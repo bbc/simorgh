@@ -148,12 +148,6 @@ module.exports = {
     },
     // Keep existing compiler findings visible; unaffected files and rules retain recommended severities.
     {
-      files: ['src/app/contexts/ReverbParamsContext/index.tsx'],
-      rules: {
-        'react-hooks/preserve-manual-memoization': 'warn',
-      },
-    },
-    {
       files: [
         'src/app/components/RelatedContentSection/index.tsx',
         'src/app/legacy/containers/PodcastExternalLinks/index.jsx',

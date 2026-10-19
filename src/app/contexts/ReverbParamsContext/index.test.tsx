@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
-import { use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { ResonanceBeaconConfig } from '#app/components/ATIAnalytics/types';
 import {
+  AllTheProviders,
   render,
+  renderHook,
   screen,
 } from '../../components/react-testing-library-with-providers';
 import {
@@ -102,6 +104,166 @@ describe('ReverbParamsContext', () => {
         },
       },
       resonanceParams: null,
+    });
+  });
+
+  describe('value memoization', () => {
+    const analyticsParams: ReturnType<
+      typeof buildAnalyticsParamsModule.buildAnalyticsParams
+    > = {
+      reverbParams: {
+        params: {
+          page: { name: 'news::pidgin.news.story.51745682.page' },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
+      },
+      resonanceParams: null,
+    };
+
+    const ContextWrapper = ({ children }: PropsWithChildren) => (
+      <AllTheProviders pageMetadata={pageMetadata} service="pidgin">
+        {children}
+      </AllTheProviders>
+    );
+
+    beforeEach(() => {
+      jest.restoreAllMocks();
+      jest
+        .spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams')
+        .mockReturnValue(analyticsParams);
+      jest.spyOn(useOptimizelyVariation, 'default').mockReturnValue(null);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it('preserves the value reference when its dependencies are unchanged despite fresh enriched ATI data', () => {
+      const { result, rerender } = renderHook(() => use(ReverbParamsContext), {
+        wrapper: ContextWrapper,
+      });
+      const initialValue = result.current;
+      const initialAtiData = jest
+        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
+        .mock.calls.at(-1)?.[0].atiData;
+
+      rerender();
+
+      const updatedAtiData = jest
+        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
+        .mock.calls.at(-1)?.[0].atiData;
+
+      expect(updatedAtiData).toEqual(initialAtiData);
+      expect(updatedAtiData).not.toBe(initialAtiData);
+      expect(result.current).toBe(initialValue);
+      expect(result.current).toEqual(analyticsParams);
+    });
+
+    it.each([null, 'off'])(
+      'updates experiment props when a variant activates, changes and becomes %s',
+      inactiveVariant => {
+        const variation = jest.mocked(useOptimizelyVariation.default);
+        const { result, rerender } = renderHook(
+          () => use(ReverbParamsContext),
+          { wrapper: ContextWrapper },
+        );
+        const initialValue = result.current;
+
+        variation.mockReturnValue('variant-a');
+        rerender();
+
+        const activeValue = result.current;
+        expect(activeValue).not.toBe(initialValue);
+        expect(activeValue.experimentProps).toEqual({
+          experimentName: 'test_page_views_aa_3',
+          experimentVariant: 'variant-a',
+          sendOptimizelyEvents: true,
+        });
+        expect(activeValue.reverbParams).toBe(analyticsParams.reverbParams);
+
+        variation.mockReturnValue('variant-b');
+        rerender();
+
+        const updatedValue = result.current;
+        expect(updatedValue).not.toBe(activeValue);
+        expect(updatedValue.experimentProps).toEqual({
+          experimentName: 'test_page_views_aa_3',
+          experimentVariant: 'variant-b',
+          sendOptimizelyEvents: true,
+        });
+        expect(
+          buildAnalyticsParamsModule.buildAnalyticsParams,
+        ).toHaveBeenLastCalledWith(
+          expect.objectContaining({
+            atiData: expect.objectContaining({
+              experimentName: 'test_page_views_aa_3',
+              experimentVariant: 'variant-b',
+              experimentProps: updatedValue.experimentProps,
+            }),
+          }),
+        );
+
+        variation.mockReturnValue(inactiveVariant);
+        rerender();
+
+        expect(result.current).not.toBe(updatedValue);
+        expect(result.current).not.toHaveProperty('experimentProps');
+        expect(result.current).toEqual(analyticsParams);
+      },
+    );
+
+    it('updates the value when reverb parameters change without experiment changes', () => {
+      const { result, rerender } = renderHook(() => use(ReverbParamsContext), {
+        wrapper: ContextWrapper,
+      });
+      const initialValue = result.current;
+      const updatedReverbParams = {
+        ...analyticsParams.reverbParams,
+        params: {
+          page: { name: 'news::pidgin.news.story.51745683.page' },
+          user: { isSignedIn: true, hashedId: 'signed-in-user' },
+        },
+      };
+      jest
+        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
+        .mockReturnValue({
+          ...analyticsParams,
+          reverbParams: updatedReverbParams,
+        });
+
+      rerender();
+
+      expect(result.current).not.toBe(initialValue);
+      expect(result.current.reverbParams).toBe(updatedReverbParams);
+      expect(result.current.resonanceParams).toBe(initialValue.resonanceParams);
+      expect(result.current).not.toHaveProperty('experimentProps');
+    });
+
+    it('updates the value when resonance parameters change without reverb or experiment changes', () => {
+      const { result, rerender } = renderHook(() => use(ReverbParamsContext), {
+        wrapper: ContextWrapper,
+      });
+      const initialValue = result.current;
+      const resonanceParams: ResonanceBeaconConfig = {
+        resonanceProperties: { mode: 'test' },
+        baseProperties: { app: { name: 'news-pidgin' } },
+        pageviewProperties: {
+          contentId: 'updated-content',
+          contentType: 'article',
+          language: 'pcm',
+        },
+      };
+      jest
+        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
+        .mockReturnValue({ ...analyticsParams, resonanceParams });
+
+      rerender();
+
+      expect(result.current).not.toBe(initialValue);
+      expect(result.current.resonanceParams).toBe(resonanceParams);
+      expect(result.current.reverbParams).toBe(initialValue.reverbParams);
+      expect(result.current).not.toHaveProperty('experimentProps');
     });
   });
 

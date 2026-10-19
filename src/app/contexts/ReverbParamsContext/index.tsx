@@ -113,15 +113,15 @@ const ReverbParamsContextProviderComponent = ({
     setBbcPage({ page, user });
   }, [page, user]);
 
+  const experimentProps = enrichedAtiData?.experimentProps;
+
   const value = useMemo(
     () => ({
       reverbParams,
       resonanceParams,
-      ...(enrichedAtiData?.experimentProps && {
-        experimentProps: enrichedAtiData.experimentProps,
-      }),
+      ...(experimentProps && { experimentProps }),
     }),
-    [reverbParams, resonanceParams, enrichedAtiData?.experimentProps],
+    [reverbParams, resonanceParams, experimentProps],
   );
 
   return (
