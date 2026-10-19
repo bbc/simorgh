@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import { PropsWithChildren, use } from 'react';
+import optimizelySdk from '@optimizely/react-sdk';
 import { ResonanceBeaconConfig } from '#app/components/ATIAnalytics/types';
+import { PageTypes } from '#app/models/types/global';
 import {
   AllTheProviders,
   render,
@@ -9,6 +11,11 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import {
   STORY_PAGE,
+  ARTICLE_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+  HOME_PAGE,
+  MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
@@ -265,6 +272,199 @@ describe('ReverbParamsContext', () => {
       expect(result.current.reverbParams).toBe(initialValue.reverbParams);
       expect(result.current).not.toHaveProperty('experimentProps');
     });
+  });
+
+  describe('experiment hook boundaries', () => {
+    const currentPageType = jest.fn<PageTypes, []>();
+    const ContextWrapper = ({ children }: PropsWithChildren) => {
+      const pageType = currentPageType();
+
+      return (
+        <AllTheProviders
+          pageMetadata={{ ...pageMetadata, type: pageType }}
+          pageType={pageType}
+          service="pidgin"
+        >
+          {children}
+        </AllTheProviders>
+      );
+    };
+
+    const setDecision = (variationKey: string | null, isClientReady = true) =>
+      jest
+        .mocked(optimizelySdk.useDecision)
+        .mockReturnValue([
+          { variationKey } as ReturnType<typeof optimizelySdk.useDecision>[0],
+          isClientReady,
+          false,
+        ]);
+
+    beforeEach(() => {
+      jest.restoreAllMocks();
+      currentPageType.mockReturnValue(ARTICLE_PAGE);
+      jest.spyOn(optimizelySdk, 'useDecision');
+      setDecision('variant-a');
+      jest.spyOn(useOptimizelyVariation, 'default');
+      jest.spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams');
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it.each([
+      [ARTICLE_PAGE, 'test_page_views_aa_3'],
+      [STORY_PAGE, 'test_page_views_aa_3'],
+      [CORRESPONDENT_STORY_PAGE, 'test_page_views_aa_3'],
+      [PHOTO_GALLERY_PAGE, 'test_page_views_aa_3'],
+      [HOME_PAGE, 'test_page_views_aa_4'],
+      [MEDIA_ARTICLE_PAGE, null],
+      [MEDIA_ASSET_PAGE, null],
+      [MOST_READ_PAGE, null],
+      ['unknown' as PageTypes, null],
+    ])(
+      'only activates the eligible experiment on %s pages',
+      (pageType, experimentName) => {
+        currentPageType.mockReturnValue(pageType as PageTypes);
+        const { result } = renderHook(() => use(ReverbParamsContext), {
+          wrapper: ContextWrapper,
+        });
+
+        if (experimentName) {
+          expect(useOptimizelyVariation.default).toHaveBeenCalledWith({
+            experimentName,
+            experimentType: useOptimizelyVariation.ExperimentType.CLIENT_SIDE,
+          });
+          expect(result.current.experimentProps).toEqual({
+            experimentName,
+            experimentVariant: 'variant-a',
+            sendOptimizelyEvents: true,
+          });
+        } else {
+          expect(useOptimizelyVariation.default).not.toHaveBeenCalled();
+          expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
+          expect(result.current).not.toHaveProperty('experimentProps');
+        }
+      },
+    );
+
+    it('keeps hook order and resets variants when a mounted provider changes page type', () => {
+      const { result, rerender } = renderHook(() => use(ReverbParamsContext), {
+        wrapper: ContextWrapper,
+      });
+      expect(result.current.experimentProps?.experimentName).toBe(
+        'test_page_views_aa_3',
+      );
+
+      rerender();
+      expect(result.current.experimentProps?.experimentVariant).toBe(
+        'variant-a',
+      );
+
+      setDecision('home-variant', false);
+      currentPageType.mockReturnValue(HOME_PAGE);
+      rerender();
+      expect(result.current).not.toHaveProperty('experimentProps');
+
+      setDecision('home-variant');
+      rerender();
+      expect(result.current.experimentProps).toEqual({
+        experimentName: 'test_page_views_aa_4',
+        experimentVariant: 'home-variant',
+        sendOptimizelyEvents: true,
+      });
+
+      jest.mocked(useOptimizelyVariation.default).mockClear();
+      jest.mocked(optimizelySdk.useDecision).mockClear();
+      currentPageType.mockReturnValue(MEDIA_ASSET_PAGE);
+      rerender();
+      expect(result.current).not.toHaveProperty('experimentProps');
+      expect(
+        result.current.reverbParams.params.page.additionalProperties,
+      ).not.toHaveProperty('mv_test');
+      expect(useOptimizelyVariation.default).not.toHaveBeenCalled();
+      expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
+
+      currentPageType.mockReturnValue(MOST_READ_PAGE);
+      rerender();
+      expect(result.current).not.toHaveProperty('experimentProps');
+      expect(
+        result.current.reverbParams.params.page.additionalProperties?.x9,
+      ).toBe(
+        'Di%20one%20wey%20dem%20dey%20read%20well%20well%20-%20BBC%20News%20Pidgin',
+      );
+      expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
+
+      currentPageType.mockReturnValue('unknown' as PageTypes);
+      rerender();
+      expect(result.current).not.toHaveProperty('experimentProps');
+      expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
+
+      setDecision('article-variant');
+      currentPageType.mockReturnValue(STORY_PAGE);
+      rerender();
+      expect(result.current.experimentProps).toEqual({
+        experimentName: 'test_page_views_aa_3',
+        experimentVariant: 'article-variant',
+        sendOptimizelyEvents: true,
+      });
+      expect(
+        result.current.reverbParams.params.page.additionalProperties?.x9,
+      ).toBe(
+        "Adams%20Oshiomhole%20say%20'I%20still%20be%20APC%20National%20Chairman'%20-%20BBC%20News%20Pidgin",
+      );
+
+      setDecision('article-variant', false);
+      currentPageType.mockReturnValue(ARTICLE_PAGE);
+      rerender();
+      expect(result.current.experimentProps?.experimentVariant).toBe(
+        'article-variant',
+      );
+    });
+
+    it.each([
+      [ARTICLE_PAGE, 'test_page_views_aa_3', null],
+      [ARTICLE_PAGE, 'test_page_views_aa_3', 'off'],
+      [HOME_PAGE, 'test_page_views_aa_4', null],
+      [HOME_PAGE, 'test_page_views_aa_4', 'off'],
+    ])(
+      'updates real hook state on %s for %s and removes experiment data when the variant becomes %s',
+      (pageType, experimentName, inactiveVariant) => {
+        currentPageType.mockReturnValue(pageType as PageTypes);
+        const { result, rerender } = renderHook(
+          () => use(ReverbParamsContext),
+          { wrapper: ContextWrapper },
+        );
+        const activeValue = result.current;
+
+        setDecision('variant-b');
+        rerender();
+
+        expect(result.current).not.toBe(activeValue);
+        expect(result.current.experimentProps?.experimentVariant).toBe(
+          'variant-b',
+        );
+        expect(
+          result.current.reverbParams.params.page.additionalProperties,
+        ).toMatchObject({
+          mv_test: experimentName,
+          mv_creation: 'variant-b',
+        });
+
+        setDecision(inactiveVariant);
+        rerender();
+
+        expect(result.current).not.toHaveProperty('experimentProps');
+        expect(
+          result.current.reverbParams.params.page.additionalProperties,
+        ).not.toHaveProperty('mv_test');
+        expect(
+          buildAnalyticsParamsModule.buildAnalyticsParams,
+        ).toHaveBeenLastCalledWith(
+          expect.objectContaining({ atiData: pageMetadata.atiAnalytics }),
+        );
+      },
+    );
   });
 
   it('should include the brand name in the pageTitle for STY pages', () => {

@@ -1,7 +1,7 @@
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+
+export const HOME_PAGE_VIEWS_EXPERIMENT_NAME = 'test_page_views_aa_4';
 
 const getActiveExperimentProps = (
   experimentName: string,
@@ -15,22 +15,21 @@ const getActiveExperimentProps = (
       }
     : null;
 
-export default ({ pageMetadata }) => {
+export default ({
+  pageMetadata,
+  experimentVariant = null,
+}: {
+  pageMetadata?: { atiAnalytics?: ATIData };
+  experimentVariant?: string | null;
+}) => {
   const { atiAnalytics: atiData = {} } = pageMetadata ?? {};
 
-  // EXPERIMENT: Home page AA test for Piano activation tracking
-  const testPageViewsExperimentName = 'test_page_views_aa_4';
-  const testPageViewsVariant = useOptimizelyVariation({
-    experimentName: testPageViewsExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
   const isTestPageViewsVariant =
-    testPageViewsVariant && testPageViewsVariant !== 'off';
+    experimentVariant && experimentVariant !== 'off';
 
   const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
+    HOME_PAGE_VIEWS_EXPERIMENT_NAME,
+    experimentVariant,
   );
 
   const enrichedData = {
