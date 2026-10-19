@@ -150,7 +150,6 @@ module.exports = {
     {
       files: [
         'src/app/components/RelatedContentSection/index.tsx',
-        'src/app/legacy/containers/PodcastExternalLinks/index.jsx',
         'src/app/pages/ArticlePage/PagePromoSections/TopStoriesSection/index.tsx',
         'src/app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/index.tsx',
       ],
