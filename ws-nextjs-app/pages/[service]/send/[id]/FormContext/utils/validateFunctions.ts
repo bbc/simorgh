@@ -37,7 +37,7 @@ const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
   const isInputEmpty = isStringEmpty(value as string);
   const isValidEmailFormat =
     !isInputEmpty &&
-    !!(value as string).match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]+$/g);
+    !!(value as string).match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/g);
 
   if (required && isInputEmpty) {
     messageCode = InvalidMessageCodes.FieldRequired;
