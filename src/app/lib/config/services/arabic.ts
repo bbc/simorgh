@@ -51,7 +51,7 @@ export const service: DefaultServiceConfig = {
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html',
-      title: 'الانتخابات الأمريكية 2026',
+      title: 'انتخابات الولايات المتحدة لعام 2026',
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
