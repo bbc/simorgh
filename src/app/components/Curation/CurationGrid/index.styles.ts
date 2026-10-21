@@ -31,26 +31,53 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
           paddingBottom: `${spacings.FULL}rem`,
-          'div div:last-child': {
-            div: {
-              width: `${pixelsToRem(77)}rem`,
-              height: `${pixelsToRem(34)}rem`,
-            },
+          // 'div div:last-child': {
+          //   div: {
+          //     width: `${pixelsToRem(77)}rem`,
+          //     height: `${pixelsToRem(34)}rem`,
+          //   },
+          // },
+        },
+      },
+      '.promo-text': {
+        h3: {
+          paddingBottom: `${spacings.FULL}rem`,
+          marginBottom: 0,
+          fontWeight: 'bold',
+        },
+        time: {
+          fontSize: `${pixelsToRem(13)}rem`,
+          paddingBottom: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          h3: {
+            fontSize: `${pixelsToRem(15)}rem`,
           },
         },
-        // [mq.GROUP_1_MAX_WIDTH]: {
-        //   width: '100%',
-        //   display: 'inline-block',
-        //   verticalAlign: 'top',
-        // },
+        [mq.GROUP_1_MAX_WIDTH]: {
+          h3: {
+            fontSize: `${pixelsToRem(16)}rem`,
+          },
+        },
+        [mq.GROUP_2_MAX_WIDTH]: {
+          h3: {
+            fontSize: `${pixelsToRem(18)}rem`,
+          },
+        },
       },
     }),
+  videoCollectionList: () =>
+    css({
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+    }),
+
   list: ({ isLite }: Theme) =>
     css({
       listStyleType: 'none',
       padding: 0,
       margin: 0,
-
       ...(isLite && {
         li: {
           '.promo-text': {
