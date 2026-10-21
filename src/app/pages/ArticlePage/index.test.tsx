@@ -56,6 +56,26 @@ jest.mock('../../components/ATIAnalytics', () => {
   return ATIAnalytics;
 });
 
+jest.mock('../../contexts/ReverbParamsContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../contexts/ReverbParamsContext'),
+}));
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/params/buildParams'),
+}));
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const reverbParamsContextProviderSpy = jest.spyOn(
   ReverbParamsContext,
   'ReverbParamsContextProvider',

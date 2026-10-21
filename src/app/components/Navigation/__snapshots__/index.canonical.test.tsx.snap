@@ -6,7 +6,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   background-color: #FFFFFF;
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-0::after {
     content: '';
     position: absolute;
@@ -17,7 +17,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 }
 
-.emotion-0 .e11sm0on2::after {
+.emotion-0 .e1s8yomp3::after {
   left: 0;
 }
 
@@ -28,13 +28,13 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-2 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-2 {
     margin: 0 auto;
   }
@@ -92,7 +92,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-7 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -103,7 +103,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-7 {
       scroll-padding-inline-end: 6rem;
     }
@@ -136,13 +136,11 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-7:after {
       width: 6rem;
     }
@@ -248,14 +246,14 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-9 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-9 {
     height: 2.75rem;
     width: 2.75rem;
@@ -283,7 +281,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-11 {
     fill: linkText;
   }
@@ -296,7 +294,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
   visibility: hidden;
   position: absolute;
   top: 100%;
@@ -306,14 +304,14 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-13 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   .emotion-13 {
     -webkit-transition: none;
     transition: none;
@@ -371,7 +369,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-16 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -382,7 +380,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-16 {
       scroll-padding-inline-end: 6rem;
     }
@@ -415,13 +413,11 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-16:after {
       width: 6rem;
     }
