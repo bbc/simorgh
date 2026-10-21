@@ -94,7 +94,10 @@ const CurationGrid = ({
     <div data-testid="curation-grid-normal">
       {hasMultiplePromos ? (
         <ul
-          css={[styles.list, hasHighImpactPromo && styles.listStretchHeight]}
+          css={[
+            isVideoCollection ? styles.videoCollectionList : styles.list,
+            hasHighImpactPromo && styles.listStretchHeight,
+          ]}
           role="list"
           data-testid="topic-promos"
         >
