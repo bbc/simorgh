@@ -21,12 +21,16 @@ const StyledParagraph = styled(Paragraph)`
   }
 `;
 
-const ParagraphContainer = ({ blocks, className }) => {
+const ParagraphContainer = ({ blocks, className, isArticleBody = false }) => {
   const { dir } = use(ServiceContext);
 
   return (
     <GridItemMedium>
-      <StyledParagraph dir={dir} className={className}>
+      <StyledParagraph
+        dir={dir}
+        className={className}
+        data-sticky-nav-anchor={isArticleBody || undefined}
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledParagraph>
     </GridItemMedium>

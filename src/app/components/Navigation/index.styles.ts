@@ -7,6 +7,24 @@ export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 export const MAX_NAV_ITEM_HEIGHT = 44;
 
 export default {
+  stickyContainer: ({ palette }: Theme) =>
+    css({
+      position: 'fixed',
+      top: 0,
+      insetInlineStart: 0,
+      width: '100%',
+      zIndex: 10000,
+      backgroundColor: palette.WHITE,
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+      transform: 'translateY(-100%)',
+      transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      '@media (prefers-reduced-motion: reduce)': {
+        transition: 'none',
+      },
+    }),
+  stickyVisible: css({
+    transform: 'translateY(0)',
+  }),
   brandDivider: ({ palette }: Theme) =>
     css({
       position: 'relative',
