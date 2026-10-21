@@ -69,8 +69,6 @@ const useUASMetadataSync = (params: UseUASMetadataSyncParams): void => {
   const { pageData, resourceId, resourceType, isActive, savedMetadata } =
     getMetadataSyncData(params);
 
-  const syncKey = `${resourceType}:${service}:${resourceId}`;
-
   useEffect(() => {
     if (!isActive || !savedMetadata) {
       hasSyncedRef.current = false;
@@ -102,7 +100,7 @@ const useUASMetadataSync = (params: UseUASMetadataSyncParams): void => {
     service,
     isActive,
     savedMetadata,
-    syncKey,
+    resourceType,
     onMetadataOutOfDate,
   ]);
 };
