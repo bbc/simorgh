@@ -14,7 +14,6 @@ const styles = {
           div: {
             display: 'flex',
             alignItems: 'center',
-            gap: '0.25rem',
             backgroundColor: palette.WHITE,
             svg: {
               position: 'static',
@@ -31,12 +30,6 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
           paddingBottom: `${spacings.FULL}rem`,
-          // 'div div:last-child': {
-          //   div: {
-          //     width: `${pixelsToRem(77)}rem`,
-          //     height: `${pixelsToRem(34)}rem`,
-          //   },
-          // },
         },
       },
       '.promo-text': {
