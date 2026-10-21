@@ -21,6 +21,16 @@ import Navigation from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('Navigation', () => {
   const navItems = [
     { title: 'Home', url: '/news' },
