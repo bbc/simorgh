@@ -176,22 +176,10 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 .emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-5 {
   margin-top: 0.5rem;
 }
 
-.emotion-5>svg {
+.emotion-4>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -199,12 +187,12 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>svg {
     color: canvasText;
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -215,24 +203,24 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     color: #222222;
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-8 {
+  .emotion-7 {
     color: canvasText;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -245,20 +233,20 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-9 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -282,17 +270,17 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -315,19 +303,19 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="emotion-8"
+        class="emotion-7"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-9"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -539,22 +527,10 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 .emotion-5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-6 {
   margin-top: 0.5rem;
 }
 
-.emotion-6>svg {
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -562,12 +538,12 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-6>svg {
+  .emotion-5>svg {
     color: canvasText;
   }
 }
 
-.emotion-7 {
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -578,24 +554,24 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     color: #222222;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-9 {
+  .emotion-8 {
     color: canvasText;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -608,20 +584,20 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-9 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -651,17 +627,17 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       type="button"
     >
       <span
-        class="emotion-5"
+        class="visuallyHiddenText"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-6"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-7 emotion-8"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -684,19 +660,19 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       </div>
       <time
         aria-hidden="true"
-        class="emotion-9"
+        class="emotion-8"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-10"
+      class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -881,19 +857,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   border: 0.1875rem solid #000000;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-5>svg {
+.emotion-4>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -901,12 +865,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>svg {
     color: canvasText;
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -917,12 +881,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-6 {
+  .emotion-5 {
     color: #222222;
   }
 }
 
-.emotion-8 {
+.emotion-7 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -935,20 +899,20 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-7 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -972,17 +936,17 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play video, "Dog chases cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -1005,12 +969,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       </div>
     </button>
     <div
-      class="emotion-8"
+      class="emotion-7"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-8"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1196,22 +1160,10 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 .emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-5 {
   margin-top: 0.5rem;
 }
 
-.emotion-5>svg {
+.emotion-4>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -1219,12 +1171,12 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>svg {
     color: canvasText;
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1233,19 +1185,19 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   height: 0.75rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-8 {
+  .emotion-7 {
     color: canvasText;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -1258,20 +1210,20 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-9 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1295,17 +1247,17 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play audio, "Dog barks at cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -1321,19 +1273,19 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="emotion-8"
+        class="emotion-7"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-9"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1518,19 +1470,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   border: 0.1875rem solid #000000;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-5>svg {
+.emotion-4>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -1538,12 +1478,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>svg {
     color: canvasText;
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1552,7 +1492,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   height: 0.75rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -1565,20 +1505,20 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-7 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1602,17 +1542,17 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play audio, "Dog barks at cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
         <svg
           aria-hidden="true"
-          class="emotion-6 emotion-7"
+          class="emotion-5 emotion-6"
           focusable="false"
           height="12px"
           viewBox="0 0 13 12"
@@ -1628,12 +1568,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       </div>
     </button>
     <div
-      class="emotion-8"
+      class="emotion-7"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-8"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1845,22 +1785,10 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 .emotion-5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.emotion-6 {
   margin-top: 0.5rem;
 }
 
-.emotion-6>svg {
+.emotion-5>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -1868,12 +1796,12 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-6>svg {
+  .emotion-5>svg {
     color: canvasText;
   }
 }
 
-.emotion-7 {
+.emotion-6 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1884,24 +1812,24 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-7 {
+  .emotion-6 {
     color: #222222;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-9 {
+  .emotion-8 {
     color: canvasText;
   }
 }
 
-.emotion-10 {
+.emotion-9 {
   position: relative;
   height: 100%;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
@@ -1914,20 +1842,20 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-9 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-9 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-11 {
+.emotion-10 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1957,17 +1885,17 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       type="button"
     >
       <span
-        class="emotion-5"
+        class="visuallyHiddenText"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-6"
+        class="emotion-5"
       >
         <svg
           aria-hidden="true"
-          class="emotion-7 emotion-8"
+          class="emotion-6 emotion-7"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -1990,19 +1918,19 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       </div>
       <time
         aria-hidden="true"
-        class="emotion-9"
+        class="emotion-8"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-10"
+      class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
