@@ -16,10 +16,7 @@ type ExperimentsForPageTypeMetrics = {
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
-    activeExperiments: [
-      'test_page_views_aa_3',
-      'newswb_ws_article_account_promo_banner',
-    ],
+    activeExperiments: ['test_page_views_aa_3'],
   },
   {
     pageType: MEDIA_ARTICLE_PAGE,
@@ -31,7 +28,6 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
       'test_page_views_aa_4',
       // experiment: newswb_ws_homepage_related_topic_promos
       HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
-      'newswb_ws_homepage_account_promo_banner_copy',
     ],
   },
 ];
