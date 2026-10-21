@@ -12,6 +12,16 @@ import { service as amharicServiceConfig } from '../../../lib/config/services/am
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import InlinePodcastPromo from './Inline';
 
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
 const PromoWithContext = ({
   serviceConfigTransformer = identity,
   config = russianServiceConfig,

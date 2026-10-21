@@ -31,6 +31,11 @@ jest.mock('#app/hooks/useHydrationDetection', () => ({
   default: () => true,
 }));
 
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 const Component = ({
   service = 'mundo',
   variant,

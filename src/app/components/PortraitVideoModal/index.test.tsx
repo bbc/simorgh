@@ -1,4 +1,4 @@
-import * as swipeTracking from '#app/hooks/useSwipeTracker';
+import useSwipeTracker from '#app/hooks/useSwipeTracker';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import Component, {
   playlistLoadedCallback,
@@ -14,6 +14,18 @@ import {
 } from '../react-testing-library-with-providers';
 import blocks from './fixture';
 import { Player, SMPEvent } from '../MediaLoader/types';
+
+jest.mock('#app/hooks/useSwipeTracker', () => {
+  const actual = jest.requireActual('#app/hooks/useSwipeTracker');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+const mockUseSwipeTracker = jest.mocked(useSwipeTracker);
 
 const eventTrackingData = {
   componentName: 'portrait-video-modal',
@@ -39,14 +51,15 @@ describe('PortraitVideoModal', () => {
     afterEach(() => {
       window.requirejs = originalRequirejs;
       jest.restoreAllMocks();
+      mockUseSwipeTracker.mockImplementation(
+        jest.requireActual('#app/hooks/useSwipeTracker').default,
+      );
     });
 
     it('uses updated tracking data and callbacks without reloading the player', async () => {
       const firstSwipeTracker = jest.fn();
       const nextSwipeTracker = jest.fn();
-      const swipeTrackerSpy = jest
-        .spyOn(swipeTracking, 'default')
-        .mockReturnValue(firstSwipeTracker);
+      mockUseSwipeTracker.mockReturnValue(firstSwipeTracker);
       const mockRequire = jest.fn();
       const bind = jest.fn();
       const mockBump = {
@@ -72,7 +85,7 @@ describe('PortraitVideoModal', () => {
       const navigationHandler = bind.mock.calls.find(
         ([event]) => event === 'statsNavigation',
       )?.[1];
-      swipeTrackerSpy.mockReturnValue(nextSwipeTracker);
+      mockUseSwipeTracker.mockReturnValue(nextSwipeTracker);
 
       rerender(
         <Component

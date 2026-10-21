@@ -17,10 +17,6 @@ updates:
     labels:
       - 'dependencies'
     groups:
-      babel:
-        patterns:
-          - '@babel/*'
-          - 'babel-*'
       happy-dom:
         patterns:
           - 'happy-dom'

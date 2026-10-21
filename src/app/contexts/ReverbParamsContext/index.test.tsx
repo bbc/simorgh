@@ -20,8 +20,36 @@ import {
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
-import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
-import * as buildAnalyticsParamsModule from '../../lib/analyticsUtils/params/buildParams';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '../../hooks/useOptimizelyVariation';
+import { buildAnalyticsParams } from '../../lib/analyticsUtils/params/buildParams';
+
+jest.mock('../../hooks/useOptimizelyVariation', () => {
+  const actual = jest.requireActual('../../hooks/useOptimizelyVariation');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => {
+  const actual = jest.requireActual(
+    '../../lib/analyticsUtils/params/buildParams',
+  );
+
+  return {
+    __esModule: true,
+    ...actual,
+    buildAnalyticsParams: jest.fn(actual.buildAnalyticsParams),
+  };
+});
+
+const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
+const mockBuildAnalyticsParams = jest.mocked(buildAnalyticsParams);
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 const pageMetadata = {
   atiAnalytics: {
@@ -53,7 +81,23 @@ const pageMetadata = {
 } as PageMetadata;
 
 beforeEach(() => {
+  delete process.env.SIMORGH_APP_ENV;
   jest.clearAllMocks();
+  mockUseOptimizelyVariation.mockImplementation(
+    jest.requireActual('../../hooks/useOptimizelyVariation').default,
+  );
+  mockBuildAnalyticsParams.mockImplementation(
+    jest.requireActual('../../lib/analyticsUtils/params/buildParams')
+      .buildAnalyticsParams,
+  );
+});
+
+afterEach(() => {
+  if (originalSimorghAppEnv === undefined) {
+    delete process.env.SIMORGH_APP_ENV;
+  } else {
+    process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+  }
 });
 
 const TestComponent = () => {
@@ -115,9 +159,7 @@ describe('ReverbParamsContext', () => {
   });
 
   describe('value memoization', () => {
-    const analyticsParams: ReturnType<
-      typeof buildAnalyticsParamsModule.buildAnalyticsParams
-    > = {
+    const analyticsParams: ReturnType<typeof buildAnalyticsParams> = {
       reverbParams: {
         params: {
           page: { name: 'news::pidgin.news.story.51745682.page' },
@@ -136,10 +178,8 @@ describe('ReverbParamsContext', () => {
 
     beforeEach(() => {
       jest.restoreAllMocks();
-      jest
-        .spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams')
-        .mockReturnValue(analyticsParams);
-      jest.spyOn(useOptimizelyVariation, 'default').mockReturnValue(null);
+      mockBuildAnalyticsParams.mockReturnValue(analyticsParams);
+      mockUseOptimizelyVariation.mockReturnValue(null);
     });
 
     afterEach(() => {
@@ -151,15 +191,13 @@ describe('ReverbParamsContext', () => {
         wrapper: ContextWrapper,
       });
       const initialValue = result.current;
-      const initialAtiData = jest
-        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
-        .mock.calls.at(-1)?.[0].atiData;
+      const initialAtiData =
+        mockBuildAnalyticsParams.mock.calls.at(-1)?.[0].atiData;
 
       rerender();
 
-      const updatedAtiData = jest
-        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
-        .mock.calls.at(-1)?.[0].atiData;
+      const updatedAtiData =
+        mockBuildAnalyticsParams.mock.calls.at(-1)?.[0].atiData;
 
       expect(updatedAtiData).toEqual(initialAtiData);
       expect(updatedAtiData).not.toBe(initialAtiData);
@@ -170,7 +208,7 @@ describe('ReverbParamsContext', () => {
     it.each([null, 'off'])(
       'updates experiment props when a variant activates, changes and becomes %s',
       inactiveVariant => {
-        const variation = jest.mocked(useOptimizelyVariation.default);
+        const variation = mockUseOptimizelyVariation;
         const { result, rerender } = renderHook(
           () => use(ReverbParamsContext),
           { wrapper: ContextWrapper },
@@ -199,9 +237,7 @@ describe('ReverbParamsContext', () => {
           experimentVariant: 'variant-b',
           sendOptimizelyEvents: true,
         });
-        expect(
-          buildAnalyticsParamsModule.buildAnalyticsParams,
-        ).toHaveBeenLastCalledWith(
+        expect(mockBuildAnalyticsParams).toHaveBeenLastCalledWith(
           expect.objectContaining({
             atiData: expect.objectContaining({
               experimentName: 'test_page_views_aa_3',
@@ -232,12 +268,10 @@ describe('ReverbParamsContext', () => {
           user: { isSignedIn: true, hashedId: 'signed-in-user' },
         },
       };
-      jest
-        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
-        .mockReturnValue({
-          ...analyticsParams,
-          reverbParams: updatedReverbParams,
-        });
+      mockBuildAnalyticsParams.mockReturnValue({
+        ...analyticsParams,
+        reverbParams: updatedReverbParams,
+      });
 
       rerender();
 
@@ -261,9 +295,10 @@ describe('ReverbParamsContext', () => {
           language: 'pcm',
         },
       };
-      jest
-        .mocked(buildAnalyticsParamsModule.buildAnalyticsParams)
-        .mockReturnValue({ ...analyticsParams, resonanceParams });
+      mockBuildAnalyticsParams.mockReturnValue({
+        ...analyticsParams,
+        resonanceParams,
+      });
 
       rerender();
 
@@ -304,8 +339,6 @@ describe('ReverbParamsContext', () => {
       currentPageType.mockReturnValue(ARTICLE_PAGE);
       jest.spyOn(optimizelySdk, 'useDecision');
       setDecision('variant-a');
-      jest.spyOn(useOptimizelyVariation, 'default');
-      jest.spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams');
     });
 
     afterEach(() => {
@@ -331,9 +364,9 @@ describe('ReverbParamsContext', () => {
         });
 
         if (experimentName) {
-          expect(useOptimizelyVariation.default).toHaveBeenCalledWith({
+          expect(mockUseOptimizelyVariation).toHaveBeenCalledWith({
             experimentName,
-            experimentType: useOptimizelyVariation.ExperimentType.CLIENT_SIDE,
+            experimentType: ExperimentType.CLIENT_SIDE,
           });
           expect(result.current.experimentProps).toEqual({
             experimentName,
@@ -341,7 +374,7 @@ describe('ReverbParamsContext', () => {
             sendOptimizelyEvents: true,
           });
         } else {
-          expect(useOptimizelyVariation.default).not.toHaveBeenCalled();
+          expect(mockUseOptimizelyVariation).not.toHaveBeenCalled();
           expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
           expect(result.current).not.toHaveProperty('experimentProps');
         }
@@ -374,7 +407,7 @@ describe('ReverbParamsContext', () => {
         sendOptimizelyEvents: true,
       });
 
-      jest.mocked(useOptimizelyVariation.default).mockClear();
+      mockUseOptimizelyVariation.mockClear();
       jest.mocked(optimizelySdk.useDecision).mockClear();
       currentPageType.mockReturnValue(MEDIA_ASSET_PAGE);
       rerender();
@@ -382,7 +415,7 @@ describe('ReverbParamsContext', () => {
       expect(
         result.current.reverbParams.params.page.additionalProperties,
       ).not.toHaveProperty('mv_test');
-      expect(useOptimizelyVariation.default).not.toHaveBeenCalled();
+      expect(mockUseOptimizelyVariation).not.toHaveBeenCalled();
       expect(optimizelySdk.useDecision).not.toHaveBeenCalled();
 
       currentPageType.mockReturnValue(MOST_READ_PAGE);
@@ -458,9 +491,7 @@ describe('ReverbParamsContext', () => {
         expect(
           result.current.reverbParams.params.page.additionalProperties,
         ).not.toHaveProperty('mv_test');
-        expect(
-          buildAnalyticsParamsModule.buildAnalyticsParams,
-        ).toHaveBeenLastCalledWith(
+        expect(mockBuildAnalyticsParams).toHaveBeenLastCalledWith(
           expect.objectContaining({ atiData: pageMetadata.atiAnalytics }),
         );
       },
@@ -627,9 +658,7 @@ describe('ReverbParamsContext', () => {
   });
 
   it('should include experiment details when present', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'experimentVariant');
+    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
 
     render(<TestComponent />, {
       pageMetadata,
@@ -708,18 +737,16 @@ describe('ReverbParamsContext', () => {
       },
     } as unknown as ResonanceBeaconConfig;
 
-    jest
-      .spyOn(buildAnalyticsParamsModule, 'buildAnalyticsParams')
-      .mockReturnValue({
-        reverbParams: {
-          params: {
-            page: { name: 'news::pidgin.news.story.51745682.page' },
-            user: { isSignedIn: false },
-          },
-          eventDetails: { eventName: 'pageView' },
+    mockBuildAnalyticsParams.mockReturnValue({
+      reverbParams: {
+        params: {
+          page: { name: 'news::pidgin.news.story.51745682.page' },
+          user: { isSignedIn: false },
         },
-        resonanceParams: mockResonanceParams,
-      });
+        eventDetails: { eventName: 'pageView' },
+      },
+      resonanceParams: mockResonanceParams,
+    });
 
     render(<TestComponent />, {
       pageMetadata,
