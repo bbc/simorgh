@@ -1,6 +1,6 @@
-import appArticleTransforms from '.';
+import appPageTransforms from '.';
 
-describe('appArticleTransforms', () => {
+describe('appPageTransforms', () => {
   describe('anchor tags', () => {
     it('should append .app suffix to article hrefs', () => {
       const html = `
@@ -12,7 +12,7 @@ describe('appArticleTransforms', () => {
         <a href="/pidgin/articles/c0000000000o?something=value&another=one#content">Article</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(html);
+      const modifiedHtml = appPageTransforms(html);
 
       expect(modifiedHtml).toEqual(`
         <a href="https://www.bbc.com/pidgin/articles/c0000000000o.app">Article</a>
@@ -24,6 +24,20 @@ describe('appArticleTransforms', () => {
       `);
     });
 
+    it('should append .app suffix to on-demand audio page hrefs', () => {
+      const html = `
+        <a href="https://www.bbc.com/arabic/podcasts/p02pc9qc/p08wtg4d">Podcast</a>
+        <a href="/arabic/bbc_arabic_radio/w3ct01yb">Audio</a>
+      `;
+
+      const modifiedHtml = appPageTransforms(html);
+
+      expect(modifiedHtml).toEqual(`
+        <a href="https://www.bbc.com/arabic/podcasts/p02pc9qc/p08wtg4d.app">Podcast</a>
+        <a href="/arabic/bbc_arabic_radio/w3ct01yb.app">Audio</a>
+      `);
+    });
+
     it('should not append .app suffix to non-article page types', () => {
       const originalHtml = `
         <a href="https://www.bbc.com/pidgin">Home</a>
@@ -31,7 +45,7 @@ describe('appArticleTransforms', () => {
         <a href="https://www.bbc.com/pidgin/popular/read">Most Read</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -45,7 +59,7 @@ describe('appArticleTransforms', () => {
         <a href="mailto:test@gmail.com">Article</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -56,7 +70,7 @@ describe('appArticleTransforms', () => {
         <a href="https://www.bbc.com/weather/articles/c0000000000o">Weather</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -67,7 +81,7 @@ describe('appArticleTransforms', () => {
         <a href="/pidgin/articles/c0000000000o" data-ignore-app="true">Article</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -75,7 +89,7 @@ describe('appArticleTransforms', () => {
     it('should not append .app suffix when no anchor tags are present', () => {
       const originalHtml = '<p>I am a paragraph</p>';
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -86,7 +100,7 @@ describe('appArticleTransforms', () => {
         <a href="">Article</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
@@ -97,7 +111,7 @@ describe('appArticleTransforms', () => {
         <a href="https://www.bbc.com/ws/languages?xtor=CS1-13-[wsgahuza~N~A39~MBC]-[Owned]&utm_source=mktg">Other Languages</a>
       `;
 
-      const modifiedHtml = appArticleTransforms(originalHtml);
+      const modifiedHtml = appPageTransforms(originalHtml);
 
       expect(modifiedHtml).toEqual(originalHtml);
     });
