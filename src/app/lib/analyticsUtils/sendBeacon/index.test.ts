@@ -10,6 +10,11 @@ import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
 
+jest.mock('../../utilities/onClient', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../utilities/onClient'),
+}));
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let isOnClient: any;
 

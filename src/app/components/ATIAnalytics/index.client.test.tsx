@@ -19,6 +19,16 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
+jest.mock('./amp', () => ({
+  __esModule: true,
+  ...jest.requireActual('./amp'),
+}));
+
+jest.mock('./canonical', () => ({
+  __esModule: true,
+  ...jest.requireActual('./canonical'),
+}));
+
 const defaultRenderProps = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
   id: 'c0000000000o',

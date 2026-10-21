@@ -35,11 +35,16 @@ When a consumer owns a real DOM context for an override, express that relationsh
 
 ## Step 2: Map Emotion theme values to SCSS tokens
 
-All tokens are forwarded from `@scss/themeTokens`. Start every file with:
+Theme tokens and mixins are forwarded from `@scss/themeTokens`. Add this import
+at the top of an SCSS Module only when the file uses one of those tokens or
+mixins:
 
 ```scss
 @use '@scss/themeTokens' as theme;
 ```
+
+Do not add the import when the module has no `theme.*` references. This keeps
+the Sass dependency explicit and avoids unused imports.
 
 ### Palette
 
