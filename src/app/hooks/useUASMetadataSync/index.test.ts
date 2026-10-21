@@ -1,13 +1,19 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
-import * as uasUtility from '#app/lib/uasApi/uasUtility';
+import {
+  buildCurrentMetadata,
+  compareMetadataWithSaved,
+} from '#app/lib/uasApi/uasUtility';
 import { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import useUASMetadataSync from './index';
 
-jest.mock('#app/lib/uasApi/uasUtility');
+jest.mock('#app/lib/uasApi/uasUtility', () => ({
+  __esModule: true,
+  buildCurrentMetadata: jest.fn(),
+  compareMetadataWithSaved: jest.fn(),
+}));
 
-const mockBuildCurrentMetadata = uasUtility.buildCurrentMetadata as jest.Mock;
-const mockCompareMetadataWithSaved =
-  uasUtility.compareMetadataWithSaved as jest.Mock;
+const mockBuildCurrentMetadata = jest.mocked(buildCurrentMetadata);
+const mockCompareMetadataWithSaved = jest.mocked(compareMetadataWithSaved);
 
 describe('useUASMetadataSync', () => {
   const mockArticlePageData: SaveArticlePageData = {
