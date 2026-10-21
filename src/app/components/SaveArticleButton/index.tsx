@@ -27,7 +27,6 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
     !articleId.includes('/');
 
   if (!isArticlePersonalizationAvailable || !isSupportedArticleId) return null;
-  // if (!isArticlePersonalizationAvailable) return null;
 
   return (
     <ErrorBoundary componentName="SaveArticleButton">
