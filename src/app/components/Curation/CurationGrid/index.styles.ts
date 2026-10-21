@@ -66,11 +66,21 @@ const styles = {
         },
       },
     }),
-  videoCollectionList: () =>
+  videoCollectionList: ({ mq }: Theme) =>
     css({
       listStyleType: 'none',
       padding: 0,
       margin: 0,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
     }),
 
   list: ({ isLite }: Theme) =>
