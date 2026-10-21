@@ -50,6 +50,7 @@ const addCspHeader = ({
   const reqUrl = ctx.req?.url || '';
   const { isAmp, isLite } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
+  const isAvEmbedsRoute = reqUrl.includes('/av-embeds/');
 
   const resolvedCountry = country?.toLowerCase() || '';
 
@@ -93,8 +94,9 @@ const addCspHeader = ({
     }),
   );
 
-  // The nonce tier ships its policy as a meta tag (httpEquiv="Content-Security-Policy) instead
-  if (!nonce) {
+  // Nonce tier usually ships policy via meta as a meta tag (httpEquiv="Content-Security-Policy"),
+  // but AV embeds bypass the wrapper that emits it.
+  if (!nonce || isAvEmbedsRoute) {
     ctx.res?.setHeader(
       'Content-Security-Policy',
       contentSecurityPolicyHeaderValue,

@@ -219,6 +219,27 @@ describe('CSP tiers', () => {
     expect(getRequestNonce(ctx.req)).toBe(MOCK_NONCE);
   });
 
+  it('sets the CSP response header for AV embeds on the nonce tier', () => {
+    const ctx = createDocumentContext(
+      '/pidgin/av-embeds/some-article/vpid/p1234567',
+    );
+
+    const { nonce, cspHeader } = addCspHeader({
+      ctx,
+      service: 'pidgin',
+      toggles: {
+        ads: { enabled: true },
+        adsNonce: { enabled: true, value: 'ke' },
+      },
+      country: 'ke',
+      showAdsBasedOnLocation: true,
+    });
+
+    expect(nonce).toBe(MOCK_NONCE);
+    expect(getCspHeader(ctx)).toEqual(cspHeader);
+    expect(getRequestNonce(ctx.req)).toBe(MOCK_NONCE);
+  });
+
   it('does not add a nonce on the strict or relaxed tiers', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
