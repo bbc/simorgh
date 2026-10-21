@@ -31,6 +31,17 @@ const STICKY_LANDSCAPE_QUERY =
 // user intentionally scrolling up.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
+const INITIAL_STICKY_MEDIA_QUERY_STATE = {
+  isStickyViewport: false,
+  isWithinStickyMaxWidth: false,
+  prefersReducedMotion: false,
+  isStickyLandscapeConstrained: false,
+};
+const INITIAL_STICKY_ANIMATION_STATE = {
+  positioned: false,
+  visible: false,
+  prepared: false,
+};
 
 type CanonicalNavigationContainerProps = {
   dir: Direction;
@@ -54,11 +65,15 @@ const CanonicalNavigationContainer: React.FC<
   const { isLite, env, service, pageType } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const { enabled: stickyNavigationEnabled } = useToggle('stickyNavigation');
-  const [isStickyViewport, setIsStickyViewport] = useState(false);
-  const [isWithinStickyMaxWidth, setIsWithinStickyMaxWidth] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [isStickyLandscapeConstrained, setIsStickyLandscapeConstrained] =
-    useState(false);
+  const [stickyMediaQuery, setStickyMediaQuery] = useState(
+    INITIAL_STICKY_MEDIA_QUERY_STATE,
+  );
+  const {
+    isStickyViewport,
+    isWithinStickyMaxWidth,
+    prefersReducedMotion,
+    isStickyLandscapeConstrained,
+  } = stickyMediaQuery;
   const enableStickyNavigation =
     stickyNavigationEnabled &&
     env !== 'live' &&
@@ -70,9 +85,14 @@ const CanonicalNavigationContainer: React.FC<
     !isLite;
   const [isOpen, setIsOpen] = useState(false);
   const [stickyState, setStickyState] = useState(INITIAL_STICKY_STATE);
-  const [isStickyPositioned, setIsStickyPositioned] = useState(false);
-  const [isStickyVisible, setIsStickyVisible] = useState(false);
-  const [isStickyPrepared, setIsStickyPrepared] = useState(false);
+  const [stickyAnimation, setStickyAnimation] = useState(
+    INITIAL_STICKY_ANIMATION_STATE,
+  );
+  const {
+    positioned: isStickyPositioned,
+    visible: isStickyVisible,
+    prepared: isStickyPrepared,
+  } = stickyAnimation;
 
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
@@ -86,7 +106,10 @@ const CanonicalNavigationContainer: React.FC<
 
   const handleStickyViewportChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setIsStickyViewport(matches);
+      setStickyMediaQuery(previous => ({
+        ...previous,
+        isStickyViewport: matches,
+      }));
       if (!matches) setIsOpen(false);
     },
     [],
@@ -95,7 +118,10 @@ const CanonicalNavigationContainer: React.FC<
 
   const handleStickyMaxWidthChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setIsWithinStickyMaxWidth(matches);
+      setStickyMediaQuery(previous => ({
+        ...previous,
+        isWithinStickyMaxWidth: matches,
+      }));
       if (!matches) setIsOpen(false);
     },
     [],
@@ -104,7 +130,10 @@ const CanonicalNavigationContainer: React.FC<
 
   const handleReducedMotionChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setPrefersReducedMotion(matches);
+      setStickyMediaQuery(previous => ({
+        ...previous,
+        prefersReducedMotion: matches,
+      }));
       if (matches) setIsOpen(false);
     },
     [],
@@ -113,7 +142,10 @@ const CanonicalNavigationContainer: React.FC<
 
   const handleStickyLandscapeChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setIsStickyLandscapeConstrained(matches);
+      setStickyMediaQuery(previous => ({
+        ...previous,
+        isStickyLandscapeConstrained: matches,
+      }));
       if (matches) setIsOpen(false);
     },
     [],
@@ -131,38 +163,43 @@ const CanonicalNavigationContainer: React.FC<
   }, []);
 
   useEffect(() => {
-    if (!isStickyPositioned) setIsStickyPrepared(false);
-  }, [isStickyPositioned]);
-
-  useEffect(() => {
     if (!enableStickyNavigation) {
-      setIsStickyPositioned(false);
-      setIsStickyVisible(false);
+      setStickyAnimation(INITIAL_STICKY_ANIMATION_STATE);
       return undefined;
     }
 
     if (!stickyState.fixed) {
-      setIsStickyVisible(false);
+      setStickyAnimation(previous => ({ ...previous, visible: false }));
       const timeout = window.setTimeout(
-        () => setIsStickyPositioned(false),
+        () =>
+          setStickyAnimation(previous => ({
+            ...previous,
+            positioned: false,
+            prepared: false,
+          })),
         STICKY_TRANSITION_DURATION,
       );
       return () => window.clearTimeout(timeout);
     }
 
-    setIsStickyPositioned(true);
     if (!stickyState.visible) {
-      setIsStickyPrepared(true);
-      setIsStickyVisible(false);
+      setStickyAnimation(previous => ({
+        ...previous,
+        positioned: true,
+        prepared: true,
+        visible: false,
+      }));
       return undefined;
     }
+
+    setStickyAnimation(previous => ({ ...previous, positioned: true }));
 
     const animationFrames = { first: 0, second: 0 };
     // Paint the fixed, off-screen position before starting the slide-in.
     animationFrames.first = window.requestAnimationFrame(() => {
-      setIsStickyPrepared(true);
+      setStickyAnimation(previous => ({ ...previous, prepared: true }));
       animationFrames.second = window.requestAnimationFrame(() => {
-        setIsStickyVisible(true);
+        setStickyAnimation(previous => ({ ...previous, visible: true }));
       });
     });
 
@@ -377,7 +414,11 @@ const CanonicalNavigationContainer: React.FC<
               event.propertyName === 'transform' &&
               !stickyState.fixed
             ) {
-              setIsStickyPositioned(false);
+              setStickyAnimation(previous => ({
+                ...previous,
+                positioned: false,
+                prepared: false,
+              }));
             }
           }}
           aria-hidden={hidden || undefined}
