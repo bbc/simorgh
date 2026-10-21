@@ -1,7 +1,7 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ElectionBanner from '#app/components/ElectionBanner';
-import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
   ExperimentType,
