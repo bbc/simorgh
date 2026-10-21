@@ -140,6 +140,30 @@ describe('SaveArticleButton', () => {
     jest.clearAllMocks();
   });
 
+  it.each([
+    { userType: 'signed-in', initialIsSignedIn: true },
+    { userType: 'guest', initialIsSignedIn: false },
+  ])(
+    'does not render for a TC2 article for a $userType user',
+    async ({ initialIsSignedIn }) => {
+      const service = 'mundo';
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, {
+          service,
+          pathname:
+            '/mundo/noticias/2015/03/150216_animales_practicas_sexuales_lp',
+          toggles: {
+            uasPersonalization: { enabled: true, value: service },
+          },
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+        }),
+      );
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    },
+  );
+
   describe('Authorized', () => {
     const signedInRenderOptions = {
       service: 'hindi' as const,
