@@ -208,7 +208,7 @@ We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascrip
 
 ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
-We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
+We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
 
 The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
 
@@ -219,8 +219,6 @@ Root and Next unit and integration projects share [src/testHelpers/setupTests.js
 Resolving the combined configuration initializes the Next app configuration and its `.env` files even when only root projects are selected. This is an intentional trade-off of keeping one configuration, so root test commands may observe app environment values during configuration resolution. A single global `jest-junit` reporter writes results to the repository root's `reports/jest` directory, regardless of the invocation directory.
 
 SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories to provide mockable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
-
-Use `yarn test:unit` for the root projects and run `yarn test` from `ws-nextjs-app` for the Next.js unit project.
 
 ### End-to-end tests
 
