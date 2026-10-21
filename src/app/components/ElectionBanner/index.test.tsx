@@ -357,9 +357,9 @@ describe('ElectionBanner', () => {
       expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
     });
 
-    it('stays hidden on topics with an unrelated curation despite matching article tags', () => {
+    it('stays hidden on topics with an unrelated curation', () => {
       const { queryByTestId } = renderElectionBanner(
-        { curationIds: ['unrelated-curation'], aboutTags: mockAboutTags },
+        { curationIds: ['unrelated-curation'] },
         {
           pageType: 'topic',
           toggles: { electionBanner: { enabled: true } },

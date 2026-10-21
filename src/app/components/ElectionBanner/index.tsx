@@ -80,7 +80,7 @@ export default function ElectionBanner({
     pageType === 'topic' &&
     curationIds?.some(curationId => electionCurationIds?.includes(curationId));
 
-  const isEligibleArticle = !isCollectionPage && Boolean(validAboutTag);
+  const isEligibleArticle = Boolean(validAboutTag);
 
   const isEligiblePage = isHomePage || isEligibleTopic || isEligibleArticle;
 
