@@ -19,6 +19,7 @@ import {
   Summary,
 } from '../../models/types/curationData';
 import { MostReadData } from '../MostRead/types';
+import { kyrgyzBillboard } from '../Billboard/fixtures';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
@@ -261,7 +262,7 @@ describe('Curation', () => {
             position={position}
             visualStyle={BANNER}
             visualProminence={prominence}
-            summaries={billboardCuration?.summaries}
+            summaries={[kyrgyzBillboard.summaries[0]]}
           />,
           { service: 'kyrgyz', pageType: 'home' },
         );
