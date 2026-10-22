@@ -318,17 +318,31 @@ describe('ElectionBanner', () => {
     });
 
     describe.each(['home', 'topic'] as const)('%s pages', pageType => {
-      it('renders on live when enabled without article tags', () => {
+      it.each(['local', 'test'])(
+        'renders on %s when enabled without article tags',
+        appEnv => {
+          process.env.SIMORGH_APP_ENV = appEnv;
+          const { getByTestId } = renderElectionBanner(
+            { curationIds: [MOCK_ELECTION_CURATION_ID] },
+            { pageType, toggles: { electionBanner: { enabled: true } } },
+            mockAssocPressServiceContext,
+          );
+
+          const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
+          expect(iframe).toHaveAttribute('src', MOCK_ASSOC_PRESS_IFRAME_SRC);
+          expect(iframe).toHaveAttribute('title', MOCK_TITLE);
+        },
+      );
+
+      it('stays hidden on live even when enabled', () => {
         process.env.SIMORGH_APP_ENV = 'live';
-        const { getByTestId } = renderElectionBanner(
+        const { queryByTestId } = renderElectionBanner(
           { curationIds: [MOCK_ELECTION_CURATION_ID] },
           { pageType, toggles: { electionBanner: { enabled: true } } },
           mockAssocPressServiceContext,
         );
 
-        const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
-        expect(iframe).toHaveAttribute('src', MOCK_ASSOC_PRESS_IFRAME_SRC);
-        expect(iframe).toHaveAttribute('title', MOCK_TITLE);
+        expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
       });
 
       it.each([false, null])('stays hidden when toggle is %s', enabled => {

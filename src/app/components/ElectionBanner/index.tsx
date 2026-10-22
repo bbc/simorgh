@@ -55,7 +55,7 @@ export default function ElectionBanner({
     isLite ||
     !electionBanner ||
     (isCollectionPage && !electionBanner.assocPressIframeSrc) ||
-    (isLive() && !isCollectionPage)
+    isLive()
   )
     return null;
 
