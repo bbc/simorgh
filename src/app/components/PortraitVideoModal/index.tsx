@@ -206,11 +206,6 @@ export const playbackEndedCallback = async (
   }
 };
 
-const pluginLoadedCallback = () => {
-  const player = getPlayerInstance();
-  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
-};
-
 const handlePrevNextVideo = (direction: 'previous' | 'next') => {
   const player = getPlayerInstance();
 
@@ -268,7 +263,6 @@ const PortraitVideoModal = ({
   const eventMapping = useMemo<EventMapping>(
     () => ({
       playlistLoaded: event => playlistLoadedCallback(event, blocks),
-      pluginLoaded: pluginLoadedCallback,
       fullscreenExit: onClose,
       statsNavigation: event =>
         statsNavigationCallback(

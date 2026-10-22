@@ -28,6 +28,7 @@ type PortraitVideoCarouselProps = {
   className?: string;
   backgroundColor?: string;
   link?: string;
+  loadPlayerScripts?: boolean;
 };
 
 const PortraitVideoCarousel = ({
@@ -37,6 +38,7 @@ const PortraitVideoCarousel = ({
   className,
   backgroundColor,
   link,
+  loadPlayerScripts = true,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,7 +96,9 @@ const PortraitVideoCarousel = ({
 
   return (
     <>
-      {playableBlocks.length > 0 && <BumpLoader nonce={nonce} />}
+      {loadPlayerScripts && playableBlocks.length > 0 && (
+        <BumpLoader nonce={nonce} />
+      )}
       <section
         aria-label={title || translations.media.watch}
         role="region"

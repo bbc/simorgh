@@ -79,6 +79,9 @@ export const toCarouselBlock = ({
 const PortraitVideosPage = ({ pageData }: PortraitVideosPageProps) => {
   const { lang } = use(ServiceContext);
   const topSlices = pageData.slices.slice(0, TOP_SLICES_LIMIT);
+  const firstPlayableSliceIndex = topSlices.findIndex(({ articles }) =>
+    articles.some(({ videoId, versionId }) => videoId && versionId),
+  );
 
   return (
     <main className={styles.main} data-is-dark-ui="true">
@@ -94,11 +97,12 @@ const PortraitVideosPage = ({ pageData }: PortraitVideosPageProps) => {
           {pageData.pageTitle}
         </Heading>
         <div className={styles.carousels}>
-          {topSlices.map(({ topicId, title, articles }) => (
+          {topSlices.map(({ topicId, title, articles }, index) => (
             <PortraitVideoCarousel
               key={topicId}
               title={title}
               blocks={articles.map(toCarouselBlock)}
+              loadPlayerScripts={index === firstPlayableSliceIndex}
               eventTrackingData={{
                 componentName: 'portrait-video-carousel-portrait-videos',
                 groupTracker: {

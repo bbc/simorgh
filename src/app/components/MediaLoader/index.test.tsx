@@ -129,6 +129,55 @@ describe('MediaLoader', () => {
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
     });
 
+    it('does not initialise a stale player after the component unmounts', async () => {
+      const mockRequire = jest.fn();
+      const mockBump = {
+        player: jest.fn(),
+      };
+
+      window.requirejs = mockRequire;
+
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+        {
+          id: 'testId',
+        },
+      );
+      const callbackFn = mockRequire.mock.calls[0][1];
+
+      unmount();
+      callbackFn(mockBump);
+
+      expect(mockBump.player).not.toHaveBeenCalled();
+    });
+
+    it('pauses the player when the component unmounts', async () => {
+      const mockRequire = jest.fn();
+      const mockPlayer = {
+        load: jest.fn(),
+        bind: jest.fn(),
+        pause: jest.fn(),
+      };
+      const mockBump = {
+        player: jest.fn(() => mockPlayer),
+      };
+
+      window.requirejs = mockRequire;
+
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+        {
+          id: 'testId',
+        },
+      );
+      const callbackFn = mockRequire.mock.calls[0][1];
+
+      await act(async () => callbackFn(mockBump));
+      unmount();
+
+      expect(mockPlayer.pause).toHaveBeenCalledTimes(1);
+    });
+
     it('Loads the player immediately with autoplay disabled when requested', async () => {
       const mockRequire = jest.fn();
       const mockPlayer = {

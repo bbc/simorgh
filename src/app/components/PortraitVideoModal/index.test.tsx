@@ -45,6 +45,42 @@ describe('PortraitVideoModal', () => {
     expect(modal).toBeInTheDocument();
   });
 
+  it('does not automatically launch the fullscreen plugin', async () => {
+    const mockRequire = jest.fn();
+    const originalRequirejs = window.requirejs;
+    const bind = jest.fn();
+    const player = {
+      bind,
+      load: jest.fn(),
+      pause: jest.fn(),
+    };
+
+    window.requirejs = mockRequire;
+
+    const { unmount } = render(
+      <Component
+        selectedVideoIndex={0}
+        blocks={blocks}
+        onClose={mockClose}
+        eventTrackingData={eventTrackingData}
+      />,
+    );
+
+    try {
+      const initialisePlayer = mockRequire.mock.calls[0][1];
+
+      await initialisePlayer({ player: () => player });
+
+      expect(bind).not.toHaveBeenCalledWith(
+        'pluginLoaded',
+        expect.any(Function),
+      );
+    } finally {
+      unmount();
+      window.requirejs = originalRequirejs;
+    }
+  });
+
   it('should set the root React element to "inert" when the modal is open', () => {
     render(
       <div id="root">

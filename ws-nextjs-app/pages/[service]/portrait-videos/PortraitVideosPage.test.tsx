@@ -25,7 +25,7 @@ jest.mock('#app/components/Metadata', () => ({
 jest.mock('#app/components/MediaLoader', () => ({
   __esModule: true,
   default: () => null,
-  BumpLoader: () => null,
+  BumpLoader: () => <div data-testid="bump-loader" />,
 }));
 
 const createArticle = (index: number): PortraitVideoArticle => ({
@@ -136,6 +136,7 @@ describe('PortraitVideosPage', () => {
       ),
     );
     expect(screen.queryByTestId('promo-link')).not.toBeInTheDocument();
+    expect(screen.getAllByTestId('bump-loader')).toHaveLength(1);
   });
 
   it('only renders the configured number of top slices', async () => {

@@ -176,9 +176,13 @@ const MediaContainer = ({
   onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
+    const playerElement = playerElementRef.current;
+    let isActive = true;
+    let mediaPlayer: ReturnType<BumpType['player']> | undefined;
+
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef?.current && playerConfig) {
+        if (isActive && playerElement && playerConfig) {
           const initPlayer = async () => {
             const autoplayOverride = loadPlayerOnInitialRender
               ? { autoplay: false }
@@ -193,17 +197,15 @@ const MediaContainer = ({
               ...fakeFullscreenOverride,
             };
 
-            const mediaPlayer = Bump.player(
-              playerElementRef.current,
-              effectiveConfig,
-            );
+            const player = Bump.player(playerElement, effectiveConfig);
+            mediaPlayer = player;
 
             if (uniqueId != null) {
               const { mediaPlayers } = window;
               if (mediaPlayers == null) {
-                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+                window.mediaPlayers = { [uniqueId]: player };
               } else {
-                mediaPlayers[uniqueId] = mediaPlayer;
+                mediaPlayers[uniqueId] = player;
               }
             }
 
@@ -212,15 +214,15 @@ const MediaContainer = ({
                 const key = bindingKey as MediaPlayerEvents;
                 const handler = eventMapping[key];
 
-                if (handler) mediaPlayer.bind(key, handler);
+                if (handler) player.bind(key, handler);
               });
             }
 
             if (shouldHandleFakeFullscreen) {
-              mediaPlayer.bind('enterFakeFullscreen', () => {
+              player.bind('enterFakeFullscreen', () => {
                 onFakeFullscreenChangeRef.current?.(true);
               });
-              mediaPlayer.bind('exitFakeFullscreen', () => {
+              player.bind('exitFakeFullscreen', () => {
                 onFakeFullscreenChangeRef.current?.(false);
               });
             }
@@ -228,8 +230,10 @@ const MediaContainer = ({
             if (showAds) {
               const adTag = await window.dotcom.ads.getAdTag();
 
+              if (!isActive) return;
+
               if (adTag) {
-                mediaPlayer.loadPlugin(
+                player.loadPlugin(
                   {
                     swf: 'name:dfpAds.swf',
                     html: 'name:dfpAds.js',
@@ -243,11 +247,11 @@ const MediaContainer = ({
                 );
               }
 
-              mediaPlayer.bind('playlistLoaded', async () => {
+              player.bind('playlistLoaded', async () => {
                 const updatedAdTag = await window.dotcom.ads.getAdTag();
 
                 if (updatedAdTag) {
-                  mediaPlayer.dispatchEvent(
+                  player.dispatchEvent(
                     'bbc.smp.plugins.ads.event.updateAdTag',
                     {
                       adTag: updatedAdTag,
@@ -257,7 +261,7 @@ const MediaContainer = ({
               });
             }
 
-            mediaPlayer.load();
+            if (isActive) player.load();
           };
 
           initPlayer();
@@ -266,6 +270,16 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
+
+    return () => {
+      isActive = false;
+      mediaPlayer?.pause?.();
+      playerElement?.replaceChildren();
+
+      if (uniqueId != null && window.mediaPlayers?.[uniqueId] === mediaPlayer) {
+        delete window.mediaPlayers[uniqueId];
+      }
+    };
   }, [
     playerConfig,
     showAds,
