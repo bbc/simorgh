@@ -15,11 +15,11 @@ const toPortraitVideoArticle = (
 ): PortraitVideoArticle => ({
   ...article,
   title: article.title
-    .replace(/^वीडियो,\s*/, '')
-    .replace(/,\s*अवधि \d+,\d+$/, ''),
+    .replace(/^วิดีโอ,\s*/, '')
+    .replace(/,\s*ความยาว \d+,\d+$/, ''),
 });
 
-const hindiPortraitVideoPageData: PortraitVideoPageData = {
+const thaiPortraitVideoPageData: PortraitVideoPageData = {
   pageTitle: 'วิดีโอรูปแบบสั้น',
   slices: topicIds.map(topicId => ({
     topicId,
@@ -28,4 +28,4 @@ const hindiPortraitVideoPageData: PortraitVideoPageData = {
   })),
 };
 
-export default hindiPortraitVideoPageData;
+export default thaiPortraitVideoPageData;

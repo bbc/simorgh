@@ -20,6 +20,19 @@ export type PortraitVideosPageProps = {
   pageData: PortraitVideoPageData;
 };
 
+export const getUniqueArticles = (articles: PortraitVideoArticle[]) => {
+  const articleIds = new Set<string>();
+
+  return articles.filter(({ url, videoId, versionId }) => {
+    const articleId = videoId && versionId ? `${videoId}-${versionId}` : url;
+
+    if (articleIds.has(articleId)) return false;
+
+    articleIds.add(articleId);
+    return true;
+  });
+};
+
 export const toCarouselBlock = ({
   url,
   title,
@@ -97,22 +110,26 @@ const PortraitVideosPage = ({ pageData }: PortraitVideosPageProps) => {
           {pageData.pageTitle}
         </Heading>
         <div className={styles.carousels}>
-          {topSlices.map(({ topicId, title, articles }, index) => (
-            <PortraitVideoCarousel
-              key={topicId}
-              title={title}
-              blocks={articles.map(toCarouselBlock)}
-              loadPlayerScripts={index === firstPlayableSliceIndex}
-              eventTrackingData={{
-                componentName: 'portrait-video-carousel-portrait-videos',
-                groupTracker: {
-                  name: title,
-                  resourceId: topicId,
-                },
-              }}
-              backgroundColor="rgba(20, 20, 20, 0.75)"
-            />
-          ))}
+          {topSlices.map(({ topicId, title, articles }, index) => {
+            const uniqueArticles = getUniqueArticles(articles);
+
+            return (
+              <PortraitVideoCarousel
+                key={topicId}
+                title={title}
+                blocks={uniqueArticles.map(toCarouselBlock)}
+                loadPlayerScripts={index === firstPlayableSliceIndex}
+                eventTrackingData={{
+                  componentName: 'portrait-video-carousel-portrait-videos',
+                  groupTracker: {
+                    name: title,
+                    resourceId: topicId,
+                  },
+                }}
+                backgroundColor="rgba(20, 20, 20, 0.75)"
+              />
+            );
+          })}
         </div>
       </div>
     </main>

@@ -10,6 +10,7 @@ import {
 import hausaPageData from '#app/lib/config/portraitVideoPages/hausa';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import PortraitVideosPage, {
+  getUniqueArticles,
   TOP_SLICES_LIMIT,
   toCarouselBlock,
 } from './PortraitVideosPage';
@@ -51,6 +52,19 @@ const playableArticle: PortraitVideoArticle = {
   videoId: 'p0123456',
   versionId: 'p0654321',
 };
+
+describe('getUniqueArticles', () => {
+  it('removes repeated media from a slice while keeping its first article', () => {
+    const duplicateArticle = {
+      ...playableArticle,
+      url: 'https://www.bbc.com/hausa/articles/duplicate',
+    };
+
+    expect(
+      getUniqueArticles([playableArticle, duplicateArticle, createArticle(1)]),
+    ).toEqual([playableArticle, createArticle(1)]);
+  });
+});
 
 describe('toCarouselBlock', () => {
   it('only creates a playable block when both media IDs are provided', () => {
