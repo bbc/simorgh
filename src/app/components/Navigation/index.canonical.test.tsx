@@ -666,6 +666,44 @@ describe('Navigation - Canonical', () => {
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
       });
+
+      it('resets the secondary scrollable row back to its start position once the bar hides', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const secondaryScroll = container.querySelector(
+          '[data-e2e="scrollable-nav-secondary"]',
+        ) as HTMLElement;
+        secondaryScroll.scrollLeft = 120;
+
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER + 1,
+        });
+        scrollTo(400);
+
+        expect(secondaryScroll.scrollLeft).toBe(0);
+      });
+
+      it('resets the secondary scrollable row when the bar merely slides out of view on scroll down, while remaining pinned', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        scrollTo(500);
+        scrollTo(450);
+        const secondaryScroll = container.querySelector(
+          '[data-e2e="scrollable-nav-secondary"]',
+        ) as HTMLElement;
+        secondaryScroll.scrollLeft = 120;
+
+        scrollTo(460);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        expect(stickyNav).toHaveStyle({ position: 'fixed' });
+        expect(secondaryScroll.scrollLeft).toBe(0);
+      });
     });
 
     describe('keyboard and dropdown accessibility', () => {

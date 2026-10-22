@@ -179,6 +179,7 @@ const CanonicalNavigationContainer: React.FC<
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
+  const secondaryScrollRef = useRef<HTMLDivElement>(null);
   // Tabbing forward can make the browser nudge the viewport upward to reveal
   // the newly focused element, which otherwise looks identical to a
   // deliberate upward scroll. Holds the timestamp until which that should be
@@ -243,6 +244,19 @@ const CanonicalNavigationContainer: React.FC<
     if (!enableStickyNavigation) {
       setStickyAnimation(INITIAL_STICKY_ANIMATION_STATE);
       return undefined;
+    }
+
+    if (!stickyState.visible) {
+      // The bar is going out of view, whether that's just sliding out of
+      // sight while scrolling down (still pinned, ready to reappear), or
+      // leaving the pinned state entirely. Either way, reset the secondary
+      // row's horizontal scroll position so it shows its first items again
+      // next time the bar appears, rather than wherever it was last left.
+      const secondaryScroll =
+        secondaryScrollRef.current?.querySelector<HTMLElement>(
+          '[data-e2e="scrollable-nav-secondary"]',
+        );
+      if (secondaryScroll) secondaryScroll.scrollLeft = 0;
     }
 
     if (!stickyState.fixed) {
@@ -548,7 +562,7 @@ const CanonicalNavigationContainer: React.FC<
               </CanonicalDropdown>
             </div>
           </div>
-          <div css={styles.lowerNavWrapper}>
+          <div css={styles.lowerNavWrapper} ref={secondaryScrollRef}>
             <ScrollableNavigation
               dir={dir}
               css={styles.bottomRowItems}
