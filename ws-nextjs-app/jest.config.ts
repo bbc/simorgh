@@ -37,9 +37,9 @@ export default async (): Promise<Config> => {
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
     testPathIgnorePatterns: [
-      '.*/app/.*',
       '.*lite\\.test\\.ts$',
       '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
     ],
   });
 
@@ -50,7 +50,12 @@ export default async (): Promise<Config> => {
     modulePaths: ['../'],
     moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
-    testMatch: ['**/integration/!(utils)/**/app/**/*.test.ts'],
+    testMatch: ['**/integration/!(utils)/**/*.test.ts'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*canonical\\.test\\.ts$',
+    ],
   });
 
   const ampIntegrationTests = await buildConfig({
@@ -61,7 +66,11 @@ export default async (): Promise<Config> => {
     moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*canonical\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   });
 
   const liteIntegrationTests = await buildConfig({
@@ -72,7 +81,11 @@ export default async (): Promise<Config> => {
     moduleNameMapper,
     setupFilesAfterEnv: ['./setupTests.ts'],
     testMatch: ['**/integration/!(utils)/**/*.test.ts'],
-    testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*canonical\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   });
 
   const unitTests = await buildConfig({
