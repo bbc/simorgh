@@ -8,7 +8,7 @@ import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
 import dariHomePage from '../../../../data/dari/homePage/index.json';
 import pidginArticlePage from '../../../../data/pidgin/articles/cnd6yxmxvp2o.json';
-import { render } from '../react-testing-library-with-providers';
+import { render, waitFor } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
   VISUAL_STYLE,
@@ -248,6 +248,39 @@ describe('Curation', () => {
   });
 
   describe('Billboard', () => {
+    it.each([
+      { prominence: HIGH, position: 0, preloadCount: 1, priority: 'high' },
+      { prominence: HIGH, position: 1, preloadCount: 0, priority: null },
+      { prominence: MAXIMUM, position: 0, preloadCount: 1, priority: 'high' },
+      { prominence: MAXIMUM, position: 1, preloadCount: 0, priority: null },
+    ])(
+      'sets image priority for a $prominence billboard at position $position',
+      async ({ prominence, position, preloadCount, priority }) => {
+        const { getByTestId } = render(
+          <Curation
+            position={position}
+            visualStyle={BANNER}
+            visualProminence={prominence}
+            summaries={billboardCuration?.summaries}
+          />,
+          { service: 'kyrgyz', pageType: 'home' },
+        );
+        const billboard = getByTestId(
+          `billboard-${prominence.toLowerCase()}-1`,
+        );
+        const image = billboard.querySelector('img');
+
+        expect(image).toBeInTheDocument();
+        expect(image?.getAttribute('fetchpriority')).toBe(priority);
+
+        await waitFor(() => {
+          expect(
+            document.head.querySelectorAll('link[rel="preload"][as="image"]'),
+          ).toHaveLength(preloadCount);
+        });
+      },
+    );
+
     it('should not be displayed if there are no promos', () => {
       render(
         <Curation
