@@ -43,6 +43,34 @@ export default ({ service }) => {
     });
   });
 
+  describe('Promo click target', () => {
+    it('should navigate when clicking the first promo container area', () => {
+      cy.get('body').then($body => {
+        if ($body.find('[data-testid="topic-promos"] li').length === 0) {
+          cy.log('No topic promos found on the page');
+          return;
+        }
+
+        cy.get('[data-testid="topic-promos"]')
+          .first()
+          .find('li')
+          .first()
+          .as('firstPromo');
+
+        cy.get('@firstPromo')
+          .find('h2 a')
+          .should('have.attr', 'href')
+          .then($href => {
+            // Click container area rather than the anchor itself to verify the full-card click target.
+            cy.get('@firstPromo').click('topRight');
+            cy.url().should('eq', $href);
+          });
+
+        cy.go('back');
+      });
+    });
+  });
+
   // Skipping this one due to a bug caused by repeatedly opening and closing the modal
   describe.skip('Portrait Video Curations', () => {
     beforeEach(() => {

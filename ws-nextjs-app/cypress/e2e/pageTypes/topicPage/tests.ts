@@ -110,6 +110,25 @@ export default ({ service, pageType, variant = 'default', path }) => {
         cy.go('back');
       });
 
+      it('Clicking the first promo container should navigate to the correct page', () => {
+        cy.get('[data-testid="topic-promos"]')
+          .first()
+          .children()
+          .first()
+          .as('firstPromo');
+
+        cy.get('@firstPromo')
+          .find('h2 a')
+          .should('have.attr', 'href')
+          .then($href => {
+            // Click container area rather than the anchor itself to verify the full-card click target.
+            cy.get('@firstPromo').click('topRight');
+            cy.url().should('eq', $href);
+          });
+
+        cy.go('back');
+      });
+
       it('clicking the message banner should navigate to the correct page', () => {
         if (messageBanner) {
           cy.get(
