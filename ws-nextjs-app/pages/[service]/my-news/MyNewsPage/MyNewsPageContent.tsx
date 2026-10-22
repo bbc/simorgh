@@ -3,8 +3,7 @@ import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import MetadataContainer from '#app/components/Metadata';
 import TopicTags from '#app/components/TopicTags';
-import Spinner from '#app/components/Spinner';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import MyNewsSpinner from '#app/components/MyNewsSpinner';
 import { RightChevron } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use, useEffect, useRef, useState } from 'react';
@@ -23,18 +22,6 @@ interface MyNewsPageContentProps {
   showSavedArticles: boolean;
   showFollowedTopics: boolean;
 }
-
-interface SectionSpinnerProps {
-  label?: string;
-  testId: string;
-}
-
-const SectionSpinner = ({ label, testId }: SectionSpinnerProps) => (
-  <div css={styles.spinnerWrapper} data-testid={testId}>
-    <VisuallyHiddenText aria-live="polite">{label}</VisuallyHiddenText>
-    <Spinner css={styles.spinner} />
-  </div>
-);
 
 const MyNewsPageContent = ({
   page,
@@ -146,7 +133,7 @@ const MyNewsPageContent = ({
           : `${followedTopicsTitle} (${followedTopics.length})`}
       </Heading>
       {topicsLoading && (
-        <SectionSpinner
+        <MyNewsSpinner
           label={loadingText}
           testId="my-news-followed-topics-spinner"
         />
@@ -185,7 +172,7 @@ const MyNewsPageContent = ({
         {description}
       </Heading>
       {articlesLoading && (
-        <SectionSpinner
+        <MyNewsSpinner
           label={loadingText}
           testId="my-news-saved-articles-spinner"
         />
