@@ -9,7 +9,10 @@ import {
 } from '#app/lib/config/portraitVideoPages';
 import hausaPageData from '#app/lib/config/portraitVideoPages/hausa';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
-import PortraitVideosPage, { TOP_TOPICS_LIMIT } from './PortraitVideosPage';
+import PortraitVideosPage, {
+  TOP_SLICES_LIMIT,
+  toCarouselBlock,
+} from './PortraitVideosPage';
 
 jest.mock('#app/components/ATIAnalytics', () => ({
   __esModule: true,
@@ -29,20 +32,47 @@ const createArticle = (index: number): PortraitVideoArticle => ({
   imgAlt: `Image ${index}`,
 });
 
-const createTopics = (count: number): PortraitVideoPageData => ({
+const createSlices = (count: number): PortraitVideoPageData => ({
   pageTitle: 'Portrait videos',
-  topicTitles: Object.fromEntries(
-    Array.from({ length: count }, (_, index) => [
-      `topic-${index}`,
-      `Topic ${index}`,
-    ]),
-  ),
-  topics: Object.fromEntries(
-    Array.from({ length: count }, (_, index) => [
-      `topic-${index}`,
-      [createArticle(index)],
-    ]),
-  ),
+  slices: Array.from({ length: count }, (_, index) => ({
+    topicId: `topic-${index}`,
+    title: `Topic ${index}`,
+    articles: [createArticle(index)],
+  })),
+});
+
+const playableArticle: PortraitVideoArticle = {
+  ...createArticle(0),
+  media: {
+    id: 'urn:bbc:optimo:asset:playable',
+    versionId: 'p0123456',
+    holdingImageURL: 'https://ichef.test.bbci.co.uk/holding-image.jpg',
+    isEmbeddingAllowed: false,
+    territories: ['uk', 'nonuk'],
+  },
+};
+
+describe('toCarouselBlock', () => {
+  it('only creates a playable block when explicit media IDs are provided', () => {
+    expect(toCarouselBlock(playableArticle)).toMatchObject({
+      model: {
+        video: {
+          id: playableArticle.media?.id,
+          version: {
+            id: playableArticle.media?.versionId,
+          },
+        },
+      },
+    });
+
+    expect(toCarouselBlock(createArticle(1))).toMatchObject({
+      model: {
+        video: {
+          articleUrl: 'https://www.bbc.com/hausa/articles/article-1',
+        },
+      },
+    });
+  });
 });
 
 describe('PortraitVideosPage', () => {
@@ -50,7 +80,7 @@ describe('PortraitVideosPage', () => {
     mockMatchMedia();
   });
 
-  it('renders Hausa article records as links rather than playable modal buttons', async () => {
+  it('renders Hausa article records as links on a dark page', async () => {
     await act(async () => {
       render(<PortraitVideosPage pageData={hausaPageData} />, {
         service: 'hausa',
@@ -58,6 +88,7 @@ describe('PortraitVideosPage', () => {
       });
     });
 
+    expect(screen.getByRole('main')).toHaveAttribute('data-is-dark-ui', 'true');
     expect(
       screen.getByRole('heading', {
         level: 1,
@@ -71,14 +102,14 @@ describe('PortraitVideosPage', () => {
     expect(screen.queryByTestId('promo-button')).not.toBeInTheDocument();
     expect(screen.getAllByTestId('promo-link')[0]).toHaveAttribute(
       'href',
-      hausaPageData.topics.c2dwqj031y7t[0].url,
+      hausaPageData.slices[0].articles[0].url,
     );
   });
 
-  it('only renders the configured number of top topics', async () => {
+  it('only renders the configured number of top slices', async () => {
     await act(async () => {
       render(
-        <PortraitVideosPage pageData={createTopics(TOP_TOPICS_LIMIT + 1)} />,
+        <PortraitVideosPage pageData={createSlices(TOP_SLICES_LIMIT + 1)} />,
         {
           service: 'hausa',
           pageType: 'static',
@@ -87,10 +118,10 @@ describe('PortraitVideosPage', () => {
     });
 
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(
-      TOP_TOPICS_LIMIT,
+      TOP_SLICES_LIMIT,
     );
     expect(
-      screen.queryByRole('heading', { name: `Topic ${TOP_TOPICS_LIMIT}` }),
+      screen.queryByRole('heading', { name: `Topic ${TOP_SLICES_LIMIT}` }),
     ).not.toBeInTheDocument();
   });
 });

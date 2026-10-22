@@ -2,12 +2,18 @@
 
 .main {
   width: 100%;
-  max-width: theme.$gridWidths-grid-width-1008;
-  margin-inline: auto;
+  min-height: 100%;
+  background-color: theme.$palette-black;
   padding: theme.$spacings-double;
 }
 
-.heading {
+.inner {
+  max-width: theme.$gridWidths-grid-width-1008;
+  margin-inline: auto;
+}
+
+h1.heading {
+  color: theme.$palette-white;
   margin-block-end: theme.$spacings-quadruple;
 }
 

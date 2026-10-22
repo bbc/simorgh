@@ -3,7 +3,10 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import Heading from '#app/components/Heading';
 import MetadataContainer from '#app/components/Metadata';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-import { PortraitVideoArticleBlock } from '#app/components/PortraitVideoCarousel/types';
+import {
+  PortraitVideoArticleBlock,
+  PortraitVideoCarouselBlock,
+} from '#app/components/PortraitVideoCarousel/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import {
   PortraitVideoArticle,
@@ -11,43 +14,73 @@ import {
 } from '#app/lib/config/portraitVideoPages';
 import styles from './index.module.scss';
 
-export const TOP_TOPICS_LIMIT = 5;
+export const TOP_SLICES_LIMIT = 6;
 
 export type PortraitVideosPageProps = {
   pageData: PortraitVideoPageData;
 };
 
-const toCarouselBlock = ({
+export const toCarouselBlock = ({
   url,
   title,
   duration,
   imgSrc,
   imgAlt,
-}: PortraitVideoArticle): PortraitVideoArticleBlock => ({
-  type: 'portraitClipMedia',
-  model: {
-    type: 'video',
-    images: [
-      {
-        source: imgSrc,
-        urlTemplate: imgSrc.replace('/240/', '/{width}/'),
-        altText: imgAlt,
-      },
-    ],
-    video: {
-      title,
-      version: { duration },
-      articleUrl: url,
+  media,
+}: PortraitVideoArticle): PortraitVideoCarouselBlock => {
+  const images = [
+    {
+      source: imgSrc,
+      urlTemplate: imgSrc.replace('/240/', '/{width}/'),
+      altText: imgAlt,
     },
-  },
-});
+  ];
+
+  if (media) {
+    return {
+      type: 'portraitClipMedia',
+      model: {
+        type: 'video',
+        images,
+        video: {
+          id: media.id,
+          title,
+          holdingImageURL: media.holdingImageURL,
+          version: {
+            id: media.versionId,
+            duration,
+            kind: media.kind ?? 'programme',
+            guidance: media.guidance ?? null,
+            territories: media.territories,
+          },
+          isEmbeddingAllowed: media.isEmbeddingAllowed,
+        },
+      },
+    };
+  }
+
+  const articleBlock: PortraitVideoArticleBlock = {
+    type: 'portraitClipMedia',
+    model: {
+      type: 'video',
+      images,
+      video: {
+        title,
+        version: { duration },
+        articleUrl: url,
+      },
+    },
+  };
+
+  return articleBlock;
+};
 
 const PortraitVideosPage = ({ pageData }: PortraitVideosPageProps) => {
   const { lang } = use(ServiceContext);
-  const topTopics = Object.entries(pageData.topics).slice(0, TOP_TOPICS_LIMIT);
+  const topSlices = pageData.slices.slice(0, TOP_SLICES_LIMIT);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} data-is-dark-ui="true">
       <ATIAnalytics />
       <MetadataContainer
         title={pageData.pageTitle}
@@ -55,28 +88,27 @@ const PortraitVideosPage = ({ pageData }: PortraitVideosPageProps) => {
         hasAmpPage={false}
         lang={lang}
       />
-      <Heading level={1} className={styles.heading}>
-        {pageData.pageTitle}
-      </Heading>
-      <div className={styles.carousels}>
-        {topTopics.map(([topicId, articles]) => {
-          const topicTitle = pageData.topicTitles[topicId] ?? topicId;
-
-          return (
+      <div className={styles.inner}>
+        <Heading level={1} className={styles.heading}>
+          {pageData.pageTitle}
+        </Heading>
+        <div className={styles.carousels}>
+          {topSlices.map(({ topicId, title, articles }) => (
             <PortraitVideoCarousel
               key={topicId}
-              title={topicTitle}
+              title={title}
               blocks={articles.map(toCarouselBlock)}
               eventTrackingData={{
                 componentName: 'portrait-video-carousel-portrait-videos',
                 groupTracker: {
-                  name: topicTitle,
+                  name: title,
                   resourceId: topicId,
                 },
               }}
+              backgroundColor="rgba(20, 20, 20, 0.75)"
             />
-          );
-        })}
+          ))}
+        </div>
       </div>
     </main>
   );

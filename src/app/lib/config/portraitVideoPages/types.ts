@@ -5,10 +5,24 @@ export type PortraitVideoArticle = {
   published: string;
   imgSrc: string;
   imgAlt: string;
+  media?: {
+    id: string;
+    versionId: string;
+    holdingImageURL?: string;
+    kind?: string;
+    guidance?: string | null;
+    territories?: string[];
+    isEmbeddingAllowed: boolean;
+  };
+};
+
+export type PortraitVideoSlice = {
+  topicId: string;
+  title: string;
+  articles: PortraitVideoArticle[];
 };
 
 export type PortraitVideoPageData = {
   pageTitle: string;
-  topicTitles: Record<string, string>;
-  topics: Record<string, PortraitVideoArticle[]>;
+  slices: PortraitVideoSlice[];
 };

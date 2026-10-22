@@ -15,6 +15,10 @@
   color: theme.$palette-grey-10;
   margin: 0;
 
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-white;
+  }
+
   @media #{theme.$mediaQueries-group-3-min-width} {
     margin-block-start: theme.$spacings-double;
   }

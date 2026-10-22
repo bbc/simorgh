@@ -99,13 +99,13 @@
   height: #{theme.pixelsToRem-px-to-rem(12)};
 }
 
-.duration {
+span.duration {
   color: theme.$palette-white;
   margin: 0;
   margin-inline-start: theme.$spacings-half;
 }
 
-.title {
+span.title {
   display: block;
   color: theme.$palette-white;
   margin: theme.$spacings-full 0 0;
