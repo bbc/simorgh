@@ -323,22 +323,25 @@ describe('useTopicFollowButton', () => {
   });
 
   describe('error tracking', () => {
-    it('tracks a failed user-initiated follow/unfollow action', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(mockError);
-      const { result } = renderHook(() => useTopicFollowButton(topicData));
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'tracks a failed user-initiated %s action',
+      async action => {
+        mockUasApiRequest.mockRejectedValueOnce(mockError);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
 
-      await act(async () => {
-        await expect(
-          result.current.handleFollowAction(FollowAction.UNFOLLOW),
-        ).rejects.toThrow(mockError);
-      });
+        await act(async () => {
+          await expect(
+            result.current.handleFollowAction(action),
+          ).rejects.toThrow(mockError);
+        });
 
-      expect(mockTrackError).toHaveBeenCalledWith({
-        error: mockError,
-        feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
-        action: FollowAction.UNFOLLOW,
-      });
-    });
+        expect(mockTrackError).toHaveBeenCalledWith({
+          error: mockError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action,
+        });
+      },
+    );
 
     it('tracks a failed background metadata resync', async () => {
       mockUasApiRequest.mockRejectedValueOnce(mockError);
