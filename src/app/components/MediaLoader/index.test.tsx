@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { StrictMode } from 'react';
 import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
+import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import {
   HOME_PAGE,
   LIVE_PAGE,
@@ -18,19 +19,74 @@ import {
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
-import { MediaBlock } from './types';
+import { BumpType, MediaBlock, Player, PlayerConfig } from './types';
 import { fakeFullscreenStyles } from './index.styles';
 import * as buildConfig from './utils/buildSettings';
+
+// Jest hoists module factories above imports, so this reference must be
+// initialized by the factory before the tests use it.
+// eslint-disable-next-line no-var
+var mockLogger: { error: jest.Mock };
+
+const REQUIRE_JS_SRC =
+  'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js';
+
+type MockRequire = jest.Mock<unknown, unknown[]> & {
+  config: jest.Mock;
+};
+
+const createMockRequire = (): MockRequire => {
+  const mockRequire = jest.fn() as MockRequire;
+  mockRequire.config = jest.fn();
+  return mockRequire;
+};
+
+const createMockPlayer = (): jest.Mocked<Player> => ({
+  currentTime: jest.fn(),
+  dispatchEvent: jest.fn(),
+  load: jest.fn(),
+  play: jest.fn(),
+  playlist: jest.fn(),
+  pause: jest.fn(),
+  previous: jest.fn(),
+  next: jest.fn(),
+  bind: jest.fn(),
+  loadPlugin: jest.fn(),
+  queuePlaylist: jest.fn(),
+  setPreviousPlaylist: jest.fn(),
+  settings: jest.fn(),
+});
+
+const createMockBump = (
+  player = createMockPlayer(),
+): jest.Mocked<BumpType> => ({
+  player: jest.fn(
+    (_div: HTMLDivElement | null, _config: PlayerConfig) => player,
+  ),
+});
+
+const loadRequireJsScript = async () => {
+  const requireScript = Array.from(document.scripts).find(
+    script => script.getAttribute('src') === REQUIRE_JS_SRC,
+  );
+
+  if (!requireScript) return;
+
+  await act(async () => {
+    requireScript.dispatchEvent(new Event('load'));
+    await Promise.resolve();
+  });
+};
 
 jest.mock('./utils/buildSettings', () => ({
   __esModule: true,
   ...jest.requireActual('./utils/buildSettings'),
 }));
 
-jest.mock('react', () => ({
-  ...jest.requireActual('react'),
-  useState: jest.fn(),
-}));
+jest.mock('../../lib/logger.node', () => {
+  mockLogger = { error: jest.fn() };
+  return jest.fn(() => mockLogger);
+});
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -43,20 +99,205 @@ jest.mock('#app/hooks/useLocation');
 describe('MediaLoader', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+    mockLogger.error.mockClear();
 
     (useLocation as jest.Mock).mockImplementation(() => ({ search: '' }));
-    (useState as jest.Mock).mockImplementation(() => [false, () => false]);
+    window.requirejs = createMockRequire();
+    window.mediaPlayers = {};
   });
 
   describe('BUMP Loader', () => {
+    it('coordinates simultaneously mounted loaders from a cold RequireJS start', async () => {
+      delete window.requirejs;
+
+      const mockRequire = createMockRequire();
+      const firstPlayer = createMockPlayer();
+      const secondPlayer = createMockPlayer();
+      const mockBump = createMockBump(firstPlayer);
+      mockBump.player
+        .mockReturnValueOnce(firstPlayer)
+        .mockReturnValueOnce(secondPlayer);
+
+      await act(async () => {
+        render(
+          <>
+            <MediaPlayer
+              blocks={aresMediaBlocks as MediaBlock[]}
+              uniqueId="first"
+            />
+            <MediaPlayer
+              blocks={aresMediaBlocks as MediaBlock[]}
+              uniqueId="second"
+            />
+          </>,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      expect(
+        document.querySelectorAll(`script[src="${REQUIRE_JS_SRC}"]`),
+      ).toHaveLength(1);
+      expect(mockRequire).not.toHaveBeenCalled();
+
+      window.requirejs = mockRequire;
+      await loadRequireJsScript();
+
+      expect(mockRequire.config).toHaveBeenCalledTimes(1);
+      expect(mockRequire).toHaveBeenCalledTimes(2);
+
+      const loadBumpCallbacks = mockRequire.mock.calls.map(
+        ([, callback]) => callback as (Bump: BumpType) => void,
+      );
+      await act(async () => {
+        loadBumpCallbacks.forEach(callback => callback(mockBump));
+      });
+
+      expect(firstPlayer.load).toHaveBeenCalledTimes(1);
+      expect(secondPlayer.load).toHaveBeenCalledTimes(1);
+      expect(window.mediaPlayers).toEqual({
+        first: firstPlayer,
+        second: secondPlayer,
+      });
+    });
+
+    it('cancels a stale readiness wait when player props change', async () => {
+      delete window.requirejs;
+
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const mockBump = createMockBump(mockPlayer);
+      const initialBlocks = aresMediaBlocks as MediaBlock[];
+      const updatedBlocks = [...initialBlocks];
+
+      const { rerender } = render(
+        <MediaPlayer blocks={initialBlocks} uniqueId="testId" />,
+        {
+          id: 'testId',
+          pageType: LIVE_PAGE,
+        },
+      );
+
+      rerender(<MediaPlayer blocks={updatedBlocks} uniqueId="testId" />);
+
+      window.requirejs = mockRequire;
+      await loadRequireJsScript();
+
+      expect(mockRequire.config).toHaveBeenCalledTimes(1);
+      expect(mockRequire).toHaveBeenCalledTimes(1);
+
+      const loadBump = mockRequire.mock.calls[0][1] as (Bump: BumpType) => void;
+      await act(async () => loadBump(mockBump));
+
+      expect(mockBump.player).toHaveBeenCalledTimes(1);
+      expect(mockPlayer.load).toHaveBeenCalledTimes(1);
+    });
+
+    it('cancels a pending readiness wait when the loader unmounts', async () => {
+      delete window.requirejs;
+
+      const mockRequire = createMockRequire();
+      const mockBump = createMockBump();
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+        {
+          id: 'testId',
+          pageType: LIVE_PAGE,
+        },
+      );
+
+      unmount();
+      window.requirejs = mockRequire;
+      await loadRequireJsScript();
+
+      expect(mockRequire).not.toHaveBeenCalled();
+      expect(mockBump.player).not.toHaveBeenCalled();
+    });
+
+    it('does not initialize twice under StrictMode', async () => {
+      const mockRequire = createMockRequire();
+      const mockBump = createMockBump();
+      window.requirejs = mockRequire;
+
+      render(
+        <StrictMode>
+          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />
+        </StrictMode>,
+        {
+          id: 'testId',
+          pageType: LIVE_PAGE,
+        },
+      );
+
+      await act(async () => Promise.resolve());
+
+      expect(mockRequire.config).toHaveBeenCalledTimes(1);
+      expect(mockRequire).toHaveBeenCalledTimes(1);
+
+      const loadBump = mockRequire.mock.calls[0][1] as (Bump: BumpType) => void;
+      await act(async () => loadBump(mockBump));
+
+      expect(mockBump.player).toHaveBeenCalledTimes(1);
+    });
+
+    it('cancels player continuation while waiting for an ad tag', async () => {
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const mockBump = createMockBump(mockPlayer);
+      let resolveAdTag: (adTag: string) => void = () => undefined;
+      const adTag = new Promise<string>(resolve => {
+        resolveAdTag = resolve;
+      });
+
+      window.requirejs = mockRequire;
+
+      const { rerender } = render(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          uniqueId="testId"
+        />,
+        {
+          id: 'testId',
+          pageType: LIVE_PAGE,
+          showAdsBasedOnLocation: true,
+          toggles: { preroll: { enabled: true } },
+        },
+      );
+      await loadRequireJsScript();
+
+      window.dotcom.ads.getAdTag = jest.fn(() => adTag);
+      const loadBump = mockRequire.mock.calls[0][1] as (Bump: BumpType) => void;
+      await act(async () => loadBump(mockBump));
+
+      rerender(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          uniqueId="testId"
+          eventMapping={{ pause: jest.fn() }}
+        />,
+      );
+
+      await act(async () => {
+        resolveAdTag('test-ad-tag');
+        await adTag;
+      });
+
+      expect(mockPlayer.load).not.toHaveBeenCalled();
+      expect(window.mediaPlayers.testId).toBeUndefined();
+    });
+
     it('Loads Ads, requireJS and Bump4 when Preroll Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
+          pageType: LIVE_PAGE,
           showAdsBasedOnLocation: true,
           toggles: { preroll: { enabled: true } },
         });
       });
+      await loadRequireJsScript();
 
       const helmetScriptTags = Helmet.peek().scriptTags;
 
@@ -68,13 +309,9 @@ describe('MediaLoader', () => {
         tag?.src?.endsWith('dotcom-bootstrap-legacy.js'),
       )?.src;
 
-      const requireScript = helmetScriptTags.find(tag =>
-        tag?.src?.endsWith('require.js'),
+      const requireScript = Array.from(document.scripts).find(script =>
+        script.src.endsWith('require.js'),
       )?.src;
-
-      const bumpScript = helmetScriptTags.find(tag =>
-        tag?.innerHTML?.includes('bump-4'),
-      )?.innerHTML;
 
       expect(adScript).toEqual(
         'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js',
@@ -84,66 +321,108 @@ describe('MediaLoader', () => {
         'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap-legacy.js',
       );
 
-      expect(requireScript).toEqual(
-        'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js',
-      );
-
-      expect(bumpScript).toContain('https://emp.bbci.co.uk/emp/bump-4/bump-4');
+      expect(requireScript).toEqual(REQUIRE_JS_SRC);
     });
 
     it('Loads requireJS and Bump4 when Ads are disabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
+          pageType: LIVE_PAGE,
         });
       });
+      await loadRequireJsScript();
 
-      const helmetScriptTags = Helmet.peek().scriptTags;
-
-      const requireScript = helmetScriptTags.find(tag =>
-        tag?.src?.endsWith('require.js'),
+      const requireScript = Array.from(document.scripts).find(script =>
+        script.src.endsWith('require.js'),
       )?.src;
 
-      const bumpScript = helmetScriptTags.find(tag =>
-        tag?.innerHTML?.includes('bump-4'),
-      )?.innerHTML;
-
-      expect(requireScript).toEqual(
-        'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js',
-      );
-
-      expect(bumpScript).toContain('https://emp.bbci.co.uk/emp/bump-4/bump-4');
+      expect(requireScript).toEqual(REQUIRE_JS_SRC);
     });
 
     it('Calls Bump when the component loads', async () => {
-      const mockRequire = jest.fn();
+      const mockRequire = createMockRequire();
 
       window.requirejs = mockRequire;
 
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
+          pageType: LIVE_PAGE,
         });
       });
 
+      await loadRequireJsScript();
+
       expect(mockRequire.mock.calls[0][0]).toStrictEqual(['bump-4']);
+      expect(mockRequire.config).toHaveBeenCalledWith({
+        paths: { 'bump-4': 'https://emp.bbci.co.uk/emp/bump-4/bump-4' },
+        waitSeconds: 30,
+      });
+    });
+
+    it('configures RequireJS once for simultaneously mounted loaders', async () => {
+      const mockRequire = createMockRequire();
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(
+          <>
+            <MediaPlayer
+              blocks={aresMediaBlocks as MediaBlock[]}
+              uniqueId="first"
+            />
+            <MediaPlayer
+              blocks={aresMediaBlocks as MediaBlock[]}
+              uniqueId="second"
+            />
+          </>,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      await loadRequireJsScript();
+
+      expect(mockRequire.config).toHaveBeenCalledTimes(1);
+      expect(mockRequire).toHaveBeenCalledTimes(2);
+    });
+
+    it('initializes a remounted loader when RequireJS is cached', async () => {
+      const mockRequire = createMockRequire();
+      window.requirejs = mockRequire;
+
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+        {
+          id: 'testId',
+          pageType: LIVE_PAGE,
+        },
+      );
+
+      await loadRequireJsScript();
+      expect(mockRequire).toHaveBeenCalledTimes(1);
+
+      unmount();
+
+      render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+        id: 'testId',
+        pageType: LIVE_PAGE,
+      });
+      await act(async () => Promise.resolve());
+
+      expect(mockRequire.config).toHaveBeenCalledTimes(1);
+      expect(mockRequire).toHaveBeenCalledTimes(2);
     });
 
     it('Loads the player immediately with autoplay disabled when requested', async () => {
-      const mockRequire = jest.fn();
-      const mockPlayer = {
-        load: jest.fn(),
-        bind: jest.fn(),
-      };
-      const mockBump = {
-        player: jest.fn(() => mockPlayer),
-      };
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const mockBump = createMockBump(mockPlayer);
 
       window.requirejs = mockRequire;
-      (useState as jest.Mock).mockImplementation(initialValue => [
-        initialValue,
-        jest.fn(),
-      ]);
 
       let container;
 
@@ -159,6 +438,7 @@ describe('MediaLoader', () => {
           },
         ));
       });
+      await loadRequireJsScript();
 
       expect(
         (container as unknown as HTMLElement).querySelector(
@@ -171,7 +451,9 @@ describe('MediaLoader', () => {
         ),
       ).toBeInTheDocument();
 
-      const callbackFn = mockRequire.mock.calls[0][1];
+      const callbackFn = mockRequire.mock.calls[0][1] as (
+        Bump: BumpType,
+      ) => void;
       await act(async () => callbackFn(mockBump));
 
       expect(mockBump.player).toHaveBeenCalledWith(
@@ -184,13 +466,8 @@ describe('MediaLoader', () => {
     });
 
     it('Adds a media player object to the window with a specified uniqueId', async () => {
-      const mockRequire = jest.fn();
-      const mockBump = {
-        player: () => ({
-          bind: jest.fn(),
-          load: jest.fn(),
-        }),
-      };
+      const mockRequire = createMockRequire();
+      const mockBump = createMockBump();
 
       window.requirejs = mockRequire;
 
@@ -202,35 +479,39 @@ describe('MediaLoader', () => {
           />,
           {
             id: 'testId',
+            pageType: LIVE_PAGE,
           },
         );
       });
+      await loadRequireJsScript();
 
-      const callbackFn = mockRequire.mock.calls[0][1];
+      const callbackFn = mockRequire.mock.calls[0][1] as (
+        Bump: BumpType,
+      ) => void;
       callbackFn(mockBump);
 
       expect(window.mediaPlayers.testId).not.toBeNull();
     });
 
     it('adds and removes fullscreen classes on fake fullscreen enter/exit events', async () => {
-      const mockRequire = jest.fn();
-      const bind = jest.fn();
-      const mockBump = {
-        player: () => ({
-          bind,
-          load: jest.fn(),
-        }),
-      };
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const { bind } = mockPlayer;
+      const mockBump = createMockBump(mockPlayer);
 
       window.requirejs = mockRequire;
 
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
+          pageType: LIVE_PAGE,
         });
       });
+      await loadRequireJsScript();
 
-      const callbackFn = mockRequire.mock.calls[0][1];
+      const callbackFn = mockRequire.mock.calls[0][1] as (
+        Bump: BumpType,
+      ) => void;
       callbackFn(mockBump);
 
       const enterFakeFullscreen = bind.mock.calls.find(
@@ -242,6 +523,9 @@ describe('MediaLoader', () => {
 
       expect(typeof enterFakeFullscreen).toBe('function');
       expect(typeof exitFakeFullscreen).toBe('function');
+      if (!enterFakeFullscreen || !exitFakeFullscreen) {
+        throw new Error('Expected fake fullscreen handlers to be bound');
+      }
 
       act(() => {
         enterFakeFullscreen({});
@@ -266,14 +550,10 @@ describe('MediaLoader', () => {
 
     it('composes caller fake fullscreen handlers with internal fullscreen handlers', async () => {
       const onEnterFakeFullscreen = jest.fn();
-      const mockRequire = jest.fn();
-      const bind = jest.fn();
-      const mockBump = {
-        player: () => ({
-          bind,
-          load: jest.fn(),
-        }),
-      };
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const { bind } = mockPlayer;
+      const mockBump = createMockBump(mockPlayer);
 
       window.requirejs = mockRequire;
 
@@ -285,11 +565,15 @@ describe('MediaLoader', () => {
           />,
           {
             id: 'testId',
+            pageType: LIVE_PAGE,
           },
         );
       });
+      await loadRequireJsScript();
 
-      const callbackFn = mockRequire.mock.calls[0][1];
+      const callbackFn = mockRequire.mock.calls[0][1] as (
+        Bump: BumpType,
+      ) => void;
       callbackFn(mockBump);
 
       const enterFakeFullscreenBindings = bind.mock.calls.filter(
@@ -309,14 +593,10 @@ describe('MediaLoader', () => {
     });
 
     it('does not bind fake fullscreen handlers for audio players', async () => {
-      const mockRequire = jest.fn();
-      const bind = jest.fn();
-      const mockBump = {
-        player: () => ({
-          bind,
-          load: jest.fn(),
-        }),
-      };
+      const mockRequire = createMockRequire();
+      const mockPlayer = createMockPlayer();
+      const { bind } = mockPlayer;
+      const mockBump = createMockBump(mockPlayer);
 
       window.requirejs = mockRequire;
 
@@ -331,8 +611,11 @@ describe('MediaLoader', () => {
           },
         );
       });
+      await loadRequireJsScript();
 
-      const callbackFn = mockRequire.mock.calls[0][1];
+      const callbackFn = mockRequire.mock.calls[0][1] as (
+        Bump: BumpType,
+      ) => void;
       callbackFn(mockBump);
 
       const fakeFullscreenBindings = bind.mock.calls.filter(([event]) =>
@@ -344,10 +627,6 @@ describe('MediaLoader', () => {
   });
 
   describe('Placeholder', () => {
-    beforeEach(() => {
-      (useState as jest.Mock).mockImplementation(() => [true, () => true]);
-    });
-
     it('Displays a placeholder image and playbutton', async () => {
       let container;
 
@@ -636,5 +915,30 @@ describe('MediaLoader', () => {
 
       expect(document.getElementById(FAKE_FULLSCREEN_STYLE_ID)).toBeNull();
     });
+  });
+
+  it('logs RequireJS configuration errors without initializing the player', async () => {
+    const mockRequire = createMockRequire();
+    const configurationError = new Error('Unable to configure RequireJS');
+    mockRequire.config.mockImplementation(() => {
+      throw configurationError;
+    });
+    window.requirejs = mockRequire;
+
+    await act(async () => {
+      render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+        id: 'testId',
+        pageType: LIVE_PAGE,
+      });
+    });
+
+    await loadRequireJsScript();
+
+    expect(mockLogger.error).toHaveBeenCalledWith(
+      MEDIA_PLAYER_STATUS,
+      configurationError,
+    );
+    expect(mockLogger.error).toHaveBeenCalledTimes(1);
+    expect(mockRequire).not.toHaveBeenCalled();
   });
 });

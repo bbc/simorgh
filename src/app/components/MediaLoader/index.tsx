@@ -1,5 +1,6 @@
 import { use, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import Script from 'next/script';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -52,20 +53,177 @@ type BumpLoaderProps = {
   nonce?: string | null;
 };
 
+type RequireJs = NonNullable<Window['requirejs']>;
+
+const REQUIRE_JS_SRC =
+  'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js';
+const BUMP_SRC = 'https://emp.bbci.co.uk/emp/bump-4/bump-4';
+const REQUIRE_JS_SCRIPT_ID = 'simorgh-requirejs';
+
+type RequireJsListener = {
+  resolve: (readiness: RequireJsReadiness) => void;
+};
+
+type RequireJsReadiness =
+  | { status: 'ready'; requireJs: RequireJs }
+  | { status: 'failed'; error: unknown };
+
+type RequireJsWait = {
+  promise: Promise<RequireJsReadiness>;
+  cancel: () => void;
+};
+
+let configuredRequireJs: RequireJs | undefined;
+let failedRequireJs: RequireJs | null | undefined;
+let requireJsFailure: unknown;
+const requireJsListeners = new Set<RequireJsListener>();
+
+const getRequireJs = () =>
+  typeof window === 'undefined' ? undefined : window.requirejs;
+
+const resetRequireJsStateIfNeeded = (requireJs: RequireJs | undefined) => {
+  if (
+    requireJs &&
+    ((configuredRequireJs && configuredRequireJs !== requireJs) ||
+      (failedRequireJs !== undefined && failedRequireJs !== requireJs))
+  ) {
+    configuredRequireJs = undefined;
+    failedRequireJs = undefined;
+    requireJsFailure = undefined;
+  }
+};
+
+const failRequireJs = (error: unknown) => {
+  const requireJs = getRequireJs();
+  const failedRequireJsKey = requireJs || null;
+
+  if (failedRequireJs === failedRequireJsKey) return;
+
+  configuredRequireJs = undefined;
+  failedRequireJs = failedRequireJsKey;
+  requireJsFailure = error;
+  requireJsListeners.forEach(({ resolve }) =>
+    resolve({ status: 'failed', error }),
+  );
+  requireJsListeners.clear();
+  logger.error(MEDIA_PLAYER_STATUS, error);
+};
+
+const configureRequireJs = (): RequireJs => {
+  const requireJs = getRequireJs();
+
+  if (!requireJs) {
+    const error = new Error('RequireJS did not load');
+    failRequireJs(error);
+    throw error;
+  }
+
+  resetRequireJsStateIfNeeded(requireJs);
+
+  if (configuredRequireJs === requireJs) return requireJs;
+  if (failedRequireJs === requireJs) throw requireJsFailure;
+
+  try {
+    requireJs.config({
+      paths: { 'bump-4': BUMP_SRC },
+      waitSeconds: 30,
+    });
+    configuredRequireJs = requireJs;
+    failedRequireJs = undefined;
+    requireJsFailure = undefined;
+    requireJsListeners.forEach(({ resolve }) =>
+      resolve({ status: 'ready', requireJs }),
+    );
+    requireJsListeners.clear();
+    return requireJs;
+  } catch (error) {
+    failRequireJs(error);
+    throw error;
+  }
+};
+
+const handleRequireJsReady = (requireJsShouldExist = false) => {
+  if (!getRequireJs()) {
+    if (requireJsShouldExist && failedRequireJs === undefined) {
+      failRequireJs(new Error('RequireJS did not load'));
+    }
+    return;
+  }
+
+  try {
+    configureRequireJs();
+  } catch {
+    // Configuration errors are logged by failRequireJs.
+  }
+};
+
+const handleRequireJsError = (error: unknown) => {
+  failRequireJs(error);
+};
+
+const waitForRequireJs = (): RequireJsWait => {
+  const requireJs = getRequireJs();
+  resetRequireJsStateIfNeeded(requireJs);
+
+  if (requireJs && configuredRequireJs === requireJs) {
+    return {
+      promise: Promise.resolve({ status: 'ready', requireJs }),
+      cancel: () => undefined,
+    };
+  }
+
+  if (
+    failedRequireJs !== undefined &&
+    (!requireJs || failedRequireJs === requireJs)
+  ) {
+    return {
+      promise: Promise.resolve({
+        status: 'failed',
+        error: requireJsFailure,
+      }),
+      cancel: () => undefined,
+    };
+  }
+
+  if (requireJs) {
+    try {
+      return {
+        promise: Promise.resolve({
+          status: 'ready',
+          requireJs: configureRequireJs(),
+        }),
+        cancel: () => undefined,
+      };
+    } catch (error) {
+      return {
+        promise: Promise.resolve({ status: 'failed', error }),
+        cancel: () => undefined,
+      };
+    }
+  }
+
+  let listener: RequireJsListener;
+  const promise = new Promise<RequireJsReadiness>(resolve => {
+    listener = { resolve };
+    requireJsListeners.add(listener);
+  });
+
+  return {
+    promise,
+    cancel: () => requireJsListeners.delete(listener),
+  };
+};
+
 export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
-  <Helmet>
-    <script
-      type="text/javascript"
-      {...(nonce ? { nonce } : {})}
-      src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
-    />
-    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
-      {`bbcRequireMap = {
-            "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
-        }
-        require({ paths: bbcRequireMap, waitSeconds: 30 });`}
-    </script>
-  </Helmet>
+  <Script
+    id={REQUIRE_JS_SCRIPT_ID}
+    strategy="afterInteractive"
+    nonce={nonce || undefined}
+    src={REQUIRE_JS_SRC}
+    onLoad={() => handleRequireJsReady(true)}
+    onReady={handleRequireJsReady}
+    onError={handleRequireJsError}
+  />
 );
 
 const AdvertTagLoader = () => {
@@ -178,97 +336,151 @@ const MediaContainer = ({
   onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
-    try {
-      window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef?.current && playerConfig) {
-          const initPlayer = async () => {
-            const autoplayOverride = loadPlayerOnInitialRender
-              ? { autoplay: false }
-              : {};
-            const fakeFullscreenOverride = shouldHandleFakeFullscreen
-              ? { supportFakeFullscreen: true }
-              : {};
+    let isCancelled = false;
+    let registeredPlayer: ReturnType<BumpType['player']> | undefined;
+    const requireJsWait = waitForRequireJs();
 
-            const effectiveConfig = {
-              ...playerConfig,
-              ...autoplayOverride,
-              ...fakeFullscreenOverride,
-            };
+    const removeRegisteredPlayer = () => {
+      if (uniqueId == null || !registeredPlayer) return;
 
-            const mediaPlayer = Bump.player(
-              playerElementRef.current,
-              effectiveConfig,
-            );
+      if (window.mediaPlayers?.[uniqueId] === registeredPlayer) {
+        delete window.mediaPlayers[uniqueId];
+      }
+    };
 
-            if (uniqueId != null) {
-              const { mediaPlayers } = window;
-              if (mediaPlayers == null) {
-                window.mediaPlayers = { [uniqueId]: mediaPlayer };
-              } else {
-                mediaPlayers[uniqueId] = mediaPlayer;
-              }
-            }
+    const initPlayer = async (Bump: BumpType) => {
+      if (isCancelled || !playerElementRef.current || !playerConfig) return;
 
-            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-              Object.keys(eventMapping).forEach(bindingKey => {
-                const key = bindingKey as MediaPlayerEvents;
-                const handler = eventMapping[key];
+      const autoplayOverride = loadPlayerOnInitialRender
+        ? { autoplay: false }
+        : {};
+      const fakeFullscreenOverride = shouldHandleFakeFullscreen
+        ? { supportFakeFullscreen: true }
+        : {};
 
-                if (handler) mediaPlayer.bind(key, handler);
-              });
-            }
+      const effectiveConfig = {
+        ...playerConfig,
+        ...autoplayOverride,
+        ...fakeFullscreenOverride,
+      };
 
-            if (shouldHandleFakeFullscreen) {
-              mediaPlayer.bind('enterFakeFullscreen', () => {
-                onFakeFullscreenChangeRef.current?.(true);
-              });
-              mediaPlayer.bind('exitFakeFullscreen', () => {
-                onFakeFullscreenChangeRef.current?.(false);
-              });
-            }
+      const mediaPlayer = Bump.player(
+        playerElementRef.current,
+        effectiveConfig,
+      );
 
-            if (showAds) {
-              const adTag = await window.dotcom.ads.getAdTag();
+      if (isCancelled || !playerElementRef.current) return;
 
-              if (adTag) {
-                mediaPlayer.loadPlugin(
-                  {
-                    swf: 'name:dfpAds.swf',
-                    html: 'name:dfpAds.js',
-                  },
-                  {
-                    name: 'AdsPluginParameters',
-                    data: {
-                      adTag,
-                    },
-                  },
-                );
-              }
+      registeredPlayer = mediaPlayer;
 
-              mediaPlayer.bind('playlistLoaded', async () => {
-                const updatedAdTag = await window.dotcom.ads.getAdTag();
-
-                if (updatedAdTag) {
-                  mediaPlayer.dispatchEvent(
-                    'bbc.smp.plugins.ads.event.updateAdTag',
-                    {
-                      adTag: updatedAdTag,
-                    },
-                  );
-                }
-              });
-            }
-
-            mediaPlayer.load();
-            onPlayerReady?.();
-          };
-
-          initPlayer();
+      if (uniqueId != null) {
+        const { mediaPlayers } = window;
+        if (mediaPlayers == null) {
+          window.mediaPlayers = { [uniqueId]: mediaPlayer };
+        } else {
+          mediaPlayers[uniqueId] = mediaPlayer;
         }
-      });
-    } catch (error) {
-      logger.error(MEDIA_PLAYER_STATUS, error);
-    }
+      }
+
+      if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+        Object.keys(eventMapping).forEach(bindingKey => {
+          const key = bindingKey as MediaPlayerEvents;
+          const handler = eventMapping[key];
+
+          if (handler) mediaPlayer.bind(key, handler);
+        });
+      }
+
+      if (shouldHandleFakeFullscreen) {
+        mediaPlayer.bind('enterFakeFullscreen', () => {
+          onFakeFullscreenChangeRef.current?.(true);
+        });
+        mediaPlayer.bind('exitFakeFullscreen', () => {
+          onFakeFullscreenChangeRef.current?.(false);
+        });
+      }
+
+      if (showAds) {
+        const adTag = await window.dotcom.ads.getAdTag();
+
+        if (isCancelled || !playerElementRef.current) {
+          removeRegisteredPlayer();
+          return;
+        }
+
+        if (adTag) {
+          mediaPlayer.loadPlugin(
+            {
+              swf: 'name:dfpAds.swf',
+              html: 'name:dfpAds.js',
+            },
+            {
+              name: 'AdsPluginParameters',
+              data: {
+                adTag,
+              },
+            },
+          );
+        }
+
+        mediaPlayer.bind('playlistLoaded', async () => {
+          const updatedAdTag = await window.dotcom.ads.getAdTag();
+
+          if (!isCancelled && updatedAdTag) {
+            mediaPlayer.dispatchEvent('bbc.smp.plugins.ads.event.updateAdTag', {
+              adTag: updatedAdTag,
+            });
+          }
+        });
+      }
+
+      if (isCancelled || !playerElementRef.current) {
+        removeRegisteredPlayer();
+        return;
+      }
+
+      mediaPlayer.load();
+      onPlayerReady?.();
+    };
+
+    const requestPlayer = (requireJs: RequireJs) => {
+      if (isCancelled || !playerElementRef.current) return;
+
+      try {
+        requireJs(
+          ['bump-4'],
+          (Bump: BumpType) => {
+            if (isCancelled) return;
+
+            initPlayer(Bump).catch(error => {
+              if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
+            });
+          },
+          error => {
+            if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
+          },
+        );
+      } catch (error) {
+        if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
+      }
+    };
+
+    requireJsWait.promise.then(
+      readiness => {
+        if (isCancelled || readiness.status === 'failed') return;
+
+        requestPlayer(readiness.requireJs);
+      },
+      error => {
+        if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
+      },
+    );
+
+    return () => {
+      isCancelled = true;
+      requireJsWait.cancel();
+      removeRegisteredPlayer();
+    };
   }, [
     playerConfig,
     showAds,
