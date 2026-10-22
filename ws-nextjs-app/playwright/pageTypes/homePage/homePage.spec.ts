@@ -39,10 +39,7 @@ type HomePageCuration = {
 };
 
 type HomePageData = {
-  // NOTE: mirrors the (nested) accessor used in the original Cypress test
-  pageData?: {
-    curations?: HomePageCuration[];
-  };
+  curations?: HomePageCuration[];
   metadata?: {
     adCampaignKeyword?: string;
   };
@@ -647,14 +644,18 @@ test.describe('homePage', () => {
           const initialSecondaryNavItemTexts =
             await getSecondaryNavItemTexts(page);
 
-          await page
-            .locator('[data-e2e="scrollable-nav"] li')
-            .first()
-            .locator('a')
-            .click();
-          await page.waitForURL(url =>
-            new URL(url).pathname.includes(`/${testSuite.service}`),
+          const initialPathname = new URL(page.url()).pathname;
+          const primaryNavItems = page.locator(
+             '[data-e2e="scrollable-nav"] li',
           );
+          test.skip(
+             (await primaryNavItems.count()) < 2,
+             'The primary navigation has fewer than two items',
+           );
+          await primaryNavItems.nth(1).locator('a').click();
+          await page.waitForURL(url => url.pathname !== initialPathname);
+          await primaryNavItems.first().locator('a').click();
+          await page.waitForURL(url => url.pathname === initialPathname);
 
           expect(await getSecondaryNavItemTexts(page)).toEqual(
             initialSecondaryNavItemTexts,
@@ -819,7 +820,7 @@ test.describe('homePage', () => {
 
             const pageData = await getHomePageData(page);
             const billboardCurations =
-              pageData?.pageData?.curations?.filter(
+              pageData?.curations?.filter(
                 curation =>
                   curation.visualProminence === 'MAXIMUM' &&
                   curation.visualStyle === 'BANNER',
@@ -834,7 +835,7 @@ test.describe('homePage', () => {
               );
 
               if (summaries.length > 1) {
-                const testId = `billboard-${index + 1}`;
+                const testId = `billboard-maximum-${index + 1}`;
                 const grid = page.locator(
                   `[data-testid="${testId}"] [data-testid="billboard-curation-grid"]`,
                 );
@@ -868,7 +869,7 @@ test.describe('homePage', () => {
 
             const pageData = await getHomePageData(page);
             const billboardCurations =
-              pageData?.pageData?.curations?.filter(
+              pageData?.curations?.filter(
                 curation =>
                   curation.visualProminence === 'MAXIMUM' &&
                   curation.visualStyle === 'BANNER',
@@ -879,12 +880,14 @@ test.describe('homePage', () => {
               const summaries = curation?.summaries || [];
 
               if (summaries.length === 1) {
-                const testId = `billboard-${index + 1}`;
+                const testId = `billboard-maximum-${index + 1}`;
+                const billboard = page.locator(`[data-testid="${testId}"]`);
+
+                // eslint-disable-next-line no-await-in-loop
+                await expect(billboard).toHaveCount(1);
                 // eslint-disable-next-line no-await-in-loop
                 await expect(
-                  page
-                    .locator(`[data-testid="${testId}"]`)
-                    .locator('[data-testid="billboard-curation-grid"]'),
+                  billboard.locator('[data-testid="billboard-curation-grid"]'),
                 ).toHaveCount(0);
               }
             }
