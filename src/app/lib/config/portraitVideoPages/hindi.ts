@@ -1,4 +1,4 @@
-import scrapedPortraitVideos from './hausa.json';
+import scrapedPortraitVideos from './hindi.json';
 import { PortraitVideoArticle, PortraitVideoPageData } from './types';
 
 const topicTitles = {
@@ -14,11 +14,11 @@ const toPortraitVideoArticle = (
 ): PortraitVideoArticle => ({
   ...article,
   title: article.title
-    .replace(/^Bidiyo,\s*/, '')
-    .replace(/,\s*Tsawon lokaci \d+,\d+$/, ''),
+    .replace(/^वीडियो,\s*/, '')
+    .replace(/,\s*अवधि \d+,\d+$/, ''),
 });
 
-const hausaPortraitVideoPageData: PortraitVideoPageData = {
+const hindiPortraitVideoPageData: PortraitVideoPageData = {
   pageTitle: 'शॉर्ट-फॉर्म वीडियो',
   slices: topicIds.map(topicId => ({
     topicId,
@@ -27,4 +27,4 @@ const hausaPortraitVideoPageData: PortraitVideoPageData = {
   })),
 };
 
-export default hausaPortraitVideoPageData;
+export default hindiPortraitVideoPageData;

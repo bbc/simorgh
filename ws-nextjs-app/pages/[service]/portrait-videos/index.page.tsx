@@ -12,7 +12,7 @@ const PortraitVideosPage = dynamic(() => import('./PortraitVideosPage'));
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
-  const pageData = getPortraitVideoPageData(service as Services);
+  const pageData = await getPortraitVideoPageData(service as Services);
   const pathname = `/${service}/portrait-videos`;
 
   if (!pageData) {

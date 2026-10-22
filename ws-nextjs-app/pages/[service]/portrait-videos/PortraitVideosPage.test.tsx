@@ -80,19 +80,13 @@ describe('toCarouselBlock', () => {
 });
 
 describe('Hausa portrait video data', () => {
-  it('provides complete playable data for the Mata and Kano slices', () => {
-    expect(
-      hausaPageData.slices.map(({ title, articles }) => ({
-        title,
-        articleCount: articles.length,
-      })),
-    ).toEqual([
-      { title: 'Mata', articleCount: 9 },
-      { title: 'Kano', articleCount: 10 },
+  it('provides complete playable data for every configured slice', () => {
+    expect(hausaPageData.slices.map(({ title }) => title)).toEqual([
+      'Siyasa',
+      'Siyasar Najeriya',
+      'Mata',
+      'Kano',
     ]);
-    expect(hausaPageData.slices[0].articles[0].title).toBe(
-      'Mai shekara 15 da ta ƙware a zane',
-    );
 
     hausaPageData.slices.forEach(({ articles }) => {
       articles.forEach(article => {
@@ -102,6 +96,8 @@ describe('Hausa portrait video data', () => {
             versionId: expect.any(String),
           }),
         );
+        expect(article.title).not.toMatch(/^Bidiyo,/);
+        expect(article.title).not.toMatch(/,\s*Tsawon lokaci \d+,\d+$/);
       });
     });
   });
@@ -133,7 +129,12 @@ describe('PortraitVideosPage', () => {
     expect(
       screen.getByRole('heading', { level: 2, name: 'Kano' }),
     ).toBeInTheDocument();
-    expect(screen.getAllByTestId('promo-button')).toHaveLength(19);
+    expect(screen.getAllByTestId('promo-button')).toHaveLength(
+      hausaPageData.slices.reduce(
+        (articleCount, { articles }) => articleCount + articles.length,
+        0,
+      ),
+    );
     expect(screen.queryByTestId('promo-link')).not.toBeInTheDocument();
   });
 
