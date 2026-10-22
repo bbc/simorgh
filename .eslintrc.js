@@ -144,5 +144,11 @@ module.exports = {
         'react/no-unused-prop-types': 'off',
       },
     },
+    {
+      files: ['src/app/components/Navigation/index.canonical.tsx'],
+      rules: {
+        'react-hooks/set-state-in-effect': 'warn',
+      },
+    },
   ],
 };
