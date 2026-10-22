@@ -10,7 +10,7 @@
                     "ldpThingIds": "142b3898-9e04-4cca-bbd2-c96b48fda3ea~15f1bcf6-b6ab-48e8-b708-efed41e43d31~3892335e-43d8-489b-b0a1-9e2cf25ff486~b25d361f-f2d6-4869-af78-aa995618b57a~b91eaef4-fdf2-47a6-b3ec-05b5a55a4843~c857f0e3-0d55-4920-86dd-cc0d5b3c5576",
                     "ldpThingLabels": "Luiz+Inacio+Lula+da+Silva~Brazil~Elderly+people~Politics+of+Brazil~Brazil+general+elections+2026~Flávio+Bolsonaro",
                     "nationsProducer": null,
-                    "pageIdentifier": "portuguese.listen.cj62yn475xrwo.page",
+                    "pageIdentifier": "portuguese.articles.cj62yn475xrwo.page",
                     "pageTitle": "Voto idoso: por que voto facultativo de eleitores 70+ pode decidir eleição para presidente",
                     "timePublished": "2026-10-22T09:26:02.467Z",
                     "timeUpdated": "2026-10-22T09:26:02.467Z",
@@ -19,7 +19,7 @@
                 "id": "urn:bbc:ares::article:cj62yn475xrwo",
                 "locators": {
                     "optimoUrn": "urn:bbc:optimo:asset:cj62yn475xrwo",
-                    "canonicalUrl": "https://www.bbc.com/portuguese/listen/cj62yn475xrwo"
+                    "canonicalUrl": "https://www.bbc.com/portuguese/articles/cj62yn475xrwo"
                 },
                 "type": "article",
                 "createdBy": "Brasil",
@@ -32,7 +32,7 @@
                 },
                 "analyticsLabels": {
                     "ldp_tags": "Luiz+Inacio+Lula+da+Silva~Brazil~Elderly+people~Politics+of+Brazil~Brazil+general+elections+2026~Flávio+Bolsonaro",
-                    "page": "portuguese.listen.cj62yn475xrwo.page",
+                    "page": "portuguese.articles.cj62yn475xrwo.page",
                     "irisKeyword": null,
                     "audience_motivation": "Help me understand",
                     "ldp_ids": "142b3898-9e04-4cca-bbd2-c96b48fda3ea~15f1bcf6-b6ab-48e8-b708-efed41e43d31~3892335e-43d8-489b-b0a1-9e2cf25ff486~b25d361f-f2d6-4869-af78-aa995618b57a~b91eaef4-fdf2-47a6-b3ec-05b5a55a4843~c857f0e3-0d55-4920-86dd-cc0d5b3c5576",
@@ -5632,7 +5632,7 @@
                 {
                     "locators": {
                         "optimoUrn": "urn:bbc:optimo:asset:cj62yn475xrwo",
-                        "canonicalUrl": "https://www.bbc.com/portuguese/listen/cj62yn475xrwo"
+                        "canonicalUrl": "https://www.bbc.com/portuguese/articles/cj62yn475xrwo"
                     },
                     "timestamp": 1792661162467,
                     "suitableForSyndication": true,

@@ -10,7 +10,7 @@
                     "ldpThingIds": "1e3ec16d-8ae2-4194-a461-ac7e7d4a00da~3d9ca6eb-a694-4880-88db-de4ed05d42cc~dd4fa30e-dec8-479a-8881-b480af10392c",
                     "ldpThingLabels": "Houthis~Yemen~Saudi+Arabia",
                     "nationsProducer": null,
-                    "pageIdentifier": "arabic.watch.cr78p48yy7qeo.page",
+                    "pageIdentifier": "arabic.articles.cr78p48yy7qeo.page",
                     "pageTitle": "مقتل أربعة أشخاص وإصابة 18 في هجمات على مطار الدمام وحقل شيبة النفطي بالسعودية",
                     "timePublished": "2026-10-21T07:17:24.849Z",
                     "timeUpdated": "2026-10-22T10:04:29.847Z",
@@ -19,7 +19,7 @@
                 "id": "urn:bbc:ares::article:cr78p48yy7qeo",
                 "locators": {
                     "optimoUrn": "urn:bbc:optimo:asset:cr78p48yy7qeo",
-                    "canonicalUrl": "https://www.bbc.com/arabic/watch/cr78p48yy7qeo"
+                    "canonicalUrl": "https://www.bbc.com/arabic/articles/cr78p48yy7qeo"
                 },
                 "type": "article",
                 "createdBy": "Arabic",
@@ -32,7 +32,7 @@
                 },
                 "analyticsLabels": {
                     "ldp_tags": "Houthis~Yemen~Saudi+Arabia",
-                    "page": "arabic.watch.cr78p48yy7qeo.page",
+                    "page": "arabic.articles.cr78p48yy7qeo.page",
                     "irisKeyword": null,
                     "audience_motivation": "Update me",
                     "ldp_ids": "1e3ec16d-8ae2-4194-a461-ac7e7d4a00da~3d9ca6eb-a694-4880-88db-de4ed05d42cc~dd4fa30e-dec8-479a-8881-b480af10392c",

@@ -132,7 +132,7 @@ const atiAnalyticsTestSuites = [
     path: '/arabic/watch/cr78p48yy7qeo.app',
     runforEnv: ['live'],
     service: 'arabic',
-    pageIdentifier: 'arabic.watch.cr78p48yy7qeo.page',
+    pageIdentifier: 'arabic.articles.cr78p48yy7qeo.page',
     siteId: 5,
     applicationType: 'mobile-app',
     contentType: 'article-sfv',

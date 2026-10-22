@@ -133,7 +133,7 @@ const atiAnalyticsTestSuites = [
     path: '/portuguese/listen/cj62yn475xrwo.app',
     runforEnv: ['live'],
     service: 'portuguese',
-    pageIdentifier: 'portuguese.listen.cj62yn475xrwo.page',
+    pageIdentifier: 'portuguese.articles.cj62yn475xrwo.page',
     siteId: 33,
     applicationType: 'mobile-app',
     contentType: 'article-sfv',
