@@ -94,6 +94,25 @@ $ap-election-banner-iframe-heights: (
   @media #{theme.$mediaQueries-group-4-min-width} {
     padding: #{theme.$spacings-double} #{theme.$spacings-double} 0;
   }
+
+  &:global(.topic-page-election-banner) {
+    margin-block-end: #{theme.$spacings-full};
+  }
+
+  &:global(.home-page-election-banner),
+  &:global(.topic-page-election-banner) {
+    margin-inline: calc(-1 * #{theme.$spacings-full});
+
+    @media #{theme.$mediaQueries-group-2-min-width} {
+      margin-inline: calc(-1 * #{theme.$spacings-double});
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      padding: 0;
+      margin-inline: auto;
+      margin-block-end: #{theme.$spacings-double};
+    }
+  }
 }
 
 .assocPressElectionBannerIframe {
