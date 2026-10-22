@@ -42,8 +42,6 @@ import Message from './Message';
 import { BumpLoader, waitForRequireJs } from './requireJs';
 import type { RequireJs } from './requireJs';
 
-export { BumpLoader };
-
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,

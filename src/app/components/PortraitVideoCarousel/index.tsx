@@ -9,7 +9,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
-import { BumpLoader } from '../MediaLoader';
+import { BumpLoader } from '../MediaLoader/requireJs';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
