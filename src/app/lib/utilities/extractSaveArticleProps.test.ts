@@ -51,6 +51,40 @@ const EXPECTED_PROMO_IMAGE =
   'https://ichef.test.bbci.co.uk/images/ic/320xn/image.jpg.webp';
 
 describe('extractSaveArticleProps', () => {
+  it.each([
+    {
+      contentId: 'urn:bbc:topcat:curie:asset:example',
+      isTC2Asset: true,
+    },
+    {
+      contentId: 'urn:bbc:optimo:asset:c1l97706v5mo',
+      isTC2Asset: false,
+    },
+    {
+      contentId: 'urn:bbc:optimo:asset:topcat-example',
+      isTC2Asset: false,
+    },
+    { contentId: undefined, isTC2Asset: false },
+  ])(
+    'sets isTC2Asset to $isTC2Asset for content ID $contentId',
+    ({ contentId, isTC2Asset }) => {
+      const article = buildArticle([]);
+      const articleWithContentId = {
+        ...article,
+        metadata: {
+          ...article.metadata,
+          analyticsLabels: contentId
+            ? { producer: 'hindi', contentId }
+            : undefined,
+        },
+      };
+
+      expect(extractSaveArticleProps(articleWithContentId)).toMatchObject({
+        isTC2Asset,
+      });
+    },
+  );
+
   it('extracts promo image from a top-level image block', () => {
     const article = buildArticle([
       buildHeadlineBlock('Top-level headline'),

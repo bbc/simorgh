@@ -157,13 +157,47 @@ describe('SaveArticleButton', () => {
       const service = 'mundo';
 
       await act(async () =>
-        render(<SaveArticleButton {...defaultProps} />, {
-          service,
-          pathname:
-            '/mundo/noticias/2015/03/150216_animales_practicas_sexuales_lp',
-          toggles: {
-            uasPersonalization: { enabled: true, value: service },
+        render(
+          <SaveArticleButton
+            saveArticlePageData={{
+              ...articleExtractPageData,
+              isTC2Asset: true,
+            }}
+          />,
+          {
+            service,
+            pathname: '/mundo/articles/c1l97706v5mo',
+            toggles: {
+              uasPersonalization: { enabled: true, value: service },
+            },
+            idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
           },
+        ),
+      );
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    },
+  );
+
+  it.each([
+    { userType: 'signed-in', initialIsSignedIn: true },
+    { userType: 'guest', initialIsSignedIn: false },
+  ])(
+    'does not render when the parsed ID contains slashes even without TC2 metadata for a $userType user',
+    async ({ initialIsSignedIn }) => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, {
+          service: 'hindi',
+          pathname: '/hindi/news/2015/03/150216_example_article',
+          toggles: personalizationToggle,
           idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
         }),
       );
@@ -171,6 +205,19 @@ describe('SaveArticleButton', () => {
       expect(screen.queryByRole('button')).not.toBeInTheDocument();
     },
   );
+
+  it('does not render when there is no article ID', async () => {
+    await act(async () =>
+      render(<SaveArticleButton {...defaultProps} />, {
+        service: 'hindi',
+        pathname: '/hindi',
+        toggles: personalizationToggle,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      }),
+    );
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
 
   describe('Authorized', () => {
     const signedInRenderOptions = {
