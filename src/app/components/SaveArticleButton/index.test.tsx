@@ -146,6 +146,14 @@ describe('SaveArticleButton', () => {
   ])(
     'does not render for a TC2 article for a $userType user',
     async ({ initialIsSignedIn }) => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
       const service = 'mundo';
 
       await act(async () =>
