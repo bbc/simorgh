@@ -5,6 +5,11 @@ import { Services } from '#app/models/types/global';
 import * as viewTracking from '../../hooks/useViewTracker';
 import ReadTimeArticle from '.';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
 const ReadTimeWithContext = ({
   readTimeValue,
   contextStub,

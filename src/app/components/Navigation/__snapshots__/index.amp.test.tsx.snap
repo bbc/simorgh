@@ -12,7 +12,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 }
 
-@media (min-width: 62.9375rem) {
+@media (min-width:62.9375rem) {
   .emotion-0::after {
     content: '';
     position: absolute;
@@ -23,7 +23,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 }
 
-.emotion-0 .e11sm0on2::after {
+.emotion-0 .e1s8yomp3::after {
   left: 0;
 }
 
@@ -34,13 +34,13 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   background-color: #FFFFFF;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-2 {
     margin: 0 0.8rem;
   }
 }
 
-@media (min-width: 66rem) {
+@media (min-width:66rem) {
   .emotion-2 {
     margin: 0 auto;
   }
@@ -98,7 +98,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   pointer-events: none;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-7 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -109,7 +109,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-7 {
       scroll-padding-inline-end: 6rem;
     }
@@ -142,13 +142,11 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-7:after {
       width: 6rem;
     }
@@ -261,14 +259,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   border: 0.25rem solid #000000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-9 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width: 20rem) {
+@media (min-width:20rem) {
   .emotion-9 {
     height: 2.75rem;
     width: 2.75rem;
@@ -296,7 +294,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   fill: currentColor;
 }
 
-@media screen and (forced-colors: active) {
+@media screen and (forced-colors:active) {
   .emotion-11 {
     fill: linkText;
   }
@@ -313,7 +311,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   border-bottom: 0.1875rem solid #B80000;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width:37.5rem) {
   .emotion-15 {
     display: none;
     visibility: hidden;
@@ -371,7 +369,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   z-index: 1;
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-18 {
     white-space: nowrap;
     overflow-x: scroll;
@@ -382,7 +380,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-18 {
       scroll-padding-inline-end: 6rem;
     }
@@ -415,13 +413,11 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     overflow: hidden;
     pointer-events: none;
     background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%
+            to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 1) 100%
           );
   }
 
-  @media (min-width: 25rem) {
+  @media (min-width:25rem) {
     .emotion-18:after {
       width: 6rem;
     }
