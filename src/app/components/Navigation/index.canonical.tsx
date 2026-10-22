@@ -30,6 +30,11 @@ const STICKY_LANDSCAPE_QUERY =
 // after a forward Tab press so none of those events are mistaken for the
 // user intentionally scrolling up.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
+// Once the sticky nav is showing, the user has to scroll up this much
+// further past the entry point (roughly the bottom of the lead image)
+// before it disappears again. Without this gap, scrolling up just enough to
+// reveal the bar and then moving the mouse to click it can hide the bar out from under the cursor.
+const STICKY_NAV_EXIT_BUFFER = 500;
 const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 const INITIAL_STICKY_MEDIA_QUERY_STATE = {
@@ -262,10 +267,19 @@ const CanonicalNavigationContainer: React.FC<
       const articleStart = document.querySelector(
         'main [data-sticky-nav-anchor]',
       );
-      const reachedActivationPoint =
-        articleStart !== null && articleStart.getBoundingClientRect().top <= 0;
-      const fixed =
-        reachedActivationPoint && (scrollingUp || scrollState.fixed);
+      const anchorTop = articleStart
+        ? articleStart.getBoundingClientRect().top
+        : null;
+      // The point at which the bar first appears while scrolling up.
+      const pastEntryPoint = anchorTop !== null && anchorTop <= 0;
+      // A more generous version of the same point, used to decide when the
+      // bar should disappear again. Scrolling up has to pass this point,
+      // not just the entry point, before the bar is hidden.
+      const pastExitPoint =
+        anchorTop !== null && anchorTop <= STICKY_NAV_EXIT_BUFFER;
+      const fixed = scrollState.fixed
+        ? pastExitPoint
+        : pastEntryPoint && scrollingUp;
       const height =
         nav.getBoundingClientRect().height ||
         slot.getBoundingClientRect().height;
