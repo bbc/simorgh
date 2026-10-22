@@ -10,6 +10,16 @@ import * as testUtils from './utils';
 import * as amp from './amp';
 import { PageTypes, Platforms } from '../../models/types/global';
 
+jest.mock('./amp', () => ({
+  __esModule: true,
+  ...jest.requireActual('./amp'),
+}));
+
+jest.mock('./utils', () => ({
+  __esModule: true,
+  ...jest.requireActual('./utils'),
+}));
+
 const sendCanonicalChartbeatBeacon = jest.fn();
 
 interface Props {

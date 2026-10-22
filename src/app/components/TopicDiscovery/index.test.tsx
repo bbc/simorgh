@@ -35,6 +35,16 @@ import {
 import useFetchTopicPromos from './useFetchTopicPromos';
 import TopicDiscovery from '.';
 
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 jest.mock('./useFetchTopicPromos');
 
 expect.extend(matchers);
