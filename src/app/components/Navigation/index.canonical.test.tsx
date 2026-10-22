@@ -562,6 +562,38 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
+      it('returns to the normal navigation at the top of the page when the article starts within the exit distance', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        const paragraphBounds = jest
+          .spyOn(firstParagraph, 'getBoundingClientRect')
+          .mockReturnValue({
+            ...firstParagraph.getBoundingClientRect(),
+            top: -1,
+          });
+
+        scrollTo(500);
+        scrollTo(450);
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+
+        paragraphBounds.mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: 400,
+        });
+        scrollTo(0);
+        act(() => {
+          jest.advanceTimersByTime(400);
+        });
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).not.toHaveStyle({ position: 'fixed' });
+      });
+
       it('keeps the dropdown menu open if tabbing through it causes a tiny, automatic scroll adjustment that would otherwise have hidden the bar', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);

@@ -246,12 +246,16 @@ const useStickyNavigation = ({
       // goes away. See STICKY_NAV_EXIT_BUFFER_PX.
       const isPastExitPoint =
         anchorTop !== null && anchorTop <= STICKY_NAV_EXIT_BUFFER_PX;
+      // The normal navigation must be restored at the top of the page even
+      // when the article starts less than the exit buffer below the header.
+      // Otherwise the bar can remain pinned over the header indefinitely.
+      const isAtPageTop = scrollY <= 0;
       // Tabbing through an open dropdown's items is the main place an
       // incidental nudge (see above) could cross the exit threshold and
       // sweep the dropdown away mid-use, so a pinned bar also stays pinned
       // for the suppression window regardless of what the exit check says.
       const isPinned = tracking.isPinned
-        ? isPastExitPoint || isWithinForwardTabSuppression
+        ? (!isAtPageTop && isPastExitPoint) || isWithinForwardTabSuppression
         : isPastEntryPoint && isScrollingUp;
 
       if (tracking.isPinned && !isPinned) closeMenuRef.current();
