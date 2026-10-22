@@ -6730,22 +6730,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:13.1.4":
-  version: 13.1.4
-  resolution: "chromatic@npm:13.1.4"
+"chromatic@npm:18.12.2":
+  version: 18.12.2
+  resolution: "chromatic@npm:18.12.2"
+  dependencies:
+    semver: "npm:^7.3.5"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+    "@chromatic-com/vitest": ^0.*.* || ^1.0.0
+  dependenciesMeta:
+    "@sentry/cli":
+      built: true
+    esbuild:
+      built: true
   peerDependenciesMeta:
     "@chromatic-com/cypress":
       optional: true
     "@chromatic-com/playwright":
       optional: true
+    "@chromatic-com/vitest":
+      optional: true
   bin:
-    chroma: dist/bin.js
-    chromatic: dist/bin.js
-    chromatic-cli: dist/bin.js
-  checksum: 10/5cc553b7dc5aeb54a48529f1170c1b409962a523761d681dd47d212eef0541c0c670786fcc232dcecbd7665bb4292ccaaf92f6c739e7f85ddfd2060b6c515d11
+    chroma: dist/bin.cjs
+    chromatic: dist/bin.cjs
+    chromatic-cli: dist/bin.cjs
+  checksum: 10/9320882c2b13ded5aed57122ead1a4030cf66c1ed62c0898ffd9bc07f1fba63e116bc9ea7a14bd9dc64669f96584b340383caacfca8e5179df52caf0478b081b
   languageName: node
   linkType: hard
 
@@ -14791,7 +14801,7 @@ __metadata:
     amphtml-validator: "npm:1.0.38"
     aws-embedded-metrics: "npm:4.2.0"
     chalk: "npm:5.6.2"
-    chromatic: "npm:13.1.4"
+    chromatic: "npm:18.12.2"
     cli-table: "npm:0.3.11"
     clsx: "npm:2.1.1"
     colors: "npm:^1.4.0"
