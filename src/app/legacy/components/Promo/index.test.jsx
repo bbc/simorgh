@@ -81,6 +81,9 @@ describe('Promo component - Image', () => {
       expect(container.querySelector('picture')).not.toBeInTheDocument();
       expect(container.querySelector('[srcset]')).not.toBeInTheDocument();
       expect(screen.getByText('Media overlay')).toBeInTheDocument();
+      expect(
+        container.querySelector('span[aria-hidden="true"]'),
+      ).not.toBeInTheDocument();
       expect(container.firstChild.firstChild).toHaveStyle({
         backgroundRepeat: 'no-repeat',
       });
