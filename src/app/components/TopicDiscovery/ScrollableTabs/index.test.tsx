@@ -10,6 +10,11 @@ import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScrollableTabs from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 expect.extend(matchers);
 
 const mockTabs = [

@@ -44,7 +44,7 @@ exports[`AmpMostRead should render as expected 1`] = `
   padding-bottom: 1.5rem;
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-1 {
     display: block;
     width: initial;

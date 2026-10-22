@@ -1,5 +1,14 @@
 import { Services } from '#app/models/types/global';
 
+export const SERVICES_WITH_STICKY_NAV: Services[] = [
+  'mundo',
+  'portuguese',
+  'russian',
+  'indonesia',
+  'turkce',
+  'urdu',
+];
+
 const SERVICES_WITH_NEW_NAV: Services[] = [
   'afaanoromoo',
   'afrique',
