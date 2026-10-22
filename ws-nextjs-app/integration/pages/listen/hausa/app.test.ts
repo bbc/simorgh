@@ -3,11 +3,11 @@
  * @pathname /hausa/listen/cpj5ny39g35mo
  */
 import { runMediaPlayerAudioTests } from '#nextjs/integration/common';
-import runCanonicalTests from '../../../articles/canonicalTests';
+import runAppTests from '../appTests';
 
-describe('Canonical', () => {
+describe('App', () => {
   describe(pageType, () => {
-    runCanonicalTests(service);
+    runAppTests(service);
     runMediaPlayerAudioTests();
   });
 });
