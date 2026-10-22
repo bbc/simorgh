@@ -1912,18 +1912,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.14.5":
-  version: 20.14.5
-  resolution: "@happy-dom/jest-environment@npm:20.14.5"
+"@happy-dom/jest-environment@npm:21.0.1":
+  version: 21.0.1
+  resolution: "@happy-dom/jest-environment@npm:21.0.1"
   dependencies:
-    happy-dom: "npm:^20.14.5"
+    happy-dom: "npm:^21.0.1"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/b64b97feaf7cc5ddf7b6fd8fbdc4232543c79f5afe94da17b962fc99974e5d24561b4807b321842090276fe8ef19d581f7d3f596349bdf555f4933a4392b892c
+  checksum: 10/e737e4ab86e0c22522307795ff4e549a27d8c73983761ac79d1e017501a30ad7487dddbc472caef2d94e4cd3c78c939f39ebfbff3cd154fb09b4697eab6fa0b2
   languageName: node
   linkType: hard
 
@@ -9642,9 +9642,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.14.5, happy-dom@npm:^20.14.5":
-  version: 20.14.5
-  resolution: "happy-dom@npm:20.14.5"
+"happy-dom@npm:21.0.1, happy-dom@npm:^21.0.1":
+  version: 21.0.1
+  resolution: "happy-dom@npm:21.0.1"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -9653,7 +9653,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/5a1f177622e7d08d0ee27b2bdd4d2c86365989e04342c67b6afd623da968ace87d551fb9ea60085159d4d9174db040cd9b5320a430a0b899a06fbbfd1acf2374
+  checksum: 10/03a4ce9ead6d8df46dc2b6fd3b2a8870a887145608f3b6a562a54f42eb8f2c0b7cd4d10d09e181ee74766457141bca02a61165af1990939172b61fe5b43d35f0
   languageName: node
   linkType: hard
 
@@ -14764,7 +14764,7 @@ __metadata:
     "@emotion/react": "npm:11.14.0"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.14.1"
-    "@happy-dom/jest-environment": "npm:20.14.5"
+    "@happy-dom/jest-environment": "npm:21.0.1"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@optimizely/optimizely-sdk": "npm:5.4.1"
@@ -14825,7 +14825,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.5.4"
     eslint-plugin-react: "npm:7.37.5"
     eslint-plugin-react-hooks: "npm:7.1.1"
-    happy-dom: "npm:20.14.5"
+    happy-dom: "npm:21.0.1"
     husky: "npm:9.1.7"
     identity-obj-proxy: "npm:3.0.0"
     jalaali-js: "npm:1.2.8"
