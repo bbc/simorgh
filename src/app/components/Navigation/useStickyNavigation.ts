@@ -177,16 +177,6 @@ const useStickyNavigation = ({
   // ---------------------------------------------------------------------
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab' || event.shiftKey) return;
-      suppressScrollUntilRef.current =
-        Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  useEffect(() => {
     setScrollState(INITIAL_SCROLL_STATE);
     if (!isEnabled) return undefined;
 
@@ -207,6 +197,8 @@ const useStickyNavigation = ({
     const pending = {
       animationFrame: null as number | null,
       resizeTimeout: 0,
+      // See handleKeyDown below.
+      suppressionRecheckTimeout: 0,
     };
 
     const resolveArticleStart = () => {
@@ -316,18 +308,41 @@ const useStickyNavigation = ({
       );
     };
 
+    // A forward Tab can carry focus somewhere the suppression window's
+    // incidental-nudge allowance was never meant to cover — such as out of
+    // the dropdown and onto an element back at the top of the page, which
+    // the browser then deliberately scrolls fully into view. That's a
+    // genuine scroll, not a pixel-or-two correction, so once the window
+    // that was ignoring it elapses, the bar is re-checked against wherever
+    // the scroll actually ended up. Without this, a Tab press that is the
+    // last scroll event to fire leaves the bar stuck in whatever state the
+    // suppression forced it into, since nothing else would ever ask again.
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab' || event.shiftKey) return;
+      suppressScrollUntilRef.current =
+        Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
+      window.clearTimeout(pending.suppressionRecheckTimeout);
+      pending.suppressionRecheckTimeout = window.setTimeout(
+        scheduleUpdate,
+        FORWARD_TAB_SCROLL_SUPPRESSION_MS,
+      );
+    };
+
     measureHeight();
 
     const navObserver = new ResizeObserver(handleRelayout);
     if (navRef.current) navObserver.observe(navRef.current);
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', handleResize, { passive: true });
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       navObserver.disconnect();
       window.clearTimeout(pending.resizeTimeout);
+      window.clearTimeout(pending.suppressionRecheckTimeout);
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('keydown', handleKeyDown);
       if (pending.animationFrame !== null) {
         window.cancelAnimationFrame(pending.animationFrame);
       }

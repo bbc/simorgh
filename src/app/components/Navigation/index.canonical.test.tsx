@@ -42,14 +42,14 @@ const navigation = (
 
 describe('Navigation - Canonical', () => {
   describe('snapshots', () => {
-    it('should correctly render Canonical navigation', () => {
+    it('renders the navigation bar correctly', () => {
       const { container } = render(navigation);
       expect(container).toMatchSnapshot();
     });
   });
 
   describe('assertions', () => {
-    it('should render scrollable nav and hide dropdown', () => {
+    it('shows the scrolling menu, with the dropdown menu hidden by default', () => {
       const { queryByTestId, getAllByTestId } = render(navigation);
       const dropdown = queryByTestId(dropdownTestId)?.parentElement;
       const [scrollableNavTopRow] = getAllByTestId(scrollableTestId);
@@ -57,7 +57,7 @@ describe('Navigation - Canonical', () => {
       expect(dropdown).toHaveAttribute('height', '0');
     });
 
-    it('should render dropdown and no scrollable nav after menu button clicked', () => {
+    it('opens the dropdown menu when the hamburger button is clicked', () => {
       const { getByRole, getByTestId } = render(navigation);
 
       const menuButton = getByRole('button', { name: 'menu' });
@@ -68,7 +68,7 @@ describe('Navigation - Canonical', () => {
       expect(dropdown).toHaveTextContent('Item 1');
     });
 
-    it('should close the menu and move focus to the first item on the page when Tab is pressed on the last dropdown item', () => {
+    it('pressing Tab on the last item in an open dropdown menu closes the menu and moves on to the next item on the page', () => {
       const { getByRole } = render(
         <>
           {navigation}
@@ -92,7 +92,7 @@ describe('Navigation - Canonical', () => {
       );
     });
 
-    it('walks backwards through the dropdown items and then onto the menu button', () => {
+    it('pressing Shift+Tab moves backward through the dropdown menu items, then back to the hamburger button', () => {
       const { getByRole } = render(
         <>
           {navigation}
@@ -120,7 +120,7 @@ describe('Navigation - Canonical', () => {
       expect(menuButton).toHaveAttribute('aria-expanded', 'true');
     });
 
-    it('moves focus into the dropdown on the first Tab press after it is opened', () => {
+    it('pressing Tab right after opening the dropdown menu moves focus to its first item', () => {
       const { getByRole } = render(navigation);
 
       fireEvent.click(getByRole('button', { name: 'menu' }));
@@ -131,7 +131,7 @@ describe('Navigation - Canonical', () => {
       );
     });
 
-    it('walks forwards through the dropdown items', () => {
+    it('pressing Tab moves forward through the dropdown menu items, one by one', () => {
       const { getByRole } = render(navigation);
 
       fireEvent.click(getByRole('button', { name: 'menu' }));
@@ -144,24 +144,24 @@ describe('Navigation - Canonical', () => {
       );
     });
 
-    describe('Top Bar OJs', () => {
+    describe('the related articles block ("Top Bar onward journeys")', () => {
       it.each([
         [
-          'should not render TopBarOJs when toggle is off',
+          'does not show the related articles block when the feature is turned off',
           { ...navigationProps, blocks },
           { topBarOJs: { enabled: false } },
           queryByTestId =>
             expect(queryByTestId('top-bar-onward-journeys')).toBeNull(),
         ],
         [
-          'should render TopBarOJs when toggle is on and blocks are provided',
+          'shows the related articles block when the feature is turned on and there are articles to show',
           { ...navigationProps, blocks },
           { topBarOJs: { enabled: true } },
           queryByTestId =>
             expect(queryByTestId('top-bar-onward-journeys')).not.toBeNull(),
         ],
         [
-          'should not render TopBarOJs when blocks are empty even if toggle is on',
+          'does not show the related articles block when there are no articles to show, even if the feature is turned on',
           { ...navigationProps, blocks: [] },
           { topBarOJs: { enabled: true } },
           queryByTestId =>
@@ -265,9 +265,9 @@ describe('Navigation - Canonical', () => {
       });
     });
 
-    describe('eligible and ineligible environments and services', () => {
+    describe("where the sticky navigation bar is, and isn't, available", () => {
       it.each([240, 299, 300, 301])(
-        'only permits sticky navigation from 300px upwards (viewport %spx)',
+        'only shows the sticky navigation bar once the screen is at least 300px wide (testing %spx)',
         width => {
           jest.mocked(window.matchMedia).mockImplementation(query => ({
             ...defaultMediaQuery,
@@ -294,7 +294,7 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it('restores normal navigation below 300px and allows sticky navigation again after widening', () => {
+      it('hides the sticky navigation bar if the screen narrows below 300px, then brings it back if it widens again', () => {
         const addListener = jest.fn();
         const mediaQuery = {
           ...defaultMediaQuery,
@@ -334,7 +334,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('disables sticky navigation above the 1007px desktop breakpoint', () => {
+      it('does not show the sticky navigation bar on wide, desktop-sized screens', () => {
         jest.mocked(window.matchMedia).mockImplementation(query => ({
           ...defaultMediaQuery,
           media: query,
@@ -351,7 +351,7 @@ describe('Navigation - Canonical', () => {
         expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
       });
 
-      it('disables sticky navigation in constrained-height landscape orientation', () => {
+      it('does not show the sticky navigation bar on short, landscape screens, such as a phone turned sideways', () => {
         jest.mocked(window.matchMedia).mockImplementation(query => ({
           ...defaultMediaQuery,
           media: query,
@@ -364,7 +364,7 @@ describe('Navigation - Canonical', () => {
         expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
       });
 
-      it('disables sticky navigation on viewports too short to spare the space', () => {
+      it('does not show the sticky navigation bar on screens too short to fit it', () => {
         jest.mocked(window.matchMedia).mockImplementation(query => ({
           ...defaultMediaQuery,
           media: query,
@@ -381,7 +381,7 @@ describe('Navigation - Canonical', () => {
         expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
       });
 
-      it('disables sticky navigation entirely when the user prefers reduced motion', () => {
+      it('does not show the sticky navigation bar at all if the reader has asked their device to reduce motion', () => {
         jest.mocked(window.matchMedia).mockImplementation(query => ({
           ...defaultMediaQuery,
           media: query,
@@ -401,18 +401,21 @@ describe('Navigation - Canonical', () => {
         'indonesia',
         'turkce',
         'urdu',
-      ])('enables sticky navigation for %s on test', service => {
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          service,
-        });
-        scrollTo(500);
-        scrollTo(450);
+      ])(
+        'shows the sticky navigation bar on the %s edition on the test environment',
+        service => {
+          const { container } = render(articleNavigation, {
+            ...stickyOptions,
+            service,
+          });
+          scrollTo(500);
+          scrollTo(450);
 
-        expect(
-          container.querySelector('[data-e2e="sticky-nav"]'),
-        ).toHaveAttribute('data-sticky-visible', 'true');
-      });
+          expect(
+            container.querySelector('[data-e2e="sticky-nav"]'),
+          ).toHaveAttribute('data-sticky-visible', 'true');
+        },
+      );
 
       it.each<Services>([
         'mundo',
@@ -422,7 +425,7 @@ describe('Navigation - Canonical', () => {
         'turkce',
         'urdu',
       ])(
-        'enables sticky navigation for %s during normal local development',
+        'shows the sticky navigation bar on the %s edition when developing locally',
         service => {
           const { container } = render(articleNavigation, {
             ...stickyOptions,
@@ -443,16 +446,19 @@ describe('Navigation - Canonical', () => {
         ['live', { bbcOrigin: 'https://www.bbc.com' }],
         ['another service', { service: 'arabic' as Services }],
         ['Lite', { isLite: true }],
-      ])('does not allow local sticky navigation on %s', (_, options) => {
-        const { container } = render(navigation, {
-          ...stickyOptions,
-          bbcOrigin: 'http://localhost:7081',
-          toggles: toggleConfigs.local,
-          ...options,
-        });
+      ])(
+        'does not show the sticky navigation bar when developing locally and the page is %s',
+        (_, options) => {
+          const { container } = render(navigation, {
+            ...stickyOptions,
+            bbcOrigin: 'http://localhost:7081',
+            toggles: toggleConfigs.local,
+            ...options,
+          });
 
-        expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
-      });
+          expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+        },
+      );
 
       it.each([
         ['another service', { service: 'arabic' as Services }],
@@ -460,23 +466,26 @@ describe('Navigation - Canonical', () => {
         ['live', { bbcOrigin: 'https://www.bbc.com' }],
         ['a disabled toggle', { toggles: toggleConfigs.live }],
         ['a missing toggle', { toggles: {} }],
-      ])('does not enable sticky navigation for %s', (_, options) => {
-        const { container } = render(navigation, {
-          ...stickyOptions,
-          ...options,
-        });
-        scrollTo(500);
-        scrollTo(450);
+      ])(
+        'does not show the sticky navigation bar when the page is %s',
+        (_, options) => {
+          const { container } = render(navigation, {
+            ...stickyOptions,
+            ...options,
+          });
+          scrollTo(500);
+          scrollTo(450);
 
-        expect(
-          container.querySelector('[data-e2e="sticky-nav"]'),
-        ).not.toBeInTheDocument();
-      });
+          expect(
+            container.querySelector('[data-e2e="sticky-nav"]'),
+          ).not.toBeInTheDocument();
+        },
+      );
     });
 
-    describe('article scroll-position thresholds', () => {
+    describe('showing and hiding the bar as the reader scrolls past the start of the article', () => {
       it.each([1, 0, -1])(
-        'only shows scroll-up navigation when the first article line is at or above the viewport top (%spx)',
+        'only shows the sticky navigation bar once the reader has scrolled back up to the start of the article (testing %spx from the top of the screen)',
         top => {
           const { container } = render(articleNavigation, stickyOptions);
           const firstParagraph = screen.getByText(
@@ -499,7 +508,7 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it('does not switch to fixed positioning while scrolling down across the article activation point', () => {
+      it('does not pin the navigation bar to the screen while scrolling down past the start of the article', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const firstParagraph = screen.getByText(
           'First line of article body text',
@@ -531,7 +540,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
       });
 
-      it('hides and closes sticky navigation when scrolling back well above the first article line', () => {
+      it('hides the sticky navigation bar, and closes its dropdown menu, once the reader scrolls back up well past the start of the article', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -553,7 +562,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('keeps the dropdown open through an incidental scroll correction that briefly crosses the exit point while tabbing through it', () => {
+      it('keeps the dropdown menu open if tabbing through it causes a tiny, automatic scroll adjustment that would otherwise have hidden the bar', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -576,7 +585,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('still closes the dropdown on a scroll past the exit point once the forward-Tab suppression window has elapsed', () => {
+      it('still closes the dropdown menu on a genuine scroll back up the page, once enough time has passed since the last Tab press', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -602,7 +611,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('keeps sticky navigation on screen while the article start is still within the exit buffer', () => {
+      it('keeps the sticky navigation bar on screen as long as the reader has not scrolled too far back up past the start of the article', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -621,7 +630,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('does not activate article sticky navigation without an article body paragraph', () => {
+      it('does not show the sticky navigation bar on a page with no article text to scroll past', () => {
         const { container } = render(navigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -632,8 +641,8 @@ describe('Navigation - Canonical', () => {
       });
     });
 
-    describe('animation and transition timing', () => {
-      it('paints off-screen before sliding in and completes the slide-out before restoring normal positioning', () => {
+    describe('how the sticky navigation bar animates in and out', () => {
+      it('slides the navigation bar fully into view before showing it, and finishes sliding it away before putting it back in the normal page layout', () => {
         enableMotion();
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
@@ -682,7 +691,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav?.parentElement).not.toHaveStyle({ height: '88px' });
       });
 
-      it('does not hide the positioned navigation when preparing a repeat entrance', () => {
+      it('does not flicker the navigation bar out of sight when it is about to reappear a second time', () => {
         enableMotion();
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
@@ -705,7 +714,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('cancels the pending slide-in when the user starts scrolling down', () => {
+      it('stops the navigation bar sliding into view if the reader starts scrolling back down again', () => {
         enableMotion();
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
@@ -720,7 +729,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('keeps the sticky navigation visible and its dropdown open while scrolling down with the dropdown open', () => {
+      it('keeps the sticky navigation bar and its open dropdown menu on screen while scrolling down, as long as the bar is still pinned', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -734,7 +743,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('hides on scroll down as normal once the dropdown has been closed', () => {
+      it('hides the sticky navigation bar on scroll down as normal, once its dropdown menu has been closed', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -749,7 +758,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('resets the secondary scrollable row back to its start position once the bar hides', () => {
+      it('scrolls the second row of links back to the start once the sticky navigation bar hides', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -770,7 +779,7 @@ describe('Navigation - Canonical', () => {
         expect(secondaryScroll.scrollLeft).toBe(0);
       });
 
-      it('resets the secondary scrollable row when the bar merely slides out of view on scroll down, while remaining pinned', () => {
+      it('scrolls the second row of links back to the start even when the bar only slides out of view, rather than disappearing completely', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -787,7 +796,7 @@ describe('Navigation - Canonical', () => {
         expect(secondaryScroll.scrollLeft).toBe(0);
       });
 
-      it('resets the secondary scrollable row on every repeated hide-and-reappear cycle, not just the first', () => {
+      it('scrolls the second row of links back to the start every time the bar hides and reappears, not just the first time', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const secondaryScroll = container.querySelector(
           '[data-e2e="scrollable-nav-secondary"]',
@@ -807,8 +816,8 @@ describe('Navigation - Canonical', () => {
       });
     });
 
-    describe('keyboard and dropdown accessibility', () => {
-      it('keeps sticky navigation visible and its dropdown open when Tab is pressed', () => {
+    describe('using the keyboard with the sticky navigation bar and its dropdown menu', () => {
+      it('keeps the sticky navigation bar and its open dropdown menu on screen while tabbing through it', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -824,7 +833,47 @@ describe('Navigation - Canonical', () => {
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
       });
 
-      it('allows sticky navigation to appear on scroll-up after keyboard navigation without pointer interaction', () => {
+      it('hides the sticky navigation bar a short while after Tab moves focus back up the page, even if the reader does not scroll again themselves', () => {
+        const { container } = render(
+          <>
+            {articleNavigation}
+            <a href="/top-of-page">Top of page link</a>
+          </>,
+          stickyOptions,
+        );
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        scrollTo(500);
+        scrollTo(450);
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+        fireEvent.keyDown(window, { key: 'Tab' });
+
+        // Tab carrying focus onto an element back at the top of the page is
+        // a real, deliberate scroll, not an incidental nudge — but it still
+        // happens to fall inside the suppression window set by that same
+        // Tab press, which is the scenario this test exercises.
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+        scrollTo(0);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+
+        // No further scroll event arrives once the reader has landed on the
+        // link — only the suppression window elapsing should prompt the bar
+        // to re-check itself against where the scroll actually ended up.
+        act(() => {
+          jest.advanceTimersByTime(400);
+        });
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      });
+
+      it('lets the sticky navigation bar appear on scroll-up for a reader who has only ever used the keyboard, never the mouse', () => {
         const { container } = render(articleNavigation, stickyOptions);
         fireEvent.keyDown(window, { key: 'Tab' });
         act(() => {
@@ -838,7 +887,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('does not activate sticky navigation when a forward Tab press causes an incidental upward scroll correction', () => {
+      it('does not show the sticky navigation bar when pressing Tab causes the page to nudge up by just a pixel or two', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab' });
@@ -849,7 +898,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('still activates sticky navigation on scroll-up after Shift+Tab (backward) keyboard navigation', () => {
+      it('still shows the sticky navigation bar on scroll-up after pressing Shift+Tab to move backward', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab', shiftKey: true });
@@ -861,7 +910,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it.each(['ArrowUp', 'PageUp', 'Home'])(
-        'activates sticky navigation on scroll-up after purposeful %s keyboard navigation',
+        'shows the sticky navigation bar on scroll-up after pressing %s to move around the page',
         key => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
@@ -874,7 +923,7 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it('allows a later genuine scroll-up to activate sticky navigation once the forward Tab suppression window has elapsed', () => {
+      it('still shows the sticky navigation bar on a genuine scroll-up, once enough time has passed since the last Tab press', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab' });
@@ -894,7 +943,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('keeps hidden sticky navigation inert when Tab is pressed', () => {
+      it('keeps a hidden sticky navigation bar unreachable by the keyboard while tabbing through the page', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -907,7 +956,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('aria-hidden', 'true');
       });
 
-      it('does not close the original dropdown when tabbing through its links', () => {
+      it('does not close the dropdown menu at the top of the page while tabbing through its links', () => {
         render(navigation, stickyOptions);
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
@@ -916,7 +965,7 @@ describe('Navigation - Canonical', () => {
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
       });
 
-      describe('dropdown-only tab order while pinned', () => {
+      describe('which parts of the pinned bar the Tab key can reach', () => {
         // The dropdown's links are hidden from the accessibility tree while
         // closed (via CSS visibility), so `getByRole` can't see them until
         // it's open; a plain DOM query is used instead for closed-state
@@ -924,7 +973,7 @@ describe('Navigation - Canonical', () => {
         const getDropdownLinks = (container: HTMLElement) =>
           container.querySelectorAll(`[data-testid="${dropdownTestId}"] a`);
 
-        it('removes the dropdown links from the tab order before the dropdown is opened', () => {
+        it('cannot reach the dropdown menu links with the Tab key before the menu is opened', () => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -937,7 +986,7 @@ describe('Navigation - Canonical', () => {
         // Browsers make overflow containers keyboard-focusable so they can be
         // scrolled with the arrow keys, so the rows take focus in their own
         // right even though they are neither a link nor a button.
-        it('removes both scrollable rows from the tab order', () => {
+        it('cannot reach either row of scrolling links with the Tab key', () => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -950,7 +999,7 @@ describe('Navigation - Canonical', () => {
           ).toHaveAttribute('tabindex', '-1');
         });
 
-        it('keeps both scrollable rows out of the tab order while the dropdown is open', () => {
+        it('still cannot reach either row of scrolling links with the Tab key while the dropdown menu is open', () => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -964,7 +1013,7 @@ describe('Navigation - Canonical', () => {
           ).toHaveAttribute('tabindex', '-1');
         });
 
-        it('restores the scrollable rows to the tab order once the bar is no longer pinned', () => {
+        it('can reach the rows of scrolling links with the Tab key again once the bar is no longer pinned to the screen', () => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -984,7 +1033,7 @@ describe('Navigation - Canonical', () => {
         // Clicking a button doesn't focus it in every browser, which would
         // otherwise leave the next Tab press starting from the top of the
         // page rather than carrying on into the dropdown.
-        it('moves focus to the menu button when the dropdown is opened by pointer', () => {
+        it('moves focus to the hamburger button when the dropdown menu is opened with the mouse', () => {
           render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -994,7 +1043,7 @@ describe('Navigation - Canonical', () => {
           expect(document.activeElement).toBe(menuButton);
         });
 
-        it('makes the dropdown links the only tab stops in the bar once the dropdown is opened', () => {
+        it('makes the dropdown menu links the only part of the bar reachable with the Tab key once the menu is opened', () => {
           render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -1017,7 +1066,7 @@ describe('Navigation - Canonical', () => {
           );
         });
 
-        it('removes the dropdown links from the tab order again once it is closed', () => {
+        it('cannot reach the dropdown menu links with the Tab key again once the menu is closed', () => {
           const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -1030,7 +1079,7 @@ describe('Navigation - Canonical', () => {
           expect(itemTwo).toHaveAttribute('tabindex', '-1');
         });
 
-        it('closes the dropdown and returns focus to the menu button when Escape is pressed', () => {
+        it('pressing the Escape key closes the dropdown menu and returns focus to the hamburger button', () => {
           render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -1047,8 +1096,8 @@ describe('Navigation - Canonical', () => {
         });
       });
 
-      describe('structure and landmarks', () => {
-        it('leaves Top Bar onward journeys outside the fixed navigation', () => {
+      describe('page structure and screen reader landmarks', () => {
+        it('keeps the related articles block separate from the sticky navigation bar', () => {
           const { container } = render(
             // @ts-expect-error partial data for testing purposes
             <CanonicalNavigation {...navigationProps} blocks={blocks} />,
@@ -1059,7 +1108,7 @@ describe('Navigation - Canonical', () => {
           expect(container).toContainElement(topBar);
         });
 
-        it('does not create a duplicate navigation landmark for Top Bar onward journeys', () => {
+        it('does not create an extra navigation landmark for the related articles block, for screen reader users', () => {
           render(
             // @ts-expect-error partial data for testing purposes
             <CanonicalNavigation {...navigationProps} blocks={blocks} />,
@@ -1070,7 +1119,7 @@ describe('Navigation - Canonical', () => {
         });
       });
 
-      it('offsets keyboard scrolling by the sticky nav height while it is visible', () => {
+      it('leaves enough space for the sticky navigation bar when the browser scrolls a focused item into view', () => {
         render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -1081,7 +1130,7 @@ describe('Navigation - Canonical', () => {
         expect(document.documentElement.style.scrollPaddingTop).toBe('');
       });
 
-      it('scrolls an element that takes focus out from behind the sticky navigation', () => {
+      it('scrolls the page so a newly focused item is not left hidden behind the sticky navigation bar', () => {
         const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
         render(articleNavigation, stickyOptions);
         scrollTo(500);
@@ -1099,7 +1148,7 @@ describe('Navigation - Canonical', () => {
         expect(scrollBy).toHaveBeenCalledWith(0, -68);
       });
 
-      it('leaves focus within the sticky navigation itself alone', () => {
+      it('does not scroll the page when focus moves to something inside the sticky navigation bar itself', () => {
         const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
         render(articleNavigation, stickyOptions);
         scrollTo(500);
@@ -1111,8 +1160,8 @@ describe('Navigation - Canonical', () => {
       });
     });
 
-    describe('lifecycle', () => {
-      it('cancels a pending scroll update when unmounted', () => {
+    describe('tidying up after itself', () => {
+      it('stops any pending work when the navigation bar is removed from the page', () => {
         const cancelAnimationFrame = jest.spyOn(window, 'cancelAnimationFrame');
         const { unmount } = render(navigation, stickyOptions);
         fireEvent.scroll(window);
