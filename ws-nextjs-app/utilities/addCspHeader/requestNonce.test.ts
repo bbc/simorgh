@@ -43,7 +43,7 @@ describe('requestNonce', () => {
     expect(getRequestNonce(requestTwo)).toBe('nonce-two');
   });
 
-  it('is not exposed as an enumerable property', () => {
+  it('stores the nonce under an internal symbol key', () => {
     const req = createRequest();
 
     setRequestNonce(req, 'a-nonce');
