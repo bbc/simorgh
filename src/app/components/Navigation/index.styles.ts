@@ -1,7 +1,10 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
-import { STICKY_MIN_VIEWPORT_HEIGHT } from './config';
+import {
+  STICKY_MIN_VIEWPORT_HEIGHT,
+  STICKY_TRANSITION_DURATION_MS,
+} from './config';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
@@ -18,7 +21,7 @@ export default {
       backgroundColor: palette.WHITE,
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
       transform: 'translateY(-100%)',
-      transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      transition: `transform ${STICKY_TRANSITION_DURATION_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`,
       // Only applied while the bar is pinned, so the browser keeps it on its
       // own compositor layer for the slide and drops the layer afterwards.
       willChange: 'transform',

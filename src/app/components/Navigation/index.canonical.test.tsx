@@ -2,8 +2,11 @@ import { Services } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
-import CanonicalNavigation, { STICKY_NAV_EXIT_BUFFER } from './index.canonical';
-import { STICKY_MIN_VIEWPORT_HEIGHT } from './config';
+import CanonicalNavigation from './index.canonical';
+import {
+  STICKY_MIN_VIEWPORT_HEIGHT,
+  STICKY_NAV_EXIT_BUFFER_PX,
+} from './config';
 import {
   dropdownTestId,
   scrollableTestId,
@@ -509,7 +512,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: STICKY_NAV_EXIT_BUFFER + 1,
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
 
         scrollTo(400);
@@ -529,7 +532,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: STICKY_NAV_EXIT_BUFFER - 1,
+          top: STICKY_NAV_EXIT_BUFFER_PX - 1,
         });
 
         scrollTo(400);
@@ -582,7 +585,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: STICKY_NAV_EXIT_BUFFER + 1,
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
         scrollTo(400);
 
@@ -681,7 +684,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: STICKY_NAV_EXIT_BUFFER + 1,
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
         scrollTo(400);
 
