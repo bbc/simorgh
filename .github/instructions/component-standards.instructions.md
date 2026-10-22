@@ -46,3 +46,5 @@ Import from:
 ```tsx
 src/app/components/react-testing-library-with-providers
 ```
+
+Instead of mocking react context and context providers, use the `react-testing-library-with-providers` render(<Component />, { contextValues }) function and pass down the necessary context values as arguments. See src/app/components/README.mdx for more details or the file src/app/components/react-testing-library-with-providers.tsx for implementation details.
