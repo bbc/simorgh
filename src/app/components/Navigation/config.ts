@@ -19,6 +19,13 @@ export const STICKY_TRANSITION_DURATION_MS = 400;
 
 export const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 
+// Everything inside the bar that can take focus. As well as the links and
+// buttons above, this covers the scrollable rows themselves: they are
+// overflow containers, which browsers make keyboard-focusable in their own
+// right so they can be scrolled with the arrow keys, so they take focus even
+// though they are neither a link nor a button.
+export const STICKY_NAV_TAB_STOP_SELECTOR = `${FOCUSABLE_ITEMS_SELECTOR}, [data-e2e^="scrollable-nav"]`;
+
 export const SERVICES_WITH_STICKY_NAV: Services[] = [
   'mundo',
   'portuguese',

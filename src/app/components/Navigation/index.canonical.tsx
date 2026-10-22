@@ -1,4 +1,11 @@
-import React, { useState, use, useEffect, useCallback, useMemo } from 'react';
+import React, {
+  useState,
+  use,
+  useEffect,
+  useCallback,
+  useMemo,
+  useRef,
+} from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -67,6 +74,7 @@ const CanonicalNavigationContainer = ({
 
   const sticky = useStickyNavigation({ isOpen, closeMenu });
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleDropdownBreakpointChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
@@ -76,35 +84,88 @@ const CanonicalNavigationContainer = ({
   );
   useMediaQuery(DROPDOWN_MAX_WIDTH_QUERY, handleDropdownBreakpointChange);
 
+  // Not every browser moves focus to a button when it is clicked, which would
+  // leave the reader's next Tab press carrying on from wherever they were
+  // before — usually the top of the page — rather than continuing into the
+  // dropdown they have just opened. Placing focus on the button explicitly
+  // makes that next press land on the first item of the dropdown everywhere.
+  useEffect(() => {
+    if (isOpen) menuButtonRef.current?.focus();
+  }, [isOpen]);
+
+  // Closing the dropdown this way, rather than just letting it lose focus,
+  // returns focus to the button that opened it so the reader isn't left
+  // without a clear focus position once its contents are no longer reachable.
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      closeMenu();
+      menuButtonRef.current?.focus();
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, closeMenu]);
+
+  // While the dropdown is open, Tab walks its items explicitly rather than
+  // leaving it to the browser's own sequential navigation. Focus is moved by
+  // calling focus() directly, which always works, instead of depending on
+  // the items being in the browser's tab order — on macOS, keyboard
+  // navigation is restricted to form controls unless the reader has turned
+  // "Keyboard navigation" on, under which plain links are skipped entirely
+  // and Tab would jump straight past the open dropdown into the article.
   useEffect(() => {
     const dropDownNav = dropDownNavRef.current;
-    if (!dropDownNav) return undefined;
+    const nav = navRef.current;
+    if (!isOpen || !dropDownNav || !nav) return undefined;
 
-    // Tabbing forward off the end of the open dropdown should continue into
-    // the page content rather than repeating the links already shown in the
-    // bar below it. Keyed off Tab rather than blur so that Shift+Tab still
-    // walks backwards normally instead of being thrown forwards.
-    const handleDropdownExit = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab' || event.shiftKey) return;
+    const handleTab = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') return;
 
-      const dropdownItems = dropDownNav.querySelectorAll(
-        FOCUSABLE_ITEMS_SELECTOR,
+      const items = Array.from(
+        dropDownNav.querySelectorAll<HTMLElement>(FOCUSABLE_ITEMS_SELECTOR),
       );
-      const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
-      if (!lastDropdownItem || event.target !== lastDropdownItem) return;
+      if (items.length === 0) return;
 
-      const nextPageItem =
-        navRef.current && findFirstFocusableAfter(navRef.current);
+      // Focus sits on the menu button just after opening, so a forward Tab
+      // from outside the dropdown enters it at the first item.
+      const currentIndex = items.findIndex(
+        item => item === document.activeElement,
+      );
+      const isInDropdown = currentIndex !== -1;
+      if (!isInDropdown && event.shiftKey) return;
 
+      const nextIndex = isInDropdown
+        ? currentIndex + (event.shiftKey ? -1 : 1)
+        : 0;
+
+      if (nextIndex < 0) {
+        // Back out of the top of the dropdown onto the button that opened it.
+        event.preventDefault();
+        menuButtonRef.current?.focus();
+        return;
+      }
+
+      if (nextIndex < items.length) {
+        event.preventDefault();
+        items[nextIndex].focus();
+        return;
+      }
+
+      // Past the last item, carry on into the page content rather than
+      // repeating the links already shown in the bar below it.
+      const nextPageItem = findFirstFocusableAfter(nav);
       if (!nextPageItem) return;
       event.preventDefault();
       closeMenu();
       nextPageItem.focus();
     };
 
-    dropDownNav.addEventListener('keydown', handleDropdownExit);
-    return () => dropDownNav.removeEventListener('keydown', handleDropdownExit);
-  }, [dropDownNavRef, navRef, closeMenu]);
+    document.addEventListener('keydown', handleTab);
+    return () => document.removeEventListener('keydown', handleTab);
+  }, [isOpen, dropDownNavRef, navRef, closeMenu]);
 
   const topBarOJs = useMemo(
     () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
@@ -128,6 +189,7 @@ const CanonicalNavigationContainer = ({
               </ScrollableNavigation>
               {!isLite && (
                 <CanonicalMenuButton
+                  ref={menuButtonRef}
                   css={styles.menuButton}
                   announcedText={menuAnnouncedText}
                   isOpen={isOpen}
@@ -171,6 +233,7 @@ const CanonicalNavigationContainer = ({
       navRef,
       dropDownNavRef,
       secondaryScrollRef,
+      menuButtonRef,
     ],
   );
 

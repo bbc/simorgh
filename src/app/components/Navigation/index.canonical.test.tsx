@@ -92,7 +92,7 @@ describe('Navigation - Canonical', () => {
       );
     });
 
-    it('leaves backward keyboard navigation out of the dropdown to the browser', () => {
+    it('walks backwards through the dropdown items and then onto the menu button', () => {
       const { getByRole } = render(
         <>
           {navigation}
@@ -102,15 +102,45 @@ describe('Navigation - Canonical', () => {
         </>,
       );
 
-      fireEvent.click(getByRole('button', { name: 'menu' }));
+      const menuButton = getByRole('button', { name: 'menu' });
+      fireEvent.click(menuButton);
       const lastLink = getByRole('link', { name: 'Item 2' });
       lastLink.focus();
-      fireEvent.keyDown(lastLink, { key: 'Tab', shiftKey: true });
 
-      expect(document.activeElement).toBe(lastLink);
-      expect(getByRole('button', { name: 'menu' })).toHaveAttribute(
-        'aria-expanded',
-        'true',
+      fireEvent.keyDown(lastLink, { key: 'Tab', shiftKey: true });
+      expect(document.activeElement).toBe(
+        getByRole('link', { name: 'Item 1' }),
+      );
+
+      fireEvent.keyDown(document.activeElement as HTMLElement, {
+        key: 'Tab',
+        shiftKey: true,
+      });
+      expect(document.activeElement).toBe(menuButton);
+      expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+    });
+
+    it('moves focus into the dropdown on the first Tab press after it is opened', () => {
+      const { getByRole } = render(navigation);
+
+      fireEvent.click(getByRole('button', { name: 'menu' }));
+      fireEvent.keyDown(document.activeElement as HTMLElement, { key: 'Tab' });
+
+      expect(document.activeElement).toBe(
+        getByRole('link', { name: 'Item 1' }),
+      );
+    });
+
+    it('walks forwards through the dropdown items', () => {
+      const { getByRole } = render(navigation);
+
+      fireEvent.click(getByRole('button', { name: 'menu' }));
+      const firstLink = getByRole('link', { name: 'Item 1' });
+      firstLink.focus();
+      fireEvent.keyDown(firstLink, { key: 'Tab' });
+
+      expect(document.activeElement).toBe(
+        getByRole('link', { name: 'Item 2' }),
       );
     });
 
@@ -523,6 +553,55 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
+      it('keeps the dropdown open through an incidental scroll correction that briefly crosses the exit point while tabbing through it', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+        fireEvent.keyDown(window, { key: 'Tab' });
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+
+        scrollTo(400);
+
+        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+      });
+
+      it('still closes the dropdown on a scroll past the exit point once the forward-Tab suppression window has elapsed', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+        fireEvent.keyDown(window, { key: 'Tab' });
+        act(() => {
+          jest.advanceTimersByTime(400);
+        });
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+
+        scrollTo(400);
+
+        expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'false');
+      });
+
       it('keeps sticky navigation on screen while the article start is still within the exit buffer', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
@@ -707,6 +786,25 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
         expect(secondaryScroll.scrollLeft).toBe(0);
       });
+
+      it('resets the secondary scrollable row on every repeated hide-and-reappear cycle, not just the first', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const secondaryScroll = container.querySelector(
+          '[data-e2e="scrollable-nav-secondary"]',
+        ) as HTMLElement;
+
+        scrollTo(500);
+        scrollTo(450);
+        secondaryScroll.scrollLeft = 120;
+        scrollTo(460);
+        expect(secondaryScroll.scrollLeft).toBe(0);
+
+        scrollTo(500);
+        scrollTo(450);
+        secondaryScroll.scrollLeft = 80;
+        scrollTo(460);
+        expect(secondaryScroll.scrollLeft).toBe(0);
+      });
     });
 
     describe('keyboard and dropdown accessibility', () => {
@@ -816,6 +914,137 @@ describe('Navigation - Canonical', () => {
         fireEvent.keyDown(window, { key: 'Tab' });
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+      });
+
+      describe('dropdown-only tab order while pinned', () => {
+        // The dropdown's links are hidden from the accessibility tree while
+        // closed (via CSS visibility), so `getByRole` can't see them until
+        // it's open; a plain DOM query is used instead for closed-state
+        // checks.
+        const getDropdownLinks = (container: HTMLElement) =>
+          container.querySelectorAll(`[data-testid="${dropdownTestId}"] a`);
+
+        it('removes the dropdown links from the tab order before the dropdown is opened', () => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+
+          const [itemOne, itemTwo] = getDropdownLinks(container);
+          expect(itemOne).toHaveAttribute('tabindex', '-1');
+          expect(itemTwo).toHaveAttribute('tabindex', '-1');
+        });
+
+        // Browsers make overflow containers keyboard-focusable so they can be
+        // scrolled with the arrow keys, so the rows take focus in their own
+        // right even though they are neither a link nor a button.
+        it('removes both scrollable rows from the tab order', () => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav"]'),
+          ).toHaveAttribute('tabindex', '-1');
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav-secondary"]'),
+          ).toHaveAttribute('tabindex', '-1');
+        });
+
+        it('keeps both scrollable rows out of the tab order while the dropdown is open', () => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav"]'),
+          ).toHaveAttribute('tabindex', '-1');
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav-secondary"]'),
+          ).toHaveAttribute('tabindex', '-1');
+        });
+
+        it('restores the scrollable rows to the tab order once the bar is no longer pinned', () => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          scrollTo(500);
+          act(() => {
+            jest.advanceTimersByTime(400);
+          });
+
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav"]'),
+          ).not.toHaveAttribute('tabindex');
+          expect(
+            container.querySelector('[data-e2e="scrollable-nav-secondary"]'),
+          ).not.toHaveAttribute('tabindex');
+        });
+
+        // Clicking a button doesn't focus it in every browser, which would
+        // otherwise leave the next Tab press starting from the top of the
+        // page rather than carrying on into the dropdown.
+        it('moves focus to the menu button when the dropdown is opened by pointer', () => {
+          render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          const menuButton = screen.getByRole('button', { name: 'menu' });
+          fireEvent.click(menuButton);
+
+          expect(document.activeElement).toBe(menuButton);
+        });
+
+        it('makes the dropdown links the only tab stops in the bar once the dropdown is opened', () => {
+          render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+
+          // Set outright rather than left absent, so the items are tab stops
+          // even where links are not tabbable by default (macOS keyboard
+          // navigation). See useStickyNavigation.
+          expect(screen.getByRole('link', { name: 'Item 1' })).toHaveAttribute(
+            'tabindex',
+            '0',
+          );
+          expect(screen.getByRole('link', { name: 'Item 2' })).toHaveAttribute(
+            'tabindex',
+            '0',
+          );
+          expect(screen.getByRole('button', { name: 'menu' })).toHaveAttribute(
+            'tabindex',
+            '-1',
+          );
+        });
+
+        it('removes the dropdown links from the tab order again once it is closed', () => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          const menuButton = screen.getByRole('button', { name: 'menu' });
+          fireEvent.click(menuButton);
+          fireEvent.click(menuButton);
+
+          const [itemOne, itemTwo] = getDropdownLinks(container);
+          expect(itemOne).toHaveAttribute('tabindex', '-1');
+          expect(itemTwo).toHaveAttribute('tabindex', '-1');
+        });
+
+        it('closes the dropdown and returns focus to the menu button when Escape is pressed', () => {
+          render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          const menuButton = screen.getByRole('button', { name: 'menu' });
+          fireEvent.click(menuButton);
+          const firstLink = screen.getByRole('link', { name: 'Item 1' });
+          firstLink.focus();
+
+          fireEvent.keyDown(document, { key: 'Escape' });
+
+          expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+          expect(document.activeElement).toBe(menuButton);
+          expect(firstLink).toHaveAttribute('tabindex', '-1');
+        });
       });
 
       describe('structure and landmarks', () => {

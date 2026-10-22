@@ -11,20 +11,21 @@ import useToggle from '#app/hooks/useToggle';
 import subscribeToMediaQuery from '#hooks/useMediaQuery/subscribeToMediaQuery';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
-  FOCUSABLE_ITEMS_SELECTOR,
   SERVICES_WITH_STICKY_NAV,
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_EXIT_BUFFER_PX,
+  STICKY_NAV_TAB_STOP_SELECTOR,
   STICKY_TRANSITION_DURATION_MS,
 } from './config';
 
 // Resizing fires in bursts, and only the bar's measured height can change as
 // a result, so the work is deferred until the burst has settled.
 const RESIZE_DEBOUNCE_MS = 150;
-// Tabbing forward can make the browser nudge the viewport upward to reveal
-// the newly focused element, which looks identical to a deliberate upward
-// scroll. Upward movement is ignored for this long after a forward Tab so
-// that the bar isn't dragged into view by the browser's own correction.
+// Tabbing forward can make the browser nudge the viewport by a pixel or two,
+// in either direction, to reveal the newly focused element, which looks
+// identical to a deliberate scroll. Scroll position changes are ignored for
+// this long after a forward Tab so that the bar isn't dragged into view, or
+// swept away mid-use, by the browser's own correction.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
 const ARTICLE_START_SELECTOR = 'main [data-sticky-nav-anchor]';
 
@@ -126,9 +127,9 @@ const useStickyNavigation = ({
   const secondaryScrollRef = useRef<HTMLDivElement>(null);
   const isOpenRef = useLatestRef(isOpen);
   const closeMenuRef = useLatestRef(closeMenu);
-  // Timestamp until which upward scrolling should not count as the reader
-  // deliberately scrolling up. See FORWARD_TAB_SCROLL_SUPPRESSION_MS.
-  const suppressUpwardScrollUntilRef = useRef(0);
+  // Timestamp until which a scroll position change should not count as the
+  // reader deliberately scrolling. See FORWARD_TAB_SCROLL_SUPPRESSION_MS.
+  const suppressScrollUntilRef = useRef(0);
 
   // ---------------------------------------------------------------------
   // Eligibility: does this viewport qualify for a sticky bar at all?
@@ -178,7 +179,7 @@ const useStickyNavigation = ({
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab' || event.shiftKey) return;
-      suppressUpwardScrollUntilRef.current =
+      suppressScrollUntilRef.current =
         Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -192,9 +193,16 @@ const useStickyNavigation = ({
     // Cached DOM reads. Measuring these on every frame would force the
     // browser to recalculate layout in the middle of a scroll.
     const measurements = { height: 0, articleStart: null as Element | null };
-    // Where the previous frame left off. `isPinned` mirrors the committed
-    // state so that the latch below can read it without re-subscribing.
-    const tracking = { lastScrollY: window.scrollY, isPinned: false };
+    // Where the previous frame left off. `isPinned` and `isVisible` mirror
+    // the committed state so that the checks below can read them without
+    // re-subscribing, and so the scroll reset below has its own ground
+    // truth to compare against instead of reaching into React's state from
+    // inside an updater function, which must stay a pure calculation.
+    const tracking = {
+      lastScrollY: window.scrollY,
+      isPinned: false,
+      isVisible: false,
+    };
     // Outstanding scheduled work, cancelled on teardown.
     const pending = {
       animationFrame: null as number | null,
@@ -224,9 +232,16 @@ const useStickyNavigation = ({
       if (!navSlotRef.current || !navRef.current) return;
 
       const { scrollY } = window;
+      // See FORWARD_TAB_SCROLL_SUPPRESSION_MS: a forward Tab can make the
+      // browser nudge the viewport by a pixel or two, in either direction,
+      // to reveal the newly focused element. That nudge looks identical to
+      // a deliberate scroll, so both the entry check below and the exit
+      // check further down ignore scroll position changes for this long
+      // after a forward Tab.
+      const isWithinForwardTabSuppression =
+        Date.now() < suppressScrollUntilRef.current;
       const isScrollingUp =
-        scrollY < tracking.lastScrollY &&
-        Date.now() >= suppressUpwardScrollUntilRef.current;
+        scrollY < tracking.lastScrollY && !isWithinForwardTabSuppression;
       const isScrollingDown = scrollY > tracking.lastScrollY;
       tracking.lastScrollY = scrollY;
 
@@ -239,22 +254,35 @@ const useStickyNavigation = ({
       // goes away. See STICKY_NAV_EXIT_BUFFER_PX.
       const isPastExitPoint =
         anchorTop !== null && anchorTop <= STICKY_NAV_EXIT_BUFFER_PX;
+      // Tabbing through an open dropdown's items is the main place an
+      // incidental nudge (see above) could cross the exit threshold and
+      // sweep the dropdown away mid-use, so a pinned bar also stays pinned
+      // for the suppression window regardless of what the exit check says.
       const isPinned = tracking.isPinned
-        ? isPastExitPoint
+        ? isPastExitPoint || isWithinForwardTabSuppression
         : isPastEntryPoint && isScrollingUp;
 
-      // An open dropdown survives scrolling in either direction; only
-      // leaving the pinned region entirely closes it, so that scrolling down
-      // doesn't interrupt someone part-way through using it.
       if (tracking.isPinned && !isPinned) closeMenuRef.current();
       tracking.isPinned = isPinned;
 
+      const isVisible =
+        isPinned &&
+        (isOpenRef.current ||
+          isScrollingUp ||
+          (!isScrollingDown && tracking.isVisible));
+
+      // Reset eagerly, in the same tick as the transition that hides the
+      // bar, rather than from a separate effect that only runs once React
+      // has re-rendered and committed. That gives the row's horizontal
+      // scroll nowhere to be read back from mid-transition, so the bar can
+      // never be caught showing wherever it was last left.
+      if (tracking.isVisible && !isVisible) {
+        const secondaryScroll = secondaryScrollRef.current;
+        if (secondaryScroll) secondaryScroll.scrollLeft = 0;
+      }
+      tracking.isVisible = isVisible;
+
       setScrollState(previous => {
-        const isVisible =
-          isPinned &&
-          (isOpenRef.current ||
-            isScrollingUp ||
-            (!isScrollingDown && previous.shouldBeVisible));
         const isUnchanged =
           previous.shouldBePinned === isPinned &&
           previous.shouldBeVisible === isVisible &&
@@ -369,15 +397,6 @@ const useStickyNavigation = ({
     [shouldBePinned],
   );
 
-  // Reset the secondary row's horizontal scroll whenever the bar leaves the
-  // screen, so that it comes back showing its first items rather than
-  // wherever the reader last left it.
-  useEffect(() => {
-    if (!isEnabled || shouldBeVisible) return;
-    const secondaryScroll = secondaryScrollRef.current;
-    if (secondaryScroll) secondaryScroll.scrollLeft = 0;
-  }, [isEnabled, shouldBeVisible]);
-
   // ---------------------------------------------------------------------
   // Accessibility: keeping the pinned bar out of the way of everyone who
   // isn't using a pointer.
@@ -416,20 +435,36 @@ const useStickyNavigation = ({
   // The bar is a convenience overlay for pointer and touch readers scrolling
   // back up an article; keyboard users already reach these same links in
   // their normal document-order position. While it is pinned over the
-  // content, take it out of the tab order so focus can never land on it,
-  // while leaving it visible and clickable.
+  // content, take it out of the tab order so focus can never land on it.
+  // The one exception is the dropdown menu: once the reader has opened it
+  // (the hamburger button stays clickable throughout, just not reachable by
+  // Tab), its items become the only tab stops in the bar, and are removed
+  // again the moment the dropdown closes.
+  //
+  // Those items are given an explicit `tabindex="0"` rather than simply
+  // having the attribute left off. macOS ships with keyboard navigation
+  // limited to form controls by default — Safari's "Press Tab to highlight
+  // each item on a webpage" — under which a plain `<a href>` is not a tab
+  // stop at all, but one carrying an explicit tabindex still is. Setting it
+  // outright means the open dropdown can be tabbed through on every
+  // platform, rather than only where links happen to be tabbable.
   useEffect(() => {
     const nav = navRef.current;
     if (!nav || !isVisible) return undefined;
 
-    const focusableItems = Array.from(
-      nav.querySelectorAll<HTMLElement>(FOCUSABLE_ITEMS_SELECTOR),
+    const dropDownNav = dropDownNavRef.current;
+    const tabStops = Array.from(
+      nav.querySelectorAll<HTMLElement>(STICKY_NAV_TAB_STOP_SELECTOR),
     );
-    focusableItems.forEach(item => item.setAttribute('tabindex', '-1'));
+
+    tabStops.forEach(tabStop => {
+      const isInOpenDropdown = isOpen && dropDownNav?.contains(tabStop);
+      tabStop.setAttribute('tabindex', isInOpenDropdown ? '0' : '-1');
+    });
 
     return () =>
-      focusableItems.forEach(item => item.removeAttribute('tabindex'));
-  }, [isVisible]);
+      tabStops.forEach(tabStop => tabStop.removeAttribute('tabindex'));
+  }, [isVisible, isOpen]);
 
   return {
     isEnabled,
