@@ -1,8 +1,8 @@
 import { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import * as onClient from '#app/lib/utilities/onClient';
-import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import onClient from '#app/lib/utilities/onClient';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
@@ -19,6 +19,26 @@ jest.mock('./cookies', () => ({
   getCookiePolicy: jest.fn(),
   personalisationEnabled: jest.fn(),
 }));
+
+jest.mock('#app/lib/utilities/onClient', () => {
+  const actual = jest.requireActual('#app/lib/utilities/onClient');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('#app/lib/utilities/isOperaProxy', () => {
+  const actual = jest.requireActual('#app/lib/utilities/isOperaProxy');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
 
 const DummyComponent = () => {
   use(UserContext);
@@ -58,8 +78,8 @@ describe('UserContext', () => {
   describe('ckns_mvt cookie', () => {
     const cookieSetterSpy = jest.spyOn(Cookie, 'set');
     const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    const isOperaProxySpy = jest.spyOn(isOperaProxy, 'default');
-    const onClientSpy = jest.spyOn(onClient, 'default');
+    const isOperaProxySpy = jest.mocked(isOperaProxy);
+    const onClientSpy = jest.mocked(onClient);
 
     beforeEach(() => {
       jest.clearAllMocks();

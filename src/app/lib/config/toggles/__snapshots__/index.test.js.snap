@@ -91,6 +91,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "sportDataPolling": {
     "enabled": false,
   },
+  "stickyNavigation": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
   },
@@ -209,6 +212,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "sportDataPolling": {
     "enabled": true,
   },
+  "stickyNavigation": {
+    "enabled": true,
+  },
   "topBarOJs": {
     "enabled": true,
   },
@@ -319,6 +325,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "sportDataPolling": {
     "enabled": false,
+  },
+  "stickyNavigation": {
+    "enabled": true,
   },
   "topBarOJs": {
     "enabled": true,

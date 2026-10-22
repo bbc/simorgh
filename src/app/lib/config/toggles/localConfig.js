@@ -97,6 +97,9 @@ export default {
   showSportDataHeader: {
     enabled: true,
   },
+  stickyNavigation: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
   },

@@ -7,6 +7,16 @@ import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import RecentAudioEpisodes from '.';
 
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
 const RecentAudioEpisodesWithContext = ({
   masterBrand,
   brandId,
