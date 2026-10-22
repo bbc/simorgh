@@ -1,4 +1,3 @@
-import React from 'react';
 import Spinner from '#app/components/Spinner';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './index.module.scss';

@@ -48,20 +48,6 @@ const styles = {
       },
     }),
 
-  spinnerWrapper: css({
-    display: 'flex',
-    justifyContent: 'center',
-  }),
-
-  spinner: ({ mq }) =>
-    css({
-      height: `${pixelsToRem(32)}rem`,
-      width: `${pixelsToRem(32)}rem`,
-      [mq.FORCED_COLOURS]: {
-        fill: 'canvasText',
-      },
-    }),
-
   seeMoreButton: ({
     palette,
     spacings,
