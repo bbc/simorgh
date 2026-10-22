@@ -74,6 +74,23 @@ const PortraitVideoCarousel = ({
     () => blocks.filter(isPlayablePortraitVideoBlock),
     [blocks],
   );
+  const keyedBlocks = useMemo(() => {
+    const blockOccurrences = new Map<string, number>();
+
+    return blocks.map(block => {
+      const blockId = isPlayablePortraitVideoBlock(block)
+        ? `${block.model.video.id}-${block.model.video.version.id}`
+        : block.model.video.articleUrl;
+      const occurrence = blockOccurrences.get(blockId) ?? 0;
+
+      blockOccurrences.set(blockId, occurrence + 1);
+
+      return {
+        block,
+        key: `${blockId}-${occurrence}`,
+      };
+    });
+  }, [blocks]);
 
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
@@ -143,13 +160,9 @@ const PortraitVideoCarousel = ({
               tabIndex={-1}
               role="list"
             >
-              {blocks.map((block, index) => (
+              {keyedBlocks.map(({ block, key }, index) => (
                 <PortraitVideoPromo
-                  key={
-                    isPlayablePortraitVideoBlock(block)
-                      ? block.model.video.id
-                      : block.model.video.articleUrl
-                  }
+                  key={key}
                   block={block}
                   onClick={() => handlePromoClick(index)}
                   blockPosition={index}

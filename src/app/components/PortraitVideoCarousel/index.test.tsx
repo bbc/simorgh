@@ -114,6 +114,23 @@ describe('PortraitVideoCarousel', () => {
     expect(portraitVideoItems.length).toBe(fixture.blocks.length);
   });
 
+  it('renders repeated videos without duplicate React keys', async () => {
+    const repeatedBlock = fixture.blocks[0];
+
+    await act(async () => {
+      render(
+        <Component
+          blocks={[repeatedBlock, repeatedBlock]}
+          eventTrackingData={eventTrackingData}
+        />,
+      );
+    });
+
+    expect(
+      screen.getByTestId('pv-carousel').getElementsByTagName('li'),
+    ).toHaveLength(2);
+  });
+
   it('Should render the carousel heading with the correct title', async () => {
     await act(async () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
