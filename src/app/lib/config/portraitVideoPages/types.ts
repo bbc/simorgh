@@ -5,15 +5,8 @@ export type PortraitVideoArticle = {
   published: string;
   imgSrc: string;
   imgAlt: string;
-  media?: {
-    id: string;
-    versionId: string;
-    holdingImageURL?: string;
-    kind?: string;
-    guidance?: string | null;
-    territories?: string[];
-    isEmbeddingAllowed: boolean;
-  };
+  videoId?: string;
+  versionId?: string;
 };
 
 export type PortraitVideoSlice = {

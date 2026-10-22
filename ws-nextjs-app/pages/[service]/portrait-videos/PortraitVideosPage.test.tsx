@@ -22,6 +22,11 @@ jest.mock('#app/components/Metadata', () => ({
   __esModule: true,
   default: () => null,
 }));
+jest.mock('#app/components/MediaLoader', () => ({
+  __esModule: true,
+  default: () => null,
+  BumpLoader: () => null,
+}));
 
 const createArticle = (index: number): PortraitVideoArticle => ({
   url: `https://www.bbc.com/hausa/articles/article-${index}`,
@@ -43,34 +48,61 @@ const createSlices = (count: number): PortraitVideoPageData => ({
 
 const playableArticle: PortraitVideoArticle = {
   ...createArticle(0),
-  media: {
-    id: 'urn:bbc:optimo:asset:playable',
-    versionId: 'p0123456',
-    holdingImageURL: 'https://ichef.test.bbci.co.uk/holding-image.jpg',
-    isEmbeddingAllowed: false,
-    territories: ['uk', 'nonuk'],
-  },
+  videoId: 'p0123456',
+  versionId: 'p0654321',
 };
 
 describe('toCarouselBlock', () => {
-  it('only creates a playable block when explicit media IDs are provided', () => {
+  it('only creates a playable block when both media IDs are provided', () => {
     expect(toCarouselBlock(playableArticle)).toMatchObject({
       model: {
         video: {
-          id: playableArticle.media?.id,
+          id: playableArticle.videoId,
           version: {
-            id: playableArticle.media?.versionId,
+            id: playableArticle.versionId,
           },
         },
       },
     });
 
-    expect(toCarouselBlock(createArticle(1))).toMatchObject({
-      model: {
-        video: {
-          articleUrl: 'https://www.bbc.com/hausa/articles/article-1',
-        },
+    [createArticle(1), { ...createArticle(2), videoId: 'p0123456' }].forEach(
+      article => {
+        expect(toCarouselBlock(article)).toMatchObject({
+          model: {
+            video: {
+              articleUrl: article.url,
+            },
+          },
+        });
       },
+    );
+  });
+});
+
+describe('Hausa portrait video data', () => {
+  it('provides complete playable data for the Mata and Kano slices', () => {
+    expect(
+      hausaPageData.slices.map(({ title, articles }) => ({
+        title,
+        articleCount: articles.length,
+      })),
+    ).toEqual([
+      { title: 'Mata', articleCount: 9 },
+      { title: 'Kano', articleCount: 10 },
+    ]);
+    expect(hausaPageData.slices[0].articles[0].title).toBe(
+      'Mai shekara 15 da ta ƙware a zane',
+    );
+
+    hausaPageData.slices.forEach(({ articles }) => {
+      articles.forEach(article => {
+        expect(article).toEqual(
+          expect.objectContaining({
+            videoId: expect.any(String),
+            versionId: expect.any(String),
+          }),
+        );
+      });
     });
   });
 });
@@ -80,7 +112,7 @@ describe('PortraitVideosPage', () => {
     mockMatchMedia();
   });
 
-  it('renders Hausa article records as links on a dark page', async () => {
+  it('renders the Hausa topics as playable carousels on a dark page', async () => {
     await act(async () => {
       render(<PortraitVideosPage pageData={hausaPageData} />, {
         service: 'hausa',
@@ -96,14 +128,13 @@ describe('PortraitVideosPage', () => {
       }),
     ).toBeInTheDocument();
     expect(
+      screen.getByRole('heading', { level: 2, name: 'Mata' }),
+    ).toBeInTheDocument();
+    expect(
       screen.getByRole('heading', { level: 2, name: 'Kano' }),
     ).toBeInTheDocument();
-    expect(screen.getAllByTestId('promo-link')).toHaveLength(10);
-    expect(screen.queryByTestId('promo-button')).not.toBeInTheDocument();
-    expect(screen.getAllByTestId('promo-link')[0]).toHaveAttribute(
-      'href',
-      hausaPageData.slices[0].articles[0].url,
-    );
+    expect(screen.getAllByTestId('promo-button')).toHaveLength(19);
+    expect(screen.queryByTestId('promo-link')).not.toBeInTheDocument();
   });
 
   it('only renders the configured number of top slices', async () => {

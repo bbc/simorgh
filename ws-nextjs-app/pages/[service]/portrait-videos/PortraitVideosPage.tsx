@@ -26,7 +26,8 @@ export const toCarouselBlock = ({
   duration,
   imgSrc,
   imgAlt,
-  media,
+  videoId,
+  versionId,
 }: PortraitVideoArticle): PortraitVideoCarouselBlock => {
   const images = [
     {
@@ -36,24 +37,24 @@ export const toCarouselBlock = ({
     },
   ];
 
-  if (media) {
+  if (videoId && versionId) {
     return {
       type: 'portraitClipMedia',
       model: {
         type: 'video',
         images,
         video: {
-          id: media.id,
+          id: videoId,
           title,
-          holdingImageURL: media.holdingImageURL,
+          holdingImageURL: imgSrc,
           version: {
-            id: media.versionId,
+            id: versionId,
             duration,
-            kind: media.kind ?? 'programme',
-            guidance: media.guidance ?? null,
-            territories: media.territories,
+            kind: 'programme',
+            guidance: null,
+            territories: ['uk', 'nonuk'],
           },
-          isEmbeddingAllowed: media.isEmbeddingAllowed,
+          isEmbeddingAllowed: false,
         },
       },
     };

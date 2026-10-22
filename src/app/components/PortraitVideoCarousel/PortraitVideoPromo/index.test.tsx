@@ -29,8 +29,10 @@ describe('PortraitVideoPromo', () => {
     const sampleVideoData = {
       model: {
         video: {
+          id: 'testId',
           title: 'Sample Heading',
           version: {
+            id: 'testVersionId',
             duration: 'PT13S',
             kind: 'programme',
             territories: ['uk', 'nonuk'],
@@ -57,6 +59,35 @@ describe('PortraitVideoPromo', () => {
 
     const screenreaderText = `${watchVideo}${heading}${duration}`;
     expect(screenreaderText).toBe('Play Vídeo, Sample Heading, Duration 0,13');
+  });
+
+  it('uses a fallback action label when the service translation is missing', () => {
+    const sampleVideoData = {
+      model: {
+        video: {
+          id: 'testId',
+          title: 'Sample Heading',
+          version: {
+            id: 'testVersionId',
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
+    render(
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
+      { service: 'hausa' },
+    );
+
+    expect(screen.getByTestId('text-contents')).toHaveTextContent(
+      'Play Bidiyo, Sample Heading, Tsawon lokaci 0,13',
+    );
   });
 
   it('Should not show a visually hidden duration if no duration is given', () => {
@@ -225,6 +256,7 @@ describe('PortraitVideoPromo', () => {
           id: 'testId',
           title: 'Sample Heading',
           version: {
+            id: 'testVersionId',
             kind: 'programme',
             territories: ['uk', 'nonuk'],
           },
@@ -273,6 +305,7 @@ describe('PortraitVideoPromo', () => {
           id: 'testId',
           title: 'Sample Heading',
           version: {
+            id: 'testVersionId',
             duration: 'PT13S',
             kind: 'programme',
             territories: ['uk', 'nonuk'],

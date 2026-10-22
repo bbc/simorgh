@@ -62,9 +62,9 @@ export default ({
   const mediaISO8601Duration = video?.version?.duration;
 
   const {
-    video: mediaType,
-    play: actionType,
-    duration: durationTranslation,
+    video: mediaType = DEFAULT_TRANSLATION.video,
+    play: actionType = DEFAULT_TRANSLATION.play,
+    duration: durationTranslation = DEFAULT_TRANSLATION.duration,
   } = media;
 
   let momentDuration: moment.Duration | null = null;
