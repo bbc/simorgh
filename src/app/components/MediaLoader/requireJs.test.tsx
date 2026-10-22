@@ -3,7 +3,7 @@ import {
   render,
 } from '#app/components/react-testing-library-with-providers';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
-import { BumpLoader } from '.';
+import { BumpLoader } from './requireJs';
 
 // Jest hoists module factories above imports, so this reference must be
 // initialized by the factory before the tests use it.
