@@ -167,12 +167,14 @@ const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
   return null;
 };
 
+const renderSaveArticleButtonErrorFallback = (error: Error) => (
+  <SaveArticleButtonErrorFallback error={error} />
+);
+
 const SaveArticleButtonAuthenticated = (props: SaveArticleButtonProps) => (
   <ErrorBoundary
     componentName="SaveArticleButtonAuthenticated"
-    // Stable module-scope component - safe to reference from the fallback prop.
-    // eslint-disable-next-line react/no-unstable-nested-components
-    fallback={error => <SaveArticleButtonErrorFallback error={error} />}
+    fallback={renderSaveArticleButtonErrorFallback}
   >
     <SaveArticleButtonAuthenticatedInner {...props} />
   </ErrorBoundary>
