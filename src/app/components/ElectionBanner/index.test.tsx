@@ -5,6 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner, { DEFAULT_HEIGHTS_AP } from '.';
@@ -181,6 +182,24 @@ describe('ElectionBanner', () => {
       expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
     });
 
+    it('should render ElectionBanner when live-page taggings contain an election thing ID', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: {
+            electionBanner: { enabled: true },
+          },
+          isAmp,
+          service: 'mundo',
+        },
+      );
+
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
+
+      expect(iframe).toHaveAttribute('title', 'Election banner');
+    });
+
     it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
       const { queryByTestId } = renderElectionBanner(
         {
@@ -311,6 +330,67 @@ describe('ElectionBanner', () => {
       const title = getByText(MOCK_TITLE);
 
       expect(title).toBeInTheDocument();
+    });
+  });
+
+  describe('Live page styling', () => {
+    it('should apply the full-bleed wrapper class on Live pages for the VJ banner', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: { electionBanner: { enabled: true } },
+          service: 'mundo',
+          pageType: LIVE_PAGE,
+        },
+      );
+
+      expect(getByTestId(ELEMENT_ID)).toHaveClass('electionBannerWrapperLive');
+    });
+
+    it('should apply the full-bleed wrapper class on Live pages for the Associated Press banner', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: { electionBanner: { enabled: true } },
+          service: 'mundo',
+          pageType: LIVE_PAGE,
+        },
+        mockAssocPressServiceContext,
+      );
+
+      expect(getByTestId(ELEMENT_ID)).toHaveClass(
+        'assocPressElectionBannerWrapperLivePage',
+      );
+    });
+
+    it('should widen the Associated Press iframe max-width on Live pages', () => {
+      const { getByTestId } = renderElectionBanner(
+        { taggings: mockTaggings },
+        {
+          toggles: { electionBanner: { enabled: true } },
+          service: 'mundo',
+          pageType: LIVE_PAGE,
+        },
+        mockAssocPressServiceContext,
+      );
+
+      const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
+
+      expect(iframe).toHaveClass('assocPressElectionBannerIframeLivePage');
+    });
+
+    it('should not apply the full-bleed wrapper class on article pages', () => {
+      const { getByTestId } = renderElectionBanner(
+        { aboutTags: mockAboutTags, taggings: mockTaggings },
+        {
+          toggles: { electionBanner: { enabled: true } },
+          service: 'mundo',
+        },
+      );
+
+      expect(getByTestId(ELEMENT_ID)).not.toHaveClass(
+        'electionBannerWrapperLive',
+      );
     });
   });
 });
