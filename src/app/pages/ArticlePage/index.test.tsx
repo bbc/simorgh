@@ -42,7 +42,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
-import * as buildReverbParams from '../../components/ATIAnalytics/params';
+import * as buildReverbParams from '../../lib/analyticsUtils/params/buildParams';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -56,12 +56,35 @@ jest.mock('../../components/ATIAnalytics', () => {
   return ATIAnalytics;
 });
 
+jest.mock('../../contexts/ReverbParamsContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../contexts/ReverbParamsContext'),
+}));
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/params/buildParams'),
+}));
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const reverbParamsContextProviderSpy = jest.spyOn(
   ReverbParamsContext,
   'ReverbParamsContextProvider',
 );
 
-const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
+const buildReverbParamsSpy = jest.spyOn(
+  buildReverbParams,
+  'buildAnalyticsParams',
+);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -158,6 +181,19 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
+    const { container } = render(
+      <ArticlePage pageData={articleDataPersian} />,
+      { service: 'persian' },
+    );
+    const anchor = container.querySelector('main [data-sticky-nav-anchor]');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor?.tagName).toBe('P');
+    expect(anchor).toHaveTextContent(/\S/);
+    expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
   });
 
   it.each([
