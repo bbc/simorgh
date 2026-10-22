@@ -16,7 +16,6 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { SERVICES_WITH_STICKY_NAV, STICKY_MIN_VIEWPORT_HEIGHT } from './config';
 import styles from './index.styles';
 
-const STICKY_NAV_CLEARANCE = 65;
 const STICKY_TRANSITION_DURATION = 400;
 const STICKY_MIN_WIDTH_QUERY = '(min-width: 300px)';
 const STICKY_MAX_WIDTH_QUERY = '(max-width: 1007px)';
@@ -81,6 +80,7 @@ const CanonicalNavigationContainer: React.FC<
   const enableStickyNavigation =
     stickyNavigationEnabled &&
     env !== 'live' &&
+    pageType === ARTICLE_PAGE &&
     SERVICES_WITH_STICKY_NAV.includes(service) &&
     isStickyViewport &&
     isWithinStickyMaxWidth &&
@@ -253,15 +253,11 @@ const CanonicalNavigationContainer: React.FC<
       const scrollingDown = scrollY > scrollState.lastScrollY;
       scrollState.lastScrollY = scrollY;
 
-      const articleStart =
-        pageType === ARTICLE_PAGE
-          ? document.querySelector('main [data-sticky-nav-anchor]')
-          : null;
+      const articleStart = document.querySelector(
+        'main [data-sticky-nav-anchor]',
+      );
       const reachedActivationPoint =
-        pageType === ARTICLE_PAGE
-          ? articleStart !== null &&
-            articleStart.getBoundingClientRect().top <= 0
-          : slot.getBoundingClientRect().bottom < -STICKY_NAV_CLEARANCE;
+        articleStart !== null && articleStart.getBoundingClientRect().top <= 0;
       const fixed =
         reachedActivationPoint && (scrollingUp || scrollState.fixed);
       const height =

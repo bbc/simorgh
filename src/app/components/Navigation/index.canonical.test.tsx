@@ -1,5 +1,5 @@
 import { Services } from '#app/models/types/global';
-import { HOME_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
 import CanonicalNavigation from './index.canonical';
@@ -166,7 +166,7 @@ describe('Navigation - Canonical', () => {
     };
     const stickyOptions = {
       service: 'mundo' as Services,
-      pageType: HOME_PAGE,
+      pageType: ARTICLE_PAGE,
       toggles: toggleConfigs.test,
     };
     // Settles the full, non-reduced-motion slide-in animation (scroll
@@ -245,7 +245,7 @@ describe('Navigation - Canonical', () => {
                 ? width >= 300
                 : !nonMatchingByDefault.includes(query),
           }));
-          const { container } = render(navigation, stickyOptions);
+          const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
           const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
@@ -275,7 +275,7 @@ describe('Navigation - Canonical', () => {
               ? mediaQuery
               : defaultMatchMediaImplementation(query),
           );
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
         fireEvent.click(screen.getByRole('button', { name: 'menu' }));
@@ -369,7 +369,7 @@ describe('Navigation - Canonical', () => {
         'turkce',
         'urdu',
       ])('enables sticky navigation for %s on test', service => {
-        const { container } = render(navigation, {
+        const { container } = render(articleNavigation, {
           ...stickyOptions,
           service,
         });
@@ -391,7 +391,7 @@ describe('Navigation - Canonical', () => {
       ])(
         'enables sticky navigation for %s during normal local development',
         service => {
-          const { container } = render(navigation, {
+          const { container } = render(articleNavigation, {
             ...stickyOptions,
             service,
             bbcOrigin: 'http://localhost:7081',
@@ -445,10 +445,7 @@ describe('Navigation - Canonical', () => {
       it.each([1, 0, -1])(
         'only shows scroll-up navigation when the first article line is at or above the viewport top (%spx)',
         top => {
-          const { container } = render(articleNavigation, {
-            ...stickyOptions,
-            pageType: ARTICLE_PAGE,
-          });
+          const { container } = render(articleNavigation, stickyOptions);
           const firstParagraph = screen.getByText(
             'First line of article body text',
           );
@@ -470,10 +467,7 @@ describe('Navigation - Canonical', () => {
       );
 
       it('does not switch to fixed positioning while scrolling down across the article activation point', () => {
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(articleNavigation, stickyOptions);
         const firstParagraph = screen.getByText(
           'First line of article body text',
         );
@@ -505,10 +499,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('hides and closes sticky navigation when scrolling back above the first article line', () => {
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
         const menuButton = screen.getByRole('button', { name: 'menu' });
@@ -530,10 +521,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('does not activate article sticky navigation without an article body paragraph', () => {
-        const { container } = render(navigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(navigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
 
@@ -546,10 +534,7 @@ describe('Navigation - Canonical', () => {
     describe('animation and transition timing', () => {
       it('paints off-screen before sliding in and completes the slide-out before restoring normal positioning', () => {
         enableMotion();
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
 
         scrollTo(500);
@@ -598,10 +583,7 @@ describe('Navigation - Canonical', () => {
 
       it('does not hide the positioned navigation when preparing a repeat entrance', () => {
         enableMotion();
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
         scrollTo(450);
@@ -624,10 +606,7 @@ describe('Navigation - Canonical', () => {
 
       it('cancels the pending slide-in when the user starts scrolling down', () => {
         enableMotion();
-        const { container } = render(articleNavigation, {
-          ...stickyOptions,
-          pageType: ARTICLE_PAGE,
-        });
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
         scrollTo(460);
@@ -641,110 +620,9 @@ describe('Navigation - Canonical', () => {
       });
     });
 
-    describe('dropdown and layout behaviour (non-article pages)', () => {
-      it('keeps both tiers in a single navigation and reserves their space while fixed', () => {
-        const { container, getAllByTestId } = render(navigation, stickyOptions);
-        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
-
-        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
-        expect(stickyNav).not.toHaveAttribute('inert');
-        scrollTo(500);
-        expect(stickyNav).not.toHaveAttribute('aria-hidden');
-        expect(stickyNav).not.toHaveAttribute('inert');
-        expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
-
-        scrollTo(450);
-        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
-        expect(stickyNav).not.toHaveAttribute('aria-hidden');
-        expect(stickyNav).not.toHaveAttribute('inert');
-        expect(stickyNav?.parentElement).toHaveStyle({ height: '88px' });
-        expect(getAllByTestId(scrollableTestId)).toHaveLength(2);
-        expect(screen.getAllByRole('button', { name: 'menu' })).toHaveLength(1);
-        expect(stickyNav).toHaveStyle({ position: 'fixed' });
-        expect(stickyNav).toHaveStyle({ transform: 'translateY(0)' });
-      });
-
-      it('hides and closes the dropdown when scrolling down', () => {
-        const { container, getByRole } = render(navigation, stickyOptions);
-        scrollTo(500);
-        scrollTo(450);
-        const menuButton = getByRole('button', { name: 'menu' });
-        fireEvent.click(menuButton);
-        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
-
-        scrollTo(460);
-
-        expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-        expect(
-          container.querySelector('[data-e2e="sticky-nav"]'),
-        ).toHaveAttribute('data-sticky-visible', 'false');
-      });
-
-      it('keeps a sticky dropdown open when there is no vertical scroll movement', () => {
-        render(navigation, stickyOptions);
-        scrollTo(500);
-        scrollTo(450);
-        const menuButton = screen.getByRole('button', { name: 'menu' });
-        fireEvent.click(menuButton);
-
-        scrollTo(450);
-
-        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
-      });
-
-      it('does not close the original dropdown on a normal page scroll', () => {
-        const { container } = render(navigation, stickyOptions);
-        const slot = container.querySelector(
-          '[data-e2e="sticky-nav"]',
-        )?.parentElement;
-        if (!slot) throw new Error('Navigation slot was not rendered');
-        jest.spyOn(slot, 'getBoundingClientRect').mockReturnValue({
-          ...slot.getBoundingClientRect(),
-          bottom: 88,
-        });
-        const menuButton = screen.getByRole('button', { name: 'menu' });
-        fireEvent.click(menuButton);
-
-        scrollTo(10);
-
-        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
-      });
-
-      it.each([-65, -64, 0])(
-        'restores normal navigation when its original bottom is %spx from the viewport',
-        bottom => {
-          const { container } = render(navigation, stickyOptions);
-          scrollTo(500);
-          scrollTo(450);
-          const slot = container.querySelector(
-            '[data-e2e="sticky-nav"]',
-          )?.parentElement;
-          if (!slot) throw new Error('Navigation slot was not rendered');
-          jest.spyOn(slot, 'getBoundingClientRect').mockReturnValue({
-            ...slot.getBoundingClientRect(),
-            bottom,
-          });
-
-          scrollTo(400);
-          act(() => {
-            jest.advanceTimersByTime(400);
-          });
-
-          expect(slot).not.toHaveStyle({ height: '88px' });
-          expect(slot?.firstElementChild).not.toHaveStyle({
-            position: 'fixed',
-          });
-          expect(slot?.firstElementChild).toHaveAttribute(
-            'data-sticky-visible',
-            'false',
-          );
-        },
-      );
-    });
-
     describe('keyboard and dropdown accessibility', () => {
       it('keeps sticky navigation visible and its dropdown open when Tab is pressed', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
         scrollTo(450);
@@ -760,7 +638,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('allows sticky navigation to appear on scroll-up after keyboard navigation without pointer interaction', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         fireEvent.keyDown(window, { key: 'Tab' });
         act(() => {
           jest.advanceTimersByTime(500);
@@ -774,7 +652,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('does not activate sticky navigation when a forward Tab press causes an incidental upward scroll correction', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab' });
         scrollTo(450);
@@ -785,7 +663,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('still activates sticky navigation on scroll-up after Shift+Tab (backward) keyboard navigation', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab', shiftKey: true });
         scrollTo(450);
@@ -798,7 +676,7 @@ describe('Navigation - Canonical', () => {
       it.each(['ArrowUp', 'PageUp', 'Home'])(
         'activates sticky navigation on scroll-up after purposeful %s keyboard navigation',
         key => {
-          const { container } = render(navigation, stickyOptions);
+          const { container } = render(articleNavigation, stickyOptions);
           scrollTo(500);
           fireEvent.keyDown(window, { key });
           scrollTo(450);
@@ -810,7 +688,7 @@ describe('Navigation - Canonical', () => {
       );
 
       it('allows a later genuine scroll-up to activate sticky navigation once the forward Tab suppression window has elapsed', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab' });
         scrollTo(450);
@@ -830,7 +708,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('keeps hidden sticky navigation inert when Tab is pressed', () => {
-        const { container } = render(navigation, stickyOptions);
+        const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
         scrollTo(460);
@@ -875,7 +753,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('offsets keyboard scrolling by the sticky nav height while it is visible', () => {
-        render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+        render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
 
@@ -887,7 +765,7 @@ describe('Navigation - Canonical', () => {
 
       it('scrolls an element that takes focus out from behind the sticky navigation', () => {
         const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
-        render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+        render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
 
@@ -905,7 +783,7 @@ describe('Navigation - Canonical', () => {
 
       it('leaves focus within the sticky navigation itself alone', () => {
         const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
-        render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+        render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
 
