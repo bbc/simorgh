@@ -41,7 +41,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: block;
     width: initial;
