@@ -2,6 +2,8 @@ import scrapedPortraitVideos from './hausa.json';
 import { PortraitVideoArticle, PortraitVideoPageData } from './types';
 
 const topicTitles = {
+  cxnyk32yqn4t: 'Siyasa',
+  cqywjk67g1kt: 'Siyasar Najeriya',
   cnq68kdjkxdt: 'Mata',
   c2dwqj031y7t: 'Kano',
 } as const;
