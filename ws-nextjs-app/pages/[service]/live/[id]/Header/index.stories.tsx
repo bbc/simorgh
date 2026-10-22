@@ -11,7 +11,7 @@ interface ComponentProps {
   imageUrlTemplate?: string;
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
-  passportTaggings?: any;
+  taggings?: any;
 }
 
 const Component = ({
@@ -22,7 +22,7 @@ const Component = ({
   imageUrlTemplate,
   imageWidth,
   mediaCollections,
-  passportTaggings,
+  taggings,
 }: ComponentProps) => {
   return (
     <Header
@@ -33,7 +33,7 @@ const Component = ({
       imageUrlTemplate={imageUrlTemplate}
       imageWidth={imageWidth}
       mediaCollections={mediaCollections}
-      passportTaggings={passportTaggings}
+      taggings={taggings}
     />
   );
 };

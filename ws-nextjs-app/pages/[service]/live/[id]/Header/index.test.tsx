@@ -37,7 +37,7 @@ describe('Live Page Header', () => {
       <Header
         title="I am a title"
         showLiveLabel
-        passportTaggings={electionTaggings}
+        taggings={electionTaggings}
         {...props}
       />,
       {

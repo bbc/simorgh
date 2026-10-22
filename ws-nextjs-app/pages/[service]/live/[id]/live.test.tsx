@@ -547,7 +547,7 @@ describe('Live Page', () => {
       const pageData = {
         ...mockPageData,
         isLive: true,
-        passportTaggings: electionTaggings,
+        taggings: electionTaggings,
       } as unknown as ComponentProps['pageData'];
 
       mockPollingUpdate(pageData);
@@ -564,7 +564,7 @@ describe('Live Page', () => {
         ...mockPageData,
         isLive: true,
         mediaCollections: mundoLiveFixture.data.mediaCollections,
-        passportTaggings: electionTaggings,
+        taggings: electionTaggings,
       } as unknown as ComponentProps['pageData'];
 
       mockPollingUpdate(pageData);

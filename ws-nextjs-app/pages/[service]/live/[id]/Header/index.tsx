@@ -26,7 +26,7 @@ const Header = ({
   imageWidth,
   mediaCollections,
   showSportData,
-  passportTaggings,
+  taggings,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -36,7 +36,7 @@ const Header = ({
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
-  passportTaggings?: MetadataTaggings;
+  taggings?: MetadataTaggings;
 }) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
@@ -64,12 +64,12 @@ const Header = ({
       electionBannerEnabled,
       electionThingIds: electionBanner?.electionThingIds,
       isLite,
-      taggings: passportTaggings,
+      taggings,
     }) && !hasLiveMediaStream;
 
   const isHeaderImage = hasHeaderImage && !shouldShowElectionBanner;
   const isWithImageLayout = isHeaderImage || hasLiveMediaStream;
-  const electionBannerTaggings = passportTaggings ?? [];
+  const electionBannerTaggings = taggings ?? [];
 
   const {
     src: srcWebp,
