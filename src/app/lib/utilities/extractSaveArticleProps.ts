@@ -15,7 +15,6 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
  */
 
 export interface SaveArticlePageData {
-  isTC2Asset?: boolean;
   canonicalUrl?: string;
   promoImage?: string;
   promoImageAltText?: string;
@@ -73,10 +72,6 @@ const extractSaveArticleProps = (
     '';
 
   return {
-    isTC2Asset:
-      articlePageData?.metadata?.analyticsLabels?.contentId
-        ?.split(':')
-        ?.includes('topcat') ?? false,
     canonicalUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
     promoImage: promoImageUrl,
     promoImageAltText: altText,

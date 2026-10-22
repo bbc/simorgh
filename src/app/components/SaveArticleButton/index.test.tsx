@@ -144,45 +144,6 @@ describe('SaveArticleButton', () => {
     { userType: 'signed-in', initialIsSignedIn: true },
     { userType: 'guest', initialIsSignedIn: false },
   ])(
-    'does not render for a TC2 article for a $userType user',
-    async ({ initialIsSignedIn }) => {
-      mockedUseUASButton.mockReturnValue({
-        isSaved: false,
-        isLoading: false,
-        isUpdating: false,
-        error: null,
-        handleSaveAction: mockHandleSaveAction,
-      });
-
-      const service = 'mundo';
-
-      await act(async () =>
-        render(
-          <SaveArticleButton
-            saveArticlePageData={{
-              ...articleExtractPageData,
-              isTC2Asset: true,
-            }}
-          />,
-          {
-            service,
-            pathname: '/mundo/articles/c1l97706v5mo',
-            toggles: {
-              uasPersonalization: { enabled: true, value: service },
-            },
-            idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
-          },
-        ),
-      );
-
-      expect(screen.queryByRole('button')).not.toBeInTheDocument();
-    },
-  );
-
-  it.each([
-    { userType: 'signed-in', initialIsSignedIn: true },
-    { userType: 'guest', initialIsSignedIn: false },
-  ])(
     'does not render when the parsed ID contains slashes even without TC2 metadata for a $userType user',
     async ({ initialIsSignedIn }) => {
       mockedUseUASButton.mockReturnValue({

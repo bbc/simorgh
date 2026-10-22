@@ -15,7 +15,6 @@ export interface SaveArticleButtonProps {
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
 const SaveArticleButton = (props: SaveArticleButtonProps) => {
-  const { saveArticlePageData } = props;
   const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
     use(AccountContext);
 
@@ -27,12 +26,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
     articleId.length > 0 &&
     !articleId.includes('/');
 
-  if (
-    !isArticlePersonalizationAvailable ||
-    !isSupportedArticleId ||
-    saveArticlePageData.isTC2Asset
-  )
-    return null;
+  if (!isArticlePersonalizationAvailable || !isSupportedArticleId) return null;
 
   return (
     <ErrorBoundary componentName="SaveArticleButton">
