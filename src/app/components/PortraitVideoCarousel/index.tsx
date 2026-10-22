@@ -1,5 +1,6 @@
-import { use, useCallback, useRef, useState } from 'react';
+import { use, useCallback, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -7,19 +8,22 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
 import PortraitVideoPromo from './PortraitVideoPromo';
 import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
-import { PortraitClipMediaBlock } from '../MediaLoader/types';
 import Subheading from '../Curation/Subhead';
+import {
+  isPlayablePortraitVideoBlock,
+  PortraitVideoCarouselBlock,
+} from './types';
 
 type PortraitVideoCarouselProps = {
   title?: string;
-  blocks: PortraitClipMediaBlock[];
+  blocks: PortraitVideoCarouselBlock[];
   eventTrackingData: EventTrackingData;
   className?: string;
   backgroundColor?: string;
@@ -64,6 +68,10 @@ const PortraitVideoCarousel = ({
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
   const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
+  const playableBlocks = useMemo(
+    () => blocks.filter(isPlayablePortraitVideoBlock),
+    [blocks],
+  );
 
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
@@ -73,21 +81,25 @@ const PortraitVideoCarousel = ({
   if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
-    if (blocks?.[index]?.model?.video) {
+    if (isPlayablePortraitVideoBlock(blocks[index])) {
       setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
   };
 
+  const selectedPlayableVideoIndex =
+    selectedVideoIndex === null
+      ? -1
+      : playableBlocks.findIndex(block => block === blocks[selectedVideoIndex]);
+
   return (
     <>
-      <BumpLoader nonce={nonce} />
+      {playableBlocks.length > 0 && <BumpLoader nonce={nonce} />}
       <section
         aria-label={title || translations.media.watch}
         role="region"
         data-testid="portrait-video-carousel"
-        css={styles.section}
-        className={className}
+        className={clsx(styles.section, className)}
         {...viewTracker}
       >
         <SkipLinkWrapper
@@ -106,7 +118,7 @@ const PortraitVideoCarousel = ({
                 level={2}
                 size="doublePica"
                 fontVariant="sansBold"
-                css={styles.heading}
+                className={styles.heading}
               >
                 {title}
               </Heading>
@@ -115,21 +127,25 @@ const PortraitVideoCarousel = ({
           <noscript>
             <PortraitVideoNoJs />
           </noscript>
-          <div css={styles.carouselContainer}>
+          <div className={styles.carouselContainer}>
             <PortraitCarouselNavigation
               scrollPaneRef={scrollRef}
               backgroundColor={backgroundColor}
             />
             <ul
               ref={scrollRef}
-              css={styles.carousel}
+              className={styles.carousel}
               data-testid="pv-carousel"
               tabIndex={-1}
               role="list"
             >
               {blocks.map((block, index) => (
                 <PortraitVideoPromo
-                  key={block?.model?.video?.id}
+                  key={
+                    isPlayablePortraitVideoBlock(block)
+                      ? block.model.video.id
+                      : block.model.video.articleUrl
+                  }
                   block={block}
                   onClick={() => handlePromoClick(index)}
                   blockPosition={index}
@@ -140,11 +156,11 @@ const PortraitVideoCarousel = ({
             </ul>
           </div>
           {isModalOpen &&
-            selectedVideoIndex !== null &&
+            selectedPlayableVideoIndex >= 0 &&
             createPortal(
               <PortraitVideoModal
-                blocks={blocks}
-                selectedVideoIndex={selectedVideoIndex}
+                blocks={playableBlocks}
+                selectedVideoIndex={selectedPlayableVideoIndex}
                 onClose={handleCloseModal}
                 nonce={nonce}
                 eventTrackingData={eventTrackingDataExtended}

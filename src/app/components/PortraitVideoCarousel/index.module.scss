@@ -1,0 +1,79 @@
+@use '@scss/themeTokens' as theme;
+
+.section {
+  :global(.is-opera-mini) & {
+    display: none;
+  }
+
+  > h2:has(a) {
+    margin-block-end: 0;
+  }
+}
+
+.heading {
+  display: inline-block;
+  color: theme.$palette-grey-10;
+  margin: 0;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-start: theme.$spacings-double;
+  }
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  container-type: inline-size;
+
+  :global(.no-js) & {
+    display: none;
+  }
+}
+
+.carousel {
+  container-type: inline-size;
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  column-gap: theme.$spacings-full;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    column-gap: theme.$spacings-double;
+    padding-block: theme.$spacings-full;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    @media #{theme.$mediaQueries-group-3-min-width} and #{theme.$mediaQueries-pointer-fine} {
+      display: block;
+      flex-basis: calc((100% / 3.5 - #{theme.$spacings-double}) * 0.5);
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      @container (min-width: #{theme.$gridWidths-grid-width-900}) {
+        display: block;
+        flex-basis: calc((100% / 4.5 - #{theme.$spacings-double}) * 0.5);
+      }
+    }
+
+    @media #{theme.$mediaQueries-group-5-min-width} {
+      @container (min-width: #{theme.$gridWidths-grid-width-1008}) {
+        display: block;
+        flex-basis: calc((100% / 5.5 - #{theme.$spacings-double}) * 0.5);
+      }
+    }
+  }
+}

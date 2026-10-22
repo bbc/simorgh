@@ -1,0 +1,113 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  all: unset;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  @media #{theme.$mediaQueries-group-0-max-width} {
+    width: #{theme.pixelsToRem-px-to-rem(147)};
+  }
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    min-width: #{theme.pixelsToRem-px-to-rem(147)};
+    flex-basis: calc(100% / 2.33 - #{theme.$spacings-full});
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    min-width: unset;
+    flex-basis: calc(100% / 3.33 - #{theme.$spacings-double});
+
+    @media #{theme.$mediaQueries-pointer-fine} {
+      flex-basis: calc(100% / 3.5 - #{theme.$spacings-double});
+    }
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    @container (min-width: #{theme.$gridWidths-grid-width-900}) {
+      flex-basis: calc(100% / 4.5 - #{theme.$spacings-double});
+    }
+  }
+
+  @media #{theme.$mediaQueries-group-5-min-width} {
+    @container (min-width: #{theme.$gridWidths-grid-width-1008}) {
+      flex-basis: calc(100% / 5.5 - #{theme.$spacings-double});
+    }
+  }
+}
+
+.interactive {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+
+  &:focus-visible {
+    inset: #{theme.pixelsToRem-px-to-rem(4)};
+    border: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-black;
+    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
+  }
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: #{theme.pixelsToRem-px-to-rem(28)} theme.$spacings-full
+    theme.$spacings-full;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 24%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.textWrapper {
+  @media #{theme.$mediaQueries-forced-colours} {
+    background-color: canvas;
+  }
+
+  .interactive:focus-visible &,
+  .interactive:hover & {
+    text-decoration: underline;
+    text-decoration-color: theme.$palette-white;
+  }
+
+  .interactive:focus-visible & {
+    border: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
+    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-black;
+  }
+}
+
+.durationContainer {
+  display: inline-flex;
+  align-items: center;
+  color: theme.$palette-white;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    background-color: canvas;
+  }
+}
+
+.playIcon {
+  fill: currentcolor;
+  width: #{theme.pixelsToRem-px-to-rem(12)};
+  height: #{theme.pixelsToRem-px-to-rem(12)};
+}
+
+.duration {
+  color: theme.$palette-white;
+  margin: 0;
+  margin-inline-start: theme.$spacings-half;
+}
+
+.title {
+  display: block;
+  color: theme.$palette-white;
+  margin: theme.$spacings-full 0 0;
+  text-decoration-color: theme.$palette-white;
+}

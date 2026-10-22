@@ -9,6 +9,7 @@ import {
 } from '../react-testing-library-with-providers';
 import fixture from './fixture';
 import { Player, PortraitClipMediaBlock } from '../MediaLoader/types';
+import { PortraitVideoArticleBlock } from './types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
@@ -17,6 +18,41 @@ const eventTrackingData = {
 const defaultAriaLabel = pidginConfig.default.translations.media.watch;
 
 describe('PortraitVideoCarousel', () => {
+  it('renders article-backed videos as links without opening the player modal', () => {
+    const articleBlock: PortraitVideoArticleBlock = {
+      type: 'portraitClipMedia',
+      model: {
+        type: 'video',
+        images: [
+          {
+            source: 'https://ichef.test.bbci.co.uk/image.jpg',
+            altText: 'Article image',
+          },
+        ],
+        video: {
+          title: 'Article-backed portrait video',
+          version: { duration: 'PT1M' },
+          articleUrl: '/hausa/articles/test',
+        },
+      },
+    };
+
+    render(
+      <Component
+        blocks={[articleBlock]}
+        eventTrackingData={eventTrackingData}
+      />,
+      { service: 'hausa' },
+    );
+
+    const promoLink = screen.getByTestId('promo-link');
+    expect(promoLink).toHaveAttribute('href', '/hausa/articles/test');
+
+    fireEvent.click(promoLink);
+
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
   it('does not pause or reload the Hindi live-page carousel when its parent updates', () => {
     const blocks = hindiLivePage.data.portraitVideoItems.portraitVideo
       .blocks as PortraitClipMediaBlock[];

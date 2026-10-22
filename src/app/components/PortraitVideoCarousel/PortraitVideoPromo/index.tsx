@@ -5,7 +5,7 @@ import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { use, FocusEvent } from 'react';
+import { use, FocusEvent, MouseEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -15,9 +15,12 @@ import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import styles from './index.styles';
+import styles from './index.module.scss';
+import {
+  isPlayablePortraitVideoBlock,
+  PortraitVideoCarouselBlock,
+} from '../types';
 
 const DEFAULT_TRANSLATION = {
   video: 'video',
@@ -26,7 +29,7 @@ const DEFAULT_TRANSLATION = {
 };
 
 type PortraitVideoPromoProps = {
-  block: PortraitClipMediaBlock;
+  block: PortraitVideoCarouselBlock;
   eventTrackingData: EventTrackingData;
   isHydrated?: boolean;
   blockPosition?: number;
@@ -49,6 +52,8 @@ export default ({
   const { pageType } = use(RequestContext);
 
   const { images, video } = block.model;
+  const isPlayable = isPlayablePortraitVideoBlock(block);
+  const articleUrl = isPlayable ? undefined : block.model.video.articleUrl;
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -78,7 +83,7 @@ export default ({
     });
   }
 
-  const onFocusListener = (event: FocusEvent<HTMLButtonElement>) => {
+  const onFocusListener = (event: FocusEvent<HTMLElement>) => {
     event.target.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
@@ -109,7 +114,7 @@ export default ({
       type: pageType === LIVE_PAGE ? 'portrait-video' : 'portrait-video-promo',
       text: headline,
       position: blockPosition + 1,
-      resourceId: video?.id,
+      resourceId: isPlayable ? block.model.video.id : articleUrl,
       ...(momentDuration && { duration: momentDuration.asMilliseconds() }),
     },
   };
@@ -119,13 +124,50 @@ export default ({
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingDataExtended) ?? {};
 
-  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    if (clickTrackerHandler) clickTrackerHandler(e);
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
+    if (clickTrackerHandler) clickTrackerHandler(event);
     if (onClick) onClick();
   };
 
+  const promoContent = (
+    <div className={styles.gradientOverlay}>
+      <div className={styles.textWrapper}>
+        {mediaISO8601Duration && (
+          <div className={styles.durationContainer} aria-hidden="true">
+            <Play className={styles.playIcon} />
+            <time dateTime={mediaISO8601Duration}>
+              <Text size="brevier" className={styles.duration}>
+                {durationString}
+              </Text>
+            </time>
+          </div>
+        )}
+        <Text
+          size="pica"
+          fontVariant="sansBold"
+          className={styles.title}
+          data-testid="text-contents"
+        >
+          <VisuallyHiddenText>
+            {isPlayable && `${actionType} `}
+            {mediaType},{' '}
+          </VisuallyHiddenText>
+          <span>{headline}</span>
+          {mediaISO8601Duration && (
+            <VisuallyHiddenText>
+              , {durationTranslation} {durationSpokenString}
+            </VisuallyHiddenText>
+          )}
+        </Text>
+      </div>
+    </div>
+  );
+
   return (
-    <li css={[styles.container, isHydrated && { scrollSnapAlign: 'start' }]}>
+    <li
+      className={styles.container}
+      style={isHydrated ? { scrollSnapAlign: 'start' } : undefined}
+    >
       <Image
         alt={alt}
         src={imageUrl}
@@ -135,45 +177,29 @@ export default ({
         sizes={srcSets?.sizes}
         lazyLoad
       />
-      <button
-        type="button"
-        css={styles.button}
-        onFocus={onFocusListener}
-        onClick={e => handleClick(e)}
-        {...viewTracker}
-        data-testid="promo-button"
-      >
-        <div css={styles.gradientOverlay}>
-          <div css={styles.textWrapper}>
-            {mediaISO8601Duration && (
-              <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
-                <time dateTime={mediaISO8601Duration}>
-                  <Text size="brevier" css={styles.duration}>
-                    {durationString}
-                  </Text>
-                </time>
-              </div>
-            )}
-            <Text
-              size="pica"
-              fontVariant="sansBold"
-              css={styles.title}
-              data-testid="text-contents"
-            >
-              <VisuallyHiddenText>
-                {actionType} {mediaType},{' '}
-              </VisuallyHiddenText>
-              <span>{headline}</span>
-              {mediaISO8601Duration && (
-                <VisuallyHiddenText>
-                  , {durationTranslation} {durationSpokenString}
-                </VisuallyHiddenText>
-              )}
-            </Text>
-          </div>
-        </div>
-      </button>
+      {articleUrl ? (
+        <a
+          href={articleUrl}
+          className={styles.interactive}
+          onFocus={onFocusListener}
+          onClick={handleClick}
+          {...viewTracker}
+          data-testid="promo-link"
+        >
+          {promoContent}
+        </a>
+      ) : (
+        <button
+          type="button"
+          className={styles.interactive}
+          onFocus={onFocusListener}
+          onClick={handleClick}
+          {...viewTracker}
+          data-testid="promo-button"
+        >
+          {promoContent}
+        </button>
+      )}
     </li>
   );
 };

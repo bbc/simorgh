@@ -1,0 +1,24 @@
+@use '@scss/themeTokens' as theme;
+
+.main {
+  width: 100%;
+  max-width: theme.$gridWidths-grid-width-1008;
+  margin-inline: auto;
+  padding: theme.$spacings-double;
+}
+
+.heading {
+  margin-block-end: theme.$spacings-quadruple;
+}
+
+.carousels {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-quadruple;
+}
+
+@media #{theme.$mediaQueries-group-3-min-width} {
+  .main {
+    padding-inline: theme.$spacings-quadruple;
+  }
+}
