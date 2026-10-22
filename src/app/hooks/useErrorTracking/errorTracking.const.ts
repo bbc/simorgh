@@ -9,8 +9,7 @@ export type ErrorTrackingFeature =
 export const UAS_ERROR_ACTIONS = {
   FETCH_STATUS: 'fetch-status',
   METADATA_SYNC: 'metadata-sync',
-  RECENT_ACTIVITY: 'recent-activity',
-  FOLLOWED_TOPICS: 'followed-topics',
+  FETCH_ACTIVITY: 'fetch-activity',
   RENDER: 'render',
 } as const;
 

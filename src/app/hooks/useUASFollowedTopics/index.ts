@@ -57,7 +57,7 @@ const useUASFollowedTopics = ({
   useTrackErrorEffect({
     error,
     feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
-    action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
+    action: UAS_ERROR_ACTIONS.FETCH_ACTIVITY,
   });
 
   return {
