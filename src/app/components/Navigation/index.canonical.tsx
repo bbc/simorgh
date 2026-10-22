@@ -108,6 +108,12 @@ const CanonicalNavigationContainer: React.FC<
   // deliberate upward scroll. Holds the timestamp until which that should be
   // ignored for sticky nav activation purposes.
   const suppressForwardTabScrollUntilRef = useRef(0);
+  // Read inside the scroll handler below, which only subscribes once and
+  // would otherwise see a stale value of isOpen from when it was set up.
+  const isOpenRef = useRef(isOpen);
+  useEffect(() => {
+    isOpenRef.current = isOpen;
+  }, [isOpen]);
 
   const handleStickyViewportChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
@@ -264,12 +270,18 @@ const CanonicalNavigationContainer: React.FC<
         nav.getBoundingClientRect().height ||
         slot.getBoundingClientRect().height;
 
-      if (scrollState.fixed && (!fixed || scrollingDown)) setIsOpen(false);
+      // An open dropdown is only ever closed by leaving the fixed state
+      // entirely (scrolling back above the activation point), not by scroll
+      // direction, so that scrolling down doesn't interrupt someone using it.
+      if (scrollState.fixed && !fixed) setIsOpen(false);
       scrollState.fixed = fixed;
 
       setStickyState(previous => {
         const visible =
-          fixed && (scrollingUp || (!scrollingDown && previous.visible));
+          fixed &&
+          (isOpenRef.current ||
+            scrollingUp ||
+            (!scrollingDown && previous.visible));
         if (
           previous.fixed === fixed &&
           previous.visible === visible &&

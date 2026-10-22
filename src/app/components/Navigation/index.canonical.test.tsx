@@ -618,6 +618,35 @@ describe('Navigation - Canonical', () => {
           container.querySelector('[data-e2e="sticky-nav"]'),
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
+
+      it('keeps the sticky navigation visible and its dropdown open while scrolling down with the dropdown open', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        scrollTo(500);
+        scrollTo(450);
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+
+        scrollTo(460);
+
+        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+      });
+
+      it('hides on scroll down as normal once the dropdown has been closed', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        scrollTo(500);
+        scrollTo(450);
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+        fireEvent.click(menuButton);
+
+        scrollTo(460);
+
+        expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      });
     });
 
     describe('keyboard and dropdown accessibility', () => {
