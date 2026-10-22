@@ -8,7 +8,6 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Image from '#app/components/Image';
-import ElectionBanner from '#app/components/ElectionBanner';
 import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
@@ -16,6 +15,7 @@ import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
+import LiveElectionBanner from './LiveElectionBanner';
 
 const Header = ({
   showLiveLabel,
@@ -143,7 +143,7 @@ const Header = ({
           </div>
         </div>
         {shouldShowElectionBanner && (
-          <ElectionBanner taggings={electionBannerTaggings} />
+          <LiveElectionBanner taggings={electionBannerTaggings} />
         )}
       </>
     );

@@ -8,13 +8,22 @@ import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
+
+// Consumers (e.g. the Live page) own any page-specific style overrides and pass
+// them in here, rather than this component branching on which page it's rendered on.
+type OverrideClassnames = {
+  wrapper?: string;
+  assocPressWrapper?: string;
+  iframe?: string;
+  title?: string;
+};
 
 type Props = {
   aboutTags?: Tag[];
   taggings: MetadataTaggings;
+  overrideClassnames?: OverrideClassnames;
 };
 
 type ToggleType = {
@@ -37,12 +46,15 @@ export const DEFAULT_HEIGHTS_AP = {
   mobile: 340,
 };
 
-export default function ElectionBanner({ aboutTags, taggings }: Props) {
+export default function ElectionBanner({
+  aboutTags,
+  taggings,
+  overrideClassnames,
+}: Props) {
   const { electionBanner } = use(ServiceContext);
-  const { isAmp, isLite, pageType } = use(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const { enabled: electionBannerEnabled }: ToggleType =
     useToggle('electionBanner');
-  const isLivePage = pageType === LIVE_PAGE;
 
   if (isLive() || isLite || !electionBanner) return null;
 
@@ -103,7 +115,11 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         }
       >
         <div className={styles.electionBannerContent}>
-          {hasTitle && <span className={styles.title}>{title}</span>}
+          {hasTitle && (
+            <span className={clsx(styles.title, overrideClassnames?.title)}>
+              {title}
+            </span>
+          )}
           <AmpIframe
             ampMetadata={{
               ...(!isAssocPress && { imageWidth: 1 }),
@@ -122,49 +138,42 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
 
   return (
     <div
-      {...(isLivePage && {
-        className: styles.assocPressElectionBannerBackgroundLivePage,
-      })}
+      data-testid="election-banner"
+      className={clsx(
+        isAssocPress
+          ? styles.assocPressElectionBannerWrapper
+          : styles.electionBannerWrapper,
+        isAssocPress
+          ? overrideClassnames?.assocPressWrapper
+          : overrideClassnames?.wrapper,
+      )}
     >
-      <div
-        data-testid="election-banner"
-        className={clsx(
-          isAssocPress
-            ? styles.assocPressElectionBannerWrapper
-            : styles.electionBannerWrapper,
-          isLivePage &&
-            (isAssocPress
-              ? styles.assocPressElectionBannerWrapperLivePage
-              : styles.electionBannerWrapperLive),
+      <div className={styles.electionBannerContent}>
+        {hasTitle && (
+          <span className={clsx(styles.title, overrideClassnames?.title)}>
+            {title}
+          </span>
         )}
-      >
-        <div className={styles.electionBannerContent}>
-          {hasTitle && !isLivePage && (
-            <span className={styles.title}>{title}</span>
+        <iframe
+          className={clsx(
+            isAssocPress && 'ap-embed',
+            isAssocPress
+              ? styles.assocPressElectionBannerIframe
+              : styles.electionBannerIframe,
+            overrideClassnames?.iframe,
           )}
-          <iframe
-            className={clsx(
-              isAssocPress && 'ap-embed',
-              isAssocPress
-                ? styles.assocPressElectionBannerIframe
-                : styles.electionBannerIframe,
-              isLivePage &&
-                isAssocPress &&
-                styles.assocPressElectionBannerIframeLivePage,
-            )}
-            title={bannerTitle}
-            src={src}
-            scrolling="no"
-            {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
-            width="100%"
+          title={bannerTitle}
+          src={src}
+          scrolling="no"
+          {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}
+          width="100%"
+        />
+        {isAssocPress && (
+          <Script
+            src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
+            strategy="lazyOnload"
           />
-          {isAssocPress && (
-            <Script
-              src="https://interactives.apelections.org/election-results/assets/microsite/resizeClient.js"
-              strategy="lazyOnload"
-            />
-          )}
-        </div>
+        )}
       </div>
     </div>
   );

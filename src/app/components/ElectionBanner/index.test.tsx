@@ -5,7 +5,6 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner, { DEFAULT_HEIGHTS_AP } from '.';
@@ -333,64 +332,48 @@ describe('ElectionBanner', () => {
     });
   });
 
-  describe('Live page styling', () => {
-    it('should apply the full-bleed wrapper class on Live pages for the VJ banner', () => {
+  describe('overrideClassnames', () => {
+    it('should apply a consumer-provided wrapper override class for the VJ banner', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings },
+        { taggings: mockTaggings, overrideClassnames: { wrapper: 'custom' } },
         {
           toggles: { electionBanner: { enabled: true } },
           service: 'mundo',
-          pageType: LIVE_PAGE,
         },
       );
 
-      expect(getByTestId(ELEMENT_ID)).toHaveClass('electionBannerWrapperLive');
+      expect(getByTestId(ELEMENT_ID)).toHaveClass('custom');
     });
 
-    it('should apply the full-bleed wrapper class on Live pages for the Associated Press banner', () => {
+    it('should apply a consumer-provided wrapper override class for the Associated Press banner', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings },
+        {
+          taggings: mockTaggings,
+          overrideClassnames: { assocPressWrapper: 'custom' },
+        },
         {
           toggles: { electionBanner: { enabled: true } },
           service: 'mundo',
-          pageType: LIVE_PAGE,
         },
         mockAssocPressServiceContext,
       );
 
-      expect(getByTestId(ELEMENT_ID)).toHaveClass(
-        'assocPressElectionBannerWrapperLivePage',
-      );
+      expect(getByTestId(ELEMENT_ID)).toHaveClass('custom');
     });
 
-    it('should widen the Associated Press iframe max-width on Live pages', () => {
+    it('should apply a consumer-provided iframe override class', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings },
+        { taggings: mockTaggings, overrideClassnames: { iframe: 'custom' } },
         {
           toggles: { electionBanner: { enabled: true } },
           service: 'mundo',
-          pageType: LIVE_PAGE,
         },
         mockAssocPressServiceContext,
       );
 
       const iframe = getByTestId(ELEMENT_ID).querySelector('iframe');
 
-      expect(iframe).toHaveClass('assocPressElectionBannerIframeLivePage');
-    });
-
-    it('should not apply the full-bleed wrapper class on article pages', () => {
-      const { getByTestId } = renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: { electionBanner: { enabled: true } },
-          service: 'mundo',
-        },
-      );
-
-      expect(getByTestId(ELEMENT_ID)).not.toHaveClass(
-        'electionBannerWrapperLive',
-      );
+      expect(iframe).toHaveClass('custom');
     });
   });
 });
