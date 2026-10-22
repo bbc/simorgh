@@ -13,13 +13,14 @@ import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { SERVICES_WITH_STICKY_NAV } from './config';
+import { SERVICES_WITH_STICKY_NAV, STICKY_MIN_VIEWPORT_HEIGHT } from './config';
 import styles from './index.styles';
 
 const STICKY_NAV_CLEARANCE = 65;
 const STICKY_TRANSITION_DURATION = 400;
 const STICKY_MIN_WIDTH_QUERY = '(min-width: 300px)';
 const STICKY_MAX_WIDTH_QUERY = '(max-width: 1007px)';
+const STICKY_MIN_HEIGHT_QUERY = `(min-height: ${STICKY_MIN_VIEWPORT_HEIGHT}px)`;
 const STICKY_REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const STICKY_LANDSCAPE_QUERY =
   '(orientation: landscape) and (max-height: 500px)';
@@ -30,10 +31,12 @@ const STICKY_LANDSCAPE_QUERY =
 // after a forward Tab press so none of those events are mistaken for the
 // user intentionally scrolling up.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
+const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 const INITIAL_STICKY_MEDIA_QUERY_STATE = {
   isStickyViewport: false,
   isWithinStickyMaxWidth: false,
+  isAboveStickyMinHeight: false,
   prefersReducedMotion: false,
   isStickyLandscapeConstrained: false,
 };
@@ -71,6 +74,7 @@ const CanonicalNavigationContainer: React.FC<
   const {
     isStickyViewport,
     isWithinStickyMaxWidth,
+    isAboveStickyMinHeight,
     prefersReducedMotion,
     isStickyLandscapeConstrained,
   } = stickyMediaQuery;
@@ -80,6 +84,7 @@ const CanonicalNavigationContainer: React.FC<
     SERVICES_WITH_STICKY_NAV.includes(service) &&
     isStickyViewport &&
     isWithinStickyMaxWidth &&
+    isAboveStickyMinHeight &&
     !prefersReducedMotion &&
     !isStickyLandscapeConstrained &&
     !isLite;
@@ -127,6 +132,18 @@ const CanonicalNavigationContainer: React.FC<
     [],
   );
   useMediaQuery(STICKY_MAX_WIDTH_QUERY, handleStickyMaxWidthChange);
+
+  const handleStickyMinHeightChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      setStickyMediaQuery(previous => ({
+        ...previous,
+        isAboveStickyMinHeight: matches,
+      }));
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(STICKY_MIN_HEIGHT_QUERY, handleStickyMinHeightChange);
 
   const handleReducedMotionChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
@@ -304,20 +321,77 @@ const CanonicalNavigationContainer: React.FC<
       documentElement.style.scrollPaddingTop = '';
     };
   }, [isStickyVisible, stickyState.height]);
+  // scrollPaddingTop only covers the browser's own "scroll an off-screen
+  // element into view" behaviour. Something already on screen when it takes
+  // focus is left where it is, which can leave it sitting behind the fixed
+  // bar. Scroll back up by whatever part of it the bar covers so the focused
+  // element always ends up fully below the navigation.
+  useEffect(() => {
+    if (!isStickyVisible) return undefined;
+
+    const revealFocusedElement = (event: FocusEvent) => {
+      const { target } = event;
+      if (
+        !(target instanceof HTMLElement) ||
+        navRef.current?.contains(target)
+      ) {
+        return;
+      }
+      const obscuredBy =
+        stickyState.height - target.getBoundingClientRect().top;
+      if (obscuredBy > 0) window.scrollBy(0, -obscuredBy);
+    };
+
+    document.addEventListener('focusin', revealFocusedElement);
+    return () => document.removeEventListener('focusin', revealFocusedElement);
+  }, [isStickyVisible, stickyState.height]);
+
+  // The sticky bar is a convenience overlay for mouse/touch users scrolling
+  // back up through an article; keyboard users already reach these same
+  // links in their normal document-order position before the page is
+  // scrolled. While the bar is pinned over the content, take it out of the
+  // tab order so keyboard focus can never land on it, while leaving it
+  // visible, hoverable and clickable for pointer and touch input.
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav || !isStickyVisible) return undefined;
+
+    const focusableItems = Array.from(
+      nav.querySelectorAll<HTMLElement>(FOCUSABLE_ITEMS_SELECTOR),
+    );
+    focusableItems.forEach(item => item.setAttribute('tabindex', '-1'));
+
+    return () => {
+      focusableItems.forEach(item => item.removeAttribute('tabindex'));
+    };
+  }, [isStickyVisible]);
 
   useEffect(() => {
-    const handleOnBlur = (event: Event) => {
-      const currentTarget = event.currentTarget as HTMLElement | null;
-      if (!currentTarget) return;
+    const dropDownNav = dropDownNavRef.current;
+    if (!dropDownNav) return undefined;
+
+    // Tabbing forward off the end of the open dropdown should continue into
+    // the page content rather than repeating the links already shown in the
+    // bar below it. Keyed off Tab rather than blur so that Shift+Tab still
+    // walks backwards normally instead of being thrown forwards.
+    const handleDropdownExit = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab' || event.shiftKey) return;
+
+      const dropdownItems = dropDownNav.querySelectorAll(
+        FOCUSABLE_ITEMS_SELECTOR,
+      );
+      const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
+      if (!lastDropdownItem || event.target !== lastDropdownItem) return;
 
       const allFocusableItems = Array.from(
-        document.querySelectorAll('a[href], button:not([disabled])'),
+        document.querySelectorAll(FOCUSABLE_ITEMS_SELECTOR),
       );
-      const lastDropdownIndex = allFocusableItems.indexOf(currentTarget);
-      const itemsAfterDropdown = allFocusableItems.slice(lastDropdownIndex + 1);
+      const itemsAfterDropdown = allFocusableItems.slice(
+        allFocusableItems.indexOf(lastDropdownItem) + 1,
+      );
       const nextPageItem = itemsAfterDropdown.find(
         item =>
-          !dropDownNavRef.current?.contains(item) &&
+          !dropDownNav.contains(item) &&
           !bottomScrollableNavRef.current?.contains(item),
       );
 
@@ -327,23 +401,8 @@ const CanonicalNavigationContainer: React.FC<
       (nextPageItem as HTMLElement).focus();
     };
 
-    const dropDownNav = dropDownNavRef.current;
-    const dropdownItems = dropDownNav?.querySelectorAll(
-      'a[href], button:not([disabled])',
-    );
-    const lastDropdownItem = dropdownItems
-      ? dropdownItems[dropdownItems.length - 1]
-      : null;
-
-    if (lastDropdownItem) {
-      lastDropdownItem.addEventListener('blur', handleOnBlur);
-    }
-
-    return () => {
-      if (lastDropdownItem) {
-        lastDropdownItem.removeEventListener('blur', handleOnBlur);
-      }
-    };
+    dropDownNav.addEventListener('keydown', handleDropdownExit);
+    return () => dropDownNav.removeEventListener('keydown', handleDropdownExit);
   }, []);
 
   const topBarOJs = topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />;

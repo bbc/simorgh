@@ -3,6 +3,7 @@ import { HOME_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
 import CanonicalNavigation from './index.canonical';
+import { STICKY_MIN_VIEWPORT_HEIGHT } from './config';
 import {
   dropdownTestId,
   scrollableTestId,
@@ -80,11 +81,33 @@ describe('Navigation - Canonical', () => {
 
       const lastLink = getByRole('link', { name: 'Item 2' });
       lastLink.focus();
-      fireEvent.blur(lastLink, { key: 'Tab' });
+      fireEvent.keyDown(lastLink, { key: 'Tab' });
 
       expect(menuButton).toHaveAttribute('aria-expanded', 'false');
       expect(document.activeElement).toBe(
         getByRole('link', { name: 'First article' }),
+      );
+    });
+
+    it('leaves backward keyboard navigation out of the dropdown to the browser', () => {
+      const { getByRole } = render(
+        <>
+          {navigation}
+          <main>
+            <a href="/first-article">First article</a>
+          </main>
+        </>,
+      );
+
+      fireEvent.click(getByRole('button', { name: 'menu' }));
+      const lastLink = getByRole('link', { name: 'Item 2' });
+      lastLink.focus();
+      fireEvent.keyDown(lastLink, { key: 'Tab', shiftKey: true });
+
+      expect(document.activeElement).toBe(lastLink);
+      expect(getByRole('button', { name: 'menu' })).toHaveAttribute(
+        'aria-expanded',
+        'true',
       );
     });
 
@@ -125,6 +148,7 @@ describe('Navigation - Canonical', () => {
     const defaultMediaQuery = window.matchMedia('');
     const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
     const LANDSCAPE_QUERY = '(orientation: landscape) and (max-height: 500px)';
+    const MIN_HEIGHT_QUERY = `(min-height: ${STICKY_MIN_VIEWPORT_HEIGHT}px)`;
     const nonMatchingByDefault = [REDUCED_MOTION_QUERY, LANDSCAPE_QUERY];
     const defaultMatchMediaImplementation = (query: string) => ({
       ...defaultMediaQuery,
@@ -299,6 +323,23 @@ describe('Navigation - Canonical', () => {
           ...defaultMediaQuery,
           media: query,
           matches: query === LANDSCAPE_QUERY,
+        }));
+        const { container } = render(navigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+
+        expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+      });
+
+      it('disables sticky navigation on viewports too short to spare the space', () => {
+        jest.mocked(window.matchMedia).mockImplementation(query => ({
+          ...defaultMediaQuery,
+          media: query,
+          matches:
+            // eslint-disable-next-line no-nested-ternary
+            query === MIN_HEIGHT_QUERY
+              ? false
+              : !nonMatchingByDefault.includes(query),
         }));
         const { container } = render(navigation, stickyOptions);
         scrollTo(500);
@@ -841,8 +882,36 @@ describe('Navigation - Canonical', () => {
         expect(document.documentElement.style.scrollPaddingTop).toBe('88px');
 
         scrollTo(500);
-
         expect(document.documentElement.style.scrollPaddingTop).toBe('');
+      });
+
+      it('scrolls an element that takes focus out from behind the sticky navigation', () => {
+        const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
+        render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+        scrollTo(500);
+        scrollTo(450);
+
+        const headline = screen.getByText('Article headline');
+        jest.spyOn(headline, 'getBoundingClientRect').mockReturnValue({
+          ...headline.getBoundingClientRect(),
+          top: 20,
+        });
+        fireEvent.focusIn(headline);
+
+        // The bar is 88px tall and the headline sits 20px from the top of the
+        // viewport, so the page scrolls back up by the 68px it covers.
+        expect(scrollBy).toHaveBeenCalledWith(0, -68);
+      });
+
+      it('leaves focus within the sticky navigation itself alone', () => {
+        const scrollBy = jest.spyOn(window, 'scrollBy').mockImplementation();
+        render(articleNavigation, { ...stickyOptions, pageType: ARTICLE_PAGE });
+        scrollTo(500);
+        scrollTo(450);
+
+        fireEvent.focusIn(screen.getByRole('button', { name: 'menu' }));
+
+        expect(scrollBy).not.toHaveBeenCalled();
       });
     });
 

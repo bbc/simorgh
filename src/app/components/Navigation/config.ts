@@ -1,5 +1,11 @@
 import { Services } from '#app/models/types/global';
 
+// The two-tier bar is roughly 88px tall. Requiring at least this much
+// viewport height keeps it under about a fifth of the screen, and has the
+// side effect of switching the feature off beyond roughly 200% zoom, where a
+// fixed bar would cover too much of the content it overlays.
+export const STICKY_MIN_VIEWPORT_HEIGHT = 450;
+
 export const SERVICES_WITH_STICKY_NAV: Services[] = [
   'mundo',
   'portuguese',
