@@ -9,14 +9,13 @@ import {
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import fetchDataFromBFF from '.';
 
-jest.mock('../fetchPageData', () =>
-  jest.fn().mockImplementation(() => {
-    return {
-      json: { data: {} },
-      status: 200,
-    };
-  }),
-);
+jest.mock('../fetchPageData', () => ({
+  __esModule: true,
+  default: jest.fn().mockImplementation(() => ({
+    json: { data: {} },
+    status: 200,
+  })),
+}));
 
 const mockAgent = {
   connect: { cert: 'cert', ca: 'ca', key: 'key' },

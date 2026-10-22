@@ -202,7 +202,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   color: #222222;
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-5 {
     color: #222222;
   }
@@ -553,7 +553,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   color: #222222;
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-6 {
     color: #222222;
   }
@@ -880,7 +880,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   color: #222222;
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-5 {
     color: #222222;
   }
@@ -1811,7 +1811,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   color: #222222;
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-6 {
     color: #222222;
   }

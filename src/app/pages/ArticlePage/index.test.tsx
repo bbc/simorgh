@@ -56,6 +56,26 @@ jest.mock('../../components/ATIAnalytics', () => {
   return ATIAnalytics;
 });
 
+jest.mock('../../contexts/ReverbParamsContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../contexts/ReverbParamsContext'),
+}));
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/params/buildParams'),
+}));
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const reverbParamsContextProviderSpy = jest.spyOn(
   ReverbParamsContext,
   'ReverbParamsContextProvider',
@@ -161,6 +181,19 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
+    const { container } = render(
+      <ArticlePage pageData={articleDataPersian} />,
+      { service: 'persian' },
+    );
+    const anchor = container.querySelector('main [data-sticky-nav-anchor]');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor?.tagName).toBe('P');
+    expect(anchor).toHaveTextContent(/\S/);
+    expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
   });
 
   it.each([
