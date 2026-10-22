@@ -2,7 +2,7 @@ import { Services } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
-import CanonicalNavigation from './index.canonical';
+import CanonicalNavigation, { STICKY_NAV_EXIT_BUFFER } from './index.canonical';
 import { STICKY_MIN_VIEWPORT_HEIGHT } from './config';
 import {
   dropdownTestId,
@@ -498,7 +498,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
       });
 
-      it('hides and closes sticky navigation when scrolling back above the first article line', () => {
+      it('hides and closes sticky navigation when scrolling back well above the first article line', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -509,7 +509,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: 1,
+          top: STICKY_NAV_EXIT_BUFFER + 1,
         });
 
         scrollTo(400);
@@ -518,6 +518,25 @@ describe('Navigation - Canonical', () => {
         expect(
           container.querySelector('[data-e2e="sticky-nav"]'),
         ).toHaveAttribute('data-sticky-visible', 'false');
+      });
+
+      it('keeps sticky navigation on screen while the article start is still within the exit buffer', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER - 1,
+        });
+
+        scrollTo(400);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
       it('does not activate article sticky navigation without an article body paragraph', () => {
@@ -563,7 +582,7 @@ describe('Navigation - Canonical', () => {
         );
         jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
           ...firstParagraph.getBoundingClientRect(),
-          top: 1,
+          top: STICKY_NAV_EXIT_BUFFER + 1,
         });
         scrollTo(400);
 

@@ -19,6 +19,9 @@ export default {
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
       transform: 'translateY(-100%)',
       transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+      // Only applied while the bar is pinned, so the browser keeps it on its
+      // own compositor layer for the slide and drops the layer afterwards.
+      willChange: 'transform',
 
       // When a user zooms in a lot (roughly 200% or more), the browser
       // reports a much shorter viewport. We don't want the bar fixed to the
@@ -72,6 +75,10 @@ export default {
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
+    width: '100%',
+  }),
+  navRowWrapper: css({
+    position: 'relative',
     width: '100%',
   }),
   ampScrollableNav: ({ mq }: Theme) =>

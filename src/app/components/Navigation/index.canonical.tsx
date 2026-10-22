@@ -1,4 +1,11 @@
-import React, { useState, use, useEffect, useRef, useCallback } from 'react';
+import React, {
+  useState,
+  use,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+} from 'react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -23,6 +30,7 @@ const STICKY_MIN_HEIGHT_QUERY = `(min-height: ${STICKY_MIN_VIEWPORT_HEIGHT}px)`;
 const STICKY_REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const STICKY_LANDSCAPE_QUERY =
   '(orientation: landscape) and (max-height: 500px)';
+const DROPDOWN_MAX_WIDTH_QUERY = `(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
 // Native focus-driven corrective scrolling (e.g. the browser nudging the
 // viewport to reveal a newly Tab-focused element) can span more than one
 // animation frame and may fire several 'scroll' events before it settles.
@@ -34,7 +42,11 @@ const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
 // further past the entry point (roughly the bottom of the lead image)
 // before it disappears again. Without this gap, scrolling up just enough to
 // reveal the bar and then moving the mouse to click it can hide the bar out from under the cursor.
-const STICKY_NAV_EXIT_BUFFER = 500;
+export const STICKY_NAV_EXIT_BUFFER = 500;
+// Resizing fires in bursts. Only the bar's measured height can change as a
+// result, so the work is deferred until the burst has settled.
+const STICKY_RESIZE_DEBOUNCE_MS = 150;
+const ARTICLE_START_SELECTOR = 'main [data-sticky-nav-anchor]';
 const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 const INITIAL_STICKY_STATE = { fixed: false, visible: false, height: 0 };
 const INITIAL_STICKY_MEDIA_QUERY_STATE = {
@@ -48,6 +60,61 @@ const INITIAL_STICKY_ANIMATION_STATE = {
   positioned: false,
   visible: false,
   prepared: false,
+};
+
+const STICKY_MEDIA_QUERIES: {
+  query: string;
+  stateKey: keyof typeof INITIAL_STICKY_MEDIA_QUERY_STATE;
+  closesMenuWhenMatching: boolean;
+}[] = [
+  {
+    query: STICKY_MIN_WIDTH_QUERY,
+    stateKey: 'isStickyViewport',
+    closesMenuWhenMatching: false,
+  },
+  {
+    query: STICKY_MAX_WIDTH_QUERY,
+    stateKey: 'isWithinStickyMaxWidth',
+    closesMenuWhenMatching: false,
+  },
+  {
+    query: STICKY_MIN_HEIGHT_QUERY,
+    stateKey: 'isAboveStickyMinHeight',
+    closesMenuWhenMatching: false,
+  },
+  {
+    query: STICKY_REDUCED_MOTION_QUERY,
+    stateKey: 'prefersReducedMotion',
+    closesMenuWhenMatching: true,
+  },
+  {
+    query: STICKY_LANDSCAPE_QUERY,
+    stateKey: 'isStickyLandscapeConstrained',
+    closesMenuWhenMatching: true,
+  },
+];
+
+// Walks the document forwards from the navigation and stops at the first
+// focusable element outside it, rather than collecting every focusable
+// element on what may be a very long article.
+const findFirstFocusableAfter = (nav: HTMLElement) => {
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    {
+      acceptNode: node =>
+        (node as Element).matches(FOCUSABLE_ITEMS_SELECTOR)
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_SKIP,
+    },
+  );
+  walker.currentNode = nav;
+
+  let candidate = walker.nextNode();
+  while (candidate && nav.contains(candidate)) {
+    candidate = walker.nextNode();
+  }
+  return candidate as HTMLElement | null;
 };
 
 type CanonicalNavigationContainerProps = {
@@ -82,17 +149,22 @@ const CanonicalNavigationContainer: React.FC<
     prefersReducedMotion,
     isStickyLandscapeConstrained,
   } = stickyMediaQuery;
-  const enableStickyNavigation =
+  // Whether sticky navigation could ever apply here. None of these can
+  // change without a new page load, so the viewport listeners below are only
+  // ever attached on the pages that can actually use them.
+  const isStickyNavigationSupported =
     stickyNavigationEnabled &&
     env !== 'live' &&
     pageType === ARTICLE_PAGE &&
     SERVICES_WITH_STICKY_NAV.includes(service) &&
+    !isLite;
+  const enableStickyNavigation =
+    isStickyNavigationSupported &&
     isStickyViewport &&
     isWithinStickyMaxWidth &&
     isAboveStickyMinHeight &&
     !prefersReducedMotion &&
-    !isStickyLandscapeConstrained &&
-    !isLite;
+    !isStickyLandscapeConstrained;
   const [isOpen, setIsOpen] = useState(false);
   const [stickyState, setStickyState] = useState(INITIAL_STICKY_STATE);
   const [stickyAnimation, setStickyAnimation] = useState(
@@ -107,7 +179,6 @@ const CanonicalNavigationContainer: React.FC<
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
-  const bottomScrollableNavRef = useRef<HTMLDivElement>(null);
   // Tabbing forward can make the browser nudge the viewport upward to reveal
   // the newly focused element, which otherwise looks identical to a
   // deliberate upward scroll. Holds the timestamp until which that should be
@@ -120,65 +191,43 @@ const CanonicalNavigationContainer: React.FC<
     isOpenRef.current = isOpen;
   }, [isOpen]);
 
-  const handleStickyViewportChange = useCallback(
-    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setStickyMediaQuery(previous => ({
-        ...previous,
-        isStickyViewport: matches,
-      }));
-      if (!matches) setIsOpen(false);
-    },
-    [],
-  );
-  useMediaQuery(STICKY_MIN_WIDTH_QUERY, handleStickyViewportChange);
+  useEffect(() => {
+    if (!isStickyNavigationSupported) return undefined;
 
-  const handleStickyMaxWidthChange = useCallback(
-    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setStickyMediaQuery(previous => ({
-        ...previous,
-        isWithinStickyMaxWidth: matches,
-      }));
-      if (!matches) setIsOpen(false);
-    },
-    [],
-  );
-  useMediaQuery(STICKY_MAX_WIDTH_QUERY, handleStickyMaxWidthChange);
+    const subscriptions = STICKY_MEDIA_QUERIES.map(
+      ({ query, stateKey, closesMenuWhenMatching }) => {
+        const mediaQueryList = window.matchMedia(query);
+        const handleChange = ({
+          matches,
+        }: MediaQueryList | MediaQueryListEvent) => {
+          setStickyMediaQuery(previous =>
+            previous[stateKey] === matches
+              ? previous
+              : { ...previous, [stateKey]: matches },
+          );
+          if (matches === closesMenuWhenMatching) setIsOpen(false);
+        };
 
-  const handleStickyMinHeightChange = useCallback(
-    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setStickyMediaQuery(previous => ({
-        ...previous,
-        isAboveStickyMinHeight: matches,
-      }));
-      if (!matches) setIsOpen(false);
-    },
-    [],
-  );
-  useMediaQuery(STICKY_MIN_HEIGHT_QUERY, handleStickyMinHeightChange);
+        handleChange(mediaQueryList);
 
-  const handleReducedMotionChange = useCallback(
-    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setStickyMediaQuery(previous => ({
-        ...previous,
-        prefersReducedMotion: matches,
-      }));
-      if (matches) setIsOpen(false);
-    },
-    [],
-  );
-  useMediaQuery(STICKY_REDUCED_MOTION_QUERY, handleReducedMotionChange);
+        if (mediaQueryList.addEventListener) {
+          mediaQueryList.addEventListener('change', handleChange);
+        } else {
+          mediaQueryList.addListener(handleChange);
+        }
+        return { mediaQueryList, handleChange };
+      },
+    );
 
-  const handleStickyLandscapeChange = useCallback(
-    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
-      setStickyMediaQuery(previous => ({
-        ...previous,
-        isStickyLandscapeConstrained: matches,
-      }));
-      if (matches) setIsOpen(false);
-    },
-    [],
-  );
-  useMediaQuery(STICKY_LANDSCAPE_QUERY, handleStickyLandscapeChange);
+    return () =>
+      subscriptions.forEach(({ mediaQueryList, handleChange }) => {
+        if (mediaQueryList.removeEventListener) {
+          mediaQueryList.removeEventListener('change', handleChange);
+        } else {
+          mediaQueryList.removeListener(handleChange);
+        }
+      });
+  }, [isStickyNavigationSupported]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -245,17 +294,43 @@ const CanonicalNavigationContainer: React.FC<
       lastScrollY: number;
       fixed: boolean;
       animationFrame: number | null;
+      height: number;
+      articleStart: Element | null;
     } = {
       lastScrollY: window.scrollY,
       fixed: false,
       animationFrame: null,
+      height: 0,
+      articleStart: null,
     };
 
-    const updateStickyNavigation = () => {
-      scrollState.animationFrame = null;
+    // Looked up once and remembered, so that every scroll frame doesn't have
+    // to search the whole article for the anchor again.
+    const resolveArticleStart = () => {
+      if (!scrollState.articleStart?.isConnected) {
+        scrollState.articleStart = document.querySelector(
+          ARTICLE_START_SELECTOR,
+        );
+      }
+      return scrollState.articleStart;
+    };
+
+    // The bar's height only changes when the browser reflows it, so it is
+    // measured on those events rather than on every scroll frame. Reading it
+    // while scrolling would force the browser to recalculate layout mid-scroll.
+    const measureHeight = () => {
       const slot = navSlotRef.current;
       const nav = navRef.current;
       if (!slot || !nav) return;
+      scrollState.height =
+        nav.getBoundingClientRect().height ||
+        slot.getBoundingClientRect().height;
+    };
+    measureHeight();
+
+    const updateStickyNavigation = () => {
+      scrollState.animationFrame = null;
+      if (!navSlotRef.current || !navRef.current) return;
 
       const { scrollY } = window;
       const scrollingUp =
@@ -264,9 +339,7 @@ const CanonicalNavigationContainer: React.FC<
       const scrollingDown = scrollY > scrollState.lastScrollY;
       scrollState.lastScrollY = scrollY;
 
-      const articleStart = document.querySelector(
-        'main [data-sticky-nav-anchor]',
-      );
+      const articleStart = resolveArticleStart();
       const anchorTop = articleStart
         ? articleStart.getBoundingClientRect().top
         : null;
@@ -280,9 +353,6 @@ const CanonicalNavigationContainer: React.FC<
       const fixed = scrollState.fixed
         ? pastExitPoint
         : pastEntryPoint && scrollingUp;
-      const height =
-        nav.getBoundingClientRect().height ||
-        slot.getBoundingClientRect().height;
 
       // An open dropdown is only ever closed by leaving the fixed state
       // entirely (scrolling back above the activation point), not by scroll
@@ -299,11 +369,11 @@ const CanonicalNavigationContainer: React.FC<
         if (
           previous.fixed === fixed &&
           previous.visible === visible &&
-          previous.height === height
+          previous.height === scrollState.height
         ) {
           return previous;
         }
-        return { fixed, visible, height };
+        return { fixed, visible, height: scrollState.height };
       });
     };
 
@@ -314,23 +384,45 @@ const CanonicalNavigationContainer: React.FC<
         );
       }
     };
+
+    const handleRelayout = () => {
+      measureHeight();
+      handleScroll();
+    };
+
+    let resizeTimeout = 0;
+    const handleResize = () => {
+      window.clearTimeout(resizeTimeout);
+      resizeTimeout = window.setTimeout(
+        handleRelayout,
+        STICKY_RESIZE_DEBOUNCE_MS,
+      );
+    };
+
+    const navObserver = new ResizeObserver(handleRelayout);
+    if (navRef.current) navObserver.observe(navRef.current);
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleScroll);
+    window.addEventListener('resize', handleResize, { passive: true });
 
     return () => {
+      navObserver.disconnect();
+      window.clearTimeout(resizeTimeout);
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
+      window.removeEventListener('resize', handleResize);
       if (scrollState.animationFrame !== null) {
         window.cancelAnimationFrame(scrollState.animationFrame);
       }
     };
-  }, [enableStickyNavigation, pageType]);
+  }, [enableStickyNavigation]);
 
-  useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
-    if (!event.matches) {
-      setIsOpen(false);
-    }
-  });
+  const handleDropdownBreakpointChange = useCallback(
+    ({ matches }: MediaQueryList | MediaQueryListEvent) => {
+      if (!matches) setIsOpen(false);
+    },
+    [],
+  );
+  useMediaQuery(DROPDOWN_MAX_WIDTH_QUERY, handleDropdownBreakpointChange);
 
   useEffect(() => {
     const { documentElement } = document;
@@ -405,70 +497,83 @@ const CanonicalNavigationContainer: React.FC<
       const lastDropdownItem = dropdownItems[dropdownItems.length - 1];
       if (!lastDropdownItem || event.target !== lastDropdownItem) return;
 
-      const allFocusableItems = Array.from(
-        document.querySelectorAll(FOCUSABLE_ITEMS_SELECTOR),
-      );
-      const itemsAfterDropdown = allFocusableItems.slice(
-        allFocusableItems.indexOf(lastDropdownItem) + 1,
-      );
-      const nextPageItem = itemsAfterDropdown.find(
-        item =>
-          !dropDownNav.contains(item) &&
-          !bottomScrollableNavRef.current?.contains(item),
-      );
+      const nextPageItem =
+        navRef.current && findFirstFocusableAfter(navRef.current);
 
       if (!nextPageItem) return;
       event.preventDefault();
       setIsOpen(false);
-      (nextPageItem as HTMLElement).focus();
+      nextPageItem.focus();
     };
 
     dropDownNav.addEventListener('keydown', handleDropdownExit);
     return () => dropDownNav.removeEventListener('keydown', handleDropdownExit);
   }, []);
 
-  const topBarOJs = topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />;
-  const navigation = (
-    <Navigation dir={dir} isOpen={isOpen} ref={navRef}>
-      <div css={styles.navStack}>
-        <div css={{ position: 'relative', width: '100%' }}>
-          <div css={styles.topRow}>
+  const toggleMenu = useCallback(() => setIsOpen(previous => !previous), []);
+
+  const topBarOJs = useMemo(
+    () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
+    [topBarOJsEnabled, blocks],
+  );
+  // Scrolling updates the sticky state several times a second. Nothing in
+  // this subtree depends on that state, so it is rebuilt only when something
+  // it actually uses changes.
+  const navigation = useMemo(
+    () => (
+      <Navigation dir={dir} isOpen={isOpen} ref={navRef}>
+        <div css={styles.navStack}>
+          <div css={styles.navRowWrapper}>
+            <div css={styles.topRow}>
+              <ScrollableNavigation
+                dir={dir}
+                css={styles.topRowItems}
+                navPosition="primary"
+              >
+                {topScrollableListItems}
+              </ScrollableNavigation>
+              {!isLite && (
+                <CanonicalMenuButton
+                  css={styles.menuButton}
+                  announcedText={menuAnnouncedText}
+                  isOpen={isOpen}
+                  onClick={toggleMenu}
+                  dir={dir}
+                />
+              )}
+            </div>
+            <div role="presentation" ref={dropDownNavRef}>
+              <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+                {dropdownListItems}
+              </CanonicalDropdown>
+            </div>
+          </div>
+          <div css={styles.lowerNavWrapper}>
             <ScrollableNavigation
               dir={dir}
-              css={styles.topRowItems}
-              navPosition="primary"
+              css={styles.bottomRowItems}
+              navPosition="secondary"
             >
-              {topScrollableListItems}
+              {bottomScrollableListItems}
             </ScrollableNavigation>
-            {!isLite && (
-              <CanonicalMenuButton
-                css={styles.menuButton}
-                announcedText={menuAnnouncedText}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-                dir={dir}
-              />
-            )}
-          </div>
-          <div role="presentation" ref={dropDownNavRef}>
-            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
-              {dropdownListItems}
-            </CanonicalDropdown>
           </div>
         </div>
-        <div css={styles.lowerNavWrapper} ref={bottomScrollableNavRef}>
-          <ScrollableNavigation
-            dir={dir}
-            css={styles.bottomRowItems}
-            navPosition="secondary"
-          >
-            {bottomScrollableListItems}
-          </ScrollableNavigation>
-        </div>
-      </div>
-      <div css={styles.bottomDivider} />
-      {!enableStickyNavigation && topBarOJs}
-    </Navigation>
+        <div css={styles.bottomDivider} />
+        {!enableStickyNavigation && topBarOJs}
+      </Navigation>
+    ),
+    [
+      dir,
+      isOpen,
+      isLite,
+      menuAnnouncedText,
+      topScrollableListItems,
+      bottomScrollableListItems,
+      dropdownListItems,
+      enableStickyNavigation,
+      topBarOJs,
+      toggleMenu,
+    ],
   );
 
   if (!enableStickyNavigation) return navigation;
