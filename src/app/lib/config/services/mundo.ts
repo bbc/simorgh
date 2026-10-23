@@ -48,8 +48,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
-      title: 'Elecciones de mitad de período en Estados Unidos 2026',
+      title: 'Elecciones EE.UU. 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960',
+      ],
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:

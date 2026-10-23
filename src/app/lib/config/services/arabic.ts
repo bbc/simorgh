@@ -47,12 +47,16 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     electionBanner: {
-      title: 'الانتخابات الأمريكية 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:c7c9ac42-0101-4cb2-b8a6-f059e591f3a4',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html',
+      title: 'انتخابات الولايات المتحدة لعام 2026',
     },
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'البودكاست',
       brandTitle: 'يستحق الانتباه',

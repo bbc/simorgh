@@ -2,27 +2,10 @@
 import { jest } from '@jest/globals';
 import 'temporal-polyfill/global';
 import path from 'path';
-import { TextEncoder, TextDecoder } from 'util';
-import { ReadableStream } from 'node:stream/web';
-import { MessageChannel, MessagePort } from 'node:worker_threads';
 
 global.jest = jest;
 
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 global.fetch = jest.fn();
-global.ReadableStream = ReadableStream;
-global.MessageChannel = MessageChannel;
-global.MessagePort = MessagePort;
-
-Object.defineProperty(global, 'crypto', {
-  value: {
-    randomUUID: jest.fn(),
-    getRandomValues: jest.fn(),
-  },
-});
-
-global.crypto.randomUUID = jest.fn();
 
 /*
  * Mock to avoid async behaviour in tests

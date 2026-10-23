@@ -12,6 +12,12 @@ const canonicalTests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
+    path: '/dari/listen/c4z1p12mn62po',
+    runforEnv: ['local'],
+    service: 'dari',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/tamil/listen/cw3xlkprxv82o',
     runforEnv: ['local'],
     service: 'tamil',
@@ -23,9 +29,31 @@ const testSuites = [
     service: 'tamil',
     tests: [...canonicalTests],
   },
+  {
+    path: '/zhongwen/listen/cgn50l2wz6kqo/trad',
+    runforEnv: ['local'],
+    service: 'zhongwen',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/zhongwen/listen/cgn50l2wz6kqo/simp',
+    runforEnv: ['local'],
+    service: 'zhongwen',
+    tests: [...canonicalTests],
+  },
 ];
 
 const atiAnalyticsTestSuites = [
+  {
+    path: '/dari/listen/c4z1p12mn62po',
+    runforEnv: ['local'],
+    service: 'dari',
+    pageIdentifier: 'dari.listen.c4z1p12mn62po.page',
+    siteId: 142,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
   {
     path: '/tamil/listen/cw3xlkprxv82o',
     runforEnv: ['local'],
@@ -45,6 +73,26 @@ const atiAnalyticsTestSuites = [
     siteId: 87,
     applicationType: 'responsive',
     contentType: 'article',
+    tests: [assertPageView],
+  },
+  {
+    path: '/zhongwen/listen/cgn50l2wz6kqo/trad',
+    runforEnv: ['local'],
+    service: 'zhongwen',
+    pageIdentifier: 'zhongwen.listen.cgn50l2wz6kqo.trad.page',
+    siteId: 38,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
+  {
+    path: '/zhongwen/listen/cgn50l2wz6kqo/simp',
+    runforEnv: ['local'],
+    service: 'zhongwen',
+    pageIdentifier: 'zhongwen.listen.cgn50l2wz6kqo.simp.page',
+    siteId: 38,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
     tests: [assertPageView],
   },
 ] as unknown as TestDataType[];

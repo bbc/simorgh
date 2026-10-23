@@ -24,9 +24,14 @@ const dispatchClick = (targetElement: HTMLElement) => {
   fireEvent.click(targetElement);
 };
 
+const evaluateStringifiedTracker = (tracker: () => void): (() => void) => {
+  // eslint-disable-next-line no-new-func
+  return new Function(`return (${tracker.toString()})`)() as () => void;
+};
+
 describe('Click tracking script', () => {
   beforeAll(() => {
-    clickTracking();
+    evaluateStringifiedTracker(clickTracking)();
   });
 
   beforeEach(() => {
@@ -35,18 +40,6 @@ describe('Click tracking script', () => {
       document.body.removeChild(document.body.firstChild);
     }
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
-  });
-
-  it('STATIC_REVERB_CLICK_TRACKING variable is correct', () => {
-    const clickTrackerString = clickTracking.toString();
-
-    const pattern = /STATIC_REVERB_CLICK_TRACKING = '([^']+)'/;
-
-    const matches = clickTrackerString.match(pattern) || [];
-    const [, staticAtiClickTracking] = matches;
-
-    // STATIC_ATI_CLICK_TRACKING in ./index.ts must match the value of STATIC_ATI_CLICK_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(staticAtiClickTracking).toBe(STATIC_REVERB_CLICK_TRACKING);
   });
 
   it('Redirects all clicks', () => {
@@ -60,7 +53,7 @@ describe('Click tracking script', () => {
     expect(window.location.toString()).toContain('gahuza');
   });
 
-  it('Calls processClientDeviceAndSendStaticBeacon() with the right parameters', () => {
+  it('uses the exported tracking attribute with the stringified click tracker', () => {
     const anchorElement = createAnchor();
 
     dispatchClick(anchorElement);
