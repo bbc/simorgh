@@ -89,7 +89,10 @@ const MyNewsPageContent = ({ page }: MyNewsPageContentProps) => {
             You haven’t followed any topics yet
           </Text>
         ) : (
-          <TopicTags tags={transformTopicsForRelatedTopics()} />
+          <TopicTags
+            tags={transformTopicsForRelatedTopics()}
+            trackingSource="my-news"
+          />
         )}
       </section>
     );
