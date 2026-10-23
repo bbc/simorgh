@@ -19,7 +19,7 @@ const usesReverbViewabilityModel = applicationType =>
 const usesResonance = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
-const getAppName = (service, applicationType) => {
+const getAppName = (service, appType) => {
   const customServiceAppName = {
     ws: '[news]',
     romania: '[news-romanian]',
@@ -39,7 +39,7 @@ const getAppName = (service, applicationType) => {
     ? service
     : `news-${service}`;
 
-  return applicationType === 'mobile-app' ? `[${appName}-app]` : `[${appName}]`;
+  return appType === 'mobile-app' ? `[${appName}-app]` : `[${appName}]`;
 };
 
 const getResonanceAppName = service => {
