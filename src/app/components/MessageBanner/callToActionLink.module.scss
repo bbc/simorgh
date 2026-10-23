@@ -1,0 +1,30 @@
+@use '@scss/themeTokens' as theme;
+
+a.callToActionLink {
+  padding: theme.$spacings-double;
+  background-color: theme.$palette-white;
+  margin: 0 theme.$spacings-double theme.$spacings-double;
+  width: 100%;
+  color: theme.$palette-black;
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: auto;
+    max-width: calc(100% - #{theme.pixelsToRem-px-to-rem(240)});
+    margin: 0 0 #{theme.$spacings-triple};
+    padding-bottom: theme.$spacings-double;
+  }
+
+  span {
+    padding-inline-start: theme.$spacings-half;
+  }
+}
+
+span.callToActionLinkText {
+  color: theme.$palette-black;
+}

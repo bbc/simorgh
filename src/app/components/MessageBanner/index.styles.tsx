@@ -46,31 +46,6 @@ const styles = {
 
       img: { objectPosition: 'top' },
     }),
-  callToActionLink: ({ mq, palette }: Theme) =>
-    css({
-      padding: '1rem',
-      backgroundColor: palette.WHITE,
-      margin: '0 1rem 1rem 1rem',
-      width: '100%',
-      color: palette.BLACK,
-      '&:hover, &:focus': {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: 'auto',
-        maxWidth: 'calc(100% - 240px)',
-        margin: '0 0 1.5rem 0',
-        paddingBottom: '1rem',
-      },
-      '& span': {
-        paddingInlineStart: '0.5rem',
-      },
-    }),
-  callToActionLinkText: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-    }),
   flex: ({ mq }: Theme) =>
     css({
       display: 'flex',
