@@ -126,7 +126,7 @@ describe('useTopicFollowButton', () => {
       isFollowed: false,
       isLoading: false,
       error: null,
-      savedMetadata: undefined,
+      metadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
@@ -172,7 +172,7 @@ describe('useTopicFollowButton', () => {
       isFollowed: true,
       isLoading: true,
       error: statusError,
-      savedMetadata: undefined,
+      metadata: undefined,
     });
 
     const { result } = renderHook(() => useTopicFollowButton(topicData));
@@ -371,7 +371,7 @@ describe('useTopicFollowButton', () => {
         isFollowed: false,
         isLoading: false,
         error: new Error('failed to fetch follow status'),
-        savedMetadata: undefined,
+        metadata: undefined,
       });
 
       renderHook(() => useTopicFollowButton(topicData));
@@ -396,7 +396,7 @@ describe('useTopicFollowButton', () => {
         isFollowed: true,
         isLoading: false,
         error: null,
-        savedMetadata: {
+        metadata: {
           topicId: topicData.topicId,
           title: 'Old title',
           locatorUrl: topicData.url,

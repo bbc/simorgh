@@ -40,8 +40,12 @@ const useTopicFollowButton = (
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const trackError = useErrorTracking();
-  const { isFollowed, isLoading, error, savedMetadata } =
-    useTopicFollowStatus(topicId);
+  const {
+    isFollowed,
+    isLoading,
+    error,
+    metadata: savedMetadata,
+  } = useTopicFollowStatus(topicId);
 
   useTrackErrorEffect({
     error,

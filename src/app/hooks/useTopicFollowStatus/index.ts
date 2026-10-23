@@ -11,24 +11,16 @@ interface UseTopicFollowStatusReturn {
   isFollowed: boolean;
   isLoading: boolean;
   error: Error | null;
-  savedMetadata?: Record<string, unknown>;
+  metadata?: Record<string, unknown>;
 }
 
-const useTopicFollowStatus = (topicId: string): UseTopicFollowStatusReturn => {
-  const { isFollowed, isLoading, error, metadata } = useUASStatusHook({
+const useTopicFollowStatus = (topicId: string): UseTopicFollowStatusReturn =>
+  useUASStatusHook({
     resourceId: topicId,
     config: FOLLOWS_CONFIG,
     queryKeyFn: (hashedUserId, id) => uasKeys.followStatus(hashedUserId, id),
     statusField: UASStatusField.FOLLOWED,
     enabledFn: (id, hashedUserId) => !!id && !!hashedUserId,
   });
-
-  return {
-    isFollowed,
-    isLoading,
-    error,
-    savedMetadata: metadata,
-  };
-};
 
 export default useTopicFollowStatus;

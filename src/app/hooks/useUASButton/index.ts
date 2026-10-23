@@ -63,8 +63,12 @@ const useUASButton = ({
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
   const trackError = useErrorTracking();
-  const { isSaved, isLoading, error, savedMetadata } =
-    useUASFetchSaveStatus(articleId);
+  const {
+    isSaved,
+    isLoading,
+    error,
+    metadata: savedMetadata,
+  } = useUASFetchSaveStatus(articleId);
 
   useTrackErrorEffect({
     error,

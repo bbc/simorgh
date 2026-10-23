@@ -141,7 +141,7 @@ describe('useUASButton', () => {
       isLoading: false,
       isUpdating: false,
       error: null,
-      savedMetadata: undefined,
+      metadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation(context => {
@@ -331,7 +331,7 @@ describe('useUASButton', () => {
         isSaved: false,
         isLoading: false,
         error: new Error('failed to fetch save status'),
-        savedMetadata: undefined,
+        metadata: undefined,
       });
 
       renderHook(() => useUASButton(defaultProps));
@@ -361,7 +361,7 @@ describe('useUASButton', () => {
         isSaved: true,
         isLoading: false,
         error: null,
-        savedMetadata: mockMetadata,
+        metadata: mockMetadata,
       });
 
       renderHook(() => useUASButton(defaultProps));
