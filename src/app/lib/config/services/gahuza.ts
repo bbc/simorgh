@@ -60,6 +60,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'Intara {returned} kuri {total} zabaruwe',
+        spread: 'Ikwirakwizwa',
+        live: 'Ikibiriraho',
+        liveUpdates: 'amakuru mashya',
+        howItWorks: 'Uko aya matora akorwa',
+        lastUpdated: 'Byavuguruwe bwa nyuma:',
+      },
       and: 'na',
       readTime: {
         readTimePrefix: 'Igihe co gusoma',

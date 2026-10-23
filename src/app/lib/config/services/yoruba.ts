@@ -60,6 +60,14 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle: 'Àbáwọlé',
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'Ìpínlẹ̀ {returned} nínú {total} ni wọ́n ti kà',
+        spread: 'Ìtànkálẹ̀',
+        live: 'Lọ́wọ́lọ́wọ́',
+        liveUpdates: 'ìròyìn tuntun',
+        howItWorks: 'Bí ìdìbò yìí ṣe ń ṣiṣẹ́',
+        lastUpdated: 'Ìgbà tí a ṣe àtúnṣe kẹ́yìn:',
+      },
       and: 'ati',
       pagination: {
         previousPage: 'Ìṣájú',
@@ -94,6 +102,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Àwọn Àkórí Tójọra',
       moreOnThis: '',
       navMenuText: 'Àwọn abala',
+      liteSite: {
+        onboardingMessage:
+          'Ìwọ ń wo ẹ̀dà ọ̀rọ̀-nìkan ti ìkànnì yìí tí ó máa ń lo dátà díẹ̀. Wo ẹ̀dà àkọ́kọ́ ti ìkànnì náà pẹ̀lú gbogbo àwòrán àti fídíò.',
+        toMainSite: 'Gbé mi lọ sí ìkànnì àkọ́kọ́',
+        informationPage: 'Wa ohun tí ó pọ̀ síi nípa ẹ̀dà fífi dátà pamọ́ yìí',
+        dataSaving: 'Ẹ̀dà fífi dátà pamọ́',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

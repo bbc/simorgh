@@ -65,6 +65,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'Majimbo {returned} kati ya {total} yamehesabiwa',
+        spread: 'Usambazaji',
+        live: 'Moja kwa moja',
+        liveUpdates: 'taarifa mpya',
+        howItWorks: 'Jinsi uchaguzi huu unavyofanya kazi',
+        lastUpdated: 'Ilisasishwa mwisho:',
+      },
       and: 'na',
       readTime: {
         readTimePrefix: 'Muda wa kusoma',

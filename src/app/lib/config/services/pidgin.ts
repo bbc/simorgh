@@ -47,6 +47,14 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      electionResultsBanner: {
+        statesCounted: '{returned} out of {total} states don count',
+        spread: 'Spread',
+        live: 'Live',
+        liveUpdates: 'updates',
+        howItWorks: 'How dis election dey work',
+        lastUpdated: 'Last update:',
+      },
       and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',
@@ -82,6 +90,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Topics Wey Dem Resemble',
       moreOnThis: '',
       navMenuText: 'Plenti seshon',
+      liteSite: {
+        onboardingMessage:
+          'You dey view text-only version of dis website wey dey use small data. Check di main version of di website wey get all images and videos.',
+        toMainSite: 'Carry me go di main website',
+        informationPage: 'Find out more about dis data-saving version',
+        dataSaving: 'Data-saving version',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

@@ -65,6 +65,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: '{returned} États sur {total} dépouillés',
+        spread: 'Répartition',
+        live: 'En direct',
+        liveUpdates: 'mises à jour',
+        howItWorks: 'Comment fonctionne cette élection',
+        lastUpdated: 'Dernière mise à jour :',
+      },
       and: 'et',
       readTime: {
         readTimePrefix: 'Temps de lecture',

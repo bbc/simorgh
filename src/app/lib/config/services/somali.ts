@@ -65,6 +65,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: '{returned} ka mid ah {total} gobol ayaa la tiriyay',
+        spread: 'Baahsanaan',
+        live: 'Toos',
+        liveUpdates: 'warar cusub',
+        howItWorks: 'Sida doorashadani u shaqeyso',
+        lastUpdated: 'Markii ugu dambeysay la cusbooneysiiyay:',
+      },
       and: 'iyo',
       readTime: {
         readTimePrefix: 'Waqtiga akhriska',
@@ -101,6 +109,14 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Mowduucyada la xiriira',
       moreOnThis: '',
       navMenuText: 'Qaybaha',
+      liteSite: {
+        onboardingMessage:
+          'Waxaad eegaysaa nooca qoraalka kaliya ee boggan oo isticmaala xog yar. Eeg nooca ugu weyn ee boggan oo ay ku jiraan dhammaan sawirada iyo muuqaallada.',
+        toMainSite: 'Igu celi boggaga ugu weyn',
+        informationPage:
+          'Baro wax dheeraad ah oo ku saabsan nooca kaydinta xogta',
+        dataSaving: 'Nooca kaydinta xogta',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
         audioPlayer: 'Ciyaaridda Codka',

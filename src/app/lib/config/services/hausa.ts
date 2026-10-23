@@ -65,6 +65,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'An ƙirga jihohi {returned} cikin {total}',
+        spread: 'Yaɗuwa',
+        live: 'Kai tsaye',
+        liveUpdates: 'sabbin bayanai',
+        howItWorks: 'Yadda wannan zaɓen ke aiki',
+        lastUpdated: 'An sabunta a ƙarshe:',
+      },
       and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',

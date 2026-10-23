@@ -67,6 +67,14 @@ export interface Translations {
   googlePreferredSource?: {
     linkText: string;
   };
+  electionResultsBanner?: {
+    statesCounted: string;
+    spread: string;
+    live: string;
+    liveUpdates: string;
+    howItWorks: string;
+    lastUpdated: string;
+  };
   saveArticleButton?: {
     loading: string;
     save: string;
