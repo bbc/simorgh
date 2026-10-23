@@ -61,8 +61,7 @@ export const service: DefaultServiceConfig = {
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
         linkHref: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
-        heading:
-          'Eleições 2026: resultados em tempo real',
+        heading: 'Eleições 2026: resultados em tempo real',
         description:
           'Acompanhe a apuração para presidente e governador em seu Estado e município com o mapa interativo da BBC News Brasil',
         linkText: 'Clique aqui',
