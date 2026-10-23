@@ -32,6 +32,7 @@ import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import useMediaQuery from '#hooks/useMediaQuery';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import {
   render,
   screen,
@@ -42,7 +43,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
-import * as buildReverbParams from '../../components/ATIAnalytics/params';
+import * as buildReverbParams from '../../lib/analyticsUtils/params/buildParams';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -56,12 +57,35 @@ jest.mock('../../components/ATIAnalytics', () => {
   return ATIAnalytics;
 });
 
+jest.mock('../../contexts/ReverbParamsContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../contexts/ReverbParamsContext'),
+}));
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/params/buildParams'),
+}));
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const reverbParamsContextProviderSpy = jest.spyOn(
   ReverbParamsContext,
   'ReverbParamsContextProvider',
 );
 
-const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
+const buildReverbParamsSpy = jest.spyOn(
+  buildReverbParams,
+  'buildAnalyticsParams',
+);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -158,6 +182,19 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
+    const { container } = render(
+      <ArticlePage pageData={articleDataPersian} />,
+      { service: 'persian' },
+    );
+    const anchor = container.querySelector('main [data-sticky-nav-anchor]');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor?.tagName).toBe('P');
+    expect(anchor).toHaveTextContent(/\S/);
+    expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
   });
 
   it.each([
@@ -645,7 +682,7 @@ describe('Article Page', () => {
       { service: 'russian' },
     );
 
-    expect(getByText('Канал Би-би-си в WhatsApp')).toBeInTheDocument();
+    expect(getByText('Расширение BBC News Russian')).toBeInTheDocument();
   });
   it('should render oEmbed component when passed', async () => {
     const pageDataWithRiddle = {
@@ -744,6 +781,46 @@ describe('Article Page', () => {
     });
   });
 
+  it.each([
+    {
+      contentId: 'urn:bbc:topcat:curie:asset:example',
+      shouldRender: false,
+    },
+    {
+      contentId: 'urn:bbc:optimo:asset:c1l97706v5mo',
+      shouldRender: true,
+    },
+  ])(
+    'renders SaveArticleButton=$shouldRender for content ID $contentId',
+    async ({ contentId, shouldRender }) => {
+      const pageData = {
+        ...articleDataPidginWithByline,
+        metadata: {
+          ...articleDataPidginWithByline.metadata,
+          analyticsLabels: {
+            ...articleDataPidginWithByline.metadata.analyticsLabels,
+            contentId,
+          },
+        },
+      } as Article;
+
+      await act(async () =>
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'hindi',
+          pathname: '/hindi/articles/c1l97706v5mo',
+          toggles: {
+            uasPersonalization: { enabled: true, value: 'hindi' },
+          },
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+        }),
+      );
+
+      expect(document.querySelector('#save-article-button') !== null).toBe(
+        shouldRender,
+      );
+    },
+  );
+
   it('should not set "amphtml" link tag for TC2 asset', async () => {
     const pageDataAsTC2Asset = {
       ...articleDataNews,
@@ -824,35 +901,42 @@ describe('Article Page', () => {
       expect(metadata).toEqual({ atiAnalytics, type });
 
       expect(buildReverbParamsSpy).toHaveReturnedWith({
-        eventDetails: { eventName: 'pageView' },
-        params: {
-          env: undefined,
-          page: {
-            additionalProperties: {
-              app_name: 'news-pidgin',
-              app_type: 'responsive',
-              content_language: 'pcm',
-              product_platform: null,
-              referrer_url: null,
-              x10: null,
-              x11: '2018-01-01T12:01:00.000Z',
-              x12: '2018-01-01T14:00:00.000Z',
-              x13: null,
-              x14: null,
-              x16: '',
-              x17: null,
-              x18: null,
-              x5: null,
-              x8: 'simorgh',
-              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+        resonanceParams: null,
+        reverbParams: {
+          eventDetails: { eventName: 'pageView' },
+          params: {
+            env: undefined,
+            page: {
+              additionalProperties: {
+                app_name: 'news-pidgin',
+                app_type: 'responsive',
+                content_language: 'pcm',
+                product_platform: null,
+                referrer_url: null,
+                x10: null,
+                x11: '2018-01-01T12:01:00.000Z',
+                x12: '2018-01-01T14:00:00.000Z',
+                x13: null,
+                x14: null,
+                x16: '',
+                x17: null,
+                x18: null,
+                x5: null,
+                x8: 'simorgh',
+                x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+              },
+              contentId: 'urn:bbc:optimo:c0000000001o',
+              contentType: undefined,
+              destination: 'WS_NEWS_LANGUAGES_TEST',
+              name: null,
+              producer: 'PIDGIN',
             },
-            contentId: 'urn:bbc:optimo:c0000000001o',
-            contentType: undefined,
-            destination: 'WS_NEWS_LANGUAGES_TEST',
-            name: null,
-            producer: 'PIDGIN',
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
-          user: { hashedId: null, isSignedIn: false },
         },
       });
     });
@@ -897,35 +981,42 @@ describe('Article Page', () => {
       expect(metadata).toEqual({ atiAnalytics, type });
 
       expect(buildReverbParamsSpy).toHaveReturnedWith({
-        eventDetails: { eventName: 'pageView' },
-        params: {
-          env: undefined,
-          page: {
-            additionalProperties: {
-              app_name: 'news-pidgin',
-              app_type: 'responsive',
-              content_language: 'pcm',
-              product_platform: null,
-              referrer_url: null,
-              x10: null,
-              x11: '2018-01-01T12:01:00.000Z',
-              x12: '2018-01-01T14:00:00.000Z',
-              x13: null,
-              x14: null,
-              x16: '',
-              x17: null,
-              x18: null,
-              x5: null,
-              x8: 'simorgh',
-              x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+        resonanceParams: null,
+        reverbParams: {
+          eventDetails: { eventName: 'pageView' },
+          params: {
+            env: undefined,
+            page: {
+              additionalProperties: {
+                app_name: 'news-pidgin',
+                app_type: 'responsive',
+                content_language: 'pcm',
+                product_platform: null,
+                referrer_url: null,
+                x10: null,
+                x11: '2018-01-01T12:01:00.000Z',
+                x12: '2018-01-01T14:00:00.000Z',
+                x13: null,
+                x14: null,
+                x16: '',
+                x17: null,
+                x18: null,
+                x5: null,
+                x8: 'simorgh',
+                x9: 'Article%20Headline%20for%20SEO%20in%20Pidgin%20-%20BBC%20News%20Pidgin',
+              },
+              contentId: 'urn:bbc:optimo:c0000000001o',
+              contentType: undefined,
+              destination: 'WS_NEWS_LANGUAGES_TEST',
+              name: null,
+              producer: 'PIDGIN',
             },
-            contentId: 'urn:bbc:optimo:c0000000001o',
-            contentType: undefined,
-            destination: 'WS_NEWS_LANGUAGES_TEST',
-            name: null,
-            producer: 'PIDGIN',
+            user: {
+              hashedId: null,
+              isSignedIn: false,
+              isPersonalisationOn: false,
+            },
           },
-          user: { hashedId: null, isSignedIn: false },
         },
       });
     });

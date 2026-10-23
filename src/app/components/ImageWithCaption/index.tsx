@@ -1,7 +1,6 @@
 import { use } from 'react';
-import buildIChefURL from '../../lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
-import { createSrcsets } from '../../lib/utilities/srcSet';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
@@ -70,18 +69,18 @@ const ImageWithCaption = ({
 
   const copyright = getCopyright(copyrightHolder);
 
-  const src = buildIChefURL({
+  const {
+    src,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
     originCode,
     locator,
-    resolution: DEFAULT_IMAGE_RES,
+    originalImageWidth: width,
+    srcResolution: DEFAULT_IMAGE_RES,
   });
-
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: width,
-    });
 
   const lazyLoad = shouldLazyLoad(position);
 

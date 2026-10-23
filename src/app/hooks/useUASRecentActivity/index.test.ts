@@ -6,12 +6,23 @@ import getRecentActivity, {
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASRecentActivity from '.';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '../useErrorTracking/errorTracking.const';
 
 jest.mock('#app/lib/uasApi/getRecentActivity');
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
   use: jest.fn(),
+}));
+
+const mockTrackError = jest.fn();
+jest.mock('../useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
 }));
 
 let mockQueryFn: (opts: { signal: AbortSignal }) => Promise<RecentActivityData>;
@@ -68,13 +79,19 @@ const mockSavedArticles: SavedArticle[] = [
   },
 ];
 
+const mockHashedUserId = 'user-123';
+
 describe('useUASRecentActivity', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockUseQueryReturn = { data: undefined, isLoading: false, error: null };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: 'user-123' };
+      if (context === AccountContext)
+        return {
+          hashedUserId: mockHashedUserId,
+          isArticlePersonalizationEnabled: true,
+        };
       return {};
     });
   });
@@ -132,6 +149,32 @@ describe('useUASRecentActivity', () => {
     expect(result.current.savedArticles).toEqual([]);
   });
 
+  it('should track a recent-activity error when the query fails', () => {
+    const error = new Error('Some error');
+    mockUseQueryReturn.error = error;
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockTrackError).toHaveBeenCalledWith({
+      error,
+      feature: ERROR_TRACKING_FEATURES.UAS,
+      action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
+    });
+  });
+
+  it('should not track an error when the query succeeds', () => {
+    mockUseQueryReturn.data = {
+      savedArticles: mockSavedArticles,
+      total: 25,
+      itemsPerPage: 10,
+      startIndex: 0,
+    };
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockTrackError).not.toHaveBeenCalled();
+  });
+
   it('should be disabled when hashedUserId is empty', () => {
     (use as jest.Mock).mockImplementation((context: unknown) => {
       if (context === AccountContext) return { hashedUserId: '' };
@@ -143,7 +186,22 @@ describe('useUASRecentActivity', () => {
     expect(mockEnabled).toBe(false);
   });
 
-  it('should be enabled when hashedUserId is present', () => {
+  it('should be disabled when isArticlePersonalizationEnabled is false', () => {
+    (use as jest.Mock).mockImplementationOnce((context: unknown) => {
+      if (context === AccountContext)
+        return {
+          hashedUserId: mockHashedUserId,
+          isArticlePersonalizationEnabled: false,
+        };
+      return {};
+    });
+
+    renderHook(() => useUASRecentActivity());
+
+    expect(mockEnabled).toBe(false);
+  });
+
+  it('should be enabled when hashedUserId is present and isArticlePersonalizationEnabled is true', () => {
     renderHook(() => useUASRecentActivity());
 
     expect(mockEnabled).toBe(true);
@@ -152,7 +210,27 @@ describe('useUASRecentActivity', () => {
   it('should include hashedUserId and startIndex in the query key', () => {
     renderHook(() => useUASRecentActivity({ startIndex: 10 }));
 
-    expect(mockQueryKey).toEqual(uasKeys.favouritesPage('user-123', 10));
+    expect(mockQueryKey).toEqual(uasKeys.favouritesPage(mockHashedUserId, 10));
+  });
+
+  it('should include the current service in the query key and pass it to getRecentActivity', async () => {
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext) return { hashedUserId: mockHashedUserId };
+      if (context === ServiceContext) return { service: 'mundo' };
+      return {};
+    });
+
+    renderHook(() => useUASRecentActivity({ startIndex: 10 }));
+
+    expect(mockQueryKey).toEqual(
+      uasKeys.favouritesPage(mockHashedUserId, 10, 'mundo'),
+    );
+
+    await mockQueryFn({ signal: new AbortController().signal });
+
+    expect(mockGetRecentActivity).toHaveBeenCalledWith(
+      expect.objectContaining({ service: 'mundo' }),
+    );
   });
 
   it('should pass AbortSignal to getRecentActivity', async () => {

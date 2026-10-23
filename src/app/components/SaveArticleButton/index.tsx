@@ -1,6 +1,9 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
@@ -12,24 +15,32 @@ export interface SaveArticleButtonProps {
 const SAVE_ARTICLE_BUTTON_ID = 'save-article-button';
 
 const SaveArticleButton = (props: SaveArticleButtonProps) => {
-  const { isPersonalizationAvailable, isPersonalizationEnabled } =
+  const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
     use(AccountContext);
 
-  if (!isPersonalizationAvailable) return null;
+  const { pathname } = use(RequestContext);
+  const { assetId: articleId } = parseRoute(pathname);
+
+  const isSupportedArticleId =
+    typeof articleId === 'string' &&
+    articleId.length > 0 &&
+    !articleId.includes('/');
+
+  if (!isArticlePersonalizationAvailable || !isSupportedArticleId) return null;
 
   return (
-    <>
+    <ErrorBoundary componentName="SaveArticleButton">
       <noscript>
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
       <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
-        {isPersonalizationEnabled ? (
+        {isArticlePersonalizationEnabled ? (
           <SaveArticleButtonAuthenticated {...props} />
         ) : (
           <SaveArticleButtonGuest />
         )}
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -1,10 +1,10 @@
 import { use } from 'react';
 import { render } from '@testing-library/react';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import * as getStatsDestination from './getStatsDestination';
-import * as getOriginContext from './getOriginContext';
-import * as getEnv from './getEnv';
-import * as getMetaUrls from './getMetaUrls';
+import getStatsDestination from './getStatsDestination';
+import getOriginContext from './getOriginContext';
+import getEnv from './getEnv';
+import getMetaUrls from './getMetaUrls';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { RequestContextProvider, RequestContext } = require('./index');
@@ -22,19 +22,37 @@ jest.mock('react', () => {
   };
 });
 
-jest.mock('./getStatsDestination');
-jest.mock('./getOriginContext');
-jest.mock('./getEnv');
-jest.mock('./getMetaUrls');
+jest.mock('./getStatsDestination', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('./getOriginContext', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('./getEnv', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('./getMetaUrls', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
-(getStatsDestination.default as jest.Mock).mockReturnValue(
-  'getStatsDestination',
-);
-(getOriginContext.default as jest.Mock).mockReturnValue({
+const mockGetStatsDestination = jest.mocked(getStatsDestination);
+const mockGetOriginContext = jest.mocked(getOriginContext);
+const mockGetEnv = jest.mocked(getEnv);
+const mockGetMetaUrls = jest.mocked(getMetaUrls);
+
+mockGetStatsDestination.mockReturnValue({
+  destinationName: 'getStatsDestination',
+  destinationSiteId: 12345,
+});
+mockGetOriginContext.mockReturnValue({
   origin: 'origin',
 });
-(getEnv.default as jest.Mock).mockReturnValue('getEnv');
-(getMetaUrls.default as jest.Mock).mockReturnValue({
+mockGetEnv.mockReturnValue('test');
+mockGetMetaUrls.mockReturnValue({
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',
   canonicalUkLink: 'canonicalUkLink',
@@ -58,7 +76,7 @@ const input = {
 };
 
 const expectedOutput = {
-  env: 'getEnv',
+  env: 'test',
   id: input.id,
   isUK: true,
   origin: 'origin',
@@ -72,6 +90,7 @@ const expectedOutput = {
   variant: 'simp',
   timeOnServer: null,
   statsDestination: 'getStatsDestination',
+  destinationSiteId: 12345,
   statusCode: 200,
   canonicalLink: 'canonicalLink',
   ampLink: 'ampLink',
@@ -86,6 +105,7 @@ const expectedOutput = {
   serverSideExperiments: input.serverSideExperiments,
   nonce: null,
   cspHeader: null,
+  primaryMediaType: null,
 };
 
 describe('RequestContext', () => {
@@ -100,17 +120,17 @@ describe('RequestContext', () => {
       </RequestContextProvider>,
     );
 
-    expect(getStatsDestination.default).toHaveBeenCalledWith({
-      env: 'getEnv',
+    expect(mockGetStatsDestination).toHaveBeenCalledWith({
+      env: 'test',
       isUK: true,
       service: 'service',
     });
 
-    expect(getOriginContext.default).toHaveBeenCalledWith('bbcOrigin');
+    expect(mockGetOriginContext).toHaveBeenCalledWith('bbcOrigin');
 
-    expect(getEnv.default).toHaveBeenCalledWith('origin');
+    expect(mockGetEnv).toHaveBeenCalledWith('origin');
 
-    expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
+    expect(mockGetMetaUrls).toHaveBeenCalledWith('origin', '/current-path');
 
     expect(use).toHaveReturnedWith(expectedOutput);
   });
@@ -133,6 +153,24 @@ describe('RequestContext', () => {
       isAmp: false,
       isApp: true,
       platform: 'app',
+    });
+  });
+
+  it('should return expected values for Topic Pages where primaryMediaType is set', () => {
+    const primaryMediaTypeInput = {
+      ...input,
+      primaryMediaType: 'video',
+    };
+
+    render(
+      <RequestContextProvider {...primaryMediaTypeInput}>
+        <Component />
+      </RequestContextProvider>,
+    );
+
+    expect(use).toHaveReturnedWith({
+      ...expectedOutput,
+      primaryMediaType: 'video',
     });
   });
 
@@ -197,7 +235,7 @@ describe('RequestContext', () => {
     });
 
     it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
-      (getOriginContext.default as jest.Mock).mockReturnValue({
+      mockGetOriginContext.mockReturnValue({
         origin: 'origin',
       });
       render(
@@ -206,15 +244,15 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(getStatsDestination.default).toHaveBeenCalledWith({
-        env: 'getEnv',
+      expect(mockGetStatsDestination).toHaveBeenCalledWith({
+        env: 'test',
         isUK: true,
         service: 'service',
       });
     });
 
     it('should set isUK to false when the input isUK value is null', () => {
-      (getOriginContext.default as jest.Mock).mockReturnValue({
+      mockGetOriginContext.mockReturnValue({
         origin: 'origin',
       });
 

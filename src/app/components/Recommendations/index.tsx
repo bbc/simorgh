@@ -15,15 +15,9 @@ import RecommendationsItem from './RecommendationsItem';
 interface RecommendationsProps {
   data: Recommendation[];
   experimentProps?: ComponentExperimentProps;
-  // this lets the experiment observe the rendered recommendations section
-  id?: string;
 }
 
-const Recommendations = ({
-  data,
-  experimentProps,
-  id,
-}: RecommendationsProps) => {
+const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
   const { recommendations, mostRead, dir } = use(ServiceContext);
 
   const {
@@ -82,7 +76,6 @@ const Recommendations = ({
 
   return (
     <section
-      id={id}
       css={styles.recommendationsWrapper}
       data-e2e={labelId}
       {...a11yAttributes}

@@ -81,6 +81,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Díẹ̀ síì nípa {topic}',
         fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
       },
+      googlePreferredSource: {
+        linkText: 'Fi kun gẹ́gẹ́ bí orísun tí a fẹ́ràn lórí Google',
+      },
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       skipContent: {
@@ -91,6 +94,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Àwọn Àkórí Tójọra',
       moreOnThis: '',
       navMenuText: 'Àwọn abala',
+      liteSite: {
+        onboardingMessage:
+          'Ìwọ ń wo ẹ̀dà ọ̀rọ̀-nìkan ti ìkànnì yìí tí ó máa ń lo dátà díẹ̀. Wo ẹ̀dà àkọ́kọ́ ti ìkànnì náà pẹ̀lú gbogbo àwòrán àti fídíò.',
+        toMainSite: 'Gbé mi lọ sí ìkànnì àkọ́kọ́',
+        informationPage: 'Wa ohun tí ó pọ̀ síi nípa ẹ̀dà fífi dátà pamọ́ yìí',
+        dataSaving: 'Ẹ̀dà fífi dátà pamọ́',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

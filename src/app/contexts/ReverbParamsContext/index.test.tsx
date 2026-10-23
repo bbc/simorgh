@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import { use } from 'react';
+import { ResonanceBeaconConfig } from '#app/components/ATIAnalytics/types';
 import {
   render,
   screen,
@@ -10,7 +11,34 @@ import {
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
-import * as useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
+import { buildAnalyticsParams } from '../../lib/analyticsUtils/params/buildParams';
+
+jest.mock('../../hooks/useOptimizelyVariation', () => {
+  const actual = jest.requireActual('../../hooks/useOptimizelyVariation');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => {
+  const actual = jest.requireActual(
+    '../../lib/analyticsUtils/params/buildParams',
+  );
+
+  return {
+    __esModule: true,
+    ...actual,
+    buildAnalyticsParams: jest.fn(actual.buildAnalyticsParams),
+  };
+});
+
+const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
+const mockBuildAnalyticsParams = jest.mocked(buildAnalyticsParams);
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 const pageMetadata = {
   atiAnalytics: {
@@ -42,7 +70,16 @@ const pageMetadata = {
 } as PageMetadata;
 
 beforeEach(() => {
+  delete process.env.SIMORGH_APP_ENV;
   jest.clearAllMocks();
+});
+
+afterEach(() => {
+  if (originalSimorghAppEnv === undefined) {
+    delete process.env.SIMORGH_APP_ENV;
+  } else {
+    process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+  }
 });
 
 const TestComponent = () => {
@@ -95,9 +132,11 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -146,9 +185,11 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -197,9 +238,11 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
@@ -248,16 +291,16 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
+      resonanceParams: null,
     });
   });
 
   it('should include experiment details when present', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'experimentVariant');
+    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
 
     render(<TestComponent />, {
       pageMetadata,
@@ -303,14 +346,58 @@ describe('ReverbParamsContext', () => {
           user: {
             hashedId: null,
             isSignedIn: false,
+            isPersonalisationOn: false,
           },
         },
       },
+      resonanceParams: null,
       experimentProps: {
         experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
         sendOptimizelyEvents: true,
       },
     });
+  });
+
+  it('should provide resonanceParams to child components when resonanceEnabled is enabled', () => {
+    const mockResonanceParams = {
+      resonanceProperties: { mode: 'test' },
+      baseProperties: {
+        app: { name: 'news-pidgin' },
+        destination: 'WS_NEWS_LANGUAGES_TEST',
+        pageName: 'news::pidgin.news.story.51745682.page',
+        producer: 'PIDGIN',
+        siteId: 598343,
+      },
+      pageviewProperties: {
+        contentId:
+          'urn:bbc:cps:curie:asset:53870d86-88c5-6f4d-a260-f97c68606458',
+        contentType: 'article',
+        language: 'pcm',
+        destination: 'WS_NEWS_LANGUAGES_TEST',
+        producer: 'PIDGIN',
+      },
+    } as unknown as ResonanceBeaconConfig;
+
+    mockBuildAnalyticsParams.mockReturnValue({
+      reverbParams: {
+        params: {
+          page: { name: 'news::pidgin.news.story.51745682.page' },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
+      },
+      resonanceParams: mockResonanceParams,
+    });
+
+    render(<TestComponent />, {
+      pageMetadata,
+      service: 'pidgin',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const contextValue = JSON.parse(testEl.textContent as string);
+
+    expect(contextValue.resonanceParams).toEqual(mockResonanceParams);
   });
 });

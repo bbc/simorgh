@@ -1,7 +1,16 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import ElectionBanner from '#app/components/ElectionBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import {
+  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  HOMEPAGE_RELATED_TOPIC_SERVICES,
+  isHomepageRelatedTopicVariation,
+} from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -45,10 +54,30 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
+
+  // experiment: newswb_ws_homepage_related_topic_promos
+  // read the server assignment before rendering and activate both groups on load
+  const relatedTopicVariant = useOptimizelyVariation({
+    experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+  const relatedTopicExperimentProps =
+    HOMEPAGE_RELATED_TOPIC_SERVICES.includes(service) &&
+    isHomepageRelatedTopicVariation(relatedTopicVariant)
+      ? {
+          experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+          experimentVariant: relatedTopicVariant,
+          sendOptimizelyEvents: true,
+        }
+      : undefined;
+  const showRelatedTopicExperiment =
+    Boolean(relatedTopicExperimentProps) &&
+    relatedTopicVariant === 'related_topic';
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',
@@ -63,8 +92,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      <PWAPromotionalBanner />
       <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
@@ -90,6 +117,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <ElectionBanner className="home-page-election-banner" />
           <div css={styles.margins}>
             {curations.map(
               (
@@ -101,6 +129,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
+                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -123,7 +152,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link}
+                      link={link || uri}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
@@ -131,6 +160,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       {...curationProps}
+                      experimentProps={relatedTopicExperimentProps}
+                      showRelatedTopicExperiment={showRelatedTopicExperiment}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </Fragment>
@@ -140,6 +171,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      {relatedTopicExperimentProps && (
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+      )}
     </>
   );
 };

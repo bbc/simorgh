@@ -68,6 +68,44 @@ const pidginHomePageData = {
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
+  it('renders the election banner before the first curation when enabled', () => {
+    const { getByTestId, container } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: true } },
+      },
+    );
+
+    expect(getByTestId('election-banner')).toHaveClass(
+      'home-page-election-banner',
+    );
+    expect(
+      getByTestId('election-banner').compareDocumentPosition(
+        container.querySelector('section') as HTMLElement,
+      ),
+    ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    expect(
+      getByTestId('election-banner').nextElementSibling?.contains(
+        container.querySelector('section'),
+      ),
+    ).toBe(true);
+  });
+
+  it('does not render the election banner when disabled', () => {
+    const { queryByTestId } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: false } },
+      },
+    );
+
+    expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+  });
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
       service: 'afrique',
@@ -1073,6 +1111,99 @@ describe('Home Page', () => {
         expect(socialLinksCalls).toContainEqual(expectedTrackingData);
       });
     });
+  });
+});
+
+describe('associatedContent', () => {
+  it('should use associatedContent.uri as link fallback for curations without a link property', () => {
+    const testUri = 'https://www.bbc.com/test-associated-content';
+
+    const testCuration = {
+      curationId: 'test-curation-with-associated-content',
+      position: 999,
+      title: 'Test Associated Content',
+      visualStyle: 'grid',
+      visualProminence: 'NORMAL',
+      summaries: [
+        {
+          type: 'article',
+          title: 'Test Article',
+          link: 'https://www.bbc.com/article',
+          id: 'test-article-1',
+        },
+      ],
+      link: undefined,
+      associatedContent: {
+        uri: testUri,
+      },
+    };
+
+    const testHomePageData = {
+      ...pidginHomePageData,
+      curations: [...pidginHomePageData.curations, testCuration],
+    };
+
+    // @ts-expect-error suppress pageData prop type conflicts
+    const { container } = render(<HomePage pageData={testHomePageData} />, {
+      service: 'pidgin',
+    });
+
+    const subheadingLinks = Array.from(container.querySelectorAll('h2 a'));
+    const associatedContentLink = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testUri),
+    );
+
+    expect(associatedContentLink).toBeInTheDocument();
+    expect(associatedContentLink?.textContent).toContain(
+      'Test Associated Content',
+    );
+  });
+
+  it('should prioritize link over associatedContent.uri when both are provided', () => {
+    const testLink = 'https://www.bbc.com/test-link';
+    const testUri = 'https://www.bbc.com/test-associated-uri';
+
+    const testCuration = {
+      curationId: 'test-curation-with-both-links',
+      position: 999,
+      title: 'Test Both Links',
+      visualStyle: 'grid',
+      visualProminence: 'NORMAL',
+      summaries: [
+        {
+          type: 'article',
+          title: 'Test Article',
+          link: 'https://www.bbc.com/article',
+          id: 'test-article-2',
+        },
+      ],
+      link: testLink,
+      associatedContent: {
+        uri: testUri,
+      },
+    };
+
+    const testHomePageData = {
+      ...pidginHomePageData,
+      curations: [...pidginHomePageData.curations, testCuration],
+    };
+
+    // @ts-expect-error suppress pageData prop type conflicts
+    const { container } = render(<HomePage pageData={testHomePageData} />, {
+      service: 'pidgin',
+    });
+
+    const subheadingLinks = Array.from(container.querySelectorAll('h2 a'));
+    const linkElement = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testLink),
+    );
+    const associatedLink = subheadingLinks.find(link =>
+      link.getAttribute('href')?.includes(testUri),
+    );
+
+    expect(linkElement).toBeInTheDocument();
+    expect(linkElement?.textContent).toContain('Test Both Links');
+    expect(associatedLink).toBeFalsy();
   });
 });
 

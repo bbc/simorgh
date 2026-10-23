@@ -67,6 +67,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'เพิ่มเติมเกี่ยวกับ {topic}',
         fetchErrorMessage: 'โหลดไม่สำเร็จ กรุณาลองอีกครั้ง',
       },
+      googlePreferredSource: {
+        linkText: 'เพิ่มเป็นแหล่งข่าวที่ต้องการบน Google',
+      },
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       skipContent: {
@@ -77,6 +80,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
       moreOnThis: '',
       navMenuText: 'หมวดข่าว',
+      liteSite: {
+        onboardingMessage:
+          'คุณกำลังดูเวอร์ชันข้อความล้วนของเว็บไซต์นี้ซึ่งใช้ข้อมูลน้อยลง ดูเวอร์ชันหลักของเว็บไซต์ที่มีภาพและวิดีโอทั้งหมด',
+        toMainSite: 'พาฉันไปที่เว็บไซต์หลัก',
+        informationPage: 'ดูข้อมูลเพิ่มเติมเกี่ยวกับเวอร์ชันประหยัดข้อมูลนี้',
+        dataSaving: 'เวอร์ชันประหยัดข้อมูล',
+      },
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',

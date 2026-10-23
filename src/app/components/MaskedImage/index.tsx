@@ -1,9 +1,7 @@
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
-import { createSrcsets } from '#app/lib/utilities/srcSet';
-import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
-import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import { prepareIchefImage } from '#app/utilities/imageSrcSets';
 import styles from './styles';
 
 type Props = {
@@ -50,15 +48,9 @@ const MaskedImage = ({
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
-  const url = imageUrlTemplate.split('{width}')[1];
-
-  const originCode = getOriginCode(url);
-  const locator = getLocator(url);
-
   const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
+    prepareIchefImage({
+      imageUrlTemplate,
       originalImageWidth: imageWidth,
     });
 

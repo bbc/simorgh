@@ -118,16 +118,20 @@ export type ServiceConfig = {
   googleSiteVerification?: string;
   promotionalBanner?: PromotionalBannerConfig;
   electionBanner?: {
+    title?: string;
     heights?: {
       desktop: number;
       tablet: number;
       mobile: number;
     };
-    electionThingIds: string[];
-    iframeSrc: string;
-    iframeDevSrc: string;
+    electionThingIds?: string[];
+    electionCurationIds?: string[];
+    iframeSrc?: string;
+    iframeDevSrc?: string;
+    assocPressIframeSrc?: string;
   };
   articleMessageBanners?: ArticleMessageBannerConfig[];
+  resonanceEnabled?: boolean;
 };
 
 export type ArticleMessageBannerConfig = {

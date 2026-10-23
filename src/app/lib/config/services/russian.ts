@@ -10,6 +10,13 @@ const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
   navMenuText: 'Разделы',
+  liteSite: {
+    onboardingMessage:
+      'Вы просматриваете текстовую версию этого сайта, которая использует меньше данных. Посмотрите основную версию сайта со всеми изображениями и видео.',
+    toMainSite: 'Перейти на основную версию сайта',
+    informationPage: 'Узнать больше об этой версии с экономией трафика',
+    dataSaving: 'Версия с экономией трафика',
+  },
   consentBanner: {
     privacy: {
       title: 'Мы обновили наши правила использования личных данных и куки.',
@@ -124,6 +131,9 @@ export const service: DefaultServiceConfig = {
         heading: 'Узнать больше',
         moreAboutTopic: 'Больше по теме: {topic}',
         fetchErrorMessage: 'Не удалось загрузить. Пожалуйста, попробуйте снова',
+      },
+      googlePreferredSource: {
+        linkText: 'Добавить как предпочтительный источник в Google',
       },
       sport: {
         keyEventsTitle: 'Ключевые события',
@@ -254,6 +264,15 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Выборы в Конгресс США 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:9bcbbe46-d21c-4e95-8c61-53fa233fcc8a',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33043.html',
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
       header: 'Популярное',
@@ -269,21 +288,21 @@ export const service: DefaultServiceConfig = {
       },
     },
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Канал Би-би-си в WhatsApp',
+      title: 'Расширение для браузера Chrome - ссылка',
+      brandTitle: 'Расширение BBC News Russian',
       brandDescription:
-        'Тут мы публикуем только главные новости и самые интересные тексты. Канал доступен для нероссийских номеров.',
+        'Это расширение поможет, если возникают трудности с доступом к сайту Русской службы Би-би-си.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jq48n8.png',
-        alt: 'WhatsApp',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pb8pp9.png',
+        alt: 'Как нас читать с расширением для браузера Chrome',
       },
       linkLabel: {
-        text: 'Подписывайтесь',
-        href: 'https://whatsapp.com/channel/0029VaZ437k4Y9li4jkzIU0G',
+        text: 'Загрузить расширение',
+        href: 'https://chromewebstore.google.com/detail/bbc-news-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D0%B0/bnliibjlmflplmjlfnecbkdkbpglkpio?utm_source=ext_app_menu',
       },
       skipLink: {
-        text: 'Пропустить Реклама WhatsApp-канала и продолжить чтение.',
-        endTextVisuallyHidden: 'Конец истории Реклама WhatsApp-канала',
+        text: 'Пропустить %title% и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории %title%',
       },
     },
     disclaimer: {

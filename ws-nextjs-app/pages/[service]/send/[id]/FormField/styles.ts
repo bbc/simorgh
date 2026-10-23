@@ -1,7 +1,7 @@
 import { focusIndicatorThickness } from '#app/components/ThemeProvider/focusIndicator';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
-import { getInlineLinkStyles } from '#app/components/InlineLink/index.styles';
+import { getInlineLinkStyles } from '../styles';
 
 const CHECK_IMG = `data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.65 98.87'%3E%3Cpath d='M96.64 0L46.11 60.23 17.63 36.34 0 57.35l28.47 23.89 21.01 17.63 17.63-21.01 50.54-60.22L96.64 0z'/%3E%3C/svg%3E`;
 
@@ -118,6 +118,65 @@ export default {
       },
     }),
   checkboxError: ({ palette }: Theme) =>
+    css({
+      border: `solid 0.0625rem ${palette.ERROR_CORE}`,
+    }),
+  constrainedListFieldset: () =>
+    css({
+      border: 0,
+      margin: 0,
+      padding: 0,
+    }),
+  constrainedListOptions: ({ spacings }: Theme) =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      gap: `${spacings.DOUBLE}rem`,
+    }),
+  constrainedListContainer: () =>
+    css({
+      display: 'flex',
+      flexWrap: 'nowrap',
+      alignItems: 'flex-start',
+    }),
+  constrainedListLabel: ({ spacings, fontSizes }: Theme) =>
+    css({
+      flex: 'auto',
+      marginInlineStart: `${spacings.DOUBLE}rem`,
+      paddingBlockStart: `${pixelsToRem(5)}rem`,
+      cursor: 'pointer',
+      ...fontSizes.pica,
+    }),
+  radioButton: ({ palette, mq }: Theme) =>
+    css({
+      scrollMarginTop: `${pixelsToRem(8)}rem`,
+      display: 'inline-block',
+      flex: 'initial',
+      flexShrink: 0,
+      width: `${pixelsToRem(32)}rem`,
+      height: `${pixelsToRem(32)}rem`,
+      cursor: 'pointer',
+      boxSizing: 'border-box',
+      border: `solid 0.0625rem ${palette.GREY_10}`,
+      borderRadius: '50%',
+      appearance: 'none',
+      '&:checked::after': {
+        content: '""',
+        display: 'block',
+        width: `${pixelsToRem(16)}rem`,
+        height: `${pixelsToRem(16)}rem`,
+        margin: `${pixelsToRem(7)}rem`,
+        backgroundColor: palette.GREY_10,
+        borderRadius: '50%',
+      },
+      [mq.FORCED_COLOURS]: {
+        appearance: 'auto',
+        '&:checked::after': {
+          content: 'none',
+        },
+      },
+    }),
+  radioButtonError: ({ palette }: Theme) =>
     css({
       border: `solid 0.0625rem ${palette.ERROR_CORE}`,
     }),

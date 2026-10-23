@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { createContext, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   renderHook,
@@ -12,9 +12,37 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import * as serviceContextModule from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+  resonanceEnabled: false,
+};
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }: PropsWithChildren) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
@@ -72,6 +100,15 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
+jest.mock(
+  '../../components/ATIAnalytics/resonance/dispatchResonanceEvent',
+  () => jest.fn(),
+);
+jest.mock(
+  '../../components/ATIAnalytics/resonance/buildResonanceEventConfig',
+  () => jest.fn(config => ({ mockedResonanceConfig: config })),
+);
+
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
@@ -84,16 +121,12 @@ beforeEach(() => {
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-    }),
-  );
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  };
 });
 
 afterEach(() => {
@@ -145,13 +178,13 @@ const wrapper = ({
       service="pidgin"
       pathname="/pidgin/tori-51745682"
     >
-      <serviceContextModule.ServiceContextProvider service="pidgin">
+      <ServiceContextProvider service="pidgin">
         <ToggleContextProvider toggles={toggles}>
           <EventTrackingContextProvider atiData={atiData}>
             {children}
           </EventTrackingContextProvider>
         </ToggleContextProvider>
-      </serviceContextModule.ServiceContextProvider>
+      </ServiceContextProvider>
     </RequestContextProvider>
   </OptimizelyProvider>
 );
@@ -837,6 +870,72 @@ describe('useViewTracker', () => {
           },
         );
       });
+    });
+  });
+
+  describe('Resonance dual-run', () => {
+    const trackingData = {
+      componentName: 'most-read',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
+    };
+
+    it('should dispatch a resonance event when resonanceEnabled is true', async () => {
+      mockServiceContextValue = {
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(() => useViewTracker(trackingData), {
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+      });
+      const element = document.createElement('div');
+
+      await result.current.ref(element);
+
+      const observerInstance = getObserverInstance(element);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
+        });
+      });
+
+      await act(() => {
+        jest.advanceTimersByTime(1100);
+      });
+
+      expect(buildResonanceEventConfig).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+    });
+
+    it('should not dispatch a resonance event when resonanceEnabled is false', async () => {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+      });
+      const element = document.createElement('div');
+
+      await result.current.ref(element);
+
+      const observerInstance = getObserverInstance(element);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
+        });
+      });
+
+      await act(() => {
+        jest.advanceTimersByTime(1100);
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
     });
   });
 

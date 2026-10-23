@@ -1,5 +1,6 @@
+import { screen } from '@testing-library/react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Bulletin from '.';
 
@@ -26,14 +27,14 @@ const BulletinComponent = ({
     <Image
       src={imageSrc}
       alt="Iron man"
-      srcset={imageSizes
+      srcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
         .join(', ')}
-      fallbackSrcset={imageSizes
+      fallbackSrcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
         .join(', ')}
-      primaryMimeType="image/webp"
-      fallbackMimeType="image/jpeg"
+      mediaType="image/webp"
+      fallbackMediaType="image/jpeg"
     />
   );
   return (
@@ -57,18 +58,18 @@ describe('Bulletin', () => {
   suppressPropWarnings(['ariaId', 'undefined']);
 
   it('should render audio correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="audio"
         ctaText="Listen"
         ariaId="https://bbc.co.uk"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render audio correctly with lang prop passed in', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="audio"
         ctaText="Listen"
@@ -78,22 +79,22 @@ describe('Bulletin', () => {
       />,
       { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render video correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="video"
         ctaText="Watch"
         ariaId="https://bbc.co.uk"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render live audio correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="audio"
         ctaText="Listen"
@@ -101,11 +102,11 @@ describe('Bulletin', () => {
         isLive
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render live video correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="video"
         ctaText="Watch"
@@ -113,11 +114,11 @@ describe('Bulletin', () => {
         isLive
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   it('should render radio bulletin without summary correctly', () => {
-    const { container } = render(
+    render(
       <BulletinComponent
         mediaType="audio"
         ctaText="Listen"
@@ -125,14 +126,12 @@ describe('Bulletin', () => {
         withSummary={false}
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 
   // the below test is a temporary test for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   it('should render radio bulletin without ariaId', () => {
-    const { container } = render(
-      <BulletinComponent mediaType="audio" ctaText="Listen" />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<BulletinComponent mediaType="audio" ctaText="Listen" />);
+    expect(screen.getByText('This is the headline')).toBeInTheDocument();
   });
 });

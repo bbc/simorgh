@@ -12,6 +12,7 @@ const {
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
 const isrRolloutServices = (process.env.SIMORGH_ISR_ROLLOUT_SERVICES || '')
   .split(',')
@@ -69,12 +70,28 @@ module.exports = {
         destination: `/${service}/articles-isr/:path*`,
       })),
       {
+        source: '/:service/og/:id',
+        destination: '/api/:service/og/:id',
+      },
+      {
         source: '/:service/sw.js',
         destination: '/sw.js',
       },
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant`,
+        destination: '/:service/articles/:id/:variant',
       },
     ];
   },

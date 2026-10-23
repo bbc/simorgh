@@ -8,6 +8,7 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -52,25 +53,13 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-const enterFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '-1';
-  }
-};
-
-const exitFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '2147483647';
-  }
-};
-
 interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
   curationContentType?: string;
   pageType?: string;
+  // experiment: newswb_ws_homepage_related_topic_promos
+  showRelatedTopicExperiment?: boolean;
 }
 
 export default ({
@@ -93,6 +82,7 @@ export default ({
   experimentProps,
   curationContentType,
   pageType,
+  showRelatedTopicExperiment = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -122,7 +112,15 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const experimentTrackingProps = experimentProps || {};
+  // experiment: only simple and hierarchical grids take part in promo tracking
+  const isRelatedTopicGrid =
+    componentName === SIMPLE_CURATION_GRID ||
+    componentName === HIERARCHICAL_CURATION_GRID;
+  const experimentTrackingProps =
+    experimentProps?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT &&
+    !isRelatedTopicGrid
+      ? {}
+      : experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
     componentName,
@@ -238,13 +236,7 @@ export default ({
           aria-labelledby="bbcMediaPlayer0"
           data-testid={mediaCollectionId}
         >
-          <MediaLoader
-            blocks={mediaCollection}
-            eventMapping={{
-              enterFakeFullscreen: enterFakeScreenCallback,
-              exitFakeFullscreen: exitFakeScreenCallback,
-            }}
-          />
+          <MediaLoader blocks={mediaCollection} />
         </section>
       ) : null;
     }
@@ -288,6 +280,9 @@ export default ({
                 headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                showRelatedTopicExperiment={
+                  showRelatedTopicExperiment && isRelatedTopicGrid
+                }
               />
             </div>
           </section>
@@ -298,6 +293,9 @@ export default ({
               headingLevel={2}
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              showRelatedTopicExperiment={
+                showRelatedTopicExperiment && isRelatedTopicGrid
+              }
             />
           </div>
         );

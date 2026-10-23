@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: '{topic} کے بارے میں مزید',
         fetchErrorMessage: 'لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں',
       },
+      googlePreferredSource: {
+        linkText: 'Google پر پسندیدہ ماخذ کے طور پر شامل کریں',
+      },
       continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',

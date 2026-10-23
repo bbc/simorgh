@@ -9,7 +9,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
   grid-template-rows: repeat(5, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -119,7 +119,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -512,7 +512,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -634,7 +634,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -1407,7 +1407,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -1517,7 +1517,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -2290,7 +2290,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -2352,7 +2352,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
   padding-bottom: 1.5rem;
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -2885,7 +2885,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -3001,7 +3001,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -3662,7 +3662,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -3784,7 +3784,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -4557,7 +4557,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -4679,7 +4679,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;
@@ -5452,7 +5452,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
   grid-template-rows: repeat(10, auto);
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -5574,7 +5574,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;

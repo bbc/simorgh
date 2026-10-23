@@ -70,6 +70,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'د {topic} په اړه نور',
         fetchErrorMessage: 'پورته کول ناکام شول. مهرباني وکړئ بیا هڅه وکړئ',
       },
+      googlePreferredSource: {
+        linkText: 'په Google کې د غوره سرچینې په توګه اضافه کړئ',
+      },
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       skipContent: {

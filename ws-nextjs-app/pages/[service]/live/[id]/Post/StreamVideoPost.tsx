@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import MediaLoader from '#app/components/MediaLoader';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -44,14 +45,18 @@ const StreamVideoPost = ({ blocks }: StreamVideoPostProps) => {
   const title = getMediaTitle(blocks);
 
   const itemType = isPortrait ? 'portrait-video' : 'landscape-video';
+  const eventTrackingData = useMemo(
+    () => ({
+      componentName: 'stream',
+      itemTracker: {
+        type: itemType,
+        ...(title && { text: title }),
+      },
+    }),
+    [itemType, title],
+  );
 
-  const viewTracker = useViewTracker({
-    componentName: 'stream',
-    itemTracker: {
-      type: itemType,
-      ...(title && { text: title }),
-    },
-  });
+  const viewTracker = useViewTracker(eventTrackingData);
 
   return (
     <div css={isPortrait && styles.portraitVideoPlayer} {...viewTracker}>

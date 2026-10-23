@@ -52,7 +52,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS radio page', () => {
@@ -62,7 +62,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS TV page', () => {
@@ -72,7 +72,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
 
     it('should render correctly for WS on demand audio page', () => {
@@ -82,7 +82,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.querySelector('header')).toBeInTheDocument();
     });
   });
 

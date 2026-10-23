@@ -24,6 +24,7 @@ export type FileData = {
 
 export type OnChangeInputValue =
   | ChangeEvent<HTMLInputElement>['target']['value']
+  | string[]
   | FileData[]
   | boolean;
 
@@ -52,15 +53,21 @@ export type InvalidMessageBoxProps = {
   validationCriteria?: ValidationConditions;
 };
 
+export type FieldOption = {
+  label: string;
+  value: string;
+};
+
 export type FetchParameters = {
   id: string;
   service: Services;
   variant?: Variants;
 };
 
-type Section = {
+export type Section = {
   sectionText: {
     title: string;
+    description?: string;
   };
   fields: Field[];
 };
@@ -86,6 +93,8 @@ export type ValidationConditions = {
   max?: number;
   fileTypes?: string[];
   mandatory?: boolean;
+  multiSelect?: boolean;
+  options?: FieldOption[];
   wordLimit?: number;
 };
 

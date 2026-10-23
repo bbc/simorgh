@@ -56,7 +56,14 @@ yarn install
 
 ## Local Development
 
-To run this application locally, with hot-reloading:
+Export a relevant BFF_PATH so that simorgh can connect to the relevant fabl instance:
+
+```
+# For a local instance of fabl
+export BFF_PATH="http://localhost:3210/module/simorgh-bff"
+```
+
+Start the application:
 
 ```
 cd ws-nextjs-app
@@ -136,6 +143,10 @@ When viewing Video stories locally, make sure to use a BBC domain, as outlined i
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
 
+Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin.
+
+When updating Storybook's SWC compiler or `@swc/plugin-emotion`, check their [plugin compatibility](https://swc.rs/docs/plugin/selecting-swc-core) and validate Emotion-styled stories as well as SCSS Modules and MDX documentation.
+
 Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
 
 ### Configuring the application to run on a local network
@@ -195,9 +206,19 @@ Every run of `yarn build` will update the bundle analysis files in the repo. To 
 
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
-We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
+ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
-`yarn test` runs both sets of these.
+We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
+
+The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
+
+Root and Next unit and integration projects share [src/testHelpers/setupTests.js](./src/testHelpers/setupTests.js) for DOM matchers, Web APIs, crypto mocks, `setImmediate` and console handling. All these projects fail on unexpected console errors, with the existing warning suppressions retained. Browser-specific error filtering only runs when a window is available, so Node-only API tests use the same file. Location mocking is left to individual tests rather than replacing the environment's location globally. Root-only mocks and fixture environment values still run earlier through [src/testHelpers/jest-setup.js](./src/testHelpers/jest-setup.js); Next integration tests retain their real fetch. Puppeteer keeps its separate setup.
+
+`yarn test:unit` selects the two root unit projects. The Next workspace's `yarn test` selects only `Unit Tests (Next)`, and its integration scripts select their named platform projects. All workspace commands explicitly use the root configuration so running them from either repository directory resolves the same projects. The root integration command continues to manage the app lifecycle through `ws-nextjs-app/integration/utils/runTests.ts`.
+
+Resolving the combined configuration initializes the Next app configuration and its `.env` files even when only root projects are selected. This is an intentional trade-off of keeping one configuration, so root test commands may observe app environment values during configuration resolution. A single global `jest-junit` reporter writes results to the repository root's `reports/jest` directory, regardless of the invocation directory.
+
+SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories to provide mockable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
 
 ### End-to-end tests
 

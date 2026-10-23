@@ -10,7 +10,8 @@ export default {
     enabled: true,
   },
   adsNonce: {
-    enabled: false,
+    enabled: true,
+    value: 'ng,ke,es',
   },
   articleLiteSiteLink: { enabled: true },
   articlePortraitVideo: {
@@ -32,10 +33,16 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
   include: {
+    enabled: true,
+  },
+  livePagePolling: {
     enabled: true,
   },
   liveRadioSchedule: {
@@ -77,6 +84,10 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
+  },
   scriptLink: {
     enabled: true,
   },
@@ -86,8 +97,15 @@ export default {
   showSportDataHeader: {
     enabled: true,
   },
+  stickyNavigation: {
+    enabled: true,
+  },
   topBarOJs: {
     enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   variantCookie: {
     enabled: true,
