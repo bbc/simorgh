@@ -69,3 +69,23 @@ export const pashto = [
     altText: 'نړۍ دا وخت',
   },
 ];
+
+export const durationCoverage = [
+  {
+    id: 'duration-video-short',
+    brandTitle: 'Duration coverage',
+    episodeTitle: 'Short duration',
+    timestamp: 1749902400000,
+    duration: 'PT1M2S',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
+    altText: 'Duration coverage',
+  },
+  {
+    id: 'duration-video-long',
+    brandTitle: 'Duration coverage',
+    timestamp: 1749898800000,
+    duration: 'PT1H2M3S',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
+    altText: 'Duration coverage',
+  },
+];

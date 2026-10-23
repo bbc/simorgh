@@ -131,3 +131,19 @@ export const arabic = [
     altText: 'BBC Xtra',
   },
 ];
+
+export const durationCoverage = [
+  {
+    id: 'duration-audio-short',
+    brandTitle: 'Duration coverage',
+    episodeTitle: 'Short duration',
+    timestamp: 1749902400000,
+    duration: 'PT1M2S',
+  },
+  {
+    id: 'duration-audio-long',
+    brandTitle: 'Duration coverage',
+    timestamp: 1749898800000,
+    duration: 'PT1H2M3S',
+  },
+];
