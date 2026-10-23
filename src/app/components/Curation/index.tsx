@@ -83,8 +83,7 @@ export default ({
   curationContentType,
   pageType,
   showRelatedTopicExperiment = false,
-  curationType,
-  primaryMediaType,
+  isVideoCollection = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -97,10 +96,8 @@ export default ({
 
   const GridComponent = getGridComponent(componentName);
 
-  const isVideoCollection =
-    componentName === SIMPLE_CURATION_GRID &&
-    primaryMediaType === 'video' &&
-    curationType === 'tipo-curation';
+  const shouldStyleAsVideoCollection =
+    componentName === SIMPLE_CURATION_GRID && isVideoCollection;
 
   const isFirstCuration = position === 0;
 
@@ -286,7 +283,7 @@ export default ({
                 summaries={summaries}
                 headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
-                isVideoCollection={isVideoCollection}
+                isVideoCollection={shouldStyleAsVideoCollection}
                 eventTrackingData={eventTrackingData}
                 showRelatedTopicExperiment={
                   showRelatedTopicExperiment && isRelatedTopicGrid
@@ -300,7 +297,7 @@ export default ({
               summaries={summaries}
               headingLevel={2}
               isFirstCuration={isFirstCuration}
-              isVideoCollection={isVideoCollection}
+              isVideoCollection={shouldStyleAsVideoCollection}
               eventTrackingData={eventTrackingData}
               showRelatedTopicExperiment={
                 showRelatedTopicExperiment && isRelatedTopicGrid
