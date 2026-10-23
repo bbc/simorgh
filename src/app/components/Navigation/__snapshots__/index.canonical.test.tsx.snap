@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Navigation - Canonical snapshots should correctly render Canonical navigation 1`] = `
+exports[`Navigation - Canonical snapshots renders the navigation bar correctly 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
