@@ -121,9 +121,11 @@ const getFollowedTopics = async ({
       startIndex: pagination?.startIndex ?? startIndex,
     };
   } catch (error) {
-    logger.error(UAS_API_ERROR, {
-      error: error instanceof Error ? error.message : 'Unknown error',
-    });
+    if (!signal?.aborted) {
+      logger.error(UAS_API_ERROR, {
+        error: error instanceof Error ? error.message : 'Unknown error',
+      });
+    }
 
     throw error;
   }

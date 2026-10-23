@@ -14,10 +14,21 @@ import {
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
+import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useTopicFollowButton, { FollowAction } from './index';
 
 jest.mock('#app/hooks/useTopicFollowStatus');
+jest.mock('#app/hooks/useUASMetadataSync');
 jest.mock('#app/lib/uasApi');
+const mockTrackError = jest.fn();
+jest.mock('#app/hooks/useErrorTracking', () => ({
+  __esModule: true,
+  default: () => mockTrackError,
+}));
 jest.mock('#app/lib/uasApi/uasUtility', () => {
   const actual = jest.requireActual('#app/lib/uasApi/uasUtility');
   return {
@@ -33,9 +44,14 @@ jest.mock('react', () => ({
 
 const mockSetQueryData = jest.fn();
 const mockInvalidateQueries = jest.fn();
-const mutationState = {
+const mutationState: {
+  isPending: boolean;
+  isPaused: boolean;
+  error: Error | null;
+} = {
   isPending: false,
   isPaused: false,
+  error: null,
 };
 
 jest.mock('@tanstack/react-query', () => {
@@ -57,33 +73,41 @@ jest.mock('@tanstack/react-query', () => {
       capturedMutationConfig = config;
 
       return {
-        mutate: async (action: FollowAction) => {
-          const result = await capturedMutationConfig.mutationFn?.(action);
-          capturedMutationConfig.onSuccess?.(result, action);
-          return result;
+        mutate: async (
+          action: FollowAction,
+          options?: {
+            onSuccess?: (result: unknown, mutationAction: FollowAction) => void;
+            onError?: (error: unknown, mutationAction: FollowAction) => void;
+          },
+        ) => {
+          try {
+            const result = await capturedMutationConfig.mutationFn?.(action);
+            capturedMutationConfig.onSuccess?.(result, action);
+            options?.onSuccess?.(result, action);
+            return result;
+          } catch (err) {
+            options?.onError?.(err, action);
+            mutationState.error = err as Error;
+            throw err;
+          }
         },
         isPending: mutationState.isPending,
         isPaused: mutationState.isPaused,
-        error: null,
+        error: mutationState.error,
       };
     },
   };
 });
 
-const mockUseTopicFollowStatus = useTopicFollowStatus as jest.MockedFunction<
-  typeof useTopicFollowStatus
->;
-const mockUasApiRequest = uasApiRequest as jest.MockedFunction<
-  typeof uasApiRequest
->;
-const mockCreateFollowsPayload = createFollowsPayload as jest.MockedFunction<
-  typeof createFollowsPayload
->;
-const mockBuildGlobalId = buildGlobalId as jest.MockedFunction<
-  typeof buildGlobalId
->;
+const mockUseTopicFollowStatus = useTopicFollowStatus as jest.Mock;
+const mockUasApiRequest = uasApiRequest as jest.Mock;
+const mockCreateFollowsPayload = createFollowsPayload as jest.Mock;
+const mockBuildGlobalId = buildGlobalId as jest.Mock;
+const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
 const mockHashedUserId = 'user-123';
+const mockService = 'hindi';
+const mockError = new Error('UAS request failed with status 500');
 
 describe('useTopicFollowButton', () => {
   const topicData = {
@@ -96,6 +120,7 @@ describe('useTopicFollowButton', () => {
     jest.clearAllMocks();
     mutationState.isPending = false;
     mutationState.isPaused = false;
+    mutationState.error = null;
 
     mockUseTopicFollowStatus.mockReturnValue({
       isFollowed: false,
@@ -105,7 +130,7 @@ describe('useTopicFollowButton', () => {
     });
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === ServiceContext) return { service: 'hindi' };
+      if (context === ServiceContext) return { service: mockService };
       if (context === AccountContext)
         return {
           hashedUserId: mockHashedUserId,
@@ -119,12 +144,12 @@ describe('useTopicFollowButton', () => {
       activityType: FOLLOWS_CONFIG.activityType,
       action: 'followed',
       resourceType: FOLLOWS_CONFIG.resourceType,
-      resourceTitle: 'hindi',
+      resourceTitle: mockService,
       metaData: {
         topicId: topicData.topicId,
         title: topicData.title,
         locatorUrl: topicData.url,
-        service: 'hindi',
+        service: mockService,
       },
     });
 
@@ -139,126 +164,6 @@ describe('useTopicFollowButton', () => {
     renderHook(() => useTopicFollowButton(topicData));
 
     expect(mockUseTopicFollowStatus).toHaveBeenCalledWith(topicData.topicId);
-  });
-
-  it('sends POST request with follows payload when following', async () => {
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await result.current.handleFollowAction(FollowAction.FOLLOW);
-    });
-
-    expect(mockCreateFollowsPayload).toHaveBeenCalledWith(topicData, 'hindi');
-    expect(mockUasApiRequest).toHaveBeenCalledWith(
-      'POST',
-      FOLLOWS_CONFIG.activityType,
-      {
-        body: expect.objectContaining({
-          resourceId: topicData.topicId,
-          action: 'followed',
-        }),
-        isRefreshAvailable: true,
-      },
-    );
-  });
-
-  it('sends DELETE request with globalId when unfollowing', async () => {
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await result.current.handleFollowAction(FollowAction.UNFOLLOW);
-    });
-
-    expect(mockBuildGlobalId).toHaveBeenCalledWith(
-      topicData.topicId,
-      FOLLOWS_CONFIG.resourceDomain,
-      FOLLOWS_CONFIG.resourceType,
-    );
-
-    expect(mockUasApiRequest).toHaveBeenCalledWith(
-      'DELETE',
-      FOLLOWS_CONFIG.activityType,
-      {
-        globalId:
-          'urn:bbc:world-service-news:topic:urn:bbc:topic:climate-change',
-        isRefreshAvailable: true,
-      },
-    );
-  });
-
-  it('updates follow status cache and invalidates follows list after follow', async () => {
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await result.current.handleFollowAction(FollowAction.FOLLOW);
-    });
-
-    expect(mockSetQueryData).toHaveBeenCalledWith(
-      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
-      {
-        isFollowed: true,
-        metadata: {
-          topicId: topicData.topicId,
-          title: topicData.title,
-          locatorUrl: topicData.url,
-          service: 'hindi',
-        },
-      },
-    );
-    expect(mockInvalidateQueries).toHaveBeenCalledWith({
-      queryKey: uasKeys.followsList(mockHashedUserId),
-    });
-  });
-
-  it('updates follow status cache and invalidates follows list after unfollow', async () => {
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await result.current.handleFollowAction(FollowAction.UNFOLLOW);
-    });
-
-    expect(mockSetQueryData).toHaveBeenCalledWith(
-      uasKeys.followStatus(mockHashedUserId, topicData.topicId),
-      {
-        isFollowed: false,
-        metadata: undefined,
-      },
-    );
-    expect(mockInvalidateQueries).toHaveBeenCalledWith({
-      queryKey: uasKeys.followsList(mockHashedUserId),
-    });
-  });
-
-  it('does not update query cache when follow request fails', async () => {
-    mockUasApiRequest.mockRejectedValueOnce(
-      new Error('UAS request failed with status 500'),
-    );
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await expect(
-        result.current.handleFollowAction(FollowAction.FOLLOW),
-      ).rejects.toThrow('UAS request failed with status 500');
-    });
-
-    expect(mockSetQueryData).not.toHaveBeenCalled();
-    expect(mockInvalidateQueries).not.toHaveBeenCalled();
-  });
-
-  it('does not update query cache when unfollow request fails', async () => {
-    mockUasApiRequest.mockRejectedValueOnce(
-      new Error('UAS request failed with status 500'),
-    );
-    const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-    await act(async () => {
-      await expect(
-        result.current.handleFollowAction(FollowAction.UNFOLLOW),
-      ).rejects.toThrow('UAS request failed with status 500');
-    });
-
-    expect(mockSetQueryData).not.toHaveBeenCalled();
-    expect(mockInvalidateQueries).not.toHaveBeenCalled();
   });
 
   it('returns status hook state when no mutation error exists', () => {
@@ -294,5 +199,249 @@ describe('useTopicFollowButton', () => {
     const { result } = renderHook(() => useTopicFollowButton(topicData));
 
     expect(result.current.isUpdating).toBe(true);
+  });
+
+  describe('handleFollowAction', () => {
+    it('sends POST request with follows payload when following', async () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+
+      expect(mockCreateFollowsPayload).toHaveBeenCalledWith(
+        topicData,
+        mockService,
+      );
+      expect(mockUasApiRequest).toHaveBeenCalledWith(
+        'POST',
+        FOLLOWS_CONFIG.activityType,
+        {
+          body: expect.objectContaining({
+            resourceId: topicData.topicId,
+            action: 'followed',
+          }),
+          isRefreshAvailable: true,
+        },
+      );
+    });
+
+    it('sends DELETE request with globalId when unfollowing', async () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.UNFOLLOW);
+      });
+
+      expect(mockBuildGlobalId).toHaveBeenCalledWith(
+        topicData.topicId,
+        FOLLOWS_CONFIG.resourceDomain,
+        FOLLOWS_CONFIG.resourceType,
+      );
+
+      expect(mockUasApiRequest).toHaveBeenCalledWith(
+        'DELETE',
+        FOLLOWS_CONFIG.activityType,
+        {
+          globalId:
+            'urn:bbc:world-service-news:topic:urn:bbc:topic:climate-change',
+          isRefreshAvailable: true,
+        },
+      );
+    });
+
+    it('updates follow status cache and invalidates follows list after follow', async () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+
+      expect(mockSetQueryData).toHaveBeenCalledWith(
+        uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+        {
+          isFollowed: true,
+          metadata: {
+            topicId: topicData.topicId,
+            title: topicData.title,
+            locatorUrl: topicData.url,
+            service: mockService,
+          },
+        },
+      );
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.followsList(mockHashedUserId),
+      });
+    });
+
+    it('updates follow status cache and invalidates follows list after unfollow', async () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.UNFOLLOW);
+      });
+
+      expect(mockSetQueryData).toHaveBeenCalledWith(
+        uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+        {
+          isFollowed: false,
+          metadata: undefined,
+        },
+      );
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.followsList(mockHashedUserId),
+      });
+    });
+
+    it('does not update query cache when follow request fails', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await expect(
+          result.current.handleFollowAction(FollowAction.FOLLOW),
+        ).rejects.toThrow(mockError);
+      });
+
+      expect(mockSetQueryData).not.toHaveBeenCalled();
+      expect(mockInvalidateQueries).not.toHaveBeenCalled();
+    });
+
+    it('does not update query cache when unfollow request fails', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await expect(
+          result.current.handleFollowAction(FollowAction.UNFOLLOW),
+        ).rejects.toThrow(mockError);
+      });
+
+      expect(mockSetQueryData).not.toHaveBeenCalled();
+      expect(mockInvalidateQueries).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('error tracking', () => {
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'tracks a failed user-initiated %s action',
+      async action => {
+        mockUasApiRequest.mockRejectedValueOnce(mockError);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+        await act(async () => {
+          await expect(
+            result.current.handleFollowAction(action),
+          ).rejects.toThrow(mockError);
+        });
+
+        expect(mockTrackError).toHaveBeenCalledWith({
+          error: mockError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action,
+        });
+      },
+    );
+
+    it('tracks a failed background metadata resync', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
+
+      let onMetadataOutOfDate: (() => unknown) | undefined;
+      mockUseUASMetadataSync.mockImplementation(
+        ({ onMetadataOutOfDate: callback }) => {
+          onMetadataOutOfDate = callback;
+        },
+      );
+
+      renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await (onMetadataOutOfDate?.() as Promise<void>).catch(() => undefined);
+      });
+
+      expect(mockTrackError).toHaveBeenCalledWith({
+        error: expect.any(Error),
+        feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+        action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+      });
+    });
+
+    it('tracks a failed follow-status fetch', () => {
+      mockUseTopicFollowStatus.mockReturnValue({
+        isFollowed: false,
+        isLoading: false,
+        error: new Error('failed to fetch follow status'),
+        metadata: undefined,
+      });
+
+      renderHook(() => useTopicFollowButton(topicData));
+
+      expect(mockTrackError).toHaveBeenCalledWith({
+        error: expect.any(Error),
+        feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+      });
+    });
+
+    it('does not track when there is no error', () => {
+      renderHook(() => useTopicFollowButton(topicData));
+
+      expect(mockTrackError).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('useUASMetadataSync integration', () => {
+    it('passes topic metadata to useUASMetadataSync when topic is followed', () => {
+      mockUseTopicFollowStatus.mockReturnValue({
+        isFollowed: true,
+        isLoading: false,
+        error: null,
+        metadata: {
+          topicId: topicData.topicId,
+          title: 'Old title',
+          locatorUrl: topicData.url,
+          service: mockService,
+        },
+      });
+
+      renderHook(() => useTopicFollowButton(topicData));
+
+      expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
+        expect.objectContaining({
+          followTopicPageData: topicData,
+          topicId: topicData.topicId,
+          service: mockService,
+          isFollowed: true,
+          savedTopicMetadata: expect.objectContaining({
+            title: 'Old title',
+          }),
+          onMetadataOutOfDate: expect.any(Function),
+        }),
+      );
+    });
+  });
+
+  describe('error', () => {
+    it('is null before any action is taken', () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      expect(result.current.error).toBeNull();
+    });
+
+    it('exposes the underlying error when a genuine request fails', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
+      const { result, rerender } = renderHook(() =>
+        useTopicFollowButton(topicData),
+      );
+
+      await act(async () => {
+        await expect(
+          result.current.handleFollowAction(FollowAction.FOLLOW),
+        ).rejects.toThrow(mockError);
+      });
+      rerender();
+
+      expect(result.current.error).toBe(mockError);
+    });
   });
 });
