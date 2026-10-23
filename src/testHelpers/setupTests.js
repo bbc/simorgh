@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import colours from 'colors';
+import 'temporal-polyfill/global';
 import '@testing-library/jest-dom';
 import { TextEncoder, TextDecoder } from 'node:util';
 import { ReadableStream } from 'node:stream/web';
