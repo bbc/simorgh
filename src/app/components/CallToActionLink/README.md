@@ -16,7 +16,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 | url               | string                         | Yes      | The url for the Call to Action Link                                                                                                                                                                                                     |
 | children          | node                           | No       | The content included between the opening and closing tags of the Call to Action Link                                                                                                                                                    |
 | alignWithMargin   | boolean                        | No       | Applies display styling to align link with text. (Left margin for LTR, right margin for RTL). Component is centered by default                                                                                                          |
-| className         | string                         | No       | Permits `css` prop to be applied                                                                                                                                                                                                        |
+| className         | string                         | No       | Additional class names for consumer-owned styling                                                                                                                                                                                       |
 | htmlAttributes    | string                         | No       | Permits custom html attributes to be applied. E.g. `data-ignore-lite` for .lite                                                                                                                                                         |
 | eventTrackingData | shape({componentName: string}) | No       | Tracking data needed for ati to track view and click of the Call to Action Link                                                                                                                                                         |
 | download          | boolean                        | No       | Permits download                                                                                                                                                                                                                        |
@@ -72,14 +72,14 @@ The `alignWithMargin` prop applies `display: 'inline-block'` styles. Otherwise t
 
 Interaction state (`hover`, `focus` and `visited`) styles are applied by default to ensure the component is accessible out of the box.
 
-The css prop can be used to apply further styles, such as spacing and colours. These can be applied to interaction states. For example:
+Use a consumer-owned SCSS Module class to apply further styles, such as spacing
+and colours. These can be applied to interaction states. For example:
 
 ```javascript
 <CallToActionLink
   url={link}
-  className="focusIndicatorInvert"
+  className={`${styles.callToActionLink} focusIndicatorInvert`}
   eventTrackingData={eventTrackingData}
-  css={styles.callToActionLink}
 >
   <CallToActionLink.ButtonLikeWrapper>
     <CallToActionLink.Text>
@@ -90,22 +90,22 @@ The css prop can be used to apply further styles, such as spacing and colours. T
 </CallToActionLink>
 ```
 
-In `index.styles.ts`:
+In the consumer's `index.module.scss`:
 
-```javascript
-calltoActionLink: ({ palette }: Theme) =>
-  css(
-    {
-    padding: '1rem',
-    backgroundColor: palette.WHITE,
-    margin: '0 1rem 1rem 1rem',
-    width: '100%',
-    color: palette.BLACK,
-    '&:hover, &:focus':
-      {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      }
-    }
-  );
+```scss
+@use '@scss/themeTokens' as theme;
+
+.callToActionLink {
+  padding: theme.$spacings-double;
+  background-color: theme.$palette-white;
+  margin: theme.$spacings-double;
+  width: 100%;
+  color: theme.$palette-black;
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+}
 ```

@@ -1,6 +1,10 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { render, screen } from '../react-testing-library-with-providers';
 import CallToActionLink from '.';
+import styles from './index.module.scss';
+import buttonLikeWrapperStyles from './ButtonLikeWrapper/index.module.scss';
+import chevronStyles from './Chevron/index.module.scss';
+import textStyles from './Text/index.module.scss';
 
 describe('Call To Action Link', () => {
   beforeEach(() => {
@@ -20,6 +24,47 @@ describe('Call To Action Link', () => {
     const [chevron] = container.getElementsByTagName('svg');
     expect(link).toBeInTheDocument();
     expect(chevron).toBeInTheDocument();
+  });
+
+  it('should preserve component and consumer classes', () => {
+    const { container } = render(
+      <CallToActionLink
+        url="https://www.bbc.com/ws/languages"
+        alignWithMargin
+        className="custom-link"
+      >
+        <CallToActionLink.ButtonLikeWrapper className="custom-wrapper">
+          <CallToActionLink.Text className="custom-text">
+            My Link Text
+          </CallToActionLink.Text>
+          <CallToActionLink.Chevron className="custom-chevron" />
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>,
+    );
+
+    const link = screen.getByRole('link');
+    const text = screen.getByText('My Link Text');
+    const [chevron] = container.getElementsByTagName('svg');
+
+    expect(link).toHaveClass(
+      styles.link,
+      styles.alignWithMargin,
+      'custom-link',
+    );
+    expect(text).toHaveClass(
+      textStyles.text,
+      textStyles.defaultTextStyles,
+      'custom-text',
+    );
+    expect(text.parentElement).toHaveClass(
+      buttonLikeWrapperStyles.flexWrapper,
+      'custom-wrapper',
+    );
+    expect(chevron).toHaveClass(
+      chevronStyles.chevron,
+      chevronStyles.picaSize,
+      'custom-chevron',
+    );
   });
 
   it('should render a link with the correct href', () => {

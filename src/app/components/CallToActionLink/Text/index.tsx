@@ -1,7 +1,8 @@
 import { PropsWithChildren, use } from 'react';
+import clsx from 'clsx';
 import Text from '#app/components/Text';
 import CallToActionLinkContext from '../CallToActionLinkContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type TextProps = {
   as?: string;
@@ -21,13 +22,13 @@ export default ({
       as={as}
       size={size}
       fontVariant={fontVariant}
-      css={[
+      className={clsx(
         styles.text,
         shouldUnderlineOnHoverFocus
           ? styles.underlineOnHoverFocus
           : styles.defaultTextStyles,
-      ]}
-      className={className}
+        className,
+      )}
     >
       {children}
     </Text>

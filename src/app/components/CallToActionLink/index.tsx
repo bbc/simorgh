@@ -1,11 +1,12 @@
 import { PropsWithChildren, Ref, useMemo } from 'react';
+import clsx from 'clsx';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
 import Text from './Text';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
@@ -51,10 +52,13 @@ const CallToActionLink = ({
       {...(id && { id })}
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
-      className={className}
+      className={clsx(
+        styles.link,
+        alignWithMargin && styles.alignWithMargin,
+        className,
+      )}
       download={download}
       {...htmlAttributes}
-      css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
       <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
         {children}
