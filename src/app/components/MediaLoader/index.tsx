@@ -20,6 +20,7 @@ import {
   EventMapping,
   MediaBlock,
   MediaPlayerEvents,
+  Player,
   PlayerConfig,
 } from './types';
 import Caption from '../Caption';
@@ -135,7 +136,7 @@ type MediaContainerProps = {
   eventMapping?: EventMapping;
   shouldHandleFakeFullscreen?: boolean;
   loadPlayerOnInitialRender?: boolean;
-  onPlayerReady?: () => void;
+  onPlayerReady?: (mediaPlayer: Player) => void;
   onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
@@ -162,6 +163,7 @@ const MediaContainer = ({
   useEffect(() => {
     let isCancelled = false;
     let registeredPlayer: ReturnType<BumpType['player']> | undefined;
+    let hasNotifiedPlayerReady = false;
     const requireJsWait = waitForRequireJs();
 
     const removeRegisteredPlayer = () => {
@@ -263,8 +265,13 @@ const MediaContainer = ({
         return;
       }
 
+      mediaPlayer.bind('playlistLoaded', () => {
+        if (hasNotifiedPlayerReady || isCancelled) return;
+
+        hasNotifiedPlayerReady = true;
+        onPlayerReady?.(mediaPlayer);
+      });
       mediaPlayer.load();
-      onPlayerReady?.();
     };
 
     const requestPlayer = (requireJs: RequireJs) => {
@@ -336,7 +343,7 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
-  onPlayerReady?: () => void;
+  onPlayerReady?: (mediaPlayer: Player) => void;
   withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
 };

@@ -1,6 +1,6 @@
 import { memo, use, useCallback, useRef, useState } from 'react';
 import Text from '#app/components/Text';
-import { MediaCollection } from '#app/components/MediaLoader/types';
+import { MediaCollection, Player } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -43,11 +43,10 @@ const LiveHeaderMedia = ({
   const [hasOpenedMedia, setHasOpenedMedia] = useState(false);
   const shouldPlayWhenReady = useRef(false);
   const playerIdRef = useRef<string | undefined>(undefined);
-  const playMediaWhenReady = useCallback(() => {
-    const playerId = playerIdRef.current;
-    if (!shouldPlayWhenReady.current || !playerId) return;
+  const playMediaWhenReady = useCallback((mediaPlayer: Player) => {
+    if (!shouldPlayWhenReady.current) return;
 
-    window.mediaPlayers?.[playerId]?.play();
+    mediaPlayer.play();
     shouldPlayWhenReady.current = false;
   }, []);
 

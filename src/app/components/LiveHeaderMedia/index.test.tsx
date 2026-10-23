@@ -225,6 +225,18 @@ describe('liveMediaStream', () => {
 
     expect(mockBump.player).toHaveBeenCalledTimes(1);
     expect(mockPlayer.load).toHaveBeenCalledTimes(1);
+    expect(mockPlayer.play).not.toHaveBeenCalled();
+
+    const playlistLoadedHandler = mockPlayer.bind.mock.calls.find(
+      ([event]) => event === 'playlistLoaded',
+    )?.[1];
+
+    expect(playlistLoadedHandler).toEqual(expect.any(Function));
+
+    await act(async () => {
+      playlistLoadedHandler?.({});
+    });
+
     expect(mockPlayer.play).toHaveBeenCalledTimes(1);
   });
 
