@@ -1,6 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
-import 'temporal-polyfill/global';
 import path from 'path';
 
 global.jest = jest;
