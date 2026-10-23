@@ -74,6 +74,32 @@ The nextJS application will start on [http://localhost:7081](http://localhost:70
 
 Once the application is running, you can visit a valid route, e.g. http://localhost:7081/pidgin.
 
+### Using the live BFF locally
+
+Some local development tasks require a client certificate to authenticate with BBC services. For
+example, a certificate is required when requesting live BFF data with `?renderer_env=live`.
+
+If you have been provided with a renewed `.p12` certificate, install it from the
+`ws-nextjs-app` directory:
+
+```
+cd ws-nextjs-app
+yarn dev-cert "/path/to/certificate.p12"
+```
+
+Use quotes around the path if it contains spaces. The command prompts for the certificate import
+password and uses `sudo` to install the certificate and private key for the local application.
+Restart any running development or production processes after renewing the certificate so they use
+the newly installed files.
+
+For example, after starting the development server, append `?renderer_env=live` to a local route:
+
+```
+http://localhost:7081/pidgin?renderer_env=live
+```
+
+The certificate is not needed when the BFF is running locally.
+
 ### Secret Environment Variables
 
 Some local-development commands used by BBC staff require additional environment variables that are not stored in this repository. BBC staff can follow this [guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) (requires access) to set them on your machine.
