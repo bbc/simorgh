@@ -6,6 +6,7 @@ import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
+import ctaStyles from './callToActionLink.module.scss';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
@@ -44,7 +45,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.liteSiteLink}
+            className={ctaStyles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >
