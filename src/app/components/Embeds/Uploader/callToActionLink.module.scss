@@ -1,0 +1,18 @@
+@use '@scss/themeTokens' as theme;
+
+a.callToActionLink {
+  padding: #{theme.pixelsToRem-px-to-rem(12)} theme.$spacings-double;
+  margin-top: theme.$spacings-double;
+  background-color: theme.$palette-grey-10;
+  width: auto;
+  color: theme.$palette-white;
+
+  &:hover,
+  &:focus {
+    color: theme.$palette-white;
+  }
+}
+
+svg.chevronSpacing {
+  margin-inline-start: #{theme.pixelsToRem-px-to-rem(12)};
+}
