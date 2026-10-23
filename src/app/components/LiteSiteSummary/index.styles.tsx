@@ -30,23 +30,4 @@ export default {
         marginBottom: `${spacings.FULL}rem`,
       },
     }),
-  bottomLinkSpacing: ({ spacings, mq }: Theme) =>
-    css({
-      padding: `${spacings.HALF}rem 0 ${spacings.DOUBLE}rem`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        padding: `${spacings.FULL}rem 0 ${spacings.DOUBLE}rem`,
-      },
-    }),
-  topLinkSpacing: ({ spacings }: Theme) =>
-    css({
-      padding: `${spacings.FULL + spacings.HALF}rem 0 ${spacings.FULL + spacings.HALF}rem`,
-    }),
-  singleLinkSpacing: ({ spacings, mq }: Theme) =>
-    css({
-      padding: `${spacings.FULL + spacings.HALF}rem 0 ${spacings.FULL + spacings.HALF}rem`,
-      marginBottom: `${spacings.FULL + spacings.HALF}rem`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        marginBottom: `${spacings.HALF}rem`,
-      },
-    }),
 };

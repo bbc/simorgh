@@ -4,6 +4,7 @@ import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
+import ctaStyles from './callToActionLink.module.scss';
 import styles from './index.styles';
 import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
@@ -44,10 +45,10 @@ const LiteSiteSummary = () => {
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}
-            css={
+            className={
               informationPageLink
-                ? styles.topLinkSpacing
-                : styles.singleLinkSpacing
+                ? ctaStyles.topLinkSpacing
+                : ctaStyles.singleLinkSpacing
             }
             alignWithMargin
             size="brevier"
@@ -60,7 +61,7 @@ const LiteSiteSummary = () => {
           <Paragraph data-e2e="information-page">
             <CallToActionLink
               url={informationPageLink}
-              css={styles.bottomLinkSpacing}
+              className={ctaStyles.bottomLinkSpacing}
               alignWithMargin
               size="brevier"
               fontVariant="sansRegular"
