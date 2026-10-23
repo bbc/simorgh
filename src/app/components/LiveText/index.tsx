@@ -1,7 +1,7 @@
 import { PropsWithChildren, use } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import { TextProps } from '../LiveLabel/types';
 
 const Text = ({
@@ -49,7 +49,7 @@ const Text = ({
       className={className}
     >
       <span
-        css={styles.liveLabelText}
+        className={styles.liveLabelText}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >

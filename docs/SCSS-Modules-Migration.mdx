@@ -62,8 +62,13 @@ Jest mocks `.module.scss`, so component tests cannot validate compiled selectors
 2. A production build to catch SCSS, TypeScript, and deleted-style-file consumers.
 3. Sass contract tests when shared typography or theme mixins change.
 4. Browser or Storybook/Chromatic checks for RTL, dark UI, responsive typography, and AMP/Lite-rendered components.
+5. Relevant canonical, AMP and Lite integration suites against the production build, including review of affected consumer snapshots. These inspect rendered HTML and class names, not computed CSS.
 
 Snapshots are useful for structural changes, but they are not a substitute for compiled-CSS or visual verification.
+
+### Keep migrations focused
+
+Preserve existing behaviour and public APIs; justify API or typing changes separately using actual consumer needs. Test observable output with explicit expected values rather than importing production style objects, and distinguish migration regression checks from additional general coverage.
 
 ### Order by contract risk, not only style size
 
