@@ -1,23 +1,17 @@
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import serviceVariants from '#testHelpers/serviceVariants';
-import { afrique, durationCoverage, pashto } from './fixtures';
+import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
 
-const Component = ({ masterBrand, episodes, service, variant, pageLang }) => (
+const Component = ({ masterBrand, episodes, service }) => (
   <RequestContextProvider
     service={service}
     pageType="media"
     pathname={`/${service}`}
     isAmp={false}
     // should amp come from context?
-    variant={variant === 'default' ? null : variant}
   >
-    <ServiceContextProvider
-      service={service}
-      variant={variant}
-      pageLang={pageLang}
-    >
+    <ServiceContextProvider service={service}>
       <RecentVideoEpisodes masterBrand={masterBrand} episodes={episodes} />
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -77,29 +71,4 @@ export const TestSingleItem = storyArgs =>
 TestSingleItem.tags = ['!dev'];
 TestSingleItem.globals = {
   service: { service: 'afrique' },
-};
-
-export const AllServicesDuration = () => (
-  <div>
-    {serviceVariants.map(
-      ({ service, variant, pageLang, configVariant, label }) => (
-        <div key={`${service}-${configVariant}`}>
-          <strong>{label}</strong>
-          <Component
-            episodes={durationCoverage}
-            masterBrand={`bbc_${service}_tv`}
-            service={service}
-            variant={variant}
-            pageLang={pageLang}
-          />
-        </div>
-      ),
-    )}
-  </div>
-);
-AllServicesDuration.tags = ['!dev'];
-AllServicesDuration.parameters = {
-  chromatic: {
-    disable: false,
-  },
 };
