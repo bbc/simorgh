@@ -50,9 +50,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText(
-        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
-      ),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
   });
 
@@ -86,9 +84,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText(
-        'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
-      ),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
 
     expect(
@@ -120,7 +116,7 @@ describe('ArticleMessageBanner', () => {
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
-        pathname: '/portuguese/articles/cm1dlv13yql9o',
+        pathname: '/portuguese/articles/c61m430mdek2o',
       },
     );
 
