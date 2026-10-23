@@ -2,7 +2,6 @@
 import type { ReactNode } from 'react';
 
 import { PropsWithChildren, use } from 'react';
-import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
 import IMAGE from '../Image';
@@ -98,21 +97,15 @@ const FrostedGlassPromo = ({
       <IMAGE
         darkPlaceholder={isCanonical}
         lazyLoad
-        {...pick(
-          [
-            'src',
-            'srcSet',
-            'fallbackSrcset',
-            'primaryMimeType',
-            'fallbackMimeType',
-            'sizes',
-            'alt',
-            'ratio',
-            'width',
-            'height',
-          ],
-          image,
-        )}
+        src={image.src}
+        srcSet={image.srcSet}
+        fallbackSrcSet={image.fallbackSrcset}
+        mediaType={image.primaryMimeType}
+        fallbackMediaType={image.fallbackMimeType}
+        sizes={image.sizes}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
       />
       <Lazyload
         css={{ height: '100%' }}
