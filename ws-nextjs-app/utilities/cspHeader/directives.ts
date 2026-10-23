@@ -425,7 +425,7 @@ export const generateWorkerSrc = ({ isAmp, shouldServeRelaxedCsp = false }) => {
 export const cspDirectives = ({
   isAmp,
   isLive,
-  nonce = null,
+  nonce = null as string | null,
   shouldServeRelaxedCsp = false,
   country = '',
 }) => {

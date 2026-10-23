@@ -12,7 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
-import text from '#containers/Text';
+import TextContainer from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -191,6 +191,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 
 const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
+);
+
+const ArticleBodyText = (props: ComponentToRenderProps) => (
+  <TextContainer {...props} isArticleBody />
 );
 
 const getVideoComponent =
@@ -397,7 +401,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
-    text,
+    text: ArticleBodyText,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
       hasByline,
