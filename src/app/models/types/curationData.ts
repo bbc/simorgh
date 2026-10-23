@@ -101,7 +101,7 @@ export interface BaseCuration {
   associatedContent?: {
     uri?: string;
   };
-  primaryMediaType?: string;
+  isVideoCollection?: boolean;
 }
 
 export interface Curation extends BaseCuration {
