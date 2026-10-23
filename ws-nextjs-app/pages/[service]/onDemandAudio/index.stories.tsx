@@ -108,9 +108,6 @@ export const Example = {
 
 // This story is for chromatic testing purposes only
 export const TestRadio = {
-  globals: {
-    service: { service: 'gahuza', variant: 'default' },
-  },
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="gahuza" variant={variant} />
   ),
@@ -119,9 +116,6 @@ export const TestRadio = {
 
 // This story is for chromatic testing purposes only
 export const TestRadioLite = {
-  globals: {
-    service: { service: 'gahuza', variant: 'default' },
-  },
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="gahuza" variant={variant} isLite />
   ),

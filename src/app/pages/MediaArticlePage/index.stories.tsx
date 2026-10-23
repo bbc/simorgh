@@ -103,10 +103,6 @@ export const MediaArticlePageWithLiveTv = (
   />
 );
 
-MediaArticlePageWithLiveTv.globals = {
-  service: { service: 'arabic', variant: 'default' },
-};
-
 export const MediaArticlePageWithPortraitVideo = (
   _: StoryArgs,
   { isLite }: StoryProps,
