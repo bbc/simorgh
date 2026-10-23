@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { Services } from '#app/models/types/global';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { isLiveStatus } from '../helpers/event-status-groups';
 import { getLocalisedDate } from '../helpers/localise-datetime';
 import styles from '../index.styles';
@@ -27,12 +27,10 @@ const HeadToHeadHeader = ({
   status,
   service,
 }: HeadToHeadHeaderProps) => {
-  const [localisedDate, setLocalisedDate] = useState(date);
-
-  useEffect(() => {
-    const clientDate = getLocalisedDate(date, time.displayTimeUK, service);
-    setLocalisedDate(clientDate);
-  }, [date, time.displayTimeUK, service]);
+  const isHydrated = useHydrationDetection();
+  const localisedDate = isHydrated
+    ? getLocalisedDate(date, time.displayTimeUK, service)
+    : date;
 
   return (
     <div css={styles.headerWrapper(isLiveStatus(status))}>

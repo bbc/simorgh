@@ -5,6 +5,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useToggle from '#app/hooks/useToggle';
 import {
   LIVE_PAGE,
@@ -126,11 +127,7 @@ const FakeFullscreenStyles = ({ nonce }: { nonce?: string | null }) => {
 };
 
 const FakeFullscreenLayer = ({ isActive }: { isActive: boolean }) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useHydrationDetection();
 
   if (!isMounted) return null;
 
@@ -173,7 +170,9 @@ const MediaContainer = ({
   const onFakeFullscreenChangeRef = useRef(onFakeFullscreenChange);
   const isAudio = isAudioPlayer(playerConfig);
 
-  onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
+  useEffect(() => {
+    onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
+  }, [onFakeFullscreenChange]);
 
   useEffect(() => {
     try {

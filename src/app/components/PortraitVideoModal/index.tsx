@@ -258,7 +258,9 @@ const PortraitVideoModal = ({
   );
 
   const trackingRef = useRef({ eventTrackingData, swipeTracker });
-  trackingRef.current = { eventTrackingData, swipeTracker };
+  useEffect(() => {
+    trackingRef.current = { eventTrackingData, swipeTracker };
+  }, [eventTrackingData, swipeTracker]);
 
   // Unrelated page updates must not reload the playing video.
   const selectedBlocks = useMemo(

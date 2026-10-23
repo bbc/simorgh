@@ -21,22 +21,21 @@ const usePWAInstallPrompt = ({
   onPromptShown,
   deferPrompt = true,
 }: UsePWAInstallPromptCallbacks = {}) => {
-  const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
-  const [isInstallable, setIsInstallable] = useState(false);
+  const [installPrompt, setInstallPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
+  const promptSession = useRef({ active: true });
   const isPWA = useIsPWA();
 
+  if (isPWA && installPrompt) setInstallPrompt(null);
+
   useEffect(() => {
-    if (typeof window === 'undefined') return undefined;
-    if (isPWA) {
-      setIsInstallable(false);
-      return undefined;
-    }
+    const session = { active: true };
+    promptSession.current = session;
+    if (isPWA) return undefined;
+
     const handleBeforeInstallPrompt = (event: Event) => {
-      if (deferPrompt) {
-        event?.preventDefault();
-        deferredPrompt.current = event as BeforeInstallPromptEvent;
-      }
-      setIsInstallable(true);
+      if (deferPrompt) event.preventDefault();
+      setInstallPrompt(event as BeforeInstallPromptEvent);
     };
     window.addEventListener(
       'beforeinstallprompt',
@@ -46,6 +45,7 @@ const usePWAInstallPrompt = ({
       },
     );
     return () => {
+      session.active = false;
       window.removeEventListener(
         'beforeinstallprompt',
         handleBeforeInstallPrompt as EventListener,
@@ -54,32 +54,31 @@ const usePWAInstallPrompt = ({
   }, [deferPrompt, isPWA]);
 
   const promptInstall = async () => {
-    if (!deferredPrompt.current) return;
+    if (!deferPrompt || !installPrompt || isPWA) return;
+    const session = promptSession.current;
     try {
-      await deferredPrompt.current.prompt();
+      await installPrompt.prompt();
+      if (!session.active) return;
       onPromptShown?.();
-      deferredPrompt.current.userChoice
-        .then(result => {
-          if (result.outcome === 'accepted') {
-            onAccepted?.();
-          } else {
-            onDismissed?.();
-          }
-        })
-        .catch(error => {
-          onError?.(error);
-        })
-        .finally(() => {
-          deferredPrompt.current = null;
-          setIsInstallable(false);
-        });
     } catch (error) {
-      onError?.(error);
+      if (session.active) onError?.(error);
+      return;
+    }
+
+    try {
+      const result = await installPrompt.userChoice;
+      if (!session.active) return;
+      if (result.outcome === 'accepted') onAccepted?.();
+      else onDismissed?.();
+    } catch (error) {
+      if (session.active) onError?.(error);
+    } finally {
+      if (session.active) setInstallPrompt(null);
     }
   };
 
   return {
-    isInstallable,
+    isInstallable: !isPWA && installPrompt !== null,
     promptInstall,
   };
 };

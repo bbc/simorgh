@@ -1,26 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+const serverLocation = { search: '' } as Location;
+const getServerSnapshot = () => null;
+const getSnapshot = () => window.location.href;
+const subscribe = (listener: () => void) => {
+  window.addEventListener('popstate', listener);
+  window.addEventListener('hashchange', listener);
+  return () => {
+    window.removeEventListener('popstate', listener);
+    window.removeEventListener('hashchange', listener);
+  };
+};
 
 const useLocation = () => {
-  const [location, setLocation] = useState<Location>({
-    search: '',
-  } as Location);
+  const href = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  const listener = () => {
-    setLocation(window.location);
-  };
-
-  useEffect(() => {
-    setLocation(window.location);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('popstate', listener);
-    return () => {
-      window.removeEventListener('popstate', listener);
-    };
-  }, []);
-
-  return location;
+  return href === null ? serverLocation : window.location;
 };
 
 export default useLocation;

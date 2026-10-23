@@ -42,7 +42,7 @@ const TopStoriesSection = ({
   const contentType = content?.[0]?.contentType ?? '';
   const assetUri = content?.[0]?.locators?.assetUri ?? '';
   const uri = content?.[0]?.uri ?? '';
-  let ariaLabelledBy = generatePromoId({
+  const singleItemAriaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
     assetUri,
     uri,
@@ -68,14 +68,14 @@ const TopStoriesSection = ({
       {hasSingleContent ? (
         <TopStoriesItem
           item={content[0]}
-          ariaLabelledBy={ariaLabelledBy}
+          ariaLabelledBy={singleItemAriaLabelledBy}
           ref={viewTracker}
           eventTrackingData={eventTrackingData}
         />
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) => {
-            ariaLabelledBy = generatePromoId({
+            const ariaLabelledBy = generatePromoId({
               sectionType: 'top-stories',
               assetUri: item?.locators?.assetUri ?? '',
               canonicalUrl: item?.locators?.canonicalUrl ?? '',

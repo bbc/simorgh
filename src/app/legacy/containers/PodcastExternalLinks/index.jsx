@@ -121,12 +121,12 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     translations,
   );
   const hasMultipleLinks = links.length > 1;
-  const firstLink = links[0];
-  const lastLink = links[links.length - 1];
-
-  if (lastLink.linkType === 'download') {
-    lastLink.linkText = downloadLinkTranslation;
-  }
+  const translatedLinks = links.map((link, index) =>
+    index === links.length - 1 && link.linkType === 'download'
+      ? { ...link, linkText: downloadLinkTranslation }
+      : link,
+  );
+  const firstLink = translatedLinks[0];
 
   return (
     <Wrapper
@@ -140,7 +140,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
         <StyledList role="list">
-          {links.map(({ linkText, linkUrl }) => (
+          {translatedLinks.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={`${linkText}`}>
               {/* line 147 and id={`externalLinkId-${linkText}`} in line 152 are a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652 */}
               <PodcastExternalLink

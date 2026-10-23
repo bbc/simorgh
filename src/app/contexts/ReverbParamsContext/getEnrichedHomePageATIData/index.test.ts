@@ -1,13 +1,4 @@
 import getEnrichedHomePageATIData from '.';
-import useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
-
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
-  __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
-  default: jest.fn(),
-}));
-
-const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -24,14 +15,11 @@ const pageMetadata = {
 };
 
 describe('getEnrichedHomePageATIData', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should return the ATI data unchanged when the experiment is off', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => 'off');
-
-    const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
+    const enrichedData = getEnrichedHomePageATIData({
+      pageMetadata,
+      experimentVariant: 'off',
+    });
 
     expect(enrichedData).toEqual({
       contentType: 'index-home',
@@ -46,9 +34,10 @@ describe('getEnrichedHomePageATIData', () => {
   });
 
   it('should return the ATI data unchanged when there is no variant', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => null);
-
-    const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
+    const enrichedData = getEnrichedHomePageATIData({
+      pageMetadata,
+      experimentVariant: null,
+    });
 
     expect(enrichedData).toEqual({
       contentType: 'index-home',
@@ -63,9 +52,10 @@ describe('getEnrichedHomePageATIData', () => {
   });
 
   it('should include experiment details when a variant is active', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => 'variant_a');
-
-    const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
+    const enrichedData = getEnrichedHomePageATIData({
+      pageMetadata,
+      experimentVariant: 'variant_a',
+    });
 
     expect(enrichedData).toEqual({
       contentType: 'index-home',

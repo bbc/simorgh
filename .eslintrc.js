@@ -3,6 +3,7 @@ const { eslintDirAlias } = require('./dirAlias');
 module.exports = {
   extends: [
     'airbnb',
+    'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
   ],
@@ -77,8 +78,6 @@ module.exports = {
       },
     ],
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'import/no-import-module-exports': [
       'error',
       {
@@ -143,6 +142,12 @@ module.exports = {
         '@typescript-eslint/prefer-optional-chain': ['error'],
         'react/require-default-props': 'off',
         'react/no-unused-prop-types': 'off',
+      },
+    },
+    {
+      files: ['src/app/components/Navigation/index.canonical.tsx'],
+      rules: {
+        'react-hooks/set-state-in-effect': 'warn',
       },
     },
   ],

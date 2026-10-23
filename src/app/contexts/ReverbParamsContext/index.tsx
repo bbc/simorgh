@@ -8,6 +8,9 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { buildAnalyticsParams } from '#app/lib/analyticsUtils/params/buildParams';
 import {
@@ -27,10 +30,14 @@ import {
 } from '#app/routes/utils/pageTypes';
 import { ComponentExperimentProps, PageTypes } from '#app/models/types/global';
 import setBbcPage from '#app/lib/analyticsUtils/setBbcPage';
-import getEnrichedArticleATIData from './getEnrichedArticleATIData';
+import getEnrichedArticleATIData, {
+  ARTICLE_PAGE_VIEWS_EXPERIMENT_NAME,
+} from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
-import getEnrichedHomePageATIData from './getEnrichedHomePageATIData';
+import getEnrichedHomePageATIData, {
+  HOME_PAGE_VIEWS_EXPERIMENT_NAME,
+} from './getEnrichedHomePageATIData';
 
 type ReverbParamsContextProps = {
   reverbParams: ReverbBeaconConfig;
@@ -70,18 +77,26 @@ const getPageTypeHandler = pageType => {
   }
 };
 
-const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) => {
+const getEnrichedATIData = ({
+  pageMetadata,
+  serviceContext,
+  pageType,
+  experimentVariant,
+}) => {
   const pageTypeHandler = getPageTypeHandler(pageType);
 
   return pageTypeHandler
-    ? pageTypeHandler({ pageMetadata, serviceContext })
+    ? pageTypeHandler({ pageMetadata, serviceContext, experimentVariant })
     : pageMetadata?.atiAnalytics || {};
 };
 
-const ReverbParamsContextProviderComponent = ({
+const ReverbParamsProvider = ({
   children,
   metadata,
-}: PropsWithChildren<ReverbParamsProviderProps>) => {
+  experimentVariant,
+}: PropsWithChildren<
+  ReverbParamsProviderProps & { experimentVariant?: string | null }
+>) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
   const {
@@ -94,6 +109,7 @@ const ReverbParamsContextProviderComponent = ({
     pageMetadata: metadata,
     serviceContext,
     pageType: requestContext?.pageType,
+    experimentVariant,
   });
 
   const { reverbParams, resonanceParams } = buildAnalyticsParams({
@@ -113,21 +129,68 @@ const ReverbParamsContextProviderComponent = ({
     setBbcPage({ page, user });
   }, [page, user]);
 
+  const experimentProps = enrichedAtiData?.experimentProps;
+
   const value = useMemo(
     () => ({
       reverbParams,
       resonanceParams,
-      ...(enrichedAtiData?.experimentProps && {
-        experimentProps: enrichedAtiData.experimentProps,
-      }),
+      ...(experimentProps && { experimentProps }),
     }),
-    [reverbParams, resonanceParams, enrichedAtiData?.experimentProps],
+    [reverbParams, resonanceParams, experimentProps],
   );
 
   return (
     <ReverbParamsContext.Provider value={value}>
       {children}
     </ReverbParamsContext.Provider>
+  );
+};
+
+const ExperimentReverbParamsProvider = ({
+  experimentName,
+  ...props
+}: PropsWithChildren<
+  ReverbParamsProviderProps & { experimentName: string }
+>) => {
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  return (
+    <ReverbParamsProvider {...props} experimentVariant={experimentVariant} />
+  );
+};
+
+const getPageViewsExperimentName = (pageType: PageTypes) => {
+  switch (pageType) {
+    case ARTICLE_PAGE:
+    case CORRESPONDENT_STORY_PAGE:
+    case PHOTO_GALLERY_PAGE:
+    case STORY_PAGE:
+      return ARTICLE_PAGE_VIEWS_EXPERIMENT_NAME;
+    case HOME_PAGE:
+      return HOME_PAGE_VIEWS_EXPERIMENT_NAME;
+    default:
+      return null;
+  }
+};
+
+const ReverbParamsContextProviderComponent = (
+  props: PropsWithChildren<ReverbParamsProviderProps>,
+) => {
+  const { pageType } = use(RequestContext);
+  const experimentName = getPageViewsExperimentName(pageType);
+
+  return experimentName ? (
+    <ExperimentReverbParamsProvider
+      key={experimentName}
+      experimentName={experimentName}
+      {...props}
+    />
+  ) : (
+    <ReverbParamsProvider {...props} />
   );
 };
 
