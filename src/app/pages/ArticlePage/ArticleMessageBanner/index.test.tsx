@@ -50,8 +50,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Eleições 2026: resultados em tempo real',
-      ),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
   });
 
@@ -85,8 +84,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Eleições 2026: resultados em tempo real',
-      ),
+      getByText('Eleições 2026: resultados em tempo real'),
     ).toBeInTheDocument();
 
     expect(
