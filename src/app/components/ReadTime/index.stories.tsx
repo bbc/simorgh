@@ -5,13 +5,21 @@ import serviceVariants from '#testHelpers/serviceVariants';
 import readme from './README.md';
 import metadata from './metadata.json';
 
-// Example for pidgin service and default variant
-const service = 'pidgin';
-const variant = 'default';
-
-const Component = ({ readTime }: { readTime: number }) => (
-  <ServiceContextProvider service={service} variant={variant}>
-    <ReadTimeArticle readTimeValue={readTime} />
+const Component = ({
+  service,
+  variant,
+  pageLang,
+}: {
+  service: Services;
+  variant: Variants;
+  pageLang?: string;
+}) => (
+  <ServiceContextProvider
+    service={service}
+    variant={variant}
+    pageLang={pageLang}
+  >
+    <ReadTimeArticle readTimeValue={5} />
   </ServiceContextProvider>
 );
 
@@ -24,8 +32,9 @@ export default {
   },
 };
 
-export const SevenMinuteReadTime = () => <Component readTime={7} />;
-export const OneMinuteReadTime = () => <Component readTime={1} />;
+export const FiveMinuteReadTime = () => (
+  <Component service="pidgin" variant="default" />
+);
 
 export const AllServices = () => (
   <div>
@@ -33,14 +42,11 @@ export const AllServices = () => (
       ({ service, variant, pageLang, configVariant, label }) => (
         <div key={`${service}-${configVariant}`}>
           <strong>{label}</strong>
-          <ServiceContextProvider
+          <Component
             service={service as Services}
             variant={variant as Variants}
             pageLang={pageLang}
-          >
-            <ReadTimeArticle readTimeValue={1} />
-            <ReadTimeArticle readTimeValue={7} />
-          </ServiceContextProvider>
+          />
         </div>
       ),
     )}
