@@ -90,19 +90,19 @@ exports[`episodeAvailability - Error Message should correctly render for future 
   overflow: hidden;
 }
 
-@media (max-width: 62.9375rem) {
+@media (max-width:62.9375rem) {
   .emotion-0 {
     margin-top: 1rem;
   }
 }
 
-@media (max-width: 37.4375rem) {
+@media (max-width:37.4375rem) {
   .emotion-0 {
     margin: 1rem -1rem 0;
   }
 }
 
-@media (max-width: 24.9375rem) {
+@media (max-width:24.9375rem) {
   .emotion-0 {
     margin: 0.5rem -0.5rem 0;
   }

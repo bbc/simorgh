@@ -1,7 +1,8 @@
 import { Fragment, use } from 'react';
 import dynamic from 'next/dynamic';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import ElectionBanner from '#app/components/ElectionBanner';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -101,8 +102,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy */}
-      <AccountPromotionalBannerHomePageExperiment />
+      <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -127,6 +127,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <ElectionBanner className="home-page-election-banner" />
           {isLanguagesPage && (
             <div css={styles.margins}>
               <Globe />
