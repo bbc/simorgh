@@ -5,6 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
+  articleDataWithDelayedLeadImages,
   articleDataNewsWithEmbeds,
   articleDataPersian,
   articleDataPersianWithFourParagraphs,
@@ -115,6 +116,7 @@ type Props = {
   service?: Services;
   adsToggledOn?: boolean;
   mostReadToggledOn?: boolean;
+  preloadLeadImageToggledOn?: boolean;
   showAdsBasedOnLocation?: boolean;
   isApp?: boolean;
   promo?: boolean | null;
@@ -128,6 +130,7 @@ const Context = ({
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
+  preloadLeadImageToggledOn = false,
   showAdsBasedOnLocation = false,
   isApp = false,
   promo = null,
@@ -153,7 +156,7 @@ const Context = ({
           ads: { enabled: adsToggledOn },
           podcastPromo: { enabled: promo != null },
           eventTracking: { enabled: false },
-          preloadLeadImage: { enabled: false },
+          preloadLeadImage: { enabled: preloadLeadImageToggledOn },
           topBarOJs: { enabled: false },
           articlePortraitVideo: { enabled: false },
           articleVideoCuration: { enabled: false },
@@ -182,6 +185,53 @@ describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
+
+  it.each([
+    {
+      preloadLeadImageToggledOn: true,
+      priority: 'high',
+      preloadSources: [
+        'https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/test/lead-image.jpg.webp',
+      ],
+    },
+    {
+      preloadLeadImageToggledOn: false,
+      priority: null,
+      preloadSources: [],
+    },
+  ])(
+    'prioritizes the first image beyond block 4 with preloading $preloadLeadImageToggledOn',
+    async ({ preloadLeadImageToggledOn, priority, preloadSources }) => {
+      render(
+        <Context
+          service="news"
+          mostReadToggledOn={false}
+          preloadLeadImageToggledOn={preloadLeadImageToggledOn}
+        >
+          <ArticlePage pageData={articleDataWithDelayedLeadImages} />
+        </Context>,
+      );
+
+      const leadImage = screen.getByRole('img', { name: 'Lead article image' });
+      const laterImage = screen.getByRole('img', {
+        name: 'Later article image',
+      });
+
+      expect(leadImage).toHaveAttribute('loading', 'eager');
+      expect(leadImage.getAttribute('fetchpriority')).toBe(priority);
+      expect(laterImage).toHaveAttribute('loading', 'lazy');
+      expect(laterImage).not.toHaveAttribute('fetchpriority');
+
+      await waitFor(() => {
+        const preloadLinks = document.head.querySelectorAll(
+          'link[rel="preload"][as="image"]',
+        );
+        expect(
+          Array.from(preloadLinks, link => link.getAttribute('href')),
+        ).toEqual(preloadSources);
+      });
+    },
+  );
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
     const { container } = render(

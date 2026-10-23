@@ -25,11 +25,36 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 const singlePostWithTitle = postFixture.data.results[0];
 
 const singlePostWithTitleAndSubtitle = postFixture.data.results[2];
+const REQUIRE_JS_SRC =
+  'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js';
+
+type MockRequire = jest.Mock<unknown, unknown[]> & {
+  config: jest.Mock;
+};
+
+const createMockRequire = (): MockRequire => {
+  const mockRequire = jest.fn() as MockRequire;
+  mockRequire.config = jest.fn();
+  return mockRequire;
+};
+
+const loadRequireJsScript = async () => {
+  const requireScript = Array.from(document.scripts).find(
+    script => script.getAttribute('src') === REQUIRE_JS_SRC,
+  );
+
+  if (!requireScript) return;
+
+  await act(async () => {
+    requireScript.dispatchEvent(new Event('load'));
+  });
+};
 
 describe('Post', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
+    window.requirejs = createMockRequire();
 
     mockMatchMedia();
   });
@@ -246,6 +271,7 @@ describe('Post', () => {
           pathname: '/pidgin/live/c7p765ynk9qt',
         });
       });
+      await loadRequireJsScript();
 
       expect(
         container.querySelector('[data-e2e="media-player"]'),
@@ -268,7 +294,7 @@ describe('Post', () => {
     });
 
     it('should not reinitialise the media player when Post rerenders for an unrelated reason', async () => {
-      const mockRequire = jest.fn();
+      const mockRequire = createMockRequire();
       const originalRequirejs = window.requirejs;
       window.requirejs = mockRequire;
 
@@ -283,6 +309,7 @@ describe('Post', () => {
         const { rerender } = await act(async () => {
           return render(<Post post={videoSamplePost} />, renderOptions);
         });
+        await loadRequireJsScript();
 
         expect(mockRequire).toHaveBeenCalledTimes(1);
 
