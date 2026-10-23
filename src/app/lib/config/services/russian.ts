@@ -267,6 +267,9 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'Выборы в Конгресс США 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:9bcbbe46-d21c-4e95-8c61-53fa233fcc8a',
+      ],
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33043.html',
     },
