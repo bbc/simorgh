@@ -1,0 +1,72 @@
+@use '@scss/themeTokens' as theme;
+
+a.callToActionLink {
+  padding: theme.$spacings-double;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    flex-direction: row;
+  }
+}
+
+a.signInLink {
+  height: #{theme.pixelsToRem-px-to-rem(44)};
+  padding: theme.$spacings-half;
+  color: theme.$palette-white;
+  text-decoration-thickness: #{theme.pixelsToRem-px-to-rem(1)};
+  background-color: theme.$palette-service-neutral-core;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    padding-inline: theme.$spacings-full;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-service-neutral-dark;
+    color: theme.$palette-white;
+    text-decoration-thickness: #{theme.pixelsToRem-px-to-rem(2)};
+  }
+
+  &:visited {
+    color: theme.$palette-white;
+  }
+}
+
+a.registerLink {
+  height: #{theme.pixelsToRem-px-to-rem(44)};
+  color: theme.$palette-white;
+  text-decoration: underline;
+  text-decoration-thickness: #{theme.pixelsToRem-px-to-rem(1)};
+  padding: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration-thickness: #{theme.pixelsToRem-px-to-rem(2)};
+    color: theme.$palette-neutral-light;
+    text-decoration-color: theme.$palette-neutral-light;
+  }
+
+  &:visited {
+    color: theme.$palette-white;
+  }
+}
+
+a.registerLinkOnLightBackground {
+  color: theme.$palette-grey-10;
+
+  &:hover,
+  &:focus {
+    color: theme.$palette-grey-10;
+    text-decoration-color: theme.$palette-grey-10;
+  }
+
+  &:visited {
+    color: theme.$palette-grey-10;
+  }
+}

@@ -1,10 +1,12 @@
 import React, { use } from 'react';
+import clsx from 'clsx';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import ctaStyles from './callToActionLink.module.scss';
 import styles from './index.styles';
 
 interface AccountActionButtonsProps {
@@ -60,8 +62,11 @@ const AccountActionButtons = ({
       <CallToActionLink
         ref={signInRef}
         url={signInUrl}
-        className={focusIndicatorClassName}
-        css={[styles.callToActionLink, styles.signInLink]}
+        className={clsx(
+          focusIndicatorClassName,
+          ctaStyles.callToActionLink,
+          ctaStyles.signInLink,
+        )}
         eventTrackingData={{
           componentName: signInComponentName,
           ...(experimentName && { experimentName }),
@@ -87,12 +92,12 @@ const AccountActionButtons = ({
 
       <CallToActionLink
         url={registerUrl}
-        className={focusIndicatorClassName}
-        css={[
-          styles.callToActionLink,
-          styles.registerLink,
-          onLightBackground && styles.registerLinkOnLightBackground,
-        ]}
+        className={clsx(
+          focusIndicatorClassName,
+          ctaStyles.callToActionLink,
+          ctaStyles.registerLink,
+          onLightBackground && ctaStyles.registerLinkOnLightBackground,
+        )}
         eventTrackingData={{
           componentName: registerComponentName,
           ...(experimentName && { experimentName }),
