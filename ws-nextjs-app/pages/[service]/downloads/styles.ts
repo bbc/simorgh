@@ -33,12 +33,6 @@ export default {
         gridTemplateColumns: 'repeat(auto-fill, minmax(50%, 1fr))',
       },
     }),
-  cta: () =>
-    css({
-      div: {
-        display: 'block',
-      },
-    }),
   listItem: ({ fontSizes, palette }: Theme) =>
     css({
       borderBottom: '1px solid #000',
