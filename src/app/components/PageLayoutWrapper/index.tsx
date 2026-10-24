@@ -15,6 +15,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
+import { useArticleOnwardJourneys } from '#app/contexts/ArticleOnwardJourneysContext';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
@@ -59,12 +60,14 @@ const PageLayoutWrapper = ({
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
+  const onwardJourneyPageData = useArticleOnwardJourneys(pageData);
+  const effectivePageData = onwardJourneyPageData || pageData;
 
   const isErrorPage = ![200].includes(status) || !status;
-  const pageType = pageData?.metadata?.type;
+  const pageType = effectivePageData?.metadata?.type;
 
   const primaryMediaType = getPrimaryMediaType(
-    pageData?.metadata?.passport?.taggings,
+    effectivePageData?.metadata?.passport?.taggings,
   );
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
@@ -74,7 +77,7 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
-    wordCount = pageData?.content?.model?.blocks
+    wordCount = effectivePageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
       ?.reduce((reducer, block) => {
         const innerBlocks = block?.model?.blocks
@@ -90,7 +93,7 @@ const PageLayoutWrapper = ({
 
   const serviceFonts = fontFaces();
 
-  const wrappedTopics = pageData?.metadata?.topics?.map(topic => ({
+  const wrappedTopics = effectivePageData?.metadata?.topics?.map(topic => ({
     topicName: topic.topicName,
     topicId: topic.topicId,
   }));
@@ -138,7 +141,7 @@ const PageLayoutWrapper = ({
           navItems={navItems}
           primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
-            blocks: pageData?.secondaryColumn?.topStories || [],
+            blocks: effectivePageData?.secondaryColumn?.topStories || [],
           }}
         />
         <div css={styles.content}>{children}</div>

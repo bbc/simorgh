@@ -34,6 +34,8 @@ import QueryProvider from '#app/contexts/QueryContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
+import { Article } from '#app/models/types/optimo';
+import { ArticleOnwardJourneysProvider } from '#app/contexts/ArticleOnwardJourneysContext';
 
 interface Props {
   pageProps: {
@@ -214,36 +216,41 @@ export default class CustomApp extends App<Props> {
             isUK={isUK ?? false}
             primaryMediaType={primaryMediaType}
           >
-            <AccountProvider initialConfig={idctaConfig}>
-              <ReverbParamsContextProvider metadata={pageData?.metadata}>
-                <EventTrackingContextProvider atiData={atiAnalytics}>
-                  {isAvEmbeds ? (
-                    <ThemeProvider service={service} variant={variant}>
-                      {RenderChildrenOrError}
-                    </ThemeProvider>
-                  ) : (
-                    <QueryProvider>
-                      <UserContextProvider>
-                        <ThemeProviderSCSSModules
-                          service={service}
-                          variant={variant}
-                        >
-                          <ThemeProvider service={service} variant={variant}>
-                            <PageWrapper
-                              navItems={navItems}
-                              pageData={pageData}
-                              status={status}
-                            >
-                              {RenderChildrenOrError}
-                            </PageWrapper>
-                          </ThemeProvider>
-                        </ThemeProviderSCSSModules>
-                      </UserContextProvider>
-                    </QueryProvider>
-                  )}
-                </EventTrackingContextProvider>
-              </ReverbParamsContextProvider>
-            </AccountProvider>
+            <ArticleOnwardJourneysProvider
+              pageData={pageData as Article}
+              pageType={pageType}
+            >
+              <AccountProvider initialConfig={idctaConfig}>
+                <ReverbParamsContextProvider metadata={pageData?.metadata}>
+                  <EventTrackingContextProvider atiData={atiAnalytics}>
+                    {isAvEmbeds ? (
+                      <ThemeProvider service={service} variant={variant}>
+                        {RenderChildrenOrError}
+                      </ThemeProvider>
+                    ) : (
+                      <QueryProvider>
+                        <UserContextProvider>
+                          <ThemeProviderSCSSModules
+                            service={service}
+                            variant={variant}
+                          >
+                            <ThemeProvider service={service} variant={variant}>
+                              <PageWrapper
+                                navItems={navItems}
+                                pageData={pageData}
+                                status={status}
+                              >
+                                {RenderChildrenOrError}
+                              </PageWrapper>
+                            </ThemeProvider>
+                          </ThemeProviderSCSSModules>
+                        </UserContextProvider>
+                      </QueryProvider>
+                    )}
+                  </EventTrackingContextProvider>
+                </ReverbParamsContextProvider>
+              </AccountProvider>
+            </ArticleOnwardJourneysProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
