@@ -10,6 +10,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
@@ -80,10 +81,8 @@ const StyledLink = styled.a`
 `;
 
 // `currentColor` has been used to address high contrast mode in Firefox.
-const BrandSvg = styled.svg`
+const BrandImage = styled.img`
   box-sizing: content-box;
-  color: ${props => props.theme.palette.BRAND_LOGO};
-  fill: currentColor;
   height: ${20 / 16}rem;
   max-width: 100%;
 
@@ -126,24 +125,21 @@ const StyledBrand = ({
   svg,
   isLanguagesPage = false,
 }) => {
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
+
   return svg ? (
     <>
-      <BrandSvg
+      <BrandImage
         id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-        viewBox={[
-          svg.viewbox.minX || 0,
-          svg.viewbox.minY || 0,
-          svg.viewbox.width,
-          svg.viewbox.height,
-        ].join(' ')}
-        xmlns="http://www.w3.org/2000/svg"
-        focusable="false"
+        className="external-svg"
         aria-hidden="true"
-        height="32"
+        alt=""
+        src={`${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${svg.path.slice(1)}`}
         isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
-      >
-        {svg.group}
-      </BrandSvg>
+      />
       <LocalisedBrandName
         linkId={linkId}
         product={product}

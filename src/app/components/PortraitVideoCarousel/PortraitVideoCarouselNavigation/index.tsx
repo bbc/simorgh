@@ -74,7 +74,11 @@ export default ({
           tabIndex={-1}
           data-testid="pv-scroll-left"
         >
-          <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
+          <Chevron
+            orientation={ChevronOrientation.BACKWARD}
+            dir={dir}
+            isInverted
+          />
         </button>
         <button
           type="button"
@@ -85,7 +89,11 @@ export default ({
           tabIndex={-1}
           data-testid="pv-scroll-right"
         >
-          <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
+          <Chevron
+            orientation={ChevronOrientation.FORWARD}
+            dir={dir}
+            isInverted
+          />
         </button>
       </div>
     </div>

@@ -1,42 +1,74 @@
+import type { Interpolation, Theme } from '@emotion/react';
 import { Direction } from '#app/models/types/global';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import styles from './index.module.scss';
+
+type IconProps = {
+  className?: string;
+  css?: Interpolation<Theme>;
+  height?: string;
+  isColoured?: boolean;
+  isInverted?: boolean;
+  name?: string;
+  path?: string;
+  width?: string;
+};
+
+export const ExternalSvg = ({
+  className,
+  css,
+  height,
+  isColoured = false,
+  isInverted = false,
+  name,
+  path,
+  width,
+}: IconProps) => {
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
+  const classes = [className, 'external-svg'];
+
+  if (!isColoured) classes.push(styles.externalSvg);
+  if (isInverted) classes.push(styles.inverted);
+
+  return (
+    <img
+      alt=""
+      aria-hidden="true"
+      className={classes.filter(Boolean).join(' ')}
+      css={css}
+      height={height}
+      src={`${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${
+        path || `images/icons/${name}.svg`
+      }`}
+      width={width}
+    />
+  );
+};
 
 export const Ellipsis = () => (
-  <svg
-    viewBox="0 0 32 32"
-    focusable="false"
-    aria-hidden="true"
-    width="12"
-    height="12"
-  >
-    <path d="M1.6 18.8h5.8v-5.6H1.6v5.6zm11.5 0h5.8v-5.6h-5.8v5.6zm11.5 0h5.8v-5.6h-5.8v5.6z" />
-  </svg>
+  <ExternalSvg name="ellipsis" width="12" height="12" />
 );
 
 export const LeftChevron = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 32"
-    focusable="false"
-    aria-hidden="true"
+  <ExternalSvg
+    name="chevron-backward"
+    className={className}
     width="12"
     height="12"
-    className={className}
-  >
-    <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
-  </svg>
+  />
 );
 
 export const RightChevron = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 32"
-    focusable="false"
-    aria-hidden="true"
+  <ExternalSvg
+    name="chevron-forward"
+    className={className}
     width="12"
     height="12"
-    className={className}
-  >
-    <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
-  </svg>
+  />
 );
 
 export enum ChevronOrientation {
@@ -46,136 +78,61 @@ export enum ChevronOrientation {
 
 type ChevronProps = {
   className?: string;
+  css?: Interpolation<Theme>;
   dir: Direction;
+  isInverted?: boolean;
   orientation: ChevronOrientation;
 };
 
-export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
-  let normalisedDirection = ChevronOrientation.FORWARD;
-  const paths = {
-    [ChevronOrientation.BACKWARD]: (
-      <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
-    ),
-    [ChevronOrientation.FORWARD]: (
-      <path d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z" />
-    ),
-  };
-
-  if (orientation === ChevronOrientation.BACKWARD) {
-    normalisedDirection =
-      dir === 'ltr' ? ChevronOrientation.BACKWARD : ChevronOrientation.FORWARD;
-  }
-
-  if (orientation === ChevronOrientation.FORWARD) {
-    normalisedDirection =
-      dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
-  }
+export const Chevron = ({
+  className,
+  css,
+  dir,
+  isInverted,
+  orientation,
+}: ChevronProps) => {
+  const isBackward =
+    (orientation === ChevronOrientation.BACKWARD && dir === 'ltr') ||
+    (orientation === ChevronOrientation.FORWARD && dir === 'rtl');
 
   return (
-    <svg
-      viewBox="0 0 32 32"
-      focusable="false"
-      aria-hidden="true"
+    <ExternalSvg
+      name={isBackward ? 'chevron-backward' : 'chevron-forward'}
+      className={className}
+      css={css}
+      isInverted={isInverted}
       width="12"
       height="12"
-      className={className}
-    >
-      {paths[normalisedDirection]}
-    </svg>
+    />
   );
 };
 
 export const Clock = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M16 31c8.5 0 15-6.5 15-15S24.5 1 16 1 1 7.5 1 16s6.5 15 15 15zm0-2.7C9 28.3 3.7 23 3.7 16S9 3.7 16 3.7C23 3.7 28.3 9 28.3 16S23 28.3 16 28.3zm6.2-6.7 1-1.5-5.7-4.5-.6-8.6H15l-.7 10.5 7.9 4.1z" />
-  </svg>
+  <ExternalSvg name="clock" className={className} width="12" height="12" />
 );
 
 export const Book = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M8.6 1.6c-3.1 0-5 1.8-5 5v18.9c0 3.1 1.8 5 5 5h19.7V6.1h-2.2v21.7H8.2c-1.2 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3h15.3V1.6H8.6z" />
-  </svg>
+  <ExternalSvg name="book" className={className} width="12" height="12" />
 );
 
 export const Words = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M6 15.9h10v2H6zm4-4h12v2H10zm8 4h8v2h-8z" />
-    <path d="M28 3.9H4c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h10.2v7l7.4-7H28c1.1 0 2-.9 2-2v-15c0-1.1-.9-2-2-2zm-6.4 17H20L16.2 25v-4.1H4v-15h24v15h-6.4z" />
-  </svg>
+  <ExternalSvg name="words" className={className} width="12" height="12" />
 );
 
 export const Articles = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M5 9v20h22V9Zm20 18h-3a5.89 5.89 0 0 0-6-5 5.89 5.89 0 0 0-6 5H7V11h18ZM7 6h18v2H7zm2-3h14v2H9z" />
-    <circle cx="15.998" cy="17.5" r="3.5" />
-  </svg>
+  <ExternalSvg name="articles" className={className} width="12" height="12" />
 );
 
 export const Calendar = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M6.2 30.5h19.5c5 0 5.3-2.5 5.3-5.3V9.3h-2.6v16c0 2-.6 2.6-2.6 2.6H6.3c-2 0-2.6-.6-2.6-2.6v-16H1v15.9c0 2.8.2 5.3 5.2 5.3zM10.8 15h2v-2h-2v2zM1 9.6h30V1.5h-5.3v3h-3v-3H9.2v3h-3v-3H1v8.1zM15 15h2v-2h-2v2zm4.1 0h2v-2h-2v2zm4.2 0h2v-2h-2v2zm-12.5 4.7h2v-2h-2v2zm4.2 0h2v-2h-2v2zm4.1 0h2v-2h-2v2zm4.2 0h2v-2h-2v2zm-16.6 0h2v-2h-2v2zm4.1 4.7h2v-2h-2v2zm4.2 0h2v-2h-2v2zm4.1 0h2v-2h-2v2zm-12.4 0h2v-2h-2v2z" />
-  </svg>
+  <ExternalSvg name="calendar" className={className} width="12" height="12" />
 );
 
 export const Favourites = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M9.1 7.5h21.8V1.9H9.1v5.6zm0 22.6h21.8v-5.6H9.1v5.6zm7.2-11.3h14.6v-5.6H16.3v5.6zm-2.8-4.6H9.1V9.8H5.5v4.4H1.1v3.5h4.4v4.4h3.6v-4.4h4.4v-3.5z" />
-  </svg>
+  <ExternalSvg name="favourites" className={className} width="12" height="12" />
 );
 
 export const Calculator = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    aria-hidden="true"
-    width="12"
-    height="12"
-    className={className}
-  >
-    <path d="M22.8 32H9.2c-1.2 0-2.1-.3-2.6-.8s-.8-1.4-.8-2.6V3.4c0-1.2.3-2.1.8-2.6S8 0 9.2 0h13.6c1.3 0 2.1.3 2.6.8s.8 1.4.8 2.6v25.2c0 1.2-.3 2.1-.8 2.6s-1.3.8-2.6.8zm.8-29.4H8.4V12h15.2V2.6zM12.1 14.2H8.4v3.7h3.7v-3.7zm0 5.7H8.4v3.7h3.7v-3.7zm0 5.8H8.4v3.7h3.7v-3.7zm5.7-11.5h-3.7v3.7h3.7v-3.7zm0 5.7h-3.7v3.7h3.7v-3.7zm0 5.8h-3.7v3.7h3.7v-3.7zm5.8-11.5h-3.7v3.7h3.7v-3.7zm0 5.7h-3.7v9.5h3.7v-9.5z" />
-  </svg>
+  <ExternalSvg name="calculator" className={className} width="12" height="12" />
 );
 
 export const Close = ({
@@ -187,263 +144,128 @@ export const Close = ({
   width?: string;
   height?: string;
 }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
+  <ExternalSvg
+    name="close"
+    className={className}
     width={width}
     height={height}
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="m30 4.6-2.8-2.8L2 27.4l2.8 2.8zM4.8 1.8 1.9 4.7l25.2 25.5 2.9-2.9z" />
-  </svg>
+  />
 );
 
-export const Play = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
+export const Play = ({
+  className,
+  css,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
+  <ExternalSvg
+    name="play"
+    className={className}
+    css={css}
+    isInverted={isInverted}
     width="12"
     height="12"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M29 16 5.8 1v30z" />
-  </svg>
+  />
 );
 
 export const TriangleDown = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M26.7 12.6 16 23.2 5.3 12.6V8.8h21.4z" />
-  </svg>
+  <ExternalSvg name="triangle-down" className={className} />
 );
 
-export const Warning = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
+export const Warning = ({
+  className,
+  css,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
+  <ExternalSvg
+    name="warning"
+    className={className}
+    css={css}
+    isInverted={isInverted}
     width="24"
     height="24"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M3.1 30.2h25.8c1.6 0 2.3-.8 2.3-1.9 0-.8-.3-1.4-1-2.9L18.6 3.8c-.8-1.5-1.5-2-2.6-2s-1.8.5-2.6 2L1.8 25.4C1 26.9.7 27.5.7 28.3c.1 1.1.8 1.9 2.4 1.9M16 26.9c-1.6 0-2.4-1-2.4-2.1 0-1.2.8-2.1 2.4-2.1s2.4 1 2.4 2.1-.8 2.1-2.4 2.1m-1.7-6.7-.8-10.6h5l-.8 10.6z" />
-  </svg>
+  />
 );
 
 export const UpArrowIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    width="24"
-    height="24"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
-  </svg>
+  <ExternalSvg name="arrow-up" width="24" height="24" />
 );
 
 export const DownArrowIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    width="24"
-    height="24"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
-  </svg>
+  <ExternalSvg name="arrow-down" width="24" height="24" />
 );
 
 export const AccountIconRounded = ({ className }: { className?: string }) => (
-  <svg
+  <ExternalSvg
+    name="account-rounded"
+    className={className}
     width="24"
     height="24"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M12 17.2501C9.525 17.2501 7.65 15.3751 7.65 12.9001C7.65 10.4251 9.525 8.5501 12 8.5501C14.4 8.5501 16.35 10.4251 16.35 12.9001C16.35 15.3751 14.4 17.2501 12 17.2501ZM23.25 12.9751C23.25 6.6751 18.3 1.7251 12 1.7251C5.625 1.7251 0.75 6.6751 0.75 12.9751C0.75 16.8751 2.625 20.3251 5.55 22.2751C6.975 20.1751 9.3 18.8251 12 18.8251C14.7 18.8251 17.025 20.1751 18.45 22.2751C21.375 20.2501 23.25 16.8751 23.25 12.9751Z" />
-  </svg>
+  />
 );
 
 export const AccountIcon = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 32"
-    width="20"
-    height="18"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path
-      fillRule="evenodd"
-      d="M16 17.5a7.88 7.88 0 0 1-8-7.75A7.88 7.88 0 0 1 16 2a7.88 7.88 0 0 1 8 7.75 7.88 7.88 0 0 1-8 7.75M2 30c0-5.883 7.519-10 14.014-10C22.48 20 30 24.12 30 29.994c0 .005-28 .007-28 .005"
-    />
-  </svg>
+  <ExternalSvg name="account" className={className} width="20" height="18" />
 );
 
 export const BookmarkIcon = ({ className }: { className?: string }) => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 18 18"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path
-      d="M11.25 1.25V15.375L6.25 12.5625L1.25 15.375V1.25H11.25ZM12.5 0H0V17.5L6.25 14L12.5 17.5V0Z"
-      fillRule="evenodd"
-    />
-  </svg>
+  <ExternalSvg name="bookmark" className={className} width="20" height="20" />
 );
 
 export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
-  <svg
+  <ExternalSvg
+    name="bookmark-filled"
+    className={className}
     width="20"
     height="20"
-    viewBox="0 0 18 18"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path
-      d="M3.75 1.25V18.75L9.625 15.4375L10 15.25L10.375 15.4375L16.25 18.75V1.25H3.75Z"
-      fillRule="evenodd"
-    />
-  </svg>
+  />
 );
 
 export const PlusIcon = ({ className }: { className?: string }) => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M14 2h4v12h12v4H18v12h-4V18H2v-4h12V2z" />
-  </svg>
+  <ExternalSvg name="plus" className={className} width="20" height="20" />
 );
 
 export const TickIcon = ({ className }: { className?: string }) => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path d="M12 21.56 6.44 16l-1.89 1.88L12 25.33 28 9.33l-1.88-1.88z" />
-  </svg>
+  <ExternalSvg name="tick" className={className} width="20" height="20" />
 );
 
 export const Spinner = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 32"
-    width="20"
-    height="20"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="m29 8.3-2.5 1.5c1.1 1.8 1.6 3.9 1.6 6.2 0 6.9-5.3 12.2-12.1 12.2-6.9 0-12.1-5.3-12.1-12.2S9.1 3.8 16 3.8V1C7.5 1 1 7.5 1 16s6.5 15 15 15 15-6.5 15-15c0-2.9-.7-5.5-2-7.7" />
-  </svg>
+  <ExternalSvg name="spinner" className={className} width="20" height="20" />
 );
 
 export const RedCardSVG = ({ className }: { className?: string }) => (
-  <svg
-    enableBackground="new 0 0 9.22 13.36"
-    viewBox="0 0 9.22 13.36"
-    xmlns="http://www.w3.org/2000/svg"
+  <ExternalSvg
+    name="red-card"
     className={className}
-    width={`${pixelsToRem(11)}rem`}
     height={`${pixelsToRem(16)}rem`}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m-29.51 285.84v-9.72h-4.53v11.82h8.48v-2.1z" fill="#ffd230" />
-    <path d="m-163.79-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m-102.17-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
-    <g fill="#f51a5a">
-      <path d="m24 0h9.22v13.36h-9.22z" />
-      <path d="m0 0h9.22v13.36h-9.22z" />
-      <path d="m-28.42 0h9.22v13.36h-9.22z" />
-    </g>
-    <path d="m-29.5 14.44v-9.89h-4.54v13.36h9.23v-3.47z" fill="#ffd230" />
-  </svg>
+    isColoured
+    width={`${pixelsToRem(11)}rem`}
+  />
 );
 
 export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
-  <svg
-    enableBackground="new 0 0 14.84 17.91"
-    viewBox="0 0 14.84 17.91"
-    xmlns="http://www.w3.org/2000/svg"
+  <ExternalSvg
+    name="second-yellow-card"
     className={className}
-    width={`${pixelsToRem(16)}rem`}
     height={`${pixelsToRem(19)}rem`}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m4.52 285.84v-9.72h-4.52v11.82h8.47v-2.1z" fill="#ffd230" />
-    <path d="m-129.76-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
-    <path d="m-68.14-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
-    <path d="m5.61 0h9.22v13.36h-9.22z" fill="#f51a5a" />
-    <path d="m4.53 14.44v-9.89h-4.53v13.36h9.22v-3.47z" fill="#ffd230" />
-  </svg>
+    isColoured
+    width={`${pixelsToRem(16)}rem`}
+  />
 );
 
 export const InfoTriangle = ({ className }: { className?: string }) => (
-  <svg
+  <ExternalSvg
+    name="info-triangle"
+    className={className}
     width="22"
     height="22"
-    viewBox="0 0 22 22"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M2.13145 20.7625H19.8689C20.9689 20.7625 21.4502 20.2125 21.4502 19.4562C21.4502 18.9062 21.2439 18.4937 20.7627 17.4625L12.7877 2.61249C12.2377 1.58124 11.7564 1.23749 11.0002 1.23749C10.2439 1.23749 9.7627 1.58124 9.2127 2.61249L1.2377 17.4625C0.687695 18.4937 0.481445 18.9062 0.481445 19.4562C0.550195 20.2125 1.03145 20.7625 2.13145 20.7625ZM11.0002 18.4937C9.9002 18.4937 9.3502 17.8062 9.3502 17.05C9.3502 16.225 9.9002 15.6062 11.0002 15.6062C12.1002 15.6062 12.6502 16.2937 12.6502 17.05C12.6502 17.8062 12.1002 18.4937 11.0002 18.4937ZM9.83145 13.8875L9.28145 6.59999H12.7189L12.1689 13.8875H9.83145Z" />
-  </svg>
+  />
 );
 
 export const InfoCircle = ({ className }: { className?: string }) => (
-  <svg
+  <ExternalSvg
+    name="info-circle"
+    className={className}
     width="22"
     height="22"
-    viewBox="0 0 22 22"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="M11 21.3125C16.8438 21.3125 21.3125 16.8438 21.3125 11C21.3125 5.15625 16.8438 0.6875 11 0.6875C5.15625 0.6875 0.6875 5.15625 0.6875 11C0.6875 16.8438 5.15625 21.3125 11 21.3125ZM9.4875 17.5312V8.73125H12.5125V17.6H9.4875V17.5312ZM11 6.875C9.83125 6.875 9.14375 6.25625 9.14375 5.225C9.14375 4.19375 9.83125 3.575 11 3.575C12.1687 3.575 12.8563 4.19375 12.8563 5.225C12.8563 6.25625 12.1687 6.875 11 6.875Z" />
-  </svg>
+  />
 );

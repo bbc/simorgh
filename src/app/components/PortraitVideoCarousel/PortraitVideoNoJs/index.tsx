@@ -16,7 +16,7 @@ export default () => {
 
   return (
     <div css={style.container}>
-      <Warning css={style.icon} />
+      <Warning css={style.icon} isInverted />
       <Text css={style.message} as="p">
         {noJs}
       </Text>

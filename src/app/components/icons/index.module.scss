@@ -1,0 +1,9 @@
+.externalSvg {
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+.inverted {
+  filter: invert(1) hue-rotate(180deg);
+}
