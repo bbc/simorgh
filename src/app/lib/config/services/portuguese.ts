@@ -200,13 +200,21 @@ export const service: DefaultServiceConfig = {
         guestTitle: 'Bem-vindo à Notícias para você',
         description: 'Matérias salvas',
         guestDescription:
-          'Faça login para salvar matérias e ler quando quiser.',
+          'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
         noArticles: 'Você ainda não salvou nenhuma matéria',
-        errorText:
-          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
+        savedArticlesErrorText:
+          'Estamos tendo problemas para carregar suas matérias salvas',
         loading: 'Carregando',
         noJsDescription:
           'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        followedTopicsTitle: 'Temas que você segue',
+        followedTopicsErrorText:
+          'Estamos tendo problemas para carregar os temas que você segue',
+        noFollowedTopics: 'Você ainda não segue nenhum tema',
+        seeMoreTopics: 'Ver mais',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
       },
       actionTooltip: {
         success: {
