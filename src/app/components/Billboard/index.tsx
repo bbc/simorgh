@@ -104,6 +104,7 @@ export default ({
           placeholder={false}
           fetchPriority="high"
           preload
+          lazyLoad={false}
         />
       </div>
     );

@@ -4,7 +4,7 @@ import { Recommendation } from '#models/types/onwardJourney';
 
 const RecommendationsImage = ({
   image,
-  lazyLoad = false,
+  lazyLoad = true,
 }: {
   image?: Recommendation['image'] | null;
   lazyLoad?: boolean;

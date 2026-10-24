@@ -43,7 +43,7 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  lazyLoad = false,
+  lazyLoad = true,
   placeholder = true,
   darkPlaceholder = false,
   preload = false,
