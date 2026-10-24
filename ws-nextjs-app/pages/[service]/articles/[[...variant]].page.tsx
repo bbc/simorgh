@@ -5,6 +5,7 @@ import { PageTypes } from '#app/models/types/global';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ArticlePageProps } from './types';
 import handleArticleRoute from './handleArticleRoute';
+import ArticlePageWithOnwardJourneys from './ArticlePageWithOnwardJourneys';
 
 const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(
@@ -21,9 +22,11 @@ const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
 }: PageProps) {
   switch (pageType) {
     case ARTICLE_PAGE:
-      return <ArticlePage {...rest} />;
+      return <ArticlePageWithOnwardJourneys Page={ArticlePage} {...rest} />;
     case MEDIA_ARTICLE_PAGE:
-      return <MediaArticlePage {...rest} />;
+      return (
+        <ArticlePageWithOnwardJourneys Page={MediaArticlePage} {...rest} />
+      );
     default:
       return null;
   }
