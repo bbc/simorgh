@@ -1,3 +1,4 @@
+import type { Interpolation, Theme } from '@emotion/react';
 import { Direction } from '#app/models/types/global';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -5,8 +6,10 @@ import styles from './index.module.scss';
 
 type IconProps = {
   className?: string;
+  css?: Interpolation<Theme>;
   height?: string;
   isColoured?: boolean;
+  isInverted?: boolean;
   name?: string;
   path?: string;
   width?: string;
@@ -14,8 +17,10 @@ type IconProps = {
 
 export const ExternalSvg = ({
   className,
+  css,
   height,
   isColoured = false,
+  isInverted = false,
   name,
   path,
   width,
@@ -27,12 +32,14 @@ export const ExternalSvg = ({
   const classes = [className, 'external-svg'];
 
   if (!isColoured) classes.push(styles.externalSvg);
+  if (isInverted) classes.push(styles.inverted);
 
   return (
     <img
       alt=""
       aria-hidden="true"
       className={classes.filter(Boolean).join(' ')}
+      css={css}
       height={height}
       src={`${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${
         path || `images/icons/${name}.svg`
@@ -71,11 +78,19 @@ export enum ChevronOrientation {
 
 type ChevronProps = {
   className?: string;
+  css?: Interpolation<Theme>;
   dir: Direction;
+  isInverted?: boolean;
   orientation: ChevronOrientation;
 };
 
-export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
+export const Chevron = ({
+  className,
+  css,
+  dir,
+  isInverted,
+  orientation,
+}: ChevronProps) => {
   const isBackward =
     (orientation === ChevronOrientation.BACKWARD && dir === 'ltr') ||
     (orientation === ChevronOrientation.FORWARD && dir === 'rtl');
@@ -84,6 +99,8 @@ export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
     <ExternalSvg
       name={isBackward ? 'chevron-backward' : 'chevron-forward'}
       className={className}
+      css={css}
+      isInverted={isInverted}
       width="12"
       height="12"
     />
@@ -135,16 +152,38 @@ export const Close = ({
   />
 );
 
-export const Play = ({ className }: { className?: string }) => (
-  <ExternalSvg name="play" className={className} width="12" height="12" />
+export const Play = ({
+  className,
+  css,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
+  <ExternalSvg
+    name="play"
+    className={className}
+    css={css}
+    isInverted={isInverted}
+    width="12"
+    height="12"
+  />
 );
 
 export const TriangleDown = ({ className }: { className?: string }) => (
   <ExternalSvg name="triangle-down" className={className} />
 );
 
-export const Warning = ({ className }: { className?: string }) => (
-  <ExternalSvg name="warning" className={className} width="24" height="24" />
+export const Warning = ({
+  className,
+  css,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
+  <ExternalSvg
+    name="warning"
+    className={className}
+    css={css}
+    isInverted={isInverted}
+    width="24"
+    height="24"
+  />
 );
 
 export const UpArrowIcon = () => (
