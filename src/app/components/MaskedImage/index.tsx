@@ -82,6 +82,7 @@ const MaskedImage = ({
         {...(shouldFillHeight ? {} : { width: 800, height: 533 })}
         fetchPriority="high"
         preload
+        lazyLoad={false}
         placeholder={showPlaceholder}
       />
     </div>
