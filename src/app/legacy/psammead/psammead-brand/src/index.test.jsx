@@ -6,15 +6,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import Brand from '.';
 
 const svg = {
-  group: (
-    <g fillRule="evenodd">
-      <path d="M84.32" />
-    </g>
-  ),
-  viewbox: {
-    height: 24,
-    width: 167.95,
-  },
+  path: '/news/images/brand.svg',
   ratio: 6.9979,
 };
 
