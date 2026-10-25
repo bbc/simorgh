@@ -1,6 +1,7 @@
 import {
   act,
   render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
@@ -137,13 +138,13 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
+    await act(() => {
       return render(<ErrorSummaryBox labelMap={labelMap} />);
     });
 
-    const inputWithError = container.querySelectorAll('span')[1];
+    const inputWithError = screen.getByText(labelMap.txt49018765);
     expect(inputWithError).toBeInTheDocument();
-    expect(inputWithError?.textContent).toEqual(`Nombre`);
+    expect(inputWithError.closest('a')).toBeNull();
   });
 
   it('should prefix fileUpload href so that focus is taken to Upload button label', async () => {

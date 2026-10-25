@@ -101,10 +101,14 @@ describe('MyNewsPage', () => {
     });
 
     const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
-    const spinnerSvg = spinnerWrapper.querySelector('svg');
+    const spinnerImage = spinnerWrapper.querySelector('img.external-svg');
 
     expect(spinnerWrapper).toBeInTheDocument();
-    expect(spinnerSvg).toBeInTheDocument();
+    expect(spinnerImage).toBeInTheDocument();
+    expect(spinnerImage).toHaveAttribute(
+      'src',
+      expect.stringContaining('images/icons/spinner.svg'),
+    );
   });
 
   it('should render saved articles after fetching', async () => {
