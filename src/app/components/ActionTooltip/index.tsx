@@ -24,9 +24,9 @@ export interface ActionTooltipProps {
 
 const StatusIcon = ({ status }: { status: ActionTooltipStatus }) =>
   status === 'error' ? (
-    <InfoTriangle className={styles.icon} isInverted />
+    <InfoTriangle className={styles.icon} />
   ) : (
-    <InfoCircle className={styles.icon} isInverted />
+    <InfoCircle className={styles.icon} />
   );
 
 const ActionTooltip = ({
