@@ -8,6 +8,18 @@ For more information on Next.js and how to use the framework, see the [Next.js d
 
 **Note:** We currently use the 'Pages Router' in Next.js, so be sure to select the "Using Pages Router" tab when viewing the Next.js documentation.
 
+## Request setup
+
+Wrap each page's `getServerSideProps` with `utilities/pageRequests/withRequestProps`.
+It loads shared request props (toggles, navigation, account configuration,
+location and experiments), sets response headers, and merges page-specific props
+over the shared props. The handler receives the shared props as its second
+argument so it can reuse configuration without fetching it again.
+
+Request paths come from `context.resolvedUrl`, including for Next.js data requests.
+`_app` only renders providers and page content; it has no `getInitialProps`.
+Next.js error pages reuse the setup through `_error.getInitialProps` on the server.
+
 ---
 
 ## Setup

@@ -21,6 +21,11 @@ import { StreamResponse } from './Post/types';
 import livePageData from './fixture/livePageData';
 import streamDataUpdate from './fixture/streamDataUpdate';
 
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
@@ -245,6 +250,7 @@ describe('Live Page', () => {
 
   it('Should set Cache-Control header to correct values', async () => {
     const context = {
+      resolvedUrl: '/pidgin/live/c7p765ynk9qt',
       query: {
         service: 'pidgin',
         id: 'c7p765ynk9qt',
