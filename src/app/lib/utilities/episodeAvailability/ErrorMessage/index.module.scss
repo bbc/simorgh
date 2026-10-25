@@ -1,0 +1,27 @@
+@use '@scss/themeTokens' as theme;
+
+.audioErrorWrapper {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: theme.$spacings-quadruple;
+}
+
+.videoErrorWrapper {
+  /* (9/16)*100 = 16:9 */
+  padding-top: 56.25%;
+  margin: #{theme.$spacings-quintuple} 0 #{theme.$spacings-triple};
+  position: relative;
+  overflow: hidden;
+
+  @media #{theme.$mediaQueries-group-3-max-width} {
+    margin-top: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-2-max-width} {
+    margin: #{theme.$spacings-double} -#{theme.$spacings-double} 0;
+  }
+
+  @media #{theme.$mediaQueries-group-1-max-width} {
+    margin: #{theme.$spacings-full} -#{theme.$spacings-full} 0;
+  }
+}

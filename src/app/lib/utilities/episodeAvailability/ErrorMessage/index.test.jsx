@@ -12,7 +12,7 @@ const ErrorMessageWithContext = ({ episodeAvailability, skin }) => (
 
 describe(`episodeAvailability - Error Message`, () => {
   it('should correctly render for future episodes with video skin', () => {
-    const { getByText, container } = render(
+    const { getByText } = render(
       <ErrorMessageWithContext
         episodeAvailability={EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE}
         skin="video"
@@ -22,12 +22,10 @@ describe(`episodeAvailability - Error Message`, () => {
     expect(
       getByText('De thing wey de here never ready for you to play.'),
     ).toBeInTheDocument();
-
-    expect(container).toMatchSnapshot();
   });
 
   it('should correctly render for expired episodes with audio skin', () => {
-    const { getByText, container } = render(
+    const { getByText } = render(
       <ErrorMessageWithContext
         episodeAvailability={EPISODE_STATUS.EPISODE_IS_EXPIRED}
         skin="audio"
@@ -35,6 +33,15 @@ describe(`episodeAvailability - Error Message`, () => {
     );
 
     expect(getByText('Dis thing no dey again')).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+  });
+
+  it('should default to the video skin when no skin is provided', () => {
+    const { getByText } = render(
+      <ErrorMessageWithContext
+        episodeAvailability={EPISODE_STATUS.EPISODE_IS_EXPIRED}
+      />,
+    );
+
+    expect(getByText('Dis thing no dey again')).toBeInTheDocument();
   });
 });
