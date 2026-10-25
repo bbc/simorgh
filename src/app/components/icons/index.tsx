@@ -147,18 +147,18 @@ export const Calculator = ({ className }: { className?: string }) => (
 
 export const Close = ({
   className,
+  css,
   width = '12',
   height = '12',
   isInverted,
-}: {
-  className?: string;
-  width?: string;
-  height?: string;
-  isInverted?: boolean;
-}) => (
+}: Pick<
+  IconProps,
+  'className' | 'css' | 'height' | 'isInverted' | 'width'
+>) => (
   <ExternalSvg
     name="close"
     className={className}
+    css={css}
     width={width}
     height={height}
     isInverted={isInverted}
@@ -181,7 +181,12 @@ export const Play = ({
 );
 
 export const TriangleDown = ({ className }: { className?: string }) => (
-  <ExternalSvg name="triangle-down" className={className} />
+  <ExternalSvg
+    name="triangle-down"
+    className={className}
+    width="16"
+    height="16"
+  />
 );
 
 export const Warning = ({
@@ -207,17 +212,38 @@ export const DownArrowIcon = () => (
   <ExternalSvg name="arrow-down" width="24" height="24" />
 );
 
-export const AccountIconRounded = ({ className }: { className?: string }) => (
+export const AccountIconRounded = ({
+  className,
+  css,
+  isBlue = false,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'> & {
+  isBlue?: boolean;
+}) => (
   <ExternalSvg
-    name="account-rounded"
+    name={isBlue ? 'account-rounded-blue' : 'account-rounded'}
     className={className}
+    css={css}
+    isColoured={isBlue}
+    isInverted={isInverted}
     width="24"
     height="24"
   />
 );
 
-export const AccountIcon = ({ className }: { className?: string }) => (
-  <ExternalSvg name="account" className={className} width="20" height="18" />
+export const AccountIcon = ({
+  className,
+  css,
+  isInverted,
+}: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
+  <ExternalSvg
+    name="account"
+    className={className}
+    css={css}
+    isInverted={isInverted}
+    width="20"
+    height="18"
+  />
 );
 
 export const BookmarkIcon = ({ className }: { className?: string }) => (
@@ -265,19 +291,27 @@ export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
   />
 );
 
-export const InfoTriangle = ({ className }: { className?: string }) => (
+export const InfoTriangle = ({
+  className,
+  isInverted,
+}: Pick<IconProps, 'className' | 'isInverted'>) => (
   <ExternalSvg
     name="info-triangle"
     className={className}
+    isInverted={isInverted}
     width="22"
     height="22"
   />
 );
 
-export const InfoCircle = ({ className }: { className?: string }) => (
+export const InfoCircle = ({
+  className,
+  isInverted,
+}: Pick<IconProps, 'className' | 'isInverted'>) => (
   <ExternalSvg
     name="info-circle"
     className={className}
+    isInverted={isInverted}
     width="22"
     height="22"
   />

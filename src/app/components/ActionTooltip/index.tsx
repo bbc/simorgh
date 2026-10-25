@@ -24,9 +24,9 @@ export interface ActionTooltipProps {
 
 const StatusIcon = ({ status }: { status: ActionTooltipStatus }) =>
   status === 'error' ? (
-    <InfoTriangle className={styles.icon} />
+    <InfoTriangle className={styles.icon} isInverted />
   ) : (
-    <InfoCircle className={styles.icon} />
+    <InfoCircle className={styles.icon} isInverted />
   );
 
 const ActionTooltip = ({
@@ -76,7 +76,7 @@ const ActionTooltip = ({
           data-testid="action-tooltip-close"
         >
           <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
-          <Close width="20" height="20" />
+          <Close width="20" height="20" isInverted />
         </button>
 
         <div className={styles.content}>

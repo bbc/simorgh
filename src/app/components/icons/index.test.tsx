@@ -1,5 +1,12 @@
 import { render } from '#app/components/react-testing-library-with-providers';
-import { Chevron, ChevronOrientation, Close, ExternalSvg } from '.';
+import {
+  AccountIconRounded,
+  Chevron,
+  ChevronOrientation,
+  Close,
+  ExternalSvg,
+  TriangleDown,
+} from '.';
 
 describe('icons', () => {
   it('loads shared icons from the static-assets CDN', () => {
@@ -37,5 +44,21 @@ describe('icons', () => {
       width: '4rem',
       height: '4rem',
     });
+  });
+
+  it('renders the disclosure icon at its intended dimensions', () => {
+    const { container } = render(<TriangleDown />);
+
+    expect(container.querySelector('img')).toHaveAttribute('width', '16');
+    expect(container.querySelector('img')).toHaveAttribute('height', '16');
+  });
+
+  it('loads the blue rounded account asset for the default navigation', () => {
+    const { container } = render(<AccountIconRounded isBlue />);
+
+    expect(container.querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('images/icons/account-rounded-blue.svg'),
+    );
   });
 });

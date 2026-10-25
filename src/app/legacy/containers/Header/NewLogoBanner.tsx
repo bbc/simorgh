@@ -25,7 +25,7 @@ const NewLogoBanner = () => {
       <a href={logoHref} aria-label="BBC News World Service">
         <ExternalSvg
           path="images/icons/ws-header-logo.svg"
-          width="117"
+          width="112"
           isColoured
         />
       </a>

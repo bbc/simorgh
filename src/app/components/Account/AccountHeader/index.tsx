@@ -56,6 +56,8 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
       >
         <AccountIconRounded
           css={isDefaultVariant ? styles.iconDefault : styles.icon}
+          isBlue={isDefaultVariant}
+          isInverted={!isDefaultVariant}
         />
         <span>{label}</span>
       </Text>

@@ -36,6 +36,10 @@
   :global([data-is-dark-ui='true']) & {
     color: theme.$palette-grey-2;
   }
+
+  :global([data-is-dark-ui='true']) & .chevron {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
 
 .promoBox {
