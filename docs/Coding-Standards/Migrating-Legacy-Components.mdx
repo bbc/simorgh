@@ -1,175 +1,152 @@
-import { Meta, Markdown } from '@storybook/addon-docs/blocks';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
-  GEL_GROUP_5_SCREEN_WIDTH_MIN,
-  GEL_GROUP_0_SCREEN_WIDTH_MAX,
-} from '../../src/app/legacy/psammead/gel-foundations/src/breakpoints';
-import * as spacings from '../../src/app/components/ThemeProvider/spacings';
-import {
-  MARGIN_BELOW_400PX,
-  MARGIN_ABOVE_400PX,
-  GUTTER_BELOW_600PX,
-  GUTTER_ABOVE_600PX,
-} from '../../src/app/components/ThemeProvider/spacings';
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Coding Standards/Migrating Legacy Components" />
 
 # Coding standards: Migrating Legacy Components
 
+This guide covers moving a component out of `src/app/legacy` into `src/app/components`.
+
+> **Target state:** migrated components use **SCSS Modules + CSS custom properties**
+> (`ThemeProviderSCSSModules`), TypeScript, and co-located tests.
+> Do **not** migrate to Emotion. Emotion (`styled`, the `css` prop, `index.styles.ts`) is
+> itself being removed — converting a legacy component to Emotion creates work that has to
+> be redone. Go straight from `styled` to `index.module.scss`.
+
+See `.github/instructions/styling-standards.instructions.md` and `Styles.mdx` for the full
+styling rules, and `src/app/components/Example` for the canonical reference implementation.
+
+## Before you start: migrate the whole cluster
+
+Legacy modules are heavily interlinked, and the aliases `#components`, `#containers` and
+`#psammead` all resolve **into `src/app/legacy`**. A component that looks standalone usually
+pulls in several other legacy modules transitively.
+
+Before opening a PR:
+
+1. Map the component's transitive legacy dependencies, not just its direct imports.
+2. Migrate **leaf dependencies first**, bottom-up. Shared leaves such as `gel-foundations`
+   are pulled in by most clusters.
+3. Where several entry points share the same interior modules, migrate them as a single
+   unit rather than repeating the same interior work in multiple PRs.
+4. Watch for cycles. `Header` ↔ `Brand` ↔ `Footer` are mutually dependent and cannot be
+   split across PRs.
+
+Do not leave a migrated copy alongside the legacy original. Update all importers and delete
+the legacy module in the same PR.
+
 ## Props / Typing
 
 ### Do not define `children` as an interface prop
 
-There are helpers in React which will accept `children` as a prop (with the appropriate type) without us having to declare it.
+React provides helpers that accept `children` with the appropriate type without declaring it.
 
-### Before
+#### Before
 
-```jsx
-
+```tsx
 interface MyComponentProps {
-  children: React.Node,
-  prop1: string,
-  ...
+  children: React.Node;
+  prop1: string;
 }
 
-const MyComponent = ({
-  prop1,
-  children
-}: MyComponentProps) => {
-  return (
-  <TheComponent prop1={prop1}>
-    {children}
-  </>
-  );
-}
+const MyComponent = ({ prop1, children }: MyComponentProps) => (
+  <TheComponent prop1={prop1}>{children}</TheComponent>
+);
 ```
 
-### After
+#### After
 
-```jsx
-
+```tsx
 import { PropsWithChildren } from 'react';
 
 interface MyComponentProps {
-  prop1: string,
-  ...
+  prop1: string;
 }
 
 const MyComponent = ({
   prop1,
-  children
-}: PropsWithChildren<MyComponentProps>) => {
-  return (
-  <TheComponent prop1={prop1}>
-    {children}
-  </>
-  );
-}
+  children,
+}: PropsWithChildren<MyComponentProps>) => (
+  <TheComponent prop1={prop1}>{children}</TheComponent>
+);
 ```
 
-## Where appropriate, add new types/interfaces to a `types.ts` file next to the component
+### Where appropriate, add new types/interfaces to a `types.ts` file next to the component
 
-This keeps all types in a single location, which can be easily imported when required. It is recommended to do this if the type/interface declaration is required to be in a shared (but not global) location, if it is used by other components.
-
-### Before
-
-**(index.tsx)**
-
-```jsx
-
-interface MyComponentProps {
-  prop1: string,
-  ...
-}
-
-const MyComponent = ({ prop1 }: MyComponentProps) => {
-  ...
-}
-```
-
-### After
+This keeps types in a single location that can be imported where required. Do this when the
+type is needed in a shared (but not global) location, or is used by other components.
 
 **(types.ts)**
 
-```jsx
+```ts
 export interface MyComponentProps {
-  prop1: string,
-  ...
+  prop1: string;
 }
 ```
 
-**(index.ts)**
+**(index.tsx)**
 
-```jsx
+```tsx
 import { MyComponentProps } from './types';
 
 const MyComponent = ({ prop1 }: MyComponentProps) => {
-  ...
-}
+  // ...
+};
 ```
 
-## ⚠️ When not to declare types/interfaces in a separate `types.ts` file
+### ⚠️ When not to declare types/interfaces in a separate `types.ts` file
 
-Usually if it makes more sense to keep the type/interface declaration right next to the component if it is not required or used anywhere else.
+Keep the declaration next to the component when it is not used anywhere else.
 
 ## Styling
 
-### Use emotion's `css` library instead of `styled`
+### Replace `styled` with an `index.module.scss` file
 
-Follow the guidelines outlined in [Emotion Docs](https://emotion.sh/docs/css-prop) about how to convert from styled → css
+Import the shared design tokens with `@use '@scss/themeTokens' as theme;` and apply classes
+via `className`. Never hard-code colours, spacings, font values or breakpoints.
 
-### Before
+#### Before
 
 **(index.jsx)**
 
 ```jsx
-
-const StyledContainer = styled.{html primitive element}`
-  color: ${props => props.theme.palette.BLACK}
+const StyledContainer = styled.div`
+  color: ${props => props.theme.palette.BLACK};
   text-align: center;
+  padding: ${GEL_SPACING_DBL};
+`;
 ```
 
-### After
+#### After
 
-**(index.styles.ts)**
+**(index.module.scss)**
 
-```jsx
-import { css, Theme } from '@emotion/react';
+```scss
+@use '@scss/themeTokens' as theme;
 
-const styles = {
-  link: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      textAlign: 'center',
-    }),
-};
-
-export default styles;
+.container {
+  color: theme.$palette-black;
+  text-align: center;
+  padding: theme.$spacings-double;
+}
 ```
-
-_Ensure that the `jsx` function is imported from the `@emotion/react` library, per the [https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact](https://emotion.sh/docs/css-prop#import-the-jsx-function-from-emotionreact) docs._
 
 **(index.tsx)**
 
-```jsx
+```tsx
+import styles from './index.module.scss';
 
-import styles from './index.styles';
-
-...
-
-<a css={styles.link} href={href}>Link Text Here</a>
+const MyComponent = () => <div className={styles.container}>...</div>;
 ```
 
-## Migrating Media Queries
+### Migrating media queries
 
-### Before
+Media query variables are strings, so they are used with interpolation:
+`@media #{theme.$mediaQueries-group-2-min-width} { ... }`.
+
+Prefer a mobile-first approach: write base styles for mobile, then layer on `min-width`
+queries for larger viewports.
+
+#### Before
 
 ```jsx
 const StyledLink = styled.a`
@@ -179,195 +156,156 @@ const StyledLink = styled.a`
 `;
 ```
 
-### After
+#### After
 
-```jsx
-import { css, Theme } from '@emotion/react';
+```scss
+@use '@scss/themeTokens' as theme;
 
-const styles = {
-  link: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_2_MIN_WIDTH]: {
-        ...cssForGroup,
-      },
-    }),
-};
-
-export default styles;
-```
-
-### Media Query / Breakpoint Mappings
-
-<Markdown>
-  {`
-| Before                                                                                                   | After                         |
-| -------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| **Min Widths**                                                                                           |                               |
-| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_1_MIN_WIDTH]: {\`   |
-| \`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_2_MIN_WIDTH]: {\`   |
-| \`@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_3_MIN_WIDTH]: {\`   |
-| \`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_4_MIN_WIDTH]: {\`   |
-| \`@media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {\`                                                  | \`[mq.GROUP_5_MIN_WIDTH]: {\`   |
-| **Max Widths**                                                                                           |                               |
-| \`@media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_0_MAX_WIDTH]: {\`   |
-| \`@media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_1_MAX_WIDTH]: {\`   |
-| \`@media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_2_MAX_WIDTH]: {\`   |
-| \`@media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_3_MAX_WIDTH]: {\`   |
-| \`@media (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {\`                                                  | \`[mq.GROUP_4_MAX_WIDTH]: {\`   |
-| **Min and Max Widths**                                                                                   |                               |
-| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_1_ONLY]: {\`        |
-| \`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_2_ONLY]: {\`        |
-| \`@media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_1_AND_GROUP_2]: {\` |
-| \`@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_3_ONLY]: {\`        |
-| \`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {\` | \`[mq.GROUP_4_ONLY]: {\`        |
-| **Forced Colours/High Contrast**                                                                         |                               |
-| \`@media screen and (forced-colors: active)\`                                                              | \`[mq.FORCED_COLOURS]: {\`      |
-`}
-</Markdown>
-
-### Migrating GEL Breakpoints (Spacing)
-
-<Markdown>
-  {`
-| Rems (Pixels)  | GEL Spacing              | New Theme Spacing          |
-| -------------- | ------------------------ | -------------------------- |
-| 0.25rem (4px)  | \`GEL_SPACING_HLF\`        | \`${spacings.HALF}rem\`      |
-| 0.5rem (8px)   | \`GEL_SPACING\`            | \`${spacings.FULL}rem\`      |
-| 0.75rem (12px) | \`GEL_SPACING_HLF_TRPL\`   | \`0.75rem\`                  |
-| 1rem (16px)    | \`GEL_SPACING_DBL\`        | \`${spacings.DOUBLE}rem\`    |
-| 1.5rem (24px)  | \`GEL_SPACING_TRPL\`       | \`${spacings.TRIPLE}rem\`    |
-| 2rem (32px)    | \`GEL_SPACING_QUAD\`       | \`${spacings.QUADRUPLE}rem\` |
-| 2.5rem (40px)  | \`GEL_SPACING_QUIN\`       | \`${spacings.QUINTUPLE}rem\` |
-| 3rem (48px)    | \`GEL_SPACING_SEXT\`       | \`${spacings.SEXTUPLE}rem\`  |
-| 3.5rem (56px)  | \`GEL_SPACING_SEPT\`       | \`3.5rem\`                   |
-| **Other**      |                          |                            |
-| 0.5rem (8px)   | \`GEL_MARGIN_BELOW_400PX\` | \`${MARGIN_BELOW_400PX}\`    |
-| 1rem (16px)    | \`GEL_MARGIN_ABOVE_400PX\` | \`${MARGIN_ABOVE_400PX}\`    |
-| 0.5rem (8px)   | \`GEL_GUTTER_BELOW_600PX\` | \`${GUTTER_BELOW_600PX}\`    |
-| 1rem (16px)    | \`GEL_GUTTER_ABOVE_600PX\` | \`${GUTTER_ABOVE_600PX}\`    |
-`}
-</Markdown>
-
-## Using `CSS` library with values driven by props
-
-When using the `styled` library it was possible to use any prop to return different css based on conditional logic.
-
-### Before
-
-_It was possible to pass in props to conditionally change the css_
-
-```jsx
-
-const Timestamp = styled.time`
-  ..timestampStyledProps
-  color: ${props => props.isAmp ? props.theme.palette.BLACK : props.theme.palette.GREY_3: }
-`
-```
-
-### After
-
-See [https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76](https://github.com/bbc/simorgh/blob/70ef6ad00c1eca018ab7b56bc82faaf016ecc14a/src/app/components/FrostedGlassPromo/withData.tsx#L71-L76) as an example.
-
-_Here, the value of color is based on the value of the `isAmp` variable, and this variation is added to the list of css functions already applied to the component._
-
-```jsx
-
-css={theme => [
-  styles.timestamp,
-  {
-    color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,
-  },
-]}
-```
-
-## Using `CSS` library with values driven by props within media queries
-
-When using the `styled` library it was possible to use any prop to return different css within a media query.
-
-### Before
-
-e.g. https://github.com/bbc/simorgh/blob/3dd7ead41db069ce638da887fbfe47d13e63d119/src/app/legacy/components/Footer/List/index.jsx#L49-L58
-
-In this example, `itemCount` and `trustProjectLink` are used to calculate the number of rows in `grid-template-rows`
-
-```jsx
-styled.ul`
-  ...
-    @media
-    (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN})
-    and
-    (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-column-gap: ${GEL_SPACING};
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(
-      ${({ itemCount, trustProjectLink }) =>
-        getRowCount(itemCount, 2, trustProjectLink)},
-      auto
-    );
-    column-count: 2;
+.link {
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    /* cssForGroup */
   }
+}
+```
+
+### Media query / breakpoint mappings
+
+| Before                                             | After                                        |
+| -------------------------------------------------- | -------------------------------------------- |
+| **Min widths**                                      |                                              |
+| `@media (min-width: 240px) {`                       | `theme.$mediaQueries-group-1-min-width`      |
+| `@media (min-width: 400px) {`                       | `theme.$mediaQueries-group-2-min-width`      |
+| `@media (min-width: 600px) {`                       | `theme.$mediaQueries-group-3-min-width`      |
+| `@media (min-width: 1008px) {`                      | `theme.$mediaQueries-group-4-min-width`      |
+| `@media (min-width: 1280px) {`                      | `theme.$mediaQueries-group-5-min-width`      |
+| **Max widths**                                      |                                              |
+| `@media (max-width: 239px) {`                       | `theme.$mediaQueries-group-0-max-width`      |
+| `@media (max-width: 399px) {`                       | `theme.$mediaQueries-group-1-max-width`      |
+| `@media (max-width: 599px) {`                       | `theme.$mediaQueries-group-2-max-width`      |
+| `@media (max-width: 1007px) {`                      | `theme.$mediaQueries-group-3-max-width`      |
+| `@media (max-width: 1279px) {`                      | `theme.$mediaQueries-group-4-max-width`      |
+| **Forced colours / high contrast**                  |                                              |
+| `@media screen and (forced-colors: active)`         | `theme.$mediaQueries-forced-colours`         |
+
+There are no combined "only" / "group 1 and 2" variables. Compose the min and max variables
+instead:
+
+```scss
+@media #{theme.$mediaQueries-group-1-min-width} and #{theme.$mediaQueries-group-2-max-width} {
+  /* previously GROUP_1_AND_GROUP_2 */
+}
+```
+
+### Migrating GEL spacing
+
+| Pixels | GEL spacing              | New SCSS token               |
+| ------ | ------------------------ | ---------------------------- |
+| 4px    | `GEL_SPACING_HLF`        | `theme.$spacings-half`       |
+| 8px    | `GEL_SPACING`            | `theme.$spacings-full`       |
+| 16px   | `GEL_SPACING_DBL`        | `theme.$spacings-double`     |
+| 24px   | `GEL_SPACING_TRPL`       | `theme.$spacings-triple`     |
+| 32px   | `GEL_SPACING_QUAD`       | `theme.$spacings-quadruple`  |
+| 40px   | `GEL_SPACING_QUIN`       | `theme.$spacings-quintuple`  |
+| 48px   | `GEL_SPACING_SEXT`       | `theme.$spacings-sextuple`   |
+| 8px    | `GEL_MARGIN_BELOW_400PX` | `theme.$spacings-margin-below-400px` |
+| 16px   | `GEL_MARGIN_ABOVE_400PX` | `theme.$spacings-margin-above-400px` |
+| 8px    | `GEL_GUTTER_BELOW_600PX` | `theme.$spacings-gutter-below-600px` |
+| 16px   | `GEL_GUTTER_ABOVE_600PX` | `theme.$spacings-gutter-above-600px` |
+
+`GEL_SPACING_HLF_TRPL` (12px) and `GEL_SPACING_SEPT` (56px) have no token. Use
+`theme.pixelsToRem-px-to-rem(12)` / `theme.pixelsToRem-px-to-rem(56)`.
+
+### Values driven by props
+
+With `styled` it was possible to vary CSS from any prop. With SCSS Modules, keep the
+conditional logic in the component and select between classes.
+
+#### Before
+
+```jsx
+const Timestamp = styled.time`
+  color: ${props =>
+    props.isAmp ? props.theme.palette.BLACK : props.theme.palette.GREY_3};
 `;
 ```
 
-### After
+#### After
 
-In this example, we have created a function which can take `itemCount` and `trustProjectLink` as a prop, and return the correct `gridTemplateRows` for the respective breakpoints.
+**(index.module.scss)**
 
-```ts
-const gridTemplateRows = ({
-  itemCount,
-  trustProjectLink,
-}: {
-  itemCount: number;
-  trustProjectLink?: FooterLink;
-}) =>
-  css({
-    [GROUP_1_AND_GROUP_2]: {
-      gridTemplateRows: `repeat(${getRowCount({
-        itemCount,
-        columns: 2,
-        trustProjectLink,
-      })}, auto)`,
-    },
-    ...
-  })
+```scss
+@use '@scss/themeTokens' as theme;
 
+.timestamp {
+  color: theme.$palette-grey-6;
+}
+
+.timestampAmp {
+  color: theme.$palette-black;
+}
 ```
 
-This function is then called from the component which requires it: https://github.com/bbc/simorgh/blob/2972055de18e470667be6a58b9c796f79eaa0e07/src/app/components/Footer/List/index.tsx#L18-L30
+**(index.tsx)**
 
 ```tsx
-css={[
-...
-  gridTemplateRows({
-    itemCount: elements.length,
-    trustProjectLink,
-  }),
-]}
+<time className={isAmp ? styles.timestampAmp : styles.timestamp}>
 ```
 
-# General Standards
+For a genuinely per-instance numeric value, set a single CSS custom property inline and
+reference it from the stylesheet, rather than generating dynamic class names:
 
-## Use `@ts-expect-error` instead of `@ts-ignore` to suppress unfixable / expected TypeScript errors
+```tsx
+<ul className={styles.list} style={{ '--row-count': rowCount } as CSSProperties}>
+```
 
-### Why?
+```scss
+.list {
+  grid-template-rows: repeat(var(--row-count), auto);
+}
+```
 
-Sometimes Typescript errors are unavoidable / cannot be fixed (usually in tests). One way to make the TS compiler ignore errors is to use `@ts-ignore`. However, usage of `@ts-expect-error` is preferred, because it requires a description explaining why the error is to be expected. If the error is then fixed in future, the TS compiler will require removal of the `@ts-expect-error` comment.
+### Dark UI and directionality
 
-### Before
+- Handle dark UI with `:global([data-is-dark-ui='true']) &` inside the `.module.scss`,
+  rather than branching in TypeScript.
+- Use logical properties (`padding-inline-start`, `margin-inline-end`) for RTL support.
+  Do not branch `className` on `dir`, and do not use `[dir='rtl']` selectors.
 
-_No idea why this syntax is ignored, and will remain this way until someone revisits the code and removes the comment._
+### Grid
 
-```jsx
+`psammead-grid` must not be used in migrated components. CSS Grid is permitted for page
+layout only, because Opera Mini falls back to inline layout. Scope any unavoidable Opera
+Mini override with `:global(.is-opera-mini) &`.
+
+## Tests
+
+- Use `src/app/components/react-testing-library-with-providers` rather than
+  `@testing-library/react` directly, so context providers are applied.
+- **Delete legacy snapshot files.** Snapshots assert on markup and will fail on every
+  styling change without describing intended behaviour. Replace them with behavioural
+  assertions.
+- Legacy components often branch on `isAmp`. Verify the canonical, AMP and Lite render
+  paths.
+- Be service-aware: check per-service branching (variants, translations, directionality)
+  and test at least one RTL service (for example `arabic`) alongside a Latin-script one.
+
+## General Standards
+
+### Use `@ts-expect-error` instead of `@ts-ignore`
+
+`@ts-expect-error` requires a description, and the compiler will flag it once the underlying
+error is fixed, prompting removal. `@ts-ignore` silently rots.
+
+#### Before
+
+```ts
 // @ts-ignore
 broken.typescript.syntax;
 ```
 
-### After
+#### After
 
-_A reason explaining why the syntax is ignored. Once the fix is merged in a future PR, the TS compiler should throw an error, meaning that this comment must then be removed._
-
-```jsx
+```ts
 // @ts-expect-error ignoring broken TS syntax until ticket 12345 is merged
 broken.typescript.syntax;
 ```
