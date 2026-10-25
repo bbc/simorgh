@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 
 const styles = {
   link: ({ palette, fontSizes, fontVariants }: Theme) =>
@@ -87,14 +87,14 @@ const styles = {
 
   gridPaddingLtr: () =>
     css({
-      [`@supports (${grid})`]: {
+      [`@supports (${GRID_SUPPORT_QUERY})`]: {
         paddingRight: 0,
       },
     }),
 
   gridPaddingRtl: () =>
     css({
-      [`@supports (${grid})`]: {
+      [`@supports (${GRID_SUPPORT_QUERY})`]: {
         paddingLeft: 0,
       },
     }),

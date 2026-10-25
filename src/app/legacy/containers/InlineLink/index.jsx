@@ -1,5 +1,5 @@
 import { use } from 'react';
-import InlineLink from '#psammead/psammead-inline-link/src';
+import InlineLink from '#app/components/InlineLink';
 import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -14,8 +14,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   const linkText = pathOr(null, [0, 'model', 'text'], blocks);
   return (
     <InlineLink
-      href={makeRelativeUrlPath(locator)}
-      className="focusIndicatorReducedWidth"
+      to={makeRelativeUrlPath(locator)}
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
       onClick={event => {
         if (onClick) {

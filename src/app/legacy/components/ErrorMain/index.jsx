@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import InlineLink from '#psammead/psammead-inline-link/src';
+import InlineLink from '#app/components/InlineLink';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -86,12 +86,7 @@ const ErrorMain = ({
       </ul>
       <CustomParagraph>
         {callToActionFirst}
-        <InlineLink
-          href={callToActionLinkUrl}
-          className="focusIndicatorReducedWidth"
-        >
-          {callToActionLinkText}
-        </InlineLink>
+        <InlineLink to={callToActionLinkUrl} text={callToActionLinkText} />
         {callToActionLast}
       </CustomParagraph>
     </Grid>

@@ -1,6 +1,6 @@
 import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
-import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
+import GlobalStyles from '#app/components/GlobalStyles';
 import { Navigation, PageTypes } from '#app/models/types/global';
 import { MetadataTaggings } from '#app/models/types/metadata';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
