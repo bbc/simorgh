@@ -14,7 +14,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { grid } from '#psammead/psammead-styles/src/detection';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 import ImageGridItem from './ImageStyles';
 import TextGridItem from './TextStyles';
 
@@ -38,7 +38,7 @@ const wrapperStyles = {
 
 const StoryPromoWrapper = styled.div`
   position: relative; /* This is needed to contain the faux-block-link to the Story Promo */
-  @supports (${grid}) {
+  @supports (${GRID_SUPPORT_QUERY}) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: ${GEL_SPACING};
