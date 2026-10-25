@@ -99,6 +99,29 @@ module.exports = {
       },
     ],
     'jsx-a11y/no-redundant-roles': 'off',
+    // The #components, #containers and #psammead aliases resolve into src/app/legacy.
+    // Ratchet: warn now, raise to error once the remaining legacy modules are migrated.
+    'no-restricted-imports': [
+      'warn',
+      {
+        patterns: [
+          {
+            group: [
+              // The leading '#' must be escaped: these patterns are matched with
+              // gitignore semantics, where an unescaped leading '#' is a comment.
+              '\\#components/*',
+              '\\#components/**',
+              '\\#containers/*',
+              '\\#containers/**',
+              '\\#psammead/*',
+              '\\#psammead/**',
+            ],
+            message:
+              'This resolves into src/app/legacy. Import a migrated component from #app/components instead, or migrate it — see docs/Coding-Standards/Migrating-Legacy-Components.mdx',
+          },
+        ],
+      },
+    ],
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
     'cypress/no-assigning-return-values': 'error',
@@ -115,6 +138,13 @@ module.exports = {
     },
   },
   overrides: [
+    {
+      // Legacy modules necessarily import each other via these aliases until migrated.
+      files: ['src/app/legacy/**'],
+      rules: {
+        'no-restricted-imports': 'off',
+      },
+    },
     {
       files: ['**/*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
