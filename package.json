@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "sideEffects": [
     "./src/app/legacy/psammead/moment-timezone-include/**/*.*",
-    "./src/app/legacy/psammead/psammead-locales/**/*.*",
+    "./src/app/lib/locales/**/*.*",
     "**/*.scss",
     "**/*.css"
   ],

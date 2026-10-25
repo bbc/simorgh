@@ -1,5 +1,5 @@
 const moment = require('moment');
-const numerals = require('../src/numerals/index');
+const numerals = require('../numerals/index');
 
 // eslint-disable-next-line import/prefer-default-export
 export const months = [

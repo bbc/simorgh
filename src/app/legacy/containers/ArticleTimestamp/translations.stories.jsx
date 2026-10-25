@@ -15,9 +15,9 @@ import PromoTimestamp from '#components/Promo/timestamp';
 import ArticleTimestamp from '#containers/ArticleTimestamp';
 import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
 
-import readme from '../README.md';
 import WithTimeMachine from '#src/testHelpers/withTimeMachine';
-import { REITH_SANS } from '../../../../components/ThemeProvider/fontFamilies';
+import readme from '../../../lib/locales/README.md';
+import { REITH_SANS } from '../../../components/ThemeProvider/fontFamilies';
 
 const ws = services.ws.default;
 
@@ -225,8 +225,7 @@ timeFunctions.push(
       subheading: `Most Read Timestamp: article more than 60 days old`,
     },
     ({ service, variant }) => {
-      const { articleTimestampPrefix, script, locale, timezone } =
-        use(ServiceContext);
+      const { articleTimestampPrefix, locale, timezone } = use(ServiceContext);
 
       return (
         <WithService service={service} variant={variant}>
@@ -329,7 +328,7 @@ timeFunctions.push(
         </WithService>
       );
     },
-  ]
+  ],
 );
 
 timeFunctions.push({ heading: '' });
@@ -341,7 +340,7 @@ timeFunctions.push({
   subheading: 'Date (including Ordinal)',
 });
 
-Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
+Array.from({ length: 31 }, (_, index) => index).forEach(day => {
   timeFunctions.push(({ locale }) => {
     const numeral = moment('20240101')
       .locale(locale)
@@ -352,15 +351,15 @@ Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
       .add(day, 'days')
       .format('Do');
 
-    return `${numeral} ${ordinal !== numeral ? '(' + ordinal + ')' : ''}`;
+    return `${numeral} ${ordinal !== numeral ? `(${ordinal})` : ''}`;
   });
 });
 
 timeFunctions.push({ subheading: 'Month' });
 
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
+Array.from({ length: 12 }, (_, index) => index).forEach(month => {
   timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(month, 'months').format('MMMM')
+    moment('20240101').locale(locale).add(month, 'months').format('MMMM'),
   );
 });
 
@@ -371,7 +370,7 @@ timeFunctions.push({
   subheading: `Year (±5 from ${currentYear})`,
 });
 
-years.forEach((year) => {
+years.forEach(year => {
   timeFunctions.push(({ locale, altCalendar }) => {
     const thisYear = moment(`${year}0101`).locale(locale);
     const formattedYear = thisYear.format('YYYY');
@@ -385,13 +384,13 @@ years.forEach((year) => {
 
 const Table = styled.table`
   margin: ${GEL_SPACING_DBL};
-  border: 1px solid ${(props) => props.theme.palette.PEBBLE};
+  border: 1px solid ${props => props.theme.palette.PEBBLE};
   font-family: ${REITH_SANS};
 
   & td,
   th {
     padding: ${GEL_SPACING_HLF} ${GEL_SPACING};
-    border: 1px solid ${(props) => props.theme.palette.PEBBLE};
+    border: 1px solid ${props => props.theme.palette.PEBBLE};
   }
 `;
 
@@ -400,7 +399,7 @@ const Paragraph = styled.p`
   margin: ${GEL_SPACING_DBL};
 `;
 
-const issueHref = (localeName) =>
+const issueHref = localeName =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
 const Component = ({ service, variant, dir, locale, altCalendar }) => {
@@ -416,6 +415,7 @@ const Component = ({ service, variant, dir, locale, altCalendar }) => {
               {service} {variant !== 'default' && variant} ({locale})
             </th>
           </tr>
+          {/* eslint-disable react/no-array-index-key -- timeFunctions is a static, append-only list that is never reordered */}
           {timeFunctions.map((timeFunction, index) => {
             if (typeof timeFunction === 'function') {
               return (
