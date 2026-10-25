@@ -69,7 +69,7 @@ For an example see Usage, below.
 
 ```jsx
 import moment from 'moment';
-import '#psammead/psammead-locales/moment/ig';
+import '#lib/locales/moment/ig';
 
 moment.locale('ig');
 ```
@@ -80,7 +80,7 @@ moment.locale('ig');
 import {
   Bengali,
   makeNumeralTranslator,
-} from '#psammead/psammead-locales/numerals';
+} from '#lib/locales/numerals';
 
 const translateNumerals = makeNumeralTranslator(Bengali);
 const result = translateNumerals(someInput); // returns someInput with numbers translated to Bengali
@@ -92,7 +92,7 @@ const result = translateNumerals(someInput); // returns someInput with numbers t
 
 Adding a new locale is necessary when the locale is not already supported by Moment.js i.e. there is no matching locale in the [Moment.js library](https://github.com/moment/moment/tree/develop/src/locale)
 
-- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/new-locale](./moment/templates/new-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`pcm` for Pidgin](./moment/pcm)
+- Copy [src/app/lib/locales/moment/templates/new-locale](./moment/templates/new-locale), paste into the [src/app/lib/locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`pcm` for Pidgin](./moment/pcm)
 - Use `moment.defineLocale('new-locale', { ... })` to define the [required locale fields](#required-locale-fields)
 - Update `index.test.ts` as required - replacing `new-locale` with the desired locale & fixing test assertions
 - [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires a new locale
@@ -101,7 +101,7 @@ Adding a new locale is necessary when the locale is not already supported by Mom
 
 Overwriting a locale is necessary when the default Moment.js locale does not meet editorial or UX requirements e.g. when formatting needs to be more culturally accurate or simplified for a specific audience.
 
-- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/update-locale](./moment/templates/update-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`zh-tw` for Zhongwen](./moment/zh-tw)
+- Copy [src/app/lib/locales/moment/templates/update-locale](./moment/templates/update-locale), paste into the [src/app/lib/locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`zh-tw` for Zhongwen](./moment/zh-tw)
 - Use `moment.updateLocale('update-locale', { ... })` to override any/all of the [required locale fields](#required-locale-fields)
 - Update `index.test.ts` as required - replacing `update-locale` with the desired locale & fixing test assertions
 - [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires an updated locale
@@ -110,7 +110,7 @@ Overwriting a locale is necessary when the default Moment.js locale does not mee
 
 Extending a locale is necessary Use creating a regional variant that mostly reuses an existing Moment.js locale.
 
-- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/extend-locale](./moment/templates/extend-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`fa-af` for Dari](./moment/fa-af)
+- Copy [src/app/lib/locales/moment/templates/extend-locale](./moment/templates/extend-locale), paste into the [src/app/lib/locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`fa-af` for Dari](./moment/fa-af)
 - Use `moment.defineLocale('extend-locale', { parentLocale: 'base-locale', ... })` to override any/all of the [required locale fields](#required-locale-fields)
 - Update `index.test.ts` as required - replacing `extend-locale` with the desired locale & fixing test assertions
 - [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires an extended locale
@@ -133,7 +133,7 @@ Extending a locale is necessary Use creating a regional variant that mostly reus
 In `src/app/lib/config/services/<service>.ts`
 
 ```jsx
-import '#psammead/psammead-locales/moment/locale-name';
+import '#lib/locales/moment/locale-name';
 
 export default {
   ...
