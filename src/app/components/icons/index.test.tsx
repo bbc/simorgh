@@ -1,5 +1,5 @@
 import { render } from '#app/components/react-testing-library-with-providers';
-import { Chevron, ChevronOrientation, Close } from '.';
+import { Chevron, ChevronOrientation, Close, ExternalSvg } from '.';
 
 describe('icons', () => {
   it('loads shared icons from the static-assets CDN', () => {
@@ -22,5 +22,20 @@ describe('icons', () => {
       'src',
       expect.stringContaining('images/icons/chevron-backward.svg'),
     );
+  });
+
+  it('preserves CSS-unit dimensions for external SVG images', () => {
+    const { container } = render(
+      <ExternalSvg
+        path="images/icons/success.svg"
+        width="4rem"
+        height="4rem"
+      />,
+    );
+
+    expect(container.querySelector('img')).toHaveStyle({
+      width: '4rem',
+      height: '4rem',
+    });
   });
 });

@@ -29,16 +29,10 @@ const styles = {
         textDecoration: 'underline',
         textUnderlineOffset: `${pixelsToRem(4)}rem`,
       },
-      svg: {
+      '.external-svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         marginInlineEnd: `${spacings.FULL}rem`,
-        path: {
-          fill: palette.WHITE,
-          [mq.FORCED_COLOURS]: {
-            fill: 'canvas',
-          },
-        },
       },
     }),
   container: ({ spacings }: Theme) =>

@@ -37,22 +37,17 @@ export default {
       border: 'unset',
       textAlign: 'start',
     }),
-  watchLiveCTAText: ({ spacings, palette, mq }: Theme) =>
+  watchLiveCTAText: ({ spacings, palette }: Theme) =>
     css({
       color: palette.WHITE,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      svg: {
+      '.external-svg': {
         height: `${spacings.DOUBLE}rem`,
         width: `${spacings.DOUBLE}rem`,
         verticalAlign: 'middle',
-        fill: 'currentcolor',
-        color: palette.WHITE,
         marginInlineEnd: `${spacings.FULL}rem`,
-        [mq.FORCED_COLOURS]: {
-          color: 'buttonText',
-        },
       },
       'button:hover &, button:focus-visible &': {
         textDecoration: 'underline',
@@ -90,18 +85,13 @@ export default {
       lineHeight: 0,
       alignItems: 'center',
     }),
-  closeContainer: ({ spacings, palette, mq }: Theme) =>
+  closeContainer: ({ spacings, palette }: Theme) =>
     css({
       verticalAlign: 'center',
-      svg: {
-        fill: 'currentcolor',
-        color: palette.WHITE,
+      '.external-svg': {
         height: `${spacings.DOUBLE}rem`,
         width: `${spacings.DOUBLE}rem`,
         margin: `${pixelsToRem(13)}rem`,
-        [mq.FORCED_COLOURS]: {
-          color: 'buttonText',
-        },
       },
       backgroundColor: palette.BLACK,
       border: `${palette.WHITE} solid ${pixelsToRem(1)}rem`,

@@ -30,6 +30,15 @@ export const ExternalSvg = ({
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
   } = getEnvConfig();
   const classes = [className, 'external-svg'];
+  const hasCssLength = [width, height].some(
+    dimension => dimension && Number.isNaN(Number(dimension)),
+  );
+  const dimensions = hasCssLength
+    ? {
+        ...(width && Number.isNaN(Number(width)) ? { width } : {}),
+        ...(height && Number.isNaN(Number(height)) ? { height } : {}),
+      }
+    : undefined;
 
   if (!isColoured) classes.push(styles.externalSvg);
   if (isInverted) classes.push(styles.inverted);
@@ -44,6 +53,7 @@ export const ExternalSvg = ({
       src={`${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${
         path || `images/icons/${name}.svg`
       }`}
+      style={dimensions}
       width={width}
     />
   );
@@ -139,16 +149,19 @@ export const Close = ({
   className,
   width = '12',
   height = '12',
+  isInverted,
 }: {
   className?: string;
   width?: string;
   height?: string;
+  isInverted?: boolean;
 }) => (
   <ExternalSvg
     name="close"
     className={className}
     width={width}
     height={height}
+    isInverted={isInverted}
   />
 );
 

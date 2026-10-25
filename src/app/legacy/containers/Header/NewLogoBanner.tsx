@@ -26,7 +26,6 @@ const NewLogoBanner = () => {
         <ExternalSvg
           path="images/icons/ws-header-logo.svg"
           width="117"
-          height="48"
           isColoured
         />
       </a>

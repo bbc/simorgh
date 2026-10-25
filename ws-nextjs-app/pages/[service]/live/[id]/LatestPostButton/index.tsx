@@ -7,7 +7,9 @@ import styles from './styles';
 
 const TEN_SECONDS = 10 * 1000;
 
-const RefreshSvg = () => <ExternalSvg path="images/icons/refresh.svg" />;
+const RefreshSvg = () => (
+  <ExternalSvg path="images/icons/refresh.svg" isInverted />
+);
 
 interface LatestPostButtonProps {
   isFirstPostVisible: boolean;

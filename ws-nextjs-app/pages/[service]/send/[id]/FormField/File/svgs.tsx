@@ -3,11 +3,23 @@ import styles from './styles';
 
 export const UploadSvg = () => (
   <span css={styles.fileUploadIcon}>
-    <ExternalSvg path="images/icons/upload.svg" />
+    <ExternalSvg
+      path="images/icons/upload.svg"
+      width="14"
+      height="14"
+      isInverted
+    />
   </span>
 );
 
-export const DeleteSvg = () => <ExternalSvg path="images/icons/delete.svg" />;
+export const DeleteSvg = () => (
+  <ExternalSvg
+    path="images/icons/delete.svg"
+    width="17"
+    height="18"
+    isInverted
+  />
+);
 
 export const VIDEO_SVG_DATA_URI =
   "data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg' focusable='false' aria-hidden='true'%0A%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cpath d='M.5.6h12v12H.5z' /%3E%3Cpath fill='currentColor' d='M2.144.96v11.28l8.712-5.64z' /%3E%3C/g%3E%3C/svg%3E";
