@@ -1,5 +1,5 @@
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
-import '#psammead/psammead-locales/moment/az';
+import '#lib/locales/moment/az';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

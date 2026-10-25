@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
-import '#psammead/psammead-locales/moment/ne';
+import '#lib/locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
