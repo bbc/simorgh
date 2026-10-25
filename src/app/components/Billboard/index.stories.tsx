@@ -123,6 +123,10 @@ export const PidginLiveWithFourSummaries = () => {
   );
 };
 
+PidginLiveWithFourSummaries.globals = {
+  service: { service, variant },
+};
+
 export const PidginLiveWithFiveSummaries = () => {
   const summary = pidginLiveBillboard.summaries[0];
   return (
@@ -140,6 +144,10 @@ export const PidginLiveWithFiveSummaries = () => {
       </ServiceContextProvider>
     </ThemeProvider>
   );
+};
+
+PidginLiveWithFiveSummaries.globals = {
+  service: { service, variant },
 };
 
 export const PersianBillboard = () => {

@@ -3,13 +3,19 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
 } from '#app/hooks/useTopicFollowButton';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
 
 import type { FollowTopicButtonProps } from '../index';
 
-const FollowTopicButtonAuthenticated = ({
+const FollowTopicButtonAuthenticatedInner = ({
   topicData,
 }: FollowTopicButtonProps) => {
   const { translations } = use(ServiceContext);
@@ -33,6 +39,18 @@ const FollowTopicButtonAuthenticated = ({
       resourceId: topicId,
     },
   });
+
+  // Temporary: uncomment for testing follow topic button render error
+  // Add ?testFollowTopicRenderError=1 to the topic page url
+
+  // if (
+  //   typeof window !== 'undefined' &&
+  //   new URLSearchParams(window.location.search).has(
+  //     'testFollowTopicRenderError',
+  //   )
+  // ) {
+  //   throw new Error('Test follow-topic render failure');
+  // }
 
   if (!followTopicButton) return null;
 
@@ -84,5 +102,28 @@ const FollowTopicButtonAuthenticated = ({
     />
   );
 };
+
+const FollowTopicButtonErrorFallback = ({ error }: { error: Error }) => {
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.RENDER,
+  });
+
+  return null;
+};
+
+const renderFollowTopicButtonErrorFallback = (error: Error) => (
+  <FollowTopicButtonErrorFallback error={error} />
+);
+
+const FollowTopicButtonAuthenticated = (props: FollowTopicButtonProps) => (
+  <ErrorBoundary
+    componentName="FollowTopicButtonAuthenticated"
+    fallback={renderFollowTopicButtonErrorFallback}
+  >
+    <FollowTopicButtonAuthenticatedInner {...props} />
+  </ErrorBoundary>
+);
 
 export default FollowTopicButtonAuthenticated;
