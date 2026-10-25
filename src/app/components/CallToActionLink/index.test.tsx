@@ -22,7 +22,7 @@ describe('Call To Action Link', () => {
       </CallToActionLink>,
     );
     const link = screen.getByText('My Link Text');
-    const [chevron] = container.getElementsByTagName('svg');
+    const [chevron] = container.getElementsByClassName('external-svg');
     expect(link).toBeInTheDocument();
     expect(chevron).toBeInTheDocument();
   });

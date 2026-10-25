@@ -673,7 +673,9 @@ test.describe('homePage', () => {
 
             await gotoHomePage(page, testSuite.path);
 
-            const images = page.locator('img:not([data-testid="embed"] img)');
+            const images = page.locator(
+              'img:not(.external-svg):not([data-testid="embed"] img)',
+            );
             const imageCount = await images.count();
 
             // eslint-disable-next-line no-plusplus

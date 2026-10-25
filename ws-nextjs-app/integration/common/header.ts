@@ -28,13 +28,13 @@ export default service => {
 
       expect(brandingTextElement?.textContent).toBeTruthy();
 
-      const svg = logo.querySelector('g path');
+      expect(logo.tagName).toBe('IMG');
+      expect(logo).toHaveClass('external-svg');
+      expect(logo).toHaveAttribute('src', expect.stringMatching(/brand\.svg$/));
+
       const brandText = brandingTextElement?.textContent ?? '';
 
-      expect({
-        svg,
-        brandLink: brandText,
-      }).toMatchSnapshot();
+      expect(brandText).toBeTruthy();
     });
 
     if (service !== 'news' && service !== 'scotland') {

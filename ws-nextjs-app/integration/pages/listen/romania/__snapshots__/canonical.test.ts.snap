@@ -114,15 +114,6 @@ exports[`Canonical Listen Footer I can click on the BBC branding and it would ta
 
 exports[`Canonical Listen Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nu este responsabil de conținutul altor site-uri. Aflați mai multe despre politica noastră privind utilizarea link-urilor externe"`;
 
-exports[`Canonical Listen Header I can see the branding 1`] = `
-{
-  "brandLink": "BBC News, România",
-  "svg": <path
-    d="M174.426 34.9999C172.244 31.5036 170.034 28.0002 167.797 24.4894C165.558 20.9794 163.349 17.5737 161.167 14.2729V34.9999H154.958V5.00024H161.503C163.769 8.38495 165.999 11.7764 168.195 15.175C170.391 18.5734 172.58 22.0211 174.762 25.5174V5.00024H180.971V34.9999H174.426Z"
-  />,
-}
-`;
-
 exports[`Canonical Listen Header Navigation link should match text and url 1`] = `
 {
   "text": "Ultimele știri",
@@ -203,7 +194,7 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 exports[`Canonical Listen SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/romania/images/icons/icon-192x192.png",
+  "url": "http://localhost:7080/romania/images/icons/icon-192x192.png",
 }
 `;
 

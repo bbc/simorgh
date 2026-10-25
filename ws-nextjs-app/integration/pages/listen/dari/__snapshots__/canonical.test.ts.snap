@@ -114,15 +114,6 @@ exports[`Canonical Listen Footer I can click on the BBC branding and it would ta
 
 exports[`Canonical Listen Footer Paragraphs should match text 1`] = `"© 2026 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`Canonical Listen Header I can see the branding 1`] = `
-{
-  "brandLink": "BBC News, دری",
-  "svg": <path
-    d="M175.28242,212.59656c-7.73097-12.38836-15.56197-24.80214-23.48976-37.24187-7.9305-12.43703-15.75934-24.50473-23.48976-36.2004v73.44228h-22.00327V106.29836h23.19235c8.02837,11.99308,15.93075,24.00995,23.71309,36.05224,7.77909,12.04175,15.53547,24.25815,23.26644,36.64652V106.29836h22.00327v106.2982h-23.19235Z"
-  />,
-}
-`;
-
 exports[`Canonical Listen Header Navigation link should match text and url 1`] = `
 {
   "text": "صفحه اول",
@@ -203,7 +194,7 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 exports[`Canonical Listen SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7081/dari/images/icons/icon-192x192.png",
+  "url": "http://localhost:7080/dari/images/icons/icon-192x192.png",
 }
 `;
 
