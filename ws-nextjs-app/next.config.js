@@ -71,7 +71,7 @@ module.exports = {
         destination: '/:service/articles/:id',
       },
       {
-        source: `/:service/watch/:id(${optimoIdPattern})/:variant(\\.app)?`,
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
         destination: '/:service/articles/:id/:variant',
       },
       {
@@ -79,7 +79,7 @@ module.exports = {
         destination: '/:service/articles/:id',
       },
       {
-        source: `/:service/listen/:id(${optimoIdPattern})/:variant(\\.app)?`,
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
         destination: '/:service/articles/:id/:variant',
       },
     ];

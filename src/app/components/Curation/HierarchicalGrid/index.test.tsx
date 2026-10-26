@@ -19,6 +19,11 @@ jest.mock('../../MediaLoader', () => ({
   )),
 }));
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const minimalEventTrackingData = { componentName: 'test-component' };
 
 const getSummariesWithInSituMedia = () => {

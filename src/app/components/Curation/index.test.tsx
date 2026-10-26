@@ -25,6 +25,11 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 jest.mock('../ThemeProvider');
 
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
