@@ -16,6 +16,7 @@ describe('image PoC preparation', () => {
     );
   });
 
+  // The source policy belongs to the custom loader, not Next.js remotePatterns.
   it.each([
     'http://ichef.bbci.co.uk/ace/ws/{width}/image.jpg',
     'https://example.com/ace/ws/{width}/image.jpg',

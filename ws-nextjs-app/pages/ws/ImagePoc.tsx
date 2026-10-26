@@ -1,5 +1,6 @@
 import ImagePocComparison from './ImagePocComparison';
 
+// Keep the experiment on its own page; production image consumers are unchanged.
 const ImagePoc = () => (
   <main
     style={{

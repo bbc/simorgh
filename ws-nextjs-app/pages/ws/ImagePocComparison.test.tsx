@@ -17,44 +17,66 @@ describe('Image suitability PoC', () => {
     render(<ImagePocComparison />);
     expect(
       await screen.findByRole('heading', {
-        name: 'Main differences, pros and cons',
+        name: 'Main differences',
       }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Renders a real Next.js Image with a custom iChef loader.',
+      ),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Renders the existing Simorgh Image primitive and its prepared srcSet.',
+      ),
     ).toBeInTheDocument();
     expect(screen.getAllByRole('heading', { name: 'Pros' })).toHaveLength(2);
     expect(screen.getAllByRole('heading', { name: 'Cons' })).toHaveLength(2);
     expect(
       screen.getByRole('heading', {
-        name: 'Overall winner for “Eager image”: Current Simorgh Image',
+        name: 'Adoption assessment: 01 - Eager image (most common)',
       }),
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        'Best fit for this scenario, not a proven performance winner.',
+        'Target: Next.js-based BBC adapter, not a proven performance winner.',
       ),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/Overall recommendation: revisit later/),
+      screen.getByText(/Overall recommendation: full replacement/),
     ).toBeInTheDocument();
     expect(
       screen.getByText(/No production migration without team agreement/),
     ).toBeInTheDocument();
   });
 
-  it('updates the winner explanation when the selected scenario changes', () => {
+  it('updates the assessment when the selected scenario changes', () => {
     render(<ImagePocComparison />);
     fireEvent.change(screen.getByLabelText('Example:'), {
       target: { value: 'missing' },
     });
     expect(
       screen.getByRole('heading', {
-        name: 'Overall winner for “Missing source / BBC placeholder”: Current Simorgh Image',
+        name: 'Adoption assessment: 02 - Missing source / BBC placeholder',
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(
-        /retains the BBC placeholder and missing-source behaviour/,
-      ),
+      screen.getByText(/owns the BBC placeholder and missing-source layout/),
     ).toBeInTheDocument();
+    expect(
+      screen.getByText('Owns the missing-source placeholder without rendering an image.'),
+    ).toBeInTheDocument();
+  });
+
+  it('uses the service direction for the comparison layout', async () => {
+    render(<ImagePocComparison />, { service: 'arabic' });
+    expect(
+      (
+        await screen.findByRole('heading', {
+          name: 'Compare the actual renderers',
+        })
+      ).closest('section'),
+    ).toHaveAttribute('dir', 'rtl');
   });
 
   it.each(['next', 'current'] as const)(
@@ -113,7 +135,15 @@ describe('Image suitability PoC', () => {
         { pageType: HOME_PAGE },
       );
       expect(screen.getByRole('img')).toHaveAttribute('height', '832');
-      expect(screen.getByRole('img')).toHaveStyle({ aspectRatio: '3 / 4' });
+      if (renderer === 'next') {
+        expect(container.querySelector('.wrapper')).toHaveStyle({
+          '--image-aspect-ratio': '3 / 4',
+        });
+      } else {
+        expect(screen.getByRole('img')).toHaveStyle({
+          aspectRatio: '3 / 4',
+        });
+      }
       expect(container.querySelector('source')).toHaveAttribute(
         'sizes',
         POC_PORTRAIT_SIZES,
@@ -130,13 +160,20 @@ describe('Image suitability PoC', () => {
       expect(
         container.querySelector('img, picture, source'),
       ).not.toBeInTheDocument();
-      expect(container.firstChild).toHaveStyle({ paddingBottom: '56.25%' });
+      if (renderer === 'next') {
+        expect(container.firstChild).toHaveClass('placeholder');
+        expect(container.firstChild).toHaveStyle({
+          '--image-aspect-ratio': '16 / 9',
+        });
+      } else {
+        expect(container.firstChild).toHaveStyle({ paddingBottom: '56.25%' });
+      }
       expect(container.innerHTML).not.toContain('undefined');
     },
   );
 
   it.each(['next', 'current'] as const)(
-    '%s delegates AMP to amp-img',
+    '%s renders AMP with amp-img',
     renderer => {
       const { container } = render(
         <ImagePocExample renderer={renderer} scenario="eager" />,
@@ -175,7 +212,7 @@ describe('Image suitability PoC', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 
-  it('exposes AMP and Lite delegation as explicitly labelled examples', () => {
+  it('exposes AMP and Lite rendering as explicitly labelled examples', () => {
     const { container } = render(<ImagePocComparison />);
     fireEvent.change(screen.getByLabelText('Example:'), {
       target: { value: 'amp' },
@@ -183,7 +220,7 @@ describe('Image suitability PoC', () => {
     expect(container.querySelectorAll('amp-img')).toHaveLength(2);
     expect(
       screen.getByRole('option', {
-        name: 'AMP delegation (markup preview, not a valid AMP page)',
+        name: '08 - AMP rendering (markup preview, not a valid AMP page)',
       }),
     ).toBeInTheDocument();
     fireEvent.change(screen.getByLabelText('Example:'), {

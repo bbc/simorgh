@@ -5,6 +5,8 @@ import ImagePoc from '../ws/ImagePoc';
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service } = context.query;
 
+  // Supply the app shell's required metadata without fetching a production page.
+  // HOME_PAGE also enables the legacy primitive's picture-format fallback.
   return {
     props: {
       pageType: HOME_PAGE,
