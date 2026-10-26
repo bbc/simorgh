@@ -2,6 +2,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
+import interceptArticleOnwardJourney from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { FEATURES } = COMPONENTS;
 
@@ -13,7 +14,11 @@ export const assertFeaturesAnalysisComponentView = ({
 }: AtiAssertionFnProps) => {
   it('should send a view event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
+    const onwardJourney = interceptArticleOnwardJourney(
+      'topStoriesAndFeatures',
+    );
     cy.visit(path);
+    cy.wait(onwardJourney);
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
@@ -36,7 +41,11 @@ export const assertFeaturesAnalysisComponentClick = ({
 }: AtiAssertionFnProps) => {
   it('should send a click event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
+    const onwardJourney = interceptArticleOnwardJourney(
+      'topStoriesAndFeatures',
+    );
     cy.visit(path);
+    cy.wait(onwardJourney);
 
     cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
 

@@ -2,6 +2,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
+import interceptArticleOnwardJourney from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { TOP_BAR_OJ } = COMPONENTS;
 
@@ -13,8 +14,12 @@ export const assertTopBarOJComponentView = ({
 }: AtiAssertionFnProps) => {
   it('should send a view event for the Top Bar OJ component', () => {
     interceptATIAnalyticsBeacons();
+    const onwardJourney = interceptArticleOnwardJourney(
+      'topStoriesAndFeatures',
+    );
 
     cy.visit(path);
+    cy.wait(onwardJourney);
 
     cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView({
       duration: 1000,
@@ -37,8 +42,12 @@ export const assertTopBarOJComponentClick = ({
 }: AtiAssertionFnProps) => {
   it('should send a click event for the Top Bar OJ component', () => {
     interceptATIAnalyticsBeacons();
+    const onwardJourney = interceptArticleOnwardJourney(
+      'topStoriesAndFeatures',
+    );
 
     cy.visit(path);
+    cy.wait(onwardJourney);
 
     cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView({
       duration: 1000,
