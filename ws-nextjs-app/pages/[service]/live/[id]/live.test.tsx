@@ -66,6 +66,12 @@ jest.mock('#app/components/PortraitVideoCarousel', () => ({
   default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
 }));
 
+// Real media collections pull in the actual player bootstrap, which injects scripts jsdom can't run.
+jest.mock('#app/components/MediaLoader', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="media-loader" />),
+}));
+
 jest.mock('#app/hooks/useToggle', () => ({
   __esModule: true,
   default: jest.fn(() => ({ enabled: true })),
