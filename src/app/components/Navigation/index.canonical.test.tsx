@@ -865,6 +865,26 @@ describe('Navigation - Canonical', () => {
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
       });
 
+      it('closes a dropdown opened in the original navigation before the sticky navigation appears', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const menuButtons = screen.getAllByRole('button', { name: 'menu' });
+        const originalMenuButton = menuButtons[0];
+        fireEvent.click(originalMenuButton);
+        expect(originalMenuButton).toHaveAttribute('aria-expanded', 'true');
+
+        scrollTo(500);
+        scrollTo(450);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+        expect(originalMenuButton).toHaveAttribute('aria-expanded', 'false');
+        expect(screen.getAllByRole('button', { name: 'menu' })[1]).toHaveAttribute(
+          'aria-expanded',
+          'false',
+        );
+      });
+
       it('hides the sticky navigation bar a short while after Tab moves focus back up the page, even if the reader does not scroll again themselves', () => {
         const { container } = render(
           <>

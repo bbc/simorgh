@@ -126,6 +126,7 @@ const useStickyNavigation = ({
   const navRef = useRef<HTMLDivElement>(null);
   const dropDownNavRef = useRef<HTMLDivElement>(null);
   const secondaryScrollRef = useRef<HTMLDivElement>(null);
+  const isOpenRef = useLatestRef(isOpen);
   const closeMenuRef = useLatestRef(closeMenu);
   // Timestamp until which a scroll position change should not count as the
   // reader deliberately scrolling. See FORWARD_TAB_SCROLL_SUPPRESSION_MS.
@@ -281,6 +282,14 @@ const useStickyNavigation = ({
       const isVisible =
         isPinned &&
         (isScrollingUp || (tracking.isVisible && !hasPassedHideDistance));
+
+      // The original and sticky navigation share the same menu state. If the
+      // original navigation was left open, close it before the sticky copy
+      // appears. This keeps the sticky dropdown closed until its own button
+      // is clicked, while still allowing that button to open it afterwards.
+      if (!tracking.isVisible && isVisible && isOpenRef.current) {
+        closeMenuRef.current();
+      }
 
       // Reset eagerly, in the same tick as the transition that hides the
       // bar, rather than from a separate effect that only runs once React
