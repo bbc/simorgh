@@ -17,6 +17,12 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(),
 }));
 
+// Real media collections pull in the actual player bootstrap, which injects scripts jsdom can't run.
+jest.mock('#app/components/MediaLoader', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="media-loader" />),
+}));
+
 describe('Live Page Header', () => {
   const electionTaggings = [
     {
@@ -32,20 +38,29 @@ describe('Live Page Header', () => {
     mockMatchMedia();
   });
 
-  const renderElectionHeader = (props = {}) =>
-    render(
-      <Header
-        title="I am a title"
-        showLiveLabel
-        taggings={electionTaggings}
-        {...props}
-      />,
-      {
-        pageType: LIVE_PAGE,
-        service: 'mundo',
-        toggles: { electionBanner: { enabled: true } },
-      },
-    );
+  const renderElectionHeader = async (props = {}) => {
+    const results: ReturnType<typeof render>[] = [];
+
+    await act(async () => {
+      results.push(
+        render(
+          <Header
+            title="I am a title"
+            showLiveLabel
+            taggings={electionTaggings}
+            {...props}
+          />,
+          {
+            pageType: LIVE_PAGE,
+            service: 'mundo',
+            toggles: { electionBanner: { enabled: true } },
+          },
+        ),
+      );
+    });
+
+    return results[0];
+  };
 
   describe('title and description', () => {
     it('should render a title and description when provided', async () => {
@@ -90,8 +105,8 @@ describe('Live Page Header', () => {
   });
 
   describe('election banner', () => {
-    it('should not render when a live media stream is present', () => {
-      const { queryByTestId } = renderElectionHeader({
+    it('should not render when a live media stream is present', async () => {
+      const { queryByTestId } = await renderElectionHeader({
         mediaCollections: liveMediaCollections,
       });
 
@@ -103,15 +118,17 @@ describe('Live Page Header', () => {
       ['empty', []],
     ])(
       'should render when the media collection is %s',
-      (_, mediaCollections) => {
-        const { getByTestId } = renderElectionHeader({ mediaCollections });
+      async (_, mediaCollections) => {
+        const { getByTestId } = await renderElectionHeader({
+          mediaCollections,
+        });
 
         expect(getByTestId('election-banner')).toBeInTheDocument();
       },
     );
 
-    it('should hide the header image when the election banner is rendered', () => {
-      const { queryByRole, getByTestId } = renderElectionHeader({
+    it('should hide the header image when the election banner is rendered', async () => {
+      const { queryByRole, getByTestId } = await renderElectionHeader({
         imageUrl:
           'https://ichef.bbci.co.uk/ace/standard/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg',
         imageUrlTemplate:
