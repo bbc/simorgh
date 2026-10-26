@@ -376,7 +376,7 @@ const useStickyNavigation = ({
         window.cancelAnimationFrame(pending.animationFrame);
       }
     };
-  }, [isEnabled, closeMenuRef]);
+  }, [isEnabled, isOpenRef, closeMenuRef]);
 
   // ---------------------------------------------------------------------
   // Animation: moving the bar between the page flow and the pinned position.

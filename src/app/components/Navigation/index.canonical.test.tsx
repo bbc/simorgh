@@ -908,10 +908,9 @@ describe('Navigation - Canonical', () => {
           container.querySelector('[data-e2e="sticky-nav"]'),
         ).toHaveAttribute('data-sticky-visible', 'true');
         expect(originalMenuButton).toHaveAttribute('aria-expanded', 'false');
-        expect(screen.getAllByRole('button', { name: 'menu' })[1]).toHaveAttribute(
-          'aria-expanded',
-          'false',
-        );
+        expect(
+          screen.getAllByRole('button', { name: 'menu' })[1],
+        ).toHaveAttribute('aria-expanded', 'false');
       });
 
       it('hides the sticky navigation bar a short while after Tab moves focus back up the page, even if the reader does not scroll again themselves', () => {
