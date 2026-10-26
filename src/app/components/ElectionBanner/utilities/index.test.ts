@@ -33,6 +33,30 @@ describe('isElectionBannerVisible', () => {
     ).toBe(true);
   });
 
+  it('returns true for an enabled banner with a matching curationId', () => {
+    const MOCK_ELECTION_CURATION_ID = 'urn:bbc:vivo:curation:874d2084';
+
+    expect(
+      isElectionBannerVisible({
+        ...getVisibilityArgs(),
+        taggings: undefined,
+        curationIds: [MOCK_ELECTION_CURATION_ID],
+        electionCurationIds: [MOCK_ELECTION_CURATION_ID],
+      }),
+    ).toBe(true);
+  });
+
+  it('returns false when no curationId matches', () => {
+    expect(
+      isElectionBannerVisible({
+        ...getVisibilityArgs(),
+        taggings: undefined,
+        curationIds: ['unrelated-curation'],
+        electionCurationIds: ['urn:bbc:vivo:curation:874d2084'],
+      }),
+    ).toBe(false);
+  });
+
   it('returns false for an editorially sensitive live page', () => {
     expect(
       isElectionBannerVisible({

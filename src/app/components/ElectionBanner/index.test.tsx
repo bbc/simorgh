@@ -35,6 +35,14 @@ const mockServiceContext = {
   },
 } as ServiceConfig;
 
+const mockServiceContextWithoutTitle = {
+  electionBanner: {
+    electionThingIds: [MOCK_ELECTION_THING_ID],
+    iframeSrc: MOCK_IFRAME_LIVE_SRC,
+    iframeDevSrc: MOCK_IFRAME_DEV_SRC,
+  },
+} as ServiceConfig;
+
 const mockAssocPressServiceContext = {
   electionBanner: {
     title: MOCK_TITLE,
@@ -46,9 +54,9 @@ const mockAssocPressServiceContext = {
 } as ServiceConfig;
 
 const renderElectionBanner = (
-  props: ComponentProps<typeof ElectionBanner> = {},
   options?: Parameters<typeof render>[1],
   serviceContext: ServiceConfig = mockServiceContext,
+  props: ComponentProps<typeof ElectionBanner> = {},
 ) =>
   render(
     <ServiceContext.Provider value={serviceContext}>
@@ -143,10 +151,23 @@ describe('ElectionBanner', () => {
       expect(iframe).toHaveAttribute('title', 'Election banner');
     });
 
-    it('should fall back to the default banner title when no aboutTag matches', () => {
+    it('should fall back to the configured banner title when no aboutTag matches', () => {
       const { getByTestId } = renderElectionBanner(
         { aboutTags: [{ thingLabel: 'thing1' }] as Tag[] },
         { isAmp, service: 'mundo' },
+      );
+
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
+
+      expect(iframe).toHaveAttribute('title', MOCK_TITLE);
+    });
+
+    it('should fall back to the generic banner title when nothing else matches', () => {
+      const { getByTestId } = renderElectionBanner(
+        {},
+        { isAmp, service: 'mundo' },
+        mockServiceContextWithoutTitle,
       );
 
       const wrappingEl = getByTestId(ELEMENT_ID);
@@ -243,3 +264,4 @@ describe('ElectionBanner', () => {
     });
   });
 });
+

@@ -1,11 +1,11 @@
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useErrorTracking from '../useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -27,10 +27,14 @@ const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
-  const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
+  const {
+    hashedUserId = '',
+    isRefreshAvailable,
+    isArticlePersonalizationEnabled,
+  } = use(AccountContext);
   const { service } = use(ServiceContext);
 
-  const trackError = useErrorTracking();
+  const isQueryEnabled = !!hashedUserId && isArticlePersonalizationEnabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.favouritesPage(hashedUserId, startIndex, service),
@@ -42,18 +46,14 @@ const useUASRecentActivity = ({
         isRefreshAvailable,
         service,
       }),
-    enabled: !!hashedUserId,
+    enabled: isQueryEnabled,
   });
 
-  useEffect(() => {
-    if (error) {
-      trackError({
-        error,
-        feature: ERROR_TRACKING_FEATURES.UAS,
-        action: UAS_ERROR_ACTIONS.RECENT_ACTIVITY,
-      });
-    }
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+    action: UAS_ERROR_ACTIONS.FETCH_ACTIVITY,
+  });
 
   return {
     savedArticles: data?.savedArticles ?? [],

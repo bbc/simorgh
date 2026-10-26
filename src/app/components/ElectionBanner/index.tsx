@@ -9,8 +9,9 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
 import styles from './index.module.scss';
 
-// Consumers (e.g. the Live page) own any page-specific style overrides and pass
-// them in here, rather than this component branching on which page it's rendered on.
+// Consumers (e.g. the Live, Home and Topic pages) own any page-specific style
+// overrides and pass them in here, rather than this component branching on
+// which page it's rendered on.
 type OverrideClassnames = {
   wrapper?: string;
   assocPressWrapper?: string;
@@ -60,7 +61,8 @@ export default function ElectionBanner({
     electionThingIds?.includes(thingId),
   );
 
-  const bannerTitle = validAboutTag?.thingLabel ?? ELECTION_BANNER_TITLE;
+  const bannerTitle =
+    validAboutTag?.thingLabel || title || ELECTION_BANNER_TITLE;
 
   const {
     SIMORGH_APP_ENV,
