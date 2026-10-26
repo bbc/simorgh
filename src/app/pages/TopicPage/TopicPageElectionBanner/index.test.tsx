@@ -2,7 +2,8 @@ import { render } from '#app/components/react-testing-library-with-providers';
 import TopicPageElectionBanner from '.';
 
 const ELEMENT_ID = 'election-banner';
-const MOCK_CURATION_ID = 'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960';
+const MOCK_CURATION_ID =
+  'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960';
 
 describe('TopicPageElectionBanner', () => {
   it('renders with its own wrapper class when a curation matches', () => {
