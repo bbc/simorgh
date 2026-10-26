@@ -119,9 +119,11 @@ describe('compareToBudget', () => {
 });
 
 test('readReport reads a file and parses it to Json', () => {
-  readReport();
+  const reportPath = 'lighthouse-reports/example.report.json';
 
-  expect(fs.readFileSync).toHaveBeenCalled();
+  readReport(reportPath);
+
+  expect(fs.readFileSync).toHaveBeenCalledWith(reportPath);
   expect(global.JSON.parse).toHaveBeenCalled();
 });
 

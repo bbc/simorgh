@@ -45,7 +45,7 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
   return result;
 };
 
-const readReport = path => {
+const readReport = (path = 'simorgh.report.json') => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
   const result = JSON.parse(rawdata);
@@ -79,8 +79,8 @@ const budget = {
 
 const testableProperties = ['ally', 'bestPractises', 'seo'];
 
-const run = () => {
-  const report = readReport('simorgh.report.json');
+const run = (reportPath = 'simorgh.report.json') => {
+  const report = readReport(reportPath);
   const extractedCategories = getCategoryScores(report);
 
   const result = compareToBudget(
@@ -110,5 +110,5 @@ module.exports = {
 const args = process.argv.slice(2);
 
 if (args[0] === 'run') {
-  run();
+  run(args[1]);
 }
