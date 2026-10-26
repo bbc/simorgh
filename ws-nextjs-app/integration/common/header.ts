@@ -6,35 +6,20 @@ export default service => {
       document.documentElement.hasAttribute('amp') ||
       window.location.pathname.endsWith('.amp');
 
-    it('I can see the branding', () => {
+    it('renders an external header brand asset with an accessible link label', () => {
       const logo = document.getElementById('brandSvgHeader');
 
       expect(logo).toBeInTheDocument();
-
-      const parentElement = logo?.parentNode as Element | null;
-
-      expect(parentElement).toBeTruthy();
-
-      if (!logo || !parentElement) return;
-
-      const brandingLink =
-        document.getElementById('topPage') ||
-        document.getElementById('brandLink');
-
-      const brandingLabelId = brandingLink?.getAttribute('aria-labelledby');
-      const brandingTextElement = brandingLabelId
-        ? document.getElementById(brandingLabelId)
-        : null;
-
-      expect(brandingTextElement?.textContent).toBeTruthy();
-
       expect(logo.tagName).toBe('IMG');
       expect(logo).toHaveClass('external-svg');
+      expect(logo).toHaveAttribute('alt', '');
+      expect(logo).toHaveAttribute('aria-hidden', 'true');
       expect(logo).toHaveAttribute('src', expect.stringMatching(/brand\.svg$/));
 
-      const brandText = brandingTextElement?.textContent ?? '';
+      const brandingLink = logo.closest('a');
 
-      expect(brandText).toBeTruthy();
+      expect(brandingLink).toBeInTheDocument();
+      expect(brandingLink).toHaveAccessibleName(/\S/);
     });
 
     if (service !== 'news' && service !== 'scotland') {
