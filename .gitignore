@@ -23,6 +23,7 @@ debug-storybook.log
 src/app/lib/config/services/*.test.js
 .env
 yarn-error.log
+.eslintcache
 .yarn/*
 !.yarn/cache
 !.yarn/patches
