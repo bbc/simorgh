@@ -54,6 +54,7 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
       {isModalOpen &&
         createPortal(
           <AccountSignInModal
+            context="followTopic"
             onClose={() => setIsModalOpen(false)}
             signInUrl={signInUrl}
             registerUrl={registerUrl}
