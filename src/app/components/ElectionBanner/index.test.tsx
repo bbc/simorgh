@@ -54,9 +54,9 @@ const mockAssocPressServiceContext = {
 } as ServiceConfig;
 
 const renderElectionBanner = (
+  props: ComponentProps<typeof ElectionBanner>,
   options?: Parameters<typeof render>[1],
   serviceContext: ServiceConfig = mockServiceContext,
-  props: ComponentProps<typeof ElectionBanner> = {},
 ) =>
   render(
     <ServiceContext.Provider value={serviceContext}>
