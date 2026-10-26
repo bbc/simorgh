@@ -909,7 +909,9 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
         expect(originalMenuButton).toHaveAttribute('aria-expanded', 'false');
         expect(
-          screen.getAllByRole('button', { name: 'menu' })[1],
+          container.querySelector(
+            '[data-e2e="sticky-nav"] button[aria-label="menu"]',
+          ),
         ).toHaveAttribute('aria-expanded', 'false');
       });
 
