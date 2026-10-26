@@ -6,6 +6,7 @@ import CanonicalNavigation from './index.canonical';
 import {
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_EXIT_BUFFER_PX,
+  STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
 } from './config';
 import {
   dropdownTestId,
@@ -732,7 +733,7 @@ describe('Navigation - Canonical', () => {
         act(() => {
           jest.advanceTimersByTime(400);
         });
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         act(() => {
           jest.advanceTimersByTime(400);
         });
@@ -751,7 +752,7 @@ describe('Navigation - Canonical', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         act(() => {
           jest.advanceTimersByTime(400);
         });
@@ -761,7 +762,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('keeps the sticky navigation bar and its open dropdown menu on screen while scrolling down, as long as the bar is still pinned', () => {
+      it('keeps the sticky navigation visible and its dropdown open while scrolling down with the dropdown open', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -769,22 +770,21 @@ describe('Navigation - Canonical', () => {
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX - 1);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('hides the sticky navigation bar on scroll down as normal, once its dropdown menu has been closed', () => {
+      it('hides on scroll down as normal once the dropdown has been closed', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
         scrollTo(450);
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
-        fireEvent.click(menuButton);
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -821,7 +821,7 @@ describe('Navigation - Canonical', () => {
         ) as HTMLElement;
         secondaryScroll.scrollLeft = 120;
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
@@ -837,13 +837,13 @@ describe('Navigation - Canonical', () => {
         scrollTo(500);
         scrollTo(450);
         secondaryScroll.scrollLeft = 120;
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         expect(secondaryScroll.scrollLeft).toBe(0);
 
         scrollTo(500);
         scrollTo(450);
         secondaryScroll.scrollLeft = 80;
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         expect(secondaryScroll.scrollLeft).toBe(0);
       });
     });
@@ -979,7 +979,7 @@ describe('Navigation - Canonical', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         fireEvent.keyDown(window, { key: 'Tab' });
 
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
