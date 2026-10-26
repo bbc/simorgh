@@ -14,6 +14,7 @@ import {
 interface UseFollowedTopicsParams {
   itemsPerPage?: number;
   startIndex?: number;
+  enabled?: boolean;
 }
 
 interface UseFollowedTopicsReturn {
@@ -26,6 +27,7 @@ interface UseFollowedTopicsReturn {
 const useUASFollowedTopics = ({
   itemsPerPage = 10,
   startIndex = 0,
+  enabled = true,
 }: UseFollowedTopicsParams = {}): UseFollowedTopicsReturn => {
   const {
     hashedUserId = '',
@@ -34,7 +36,8 @@ const useUASFollowedTopics = ({
   } = use(AccountContext);
   const { service } = use(ServiceContext);
 
-  const isQueryEnabled = !!hashedUserId && isTopicPersonalizationEnabled;
+  const isQueryEnabled =
+    enabled && !!hashedUserId && isTopicPersonalizationEnabled;
 
   const { data, isLoading, error } = useQuery({
     queryKey: uasKeys.followsPage(

@@ -183,6 +183,12 @@ describe('useUASFollowedTopics', () => {
     expect(mockEnabled).toBe(false);
   });
 
+  it('should be disabled when explicitly requested', () => {
+    renderHook(() => useUASFollowedTopics({ enabled: false }));
+
+    expect(mockEnabled).toBe(false);
+  });
+
   it('should be enabled when hashedUserId is present and isTopicPersonalizationEnabled is true', () => {
     renderHook(() => useUASFollowedTopics());
 

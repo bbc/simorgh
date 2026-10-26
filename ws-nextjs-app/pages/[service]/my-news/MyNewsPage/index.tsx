@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
@@ -16,6 +16,12 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
   ssr: false,
   loading: () => <MyNewsPageLoading />,
 });
+
+const isMockFollowedTopicsEnabled = () =>
+  process.env.NODE_ENV !== 'production' &&
+  typeof window !== 'undefined' &&
+  new URLSearchParams(window.location.search).get('mockFollowedTopics') ===
+    'true';
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const {
@@ -35,8 +41,22 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
     isArticlePersonalizationAvailable || isTopicPersonalizationAvailable;
   const isPersonalizationEnabled =
     isArticlePersonalizationEnabled || isTopicPersonalizationEnabled;
+  const [shouldShowMockFollowedTopics, setShouldShowMockFollowedTopics] =
+    useState(false);
 
-  if (!isPersonalizationAvailable || !translations?.myNews) return null;
+  useEffect(() => {
+    setShouldShowMockFollowedTopics(isMockFollowedTopicsEnabled());
+  }, []);
+
+  if (
+    (!isPersonalizationAvailable && !shouldShowMockFollowedTopics) ||
+    !translations?.myNews
+  ) {
+    return null;
+  }
+
+  const shouldShowPageContent =
+    isPersonalizationEnabled || shouldShowMockFollowedTopics;
 
   return (
     <main css={styles.main}>
@@ -56,11 +76,14 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
           </div>
         </noscript>
         <div css={styles.innerContent}>
-          {isPersonalizationEnabled ? (
+          {shouldShowPageContent ? (
             <MyNewsPageContent
               page={page}
               showSavedArticles={isArticlePersonalizationEnabled}
-              showFollowedTopics={isTopicPersonalizationEnabled}
+              showFollowedTopics={
+                isTopicPersonalizationEnabled || shouldShowMockFollowedTopics
+              }
+              mockFollowedTopics={shouldShowMockFollowedTopics}
             />
           ) : (
             <MyNewsPageGuest />

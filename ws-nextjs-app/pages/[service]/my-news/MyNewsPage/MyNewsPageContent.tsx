@@ -16,17 +16,26 @@ const ITEMS_PER_PAGE = 24;
 // Topics are fetched and paginated server-side in batches of 100.
 const FOLLOWED_TOPICS_ITEMS_PER_PAGE = 100;
 const FOLLOWED_TOPICS_VISIBLE_LIMIT = 9;
+const MOCK_FOLLOWED_TOPICS =
+  process.env.NODE_ENV === 'production'
+    ? []
+    : Array.from({ length: 150 }, (_, index) => ({
+        id: `mock-topic-${index + 1}`,
+        title: `Fictitious topic ${index + 1}`,
+      }));
 
 interface MyNewsPageContentProps {
   page?: string;
   showSavedArticles: boolean;
   showFollowedTopics: boolean;
+  mockFollowedTopics: boolean;
 }
 
 const MyNewsPageContent = ({
   page,
   showSavedArticles,
   showFollowedTopics,
+  mockFollowedTopics,
 }: MyNewsPageContentProps) => {
   const { translations, lang } = use(ServiceContext);
   const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
@@ -61,12 +70,18 @@ const MyNewsPageContent = ({
   });
 
   const {
-    followedTopics,
-    isLoading: topicsLoading,
-    error: topicsError,
+    followedTopics: uasFollowedTopics,
+    isLoading: uasTopicsLoading,
+    error: uasTopicsError,
   } = useUASFollowedTopics({
     itemsPerPage: FOLLOWED_TOPICS_ITEMS_PER_PAGE,
+    enabled: !mockFollowedTopics,
   });
+  const followedTopics = mockFollowedTopics
+    ? MOCK_FOLLOWED_TOPICS
+    : uasFollowedTopics;
+  const topicsLoading = mockFollowedTopics ? false : uasTopicsLoading;
+  const topicsError = mockFollowedTopics ? null : uasTopicsError;
 
   const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
 

@@ -3,6 +3,7 @@ import {
   screen,
   act,
   waitFor,
+  within,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
@@ -73,6 +74,7 @@ const mockFollowedTopics = [
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    window.history.replaceState({}, '', '/');
     window.scrollTo = jest.fn();
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
@@ -303,6 +305,51 @@ describe('MyNewsPage', () => {
         screen.getByText(myNewsTranslations.noArticles),
       ).toBeInTheDocument();
     });
+  });
+
+  it('should display 150 fictitious followed topics when requested locally', async () => {
+    window.history.replaceState(
+      {},
+      '',
+      '/hindi/my-news?mockFollowedTopics=true',
+    );
+
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        toggles: {
+          uasPersonalization: { enabled: false, value: 'hindi' },
+          topicUasPersonalization: { enabled: false, value: 'hindi' },
+        },
+      });
+    });
+
+    expect(
+      await screen.findByRole('heading', {
+        name: `${myNewsTranslations.followedTopicsTitle} (150)`,
+        level: 2,
+      }),
+    ).toBeInTheDocument();
+
+    const topicsList = screen.getByRole('list');
+    expect(within(topicsList).getAllByRole('link')).toHaveLength(9);
+
+    const seeMoreButton = screen.getByRole('button', {
+      name: myNewsTranslations.seeMoreTopics,
+    });
+    expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
+
+    await act(async () => {
+      seeMoreButton.click();
+    });
+
+    const topicLinks = within(topicsList).getAllByRole('link');
+    expect(topicLinks).toHaveLength(150);
+    expect(topicLinks[0]).toHaveTextContent('Fictitious topic 1');
+    expect(topicLinks[149]).toHaveTextContent('Fictitious topic 150');
+    expect(mockUseFollowedTopics).toHaveBeenCalledWith(
+      expect.objectContaining({ enabled: false }),
+    );
   });
 
   it('should show the count of actually rendered topics, not the raw API total', async () => {
