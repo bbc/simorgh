@@ -92,7 +92,7 @@
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
     "temporal-polyfill": "0.3.0",
-    "undici": "8.10.2",
+    "undici": "8.12.3",
     "winston": "3.19.0"
   },
   "devDependencies": {
