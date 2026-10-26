@@ -99,25 +99,19 @@ module.exports = {
       },
     ],
     'jsx-a11y/no-redundant-roles': 'off',
-    // The #components, #containers and #psammead aliases resolve into src/app/legacy.
-    // Ratchet: warn now, raise to error once the remaining legacy modules are migrated.
-    'no-restricted-imports': [
+    // Ratchet on new coupling to src/app/legacy. This matches on the *resolved*
+    // path, so it catches both the #components/#containers/#psammead aliases and
+    // relative imports such as '../../legacy/components/Grid'.
+    // Raise to error once the remaining legacy modules are migrated.
+    'import/no-restricted-paths': [
       'warn',
       {
-        patterns: [
+        zones: [
           {
-            group: [
-              // The leading '#' must be escaped: these patterns are matched with
-              // gitignore semantics, where an unescaped leading '#' is a comment.
-              '\\#components/*',
-              '\\#components/**',
-              '\\#containers/*',
-              '\\#containers/**',
-              '\\#psammead/*',
-              '\\#psammead/**',
-            ],
+            target: ['./src', './ws-nextjs-app'],
+            from: './src/app/legacy',
             message:
-              'This resolves into src/app/legacy. Import a migrated component from #app/components instead, or migrate it — see docs/Coding-Standards/Migrating-Legacy-Components.mdx',
+              'This imports from src/app/legacy. Import a migrated component from #app/components instead, or migrate it — see docs/Coding-Standards/Migrating-Legacy-Components.mdx',
           },
         ],
       },
@@ -139,10 +133,10 @@ module.exports = {
   },
   overrides: [
     {
-      // Legacy modules necessarily import each other via these aliases until migrated.
+      // Legacy modules necessarily import each other until they are migrated.
       files: ['src/app/legacy/**'],
       rules: {
-        'no-restricted-imports': 'off',
+        'import/no-restricted-paths': 'off',
       },
     },
     {
