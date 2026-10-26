@@ -13,8 +13,8 @@ const withRequestProps =
   async (context: GetServerSidePropsContext) => {
     const requestProps = await getRequestProps({
       ...context,
-      asPath: context.resolvedUrl,
-      pathname: context.resolvedUrl.split('?')[0],
+      asPath: context.context.req.url,
+      pathname: context.context.req.url.split('?')[0],
     });
     const result = await handler(context, requestProps);
 
