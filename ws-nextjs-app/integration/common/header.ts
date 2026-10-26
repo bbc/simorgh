@@ -10,6 +10,10 @@ export default service => {
       const logo = document.getElementById('brandSvgHeader');
 
       expect(logo).toBeInTheDocument();
+      if (!logo) {
+        throw new Error('Expected the header brand asset to be rendered');
+      }
+
       expect(logo.tagName).toBe('IMG');
       expect(logo).toHaveClass('external-svg');
       expect(logo).toHaveAttribute('alt', '');
