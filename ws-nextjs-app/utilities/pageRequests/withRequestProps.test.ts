@@ -80,6 +80,46 @@ describe('withRequestProps', () => {
     });
   });
 
+  it.each(['watch', 'listen'])(
+    'preserves the requested /%s/ URL when Next.js rewrites to /articles/',
+    async route => {
+      const asPath = `/pidgin/${route}/c0000000000o?renderer_env=test`;
+      const request = Object.assign(new IncomingMessage(new Socket()), {
+        url: asPath,
+        cookies: {},
+      });
+      const handler = jest.fn().mockResolvedValue({ props: { status: 200 } });
+
+      await withRequestProps(handler)({
+        ...context,
+        req: request,
+      });
+
+      expect(mockGetRequestProps).toHaveBeenCalledWith(
+        expect.objectContaining({
+          asPath,
+          pathname: `/pidgin/${route}/c0000000000o`,
+        }),
+      );
+    },
+  );
+
+  it('uses the resolved URL when the request URL is unavailable', async () => {
+    const request = Object.assign(new IncomingMessage(new Socket()), {
+      cookies: {},
+    });
+    const handler = jest.fn().mockResolvedValue({ props: { status: 200 } });
+
+    await withRequestProps(handler)({ ...context, req: request });
+
+    expect(mockGetRequestProps).toHaveBeenCalledWith(
+      expect.objectContaining({
+        asPath: context.resolvedUrl,
+        pathname: '/pidgin/articles/c0000000000o',
+      }),
+    );
+  });
+
   it('preserves redirects', async () => {
     const redirect = { destination: '/pidgin', permanent: false };
     const result = await withRequestProps(async () => ({ redirect }))(context);

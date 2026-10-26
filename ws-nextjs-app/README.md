@@ -16,7 +16,10 @@ location and experiments), sets response headers, and merges page-specific props
 over the shared props. The handler receives the shared props as its second
 argument so it can reuse configuration without fetching it again.
 
-Request paths come from `context.resolvedUrl`, including for Next.js data requests.
+Request paths come from `context.req.url` to preserve the original URL through
+Next.js rewrites (for example, `/watch/` and `/listen/` to `/articles/`).
+Next.js data requests use `context.resolvedUrl` instead of the internal
+`/_next/data/` URL.
 `_app` only renders providers and page content; it has no `getInitialProps`.
 Next.js error pages reuse the setup through `_error.getInitialProps` on the server.
 

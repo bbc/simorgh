@@ -1,5 +1,6 @@
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import getRequestProps from './getRequestProps';
+import getRequestUrl from './getRequestUrl';
 
 type RequestProps = Awaited<ReturnType<typeof getRequestProps>>;
 
@@ -11,10 +12,11 @@ const withRequestProps =
     ) => Promise<Result>,
   ) =>
   async (context: GetServerSidePropsContext) => {
+    const asPath = getRequestUrl(context);
     const requestProps = await getRequestProps({
       ...context,
-      asPath: context.context.req.url,
-      pathname: context.context.req.url.split('?')[0],
+      asPath,
+      pathname: asPath.split('?')[0],
     });
     const result = await handler(context, requestProps);
 
