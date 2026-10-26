@@ -129,7 +129,7 @@ describe('MyNewsPage', () => {
         idctaConfig: mockIdctaConfig,
       });
 
-      expect(screen.getByText(guestDescription)).toBeInTheDocument();
+      expect(await screen.findByText(guestDescription)).toBeInTheDocument();
       unmount();
 
       await act(async () => {
@@ -141,7 +141,7 @@ describe('MyNewsPage', () => {
       });
 
       expect(
-        screen.getByRole('heading', { name: followedTopicsTitle }),
+        await screen.findByRole('heading', { name: followedTopicsTitle }),
       ).toBeInTheDocument();
       expect(
         screen.getByRole('heading', { name: savedArticlesTitle }),
@@ -150,7 +150,7 @@ describe('MyNewsPage', () => {
     },
   );
 
-  it('should render loading state initially', async () => {
+  it('should render saved articles loading state while the request is pending', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
@@ -158,11 +158,11 @@ describe('MyNewsPage', () => {
       error: null,
     });
 
-    await act(async () => {
-      render(<MyNewsPage />, renderOptions);
-    });
+    render(<MyNewsPage />, renderOptions);
 
-    const spinnerWrapper = screen.getByTestId('my-news-saved-articles-spinner');
+    const spinnerWrapper = await screen.findByTestId(
+      'my-news-saved-articles-spinner',
+    );
     const spinnerSvg = spinnerWrapper.querySelector('svg');
 
     expect(screen.getByText(myNewsTranslations.title)).toBeInTheDocument();
@@ -366,12 +366,10 @@ describe('MyNewsPage', () => {
       error: null,
     });
 
-    await act(async () => {
-      render(<MyNewsPage />, renderOptions);
-    });
+    render(<MyNewsPage />, renderOptions);
 
     expect(
-      screen.getByTestId('my-news-followed-topics-spinner'),
+      await screen.findByTestId('my-news-followed-topics-spinner'),
     ).toBeInTheDocument();
   });
 
