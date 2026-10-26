@@ -1,33 +1,40 @@
-import isLive from '#app/lib/utilities/isLive';
+import { Tag } from '#app/components/Metadata/types';
 import { MetadataTaggings } from '#app/models/types/metadata';
 
 const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 
 type IsElectionBannerVisibleArgs = {
+  aboutTags?: Tag[];
   electionBannerEnabled: boolean | null;
   electionThingIds?: string[];
-  isLite: boolean;
   taggings?: MetadataTaggings;
 };
 
+// isLite/isLive are deliberately not considered here; ElectionBanner guards against those itself.
 const isElectionBannerVisible = ({
+  aboutTags,
   electionBannerEnabled,
   electionThingIds,
-  isLite,
   taggings,
 }: IsElectionBannerVisibleArgs): boolean => {
-  if (isLive() || isLite) return false;
-
   const isEditoriallySensitive = taggings?.some(({ value }) =>
     value.includes(SENSITIVE_ARTICLE_ID),
   );
 
-  const hasValidTagLivePage = taggings?.some(({ value }) =>
+  const hasMatchingTagging = taggings?.some(({ value }) =>
     electionThingIds?.some(electionThingId => value.includes(electionThingId)),
   );
 
+  const hasMatchingAboutTag = aboutTags?.some(({ thingId }) =>
+    electionThingIds?.includes(thingId),
+  );
+
+  const hasValidElectionTag = Boolean(
+    hasMatchingAboutTag || hasMatchingTagging,
+  );
+
   return Boolean(
-    !isEditoriallySensitive && hasValidTagLivePage && electionBannerEnabled,
+    !isEditoriallySensitive && hasValidElectionTag && electionBannerEnabled,
   );
 };
 

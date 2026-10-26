@@ -3,12 +3,10 @@ import Script from 'next/script';
 import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
-import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
-import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
 // Consumers (e.g. the Live page) own any page-specific style overrides and pass
@@ -22,16 +20,9 @@ type OverrideClassnames = {
 
 type Props = {
   aboutTags?: Tag[];
-  taggings: MetadataTaggings;
   overrideClassnames?: OverrideClassnames;
 };
 
-type ToggleType = {
-  enabled: boolean | null;
-  value: string | null;
-};
-
-const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
 const ELECTION_BANNER_TITLE = 'Election banner';
 
 export const DEFAULT_HEIGHTS_VJ = {
@@ -46,17 +37,16 @@ export const DEFAULT_HEIGHTS_AP = {
   mobile: 340,
 };
 
+// Callers decide editorial visibility via isElectionBannerVisible; this guards
+// the isLite/isLive runtime cases so every consumer doesn't have to repeat them.
 export default function ElectionBanner({
   aboutTags,
-  taggings,
   overrideClassnames,
 }: Props) {
   const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled }: ToggleType =
-    useToggle('electionBanner');
 
-  if (isLive() || isLite || !electionBanner) return null;
+  if (!electionBanner || isLive() || isLite) return null;
 
   const {
     title,
@@ -66,25 +56,9 @@ export default function ElectionBanner({
     assocPressIframeSrc,
   } = electionBanner;
 
-  const isEditoriallySensitive = taggings?.some(({ value }) =>
-    value.includes(SENSITIVE_ARTICLE_ID),
-  );
-
-  // to do - refactor - now duplicated in src/app/components/ElectionBanner/utilities/index.ts
-  const hasValidTagLivePage = taggings?.some(({ value }) =>
-    electionThingIds?.some(electionThingId => value.includes(electionThingId)),
-  );
-
   const validAboutTag = aboutTags?.find(({ thingId }) =>
     electionThingIds?.includes(thingId),
   );
-
-  const hasValidElectionTag = Boolean(validAboutTag || hasValidTagLivePage);
-
-  const showBanner =
-    !isEditoriallySensitive && hasValidElectionTag && electionBannerEnabled;
-
-  if (!showBanner) return null;
 
   const bannerTitle = validAboutTag?.thingLabel ?? ELECTION_BANNER_TITLE;
 

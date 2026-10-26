@@ -59,17 +59,19 @@ const Header = ({
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
+  // isLite is checked here (rather than inside isElectionBannerVisible) because this
+  // page also needs it to decide its own layout, not just whether to render the banner.
   const shouldShowElectionBanner =
+    !isLite &&
     isElectionBannerVisible({
       electionBannerEnabled,
       electionThingIds: electionBanner?.electionThingIds,
-      isLite,
       taggings,
-    }) && !hasLiveMediaStream;
+    }) &&
+    !hasLiveMediaStream;
 
   const isHeaderImage = hasHeaderImage && !shouldShowElectionBanner;
   const isWithImageLayout = isHeaderImage || hasLiveMediaStream;
-  const electionBannerTaggings = taggings ?? [];
 
   const {
     src: srcWebp,
@@ -142,9 +144,7 @@ const Header = ({
             )}
           </div>
         </div>
-        {shouldShowElectionBanner && (
-          <LiveElectionBanner taggings={electionBannerTaggings} />
-        )}
+        {shouldShowElectionBanner && <LiveElectionBanner />}
       </>
     );
   }

@@ -5,7 +5,6 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { MetadataTaggings } from '#app/models/types/metadata';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ElectionBanner, { DEFAULT_HEIGHTS_AP } from '.';
 
@@ -24,24 +23,6 @@ const mockAboutTags = [
   { thingId: 'thing2' },
   { thingId: MOCK_ELECTION_THING_ID, thingLabel: 'Election banner' },
 ] as Tag[];
-
-const mockTaggings: MetadataTaggings = [
-  {
-    predicate: 'http://www.bbc.co.uk/ontologies/bbc/infoClass',
-    value:
-      'http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id',
-  },
-  {
-    predicate: 'http://www.bbc.co.uk/ontologies/bbc/assetType',
-    value:
-      'http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id',
-  },
-  {
-    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
-    value:
-      'http://www.bbc.co.uk/things/647d5613-e0e2-4ef5-b0ce-b491de38bdbd#id',
-  },
-];
 
 const ELEMENT_ID = 'election-banner';
 
@@ -65,7 +46,7 @@ const mockAssocPressServiceContext = {
 } as ServiceConfig;
 
 const renderElectionBanner = (
-  props: ComponentProps<typeof ElectionBanner>,
+  props: ComponentProps<typeof ElectionBanner> = {},
   options?: Parameters<typeof render>[1],
   serviceContext: ServiceConfig = mockServiceContext,
 ) =>
@@ -87,18 +68,15 @@ describe('ElectionBanner', () => {
     process.env = originalEnv;
   });
 
-  it('should not render ElectionBanner when isLite is true', () => {
-    const { queryByTestId } = renderElectionBanner(
-      { aboutTags: mockAboutTags, taggings: mockTaggings },
-      { isLite: true },
-    );
+  it('should not render when isLite is true', () => {
+    const { queryByTestId } = renderElectionBanner({}, { isLite: true });
 
     expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
   });
 
-  it('should not render ElectionBanner when electionBanner is not configured', () => {
+  it('should not render when electionBanner is not configured', () => {
     const { queryByTestId } = renderElectionBanner(
-      { aboutTags: mockAboutTags, taggings: mockTaggings },
+      {},
       undefined,
       {} as ServiceConfig,
     );
@@ -119,14 +97,8 @@ describe('ElectionBanner', () => {
         process.env.SIMORGH_APP_ENV = appEnv;
 
         const { getByTestId } = renderElectionBanner(
-          { aboutTags: mockAboutTags, taggings: mockTaggings },
-          {
-            toggles: {
-              electionBanner: { enabled: true },
-            },
-            isAmp,
-            service: 'mundo',
-          },
+          { aboutTags: mockAboutTags },
+          { isAmp, service: 'mundo' },
         );
 
         const wrappingEl = getByTestId(ELEMENT_ID);
@@ -147,50 +119,22 @@ describe('ElectionBanner', () => {
     it.each([
       ['VJ', mockServiceContext],
       ['Associated Press', mockAssocPressServiceContext],
-    ])(
-      'should not render the %s ElectionBanner in Live even when enabled',
-      (_, serviceContext) => {
-        process.env.SIMORGH_APP_ENV = 'live';
+    ])('should not render the %s banner in Live', (_, serviceContext) => {
+      process.env.SIMORGH_APP_ENV = 'live';
 
-        const { container } = renderElectionBanner(
-          { aboutTags: mockAboutTags, taggings: mockTaggings },
-          {
-            toggles: { electionBanner: { enabled: true } },
-            isAmp,
-            service: 'mundo',
-          },
-          serviceContext,
-        );
-
-        expect(container).toBeEmptyDOMElement();
-      },
-    );
-
-    it('should render ElectionBanner when aboutTags contain the correct thingLabel', () => {
-      const { getByTestId } = renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: {
-            electionBanner: { enabled: true },
-          },
-          isAmp,
-          service: 'mundo',
-        },
+      const { container } = renderElectionBanner(
+        { aboutTags: mockAboutTags },
+        { isAmp, service: 'mundo' },
+        serviceContext,
       );
 
-      expect(getByTestId(ELEMENT_ID)).toBeInTheDocument();
+      expect(container).toBeEmptyDOMElement();
     });
 
-    it('should render ElectionBanner when live-page taggings contain an election thing ID', () => {
+    it('should use the matching aboutTag as the banner title when provided', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings },
-        {
-          toggles: {
-            electionBanner: { enabled: true },
-          },
-          isAmp,
-          service: 'mundo',
-        },
+        { aboutTags: mockAboutTags },
+        { isAmp, service: 'mundo' },
       );
 
       const wrappingEl = getByTestId(ELEMENT_ID);
@@ -199,90 +143,24 @@ describe('ElectionBanner', () => {
       expect(iframe).toHaveAttribute('title', 'Election banner');
     });
 
-    it('should not render ElectionBanner when taggings contain the editorialSensitivityId', () => {
-      const { queryByTestId } = renderElectionBanner(
-        {
-          aboutTags: mockAboutTags,
-          taggings: [
-            ...mockTaggings,
-            {
-              predicate:
-                'http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity',
-              value:
-                'http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id',
-            },
-          ],
-        },
-        {
-          toggles: { electionBanner: { enabled: true } },
-          isAmp,
-        },
+    it('should fall back to the default banner title when no aboutTag matches', () => {
+      const { getByTestId } = renderElectionBanner(
+        { aboutTags: [{ thingLabel: 'thing1' }] as Tag[] },
+        { isAmp, service: 'mundo' },
       );
 
-      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
-    });
+      const wrappingEl = getByTestId(ELEMENT_ID);
+      const iframe = wrappingEl.querySelector('iframe, amp-iframe');
 
-    it('should not render ElectionBanner when aboutTags do not contain the correct thingLabel', () => {
-      const { queryByTestId } = renderElectionBanner(
-        {
-          aboutTags: [{ thingLabel: 'thing1' }] as Tag[],
-          taggings: mockTaggings,
-        },
-        { isAmp },
-      );
-
-      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner when aboutTags is empty', () => {
-      const { queryByTestId } = renderElectionBanner(
-        { aboutTags: [], taggings: mockTaggings },
-        {
-          isAmp,
-        },
-      );
-
-      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner when toggle is disabled', () => {
-      const { queryByTestId } = renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: { electionBanner: { enabled: false } },
-          isAmp,
-        },
-      );
-
-      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
-    });
-
-    it('should not render ElectionBanner when toggle is null', () => {
-      const { queryByTestId } = renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: {
-            someOtherToggle: { enabled: true },
-          },
-          isAmp,
-        },
-      );
-
-      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+      expect(iframe).toHaveAttribute('title', 'Election banner');
     });
   });
 
   describe('Association Press', () => {
     const renderAssocPressBanner = (isAmp: boolean) =>
       renderElectionBanner(
-        { aboutTags: mockAboutTags, taggings: mockTaggings },
-        {
-          toggles: {
-            electionBanner: { enabled: true },
-          },
-          isAmp,
-          service: 'mundo',
-        },
+        { aboutTags: mockAboutTags },
+        { isAmp, service: 'mundo' },
         mockAssocPressServiceContext,
       );
 
@@ -335,11 +213,8 @@ describe('ElectionBanner', () => {
   describe('overrideClassnames', () => {
     it('should apply a consumer-provided wrapper override class for the VJ banner', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings, overrideClassnames: { wrapper: 'custom' } },
-        {
-          toggles: { electionBanner: { enabled: true } },
-          service: 'mundo',
-        },
+        { overrideClassnames: { wrapper: 'custom' } },
+        { service: 'mundo' },
       );
 
       expect(getByTestId(ELEMENT_ID)).toHaveClass('custom');
@@ -347,14 +222,8 @@ describe('ElectionBanner', () => {
 
     it('should apply a consumer-provided wrapper override class for the Associated Press banner', () => {
       const { getByTestId } = renderElectionBanner(
-        {
-          taggings: mockTaggings,
-          overrideClassnames: { assocPressWrapper: 'custom' },
-        },
-        {
-          toggles: { electionBanner: { enabled: true } },
-          service: 'mundo',
-        },
+        { overrideClassnames: { assocPressWrapper: 'custom' } },
+        { service: 'mundo' },
         mockAssocPressServiceContext,
       );
 
@@ -363,11 +232,8 @@ describe('ElectionBanner', () => {
 
     it('should apply a consumer-provided iframe override class', () => {
       const { getByTestId } = renderElectionBanner(
-        { taggings: mockTaggings, overrideClassnames: { iframe: 'custom' } },
-        {
-          toggles: { electionBanner: { enabled: true } },
-          service: 'mundo',
-        },
+        { overrideClassnames: { iframe: 'custom' } },
+        { service: 'mundo' },
         mockAssocPressServiceContext,
       );
 

@@ -61,6 +61,7 @@ import ContinueReadingButton, {
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from '#app/components/ElectionBanner';
+import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
@@ -235,6 +236,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const {
     articleAuthor,
+    electionBanner,
     isTrustProjectParticipant,
     showRelatedTopics,
     translations,
@@ -258,6 +260,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: googlePreferredSourceEnabled } = useToggle(
     'googlePreferredSource',
   );
+  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
 
   const isGoogleReferralTraffic = isGoogleReferral();
 
@@ -320,6 +323,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+
+  const shouldShowElectionBanner = isElectionBannerVisible({
+    aboutTags,
+    electionBannerEnabled,
+    electionThingIds: electionBanner?.electionThingIds,
+    taggings,
+  });
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
@@ -513,7 +523,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      {shouldShowElectionBanner && <ElectionBanner aboutTags={aboutTags} />}
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div
