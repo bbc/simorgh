@@ -76,6 +76,27 @@ const CanonicalNavigationContainer = ({
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
+  useEffect(() => {
+    const navigation = navSlotRef.current;
+    if (!sticky.isVisible || !isOpen || !navigation) return undefined;
+
+    const preventPageScroll = (event: WheelEvent | TouchEvent) => {
+      event.preventDefault();
+    };
+
+    navigation.addEventListener('wheel', preventPageScroll, {
+      passive: false,
+    });
+    navigation.addEventListener('touchmove', preventPageScroll, {
+      passive: false,
+    });
+
+    return () => {
+      navigation.removeEventListener('wheel', preventPageScroll);
+      navigation.removeEventListener('touchmove', preventPageScroll);
+    };
+  }, [isOpen, sticky.isVisible, navSlotRef]);
+
   const handleDropdownBreakpointChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
       if (!matches) closeMenu();
