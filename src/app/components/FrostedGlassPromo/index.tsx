@@ -12,7 +12,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
-import styles from './styles';
+import styles from './index.module.scss';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { PromoProps } from './types';
 
@@ -52,6 +52,17 @@ const FrostedGlassPromo = ({
   const { isAmp } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
+  const {
+    src,
+    srcSet,
+    fallbackSrcset: fallbackSrcSet,
+    primaryMimeType: mediaType,
+    fallbackMimeType,
+    sizes,
+    alt,
+    width,
+    height,
+  } = image;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -60,18 +71,9 @@ const FrostedGlassPromo = ({
 
   const promoText = (
     <>
-      <h3 css={styles.header}>
+      <h3 className={styles.header}>
         <a
-          css={theme => [
-            styles.anchor,
-            {
-              color: isAmp ? theme.palette.BLACK : theme.palette.WHITE,
-
-              '&:visited': {
-                color: isAmp ? theme.palette.METAL : theme.palette.GREY_3,
-              },
-            },
-          ]}
+          className={`${styles.anchor} ${isAmp ? styles.anchorAmp : ''}`}
           href={relativeUrl}
           {...(eventTrackingData && clickTracker)}
         >
@@ -86,9 +88,12 @@ const FrostedGlassPromo = ({
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
+    <div
+      className={styles.componentWrapper}
+      data-testid={`frosted-promo-${index}`}
+    >
       <a
-        css={styles.clickableArea}
+        className={styles.clickableArea}
         href={relativeUrl}
         {...(eventTrackingData && clickTracker)}
         aria-hidden="true"
@@ -97,15 +102,15 @@ const FrostedGlassPromo = ({
       <IMAGE
         darkPlaceholder={isCanonical}
         lazyLoad
-        src={image.src}
-        srcSet={image.srcSet}
-        fallbackSrcSet={image.fallbackSrcset}
-        mediaType={image.primaryMimeType}
-        fallbackMediaType={image.fallbackMimeType}
-        sizes={image.sizes}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
+        src={src}
+        srcSet={srcSet}
+        fallbackSrcSet={fallbackSrcSet}
+        mediaType={mediaType}
+        fallbackMediaType={fallbackMimeType}
+        sizes={sizes}
+        alt={alt}
+        width={width}
+        height={height}
       />
       <Lazyload
         css={{ height: '100%' }}
@@ -114,14 +119,9 @@ const FrostedGlassPromo = ({
         placeholder={
           // Placeholder always gets rendered on AMP
           <div
-            css={theme => [
-              styles.lazyloadPlaceholder,
-              {
-                backgroundColor: isAmp
-                  ? theme.palette.WHITE
-                  : theme.palette.GREY_8,
-              },
-            ]}
+            className={`${styles.lazyloadPlaceholder} ${
+              isAmp ? styles.lazyloadPlaceholderAmp : ''
+            }`}
             data-testid="frosted-glass-lazyload-placeholder"
           >
             {promoText}
