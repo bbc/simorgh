@@ -208,6 +208,8 @@ We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascrip
 
 ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
+Both `yarn test:lint` and `yarn test:lint:fix` use a content-based cache in `.eslintcache` to skip unchanged files on subsequent runs. The existing lint scope and rules are unchanged. Use `yarn test:lint --no-cache` for a full uncached run, for example after updating dependencies or Prettier configuration. ESLint's per-file cache does not track changes to imported files, so use an uncached run when checking cross-file changes.
+
 We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
 
 The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
