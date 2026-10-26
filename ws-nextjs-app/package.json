@@ -26,7 +26,7 @@
     "test:integration:canonical": "jest --selectProjects='Integration Tests - Canonical' --config=../jest.config.ts --ci --colors",
     "test:integration:amp": "jest --selectProjects='Integration Tests - AMP' --config=../jest.config.ts --ci --colors",
     "test:integration:lite": "jest --selectProjects='Integration Tests - Lite' --config=../jest.config.ts --ci --colors",
-    "cypress": "run-p cypress:group-1 cypress:group-2 cypress:group-3",
+    "cypress": "run-p --continue-on-error cypress:group-1 cypress:group-2 cypress:group-3",
     "cypress:install": "cypress install",
     "cypress:application": "cypress run --browser chrome --spec ./cypress/e2e/application",
     "cypress:group-1": "cypress run --browser chrome --spec './cypress/e2e/application,./cypress/e2e/pageTypes/articlePage/index.cy.ts,./cypress/e2e/pageTypes/watch/index.cy.ts,./cypress/e2e/pageTypes/listen/index.cy.ts,./cypress/e2e/pageTypes/homePage/index.cy.ts'",
