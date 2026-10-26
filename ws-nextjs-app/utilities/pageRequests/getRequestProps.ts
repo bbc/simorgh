@@ -72,7 +72,9 @@ const getRequestProps = async (
     isNextJs: true,
     serverSideExperiments,
     toggles,
-    idctaConfig,
+    idctaConfig: idctaConfig
+      ? { ...idctaConfig, availability: idctaConfig.availability ?? {} }
+      : null,
     navItems,
     service,
     variant,
