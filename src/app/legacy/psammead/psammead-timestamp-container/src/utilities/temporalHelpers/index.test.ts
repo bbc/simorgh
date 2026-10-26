@@ -129,6 +129,9 @@ describe('Temporal Helper functions', () => {
       ['fa', '۰۵'],
       ['fa-AF', '۰۵'],
       ['ps', '۰۵'],
+      ['ar-EG', '٠٥'],
+      ['mr-IN', '05'],
+      ['ps-AF', '۰۵'],
     ])('translates digits into the %p numeral system', (locale, expected) => {
       expect(translateDigits(5, 2, locale)).toEqual(expected);
     });
@@ -179,6 +182,34 @@ describe('Temporal Helper functions', () => {
           useGrouping: false,
         }),
       );
+    });
+
+    it('forces Devanagari numerals for the `ne` locale', () => {
+      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+      translateDigits(5, 2, 'ne');
+
+      expect(numberFormatSpy).toHaveBeenCalledWith(
+        'ne-u-nu-deva',
+        expect.objectContaining({
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        }),
+      );
+    });
+
+    it('falls back to Nepali numerals when the runtime ignores deva', () => {
+      const NativeNumberFormat = Intl.NumberFormat;
+
+      jest.spyOn(Intl, 'NumberFormat').mockImplementation(
+        () =>
+          new NativeNumberFormat('en-GB', {
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+      );
+
+      expect(translateDigits(5, 2, 'ne')).toEqual('०५');
     });
 
     it('leaves locales without an explicit override unchanged', () => {

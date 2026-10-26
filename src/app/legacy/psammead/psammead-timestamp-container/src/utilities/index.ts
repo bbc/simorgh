@@ -6,6 +6,10 @@ import {
   withArabicComma,
   DurationFormat,
 } from './temporalHelpers';
+import {
+  formatTimestampToken,
+  TimestampFormat,
+} from './temporalHelpers/timestampFormat';
 
 type Locale = string;
 type ISODuration = string;
@@ -93,7 +97,7 @@ export const formatUnixTimestamp = ({
   timestamp,
   timezone,
 }: {
-  format?: string | null;
+  format?: TimestampFormat | null;
   isRelative?: boolean;
   locale?: Locale;
   timestamp?: number;
@@ -109,5 +113,10 @@ export const formatUnixTimestamp = ({
     return momentObj.fromNow();
   }
 
-  return momentObj.format(format || 'LL, LT z');
+  return formatTimestampToken({
+    format: format ?? 'LL, LT z',
+    timestamp,
+    timezone,
+    locale,
+  });
 };
