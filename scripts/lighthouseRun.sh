@@ -20,7 +20,7 @@ run_audit() {
 pids=()
 run_audit pidgin-article http://localhost:7081/pidgin/articles/ce9wk6glg4lo &
 pids+=("$!")
-run_audit hindi-home http://localhost:7080/hindi &
+run_audit hindi-home http://localhost:7081/hindi &
 pids+=("$!")
 run_audit pidgin-live http://localhost:7081/pidgin/live/c7p765ynk9qt &
 pids+=("$!")
