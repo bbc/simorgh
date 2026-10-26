@@ -63,6 +63,10 @@ export interface Translations {
     title: string;
     description: string;
     closeLabel: string;
+    followTopic?: {
+      title: string;
+      description: string;
+    };
   };
   googlePreferredSource?: {
     linkText: string;

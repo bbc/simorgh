@@ -141,6 +141,11 @@ export const service: DefaultServiceConfig = {
         title: 'माई न्यूज़ में सेव करने के लिए साइन इन करें',
         description: 'स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें',
         closeLabel: 'बंद करें',
+        followTopic: {
+          title: 'टॉपिक्स फ़ॉलो करने के लिए साइन इन करें',
+          description:
+            'अपनी रुचि की खबरें सीधे पाएं और कोई भी स्टोरी मिस न करें',
+        },
       },
       googlePreferredSource: {
         linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',

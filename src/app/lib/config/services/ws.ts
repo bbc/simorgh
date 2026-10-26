@@ -91,6 +91,11 @@ export const service: DefaultServiceConfig = {
         title: 'Sign in to save to My News',
         description: 'Save stories and read them at your convenience',
         closeLabel: 'Close',
+        followTopic: {
+          title: 'Sign in to follow topics',
+          description:
+            'Get straight to the news that interests you and never miss a story',
+        },
       },
       saveArticleButton: {
         loading: 'Loading',
@@ -115,7 +120,7 @@ export const service: DefaultServiceConfig = {
         guestTitle: 'Welcome to My News',
         description: 'My saved articles',
         guestDescription:
-          'Sign in to save stories to My News, and read them at your convenience.',
+          'Sign in to follow topics that matter to you and save articles for later.',
         noArticles: "You haven't saved any articles yet",
         savedArticlesErrorText:
           "We're having trouble loading your saved articles",

@@ -172,6 +172,11 @@ export const service: DefaultServiceConfig = {
         title: 'Inicia sesión para guardar en Mis Noticias',
         description: 'Guarda artículos y léelos cuando quieras',
         closeLabel: 'Cerrar',
+        followTopic: {
+          title: 'Inicia sesión para seguir temas',
+          description:
+            'Accede directamente a las noticias que te interesan y no te pierdas ninguna historia',
+        },
       },
       saveArticleButton: {
         loading: 'Cargando',

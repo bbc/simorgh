@@ -89,6 +89,67 @@ describe('MyNewsPage', () => {
     mockMatchMedia();
   });
 
+  it.each([
+    {
+      service: 'mundo' as const,
+      guestDescription:
+        'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
+      followedTopicsTitle: 'Temas que sigues',
+      savedArticlesTitle: 'Mis artículos guardados',
+    },
+    {
+      service: 'hindi' as const,
+      guestDescription:
+        'अपनी पसंद के टॉपिक्स फ़ॉलो करने और आर्टिकल्स को बाद में पढ़ने के लिए सेव करने के लिए साइन इन करें.',
+      followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+      savedArticlesTitle: 'मेरे सेव किए हुए आर्टिकल',
+    },
+    {
+      service: 'portuguese' as const,
+      guestDescription:
+        'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
+      followedTopicsTitle: 'Temas que você segue',
+      savedArticlesTitle: 'Matérias salvas',
+    },
+  ])(
+    'renders approved signed-out and signed-in copy for $service',
+    async ({
+      service,
+      guestDescription,
+      followedTopicsTitle,
+      savedArticlesTitle,
+    }) => {
+      const toggles = {
+        uasPersonalization: { enabled: true, value: service },
+        topicUasPersonalization: { enabled: true, value: service },
+      };
+      const { unmount } = render(<MyNewsPage />, {
+        service,
+        toggles,
+        idctaConfig: mockIdctaConfig,
+      });
+
+      expect(screen.getByText(guestDescription)).toBeInTheDocument();
+      unmount();
+
+      await act(async () => {
+        render(<MyNewsPage />, {
+          service,
+          toggles,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+        });
+      });
+
+      expect(
+        screen.getByRole('heading', { name: followedTopicsTitle }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { name: savedArticlesTitle }),
+      ).toBeInTheDocument();
+      expect(screen.queryByText(guestDescription)).not.toBeInTheDocument();
+    },
+  );
+
   it('should render loading state initially', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],

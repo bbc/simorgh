@@ -175,6 +175,11 @@ export const service: DefaultServiceConfig = {
         title: 'Faça login para salvar em Notícias para você',
         description: 'Salve matérias e leia quando você quiser',
         closeLabel: 'Fechar',
+        followTopic: {
+          title: 'Faça login para seguir tópicos',
+          description:
+            'Acesse diretamente as notícias do seu interesse e não perca nenhuma matéria.',
+        },
       },
       saveArticleButton: {
         loading: 'Carregando',
