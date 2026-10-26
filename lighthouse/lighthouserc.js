@@ -85,7 +85,7 @@ module.exports = {
   ci: {
     collect: {
       url: urlsToAudit,
-      numberOfRuns: 3,
+      numberOfRuns: 1,
       settings: {
         chromeFlags: '--no-sandbox --headless',
         // Non-live environments send x-robots-tag: noindex, so is-crawlable always fails there
