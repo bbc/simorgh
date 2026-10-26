@@ -61,9 +61,9 @@ export const service: DefaultServiceConfig = {
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
         linkHref: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
-        heading: 'Eleições 2026: resultados em tempo real',
+        heading: 'Eleições 2026: veja como foi a votação',
         description:
-          'Acompanhe a apuração para presidente e governador em seu Estado e município com o mapa interativo da BBC News Brasil',
+          'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil',
         linkText: 'Clique aqui',
         image:
           'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
@@ -81,8 +81,9 @@ export const service: DefaultServiceConfig = {
     ],
     podcastPromo: {
       title: 'Promoção Resultados eleição 2026',
-      brandTitle: 'Acompanhe a apuração em tempo real',
-      brandDescription: ' ',
+      brandTitle: 'Eleições 2026: veja como foi a votação',
+      brandDescription:
+        'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil ',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
         alt: 'Agregador de Pesquisas da BBC News Brasil',
