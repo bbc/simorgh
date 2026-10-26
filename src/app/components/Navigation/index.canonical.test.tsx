@@ -776,6 +776,35 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       });
 
+      it('blocks gestures over the dropdown without blocking navigation row scrolling', () => {
+        const { container, getByTestId } = render(
+          articleNavigation,
+          stickyOptions,
+        );
+        scrollTo(500);
+        scrollTo(450);
+        fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+
+        const dropdown = getByTestId(dropdownTestId);
+        const navigationRow = container.querySelector(
+          '[data-e2e="scrollable-nav-secondary"]',
+        );
+        const dropdownWheelEvent = new Event('wheel', {
+          bubbles: true,
+          cancelable: true,
+        });
+        const navigationRowWheelEvent = new Event('wheel', {
+          bubbles: true,
+          cancelable: true,
+        });
+
+        dropdown.dispatchEvent(dropdownWheelEvent);
+        navigationRow?.dispatchEvent(navigationRowWheelEvent);
+
+        expect(dropdownWheelEvent.defaultPrevented).toBe(true);
+        expect(navigationRowWheelEvent.defaultPrevented).toBe(false);
+      });
+
       it('hides on scroll down as normal once the dropdown has been closed', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');

@@ -77,25 +77,25 @@ const CanonicalNavigationContainer = ({
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const navigation = navSlotRef.current;
-    if (!sticky.isVisible || !isOpen || !navigation) return undefined;
+    const dropdown = dropDownNavRef.current;
+    if (!sticky.isVisible || !isOpen || !dropdown) return undefined;
 
     const preventPageScroll = (event: WheelEvent | TouchEvent) => {
       event.preventDefault();
     };
 
-    navigation.addEventListener('wheel', preventPageScroll, {
+    dropdown.addEventListener('wheel', preventPageScroll, {
       passive: false,
     });
-    navigation.addEventListener('touchmove', preventPageScroll, {
+    dropdown.addEventListener('touchmove', preventPageScroll, {
       passive: false,
     });
 
     return () => {
-      navigation.removeEventListener('wheel', preventPageScroll);
-      navigation.removeEventListener('touchmove', preventPageScroll);
+      dropdown.removeEventListener('wheel', preventPageScroll);
+      dropdown.removeEventListener('touchmove', preventPageScroll);
     };
-  }, [isOpen, sticky.isVisible, navSlotRef]);
+  }, [isOpen, sticky.isVisible, dropDownNavRef]);
 
   const handleDropdownBreakpointChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
