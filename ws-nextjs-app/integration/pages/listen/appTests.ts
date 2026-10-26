@@ -9,7 +9,6 @@ import runAppSiteNavigationTests from '../../common/navigation.app';
 
 export default () => {
   runResponseHeaderTests();
-  // Assert header and footer are not present
   runAppSiteNavigationTests();
   runCrossPlatformSEOTests();
   runTimestampTests();

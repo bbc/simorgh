@@ -7,7 +7,7 @@ import runAppTests from '../appTests';
 
 describe('App', () => {
   describe(pageType, () => {
-    runAppTests(service);
+    runAppTests();
     runMediaPlayerAudioTests();
   });
 });
