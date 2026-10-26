@@ -140,7 +140,7 @@ const PageLayoutWrapper = ({
           navItems={navItems}
           primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
-            blocks: onwardJourneyPageData.secondaryColumn?.topStories || [],
+            blocks: onwardJourneyPageData?.secondaryColumn?.topStories || [],
           }}
         />
         <div css={styles.content}>{children}</div>
