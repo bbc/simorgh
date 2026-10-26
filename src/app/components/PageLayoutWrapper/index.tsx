@@ -7,6 +7,7 @@ import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeade
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import getPrimaryMediaType from '#lib/utilities/getPrimaryMediaType';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
+import { useArticleOnwardJourneys } from '#app/contexts/ArticleOnwardJourneysContext';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -15,7 +16,6 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import { useArticleOnwardJourneys } from '#app/contexts/ArticleOnwardJourneysContext';
 import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
@@ -61,13 +61,12 @@ const PageLayoutWrapper = ({
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
   const onwardJourneyPageData = useArticleOnwardJourneys(pageData);
-  const effectivePageData = onwardJourneyPageData || pageData;
 
   const isErrorPage = ![200].includes(status) || !status;
-  const pageType = effectivePageData?.metadata?.type;
+  const pageType = pageData?.metadata?.type;
 
   const primaryMediaType = getPrimaryMediaType(
-    effectivePageData?.metadata?.passport?.taggings,
+    pageData?.metadata?.passport?.taggings,
   );
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
@@ -77,7 +76,7 @@ const PageLayoutWrapper = ({
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
-    wordCount = effectivePageData?.content?.model?.blocks
+    wordCount = pageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
       ?.reduce((reducer, block) => {
         const innerBlocks = block?.model?.blocks
@@ -93,7 +92,7 @@ const PageLayoutWrapper = ({
 
   const serviceFonts = fontFaces();
 
-  const wrappedTopics = effectivePageData?.metadata?.topics?.map(topic => ({
+  const wrappedTopics = pageData?.metadata?.topics?.map(topic => ({
     topicName: topic.topicName,
     topicId: topic.topicId,
   }));
@@ -141,7 +140,7 @@ const PageLayoutWrapper = ({
           navItems={navItems}
           primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
-            blocks: effectivePageData?.secondaryColumn?.topStories || [],
+            blocks: onwardJourneyPageData.secondaryColumn?.topStories || [],
           }}
         />
         <div css={styles.content}>{children}</div>

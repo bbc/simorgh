@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   render,
   waitFor,
@@ -46,13 +45,7 @@ const ArticleData = ({ pageData }: { pageData: Article }) => {
   );
 };
 
-const Wrapper = ({
-  children,
-  country,
-}: {
-  children: ReactNode;
-  country?: string;
-}) => (
+const TestApp = ({ country }: { country?: string }) => (
   <RequestContextProvider
     service="pidgin"
     pageType={ARTICLE_PAGE}
@@ -60,7 +53,7 @@ const Wrapper = ({
     country={country}
   >
     <ArticleOnwardJourneysProvider pageData={article} pageType={ARTICLE_PAGE}>
-      {children}
+      <ArticleData pageData={article} />
     </ArticleOnwardJourneysProvider>
   </RequestContextProvider>
 );
@@ -93,13 +86,11 @@ describe('ArticleOnwardJourneysProvider', () => {
 
       return Promise.resolve({
         ok: true,
-        json: async () => ({ data: responseData[onwardJourney!] }),
+        json: async () => ({ data: responseData[onwardJourney ?? ''] }),
       });
     });
 
-    const { getByTestId } = render(<ArticleData pageData={article} />, {
-      wrapper: ({ children }) => <Wrapper country="ng">{children}</Wrapper>,
-    });
+    const { getByTestId } = render(<TestApp country="ng" />);
 
     await waitFor(() => {
       expect(getByTestId('top-stories')).toHaveTextContent('1');
@@ -131,7 +122,7 @@ describe('ArticleOnwardJourneysProvider', () => {
       json: async () => ({ data: null }),
     });
 
-    render(<ArticleData pageData={article} />, { wrapper: Wrapper });
+    render(<TestApp />);
 
     await waitFor(() => expect(mockFetch).toHaveBeenCalled());
 

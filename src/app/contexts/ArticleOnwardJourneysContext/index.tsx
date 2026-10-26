@@ -101,10 +101,31 @@ const fetchOnwardJourney = async <T,>({
   return data;
 };
 
-const getFulfilledValue = <T,>(
-  result: PromiseSettledResult<T | null>,
-): T | null | undefined =>
-  result.status === 'fulfilled' ? result.value : undefined;
+const safelyFetchOnwardJourney = async <T,>(
+  request: Promise<T | null>,
+): Promise<T | null | undefined> => {
+  try {
+    return await request;
+  } catch {
+    return undefined;
+  }
+};
+
+const getCountryTopicIdToReorder = ({
+  topics,
+  countryCuration,
+  countryTopicIdToReorder,
+}: {
+  topics: Article['metadata']['topics'];
+  countryCuration: Article['countryCuration'] | null | undefined;
+  countryTopicIdToReorder: Article['countryTopicIdToReorder'];
+}) => {
+  if (countryCuration === undefined) return countryTopicIdToReorder;
+
+  return topics?.[0]?.topicId === countryCuration?.topicId
+    ? countryCuration.topicId
+    : null;
+};
 
 const mergeOnwardJourneyData = ({
   article,
@@ -122,29 +143,40 @@ const mergeOnwardJourneyData = ({
     videoCuration,
   } = onwardJourneyData;
 
-  const secondaryColumn = {
-    ...article.secondaryColumn,
-    ...(topStoriesAndFeatures !== undefined && {
-      topStories: topStoriesAndFeatures?.topStories ?? null,
-      features: topStoriesAndFeatures?.features ?? null,
-    }),
-    ...(latestMedia !== undefined && { latestMedia }),
-    ...(videoCuration !== undefined && { mediaCuration: videoCuration }),
-  };
+  const hasSecondaryColumnData = Boolean(
+    article.secondaryColumn ||
+    topStoriesAndFeatures ||
+    latestMedia ||
+    videoCuration,
+  );
+  const secondaryColumn: SecondaryColumn | undefined = hasSecondaryColumnData
+    ? {
+        topStories:
+          topStoriesAndFeatures?.topStories ??
+          article.secondaryColumn?.topStories ??
+          [],
+        features:
+          topStoriesAndFeatures?.features ??
+          article.secondaryColumn?.features ??
+          [],
+        ...article.secondaryColumn,
+        ...(latestMedia && { latestMedia }),
+        ...(videoCuration && { mediaCuration: videoCuration }),
+      }
+    : undefined;
 
-  const countryTopicIdToReorder =
-    countryCuration !== undefined
-      ? article.metadata.topics?.[0]?.topicId === countryCuration?.topicId
-        ? countryCuration.topicId
-        : null
-      : article.countryTopicIdToReorder;
+  const countryTopicIdToReorder = getCountryTopicIdToReorder({
+    topics: article.metadata.topics,
+    countryCuration,
+    countryTopicIdToReorder: article.countryTopicIdToReorder,
+  });
 
   return {
     ...article,
-    secondaryColumn,
-    ...(mostRead !== undefined && { mostRead }),
-    ...(portraitVideo !== undefined && { portraitVideoItems: portraitVideo }),
-    ...(countryCuration !== undefined && { countryCuration }),
+    ...(secondaryColumn && { secondaryColumn }),
+    ...(mostRead && { mostRead }),
+    ...(portraitVideo && { portraitVideoItems: portraitVideo }),
+    ...(countryCuration && { countryCuration }),
     countryTopicIdToReorder,
   };
 };
@@ -181,38 +213,49 @@ export const ArticleOnwardJourneysProvider = ({
     };
 
     const fetchOnwardJourneys = async () => {
-      const requests = [
+      const topStoriesAndFeaturesRequest = safelyFetchOnwardJourney(
         fetchOnwardJourney<OnwardJourneyData['topStoriesAndFeatures']>({
           onwardJourney: 'topStoriesAndFeatures',
           ...commonParams,
         }),
+      );
+      const mostReadRequest = safelyFetchOnwardJourney(
         fetchOnwardJourney<OnwardJourneyData['mostRead']>({
           onwardJourney: 'mostRead',
           ...commonParams,
         }),
+      );
+      const portraitVideoRequest = safelyFetchOnwardJourney(
         fetchOnwardJourney<OnwardJourneyData['portraitVideo']>({
           onwardJourney: 'portraitVideo',
           ...commonParams,
         }),
+      );
+      const videoCurationRequest = safelyFetchOnwardJourney(
         fetchOnwardJourney<OnwardJourneyData['videoCuration']>({
           onwardJourney: 'videoCuration',
           ...commonParams,
         }),
-        country
-          ? fetchOnwardJourney<OnwardJourneyData['countryCuration']>({
+      );
+      const countryCurationRequest = country
+        ? safelyFetchOnwardJourney(
+            fetchOnwardJourney<OnwardJourneyData['countryCuration']>({
               onwardJourney: 'countryCuration',
               country,
               ...commonParams,
-            })
-          : Promise.resolve(undefined),
+            }),
+          )
+        : Promise.resolve(undefined);
+      const latestMediaRequest =
         articlePageData?.metadata.consumableAsSFV && articleId
-          ? fetchOnwardJourney<OnwardJourneyData['latestMedia']>({
-              onwardJourney: 'latestMedia',
-              id: articleId,
-              ...commonParams,
-            })
-          : Promise.resolve(undefined),
-      ];
+          ? safelyFetchOnwardJourney(
+              fetchOnwardJourney<OnwardJourneyData['latestMedia']>({
+                onwardJourney: 'latestMedia',
+                id: articleId,
+                ...commonParams,
+              }),
+            )
+          : Promise.resolve(undefined);
 
       const [
         topStoriesAndFeatures,
@@ -221,7 +264,14 @@ export const ArticleOnwardJourneysProvider = ({
         videoCuration,
         countryCuration,
         latestMedia,
-      ] = await Promise.allSettled(requests);
+      ] = await Promise.all([
+        topStoriesAndFeaturesRequest,
+        mostReadRequest,
+        portraitVideoRequest,
+        videoCurationRequest,
+        countryCurationRequest,
+        latestMediaRequest,
+      ] as const);
 
       if (abortController.signal.aborted) return;
 
@@ -230,19 +280,19 @@ export const ArticleOnwardJourneysProvider = ({
           ? mergeOnwardJourneyData({
               article: currentArticle,
               onwardJourneyData: {
-                topStoriesAndFeatures: getFulfilledValue(topStoriesAndFeatures),
-                mostRead: getFulfilledValue(mostRead),
-                portraitVideo: getFulfilledValue(portraitVideo),
-                videoCuration: getFulfilledValue(videoCuration),
-                countryCuration: getFulfilledValue(countryCuration),
-                latestMedia: getFulfilledValue(latestMedia),
+                topStoriesAndFeatures,
+                mostRead,
+                portraitVideo,
+                videoCuration,
+                countryCuration,
+                latestMedia,
               },
             })
           : currentArticle,
       );
     };
 
-    void fetchOnwardJourneys();
+    fetchOnwardJourneys();
 
     return () => {
       abortController.abort();

@@ -44,9 +44,12 @@ describe('handleArticleRoute', () => {
 
   it('leaves onward journey data to the client on canonical pages', async () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    const { pageData } = result.props;
 
-    expect(result.props.pageData.secondaryColumn).toBeUndefined();
-    expect(result.props.pageData.mostRead).toBeUndefined();
+    if (!pageData) throw new Error('Expected article page data');
+
+    expect(pageData.secondaryColumn).toBeUndefined();
+    expect(pageData.mostRead).toBeUndefined();
   });
 
   it('keeps onward journey data in the response for AMP pages', async () => {
@@ -56,13 +59,16 @@ describe('handleArticleRoute', () => {
     } satisfies GetServerSidePropsContext;
 
     const result = await handleArticleRoute(ampRequest);
+    const { pageData } = result.props;
 
-    expect(result.props.pageData.secondaryColumn).toEqual(
+    if (!pageData) throw new Error('Expected article page data');
+
+    expect(pageData.secondaryColumn).toEqual(
       expect.objectContaining({
         topStories: expect.anything(),
       }),
     );
-    expect(result.props.pageData.mostRead).toBeDefined();
+    expect(pageData.mostRead).toBeDefined();
   });
 
   it('returns expected props if shouldRender succeeds', async () => {
