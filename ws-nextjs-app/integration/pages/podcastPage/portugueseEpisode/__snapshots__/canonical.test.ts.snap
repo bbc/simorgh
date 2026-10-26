@@ -180,7 +180,7 @@ exports[`Canonical Podcast Page Recent Episodes List items should match text and
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/portuguese/images/icons/icon-192x192.png",
 }
 `;
 

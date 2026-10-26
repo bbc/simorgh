@@ -151,7 +151,7 @@ exports[`Canonical Korean Live Radio Page Media Loader renders a valid container
 exports[`Canonical Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/korean/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/korean/images/icons/icon-192x192.png",
 }
 `;
 

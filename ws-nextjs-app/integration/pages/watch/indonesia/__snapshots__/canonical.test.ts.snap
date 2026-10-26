@@ -194,7 +194,7 @@ exports[`Canonical Watch Media Loader renders a valid container 1`] = `
 exports[`Canonical Watch SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/indonesia/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/indonesia/images/icons/icon-192x192.png",
 }
 `;
 

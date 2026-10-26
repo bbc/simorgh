@@ -134,7 +134,7 @@ exports[`Canonical Topic Page Page content First item in the first curation is t
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/pidgin/images/icons/icon-192x192.png",
 }
 `;
 

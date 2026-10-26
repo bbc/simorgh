@@ -154,7 +154,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/arabic/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/arabic/images/icons/icon-192x192.png",
 }
 `;
 

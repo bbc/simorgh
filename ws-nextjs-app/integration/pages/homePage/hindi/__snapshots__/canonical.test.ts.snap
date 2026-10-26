@@ -204,7 +204,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/hindi/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hindi/images/icons/icon-192x192.png",
 }
 `;
 
@@ -733,7 +733,7 @@ exports[`Canonical Home Page messageBanner has an image 1`] = `
   aria-hidden="true"
   class="external-svg icons_externalSvg__wi_O0 css-4xk39v"
   height="12"
-  src="http://localhost:7080/images/icons/chevron-forward.svg"
+  src="http://localhost:7081/images/icons/chevron-forward.svg"
   width="12"
 />
 `;
