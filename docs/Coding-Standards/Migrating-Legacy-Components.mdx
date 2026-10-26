@@ -99,6 +99,28 @@ Keep the declaration next to the component when it is not used anywhere else.
 
 ## Styling
 
+### ⚠️ Check for PWA typography before migrating anything that renders text
+
+Around 20 services (pidgin, hausa, yoruba, ukrainian and others) define a `pwaTheme`
+alongside their normal theme. When `useIsPWA()` is true, `withThemeProvider` swaps
+`fontVariants` to Reith at runtime, so an installed PWA renders different fonts to the
+browser.
+
+`ThemeProviderSCSSModules` does **not** yet support this. Until it does, a component that
+reads `fontVariants` or `fontSizes` from the Emotion theme **must not** be migrated to SCSS
+Modules — doing so silently drops the PWA override for those services, which is very hard
+to spot in review because it only reproduces in an installed PWA.
+
+Before migrating, check whether the component uses `fontVariants` or `fontSizes`:
+
+- **It does** — leave it on Emotion for now. If the goal is to remove a `gel-foundations`
+  import, take the values from the theme instead (`theme.mq.*`, `theme.spacings.*`), which
+  removes the legacy coupling without changing the styling system.
+- **It does not** (layout-only components) — migrate to SCSS Modules as normal.
+
+Lifting PWA typography into `ThemeProviderSCSSModules` is a prerequisite for migrating the
+text components, and should be done before the `Text`/`Paragraph`/`Headings` cluster.
+
 ### Replace `styled` with an `index.module.scss` file
 
 Import the shared design tokens with `@use '@scss/themeTokens' as theme;` and apply classes
