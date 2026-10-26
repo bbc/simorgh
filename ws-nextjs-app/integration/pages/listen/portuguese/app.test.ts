@@ -3,11 +3,11 @@
  * @pathname /portuguese/listen/cqx36ey0kld4o
  */
 import { runMediaPlayerAudioTests } from '#nextjs/integration/common';
-import runCanonicalTests from '../../../articles/canonicalTests';
+import runAppTests from '../appTests';
 
-describe('Canonical', () => {
+describe('App', () => {
   describe(pageType, () => {
-    runCanonicalTests(service);
+    runAppTests();
     runMediaPlayerAudioTests();
   });
 });

@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`App Listen Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`App Listen Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`App Listen Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "62",
+  },
+  {
+    "p": "mundo.listen.ck124pz8jz1yo.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:ck124pz8jz1yo]",
+  },
+  {
+    "x2": "[mobile-app]",
+  },
+  {
+    "x3": "[news-mundo-app]",
+  },
+  {
+    "x4": "[es]",
+  },
+  {
+    "x7": "[article-sfv]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Test]",
+  },
+  {
+    "x11": "[2026-10-16T14:44:54.193Z]",
+  },
+  {
+    "x12": "[2026-10-16T14:44:54.193Z]",
+  },
+]
+`;
+
+exports[`App Listen Media Loader renders a valid container 1`] = `
+<figure
+  class="media-container css-1vwdzux"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-uym7w5"
+    data-simorgh-media-loader="inactive"
+  >
+    <div
+      class="media-player css-eyhmom"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-w2qiqs"
+          >
+            <strong
+              class="css-1cnbroz"
+            >
+              Para ver este contenido, favor activar JavaScript, o intentar con otro navegador
+            </strong>
+          </div>
+        </div>
+      </noscript>
+    </div>
+  </div>
+  <figcaption
+    class="css-odcz7m"
+    dir="ltr"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="VisuallyHiddenText_visuallyHiddenText__NazL3"
+      >
+        Título del audio
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        the boop from slack
+      </span>
+    </span>
+  </figcaption>
+</figure>
+`;
+
+exports[`App Listen SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/mundo/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`App Listen SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`App Listen SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`App Listen SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`App Listen SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`App Listen SEO Canonical link 1`] = `"http://localhost:7081/mundo/listen/ck124pz8jz1yo.app"`;
+
+exports[`App Listen SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`App Listen SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`App Listen SEO Heading level 1 1`] = `"syndication test run"`;
+
+exports[`App Listen SEO Lang attribute 1`] = `"es"`;
+
+exports[`App Listen SEO Linked data should match text 1`] = `
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Mundo",
+        "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
+      },
+      "dateModified": "2026-10-16T14:44:54.193Z",
+      "datePublished": "2026-10-16T14:44:54.193Z",
+      "headline": "Test",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/p01xcmls.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/mundo/listen/ck124pz8jz1yo.app",
+        "@type": "WebPage",
+        "name": "Test",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Mundo",
+        "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/p01xcmls.png",
+      "url": "http://localhost:7081/mundo/listen/ck124pz8jz1yo.app",
+    },
+  ],
+}
+`;
+
+exports[`App Listen SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "the boop from slack",
+  "duration": "PT2S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/ck124pz8jz1yo/p01xcmlm/es",
+  "name": "the boop from slack",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01xcmls.png",
+  "uploadDate": "2026-08-26T17:01:00.000Z",
+}
+`;
+
+exports[`App Listen SEO OG description 1`] = `"Test"`;
+
+exports[`App Listen SEO OG image 1`] = `"http://localhost:7081/mundo/og/ck124pz8jz1yo"`;
+
+exports[`App Listen SEO OG image alt 1`] = `"the boop from slack"`;
+
+exports[`App Listen SEO OG locale 1`] = `"es-005"`;
+
+exports[`App Listen SEO OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`App Listen SEO OG title 1`] = `"Test - BBC News Mundo"`;
+
+exports[`App Listen SEO OG type 1`] = `"article"`;
+
+exports[`App Listen SEO OG url 1`] = `"http://localhost:7081/mundo/listen/ck124pz8jz1yo.app"`;
+
+exports[`App Listen SEO Page title 1`] = `"Test - BBC News Mundo"`;
+
+exports[`App Listen SEO Robots meta tag 1`] = `"noindex"`;
+
+exports[`App Listen SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`App Listen SEO Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`App Listen SEO Twitter description 1`] = `"Test"`;
+
+exports[`App Listen SEO Twitter image alt 1`] = `"the boop from slack"`;
+
+exports[`App Listen SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_mundo/p01xcmls.png"`;
+
+exports[`App Listen SEO Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`App Listen SEO Twitter title 1`] = `"Test - BBC News Mundo"`;
+
+exports[`App Listen Timestamp should match text and date 1`] = `
+{
+  "date": "2026-10-16",
+  "text": "16 octubre 2026",
+}
+`;
