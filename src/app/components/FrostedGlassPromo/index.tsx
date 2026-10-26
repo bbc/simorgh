@@ -102,15 +102,17 @@ const FrostedGlassPromo = ({
       <IMAGE
         darkPlaceholder={isCanonical}
         lazyLoad
-        src={src}
-        srcSet={srcSet}
-        fallbackSrcSet={fallbackSrcSet}
-        mediaType={mediaType}
-        fallbackMediaType={fallbackMimeType}
-        sizes={sizes}
-        alt={alt}
-        width={width}
-        height={height}
+        {...{
+          src,
+          srcSet,
+          fallbackSrcSet,
+          mediaType,
+          fallbackMediaType: fallbackMimeType,
+          sizes,
+          alt,
+          width,
+          height,
+        }}
       />
       <Lazyload
         css={{ height: '100%' }}

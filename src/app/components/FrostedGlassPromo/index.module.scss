@@ -108,12 +108,12 @@ $scale-amount: 1.15;
 
   &[data-is-loading='false'] {
     @supports (filter: blur($blur-radius)) {
-      background: rgb(var(--panel-colour-rgb, 32, 34, 36) / 62%);
+      background: rgba(var(--panel-colour-rgb, 32, 34, 36), 0.62);
     }
   }
 }
 
-.timestamp {
+time.timestamp {
   @include theme.fontVariants-gel-font-variant('sans-regular');
   font-size: 0.8125rem;
   padding: 0.75rem theme.$spacings-full 0;
@@ -124,10 +124,10 @@ $scale-amount: 1.15;
   }
 }
 
-.timestampAmp {
+time.timestampAmp {
   color: theme.$palette-black;
 }
 
-.timestampCanonical {
+time.timestampCanonical {
   color: theme.$palette-grey-3;
 }
