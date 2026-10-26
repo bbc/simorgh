@@ -21,8 +21,14 @@ jest.mock('#app/hooks/useHydrationDetection');
 
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
-  default: ({ onClose }: { onClose: () => void }) => (
-    <div data-testid="follow-topic-sign-in-modal">
+  default: ({
+    onClose,
+    context,
+  }: {
+    onClose: () => void;
+    context?: string;
+  }) => (
+    <div data-testid="follow-topic-sign-in-modal" data-context={context}>
       <button
         type="button"
         onClick={onClose}
@@ -151,9 +157,10 @@ describe('FollowTopicButton', () => {
 
     await userEvent.click(screen.getByTestId('follow-topic-btn-guest'));
 
-    expect(
-      screen.getByTestId('follow-topic-sign-in-modal'),
-    ).toBeInTheDocument();
+    expect(screen.getByTestId('follow-topic-sign-in-modal')).toHaveAttribute(
+      'data-context',
+      'followTopic',
+    );
 
     await userEvent.click(
       screen.getByTestId('follow-topic-sign-in-modal-close'),
