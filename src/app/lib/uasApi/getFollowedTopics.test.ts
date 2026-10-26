@@ -1,11 +1,13 @@
 import getFollowedTopics, { UasFollowItem } from './getFollowedTopics';
 import uasApiRequest from './index';
+import { UAS_API_ERROR } from '../logger.const';
 
+const mockLoggerError = jest.fn();
 jest.mock('./index');
 jest.mock('#lib/logger.node', () => ({
   __esModule: true,
   default: jest.fn(() => ({
-    error: jest.fn(),
+    error: (...args: unknown[]) => mockLoggerError(...args),
   })),
 }));
 
@@ -54,6 +56,21 @@ const mockFollowsResponse = {
 describe('getFollowedTopics', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('should rethrow request cancellation without logging an API error', async () => {
+    const controller = new AbortController();
+    controller.abort();
+    mockUasApiRequest.mockRejectedValueOnce(controller.signal.reason);
+
+    await expect(
+      getFollowedTopics({
+        signal: controller.signal,
+        isRefreshAvailable: false,
+      }),
+    ).rejects.toBe(controller.signal.reason);
+
+    expect(mockLoggerError).not.toHaveBeenCalled();
   });
 
   it('should fetch follows and transform them into followedTopics', async () => {
@@ -427,5 +444,8 @@ describe('getFollowedTopics', () => {
     await expect(
       getFollowedTopics({ isRefreshAvailable: false }),
     ).rejects.toThrow('API Error');
+    expect(mockLoggerError).toHaveBeenCalledWith(UAS_API_ERROR, {
+      error: error.message,
+    });
   });
 });
