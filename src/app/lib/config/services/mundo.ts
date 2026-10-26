@@ -50,6 +50,9 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'Elecciones EE.UU. 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960',
+      ],
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:
@@ -172,6 +175,11 @@ export const service: DefaultServiceConfig = {
         title: 'Inicia sesión para guardar en Mis Noticias',
         description: 'Guarda artículos y léelos cuando quieras',
         closeLabel: 'Cerrar',
+        followTopic: {
+          title: 'Inicia sesión para seguir temas',
+          description:
+            'Accede directamente a las noticias que te interesan y no te pierdas ninguna historia',
+        },
       },
       saveArticleButton: {
         loading: 'Cargando',
@@ -198,11 +206,19 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
         noArticles: 'Aún no has guardado ningún artículo',
-        errorText:
-          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
+        savedArticlesErrorText:
+          'Estamos teniendo problemas para cargar tus artículos guardados',
         loading: 'Cargando',
         noJsDescription:
           'Habilita JavaScript o utiliza otro navegador para ver este contenido.',
+        followedTopicsTitle: 'Temas que sigues',
+        followedTopicsErrorText:
+          'Estamos teniendo problemas para cargar los temas que sigues',
+        noFollowedTopics: 'Aún no has seguido ningún tema',
+        seeMoreTopics: 'Ver más',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
       },
       actionTooltip: {
         success: {

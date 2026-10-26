@@ -8,6 +8,7 @@ describe('LiveLabel', () => {
     });
 
     expect(screen.getByRole('text')).toHaveTextContent('As E Dey Happen');
+    expect(screen.getByText('As E Dey Happen')).toHaveClass('liveLabelText');
   });
 
   it('should render correctly with English live text', () => {

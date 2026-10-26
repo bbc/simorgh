@@ -70,6 +70,9 @@ export const COMPONENTS = {
   RADIO_SCHEDULE: 'radio-schedule',
   LITE_SITE_SUMMARY: 'lite-site-summary',
   MESSAGE_BANNER: 'message-banner',
+  BILLBOARD: 'billboard',
+  PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
+  PORTRAIT_VIDEO_MODAL: 'portrait-video-modal',
 };
 
 export const isPageViewRequest =

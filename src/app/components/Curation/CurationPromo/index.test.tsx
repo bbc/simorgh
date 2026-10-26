@@ -9,6 +9,11 @@ import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 interface FixtureProps {
   lazy?: boolean;
   type?: string;
