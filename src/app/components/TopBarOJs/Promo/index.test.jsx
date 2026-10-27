@@ -48,7 +48,7 @@ describe('Top Bar Onward Journey Promo', () => {
     const liveLabel = link.querySelector('[class*="liveLabelText"]');
 
     expect(link).not.toHaveAttribute('aria-label');
-    expect(liveLabel.parentElement.nextSibling.nodeValue).toEqual(' ');
-    expect(link.textContent).toContain(`${liveLabel.textContent} `);
+    expect(link.textContent).toContain(liveLabel.textContent);
+    expect(liveLabel.textContent).toMatch(/ $/);
   });
 });
