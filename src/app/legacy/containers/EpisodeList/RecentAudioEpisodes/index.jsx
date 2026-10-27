@@ -41,9 +41,14 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
-// inline-block so its leading space separates the duration and date in the
-// accessible name without being rendered
 const InlineDiv = styled.div`
+  display: inline;
+`;
+
+// inline-block so its trailing space separates the duration and date in the
+// accessible name without being rendered. The duration always starts its own
+// line, so this doesn't change how it wraps.
+const VisibleDuration = styled.span`
   display: inline-block;
 `;
 
@@ -139,16 +144,15 @@ const RecentAudioEpisodes = ({
                 })} `}
               </VisuallyHiddenText>
               <EpisodeList.DateTimeDuration>
-                <span aria-hidden="true">
+                <VisibleDuration aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: datetimeLocale,
-                  })}`}
-                </span>
+                  })} `}
+                </VisibleDuration>
               </EpisodeList.DateTimeDuration>
               {episode.episodeTitle && (
                 <InlineDiv>
-                  {' '}
                   <EpisodeList.DateTimeDuration
                     hasBorder
                     dir={dir}

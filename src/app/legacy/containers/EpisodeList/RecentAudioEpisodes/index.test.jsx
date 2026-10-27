@@ -215,9 +215,8 @@ describe('RecentAudioEpisodes', () => {
     const duration = label.querySelector('[aria-hidden="true"]').parentElement;
 
     expect(title.nextSibling.nextSibling.nodeValue).toEqual(' ');
-    const dateWrapper = duration.nextSibling;
-    expect(dateWrapper).toContainElement(label.querySelector('time'));
-    expect(dateWrapper.firstChild.nodeValue).toEqual(' ');
+    expect(duration.textContent).toMatch(/ $/);
+    expect(duration.nextSibling).toContainElement(label.querySelector('time'));
   });
 
   it('should render the correct list item links for podcasts', async () => {
