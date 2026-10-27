@@ -114,9 +114,10 @@ const RecentAudioEpisodes = ({
             >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
+              {/* Plain spaces ({' '}) stop visible words running together in the accessible name (WCAG 2.5.3) */}
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
-              </EpisodeList.Title>
+              </EpisodeList.Title>{' '}
               <VisuallyHiddenText>, </VisuallyHiddenText>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
@@ -142,7 +143,7 @@ const RecentAudioEpisodes = ({
                     locale: datetimeLocale,
                   })}`}
                 </span>
-              </EpisodeList.DateTimeDuration>
+              </EpisodeList.DateTimeDuration>{' '}
               {episode.episodeTitle && (
                 <InlineDiv>
                   <EpisodeList.DateTimeDuration
