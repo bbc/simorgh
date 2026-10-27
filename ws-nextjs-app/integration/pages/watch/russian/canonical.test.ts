@@ -2,8 +2,8 @@
  * @service russian
  * @pathname /russian/watch/cjqyq2kz645mo
  */
-import runMediaPlayerTests from '../../../../common/mediaPlayer';
-import runCanonicalTests from '../../../articles/canonicalTests';
+import runMediaPlayerTests from '../../../common/mediaPlayer';
+import runCanonicalTests from '../../articles/canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
