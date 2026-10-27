@@ -78,4 +78,26 @@ describe('Assertions', () => {
       container.querySelector('a').getAttribute('data-navigation'),
     ).toEqual('test_navigation');
   });
+
+  it('should label a multi-word current page link with an id that resolves', () => {
+    const { container } = render(
+      <NavigationLi
+        url="http://test.url"
+        currentPageText="Current page"
+        service="news"
+        active
+      >
+        Ecoutez en direct
+      </NavigationLi>,
+    );
+
+    const labelledBy = container
+      .querySelector('a')
+      .getAttribute('aria-labelledby');
+
+    expect(labelledBy).toEqual('NavigationLinks-Ecoutez-en-direct');
+    expect(document.getElementById(labelledBy)).toHaveTextContent(
+      'Current page, Ecoutez en direct',
+    );
+  });
 });
