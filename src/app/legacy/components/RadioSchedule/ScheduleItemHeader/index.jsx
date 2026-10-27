@@ -126,12 +126,14 @@ const ScheduleItemHeader = ({
           {`${nextLabel} `}
         </NextLabel>
       )}
-      {brandTitle}
-      <VisuallyHiddenText>{`, ${formattedStartTime}, `}</VisuallyHiddenText>
+      {brandTitle}{' '}
+      {/* Start time comes after the visible text so the accessible name contains the visible label (WCAG 2.5.3) */}
       <TitleWrapper suppressHydrationWarning {...programStateConfig[state]}>
         {episodeTitle}
       </TitleWrapper>
-      <VisuallyHiddenText>{`, ${formattedDuration} `}</VisuallyHiddenText>
+      <VisuallyHiddenText>
+        {`, ${formattedStartTime}, ${formattedDuration} `}
+      </VisuallyHiddenText>
     </span>
   );
   const linkProps = { [linkComponentAttr]: link };
