@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/bbc/simorgh)
+[<img src="https://devin.ai/assets/askdeepwiki.png" alt="Ask DeepWiki about Simorgh" height="20"/>](https://deepwiki.com/bbc/simorgh)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 

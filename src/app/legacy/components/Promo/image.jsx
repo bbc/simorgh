@@ -66,31 +66,33 @@ const Image = props => {
     isLite,
     ...rest
   } = props;
-  const isProgrammeImage = src.startsWith(
+  const isProgrammeImage = src?.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
-  const suffix = src.endsWith('.webp') ? '' : '.webp';
+  const suffix = src?.endsWith('.webp') ? '' : '.webp';
   const resolutions = isProgrammeImage
     ? PROGRAMME_IMAGE_RESOLUTIONS
     : IMAGE_RESOLUTIONS;
   const sizes = buildSizes(useLargeImages, isProgrammeImage);
   const primarySrcSet = createResponsiveSrcSet({
-    imageUrlTemplate: `${src}${suffix}`,
+    imageUrlTemplate: src ? `${src}${suffix}` : undefined,
     widths: resolutions,
     mq: { GROUP_2_MAX_WIDTH: '' },
     sizesBuilder: () => sizes,
-  }).srcSet;
+  })?.srcSet;
   const fallbackSrcSet = createResponsiveSrcSet({
-    imageUrlTemplate: src.replaceAll('.webp', ''),
+    imageUrlTemplate: src ? src.replaceAll('.webp', '') : undefined,
     widths: resolutions,
     mq: { GROUP_2_MAX_WIDTH: '' },
     sizesBuilder: () => sizes,
-  }).srcSet;
-  const srcWith240Width = src.replace('{width}', 240);
+  })?.srcSet;
+  const srcWith240Width = src?.replace('{width}', 240);
 
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
+      {isPortraitImage && srcWith240Width && (
+        <BlurredBackground src={srcWith240Width} />
+      )}
       <IMAGE
         {...rest}
         src={srcWith240Width}
