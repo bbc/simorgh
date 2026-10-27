@@ -16,6 +16,7 @@ import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
 import LiveElectionBanner from './LiveElectionBanner';
+import isLive from '#app/lib/utilities/isLive';
 
 const Header = ({
   showLiveLabel,
@@ -62,6 +63,7 @@ const Header = ({
   // isLite is checked here (rather than inside isElectionBannerVisible) because this
   // page also needs it to decide its own layout, not just whether to render the banner.
   const shouldShowElectionBanner =
+    !isLive() &&
     !isLite &&
     isElectionBannerVisible({
       electionBannerEnabled,
