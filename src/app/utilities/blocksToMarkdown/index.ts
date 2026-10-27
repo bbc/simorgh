@@ -1,3 +1,5 @@
+import { Block } from '#app/pages/ArticlePage/types';
+
 export default function blocksToMarkdown(blocks: Block[]): string {
   return blocks.map(block => renderBlock(block)).join('\n\n');
 }
