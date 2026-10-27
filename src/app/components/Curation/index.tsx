@@ -9,6 +9,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
+import isLive from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -97,7 +98,7 @@ export default ({
   const GridComponent = getGridComponent(componentName);
 
   const shouldStyleAsVideoCollection =
-    componentName === SIMPLE_CURATION_GRID && isVideoCollection;
+    !isLive && componentName === SIMPLE_CURATION_GRID && isVideoCollection;
 
   const isFirstCuration = position === 0;
 
