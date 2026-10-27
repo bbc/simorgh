@@ -41,8 +41,10 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
+// inline-block so its leading space separates the duration and date in the
+// accessible name without being rendered
 const InlineDiv = styled.div`
-  display: inline;
+  display: inline-block;
 `;
 
 const RecentAudioEpisodes = ({
@@ -117,8 +119,8 @@ const RecentAudioEpisodes = ({
               {/* Plain spaces ({' '}) stop visible words running together in the accessible name (WCAG 2.5.3) */}
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
-              </EpisodeList.Title>{' '}
-              <VisuallyHiddenText>, </VisuallyHiddenText>
+              </EpisodeList.Title>
+              <VisuallyHiddenText>,</VisuallyHiddenText>{' '}
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
@@ -143,9 +145,10 @@ const RecentAudioEpisodes = ({
                     locale: datetimeLocale,
                   })}`}
                 </span>
-              </EpisodeList.DateTimeDuration>{' '}
+              </EpisodeList.DateTimeDuration>
               {episode.episodeTitle && (
                 <InlineDiv>
+                  {' '}
                   <EpisodeList.DateTimeDuration
                     hasBorder
                     dir={dir}
