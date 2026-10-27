@@ -201,6 +201,7 @@ export default class AppDocument extends Document<DocProps> {
               {pageType === 'live' && (
                 <script
                   src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
+                  defer
                   {...(nonce ? { nonce } : {})}
                 />
               )}
