@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/bbc/simorgh)
+[<img src="https://devin.ai/assets/askdeepwiki.png" alt="Ask DeepWiki about Simorgh" height="20"/>](https://deepwiki.com/bbc/simorgh)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
@@ -207,6 +207,8 @@ Every run of `yarn build` will update the bundle analysis files in the repo. To 
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
 ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
+
+Both `yarn test:lint` and `yarn test:lint:fix` use a content-based cache in `.eslintcache` to skip unchanged files on subsequent runs. The existing lint scope and rules are unchanged. Use `yarn test:lint --no-cache` for a full uncached run, for example after updating dependencies or Prettier configuration. ESLint's per-file cache does not track changes to imported files, so use an uncached run when checking cross-file changes.
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
 
