@@ -63,6 +63,10 @@ export interface Translations {
     title: string;
     description: string;
     closeLabel: string;
+    followTopic?: {
+      title: string;
+      description: string;
+    };
   };
   googlePreferredSource?: {
     linkText: string;
@@ -91,9 +95,15 @@ export interface Translations {
     description: string;
     guestDescription: string;
     noArticles: string;
-    errorText: string;
+    savedArticlesErrorText: string;
     loading: string;
     noJsDescription: string;
+    followedTopicsTitle: string;
+    followedTopicsErrorText: string;
+    noFollowedTopics: string;
+    seeMoreTopics: string;
+    seeLessTopics: string;
+    contentErrorText: string;
   };
   actionTooltip?: {
     success: {
