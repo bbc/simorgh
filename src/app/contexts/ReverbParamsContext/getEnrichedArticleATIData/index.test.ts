@@ -4,15 +4,6 @@ import {
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import getEnrichedArticleATIData from '.';
-import useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
-
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
-  __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
-  default: jest.fn(),
-}));
-
-const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -53,6 +44,7 @@ describe('getEnrichedArticleATIData', () => {
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata,
       serviceContext,
+      experimentVariant: null,
     });
 
     expect(enrichedData).toEqual({
@@ -86,6 +78,7 @@ describe('getEnrichedArticleATIData', () => {
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata: { ...pageMetadata, type: PHOTO_GALLERY_PAGE },
       serviceContext,
+      experimentVariant: null,
     });
 
     expect(enrichedData).toEqual({
@@ -120,6 +113,7 @@ describe('getEnrichedArticleATIData', () => {
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata: { ...pageMetadata, type: STORY_PAGE },
       serviceContext,
+      experimentVariant: null,
     });
 
     expect(enrichedData).toEqual({
@@ -154,6 +148,7 @@ describe('getEnrichedArticleATIData', () => {
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata: { ...pageMetadata, type: CORRESPONDENT_STORY_PAGE },
       serviceContext,
+      experimentVariant: null,
     });
 
     expect(enrichedData).toEqual({
@@ -185,11 +180,10 @@ describe('getEnrichedArticleATIData', () => {
   });
 
   it('should include experiment details when present', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
-
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata,
       serviceContext,
+      experimentVariant: 'experimentVariant',
     });
 
     expect(enrichedData).toEqual({
@@ -225,4 +219,17 @@ describe('getEnrichedArticleATIData', () => {
       timeUpdated: '2020-03-04T19:26:11.000Z',
     });
   });
+
+  it.each([null, 'off'])(
+    'does not add experiment details for the %s variant',
+    experimentVariant => {
+      expect(
+        getEnrichedArticleATIData({
+          pageMetadata,
+          serviceContext,
+          experimentVariant,
+        }),
+      ).toEqual(pageMetadata.atiAnalytics);
+    },
+  );
 });

@@ -1,7 +1,66 @@
-import { useState, useEffect } from 'react';
+import { useCallback, useMemo, useSyncExternalStore } from 'react';
 import ColorThief from './colorthief';
 
 import { selectColour } from './utils';
+
+const initialSnapshot = { palette: null, isLoading: true, error: null };
+const getServerSnapshot = () => initialSnapshot;
+
+const createImageColourStore = () => {
+  let snapshot = initialSnapshot;
+
+  return {
+    getSnapshot: () => snapshot,
+    subscribe: (url, paletteSize, listener) => {
+      let active = true;
+      let img;
+      snapshot = { ...snapshot, isLoading: true };
+      listener();
+
+      const handleError = () => {
+        if (!active) return;
+        snapshot = {
+          url,
+          paletteSize,
+          palette: null,
+          isLoading: false,
+          error: true,
+        };
+        listener();
+      };
+
+      const handleLoad = () => {
+        if (!active) return;
+        let palette;
+        try {
+          const colorThief = new ColorThief();
+          palette = colorThief.getPalette(img, paletteSize);
+        } catch (error) {
+          handleError();
+          return;
+        }
+        snapshot = { url, paletteSize, palette, isLoading: false, error: null };
+        listener();
+      };
+
+      try {
+        img = new Image();
+        img.addEventListener('load', handleLoad);
+        img.addEventListener('error', handleError);
+        img.crossOrigin = 'Anonymous';
+        img.src = url;
+      } catch (error) {
+        handleError();
+      }
+
+      return () => {
+        active = false;
+        img?.removeEventListener('load', handleLoad);
+        img?.removeEventListener('error', handleError);
+      };
+    },
+  };
+};
 
 const useImageColour = (
   url,
@@ -12,34 +71,17 @@ const useImageColour = (
     paletteSize = 10,
   } = {},
 ) => {
-  const [palette, setPalette] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const setErrorState = () => {
-    setPalette(null);
-    setError(true);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    try {
-      setIsLoading(true);
-
-      const colorThief = new ColorThief();
-      const img = new Image();
-      img.addEventListener('load', () => {
-        setPalette(colorThief.getPalette(img, paletteSize));
-        setIsLoading(false);
-        setError(null);
-      });
-
-      img.addEventListener('error', setErrorState);
-      img.crossOrigin = 'Anonymous';
-      img.src = url;
-    } catch (err) {
-      setErrorState();
-    }
-  }, [url, paletteSize]);
+  const store = useMemo(() => createImageColourStore(), []);
+  const subscribe = useCallback(
+    listener => store.subscribe(url, paletteSize, listener),
+    [store, url, paletteSize],
+  );
+  const snapshot = useSyncExternalStore(
+    subscribe,
+    store.getSnapshot,
+    getServerSnapshot,
+  );
+  const { palette, error } = snapshot;
 
   return {
     colour: selectColour({
@@ -48,7 +90,10 @@ const useImageColour = (
       contrastColour,
       fallbackColour,
     }),
-    isLoading,
+    isLoading:
+      snapshot.isLoading ||
+      snapshot.url !== url ||
+      snapshot.paletteSize !== paletteSize,
     error,
   };
 };

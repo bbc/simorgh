@@ -99,7 +99,7 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
     reducedStoryPromoItems[0],
   );
 
-  let ariaLabelledBy = generatePromoId({
+  const singleItemAriaLabelledBy = generatePromoId({
     sectionType: 'promo-rel-content',
     assetUri,
   });
@@ -124,7 +124,7 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
         >
           <RelatedContentItem
             item={reducedStoryPromoItems[0]}
-            ariaLabelledBy={ariaLabelledBy}
+            ariaLabelledBy={singleItemAriaLabelledBy}
             viewTracker={viewTracker}
             eventTrackingData={eventTrackingData}
           />
@@ -150,7 +150,7 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
               item,
             );
 
-            ariaLabelledBy = generatePromoId({
+            const ariaLabelledBy = generatePromoId({
               sectionType: 'promo-rel-content',
               assetUri: itemAssetUri,
               index,

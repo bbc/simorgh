@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { use, useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -51,12 +51,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     articleId,
     saveArticlePageData,
   });
-
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
-  useEffect(() => {
-    if (actionResult) setIsTooltipVisible(true);
-  }, [actionResult]);
 
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
@@ -123,7 +117,6 @@ const SaveArticleButtonAuthenticatedInner = ({
   };
 
   const handleTooltipClose = (event?: React.MouseEvent) => {
-    setIsTooltipVisible(false);
     resetActionResult();
     onTooltipCloseClickTrack?.(event);
   };
@@ -141,7 +134,7 @@ const SaveArticleButtonAuthenticatedInner = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && !isDarkUi && (
+      {actionResult && actionTooltip && !isDarkUi && (
         <ActionTooltip
           status={getTooltipStatus(actionResult)}
           content={getArticleTooltipContent(

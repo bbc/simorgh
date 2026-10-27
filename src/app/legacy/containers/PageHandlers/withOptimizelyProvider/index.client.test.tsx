@@ -1,8 +1,8 @@
 /* eslint-disable import/no-unresolved */
-import { useMemo } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { UserInfo } from '@optimizely/react-sdk/dist/utils';
-import { render } from '@testing-library/react';
+import { render } from '#app/components/react-testing-library-with-providers';
 import Cookie from 'js-cookie';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -33,10 +33,9 @@ const optimizelyProviderSpy = jest.spyOn(
 );
 
 const Component = () => <h1>Hola Optimizely</h1>;
+const OptimizelyComponent = withOptimizelyProvider(Component);
 
 const TestComponent = ({ country }: { country?: string }) => {
-  const OptimizelyComponent = withOptimizelyProvider(Component);
-
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
@@ -58,6 +57,12 @@ const TestComponent = ({ country }: { country?: string }) => {
 
 jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
 jest.mock('@optimizely/react-sdk');
+jest.mock('#app/contexts/ReverbParamsContext', () => ({
+  ReverbParamsContextProvider: ({ children }: PropsWithChildren) => children,
+}));
+jest.mock('#app/contexts/UserContext', () => ({
+  UserContextProvider: ({ children }: PropsWithChildren) => children,
+}));
 
 describe('withOptimizelyProvider HOC', () => {
   const originalMatchMedia = window.matchMedia;
@@ -81,6 +86,34 @@ describe('withOptimizelyProvider HOC', () => {
     render(<TestComponent />);
 
     expect(optimizelyProviderRenderSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should preserve the provider instance when context changes and isolate separate mounts', () => {
+    const optimizelyProviderRenderSpy = jest.spyOn(
+      optimizelyReactSdk.OptimizelyProvider.prototype,
+      'render',
+    );
+    const { rerender, unmount } = render(<TestComponent country="gb" />);
+    const providerInstance = optimizelyProviderRenderSpy.mock.instances[0];
+
+    rerender(<TestComponent country="br" />);
+
+    expect(optimizelyProviderSpy).toHaveBeenCalledTimes(1);
+    expect(optimizelyProviderRenderSpy).toHaveBeenCalledTimes(2);
+    expect(optimizelyProviderRenderSpy.mock.instances[1]).toBe(
+      providerInstance,
+    );
+    expect((providerInstance.props.user as UserInfo)?.attributes?.country).toBe(
+      'br',
+    );
+
+    unmount();
+    render(<TestComponent country="gb" />);
+
+    expect(optimizelyProviderSpy).toHaveBeenCalledTimes(2);
+    expect(optimizelyProviderRenderSpy.mock.instances[2]).not.toBe(
+      providerInstance,
+    );
   });
 
   it('should return undefined when ckns_mvt is fetched with Cookie.get', () => {

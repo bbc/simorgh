@@ -64,8 +64,7 @@ describe('AccountContext', () => {
       return { enabled: false, value: '' };
     });
 
-    delete (window as any).location;
-    window.location = { href: 'https://example.com/current-page' } as any;
+    window.history.replaceState({}, '', '/current-page');
   });
 
   afterEach(() => {
@@ -204,6 +203,29 @@ describe('AccountContext', () => {
 
     expect(mockCookieGet).toHaveBeenCalledWith(TOKEN_COOKIE_NAME);
     expect(rerenderedContext.isSignedIn).toBe(true);
+  });
+
+  it('adds the current return URL only after hydration', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    const { rerender } = render(<TestComponent />, {
+      idctaConfig: mockIdctaConfig,
+      service: 'hindi',
+    });
+    const initialContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(new URL(initialContext.signInUrl).searchParams.has('ptrt')).toBe(
+      false,
+    );
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<TestComponent />);
+    const hydratedContext = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(new URL(hydratedContext.signInUrl).searchParams.get('ptrt')).toBe(
+      'http://localhost/current-page',
+    );
   });
 
   it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
