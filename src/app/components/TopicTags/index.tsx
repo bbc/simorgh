@@ -12,6 +12,7 @@ import styles from './index.styles';
 interface TopicTagsProps {
   tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
   experimentProps?: ComponentExperimentProps;
+  trackingSource?: string;
 }
 
 type TopicTagLinkProps = {
@@ -44,15 +45,19 @@ const TopicTagLink = ({
   );
 };
 
-export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
-  const componentName = 'topics';
+export const TopicTags = ({
+  tags,
+  experimentProps,
+  trackingSource,
+}: TopicTagsProps) => {
+  const componentName = trackingSource ? `${trackingSource}-topics` : 'topics';
   const { service, translations } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const heading = translations?.relatedTopics ?? 'Related Topics';
   const eventTrackingData = {
     componentName,
     groupTracker: {
-      name: heading,
+      name: trackingSource || heading,
       type: componentName,
       itemCount: tags.length,
     },
