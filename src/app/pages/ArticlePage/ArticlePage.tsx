@@ -12,7 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
-import text from '#containers/Text';
+import TextContainer from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -59,7 +59,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from '#app/components/ElectionBanner';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
@@ -193,6 +192,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 
 const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
+);
+
+const ArticleBodyText = (props: ComponentToRenderProps) => (
+  <TextContainer {...props} isArticleBody />
 );
 
 const getVideoComponent =
@@ -399,7 +402,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
-    text,
+    text: ArticleBodyText,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
       hasByline,
@@ -468,9 +471,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
-      <AccountPromotionalBannerExperiment />
-
       <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}

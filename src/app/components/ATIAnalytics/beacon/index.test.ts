@@ -1,6 +1,11 @@
 import * as sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { sendEventBeacon } from '.';
 
+jest.mock('../../../lib/analyticsUtils/sendBeacon', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../lib/analyticsUtils/sendBeacon'),
+}));
+
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 
 const reverbMock = {

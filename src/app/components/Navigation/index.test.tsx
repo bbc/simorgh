@@ -21,11 +21,31 @@ import Navigation from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('Navigation', () => {
   const navItems = [
     { title: 'Home', url: '/news' },
     { title: 'About', url: '/about' },
   ];
+
+  it('does not enable sticky navigation on AMP even when its toggle is enabled', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      service: 'mundo',
+      isAmp: true,
+      toggles: { stickyNavigation: { enabled: true } },
+    });
+
+    expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
+  });
 
   it('should correctly render canonical navigation', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
