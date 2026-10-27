@@ -23,7 +23,9 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit'
   | 'statsNavigation'
-  | 'pause';
+  | 'pause'
+  | 'enterFakeFullscreen'
+  | 'exitFakeFullscreen';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
@@ -108,6 +110,9 @@ export type PlayerUiConfig = {
   pictureInPicture?: {
     enabled: boolean;
   };
+  cta?: {
+    mode?: 'duration' | null;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -121,6 +126,8 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
+  defaultImage: string;
+  holdingImageURL?: string;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -151,6 +158,7 @@ export type MediaInfo = {
 };
 
 export type Player = {
+  currentTime: (time?: number) => number;
   dispatchEvent(
     dispatchEvent: string,
     parameters?: { adTag: string | null },
@@ -378,4 +386,6 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
+  defaultImage: string;
+  holdingImageURL?: string;
 };

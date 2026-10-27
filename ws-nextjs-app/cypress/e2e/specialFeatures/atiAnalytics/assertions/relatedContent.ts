@@ -1,9 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import {
-  assertATIComponentClickEvent,
-  assertATIComponentViewEvent,
-} from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { RELATED_CONTENT } = COMPONENTS;
@@ -19,15 +16,12 @@ export const assertRelatedContentComponentView = ({
     cy.visit(path);
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-e2e="related-content-heading"]')
-      .filter(':visible')
-      .first()
-      .scrollIntoView({ duration: 1000 });
-
-    cy.get('[data-e2e="related-content-heading"]')
-      .filter(':visible')
-      .first()
-      .scrollIntoView({ duration: 1000 });
+    cy.get('[data-e2e="related-content-heading"]').scrollIntoView({
+      duration: 1000,
+    });
+    cy.get('[data-e2e="related-content-heading"]').scrollIntoView({
+      duration: 1000,
+    });
 
     assertATIComponentViewEvent({
       component: RELATED_CONTENT,
@@ -48,18 +42,12 @@ export const assertRelatedContentComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="related-content-heading"]')
-      .filter(':visible')
-      .first()
-      .scrollIntoView({ duration: 1000 });
+    cy.get('[data-e2e="related-content-heading"]').scrollIntoView({
+      duration: 1000,
+    });
 
     // Click on first item
-    cy.get('[data-e2e="related-content-heading"]')
-      .filter(':visible')
-      .first()
-      .find('a')
-      .first()
-      .click();
+    cy.get('[data-e2e="related-content-heading"]').find('a').first().click();
 
     assertATIComponentClickEvent({
       component: RELATED_CONTENT,

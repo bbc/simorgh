@@ -32,7 +32,9 @@ export interface MostReadLinkProps {
   size: Size;
   id: string;
   position: number | string;
+  isLive?: boolean | string;
   eventTrackingData?: EventTrackingData;
+  isAmp?: boolean;
 }
 
 type ArticleSource = 'cps' | 'optimo';
@@ -86,6 +88,7 @@ export interface MostReadData {
     href: string;
     title: string;
     timestamp: number | string;
+    isLive?: boolean;
     images?: {
       defaultPromoImage: OptimoBlock[];
     };

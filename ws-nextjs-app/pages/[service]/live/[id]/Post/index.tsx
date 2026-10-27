@@ -9,20 +9,47 @@ import UnorderedList from '#app/legacy/containers/BulletedList';
 import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
+import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
-import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import dynamic from 'next/dynamic';
+import StreamVideoPost from './StreamVideoPost';
 import styles from './styles';
 import {
   Post as PostType,
+  PostHeadline,
+  PostContributor,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
+
+const inferBlockIdentifier = ({
+  headingItem,
+}: {
+  headingItem: PostHeadingBlock;
+}) =>
+  ({
+    headline: block =>
+      `${block.type}-${block.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`,
+    subheadline: block =>
+      `${block.type}-${block.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`,
+    contributor: block => `${block.type}-${block.model?.name}`,
+  })[headingItem.type](headingItem);
+
+const enrichHeaderBlocksWithId = ({
+  headerBlocks,
+}: {
+  headerBlocks: PostHeadingBlock[];
+}) =>
+  headerBlocks.map(headingItem => ({
+    ...headingItem,
+    id: inferBlockIdentifier({ headingItem }),
+  }));
 
 const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
   ssr: false,
@@ -63,8 +90,6 @@ const PostHeaderBanner = ({
     datetimeLocale,
     serviceDatetimeLocale,
     altCalendar,
-    service,
-    script,
     translations: {
       liveExperiencePage: {
         breaking = 'Breaking',
@@ -84,8 +109,6 @@ const PostHeaderBanner = ({
         format={postDateFormat || 'D MMMM YYYY'}
         locale={locale}
         timezone={timezone}
-        service={service}
-        script={script}
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
@@ -98,88 +121,116 @@ const PostHeaderBanner = ({
   );
 };
 
-const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
-  const isHeadline = headerBlock.type === 'headline';
-  const headingText =
-    headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+const postHeadingComponentsToRender = {
+  headline: (props: { blocks: PostHeadline['model'] }) => {
+    const { blocks } = props;
 
-  return (
-    <>
-      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
+    const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+    return (
       <Text
-        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
-        size={isHeadline ? 'greatPrimer' : 'brevier'}
+        fontVariant="sansBold"
+        size="greatPrimer"
         className="headingStyling"
-        css={[
-          styles.postHeadings,
-          isHeadline ? styles.postHeadline : styles.postSubHeadline,
-        ]}
+        css={[styles.postHeadings, styles.postHeadline]}
       >
         {headingText}
       </Text>
-    </>
-  );
+    );
+  },
+  subheadline: (props: { blocks: PostHeadline['model'] }) => {
+    const { blocks } = props;
+
+    const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+    return (
+      <>
+        <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
+        <Text
+          fontVariant="sansRegular"
+          size="brevier"
+          className="headingStyling"
+          css={[styles.postHeadings, styles.postSubHeadline]}
+        >
+          {headingText}
+        </Text>
+      </>
+    );
+  },
 };
 
-const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
-  const componentsToRender = {
-    paragraph: (props: ComponentToRenderProps) => (
-      <Paragraph
-        blocks={props.blocks}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    unorderedList: (props: ComponentToRenderProps) => (
-      <UnorderedList
-        blocks={props.blocks}
-        blockGroupType={props.blockGroupType}
-        blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    orderedList: (props: ComponentToRenderProps) => (
-      <UnorderedList
-        blocks={props.blocks}
-        blockGroupType={props.blockGroupType}
-        blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    image: (props: { blocks: OptimoBlock[] }) => (
-      <ImageWithCaption
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        className="mediaStyles"
-        css={styles.bodyMedia}
-        position={[9]}
-      />
-    ),
-    video: (props: { blocks: MediaBlock[] }) => {
-      const { blocks } = props;
-      const isPortrait = isPortraitVideo(blocks);
+const PostHeading = ({
+  headerBlocks,
+}: {
+  headerBlocks: PostHeadingBlock[];
+}) => (
+  <Blocks
+    blocks={headerBlocks}
+    componentsToRender={postHeadingComponentsToRender}
+  />
+);
 
-      return (
-        <div css={isPortrait && styles.portraitVideoPlayer}>
-          <MediaLoader
-            blocks={props.blocks}
-            css={[styles.bodyMedia, styles.videoPost]}
-          />
-        </div>
-      );
-    },
-    audio: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
-    ),
-    social: SocialEmbedContainer,
-    oEmbed: OEmbed,
-  };
-  return (
-    <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-  );
+const PostByline = ({
+  postContributorBlocks,
+}: {
+  postContributorBlocks: PostContributor;
+}) => {
+  const { model: contributorData } = postContributorBlocks;
+
+  return <Byline blocks={[contributorData]} />;
 };
+
+const postContentComponentsToRender = {
+  paragraph: (props: ComponentToRenderProps) => (
+    <Paragraph
+      blocks={props.blocks}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  unorderedList: (props: ComponentToRenderProps) => (
+    <UnorderedList
+      blocks={props.blocks}
+      blockGroupType={props.blockGroupType}
+      blockGroupIndex={props.blockGroupIndex}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  orderedList: (props: ComponentToRenderProps) => (
+    <UnorderedList
+      blocks={props.blocks}
+      blockGroupType={props.blockGroupType}
+      blockGroupIndex={props.blockGroupIndex}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  image: (props: { blocks: OptimoBlock[] }) => (
+    <ImageWithCaption
+      {...props}
+      sizes="(min-width: 1008px) 760px, 100vw"
+      className="mediaStyles"
+      css={styles.bodyMedia}
+      position={[9]}
+    />
+  ),
+  video: (props: { blocks: MediaBlock[] }) => (
+    <StreamVideoPost blocks={props.blocks} />
+  ),
+  audio: (props: { blocks: MediaBlock[] }) => (
+    <MediaLoader blocks={props.blocks} css={styles.audioPost} />
+  ),
+  social: SocialEmbedContainer,
+  oEmbed: OEmbed,
+};
+
+const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => (
+  <Blocks
+    blocks={contentBlocks}
+    componentsToRender={postContentComponentsToRender}
+  />
+);
 
 const Post = ({
   post,
@@ -193,9 +244,19 @@ const Post = ({
     ['header', 'model', 'blocks'],
     post,
   );
+  const enrichedHeaderBlocks = enrichHeaderBlocksWithId({ headerBlocks });
 
+  const postHeadline = filterForBlockType(
+    enrichedHeaderBlocks,
+    'headline',
+  ) as PostHeadline;
   const firstHeadingText =
-    headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+    postHeadline?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const postContributorBlocks = filterForBlockType(
+    enrichedHeaderBlocks,
+    'contributor',
+  );
 
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
@@ -216,16 +277,16 @@ const Post = ({
             isBreakingNews={isBreakingNews}
             timestamp={timestamp}
           />
-
-          {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-          ))}
+          <PostHeading headerBlocks={enrichedHeaderBlocks} />
         </span>
       </Heading>
+      {postContributorBlocks && (
+        <PostByline postContributorBlocks={postContributorBlocks} />
+      )}
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
-      {hasShareApi && (
+      {hasShareApi && firstHeadingText && (
         <ShareButton
           eventTrackingData={{
             componentName: urn,

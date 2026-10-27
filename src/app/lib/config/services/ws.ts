@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
       moreOnThis: '',
@@ -72,15 +76,84 @@ export const service: DefaultServiceConfig = {
       gist: 'At a glance',
       account: {
         signIn: 'Sign In',
-        forYou: 'For you',
+        signInAccessibleLabel: 'Sign in to My News',
+        forYou: 'Your Account',
         register: 'Register',
+        settings: 'Settings',
       },
       accountPromoBanner: {
-        title: 'Discover your BBC',
-        description:
-          'Sign in or create an account to watch, listen and join in',
+        title: 'Your very own BBC',
+        description: 'Sign In or create an account for free',
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
+      },
+      accountSignInModal: {
+        title: 'Sign in to save to My News',
+        description: 'Save stories and read them at your convenience',
+        closeLabel: 'Close',
+        followTopic: {
+          title: 'Sign in to follow topics',
+          description:
+            'Get straight to the news that interests you and never miss a story',
+        },
+      },
+      saveArticleButton: {
+        loading: 'Loading',
+        save: 'Save for later',
+        saving: 'Saving',
+        saved: 'Saved to My News',
+        remove: 'Remove',
+        removeAccessible: 'Saved. Remove from My News',
+        removing: 'Removing',
+      },
+      followTopicButton: {
+        loading: 'Loading...',
+        follow: 'Follow',
+        following: 'Following...',
+        followed: 'Followed',
+        unfollow: 'Unfollow',
+        unfollowAccessible: 'Followed. Unfollow',
+        unfollowing: 'Unfollowing...',
+      },
+      myNews: {
+        title: 'My News',
+        guestTitle: 'Welcome to My News',
+        description: 'My saved articles',
+        guestDescription:
+          'Sign in to follow topics that matter to you and save articles for later.',
+        noArticles: "You haven't saved any articles yet",
+        savedArticlesErrorText:
+          "We're having trouble loading your saved articles",
+        loading: 'Loading',
+        noJsDescription:
+          'Please enable JavaScript or use a different browser to view this content.',
+        followedTopicsTitle: 'Followed Topics',
+        followedTopicsErrorText:
+          "We're having trouble loading your followed topics",
+        noFollowedTopics: "You haven't followed any topics yet",
+        seeMoreTopics: 'See more',
+        seeLessTopics: 'See less',
+        contentErrorText:
+          "This content doesn't seem to be loading. Please try again later.",
+      },
+      actionTooltip: {
+        success: {
+          title: 'This article is now saved',
+          bodyBefore: 'It will appear in',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Sorry, something went wrong',
+          body: 'Check your connection, refresh the page and try again',
+        },
+        removed: {
+          title: 'This article is now removed',
+          bodyBefore: 'It will be removed from',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'My News',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'Close',
       },
       error: {
         404: {
@@ -565,6 +638,12 @@ export const service: DefaultServiceConfig = {
             lang: 'cy',
           },
           {
+            id: 'magyarul',
+            href: 'https://www.bbc.com/magyarul',
+            label: 'BBC News Magyarul',
+            lang: 'hu',
+          },
+          {
             id: 'kyrgyz',
             href: 'https://www.bbc.com/kyrgyz',
             label: 'BBC News Кыргыз Кызматы',
@@ -581,6 +660,12 @@ export const service: DefaultServiceConfig = {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
             label: 'BBC News Polska',
+          },
+          {
+            id: 'romania',
+            href: 'https://www.bbc.com/romania',
+            label: 'BBC News România',
+            lang: 'ro',
           },
           {
             id: 'russian',

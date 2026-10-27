@@ -53,13 +53,6 @@
     }
   ],
   "splash_pages": null,
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "uk.co.bbc.arabic"
-    }
-  ],
   "start_url": "/arabic?at_medium=PWA&at_campaign=PWA",
   "shortcuts": [
     {
@@ -75,5 +68,13 @@
       ]
     }
   ],
-  "id": "/arabic"
+  "id": "/arabic",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "uk.co.bbc.wsuniversal",
+      "url": "https://play.google.com/store/apps/details?id=uk.co.bbc.wsuniversal"
+    }
+  ]
 }

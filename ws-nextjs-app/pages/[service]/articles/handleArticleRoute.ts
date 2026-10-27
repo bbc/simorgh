@@ -11,6 +11,7 @@ import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -33,16 +34,28 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
 export default async (context: GetServerSidePropsContext) => {
   const {
     resolvedUrl,
-    req: { headers: reqHeaders },
+    req: { headers: reqHeaders, url: requestUrl },
   } = context;
 
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const canonicalPathname =
+    requestUrl?.split('?')?.[0] || resolvedUrlWithoutQuery;
 
   const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
+
+  const countryHeader =
+    reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'];
+  const country = countryHeader
+    ? (Array.isArray(countryHeader) ? countryHeader[0] : countryHeader)
+        .toString()
+        .toLowerCase()
+    : null;
+
+  const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
 
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
@@ -52,6 +65,7 @@ export default async (context: GetServerSidePropsContext) => {
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
     isAmp,
+    ...(shouldFetchCountryCuration && country && { country }),
   });
 
   const { pageData, status } = data;
@@ -61,13 +75,20 @@ export default async (context: GetServerSidePropsContext) => {
   let routingInfoLogger = logger.debug;
 
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
+    { pageData: pageData?.article, status },
     service,
+    ['brasil', 'BBCScotland'], // Passport homes to ignore for service validation
   );
 
   // If request has fails or should not be rendered, return non-200 status
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: ARTICLE_PAGE,
+    });
 
     return {
       props: {
@@ -76,7 +97,7 @@ export default async (context: GetServerSidePropsContext) => {
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
-        pathname: resolvedUrlWithoutQuery,
+        pathname: canonicalPathname,
       },
     };
   }
@@ -84,8 +105,6 @@ export default async (context: GetServerSidePropsContext) => {
   if (!data?.pageData?.article) {
     throw handleError('Article data is malformed', 500);
   }
-
-  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
 
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
@@ -110,8 +129,10 @@ export default async (context: GetServerSidePropsContext) => {
     latestMedia = null,
     mostRead = null,
     billboardCuration = null,
-    mediaCuration = null,
+    videoCuration: mediaCuration = null,
     portraitVideoItems = null,
+    countryCuration = null,
+    countryTopicIdToReorder = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -139,9 +160,11 @@ export default async (context: GetServerSidePropsContext) => {
         },
         mostRead,
         portraitVideoItems,
+        countryCuration,
+        countryTopicIdToReorder,
       },
       pageType: derivedPageType,
-      pathname: resolvedUrlWithoutQuery,
+      pathname: canonicalPathname,
       service,
       status,
       variant: variant || null,

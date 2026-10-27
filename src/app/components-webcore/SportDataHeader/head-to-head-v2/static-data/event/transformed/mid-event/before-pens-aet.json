@@ -1,0 +1,113 @@
+{
+  "id": "3n1x4716kyvjqbh4hdw42atja",
+  "eventGroupingLabel": "Europe - UEFA Europa Conference League - 1st Qualifying Round",
+  "startDateTime": "2022-07-14T14:00:00Z",
+  "tournamentId": "c7b8o53flg36wbuevfzy3lb10",
+  "status": "MidEvent",
+  "period": "pens",
+  "periodLabel": {
+    "value": "PENS",
+    "accessible": "Penalty shootout"
+  },
+  "venue": {
+    "name": "Stadions Daugava",
+    "shortName": "Stadions Daugava"
+  },
+  "tournament": {
+    "id": "c7b8o53flg36wbuevfzy3lb10",
+    "name": "UEFA Europa Conference League",
+    "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+  },
+  "tournamentDescriptionLabel": "UEFA Europa Conference League",
+  "home": {
+    "fullName": "Liepāja",
+    "shortName": "Liepāja",
+    "urn": "urn:bbc:sportsdata:football:team:liepja",
+    "score": "2",
+    "runningScores": {
+      "halftime": "1",
+      "fulltime": "2",
+      "extratime": "2"
+    },
+    "actions": [
+      {
+        "actionType": "goal",
+        "playerId": "2k62450281k97i0qtrw18vkd1",
+        "playerName": "A. Karašausks",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "13'",
+              "accessible": "13 minutes"
+            }
+          },
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "85'",
+              "accessible": "85 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "away": {
+    "fullName": "Gjilani",
+    "shortName": "Gjilani",
+    "urn": "urn:bbc:sportsdata:football:team:gjilani",
+    "score": "2",
+    "runningScores": {
+      "halftime": "1",
+      "fulltime": "2",
+      "extratime": "2"
+    },
+    "actions": [
+      {
+        "actionType": "goal",
+        "playerId": "1dmfp2ow658dsv0re73r62ndh",
+        "playerName": "B. Krasniqi",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "33'",
+              "accessible": "33 minutes"
+            }
+          },
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "65'",
+              "accessible": "65 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
+  "date": "Thu 14 Jul 2022",
+  "accessibleEventSummary": "Liepāja 2 , Gjilani 2 after extra time going to penalties"
+}

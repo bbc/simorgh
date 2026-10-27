@@ -4,15 +4,19 @@ export default {
   _environment: 'local',
   account: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   ads: {
     enabled: true,
   },
   adsNonce: {
-    enabled: false,
+    enabled: true,
+    value: 'ng,ke,es',
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -29,13 +33,22 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
+    enabled: true,
+  },
+  locationTopicCuration: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -71,14 +84,35 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
+  },
   scriptLink: {
+    enabled: true,
+  },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
+  stickyNavigation: {
     enabled: true,
   },
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

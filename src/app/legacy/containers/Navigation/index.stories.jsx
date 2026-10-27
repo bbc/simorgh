@@ -19,7 +19,7 @@ const Component = ({ isAmp = false, service, propsForOJExperiment = null }) => (
 );
 
 export default {
-  title: 'Containers/Navigation',
+  title: 'Containers/Navigation/Legacy',
   Component,
   parameters: { chromatic: { disable: true } },
 };

@@ -7,9 +7,14 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import getSrcSets from '#app/utilities/getSrcSets';
+import {
+  createResponsiveSrcSet,
+  MULTILINE_SRCSET_SEPARATOR,
+} from '#app/utilities/imageSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
@@ -23,9 +28,8 @@ const DEFAULT_TRANSLATION = {
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
+  isHydrated?: boolean;
   blockPosition?: number;
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playDurationVariation?: string;
   onClick?: () => void;
 };
 
@@ -34,8 +38,7 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  playDurationVariation,
+  isHydrated,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -43,10 +46,9 @@ export default ({
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
 
   const { images, video } = block.model;
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-  const isLargeVariation = playDurationVariation === 'large';
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -84,31 +86,27 @@ export default ({
     });
   };
 
-  const srcSets = getSrcSets({
+  const srcSets = createResponsiveSrcSet({
     imageUrlTemplate,
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
-  const fallbackSrcSets = getSrcSets({
+  const fallbackSrcSets = createResponsiveSrcSet({
     imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-    ...(playDurationVariation && {
-      sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_play_and_duration_size_increase_2',
-      experimentVariant: playDurationVariation,
-    }),
     viewThreshold: 1,
     itemTracker: {
-      type: 'portrait-video-promo',
+      type: pageType === LIVE_PAGE ? 'portrait-video' : 'portrait-video-promo',
       text: headline,
       position: blockPosition + 1,
       resourceId: video?.id,
@@ -127,7 +125,7 @@ export default ({
   };
 
   return (
-    <li css={styles.container}>
+    <li css={[styles.container, isHydrated && { scrollSnapAlign: 'start' }]}>
       <Image
         alt={alt}
         src={imageUrl}
@@ -149,18 +147,9 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play
-                  css={
-                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-                    isLargeVariation ? styles.playIconLarge : styles.playIcon
-                  }
-                />
+                <Play css={styles.playIcon} />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text
-                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-                    size={isLargeVariation ? 'pica' : 'brevier'}
-                    css={styles.duration}
-                  >
+                  <Text size="brevier" css={styles.duration}>
                     {durationString}
                   </Text>
                 </time>

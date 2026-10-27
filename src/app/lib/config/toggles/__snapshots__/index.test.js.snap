@@ -15,6 +15,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "articleLiteSiteLink": {
     "enabled": true,
   },
+  "articlePortraitVideo": {
+    "enabled": true,
+  },
   "comscoreAnalytics": {
     "enabled": true,
   },
@@ -30,6 +33,9 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": false,
@@ -73,11 +79,29 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": true,
     "value": 4,
   },
+  "relaxedCsp": {
+    "enabled": false,
+  },
   "scriptLink": {
     "enabled": true,
   },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
+  "stickyNavigation": {
+    "enabled": false,
+  },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": false,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,
@@ -93,15 +117,19 @@ exports[`Toggles Config when application environment is local should contain cor
   "_environment": "local",
   "account": {
     "enabled": true,
-    "value": "hindi",
+    "value": "hindi|mundo|portuguese",
   },
   "ads": {
     "enabled": true,
   },
   "adsNonce": {
-    "enabled": false,
+    "enabled": true,
+    "value": "ng,ke,es",
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -120,13 +148,22 @@ exports[`Toggles Config when application environment is local should contain cor
   "eventTracking": {
     "enabled": true,
   },
+  "googlePreferredSource": {
+    "enabled": false,
+  },
   "homePageRadioSchedule": {
     "enabled": true,
   },
   "include": {
     "enabled": true,
   },
+  "livePagePolling": {
+    "enabled": true,
+  },
   "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "locationTopicCuration": {
     "enabled": true,
   },
   "midArticleOnwardJourney": {
@@ -162,11 +199,32 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
     "value": 4,
   },
+  "relaxedCsp": {
+    "enabled": true,
+    "value": "in",
+  },
   "scriptLink": {
+    "enabled": true,
+  },
+  "showSportDataHeader": {
+    "enabled": true,
+  },
+  "sportDataPolling": {
+    "enabled": true,
+  },
+  "stickyNavigation": {
     "enabled": true,
   },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
+  },
+  "uasPersonalization": {
+    "enabled": true,
+    "value": "hindi|mundo|portuguese",
   },
   "variantCookie": {
     "enabled": true,
@@ -192,6 +250,9 @@ exports[`Toggles Config when application environment is test should contain corr
   "articleLiteSiteLink": {
     "enabled": true,
   },
+  "articlePortraitVideo": {
+    "enabled": true,
+  },
   "comscoreAnalytics": {
     "enabled": true,
   },
@@ -207,6 +268,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "eventTracking": {
     "enabled": true,
+  },
+  "googlePreferredSource": {
+    "enabled": false,
   },
   "homePageRadioSchedule": {
     "enabled": true,
@@ -250,11 +314,29 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
     "value": 4,
   },
+  "relaxedCsp": {
+    "enabled": false,
+  },
   "scriptLink": {
+    "enabled": true,
+  },
+  "showSportDataHeader": {
+    "enabled": false,
+  },
+  "sportDataPolling": {
+    "enabled": false,
+  },
+  "stickyNavigation": {
     "enabled": true,
   },
   "topBarOJs": {
     "enabled": true,
+  },
+  "topicUasPersonalization": {
+    "enabled": false,
+  },
+  "uasPersonalization": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,

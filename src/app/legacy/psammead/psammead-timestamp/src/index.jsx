@@ -20,19 +20,10 @@ const StyledTimestamp = styled.time`
   ${props => props.padding && PADDING}
 `;
 
-const Timestamp = ({
-  children,
-  datetime,
-  script,
-  padding = true,
-  service,
-  className = '',
-}) => (
+const Timestamp = ({ children, datetime, padding = true, className = '' }) => (
   <StyledTimestamp
     dateTime={datetime}
-    script={script}
     padding={padding}
-    service={service}
     suppressHydrationWarning
     {...(className ? { className } : undefined)}
   >

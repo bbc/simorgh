@@ -60,8 +60,6 @@ const SectionLabel = ({
   href = '',
   labelId,
   linkText = '',
-  script,
-  service,
   visuallyHidden = false,
   backgroundColor = GHOST,
   overrideHeadingAs = '',
@@ -82,8 +80,6 @@ const SectionLabel = ({
           href={href}
           labelId={labelId}
           linkText={linkText}
-          script={script}
-          service={service}
           backgroundColor={backgroundColor}
         >
           {title}
@@ -92,8 +88,6 @@ const SectionLabel = ({
         <PlainTitle
           dir={dir}
           labelId={labelId}
-          script={script}
-          service={service}
           backgroundColor={backgroundColor}
         >
           {title}

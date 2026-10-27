@@ -22,7 +22,7 @@ const Wrapper = styled.time`
 `;
 
 const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
-  const { script, service, timezone, datetimeLocale } = use(ServiceContext);
+  const { timezone, datetimeLocale } = use(ServiceContext);
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',
@@ -39,12 +39,7 @@ const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
   });
 
   return (
-    <Wrapper
-      script={script}
-      service={service}
-      dateTime={dateTime}
-      suppressHydrationWarning
-    >
+    <Wrapper dateTime={dateTime} suppressHydrationWarning>
       {formattedTimestamp}
     </Wrapper>
   );

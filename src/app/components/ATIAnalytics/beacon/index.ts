@@ -1,5 +1,5 @@
 import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
-import { buildReverbEventModel } from '../atiUrl';
+import { buildReverbEventModel } from '../../../lib/analyticsUtils/atiUrl';
 import { ATIEventTrackingProps } from '../types';
 
 export const sendEventBeacon = async ({
@@ -17,6 +17,9 @@ export const sendEventBeacon = async ({
   itemTracker,
   groupTracker,
   eventGroupingName,
+  isSignedIn,
+  hashedId,
+  isPersonalisationOn,
 }: ATIEventTrackingProps) => {
   const reverbParams = buildReverbEventModel({
     pageIdentifier,
@@ -33,6 +36,9 @@ export const sendEventBeacon = async ({
     itemTracker,
     groupTracker,
     eventGroupingName,
+    isSignedIn,
+    hashedId,
+    isPersonalisationOn,
   });
 
   await sendBeacon(reverbParams);

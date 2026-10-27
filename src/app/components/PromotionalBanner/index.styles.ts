@@ -31,6 +31,10 @@ const styles = {
       paddingInlineStart: `${spacings.FULL}rem`,
       paddingInlineEnd: `${pixelsToRem(52)}rem`,
 
+      [mq.GROUP_1_MIN_WIDTH]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingInlineStart: `${spacings.DOUBLE}rem`,
       },
@@ -60,7 +64,6 @@ const styles = {
     css({
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'flex-start',
       gap: `${spacings.FULL}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
       flexWrap: 'wrap',

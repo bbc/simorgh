@@ -6,17 +6,12 @@ import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { getServerExperiments } from '#server/utilities/experimentHeader';
-import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
 
 export default async (context: GetServerSidePropsContext) => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
+  const { resolvedUrl } = context;
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
@@ -52,18 +47,19 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
-    service,
-  );
-
-  if (!hasRequestSucceeded && renderStatus !== OK) {
+  if (status !== OK) {
     routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status,
+      pageType: HOME_PAGE,
+    });
 
     return {
       props: {
         service,
-        status: renderStatus,
+        status,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: HOME_PAGE,
@@ -87,12 +83,6 @@ export default async (context: GetServerSidePropsContext) => {
     pageType: HOME_PAGE,
   });
 
-  const serverSideExperiments = getServerExperiments({
-    headers: reqHeaders,
-    service,
-    pageType: HOME_PAGE,
-  });
-
   return {
     props: {
       id: resolvedUrlWithoutQuery,
@@ -106,7 +96,6 @@ export default async (context: GetServerSidePropsContext) => {
       },
       pageType: HOME_PAGE,
       pathname: resolvedUrlWithoutQuery,
-      serverSideExperiments,
       service,
       status,
       variant: variant || null,

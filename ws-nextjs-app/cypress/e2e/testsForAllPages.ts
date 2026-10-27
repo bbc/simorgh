@@ -3,7 +3,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-import checkA11y from '../../../cypress/support/helpers/checkA11y';
+import checkA11y from '../support/helpers/checkA11y';
 import topicTagsTest from '../support/helpers/topicTagsTest';
 import { ServiceParametersType } from '../types';
 
@@ -55,15 +55,8 @@ export default ({ service, pageType }: ServiceParametersType) => {
                     // eslint-disable-next-line cypress/unsafe-to-chain-command
                     cy.wrap($img).then($el => {
                       // Check if the element and all its parents are visible
-                      const isVisible =
-                        Cypress.$($el).is(':visible') &&
-                        !$el
-                          .parents()
-                          .toArray()
-                          .some(
-                            parent =>
-                              Cypress.$(parent).css('display') === 'none',
-                          );
+                      const isVisible = Cypress.$($el).is(':visible');
+
                       if (isVisible) {
                         cy.wrap($el)
                           .invoke('attr', 'src')

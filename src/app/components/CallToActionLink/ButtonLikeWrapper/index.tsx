@@ -8,9 +8,10 @@ type ButtonLikeWrapperProps = {
 const ButtonLikeWrapper = ({
   children,
   className,
+  ...rest
 }: PropsWithChildren<ButtonLikeWrapperProps>) => {
   return (
-    <div css={styles.flexWrapper} className={className}>
+    <div css={styles.flexWrapper} className={className} {...rest}>
       {children}
     </div>
   );

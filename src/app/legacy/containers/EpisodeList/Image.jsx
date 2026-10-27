@@ -12,8 +12,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import pixelsToRem from '#app/utilities/pixelsToRem';
-
-import ImagePlaceholder from '#psammead/psammead-image-placeholder/src';
+import Image from '#app/components/Image';
 import { RequestContext } from '../../../contexts/RequestContext';
 
 import { withEpisodeContext } from './helpers';
@@ -82,23 +81,18 @@ const DurationWrapper = withEpisodeContext(styled.span`
       : `padding: 0 0 0 ${GEL_SPACING_HLF};`}
 `);
 
-const StyledImage = styled.img`
-  width: 100%;
-`;
-
 const EpisodeImage = props => {
   const { duration = '', alt = '', dir } = props;
 
   const { isLite } = use(RequestContext);
 
-  // This component only uses a subset of its props
-  // the remaining props are passed down to the underlying <img> element
   const selectImgProps = omit([
     'alt',
     'duration',
     'classname',
     'script',
     'service',
+    'dir',
   ]);
 
   return isLite ? (
@@ -110,9 +104,7 @@ const EpisodeImage = props => {
     </div>
   ) : (
     <Wrapper dir={dir}>
-      <ImagePlaceholder ratio={56.25}>
-        <StyledImage alt={alt} {...selectImgProps(props)} />
-      </ImagePlaceholder>
+      <Image alt={alt} aspectRatio={[16, 9]} {...selectImgProps(props)} />
       <PlayWrapper aria-hidden="true">
         {mediaIcons.video}
         {duration && <DurationWrapper>{duration}</DurationWrapper>}

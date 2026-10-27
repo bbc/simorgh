@@ -11,19 +11,23 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import NewNavigationContainer from '#src/app/components/Navigation';
+import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import AccountHeader from '#app/components/Account/AccountHeader';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
-import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+import NewLogoBanner, { isGlobalLanguageHomepage } from './NewLogoBanner';
+import styles from './index.styles';
 
 const Header = ({
   brandRef,
-  borderBottom,
   skipLink,
   scriptLink,
   linkId,
   children,
+  className,
 }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
@@ -46,11 +50,11 @@ const Header = ({
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer
-        borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
+        className={className}
       >
         {children}
       </BrandContainer>
@@ -58,9 +62,13 @@ const Header = ({
   );
 };
 
-const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
+const HeaderContainer = ({
+  navItems,
+  propsForTopBarOJComponent,
+  primaryMediaType,
+}) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
-  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+  const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
   const { skipLinkText } = translations;
 
@@ -73,8 +81,6 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
-      service={service}
-      script={script}
       dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
@@ -83,6 +89,14 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
       <div>{skipLinkText}</div>
     </SkipLink>
   );
+
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+
+  const { pathname } = use(RequestContext);
+
+  const isLanguagesPage = isGlobalLanguageHomepage(pathname);
+
+  const shouldShowNewLogoBanner = shouldUseNewNav || isLanguagesPage;
 
   let shouldRenderScriptSwitch = false;
 
@@ -100,30 +114,43 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   }
 
   if (isApp) return null;
+  const headerBrandCss = shouldUseNewNav ? styles.headerBrand : null;
+
+  const NavigationComponent = shouldUseNewNav
+    ? NewNavigationContainer
+    : LegacyNavigationContainer;
+
+  const brandBarAccountHeader = shouldShowNewLogoBanner ? null : (
+    <AccountHeader />
+  );
 
   return (
     <header role="banner" lang={serviceLang}>
+      {shouldShowNewLogoBanner && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          css={headerBrandCss}
         >
-          <AccountHeader />
+          {brandBarAccountHeader}
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
-      <NavigationContainer
+      <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
+        primaryMediaType={primaryMediaType}
       />
     </header>
   );

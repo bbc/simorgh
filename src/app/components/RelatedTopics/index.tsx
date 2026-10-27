@@ -5,6 +5,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TopicTags from '#app/components/TopicTags';
 import { TopicTag } from '#app/models/types/metadata';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 
 interface RelatedTopicsProps {
@@ -12,6 +13,7 @@ interface RelatedTopicsProps {
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
+  experimentProps?: ComponentExperimentProps;
 }
 
 const RelatedTopics = ({
@@ -19,8 +21,9 @@ const RelatedTopics = ({
   mobileDivider = true,
   bar = true,
   className = '',
+  experimentProps,
 }: RelatedTopicsProps) => {
-  const { service, script, translations, dir } = use(ServiceContext);
+  const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
 
   const shouldDisplayTopics =
@@ -40,8 +43,6 @@ const RelatedTopics = ({
     >
       <SectionLabel
         bar={bar}
-        script={script}
-        service={service}
         dir={dir}
         labelId="related-topics"
         mobileDivider={mobileDivider}
@@ -50,7 +51,7 @@ const RelatedTopics = ({
       >
         {heading}
       </SectionLabel>
-      <TopicTags tags={topics} />
+      <TopicTags tags={topics} experimentProps={experimentProps} />
     </aside>
   );
 };

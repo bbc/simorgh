@@ -1,19 +1,9 @@
 import { GetServerSidePropsContext } from 'next';
 import pidginTopicFixtureData from '#data/pidgin/topics/c95y35941vrt.json';
-import * as shouldRender from '../../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../../utilities/pageRequests/getPageData';
 import { getServerSideProps as handleTopicRoute } from './[[...variant]].page';
 
 jest.mock('../../../../utilities/pageRequests/getPageData');
-jest.mock('../../../../utilities/shouldRender', () => {
-  const originalModule = jest.requireActual(
-    '../../../../utilities/shouldRender',
-  );
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 describe('handleTopicRoute', () => {
   const mockSetHeader = jest.fn();
@@ -41,7 +31,7 @@ describe('handleTopicRoute', () => {
     });
   });
 
-  it('returns expected props if shouldRender succeeds', async () => {
+  it('returns expected props if data fetch succeeds', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
 
     const result = await handleTopicRoute(mockGetServerSidePropsContext);
@@ -50,10 +40,12 @@ describe('handleTopicRoute', () => {
     expect(result.props.pageType).toEqual('topic');
   });
 
-  it('returns error props if shouldRender fails - 500', async () => {
-    jest.spyOn(shouldRender, 'default').mockReturnValue({
-      hasRequestSucceeded: false,
-      status: 500,
+  it('returns error props if data fetch returns 500', async () => {
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: pidginTopicFixtureData.data,
+        status: 500,
+      },
     });
 
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
@@ -69,10 +61,12 @@ describe('handleTopicRoute', () => {
     });
   });
 
-  it('returns error props if shouldRender fails - 404', async () => {
-    jest.spyOn(shouldRender, 'default').mockReturnValue({
-      hasRequestSucceeded: false,
-      status: 404,
+  it('returns error props if data fetch returns 404', async () => {
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: pidginTopicFixtureData.data,
+        status: 404,
+      },
     });
 
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);

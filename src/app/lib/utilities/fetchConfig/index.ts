@@ -2,10 +2,11 @@ import nodeLogger from '#lib/logger.node';
 import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import { LRUCache } from 'lru-cache';
 import { Services, Variants } from '#app/models/types/global';
-import getAgent from '#src/server/utilities/getAgent';
+import getAgent from '#utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
@@ -35,8 +36,13 @@ const fetchConfig = async <T>({
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
+
   if (variant) {
     fetchUrl.searchParams.set('variant', variant);
+  }
+
+  if (SERVICES_WITH_NEW_NAV.includes(service)) {
+    fetchUrl.searchParams.set('useNewNav', 'true');
   }
 
   const bffReqPath = fetchUrl.toString();
@@ -49,7 +55,9 @@ const fetchConfig = async <T>({
     cached: !!cachedResponse,
   });
 
-  if (cachedResponse) return cachedResponse as T;
+  if (cachedResponse) {
+    return cachedResponse as T;
+  }
 
   const environment = getEnvironment(pagePath);
   const isLocal = !environment || environment === 'local';
@@ -70,7 +78,6 @@ const fetchConfig = async <T>({
       cache.set(bffReqPath, res);
       return res as T;
     }
-
     const error = new Error() as FetchError;
 
     error.status = response.status;

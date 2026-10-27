@@ -1,27 +1,10 @@
+/* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
-import fetch from 'jest-fetch-mock';
 import path from 'path';
-import { TextEncoder, TextDecoder } from 'util';
-import { ReadableStream } from 'node:stream/web';
-import { MessageChannel, MessagePort } from 'node:worker_threads';
 
 global.jest = jest;
 
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-global.fetch = fetch;
-global.ReadableStream = ReadableStream;
-global.MessageChannel = MessageChannel;
-global.MessagePort = MessagePort;
-
-Object.defineProperty(global, 'crypto', {
-  value: {
-    randomUUID: jest.fn(),
-    getRandomValues: jest.fn(),
-  },
-});
-
-global.crypto.randomUUID = jest.fn();
+global.fetch = jest.fn();
 
 /*
  * Mock to avoid async behaviour in tests
@@ -53,6 +36,22 @@ global.IntersectionObserver = class IntersectionObserver {
     this.disconnect = jest.fn();
 
     document.addEventListener('triggerMockObserver', () => {
+      this.callback(this.entries);
+    });
+  }
+};
+
+global.ResizeObserver = class ResizeObserver {
+  constructor(callback) {
+    this.callback = callback;
+    this.entries = [];
+    this.observe = jest
+      .fn()
+      .mockImplementation(entry => this.entries.push(entry));
+    this.unobserve = jest.fn();
+    this.disconnect = jest.fn();
+
+    document.addEventListener('triggerMockResizeObserver', () => {
       this.callback(this.entries);
     });
   }

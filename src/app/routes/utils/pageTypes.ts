@@ -20,3 +20,4 @@ export const TV_PAGE = 'tv' as const;
 export const OFFLINE_PAGE = 'offline' as const;
 export const LIVE_TV_PAGE = 'liveTV' as const;
 export const UNKNOWN_PAGE = 'Unknown' as const;
+export const MY_NEWS_PAGE = 'myNews' as const;

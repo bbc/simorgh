@@ -1,0 +1,30 @@
+{
+  "id": "78bis3qan491aqnwxn71ix6or",
+  "eventGroupingLabel": "England - Premier League",
+  "startDateTime": "2022-08-06T11:30:00Z",
+  "tournamentId": "2kwbbcootiqqgmrzs6o5inle5",
+  "status": "PreEvent",
+  "periodLabel": { "value": "Scheduled", "accessible": "Scheduled" },
+  "venue": { "name": "Craven Cottage", "shortName": "Craven Cottage" },
+  "tournament": {
+    "id": "2kwbbcootiqqgmrzs6o5inle5",
+    "name": "Premier League",
+    "urn": "urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5"
+  },
+  "tournamentDescriptionLabel": "Premier League",
+  "home": {
+    "fullName": "TBC",
+    "shortName": "TBC"
+  },
+  "away": {
+    "fullName": "TBC",
+    "shortName": "TBC"
+  },
+  "time": {
+    "accessibleTime": "12:30",
+    "displayTimeUK": "12:30",
+    "timeCertainty": true
+  },
+  "date": "Sat 6 Aug 2022",
+  "accessibleEventSummary": "Team to be confirmed versus Team to be confirmed kick off 12:30"
+}

@@ -7,7 +7,7 @@ import SkipLinkWrapper from '#app/legacy/components/SkipLinkWrapper';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface ArticleLinksBlockProps {
   blocks: OptimoBlock[];
@@ -18,7 +18,7 @@ const ArticleLinksBlock = ({
   blocks,
   blockGroupIndex = null,
 }: ArticleLinksBlockProps) => {
-  const { translations, recommendations, service } = use(ServiceContext);
+  const { translations, recommendations } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -73,10 +73,10 @@ const ArticleLinksBlock = ({
 
   return (
     <section {...a11yAttributes} data-e2e="article-links-block">
-      <SkipLinkWrapper service={service} {...skipLinkProps}>
+      <SkipLinkWrapper {...skipLinkProps}>
         {typeof title === 'string' && title.length > 0 && (
           <strong
-            css={styles.labelComponent}
+            className={styles.labelComponent}
             id={ariaLabel}
             data-testid="eoj-recommendations-heading"
           >
@@ -84,7 +84,7 @@ const ArticleLinksBlock = ({
           </strong>
         )}
         {isSingleItem ? (
-          <div css={styles.promoContainer} {...viewTracker}>
+          <div className={styles.promoContainer} {...viewTracker}>
             <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
           </div>
         ) : (

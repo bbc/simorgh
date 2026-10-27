@@ -84,7 +84,7 @@ const GistList = styled(UnorderedList)`
   }
 `;
 
-const componentsToRender = (service, script, dir, bulletPointColour) => ({
+const componentsToRender = (dir, bulletPointColour) => ({
   text: props => (
     <Text
       {...props}
@@ -92,8 +92,6 @@ const componentsToRender = (service, script, dir, bulletPointColour) => ({
         unorderedList: innerProps => (
           <GistList
             {...innerProps}
-            service={service}
-            script={script}
             direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
             bulletPointColour={bulletPointColour}
@@ -105,25 +103,18 @@ const componentsToRender = (service, script, dir, bulletPointColour) => ({
 });
 
 const Gist = ({ blocks }) => {
-  const { service, script, dir, translations } = use(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
   const {
     palette: { GREY_6: bulletPointColour },
   } = useTheme();
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
     <GridItemLarge role="region" aria-labelledby="gist-title">
-      <GistWrapper service={service} script={script} dir={dir}>
-        <GistIntroduction service={service} script={script} id="gist-title">
-          {gistTitle}
-        </GistIntroduction>
+      <GistWrapper dir={dir}>
+        <GistIntroduction id="gist-title">{gistTitle}</GistIntroduction>
         <Blocks
           blocks={blocks}
-          componentsToRender={componentsToRender(
-            service,
-            script,
-            dir,
-            bulletPointColour,
-          )}
+          componentsToRender={componentsToRender(dir, bulletPointColour)}
         />
       </GistWrapper>
     </GridItemLarge>

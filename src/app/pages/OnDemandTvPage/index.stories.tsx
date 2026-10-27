@@ -1,12 +1,16 @@
-import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
-import { Services } from '#app/models/types/global';
 import { data as afrique } from '#data/afrique/bbc_afrique_tv/tv_programmes/w13xttmz.json';
 import { data as pashto } from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import { OnDemandTvPage } from '..';
-import { OnDemandTVProps } from './OnDemandTvPage';
+import _OnDemandTvPage, { OnDemandTVProps } from './OnDemandTvPage';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import ThemeProvider from '#app/components/ThemeProvider';
+
+const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 
 const onDemandTvFixtures: {
   pashto: OnDemandTVProps['pageData'];
@@ -18,29 +22,31 @@ const onDemandTvFixtures: {
   afrique,
 };
 
-const matchFixtures = (service: Services) => ({
-  params: {
-    serviceId: {
-      afrique: 'bbc_afrique_tv',
-      pashto: 'bbc_pashto_tv',
-    }[service],
-  },
-});
-
 const Component = ({ service, isLite }: StoryProps) => {
+  const pageData = onDemandTvFixtures[service] || afrique;
+
   return (
-    <BrowserRouter>
-      <OnDemandTvPage
-        match={matchFixtures(service)}
-        pageData={onDemandTvFixtures[service] || afrique}
-        status={200}
-        service={service}
-        loading={false}
-        error=""
-        pageType={TV_PAGE}
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
         isLite={isLite}
-      />
-    </BrowserRouter>
+        service={service}
+        pageType={TV_PAGE}
+        pathname={`/${service}/tv`}
+      >
+        <ThemeProvider service={service}>
+          <PageLayoutWrapper pageData={pageData} status={200}>
+            <OnDemandTvPage
+              pageData={pageData}
+              service={service}
+              loading={false}
+              error=""
+              pageType={TV_PAGE}
+              isLite={isLite}
+            />
+          </PageLayoutWrapper>
+        </ThemeProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
   );
 };
 
@@ -50,9 +56,12 @@ export default {
   decorators: [
     (story: () => unknown) => (
       // @ts-expect-error use default params
-      (<WithTimeMachine>{story()}</WithTimeMachine>)
+      <WithTimeMachine>{story()}</WithTimeMachine>
     ),
   ],
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export const Example = {
@@ -63,17 +72,21 @@ export const Example = {
 };
 
 // This story is for chromatic testing purposes only
-export const Test = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="pashto" variant={variant} />
-  ),
-  tags: ['!dev'],
+export const Test = () => <Component service="pashto" variant="default" />;
+
+Test.globals = {
+  service: { service: 'pashto' },
 };
 
+Test.tags = ['!dev'];
+
 // This story is for chromatic testing purposes only
-export const TestLite = {
-  render: (_: StoryArgs, { variant }: StoryProps) => (
-    <Component service="pashto" variant={variant} isLite />
-  ),
-  tags: ['!dev'],
+export const TestLite = () => (
+  <Component service="pashto" variant="default" isLite />
+);
+
+TestLite.globals = {
+  service: { service: 'pashto' },
 };
+
+TestLite.tags = ['!dev'];

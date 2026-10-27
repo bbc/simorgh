@@ -36,13 +36,12 @@ const Divider = styled.div`
   }
 `;
 const CanonicalNavigationContainer = ({
-  script,
-  service,
   dir,
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
   blocks,
+  children,
 }) => {
   const { isLite } = use(RequestContext);
   const { enabled } = useToggle('topBarOJs');
@@ -53,27 +52,31 @@ const CanonicalNavigationContainer = ({
     }
   });
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <ScrollableWrapper>
-        {!isLite && (
-          <CanonicalMenuButton
-            announcedText={menuAnnouncedText}
-            isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-            dir={dir}
-            script={script}
-          />
-        )}
-        {!isOpen && (
-          <ScrollableNavigation dir={dir}>
-            {scrollableListItems}
-          </ScrollableNavigation>
-        )}
-      </ScrollableWrapper>
-      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
-      <Divider />
+    <>
+      <Navigation dir={dir} isOpen={isOpen}>
+        <ScrollableWrapper>
+          {!isLite && (
+            <CanonicalMenuButton
+              announcedText={menuAnnouncedText}
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+              dir={dir}
+            />
+          )}
+          {!isOpen && (
+            <ScrollableNavigation dir={dir}>
+              {scrollableListItems}
+            </ScrollableNavigation>
+          )}
+        </ScrollableWrapper>
+        <CanonicalDropdown isOpen={isOpen}>
+          {dropdownListItems}
+        </CanonicalDropdown>
+        <Divider />
+      </Navigation>
       {enabled && <TopBarOJs blocks={blocks} />}
-    </Navigation>
+      {children}
+    </>
   );
 };
 

@@ -1,8 +1,5 @@
-import { createContext, use, useMemo } from 'react';
 import styled from '@emotion/styled';
 import partition from 'ramda/src/partition';
-
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import Image from './image';
 import MediaIcon from './media-icon';
@@ -12,48 +9,31 @@ import Footer from './footer';
 import A from './a';
 import Timestamp from './timestamp';
 
-const PromoContext = createContext({});
-const withPromoContext = Component => props => (
-  <PromoContext.Consumer>
-    {context => <Component {...context} {...props} />}
-  </PromoContext.Consumer>
-);
-
 const Wrapper = styled.div`
   position: relative;
 `;
 
 const Promo = ({ children, className }) => {
-  const { script, service } = use(ServiceContext);
-
   // Image components are moved to a left column on mobile
   const [leftChildren, rightChildren] = partition(
     child => child.type === Promo.Image,
     children.filter(Boolean),
   );
-  const promoValue = useMemo(
-    () => ({
-      script,
-      service,
-    }),
-    [script, service],
-  );
+
   return (
     <Wrapper className={className}>
-      <PromoContext.Provider value={promoValue}>
-        {leftChildren && <div className="promo-image">{leftChildren}</div>}
-        {rightChildren && <div className="promo-text">{rightChildren}</div>}
-      </PromoContext.Provider>
+      {leftChildren && <div className="promo-image">{leftChildren}</div>}
+      {rightChildren && <div className="promo-text">{rightChildren}</div>}
     </Wrapper>
   );
 };
 
-Promo.Image = withPromoContext(Image);
-Promo.MediaIcon = withPromoContext(MediaIcon);
-Promo.Heading = withPromoContext(Heading);
-Promo.Body = withPromoContext(Body);
-Promo.Footer = withPromoContext(Footer);
-Promo.A = withPromoContext(A);
-Promo.Timestamp = withPromoContext(Timestamp);
+Promo.Image = Image;
+Promo.MediaIcon = MediaIcon;
+Promo.Heading = Heading;
+Promo.Body = Body;
+Promo.Footer = Footer;
+Promo.A = A;
+Promo.Timestamp = Timestamp;
 
 export default Promo;

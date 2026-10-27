@@ -14,6 +14,10 @@ export interface Translations {
   home: string;
   currentPage: string;
   skipLinkText: string;
+  skipContent?: {
+    text: string;
+    endTextVisuallyHidden: string;
+  };
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
@@ -34,6 +38,8 @@ export interface Translations {
     shareButtonText: string;
     postDateTimeFormat?: string;
     postDateFormat?: string;
+    refreshButtonText?: string;
+    visuallyHiddenButtonText?: string;
   };
   downloads?: {
     instructions?: string;
@@ -42,14 +48,81 @@ export interface Translations {
   gist?: string;
   account?: {
     signIn?: string;
+    signInAccessibleLabel?: string;
     forYou?: string;
     register?: string;
+    settings?: string;
   };
   accountPromoBanner?: {
     title: string;
     description: string;
     closeLabel: string;
     buttonSeparatorText: string;
+  };
+  accountSignInModal?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+    followTopic?: {
+      title: string;
+      description: string;
+    };
+  };
+  googlePreferredSource?: {
+    linkText: string;
+  };
+  saveArticleButton?: {
+    loading: string;
+    save: string;
+    saving: string;
+    saved: string;
+    remove: string;
+    removeAccessible: string;
+    removing: string;
+  };
+  followTopicButton?: {
+    loading: string;
+    follow: string;
+    following: string;
+    followed: string;
+    unfollow: string;
+    unfollowAccessible: string;
+    unfollowing: string;
+  };
+  myNews?: {
+    title: string;
+    guestTitle: string;
+    description: string;
+    guestDescription: string;
+    noArticles: string;
+    savedArticlesErrorText: string;
+    loading: string;
+    noJsDescription: string;
+    followedTopicsTitle: string;
+    followedTopicsErrorText: string;
+    noFollowedTopics: string;
+    seeMoreTopics: string;
+    seeLessTopics: string;
+    contentErrorText: string;
+  };
+  actionTooltip?: {
+    success: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
   };
   error: {
     home?: string;
@@ -59,6 +132,11 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  topicDiscovery?: {
+    heading: string;
+    moreAboutTopic: string;
+    fetchErrorMessage?: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
@@ -225,6 +303,46 @@ export interface Translations {
     previous?: string;
     next?: string;
   };
+  sport?: {
+    assists?: string;
+    penalties?: string;
+    ht?: string;
+    ft?: string;
+    et?: string;
+    afterExtraTime?: string;
+    versus?: string;
+    kickOff?: string;
+    teamToBeConfirmed?: string;
+    timeToBeConfirmed?: string;
+    afterFullTime?: string;
+    atFullTime?: string;
+    onPenalties?: string;
+    onAggregate?: string;
+    win?: string;
+    penaltyAbbreviation?: string;
+    ownGoal?: string;
+    venue?: string;
+    attendance?: string;
+    matchSummary?: string;
+    keyEventsTitle?: string;
+    winOnPenalties?: {
+      prefix?: string;
+      suffix?: string;
+    };
+    worldCupTeamNames?: WorldCupTeamNameTranslations;
+    tournaments?: {
+      fifaWorldCup?: string;
+    };
+    stages?: {
+      groupStage?: string;
+      last32?: string;
+      last16?: string;
+      quarterFinals?: string;
+      semiFinals?: string;
+      final?: string;
+      thirdPlaceFinal?: string;
+    };
+  };
 }
 
 export interface TranslationsError {
@@ -316,3 +434,54 @@ export interface LiteSiteTranslations {
   dataSaving: string;
   articleDataSavingLinkText?: string;
 }
+
+export type WorldCupTeamNameTranslations = {
+  algeria?: string;
+  argentina?: string;
+  australia?: string;
+  austria?: string;
+  belgium?: string;
+  'bosnia-herzegovina'?: string;
+  brazil?: string;
+  canada?: string;
+  'cape-verde'?: string;
+  colombia?: string;
+  croatia?: string;
+  curacao?: string;
+  'czech-republic'?: string;
+  'dr-congo'?: string;
+  ecuador?: string;
+  egypt?: string;
+  england?: string;
+  france?: string;
+  germany?: string;
+  ghana?: string;
+  haiti?: string;
+  iran?: string;
+  iraq?: string;
+  'ivory-coast'?: string;
+  japan?: string;
+  jordan?: string;
+  mexico?: string;
+  morocco?: string;
+  netherlands?: string;
+  'new-zealand'?: string;
+  norway?: string;
+  panama?: string;
+  paraguay?: string;
+  portugal?: string;
+  qatar?: string;
+  'saudi-arabia'?: string;
+  scotland?: string;
+  senegal?: string;
+  'south-africa'?: string;
+  'south-korea'?: string;
+  spain?: string;
+  sweden?: string;
+  switzerland?: string;
+  tunisia?: string;
+  turkey?: string;
+  uruguay?: string;
+  usa?: string;
+  uzbekistan?: string;
+};

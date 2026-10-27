@@ -3,16 +3,18 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+import CurationMessageBanner from './CurationMessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
@@ -51,6 +53,15 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+interface CurationProps extends Curation {
+  // keep this local so we do not change the shared bff curation data shape
+  experimentProps?: ComponentExperimentProps;
+  curationContentType?: string;
+  pageType?: string;
+  // experiment: newswb_ws_homepage_related_topic_promos
+  showRelatedTopicExperiment?: boolean;
+}
+
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -68,13 +79,18 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
   mediaCollection,
-}: Curation) => {
+  experimentProps,
+  curationContentType,
+  pageType,
+  showRelatedTopicExperiment = false,
+}: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
     radioSchedule,
     embed,
     mediaCollection,
+    curationContentType,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -96,23 +112,35 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
+  // experiment: only simple and hierarchical grids take part in promo tracking
+  const isRelatedTopicGrid =
+    componentName === SIMPLE_CURATION_GRID ||
+    componentName === HIERARCHICAL_CURATION_GRID;
+  const experimentTrackingProps =
+    experimentProps?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT &&
+    !isRelatedTopicGrid
+      ? {}
+      : experimentProps || {};
+
   const eventTrackingData: EventTrackingData = {
     componentName,
     groupTracker: {
       name: curationSubheading,
-      type: `${componentName}`,
+      type: componentName,
       position: position + 1,
       ...(link && { link }),
       ...(curationId && { resourceId: curationId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
+    ...experimentTrackingProps,
   };
 
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
+      const billboardId =
+        `billboard-${visualProminence}-${nthCurationByStyleAndProminence}`.toLowerCase();
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -122,6 +150,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
+              prominence={visualProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
@@ -135,7 +164,7 @@ export default ({
     case MESSAGE_BANNER:
       if (firstSummary) {
         return (
-          <MessageBanner
+          <CurationMessageBanner
             heading={title}
             description={description}
             link={summaryLink}
@@ -150,6 +179,7 @@ export default ({
     case MOST_READ:
       return (
         <MostRead
+          showSectionLabel={curationLength > 1}
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
@@ -174,6 +204,7 @@ export default ({
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             css={styles.pvCarousel}
+            link={link}
           />
         );
       }
@@ -221,7 +252,13 @@ export default ({
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
 
-        return curationLength > 1 ? (
+        // Show heading if more than one curation, or if only one and pageType is 'article'
+        const shouldShowHeading = curationLength > 1 || pageType === 'article';
+
+        const gridHeadingLevel =
+          pageType === 'article' || curationLength > 1 ? 3 : 2;
+
+        return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
               {curationSubheading &&
@@ -240,9 +277,12 @@ export default ({
                 ))}
               <GridComponent
                 summaries={summaries}
-                headingLevel={3}
+                headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                showRelatedTopicExperiment={
+                  showRelatedTopicExperiment && isRelatedTopicGrid
+                }
               />
             </div>
           </section>
@@ -250,9 +290,12 @@ export default ({
           <div {...viewTracker}>
             <GridComponent
               summaries={summaries}
-              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              headingLevel={2}
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              showRelatedTopicExperiment={
+                showRelatedTopicExperiment && isRelatedTopicGrid
+              }
             />
           </div>
         );

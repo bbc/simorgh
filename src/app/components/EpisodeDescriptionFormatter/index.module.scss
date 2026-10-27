@@ -1,0 +1,89 @@
+@use '@scss/themeTokens' as theme;
+
+.paragraph {
+  @include theme.fontSizes-gel-font-size(pica);
+  @include theme.fontVariants-gel-font-variant('sans-regular');
+  color: theme.$palette-metal;
+  margin: 0 0 #{theme.$spacings-double} 0;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-ghost;
+  }
+}
+
+.link {
+  color: theme.$palette-postbox;
+  text-decoration: underline;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-pebble;
+  }
+}
+
+.chapterBlock {
+  margin-bottom: #{theme.$spacings-double};
+}
+
+.chapterList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chapterItem {
+  display: flex;
+  gap: #{theme.$spacings-full};
+  padding: #{theme.$spacings-half} 0;
+  border-bottom: 1px solid theme.$palette-pebble;
+  align-items: baseline;
+
+  &:first-child {
+    border-top: 1px solid theme.$palette-pebble;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    border-color: theme.$palette-shadow;
+  }
+}
+
+.timestamp {
+  @include theme.fontSizes-gel-font-size(pica);
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  color: theme.$palette-postbox;
+  min-width: 3.5rem;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.timestampButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover,
+  &:focus {
+    color: theme.$palette-shadow;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    &:hover,
+    &:focus {
+      color: theme.$palette-ghost;
+    }
+  }
+}
+
+.chapterLabel {
+  @include theme.fontSizes-gel-font-size(pica);
+  @include theme.fontVariants-gel-font-variant('sans-regular');
+  color: theme.$palette-metal;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-ghost;
+  }
+}

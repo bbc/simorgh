@@ -19,6 +19,7 @@ interface FetchDataFromBffParams {
   disableRadioSchedule?: boolean;
   page?: string;
   getAgent?: GetAgent;
+  country?: string | null;
 }
 
 export default async ({
@@ -30,6 +31,7 @@ export default async ({
   disableRadioSchedule,
   page,
   getAgent,
+  country,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
 
@@ -44,6 +46,7 @@ export default async ({
     isAmp,
     disableRadioSchedule,
     page,
+    country,
   });
 
   const useCerts = certsRequired(pathname);

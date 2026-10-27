@@ -11,11 +11,6 @@ const initObserver = async ({
   threshold = MIN_VIEWED_PERCENT,
   componentViewStateSetter,
 }: InitObserverParams) => {
-  if (typeof window.IntersectionObserver === 'undefined') {
-    // Polyfill IntersectionObserver, e.g. for IE11
-    await import('intersection-observer');
-  }
-
   const callback = (elements: IntersectionObserverEntry[]) => {
     const someElementsAreInView = elements.some(
       element => element.isIntersecting,

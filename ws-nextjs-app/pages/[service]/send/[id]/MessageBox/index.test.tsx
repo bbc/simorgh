@@ -2,6 +2,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
 import * as FormContextModule from '../FormContext';
@@ -17,6 +18,12 @@ jest.mock('#hooks/useAdroidDetection', () => {
     default: jest.fn().mockReturnValue(false),
   };
 });
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 jest.mock('../FormContext', () => {
   const originalModule = jest.requireActual('../FormContext');
@@ -38,6 +45,8 @@ const labelMap = {
 describe('ErrorSummaryBox', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+
+    mockMatchMedia();
   });
 
   it('should render an unordered list for multiple validation errors', async () => {

@@ -3,6 +3,7 @@ import {
   render,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import {
   title,
   description,
@@ -13,12 +14,18 @@ import {
 import * as FormContextModule from '../FormContext';
 import { FormContext } from '../FormContext';
 import Form from '.';
-import { Field, FormScreen, InvalidMessageCodes } from '../types';
+import { Field, FormScreen, InvalidMessageCodes, Section } from '../types';
 
 jest.mock('next/router', () => ({
   useRouter: () => ({
     query: { id: '123' },
   }),
+}));
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
 }));
 
 jest.mock('../FormContext', () => {
@@ -42,8 +49,19 @@ const mockContextValue = {
   submissionID: '',
 };
 
+const sections: Section[] = [
+  {
+    sectionText: { title: sectionTitle },
+    fields: fields as Field[],
+  },
+];
+
 describe('Form', () => {
-  it('should render and match snapshot', async () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
+  it('should render a form with title and fields', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => mockContextValue);
@@ -53,15 +71,13 @@ describe('Form', () => {
         <Form
           title={title}
           description={description}
-          sectionTitle={sectionTitle}
           privacyNotice={privacyNotice}
-          fields={fields as Field[]}
+          sections={sections}
         />,
       );
     });
     const form = container.querySelector('form');
     expect(form).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
   it('should handle submit', async () => {
     const handleSubmit = jest.fn(e => e.preventDefault());
@@ -87,9 +103,8 @@ describe('Form', () => {
           <Form
             title={title}
             description={description}
-            sectionTitle={sectionTitle}
             privacyNotice={privacyNotice}
-            fields={fields as Field[]}
+            sections={sections}
           />
           ,
         </FormContext.Provider>,
@@ -135,9 +150,8 @@ describe('Form', () => {
         <Form
           title={title}
           description={description}
-          sectionTitle={sectionTitle}
           privacyNotice={privacyNotice}
-          fields={fields as Field[]}
+          sections={sections}
         />,
       );
     });
@@ -160,13 +174,58 @@ describe('Form', () => {
         <Form
           title={title}
           description={description}
-          sectionTitle={sectionTitle}
           privacyNotice={privacyNotice}
-          fields={fields as Field[]}
+          sections={sections}
         />,
       );
     });
     const errorSummmary = container.querySelector('strong[id=errorSummaryBox]');
     expect(errorSummmary).toBeNull();
+  });
+
+  it('should render every section and its fields', async () => {
+    jest
+      .spyOn(FormContextModule, 'useFormContext')
+      .mockImplementationOnce(() => mockContextValue);
+
+    const secondSectionField = {
+      id: 'secondSectionField',
+      type: 'text',
+      validation: { mandatory: false },
+      htmlType: 'text',
+      label: 'Second section field',
+      description: '',
+    } as Field;
+
+    const { getByRole, container } = await act(() => {
+      return render(
+        <Form
+          title={title}
+          description={description}
+          privacyNotice={privacyNotice}
+          sections={[
+            ...sections,
+            {
+              sectionText: {
+                title: 'Second section',
+                description: '<p>Second section description</p>',
+              },
+              fields: [secondSectionField],
+            },
+          ]}
+        />,
+      );
+    });
+
+    expect(
+      getByRole('heading', { level: 2, name: sectionTitle }),
+    ).toBeInTheDocument();
+    expect(
+      getByRole('heading', { level: 2, name: 'Second section' }),
+    ).toBeInTheDocument();
+    expect(container).toHaveTextContent('Second section description');
+    expect(
+      container.querySelector('input[id=secondSectionField]'),
+    ).toBeInTheDocument();
   });
 });

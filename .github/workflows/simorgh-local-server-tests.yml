@@ -11,22 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [22.x]
+          node-version: ['24']
     env:
       CI: true
       LOG_LEVEL: 'error'
       LIGHTHOUSE_BUILD: true
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Cache Node Modules
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             node_modules
@@ -36,12 +36,6 @@ jobs:
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
-
-      - name: Build Simorgh - Express App
-        run: yarn build:local
-
-      - name: Start Simorgh Server - Express App
-        run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Build Simorgh - Next.JS App
         working-directory: ./ws-nextjs-app

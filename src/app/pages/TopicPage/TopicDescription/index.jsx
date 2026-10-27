@@ -1,4 +1,3 @@
-import { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -9,12 +8,14 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
-  color: ${props => props.theme.palette.GREY_10};
+  color: ${props =>
+    props.theme.isDarkUi
+      ? props.theme.palette.WHITE
+      : props.theme.palette.GREY_10};
   padding-top: ${GEL_SPACING_DBL};
   margin: 0;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -26,13 +27,7 @@ const Paragraph = styled.p`
 `;
 
 const TopicDescription = ({ children }) => {
-  const { service, script } = use(ServiceContext);
-
-  return (
-    <Paragraph service={service} script={script}>
-      {children}
-    </Paragraph>
-  );
+  return <Paragraph>{children}</Paragraph>;
 };
 
 export default TopicDescription;

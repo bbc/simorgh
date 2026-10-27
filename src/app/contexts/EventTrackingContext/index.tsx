@@ -1,5 +1,7 @@
 import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
+import { AccountContext } from '#contexts/AccountContext';
+import { setActivationTrackingData } from '#app/lib/analyticsUtils/activationTrackingData';
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -23,6 +25,7 @@ import {
   AUDIO_PAGE,
   OFFLINE_PAGE,
   LIVE_TV_PAGE,
+  MY_NEWS_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';
@@ -57,6 +60,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
     [LIVE_TV_PAGE]: 'live-tv',
+    [MY_NEWS_PAGE]: 'my-news',
   }[pageType];
 
   if (!campaignID) {
@@ -83,8 +87,13 @@ export const EventTrackingContextProvider = ({
   const { pageType, platform, statsDestination } = requestContext;
 
   const serviceContext = use(ServiceContext);
-  const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
+  const {
+    atiAnalyticsAppName,
+    atiAnalyticsProducerId,
+    atiAnalyticsProducerName,
+  } = serviceContext;
 
+  const { isSignedIn, hashedUserId, isPersonalisationOn } = use(AccountContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -96,13 +105,18 @@ export const EventTrackingContextProvider = ({
         campaignID,
         pageIdentifier,
         platform,
+        appName: atiAnalyticsAppName,
         producerId: atiAnalyticsProducerId,
         producerName: atiAnalyticsProducerName,
         statsDestination,
+        isSignedIn,
+        hashedId: hashedUserId || null,
+        isPersonalisationOn,
       };
     }
     return null;
   }, [
+    atiAnalyticsAppName,
     atiAnalyticsProducerId,
     atiAnalyticsProducerName,
     atiData,
@@ -110,9 +124,14 @@ export const EventTrackingContextProvider = ({
     pageType,
     platform,
     statsDestination,
+    isSignedIn,
+    hashedUserId,
+    isPersonalisationOn,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
+    setActivationTrackingData({ trackingIsEnabled: false });
+
     return (
       <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
         {children}
@@ -120,9 +139,31 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const hasRequiredProps = Object.values(
-    trackingProps as EventTrackingContextProps,
-  ).every(Boolean);
+  const hasRequiredProps =
+    trackingProps &&
+    [
+      trackingProps.campaignID,
+      trackingProps.pageIdentifier,
+      trackingProps.platform,
+      trackingProps.producerId,
+      trackingProps.producerName,
+      trackingProps.statsDestination,
+    ].every(Boolean);
+
+  // Populated synchronously (not in an effect) so it's set before any descendant's
+  // effects run and potentially trigger an Optimizely decision on this same render pass.
+  const activationTrackingData = {
+    trackingIsEnabled: Boolean(hasRequiredProps),
+    pageIdentifier: trackingProps?.pageIdentifier,
+    platform: trackingProps?.platform,
+    appName: trackingProps?.appName,
+    producerName: trackingProps?.producerName,
+    statsDestination: trackingProps?.statsDestination,
+    isSignedIn: trackingProps?.isSignedIn,
+    hashedId: trackingProps?.hashedId,
+    isPersonalisationOn: trackingProps?.isPersonalisationOn,
+  };
+  setActivationTrackingData(activationTrackingData);
 
   return (
     <EventTrackingContext.Provider

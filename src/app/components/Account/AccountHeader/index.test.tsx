@@ -1,13 +1,7 @@
-import Cookie from 'js-cookie';
 import { screen } from '@testing-library/react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
-
-jest.mock('#hooks/useHydrationDetection', () => ({
-  __esModule: true,
-  default: () => true,
-}));
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
@@ -17,30 +11,29 @@ const idctaConfig: IdctaConfig = {
   settings_url: 'https://example.com/settings',
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
+  initialIsSignedIn: false,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
 };
 
-const renderWithProviders = () =>
+const renderWithProviders = (overrides = {}) =>
   render(<AccountHeader />, {
     service: 'hindi',
-    idctaConfig,
+    idctaConfig: { ...idctaConfig, ...overrides },
   });
 
 describe('AccountHeader', () => {
-  afterEach(() => {
-    Cookie.remove('ckns_id');
-  });
-
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
-    const link = await screen.findByRole('link', { name: 'Sign In' });
+    const link = await screen.findByRole('link', { name: 'साइन इन' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+    const icon = link.querySelector('svg');
+    expect(icon).toBeInTheDocument();
   });
 
   it('does not render when account toggle is disabled for service', () => {
@@ -52,15 +45,35 @@ describe('AccountHeader', () => {
     expect(screen.queryByRole('link')).toBeNull();
   });
 
-  it('shows For you when signed in', async () => {
-    Cookie.set('ckns_id', '1');
+  it('shows Settings when signed in', async () => {
+    renderWithProviders({ initialIsSignedIn: true });
 
-    renderWithProviders();
-
-    const link = await screen.findByRole('link', { name: 'For you' });
+    const link = await screen.findByRole('link', { name: 'आपका एकाउंट' });
     expect(link).toHaveAttribute(
       'href',
-      expect.stringContaining('https://example.com/foryou'),
+      expect.stringContaining('https://example.com/settings'),
     );
+    const icon = link.querySelector('svg');
+    expect(icon).toBeInTheDocument();
+  });
+
+  it('keeps an accessible name in the default variant when the label is visually hidden', async () => {
+    render(<AccountHeader variant="default" />, {
+      service: 'hindi',
+      idctaConfig,
+    });
+
+    const link = await screen.findByRole('link', { name: 'साइन इन' });
+    expect(link).toHaveAttribute('aria-label', 'साइन इन');
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://example.com/signin'),
+    );
+  });
+
+  it('renders synchronously on first render, without waiting for hydration', () => {
+    renderWithProviders();
+
+    expect(screen.getByRole('link', { name: 'साइन इन' })).toBeVisible();
   });
 });

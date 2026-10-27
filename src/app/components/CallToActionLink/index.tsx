@@ -1,4 +1,4 @@
-import { PropsWithChildren, useMemo } from 'react';
+import { PropsWithChildren, Ref, useMemo } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -17,6 +17,7 @@ type CallToActionLinkProps = {
   download?: boolean;
   fontVariant?: FontVariant;
   size?: GelFontSize;
+  ref?: Ref<HTMLAnchorElement>;
 };
 
 const CallToActionLink = ({
@@ -29,6 +30,7 @@ const CallToActionLink = ({
   className,
   fontVariant = 'sansBold',
   size = 'pica',
+  ref,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -45,6 +47,7 @@ const CallToActionLink = ({
 
   return (
     <a
+      ref={ref}
       {...(id && { id })}
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}

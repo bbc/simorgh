@@ -154,8 +154,6 @@ const PlayCTA = styled.div`
 `;
 
 const Bulletin = ({
-  script,
-  service,
   dir = 'ltr',
   image = null,
   mediaType,
@@ -180,12 +178,7 @@ const Bulletin = ({
         <ImageGridItem bulletinType={bulletinType}>{image}</ImageGridItem>
       )}
       <TextGridItem bulletinType={bulletinType} fullWidth={!image} dir={dir}>
-        <BulletinHeading
-          script={script}
-          service={service}
-          bulletinType={bulletinType}
-          dir={dir}
-        >
+        <BulletinHeading bulletinType={bulletinType} dir={dir}>
           <Link
             className="focusIndicatorDisplayBlock"
             href={ctaLink}
@@ -214,19 +207,12 @@ const Bulletin = ({
           </Link>
         </BulletinHeading>
         {summaryText && (
-          <BulletinSummary
-            script={script}
-            service={service}
-            bulletinType={bulletinType}
-            dir={dir}
-          >
+          <BulletinSummary bulletinType={bulletinType} dir={dir}>
             {summaryText}
           </BulletinSummary>
         )}
         <PlayCTA
           isLive={isLive}
-          service={service}
-          script={script}
           bulletinType={bulletinType}
           dir={dir}
           aria-hidden="true"

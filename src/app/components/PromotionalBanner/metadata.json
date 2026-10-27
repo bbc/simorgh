@@ -15,14 +15,14 @@
   "acceptanceCriteria": {
     "done": true,
     "reference": {
-      "url": "",
+      "url": "https://www.dropbox.com/scl/fi/gabsa972pah0a2mgvsrsv/AAC-WS-PWA-Promotional-Banner.paper?rlkey=ytuqha1qphq7y7g7mbgy6ducw&dl=0",
       "label": "Accessibility Acceptance Criteria"
     }
   },
   "swarm": {
     "done": true,
     "reference": {
-      "url": "",
+      "url": "https://www.dropbox.com/scl/fi/dr7dkwne0u79tkzsx2i7j/A11Y-Swarm-Promotional-banner.paper?rlkey=utkj5kcsqi4ssuumwbnmkg3oq&dl=0",
       "label": "Accessibility Swarm Notes"
     }
   },

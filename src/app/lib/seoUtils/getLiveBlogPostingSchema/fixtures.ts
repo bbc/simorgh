@@ -94,6 +94,12 @@ export const samplePost = {
   options: {
     isBreakingNews: false,
   },
+  dates: {
+    firstPublished: '2023-09-08T10:05:00+00:00',
+    lastPublished: '2023-09-08T10:05:00+00:00',
+    time: null,
+    curated: '2023-09-08T10:05:00.000Z',
+  },
   titles: [
     {
       title: null,

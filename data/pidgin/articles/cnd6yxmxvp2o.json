@@ -2987,9 +2987,7 @@
             "versions": [
               {
                 "versionId": "p01p5qff",
-                "types": [
-                  "Original"
-                ],
+                "types": ["Original"],
                 "duration": 67,
                 "durationISO8601": "PT1M7S",
                 "warnings": {},
@@ -3290,6 +3288,149 @@
           "type": "cps"
         }
       ],
+      "mediaCuration": {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT1M25S",
+            "isLive": false,
+            "title": "How Nigerians repatriation from SA go happun",
+            "firstPublished": "2026-05-06T16:52:32.529Z",
+            "lastPublished": "2026-05-06T16:52:32.529Z",
+            "link": "https://www.bbc.com/pidgin/articles/cwy2j1j1jdwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6468/live/d006f040-496b-11f1-b55d-0f258dce1735.jpg.webp",
+            "imageAlt": "Protests in South Africa against foreigners",
+            "isPortraitImage": true,
+            "id": "cwy2j1j1jdwo",
+            "attributions": [
+              {
+                "title": "Pidgin",
+                "link": {
+                  "url": "https://www.bbc.co.uk/pidgin",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/pidgin"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "Nigeria",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M18S",
+            "isLive": false,
+            "title": "Family of Nigerian man wey police kpai seek justice",
+            "firstPublished": "2026-04-29T19:20:31.992Z",
+            "lastPublished": "2026-04-29T19:20:31.992Z",
+            "link": "https://www.bbc.com/pidgin/articles/c98rylgge3ko",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d1e4/live/4cc7fe60-4400-11f1-b55d-0f258dce1735.jpg.webp",
+            "imageAlt": "Mene Ogidi's mother and Mene Ogidi in a circle",
+            "isPortraitImage": true,
+            "id": "c98rylgge3ko",
+            "attributions": [
+              {
+                "title": "Pidgin",
+                "link": {
+                  "url": "https://www.bbc.co.uk/pidgin",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/pidgin"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "To do police work",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c06gq61pqqvt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c06gq61pqqvt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M46S",
+            "isLive": false,
+            "title": "'If acting bin no work out, I for dey Canada' - Tobi Bakre",
+            "firstPublished": "2026-04-24T18:49:34.154Z",
+            "lastPublished": "2026-04-24T18:49:34.154Z",
+            "link": "https://www.bbc.com/pidgin/articles/cvg02d9zzvdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b50a/live/0a73ff50-400e-11f1-ac78-2112837ce2aa.jpg.webp",
+            "imageAlt": "Tobi Bakre",
+            "isPortraitImage": true,
+            "id": "cvg02d9zzvdo",
+            "attributions": [
+              {
+                "title": "Pidgin",
+                "link": {
+                  "url": "https://www.bbc.co.uk/pidgin",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/pidgin"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "Nigeria",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c2dwqd1zr92t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c2dwqd1zr92t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M56S",
+            "isLive": false,
+            "title": "'Over 1000 men bin indicate interest to marry autistic daughter' - OPM founder",
+            "firstPublished": "2026-04-22T12:20:46.170Z",
+            "lastPublished": "2026-04-22T12:23:55.115Z",
+            "link": "https://www.bbc.com/pidgin/articles/c239xdy5nkpo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8e36/live/8db08f20-3e45-11f1-ac78-2112837ce2aa.jpg.webp",
+            "description": "Oga Chinyere wey be di general overseer of Omega Power Ministry (OPM) say im intentions dey clear but di tok-tok don too much.",
+            "imageAlt": "Autistic girl and Apostle Chibuzor Chinyere",
+            "isPortraitImage": true,
+            "id": "c239xdy5nkpo",
+            "attributions": [
+              {
+                "title": "Pidgin",
+                "link": {
+                  "url": "https://www.bbc.co.uk/pidgin",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/pidgin"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "Women",
+              "link": {
+                "url": "https://www.bbc.com/pidgin/topics/c1gdqg448w1t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/pidgin/topics/c1gdqg448w1t"
+              }
+            }
+          }
+        ],
+        "topicId": "c3l19z3k1ert",
+        "title": "Video",
+        "curationId": "urn:bbc:vivo:curation:0a533527-dc0a-4e6f-8ffd-2f8e80659277",
+        "curationType": "vivo-stream",
+        "link": "/pidgin/topics/c3l19z3k1ert",
+        "position": 0
+      },
       "mostRead": {
         "generated": "2023-02-18T03:04:58.493Z",
         "lastRecordTimeStamp": "2021-05-04T11:53:00Z",
@@ -3966,9 +4107,7 @@
                         "core:Thing",
                         "tagging:TagConcept"
                       ],
-                      "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                      ],
+                      "thingSameAs": ["http://sws.geonames.org/2328926/"],
                       "thingEnglishLabel": "Nigeria",
                       "type": "about"
                     },
@@ -4000,9 +4139,7 @@
                         "core:Thing",
                         "core:Theme"
                       ],
-                      "thingSameAs": [
-                        "http://dbpedia.org/resource/Transport"
-                      ],
+                      "thingSameAs": ["http://dbpedia.org/resource/Transport"],
                       "thingEnglishLabel": "Transport",
                       "type": "about"
                     }

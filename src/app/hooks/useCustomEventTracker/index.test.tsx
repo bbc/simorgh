@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 import {
   renderHook,
   act,
@@ -10,9 +10,43 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
-import * as serviceContextModule from '../../contexts/ServiceContext';
-import * as beaconModule from '../../components/ATIAnalytics/beacon';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useCustomEventTracker from '.';
+
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+};
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }: PropsWithChildren) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
+
+jest.mock('../../components/ATIAnalytics/beacon', () => {
+  const actual = jest.requireActual('../../components/ATIAnalytics/beacon');
+
+  return {
+    __esModule: true,
+    ...actual,
+    sendEventBeacon: jest.fn(),
+  };
+});
 
 const atiAnalyticsFixture = {
   campaigns: [
@@ -39,9 +73,7 @@ const atiAnalyticsFixture = {
   producerName: 'PIDGIN',
 };
 
-const mockSendEventBeacon = jest
-  .spyOn(beaconModule, 'sendEventBeacon')
-  .mockImplementation(jest.fn());
+const mockSendEventBeacon = jest.mocked(sendEventBeacon);
 
 const defaultToggles = {
   eventTracking: {
@@ -52,16 +84,11 @@ const defaultToggles = {
 beforeEach(() => {
   jest.clearAllMocks();
 
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-    }),
-  );
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  };
 });
 
 const wrapper = ({
@@ -80,13 +107,13 @@ const wrapper = ({
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
-    <serviceContextModule.ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service="pidgin">
       <ToggleContextProvider toggles={toggles}>
         <EventTrackingContextProvider atiData={atiData}>
           {children}
         </EventTrackingContextProvider>
       </ToggleContextProvider>
-    </serviceContextModule.ServiceContextProvider>
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 
@@ -102,18 +129,21 @@ describe('useCustomEventTracker', () => {
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
-    expect(mockSendEventBeacon).toHaveBeenCalledWith({
-      type: VIEW_EVENT,
-      eventGroupingName: eventName,
-      componentName: '',
-      campaignID: 'article-sty',
-      pageIdentifier: 'news::pidgin.news.story.51745682.page',
-      platform: 'canonical',
-      producerId: '70',
-      producerName: 'PIDGIN',
-      service: 'pidgin',
-      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-    });
+    expect(mockSendEventBeacon).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: VIEW_EVENT,
+        eventGroupingName: eventName,
+        componentName: '',
+        campaignID: 'article-sty',
+        pageIdentifier: 'news::pidgin.news.story.51745682.page',
+        platform: 'canonical',
+        producerId: '70',
+        producerName: 'PIDGIN',
+        service: 'pidgin',
+        statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+        hashedId: null,
+      }),
+    );
   });
 
   it('should use stringifiedData as componentName when provided', async () => {

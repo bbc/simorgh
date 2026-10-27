@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 import context from '../context';
 
 const BASE_URL = {
-  local: 'http://localhost:7080',
+  local: 'http://localhost:7081',
   test: 'https://www.test.bbc.com',
   live: 'https://www.bbc.com',
 };
@@ -12,7 +12,7 @@ const onFailedRequest = request => {
   console.log('Request failed:', {
     url: request.url(),
     test: expect.getState().currentTestName,
-    errorText: request.failure().errorText,
+    errorText: request.failure()?.errorText,
   });
 };
 

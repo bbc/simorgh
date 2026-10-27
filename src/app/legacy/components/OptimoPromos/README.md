@@ -63,7 +63,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
       height={height}
     />
     <Promo.ContentWrapper>
-      <Promo.Title as="h3" script={script}>
+      <Promo.Title as="h3">
         <Promo.Link>
           <Promo.Content headline={headline} />
         </Promo.Link>
@@ -83,12 +83,12 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
     ariaLabelledBy={ariaLabelledBy}
     eventTrackingData={eventTrackingData}
   >
-    <Promo.Title as="h3" script={script}>
-    <Promo.Link>
-    <Promo.LiveLabel>
-        <Promo.Content headline={headline} />
-    </Promo.LiveLabel>
-    </Promo.Link>
+    <Promo.Title as="h3">
+      <Promo.Link>
+        <Promo.LiveLabel>
+          <Promo.Content headline={headline} />
+        </Promo.LiveLabel>
+      </Promo.Link>
     </Promo.Title>
 
     <Promo.Timestamp>{timestamp}</Promo.Timestamp>
@@ -106,7 +106,7 @@ More [here](https://github.com/bbc/simorgh/issues/9652)
     eventTrackingData={eventTrackingData}
   >
     <Promo.MediaIndicator />
-    <Promo.Title as="div" script={script}>
+    <Promo.Title as="div">
       <Promo.Link>
         <Promo.Content headline={headline} />
       </Promo.Link>

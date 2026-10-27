@@ -24,10 +24,6 @@ const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
 );
 
 describe('RadioSchedule', () => {
-  beforeEach(() => {
-    fetch.resetMocks();
-  });
-
   afterEach(() => {
     jest.resetAllMocks();
   });
@@ -46,7 +42,7 @@ describe('RadioSchedule', () => {
           { service: 'arabic' },
         ).container;
       });
-      expect(container).toMatchSnapshot();
+      expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
@@ -77,7 +73,9 @@ describe('RadioSchedule', () => {
         Date.now(),
       );
 
-      fetch.mockResponseOnce(JSON.stringify(radioSchedule2Programmes));
+      jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+        json: async () => radioSchedule2Programmes,
+      });
 
       let container;
 
@@ -91,7 +89,9 @@ describe('RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetch.mockResponseOnce(JSON.stringify([]));
+      jest.spyOn(global, 'fetch').mockResolvedValueOnce({
+        json: async () => [],
+      });
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',

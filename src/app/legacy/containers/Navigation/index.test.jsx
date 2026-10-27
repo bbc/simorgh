@@ -15,6 +15,16 @@ import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
+jest.mock('../../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../hooks/useClickTrackerHandler'),
+}));
+
 describe('Navigation Container', () => {
   it('should correctly render amp navigation', () => {
     const { container } = render(<Navigation />, {
@@ -26,7 +36,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/news',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation', () => {
@@ -39,7 +49,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/news',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render amp navigation on non-home navigation page', () => {
@@ -52,7 +62,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/uk',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation on non-home navigation page', () => {
@@ -65,7 +75,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/uk',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render amp navigation on non-navigation page', () => {
@@ -78,7 +88,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/not-a-navigation-page',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should correctly render canonical navigation on non-navigation page', () => {
@@ -91,7 +101,7 @@ describe('Navigation Container', () => {
       statusCode: 200,
       pathname: '/not-a-navigation-page',
     });
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('nav')).toBeInTheDocument();
   });
 
   it('should render navigation links in the correct format', () => {

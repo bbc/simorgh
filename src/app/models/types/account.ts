@@ -3,12 +3,16 @@ type FlagpoleStatus = 'GREEN' | 'RED';
 
 export type IdctaConfig = {
   'id-availability': FlagpoleStatus;
+  availability?: {
+    refresh?: FlagpoleStatus;
+  };
   unavailable_url: string;
   signin_url: string;
   register_url: string;
   settings_url: string;
   signout_url: string;
   foryou_url: string;
+  initialIsSignedIn?: boolean;
   identity: {
     idSignedInCookieName: string;
   };
@@ -16,10 +20,17 @@ export type IdctaConfig = {
 
 export type AccountContextProps = {
   isIdctaAvailable: boolean;
+  isRefreshAvailable: boolean;
   isSignedIn: boolean;
   signInUrl?: string;
   registerUrl?: string;
   settingsUrl?: string;
   signOutUrl?: string;
   forYouUrl?: string;
+  hashedUserId?: string;
+  isArticlePersonalizationEnabled: boolean;
+  isArticlePersonalizationAvailable: boolean;
+  isTopicPersonalizationEnabled: boolean;
+  isTopicPersonalizationAvailable: boolean;
+  isPersonalisationOn: boolean;
 };

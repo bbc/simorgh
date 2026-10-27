@@ -1,0 +1,83 @@
+{
+  "id": "3n1x4716kyvjqbh4hdw42atji",
+  "eventGroupingLabel": "Europe - UEFA Europa Conference League - 1st Qualifying Round",
+  "startDateTime": "2022-07-14T14:00:00Z",
+  "tournamentId": "c7b8o53flg36wbuevfzy3lb10",
+  "urn": "urn:bbc:sportsdata:football:event:3n1x4716kyvjqbh4hdw42atjo",
+  "sport": "football",
+  "status": "MidEvent",
+  "period": "secondhalf",
+  "periodLabel": {
+    "value": "64'",
+    "accessible": "64 minutes"
+  },
+  "participants": [
+    {
+      "id": "3rutx3wc2j6q3qq8uqdn8pdja",
+      "urn": "urn:bbc:sportsdata:football:team:liepja",
+      "name": {
+        "fullName": "Liepāja",
+        "shortName": "Liepāja"
+      },
+      "score": "1",
+      "runningScores": {
+        "halftime": "0",
+        "fulltime": "1",
+        "aggregate": "1"
+      },
+      "alignment": "home"
+    },
+    {
+      "id": "57m9hz7bq5v1va8q1pyr1u1nt",
+      "urn": "urn:bbc:sportsdata:football:team:gjilani",
+      "name": {
+        "fullName": "Gjilani",
+        "shortName": "Gjilani"
+      },
+      "score": "1",
+      "runningScores": {
+        "halftime": "0",
+        "fulltime": "1",
+        "aggregate": "2"
+      },
+      "alignment": "away"
+    }
+  ],
+  "currentLeader": "draw",
+  "venue": {
+    "name": "Stadions Daugava",
+    "shortName": "Stadions Daugava"
+  },
+  "tournament": {
+    "id": "c7b8o53flg36wbuevfzy3lb10",
+    "name": "UEFA Europa Conference League",
+    "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+  },
+  "stage": {
+    "id": "brodav2njw2t51ew6v6jovfv8",
+    "name": "1st Qualifying Round",
+    "urn": "urn:bbc:sportsdata:football:stage:brodav2njw2t51ew6v6jovfv8"
+  },
+  "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+  "lastUpdated": "2022-07-14T15:26:00Z",
+  "round": "undefined",
+  "home": {
+    "fullName": "Liepāja",
+    "shortName": "Liepāja",
+    "urn": "urn:bbc:sportsdata:football:team:liepja",
+    "score": "1"
+  },
+  "away": {
+    "fullName": "Gjilani",
+    "shortName": "Gjilani",
+    "urn": "urn:bbc:sportsdata:football:team:gjilani",
+    "score": "1"
+  },
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
+  "date": "Thu 14 Jul 2022",
+  "accessibleEventSummary": "Liepāja 1 , Gjilani 1"
+}

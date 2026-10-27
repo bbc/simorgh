@@ -1,5 +1,5 @@
 import { Services } from '../../../../models/types/global';
-import { serviceNumerals } from '../../Canonical/Rank';
+import serviceNumerals from '../../utilities/getServiceNumerals';
 
 export const transformData = () => {
   return `

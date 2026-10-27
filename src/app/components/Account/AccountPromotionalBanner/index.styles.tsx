@@ -1,43 +1,12 @@
-import { Theme, css } from '@emotion/react';
+import { css } from '@emotion/react';
+import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 
 export default {
-  actionLinkWrapper: ({ mq }) =>
+  bannerWrapper: () =>
     css({
-      display: 'flex',
-      flexDirection: 'column',
-      flex: '1 1 auto',
-      alignItems: 'center',
-      gap: '1rem',
-      [mq.GROUP_2_MIN_WIDTH]: {
-        flexDirection: 'row',
-      },
-    }),
-  callToActionLink: () =>
-    css({
-      padding: '1rem',
-    }),
-
-  buttonSeparatorText: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-    }),
-
-  signInLink: ({ palette }: Theme) =>
-    css({
-      color: palette.WHITE,
-      backgroundColor: palette.SERVICE_NEUTRAL_CORE,
-      '&:hover, &:focus': {
-        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
-        color: palette.WHITE,
-      },
-    }),
-  registerLink: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      backgroundColor: palette.WHITE,
-      '&:hover, &:focus': {
-        backgroundColor: palette.GREY_2,
-        color: palette.BLACK,
+      display: 'none',
+      [`.${DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS} &`]: {
+        display: 'block',
       },
     }),
 };

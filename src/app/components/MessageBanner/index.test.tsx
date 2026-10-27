@@ -4,9 +4,20 @@ import {
   screen,
 } from '../react-testing-library-with-providers';
 import MessageBanner from '.';
+import Heading from '../Heading';
 import { kyrgyzMessageBannerOnePromo } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
 
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
@@ -23,46 +34,35 @@ describe('MessageBanner', () => {
   });
 
   describe('for a curation with 1 summary', () => {
-    it('should render a section with role region', () => {
+    it('should render the heading correctly', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
-      );
-      const region = screen.getByRole('region');
-      expect(region).toBeInTheDocument();
-    });
-
-    it('should have a heading with an id which matches the aria-labelledby attribute', () => {
-      const { getByRole } = render(
-        <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
-          description={summary.description}
-          link={summary.link}
-          linkText={summary.title}
-          image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       const heading = screen.getByText(kyrgyzMessageBannerOnePromo.title);
-      const messageBannerEl = getByRole('region');
-      expect(messageBannerEl.getAttribute('aria-labelledby')).toBe(
-        heading.getAttribute('id'),
-      );
+      expect(heading).toBeInTheDocument();
     });
 
     it('should display the banner heading correctly as an H2', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       expect(screen.getByText(kyrgyzMessageBannerOnePromo.title).nodeName).toBe(
         'H2',
@@ -72,12 +72,15 @@ describe('MessageBanner', () => {
     it('should display the banner subtext correctly as a Paragraph', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       expect(screen.getByText(summary.description).nodeName).toBe('P');
     });
@@ -85,12 +88,15 @@ describe('MessageBanner', () => {
     it('should display link text correctly as an Anchor', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       const ctaLink = screen.getByRole('link');
       expect(ctaLink.getAttribute('href')).toEqual(summary.link);
@@ -100,12 +106,15 @@ describe('MessageBanner', () => {
     it('should render an image with the correct image src', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       const image = screen.getByAltText('');
       expect(image.getAttribute('src')).toEqual(
@@ -113,15 +122,49 @@ describe('MessageBanner', () => {
       );
     });
 
-    it('should have an image with an empty alt text', () => {
+    it('should render an image with the correct srcSet and sizes', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
+      );
+      const image = screen.getByAltText('');
+      const imagePath =
+        'cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png';
+      const separator = ', \n                          ';
+
+      expect(image.getAttribute('srcset')).toEqual(
+        [
+          `https://ichef.test.bbci.co.uk/ace/ws/184/${imagePath} 184w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/368/${imagePath} 368w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/224/${imagePath} 224w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/448/${imagePath} 448w`,
+        ].join(separator),
+      );
+      expect(image.getAttribute('sizes')).toEqual(
+        '(max-width: 37.4375rem) 184px, 224px',
+      );
+    });
+
+    it('should have an image with an empty alt text', () => {
+      render(
+        <MessageBanner
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
       const image = screen.getByAltText('');
       expect(image).toBeInTheDocument();
@@ -134,12 +177,15 @@ describe('MessageBanner', () => {
     it('should not be enabled if event tracking data not provided', () => {
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(undefined);
@@ -156,13 +202,16 @@ describe('MessageBanner', () => {
 
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingDataModel}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
@@ -177,12 +226,15 @@ describe('MessageBanner', () => {
     it('should not be enabled if event tracking data not provided', () => {
       const { container } = render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(undefined);
@@ -203,13 +255,16 @@ describe('MessageBanner', () => {
 
       render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingDataModel}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
@@ -220,13 +275,16 @@ describe('MessageBanner', () => {
 
       const { container } = render(
         <MessageBanner
-          heading={kyrgyzMessageBannerOnePromo.title}
           description={summary.description}
           link={summary.link}
           linkText={summary.title}
           image={summary.imageUrl}
           eventTrackingData={eventTrackingData}
-        />,
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
       );
 
       const [callToActionLink] = container.getElementsByTagName('a');

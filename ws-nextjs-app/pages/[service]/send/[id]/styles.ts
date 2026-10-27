@@ -1,17 +1,56 @@
 import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
-export default {
-  background: ({ mq }: Theme) =>
-    css({
-      display: 'none',
+const IMAGE_RECIPE = '1280xn';
+const BACKGROUND_POSITION = 'center top / cover no-repeat';
 
+export const fallbackBackground =
+  'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)';
+
+// Local copy of InlineLink's former Emotion styles - InlineLink itself has moved to SCSS Modules
+export const getInlineLinkStyles = (palette: Theme['palette']) => ({
+  color: palette.EBON,
+  borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+  textDecoration: 'none',
+  '&:visited': {
+    color: palette.METAL,
+    borderBottom: `${pixelsToRem(1)}rem solid ${palette.METAL}`,
+  },
+  '&:focus, &:hover': {
+    borderBottom: `${pixelsToRem(2)}rem solid ${palette.POSTBOX}`,
+    color: palette.POSTBOX,
+  },
+});
+
+export const buildImageBackground = (pageBackgroundTemplateUrl: string) => {
+  const baseUrl = pageBackgroundTemplateUrl.replace('$recipe', IMAGE_RECIPE);
+  const imageSet = `url(${baseUrl}.webp) type('image/webp'), url(${baseUrl}) type('image/png')`;
+
+  return [
+    `url(${baseUrl}) ${BACKGROUND_POSITION}`,
+    `-webkit-image-set(${imageSet}) ${BACKGROUND_POSITION}`,
+    `image-set(${imageSet}) ${BACKGROUND_POSITION}`,
+  ];
+};
+
+export default {
+  background:
+    (background: string | string[]) =>
+    ({ mq }: Theme) =>
+      css({
+        display: 'none',
+
+        [mq.GROUP_3_MIN_WIDTH]: {
+          display: 'block',
+          position: 'absolute',
+          inset: 0,
+          background,
+        },
+      }),
+  backgroundFixed: ({ mq }: Theme) =>
+    css({
       [mq.GROUP_3_MIN_WIDTH]: {
-        display: 'block',
-        position: 'absolute',
-        inset: 0,
-        background:
-          'linear-gradient(200deg, #A20219 0%, #180109 54%, #180109 90%)',
+        backgroundAttachment: 'fixed',
       },
     }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>

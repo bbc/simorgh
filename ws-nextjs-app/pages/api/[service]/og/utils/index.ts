@@ -81,7 +81,7 @@ export const extractArticleData = ({
   const defaultImage = getDefaultImage(service);
 
   const brandedImage = promoImage?.locator
-    ? getBrandedImage(promoImage?.locator, service)
+    ? getBrandedImage({ locator: promoImage?.locator, service })
     : defaultImage;
 
   const isInTopStories = Boolean(
@@ -127,7 +127,7 @@ export const extractLiveData = ({
     ?.join('/');
 
   const brandedImage = imageLocator
-    ? getBrandedImage(imageLocator, service)
+    ? getBrandedImage({ locator: imageLocator, service })
     : defaultImage;
 
   return {

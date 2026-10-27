@@ -27,14 +27,15 @@ export type Toggles =
 export type Navigation = {
   title: string;
   url: string;
+  type?: string;
   hideOnLiteSite?: boolean;
+  subItems?: Navigation[];
 };
 
 export type ComponentExperimentProps = {
   sendOptimizelyEvents?: boolean;
   experimentName?: string;
   experimentVariant?: string;
-  referrer?: string | null;
 };
 
 export type ServerSideExperiment = {
@@ -66,7 +67,7 @@ export type UkrainianService = {
 
 export type UzbekService = {
   service: 'uzbek';
-  variant: 'default' | 'cyr' | 'lat';
+  variant: 'cyr' | 'lat';
 };
 
 export type ServicesWithVariants =

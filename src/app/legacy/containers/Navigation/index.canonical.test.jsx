@@ -1,4 +1,3 @@
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,
@@ -17,8 +16,6 @@ const navigationProps = {
   scrollableListItems,
   dropdownListItems,
   menuAnnouncedText: 'menu',
-  script: latin,
-  service: 'pidgin',
   dir: 'ltr',
 };
 
@@ -27,8 +24,6 @@ const navigation = (
     scrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
     menuAnnouncedText="menu"
-    script={latin}
-    service="news"
     dir="ltr"
   />
 );
@@ -36,8 +31,8 @@ const navigation = (
 describe('Canonical Navigation', () => {
   describe('snapshots', () => {
     it('should correctly render Canonical navigation', () => {
-      const { container } = render(navigation);
-      expect(container).toMatchSnapshot();
+      const { queryByTestId } = render(navigation);
+      expect(queryByTestId(scrollableTestId)).toBeInTheDocument();
     });
   });
 

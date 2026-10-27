@@ -12,6 +12,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -27,6 +30,9 @@ export default {
   },
   eventTracking: {
     enabled: true,
+  },
+  googlePreferredSource: {
+    enabled: false,
   },
   homePageRadioSchedule: {
     enabled: false,
@@ -70,14 +76,32 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: false,
+  },
   scriptLink: {
     enabled: true,
+  },
+  sportDataPolling: {
+    enabled: false,
+  },
+  showSportDataHeader: {
+    enabled: false,
+  },
+  stickyNavigation: {
+    enabled: false,
   },
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: false,
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: false,
   },
   webVitalsMonitoring: {
     enabled: true,

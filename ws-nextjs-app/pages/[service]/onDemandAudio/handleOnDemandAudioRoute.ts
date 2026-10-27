@@ -3,14 +3,13 @@ import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
-import shouldRender from '#nextjs/utilities/shouldRender';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import isTest from '#app/lib/utilities/isTest';
+import getPodcastExternalLinks from './podcastExternalLinks';
 
 const logger = nodeLogger(__filename);
 
@@ -37,6 +36,8 @@ export default async (context: GetServerSidePropsContext) => {
   const { service, variant } = parseRoute(resolvedUrl);
 
   if (!service) {
+    context.res.statusCode = NOT_FOUND;
+
     return {
       props: {
         service,
@@ -64,18 +65,19 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
-    service,
-  );
-
-  if (!hasRequestSucceeded && renderStatus !== OK) {
+  if (status !== OK) {
     routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status,
+      pageType: AUDIO_PAGE,
+    });
 
     return {
       props: {
         service,
-        status: renderStatus,
+        status,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: AUDIO_PAGE,
@@ -88,7 +90,7 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('AudioPage data is malformed', 500);
   }
 
-  const toggles = await getToggles(service);
+  const toggles = await fetchToggles({ service });
 
   const { externalLinkVersionId, brandId, recentEpisodes } = pageData;
   const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;
@@ -98,11 +100,11 @@ export default async (context: GetServerSidePropsContext) => {
 
   const externalLinks = isPodcast
     ? await getPodcastExternalLinks({
-        service,
-        variant: variant || undefined,
-        brandId,
-        versionId: externalLinkVersionId,
-      })
+      service,
+      variant: variant || undefined,
+      brandId,
+      versionId: externalLinkVersionId,
+    })
     : [];
 
   context.res.setHeader(

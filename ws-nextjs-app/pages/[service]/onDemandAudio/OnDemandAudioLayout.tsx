@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -14,8 +14,12 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
+import EpisodeDescriptionFormatter from '#app/components/EpisodeDescriptionFormatter';
+import getOnDemandAudioLinkedData from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -34,11 +38,16 @@ const OnDemandAudioPage = ({
     headline,
     summary,
     shortSynopsis,
+    longSynopsis,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
     imageAltText,
     promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -48,26 +57,75 @@ const OnDemandAudioPage = ({
     externalLinks,
   } = pageData;
 
+  const PLAYER_ID = 'on-demand-audio-player';
+
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
+  const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
+
+  const {
+    isPodcastEpisodePage,
+    isPodcastBrandPage,
+    linkedDataEntities,
+    mainEntityId,
+    metadataTitle,
+    metadataDescription,
+    brandDescription,
+  } = getOnDemandAudioLinkedData({
+    pathname,
+    canonicalNonUkLink,
+    serviceName,
+    isPodcast,
+    mediaIsAvailable,
+    mediaBlocks: pageData.mediaBlocks,
+    brandTitle,
+    headline,
+    episodeTitle,
+    summary,
+    promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
+    thumbnailImageUrl,
+    durationISO8601,
+    releaseDateTimeStamp,
+    externalLinks,
+    recentEpisodes,
+  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-  const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
-    : headline;
 
+  const imageHeight = isPodcastEpisodePage ? 675 : 400;
+  const imageWidth = isPodcastEpisodePage ? 1200 : 400;
+  const image = `https://${imageUrl?.replace('$recipe', `${imageWidth}x${imageHeight}`)}`;
   const metadataImageProps = is(String, imageUrl)
     ? {
-        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
-        imageWidth: 400,
-        imageHeight: 400,
+        image,
+        imageWidth,
+        imageHeight,
       }
     : {};
 
+  const [showAllContent, setShowAllContent] = useState(false);
+
+  const displayText =
+    isPodcastEpisodePage && longSynopsis ? longSynopsis : summary;
+
+  const summaryIsShort = Boolean(displayText === shortSynopsis);
+
+  const shouldShowContinueReadingButton =
+    isPodcast && !isLite && !summaryIsShort;
+
+  const summaryStyles =
+    shouldShowContinueReadingButton && !showAllContent
+      ? styles.collapsedSummary
+      : styles.expandedSummary;
+
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
         title={headline}
@@ -80,7 +138,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={metadataDescription}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -95,11 +153,21 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer testid="summary" text={summary} />
                 {episodeTitle && (
-                  <FooterTimestamp
-                    releaseDateTimeStamp={releaseDateTimeStamp}
+                  <div css={styles.footerTimeStampWrapper}>
+                    <FooterTimestamp
+                      releaseDateTimeStamp={releaseDateTimeStamp}
+                    />
+                  </div>
+                )}
+                {mediaIsAvailable ? (
+                  <MediaLoader
+                    blocks={pageData?.mediaBlocks}
+                    uniqueId={PLAYER_ID}
                   />
+                ) : (
+                  //  @ts-expect-error allow rendering of MediaError component when media is not available
+                  <MediaError skin="audio" />
                 )}
               </div>
               <EpisodeImage
@@ -107,36 +175,42 @@ const OnDemandAudioPage = ({
                 alt={imageAltText}
                 css={styles.image}
                 className="imageStyles"
+                isPodcastEpisodePage
               />
             </div>
-            {mediaIsAvailable ? (
-              <MediaLoader blocks={pageData?.mediaBlocks} />
-            ) : (
-              //  @ts-expect-error allow rendering of MediaError component when media is not available
-              <MediaError skin="audio" />
+            <div css={summaryStyles}>
+              {isPodcastEpisodePage ? (
+                <EpisodeDescriptionFormatter
+                  text={displayText}
+                  data-testid="synopsis"
+                  playerId={mediaIsAvailable && !isLite ? PLAYER_ID : undefined}
+                  eventTrackingData={{
+                    componentName: 'podcast-chapter-timestamp',
+                  }}
+                />
+              ) : (
+                <OnDemandParagraphContainer testid="summary" text={summary} />
+              )}
+            </div>
+            {shouldShowContinueReadingButton && (
+              <ContinueReadingButton
+                css={styles.continueReadingButton}
+                showAllContent={showAllContent}
+                setShowAllContent={setShowAllContent}
+              />
             )}
 
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
-              entities={
-                mediaIsAvailable
-                  ? [
-                      {
-                        '@type': 'AudioObject',
-                        name: promoBrandTitle,
-                        description: shortSynopsis,
-                        thumbnailUrl: thumbnailImageUrl,
-                        duration: durationISO8601,
-                        ...(releaseDateTimeStamp && {
-                          uploadDate: new Date(
-                            releaseDateTimeStamp,
-                          ).toISOString(),
-                        }),
-                      },
-                    ]
-                  : []
-              }
+              description={isPodcastBrandPage ? brandDescription : undefined}
+              entities={linkedDataEntities}
+              mainEntityId={mainEntityId}
+              {...(!isPodcastBrandPage &&
+                isPodcastEpisodePage &&
+                metadataImageProps && {
+                  metadataImageProps,
+                })}
             />
           </main>
 

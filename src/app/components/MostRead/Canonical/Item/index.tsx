@@ -1,6 +1,7 @@
 import { forwardRef, PropsWithChildren } from 'react';
 import { SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import LiveLabel from '#app/components/LiveLabel';
 import styles from './index.styles';
 import {
   mostReadListGridProps,
@@ -45,7 +46,9 @@ export const MostReadLink = ({
   size,
   id,
   position,
+  isLive,
   eventTrackingData,
+  isAmp = false,
 }: PropsWithChildren<MostReadLinkProps>) => {
   const positionIndex =
     typeof position === 'string' ? parseInt(position, 10) : position;
@@ -71,6 +74,20 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
+        {isLive && !isAmp && (
+          <span data-e2e="most-read-live-pulse">
+            <LiveLabel />
+          </span>
+        )}
+        {isAmp && (
+          <>
+            {'{{#isLive}}'}
+            <span data-e2e="most-read-live-pulse">
+              <LiveLabel />
+            </span>
+            {'{{/isLive}}'}
+          </>
+        )}
         {title}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}

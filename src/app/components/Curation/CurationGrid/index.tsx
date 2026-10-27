@@ -18,6 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  showRelatedTopicExperiment = false,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -32,19 +33,30 @@ const CurationGrid = ({
     promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
-    itemTracker: {
-      type: 'simple-curation-grid-promo',
-      text: promo.title,
-      position: i + 1,
-      resourceId: promo.id,
-      ...(promo.type && { mediaType: promo.type }),
-      ...(promo.duration && {
-        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-      }),
-    },
-    ...eventTrackingData,
-  });
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+    const componentName =
+      eventTrackingData?.componentName || 'simple-curation-grid';
+
+    const promoType = `${componentName}-promo`;
+    const trackingComponentName =
+      componentName === 'topic-discovery-curation-grid'
+        ? promoType
+        : componentName;
+    return {
+      itemTracker: {
+        type: promoType,
+        text: promo.title,
+        position: i + 1,
+        resourceId: promo.id,
+        ...(promo.type && { mediaType: promo.type }),
+        ...(promo.duration && {
+          duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+        }),
+      },
+      ...eventTrackingData,
+      componentName: trackingComponentName,
+    };
+  };
 
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
@@ -58,9 +70,14 @@ const CurationGrid = ({
       eventTrackingData: buildPromoEventTrackingData(promo, index),
       position: index,
     };
-
     if (!shouldUseHighImpact) {
-      return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
+      return (
+        <CurationPromo
+          {...commonProps}
+          headingLevel={headingLevel}
+          showRelatedTopicExperiment={showRelatedTopicExperiment}
+        />
+      );
     }
 
     return service ? (

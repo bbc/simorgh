@@ -18,7 +18,7 @@ import {
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import Image from '#app/components/Image';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -63,8 +63,10 @@ const StyledPromoComponent = styled(PromoComponent)`
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
   display: block;
   width: 100%;
+  height: 0;
   margin: 0;
   padding: 0;
+  padding-bottom: 100%;
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: none;
   }
@@ -145,7 +147,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   }
 `;
 
-const StyledPodcastIconWrapper = styled.div`
+const StyledInArticlePromoIconWrapper = styled.div`
   position: absolute;
   float: bottom;
   transform: translateY(-100%);
@@ -162,10 +164,31 @@ const StyledPodcastIconWrapper = styled.div`
   }
 `;
 
-const Promo = () => {
-  const { podcastPromo, script, service, dir } = use(ServiceContext);
-  const { pageType, isLite } = use(RequestContext);
+const icons = {
+  podcast: mediaIcons.podcast,
+  youtube: mediaIcons.youtube,
+  whatsapp: mediaIcons.whatsapp,
+};
 
+const iconOverridesByUrl = {
+  '/portuguese/articles/c61m430mdek2o': mediaIcons.elections,
+};
+
+const getIconFromUrl = url => {
+  const lowerCaseUrl = url?.toLowerCase();
+
+  if (lowerCaseUrl && iconOverridesByUrl[lowerCaseUrl]) {
+    return iconOverridesByUrl[lowerCaseUrl];
+  }
+
+  const match = Object.keys(icons).find(key => lowerCaseUrl?.includes(key));
+
+  return icons[match] || mediaIcons.communication;
+};
+
+const Promo = () => {
+  const { podcastPromo, dir } = use(ServiceContext);
+  const { pageType, isAmp, isLite } = use(RequestContext);
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -201,53 +224,44 @@ const Promo = () => {
     '%title%': podcastPromoTitle,
   };
 
+  const promoIcon = getIconFromUrl(url);
+
   return (
     <ResponsivePodcastPromoWrapper
       {...viewTrackerRef}
       dir={dir}
       data-e2e="podcast-promo"
     >
-      <StyledPromoComponent
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
+      <StyledPromoComponent role="region" aria-labelledby="podcast-promo">
         <SkipLinkWrapper
           endTextId="end-of-podcasts"
           terms={terms}
           text={text}
           endTextVisuallyHidden={endTextVisuallyHidden}
-          service={service}
         >
           <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
-              <ImageWithPlaceholder
+              <Image
                 src={imgSrc}
-                srcset={srcset}
-                primaryMimeType={primaryMimeType}
-                sizes={sizes}
+                srcSet={srcset}
+                mediaType={primaryMimeType}
+                sizes={isAmp ? undefined : sizes}
                 alt={alt}
                 height={100}
                 width={100}
-                ratio={100}
+                aspectRatio={[1, 1]}
                 lazyLoad
               />
             </StyledImageWrapper>
-            <StyledPodcastIconWrapper
+            <StyledInArticlePromoIconWrapper
               className="podcastIconWrapper"
               isOptimo={pageType === ARTICLE_PAGE}
             >
-              {mediaIcons.podcast}
-            </StyledPodcastIconWrapper>
+              {promoIcon}
+            </StyledInArticlePromoIconWrapper>
             <StyledCardContentWrapper>
               <strong>
-                <StyledCardLink
-                  href={url}
-                  {...clickTrackerRef}
-                  script={script}
-                  service={service}
-                >
+                <StyledCardLink href={url} {...clickTrackerRef}>
                   <span
                     id="podcast-promo"
                     className="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
@@ -256,10 +270,10 @@ const Promo = () => {
                   </span>
                 </StyledCardLink>
               </strong>
-              <StyledCardDescriptionWrapper script={script}>
+              <StyledCardDescriptionWrapper>
                 {description}
               </StyledCardDescriptionWrapper>
-              <StyledEpisodeTextWrapper dir={dir} script={script}>
+              <StyledEpisodeTextWrapper dir={dir}>
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>

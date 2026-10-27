@@ -6,6 +6,7 @@ import styles from './index.styles';
 
 interface LiveLabelPromoProps extends LiveLabelProps {
   isHeaderImage: boolean;
+  showSportData?: boolean;
 }
 
 const LiveLabelHeader = ({
@@ -15,9 +16,13 @@ const LiveLabelHeader = ({
   offScreenText,
   className,
   isHeaderImage,
+  showSportData,
 }: PropsWithChildren<LiveLabelPromoProps>) => {
   return (
-    <div data-testid="live-label">
+    <div
+      data-testid="live-label"
+      css={showSportData && styles.liveLabelContainer}
+    >
       <LivePulse
         className={className}
         width="24"
@@ -28,11 +33,11 @@ const LiveLabelHeader = ({
         lang={lang}
         id={id}
         offScreenText={offScreenText}
-        css={
-          isHeaderImage
-            ? styles.liveLabelTextWithImage
-            : styles.liveLabelTextWithoutImage
-        }
+        css={[
+          styles.liveLabelText,
+          !showSportData && isHeaderImage && styles.liveLabelTextWithImage,
+          !showSportData && !isHeaderImage && styles.liveLabelTextWithoutImage,
+        ]}
       >
         {children}
       </LiveText>

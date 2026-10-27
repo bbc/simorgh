@@ -29,7 +29,7 @@ const mockReverbParams = {
         x18: null,
       },
     },
-    user: { isSignedIn: false },
+    user: { isSignedIn: false, hashedId: null },
   },
   eventDetails: { eventName: 'pageView' },
 } as unknown as ReverbBeaconConfig;

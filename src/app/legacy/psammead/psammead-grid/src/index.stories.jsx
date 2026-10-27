@@ -1248,15 +1248,10 @@ storiesOf(STORY_KIND, module)
   )
   .add(
     'Example with Top story and regular promos',
-    ({ service, script, dir, text }) => {
+    ({ service, dir, text }) => {
       const generateStory = ({ promoType, mediaType }) => {
         const MediaIndicatorComponent = () => (
-          <ExampleMediaIndicator
-            dir={dir}
-            script={script}
-            service={service}
-            type={mediaType}
-          >
+          <ExampleMediaIndicator dir={dir} type={mediaType}>
             {mediaType !== 'photogallery' && (
               <ExampleTime dateTime="PT2M15S">2:15</ExampleTime>
             )}
@@ -1265,10 +1260,10 @@ storiesOf(STORY_KIND, module)
 
         const Info = (
           <>
-            <Headline script={script} promoType={promoType} service={service}>
+            <Headline promoType={promoType}>
               <Link href="https://www.bbc.co.uk/news">{text}</Link>
             </Headline>
-            <Summary script={script} promoType={promoType} service={service}>
+            <Summary promoType={promoType}>
               {service === 'news'
                 ? 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
                 : text}
@@ -1282,10 +1277,7 @@ storiesOf(STORY_KIND, module)
             info={Info}
             promoType={promoType}
             dir={dir}
-            mediaIndicator={
-              mediaType &&
-              MediaIndicatorComponent({ script, service, mediaType })
-            }
+            mediaIndicator={mediaType && MediaIndicatorComponent({ mediaType })}
           />
         );
       };

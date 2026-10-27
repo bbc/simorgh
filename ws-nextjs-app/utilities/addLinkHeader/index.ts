@@ -1,5 +1,5 @@
 import { NextPageContext } from 'next/types';
-import getAssetOrigins from '#server/utilities/getAssetOrigins';
+import getAssetOrigins from '#utilities/getAssetOrigins';
 
 const addLinkHeader = ({ ctx }: { ctx: NextPageContext }) => {
   const { dnsPrefetchOrigins, preconnectOrigins } = getAssetOrigins(
