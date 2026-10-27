@@ -188,6 +188,9 @@ describe('Curation Promo', () => {
       });
       expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
       expect(screen.queryByRole('img')).not.toBeInTheDocument();
+      expect(
+        container.querySelector('picture, [srcset]'),
+      ).not.toBeInTheDocument();
     });
 
     it('should not render a placeholder when imageUrl is missing on non-My News page', () => {
