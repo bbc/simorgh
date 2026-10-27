@@ -141,7 +141,10 @@ const MyNewsPageContent = ({
       {!topicsLoading && topicsError && <Text>{followedTopicsErrorText}</Text>}
       {!topicsLoading && !topicsError && hasTopics && (
         <>
-          <TopicTags tags={transformTopicsForRelatedTopics()} />
+          <TopicTags
+            tags={transformTopicsForRelatedTopics()}
+            trackingSource="my-news"
+          />
           {hasMoreTopicsThanLimit && (
             <button
               type="button"
