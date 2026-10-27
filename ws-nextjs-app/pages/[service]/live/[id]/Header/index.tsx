@@ -13,10 +13,10 @@ import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import { MetadataTaggings } from '#app/models/types/metadata';
+import isLive from '#app/lib/utilities/isLive';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
 import LiveElectionBanner from './LiveElectionBanner';
-import isLive from '#app/lib/utilities/isLive';
 
 const Header = ({
   showLiveLabel,
