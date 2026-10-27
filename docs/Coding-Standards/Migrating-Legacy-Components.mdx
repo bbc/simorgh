@@ -299,6 +299,25 @@ reference it from the stylesheet, rather than generating dynamic class names:
 layout only, because Opera Mini falls back to inline layout. Scope any unavoidable Opera
 Mini override with `:global(.is-opera-mini) &`.
 
+### PWA typography
+
+Around seventeen service/variant themes (for example `pidgin`, `ukrainian`, `serbian/cyr`,
+`uzbek/lat`) swap their default Helmet font variants for Reith when the page is displayed
+as an installed PWA. `ThemeProviderSCSSModules` handles this in CSS, so migrated components
+need no PWA branching of their own:
+
+- `src/app/components/ThemeProviderSCSSModules/pwaTypography/reith.scss` redeclares the
+  `--sans-*` and `--serif-*` custom properties, and declares the four Reith `@font-face`
+  rules, inside a `@media (display-mode: ...)` block.
+- Each opted-in service theme imports it after its base `fontVariants` file, so the PWA
+  block wins the cascade. Services without PWA typography never load it, and the Reith
+  fonts are only fetched when the media query matches.
+
+Because the override resolves through the same `--gel-font-variant-*` aliases as every
+other variant, any component using the `fontVariants` mixins picks it up automatically.
+Do not read `useIsPWA` in an SCSS Modules component to switch fonts — that reintroduces a
+client-only render and a flash of the wrong font.
+
 ## Tests
 
 - Use `src/app/components/react-testing-library-with-providers` rather than

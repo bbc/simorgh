@@ -1,0 +1,23 @@
+@use './fontBaseUrls.scss' as fontUrls;
+
+@mixin reith-font-face($family, $file, $weight) {
+  @font-face {
+    font-family: $family;
+    src:
+      url('#{fontUrls.$reith-fonts-dir}#{$file}.woff2') format('woff2'),
+      url('#{fontUrls.$reith-fonts-dir}#{$file}.woff') format('woff');
+    font-weight: $weight;
+    font-display: optional;
+  }
+}
+
+@mixin reith-pwa-font-faces {
+  @include reith-font-face('ReithSans', 'BBCReithSans_W_Rg', 400);
+  @include reith-font-face('ReithSans', 'BBCReithSans_W_Bd', 700);
+  @include reith-font-face('ReithSerif', 'BBCReithSerif_W_Md', 500);
+  @include reith-font-face(
+    'ReithSerif',
+    'subsets/BBCReithSerif_WNumbers_Lt',
+    300
+  );
+}
