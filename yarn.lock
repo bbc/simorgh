@@ -6114,17 +6114,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axe-core@npm:4.14.0, axe-core@npm:^4.10.3":
+  version: 4.14.0
+  resolution: "axe-core@npm:4.14.0"
+  checksum: 10/b41f9c5fb670b3e1812ba203b17570efa026071e6c722cd8384bacbe5f2be1578fc5d7544acf06df7758eb755c7d23629df922e86cc0655d656784157c0d8df5
+  languageName: node
+  linkType: hard
+
 "axe-core@npm:^4.10.0, axe-core@npm:^4.2.0":
   version: 4.10.3
   resolution: "axe-core@npm:4.10.3"
   checksum: 10/9ff51ad0fd0fdec5c0247ea74e8ace5990b54c7f01f8fa3e5cd8ba98b0db24d8ebd7bab4a9bd4d75c28c4edcd1eac455b44c8c6c258c6a98f3d2f88bc60af4cc
-  languageName: node
-  linkType: hard
-
-"axe-core@npm:^4.10.3":
-  version: 4.14.0
-  resolution: "axe-core@npm:4.14.0"
-  checksum: 10/b41f9c5fb670b3e1812ba203b17570efa026071e6c722cd8384bacbe5f2be1578fc5d7544acf06df7758eb755c7d23629df922e86cc0655d656784157c0d8df5
   languageName: node
   linkType: hard
 
@@ -15461,6 +15461,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:16.3.1"
     autoprefixer: "npm:10.5.4"
+    axe-core: "npm:4.14.0"
     cypress: "npm:15.16.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
