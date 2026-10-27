@@ -161,6 +161,13 @@ export const service: SerbianConfig = {
       relatedTopics: 'Povezane teme',
       moreOnThis: '',
       navMenuText: 'Odeljci',
+      liteSite: {
+        onboardingMessage:
+          'Gledate tekstualnu verziju ovog sajta koja koristi manje podataka. Pogledajte glavnu verziju sajta sa svim slikama i video snimcima.',
+        toMainSite: 'Odvedi me na glavni sajt',
+        informationPage: 'Saznajte više o ovoj verziji koja štedi podatke',
+        dataSaving: 'Verzija koja štedi podatke',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
         audioPlayer: 'Audio plejer',
@@ -168,13 +175,13 @@ export const service: SerbianConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'Uživo',
-        liveCoverage: 'Pokrivenost uživo',
-        breaking: 'Vanredne',
+        liveCoverage: 'Izveštavanje uživo',
+        breaking: 'Najnovija vest',
         postedAt: 'Objavljeno u',
-        summary: 'Sažetak',
+        summary: 'Najvažnije',
         shareButtonText: 'Deli',
-        refreshButtonText: 'Najnoviji post',
-        visuallyHiddenButtonText: 'Dostupan je novi post',
+        refreshButtonText: 'Najnovija objava',
+        visuallyHiddenButtonText: 'Dostupna je nova objava',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -649,6 +656,13 @@ export const service: SerbianConfig = {
       relatedContent: 'Повезано',
       relatedTopics: 'Повезане теме',
       navMenuText: 'Одељци',
+      liteSite: {
+        onboardingMessage:
+          'Гледате текстуалну верзију овог сајта која користи мање података. Погледајте главну верзију сајта са свим сликама и видео снимцима.',
+        toMainSite: 'Одведи ме на главни сајт',
+        informationPage: 'Сазнајте више о овој верзији која штеди податке',
+        dataSaving: 'Верзија која штеди податке',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
@@ -656,13 +670,13 @@ export const service: SerbianConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'Уживо',
-        liveCoverage: 'Покривеност уживо',
-        breaking: 'Ванредне',
+        liveCoverage: 'Извештавање уживо',
+        breaking: 'Најновија вест',
         postedAt: 'Објављено у',
-        summary: 'Сажетак',
+        summary: 'Најважније',
         shareButtonText: 'Дели',
-        refreshButtonText: 'Последњи пост',
-        visuallyHiddenButtonText: 'Доступан је нови пост',
+        refreshButtonText: 'Најновија објава',
+        visuallyHiddenButtonText: 'Доступна је нова објава',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

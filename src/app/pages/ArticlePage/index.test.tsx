@@ -33,6 +33,7 @@ import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import useMediaQuery from '#hooks/useMediaQuery';
 import electionResultsFixture from './ArticleElectionResults/fixtures';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import {
   render,
   screen,
@@ -43,7 +44,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
-import * as buildReverbParams from '../../components/ATIAnalytics/params';
+import * as buildReverbParams from '../../lib/analyticsUtils/params/buildParams';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -57,12 +58,35 @@ jest.mock('../../components/ATIAnalytics', () => {
   return ATIAnalytics;
 });
 
+jest.mock('../../contexts/ReverbParamsContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../contexts/ReverbParamsContext'),
+}));
+
+jest.mock('../../lib/analyticsUtils/params/buildParams', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/params/buildParams'),
+}));
+
+jest.mock('#app/hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useViewTracker'),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const reverbParamsContextProviderSpy = jest.spyOn(
   ReverbParamsContext,
   'ReverbParamsContextProvider',
 );
 
-const buildReverbParamsSpy = jest.spyOn(buildReverbParams, 'default');
+const buildReverbParamsSpy = jest.spyOn(
+  buildReverbParams,
+  'buildAnalyticsParams',
+);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
@@ -159,6 +183,19 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
+    const { container } = render(
+      <ArticlePage pageData={articleDataPersian} />,
+      { service: 'persian' },
+    );
+    const anchor = container.querySelector('main [data-sticky-nav-anchor]');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor?.tagName).toBe('P');
+    expect(anchor).toHaveTextContent(/\S/);
+    expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
   });
 
   it.each([
@@ -744,6 +781,46 @@ describe('Article Page', () => {
       rel: 'amphtml',
     });
   });
+
+  it.each([
+    {
+      contentId: 'urn:bbc:topcat:curie:asset:example',
+      shouldRender: false,
+    },
+    {
+      contentId: 'urn:bbc:optimo:asset:c1l97706v5mo',
+      shouldRender: true,
+    },
+  ])(
+    'renders SaveArticleButton=$shouldRender for content ID $contentId',
+    async ({ contentId, shouldRender }) => {
+      const pageData = {
+        ...articleDataPidginWithByline,
+        metadata: {
+          ...articleDataPidginWithByline.metadata,
+          analyticsLabels: {
+            ...articleDataPidginWithByline.metadata.analyticsLabels,
+            contentId,
+          },
+        },
+      } as Article;
+
+      await act(async () =>
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'hindi',
+          pathname: '/hindi/articles/c1l97706v5mo',
+          toggles: {
+            uasPersonalization: { enabled: true, value: 'hindi' },
+          },
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+        }),
+      );
+
+      expect(document.querySelector('#save-article-button') !== null).toBe(
+        shouldRender,
+      );
+    },
+  );
 
   it('should not set "amphtml" link tag for TC2 asset', async () => {
     const pageDataAsTC2Asset = {

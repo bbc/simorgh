@@ -50,7 +50,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Eleições 2026: resultados em tempo real'),
+      getByText('Eleições 2026: veja como foi a votação'),
     ).toBeInTheDocument();
   });
 
@@ -84,7 +84,7 @@ describe('ArticleMessageBanner', () => {
     );
 
     expect(
-      getByText('Eleições 2026: resultados em tempo real'),
+      getByText('Eleições 2026: veja como foi a votação'),
     ).toBeInTheDocument();
 
     expect(
@@ -116,7 +116,7 @@ describe('ArticleMessageBanner', () => {
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
-        pathname: '/portuguese/articles/cwly7mke0mpdo',
+        pathname: '/portuguese/articles/c61m430mdek2o',
       },
     );
 

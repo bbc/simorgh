@@ -81,6 +81,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'సంబంధిత అంశాలు',
       moreOnThis: '',
       navMenuText: 'విభాగాలు',
+      liteSite: {
+        onboardingMessage:
+          'మీరు ఈ వెబ్‌సైట్ యొక్క టెక్స్ట్-ఓన్లీ వెర్షన్‌ను చూస్తున్నారు, ఇది తక్కువ డేటాను వినియోగిస్తుంది. అన్ని చిత్రాలు మరియు వీడియోలతో కూడిన వెబ్‌సైట్ యొక్క ప్రధాన వెర్షన్‌ను చూడండి.',
+        toMainSite: 'నన్ను ప్రధాన వెబ్‌సైట్‌కు తీసుకెళ్లండి',
+        informationPage: 'ఈ డేటా-ఆదా వెర్షన్ గురించి మరింత తెలుసుకోండి',
+        dataSaving: 'డేటా-ఆదా వెర్షన్',
+      },
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',

@@ -1,5 +1,7 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
@@ -16,7 +18,15 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
   const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
     use(AccountContext);
 
-  if (!isArticlePersonalizationAvailable) return null;
+  const { pathname } = use(RequestContext);
+  const { assetId: articleId } = parseRoute(pathname);
+
+  const isSupportedArticleId =
+    typeof articleId === 'string' &&
+    articleId.length > 0 &&
+    !articleId.includes('/');
+
+  if (!isArticlePersonalizationAvailable || !isSupportedArticleId) return null;
 
   return (
     <ErrorBoundary componentName="SaveArticleButton">
