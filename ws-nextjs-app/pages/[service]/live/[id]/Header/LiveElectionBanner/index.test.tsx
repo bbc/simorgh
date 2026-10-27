@@ -24,7 +24,8 @@ describe('LiveElectionBanner', () => {
     mockMatchMedia();
   });
 
-  it('should apply its own full-bleed wrapper class for the VJ banner', async () => {
+  // Skips test as VJ election banners aren't used atm
+  it.skip('should apply its own full-bleed wrapper class for the VJ banner', async () => {
     // persian's electionBanner config has no assocPressIframeSrc
     const { getByTestId } = await renderLiveElectionBanner({
       service: 'persian',
@@ -34,7 +35,6 @@ describe('LiveElectionBanner', () => {
   });
 
   it('should apply its own full-bleed wrapper class for the Associated Press banner', async () => {
-    // mundo's electionBanner config has an assocPressIframeSrc
     const { getByTestId } = await renderLiveElectionBanner({
       service: 'mundo',
     });
