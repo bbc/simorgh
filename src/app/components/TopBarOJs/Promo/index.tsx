@@ -46,13 +46,15 @@ const Promo = ({ block, eventTrackingData }: PromoProps) => {
 
   return (
     <div css={promoBoxStyles}>
-      <a
-        css={styles.link}
-        aria-label={title}
-        href={href}
-        {...clickTrackerHandler}
-      >
-        {isLive && <LiveLabel />}
+      {/* The link is named by its content so the visible live label is
+      included in the accessible name (WCAG 2.5.3). The space stops the label
+      and title running together. */}
+      <a css={styles.link} href={href} {...clickTrackerHandler}>
+        {isLive && (
+          <>
+            <LiveLabel />{' '}
+          </>
+        )}
         {title}
       </a>
     </div>
