@@ -1,4 +1,6 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import isLive from '#app/lib/utilities/isLive';
+import { matchers } from '@emotion/jest';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -29,6 +31,15 @@ jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
   ...jest.requireActual('../../hooks/useClickTrackerHandler'),
 }));
+
+jest.mock('#app/lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+expect.extend(matchers);
+
+const mockIsLive = isLive as jest.MockedFunction<typeof isLive>;
 
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
@@ -604,5 +615,85 @@ describe('Curation', () => {
       }),
     );
     spy.mockRestore();
+  });
+
+  describe('Video collection styling', () => {
+    afterEach(() => {
+      mockIsLive.mockReset();
+    });
+
+    // Grid columns are only applied to video collections
+    const gridColumnsStyleRule = [
+      'grid-template-columns',
+      'repeat(2, minmax(0, 1fr))',
+      { media: '(min-width: 37.5rem)' },
+    ] as const;
+
+    const renderCuration = ({
+      service,
+      isLiveEnvironment,
+      isVideoCollection,
+    }: {
+      service: 'arabic' | 'mundo';
+      isLiveEnvironment: boolean;
+      isVideoCollection: boolean;
+    }) => {
+      mockIsLive.mockReturnValue(isLiveEnvironment);
+
+      const { getByTestId } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={fixture.data.curations[0].summaries}
+          isVideoCollection={isVideoCollection}
+        />,
+        { service },
+      );
+
+      return getByTestId('topic-promos');
+    };
+
+    it('applies video collection styling for Arabic on test', () => {
+      const list = renderCuration({
+        service: 'arabic',
+        isLiveEnvironment: false,
+        isVideoCollection: true,
+      });
+
+      expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+    });
+
+    it.each([
+      {
+        description: 'Arabic on live',
+        service: 'arabic',
+        isLiveEnvironment: true,
+        isVideoCollection: true,
+      },
+      {
+        description: 'Mundo on test',
+        service: 'mundo',
+        isLiveEnvironment: false,
+        isVideoCollection: true,
+      },
+      {
+        description: 'Non-video collection on test',
+        service: 'arabic',
+        isLiveEnvironment: false,
+        isVideoCollection: false,
+      },
+    ] as const)(
+      'does not apply video collection styling for $description',
+      ({ service, isLiveEnvironment, isVideoCollection }) => {
+        const list = renderCuration({
+          service,
+          isLiveEnvironment,
+          isVideoCollection,
+        });
+
+        expect(list).not.toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
   });
 });
