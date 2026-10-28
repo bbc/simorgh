@@ -1,6 +1,5 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ElectionBanner from '#app/components/ElectionBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
@@ -31,6 +30,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -117,7 +117,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          <ElectionBanner className="home-page-election-banner" />
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             {curations.map(
               (

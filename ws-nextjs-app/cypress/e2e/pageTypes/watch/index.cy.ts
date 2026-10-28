@@ -28,18 +28,6 @@ const testSuites = [
     tests: [...canonicalTests],
   },
   {
-    path: '/hindi/watch/cw1ldl595v1yo.app',
-    runforEnv: ['local'],
-    service: 'hindi',
-    tests: [...canonicalTests],
-  },
-  {
-    path: '/russian/watch/cjqyq2kz645mo.app',
-    runforEnv: ['local'],
-    service: 'russian',
-    tests: [...canonicalTests],
-  },
-  {
     path: '/arabic/watch/c3x2wy0879d9o',
     runforEnv: ['live'],
     service: 'arabic',
@@ -47,7 +35,8 @@ const testSuites = [
   },
   {
     path: '/arabic/watch/cr78p48yy7qeo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
     service: 'arabic',
     tests: [...canonicalTests],
   },
@@ -99,26 +88,6 @@ const atiAnalyticsTestSuites = [
     tests: [assertPageView],
   },
   {
-    path: '/hindi/watch/cw1ldl595v1yo.app',
-    runforEnv: ['local'],
-    service: 'hindi',
-    pageIdentifier: 'hindi.watch.cw1ldl595v1yo.page',
-    siteId: 52,
-    applicationType: 'mobile-app',
-    contentType: 'article-sfv',
-    tests: [assertPageView],
-  },
-  {
-    path: '/russian/watch/cjqyq2kz645mo.app',
-    runforEnv: ['local'],
-    service: 'russian',
-    pageIdentifier: 'russian.watch.cjqyq2kz645mo.page',
-    siteId: 75,
-    applicationType: 'mobile-app',
-    contentType: 'article-sfv',
-    tests: [assertPageView],
-  },
-  {
     path: '/arabic/watch/c3x2wy0879d9o',
     runforEnv: ['live'],
     service: 'arabic',
@@ -130,7 +99,8 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/arabic/watch/cr78p48yy7qeo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
     service: 'arabic',
     pageIdentifier: 'arabic.articles.cr78p48yy7qeo.page',
     siteId: 5,

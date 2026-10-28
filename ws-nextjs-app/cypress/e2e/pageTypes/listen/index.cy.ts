@@ -18,18 +18,6 @@ const testSuites = [
     tests: [...canonicalTests],
   },
   {
-    path: '/mundo/listen/ck124pz8jz1yo.app',
-    runforEnv: ['local'],
-    service: 'mundo',
-    tests: [...canonicalTests],
-  },
-  {
-    path: '/hausa/listen/cpj5ny39g35mo.app',
-    runforEnv: ['local'],
-    service: 'hausa',
-    tests: [...canonicalTests],
-  },
-  {
     path: '/dari/listen/c4z1p12mn62po',
     runforEnv: ['local'],
     service: 'dari',
@@ -49,7 +37,8 @@ const testSuites = [
   },
   {
     path: '/portuguese/listen/cj62yn475xrwo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
     service: 'portuguese',
     tests: [...canonicalTests],
   },
@@ -74,26 +63,6 @@ const atiAnalyticsTestSuites = [
     service: 'portuguese',
     pageIdentifier: 'portuguese.listen.cqx36ey0kld4o.page',
     siteId: 33,
-    applicationType: 'mobile-app',
-    contentType: 'article-sfv',
-    tests: [assertPageView],
-  },
-  {
-    path: '/mundo/listen/ck124pz8jz1yo.app',
-    runforEnv: ['local'],
-    service: 'mundo',
-    pageIdentifier: 'mundo.listen.ck124pz8jz1yo.page',
-    siteId: 62,
-    applicationType: 'mobile-app',
-    contentType: 'article-sfv',
-    tests: [assertPageView],
-  },
-  {
-    path: '/hausa/listen/cpj5ny39g35mo.app',
-    runforEnv: ['local'],
-    service: 'hausa',
-    pageIdentifier: 'hausa.listen.cpj5ny39g35mo.page',
-    siteId: 51,
     applicationType: 'mobile-app',
     contentType: 'article-sfv',
     tests: [assertPageView],
@@ -131,7 +100,8 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/portuguese/listen/cj62yn475xrwo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage
+    runforEnv: [],
     service: 'portuguese',
     pageIdentifier: 'portuguese.articles.cj62yn475xrwo.page',
     siteId: 33,
