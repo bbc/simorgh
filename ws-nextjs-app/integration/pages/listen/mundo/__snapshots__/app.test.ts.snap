@@ -47,24 +47,24 @@ exports[`App Listen Analytics ATI tracking pixel search params 1`] = `
 
 exports[`App Listen Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1vwdzux"
+  class="media-container css-19kuxfs"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-uym7w5"
+    class="css-1ubm051"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-eyhmom"
+      class="media-player css-1petm2g"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-w2qiqs"
+            class="css-1l2obxb"
           >
             <strong
-              class="css-1cnbroz"
+              class="css-1ke8rid"
             >
               Para ver este contenido, favor activar JavaScript, o intentar con otro navegador
             </strong>
@@ -74,7 +74,7 @@ exports[`App Listen Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-odcz7m"
+    class="css-16b63b3"
     dir="ltr"
   >
     <span
