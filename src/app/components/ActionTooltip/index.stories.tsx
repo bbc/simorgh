@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ActionTooltip, { ActionTooltipStatus } from '.';
-import getArticleTooltipContent from './ArticleTooltipContent';
+import getActionTooltipContent from './ActionTooltipContent';
 import metadata from './metadata.json';
 import readme from './README.md';
 
@@ -27,7 +27,7 @@ const TooltipDemo = ({ status }: { status: ActionTooltipStatus }) => {
     closeLabel: 'Close',
   };
 
-  const content = getArticleTooltipContent(actionTooltip);
+  const content = getActionTooltipContent(actionTooltip);
 
   return (
     <div style={{ position: 'relative' }}>
