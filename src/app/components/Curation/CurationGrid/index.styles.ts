@@ -33,7 +33,7 @@ const styles = {
         },
       },
       '.promo-text': {
-        h3: {
+        'h2, h3': {
           paddingBottom: `${spacings.FULL}rem`,
           marginBottom: 0,
           fontWeight: 'bold',
@@ -42,19 +42,19 @@ const styles = {
           fontSize: `${pixelsToRem(13)}rem`,
           paddingBottom: `${spacings.DOUBLE}rem`,
         },
-        [mq.GROUP_0_MAX_WIDTH]: {
-          h3: {
-            fontSize: `${pixelsToRem(15)}rem`,
+        [mq.GROUP_2_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(18)}rem`,
           },
         },
         [mq.GROUP_1_MAX_WIDTH]: {
-          h3: {
+          'h2, h3': {
             fontSize: `${pixelsToRem(16)}rem`,
           },
         },
-        [mq.GROUP_2_MAX_WIDTH]: {
-          h3: {
-            fontSize: `${pixelsToRem(18)}rem`,
+        [mq.GROUP_0_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(15)}rem`,
           },
         },
       },
