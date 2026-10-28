@@ -262,9 +262,6 @@ export default ({
           viewThreshold: 0.2,
         });
 
-        // eslint-disable-next-line no-console
-        console.log('Viewability tracking data:', eventTrackingData);
-
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
 
