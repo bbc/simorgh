@@ -195,11 +195,16 @@ Cypress.Commands.overwrite(
     // Pre-check: Verify the page returns a 200 response before visiting.
     // This mitigates Lambda cold-start failures where the first request returns a 500,
     // retrying here means before() hooks never surface these transient failures directly.
-    return checkStatus().then(() => {
-      return runVisit().then(() => {
-        // Handle Continue Reading button if it appears when cy.visit() is called
-        handleContinueReadingButton();
-      });
-    });
+    // runVisit() returns a promise rather than a chainable, so this .then() would
+    // otherwise time out at defaultCommandTimeout instead of pageLoadTimeout.
+    return checkStatus().then(
+      { timeout: Cypress.config('pageLoadTimeout') },
+      () => {
+        return runVisit().then(() => {
+          // Handle Continue Reading button if it appears when cy.visit() is called
+          handleContinueReadingButton();
+        });
+      },
+    );
   },
 );

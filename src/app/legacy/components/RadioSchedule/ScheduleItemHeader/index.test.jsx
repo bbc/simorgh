@@ -28,11 +28,15 @@ it('should render the title', () => {
   expect(getByText('BBC Xtra')).toBeInTheDocument();
 });
 
-it('should aria-hide the Live label', () => {
+it('should include the visible Live label in the accessible name of a live item', () => {
   const { container } = render(renderHeaderWithContext());
 
-  const hiddenDuration = container.querySelector('span[aria-hidden=true]');
-  expect(hiddenDuration).toContainHTML('مباشر');
+  const label = container.querySelector('span[role=text]');
+
+  expect(label.querySelector('[class*="liveLabelText"]')).not.toHaveAttribute(
+    'aria-hidden',
+  );
+  expect(label.textContent).toMatch(/^استمع للبث المباشر, مباشر BBC Xtra /);
 });
 
 it('should render a span with role=text so content is read out in single swipe', () => {
