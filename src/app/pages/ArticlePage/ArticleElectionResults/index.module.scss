@@ -104,8 +104,44 @@ $label-bg: #f5e6e6;
   line-height: #{theme.pixelsToRem-px-to-rem(22)};
   font-weight: 700;
   color: #000;
-  background: $label-bg;
-  border-inline-start: #{theme.pixelsToRem-px-to-rem(1)} solid #000; // thin divider
+  // light tint of the party colour, as in the design
+  background: color-mix(in srgb, var(--party-colour, #bbb) 25%, #fff);
+  border-inline-start: #{theme.pixelsToRem-px-to-rem(1)} solid #000;
+}
+
+// Awaiting results: no bar, a thin party-coloured edge on the label instead
+.percentAwaiting {
+  border-inline-start: #{theme.pixelsToRem-px-to-rem(2)} solid var(--party-colour, #bbb);
+}
+
+.resultsHeading {
+  margin: #{theme.pixelsToRem-px-to-rem(24)} 0 #{theme.pixelsToRem-px-to-rem(16)};
+  font-size: #{theme.pixelsToRem-px-to-rem(28)};
+  font-weight: 400;
+}
+
+// Winner banner (final state)
+.winner {
+  display: flex;
+  align-items: center;
+  min-height: #{theme.pixelsToRem-px-to-rem(66)};
+  margin-bottom: #{theme.pixelsToRem-px-to-rem(16)};
+  overflow: hidden;
+  color: #000;
+  background: var(--party-colour, #bbb);
+  border-radius: #{theme.pixelsToRem-px-to-rem(4)};
+}
+
+.winnerImage {
+  flex: 0 0 #{theme.pixelsToRem-px-to-rem(66)};
+  align-self: stretch;
+  // placeholder until the candidate photo is available:
+  // background: url(...) center / cover;
+}
+
+.winnerText {
+  padding: 0 #{theme.pixelsToRem-px-to-rem(16)};
+  font-size: #{theme.pixelsToRem-px-to-rem(20)};
 }
 
 .spread {
@@ -228,4 +264,9 @@ $label-bg: #f5e6e6;
 .lastUpdated {
   margin: #{theme.pixelsToRem-px-to-rem(16)} 0 0;
   font-size: #{theme.pixelsToRem-px-to-rem(13)};
+}
+
+.subtitle {
+  margin: 0 0 #{theme.pixelsToRem-px-to-rem(24)};
+  font-size: #{theme.pixelsToRem-px-to-rem(16)};
 }
