@@ -10,7 +10,6 @@ import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import LinkedData from '#app/components/LinkedData';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
-import 'temporal-polyfill/global';
 
 const renderCuration = ({
   curation,
