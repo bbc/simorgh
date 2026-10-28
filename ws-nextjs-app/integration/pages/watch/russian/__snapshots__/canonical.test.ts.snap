@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Watch A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "75",
+  },
+  {
+    "p": "russian.watch.cjqyq2kz645mo.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:cjqyq2kz645mo]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-russian]",
+  },
+  {
+    "x4": "[ru]",
+  },
+  {
+    "x7": "[article-sfv]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[BBC%20świadkiem%20ataku%20izraelskich%20osadników%20na%20grupę%20Palestyńczyków%20na%20Zachodnim%20Brzegu.]",
+  },
+  {
+    "x11": "[2026-10-16T14:46:06.401Z]",
+  },
+  {
+    "x12": "[2026-10-16T14:46:06.401Z]",
+  },
+]
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, Русская служба",
+  "url": "/russian",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 2`] = `
+{
+  "text": "Почему BBC News заслуживает доверия",
+  "url": "https://www.bbc.com/russian/institutional-50098149",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 3`] = `
+{
+  "text": "Правила использования",
+  "url": "https://www.bbc.com/russian/institutional-36515745",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 4`] = `
+{
+  "text": "О Би-би-си",
+  "url": "https://www.bbc.com/russian/institutional-36515748",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 5`] = `
+{
+  "text": "Личные данные",
+  "url": "https://www.bbc.com/russian/institutional-36517234",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 6`] = `
+{
+  "text": "Куки",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 7`] = `
+{
+  "text": "Связаться с Би-би-си",
+  "url": "https://www.bbc.co.uk/russian/send/u50853643",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 8`] = `
+{
+  "text": "Би-би-си на других языках",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 9`] = `
+{
+  "text": "Познакомьтесь с нашими правилами внешних ссылок.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Watch Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/russian"`;
+
+exports[`Canonical Watch Footer Paragraphs should match text 1`] = `"© 2026 BBC. Би-би-си не несет ответственности за содержание других сайтов. Познакомьтесь с нашими правилами внешних ссылок."`;
+
+exports[`Canonical Watch Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Русская служба",
+  "svg": <path
+    d="M175.28254,212.5957c-7.73096-12.38835-15.56195-24.80211-23.48974-37.24183-7.93049-12.43702-15.75932-24.50471-23.48974-36.20037v73.4422h-22.00324V106.29761h23.19233c8.02836,11.99307,15.93074,24.00993,23.71306,36.0522,7.77908,12.04173,15.53545,24.25813,23.26641,36.64648V106.29761h22.00324v106.29809h-23.19233Zm44.25889-106.29809h73.14533v19.02917h-50.25041v23.04417h44.60076v19.02917h-44.60076v26.16586h53.07523v19.02971h-75.97016V106.29761Zm177.91409,106.29809c-3.37043-11.9909-6.66678-23.98451-9.88635-35.97812-3.22173-11.9909-6.36937-23.98451-9.44078-35.97758-2.97299,11.99307-6.04655,23.98668-9.21745,35.97758-3.17306,11.99361-6.44346,23.98722-9.81172,35.97812h-24.23325c-5.05484-17.34315-9.91176-34.88637-14.56969-52.62858-4.65955-17.74059-9.06875-35.62989-13.23136-53.66951h24.97623c2.47659,13.77697,5.1035,27.55448,7.87966,41.32982,2.77345,13.77751,5.69832,27.30628,8.77134,40.58631,6.6392-25.86791,12.9345-51.68553,18.88101-77.45611h22.30011c2.97353,12.68792,6.02114,25.34772,9.14337,37.98481,3.12223,12.63655,6.31854,25.25039,9.58894,37.8361,2.97353-13.08266,5.84702-26.36323,8.62318-39.84333,2.77345-13.4774,5.3517-26.9575,7.73042-40.4376h24.53066c-4.16261,18.03962-8.57397,35.92892-13.23136,53.66951-4.6601,17.74221-9.51486,35.28543-14.56969,52.62858h-24.23325Zm95.3702,2.23001c-5.84918,0-11.62158-.64564-17.3199-1.9326-5.70048-1.28696-11.17547-3.3196-16.42768-6.09576v-20.51621c10.60391,6.444,21.854,9.66356,33.74757,9.66356,6.73924,0,11.86816-1.13826,15.38729-3.4191,3.51697-2.27922,5.27762-5.45012,5.27762-9.51486,0-3.07086-.86843-5.47553-2.6015-7.21077-1.73523-1.73253-4.03987-3.12169-6.91336-4.16261-2.87565-1.04038-6.09522-2.00723-9.66302-2.89891-5.84918-1.387-11.00189-2.97353-15.46191-4.75743-4.46002-1.7839-8.2279-3.88846-11.29876-6.31854-3.07302-2.42738-5.40307-5.35224-6.98744-8.77134-1.58653-3.41964-2.37871-7.50763-2.37871-12.26506,0-6.73924,1.70982-12.53705,5.12892-17.39452,3.41964-4.85476,8.25115-8.59722,14.49561-11.22468,6.24392-2.62475,13.67747-3.93929,22.30011-3.93929,5.64965,0,11.19926,.64564,16.651,1.9326,5.44958,1.28912,10.35571,3.02436,14.7184,5.20354v20.2188c-4.36269-2.67612-9.29207-4.75743-14.79248-6.24392-5.50095-1.48703-11.02731-2.23055-16.57692-2.23055-6.04655,0-10.7299,1.04092-14.04896,3.12223-3.32176,2.08131-4.98075,5.05484-4.98075,8.92004,0,2.77616,.79218,4.98075,2.37871,6.61595,1.58437,1.6352,3.83979,2.97353,6.76465,4.01391,2.92216,1.04092,6.36721,2.05806,10.33246,3.04761,5.05484,1.28966,9.76089,2.70208,14.12358,4.23724,4.35998,1.53786,8.19978,3.49372,11.52154,5.87243,3.3196,2.37871,5.89569,5.40307,7.73096,9.06875,1.83311,3.66784,2.7502,8.17707,2.7502,13.52877,0,7.03881-1.73523,13.05995-5.203,18.06341-3.47047,5.00617-8.47447,8.82271-15.0158,11.44746-6.54133,2.62529-14.42099,3.93983-23.63844,3.93983Z"
+  />,
+}
+`;
+
+exports[`Canonical Watch Header Navigation link should match text and url 1`] = `
+{
+  "text": "Главная",
+  "url": "/russian",
+}
+`;
+
+exports[`Canonical Watch Image Caption should match text 1`] = `"Подпись к видео, BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch Image should match snapshot 1`] = `
+<noscript>
+  <div>
+    <div
+      class="css-13p1cq8"
+    >
+      <strong
+        class="css-pow7hy"
+      >
+        Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
+      </strong>
+    </div>
+  </div>
+</noscript>
+`;
+
+exports[`Canonical Watch Main heading should match text 1`] = `"BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch Media Loader renders a valid container 1`] = `
+<figure
+  class="media-container css-1okmog4"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
+  >
+    <div
+      class="media-player css-9p9hvp"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-13p1cq8"
+          >
+            <strong
+              class="css-pow7hy"
+            >
+              Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
+            </strong>
+          </div>
+        </div>
+      </noscript>
+    </div>
+  </div>
+  <figcaption
+    class="css-120hw7u"
+    dir="ltr"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="VisuallyHiddenText_visuallyHiddenText__NazL3"
+      >
+        Подпись к видео, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu
+      </span>
+    </span>
+  </figcaption>
+</figure>
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/russian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/russian/watch/cjqyq2kz645mo"`;
+
+exports[`Canonical Watch SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Watch SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Watch SEO Heading level 1 1`] = `"BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch SEO Lang attribute 1`] = `"ru"`;
+
+exports[`Canonical Watch SEO Linked data should match text 1`] = `
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Русская служба",
+        "noBylinesPolicy": "https://www.bbc.com/russian/institutional-50098149#authorexpertise",
+      },
+      "dateModified": "2026-10-16T14:46:06.401Z",
+      "datePublished": "2026-10-16T14:46:06.401Z",
+      "headline": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1200/branded_russian/p01wppbn.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ru",
+        "name": "Russian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/russian/watch/cjqyq2kz645mo",
+        "@type": "WebPage",
+        "name": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News Русская служба",
+        "publishingPrinciples": "https://www.bbc.com/russian/institutional-50098149",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1200/branded_russian/p01wppbn.jpg",
+      "url": "http://localhost:7081/russian/watch/cjqyq2kz645mo",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Watch SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+  "duration": "PT2M10S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/cjqyq2kz645mo/p01wppb0/ru",
+  "name": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01wppbn.jpg",
+  "uploadDate": "2025-08-19T09:53:12.000Z",
+}
+`;
+
+exports[`Canonical Watch SEO OG description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
+
+exports[`Canonical Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_russian/p01wppbn.jpg"`;
+
+exports[`Canonical Watch SEO OG image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
+
+exports[`Canonical Watch SEO OG locale 1`] = `"ru-RU"`;
+
+exports[`Canonical Watch SEO OG site name 1`] = `"BBC News Русская служба"`;
+
+exports[`Canonical Watch SEO OG title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News Русская служба"`;
+
+exports[`Canonical Watch SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/russian/watch/cjqyq2kz645mo"`;
+
+exports[`Canonical Watch SEO Page title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News Русская служба"`;
+
+exports[`Canonical Watch SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Watch SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Watch SEO Twitter creator 1`] = `"@bbcrussian"`;
+
+exports[`Canonical Watch SEO Twitter description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
+
+exports[`Canonical Watch SEO Twitter image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
+
+exports[`Canonical Watch SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_russian/p01wppbn.jpg"`;
+
+exports[`Canonical Watch SEO Twitter site 1`] = `"@bbcrussian"`;
+
+exports[`Canonical Watch SEO Twitter title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News Русская служба"`;
+
+exports[`Canonical Watch Timestamp should match text and date 1`] = `
+{
+  "date": "2026-10-16",
+  "text": "16 октября 2026",
+}
+`;

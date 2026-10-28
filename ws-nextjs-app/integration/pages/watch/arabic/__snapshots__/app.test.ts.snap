@@ -47,24 +47,24 @@ exports[`App Watch Analytics ATI tracking pixel search params 1`] = `
 
 exports[`App Watch Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-19kuxfs"
+  class="media-container css-1okmog4"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-1ubm051"
+    class="css-8432in"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-1petm2g"
+      class="media-player css-9p9hvp"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-zg68q3"
+            class="css-1086ww5"
           >
             <strong
-              class="css-1ke8rid"
+              class="css-pow7hy"
             >
               جهازك لا يدعم تشغيل الفيديو
             </strong>
@@ -74,7 +74,7 @@ exports[`App Watch Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1lhawrz"
+    class="css-1kqzj19"
     dir="rtl"
   >
     <span
