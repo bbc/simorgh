@@ -4,6 +4,7 @@ import AccountPromotionalBanner from '#app/components/Account/AccountPromotional
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -65,6 +66,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
+      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer
         title={metadataTitle}
         lang={lang}
