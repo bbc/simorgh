@@ -76,6 +76,27 @@ const CanonicalNavigationContainer = ({
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
+  useEffect(() => {
+    const dropdown = dropDownNavRef.current;
+    if (!sticky.isVisible || !isOpen || !dropdown) return undefined;
+
+    const preventPageScroll = (event: WheelEvent | TouchEvent) => {
+      event.preventDefault();
+    };
+
+    dropdown.addEventListener('wheel', preventPageScroll, {
+      passive: false,
+    });
+    dropdown.addEventListener('touchmove', preventPageScroll, {
+      passive: false,
+    });
+
+    return () => {
+      dropdown.removeEventListener('wheel', preventPageScroll);
+      dropdown.removeEventListener('touchmove', preventPageScroll);
+    };
+  }, [isOpen, sticky.isVisible, dropDownNavRef]);
+
   const handleDropdownBreakpointChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
       if (!matches) closeMenu();
