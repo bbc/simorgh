@@ -1,4 +1,5 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -23,6 +24,10 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  getEnvConfig: jest.fn(),
+}));
+
 jest.mock('../ThemeProvider');
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
@@ -33,6 +38,14 @@ jest.mock('../../hooks/useClickTrackerHandler', () => ({
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
+
+const relatedTopicSummary = afriqueHomePage.data.curations[0]
+  ?.summaries?.[0] as Summary;
+const relatedTopicSummaries = [
+  relatedTopicSummary,
+  { ...relatedTopicSummary, id: 'related-topic-summary-2' },
+  { ...relatedTopicSummary, id: 'related-topic-summary-3' },
+];
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -144,6 +157,14 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  beforeEach(() => {
+    (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'test' });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
@@ -186,6 +207,62 @@ describe('Curation', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
+
+  describe('related topics', () => {
+    it('renders related topics in a simple grid outside live', () => {
+      const { getByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(getByText('Santé')).toBeInTheDocument();
+    });
+
+    it('renders related topics in a hierarchical grid outside live', () => {
+      const { getByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={HIGH}
+          summaries={relatedTopicSummaries}
+        />,
+      );
+
+      expect(getByText('Santé')).toBeInTheDocument();
+    });
+
+    it('does not render related topics in live', () => {
+      (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'live' });
+
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+
+    it('does not render related topics for another curation type', () => {
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={MAXIMUM}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+  });
 
   it.each([
     { visualStyle: BANNER, visualProminence: LOW },
