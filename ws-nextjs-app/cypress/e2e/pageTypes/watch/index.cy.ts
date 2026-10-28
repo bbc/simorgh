@@ -35,7 +35,8 @@ const testSuites = [
   },
   {
     path: '/arabic/watch/cr78p48yy7qeo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
     service: 'arabic',
     tests: [...canonicalTests],
   },
@@ -98,7 +99,8 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/arabic/watch/cr78p48yy7qeo.app',
-    runforEnv: ['live'],
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
     service: 'arabic',
     pageIdentifier: 'arabic.articles.cr78p48yy7qeo.page',
     siteId: 5,
