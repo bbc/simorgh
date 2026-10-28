@@ -223,7 +223,7 @@ describe('Curation', () => {
     });
 
     it('renders related topics in a hierarchical grid outside live', () => {
-      const { getByText } = render(
+      const { container } = render(
         <Curation
           position={0}
           visualStyle={NONE}
@@ -232,7 +232,11 @@ describe('Curation', () => {
         />,
       );
 
-      expect(getByText('Santé')).toBeInTheDocument();
+      const relatedTopicLinks = screen.getAllByRole('link', { name: 'Santé' });
+      expect(relatedTopicLinks).toHaveLength(3);
+      relatedTopicLinks.forEach(link => {
+        expect(link).toBeInTheDocument();
+      });
     });
 
     it('does not render related topics in live', () => {
