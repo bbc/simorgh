@@ -17,6 +17,7 @@ import styles from './index.styles';
 
 interface CurationPromoProps extends Summary {
   showRelatedTopicExperiment?: boolean;
+  isVideoCollection?: boolean;
 }
 
 const CurationPromo = ({
@@ -35,6 +36,7 @@ const CurationPromo = ({
   isPortraitImage,
   relatedTopic,
   showRelatedTopicExperiment = false,
+  isVideoCollection = false,
 }: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -90,6 +92,7 @@ const CurationPromo = ({
           isAmp={isAmp}
           isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
+          {...(isVideoCollection && { mobileSize: '100vw' })}
         >
           {isMedia && (
             <Promo.MediaIcon css={styles.icon} type={type}>

@@ -77,6 +77,7 @@ const CurationGrid = ({
           {...commonProps}
           headingLevel={headingLevel}
           showRelatedTopicExperiment={showRelatedTopicExperiment}
+          isVideoCollection={isVideoCollection}
         />
       );
     }
