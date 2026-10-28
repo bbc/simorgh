@@ -100,7 +100,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/portuguese/listen/cj62yn475xrwo.app',
-    // Re-enable on live once this .app route is available in Belfrage.
+    // Re-enable on live once this .app route is available in Belfrage
     runforEnv: [],
     service: 'portuguese',
     pageIdentifier: 'portuguese.articles.cj62yn475xrwo.page',
