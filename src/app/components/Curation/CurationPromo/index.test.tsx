@@ -9,6 +9,11 @@ import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 interface FixtureProps {
   lazy?: boolean;
   type?: string;
@@ -183,6 +188,9 @@ describe('Curation Promo', () => {
       });
       expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
       expect(screen.queryByRole('img')).not.toBeInTheDocument();
+      expect(
+        container.querySelector('picture, [srcset]'),
+      ).not.toBeInTheDocument();
     });
 
     it('should not render a placeholder when imageUrl is missing on non-My News page', () => {

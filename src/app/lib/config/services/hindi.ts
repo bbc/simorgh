@@ -141,6 +141,11 @@ export const service: DefaultServiceConfig = {
         title: 'माई न्यूज़ में सेव करने के लिए साइन इन करें',
         description: 'स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें',
         closeLabel: 'बंद करें',
+        followTopic: {
+          title: 'टॉपिक्स फ़ॉलो करने के लिए साइन इन करें',
+          description:
+            'अपनी रुचि की खबरें सीधे पाएं और कोई भी स्टोरी मिस न करें',
+        },
       },
       googlePreferredSource: {
         linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
@@ -168,13 +173,21 @@ export const service: DefaultServiceConfig = {
         guestTitle: 'माई न्यूज़ में आपका स्वागत है',
         description: 'मेरे सेव किए हुए आर्टिकल',
         guestDescription:
-          'माई न्यूज़ में ख़बरें सेव करने के लिए साइन इन करें. उन्हें अपनी सुविधा से पढ़ें.',
+          'अपनी पसंद के टॉपिक्स फ़ॉलो करने और आर्टिकल्स को बाद में पढ़ने के लिए सेव करने के लिए साइन इन करें.',
         noArticles: 'आपने अभी तक कोई आर्टिकल सेव नहीं किया है',
-        errorText:
-          'लगता है यह कंटेंट लोड नहीं हो रहा है. प्लीज़ बाद में कोशिश करें.',
+        savedArticlesErrorText:
+          'हमें आपके सेव किए गए आर्टिकल लोड करने में दिक्कत हो रही है',
         loading: 'लोडिंग',
         noJsDescription:
           'इस सामग्री को देखने के लिए जावास्क्रिप्ट चालू करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+        followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+        followedTopicsErrorText:
+          'आपके फ़ॉलो किए गए टॉपिक लोड करने में दिक्कत हो रही है',
+        noFollowedTopics: 'आपने अभी तक किसी टॉपिक को फ़ॉलो नहीं किया है',
+        seeMoreTopics: 'और देखें',
+        seeLessTopics: 'कम देखें',
+        contentErrorText:
+          'लगता है यह कंटेंट लोड नहीं हो रहा है. प्लीज़ बाद में कोशिश करें.',
       },
       actionTooltip: {
         success: {

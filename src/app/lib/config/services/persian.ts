@@ -51,7 +51,8 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'انتخابات میان‌دوره ای آمریکا',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/35021.html',
     },
     podcastPromo: {
       title: 'معرفی خبرنامه',

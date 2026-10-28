@@ -1,6 +1,6 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -31,6 +31,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -92,8 +93,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy */}
-      <AccountPromotionalBannerHomePageExperiment />
+      <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -118,6 +118,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             <div css={styles.riddleContainer}>
               <div css={styles.riddleMaxWidth}>

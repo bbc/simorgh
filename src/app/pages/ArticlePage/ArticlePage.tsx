@@ -12,7 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
-import text from '#containers/Text';
+import TextContainer from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -59,8 +59,8 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import AccountPromotionalBannerExperiment from '#app/components/Account/AccountPromotionalBannerExperiment';
 import ElectionBanner from '#app/components/ElectionBanner';
+import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
@@ -121,6 +121,7 @@ const getTimestampComponent =
     isLite: boolean,
     isGoogleReferralTraffic: boolean,
     googlePreferredSourceEnabled: boolean,
+    showSaveArticleButton: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -157,9 +158,11 @@ const getTimestampComponent =
             googlePreferredSourceEnabled={googlePreferredSourceEnabled}
           />
         )}
-        <SaveArticleButton
-          saveArticlePageData={extractSaveArticleProps(articlePageData)}
-        />
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(articlePageData)}
+          />
+        )}
         {!isAmp && !isLite && !isApp && (
           <GooglePreferredSourceDivider
             isGoogleReferralTraffic={isGoogleReferralTraffic}
@@ -193,6 +196,10 @@ const getPodcastPromoComponent = (podcastPromoEnabled: boolean) => () =>
 
 const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
+);
+
+const ArticleBodyText = (props: ComponentToRenderProps) => (
+  <TextContainer {...props} isArticleBody />
 );
 
 const getVideoComponent =
@@ -236,6 +243,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const {
     articleAuthor,
+    electionBanner,
     isTrustProjectParticipant,
     showRelatedTopics,
     translations,
@@ -259,6 +267,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: googlePreferredSourceEnabled } = useToggle(
     'googlePreferredSource',
   );
+  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
 
   const isGoogleReferralTraffic = isGoogleReferral();
 
@@ -322,6 +331,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
+
+  const shouldShowElectionBanner = isElectionBannerVisible({
+    aboutTags,
+    electionBannerEnabled,
+    electionThingIds: electionBanner?.electionThingIds,
+    taggings,
+  });
 
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
@@ -400,7 +416,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
-    text,
+    text: ArticleBodyText,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
       hasByline,
@@ -415,6 +431,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       isLite,
       isGoogleReferralTraffic,
       googlePreferredSourceEnabled,
+      !isTC2Asset,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -469,9 +486,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {/* EXPERIMENT: newswb_ws_article_account_promo_banner */}
-      <AccountPromotionalBannerExperiment />
-
       <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -515,7 +529,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      {shouldShowElectionBanner && <ElectionBanner aboutTags={aboutTags} />}
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div

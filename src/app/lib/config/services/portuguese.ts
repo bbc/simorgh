@@ -51,20 +51,22 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'Eleições nos EUA 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:abdb1274-d3c1-48fd-b6c7-d1a0576cc551',
+      ],
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
     },
     articleMessageBanners: [
       {
         thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
-        heading:
-          'Lula x Flávio Bolsonaro: Quem está à frente nas pesquisas para presidente?',
+        linkHref: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
+        heading: 'Eleições 2026: veja como foi a votação',
         description:
-          ' Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
+          'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil',
         linkText: 'Clique aqui',
         image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
+          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
       },
       {
         thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
@@ -78,17 +80,17 @@ export const service: DefaultServiceConfig = {
       },
     ],
     podcastPromo: {
-      title: 'Promoção Agregador de pesquisas',
-      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
+      title: 'Promoção Resultados eleição 2026',
+      brandTitle: 'Eleições 2026: veja como foi a votação',
       brandDescription:
-        'Veja a intenção de voto no 2º turno no Agregador de Pesquisas da BBC News Brasil',
+        'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil ',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
         alt: 'Agregador de Pesquisas da BBC News Brasil',
       },
       linkLabel: {
         text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
+        href: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -175,6 +177,11 @@ export const service: DefaultServiceConfig = {
         title: 'Faça login para salvar em Notícias para você',
         description: 'Salve matérias e leia quando você quiser',
         closeLabel: 'Fechar',
+        followTopic: {
+          title: 'Faça login para seguir tópicos',
+          description:
+            'Acesse diretamente as notícias do seu interesse e não perca nenhuma matéria.',
+        },
       },
       saveArticleButton: {
         loading: 'Carregando',
@@ -199,13 +206,21 @@ export const service: DefaultServiceConfig = {
         guestTitle: 'Bem-vindo à Notícias para você',
         description: 'Matérias salvas',
         guestDescription:
-          'Faça login para salvar matérias e ler quando quiser.',
+          'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
         noArticles: 'Você ainda não salvou nenhuma matéria',
-        errorText:
-          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
+        savedArticlesErrorText:
+          'Estamos tendo problemas para carregar suas matérias salvas',
         loading: 'Carregando',
         noJsDescription:
           'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        followedTopicsTitle: 'Temas que você segue',
+        followedTopicsErrorText:
+          'Estamos tendo problemas para carregar os temas que você segue',
+        noFollowedTopics: 'Você ainda não segue nenhum tema',
+        seeMoreTopics: 'Ver mais',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
       },
       actionTooltip: {
         success: {

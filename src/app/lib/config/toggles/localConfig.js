@@ -10,7 +10,8 @@ export default {
     enabled: true,
   },
   adsNonce: {
-    enabled: false,
+    enabled: true,
+    value: 'ng,ke,es',
   },
   articleLiteSiteLink: { enabled: true },
   articlePortraitVideo: {
@@ -83,6 +84,10 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
+  },
   scriptLink: {
     enabled: true,
   },
@@ -90,6 +95,9 @@ export default {
     enabled: true,
   },
   showSportDataHeader: {
+    enabled: true,
+  },
+  stickyNavigation: {
     enabled: true,
   },
   topBarOJs: {

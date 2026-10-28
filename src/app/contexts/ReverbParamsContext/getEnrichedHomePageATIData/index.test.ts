@@ -1,11 +1,13 @@
 import getEnrichedHomePageATIData from '.';
-import * as useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
+
+const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -27,9 +29,7 @@ describe('getEnrichedHomePageATIData', () => {
   });
 
   it('should return the ATI data unchanged when the experiment is off', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'off');
+    mockUseOptimizelyVariation.mockImplementation(() => 'off');
 
     const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
 
@@ -46,9 +46,7 @@ describe('getEnrichedHomePageATIData', () => {
   });
 
   it('should return the ATI data unchanged when there is no variant', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => null);
+    mockUseOptimizelyVariation.mockImplementation(() => null);
 
     const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
 
@@ -65,9 +63,7 @@ describe('getEnrichedHomePageATIData', () => {
   });
 
   it('should include experiment details when a variant is active', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'variant_a');
+    mockUseOptimizelyVariation.mockImplementation(() => 'variant_a');
 
     const enrichedData = getEnrichedHomePageATIData({ pageMetadata });
 
