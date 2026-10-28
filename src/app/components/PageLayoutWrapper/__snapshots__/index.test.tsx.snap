@@ -1076,47 +1076,13 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 .emotion-152 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #FFFFFF;
-  padding: 0.75rem 0 0.75rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.emotion-152:hover,
-.emotion-152:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-159 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-159 a {
+.emotion-152 a {
   padding: 0;
-}
-
-.emotion-160 {
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: #FFFFFF;
-  padding: 0.75rem 0 0.75rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.emotion-160:hover,
-.emotion-160:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 <div>
@@ -1683,7 +1649,7 @@ body.simorgh-player-fullscreen .emotion-1 {
               class="emotion-151"
             >
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/news/help-41670342"
               >
                 Why you can trust the BBC
@@ -1691,7 +1657,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/terms"
               >
                 Terms of Use
@@ -1699,7 +1665,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
                 About the BBC
@@ -1707,7 +1673,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/privacy/"
               >
                 Privacy Policy
@@ -1715,7 +1681,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
                 Cookies
@@ -1723,7 +1689,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/accessibility/"
               >
                 Accessibility Help
@@ -1731,7 +1697,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
             <li>
               <a
-                class="focusIndicatorInvert emotion-152"
+                class="link focusIndicatorInvert"
                 href="https://www.bbc.com/contact/"
               >
                 Contact the BBC
@@ -1739,7 +1705,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
           </ul>
           <p
-            class="emotion-159"
+            class="emotion-152"
           >
             <span
               lang="en-GB"
@@ -1750,7 +1716,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             2026 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="focusIndicatorInvert emotion-160"
+              class="link inline focusIndicatorInvert"
               href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.
