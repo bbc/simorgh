@@ -25,7 +25,7 @@ import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 jest.mock('#app/lib/utilities/getEnvConfig', () => ({
-  getEnvConfig: jest.fn(),
+  getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
 }));
 
 jest.mock('../ThemeProvider');
