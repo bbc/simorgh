@@ -134,7 +134,9 @@ export default ({
       : experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
-    componentName,
+    componentName: shouldStyleAsVideoCollection
+      ? `${componentName}-video`
+      : componentName,
     groupTracker: {
       name: curationSubheading,
       type: componentName,
@@ -259,6 +261,9 @@ export default ({
           ...eventTrackingData,
           viewThreshold: 0.2,
         });
+
+        // eslint-disable-next-line no-console
+        console.log('Viewability tracking data:', eventTrackingData);
 
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
