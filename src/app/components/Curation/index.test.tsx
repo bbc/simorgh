@@ -223,7 +223,7 @@ describe('Curation', () => {
     });
 
     it('renders related topics in a hierarchical grid outside live', () => {
-      const { container } = render(
+      const { getAllByRole } = render(
         <Curation
           position={0}
           visualStyle={NONE}
@@ -232,7 +232,7 @@ describe('Curation', () => {
         />,
       );
 
-      const relatedTopicLinks = screen.getAllByRole('link', { name: 'Santé' });
+      const relatedTopicLinks = getAllByRole('link', { name: 'Santé' });
       expect(relatedTopicLinks).toHaveLength(3);
       relatedTopicLinks.forEach(link => {
         expect(link).toBeInTheDocument();
