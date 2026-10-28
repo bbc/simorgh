@@ -61,11 +61,6 @@ const ScheduleItemHeader = ({
   const isLive = state === 'live';
   const isNext = state === 'next';
 
-  const listenLive = pathOr(
-    'Listen Live',
-    ['media', 'listenLive'],
-    translations,
-  );
   const listen = pathOr('Listen', ['media', 'listen'], translations);
   const listenNext = pathOr(
     'Listen Next',
@@ -73,8 +68,10 @@ const ScheduleItemHeader = ({
     translations,
   );
 
-  // If state is live, we want the screenreader text to be dealt with by the LiveLabel
+  // Live items are announced as "Listen, LIVE ..." rather than "Listen Live, ..."
+  // so the visible live label stays in the accessible name (WCAG 2.5.3)
   const listenLabelTranslations = {
+    live: listen,
     next: listenNext,
     onDemand: listen,
   };
@@ -116,11 +113,10 @@ const ScheduleItemHeader = ({
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
-      {/* VisuallyHiddenText outside of the Live Label is only present if the state is not live */}
       {listenLabel && (
         <VisuallyHiddenText>{`${listenLabel}, `}</VisuallyHiddenText>
       )}
-      {isLive && <LiveLabel offScreenText={`${listenLive}, `} />}
+      {isLive && <LiveLabel />}
       {isNext && (
         <NextLabel aria-hidden="true" dir={dir}>
           {`${nextLabel} `}
