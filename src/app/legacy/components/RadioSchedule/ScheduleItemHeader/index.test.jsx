@@ -36,7 +36,7 @@ it('should include the visible Live label in the accessible name of a live item'
   expect(label.querySelector('[class*="liveLabelText"]')).not.toHaveAttribute(
     'aria-hidden',
   );
-  expect(label.textContent).toMatch(/^استمع, مباشر BBC Xtra /);
+  expect(label.textContent).toMatch(/^استمع للبث المباشر, مباشر BBC Xtra /);
 });
 
 it('should render a span with role=text so content is read out in single swipe', () => {

@@ -61,6 +61,11 @@ const ScheduleItemHeader = ({
   const isLive = state === 'live';
   const isNext = state === 'next';
 
+  const listenLive = pathOr(
+    'Listen Live',
+    ['media', 'listenLive'],
+    translations,
+  );
   const listen = pathOr('Listen', ['media', 'listen'], translations);
   const listenNext = pathOr(
     'Listen Next',
@@ -68,10 +73,10 @@ const ScheduleItemHeader = ({
     translations,
   );
 
-  // Live items are announced as "Listen, LIVE ..." rather than "Listen Live, ..."
-  // so the visible live label stays in the accessible name (WCAG 2.5.3)
+  // The visible live label is read out after "Listen Live" rather than being
+  // replaced by it, so it stays in the accessible name (WCAG 2.5.3)
   const listenLabelTranslations = {
-    live: listen,
+    live: listenLive,
     next: listenNext,
     onDemand: listen,
   };
