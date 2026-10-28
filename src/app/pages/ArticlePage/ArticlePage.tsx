@@ -120,6 +120,7 @@ const getTimestampComponent =
     isLite: boolean,
     isGoogleReferralTraffic: boolean,
     googlePreferredSourceEnabled: boolean,
+    showSaveArticleButton: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -156,9 +157,11 @@ const getTimestampComponent =
             googlePreferredSourceEnabled={googlePreferredSourceEnabled}
           />
         )}
-        <SaveArticleButton
-          saveArticlePageData={extractSaveArticleProps(articlePageData)}
-        />
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(articlePageData)}
+          />
+        )}
         {!isAmp && !isLite && !isApp && (
           <GooglePreferredSourceDivider
             isGoogleReferralTraffic={isGoogleReferralTraffic}
@@ -417,6 +420,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       isLite,
       isGoogleReferralTraffic,
       googlePreferredSourceEnabled,
+      !isTC2Asset,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,

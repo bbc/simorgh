@@ -204,10 +204,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
-  const showSaveArticleButton = !isCpsMap;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
+  const showSaveArticleButton = !isCpsMap && !isTC2Asset;
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];

@@ -33,6 +33,7 @@ import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import useMediaQuery from '#hooks/useMediaQuery';
 import electionResultsFixture from './ArticleElectionResults/fixtures';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import {
   render,
   screen,
@@ -780,6 +781,46 @@ describe('Article Page', () => {
       rel: 'amphtml',
     });
   });
+
+  it.each([
+    {
+      contentId: 'urn:bbc:topcat:curie:asset:example',
+      shouldRender: false,
+    },
+    {
+      contentId: 'urn:bbc:optimo:asset:c1l97706v5mo',
+      shouldRender: true,
+    },
+  ])(
+    'renders SaveArticleButton=$shouldRender for content ID $contentId',
+    async ({ contentId, shouldRender }) => {
+      const pageData = {
+        ...articleDataPidginWithByline,
+        metadata: {
+          ...articleDataPidginWithByline.metadata,
+          analyticsLabels: {
+            ...articleDataPidginWithByline.metadata.analyticsLabels,
+            contentId,
+          },
+        },
+      } as Article;
+
+      await act(async () =>
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'hindi',
+          pathname: '/hindi/articles/c1l97706v5mo',
+          toggles: {
+            uasPersonalization: { enabled: true, value: 'hindi' },
+          },
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+        }),
+      );
+
+      expect(document.querySelector('#save-article-button') !== null).toBe(
+        shouldRender,
+      );
+    },
+  );
 
   it('should not set "amphtml" link tag for TC2 asset', async () => {
     const pageDataAsTC2Asset = {
