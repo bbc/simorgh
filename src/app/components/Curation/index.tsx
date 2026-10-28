@@ -7,6 +7,7 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -86,9 +87,11 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+  const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic =
-    componentName === SIMPLE_CURATION_GRID ||
-    componentName === HIERARCHICAL_CURATION_GRID;
+    !isLiveEnvironment &&
+    (componentName === SIMPLE_CURATION_GRID ||
+      componentName === HIERARCHICAL_CURATION_GRID);
 
   const isFirstCuration = position === 0;
 
