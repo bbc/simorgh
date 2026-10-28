@@ -110,4 +110,19 @@ describe('High Impact Promo', () => {
       'https://www.bbc.com/russian/topics/cw6eyw7m0m1t',
     );
   });
+
+  it('should render the brand fallback when related topics are disabled', () => {
+    const relatedTopic = {
+      title: 'Россия',
+      link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
+    };
+    render(<Fixture relatedTopic={relatedTopic} />, { service: 'mundo' });
+
+    expect(
+      screen.queryByRole('link', { name: 'Россия' }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'BBC News Mundo' }),
+    ).toBeInTheDocument();
+  });
 });
