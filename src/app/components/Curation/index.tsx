@@ -10,6 +10,8 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import isLive from '#app/lib/utilities/isLive';
+import { useContext } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -96,9 +98,13 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+  const { service } = useContext(ServiceContext);
 
   const shouldStyleAsVideoCollection =
-    !isLive && componentName === SIMPLE_CURATION_GRID && isVideoCollection;
+    !isLive() &&
+    service === 'arabic' &&
+    componentName === SIMPLE_CURATION_GRID &&
+    isVideoCollection;
 
   const isFirstCuration = position === 0;
 
