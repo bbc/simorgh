@@ -18,7 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
-  showRelatedTopicExperiment = false,
+  showRelatedTopic,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -75,17 +75,17 @@ const CurationGrid = ({
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
-          showRelatedTopicExperiment={showRelatedTopicExperiment}
+          showRelatedTopic={showRelatedTopic}
         />
       );
     }
 
     return service ? (
       <ServiceContextProvider service={service}>
-        <HighImpactPromo {...commonProps} />
+        <HighImpactPromo {...commonProps} showRelatedTopic={showRelatedTopic} />
       </ServiceContextProvider>
     ) : (
-      <HighImpactPromo {...commonProps} />
+      <HighImpactPromo {...commonProps} showRelatedTopic={showRelatedTopic} />
     );
   };
 
