@@ -1,0 +1,24 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  position: fixed;
+  display: inline-block;
+  background: theme.$palette-postbox;
+  text-align: center;
+  width: 10rem;
+  padding: #{theme.$spacings-full} 0;
+  bottom: 0.75rem;
+  inset-inline-end: 0.75rem;
+  z-index: 5;
+
+
+  .heading {
+    background: theme.$palette-white;
+  }
+
+  .guage {
+    color: theme.$palette-white;
+    display: block;
+    margin-top: #{theme.$spacings-half};
+  }
+}

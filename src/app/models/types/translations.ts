@@ -343,6 +343,18 @@ export interface Translations {
       thirdPlaceFinal?: string;
     };
   };
+  riddle?: {
+    riddleOfTheDay: string;
+    expiresIn: string;
+    attempts: string;
+    credits: string;
+    paid: string;
+    notEnoughCredits: string;
+    tooFast: string;
+    answerHere: string;
+    submit: string;
+    outOfAttempts: string;
+  };
 }
 
 export interface TranslationsError {
