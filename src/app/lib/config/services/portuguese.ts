@@ -241,6 +241,25 @@ export const service: DefaultServiceConfig = {
         myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
         closeLabel: 'Fechar',
       },
+      followTopicTooltip: {
+        success: {
+          title: 'Você está seguindo {Topic Name}',
+          bodyBefore: 'Encontre este tema em',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize a página e tente novamente',
+        },
+        removed: {
+          title: 'Você deixou de seguir {Topic Name}',
+          bodyBefore: 'Ele será removido de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Notícias para você',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Fechar',
+      },
       error: {
         404: {
           statusCode: '404',

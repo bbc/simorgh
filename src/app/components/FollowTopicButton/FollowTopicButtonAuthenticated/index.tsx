@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
@@ -12,12 +12,13 @@ import {
 } from '#app/hooks/useErrorTracking/errorTracking.const';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useActionTooltip from '#app/hooks/useActionTooltip';
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
 import ActionTooltip, {
   ActionTooltipStatus,
 } from '#app/components/ActionTooltip';
-import getArticleTooltipContent from '#app/components/ActionTooltip/ArticleTooltipContent';
+import getTopicTooltipContent from '#app/components/ActionTooltip/TopicTooltipContent';
 
 import type { FollowTopicButtonProps } from '../index';
 
@@ -32,7 +33,7 @@ const FollowTopicButtonAuthenticatedInner = ({
   topicData,
 }: FollowTopicButtonProps) => {
   const { translations } = use(ServiceContext);
-  const { followTopicButton, actionTooltip } = translations || {};
+  const { followTopicButton, followTopicTooltip } = translations || {};
   const { topicId } = topicData;
   const { isDarkUi } = useTheme();
 
@@ -44,12 +45,6 @@ const FollowTopicButtonAuthenticatedInner = ({
     resetActionResult,
     handleFollowAction,
   } = useTopicFollowButton(topicData);
-
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
-  useEffect(() => {
-    if (actionResult) setIsTooltipVisible(true);
-  }, [actionResult]);
 
   const clickComponentName = `follow-topic-button-click-${
     isFollowed ? FollowAction.UNFOLLOW : FollowAction.FOLLOW
@@ -77,6 +72,12 @@ const FollowTopicButtonAuthenticatedInner = ({
     itemTracker: {
       resourceId: topicId,
     },
+  });
+
+  const { isTooltipVisible, handleTooltipClose } = useActionTooltip({
+    actionResult,
+    resetActionResult,
+    onClose: onTooltipCloseClickTrack,
   });
 
   const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
@@ -121,12 +122,6 @@ const FollowTopicButtonAuthenticatedInner = ({
     );
   };
 
-  const handleTooltipClose = (event?: React.MouseEvent) => {
-    setIsTooltipVisible(false);
-    resetActionResult();
-    onTooltipCloseClickTrack?.(event);
-  };
-
   return (
     <>
       <SaveButton
@@ -141,14 +136,15 @@ const FollowTopicButtonAuthenticatedInner = ({
         testId="follow-topic-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && !isDarkUi && (
+      {isTooltipVisible && actionResult && followTopicTooltip && !isDarkUi && (
         <ActionTooltip
           status={getTooltipStatus(actionResult)}
-          content={getArticleTooltipContent(
-            actionTooltip,
+          content={getTopicTooltipContent(
+            followTopicTooltip,
+            topicData.title,
             onMyNewsLinkClickTrack,
           )}
-          closeLabel={actionTooltip.closeLabel}
+          closeLabel={followTopicTooltip.closeLabel}
           onClose={handleTooltipClose}
           {...tooltipViewTracker}
         />

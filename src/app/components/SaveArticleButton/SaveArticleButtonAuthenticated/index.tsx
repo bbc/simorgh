@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -15,6 +15,7 @@ import {
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useActionTooltip from '#app/hooks/useActionTooltip';
 import SaveButton from '#app/components/SaveButton';
 import ActionTooltip, {
   ActionTooltipStatus,
@@ -52,12 +53,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     saveArticlePageData,
   });
 
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
-  useEffect(() => {
-    if (actionResult) setIsTooltipVisible(true);
-  }, [actionResult]);
-
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
   }`;
@@ -84,6 +79,12 @@ const SaveArticleButtonAuthenticatedInner = ({
     itemTracker: {
       resourceId: articleId,
     },
+  });
+
+  const { isTooltipVisible, handleTooltipClose } = useActionTooltip({
+    actionResult,
+    resetActionResult,
+    onClose: onTooltipCloseClickTrack,
   });
 
   const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
@@ -120,12 +121,6 @@ const SaveArticleButtonAuthenticatedInner = ({
   const handleClick = (event?: React.MouseEvent) => {
     onClickTrack?.(event);
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
-  };
-
-  const handleTooltipClose = (event?: React.MouseEvent) => {
-    setIsTooltipVisible(false);
-    resetActionResult();
-    onTooltipCloseClickTrack?.(event);
   };
 
   return (

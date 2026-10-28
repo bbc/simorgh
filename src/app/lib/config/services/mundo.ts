@@ -239,6 +239,25 @@ export const service: DefaultServiceConfig = {
         myNewsUrl: 'https://www.bbc.com/mundo/my-news',
         closeLabel: 'Cerrar',
       },
+      followTopicTooltip: {
+        success: {
+          title: 'Sigues {Topic Name}',
+          bodyBefore: 'Encuentra este tema en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Has dejado de seguir {Topic Name}',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
       error: {
         404: {
           statusCode: '404',

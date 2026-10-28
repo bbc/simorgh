@@ -38,7 +38,7 @@ interface FollowTopicData {
 
 - Reuses Save Article's `ActionTooltip` for follow, unfollow and error feedback, including dismissal, accessibility and My News links.
 - Only user actions trigger tooltips; offline actions show errors immediately.
-- Tooltips require `translations.actionTooltip` and are hidden on dark UI pages temporarily.
+- Tooltips use `translations.followTopicTooltip` and are hidden on dark UI pages temporarily.
 
 Tooltip tracking events:
 

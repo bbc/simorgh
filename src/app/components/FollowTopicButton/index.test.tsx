@@ -77,7 +77,7 @@ const mockResetActionResult = jest.fn();
 const followTopicButtonTranslations =
   hindiServiceConfig.default.translations.followTopicButton;
 const actionTooltipTranslations =
-  hindiServiceConfig.default.translations.actionTooltip;
+  hindiServiceConfig.default.translations.followTopicTooltip;
 
 if (!followTopicButtonTranslations) {
   throw new Error(
@@ -87,7 +87,7 @@ if (!followTopicButtonTranslations) {
 
 if (!actionTooltipTranslations) {
   throw new Error(
-    'Hindi config must include translations.actionTooltip for FollowTopicButton tests',
+    'Hindi config must include translations.followTopicTooltip for FollowTopicButton tests',
   );
 }
 
@@ -290,7 +290,10 @@ describe('FollowTopicButton', () => {
         renderFollowTopicButton(signedInOptions);
 
         expect(screen.getByRole('group')).toHaveAccessibleName(
-          actionTooltipTranslations[tooltipStatus].title,
+          actionTooltipTranslations[tooltipStatus].title.replace(
+            '{Topic Name}',
+            topicData.title,
+          ),
         );
         expect(
           screen.getByTestId('action-tooltip').parentElement,
@@ -409,7 +412,10 @@ describe('FollowTopicButton', () => {
       rerender(<FollowTopicButtonWithTheme />);
 
       expect(screen.getByRole('group')).toHaveAccessibleName(
-        actionTooltipTranslations.removed.title,
+        actionTooltipTranslations.removed.title.replace(
+          '{Topic Name}',
+          topicData.title,
+        ),
       );
     });
 
@@ -418,7 +424,8 @@ describe('FollowTopicButton', () => {
       { service: 'mundo' as const, config: mundoServiceConfig },
       { service: 'portuguese' as const, config: portugueseServiceConfig },
     ])('uses the $service tooltip translations', ({ service, config }) => {
-      const tooltipTranslations = config.default.translations.actionTooltip;
+      const tooltipTranslations =
+        config.default.translations.followTopicTooltip;
 
       mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
       renderFollowTopicButton({
@@ -430,7 +437,10 @@ describe('FollowTopicButton', () => {
       });
 
       expect(screen.getByRole('group')).toHaveAccessibleName(
-        tooltipTranslations?.success.title,
+        tooltipTranslations?.success.title.replace(
+          '{Topic Name}',
+          topicData.title,
+        ),
       );
       expect(screen.getByTestId('action-tooltip-close')).toHaveAccessibleName(
         tooltipTranslations?.closeLabel,
