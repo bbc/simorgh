@@ -3,10 +3,7 @@ import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
-import useUASButton, {
-  UASAction,
-  UASActionResult,
-} from '#app/hooks/useUASButton';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
@@ -17,19 +14,11 @@ import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useActionTooltip from '#app/hooks/useActionTooltip';
 import SaveButton from '#app/components/SaveButton';
-import ActionTooltip, {
-  ActionTooltipStatus,
-} from '#app/components/ActionTooltip';
-import getArticleTooltipContent from '#app/components/ActionTooltip/ArticleTooltipContent';
+import ActionTooltip from '#app/components/ActionTooltip';
+import getActionTooltipContent from '#app/components/ActionTooltip/ActionTooltipContent';
+import getActionTooltipStatus from '#app/components/ActionTooltip/getActionTooltipStatus';
 
 import type { SaveArticleButtonProps } from '../index';
-
-const getTooltipStatus = (
-  actionResult: NonNullable<UASActionResult>,
-): ActionTooltipStatus => {
-  if (actionResult.status === 'error') return 'error';
-  return actionResult.action === UASAction.SAVE ? 'success' : 'removed';
-};
 
 const SaveArticleButtonAuthenticatedInner = ({
   saveArticlePageData,
@@ -61,12 +50,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     componentName: 'save-article-button-view',
   });
 
-  const tooltipViewTracker = useViewTracker({
-    componentName: `save-article-tooltip-view-${
-      actionResult ? getTooltipStatus(actionResult) : 'none'
-    }`,
-  });
-
   const { onClick: onClickTrack } = useClickTracker({
     componentName: clickComponentName,
     itemTracker: {
@@ -74,24 +57,18 @@ const SaveArticleButtonAuthenticatedInner = ({
     },
   });
 
-  const { onClick: onTooltipCloseClickTrack } = useClickTracker({
-    componentName: 'save-article-tooltip-close',
-    itemTracker: {
-      resourceId: articleId,
-    },
-  });
-
-  const { isTooltipVisible, handleTooltipClose } = useActionTooltip({
+  const {
+    isTooltipVisible,
+    handleTooltipClose,
+    onMyNewsLinkClickTrack,
+    tooltipViewTracker,
+  } = useActionTooltip({
     actionResult,
     resetActionResult,
-    onClose: onTooltipCloseClickTrack,
-  });
-
-  const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
-    componentName: 'save-article-tooltip-my-news-link',
-    itemTracker: {
-      resourceId: articleId,
-    },
+    trackingNamePrefix: 'save-article',
+    resourceId: articleId,
+    isDarkUi,
+    getTooltipStatus: result => getActionTooltipStatus(result, UASAction.SAVE),
   });
 
   if (!saveArticleButton) return null;
@@ -136,13 +113,12 @@ const SaveArticleButtonAuthenticatedInner = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && !isDarkUi && (
+      {isTooltipVisible && actionResult && actionTooltip && (
         <ActionTooltip
-          status={getTooltipStatus(actionResult)}
-          content={getArticleTooltipContent(
-            actionTooltip,
-            onMyNewsLinkClickTrack,
-          )}
+          status={getActionTooltipStatus(actionResult, UASAction.SAVE)}
+          content={getActionTooltipContent(actionTooltip, {
+            onMyNewsLinkClick: onMyNewsLinkClickTrack,
+          })}
           closeLabel={actionTooltip.closeLabel}
           onClose={handleTooltipClose}
           {...tooltipViewTracker}

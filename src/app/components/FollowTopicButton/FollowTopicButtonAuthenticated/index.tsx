@@ -3,7 +3,6 @@ import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
-  FollowActionResult,
 } from '#app/hooks/useTopicFollowButton';
 import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
@@ -15,19 +14,11 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useActionTooltip from '#app/hooks/useActionTooltip';
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
-import ActionTooltip, {
-  ActionTooltipStatus,
-} from '#app/components/ActionTooltip';
-import getTopicTooltipContent from '#app/components/ActionTooltip/TopicTooltipContent';
+import ActionTooltip from '#app/components/ActionTooltip';
+import getActionTooltipContent from '#app/components/ActionTooltip/ActionTooltipContent';
+import getActionTooltipStatus from '#app/components/ActionTooltip/getActionTooltipStatus';
 
 import type { FollowTopicButtonProps } from '../index';
-
-const getTooltipStatus = (
-  actionResult: NonNullable<FollowActionResult>,
-): ActionTooltipStatus => {
-  if (actionResult.status === 'error') return 'error';
-  return actionResult.action === FollowAction.FOLLOW ? 'success' : 'removed';
-};
 
 const FollowTopicButtonAuthenticatedInner = ({
   topicData,
@@ -54,12 +45,6 @@ const FollowTopicButtonAuthenticatedInner = ({
     componentName: 'follow-topic-button-view',
   });
 
-  const tooltipViewTracker = useViewTracker({
-    componentName: `follow-topic-tooltip-view-${
-      actionResult ? getTooltipStatus(actionResult) : 'none'
-    }`,
-  });
-
   const { onClick: onClickTrack } = useClickTracker({
     componentName: clickComponentName,
     itemTracker: {
@@ -67,24 +52,19 @@ const FollowTopicButtonAuthenticatedInner = ({
     },
   });
 
-  const { onClick: onTooltipCloseClickTrack } = useClickTracker({
-    componentName: 'follow-topic-tooltip-close',
-    itemTracker: {
-      resourceId: topicId,
-    },
-  });
-
-  const { isTooltipVisible, handleTooltipClose } = useActionTooltip({
+  const {
+    isTooltipVisible,
+    handleTooltipClose,
+    onMyNewsLinkClickTrack,
+    tooltipViewTracker,
+  } = useActionTooltip({
     actionResult,
     resetActionResult,
-    onClose: onTooltipCloseClickTrack,
-  });
-
-  const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
-    componentName: 'follow-topic-tooltip-my-news-link',
-    itemTracker: {
-      resourceId: topicId,
-    },
+    trackingNamePrefix: 'follow-topic',
+    resourceId: topicId,
+    isDarkUi,
+    getTooltipStatus: result =>
+      getActionTooltipStatus(result, FollowAction.FOLLOW),
   });
 
   if (!followTopicButton) return null;
@@ -136,14 +116,13 @@ const FollowTopicButtonAuthenticatedInner = ({
         testId="follow-topic-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && followTopicTooltip && !isDarkUi && (
+      {isTooltipVisible && actionResult && followTopicTooltip && (
         <ActionTooltip
-          status={getTooltipStatus(actionResult)}
-          content={getTopicTooltipContent(
-            followTopicTooltip,
-            topicData.title,
-            onMyNewsLinkClickTrack,
-          )}
+          status={getActionTooltipStatus(actionResult, FollowAction.FOLLOW)}
+          content={getActionTooltipContent(followTopicTooltip, {
+            topicName: topicData.title,
+            onMyNewsLinkClick: onMyNewsLinkClickTrack,
+          })}
           closeLabel={followTopicTooltip.closeLabel}
           onClose={handleTooltipClose}
           {...tooltipViewTracker}

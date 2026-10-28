@@ -79,16 +79,8 @@ const followTopicButtonTranslations =
 const actionTooltipTranslations =
   hindiServiceConfig.default.translations.followTopicTooltip;
 
-if (!followTopicButtonTranslations) {
-  throw new Error(
-    'Hindi config must include translations.followTopicButton for FollowTopicButton tests',
-  );
-}
-
-if (!actionTooltipTranslations) {
-  throw new Error(
-    'Hindi config must include translations.followTopicTooltip for FollowTopicButton tests',
-  );
+if (!followTopicButtonTranslations || !actionTooltipTranslations) {
+  throw new Error('FollowTopicButton tests require configured translations');
 }
 
 const LOADING_LABEL = followTopicButtonTranslations.loading;
