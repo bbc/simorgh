@@ -53,7 +53,10 @@ describe('Live Page Header', () => {
           {
             pageType: LIVE_PAGE,
             service: 'mundo',
-            toggles: { electionBanner: { enabled: true } },
+            toggles: {
+              electionBanner: { enabled: true },
+              livePageElectionBanner: { enabled: true },
+            },
           },
         ),
       );
