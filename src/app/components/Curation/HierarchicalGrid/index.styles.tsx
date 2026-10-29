@@ -219,6 +219,12 @@ const styles = {
           },
         },
       },
+      '.promo-paragraph': {
+        display: 'none',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'block',
+        },
+      },
     }),
   videoCollectionList: ({ mq }: Theme) =>
     css({
