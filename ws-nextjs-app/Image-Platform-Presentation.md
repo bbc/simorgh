@@ -2,7 +2,7 @@
 
 **Research:** [Next.js Image for Simorgh - findings and recommendation](https://www.dropbox.com/scl/fi/tl110z47w2iceakef8duq/Next.js-Image-for-Simorgh.paper?rlkey=sdpic0zfp4mpiorfbo4gyeqje&dl=0)
 
-**Live PoC:** [Current Simorgh Image vs Next.js Image — side-by-side comparison](http://localhost:7081/mundo/image-poc) (requires the local Next.js development server).
+**Live PoC:** [Current Simorgh Image vs Next.js Image - side-by-side comparison](http://localhost:7081/mundo/image-poc) (requires the local Next.js development server).
 
 **Shared image logic today. Next.js rendering next.**
 
