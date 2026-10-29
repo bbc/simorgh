@@ -7,7 +7,6 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 
 import styles from './index.styles';
 
-// Scroll offsets can be fractional, while element widths are rounded to pixels.
 const SCROLL_TOLERANCE_PX = 1;
 
 type ScrollableTabsProps = {
