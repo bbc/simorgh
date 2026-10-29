@@ -38,6 +38,7 @@ const useActionTooltip = <TActionResult>({
   const { onClick: onTooltipCloseClickTrack } = useClickTracker({
     componentName: `${trackingNamePrefix}-tooltip-close`,
     itemTracker: { resourceId },
+    isDismissal: true,
   });
 
   const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
@@ -45,7 +46,9 @@ const useActionTooltip = <TActionResult>({
     itemTracker: { resourceId },
   });
 
-  const handleTooltipClose = (event?: React.MouseEvent) => {
+  const handleTooltipClose = (
+    event?: React.MouseEvent | MouseEvent | KeyboardEvent,
+  ) => {
     setIsTooltipVisible(false);
     resetActionResult();
     onTooltipCloseClickTrack?.(event);
