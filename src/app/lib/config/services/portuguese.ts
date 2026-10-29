@@ -132,6 +132,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
+      showMore: 'Mostrar mais',
       moreOnThis: '',
       navMenuText: 'Seções',
       liteSite: {

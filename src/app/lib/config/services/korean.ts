@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      showMore: '더보기',
       moreOnThis: '',
       navMenuText: '섹션',
       liteSite: {
