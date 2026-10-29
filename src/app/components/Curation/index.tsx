@@ -92,20 +92,17 @@ export default ({
 
   const GridComponent = getGridComponent(componentName);
 
+  const isCurationGrid =
+    componentName === SIMPLE_CURATION_GRID ||
+    componentName === HIERARCHICAL_CURATION_GRID;
+
   const { service } = useContext(ServiceContext);
 
   const shouldStyleAsVideoCollection =
-    !isLive() &&
-    service === 'arabic' &&
-    (componentName === SIMPLE_CURATION_GRID ||
-      componentName === HIERARCHICAL_CURATION_GRID) &&
-    isVideoCollection;
+    !isLive() && service === 'arabic' && isCurationGrid && isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
-  const showRelatedTopic =
-    !isLiveEnvironment &&
-    (componentName === SIMPLE_CURATION_GRID ||
-      componentName === HIERARCHICAL_CURATION_GRID);
+  const showRelatedTopic = !isLiveEnvironment && isCurationGrid;
 
   const isFirstCuration = position === 0;
 
