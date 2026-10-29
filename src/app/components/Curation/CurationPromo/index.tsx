@@ -8,17 +8,16 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
-import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
 
-interface CurationPromoProps extends Summary {
-  showRelatedTopicExperiment?: boolean;
+type CurationPromoProps = Summary & {
+  showRelatedTopic?: boolean;
   isVideoCollection?: boolean;
-}
+};
 
 const CurationPromo = ({
   id,
@@ -35,8 +34,8 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
   relatedTopic,
-  showRelatedTopicExperiment = false,
   isVideoCollection = false,
+  showRelatedTopic,
 }: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -63,11 +62,13 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const relatedTopicToShow = getRelatedTopicForPromo(
-    relatedTopic,
-    type,
-    showRelatedTopicExperiment,
-  );
+  const relatedTopicToShow =
+    showRelatedTopic &&
+    type === 'article' &&
+    relatedTopic?.title?.trim() &&
+    relatedTopic.link?.url
+      ? relatedTopic
+      : null;
 
   const relatedTopicEventTrackingData = {
     ...eventTrackingData,
