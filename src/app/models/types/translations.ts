@@ -406,6 +406,10 @@ export type UgcTranslations = {
 
   // Form Screen
   dataPolicyHeading: string;
+  signInRequiredHeading?: string;
+  signInRequiredDescription?: string;
+  signInRequiredSignIn?: string;
+  signInRequiredRegister?: string;
 
   // Uploading Screen
   uploadingHeading: string;
