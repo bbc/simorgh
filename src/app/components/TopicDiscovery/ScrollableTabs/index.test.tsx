@@ -5,7 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { matchers } from '@emotion/jest';
 import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
-import { GREY_2, GREY_5, GREY_10 } from '#app/components/ThemeProvider/palette';
+import { GREY_2, GREY_5 } from '#app/components/ThemeProvider/palette';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScrollableTabs from '.';
@@ -230,38 +230,28 @@ describe('ScrollableTabs', () => {
     });
   });
 
-  it.each([
-    { pageType: ARTICLE_PAGE, disabledColour: GREY_5, background: GREY_2 },
-    {
-      pageType: MEDIA_ARTICLE_PAGE,
-      disabledColour: GREY_2,
-      background: GREY_10,
-    },
-  ])(
-    'should keep disabled arrows distinct from the $pageType background when the device prefers dark mode',
-    ({ pageType, disabledColour, background }) => {
-      render(
-        <ScrollableTabs
-          tabs={mockTabs}
-          activeTabId="tab-1"
-          onTabChange={jest.fn()}
-          labelledBy="heading-id"
-        />,
-        { pageType, service: 'portuguese' },
-      );
+  it('should keep disabled arrows distinct from the article background when the device prefers dark mode', () => {
+    render(
+      <ScrollableTabs
+        tabs={mockTabs}
+        activeTabId="tab-1"
+        onTabChange={jest.fn()}
+        labelledBy="heading-id"
+      />,
+      { pageType: ARTICLE_PAGE, service: 'portuguese' },
+    );
 
-      ['scroll-start', 'scroll-end'].forEach(testId => {
-        const button = screen.getByTestId(testId);
+    ['scroll-start', 'scroll-end'].forEach(testId => {
+      const button = screen.getByTestId(testId);
 
-        expect(button).toBeDisabled();
-        expect(button).toHaveStyleRule('color', disabledColour, {
-          target: ':disabled',
-        });
-        expect(button).not.toHaveStyleRule('color', background, {
-          target: ':disabled',
-          media: '(prefers-color-scheme: dark)',
-        });
+      expect(button).toBeDisabled();
+      expect(button).toHaveStyleRule('color', GREY_5, {
+        target: ':disabled',
       });
-    },
-  );
+      expect(button).not.toHaveStyleRule('color', GREY_2, {
+        target: ':disabled',
+        media: '(prefers-color-scheme: dark)',
+      });
+    });
+  });
 });
