@@ -6,6 +6,14 @@
 
 Image preparation was spread across components. We want **one reliable contract**, without losing BBC behaviour.
 
+### First task: how we addressed image consolidation
+
+- **Audited the existing paths.** StoryPromo and Promo.Image already used the modern Image primitive; duplicated preparation logic was the main consolidation opportunity.
+- **Shared the preparation.** Moved reusable source-set, iChef URL and MIME-type logic into shared helpers, while keeping layout-specific settings with consumers.
+- **Preserved the rendering contract.** Retained canonical, AMP, Lite, placeholders and loading behaviour through the shared Image primitive; added regression coverage for affected paths.
+
+**Result:** less duplicated preparation and a stronger baseline for the Next.js spike, not a wholesale replacement of every legacy wrapper. Remaining legacy removal and BFF ownership decisions are separate follow-ups.
+
 ```mermaid
 flowchart LR
     A["Reduce duplicated logic"] --> B["Preserve existing behaviour"]
