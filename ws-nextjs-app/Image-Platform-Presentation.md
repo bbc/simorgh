@@ -156,6 +156,8 @@ Sources: [PoC adapter](./pages/ws/ImagePocAdapter.tsx), [ownership findings](./I
 
 ## 5. Show the comparison
 
+**Consolidation showcase:** [all Image options and consumer examples on one Storybook page](http://localhost:9001/iframe.html?id=components-image-temporary-showcase--all-options&viewMode=story).
+
 **Demo:** [localhost:7081/mundo/image-poc](http://localhost:7081/mundo/image-poc)
 
 ```mermaid
