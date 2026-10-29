@@ -83,7 +83,7 @@ const AmpIframe = ({
           {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
           <div overflow="" css={styles.overflow}>
             <button type="button" css={styles.button}>
-              {translations.showMore}
+              {translations?.showMore ?? 'Show more'}
             </button>
           </div>
           <amp-img layout="fill" src={image} placeholder="true" />
