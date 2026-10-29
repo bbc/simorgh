@@ -4,8 +4,8 @@ import {
   runCanonicalAnalyticsTests,
   runTimestampTests,
   runCrossPlatformSEOTests,
-} from '../../common';
-import runAppSiteNavigationTests from '../../common/navigation.app';
+} from '.';
+import runAppSiteNavigationTests from './navigation.app';
 
 export default () => {
   runResponseHeaderTests();
