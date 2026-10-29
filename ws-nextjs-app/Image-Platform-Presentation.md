@@ -16,12 +16,20 @@ Image preparation was spread across components. We want **one reliable contract*
 
 ```mermaid
 flowchart LR
-    A["Reduce duplicated logic"] --> B["Preserve existing behaviour"]
-    B --> C["Evaluate Next.js Image"]
-    C --> D["Migrate only after approval"]
-    style A fill:#e0f2fe,stroke:#0369a1,color:#111827
+    subgraph Task1["Task 1: consolidate existing images"]
+        A["Problem: duplicated image preparation"] --> B["Shared helpers + existing Image primitive"]
+    end
+    B -->|"Baseline for comparison"| C
+    subgraph Task2["Task 2: investigate Next.js Image"]
+        C["Compare current Image with Next.js adapter"] --> D["Outcome: suitable, with BBC compatibility paths"]
+    end
+    D -. "Separate follow-up; requires approval" .-> E["Production migration"]
+    style B fill:#e0f2fe,stroke:#0369a1,color:#111827
     style D fill:#dcfce7,stroke:#15803d,color:#111827
+    style E fill:#fef3c7,stroke:#b45309,color:#111827
 ```
+
+**Preserving existing behaviour is a requirement throughout, not a separate delivery step.**
 
 Sources: [original brief](https://www.dropbox.com/scl/fi/e9224ij673u2u87r0a6ht/Image-Component-Refactor-Simorgh.paper?rlkey=r38irjxxi0pbi8km7h5zhed9p&dl=0),
 [first PoC / PR #14352](https://github.com/bbc/simorgh/pull/14352),
