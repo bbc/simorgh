@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Article } from '#app/models/types/optimo';
-import { articleDataWithDelayedLeadImages } from '#pages/ArticlePage/fixtureData';
+import { articleDataWithLeadImageAfterText } from '#pages/ArticlePage/fixtureData';
 import { Helmet } from 'react-helmet';
 import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
@@ -114,7 +114,7 @@ describe('MediaArticlePage', () => {
       preloadSources: [],
     },
   ])(
-    'prioritizes the first image beyond block 4 with preloading $preloadLeadImageToggledOn',
+    'only prioritises the first image when it follows other blocks, with preloading $preloadLeadImageToggledOn',
     async ({ preloadLeadImageToggledOn, priority, preloadSources }) => {
       render(
         <Context
@@ -122,7 +122,7 @@ describe('MediaArticlePage', () => {
           mostReadToggledOn={false}
           preloadLeadImageToggledOn={preloadLeadImageToggledOn}
         >
-          <MediaArticlePage pageData={articleDataWithDelayedLeadImages} />
+          <MediaArticlePage pageData={articleDataWithLeadImageAfterText} />
         </Context>,
       );
 

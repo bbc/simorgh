@@ -5,7 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   articleDataNews,
-  articleDataWithDelayedLeadImages,
+  articleDataWithLeadImageAfterText,
   articleDataNewsWithEmbeds,
   articleDataPersian,
   articleDataPersianWithFourParagraphs,
@@ -200,7 +200,7 @@ describe('Article Page', () => {
       preloadSources: [],
     },
   ])(
-    'prioritizes the first image beyond block 4 with preloading $preloadLeadImageToggledOn',
+    'only prioritises the first image when it follows other blocks, with preloading $preloadLeadImageToggledOn',
     async ({ preloadLeadImageToggledOn, priority, preloadSources }) => {
       render(
         <Context
@@ -208,7 +208,7 @@ describe('Article Page', () => {
           mostReadToggledOn={false}
           preloadLeadImageToggledOn={preloadLeadImageToggledOn}
         >
-          <ArticlePage pageData={articleDataWithDelayedLeadImages} />
+          <ArticlePage pageData={articleDataWithLeadImageAfterText} />
         </Context>,
       );
 

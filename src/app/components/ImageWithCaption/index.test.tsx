@@ -121,6 +121,23 @@ describe('Image', () => {
         expect(linkPreload).not.toBeInTheDocument();
       });
     });
+    it('should lazy load and not preload a lead image beyond block 4', async () => {
+      render(
+        <ImageContainer
+          sizes="100vw"
+          position={[5]}
+          {...data}
+          shouldPreload
+          isLeadImage
+        />,
+      );
+
+      expect(screen.getByRole('img')).toHaveAttribute('loading', 'lazy');
+      await waitFor(() => {
+        const linkPreload = document.querySelector('head link');
+        expect(linkPreload).not.toBeInTheDocument();
+      });
+    });
     const dataWithNonBbcCopyright = blockArrayModel([
       rawImageBlockWithNonBbcCopyright,
       blockContainingText(

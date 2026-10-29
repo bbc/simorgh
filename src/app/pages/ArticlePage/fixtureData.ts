@@ -283,25 +283,25 @@ export const articleDataNews = articleDataBuilder(
   },
 ) as unknown as Article;
 
-export const articleDataWithDelayedLeadImages: Article = {
+export const articleDataWithLeadImageAfterText: Article = {
   ...articleDataNews,
   content: {
     model: {
       blocks: [
         { ...articleDataNews.content.model.blocks[0], position: [1] },
-        ...[2, 3, 4, 5].map(position => ({
+        ...[2].map(position => ({
           ...singleTextBlock(`Paragraph ${position}`),
           id: `priority-paragraph-${position}`,
           position: [position],
         })),
         ...[
           {
-            position: 6,
+            position: 3,
             altText: 'Lead article image',
             locator: 'lead-image.jpg',
           },
           {
-            position: 7,
+            position: 4,
             altText: 'Later article image',
             locator: 'later-image.jpg',
           },
