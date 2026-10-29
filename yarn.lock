@@ -5247,10 +5247,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"arch@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "arch@npm:2.2.0"
-  checksum: 10/e35dbc6d362297000ab90930069576ba165fe63cd52383efcce14bd66c1b16a91ce849e1fd239964ed029d5e0bdfc32f68e9c7331b7df6c84ddebebfdbf242f7
+"arch@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "arch@npm:3.0.0"
+  checksum: 10/9af0c58900980c300737945881859df6dd2a4e4d07f697c77704a7ba85a701aa60aa7c3a3ce1eb57ef76fda726ebccf1e2a9ddd763c89fe82c961d55b4b9c374
   languageName: node
   linkType: hard
 
@@ -6243,6 +6243,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chrome-remote-interface@npm:0.33.3":
+  version: 0.33.3
+  resolution: "chrome-remote-interface@npm:0.33.3"
+  dependencies:
+    commander: "npm:2.11.x"
+    ws: "npm:^7.2.0"
+  bin:
+    chrome-remote-interface: bin/client.js
+  checksum: 10/65d07afc8f97fad6326bd94f0c4ef004d76b16841015c72d09aefbfa4df62b47407067a01c886535a706c36b23070b40fc3edb96444665438efa1d4f65cc3db8
+  languageName: node
+  linkType: hard
+
 "chrome-trace-event@npm:^1.0.2":
   version: 1.0.4
   resolution: "chrome-trace-event@npm:1.0.4"
@@ -6514,6 +6526,13 @@ __metadata:
   version: 12.0.0
   resolution: "commander@npm:12.0.0"
   checksum: 10/62062e2ffe6abd5aa42a551e62fd5eb9b2620f6ac4299382b2aa9fb02f95cda0242d7e84acb890479bd6491edb805f7f91aecb5b4f5c70dc57df49ed7f02ef14
+  languageName: node
+  linkType: hard
+
+"commander@npm:2.11.x":
+  version: 2.11.0
+  resolution: "commander@npm:2.11.0"
+  checksum: 10/d8940de4ce2886aa32ae27a1533d10ce46da8c6dcd965075462a6b8d17b01f596ec329e1430f84a123e52675403f0c2b11a6a5d144eb46146da9ae974edbc2c0
   languageName: node
   linkType: hard
 
@@ -6944,26 +6963,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:15.16.0":
-  version: 15.16.0
-  resolution: "cypress@npm:15.16.0"
+"cypress@npm:16.2.0":
+  version: 16.2.0
+  resolution: "cypress@npm:16.2.0"
   dependencies:
     "@cypress/request": "npm:^4.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
     "@types/sinonjs__fake-timers": "npm:8.1.1"
     "@types/sizzle": "npm:^2.3.2"
     "@types/tmp": "npm:^0.2.3"
-    arch: "npm:^2.2.0"
+    arch: "npm:^3.0.0"
     blob-util: "npm:^2.0.2"
     bluebird: "npm:^3.7.2"
     buffer: "npm:^5.7.1"
     cachedir: "npm:^2.4.0"
     chalk: "npm:^4.1.0"
+    chrome-remote-interface: "npm:0.33.3"
     ci-info: "npm:^4.1.0"
     cli-table3: "npm:0.6.1"
     commander: "npm:^6.2.1"
     common-tags: "npm:^1.8.0"
-    dayjs: "npm:^1.10.4"
+    dayjs: "npm:^1.11.23"
     debug: "npm:^4.3.4"
     eventemitter2: "npm:6.4.7"
     execa: "npm:4.1.0"
@@ -6984,12 +7004,11 @@ __metadata:
     systeminformation: "npm:^5.31.1"
     tmp: "npm:~0.2.4"
     tree-kill: "npm:1.2.2"
-    tslib: "npm:1.14.1"
     untildify: "npm:^4.0.0"
     yauzl: "npm:^3.3.1"
   bin:
     cypress: bin/cypress
-  checksum: 10/a485b4ce2e535d5fb33cbfeb01e51a310b081f89150d56f7c49a0bd9105264f04f74add517811002c8617b640110e8d6940700aa6acc006b1fb313aee9650b78
+  checksum: 10/ea33937b4f713bf3451a16d16c7a542e1de2f89d9343c311f4177a0d4c00b8d1bbcd85e57d8497e9a26f9a4f141e13af929efef04c981931dc222ab0b45f581b
   languageName: node
   linkType: hard
 
@@ -7069,10 +7088,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.10.4":
-  version: 1.11.13
-  resolution: "dayjs@npm:1.11.13"
-  checksum: 10/7374d63ab179b8d909a95e74790def25c8986e329ae989840bacb8b1888be116d20e1c4eee75a69ea0dfbae13172efc50ef85619d304ee7ca3c01d5878b704f5
+"dayjs@npm:^1.11.23":
+  version: 1.11.23
+  resolution: "dayjs@npm:1.11.23"
+  checksum: 10/61d29544ca1553369f75541b5abf9c1bb6a978991498923a2d5721c9df3eca513b2c15ff5534de6930dc553de5d6f2b8f8047149f3528df906b21f51df637463
   languageName: node
   linkType: hard
 
@@ -14626,7 +14645,7 @@ __metadata:
     "@testing-library/react": "npm:16.3.1"
     autoprefixer: "npm:10.5.4"
     axe-core: "npm:4.14.0"
-    cypress: "npm:15.16.0"
+    cypress: "npm:16.2.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
     cypress-terminal-report: "npm:7.3.3"
@@ -14695,7 +14714,7 @@ __metadata:
     clsx: "npm:2.1.1"
     colors: "npm:^1.4.0"
     css-loader: "npm:7.1.4"
-    cypress: "npm:15.16.0"
+    cypress: "npm:16.2.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
     cypress-terminal-report: "npm:7.3.3"
@@ -15938,7 +15957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:1.14.1, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10/7dbf34e6f55c6492637adb81b555af5e3b4f9cc6b998fb440dac82d3b42bdc91560a35a5fb75e20e24a076c651438234da6743d139e4feabf0783f3cdfe1dddb
@@ -16934,6 +16953,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 10/486141e4a01bb75883f9ba39317309c2427e24db1cb75e340fad6e5886b65c03d994a34209f0e4ba06dd6cb9ec95dd1b6a09c52c05eed9a34d6376f4fbbf617c
+  languageName: node
+  linkType: hard
+
+"ws@npm:^7.2.0":
+  version: 7.5.13
+  resolution: "ws@npm:7.5.13"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10/0873c813ce75c466b026ce0a4ce9a8b5b5f1dc9ef0dd7ae9690fa4025c66afb165d3a45550357080b29d66a0e3028cd13c72ccefc83ce10723b4822a574ebc99
   languageName: node
   linkType: hard
 

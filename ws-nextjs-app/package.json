@@ -65,7 +65,7 @@
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.1",
     "axe-core": "4.14.0",
-    "cypress": "15.16.0",
+    "cypress": "16.2.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
     "cypress-terminal-report": "7.3.3",
