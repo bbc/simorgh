@@ -1,5 +1,6 @@
 import { ExternalSvg } from '#app/components/icons';
 import styles from './styles';
+import iconStyles from './index.module.scss';
 
 export const UploadSvg = () => (
   <span css={styles.fileUploadIcon}>
@@ -8,6 +9,7 @@ export const UploadSvg = () => (
       width="14"
       height="14"
       isInverted
+      useCurrentColor
     />
   </span>
 );
@@ -15,9 +17,11 @@ export const UploadSvg = () => (
 export const DeleteSvg = () => (
   <ExternalSvg
     path="images/icons/delete.svg"
+    className={iconStyles.deleteIcon}
     width="17"
     height="18"
     isInverted
+    useCurrentColor
   />
 );
 

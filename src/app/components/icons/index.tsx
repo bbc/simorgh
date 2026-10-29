@@ -1,4 +1,5 @@
 import type { Interpolation, Theme } from '@emotion/react';
+import type { CSSProperties } from 'react';
 import { Direction } from '#app/models/types/global';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -12,7 +13,13 @@ type IconProps = {
   isInverted?: boolean;
   name?: string;
   path?: string;
+  useCurrentColor?: boolean;
   width?: string;
+};
+
+const toCssLength = (dimension?: string) => {
+  if (!dimension) return '1em';
+  return Number.isNaN(Number(dimension)) ? dimension : `${dimension}px`;
 };
 
 export const ExternalSvg = ({
@@ -23,6 +30,7 @@ export const ExternalSvg = ({
   isInverted = false,
   name,
   path,
+  useCurrentColor = false,
   width,
 }: IconProps) => {
   const {
@@ -30,6 +38,36 @@ export const ExternalSvg = ({
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
   } = getEnvConfig();
   const classes = [className, 'external-svg'];
+  const src = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${
+    path || `images/icons/${name}.svg`
+  }`;
+
+  if (useCurrentColor) {
+    const maskStyle: CSSProperties & {
+      '--icon-source': string;
+      '--icon-width': string;
+      '--icon-height': string;
+    } = {
+      '--icon-source': `url("${src}")`,
+      '--icon-width': toCssLength(width),
+      '--icon-height': toCssLength(height),
+    };
+
+    return (
+      <span
+        aria-hidden="true"
+        className={[
+          ...classes,
+          styles.mask,
+          isInverted && styles.fallbackInverted,
+        ]
+          .filter(Boolean)
+          .join(' ')}
+        css={css}
+        style={maskStyle}
+      />
+    );
+  }
   const hasCssLength = [width, height].some(
     dimension => dimension && Number.isNaN(Number(dimension)),
   );
@@ -50,21 +88,23 @@ export const ExternalSvg = ({
       className={classes.filter(Boolean).join(' ')}
       css={css}
       height={height}
-      src={`${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${
-        path || `images/icons/${name}.svg`
-      }`}
+      src={src}
       style={dimensions}
       width={width}
     />
   );
 };
 
+const CurrentColorSvg = (props: IconProps) => (
+  <ExternalSvg {...props} useCurrentColor />
+);
+
 export const Ellipsis = () => (
-  <ExternalSvg name="ellipsis" width="12" height="12" />
+  <CurrentColorSvg name="ellipsis" width="12" height="12" />
 );
 
 export const LeftChevron = ({ className }: { className?: string }) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="chevron-backward"
     className={className}
     width="12"
@@ -73,7 +113,7 @@ export const LeftChevron = ({ className }: { className?: string }) => (
 );
 
 export const RightChevron = ({ className }: { className?: string }) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="chevron-forward"
     className={className}
     width="12"
@@ -106,7 +146,7 @@ export const Chevron = ({
     (orientation === ChevronOrientation.FORWARD && dir === 'rtl');
 
   return (
-    <ExternalSvg
+    <CurrentColorSvg
       name={isBackward ? 'chevron-backward' : 'chevron-forward'}
       className={className}
       css={css}
@@ -118,31 +158,51 @@ export const Chevron = ({
 };
 
 export const Clock = ({ className }: { className?: string }) => (
-  <ExternalSvg name="clock" className={className} width="12" height="12" />
+  <CurrentColorSvg name="clock" className={className} width="12" height="12" />
 );
 
 export const Book = ({ className }: { className?: string }) => (
-  <ExternalSvg name="book" className={className} width="12" height="12" />
+  <CurrentColorSvg name="book" className={className} width="12" height="12" />
 );
 
 export const Words = ({ className }: { className?: string }) => (
-  <ExternalSvg name="words" className={className} width="12" height="12" />
+  <CurrentColorSvg name="words" className={className} width="12" height="12" />
 );
 
 export const Articles = ({ className }: { className?: string }) => (
-  <ExternalSvg name="articles" className={className} width="12" height="12" />
+  <CurrentColorSvg
+    name="articles"
+    className={className}
+    width="12"
+    height="12"
+  />
 );
 
 export const Calendar = ({ className }: { className?: string }) => (
-  <ExternalSvg name="calendar" className={className} width="12" height="12" />
+  <CurrentColorSvg
+    name="calendar"
+    className={className}
+    width="12"
+    height="12"
+  />
 );
 
 export const Favourites = ({ className }: { className?: string }) => (
-  <ExternalSvg name="favourites" className={className} width="12" height="12" />
+  <CurrentColorSvg
+    name="favourites"
+    className={className}
+    width="12"
+    height="12"
+  />
 );
 
 export const Calculator = ({ className }: { className?: string }) => (
-  <ExternalSvg name="calculator" className={className} width="12" height="12" />
+  <CurrentColorSvg
+    name="calculator"
+    className={className}
+    width="12"
+    height="12"
+  />
 );
 
 export const Close = ({
@@ -155,7 +215,7 @@ export const Close = ({
   IconProps,
   'className' | 'css' | 'height' | 'isInverted' | 'width'
 >) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="close"
     className={className}
     css={css}
@@ -170,7 +230,7 @@ export const Play = ({
   css,
   isInverted,
 }: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="play"
     className={className}
     css={css}
@@ -181,7 +241,7 @@ export const Play = ({
 );
 
 export const TriangleDown = ({ className }: { className?: string }) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="triangle-down"
     className={className}
     width="16"
@@ -194,7 +254,7 @@ export const Warning = ({
   css,
   isInverted,
 }: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="warning"
     className={className}
     css={css}
@@ -205,11 +265,11 @@ export const Warning = ({
 );
 
 export const UpArrowIcon = () => (
-  <ExternalSvg name="arrow-up" width="24" height="24" />
+  <CurrentColorSvg name="arrow-up" width="24" height="24" />
 );
 
 export const DownArrowIcon = () => (
-  <ExternalSvg name="arrow-down" width="24" height="24" />
+  <CurrentColorSvg name="arrow-down" width="24" height="24" />
 );
 
 export const AccountIconRounded = ({
@@ -220,11 +280,10 @@ export const AccountIconRounded = ({
 }: Pick<IconProps, 'className' | 'css' | 'isInverted'> & {
   isBlue?: boolean;
 }) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name={isBlue ? 'account-rounded-blue' : 'account-rounded'}
-    className={className}
+    className={[className, isBlue && styles.blue].filter(Boolean).join(' ')}
     css={css}
-    isColoured={isBlue}
     isInverted={isInverted}
     width="24"
     height="24"
@@ -236,7 +295,7 @@ export const AccountIcon = ({
   css,
   isInverted,
 }: Pick<IconProps, 'className' | 'css' | 'isInverted'>) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="account"
     className={className}
     css={css}
@@ -247,11 +306,16 @@ export const AccountIcon = ({
 );
 
 export const BookmarkIcon = ({ className }: { className?: string }) => (
-  <ExternalSvg name="bookmark" className={className} width="20" height="20" />
+  <CurrentColorSvg
+    name="bookmark"
+    className={className}
+    width="20"
+    height="20"
+  />
 );
 
 export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="bookmark-filled"
     className={className}
     width="20"
@@ -260,15 +324,20 @@ export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
 );
 
 export const PlusIcon = ({ className }: { className?: string }) => (
-  <ExternalSvg name="plus" className={className} width="20" height="20" />
+  <CurrentColorSvg name="plus" className={className} width="20" height="20" />
 );
 
 export const TickIcon = ({ className }: { className?: string }) => (
-  <ExternalSvg name="tick" className={className} width="20" height="20" />
+  <CurrentColorSvg name="tick" className={className} width="20" height="20" />
 );
 
 export const Spinner = ({ className }: { className?: string }) => (
-  <ExternalSvg name="spinner" className={className} width="20" height="20" />
+  <CurrentColorSvg
+    name="spinner"
+    className={className}
+    width="20"
+    height="20"
+  />
 );
 
 export const RedCardSVG = ({ className }: { className?: string }) => (
@@ -295,7 +364,7 @@ export const InfoTriangle = ({
   className,
   isInverted,
 }: Pick<IconProps, 'className' | 'isInverted'>) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="info-triangle"
     className={className}
     isInverted={isInverted}
@@ -308,7 +377,7 @@ export const InfoCircle = ({
   className,
   isInverted,
 }: Pick<IconProps, 'className' | 'isInverted'>) => (
-  <ExternalSvg
+  <CurrentColorSvg
     name="info-circle"
     className={className}
     isInverted={isInverted}

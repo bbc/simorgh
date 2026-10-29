@@ -14,8 +14,16 @@ export default () => {
       expect(hasContent).toBe(true);
     });
 
-    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
-      expect(getInlinedCss()).not.toContain('--brand-background');
+    it('should tree-shake unused SCSS module palette custom properties (--brand-foreground)', () => {
+      expect(getInlinedCss()).not.toContain('--brand-foreground');
+    });
+
+    it('should retain the external icon masks and their forced-colours paint', () => {
+      const css = getInlinedCss();
+
+      expect(css).toContain('mask:var(--icon-source)');
+      expect(css).toContain('background-color:currentColor');
+      expect(css).toContain('forced-color-adjust:preserve-parent-color');
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {

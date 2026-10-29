@@ -98,13 +98,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
                 href="https://www.bbc.co.uk/pidgin"
               >
                 Show headline
-                <img
-                  alt=""
+                <span
                   aria-hidden="true"
-                  class="chevron external-svg externalSvg emotion-4"
-                  height="12"
-                  src="http://localhost:7080/images/icons/chevron-forward.svg"
-                  width="12"
+                  class="chevron external-svg mask emotion-4"
+                  style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
                 />
               </a>
             </div>
@@ -120,13 +117,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
                 href="https://www.bbc.com/mundo"
               >
                 Link with Headline
-                <img
-                  alt=""
+                <span
                   aria-hidden="true"
-                  class="chevron external-svg externalSvg emotion-4"
-                  height="12"
-                  src="http://localhost:7080/images/icons/chevron-forward.svg"
-                  width="12"
+                  class="chevron external-svg mask emotion-4"
+                  style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
                 />
               </a>
             </div>
@@ -142,13 +136,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
                 href="https://www.bbc.com/brasil"
               >
                 Brasil homepage
-                <img
-                  alt=""
+                <span
                   aria-hidden="true"
-                  class="chevron external-svg externalSvg emotion-4"
-                  height="12"
-                  src="http://localhost:7080/images/icons/chevron-forward.svg"
-                  width="12"
+                  class="chevron external-svg mask emotion-4"
+                  style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
                 />
               </a>
             </div>
@@ -254,13 +245,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
             href="https://www.bbc.com/pidgin"
           >
             Single link
-            <img
-              alt=""
+            <span
               aria-hidden="true"
-              class="chevron external-svg externalSvg emotion-4"
-              height="12"
-              src="http://localhost:7080/images/icons/chevron-forward.svg"
-              width="12"
+              class="chevron external-svg mask emotion-4"
+              style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
             />
           </a>
         </div>
@@ -371,13 +359,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
             href="https://www.bbc.com/pidgin"
           >
             Single link
-            <img
-              alt=""
+            <span
               aria-hidden="true"
-              class="chevron external-svg externalSvg emotion-4"
-              height="12"
-              src="http://localhost:7080/images/icons/chevron-forward.svg"
-              width="12"
+              class="chevron external-svg mask emotion-4"
+              style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
             />
           </a>
         </div>
@@ -481,13 +466,10 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
             href="https://www.bbc.com/pidgin"
           >
             Single link
-            <img
-              alt=""
+            <span
               aria-hidden="true"
-              class="chevron external-svg externalSvg inverted emotion-4"
-              height="12"
-              src="http://localhost:7080/images/icons/chevron-forward.svg"
-              width="12"
+              class="chevron external-svg mask fallbackInverted emotion-4"
+              style="--icon-source: url("http://localhost:7080/images/icons/chevron-forward.svg"); --icon-width: 12px; --icon-height: 12px;"
             />
           </a>
         </div>

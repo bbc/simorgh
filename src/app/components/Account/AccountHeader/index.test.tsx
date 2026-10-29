@@ -32,7 +32,7 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
-    const icon = link.querySelector('img.external-svg');
+    const icon = link.querySelector('.external-svg');
     expect(icon).toBeInTheDocument();
   });
 
@@ -53,7 +53,7 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/settings'),
     );
-    const icon = link.querySelector('img.external-svg');
+    const icon = link.querySelector('.external-svg');
     expect(icon).toBeInTheDocument();
   });
 

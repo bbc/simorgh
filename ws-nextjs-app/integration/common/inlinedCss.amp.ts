@@ -10,10 +10,24 @@ export default () => {
       expect(styleEl?.textContent?.trim()).not.toBe('');
     });
 
-    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
+    it('should tree-shake unused SCSS module palette custom properties (--brand-foreground)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
 
-      expect(css).not.toContain('--brand-background');
+      expect(css).not.toContain('--brand-foreground');
+    });
+
+    it('should retain the external icon masks and their forced-colours paint', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+
+      expect(css).toContain('mask:var(--icon-source)');
+      expect(css).toContain('background-color:currentColor');
+      expect(css).toContain('forced-color-adjust:preserve-parent-color');
+    });
+
+    it('should stay below the AMP custom CSS limit', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+
+      expect(new TextEncoder().encode(css).byteLength).toBeLessThan(75_000);
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {

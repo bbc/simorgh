@@ -38,13 +38,10 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
         >
           Njana ku rubuga nyamukuru canke aho gusoma gusa
         </span>
-        <img
-          alt=""
+        <span
           aria-hidden="true"
-          class="external-svg icons_externalSvg__wi_O0 css-1bxgsgh"
-          height="12"
-          src="http://localhost:7081/images/icons/chevron-forward.svg"
-          width="12"
+          class="external-svg icons_mask__cO6__ css-1bxgsgh"
+          style="--icon-source:url("http://localhost:7081/images/icons/chevron-forward.svg");--icon-width:12px;--icon-height:12px"
         />
       </a>
     </p>

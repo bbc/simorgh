@@ -3,12 +3,19 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ExternalSvg } from '#app/components/icons';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
-import styles from './styles';
+import styles from './index.module.scss';
 
 const TEN_SECONDS = 10 * 1000;
 
 const RefreshSvg = () => (
-  <ExternalSvg path="images/icons/refresh.svg" isInverted />
+  <ExternalSvg
+    path="images/icons/refresh.svg"
+    width="16"
+    height="16"
+    isInverted
+    useCurrentColor
+    className={styles.icon}
+  />
 );
 
 interface LatestPostButtonProps {
@@ -102,7 +109,7 @@ const LatestPostButton = ({
   }, [isFirstPostVisible, hasPendingUpdate, trackButtonShown, pageId]);
 
   return (
-    <div css={styles.container}>
+    <div className={styles.container}>
       <VisuallyHiddenText aria-live="polite">
         {showButton && <span>{visuallyHiddenButtonText}</span>}
       </VisuallyHiddenText>
@@ -111,7 +118,7 @@ const LatestPostButton = ({
           data-testid="latest-post-button"
           type="button"
           onClick={handleClick}
-          css={styles.button}
+          className={styles.button}
           tabIndex={showButton ? 0 : -1}
         >
           <RefreshSvg />

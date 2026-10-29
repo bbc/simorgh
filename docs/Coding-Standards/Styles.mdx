@@ -4,6 +4,27 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Coding standards: Styles
 
+## External SVG icons and colour inheritance
+
+Shared monochrome icons render as decorative CSS masks backed by external SVG
+URLs. They inherit `currentColor` from their control or text, including hover,
+focus and forced-colours states. Set `color` on the consumer instead of styling
+SVG paths or applying inversion filters.
+
+For page-local assets that need the same behaviour, pass `useCurrentColor` to
+`ExternalSvg` and supply dimensions. Fixed-colour artwork and service logos
+remain external images; do not enable masks for those assets.
+
+The shared mask opts out of forced colour adjustment only on its paint surface.
+Where supported, `forced-color-adjust: preserve-parent-color` preserves the
+parent's forced colour rather than its original author colour. Other browsers
+use system colours (`CanvasText`, `LinkText`, `ButtonText`, or `GrayText`).
+Controls with an intentionally reversed system palette must set the icon's
+`color` explicitly too.
+
+Browsers without CSS mask support display the external SVG as a background
+image. Cross-origin mask assets must be served with CORS headers.
+
 ## Use SCSS Modules, not Emotion, for new styling work
 
 Simorgh is progressively migrating its styling foundation from [Emotion](https://emotion.sh/docs/introduction) (CSS-in-JS, `ThemeProvider`) to **SCSS Modules + CSS custom properties** (`ThemeProviderSCSSModules`). Both approaches co-exist in the codebase during the migration, but:

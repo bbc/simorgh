@@ -436,15 +436,12 @@ exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 }
 `;
 
-exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b"`;
-
-exports[`Canonical Home Page messageBanner has an image 1`] = `
-<img
-  alt=""
+exports[`Canonical Home Page messageBanner has a decorative external icon 1`] = `
+<span
   aria-hidden="true"
-  class="external-svg icons_externalSvg__wi_O0 css-4xk39v"
-  height="12"
-  src="http://localhost:7081/images/icons/chevron-forward.svg"
-  width="12"
+  class="external-svg icons_mask__cO6__ css-4xk39v"
+  style="--icon-source:url("http://localhost:7081/images/icons/chevron-forward.svg");--icon-width:12px;--icon-height:12px"
 />
 `;
+
+exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b"`;
