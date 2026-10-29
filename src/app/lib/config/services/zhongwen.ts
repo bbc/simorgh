@@ -51,7 +51,7 @@ const baseServiceConfig = {
   showRelatedTopics: true,
   timezone: 'GMT',
   electionBanner: {
-    title: '美國大選 2026',
+    title: '2026年美國中期選舉',
     electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
     assocPressIframeSrc:
       'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',

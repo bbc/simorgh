@@ -210,7 +210,11 @@ export default ({ service, pageType, variant = 'default', path }) => {
 
           it('Previous page button navigates to previous page (second to last)', () => {
             if (pageCount > 1) {
-              cy.get('[data-testid="topic-pagination"] > span > a').click();
+              cy.get('[data-testid="topic-pagination"] > ul > li')
+                .last()
+                .click();
+              cy.url().should('include', `?page=${pageCount}`);
+              cy.get('[id="pagination-previous-page"]').click();
               cy.url().should('include', `?page=${pageCount - 1}`);
               cy.get('[data-testid="topic-pagination"] > ul > li')
                 .first()

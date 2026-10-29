@@ -3,25 +3,28 @@ import Script from 'next/script';
 import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';
-import useToggle from '#app/hooks/useToggle';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isLive from '#app/lib/utilities/isLive';
-import { MetadataTaggings } from '#app/models/types/metadata';
 import styles from './index.module.scss';
 
+// Consumers (e.g. the Live, Home and Topic pages) own any page-specific style
+// overrides and pass them in here, rather than this component branching on
+// which page it's rendered on.
+type OverrideClassnames = {
+  wrapper?: string;
+  assocPressWrapper?: string;
+  iframe?: string;
+  title?: string;
+};
+
 type Props = {
-  aboutTags: Tag[];
-  taggings: MetadataTaggings;
+  aboutTags?: Tag[];
+  overrideClassnames?: OverrideClassnames;
 };
 
-type ToggleType = {
-  enabled: boolean | null;
-  value: string | null;
-};
-
-const SENSITIVE_ARTICLE_ID = 'f2b5dd0e-dda0-454c-893d-792d46ff48c3';
+const ELECTION_BANNER_TITLE = 'Election banner';
 
 export const DEFAULT_HEIGHTS_VJ = {
   desktop: 350,
@@ -35,13 +38,16 @@ export const DEFAULT_HEIGHTS_AP = {
   mobile: 340,
 };
 
-export default function ElectionBanner({ aboutTags, taggings }: Props) {
+// Callers decide editorial visibility via isElectionBannerVisible; this guards
+// the isLite/isLive runtime cases so every consumer doesn't have to repeat them.
+export default function ElectionBanner({
+  aboutTags,
+  overrideClassnames,
+}: Props) {
   const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled }: ToggleType =
-    useToggle('electionBanner');
 
-  if (isLive() || isLite || !electionBanner) return null;
+  if (!electionBanner || isLive() || isLite) return null;
 
   const {
     title,
@@ -51,18 +57,12 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
     assocPressIframeSrc,
   } = electionBanner;
 
-  const isEditoriallySensitive = taggings?.some(({ value }) =>
-    value.includes(SENSITIVE_ARTICLE_ID),
-  );
-
   const validAboutTag = aboutTags?.find(({ thingId }) =>
     electionThingIds?.includes(thingId),
   );
 
-  const showBanner =
-    !isEditoriallySensitive && validAboutTag && electionBannerEnabled;
-
-  if (!showBanner) return null;
+  const bannerTitle =
+    validAboutTag?.thingLabel || title || ELECTION_BANNER_TITLE;
 
   const {
     SIMORGH_APP_ENV,
@@ -91,7 +91,11 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
         }
       >
         <div className={styles.electionBannerContent}>
-          {hasTitle && <span className={styles.title}>{title}</span>}
+          {hasTitle && (
+            <span className={clsx(styles.title, overrideClassnames?.title)}>
+              {title}
+            </span>
+          )}
           <AmpIframe
             ampMetadata={{
               ...(!isAssocPress && { imageWidth: 1 }),
@@ -99,7 +103,7 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
               src,
               image:
                 'https://news.files.bbci.co.uk/include/vjassets/img/app-launcher.png',
-              title: validAboutTag.thingLabel,
+              title: bannerTitle,
               ...(isAssocPress && { layout: 'fixed-height' as const }),
             }}
           />
@@ -111,22 +115,30 @@ export default function ElectionBanner({ aboutTags, taggings }: Props) {
   return (
     <div
       data-testid="election-banner"
-      className={
+      className={clsx(
         isAssocPress
           ? styles.assocPressElectionBannerWrapper
-          : styles.electionBannerWrapper
-      }
+          : styles.electionBannerWrapper,
+        isAssocPress
+          ? overrideClassnames?.assocPressWrapper
+          : overrideClassnames?.wrapper,
+      )}
     >
       <div className={styles.electionBannerContent}>
-        {hasTitle && <span className={styles.title}>{title}</span>}
+        {hasTitle && (
+          <span className={clsx(styles.title, overrideClassnames?.title)}>
+            {title}
+          </span>
+        )}
         <iframe
           className={clsx(
             isAssocPress && 'ap-embed',
             isAssocPress
               ? styles.assocPressElectionBannerIframe
               : styles.electionBannerIframe,
+            overrideClassnames?.iframe,
           )}
-          title={validAboutTag.thingLabel}
+          title={bannerTitle}
           src={src}
           scrolling="no"
           {...(!isAssocPress && { height: DEFAULT_HEIGHTS_VJ.desktop })}

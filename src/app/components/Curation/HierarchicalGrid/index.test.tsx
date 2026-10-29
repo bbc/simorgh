@@ -19,6 +19,11 @@ jest.mock('../../MediaLoader', () => ({
   )),
 }));
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const minimalEventTrackingData = { componentName: 'test-component' };
 
 const getSummariesWithInSituMedia = () => {
@@ -417,7 +422,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={summariesWithRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -433,7 +438,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -466,7 +471,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={summariesWithLongRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -486,7 +491,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -525,7 +530,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',

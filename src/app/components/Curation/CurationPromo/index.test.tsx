@@ -9,6 +9,11 @@ import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 interface FixtureProps {
   lazy?: boolean;
   type?: string;
@@ -20,7 +25,7 @@ interface FixtureProps {
   eventTrackingData?: EventTrackingData;
   imageUrl?: string;
   imageAlt?: string;
-  showRelatedTopicExperiment?: boolean;
+  showRelatedTopic?: boolean;
   relatedTopic?: {
     title: string;
     link: { url: string };
@@ -38,8 +43,8 @@ const Fixture = ({
   eventTrackingData,
   imageUrl = 'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg',
   imageAlt = 'Campesino indígena peruano.',
+  showRelatedTopic,
   relatedTopic,
-  showRelatedTopicExperiment,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -57,7 +62,7 @@ const Fixture = ({
     id={resourceId}
     eventTrackingData={eventTrackingData}
     relatedTopic={relatedTopic}
-    showRelatedTopicExperiment={showRelatedTopicExperiment}
+    showRelatedTopic={showRelatedTopic}
   />
 );
 
@@ -183,6 +188,9 @@ describe('Curation Promo', () => {
       });
       expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
       expect(screen.queryByRole('img')).not.toBeInTheDocument();
+      expect(
+        container.querySelector('picture, [srcset]'),
+      ).not.toBeInTheDocument();
     });
 
     it('should not render a placeholder when imageUrl is missing on non-My News page', () => {
@@ -206,9 +214,7 @@ describe('Curation Promo', () => {
       link: { url: 'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt' },
     };
     it('should render a related topic link when relatedTopic is provided', () => {
-      render(
-        <Fixture relatedTopic={relatedTopic} showRelatedTopicExperiment />,
-      );
+      render(<Fixture relatedTopic={relatedTopic} showRelatedTopic />);
 
       const relatedTopicLink = screen.getByRole('link', {
         name: 'South Africa',
@@ -226,9 +232,7 @@ describe('Curation Promo', () => {
         title: 'A related topic title that is too long to fit on one line',
       };
 
-      render(
-        <Fixture relatedTopic={longRelatedTopic} showRelatedTopicExperiment />,
-      );
+      render(<Fixture relatedTopic={longRelatedTopic} showRelatedTopic />);
 
       expect(
         screen.getByRole('link', { name: longRelatedTopic.title }),
@@ -239,7 +243,7 @@ describe('Curation Promo', () => {
     });
 
     it('should not render a related topic link when relatedTopic is not provided', () => {
-      render(<Fixture showRelatedTopicExperiment />);
+      render(<Fixture showRelatedTopic />);
 
       expect(
         screen.queryByRole('link', { name: 'South Africa' }),
@@ -252,9 +256,7 @@ describe('Curation Promo', () => {
         .spyOn(clickTracking, 'default')
         .mockImplementation(() => ({ onClick: onClickSpy }));
 
-      render(
-        <Fixture relatedTopic={relatedTopic} showRelatedTopicExperiment />,
-      );
+      render(<Fixture relatedTopic={relatedTopic} showRelatedTopic />);
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -274,14 +276,6 @@ describe('Curation Promo', () => {
       expect(onClickSpy).toHaveBeenCalled();
 
       clickTrackerSpy.mockRestore();
-    });
-
-    it('should not render related topic links when the display flag is omitted', () => {
-      const { queryByText } = render(<Fixture relatedTopic={relatedTopic} />, {
-        service: 'pidgin',
-      });
-
-      expect(queryByText('South Africa')).not.toBeInTheDocument();
     });
   });
 });
