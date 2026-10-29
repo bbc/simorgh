@@ -97,7 +97,8 @@ export default ({
   const shouldStyleAsVideoCollection =
     !isLive() &&
     service === 'arabic' &&
-    componentName === SIMPLE_CURATION_GRID &&
+    (componentName === SIMPLE_CURATION_GRID ||
+      componentName === HIERARCHICAL_CURATION_GRID) &&
     isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
