@@ -1,16 +1,21 @@
+import { FollowAction, UASAction } from '#app/models/types/action';
 import type { ActionTooltipStatus } from '.';
 
-type ActionResult<TAction> = {
+const SUCCESS_ACTIONS = new Set<UASAction | FollowAction>([
+  UASAction.SAVE,
+  FollowAction.FOLLOW,
+]);
+
+export type ActionResult = {
   status: 'success' | 'error';
-  action: TAction;
+  action: UASAction | FollowAction;
 };
 
-const getActionTooltipStatus = <TAction>(
-  actionResult: ActionResult<TAction>,
-  successAction: TAction,
+const getActionTooltipStatus = (
+  actionResult: ActionResult,
 ): ActionTooltipStatus => {
   if (actionResult.status === 'error') return 'error';
-  return actionResult.action === successAction ? 'success' : 'removed';
+  return SUCCESS_ACTIONS.has(actionResult.action) ? 'success' : 'removed';
 };
 
 export default getActionTooltipStatus;

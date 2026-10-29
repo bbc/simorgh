@@ -63,8 +63,6 @@ const FollowTopicButtonAuthenticatedInner = ({
     trackingNamePrefix: 'follow-topic',
     resourceId: topicId,
     isDarkUi,
-    getTooltipStatus: result =>
-      getActionTooltipStatus(result, FollowAction.FOLLOW),
   });
 
   if (!followTopicButton) return null;
@@ -118,7 +116,7 @@ const FollowTopicButtonAuthenticatedInner = ({
       />
       {isTooltipVisible && actionResult && followTopicTooltip && (
         <ActionTooltip
-          status={getActionTooltipStatus(actionResult, FollowAction.FOLLOW)}
+          status={getActionTooltipStatus(actionResult)}
           content={getActionTooltipContent(followTopicTooltip, {
             topicName: topicData.title,
             onMyNewsLinkClick: onMyNewsLinkClickTrack,

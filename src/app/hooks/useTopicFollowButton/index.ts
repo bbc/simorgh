@@ -19,14 +19,10 @@ import {
   UAS_ERROR_ACTIONS,
 } from '#app/hooks/useErrorTracking/errorTracking.const';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { FollowAction } from '#app/models/types/action';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASMetadataSync from '../useUASMetadataSync';
-
-enum FollowAction {
-  FOLLOW = 'follow',
-  UNFOLLOW = 'unfollow',
-}
 
 export type FollowActionResult = {
   status: 'success' | 'error';

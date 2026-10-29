@@ -68,7 +68,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     trackingNamePrefix: 'save-article',
     resourceId: articleId,
     isDarkUi,
-    getTooltipStatus: result => getActionTooltipStatus(result, UASAction.SAVE),
   });
 
   if (!saveArticleButton) return null;
@@ -115,7 +114,7 @@ const SaveArticleButtonAuthenticatedInner = ({
       />
       {isTooltipVisible && actionResult && actionTooltip && (
         <ActionTooltip
-          status={getActionTooltipStatus(actionResult, UASAction.SAVE)}
+          status={getActionTooltipStatus(actionResult)}
           content={getActionTooltipContent(actionTooltip, {
             onMyNewsLinkClick: onMyNewsLinkClickTrack,
           })}

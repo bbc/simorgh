@@ -1,26 +1,24 @@
 import { useEffect, useState } from 'react';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import type { ActionTooltipStatus } from '#app/components/ActionTooltip';
+import getActionTooltipStatus, {
+  type ActionResult,
+} from '#app/components/ActionTooltip/getActionTooltipStatus';
 
-interface UseActionTooltipProps<TActionResult> {
+interface UseActionTooltipProps<TActionResult extends ActionResult> {
   actionResult: TActionResult | null;
   resetActionResult: () => void;
   trackingNamePrefix: string;
   resourceId?: string;
   isDarkUi: boolean;
-  getTooltipStatus: (
-    actionResult: NonNullable<TActionResult>,
-  ) => ActionTooltipStatus;
 }
 
-const useActionTooltip = <TActionResult>({
+const useActionTooltip = <TActionResult extends ActionResult>({
   actionResult,
   resetActionResult,
   trackingNamePrefix,
   resourceId,
   isDarkUi,
-  getTooltipStatus,
 }: UseActionTooltipProps<TActionResult>) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
@@ -30,7 +28,7 @@ const useActionTooltip = <TActionResult>({
 
   const tooltipViewTracker = useViewTracker({
     componentName: `${trackingNamePrefix}-tooltip-view-${
-      actionResult ? getTooltipStatus(actionResult) : 'none'
+      actionResult ? getActionTooltipStatus(actionResult) : 'none'
     }`,
     viewTrackerKey: actionResult,
   });
