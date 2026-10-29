@@ -21,6 +21,7 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 jest.mock('#app/components/MediaLoader', () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="media-loader" />),
+  BumpLoader: () => null,
 }));
 
 describe('Live Page Header', () => {
