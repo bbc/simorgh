@@ -221,7 +221,9 @@ const styles = {
       },
       '.promo-paragraph': {
         display: 'none',
-        [mq.GROUP_2_MIN_WIDTH]: {
+      },
+      '&:first-of-type .promo-paragraph': {
+        [mq.GROUP_3_MIN_WIDTH]: {
           display: 'block',
         },
       },
