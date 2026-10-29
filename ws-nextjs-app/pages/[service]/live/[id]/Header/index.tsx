@@ -45,7 +45,9 @@ const Header = ({
 
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const { isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
+  const { enabled: electionBannerEnabled } = useToggle(
+    'livePageElectionBanner',
+  );
   const hasHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const hasLiveMediaStream = Boolean(mediaCollections?.length);
   const {

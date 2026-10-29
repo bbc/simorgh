@@ -422,7 +422,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={summariesWithRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -438,7 +438,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -471,7 +471,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={summariesWithLongRelatedTopic}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -491,7 +491,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',
@@ -530,7 +530,7 @@ describe('Hierarchical Grid Curation', () => {
         headingLevel={headingLevel}
         summaries={fixture}
         eventTrackingData={minimalEventTrackingData}
-        showRelatedTopicExperiment
+        showRelatedTopic
       />,
       {
         service: 'pidgin',

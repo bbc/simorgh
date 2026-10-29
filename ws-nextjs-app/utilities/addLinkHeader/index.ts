@@ -1,7 +1,11 @@
 import { NextPageContext } from 'next/types';
 import getAssetOrigins from '#utilities/getAssetOrigins';
 
-const addLinkHeader = ({ ctx }: { ctx: NextPageContext }) => {
+const addLinkHeader = ({
+  ctx,
+}: {
+  ctx: Pick<NextPageContext, 'pathname' | 'res'>;
+}) => {
   const { dnsPrefetchOrigins, preconnectOrigins } = getAssetOrigins(
     ctx.pathname,
   );
