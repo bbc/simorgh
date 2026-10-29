@@ -166,7 +166,7 @@ const styles = {
   videoCollection: ({ mq, palette, spacings }: Theme) =>
     css({
       '&:first-of-type': {
-        [mq.GROUP_3_MIN_WIDTH]: {
+        [mq.GROUP_3_ONLY]: {
           gridColumn: '1 / -1',
         },
       },
@@ -243,16 +243,15 @@ const styles = {
     }),
   videoCollectionList: ({ mq }: Theme) =>
     css({
+      display: 'grid',
       listStyleType: 'none',
       padding: 0,
       margin: 0,
       [mq.GROUP_3_MIN_WIDTH]: {
-        display: 'grid',
         gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
         gap: `${pixelsToRem(16)}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'grid',
         gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
         gap: `${pixelsToRem(16)}rem`,
       },

@@ -18,22 +18,30 @@ import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
+const getStyles = (
+  promoCount: number,
+  i: number,
+  mq: Theme['mq'],
+  desktopOnly = false,
+) => {
   return css({
-    [mq.GROUP_1_MAX_WIDTH]: {
-      ...SMALL[promoCount - 1][i],
-    },
-    [mq.GROUP_2_ONLY]: {
-      ...MOBILE[promoCount - 1][i],
-    },
-    [mq.GROUP_3_ONLY]: {
-      ...TABLET[promoCount - 1][i],
-    },
+    ...(!desktopOnly && {
+      [mq.GROUP_1_MAX_WIDTH]: {
+        ...SMALL[promoCount - 1][i],
+      },
+      [mq.GROUP_2_ONLY]: {
+        ...MOBILE[promoCount - 1][i],
+      },
+      [mq.GROUP_3_ONLY]: {
+        ...TABLET[promoCount - 1][i],
+      },
+    }),
     [mq.GROUP_4_MIN_WIDTH]: {
       ...DESKTOP[promoCount - 1][i],
     },
   });
 };
+
 const HiearchicalGrid = ({
   summaries,
   headingLevel,
@@ -225,9 +233,8 @@ const HiearchicalGrid = ({
               key={promo.id}
               css={({ mq }: Theme) => [
                 styles.item,
-                isVideoCollection
-                  ? styles.videoCollection
-                  : getStyles(promoItems.length, i, mq),
+                isVideoCollection && styles.videoCollection,
+                getStyles(promoItems.length, i, mq, isVideoCollection),
               ]}
             >
               {inSituMediaBlocks ? (
