@@ -5,9 +5,9 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { matchers } from '@emotion/jest';
 import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
-import { GREY_2, GREY_5 } from '#app/components/ThemeProvider/palette';
+import { GREY_2, GREY_5, GREY_10 } from '#app/components/ThemeProvider/palette';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
-import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ScrollableTabs from '.';
 
 jest.mock('#app/hooks/useClickTrackerHandler', () => ({
@@ -132,6 +132,58 @@ describe('ScrollableTabs', () => {
     expect(screen.getByTestId('scroll-end')).toBeInTheDocument();
   });
 
+  it.each(['portuguese', 'arabic'] as const)(
+    'should disable scroll arrows within a pixel of either end for %s',
+    service => {
+      render(
+        <ScrollableTabs
+          tabs={mockTabs}
+          activeTabId="tab-1"
+          onTabChange={jest.fn()}
+          labelledBy="heading-id"
+        />,
+        { service },
+      );
+
+      const tabList = screen.getByRole('tablist');
+      const startButton = screen.getByTestId('scroll-start');
+      const endButton = screen.getByTestId('scroll-end');
+      const direction = service === 'arabic' ? -1 : 1;
+
+      Object.defineProperties(tabList, {
+        clientWidth: { value: 300 },
+        scrollWidth: { value: 900 },
+      });
+
+      const scrollTo = (position: number) => {
+        tabList.scrollLeft = position * direction;
+        fireEvent.scroll(tabList);
+      };
+
+      scrollTo(200);
+      expect(startButton).toBeEnabled();
+      expect(endButton).toBeEnabled();
+
+      [1, 0.5, 0].forEach(position => {
+        scrollTo(position);
+        expect(startButton).toBeDisabled();
+        expect(endButton).toBeEnabled();
+      });
+
+      scrollTo(1.5);
+      expect(startButton).toBeEnabled();
+
+      [599, 599.5, 600].forEach(position => {
+        scrollTo(position);
+        expect(startButton).toBeEnabled();
+        expect(endButton).toBeDisabled();
+      });
+
+      scrollTo(598.5);
+      expect(endButton).toBeEnabled();
+    },
+  );
+
   it('should only render the divider from 600px and above', () => {
     const { container } = render(
       <ScrollableTabs
@@ -177,4 +229,39 @@ describe('ScrollableTabs', () => {
       target: 'svg',
     });
   });
+
+  it.each([
+    { pageType: ARTICLE_PAGE, disabledColour: GREY_5, background: GREY_2 },
+    {
+      pageType: MEDIA_ARTICLE_PAGE,
+      disabledColour: GREY_2,
+      background: GREY_10,
+    },
+  ])(
+    'should keep disabled arrows distinct from the $pageType background when the device prefers dark mode',
+    ({ pageType, disabledColour, background }) => {
+      render(
+        <ScrollableTabs
+          tabs={mockTabs}
+          activeTabId="tab-1"
+          onTabChange={jest.fn()}
+          labelledBy="heading-id"
+        />,
+        { pageType, service: 'portuguese' },
+      );
+
+      ['scroll-start', 'scroll-end'].forEach(testId => {
+        const button = screen.getByTestId(testId);
+
+        expect(button).toBeDisabled();
+        expect(button).toHaveStyleRule('color', disabledColour, {
+          target: ':disabled',
+        });
+        expect(button).not.toHaveStyleRule('color', background, {
+          target: ':disabled',
+          media: '(prefers-color-scheme: dark)',
+        });
+      });
+    },
+  );
 });
