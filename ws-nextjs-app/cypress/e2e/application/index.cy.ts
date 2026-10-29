@@ -39,7 +39,7 @@ describe('Application', () => {
 });
 
 describe('Application unknown route error pages', () => {
-  if (Cypress.env('APP_ENV') === 'local') {
+  if (Cypress.expose('APP_ENV') === 'local') {
     const unknownRoutes = [
       '/foobar',
       '/foobar.amp',

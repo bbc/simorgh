@@ -61,7 +61,7 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
       },
     );
 
-    if (Cypress.env('APP_ENV') === 'local') {
+    if (Cypress.expose('APP_ENV') === 'local') {
       runCanonicalAdsTests({ service });
     }
 

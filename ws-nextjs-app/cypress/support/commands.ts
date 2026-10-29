@@ -107,7 +107,7 @@ const testResponseCodeAndType = ({
       ).to.include(type);
 
       // Ensure we're not seeing the Mozart fallback during smoke testing
-      if (Cypress.env('SMOKE') && !allowFallback) {
+      if (Cypress.expose('SMOKE') && !allowFallback) {
         try {
           expect(
             headers,

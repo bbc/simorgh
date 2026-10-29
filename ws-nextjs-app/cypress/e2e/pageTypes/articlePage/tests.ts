@@ -53,7 +53,7 @@ export default ({
       }
     }
 
-    if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') !== 'live') {
+    if (serviceHasInlineLink(service) && Cypress.expose('APP_ENV') !== 'live') {
       it('should have an inline link to an article page', () => {
         cy.get('a[href*="/articles/"]')
           .should('have.attr', 'href')

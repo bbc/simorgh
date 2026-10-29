@@ -9,7 +9,7 @@ export default ({ service, pageType, path }: ServiceParametersType) => {
 
     describeOrSkip('Media Player', () => {
       it('should render an iframe with a valid URL', () => {
-        if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
+        if (!`${Cypress.expose('currentPath')}`.includes('/russian/av/')) {
           cy.get(`amp-iframe`).should('be.visible');
 
           cy.get('amp-iframe').then($ampIframe => {

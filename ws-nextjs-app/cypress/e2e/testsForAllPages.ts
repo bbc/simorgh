@@ -19,7 +19,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
         service !== 'sport' &&
         service !== 'newsround' &&
         service !== 'news' &&
-        Cypress.env('APP_ENV') !== 'local'
+        Cypress.expose('APP_ENV') !== 'local'
       ) {
         topicTagsTest();
       } else {

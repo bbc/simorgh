@@ -242,7 +242,7 @@ const atiAnalyticsTestSuites = [
 ] as unknown as TestDataType[];
 
 // TC2 MAPs  do not support AMP pages
-const tc2CanonicalTestSuites = Cypress.env('SMOKE')
+const tc2CanonicalTestSuites = Cypress.expose('SMOKE')
   ? // DISABLED DUE TO AN UNKNOWN FAULT WITH TC2 MAPS 500 ERROR FLAKES
     // [
     //   {
@@ -346,7 +346,7 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
       },
     ];
 
-const canonicalTestSuites = Cypress.env('SMOKE')
+const canonicalTestSuites = Cypress.expose('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
@@ -359,7 +359,7 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
 });
 
 // SKIPPED: We are not able to set page-type headers in cy.click and cy.back
-const liteTestSuites = Cypress.env('SMOKE')
+const liteTestSuites = Cypress.expose('SMOKE')
   ? canonicalTestSuites
       .filter(
         ({ service }) => !['news', 'sport', 'newsround'].includes(service),

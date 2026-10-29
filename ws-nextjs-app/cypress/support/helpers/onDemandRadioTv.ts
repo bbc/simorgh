@@ -42,7 +42,7 @@ export const isBrand = jsonData => {
 };
 
 export const overrideRendererOnTest = () => {
-  if (Cypress.env('APP_ENV') === 'test') {
+  if (Cypress.expose('APP_ENV') === 'test') {
     return '?renderer_env=live';
   }
   return '';

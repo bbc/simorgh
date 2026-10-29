@@ -16,7 +16,7 @@ export type EnvironmentConfigType = {
 export type Environment = 'live' | 'test' | 'local';
 
 type CypressEnvironmentReader = {
-  env: (name: string) => string | boolean | undefined;
+  expose: (name: string) => string | boolean | undefined;
 };
 
 const config = {
@@ -97,7 +97,7 @@ export const getEnvConfig = (env: Environment, uk = false) =>
 
 const getCurrentEnvConfig = () => {
   const cypressEnvironmentReader = getCypressEnvironmentReader();
-  const currentEnvironment = cypressEnvironmentReader?.env('APP_ENV');
+  const currentEnvironment = cypressEnvironmentReader?.expose('APP_ENV');
 
   if (!isEnvironment(currentEnvironment)) {
     return getEnvConfig('local');
@@ -105,7 +105,7 @@ const getCurrentEnvConfig = () => {
 
   return getEnvConfig(
     currentEnvironment,
-    Boolean(cypressEnvironmentReader?.env('UK')),
+    Boolean(cypressEnvironmentReader?.expose('UK')),
   );
 };
 

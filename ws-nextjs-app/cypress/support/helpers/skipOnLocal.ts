@@ -1,1 +1,1 @@
-export default Cypress.env('APP_ENV') !== 'local' ? describe : describe.skip;
+export default Cypress.expose('APP_ENV') !== 'local' ? describe : describe.skip;

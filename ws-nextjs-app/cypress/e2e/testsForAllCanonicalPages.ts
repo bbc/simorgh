@@ -8,7 +8,7 @@ import { ServiceParametersType } from '../types';
 export default ({ service, pageType }: ServiceParametersType) => {
   if (pageType && pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
-      if (Cypress.env('SMOKE')) {
+      if (Cypress.expose('SMOKE')) {
         describe(
           'ATI',
           {

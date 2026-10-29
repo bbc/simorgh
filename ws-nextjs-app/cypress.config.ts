@@ -11,14 +11,22 @@ export default defineConfig({
   retries: 3,
   e2e: {
     setupNodeEvents(on, config) {
-      if (!config.env.APP_ENV) {
-        config.env.APP_ENV = 'local';
+      // CYPRESS_* environment variables only populate `env`, so copy them into `expose`
+      // https://docs.cypress.io/app/references/migration-guide#Migrating-to-Cypress-160
+      ['APP_ENV', 'SMOKE', 'UK', 'SKIP_EU', 'ONLY_SERVICE'].forEach(key => {
+        if (config.env[key] !== undefined) {
+          config.expose[key] = config.env[key];
+        }
+      });
+
+      if (!config.expose.APP_ENV) {
+        config.expose.APP_ENV = 'local';
       }
-      const appEnv = config.env.APP_ENV;
-      const env = config.env[appEnv];
+      const appEnv = config.expose.APP_ENV;
+      const env = config.expose[appEnv];
 
       const { parsed } = dotenv.config({
-        path: `./envConfig/${config.env.APP_ENV}.env`,
+        path: `./envConfig/${config.expose.APP_ENV}.env`,
       });
 
       const appConfig = parsed as Record<string, string>;
@@ -33,10 +41,10 @@ export default defineConfig({
       /* eslint-disable no-console */
       console.log('\n\n\n\n\n');
       console.log('Cypress running config:');
-      console.log('SMOKE:', config.env.SMOKE);
-      console.log('APP_ENV:', config.env.APP_ENV);
+      console.log('SMOKE:', config.expose.SMOKE);
+      console.log('APP_ENV:', config.expose.APP_ENV);
       console.log('Base URL:', config.baseUrl);
-      // console.log('UK:', config.env.UK);
+      // console.log('UK:', config.expose.UK);
       console.log('\n\n\n\n\n');
       /* eslint-enable no-console */
 
@@ -110,7 +118,7 @@ export default defineConfig({
 
       return config;
     },
-    env: {
+    expose: {
       APP_ENV: 'local',
       SMOKE: true,
       UK: false,

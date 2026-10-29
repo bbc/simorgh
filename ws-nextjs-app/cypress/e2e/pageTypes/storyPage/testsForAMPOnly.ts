@@ -14,7 +14,7 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
       mostReadAssertions({ service, variant });
     });
 
-    if (Cypress.env('APP_ENV') === 'local') {
+    if (Cypress.expose('APP_ENV') === 'local') {
       runAMPAdsTests({ service });
     }
   });

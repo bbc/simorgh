@@ -40,7 +40,7 @@ export default ({
   headers,
   clearCache,
 }: FunctionProps) => {
-  const serviceToRun = Cypress.env('ONLY_SERVICE');
+  const serviceToRun = Cypress.expose('ONLY_SERVICE');
 
   let testSuitesToRun = testSuites;
   if (serviceToRun) {
@@ -52,7 +52,7 @@ export default ({
   testSuitesToRun.forEach(testData => {
     const { path, tests, runforEnv, ...params } = testData;
 
-    const cypressEnv = Cypress.env('APP_ENV');
+    const cypressEnv = Cypress.expose('APP_ENV');
 
     if (runforEnv.includes(cypressEnv)) {
       describe(

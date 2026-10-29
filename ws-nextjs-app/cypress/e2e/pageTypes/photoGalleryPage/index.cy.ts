@@ -168,7 +168,7 @@ const atiAnalyticsTestSuites = [
   },
 ] as unknown as TestDataType[];
 
-const canonicalTestSuites = Cypress.env('SMOKE')
+const canonicalTestSuites = Cypress.expose('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 

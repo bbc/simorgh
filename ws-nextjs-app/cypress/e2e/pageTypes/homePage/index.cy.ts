@@ -260,7 +260,7 @@ const atiAnalyticsTestSuites = [
 let smokeTests: typeof testSuites = [];
 
 // TEMP: Disable homepage smoke tests on the test environment due to flakiness
-if (Cypress.env('SMOKE')) {
+if (Cypress.expose('SMOKE')) {
   smokeTests = testSuites.map(testSuite => {
     return {
       ...testSuite,
@@ -297,7 +297,7 @@ runTestsForPage({
     'page-type': 'home',
     'BBC-Adverts': 'true',
   },
-  testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
+  testSuites: Cypress.expose('SMOKE') ? smokeTests : testSuites,
 });
 
 runTestsForPage({

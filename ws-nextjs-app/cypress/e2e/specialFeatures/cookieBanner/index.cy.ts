@@ -147,9 +147,9 @@ const nonSmokeTestSuites = [
   },
 ];
 
-const testSuites = Cypress.env('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
+const testSuites = Cypress.expose('SMOKE') ? smokeTestSuites : nonSmokeTestSuites;
 
-if (!Cypress.env('SKIP_EU')) {
+if (!Cypress.expose('SKIP_EU')) {
   runTestsForPage({
     pageType: 'all',
     testSuites,
