@@ -57,7 +57,34 @@ describe('liveMediaStream', () => {
     );
   });
 
-  it('Plays the media once the player has loaded after the first click.', async () => {
+  it.each([
+    {
+      title:
+        'Plays the media once the player has loaded after the first click.',
+      warning: null,
+      closeBeforeReady: false,
+      playCalls: 1,
+    },
+    {
+      title:
+        'Does not play the media once the player has loaded for Level 1 warnings and above.',
+      warning: [
+        {
+          warning_code: 'L1',
+          short_description: 'some strong language',
+        },
+      ],
+      closeBeforeReady: false,
+      playCalls: 0,
+    },
+    {
+      title:
+        'Does not play the media if it is closed before the player has loaded.',
+      warning: null,
+      closeBeforeReady: true,
+      playCalls: 0,
+    },
+  ])('$title', async ({ warning, closeBeforeReady, playCalls }) => {
     const mockPlayer = {
       load: jest.fn(),
       bind: jest.fn(),
@@ -70,8 +97,12 @@ describe('liveMediaStream', () => {
     window.mediaPlayers = {};
 
     const mediaCollection = JSON.parse(JSON.stringify(fixtureData));
-    delete (mediaCollection[0].model.version as { warnings?: unknown })
-      .warnings;
+    const { version } = mediaCollection[0].model;
+    if (warning) {
+      version.warnings = { warning_text: '', warning };
+    } else {
+      delete version.warnings;
+    }
 
     render(
       <LiveHeaderMedia
@@ -79,7 +110,9 @@ describe('liveMediaStream', () => {
       />,
     );
 
-    fireEvent.click(screen.getByTestId('watch-now-close-button'));
+    const playCloseButton = screen.getByTestId('watch-now-close-button');
+    fireEvent.click(playCloseButton);
+    if (closeBeforeReady) fireEvent.click(playCloseButton);
 
     const initialisePlayer = mockRequire.mock.calls[0][1];
     await act(async () => initialisePlayer(mockBump));
@@ -92,7 +125,7 @@ describe('liveMediaStream', () => {
     playlistLoaded();
     playlistLoaded();
 
-    expect(mockPlayer.play).toHaveBeenCalledTimes(1);
+    expect(mockPlayer.play).toHaveBeenCalledTimes(playCalls);
   });
 
   it('Displays a warning message when needed.', () => {
