@@ -2,6 +2,7 @@ import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
 import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
@@ -24,6 +25,11 @@ const trackingScripts = ({
       }      
 
       if (isComponentTrackingEnabled) {
+        // Not every page renders ATIAnalytics (e.g. send pages), so ensure sendStaticBeacon exists
+        if (typeof window.sendStaticBeacon !== 'function') {
+          (${addSendStaticBeaconToWindow.toString()})();
+        }
+
         (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
 
         if (isComponentViewTrackingEnabled) {
