@@ -253,3 +253,15 @@ Next steps: [follow-up ticket proposals](./Nextjs-image-adoption-jira-tickets.md
 **Why not claim a performance win now?** The PoC proves rendering feasibility, not faster pages or lower cost; iChef still transforms and delivers images.
 
 > **Approve the direction now. Approve production migration only after compatibility and performance evidence.**
+
+### Why faster pages or lower cost are not guaranteed
+
+- **Same image service.** Our custom loader builds iChef URLs; it does not add Next.js image compression or replace iChef delivery.
+- **Same bytes can mean the same download time.** If the selected width, format and quality stay the same, switching the React component alone does not make the image smaller.
+- **The current component already has performance features.** Responsive sources, lazy loading, reserved image space and preload are not new benefits by themselves.
+- **Page speed depends on more than images.** Request timing, caching, network conditions, JavaScript and server work also matter. The new implementation could improve or regress these.
+- **Delivery savings require a measurable change.** Lower transferred bytes, fewer requests or less transformation work might reduce cost, depending on the service's cost model. Changing the renderer alone proves none of these.
+
+**What we can claim now:** rendering feasibility and an opportunity to simplify maintenance.
+
+**What needs evidence:** faster pages, lower infrastructure cost and the size of any maintenance saving. Compare old and new independently in production mode, using equivalent images and cold/warm caches.
