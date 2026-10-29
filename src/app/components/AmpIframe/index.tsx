@@ -1,6 +1,7 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
 type Props = {
@@ -66,6 +67,8 @@ const AmpIframe = ({
     layout = 'responsive',
   },
 }: ampMetadata) => {
+  const { translations } = use(ServiceContext);
+
   return (
     <>
       <AmpHead />
@@ -80,7 +83,7 @@ const AmpIframe = ({
           {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
           <div overflow="" css={styles.overflow}>
             <button type="button" css={styles.button}>
-              Show more
+              {translations.showMore}
             </button>
           </div>
           <amp-img layout="fill" src={image} placeholder="true" />

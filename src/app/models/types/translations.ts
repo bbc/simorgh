@@ -21,6 +21,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  showMore?: string;
   moreOnThis?: string;
   navMenuText: string;
   liteSite?: LiteSiteTranslations;
