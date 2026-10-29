@@ -70,16 +70,11 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    B["Billboard / MaskedImage"] --> P["prepareIchefImage"]
-    F["FrostedGlass / caption / related images"] --> C
-    O["Promo.Image / MessageBanner / PortraitVideoPromo"] --> R
-    subgraph Shared["Shared imageSrcSets module"]
-        P --> C["createIchefSrcSet"]
-        R["createResponsiveSrcSet"]
-    end
-    C --> I["Simorgh Image primitive"]
-    R --> I
-    E["EpisodeList: supplied image props"] --> I
+    C["Image consumers<br/>Billboard, promos, banners,<br/>captions and related images"]
+    C --> H["Shared image preparation<br/>imageSrcSets<br/>URLs, source sets and MIME types"]
+    H --> I["One renderer<br/>Simorgh Image primitive"]
+    style C fill:#e0f2fe,stroke:#0369a1,color:#111827
+    style H fill:#e0f2fe,stroke:#0369a1,color:#111827
     style I fill:#dcfce7,stroke:#15803d,color:#111827
 ```
 
@@ -87,7 +82,7 @@ flowchart LR
 
 **Still local:** some width, `sizes`, format and layout choices.
 
-These are simplified data flows from the inspected branch, not deployed-version claims. The historical StoryPromo label is not mapped to an exact current component here.
+The diagram groups the shared helpers as one preparation layer, not one mandatory function. EpisodeList forwards supplied props directly to the same renderer. These are inspected branch flows, not deployed-version claims; the historical StoryPromo label is not mapped here.
 
 Files: [shared helpers](../src/app/utilities/imageSrcSets/index.ts), [current Image](../src/app/components/Image/index.tsx).
 
