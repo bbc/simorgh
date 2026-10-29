@@ -1,5 +1,7 @@
 # Simorgh images: simplify first, adopt safely
 
+**Research:** [Next.js Image for Simorgh — findings and recommendation](https://www.dropbox.com/scl/fi/tl110z47w2iceakef8duq/Next.js-Image-for-Simorgh.paper?rlkey=sdpic0zfp4mpiorfbo4gyeqje&dl=0)
+
 **Shared image logic today. Next.js rendering next.**
 
 ## 1. Why this work?
