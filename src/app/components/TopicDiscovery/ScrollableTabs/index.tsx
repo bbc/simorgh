@@ -7,6 +7,9 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 
 import styles from './index.styles';
 
+// Scroll offsets can be fractional, while element widths are rounded to pixels.
+const SCROLL_TOLERANCE_PX = 1;
+
 type ScrollableTabsProps = {
   tabs: { id: string; label: string }[];
   activeTabId: string;
@@ -45,11 +48,14 @@ const ScrollableTabs = ({
 
     const { scrollLeft, scrollWidth, clientWidth } = el;
     const absScroll = Math.abs(scrollLeft);
-    const isOverflowing = scrollWidth > clientWidth + 1;
+    const isOverflowing = scrollWidth > clientWidth + SCROLL_TOLERANCE_PX;
 
     setHasOverflow(isOverflowing);
-    setCanScrollStart(isOverflowing && absScroll > 0);
-    setCanScrollEnd(isOverflowing && absScroll + clientWidth + 1 < scrollWidth);
+    setCanScrollStart(isOverflowing && absScroll > SCROLL_TOLERANCE_PX);
+    setCanScrollEnd(
+      isOverflowing &&
+        absScroll + clientWidth + SCROLL_TOLERANCE_PX < scrollWidth,
+    );
   }, []);
 
   useEffect(() => {
