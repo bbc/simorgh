@@ -20,7 +20,6 @@ import {
   EventMapping,
   MediaBlock,
   MediaPlayerEvents,
-  Player,
   PlayerConfig,
 } from './types';
 import Caption from '../Caption';
@@ -40,8 +39,6 @@ import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
 import Message from './Message';
-import { BumpLoader, waitForRequireJs } from './requireJs';
-import type { RequireJs } from './requireJs';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   LIVE_PAGE,
@@ -50,6 +47,26 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 ];
 
 const logger = nodeLogger(__filename);
+
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
+  <Helmet>
+    <script
+      type="text/javascript"
+      {...(nonce ? { nonce } : {})}
+      src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
+    />
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
+      {`bbcRequireMap = {
+            "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
+        }
+        require({ paths: bbcRequireMap, waitSeconds: 30 });`}
+    </script>
+  </Helmet>
+);
 
 const AdvertTagLoader = () => {
   const location = useLocation();
@@ -136,7 +153,6 @@ type MediaContainerProps = {
   eventMapping?: EventMapping;
   shouldHandleFakeFullscreen?: boolean;
   loadPlayerOnInitialRender?: boolean;
-  onPlayerReady?: (mediaPlayer: Player) => void;
   onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
@@ -151,7 +167,6 @@ const MediaContainer = ({
   eventMapping,
   shouldHandleFakeFullscreen = false,
   loadPlayerOnInitialRender = false,
-  onPlayerReady,
   onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
@@ -161,157 +176,96 @@ const MediaContainer = ({
   onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
-    let isCancelled = false;
-    let registeredPlayer: ReturnType<BumpType['player']> | undefined;
-    let hasNotifiedPlayerReady = false;
-    const requireJsWait = waitForRequireJs();
+    try {
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
+        if (playerElementRef?.current && playerConfig) {
+          const initPlayer = async () => {
+            const autoplayOverride = loadPlayerOnInitialRender
+              ? { autoplay: false }
+              : {};
+            const fakeFullscreenOverride = shouldHandleFakeFullscreen
+              ? { supportFakeFullscreen: true }
+              : {};
 
-    const removeRegisteredPlayer = () => {
-      if (uniqueId == null || !registeredPlayer) return;
+            const effectiveConfig = {
+              ...playerConfig,
+              ...autoplayOverride,
+              ...fakeFullscreenOverride,
+            };
 
-      if (window.mediaPlayers?.[uniqueId] === registeredPlayer) {
-        delete window.mediaPlayers[uniqueId];
-      }
-    };
+            const mediaPlayer = Bump.player(
+              playerElementRef.current,
+              effectiveConfig,
+            );
 
-    const initPlayer = async (Bump: BumpType) => {
-      if (isCancelled || !playerElementRef.current || !playerConfig) return;
+            if (uniqueId != null) {
+              const { mediaPlayers } = window;
+              if (mediaPlayers == null) {
+                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+              } else {
+                mediaPlayers[uniqueId] = mediaPlayer;
+              }
+            }
 
-      const autoplayOverride = loadPlayerOnInitialRender
-        ? { autoplay: false }
-        : {};
-      const fakeFullscreenOverride = shouldHandleFakeFullscreen
-        ? { supportFakeFullscreen: true }
-        : {};
+            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+              Object.keys(eventMapping).forEach(bindingKey => {
+                const key = bindingKey as MediaPlayerEvents;
+                const handler = eventMapping[key];
 
-      const effectiveConfig = {
-        ...playerConfig,
-        ...autoplayOverride,
-        ...fakeFullscreenOverride,
-      };
+                if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
 
-      const mediaPlayer = Bump.player(
-        playerElementRef.current,
-        effectiveConfig,
-      );
+            if (shouldHandleFakeFullscreen) {
+              mediaPlayer.bind('enterFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(true);
+              });
+              mediaPlayer.bind('exitFakeFullscreen', () => {
+                onFakeFullscreenChangeRef.current?.(false);
+              });
+            }
 
-      if (isCancelled || !playerElementRef.current) return;
+            if (showAds) {
+              const adTag = await window.dotcom.ads.getAdTag();
 
-      registeredPlayer = mediaPlayer;
+              if (adTag) {
+                mediaPlayer.loadPlugin(
+                  {
+                    swf: 'name:dfpAds.swf',
+                    html: 'name:dfpAds.js',
+                  },
+                  {
+                    name: 'AdsPluginParameters',
+                    data: {
+                      adTag,
+                    },
+                  },
+                );
+              }
 
-      if (uniqueId != null) {
-        const { mediaPlayers } = window;
-        if (mediaPlayers == null) {
-          window.mediaPlayers = { [uniqueId]: mediaPlayer };
-        } else {
-          mediaPlayers[uniqueId] = mediaPlayer;
+              mediaPlayer.bind('playlistLoaded', async () => {
+                const updatedAdTag = await window.dotcom.ads.getAdTag();
+
+                if (updatedAdTag) {
+                  mediaPlayer.dispatchEvent(
+                    'bbc.smp.plugins.ads.event.updateAdTag',
+                    {
+                      adTag: updatedAdTag,
+                    },
+                  );
+                }
+              });
+            }
+
+            mediaPlayer.load();
+          };
+
+          initPlayer();
         }
-      }
-
-      if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-        Object.keys(eventMapping).forEach(bindingKey => {
-          const key = bindingKey as MediaPlayerEvents;
-          const handler = eventMapping[key];
-
-          if (handler) mediaPlayer.bind(key, handler);
-        });
-      }
-
-      if (shouldHandleFakeFullscreen) {
-        mediaPlayer.bind('enterFakeFullscreen', () => {
-          onFakeFullscreenChangeRef.current?.(true);
-        });
-        mediaPlayer.bind('exitFakeFullscreen', () => {
-          onFakeFullscreenChangeRef.current?.(false);
-        });
-      }
-
-      if (showAds) {
-        const adTag = await window.dotcom.ads.getAdTag();
-
-        if (isCancelled || !playerElementRef.current) {
-          removeRegisteredPlayer();
-          return;
-        }
-
-        if (adTag) {
-          mediaPlayer.loadPlugin(
-            {
-              swf: 'name:dfpAds.swf',
-              html: 'name:dfpAds.js',
-            },
-            {
-              name: 'AdsPluginParameters',
-              data: {
-                adTag,
-              },
-            },
-          );
-        }
-
-        mediaPlayer.bind('playlistLoaded', async () => {
-          const updatedAdTag = await window.dotcom.ads.getAdTag();
-
-          if (!isCancelled && updatedAdTag) {
-            mediaPlayer.dispatchEvent('bbc.smp.plugins.ads.event.updateAdTag', {
-              adTag: updatedAdTag,
-            });
-          }
-        });
-      }
-
-      if (isCancelled || !playerElementRef.current) {
-        removeRegisteredPlayer();
-        return;
-      }
-
-      mediaPlayer.bind('playlistLoaded', () => {
-        if (hasNotifiedPlayerReady || isCancelled) return;
-
-        hasNotifiedPlayerReady = true;
-        onPlayerReady?.(mediaPlayer);
       });
-      mediaPlayer.load();
-    };
-
-    const requestPlayer = (requireJs: RequireJs) => {
-      if (isCancelled || !playerElementRef.current) return;
-
-      try {
-        requireJs(
-          ['bump-4'],
-          (Bump: BumpType) => {
-            if (isCancelled) return;
-
-            initPlayer(Bump).catch(error => {
-              if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
-            });
-          },
-          error => {
-            if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
-          },
-        );
-      } catch (error) {
-        if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
-      }
-    };
-
-    requireJsWait.promise.then(
-      readiness => {
-        if (isCancelled || readiness.status === 'failed') return;
-
-        requestPlayer(readiness.requireJs);
-      },
-      error => {
-        if (!isCancelled) logger.error(MEDIA_PLAYER_STATUS, error);
-      },
-    );
-
-    return () => {
-      isCancelled = true;
-      requireJsWait.cancel();
-      removeRegisteredPlayer();
-    };
+    } catch (error) {
+      logger.error(MEDIA_PLAYER_STATUS, error);
+    }
   }, [
     playerConfig,
     showAds,
@@ -319,7 +273,6 @@ const MediaContainer = ({
     eventMapping,
     shouldHandleFakeFullscreen,
     loadPlayerOnInitialRender,
-    onPlayerReady,
   ]);
 
   return (
@@ -343,7 +296,6 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
-  onPlayerReady?: (mediaPlayer: Player) => void;
   withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
 };
@@ -355,7 +307,6 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
   loadPlayerOnInitialRender = false,
-  onPlayerReady,
   withinFullscreenContainer = false,
   holdingImageURL,
 }: Props) => {
@@ -540,7 +491,6 @@ const MediaLoader = ({
                   eventMapping={eventMapping}
                   shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
                   loadPlayerOnInitialRender={loadPlayerOnInitialRender}
-                  onPlayerReady={onPlayerReady}
                   onFakeFullscreenChange={setFakeFullscreenPageState}
                 />
               )}

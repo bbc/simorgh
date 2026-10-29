@@ -38,17 +38,10 @@ declare global {
     __reverb: {
       __reverbLoadedPromise: Promise<ReverbClient>;
     };
-    requirejs?: {
-      (
-        bumpVersion: string[],
-        callback: (Bump: BumpType) => void,
-        errorCallback?: (error: unknown) => void,
-      ): void;
-      config: (config: {
-        paths: Record<string, string>;
-        waitSeconds: number;
-      }) => void;
-    };
+    requirejs: (
+      bumpVersion: string[],
+      callback: (Bump: BumpType) => void,
+    ) => void;
     embeddedMedia: {
       api: {
         players: () => Record<string, Player>;

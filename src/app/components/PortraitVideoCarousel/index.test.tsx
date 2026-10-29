@@ -8,78 +8,25 @@ import {
   fireEvent,
 } from '../react-testing-library-with-providers';
 import fixture from './fixture';
-import {
-  BumpType,
-  Player,
-  PlayerConfig,
-  PortraitClipMediaBlock,
-} from '../MediaLoader/types';
+import { Player, PortraitClipMediaBlock } from '../MediaLoader/types';
 
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };
 
 const defaultAriaLabel = pidginConfig.default.translations.media.watch;
-const REQUIRE_JS_SRC =
-  'https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js';
-
-type MockRequire = jest.Mock<unknown, unknown[]> & {
-  config: jest.Mock;
-};
-
-const createMockRequire = (): MockRequire => {
-  const mockRequire = jest.fn() as MockRequire;
-  mockRequire.config = jest.fn();
-  return mockRequire;
-};
-
-const createMockPlayer = (): jest.Mocked<Player> => ({
-  currentTime: jest.fn(),
-  dispatchEvent: jest.fn(),
-  load: jest.fn(),
-  play: jest.fn(),
-  playlist: jest.fn(),
-  pause: jest.fn(),
-  previous: jest.fn(),
-  next: jest.fn(),
-  bind: jest.fn(),
-  loadPlugin: jest.fn(),
-  queuePlaylist: jest.fn(),
-  setPreviousPlaylist: jest.fn(),
-  settings: jest.fn(),
-});
-
-const createMockBump = (
-  player = createMockPlayer(),
-): jest.Mocked<BumpType> => ({
-  player: jest.fn(
-    (_div: HTMLDivElement | null, _config: PlayerConfig) => player,
-  ),
-});
-
-const loadRequireJsScript = async () => {
-  const requireScript = Array.from(document.scripts).find(
-    script => script.getAttribute('src') === REQUIRE_JS_SRC,
-  );
-
-  if (!requireScript) return;
-
-  await act(async () => {
-    requireScript.dispatchEvent(new Event('load'));
-  });
-};
 
 describe('PortraitVideoCarousel', () => {
-  beforeEach(() => {
-    window.requirejs = createMockRequire();
-  });
-
-  it('does not pause or reload the Hindi live-page carousel when its parent updates', async () => {
+  it('does not pause or reload the Hindi live-page carousel when its parent updates', () => {
     const blocks = hindiLivePage.data.portraitVideoItems.portraitVideo
       .blocks as PortraitClipMediaBlock[];
-    const mockPlayer = createMockPlayer();
-    const mockRequire = createMockRequire();
-    const mockBump = createMockBump(mockPlayer);
+    const mockPlayer = {
+      load: jest.fn(),
+      bind: jest.fn(),
+      pause: jest.fn(),
+    } satisfies Partial<Player>;
+    const mockRequire = jest.fn();
+    const mockBump = { player: () => mockPlayer };
     const originalRequirejs = window.requirejs;
     const originalEmbeddedMedia = window.embeddedMedia;
     window.requirejs = mockRequire;
@@ -95,12 +42,8 @@ describe('PortraitVideoCarousel', () => {
     );
 
     try {
-      await loadRequireJsScript();
       fireEvent.click(screen.getAllByTestId('promo-button')[0]);
-      await act(async () => Promise.resolve());
-      const initialisePlayer = mockRequire.mock.calls[0][1] as (
-        Bump: BumpType,
-      ) => void;
+      const initialisePlayer = mockRequire.mock.calls[0][1];
       initialisePlayer(mockBump);
       expect(mockPlayer.load).toHaveBeenCalledTimes(1);
 

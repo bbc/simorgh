@@ -1,7 +1,10 @@
-import { memo, use, useCallback, useRef, useState } from 'react';
+import { memo, use, useMemo, useRef, useState } from 'react';
 import Text from '#app/components/Text';
-import { MediaCollection, Player } from '#app/components/MediaLoader/types';
-import MediaLoader from '#app/components/MediaLoader';
+import {
+  EventMapping,
+  MediaCollection,
+} from '#app/components/MediaLoader/types';
+import MediaLoader, { BumpLoader } from '#app/components/MediaLoader';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -38,17 +41,24 @@ const LiveHeaderMedia = ({
   clickCallback = () => null,
 }: LiveHeaderMediaProps) => {
   const { translations } = use(ServiceContext);
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
   const [hasOpenedMedia, setHasOpenedMedia] = useState(false);
   const shouldPlayWhenReady = useRef(false);
   const playerIdRef = useRef<string | undefined>(undefined);
-  const playMediaWhenReady = useCallback((mediaPlayer: Player) => {
-    if (!shouldPlayWhenReady.current) return;
+  // The player is only mounted once the reader first opens the media, so it
+  // won't exist yet on that first click. Play it once its playlist has loaded.
+  const eventMapping: EventMapping = useMemo(
+    () => ({
+      playlistLoaded: () => {
+        if (!shouldPlayWhenReady.current || !playerIdRef.current) return;
 
-    mediaPlayer.play();
-    shouldPlayWhenReady.current = false;
-  }, []);
+        window.mediaPlayers?.[playerIdRef.current]?.play();
+        shouldPlayWhenReady.current = false;
+      },
+    }),
+    [],
+  );
 
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
@@ -114,7 +124,7 @@ const LiveHeaderMedia = ({
       setHasOpenedMedia(true);
       setShowMedia(true);
       if (shouldPlay && mediaPlayer) {
-        mediaPlayer?.play();
+        mediaPlayer.play();
         shouldPlayWhenReady.current = false;
       }
     }
@@ -199,11 +209,13 @@ const LiveHeaderMedia = ({
           )}
         </button>
         <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
+          {/* Load RequireJS upfront so it is ready when the player mounts */}
+          <BumpLoader nonce={nonce} />
           {hasOpenedMedia && (
             <MemoizedMediaPlayer
               blocks={mediaCollection}
               uniqueId={vpid}
-              onPlayerReady={playMediaWhenReady}
+              eventMapping={eventMapping}
             />
           )}
         </div>
