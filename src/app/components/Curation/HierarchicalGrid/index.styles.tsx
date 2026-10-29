@@ -165,6 +165,18 @@ const styles = {
 
   videoCollection: ({ mq, palette, spacings }: Theme) =>
     css({
+      '&:first-of-type': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          gridColumn: '1 / -1',
+        },
+      },
+      '&:first-of-type .promo-text': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(22)}rem`,
+          },
+        },
+      },
       '.promo-image': {
         position: 'relative',
         'div div:last-child': {
@@ -203,7 +215,7 @@ const styles = {
           fontSize: `${pixelsToRem(13)}rem`,
           paddingBottom: `${spacings.DOUBLE}rem`,
         },
-        [mq.GROUP_2_MAX_WIDTH]: {
+        [mq.GROUP_2_MIN_WIDTH]: {
           'h2, h3': {
             fontSize: `${pixelsToRem(18)}rem`,
           },
@@ -225,6 +237,7 @@ const styles = {
       '&:first-of-type .promo-paragraph': {
         [mq.GROUP_3_MIN_WIDTH]: {
           display: 'block',
+          fontSize: `${pixelsToRem(14)}rem`,
         },
       },
     }),
