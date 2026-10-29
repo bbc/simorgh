@@ -1,6 +1,5 @@
 import { Services } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
 import CanonicalNavigation from './index.canonical';
 import {
@@ -21,12 +20,18 @@ import {
   screen,
 } from '../react-testing-library-with-providers';
 
+const STICKY_NAVIGATION_TREATMENT = 'newswb_ws_sticky_navigation';
 const blocks = [{ id: '1', title: 'Story' }];
 
 const navigationProps: ComponentProps<typeof CanonicalNavigation> = {
   topScrollableListItems: scrollableListItems,
   bottomScrollableListItems: scrollableListItems,
   dropdownListItems,
+  stickyTopScrollableListItems: scrollableListItems,
+  stickyBottomScrollableListItems: scrollableListItems,
+  stickyDropdownListItems: dropdownListItems,
+  stickyNavClickTracker: { onClick: jest.fn() },
+  stickyNavExperimentVariant: STICKY_NAVIGATION_TREATMENT,
   menuAnnouncedText: 'menu',
   dir: 'ltr',
 };
@@ -36,6 +41,11 @@ const navigation = (
     topScrollableListItems={scrollableListItems}
     bottomScrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
+    stickyTopScrollableListItems={scrollableListItems}
+    stickyBottomScrollableListItems={scrollableListItems}
+    stickyDropdownListItems={dropdownListItems}
+    stickyNavClickTracker={{ onClick: jest.fn() }}
+    stickyNavExperimentVariant={STICKY_NAVIGATION_TREATMENT}
     menuAnnouncedText="menu"
     dir="ltr"
   />
@@ -201,7 +211,9 @@ describe('Navigation - Canonical', () => {
     const stickyOptions = {
       service: 'mundo' as Services,
       pageType: ARTICLE_PAGE,
-      toggles: toggleConfigs.test,
+      toggles: {
+        topBarOJs: { enabled: true },
+      },
     };
     // Settles the full, non-reduced-motion slide-in animation (scroll
     // handler rAF + two nested position rAFs). Each animation frame is only
@@ -418,55 +430,9 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it.each<Services>([
-        'mundo',
-        'portuguese',
-        'russian',
-        'indonesia',
-        'turkce',
-        'urdu',
-      ])(
-        'shows the sticky navigation bar on the %s edition when developing locally',
-        service => {
-          const { container } = render(articleNavigation, {
-            ...stickyOptions,
-            service,
-            bbcOrigin: 'http://localhost:7081',
-            toggles: toggleConfigs.local,
-          });
-          scrollTo(500);
-          scrollTo(450);
-
-          expect(
-            container.querySelector('[data-e2e="sticky-nav"]'),
-          ).toHaveAttribute('data-sticky-visible', 'true');
-        },
-      );
-
       it.each([
-        ['live', { bbcOrigin: 'https://www.bbc.com' }],
-        ['another service', { service: 'arabic' as Services }],
-        ['Lite', { isLite: true }],
-      ])(
-        'does not show the sticky navigation bar when developing locally and the page is %s',
-        (_, options) => {
-          const { container } = render(navigation, {
-            ...stickyOptions,
-            bbcOrigin: 'http://localhost:7081',
-            toggles: toggleConfigs.local,
-            ...options,
-          });
-
-          expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
-        },
-      );
-
-      it.each([
-        ['another service', { service: 'arabic' as Services }],
         ['Lite', { isLite: true }],
         ['live', { bbcOrigin: 'https://www.bbc.com' }],
-        ['a disabled toggle', { toggles: toggleConfigs.live }],
-        ['a missing toggle', { toggles: {} }],
       ])(
         'does not show the sticky navigation bar when the page is %s',
         (_, options) => {
