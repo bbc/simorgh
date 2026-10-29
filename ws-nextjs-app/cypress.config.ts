@@ -4,6 +4,7 @@ import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-in
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
 import { DefinePlugin } from 'webpack';
 import dotenv from 'dotenv';
+import { gzipSync } from 'zlib';
 import { webpackDirAlias } from '../dirAlias';
 
 export default defineConfig({
@@ -113,6 +114,20 @@ export default defineConfig({
           // eslint-disable-next-line no-console
           console.error(message);
           return null;
+        },
+        // Replaces cy.exec(), which was removed in Cypress 16
+        async getPageSizeInKB({
+          url,
+          isCompressed,
+        }: {
+          url: string;
+          isCompressed: boolean;
+        }) {
+          const response = await fetch(url);
+          const body = Buffer.from(await response.arrayBuffer());
+          const size = isCompressed ? body.length : gzipSync(body).length;
+
+          return size / 1024;
         },
       });
 
