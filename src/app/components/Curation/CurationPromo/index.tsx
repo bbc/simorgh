@@ -16,6 +16,7 @@ import styles from './index.styles';
 
 type CurationPromoProps = Summary & {
   showRelatedTopic?: boolean;
+  isVideoCollection?: boolean;
 };
 
 const CurationPromo = ({
@@ -33,6 +34,7 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
   relatedTopic,
+  isVideoCollection = false,
   showRelatedTopic,
 }: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
@@ -91,6 +93,7 @@ const CurationPromo = ({
           isAmp={isAmp}
           isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
+          {...(isVideoCollection && { mobileSize: '100vw' })}
         >
           {isMedia && (
             <Promo.MediaIcon css={styles.icon} type={type}>
