@@ -73,7 +73,11 @@ const HiearchicalGrid = ({
 
   return (
     <div data-testid="hierarchical-grid">
-      <ul role="list" css={styles.list} data-testid="topic-promos">
+      <ul
+        role="list"
+        css={[isVideoCollection ? styles.videoCollectionList : styles.list]}
+        data-testid="topic-promos"
+      >
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
@@ -222,8 +226,8 @@ const HiearchicalGrid = ({
               css={({ mq }: Theme) => [
                 styles.item,
                 isVideoCollection
-                  ? [styles.videoCollection]
-                  : [getStyles(promoItems.length, i, mq)],
+                  ? styles.videoCollection
+                  : getStyles(promoItems.length, i, mq),
               ]}
             >
               {inSituMediaBlocks ? (
