@@ -40,6 +40,7 @@ const HiearchicalGrid = ({
   isFirstCuration,
   eventTrackingData,
   showRelatedTopic,
+  isVideoCollection = false,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
