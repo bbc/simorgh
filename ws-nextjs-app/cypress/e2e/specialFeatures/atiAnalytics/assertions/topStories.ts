@@ -2,7 +2,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
-import interceptArticleOnwardJourney from '../../../../support/helpers/interceptArticleOnwardJourney';
+import { visitArticlePageAndWaitForOnwardJourney } from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { TOP_STORIES } = COMPONENTS;
 
@@ -12,13 +12,14 @@ export const assertTopStoriesComponentView = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Top Stories component', () => {
+  it('should send a view event for the Top Stories component', function test() {
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney(
-      'topStoriesAndFeatures',
-    );
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'topStoriesAndFeatures',
+      testContext: this,
+    });
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-testid="top-stories"]').scrollIntoView({ duration: 1000 });
@@ -39,13 +40,14 @@ export const assertTopStoriesComponentClick = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Top Stories component', () => {
+  it('should send a click event for the Top Stories component', function test() {
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney(
-      'topStoriesAndFeatures',
-    );
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'topStoriesAndFeatures',
+      testContext: this,
+    });
 
     cy.get('[data-testid="top-stories"]').scrollIntoView({
       duration: 1000,

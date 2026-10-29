@@ -11,6 +11,7 @@ import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -33,15 +34,14 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
 export default async (context: GetServerSidePropsContext) => {
   const {
     resolvedUrl,
-    req: { headers: reqHeaders, url: requestUrl },
+    req: { headers: reqHeaders },
   } = context;
 
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
-  const canonicalPathname =
-    requestUrl?.split('?')?.[0] || resolvedUrlWithoutQuery;
+  const canonicalPathname = getRequestUrl(context).split('?')[0];
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);

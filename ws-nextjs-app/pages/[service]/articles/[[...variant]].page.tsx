@@ -1,7 +1,7 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ArticlePageProps } from './types';
 import handleArticleRoute from './handleArticleRoute';
@@ -34,5 +34,4 @@ const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
 
 export default PageTypeToRender;
 
-export const getServerSideProps: GetServerSideProps = async context =>
-  handleArticleRoute(context);
+export const getServerSideProps = withRequestProps(handleArticleRoute);

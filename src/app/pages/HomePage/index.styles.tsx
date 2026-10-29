@@ -30,9 +30,6 @@ const styles = {
       [mq.GROUP_4_MIN_WIDTH]: {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
-      '.home-page-election-banner + &': {
-        marginTop: 0,
-      },
     }),
 };
 

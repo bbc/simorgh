@@ -4,7 +4,7 @@ import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
 
 import runIfToggleEnabled from '../../../../support/helpers/runIfToggleEnabled';
-import interceptArticleOnwardJourney from '../../../../support/helpers/interceptArticleOnwardJourney';
+import { visitArticlePageAndWaitForOnwardJourney } from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { MOST_READ } = COMPONENTS;
 
@@ -23,9 +23,12 @@ export const assertMostReadComponentView = ({
     });
 
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney('mostRead');
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'mostRead',
+      testContext: this,
+    });
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
@@ -55,9 +58,12 @@ export const assertMostReadComponentClick = ({
     });
 
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney('mostRead');
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'mostRead',
+      testContext: this,
+    });
 
     cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
 

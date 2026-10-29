@@ -1,5 +1,7 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
+import { IncomingMessage } from 'node:http';
+import { Socket } from 'node:net';
 import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
@@ -107,6 +109,27 @@ describe('handleArticleRoute', () => {
       expect.stringContaining('max-age=90'),
     );
   });
+
+  it.each([200, 404])(
+    'uses the public page path for data requests returning %s',
+    async status => {
+      jest.spyOn(shouldRender, 'default').mockReturnValue({
+        hasRequestSucceeded: status === 200,
+        status,
+      });
+      const resolvedUrl = '/pidgin/watch/cvpde7nqj92o?renderer_env=test';
+      const result = await handleArticleRoute({
+        ...mockGetServerSidePropsContext,
+        req: Object.assign(new IncomingMessage(new Socket()), {
+          cookies: {},
+          url: '/_next/data/build/pidgin/watch/cvpde7nqj92o.json?renderer_env=test',
+        }),
+        resolvedUrl,
+      });
+
+      expect(result.props.pathname).toBe('/pidgin/watch/cvpde7nqj92o');
+    },
+  );
 
   it('returns correct cache-control header if article is not older than six hours', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1673964987894);

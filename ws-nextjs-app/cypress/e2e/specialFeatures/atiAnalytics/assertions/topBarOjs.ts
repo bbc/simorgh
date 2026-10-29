@@ -2,7 +2,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
-import interceptArticleOnwardJourney from '../../../../support/helpers/interceptArticleOnwardJourney';
+import { visitArticlePageAndWaitForOnwardJourney } from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { TOP_BAR_OJ } = COMPONENTS;
 
@@ -12,14 +12,14 @@ export const assertTopBarOJComponentView = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Top Bar OJ component', () => {
+  it('should send a view event for the Top Bar OJ component', function test() {
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney(
-      'topStoriesAndFeatures',
-    );
-
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'topStoriesAndFeatures',
+      testContext: this,
+    });
 
     cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView({
       duration: 1000,
@@ -40,14 +40,14 @@ export const assertTopBarOJComponentClick = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Top Bar OJ component', () => {
+  it('should send a click event for the Top Bar OJ component', function test() {
     interceptATIAnalyticsBeacons();
-    const onwardJourney = interceptArticleOnwardJourney(
-      'topStoriesAndFeatures',
-    );
-
-    cy.visit(path);
-    cy.wait(onwardJourney);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'topStoriesAndFeatures',
+      testContext: this,
+    });
 
     cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView({
       duration: 1000,
