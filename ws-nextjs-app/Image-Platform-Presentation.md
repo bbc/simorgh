@@ -1,6 +1,6 @@
 # Simorgh images: simplify first, adopt safely
 
-**Research:** [Next.js Image for Simorgh — findings and recommendation](https://www.dropbox.com/scl/fi/tl110z47w2iceakef8duq/Next.js-Image-for-Simorgh.paper?rlkey=sdpic0zfp4mpiorfbo4gyeqje&dl=0)
+**Research:** [Next.js Image for Simorgh - findings and recommendation](https://www.dropbox.com/scl/fi/tl110z47w2iceakef8duq/Next.js-Image-for-Simorgh.paper?rlkey=sdpic0zfp4mpiorfbo4gyeqje&dl=0)
 
 **Shared image logic today. Next.js rendering next.**
 
@@ -170,12 +170,12 @@ flowchart LR
     N --> V
 ```
 
-| Show | Look for |
-| --- | --- |
-| Responsive image | Selected URL, dimensions and loading |
-| Missing image | Placeholder; no invalid request |
-| Portrait / caption | Correct crop and attribution |
-| AMP / Lite | Correct output, including image omission |
+| Show               | Look for                                 |
+| ------------------ | ---------------------------------------- |
+| Responsive image   | Selected URL, dimensions and loading     |
+| Missing image      | Placeholder; no invalid request          |
+| Portrait / caption | Correct crop and attribution             |
+| AMP / Lite         | Correct output, including image omission |
 
 **Before comparing:** align candidate widths, dimensions, `sizes` and loading settings.
 
@@ -187,12 +187,12 @@ Files: [comparison UI](./pages/ws/ImagePocComparison.tsx), [candidate settings](
 
 ## 6. Value and trade-offs
 
-| Gain | Responsibility we keep |
-| --- | --- |
-| Reusable image preparation | Consumer-specific layout intent |
-| Framework-supported canonical rendering | AMP and Lite paths |
-| Potentially less bespoke maintenance | BBC placeholders, fallback and preload coordination |
-| Stable BBC API for future changes | Compatibility tests and safe rollout |
+| Gain                                    | Responsibility we keep                              |
+| --------------------------------------- | --------------------------------------------------- |
+| Reusable image preparation              | Consumer-specific layout intent                     |
+| Framework-supported canonical rendering | AMP and Lite paths                                  |
+| Potentially less bespoke maintenance    | BBC placeholders, fallback and preload coordination |
+| Stable BBC API for future changes       | Compatibility tests and safe rollout                |
 
 **PoC result:** Next.js is suitable through an adapter, not as a drop-in replacement.
 
@@ -204,12 +204,12 @@ Source: [investigation](./Image-Suitability-Spike.md).
 
 ## 7. Formats: what should we compare?
 
-| Format | Role | Decision |
-| --- | --- | --- |
-| JPEG | Broadly compatible fallback | Preserve where required |
-| WebP | Existing modern-format path | Preserve current compatibility |
-| AVIF | Potential byte savings | Investigate iChef support, visual quality and browser/decode cost |
-| JPEG 2000 / JP2 | Alternative codec; limited browser coverage | Not a universal web replacement |
+| Format          | Role                                        | Decision                                                          |
+| --------------- | ------------------------------------------- | ----------------------------------------------------------------- |
+| JPEG            | Broadly compatible fallback                 | Preserve where required                                           |
+| WebP            | Existing modern-format path                 | Preserve current compatibility                                    |
+| AVIF            | Potential byte savings                      | Investigate iChef support, visual quality and browser/decode cost |
+| JPEG 2000 / JP2 | Alternative codec; limited browser coverage | Not a universal web replacement                                   |
 
 ```mermaid
 flowchart LR
