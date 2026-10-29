@@ -19,11 +19,32 @@ import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { FOCUSABLE_ITEMS_SELECTOR } from './config';
 import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
 
 const DROPDOWN_MAX_WIDTH_QUERY = `(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
+// Experiment Sticky Nav
+const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
+const STICKY_NAVIGATION_COMPONENT = 'sticky-navigation';
+
+const StickyNavigationViewTracking = ({
+  experimentVariant,
+}: {
+  experimentVariant: string | null;
+}) => {
+  const viewTracker = useViewTracker({
+    componentName: STICKY_NAVIGATION_COMPONENT,
+    sendOptimizelyEvents: true,
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentVariant,
+    alwaysInView: true,
+  });
+
+  return <span ref={viewTracker.ref} aria-hidden="true" />;
+};
 
 // Walks the document forwards from the navigation and stops at the first
 // focusable element outside it, rather than collecting every focusable
@@ -54,6 +75,11 @@ type CanonicalNavigationContainerProps = {
   topScrollableListItems: React.ReactNode;
   bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
+  stickyTopScrollableListItems: React.ReactNode;
+  stickyBottomScrollableListItems: React.ReactNode;
+  stickyDropdownListItems: React.ReactNode;
+  stickyNavClickTracker: ReturnType<typeof useClickTrackerHandler>;
+  stickyNavExperimentVariant: string | null;
   blocks?: TopStoryItem[];
 };
 
@@ -63,6 +89,11 @@ const CanonicalNavigationContainer = ({
   topScrollableListItems,
   bottomScrollableListItems,
   dropdownListItems,
+  stickyTopScrollableListItems,
+  stickyBottomScrollableListItems,
+  stickyDropdownListItems,
+  stickyNavClickTracker,
+  stickyNavExperimentVariant,
   blocks,
 }: CanonicalNavigationContainerProps) => {
   const { isLite } = use(RequestContext);
@@ -72,7 +103,18 @@ const CanonicalNavigationContainer = ({
   const closeMenu = useCallback(() => setIsOpen(false), []);
   const toggleMenu = useCallback(() => setIsOpen(previous => !previous), []);
 
-  const sticky = useStickyNavigation({ isOpen, closeMenu });
+  const sticky = useStickyNavigation({
+    isOpen,
+    closeMenu,
+    experimentVariant: stickyNavExperimentVariant,
+  });
+  const handleStickyMenuClick = useCallback(
+    async (event: React.MouseEvent<HTMLButtonElement>) => {
+      toggleMenu();
+      await stickyNavClickTracker.onClick?.(event);
+    },
+    [stickyNavClickTracker, toggleMenu],
+  );
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -258,6 +300,73 @@ const CanonicalNavigationContainer = ({
     ],
   );
 
+  // Experiment Sticky Nav
+  const stickyNavigation = useMemo(
+    () => (
+      <Navigation dir={dir} isOpen={isOpen} ref={navRef}>
+        <div css={styles.navStack}>
+          <div css={styles.navRowWrapper}>
+            <div css={styles.topRow}>
+              <ScrollableNavigation
+                dir={dir}
+                css={styles.topRowItems}
+                navPosition="primary"
+              >
+                {stickyTopScrollableListItems}
+              </ScrollableNavigation>
+              {!isLite && (
+                <CanonicalMenuButton
+                  ref={menuButtonRef}
+                  css={styles.menuButton}
+                  announcedText={menuAnnouncedText}
+                  isOpen={isOpen}
+                  onClick={handleStickyMenuClick}
+                  dir={dir}
+                />
+              )}
+            </div>
+            <div role="presentation" ref={dropDownNavRef}>
+              <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+                {stickyDropdownListItems}
+              </CanonicalDropdown>
+            </div>
+          </div>
+          <div css={styles.lowerNavWrapper}>
+            <ScrollableNavigation
+              ref={secondaryScrollRef}
+              dir={dir}
+              css={styles.bottomRowItems}
+              navPosition="secondary"
+            >
+              {stickyBottomScrollableListItems}
+            </ScrollableNavigation>
+          </div>
+        </div>
+        <div css={styles.bottomDivider} />
+      </Navigation>
+    ),
+    [
+      dir,
+      isOpen,
+      isLite,
+      menuAnnouncedText,
+      stickyTopScrollableListItems,
+      stickyBottomScrollableListItems,
+      stickyDropdownListItems,
+      handleStickyMenuClick,
+      navRef,
+      dropDownNavRef,
+      secondaryScrollRef,
+      menuButtonRef,
+    ],
+  );
+
+  const stickyNavViewTracking = sticky.hasBeenPinned ? (
+    <StickyNavigationViewTracking
+      experimentVariant={stickyNavExperimentVariant}
+    />
+  ) : null;
+
   if (!sticky.isEnabled) return navigation;
 
   return (
@@ -278,8 +387,9 @@ const CanonicalNavigationContainer = ({
           aria-hidden={sticky.isOffScreen || undefined}
           inert={sticky.isOffScreen || undefined}
         >
-          {navigation}
+          {stickyNavigation}
         </div>
+        {stickyNavViewTracking}
       </div>
       {topBarOJs && (
         <Navigation dir={dir} role="presentation">
