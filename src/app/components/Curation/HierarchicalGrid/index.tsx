@@ -221,7 +221,9 @@ const HiearchicalGrid = ({
               key={promo.id}
               css={({ mq }: Theme) => [
                 styles.item,
-                getStyles(promoItems.length, i, mq),
+                isVideoCollection
+                  ? [styles.videoCollection]
+                  : [getStyles(promoItems.length, i, mq)],
               ]}
             >
               {inSituMediaBlocks ? (
