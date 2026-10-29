@@ -288,7 +288,9 @@
         "position": 0,
         "visualProminence": "HIGH",
         "title": "آخر الفيديوهات",
-        "visualStyle": "COLLECTION"
+        "visualStyle": "COLLECTION",
+        "intent": "MEDIA_PLAYER",
+        "isVideoCollection": true
       },
       {
         "summaries": [
