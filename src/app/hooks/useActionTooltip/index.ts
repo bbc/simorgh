@@ -10,7 +10,6 @@ interface UseActionTooltipProps<TActionResult extends ActionResult> {
   resetActionResult: () => void;
   trackingNamePrefix: string;
   resourceId?: string;
-  isDarkUi: boolean;
 }
 
 const useActionTooltip = <TActionResult extends ActionResult>({
@@ -18,7 +17,6 @@ const useActionTooltip = <TActionResult extends ActionResult>({
   resetActionResult,
   trackingNamePrefix,
   resourceId,
-  isDarkUi,
 }: UseActionTooltipProps<TActionResult>) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
@@ -53,7 +51,7 @@ const useActionTooltip = <TActionResult extends ActionResult>({
   };
 
   return {
-    isTooltipVisible: isTooltipVisible && !isDarkUi,
+    isTooltipVisible,
     handleTooltipClose,
     onMyNewsLinkClickTrack,
     tooltipViewTracker,

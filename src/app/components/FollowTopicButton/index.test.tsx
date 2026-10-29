@@ -1,5 +1,4 @@
 import userEvent from '@testing-library/user-event';
-import { ThemeProvider } from '@emotion/react';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#lib/config/services/hindi';
 import { service as mundoServiceConfig } from '#lib/config/services/mundo';
@@ -105,12 +104,6 @@ const mockFollowState = (
     ...overrides,
   });
 
-const FollowTopicButtonWithTheme = ({ isDarkUi = false }) => (
-  <ThemeProvider theme={{ isDarkUi }}>
-    <FollowTopicButton topicData={topicData} />
-  </ThemeProvider>
-);
-
 const observers = new Map();
 
 const IntersectionObserver = jest.fn(cb => {
@@ -188,7 +181,6 @@ describe('FollowTopicButton', () => {
   const renderFollowTopicButton = ({
     service = 'hindi',
     idctaConfig = mockIdctaConfig,
-    isDarkUi = false,
     toggles = {
       topicUasPersonalization: { enabled: true, value: 'hindi' },
     },
@@ -196,14 +188,13 @@ describe('FollowTopicButton', () => {
   }: {
     service?: Services;
     idctaConfig?: typeof mockIdctaConfig;
-    isDarkUi?: boolean;
     toggles?: Toggles;
     pageMetadata?: {
       type: 'article';
       atiAnalytics: { pageIdentifier: string };
     };
   } = {}) => {
-    return render(<FollowTopicButtonWithTheme isDarkUi={isDarkUi} />, {
+    return render(<FollowTopicButton topicData={topicData} />, {
       service,
       idctaConfig,
       toggles,
@@ -380,16 +371,6 @@ describe('FollowTopicButton', () => {
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
 
-    it('suppresses tooltips on dark UI pages without hiding the button', () => {
-      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
-      renderFollowTopicButton({ ...signedInOptions, isDarkUi: true });
-
-      expect(
-        screen.getByTestId('follow-topic-btn-authorized'),
-      ).toBeInTheDocument();
-      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
-    });
-
     it('closes, resets the action result and tracks dismissal on close', async () => {
       mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
       renderFollowTopicButton(signedInOptions);
@@ -416,7 +397,7 @@ describe('FollowTopicButton', () => {
       const button = screen.getByTestId('follow-topic-btn-authorized');
 
       await userEvent.click(button);
-      rerender(<FollowTopicButtonWithTheme />);
+      rerender(<FollowTopicButton topicData={topicData} />);
 
       expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
       await userEvent.tab();
@@ -482,11 +463,11 @@ describe('FollowTopicButton', () => {
 
       fireEvent.click(screen.getByTestId('action-tooltip-close'));
       mockActionResult(null);
-      rerender(<FollowTopicButtonWithTheme />);
+      rerender(<FollowTopicButton topicData={topicData} />);
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
 
       mockActionResult({ action: FollowAction.UNFOLLOW, status: 'success' });
-      rerender(<FollowTopicButtonWithTheme />);
+      rerender(<FollowTopicButton topicData={topicData} />);
 
       await act(async () => Promise.resolve());
       const unfollowTooltip =

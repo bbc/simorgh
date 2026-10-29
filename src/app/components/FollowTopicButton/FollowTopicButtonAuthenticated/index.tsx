@@ -1,5 +1,4 @@
 import { use } from 'react';
-import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
@@ -26,7 +25,6 @@ const FollowTopicButtonAuthenticatedInner = ({
   const { translations } = use(ServiceContext);
   const { followTopicButton, followTopicTooltip } = translations || {};
   const { topicId } = topicData;
-  const { isDarkUi } = useTheme();
 
   const {
     isFollowed,
@@ -62,7 +60,6 @@ const FollowTopicButtonAuthenticatedInner = ({
     resetActionResult,
     trackingNamePrefix: 'follow-topic',
     resourceId: topicId,
-    isDarkUi,
   });
 
   if (!followTopicButton) return null;

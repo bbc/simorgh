@@ -1,5 +1,4 @@
 import { use } from 'react';
-import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -27,9 +26,6 @@ const SaveArticleButtonAuthenticatedInner = ({
   const { translations } = use(ServiceContext);
   const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
-  // TODO: remove once the dark-UI tooltip design is ready; suppresses all tooltips on dark-UI pages
-  const { isDarkUi } = useTheme();
-
   const {
     isSaved,
     isLoading,
@@ -67,7 +63,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     resetActionResult,
     trackingNamePrefix: 'save-article',
     resourceId: articleId,
-    isDarkUi,
   });
 
   if (!saveArticleButton) return null;
