@@ -1,287 +1,255 @@
-# Presentation: Simorgh image platform
+# Simorgh images: simplify first, adopt safely
 
-**Image consolidation, Next.js suitability and next steps**
+**Shared image logic today. Next.js rendering next.**
 
-Duration: 3–5 minutes. Architecture detail is in the appendix.
+## 1. Why this work?
 
-## 1. Why: one reliable image boundary
-
-- Image URL, responsive and format logic was spread across several paths.
-- The task is to reduce duplication without losing required image behaviour.
-- Two connected steps: **consolidate the existing platform**, then **evaluate Next.js Image**.
-
-**Outcome sought:** easier maintenance, consistent behaviour and safer future format changes.
-
-Sources: [original image-refactor brief](https://www.dropbox.com/scl/fi/e9224ij673u2u87r0a6ht/Image-Component-Refactor-Simorgh.paper?rlkey=r38irjxxi0pbi8km7h5zhed9p&dl=0),
-[WS-63 / first PoC, PR #14352](https://github.com/bbc/simorgh/pull/14352),
-[WS-3220](https://bbc.atlassian.net/browse/WS-3220).
-
----
-
-## 2. Consolidation: initial, planned and actual
-
-| Initial | Planned | Actual on the inspected branch |
-| --- | --- | --- |
-| Several image-preparation paths | Shared image-data API | Shared `imageSrcSets` helper module |
-| Local and overlapping source-set logic | Reuse responsive generation | Shared generators with layout-specific configuration |
-| Existing Image primitive plus legacy paths | Common rendering contract | Inspected consumers use Simorgh Image; EpisodeList forwards supplied props |
-| Format preparation spread across callers | Consistent delivery policy | Some format and layout choices still remain in consumers |
+Image preparation was spread across components. We want **one reliable contract**, without losing BBC behaviour.
 
 ```mermaid
 flowchart LR
-    A["Initial: multiple preparation paths"] --> B["Planned: shared data API + Image"]
-    B --> C["Actual: shared helpers + Simorgh Image"]
-    C -. "Proposed next step" .-> D["BBC adapter + Next.js canonical rendering"]
+    A["Reduce duplicated logic"] --> B["Preserve existing behaviour"]
+    B --> C["Evaluate Next.js Image"]
+    C --> D["Migrate only after approval"]
+    style A fill:#e0f2fe,stroke:#0369a1,color:#111827
+    style D fill:#dcfce7,stroke:#15803d,color:#111827
 ```
 
-**Value delivered:** reusable preparation helpers and a common renderer provide a stronger baseline for the Next.js investigation.
-
-**Accuracy note:** PR #14352 was the initial audit/MessageBanner step, not the entire subsequent consolidation. Its audit confirms StoryPromo and Promo.Image already used the modern Image primitive.
-
-Files: [shared image utilities](../src/app/utilities/imageSrcSets/index.ts),
-[current Image](../src/app/components/Image/index.tsx).
+Sources: [original brief](https://www.dropbox.com/scl/fi/e9224ij673u2u87r0a6ht/Image-Component-Refactor-Simorgh.paper?rlkey=r38irjxxi0pbi8km7h5zhed9p&dl=0),
+[first PoC / PR #14352](https://github.com/bbc/simorgh/pull/14352),
+[Next.js spike / WS-3220](https://bbc.atlassian.net/browse/WS-3220).
 
 ---
 
-## 3. What Next.js Image adds
+## 2. Architecture: before, planned, now
 
-Next.js Image is a React image component with responsive candidates, dimension handling and loading controls.
+### Before: several preparation paths
+
+```mermaid
+flowchart LR
+    P["Promo.Image"] --> L["Local source sets / sizes"]
+    V["PortraitVideoPromo + MessageBanner"] --> G["getSrcSets"]
+    B["Billboard + MaskedImage + StoryPromo"] --> S["createSrcsets"]
+    L --> I["Image primitive"]
+    G --> I
+    S --> I
+    E["EpisodeList + StoryPromo"] --> PH["Legacy placeholder dependency"]
+    style L fill:#fef3c7,stroke:#b45309,color:#111827
+    style G fill:#fef3c7,stroke:#b45309,color:#111827
+    style S fill:#fef3c7,stroke:#b45309,color:#111827
+```
+
+Historical summary from the first PoC. StoryPromo and Promo.Image already used the modern Image primitive; a placeholder dependency was not a separate complete renderer.
+
+### Planned: shared preparation
+
+```mermaid
+flowchart LR
+    C["Image consumers"] --> A["Shared image data API"]
+    A --> I["Image primitive"]
+    style A fill:#e0f2fe,stroke:#0369a1,color:#111827
+```
+
+### Now: shared helpers and one renderer
+
+```mermaid
+flowchart LR
+    B["Billboard / MaskedImage"] --> P["prepareIchefImage"]
+    F["FrostedGlass / caption / related images"] --> C
+    O["Promo.Image / MessageBanner / PortraitVideoPromo"] --> R
+    subgraph Shared["Shared imageSrcSets module"]
+        P --> C["createIchefSrcSet"]
+        R["createResponsiveSrcSet"]
+    end
+    C --> I["Simorgh Image primitive"]
+    R --> I
+    E["EpisodeList: supplied image props"] --> I
+    style I fill:#dcfce7,stroke:#15803d,color:#111827
+```
+
+**Delivered:** shared preparation helpers and common rendering.
+
+**Still local:** some width, `sizes`, format and layout choices.
+
+These are simplified data flows from the inspected branch, not deployed-version claims. The historical StoryPromo label is not mapped to an exact current component here.
+
+Files: [shared helpers](../src/app/utilities/imageSrcSets/index.ts), [current Image](../src/app/components/Image/index.tsx).
+
+---
+
+## 3. What is Next.js Image?
+
+The framework's React image component: **responsive candidates, dimensions and loading controls**.
 
 ```tsx
 import Image from 'next/image';
-import { ichefLoader, POC_IMAGE_TEMPLATE } from '#nextjs/utilities/imagePoc';
+import { ichefLoader, POC_IMAGE_TEMPLATE } from './utilities/imagePoc';
 
 <Image
   src={POC_IMAGE_TEMPLATE}
   loader={ichefLoader}
+  alt="Example editorial image"
   width={624}
   height={351}
   sizes="(max-width: 600px) 100vw, 600px"
-  alt="Example editorial image"
   loading="lazy"
 />;
 ```
 
-- The custom loader resolves iChef `{width}` URLs.
-- **iChef transforms and delivers the image bytes.**
-- **The browser selects the image candidate.**
-- This example is not the complete BBC adapter.
+Illustrative usage from the Next.js app root, not the complete BBC adapter.
 
-Files: [PoC loader](../ws-nextjs-app/utilities/imagePoc.ts),
-[PoC adapter](../ws-nextjs-app/pages/ws/ImagePocAdapter.tsx).
+```mermaid
+sequenceDiagram
+    participant N as Next.js Image + loader
+    participant B as Browser
+    participant I as iChef
+    N->>B: Image markup with candidate URLs
+    B->>I: Request selected candidate
+    I-->>B: Transformed image bytes
+```
+
+**Next.js generates markup. The browser selects. iChef transforms and delivers.**
+
+Files: [loader](./utilities/imagePoc.ts), [adapter](./pages/ws/ImagePocAdapter.tsx).
 
 ---
 
-## 4. Ideal Next.js architecture
+## 4. Proposed next step: a BBC-owned adapter
+
+An adapter is a small BBC layer that keeps our image contract stable while choosing the renderer.
 
 ```mermaid
 flowchart LR
-    B["BFF: metadata + format-neutral image template"] --> C["Consumers: image + layout intent"]
-    C --> A["BBC adapter: source policy, formats, widths, placeholders"]
-    A --> N["Canonical: Next.js Image + iChef loader"]
+    B["BFF: which image?"] --> C["Consumer: layout + alt text"]
+    C --> A["BBC adapter: delivery policy + compatibility"]
+    A --> N["Canonical: Next.js Image"]
     A --> M["AMP: amp-img"]
-    A --> L["Lite: omit image output"]
+    A --> L["Lite: no image output"]
     N --> BR["Browser"]
     M --> BR
-    BR --> I["iChef: transformation and delivery"]
+    BR --> I["iChef"]
+    style A fill:#e0f2fe,stroke:#0369a1,color:#111827
+    style N fill:#dcfce7,stroke:#15803d,color:#111827
 ```
 
-**Proposed boundary:** BFF describes which image; frontend policy determines delivery and rendering.
+- **Central policy:** source validation, format selection and candidate widths.
+- **BBC contract:** placeholders, attribution, aspect ratios and loading behaviour.
+- **Presentation stays with components:** frosted panels, headlines and media overlays.
+- **Coordinate:** decorative backgrounds and service-worker recovery follow the same Lite/format policy.
 
-Consumers retain layout knowledge. Frosted panels, media overlays and captions remain presentation concerns, coordinated with source and Lite policy. Service-worker recovery must align with the same format policy.
+**Proposed direction, not a production migration.**
 
-**Not implemented production architecture:** this is a direction to agree, not a completed migration.
-
-Files: [adapter](../ws-nextjs-app/pages/ws/ImagePocAdapter.tsx),
-[ownership and adoption findings](../ws-nextjs-app/Image-Suitability-Spike.md).
+Sources: [PoC adapter](./pages/ws/ImagePocAdapter.tsx), [ownership findings](./Image-Suitability-Spike.md), [WS-66](https://bbc.atlassian.net/browse/WS-66).
 
 ---
 
-## 5. Show the image comparison
+## 5. Show the comparison
 
-Open the isolated comparison: [localhost:7081/mundo/image-poc](http://localhost:7081/mundo/image-poc).
+**Demo:** [localhost:7081/mundo/image-poc](http://localhost:7081/mundo/image-poc)
 
-| Show | Expected outcome |
+```mermaid
+flowchart LR
+    S["Same asset + equivalent layout settings"] --> O["Current Simorgh Image"]
+    S --> N["BBC / Next.js adapter"]
+    O --> V["Compare rendering and selected requests"]
+    N --> V
+```
+
+| Show | Look for |
 | --- | --- |
-| Normal responsive image | Both render correctly; inspect selected URL, dimensions and source sets |
-| Missing image / placeholder | BBC placeholder remains; no invalid image request |
-| Portrait / caption | Intended crop, layout and attribution preserved |
-| AMP / Lite | AMP image path; Lite omission rather than canonical image markup |
+| Responsive image | Selected URL, dimensions and loading |
+| Missing image | Placeholder; no invalid request |
+| Portrait / caption | Correct crop and attribution |
+| AMP / Lite | Correct output, including image omission |
 
-**Compare equivalent inputs:** same source, displayed size, dimensions, loading settings and agreed candidate widths.
+**Before comparing:** align candidate widths, dimensions, `sizes` and loading settings.
 
-The page demonstrates rendering behaviour. Shared caching and potentially different candidate ladders mean it is **not a fair performance benchmark by itself**.
+**This is a rendering demo, not a performance benchmark.** Shared caching can distort results.
 
-Files: [comparison UI](../ws-nextjs-app/pages/ws/ImagePocComparison.tsx),
-[candidate configuration](../ws-nextjs-app/utilities/imagePoc.ts),
-[existing renderer](../src/app/components/Image/index.tsx).
+Files: [comparison UI](./pages/ws/ImagePocComparison.tsx), [candidate settings](./utilities/imagePoc.ts).
 
 ---
 
-## 6. Pros, cons and result
+## 6. Value and trade-offs
 
-| Benefits / expected value | Costs / remaining risks |
+| Gain | Responsibility we keep |
 | --- | --- |
-| Shared BBC contract shields consumers from renderer changes | Not a drop-in replacement |
-| Framework-supported canonical rendering | AMP and Lite still need explicit paths |
-| Opportunity to reduce bespoke rendering maintenance | BBC placeholders, fallback and preload coordination remain our responsibility |
-| Clearer place for delivery policy | Consumer inventory, browser checks and rollout work required |
+| Reusable image preparation | Consumer-specific layout intent |
+| Framework-supported canonical rendering | AMP and Lite paths |
+| Potentially less bespoke maintenance | BBC placeholders, fallback and preload coordination |
+| Stable BBC API for future changes | Compatibility tests and safe rollout |
 
-**Result:** isolated PoC implemented; Next.js is suitable through a BBC-owned adapter. No production migration is included.
+**PoC result:** Next.js is suitable through an adapter, not as a drop-in replacement.
 
-**Not proven:** faster rendering, lower memory use or reduced delivery cost.
+**Not proven:** faster pages, lower memory use or cheaper image delivery. iChef still delivers the bytes.
 
-Measure independently: LCP (main content appearing), CLS (visual stability), bytes, request count/preload reuse, client/server cost and memory.
-
-Source: [investigation](../ws-nextjs-app/Image-Suitability-Spike.md).
+Source: [investigation](./Image-Suitability-Spike.md).
 
 ---
 
-## 7. Format comparison: WebP, AVIF and JPEG 2000
+## 7. Formats: what should we compare?
 
-**JPEG 2000 = JP2, not JPEG XL. This is a technical comparison, not a measured PoC result.**
-
-| Format | Opportunity | Limitation / decision |
+| Format | Role | Decision |
 | --- | --- | --- |
-| JPEG | Broadly compatible fallback | Often more bytes than modern formats at comparable visual quality |
-| WebP | Existing modern-format path | Preserve the explicit fallback strategy where required |
-| AVIF | Potential byte savings at comparable quality | Verify iChef support, target browsers, quality and processing cost before adoption |
-| JPEG 2000 / JP2 | Alternative codec with useful compression capabilities | Limited cross-browser suitability; not a general replacement for web delivery |
+| JPEG | Broadly compatible fallback | Preserve where required |
+| WebP | Existing modern-format path | Preserve current compatibility |
+| AVIF | Potential byte savings | Investigate iChef support, visual quality and browser/decode cost |
+| JPEG 2000 / JP2 | Alternative codec; limited browser coverage | Not a universal web replacement |
 
-**No AVIF/JP2 quality, byte or timing measurements are claimed.**
+```mermaid
+flowchart LR
+    A["Same source + dimensions"] --> B["Encode format variants"]
+    B --> C["Match perceived quality"]
+    C --> D["Compare bytes + decode cost + support"]
+    D --> E["Choose policy, not just a file extension"]
+```
 
-For a fair follow-up: encode the same sources at the same dimensions, compare at similar perceived quality, and record bytes, decode cost, transparency/colour behaviour and browser support. Verify delivered `Content-Type`, not just the URL suffix.
+**No AVIF/JP2 measurements are claimed.** JPEG 2000 is not JPEG XL.
 
-`<picture>` supports format selection. It does **not** automatically retry JPEG when a selected WebP/AVIF request fails.
+Format-support fallback is not network-error recovery: `<picture>` does not automatically retry JPEG after a selected WebP/AVIF request fails.
 
-**Recommendation:** retain the current fallback contract; investigate AVIF behind one format policy. Do not select JP2 as the universal browser format.
-
-References: [MDN image-format guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types),
-[current format helpers](../src/app/utilities/imageSrcSets/index.ts).
+References: [format guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types), [current format helpers](../src/app/utilities/imageSrcSets/index.ts).
 
 ---
 
-## 8. Decision and next steps
+## 8. Decision: proceed, with gates
 
-**Recommend the adapter-based direction; do not start production migration yet.**
+```mermaid
+flowchart LR
+    A["Agree contract + ownership"] --> B["Prove compatibility"]
+    B --> C["Benchmark independently"]
+    C --> D{"Approval"}
+    D -->|"Approved"| E["Flagged rollout + rollback"]
+    D -->|"Not yet"| F["Resolve gaps"]
+    F --> B
+    style E fill:#dcfce7,stroke:#15803d,color:#111827
+    style F fill:#fef3c7,stroke:#b45309,color:#111827
+```
 
-1. Agree the shared contract and Simorgh/BFF ownership with [WS-66](https://bbc.atlassian.net/browse/WS-66).
-2. Finish compatibility checks: consumers, AMP, Lite, fallback, preload and service worker.
-3. Benchmark independently in production mode, including mobile and cold/warm caches.
-4. Document guidelines and create the refactoring/format follow-ups.
-5. Migrate incrementally only after approval, with a feature flag and rollback.
+**Compatibility:** canonical, AMP, Lite, fallback, preload and service worker.
 
-**Bottom line:** consolidation gives us a stable foundation; Next.js can supply canonical rendering without taking over BBC image policy or iChef delivery.
+**Performance:** LCP (main content appearing), CLS (page stability), bytes, requests, JavaScript/server cost and memory.
 
-Source: [follow-up ticket proposals](../ws-nextjs-app/Nextjs-image-adoption-jira-tickets.md).
+> Consolidation gives us the foundation. Next.js can supply canonical rendering; BBC policy and iChef delivery remain ours.
+
+**Decision requested:** agree the adapter direction and validation gates. No production migration before approval.
+
+Next steps: [follow-up ticket proposals](./Nextjs-image-adoption-jira-tickets.md).
 
 ---
 
-# Appendix: architecture diagrams
+## Conclusion: proceed with a BBC adapter around Next.js Image
 
-## A. Initial architecture: first PoC framing
+**Choose adapter-based adoption over direct replacement or separate implementations in every consumer, because:**
 
-```mermaid
-flowchart LR
-    P["Promo.Image"] --> LOCAL["Local createSrcSet / createSizes"]
-    LOCAL --> I["Image component"]
-    V["PortraitVideoPromo"] --> GET["getSrcSets"]
-    M["MessageBanner"] --> GET
-    GET --> I
-    E["EpisodeList"] --> PS["Psammead ImagePlaceholder"]
-    S["StoryPromo"] --> PS
-    S --> CREATE["createSrcsets"]
-    MASK["MaskedImage"] --> CREATE
-    B["Billboard"] --> CREATE
-    CREATE --> I
-```
+1. **It builds on the consolidation.** Keep shared preparation and a stable BBC API instead of spreading image logic again.
+2. **It preserves required behaviour.** Next.js handles canonical rendering; explicit BBC paths retain AMP, Lite, placeholders, fallback and attribution.
+3. **It offers a maintenance benefit.** Use framework-supported canonical rendering rather than maintaining all of that behaviour ourselves.
+4. **It creates a clearer policy boundary.** Future format changes, such as AVIF, can follow one delivery policy instead of independent consumer changes.
+5. **It keeps adoption reversible.** Compatibility gates, benchmarks and a flagged rollout let us validate the change before retiring the existing primitive.
 
-Reproduces the supplied initial diagram as historical framing, not a freshly verified historical call graph. PR #14352 clarifies that StoryPromo and Promo.Image already used the modern Image primitive; placeholder dependencies should not be read as proof of a separate complete renderer.
+**Why not replace Image directly?** Next.js alone does not cover the full BBC contract.
 
-## B. Planned architecture: first PoC target
+**Why not claim a performance win now?** The PoC proves rendering feasibility, not faster pages or lower cost; iChef still transforms and delivers images.
 
-```mermaid
-flowchart LR
-    B["Billboard"] --> API["Shared image data API"]
-    M["MaskedImage"] --> API
-    S["StoryPromo"] --> API
-    P["Promo.Image"] --> API
-    E["EpisodeList"] --> API
-    MB["MessageBanner"] --> API
-    V["PortraitVideoPromo"] --> API
-    API --> I["Image component"]
-```
-
-Conceptual data flow: centralise reusable preparation and preserve one rendering contract.
-
-## C. Actual architecture: inspected local implementation
-
-```mermaid
-flowchart LR
-    B["Billboard"] --> P
-    B --> M["MaskedImage"]
-    M --> P
-    F["FrostedGlassPromo / withData"] --> C
-    O["ImageWithCaption / RecommendationsPromoImage / RelatedContentItem"] --> C
-    PR["Promo.Image"] --> R
-    MB["MessageBanner"] --> R
-    V["PortraitVideoPromo"] --> R
-
-    subgraph SHARED["imageSrcSets shared module"]
-        P["prepareIchefImage"] --> C["createIchefSrcSet"]
-        R["createResponsiveSrcSet"]
-    end
-
-    C --> PROPS["Prepared image props"]
-    R --> PROPS
-    PROPS --> I["Simorgh Image primitive"]
-    E["EpisodeList.Image"] -->|"Forwards supplied props"| I
-    I --> CAN["Canonical: img / homepage picture"]
-    I --> AMP["AMP: amp-img"]
-    I --> LITE["Lite: no Image output"]
-    I --> MISS["Missing source: placeholder"]
-```
-
-- This is data flow, not literal React component nesting through helpers.
-- Consumer-specific widths, `sizes`, format preparation and loading choices remain.
-- Image omission does not automatically suppress decorative CSS backgrounds.
-- StoryPromo's historical label is not mapped to an exact current component here.
-- Local code is not proof of the deployed production version.
-
-## D. Ideal Next.js architecture: proposed
-
-```mermaid
-flowchart LR
-    BFF["BFF: metadata + format-neutral template"] --> CON["Image consumers"]
-    CON --> POLICY["BBC adapter: validation + delivery policy"]
-    POLICY --> CONTRACT["Dimensions, sizes, loading, placeholders and attribution contract"]
-    CONTRACT --> MODE{"Page mode"}
-    MODE --> N["Canonical: Next.js Image + iChef loader; explicit format fallback"]
-    MODE --> A["AMP: adapter-owned amp-img"]
-    MODE --> L["Lite: coordinated image/background omission"]
-    N --> B["Browser selects candidate / format"]
-    A --> B
-    B --> I["iChef"]
-    SW["Service-worker recovery aligned with format policy"] -.-> B
-```
-
-No automatic Next.js optimisation proxy, cost saving or performance improvement is implied.
-
-## Main implementation references
-
-| File | Role |
-| --- | --- |
-| [Image/index.tsx](../src/app/components/Image/index.tsx) | Current rendering baseline |
-| [imageSrcSets/index.ts](../src/app/utilities/imageSrcSets/index.ts) | Shared preparation helpers |
-| [ichefURL/index.js](../src/app/lib/utilities/ichefURL/index.js) | Existing iChef URL builder |
-| [ImagePocAdapter.tsx](../ws-nextjs-app/pages/ws/ImagePocAdapter.tsx) | Isolated BBC/Next.js adapter |
-| [imagePoc.ts](../ws-nextjs-app/utilities/imagePoc.ts) | PoC loader, validation and candidates |
-| [ImagePocComparison.tsx](../ws-nextjs-app/pages/ws/ImagePocComparison.tsx) | Side-by-side demo |
-
-## Suggested opening
-
-> We started by consolidating how Simorgh prepares images. The Next.js spike builds on that foundation: it shows a viable canonical renderer, but BBC policy and compatibility still need a clear shared boundary.
-
-## Suggested closing
-
-> The recommendation is to adopt the capability through a BBC adapter, not migrate blindly. Agree the ownership, prove compatibility and performance, then roll out safely.
+> **Approve the direction now. Approve production migration only after compatibility and performance evidence.**
