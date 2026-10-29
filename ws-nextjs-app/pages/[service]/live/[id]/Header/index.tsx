@@ -1,4 +1,6 @@
 import { use, useState, useEffect, useRef } from 'react';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useToggle from '#app/hooks/useToggle';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import LiveHeaderMedia from '#app/components/LiveHeaderMedia';
@@ -6,11 +8,15 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Image from '#app/components/Image';
+import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
+import { MetadataTaggings } from '#app/models/types/metadata';
+import isLive from '#app/lib/utilities/isLive';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
+import LiveElectionBanner from './LiveElectionBanner';
 
 const Header = ({
   showLiveLabel,
@@ -21,6 +27,7 @@ const Header = ({
   imageWidth,
   mediaCollections,
   showSportData,
+  taggings,
 }: {
   showLiveLabel: boolean;
   title: string;
@@ -30,16 +37,22 @@ const Header = ({
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
   showSportData?: boolean;
+  taggings?: MetadataTaggings;
 }) => {
   const imageRef = useRef<HTMLImageElement>(null);
   const [isHeaderImageAlreadyLoaded, setIsHeaderImageAlreadyLoaded] =
     useState(false);
 
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
-  const isHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
-  const isWithImageLayout = isHeaderImage || !!mediaCollections;
+  const { isLite } = use(RequestContext);
+  const { enabled: electionBannerEnabled } = useToggle(
+    'livePageElectionBanner',
+  );
+  const hasHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
+  const hasLiveMediaStream = Boolean(mediaCollections?.length);
   const {
     translations: { sport: { matchSummary = 'Match Summary' } = {} },
+    electionBanner,
   } = use(ServiceContext);
   const watchVideoClickHandler = () => {
     setLiveMediaOpen(!isMediaOpen);
@@ -48,6 +61,21 @@ const Header = ({
 
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
+
+  // isLite is checked here (rather than inside isElectionBannerVisible) because this
+  // page also needs it to decide its own layout, not just whether to render the banner.
+  const shouldShowElectionBanner =
+    !isLive() &&
+    !isLite &&
+    isElectionBannerVisible({
+      electionBannerEnabled,
+      electionThingIds: electionBanner?.electionThingIds,
+      taggings,
+    }) &&
+    !hasLiveMediaStream;
+
+  const isHeaderImage = hasHeaderImage && !shouldShowElectionBanner;
+  const isWithImageLayout = isHeaderImage || hasLiveMediaStream;
 
   const {
     src: srcWebp,
@@ -78,35 +106,50 @@ const Header = ({
     </span>
   );
 
-  if (showSportData) {
+  if (shouldShowElectionBanner || showSportData) {
     return (
-      <div css={styles.headerContainer}>
-        <div css={styles.backgroundContainer}>
-          <div
-            css={[styles.backgroundColor, styles.backgroundColorSportData]}
-          />
+      <>
+        <div css={styles.headerContainer}>
+          <div css={styles.backgroundContainer}>
+            <div
+              css={[
+                styles.backgroundColor,
+                showSportData && styles.backgroundColorSportData,
+                shouldShowElectionBanner &&
+                  styles.backgroundColorElectionBanner,
+              ]}
+            />
+          </div>
+          <div css={styles.contentContainer}>
+            <Heading
+              size="trafalgar"
+              level={1}
+              id="content"
+              tabIndex={-1}
+              css={styles.heading}
+            >
+              <div
+                css={[
+                  styles.singleColumnTitleRow,
+                  showSportData && styles.sportTitleRow,
+                ]}
+              >
+                {showLiveLabel && (
+                  <LiveLabelHeader
+                    isHeaderImage={isWithImageLayout}
+                    showSportData={showSportData || shouldShowElectionBanner}
+                  />
+                )}
+                <div css={styles.singleColumnTitleText}>{title}</div>
+              </div>
+            </Heading>
+            {showSportData && (
+              <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
+            )}
+          </div>
         </div>
-        <div css={styles.contentContainer}>
-          <Heading
-            size="trafalgar"
-            level={1}
-            id="content"
-            tabIndex={-1}
-            css={styles.heading}
-          >
-            <div css={styles.sportTitleRow}>
-              {showLiveLabel && (
-                <LiveLabelHeader
-                  isHeaderImage={isWithImageLayout}
-                  showSportData={showSportData}
-                />
-              )}
-              <div css={styles.sportTitleText}>{title}</div>
-            </div>
-          </Heading>
-          <VisuallyHiddenText as="h2">{matchSummary}</VisuallyHiddenText>
-        </div>
-      </div>
+        {shouldShowElectionBanner && <LiveElectionBanner />}
+      </>
     );
   }
 
@@ -144,7 +187,7 @@ const Header = ({
 
         <div
           css={[
-            mediaCollections && styles.liveMediaAndTextContainer,
+            hasLiveMediaStream && styles.liveMediaAndTextContainer,
             isWithImageLayout && !isMediaOpen && styles.textWrapper,
           ]}
         >
@@ -153,7 +196,7 @@ const Header = ({
               isWithImageLayout
                 ? styles.textContainerWithImage
                 : styles.textContainerWithoutImage,
-              mediaCollections && [styles.fixedHeight, { width: '100%' }],
+              hasLiveMediaStream && [styles.fixedHeight, { width: '100%' }],
             ]}
           >
             <Heading
@@ -188,10 +231,10 @@ const Header = ({
               </Text>
             )}
           </div>
-          {mediaCollections && (
+          {hasLiveMediaStream && (
             <div css={[styles.liveMedia, isMediaOpen && styles.liveMediaOpen]}>
               <LiveHeaderMedia
-                mediaCollection={mediaCollections}
+                mediaCollection={mediaCollections ?? null}
                 clickCallback={watchVideoClickHandler}
               />
             </div>
