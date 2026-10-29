@@ -211,8 +211,8 @@ export const service: DefaultServiceConfig = {
       followTopicTooltip: {
         success: {
           title: 'अब आप {Topic Name} को फ़ॉलो कर रहे हैं',
-          bodyBefore: 'इस विषय को',
-          bodyAfter: 'में ढूंढें',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगा',
         },
         error: {
           title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',

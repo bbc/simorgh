@@ -230,7 +230,7 @@ export const service: DefaultServiceConfig = {
         },
         error: {
           title: 'Desculpe, algo deu errado',
-          body: 'Verifique sua conexão, atualize a página e tente novamente',
+          body: 'Verifique sua conexão, atualize a página e tente novamente.',
         },
         removed: {
           title: 'Matéria removida',
@@ -244,12 +244,12 @@ export const service: DefaultServiceConfig = {
       followTopicTooltip: {
         success: {
           title: 'Você está seguindo {Topic Name}',
-          bodyBefore: 'Encontre este tema em',
-          bodyAfter: '',
+          bodyBefore: 'Encontre este tópico em',
+          bodyAfter: '.',
         },
         error: {
           title: 'Desculpe, algo deu errado',
-          body: 'Verifique sua conexão, atualize a página e tente novamente',
+          body: 'Verifique sua conexão, atualize sua página e tente novamente.',
         },
         removed: {
           title: 'Você deixou de seguir {Topic Name}',
