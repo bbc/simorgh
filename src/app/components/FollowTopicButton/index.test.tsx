@@ -33,13 +33,6 @@ jest.mock('#app/hooks/useClickTrackerHandler', () => ({
   })),
 }));
 
-jest.mock('#app/hooks/useViewTracker', () => ({
-  __esModule: true,
-  default: jest.fn(({ componentName }) => ({
-    'data-tracking-component': componentName,
-  })),
-}));
-
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
   default: ({
@@ -118,12 +111,78 @@ const FollowTopicButtonWithTheme = ({ isDarkUi = false }) => (
   </ThemeProvider>
 );
 
+const observers = new Map();
+
+const IntersectionObserver = jest.fn(cb => {
+  const item = {
+    callback: cb,
+    elements: new Set(),
+  };
+
+  const instance = {
+    observe: jest.fn(element => {
+      item.elements.add(element);
+    }),
+    disconnect: jest.fn(() => {
+      item.elements.clear();
+    }),
+  };
+
+  observers.set(instance, item);
+
+  return instance;
+});
+
+const getObserverInstance = (element: HTMLElement) => {
+  const [instance] =
+    Array.from(observers).find(([, item]) => item.elements.has(element)) || [];
+
+  if (!instance) {
+    throw new Error('Failed to find IntersectionObserver for element.');
+  }
+
+  return instance;
+};
+
+const triggerIntersection = ({
+  changes,
+  observer,
+}: {
+  changes: Partial<IntersectionObserverEntry>[];
+  observer: IntersectionObserver;
+}) => {
+  const item = observers.get(observer);
+
+  item.callback(changes);
+};
+
+const reverbMock = {
+  isReady: jest.fn(() => true),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(),
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
 describe('FollowTopicButton', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
+    // @ts-expect-error mocking required for tests
+    global.IntersectionObserver = IntersectionObserver;
+    observers.clear();
+
     mockedUseHydrationDetection.mockReturnValue(true);
     mockFollowState();
+  });
+
+  afterEach(() => {
+    observers.clear();
+    jest.useRealTimers();
   });
 
   const renderFollowTopicButton = ({
@@ -133,16 +192,22 @@ describe('FollowTopicButton', () => {
     toggles = {
       topicUasPersonalization: { enabled: true, value: 'hindi' },
     },
+    pageMetadata,
   }: {
     service?: Services;
     idctaConfig?: typeof mockIdctaConfig;
     isDarkUi?: boolean;
     toggles?: Toggles;
+    pageMetadata?: {
+      type: 'article';
+      atiAnalytics: { pageIdentifier: string };
+    };
   } = {}) => {
     return render(<FollowTopicButtonWithTheme isDarkUi={isDarkUi} />, {
       service,
       idctaConfig,
       toggles,
+      pageMetadata,
     });
   };
 
@@ -287,12 +352,6 @@ describe('FollowTopicButton', () => {
             topicData.title,
           ),
         );
-        expect(
-          screen.getByTestId('action-tooltip').parentElement,
-        ).toHaveAttribute(
-          'data-tracking-component',
-          `follow-topic-tooltip-view-${tooltipStatus}`,
-        );
         expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
       },
     );
@@ -391,11 +450,37 @@ describe('FollowTopicButton', () => {
       jest.useRealTimers();
     });
 
-    it('shows the next action result after a tooltip has been dismissed', async () => {
+    it('shows and tracks follow and unfollow tooltip results', async () => {
+      jest.useFakeTimers();
       mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
-      const { rerender } = renderFollowTopicButton(signedInOptions);
+      const { rerender } = renderFollowTopicButton({
+        ...signedInOptions,
+        pageMetadata: {
+          type: 'article',
+          atiAnalytics: { pageIdentifier: 'follow-topic-test' },
+        },
+        toggles: {
+          eventTracking: { enabled: true },
+          topicUasPersonalization: { enabled: true, value: 'hindi' },
+        },
+      });
 
-      await userEvent.click(screen.getByTestId('action-tooltip-close'));
+      await act(async () => Promise.resolve());
+      const followTooltip = screen.getByTestId('action-tooltip').parentElement;
+      const followObserver = getObserverInstance(followTooltip as HTMLElement);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: followObserver,
+        });
+      });
+      await act(async () => {
+        jest.advanceTimersByTime(1100);
+        await Promise.resolve();
+      });
+
+      fireEvent.click(screen.getByTestId('action-tooltip-close'));
       mockActionResult(null);
       rerender(<FollowTopicButtonWithTheme />);
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
@@ -403,11 +488,57 @@ describe('FollowTopicButton', () => {
       mockActionResult({ action: FollowAction.UNFOLLOW, status: 'success' });
       rerender(<FollowTopicButtonWithTheme />);
 
+      await act(async () => Promise.resolve());
+      const unfollowTooltip =
+        screen.getByTestId('action-tooltip').parentElement;
+      const unfollowObserver = getObserverInstance(
+        unfollowTooltip as HTMLElement,
+      );
+
       expect(screen.getByRole('group')).toHaveAccessibleName(
         actionTooltipTranslations.removed.title.replace(
           '{Topic Name}',
           topicData.title,
         ),
+      );
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: unfollowObserver,
+        });
+      });
+      await act(async () => {
+        jest.advanceTimersByTime(1100);
+        await Promise.resolve();
+      });
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(2);
+      expect(reverbMock.userActionEvent).toHaveBeenNthCalledWith(
+        1,
+        'viewability',
+        '',
+        expect.objectContaining({
+          item: expect.objectContaining({
+            name: 'follow-topic-tooltip-view-success',
+          }),
+        }),
+        undefined,
+        undefined,
+        false,
+      );
+      expect(reverbMock.userActionEvent).toHaveBeenNthCalledWith(
+        2,
+        'viewability',
+        '',
+        expect.objectContaining({
+          item: expect.objectContaining({
+            name: 'follow-topic-tooltip-view-removed',
+          }),
+        }),
+        undefined,
+        undefined,
+        false,
       );
     });
 

@@ -32,6 +32,7 @@ const useActionTooltip = <TActionResult>({
     componentName: `${trackingNamePrefix}-tooltip-view-${
       actionResult ? getTooltipStatus(actionResult) : 'none'
     }`,
+    viewTrackerKey: actionResult,
   });
 
   const { onClick: onTooltipCloseClickTrack } = useClickTracker({

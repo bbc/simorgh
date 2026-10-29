@@ -23,7 +23,14 @@ import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/di
 
 const VIEWED_DURATION_MS = 1000;
 
-const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
+type ViewTrackerEventTrackingData = EventTrackingData & {
+  viewTrackerKey?: unknown;
+};
+
+const getComponentViewTracker = (
+  eventTrackingData?: ViewTrackerEventTrackingData,
+) => {
+  const { viewTrackerKey } = eventTrackingData || {};
   const {
     componentName,
     format,
@@ -60,6 +67,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const { service, resonanceEnabled } = use(ServiceContext);
+
+  useEffect(() => {
+    setComponentHasComeIntoView(alwaysInView);
+    setEventSent(false);
+    (observer.current as unknown as IntersectionObserver)?.disconnect();
+    observer.current = null;
+  }, [viewTrackerKey, alwaysInView]);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -205,13 +219,13 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         (observer.current as unknown as IntersectionObserver)?.observe(element);
       }
     },
-    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
+    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView, viewTrackerKey],
   );
 
   return viewTracker;
 };
 
-export default (eventTrackingData?: EventTrackingData): any => {
+export default (eventTrackingData?: ViewTrackerEventTrackingData): any => {
   const { isLite } = use(RequestContext);
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
