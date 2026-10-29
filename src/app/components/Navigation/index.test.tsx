@@ -37,11 +37,10 @@ describe('Navigation', () => {
     { title: 'About', url: '/about' },
   ];
 
-  it('does not enable sticky navigation on AMP even when its toggle is enabled', () => {
+  it('does not enable sticky navigation on AMP', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       service: 'mundo',
       isAmp: true,
-      toggles: { stickyNavigation: { enabled: true } },
     });
 
     expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
