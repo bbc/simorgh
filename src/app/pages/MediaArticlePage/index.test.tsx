@@ -469,6 +469,38 @@ describe('MediaArticlePage', () => {
       expect(document.querySelector('#save-article-button')).toBeNull();
     });
 
+    it.each([
+      { placement: 'byline', pageData: pidginPageDataWithByline },
+      {
+        placement: 'standalone timestamp',
+        pageData: pidginPageData as unknown as Article,
+      },
+    ])(
+      'does NOT render for a TC2 asset with a $placement',
+      async ({ pageData }) => {
+        const tc2PageData = {
+          ...pageData,
+          metadata: {
+            ...pageData.metadata,
+            analyticsLabels: {
+              ...pageData.metadata.analyticsLabels,
+              producer: 'hindi',
+              contentId: 'urn:bbc:topcat:curie:asset:example',
+            },
+          },
+        };
+
+        await act(async () => {
+          render(
+            <MediaArticlePage pageData={tc2PageData} />,
+            personalizedRenderOptions,
+          );
+        });
+
+        expect(document.querySelector('#save-article-button')).toBeNull();
+      },
+    );
+
     it('does NOT render when personalization is unavailable', async () => {
       await act(async () => {
         render(
