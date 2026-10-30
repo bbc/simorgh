@@ -1,4 +1,7 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import isLive from '#app/lib/utilities/isLive';
+import { matchers } from '@emotion/jest';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -24,6 +27,10 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
+}));
+
 jest.mock('../ThemeProvider');
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
@@ -31,9 +38,26 @@ jest.mock('../../hooks/useClickTrackerHandler', () => ({
   ...jest.requireActual('../../hooks/useClickTrackerHandler'),
 }));
 
+jest.mock('#app/lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+expect.extend(matchers);
+
+const mockIsLive = isLive as jest.MockedFunction<typeof isLive>;
+
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
+
+const relatedTopicSummary = afriqueHomePage.data.curations[0]
+  ?.summaries?.[0] as Summary;
+const relatedTopicSummaries = [
+  relatedTopicSummary,
+  { ...relatedTopicSummary, id: 'related-topic-summary-2' },
+  { ...relatedTopicSummary, id: 'related-topic-summary-3' },
+];
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -145,6 +169,14 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  beforeEach(() => {
+    (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'test' });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
@@ -187,6 +219,66 @@ describe('Curation', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
+
+  describe('related topics', () => {
+    it('renders related topics in a simple grid outside live', () => {
+      const { getByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(getByText('Santé')).toBeInTheDocument();
+    });
+
+    it('renders related topics in a hierarchical grid outside live', () => {
+      const { getAllByRole } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={HIGH}
+          summaries={relatedTopicSummaries}
+        />,
+      );
+
+      const relatedTopicLinks = getAllByRole('link', { name: 'Santé' });
+      expect(relatedTopicLinks).toHaveLength(3);
+      relatedTopicLinks.forEach(link => {
+        expect(link).toBeInTheDocument();
+      });
+    });
+
+    it('does not render related topics in live', () => {
+      (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'live' });
+
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+
+    it('does not render related topics for another curation type', () => {
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={MAXIMUM}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+  });
 
   it.each([
     { visualStyle: BANNER, visualProminence: LOW },
@@ -638,5 +730,85 @@ describe('Curation', () => {
       }),
     );
     spy.mockRestore();
+  });
+
+  describe('Video collection styling', () => {
+    afterEach(() => {
+      mockIsLive.mockReset();
+    });
+
+    // Grid columns are only applied to video collections
+    const gridColumnsStyleRule = [
+      'grid-template-columns',
+      'repeat(2, minmax(0, 1fr))',
+      { media: '(min-width: 37.5rem)' },
+    ] as const;
+
+    const renderCuration = ({
+      service,
+      isLiveEnvironment,
+      isVideoCollection,
+    }: {
+      service: 'arabic' | 'mundo';
+      isLiveEnvironment: boolean;
+      isVideoCollection: boolean;
+    }) => {
+      mockIsLive.mockReturnValue(isLiveEnvironment);
+
+      const { getByTestId } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={fixture.data.curations[0].summaries}
+          isVideoCollection={isVideoCollection}
+        />,
+        { service },
+      );
+
+      return getByTestId('topic-promos');
+    };
+
+    it('applies video collection styling for Arabic on test', () => {
+      const list = renderCuration({
+        service: 'arabic',
+        isLiveEnvironment: false,
+        isVideoCollection: true,
+      });
+
+      expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+    });
+
+    it.each([
+      {
+        description: 'Arabic on live',
+        service: 'arabic',
+        isLiveEnvironment: true,
+        isVideoCollection: true,
+      },
+      {
+        description: 'Mundo on test',
+        service: 'mundo',
+        isLiveEnvironment: false,
+        isVideoCollection: true,
+      },
+      {
+        description: 'Non-video collection on test',
+        service: 'arabic',
+        isLiveEnvironment: false,
+        isVideoCollection: false,
+      },
+    ] as const)(
+      'does not apply video collection styling for $description',
+      ({ service, isLiveEnvironment, isVideoCollection }) => {
+        const list = renderCuration({
+          service,
+          isLiveEnvironment,
+          isVideoCollection,
+        });
+
+        expect(list).not.toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
   });
 });
