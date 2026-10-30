@@ -576,4 +576,38 @@ describe('Hierarchical Grid Curation', () => {
 
     expect(queryByText('Nigeria')).not.toBeInTheDocument();
   });
+
+  describe('Video collection styling', () => {
+    const renderGrid = () =>
+      render(
+        <HierarchicalGrid
+          headingLevel={headingLevel}
+          summaries={fixture}
+          isVideoCollection
+          eventTrackingData={minimalEventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+
+    it('applies a two-column layout from 600px for video collections', () => {
+      const { getByTestId } = renderGrid();
+
+      expect(getByTestId('topic-promos')).toHaveStyleRule(
+        'grid-template-columns',
+        'repeat(2, minmax(0, 1fr))',
+        { media: '(min-width: 37.5rem)' },
+      );
+    });
+
+    it('makes the first promo span both columns between 600px and 1007px', () => {
+      const { getByTestId } = renderGrid();
+
+      const firstPromo = getByTestId('topic-promos').querySelector('li');
+
+      expect(firstPromo).toHaveStyleRule('grid-column', '1/-1', {
+        media: '(min-width: 37.5rem) and (max-width: 62.9375rem)',
+        target: ':first-of-type',
+      });
+    });
+  });
 });
