@@ -221,6 +221,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "topBarOJs": {
     "enabled": true,
   },
+  "topicDiscovery": {
+    "enabled": true,
+  },
   "topicUasPersonalization": {
     "enabled": true,
     "value": "hindi|mundo|portuguese",

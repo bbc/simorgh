@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles Flourish Embed Story should match snapshot 1`] = `
 <iframe
-  class="css-axsk9o"
+  class="css-157i3ec"
   frameborder="0"
   height="575"
   id="flourish-id-b74fce73"
@@ -15,7 +15,7 @@ exports[`Canonical Articles Flourish Embed Story should match snapshot 1`] = `
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 1`] = `
 <iframe
-  class="css-axsk9o"
+  class="css-157i3ec"
   frameborder="0"
   height="575"
   id="flourish-id-fa6c571f"
@@ -28,7 +28,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 2`] = `
 <iframe
-  class="css-axsk9o"
+  class="css-157i3ec"
   frameborder="0"
   height="575"
   id="flourish-id-d6c28b92"
@@ -41,7 +41,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 3`] = `
 <iframe
-  class="css-axsk9o"
+  class="css-157i3ec"
   frameborder="0"
   height="575"
   id="flourish-id-cbc84ae7"
@@ -54,7 +54,7 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 
 exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 4`] = `
 <iframe
-  class="css-axsk9o"
+  class="css-157i3ec"
   frameborder="0"
   height="575"
   id="flourish-id-51a5a7f8"
@@ -66,52 +66,3 @@ exports[`Canonical Articles Flourish Embed Visualisations should match snapshot 
 `;
 
 exports[`Canonical Articles Paragraph should match paragraph text 1`] = `"A cada dez anos, o Brasil tem uma oportunidade inédita de olhar para a sua população com os censos demográficos. "`;
-
-exports[`Canonical Articles Topic Tags should match text and href 1`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/c340q43xynwt",
-  "text": "Comportamento",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 2`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cg7267qgn3nt",
-  "text": "Idosos",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 3`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cpzd4zxwgddt",
-  "text": "Crianças",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 4`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cr50y580rjxt",
-  "text": "Ciência",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 5`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cyx5kx4kvr3t",
-  "text": "Família",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 6`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cz74k717pw5t",
-  "text": "Brasil",
-}
-`;
-
-exports[`Canonical Articles Topic Tags should match text and href 7`] = `
-{
-  "href": "https://www.bbc.com/portuguese/topics/cz74k71p8ynt",
-  "text": "Sociedade",
-}
-`;
