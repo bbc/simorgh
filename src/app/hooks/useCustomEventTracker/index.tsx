@@ -69,7 +69,10 @@ const useCustomEventTracker = ({
             buildResonanceEventConfig({
               type: VIEW_EVENT,
               eventGroupingName: eventName,
-              componentName: stringifiedData,
+              componentName: eventName,
+              ...(stringifiedData && {
+                itemTracker: { label: stringifiedData },
+              }),
               campaignID,
               pageIdentifier,
               platform,

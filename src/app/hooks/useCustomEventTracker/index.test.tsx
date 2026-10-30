@@ -251,8 +251,37 @@ describe('useCustomEventTracker', () => {
           event: expect.objectContaining({
             action: 'view',
             grouping: eventName,
-            subcategory: 'custom-component-data',
+            subcategory: eventName,
           }),
+          item: expect.objectContaining({
+            label: 'custom-component-data',
+            name: 'custom-component-data',
+          }),
+        }),
+      );
+    });
+
+    it('should use the event name as the subcategory and leave the item name unset when there is no payload', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalyticsFixture }),
+        },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          event: expect.objectContaining({ subcategory: eventName }),
+          item: expect.objectContaining({ name: undefined }),
         }),
       );
     });
