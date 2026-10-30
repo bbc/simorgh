@@ -36,7 +36,6 @@
   :global([data-is-dark-ui='true']) & {
     color: theme.$palette-grey-2;
   }
-
 }
 
 .promoBox {
@@ -85,5 +84,10 @@
   top: 50%;
   transform: translateY(-50%);
   inset-inline-end: #{theme.pixelsToRem-px-to-rem(12)};
-  fill: currentColor;
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    :global([data-is-dark-ui='true']) & {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  }
 }

@@ -75,6 +75,24 @@ describe('treeshakeCssModuleRules', () => {
     expect(treeshakeCssModuleRules(css, '')).toBe(css);
   });
 
+  it('removes empty container queries that are invalid in AMP', () => {
+    expect(
+      treeshakeCssModuleRules(
+        '@container(min-width:60rem){.Carousel_unused__abc{display:flex}}',
+        '',
+      ),
+    ).toBe('');
+  });
+
+  it('keeps container queries containing rendered module classes', () => {
+    const css =
+      '@container(min-width:60rem){.Carousel_used__abc{display:flex}}';
+
+    expect(
+      treeshakeCssModuleRules(css, '<div class="Carousel_used__abc"></div>'),
+    ).toBe(css);
+  });
+
   it('does not remove an escaped class by matching only its prefix', () => {
     const css = '.Card_link__abc\\:def{color:red}';
 

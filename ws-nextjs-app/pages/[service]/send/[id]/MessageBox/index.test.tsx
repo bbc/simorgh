@@ -6,6 +6,7 @@ import {
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
+import InvalidMessageBox from './InvalidMessageBox';
 import * as FormContextModule from '../FormContext';
 import { InvalidMessageCodes } from '../types';
 
@@ -44,6 +45,23 @@ const labelMap = {
 } as Record<string, string>;
 
 describe('ErrorSummaryBox', () => {
+  it('renders the error symbol as a decorative recolourable mask', async () => {
+    const { container } = await act(() =>
+      render(
+        <InvalidMessageBox
+          id="error"
+          messageCode={InvalidMessageCodes.FieldRequired}
+        />,
+      ),
+    );
+    const icon = container.querySelector('.external-svg');
+
+    expect(icon).toHaveClass('mask', 'errorIcon');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveStyle({
+      '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/error.svg")`,
+    });
+  });
   beforeEach(() => {
     jest.restoreAllMocks();
 

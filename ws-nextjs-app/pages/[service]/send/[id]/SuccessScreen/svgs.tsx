@@ -14,6 +14,7 @@ const TickSvg = ({
     css={css}
     width="4rem"
     height="4rem"
+    isColoured
   />
 );
 

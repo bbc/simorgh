@@ -275,14 +275,14 @@ export const DownArrowIcon = () => (
 export const AccountIconRounded = ({
   className,
   css,
-  isBlue = false,
+  isDefault = false,
   isInverted,
 }: Pick<IconProps, 'className' | 'css' | 'isInverted'> & {
-  isBlue?: boolean;
+  isDefault?: boolean;
 }) => (
   <CurrentColorSvg
-    name={isBlue ? 'account-rounded-blue' : 'account-rounded'}
-    className={[className, isBlue && styles.blue].filter(Boolean).join(' ')}
+    name={isDefault ? 'account-rounded-blue' : 'account-rounded'}
+    className={[className, isDefault && styles.blue].filter(Boolean).join(' ')}
     css={css}
     isInverted={isInverted}
     width="24"

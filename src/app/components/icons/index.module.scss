@@ -54,7 +54,7 @@
 }
 
 .externalSvg {
-  @media (prefers-color-scheme: dark) {
+  :global([data-is-dark-ui='true']) & {
     filter: invert(1) hue-rotate(180deg);
   }
 }

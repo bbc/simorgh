@@ -1,5 +1,4 @@
 import { use } from 'react';
-import { useTheme } from '@emotion/react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { OptimoBlock } from '#app/models/types/optimo';
@@ -15,7 +14,6 @@ interface PromoProps {
 
 const Promo = ({ block, clickTracker }: PromoProps) => {
   const { serviceDatetimeLocale, dir } = use(ServiceContext);
-  const { isDarkUi } = useTheme();
 
   const textBlock = filterForBlockType(
     (block?.model as { blocks?: Record<string, unknown> })?.blocks || {},
@@ -40,7 +38,6 @@ const Promo = ({ block, clickTracker }: PromoProps) => {
         <Chevron
           dir={dir}
           className={styles.chevron}
-          isInverted={isDarkUi}
           orientation={ChevronOrientation.FORWARD}
         />
       </a>

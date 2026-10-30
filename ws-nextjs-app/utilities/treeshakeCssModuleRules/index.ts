@@ -25,6 +25,10 @@ const treeshakeCssModuleRules = (css: string, renderedHtml: string): string => {
     }
   });
 
+  root.walkAtRules('container', rule => {
+    if (rule.nodes?.length === 0) rule.remove();
+  });
+
   return root.toString();
 };
 

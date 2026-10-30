@@ -102,7 +102,7 @@
 }
 
 .closeButton {
-  color: theme.$palette-white;
+  color: theme.$palette-black;
   position: absolute;
   top: 0;
   inset-inline-end: 0;
@@ -121,12 +121,23 @@
   }
 
   &:hover {
+    color: theme.$palette-white;
     background: theme.$palette-postbox;
   }
 
   &:focus {
+    color: theme.$palette-white;
     background: theme.$palette-postbox;
     outline: 2px solid theme.$palette-white;
     box-shadow: 0 0 0 0.25rem theme.$palette-grey-10;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    &:hover,
+    &:focus {
+      :global(.external-svg) {
+        filter: invert(1) hue-rotate(180deg);
+      }
+    }
   }
 }

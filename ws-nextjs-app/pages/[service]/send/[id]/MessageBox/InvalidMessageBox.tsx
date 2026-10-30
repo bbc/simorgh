@@ -10,10 +10,18 @@ import {
 } from '../types';
 import styles from './styles';
 import fallbackTranslations from '../fallbackTranslations';
+import iconStyles from './index.module.scss';
 
 const ErrorSymbol = () => (
   <span css={styles.errorSvg}>
-    <ExternalSvg path="images/icons/error.svg" width="1.5rem" height="1.5rem" />
+    <ExternalSvg
+      path="images/icons/error.svg"
+      className={iconStyles.errorIcon}
+      width="1.5rem"
+      height="1.5rem"
+      useCurrentColor
+      isInverted
+    />
   </span>
 );
 

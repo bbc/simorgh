@@ -13,7 +13,11 @@ export default () => {
       expect(brandingEl).toBeInTheDocument();
       if (!brandingEl) return;
 
-      const brandingLinkEl = brandingEl.parentNode as Element;
+      const brandingLinkEl = brandingEl.closest('a');
+      expect(brandingLinkEl).toBeInTheDocument();
+      if (!brandingLinkEl) {
+        throw new Error('Expected the footer brand asset to have a link');
+      }
       const brandingImageEl =
         brandingLinkEl?.querySelector?.('img.external-svg');
 

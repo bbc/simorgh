@@ -76,7 +76,7 @@ const ActionTooltip = ({
           data-testid="action-tooltip-close"
         >
           <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
-          <Close width="20" height="20" isInverted />
+          <Close width="20" height="20" />
         </button>
 
         <div className={styles.content}>

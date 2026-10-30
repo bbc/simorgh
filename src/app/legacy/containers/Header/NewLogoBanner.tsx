@@ -3,6 +3,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import AccountHeader from '#app/components/Account/AccountHeader';
 import { ExternalSvg } from '#app/components/icons';
 import styles from './index.styles';
+import logoStyles from './NewLogoBanner.module.scss';
 
 export const GLOBAL_LANGUAGES_PATH = '/ws/languages';
 
@@ -25,8 +26,10 @@ const NewLogoBanner = () => {
       <a href={logoHref} aria-label="BBC News World Service">
         <ExternalSvg
           path="images/icons/ws-header-logo.svg"
+          className={logoStyles.logo}
           width="112"
-          isColoured
+          height="32"
+          useCurrentColor
         />
       </a>
       <AccountHeader variant="default" />

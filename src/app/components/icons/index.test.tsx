@@ -58,7 +58,7 @@ describe('icons', () => {
   });
 
   it('uses the recolourable account mask for the default navigation', () => {
-    const { container } = render(<AccountIconRounded isBlue />);
+    const { container } = render(<AccountIconRounded isDefault />);
 
     expect(container.querySelector('.external-svg')).toHaveClass(
       'mask',
