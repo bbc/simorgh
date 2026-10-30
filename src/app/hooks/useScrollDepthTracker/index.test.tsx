@@ -9,12 +9,23 @@ import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
 import useScrollDepthTracker, { getHomePageBounds } from '.';
 import fixtureData from '../useViewTracker/fixtureData.json';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
-let mockServiceContextValue = {
+let mockServiceContextValue: {
+  atiAnalyticsProducerId: string;
+  atiAnalyticsProducerName: string;
+  service: string;
+  resonanceEnabled?: boolean;
+} = {
   atiAnalyticsProducerId: '70',
   atiAnalyticsProducerName: 'PIDGIN',
   service: 'pidgin',
 };
+
+jest.mock(
+  '../../components/ATIAnalytics/resonance/dispatchResonanceEvent',
+  () => jest.fn(),
+);
 
 jest.mock('../../contexts/ServiceContext', () => {
   const serviceContext = createContext({
@@ -39,6 +50,7 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 const mockDispatchTrackingRequests = jest.fn();
 jest.mock('#app/lib/analyticsUtils/dispatchTrackingRequests', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/lib/analyticsUtils/dispatchTrackingRequests'),
   default: (...args: unknown[]) => mockDispatchTrackingRequests(...args),
 }));
 
@@ -115,7 +127,7 @@ const wrapper = ({
     service="pidgin"
     pathname="/pidgin/tori-51745682"
     toggles={toggles}
-    atiData={atiData}
+    pageMetadata={atiData && { atiAnalytics: atiData, type: STORY_PAGE }}
   >
     {children}
   </AllTheProviders>
@@ -214,6 +226,89 @@ const buildElementWithFigure = ({
 };
 
 describe('useScrollDepthTracker', () => {
+  describe('Resonance dual-run', () => {
+    it('dispatches a resonance event for each threshold when resonanceEnabled is true', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useScrollDepthTracker('article-scroll-depth'),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      act(() => {
+        result.current(buildElement({ offsetHeight: 1000, documentTop: 0 }));
+      });
+
+      await act(async () => {
+        simulateScroll(400);
+      });
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(2);
+      expect(dispatchViewabilityEvent).toHaveBeenNthCalledWith(
+        1,
+        expect.objectContaining({
+          event: expect.objectContaining({
+            action: 'view',
+            subcategory: 'article-scroll-depth-25',
+          }),
+        }),
+      );
+      expect(dispatchViewabilityEvent).toHaveBeenNthCalledWith(
+        2,
+        expect.objectContaining({
+          event: expect.objectContaining({
+            action: 'view',
+            subcategory: 'article-scroll-depth-50',
+          }),
+        }),
+      );
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(2);
+    });
+
+    it('does not dispatch a resonance event when resonanceEnabled is false', async () => {
+      const { result } = renderHook(
+        () => useScrollDepthTracker('article-scroll-depth'),
+        { wrapper: props => wrapper({ ...props, atiData: atiAnalytics }) },
+      );
+
+      act(() => {
+        result.current(buildElement({ offsetHeight: 1000, documentTop: 0 }));
+      });
+
+      await act(async () => {
+        simulateScroll(400);
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+      expect(mockDispatchTrackingRequests).toHaveBeenCalledTimes(2);
+    });
+
+    it('does not dispatch a resonance event when required ATI tracking props are missing', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useScrollDepthTracker('article-scroll-depth'),
+        { wrapper },
+      );
+
+      act(() => {
+        result.current(buildElement({ offsetHeight: 1000, documentTop: 0 }));
+      });
+
+      await act(async () => {
+        simulateScroll(400);
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+    });
+  });
+
   describe('firing events at scroll depth thresholds', () => {
     it('fires a single event when the user scrolls to 25% depth', async () => {
       const { result } = renderHook(
