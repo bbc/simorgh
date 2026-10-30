@@ -130,16 +130,37 @@ exports[`Canonical Listen Header Navigation link should match text and url 1`] =
 }
 `;
 
+exports[`Canonical Listen Header Navigation link should match text and url 2`] = `
+{
+  "text": "Assista",
+  "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Listen Header Navigation link should match text and url 3`] = `
+{
+  "text": "Página atual, Ouça",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
+}
+`;
+
+exports[`Canonical Listen Header Navigation link should match text and url 4`] = `
+{
+  "text": "Notícias para você",
+  "url": "/portuguese/my-news",
+}
+`;
+
 exports[`Canonical Listen Image Caption should match text 1`] = `"Legenda do áudio, syndication test run"`;
 
 exports[`Canonical Listen Image should match snapshot 1`] = `
 <noscript>
   <div>
     <div
-      class="css-1g988if"
+      class="css-fcc1fb"
     >
       <strong
-        class="css-pow7hy"
+        class="css-1n1zjvh"
       >
         A reprodução deste formato de vídeo não é compatível com seu dispositivo
       </strong>
@@ -152,24 +173,24 @@ exports[`Canonical Listen Main heading should match text 1`] = `"syndication tes
 
 exports[`Canonical Listen Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1okmog4"
+  class="media-container css-1w30epl"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-8432in"
+    class="css-ncy9ey"
     data-simorgh-media-loader="inactive"
   >
     <div
-      class="media-player css-9p9hvp"
+      class="media-player css-6duze3"
       data-e2e="media-player"
     >
       <noscript>
         <div>
           <div
-            class="css-1g988if"
+            class="css-fcc1fb"
           >
             <strong
-              class="css-pow7hy"
+              class="css-1n1zjvh"
             >
               A reprodução deste formato de vídeo não é compatível com seu dispositivo
             </strong>
@@ -179,7 +200,7 @@ exports[`Canonical Listen Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-mj1lem"
+    class="css-ltesgd"
     dir="ltr"
   >
     <span
