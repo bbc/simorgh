@@ -4,6 +4,9 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+// Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 interface CustomEventData {
   eventName: string;
@@ -42,7 +45,7 @@ const useCustomEventTracker = ({
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
 
   const trackEvent = useCallback(
     async (stringifiedData = '') => {
@@ -60,6 +63,26 @@ const useCustomEventTracker = ({
       ].every(Boolean);
 
       if (shouldSendEvent) {
+        // Temporary Resonance dual-run, independent of the Reverb beacon below (see ticket).
+        if (resonanceEnabled) {
+          dispatchViewabilityEvent(
+            buildResonanceEventConfig({
+              type: VIEW_EVENT,
+              componentName: eventName,
+              ...(stringifiedData && {
+                itemTracker: { label: stringifiedData },
+              }),
+              campaignID,
+              pageIdentifier,
+              platform,
+              producerName,
+              experimentName,
+              experimentVariant,
+              isSignedIn,
+            }),
+          );
+        }
+
         try {
           await sendEventBeacon({
             type: VIEW_EVENT,
@@ -93,6 +116,7 @@ const useCustomEventTracker = ({
       producerId,
       producerName,
       service,
+      resonanceEnabled,
       statsDestination,
       experimentName,
       experimentVariant,
