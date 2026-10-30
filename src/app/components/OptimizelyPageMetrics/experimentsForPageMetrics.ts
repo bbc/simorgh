@@ -1,5 +1,4 @@
 import { PageTypes } from '#app/models/types/global';
-import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
