@@ -21,8 +21,8 @@ const getCopyright = (copyrightHolder: string) => {
   return copyrightHolder;
 };
 
-const shouldLazyLoad = (position: number[]) =>
-  !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
+const shouldLazyLoad = (isAboveTheFold: boolean) =>
+  !!urlWithPageAnchor() || !isAboveTheFold;
 
 const renderCopyright = (copyright: string) =>
   copyright && <Copyright>{copyright}</Copyright>;
@@ -37,6 +37,7 @@ type Props = {
   position?: number[];
   sizes?: string;
   shouldPreload?: boolean;
+  isLeadImage?: boolean;
 };
 
 const ImageWithCaption = ({
@@ -45,6 +46,7 @@ const ImageWithCaption = ({
   position = [1],
   sizes,
   shouldPreload,
+  isLeadImage = position[0] === 1,
 }: Props) => {
   const { isAmp, isLite } = use(RequestContext);
 
@@ -55,8 +57,10 @@ const ImageWithCaption = ({
   const altTextBlock = filterForBlockType(blocks, 'altText');
   const captionBlock = filterForBlockType(blocks, 'caption');
 
-  const shouldPreloadLeadImage =
-    position[0] <= LAZYLOAD_FROM_BLOCK && shouldPreload;
+  // A lead image further down the page than this is unlikely to be in the
+  // initial viewport, so it shouldn't be prioritised over other content
+  const isAboveTheFold = isLeadImage && position[0] <= LAZYLOAD_FROM_BLOCK;
+  const shouldPreloadLeadImage = isAboveTheFold && shouldPreload;
 
   if (!rawImageBlock || !altTextBlock) {
     return null;
@@ -82,7 +86,7 @@ const ImageWithCaption = ({
     srcResolution: DEFAULT_IMAGE_RES,
   });
 
-  const lazyLoad = shouldLazyLoad(position);
+  const lazyLoad = shouldLazyLoad(isAboveTheFold);
 
   return (
     <figure className={className} css={styles.figure}>

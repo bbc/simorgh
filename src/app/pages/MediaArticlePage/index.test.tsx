@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Article } from '#app/models/types/optimo';
+import { articleDataWithLeadImageAfterText } from '#pages/ArticlePage/fixtureData';
 import { Helmet } from 'react-helmet';
 import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
@@ -38,6 +39,7 @@ type ContextProps = {
   service: Services;
   adsToggledOn?: boolean;
   mostReadToggledOn?: boolean;
+  preloadLeadImageToggledOn?: boolean;
   showAdsBasedOnLocation?: boolean;
 };
 
@@ -46,6 +48,7 @@ const Context = ({
   children,
   adsToggledOn = false,
   mostReadToggledOn = true,
+  preloadLeadImageToggledOn = false,
   showAdsBasedOnLocation = false,
 }: PropsWithChildren<ContextProps>) => (
   <ThemeProvider service={service} variant="default">
@@ -56,6 +59,9 @@ const Context = ({
         },
         ads: {
           enabled: adsToggledOn,
+        },
+        preloadLeadImage: {
+          enabled: preloadLeadImageToggledOn,
         },
       }}
     >
@@ -93,6 +99,53 @@ describe('MediaArticlePage', () => {
     delete process.env.SIMORGH_ICHEF_BASE_URL;
     jest.restoreAllMocks();
   });
+
+  it.each([
+    {
+      preloadLeadImageToggledOn: true,
+      priority: 'high',
+      preloadSources: [
+        'https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/test/lead-image.jpg.webp',
+      ],
+    },
+    {
+      preloadLeadImageToggledOn: false,
+      priority: null,
+      preloadSources: [],
+    },
+  ])(
+    'only prioritises the first image when it follows other blocks, with preloading $preloadLeadImageToggledOn',
+    async ({ preloadLeadImageToggledOn, priority, preloadSources }) => {
+      render(
+        <Context
+          service="news"
+          mostReadToggledOn={false}
+          preloadLeadImageToggledOn={preloadLeadImageToggledOn}
+        >
+          <MediaArticlePage pageData={articleDataWithLeadImageAfterText} />
+        </Context>,
+      );
+
+      const leadImage = screen.getByRole('img', { name: 'Lead article image' });
+      const laterImage = screen.getByRole('img', {
+        name: 'Later article image',
+      });
+
+      expect(leadImage).toHaveAttribute('loading', 'eager');
+      expect(leadImage.getAttribute('fetchpriority')).toBe(priority);
+      expect(laterImage).toHaveAttribute('loading', 'lazy');
+      expect(laterImage).not.toHaveAttribute('fetchpriority');
+
+      await waitFor(() => {
+        const preloadLinks = document.head.querySelectorAll(
+          'link[rel="preload"][as="image"]',
+        );
+        expect(
+          Array.from(preloadLinks, link => link.getAttribute('href')),
+        ).toEqual(preloadSources);
+      });
+    },
+  );
 
   it('should render a news article correctly', async () => {
     mockMostReadResponse();

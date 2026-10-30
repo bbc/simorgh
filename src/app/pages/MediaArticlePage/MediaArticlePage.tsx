@@ -140,13 +140,21 @@ const Links = (props: ComponentToRenderProps) => (
 );
 
 const getImageComponent =
-  (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
-    <ImageWithCaption
-      {...props}
-      sizes="(min-width: 1008px) 760px, 100vw"
-      shouldPreload={preloadLeadImageToggle}
-    />
-  );
+  (preloadLeadImageToggle: boolean, leadImagePosition?: number) =>
+  (props: ComponentToRenderProps) => {
+    const { position } = props;
+
+    return (
+      <ImageWithCaption
+        {...props}
+        sizes="(min-width: 1008px) 760px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+        isLeadImage={
+          leadImagePosition !== undefined && position?.[0] === leadImagePosition
+        }
+      />
+    );
+  };
 
 const getTimestampComponent =
   (showTimestamp: boolean, showSaveArticleButton: boolean, pageData: Article) =>
@@ -177,6 +185,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const leadImagePosition = blocks.find(block => block.type === 'image')
+    ?.position?.[0];
 
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -251,7 +261,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
       showSaveArticleButton,
       pageData,
     ),
-    image: getImageComponent(preloadLeadImageToggle),
+    image: getImageComponent(preloadLeadImageToggle, leadImagePosition),
     timestamp: getTimestampComponent(
       showTimestamp,
       showSaveArticleButton,

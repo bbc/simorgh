@@ -283,6 +283,53 @@ export const articleDataNews = articleDataBuilder(
   },
 ) as unknown as Article;
 
+export const articleDataWithLeadImageAfterText: Article = {
+  ...articleDataNews,
+  content: {
+    model: {
+      blocks: [
+        { ...articleDataNews.content.model.blocks[0], position: [1] },
+        ...[2].map(position => ({
+          ...singleTextBlock(`Paragraph ${position}`),
+          id: `priority-paragraph-${position}`,
+          position: [position],
+        })),
+        ...[
+          {
+            position: 3,
+            altText: 'Lead article image',
+            locator: 'lead-image.jpg',
+          },
+          {
+            position: 4,
+            altText: 'Later article image',
+            locator: 'later-image.jpg',
+          },
+        ].map(({ position, altText, locator }) => ({
+          type: 'image',
+          id: `priority-image-${position}`,
+          position: [position],
+          model: {
+            blocks: [
+              blockContainingText('altText', altText),
+              {
+                type: 'rawImage',
+                model: {
+                  width: 800,
+                  height: 450,
+                  locator: `test/${locator}`,
+                  originCode: 'cpsprodpb',
+                  copyrightHolder: 'BBC',
+                },
+              },
+            ],
+          },
+        })),
+      ],
+    },
+  },
+};
+
 export const articleDataNewsWithEmbeds = articleDataBuilder(
   'c0000000001o',
   'News',

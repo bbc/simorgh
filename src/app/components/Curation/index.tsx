@@ -157,6 +157,7 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              isFirstCuration={isFirstCuration}
             />
           </div>
         );
