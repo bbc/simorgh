@@ -6,8 +6,18 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
+import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage from '.';
+
+const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
+
+if (!myNewsTranslations) {
+  throw new Error(
+    'Hindi config must include translations.myNews for MyNewsPage tests',
+  );
+}
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -16,14 +26,21 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 }));
 
 jest.mock('#app/hooks/useUASRecentActivity');
+jest.mock('#app/hooks/useUASFollowedTopics');
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
 >;
+const mockUseFollowedTopics = useUASFollowedTopics as jest.MockedFunction<
+  typeof useUASFollowedTopics
+>;
 
 const renderOptions = {
   service: 'hindi' as const,
-  toggles: { uasPersonalization: { enabled: true, value: 'hindi' } },
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'hindi' },
+    topicUasPersonalization: { enabled: true, value: 'hindi' },
+  },
   idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
 };
 
@@ -48,11 +65,23 @@ const mockSavedArticles = [
   },
 ];
 
+const mockFollowedTopics = [
+  { id: 'topic-1', title: 'Cricket', service: 'hindi' },
+  { id: 'topic-2', title: 'Elections', service: 'hindi' },
+];
+
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    window.scrollTo = jest.fn();
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
       total: 0,
       isLoading: false,
       error: null,
@@ -60,7 +89,68 @@ describe('MyNewsPage', () => {
     mockMatchMedia();
   });
 
-  it('should render loading state initially', async () => {
+  it.each([
+    {
+      service: 'mundo' as const,
+      guestDescription:
+        'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
+      followedTopicsTitle: 'Temas que sigues',
+      savedArticlesTitle: 'Mis artículos guardados',
+    },
+    {
+      service: 'hindi' as const,
+      guestDescription:
+        'अपनी पसंद के टॉपिक्स फ़ॉलो करने और आर्टिकल्स को बाद में पढ़ने के लिए सेव करने के लिए साइन इन करें.',
+      followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+      savedArticlesTitle: 'मेरे सेव किए हुए आर्टिकल',
+    },
+    {
+      service: 'portuguese' as const,
+      guestDescription:
+        'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
+      followedTopicsTitle: 'Temas que você segue',
+      savedArticlesTitle: 'Matérias salvas',
+    },
+  ])(
+    'renders approved signed-out and signed-in copy for $service',
+    async ({
+      service,
+      guestDescription,
+      followedTopicsTitle,
+      savedArticlesTitle,
+    }) => {
+      const toggles = {
+        uasPersonalization: { enabled: true, value: service },
+        topicUasPersonalization: { enabled: true, value: service },
+      };
+      const { unmount } = render(<MyNewsPage />, {
+        service,
+        toggles,
+        idctaConfig: mockIdctaConfig,
+      });
+
+      expect(await screen.findByText(guestDescription)).toBeInTheDocument();
+      unmount();
+
+      await act(async () => {
+        render(<MyNewsPage />, {
+          service,
+          toggles,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+        });
+      });
+
+      expect(
+        await screen.findByRole('heading', { name: followedTopicsTitle }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', { name: savedArticlesTitle }),
+      ).toBeInTheDocument();
+      expect(screen.queryByText(guestDescription)).not.toBeInTheDocument();
+    },
+  );
+
+  it('should render saved articles loading state while the request is pending', async () => {
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
       total: 0,
@@ -68,13 +158,14 @@ describe('MyNewsPage', () => {
       error: null,
     });
 
-    await act(async () => {
-      render(<MyNewsPage />, renderOptions);
-    });
+    render(<MyNewsPage />, renderOptions);
 
-    const spinnerWrapper = screen.getByTestId('my-news-page-spinner');
+    const spinnerWrapper = await screen.findByTestId(
+      'my-news-saved-articles-spinner',
+    );
     const spinnerSvg = spinnerWrapper.querySelector('svg');
 
+    expect(screen.getByText(myNewsTranslations.title)).toBeInTheDocument();
     expect(spinnerWrapper).toBeInTheDocument();
     expect(spinnerSvg).toBeInTheDocument();
   });
@@ -104,7 +195,10 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText('आपने अभी तक कोई लेख सहेजा नहीं है'),
+        screen.getByText(myNewsTranslations.noArticles),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(myNewsTranslations.noFollowedTopics),
       ).toBeInTheDocument();
     });
   });
@@ -123,9 +217,7 @@ describe('MyNewsPage', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(
-          'लगता है यह कंटेंट लोड नहीं हो रहा है. कृपया बाद में पुनः प्रयास करें.',
-        ),
+        screen.getByText(myNewsTranslations.savedArticlesErrorText),
       ).toBeInTheDocument();
     });
   });
@@ -181,5 +273,406 @@ describe('MyNewsPage', () => {
       screen.getByTestId('my-news-guest-sign-in-link'),
     ).toBeInTheDocument();
     expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
+  });
+
+  it('should render followed topics when there are no saved articles', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          `${myNewsTranslations.followedTopicsTitle} (${mockFollowedTopics.length})`,
+        ),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[1].title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByText(myNewsTranslations.noArticles),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it('should show the count of actually rendered topics, not the raw API total', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length + 1,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          `${myNewsTranslations.followedTopicsTitle} (${mockFollowedTopics.length})`,
+        ),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it('should render followed topics alongside saved articles', async () => {
+    const [singleFollowedTopic] = mockFollowedTopics;
+
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: mockSavedArticles,
+      total: 2,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [singleFollowedTopic],
+      total: 1,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(`${myNewsTranslations.followedTopicsTitle} (1)`),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: singleFollowedTopic.title }),
+      ).toBeInTheDocument();
+      expect(screen.getByText('Saved Article One')).toBeInTheDocument();
+      expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
+    });
+  });
+
+  it('should render loading state while followed topics are loading', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: true,
+      error: null,
+    });
+
+    render(<MyNewsPage />, renderOptions);
+
+    expect(
+      await screen.findByTestId('my-news-followed-topics-spinner'),
+    ).toBeInTheDocument();
+  });
+
+  it('should display error state when followed topics API fails', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.followedTopicsErrorText),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it('should show only the failed Topics section error when followed topics fails and saved articles succeed', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: mockSavedArticles,
+      total: 2,
+      isLoading: false,
+      error: null,
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.followedTopicsErrorText),
+      ).toBeInTheDocument();
+      expect(screen.getByText('Saved Article One')).toBeInTheDocument();
+      expect(screen.getByText('Saved Article Two')).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.savedArticlesErrorText),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should show only the failed Articles section error when saved articles fails and followed topics succeed', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load articles'),
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.savedArticlesErrorText),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.followedTopicsErrorText),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should show a single combined error message when both sections fail', async () => {
+    mockUseRecentActivity.mockReturnValue({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load articles'),
+    });
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: [],
+      total: 0,
+      isLoading: false,
+      error: new Error('Failed to load topics'),
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.contentErrorText),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.savedArticlesErrorText),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(myNewsTranslations.followedTopicsErrorText),
+      ).not.toBeInTheDocument();
+    });
+  });
+
+  it('should not render a "see more" button when there are 9 or fewer followed topics', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('button', { name: myNewsTranslations.seeMoreTopics }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should cap followed topics at 9 and toggle the rest via the "see more"/"see less" button', async () => {
+    const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
+      id: `topic-${i}`,
+      title: `Topic ${i}`,
+      service: 'hindi',
+    }));
+
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: manyFollowedTopics,
+      total: manyFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: manyFollowedTopics[8].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('link', { name: manyFollowedTopics[9].title }),
+    ).not.toBeInTheDocument();
+
+    const seeMoreButton = screen.getByRole('button', {
+      name: myNewsTranslations.seeMoreTopics,
+    });
+    expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
+
+    await act(async () => {
+      seeMoreButton.click();
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: manyFollowedTopics[12].title }),
+      ).toBeInTheDocument();
+    });
+
+    const seeLessButton = screen.getByRole('button', {
+      name: myNewsTranslations.seeLessTopics,
+    });
+    expect(seeLessButton).toHaveAttribute('aria-expanded', 'true');
+
+    await act(async () => {
+      seeLessButton.click();
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.queryByRole('link', { name: manyFollowedTopics[9].title }),
+      ).not.toBeInTheDocument();
+    });
+
+    expect(
+      screen.getByRole('button', { name: myNewsTranslations.seeMoreTopics }),
+    ).toHaveAttribute('aria-expanded', 'false');
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+
+  it('should scroll to top without animation when reduced motion is preferred', async () => {
+    Object.defineProperty(window, 'matchMedia', {
+      value: jest.fn().mockImplementation(query => ({
+        matches: true,
+        media: query,
+      })),
+      writable: true,
+    });
+
+    const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
+      id: `topic-${i}`,
+      title: `Topic ${i}`,
+      service: 'hindi',
+    }));
+
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: manyFollowedTopics,
+      total: manyFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, renderOptions);
+    });
+
+    await act(async () => {
+      screen
+        .getByRole('button', { name: myNewsTranslations.seeMoreTopics })
+        .click();
+    });
+
+    await act(async () => {
+      screen
+        .getByRole('button', { name: myNewsTranslations.seeLessTopics })
+        .click();
+    });
+
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: 'auto',
+    });
+  });
+
+  it('should only render the saved articles section when topic personalization is disabled', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        toggles: {
+          uasPersonalization: { enabled: true, value: 'hindi' },
+          topicUasPersonalization: { enabled: false, value: 'hindi' },
+        },
+      });
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(myNewsTranslations.description),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByRole('link', { name: mockFollowedTopics[0].title }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('should only render the followed topics section when article personalization is disabled', async () => {
+    mockUseFollowedTopics.mockReturnValue({
+      followedTopics: mockFollowedTopics,
+      total: mockFollowedTopics.length,
+      isLoading: false,
+      error: null,
+    });
+
+    await act(async () => {
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        toggles: {
+          uasPersonalization: { enabled: false, value: 'hindi' },
+          topicUasPersonalization: { enabled: true, value: 'hindi' },
+        },
+      });
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('link', { name: mockFollowedTopics[0].title }),
+      ).toBeInTheDocument();
+    });
+
+    expect(
+      screen.queryByText(myNewsTranslations.description),
+    ).not.toBeInTheDocument();
   });
 });

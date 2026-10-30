@@ -93,18 +93,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   padding-bottom: 0;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
 <div>
   <figure
     class="emotion-0"
@@ -133,7 +121,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image caption, 
         </span>
@@ -194,16 +182,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: rgba(34, 34, 34, 0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  margin: 0;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -218,22 +196,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
     font-size: 0.75rem;
     line-height: 1rem;
   }
-}
-
-.emotion-3 span {
-  font-size: 0.75rem;
-}
-
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
 }
 
 <div>
@@ -256,11 +218,11 @@ exports[`Image with data should render an image with alt text and offscreen copy
         width="640"
       />
       <p
-        class="emotion-3"
+        class="copyright emotion-3"
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image source, 
         </span>
@@ -317,16 +279,6 @@ exports[`Image with data should render an image with other originCode - this wou
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: rgba(34, 34, 34, 0.75);
-  text-transform: uppercase;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem;
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  margin: 0;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  overflow: hidden;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -341,22 +293,6 @@ exports[`Image with data should render an image with other originCode - this wou
     font-size: 0.75rem;
     line-height: 1rem;
   }
-}
-
-.emotion-3 span {
-  font-size: 0.75rem;
-}
-
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
 }
 
 <div>
@@ -379,11 +315,11 @@ exports[`Image with data should render an image with other originCode - this wou
         width="640"
       />
       <p
-        class="emotion-3"
+        class="copyright emotion-3"
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image source, 
         </span>

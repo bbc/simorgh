@@ -2,8 +2,26 @@ import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
+import { service as hindiServiceConfig } from '#lib/config/services/hindi';
 import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+
+const saveArticleButtonTranslations =
+  hindiServiceConfig.default.translations.saveArticleButton;
+const actionTooltipTranslations =
+  hindiServiceConfig.default.translations.actionTooltip;
+
+if (!saveArticleButtonTranslations) {
+  throw new Error(
+    'Hindi config must include translations.saveArticleButton for SaveArticleButton tests',
+  );
+}
+
+if (!actionTooltipTranslations) {
+  throw new Error(
+    'Hindi config must include translations.actionTooltip for SaveArticleButton tests',
+  );
+}
 
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
@@ -122,6 +140,46 @@ describe('SaveArticleButton', () => {
     jest.clearAllMocks();
   });
 
+  it.each([
+    { userType: 'signed-in', initialIsSignedIn: true },
+    { userType: 'guest', initialIsSignedIn: false },
+  ])(
+    'does not render when the parsed ID contains slashes even without TC2 metadata for a $userType user',
+    async ({ initialIsSignedIn }) => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, {
+          service: 'hindi',
+          pathname: '/hindi/news/2015/03/150216_example_article',
+          toggles: personalizationToggle,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+        }),
+      );
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    },
+  );
+
+  it('does not render when there is no article ID', async () => {
+    await act(async () =>
+      render(<SaveArticleButton {...defaultProps} />, {
+        service: 'hindi',
+        pathname: '/hindi',
+        toggles: personalizationToggle,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      }),
+    );
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
+
   describe('Authorized', () => {
     const signedInRenderOptions = {
       service: 'hindi' as const,
@@ -144,7 +202,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'बाद में पढ़ने के लिए सहेजें',
+        saveArticleButtonTranslations.save,
       );
     });
 
@@ -155,7 +213,7 @@ describe('SaveArticleButton', () => {
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
       expect(screen.getByRole('button')).toHaveTextContent(
-        'मेरी ख़बरों में सहेजा गया',
+        saveArticleButtonTranslations.saved,
       );
     });
 
@@ -170,7 +228,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('लोड हो रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.loading);
       expect(button).toBeEnabled();
     });
 
@@ -188,7 +246,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('सहेजा जा रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.saving);
       expect(button).toBeEnabled();
     });
 
@@ -206,7 +264,7 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('हटाया जा रहा है');
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.removing);
       expect(button).toBeEnabled();
     });
 
@@ -268,7 +326,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(
-        screen.getByText('माफ़ कीजिए, कुछ गड़बड़ी हुई है'),
+        screen.getByText(actionTooltipTranslations.error.title),
       ).toBeInTheDocument();
     });
 
@@ -287,7 +345,7 @@ describe('SaveArticleButton', () => {
       );
 
       expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
-        'बंद करेंये आर्टिकिल अब हटा ली गई हैये माय न्यूज़ सेक्शन से हटा ली गई है',
+        `${actionTooltipTranslations.closeLabel}${actionTooltipTranslations.removed.title}${actionTooltipTranslations.removed.bodyBefore} ${actionTooltipTranslations.myNewsLinkText} ${actionTooltipTranslations.removed.bodyAfter}`,
       );
     });
 

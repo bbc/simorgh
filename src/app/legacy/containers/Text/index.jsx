@@ -1,11 +1,14 @@
-import paragraph from '../Paragraph';
+import Paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
 
+const ArticleParagraph = props => <Paragraph {...props} isArticleBody />;
+
 const TextContainer = ({
   blocks,
+  isArticleBody = false,
   componentsToRender = {
-    paragraph,
+    paragraph: isArticleBody ? ArticleParagraph : Paragraph,
     unorderedList,
     orderedList: unorderedList,
   },

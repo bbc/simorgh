@@ -68,6 +68,28 @@ const FixtureProgrammesWithWebp = ({ useLargeImages = false }) => (
 );
 
 describe('Promo component - Image', () => {
+  it.each([undefined, null, ''])(
+    'renders a placeholder without requesting an image when src is %s',
+    src => {
+      const { container } = render(
+        <Promo.Image src={src} alt="" isPortraitImage>
+          <span>Media overlay</span>
+        </Promo.Image>,
+      );
+
+      expect(container.querySelector('img')).not.toBeInTheDocument();
+      expect(container.querySelector('picture')).not.toBeInTheDocument();
+      expect(container.querySelector('[srcset]')).not.toBeInTheDocument();
+      expect(screen.getByText('Media overlay')).toBeInTheDocument();
+      expect(
+        container.querySelector('span[aria-hidden="true"]'),
+      ).not.toBeInTheDocument();
+      expect(container.firstChild.firstChild).toHaveStyle({
+        backgroundRepeat: 'no-repeat',
+      });
+    },
+  );
+
   it('should render image using correct resolution and no large image on desktop', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
@@ -263,10 +285,10 @@ describe('Promo component - Timestamp', () => {
     });
     describe('Relative time more than 10 hours ago', () => {
       moment.locale('es');
-      const dateTenHoursAgo = moment().subtract({ h: 10 }).format('LL');
       // We are using 10 to test more than 10 hours, because by the time the test has reached the expect assertion, milliseconds have passed.
       it('should render timestamp in ISO string format', () => {
         const overTenHoursString = calcTimestampHoursAgo(10).toISOString();
+        const dateTenHoursAgo = moment.utc(overTenHoursString).format('LL');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursString} />,
           {
@@ -277,6 +299,7 @@ describe('Promo component - Timestamp', () => {
       });
       it('should render timestamp in epoch format', () => {
         const overTenHoursEpoch = calcTimestampHoursAgo(10).getTime();
+        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('LL');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursEpoch} />,
           {

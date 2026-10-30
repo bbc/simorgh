@@ -1,4 +1,4 @@
-import { buildErrorEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { buildErrorEventModel } from '../atiUrl';
 import sendBeacon from '../sendBeacon';
 
 type Props = {
@@ -13,6 +13,7 @@ type Props = {
   statsDestination?: string;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 /**
@@ -32,6 +33,7 @@ const sendErrorEvent = async ({
   statsDestination,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: Props) => {
   if (!trackingIsEnabled) {
     return;
@@ -60,6 +62,7 @@ const sendErrorEvent = async ({
     statusCode,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });
 
   await sendBeacon(reverbParams);

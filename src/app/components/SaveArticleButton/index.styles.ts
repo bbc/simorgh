@@ -5,7 +5,8 @@ const styles = {
   buttonWrapper: ({ spacings, mq }: Theme) =>
     css({
       position: 'relative',
-      marginBlock: `${spacings.TRIPLE}rem`,
+      marginBlockStart: 0,
+      marginBlockEnd: `${spacings.DOUBLE}rem`,
       marginInline: `${spacings.FULL}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {

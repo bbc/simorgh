@@ -11,6 +11,21 @@ import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 import { service as pidginService } from '../../lib/config/services/pidgin';
 
+jest.mock('../MaskedImage', () => ({
+  __esModule: true,
+  ...jest.requireActual('../MaskedImage'),
+}));
+
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('Billboard', () => {
   const summary = kyrgyzBillboard.summaries[0];
   const { title, description, link, imageUrl, imageAlt } = summary;

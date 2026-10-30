@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { IncomingHttpHeaders } from 'node:http';
 
@@ -30,6 +29,7 @@ import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaErro
 import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
 import logResponseTime from '#utilities/logResponseTime';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -76,9 +76,13 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
+  const resolvedPathname = resolvedUrl?.split('?')?.[0];
   const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
-
   const { SIMORGH_APP_ENV } = getEnvConfig();
+
+  if (SIMORGH_APP_ENV !== 'local' && resolvedPathname?.endsWith('/offline')) {
+    return OFFLINE_PAGE;
+  }
 
   switch (SIMORGH_APP_ENV) {
     // In local development, use the 'page-type' header if it exists,
@@ -104,7 +108,7 @@ const ROUTE_HANDLERS = {
   [OFFLINE_PAGE]: handleOfflineRoute,
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   const {
     resolvedUrl,
     req: { headers: reqHeaders },
@@ -136,7 +140,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       variant,
     },
   };
-};
+});
 
 type PageProps = {
   pageType?: PageTypes;

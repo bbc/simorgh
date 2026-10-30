@@ -16,12 +16,6 @@ type ServerSideExperimentConfig = {
   pageTypes: PageTypes[];
 };
 
-const enabledExperimentList: ServerSideExperimentConfig[] = [
-  {
-    name: 'newswb_ws_article_account_promo_banner',
-    services: ['hindi'],
-    pageTypes: ['article'],
-  },
-];
+const enabledExperimentList: ServerSideExperimentConfig[] = [];
 
 export default enabledExperimentList;

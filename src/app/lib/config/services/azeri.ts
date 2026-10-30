@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage:
           'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
       },
+      googlePreferredSource: {
+        linkText: 'Google-da üstün tutulan mənbə kimi əlavə et',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       skipContent: {
@@ -97,6 +100,14 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Əlaqəli mövzular',
       moreOnThis: '',
       navMenuText: 'Bölümlər',
+      liteSite: {
+        onboardingMessage:
+          'Siz bu veb saytın daha az data sərf edən mətn versiyasına baxırsınız. Bütün şəkil və videoları özündə əks etdirən əsas versiyaya baxın.',
+        toMainSite: 'Məni əsas vebsaytına apar',
+        informationPage:
+          'Bu data qənaət edən versiya haqqında daha çox məlumat əldə edin',
+        dataSaving: 'Data qənaəti versiyası',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

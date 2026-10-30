@@ -31,6 +31,9 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: false,
   },
@@ -73,6 +76,9 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: false,
+  },
   scriptLink: {
     enabled: true,
   },
@@ -82,8 +88,14 @@ export default {
   showSportDataHeader: {
     enabled: false,
   },
+  stickyNavigation: {
+    enabled: false,
+  },
   topBarOJs: {
     enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: false,
   },
   variantCookie: {
     enabled: true,

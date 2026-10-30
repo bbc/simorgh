@@ -87,6 +87,9 @@ export const service: DefaultServiceConfig = {
         fetchErrorMessage:
           'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
       },
+      googlePreferredSource: {
+        linkText: 'Ku dar il la doorbidayo Google-ka',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
@@ -98,6 +101,14 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Mowduucyada la xiriira',
       moreOnThis: '',
       navMenuText: 'Qaybaha',
+      liteSite: {
+        onboardingMessage:
+          'Waxaad eegaysaa nooca qoraalka kaliya ee boggan oo isticmaala xog yar. Eeg nooca ugu weyn ee boggan oo ay ku jiraan dhammaan sawirada iyo muuqaallada.',
+        toMainSite: 'Igu celi boggaga ugu weyn',
+        informationPage:
+          'Baro wax dheeraad ah oo ku saabsan nooca kaydinta xogta',
+        dataSaving: 'Nooca kaydinta xogta',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
         audioPlayer: 'Ciyaaridda Codka',

@@ -19,6 +19,16 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
+jest.mock('./amp', () => ({
+  __esModule: true,
+  ...jest.requireActual('./amp'),
+}));
+
+jest.mock('./canonical', () => ({
+  __esModule: true,
+  ...jest.requireActual('./canonical'),
+}));
+
 const defaultRenderProps = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
   id: 'c0000000000o',
@@ -93,6 +103,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },
@@ -213,7 +224,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -379,7 +394,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -483,7 +502,11 @@ describe('ATI Analytics Container', () => {
               x18: false,
             },
           },
-          user: { isSignedIn: false, hashedId: null },
+          user: {
+            isSignedIn: false,
+            hashedId: null,
+            isPersonalisationOn: false,
+          },
         },
         eventDetails: { eventName: 'pageView' },
       });
@@ -640,6 +663,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },
@@ -746,6 +770,7 @@ describe('ATI Analytics Container', () => {
             },
           },
           user: {
+            isPersonalisationOn: false,
             isSignedIn: false,
             hashedId: null,
           },

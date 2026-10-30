@@ -69,6 +69,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Thêm về {topic}',
         fetchErrorMessage: 'Tải không thành công. Vui lòng thử lại',
       },
+      googlePreferredSource: {
+        linkText: 'Thêm làm nguồn ưu tiên trên Google',
+      },
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       skipContent: {
@@ -79,6 +82,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Chủ đề liên quan',
       moreOnThis: '',
       navMenuText: 'Mục',
+      liteSite: {
+        onboardingMessage:
+          'Bạn đang xem phiên bản chỉ có văn bản của trang web này, sử dụng ít dữ liệu hơn. Xem phiên bản chính của trang web với đầy đủ hình ảnh và video.',
+        toMainSite: 'Đưa tôi đến trang web chính',
+        informationPage: 'Tìm hiểu thêm về phiên bản tiết kiệm dữ liệu này',
+        dataSaving: 'Phiên bản tiết kiệm dữ liệu',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',

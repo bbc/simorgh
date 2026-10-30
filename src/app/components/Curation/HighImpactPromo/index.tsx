@@ -9,6 +9,7 @@ import styles from './index.styles';
 
 export interface HighImpactPromoProps extends Summary {
   relatedTopic?: RelatedTopic | null;
+  showRelatedTopic?: boolean;
 }
 
 const HighImpactPromo = ({
@@ -20,16 +21,30 @@ const HighImpactPromo = ({
   headingLevel = 3,
   eventTrackingData,
   relatedTopic,
+  showRelatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
+  const relatedTopicToShow = showRelatedTopic ? relatedTopic : null;
   const subjectLink =
-    relatedTopic?.link?.url || (service ? getBrandPath(service) : undefined);
-  const subjectText = relatedTopic?.title || brandName;
+    relatedTopicToShow?.link?.url ||
+    (service ? getBrandPath(service) : undefined);
+  const subjectText = relatedTopicToShow?.title || brandName;
   const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: subjectText,
+    },
+  });
+  const subjectClickTrackerHandler = relatedTopicToShow
+    ? relatedTopicClickTrackerHandler
+    : clickTrackerHandler;
 
   return (
     <div data-testid="high-impact-promo" css={styles.promo} dir={dir}>
@@ -58,7 +73,7 @@ const HighImpactPromo = ({
           <Promo.A
             href={subjectLink}
             css={styles.subject}
-            {...clickTrackerHandler}
+            {...subjectClickTrackerHandler}
           >
             {subjectText}
           </Promo.A>

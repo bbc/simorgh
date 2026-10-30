@@ -61,7 +61,8 @@ Cypress.on('uncaught:exception', (err, _runnable, promise) => {
   if (
     err.message &&
     (KNOWN_ERRORS.some(knownErr => err.message.includes(knownErr)) ||
-      (err.message === 'int64' && GOOGLE_RUM_SCRIPT.test(err.stack ?? '')))
+      (err.message.includes('int64') &&
+        GOOGLE_RUM_SCRIPT.test(err.stack ?? '')))
   ) {
     return false;
   }

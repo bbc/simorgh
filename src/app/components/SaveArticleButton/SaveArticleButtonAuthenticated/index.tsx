@@ -1,4 +1,5 @@
 import { use, useEffect, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -6,7 +7,7 @@ import useUASButton, {
   UASAction,
   UASActionResult,
 } from '#app/hooks/useUASButton';
-import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
   UAS_ERROR_ACTIONS,
@@ -36,6 +37,8 @@ const SaveArticleButtonAuthenticatedInner = ({
   const { translations } = use(ServiceContext);
   const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
+  // TODO: remove once the dark-UI tooltip design is ready; suppresses all tooltips on dark-UI pages
+  const { isDarkUi } = useTheme();
 
   const {
     isSaved,
@@ -138,7 +141,7 @@ const SaveArticleButtonAuthenticatedInner = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && (
+      {isTooltipVisible && actionResult && actionTooltip && !isDarkUi && (
         <ActionTooltip
           status={getTooltipStatus(actionResult)}
           content={getArticleTooltipContent(
@@ -155,25 +158,23 @@ const SaveArticleButtonAuthenticatedInner = ({
 };
 
 const SaveArticleButtonErrorFallback = ({ error }: { error: Error }) => {
-  const trackError = useErrorTracking();
-
-  useEffect(() => {
-    trackError({
-      error,
-      feature: ERROR_TRACKING_FEATURES.UAS,
-      action: UAS_ERROR_ACTIONS.RENDER,
-    });
-  }, [error, trackError]);
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+    action: UAS_ERROR_ACTIONS.RENDER,
+  });
 
   return null;
 };
 
+const renderSaveArticleButtonErrorFallback = (error: Error) => (
+  <SaveArticleButtonErrorFallback error={error} />
+);
+
 const SaveArticleButtonAuthenticated = (props: SaveArticleButtonProps) => (
   <ErrorBoundary
     componentName="SaveArticleButtonAuthenticated"
-    // Stable module-scope component - safe to reference from the fallback prop.
-    // eslint-disable-next-line react/no-unstable-nested-components
-    fallback={error => <SaveArticleButtonErrorFallback error={error} />}
+    fallback={renderSaveArticleButtonErrorFallback}
   >
     <SaveArticleButtonAuthenticatedInner {...props} />
   </ErrorBoundary>

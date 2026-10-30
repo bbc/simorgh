@@ -9,7 +9,7 @@ moment.locale(locale);
 
 describe(`${locale}`, () => {
   describe('format', () => {
-    const date = new Date(2025, 1, 14, 15, 25, 50, 125);
+    const date = new Date(Date.UTC(2025, 1, 14, 15, 25, 50, 125));
     const formatted = moment(date).tz(timezone);
 
     test.each`

@@ -9,6 +9,16 @@ import { kyrgyzMessageBannerOnePromo } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
   const eventTrackingData = {
@@ -109,6 +119,37 @@ describe('MessageBanner', () => {
       const image = screen.getByAltText('');
       expect(image.getAttribute('src')).toEqual(
         'https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
+      );
+    });
+
+    it('should render an image with the correct srcSet and sizes', () => {
+      render(
+        <MessageBanner
+          description={summary.description}
+          link={summary.link}
+          linkText={summary.title}
+          image={summary.imageUrl}
+        >
+          <Heading level={2} id="banner-heading">
+            {kyrgyzMessageBannerOnePromo.title}
+          </Heading>
+        </MessageBanner>,
+      );
+      const image = screen.getByAltText('');
+      const imagePath =
+        'cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png';
+      const separator = ', \n                          ';
+
+      expect(image.getAttribute('srcset')).toEqual(
+        [
+          `https://ichef.test.bbci.co.uk/ace/ws/184/${imagePath} 184w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/368/${imagePath} 368w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/224/${imagePath} 224w`,
+          `https://ichef.test.bbci.co.uk/ace/ws/448/${imagePath} 448w`,
+        ].join(separator),
+      );
+      expect(image.getAttribute('sizes')).toEqual(
+        '(max-width: 37.4375rem) 184px, 224px',
       );
     });
 

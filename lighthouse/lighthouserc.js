@@ -1,4 +1,27 @@
+// Single Lighthouse CI config used locally, in GitHub Actions and in CodeBuild.
+// LIGHTHOUSE_APP_ENV selects the URL set and thresholds: local (default) | test | live
+const APP_ENV = process.env.LIGHTHOUSE_APP_ENV || 'local';
+const IS_LOCAL = APP_ENV === 'local';
+
+const LOCAL_URL = 'http://localhost:7081';
+
 const AUDIT_URLS = {
+  ARTICLE_PAGE: {
+    local: [`${LOCAL_URL}/pidgin/articles/ce9wk6glg4lo`],
+  },
+
+  HOME_PAGE: {
+    local: [`${LOCAL_URL}/hindi`],
+  },
+
+  LIVE_PAGE: {
+    local: [`${LOCAL_URL}/pidgin/live/c7p765ynk9qt`],
+  },
+
+  UGC_PAGE: {
+    local: [`${LOCAL_URL}/somali/send/u130092370`],
+  },
+
   LIVE_RADIO: {
     live: ['https://www.bbc.com/korean/bbc_korean_radio/liveradio'],
     test: ['https://www.test.bbc.com/korean/bbc_korean_radio/liveradio'],
@@ -77,46 +100,72 @@ const AUDIT_URLS = {
   },
 };
 
-const urlsToAudit = Object.entries(AUDIT_URLS)
-  .map(([, urls]) => urls[process.env.LIGHTHOUSE_APP_ENV])
+const urlsToAudit = Object.values(AUDIT_URLS)
+  .map(urls => urls[APP_ENV] || [])
   .flat();
+
+if (urlsToAudit.length === 0) {
+  throw new Error(`No Lighthouse URLs configured for "${APP_ENV}"`);
+}
+
+const SKIP_AUDITS = {
+  // Local server runs over http and third-party cookies are out of our control
+  local: ['is-on-https', 'third-party-cookies'],
+  // Non-live environments send x-robots-tag: noindex, so is-crawlable always fails there
+  test: ['is-crawlable'],
+  live: [],
+};
+
+const MIN_SCORES = {
+  local: { accessibility: 0.9, 'best-practices': 0.88, seo: 1 },
+  test: { accessibility: 0.85, 'best-practices': 0.7, seo: 0.85 },
+  live: { accessibility: 0.85, 'best-practices': 0.7, seo: 0.85 },
+};
+
+const categoryAssertion = minScore => [
+  'error',
+  { aggregationMethod: 'optimistic', minScore },
+];
 
 module.exports = {
   ci: {
     collect: {
       url: urlsToAudit,
-      numberOfRuns: 3,
+      // A local build is deterministic enough that one run per URL is sufficient
+      numberOfRuns: IS_LOCAL ? 1 : 3,
       settings: {
-        chromeFlags: '--no-sandbox --headless',
+        chromeFlags: '--no-sandbox --headless --disable-gpu',
+        // Performance against a local server isn't meaningful, so skip it to save time
+        ...(IS_LOCAL && {
+          onlyCategories: ['accessibility', 'best-practices', 'seo'],
+        }),
+        skipAudits: SKIP_AUDITS[APP_ENV],
       },
     },
     assert: {
       includePassedAssertions: true,
       assertions: {
-        'categories:performance': [
-          'warn',
-          { aggregationMethod: 'optimistic', minScore: 0.2 },
-        ],
-        'categories:accessibility': [
-          'error',
-          { aggregationMethod: 'optimistic', minScore: 0.85 },
-        ],
-        'categories:best-practices': [
-          'error',
-          { aggregationMethod: 'optimistic', minScore: 0.7 },
-        ],
-        'categories:seo': [
-          'error',
-          {
-            aggregationMethod: 'optimistic',
-            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.5,
-          },
-        ],
+        ...(!IS_LOCAL && {
+          'categories:performance': [
+            'warn',
+            { aggregationMethod: 'optimistic', minScore: 0.2 },
+          ],
+        }),
+        'categories:accessibility': categoryAssertion(
+          MIN_SCORES[APP_ENV].accessibility,
+        ),
+        'categories:best-practices': categoryAssertion(
+          MIN_SCORES[APP_ENV]['best-practices'],
+        ),
+        'categories:seo': categoryAssertion(MIN_SCORES[APP_ENV].seo),
         'third-party-cookies': 'off',
       },
     },
     upload: {
-      target: 'temporary-public-storage',
+      // Reports are written to .lighthouseci/ locally; CI runs get a shareable public link
+      target:
+        IS_LOCAL && !process.env.CI ? 'filesystem' : 'temporary-public-storage',
+      outputDir: '.lighthouseci/reports',
     },
   },
 };

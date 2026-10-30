@@ -1,27 +1,20 @@
-import { Suspense, use, type PropsWithChildren } from 'react';
-import dynamic from 'next/dynamic';
+import { use, type PropsWithChildren } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
+import PersistentQueryProvider from './lazy';
 
-const PersistentQueryProvider = dynamic(
-  () =>
-    import(
-      /* webpackChunkName: "query_provider" */
-      './lazy'
-    ),
-);
-
-// TanstackQuery Provider is only needed when personalization features are enabled.
-// This prevents the unnecessary loading of the Tanstack Query library and its dependencies
+// TanstackQuery Provider is only needed when personalization features are available.
+// Keep the wrapper stable from first render when enabled, so children are not mounted
+// outside the provider first and then remounted once a lazy provider resolves.
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  const { isPersonalizationEnabled } = use(AccountContext);
+  const { isArticlePersonalizationAvailable, isTopicPersonalizationAvailable } =
+    use(AccountContext);
 
-  if (!isPersonalizationEnabled) return children;
+  const isAnyPersonalizationAvailable =
+    isArticlePersonalizationAvailable || isTopicPersonalizationAvailable;
 
-  return (
-    <Suspense fallback={children}>
-      <PersistentQueryProvider>{children}</PersistentQueryProvider>
-    </Suspense>
-  );
+  if (!isAnyPersonalizationAvailable) return children;
+
+  return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
 };
 
 export default QueryProvider;

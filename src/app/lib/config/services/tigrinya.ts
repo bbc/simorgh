@@ -84,6 +84,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'ተወሳኩ ብዛዕባ {topic}',
         fetchErrorMessage: 'ምጫን ኣይከኣለን። እባክካ ዳግም ፈትን',
       },
+      googlePreferredSource: {
+        linkText: 'ኣብ Google ከም ተመራጺ ምንጪ ወስኽ',
+      },
       continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',

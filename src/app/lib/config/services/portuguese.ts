@@ -48,43 +48,31 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    articleMessageBanners: [
-      {
-        thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
-        heading: 'Quem está à frente nas pesquisas para presidente?',
-        description:
-          'Veja as estimativas de intenção de voto no Agregador de Pesquisas da BBC News Brasil',
-        linkText: 'Clique aqui',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/caa9/live/a04f7e60-4a1c-11f1-b55d-0f258dce1735.png.webp',
-      },
-      {
-        thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/c20yjrpxr35o',
-        heading: 'Copa do Mundo 2026 – tabela completa',
-        description:
-          'Confira aqui o calendário de jogos do torneio, com resultados e classificação',
-        linkText: 'Clique aqui para ver a tabela',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/02bc/live/37515e30-6775-11f1-8e1d-bbbb1017d210.png.webp',
-      },
-    ],
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:abdb1274-d3c1-48fd-b6c7-d1a0576cc551',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     podcastPromo: {
-      title: 'Promoção Agregador de pesquisas',
-      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
-      brandDescription: ' ',
+      title: 'Promoção Resultados eleição 2026',
+      brandTitle: 'Eleições 2026: veja como foi a votação',
+      brandDescription:
+        'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil ',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
-        alt: 'O agregador de pesquisas da BBC News Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
+        alt: 'Agregador de Pesquisas da BBC News Brasil',
       },
       linkLabel: {
         text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        href: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
-        endTextVisuallyHidden: 'Fim do %title%',
+        endTextVisuallyHidden: 'Fim da %title%',
       },
     },
     translations: {
@@ -111,6 +99,9 @@ export const service: DefaultServiceConfig = {
         moreAboutTopic: 'Mais sobre {topic}',
         fetchErrorMessage: 'Falha ao carregar. Tente novamente',
       },
+      googlePreferredSource: {
+        linkText: 'Adicionar como fonte preferida no Google',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       skipContent: {
@@ -121,6 +112,13 @@ export const service: DefaultServiceConfig = {
       relatedTopics: 'Tópicos relacionados',
       moreOnThis: '',
       navMenuText: 'Seções',
+      liteSite: {
+        onboardingMessage:
+          'Você está vendo uma versão somente texto deste site que usa menos dados. Veja a versão principal do site com todas as imagens e vídeos.',
+        toMainSite: 'Me leve para o site principal',
+        informationPage: 'Saiba mais sobre esta versão que economiza dados',
+        dataSaving: 'Versão que economiza dados',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -142,62 +140,84 @@ export const service: DefaultServiceConfig = {
       },
       gist: 'Pontos-chave',
       account: {
-        signIn: 'Sign In',
-        signInAccessibleLabel: 'Sign in to My News',
-        forYou: 'Your Account',
-        register: 'Register',
+        signIn: 'Fazer login',
+        signInAccessibleLabel: 'Fazer login em Notícias para você',
+        forYou: 'Sua conta',
+        register: 'Criar conta',
       },
       accountPromoBanner: {
-        title: 'Your very own BBC',
-        description: 'Sign In or create an account for free',
-        closeLabel: 'Close',
-        buttonSeparatorText: 'or',
+        title: 'Sua BBC',
+        description: 'Faça login ou crie uma conta gratuitamente',
+        closeLabel: 'Fechar',
+        buttonSeparatorText: 'ou',
       },
       accountSignInModal: {
-        title: 'Sign in to save to My News',
-        description: 'Save stories and read them at your convenience',
-        closeLabel: 'Close',
+        title: 'Faça login para salvar em Notícias para você',
+        description: 'Salve matérias e leia quando você quiser',
+        closeLabel: 'Fechar',
+        followTopic: {
+          title: 'Faça login para seguir tópicos',
+          description:
+            'Acesse diretamente as notícias do seu interesse e não perca nenhuma matéria.',
+        },
       },
       saveArticleButton: {
-        loading: 'Loading',
-        save: 'Save for later',
-        saving: 'Saving',
-        saved: 'Saved to My News',
-        remove: 'Remove',
-        removeAccessible: 'Saved. Remove from My News',
-        removing: 'Removing',
+        loading: 'Carregando',
+        save: 'Salvar para ler depois',
+        saving: 'Salvando',
+        saved: 'Salvo em Minhas Notícias',
+        remove: 'Remover',
+        removeAccessible: 'Salvo. Remover de Notícias para você',
+        removing: 'Removendo',
+      },
+      followTopicButton: {
+        loading: 'Carregando',
+        follow: 'Seguir',
+        following: 'Seguindo',
+        followed: 'Seguindo',
+        unfollow: 'Deixar de seguir',
+        unfollowAccessible: 'Deixar de seguir',
+        unfollowing: 'Deixar de seguir',
       },
       myNews: {
-        title: 'My News',
-        guestTitle: 'Welcome to My News',
-        description: 'My saved articles',
+        title: 'Notícias para você',
+        guestTitle: 'Bem-vindo à Notícias para você',
+        description: 'Matérias salvas',
         guestDescription:
-          'Sign in to save articles to My News, and read them at your convenience.',
-        noArticles: 'You haven’t saved any articles yet',
-        errorText:
-          'This content doesn’t seem to be loading. Please try again later.',
-        loading: 'Loading',
+          'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
+        noArticles: 'Você ainda não salvou nenhuma matéria',
+        savedArticlesErrorText:
+          'Estamos tendo problemas para carregar suas matérias salvas',
+        loading: 'Carregando',
         noJsDescription:
-          'Please enable JavaScript or use another browser to view this content.',
+          'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        followedTopicsTitle: 'Temas que você segue',
+        followedTopicsErrorText:
+          'Estamos tendo problemas para carregar os temas que você segue',
+        noFollowedTopics: 'Você ainda não segue nenhum tema',
+        seeMoreTopics: 'Ver mais',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
       },
       actionTooltip: {
         success: {
-          title: 'This article is now saved',
-          bodyBefore: 'It will appear in',
+          title: 'Matéria salva',
+          bodyBefore: 'Ela estará disponível em',
           bodyAfter: '',
         },
         error: {
-          title: 'Sorry, something went wrong',
-          body: 'Check your connection, refresh the page and try again',
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize a página e tente novamente',
         },
         removed: {
-          title: 'This article is now removed',
-          bodyBefore: 'It will be removed from',
+          title: 'Matéria removida',
+          bodyBefore: 'Ela será removida de',
           bodyAfter: '',
         },
-        myNewsLinkText: 'My News',
+        myNewsLinkText: 'Notícias para você',
         myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
-        closeLabel: 'Close',
+        closeLabel: 'Fechar',
       },
       error: {
         404: {

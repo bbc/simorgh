@@ -1,7 +1,6 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import * as isLiveEnv from '#lib/utilities/isLive';
 import userEvent from '@testing-library/user-event';
 import { LIVE_DARK, LIVE_LIGHT } from '#app/components/ThemeProvider/palette';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
@@ -9,6 +8,11 @@ import { render, screen } from '../../react-testing-library-with-providers';
 import CurationPromo from '.';
 
 jest.mock('../../ThemeProvider');
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
 
 interface FixtureProps {
   lazy?: boolean;
@@ -21,6 +25,7 @@ interface FixtureProps {
   eventTrackingData?: EventTrackingData;
   imageUrl?: string;
   imageAlt?: string;
+  showRelatedTopic?: boolean;
   relatedTopic?: {
     title: string;
     link: { url: string };
@@ -38,6 +43,7 @@ const Fixture = ({
   eventTrackingData,
   imageUrl = 'https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/17CDB/production/_123699479_indigena.jpg',
   imageAlt = 'Campesino indígena peruano.',
+  showRelatedTopic,
   relatedTopic,
 }: FixtureProps) => (
   <CurationPromo
@@ -56,6 +62,7 @@ const Fixture = ({
     id={resourceId}
     eventTrackingData={eventTrackingData}
     relatedTopic={relatedTopic}
+    showRelatedTopic={showRelatedTopic}
   />
 );
 
@@ -181,6 +188,9 @@ describe('Curation Promo', () => {
       });
       expect(container.querySelector('.promo-image')).not.toBeEmptyDOMElement();
       expect(screen.queryByRole('img')).not.toBeInTheDocument();
+      expect(
+        container.querySelector('picture, [srcset]'),
+      ).not.toBeInTheDocument();
     });
 
     it('should not render a placeholder when imageUrl is missing on non-My News page', () => {
@@ -204,7 +214,7 @@ describe('Curation Promo', () => {
       link: { url: 'https://www.bbc.com/pidgin/topics/cwr9jrd4wnnt' },
     };
     it('should render a related topic link when relatedTopic is provided', () => {
-      render(<Fixture relatedTopic={relatedTopic} />);
+      render(<Fixture relatedTopic={relatedTopic} showRelatedTopic />);
 
       const relatedTopicLink = screen.getByRole('link', {
         name: 'South Africa',
@@ -222,7 +232,7 @@ describe('Curation Promo', () => {
         title: 'A related topic title that is too long to fit on one line',
       };
 
-      render(<Fixture relatedTopic={longRelatedTopic} />);
+      render(<Fixture relatedTopic={longRelatedTopic} showRelatedTopic />);
 
       expect(
         screen.getByRole('link', { name: longRelatedTopic.title }),
@@ -233,7 +243,7 @@ describe('Curation Promo', () => {
     });
 
     it('should not render a related topic link when relatedTopic is not provided', () => {
-      render(<Fixture />);
+      render(<Fixture showRelatedTopic />);
 
       expect(
         screen.queryByRole('link', { name: 'South Africa' }),
@@ -246,7 +256,7 @@ describe('Curation Promo', () => {
         .spyOn(clickTracking, 'default')
         .mockImplementation(() => ({ onClick: onClickSpy }));
 
-      render(<Fixture relatedTopic={relatedTopic} />);
+      render(<Fixture relatedTopic={relatedTopic} showRelatedTopic />);
 
       expect(clickTrackerSpy).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -264,20 +274,8 @@ describe('Curation Promo', () => {
       await userEvent.click(relatedTopicLink);
 
       expect(onClickSpy).toHaveBeenCalled();
-    });
 
-    it('should not render related topic links when environment is live', () => {
-      const isLiveSpy = jest.spyOn(isLiveEnv, 'default').mockReturnValue(true);
-
-      const { queryByText } = render(<Fixture relatedTopic={relatedTopic} />, {
-        service: 'pidgin',
-      });
-
-      // The fixture contains promos with related topics (e.g. 'Nigeria')
-      // but in live environment they should not be rendered
-      expect(queryByText('South Africa')).not.toBeInTheDocument();
-
-      isLiveSpy.mockRestore();
+      clickTrackerSpy.mockRestore();
     });
   });
 });

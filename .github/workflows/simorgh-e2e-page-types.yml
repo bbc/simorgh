@@ -180,7 +180,7 @@ jobs:
           echo "specs=$specs" >> "$GITHUB_OUTPUT"
 
       - name: Run Simorgh NextJS E2Es (${{ matrix['group-name'] }})
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           install: false
           working-directory: ws-nextjs-app
@@ -190,7 +190,7 @@ jobs:
 
       - name: Upload Cypress reports (${{ matrix['group-name'] }})
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cypress-page-types-reports-${{ matrix['group-name'] }}
           path: ws-nextjs-app/cypress/results/*.xml

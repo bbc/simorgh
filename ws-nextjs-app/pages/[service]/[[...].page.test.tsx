@@ -8,6 +8,11 @@ import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 import handleOfflineRoute from './offline/handleOfflineRoute';
 
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
 jest.mock('#utilities/logResponseTime', () => ({
   __esModule: true,
   default: jest.fn(),
@@ -44,6 +49,7 @@ jest.mock('./offline/handleOfflineRoute', () => ({
 }));
 
 const commonContext = {
+  resolvedUrl: '/pidgin',
   req: { headers: {} },
   query: { service: 'pidgin' },
   res: {},
@@ -223,6 +229,50 @@ describe('catch-all route', () => {
 
       expect(handleOfflineRoute).toHaveBeenCalled();
     });
+
+    it('should call the Offline route handler for /offline URL in non-local environments even when page-type header conflicts', async () => {
+      const originalEnv = process.env.SIMORGH_APP_ENV;
+      process.env.SIMORGH_APP_ENV = 'live';
+
+      try {
+        const context = {
+          ...commonContext,
+          resolvedUrl: '/pidgin/offline?foo=bar',
+          req: {
+            headers: { 'page-type': 'article' },
+          } as unknown as GetServerSidePropsContext['req'],
+        };
+
+        await getServerSideProps(context);
+
+        expect(handleOfflineRoute).toHaveBeenCalled();
+        expect(handleArticleRoute).not.toHaveBeenCalled();
+      } finally {
+        process.env.SIMORGH_APP_ENV = originalEnv;
+      }
+    });
+
+    it('should honor page-type header for /offline URL in local environments', async () => {
+      const originalEnv = process.env.SIMORGH_APP_ENV;
+      process.env.SIMORGH_APP_ENV = 'local';
+
+      try {
+        const context = {
+          ...commonContext,
+          resolvedUrl: '/pidgin/offline?foo=bar',
+          req: {
+            headers: { 'page-type': 'article' },
+          } as unknown as GetServerSidePropsContext['req'],
+        };
+
+        await getServerSideProps(context);
+
+        expect(handleArticleRoute).toHaveBeenCalled();
+        expect(handleOfflineRoute).not.toHaveBeenCalled();
+      } finally {
+        process.env.SIMORGH_APP_ENV = originalEnv;
+      }
+    });
   });
 
   it('should return 404 for unsupported page types', async () => {
@@ -231,7 +281,6 @@ describe('catch-all route', () => {
       resolvedUrl: '/pidgin/some-unsupported-page-type',
     };
 
-    // @ts-expect-error - props is not typed on the return value of getServerSideProps
     const { props } = await getServerSideProps(context);
 
     expect(props.status).toBe(404);

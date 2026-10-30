@@ -8,12 +8,16 @@ import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
-import isLiveEnvironment from '#app/lib/utilities/isLive';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 import styles from './index.styles';
+
+type CurationPromoProps = Summary & {
+  showRelatedTopic?: boolean;
+  isVideoCollection?: boolean;
+};
 
 const CurationPromo = ({
   id,
@@ -30,7 +34,9 @@ const CurationPromo = ({
   eventTrackingData,
   isPortraitImage,
   relatedTopic,
-}: Summary) => {
+  isVideoCollection = false,
+  showRelatedTopic,
+}: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
@@ -56,6 +62,14 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  const relatedTopicToShow =
+    showRelatedTopic &&
+    type === 'article' &&
+    relatedTopic?.title?.trim() &&
+    relatedTopic.link?.url
+      ? relatedTopic
+      : null;
+
   const relatedTopicEventTrackingData = {
     ...eventTrackingData,
     itemTracker: {
@@ -79,6 +93,7 @@ const CurationPromo = ({
           isAmp={isAmp}
           isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
+          {...(isVideoCollection && { mobileSize: '100vw' })}
         >
           {isMedia && (
             <Promo.MediaIcon css={styles.icon} type={type}>
@@ -117,14 +132,14 @@ const CurationPromo = ({
           css={styles.metadataAndTopicData}
           className="metadata-and-topic-data"
         >
-          {relatedTopic && !isLiveEnvironment() && (
+          {relatedTopicToShow && (
             <a
-              href={relatedTopic?.link?.url}
+              href={relatedTopicToShow.link.url}
               css={styles.relatedTopicLink}
               className="related-topic-link"
               {...relatedTopicClickTrackerHandler}
             >
-              {relatedTopic.title}
+              {relatedTopicToShow.title}
             </a>
           )}
           <Promo.Timestamp className="promo-timestamp">

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
-import Image from '#psammead/psammead-image/src';
+import Image from '#app/components/Image';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Bulletin from '.';
 
@@ -27,14 +27,14 @@ const BulletinComponent = ({
     <Image
       src={imageSrc}
       alt="Iron man"
-      srcset={imageSizes
+      srcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)}.webp ${size}w`)
         .join(', ')}
-      fallbackSrcset={imageSizes
+      fallbackSrcSet={imageSizes
         .map(size => `${imageSrc.replace('[WIDTH]', size)} ${size}w`)
         .join(', ')}
-      primaryMimeType="image/webp"
-      fallbackMimeType="image/jpeg"
+      mediaType="image/webp"
+      fallbackMediaType="image/jpeg"
     />
   );
   return (

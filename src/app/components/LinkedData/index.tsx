@@ -87,7 +87,7 @@ const LinkedData = ({
     languageName,
     lang,
   } = use(ServiceContext);
-  const { canonicalNonUkLink } = use(RequestContext);
+  const { canonicalNonUkLink, nonce } = use(RequestContext);
   const IMG_TYPE = 'ImageObject';
   const ORG_TYPE = isTrustProjectParticipant
     ? 'NewsMediaOrganization'
@@ -247,7 +247,7 @@ const LinkedData = ({
 
   return (
     <Helmet>
-      <script type="application/ld+json">
+      <script type="application/ld+json" {...(nonce ? { nonce } : {})}>
         {serialiseForScript({
           '@context': 'https://schema.org',
           '@graph': [{ ...linkedData }, ...entities],

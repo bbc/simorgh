@@ -1,5 +1,5 @@
 import { Platforms, Services } from '#app/models/types/global';
-import { buildActivationEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { buildActivationEventModel } from '../atiUrl';
 import sendBeacon from '../sendBeacon';
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
   service?: Services;
   isSignedIn?: boolean;
   hashedId?: string | null;
+  isPersonalisationOn?: boolean;
 };
 
 /**
@@ -34,6 +35,7 @@ const sendOptimizelyActivationEvent = async ({
   statsDestination,
   isSignedIn,
   hashedId,
+  isPersonalisationOn,
 }: Props) => {
   if (!trackingIsEnabled || !experimentVariant || experimentVariant === 'off') {
     return;
@@ -60,6 +62,7 @@ const sendOptimizelyActivationEvent = async ({
     experimentVariant,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   });
 
   await sendBeacon(reverbParams);

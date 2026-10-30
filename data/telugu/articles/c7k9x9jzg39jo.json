@@ -1,0 +1,592 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": null,
+          "contentId": "urn:bbc:optimo:asset:c7k9x9jzg39jo",
+          "contentType": "article-sfv",
+          "language": "te",
+          "ldpThingIds": null,
+          "ldpThingLabels": null,
+          "nationsProducer": null,
+          "pageIdentifier": "telugu.watch.c7k9x9jzg39jo.page",
+          "pageTitle": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+          "timePublished": "2026-10-01T12:41:25.987Z",
+          "timeUpdated": "2026-10-01T12:41:25.987Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:c7k9x9jzg39jo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c7k9x9jzg39jo",
+          "canonicalUrl": "https://www.bbc.com/telugu/watch/c7k9x9jzg39jo"
+        },
+        "type": "article",
+        "createdBy": "Telugu",
+        "language": "te",
+        "firstPublished": 1790858485987,
+        "lastPublished": 1790858485987,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "contentId": "urn:bbc:optimo:asset:c7k9x9jzg39jo",
+          "producer": "Telugu",
+          "page": "telugu.watch.c7k9x9jzg39jo.page",
+          "irisKeyword": null
+        },
+        "passport": {
+          "language": "te",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Telugu",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-10-01T12:41:25.987Z"
+            }
+          ],
+          "predicates": {
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-10-01T12:41:25.987Z",
+                "type": "dateFirstReleased"
+              }
+            ]
+          }
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 22 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "9829adca",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ec810409",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "3ef2c728",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                            "blocks": [
+                              {
+                                "id": "c5b32b7a",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "cf3a0425",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wppb0",
+                "blocks": [
+                  {
+                    "id": "f30238e6",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f3f0815a",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0bfcc71d",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                  "blocks": [
+                                    {
+                                      "id": "2e7fb1e3",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "82904701",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "39d11f4d",
+                          "blockId": "urn:bbc:ares::clip:p01wppb0",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wppb0",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                            "synopses": {
+                              "short": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wppbn.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01wppb2",
+                                "types": ["Original"],
+                                "duration": 130,
+                                "durationISO8601": "PT2M10S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1755597192000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "aaf18a87",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b6305638",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1280,
+                                  "height": 720,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wppbn.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "1da8579a",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "88c1839c",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "5bc0610b",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                                              "blocks": [
+                                                {
+                                                  "id": "cb87ca9b",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "6c200b4d",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "b9d6d749",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "9c76afae",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                            "blocks": [
+                              {
+                                "id": "fe66a3e5",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "70312954",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1790858485987,
+                "lastPublished": 1790858485987
+              },
+              "position": [4]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1280,
+                  "height": 720,
+                  "locator": "p01wppbn.jpg",
+                  "originCode": "mpv",
+                  "copyrightHolder": "BBC"
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": { "text": "", "attributes": [] }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Telugu",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p01wppb0",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p01wppb0",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01wppb0",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+                            "synopses": {
+                              "short": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01wppbn.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p01wppb2",
+                                "types": ["Original"],
+                                "duration": 130,
+                                "durationISO8601": "PT2M10S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1755597192000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1280,
+                                  "height": 720,
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01wppbn.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku.",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [],
+      "portraitVideoItems": null,
+      "electionBanner": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

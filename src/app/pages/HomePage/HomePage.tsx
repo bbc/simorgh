@@ -1,10 +1,10 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -22,6 +22,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -63,10 +64,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      <PWAPromotionalBanner />
       <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
+      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer
         title={metadataTitle}
         lang={lang}
@@ -90,6 +90,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             {curations.map(
               (

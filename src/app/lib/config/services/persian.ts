@@ -48,6 +48,12 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'انتخابات میان‌دوره ای آمریکا',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/35021.html',
+    },
     podcastPromo: {
       title: 'معرفی خبرنامه',
       brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
@@ -87,6 +93,9 @@ export const service: DefaultServiceConfig = {
         heading: 'بیشتر بخوانید',
         moreAboutTopic: 'بیشتر درباره {topic}',
         fetchErrorMessage: 'بارگذاری ناموفق بود. لطفاً دوباره تلاش کنید',
+      },
+      googlePreferredSource: {
+        linkText: 'به عنوان منبع ترجیحی در Google اضافه کنید',
       },
       continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',

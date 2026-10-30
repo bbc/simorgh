@@ -1,5 +1,6 @@
 import SERVICES from '#app/lib/config/services';
 import { Services } from '#app/models/types/global';
+import { Helmet } from 'react-helmet';
 import { act, render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
 
@@ -42,5 +43,118 @@ describe('PageLayoutWrapper', () => {
       'font-style': style.getPropertyValue('font-style'),
       'font-weight': style.getPropertyValue('font-weight'),
     }).toMatchSnapshot();
+  });
+
+  it('escapes a `</script>` breakout attempt in a topic name before it is inlined', async () => {
+    const originalJestWorkerId = process.env.JEST_WORKER_ID;
+    delete process.env.JEST_WORKER_ID;
+
+    try {
+      await act(() =>
+        render(
+          <PageLayoutWrapper
+            status={200}
+            pageData={{
+              metadata: {
+                type: 'article',
+                topics: [
+                  {
+                    topicName: '</script><script>alert(1)</script>',
+                    topicId: 'c000000001',
+                  },
+                ],
+              },
+            }}
+          />,
+          { service: 'arabic' },
+        ),
+      );
+
+      const { scriptTags } = Helmet.peek();
+      const wrapperScript = scriptTags.find(scriptTag =>
+        scriptTag.innerHTML.includes('wrappedTopics'),
+      );
+
+      expect(wrapperScript).toBeDefined();
+      expect(wrapperScript?.innerHTML).not.toContain('</script>');
+      expect(wrapperScript?.innerHTML).toContain(
+        '\\u003c/script>\\u003cscript>',
+      );
+    } finally {
+      process.env.JEST_WORKER_ID = originalJestWorkerId;
+    }
+  });
+
+  describe('executing the generated script in a browser-like environment', () => {
+    let originalJestWorkerId: string | undefined;
+
+    beforeEach(() => {
+      originalJestWorkerId = process.env.JEST_WORKER_ID;
+      delete process.env.JEST_WORKER_ID;
+      localStorage.clear();
+    });
+
+    afterEach(() => {
+      process.env.JEST_WORKER_ID = originalJestWorkerId;
+      delete (window as unknown as { xssExecuted?: boolean }).xssExecuted;
+    });
+
+    it('safely executes the generated script end-to-end, without running an injected `</script>` breakout attempt, while preserving the original topic name', async () => {
+      const topicName = '</script><script>window.xssExecuted = true;</script>';
+
+      // react-helmet inserts the script into the real document, and jsdom
+      // then runs it automatically. Stubbing `appendChild` stops that
+      // automatic run so the script only executes once, below. This
+      // doesn't affect `Helmet.peek()`, which reads from component state,
+      // not the DOM. The escaping performed by the shared `addInlineScript`
+      // helper is covered independently in its own test suite - this test
+      // instead proves the whole pipeline behaves safely when executed.
+      const appendChildSpy = jest
+        .spyOn(document.head, 'appendChild')
+        .mockImplementation(node => node);
+
+      await act(() =>
+        render(
+          <PageLayoutWrapper
+            status={200}
+            pageData={{
+              metadata: {
+                type: 'article',
+                topics: [{ topicName, topicId: 'c000000001' }],
+              },
+            }}
+          />,
+          { service: 'arabic' },
+        ),
+      );
+
+      appendChildSpy.mockRestore();
+
+      const { scriptTags } = Helmet.peek();
+      const wrapperScript = scriptTags.find(scriptTag =>
+        scriptTag.innerHTML.includes('wrappedTopics'),
+      );
+      expect(wrapperScript).toBeDefined();
+
+      // Run the exact script sent to the browser using only real globals
+      // (window, document, localStorage), proving it's valid, executable
+      // JavaScript, not just correctly escaped text.
+      // eslint-disable-next-line no-new-func
+      new Function(wrapperScript?.innerHTML as string)();
+
+      expect(
+        (window as unknown as { xssExecuted?: boolean }).xssExecuted,
+      ).toBeUndefined();
+
+      const topics = JSON.parse(
+        localStorage.getItem('ws_bbc_topics') as string,
+      );
+
+      expect(topics.arabic[topicName]).toEqual({
+        count: 1,
+        id: 'c000000001',
+        path: '/arabic/topics/c000000001',
+      });
+    });
   });
 });
