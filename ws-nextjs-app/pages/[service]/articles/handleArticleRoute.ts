@@ -12,6 +12,7 @@ import { PageTypes } from '#app/models/types/global';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
+import excludeCurrentArticle from '#app/lib/utilities/excludeCurrentArticle';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -127,6 +128,34 @@ export default async (context: GetServerSidePropsContext) => {
     countryTopicIdToReorder = null,
   } = secondaryData || {};
 
+  // An article is never a useful onward journey for a reader already viewing
+  // it, so it's excluded from every OJ surface fed by this route before the page is rendered.
+  const currentArticleId = article.metadata.id;
+
+  const dedupedTopStories = topStories
+    ? excludeCurrentArticle(topStories, currentArticleId)
+    : topStories;
+
+  const dedupedMediaCuration = mediaCuration
+    ? {
+        ...mediaCuration,
+        summaries: excludeCurrentArticle(
+          mediaCuration.summaries,
+          currentArticleId,
+        ),
+      }
+    : mediaCuration;
+
+  const dedupedCountryCuration = countryCuration
+    ? {
+        ...countryCuration,
+        summaries: excludeCurrentArticle(
+          countryCuration.summaries,
+          currentArticleId,
+        ),
+      }
+    : countryCuration;
+
   const transformedArticleData = transformPageData()(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
@@ -144,15 +173,15 @@ export default async (context: GetServerSidePropsContext) => {
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
-          topStories,
+          topStories: dedupedTopStories,
           features,
           latestMedia,
-          mediaCuration,
+          mediaCuration: dedupedMediaCuration,
           billboardCuration,
         },
         mostRead,
         portraitVideoItems,
-        countryCuration,
+        countryCuration: dedupedCountryCuration,
         countryTopicIdToReorder,
       },
       pageType: derivedPageType,

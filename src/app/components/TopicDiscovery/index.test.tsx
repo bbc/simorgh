@@ -131,6 +131,30 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(firstTopicTitle)).toBeInTheDocument();
   });
 
+  it('should not render a promo matching the currentArticleId, so the current article is never recommended to itself', () => {
+    const { items } = multipleTopicsFixture[topicTagsFixture[0].topicId].data;
+    const [currentArticlePromo, otherPromo] = items;
+
+    mockUseFetchTopicPromos.mockReturnValue({
+      topicPromos: items,
+      isLoading: false,
+      isError: false,
+    });
+
+    render(
+      <TopicDiscovery
+        topics={topicTagsFixture}
+        currentArticleId={currentArticlePromo.id}
+      />,
+      { service: 'portuguese' },
+    );
+
+    expect(
+      screen.queryByText(currentArticlePromo.title),
+    ).not.toBeInTheDocument();
+    expect(screen.getByText(otherPromo.title)).toBeInTheDocument();
+  });
+
   it('should switch active topic when a different tab is clicked', () => {
     render(<TopicDiscovery topics={topicTagsFixture} />, {
       service: 'portuguese',

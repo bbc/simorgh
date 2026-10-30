@@ -6,6 +6,7 @@ import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
+import excludeCurrentArticle from '#app/lib/utilities/excludeCurrentArticle';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
@@ -18,11 +19,16 @@ export type ExtractedTopic = Pick<
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
+  currentArticleId?: string;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+const TopicDiscovery = ({
+  topics,
+  className,
+  currentArticleId,
+}: TopicDiscoveryProps) => {
   const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const {
@@ -64,9 +70,17 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     groupTracker,
   };
 
-  const { topicPromos, isLoading, isError } = useFetchTopicPromos({
+  const {
+    topicPromos: fetchedTopicPromos,
+    isLoading,
+    isError,
+  } = useFetchTopicPromos({
     activeTabId,
   });
+  const topicPromos = excludeCurrentArticle(
+    fetchedTopicPromos,
+    currentArticleId,
+  );
 
   const viewTracker = useViewTracker(eventTrackingData);
 
@@ -222,7 +236,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                         type: 'topic-discovery-curation-grid',
                         link: selectedTopicUrl,
                         resourceId: selectedTopic.topicId,
-                        ...(topicPromos?.length > 0 && {
+                        ...(topicPromos.length > 0 && {
                           itemCount: topicPromos.length,
                         }),
                       },

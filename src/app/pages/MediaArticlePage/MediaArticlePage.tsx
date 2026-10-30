@@ -315,7 +315,12 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
+          {showTopicDiscovery && (
+            <TopicDiscovery
+              topics={topics}
+              currentArticleId={getArticleId(pageData)}
+            />
+          )}
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}

@@ -106,6 +106,9 @@ export default {
   topBarOJs: {
     enabled: true,
   },
+  topicDiscovery: {
+    enabled: true,
+  },
   topicUasPersonalization: {
     enabled: true,
     value: 'hindi|mundo|portuguese',
