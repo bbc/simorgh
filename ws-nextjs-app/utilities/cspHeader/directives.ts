@@ -96,6 +96,7 @@ const directives = {
       'https://public.flourish.studio', // Flourish embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.frameSrc,
       ...advertisingDirectives.frameSrc,
       "'self'",
@@ -132,6 +133,7 @@ const directives = {
       'https://public.flourish.studio', // Flourish embeds
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.frameSrc,
       ...advertisingDirectives.frameSrc,
       "'self'",
@@ -161,6 +163,7 @@ const directives = {
       'https://*.tiktokcdn.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://*.xx.fbcdn.net', // Social Embeds
+      'https://*.userzoom.com', // UserZoom Intercept
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
@@ -194,6 +197,7 @@ const directives = {
       'https://*.tiktokcdn.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://*.xx.fbcdn.net', // Social Embeds
+      'https://*.userzoom.com', // UserZoom Intercept
       ...advertisingDirectives.imgSrc,
       'https://*.googleusercontent.com', // Google Play Store - BBC News Apps - Arabic, Hindi, Mundo, Russian
       "data: 'self'", // needed at the end to maintain proper order
@@ -224,6 +228,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://www.riddle.com',
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.scriptSrc,
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
@@ -258,6 +263,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://public.flourish.studio', // STY includes
       'https://www.riddle.com',
+      'https://*.userzoom.com', // UserZoom Intercept
       ...electionDirectives.scriptSrc,
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
@@ -275,6 +281,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       'https://*.xx.fbcdn.net', // Social Embeds
+      'https://*.userzoom.com', // UserZoom Intercept
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
@@ -285,6 +292,7 @@ const directives = {
       'https://*.twimg.com', // Social Embeds
       'https://lf16-tiktok-web.ttwstatic.com', // Social Embeds - TikTok
       'https://*.xx.fbcdn.net', // Social Embeds
+      'https://*.userzoom.com', // UserZoom Intercept
       ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
