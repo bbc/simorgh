@@ -92,6 +92,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      showMore: 'Erekana ibindi',
       moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {

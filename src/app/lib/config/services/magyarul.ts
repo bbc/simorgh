@@ -81,6 +81,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Kapcsolódó tartalom',
       relatedTopics: 'Kapcsolódó téma',
+      showMore: 'Továbbiak megjelenítése',
       navMenuText: 'Menü',
       liteSite: {
         onboardingMessage:

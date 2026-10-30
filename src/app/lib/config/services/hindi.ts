@@ -97,6 +97,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
+      showMore: 'और दिखाएं',
       moreOnThis: '',
       navMenuText: 'सेक्शन',
       liteSite: {

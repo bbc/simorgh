@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
+      showMore: 'Show more',
       moreOnThis: '',
       navMenuText: 'Plenti seshon',
       liteSite: {

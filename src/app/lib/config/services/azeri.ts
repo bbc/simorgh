@@ -98,6 +98,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      showMore: 'Daha çox göstər',
       moreOnThis: '',
       navMenuText: 'Bölümlər',
       liteSite: {
