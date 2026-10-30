@@ -1337,24 +1337,6 @@
         "visualProminence": "NORMAL",
         "title": "مراسلون",
         "visualStyle": "COLLECTION",
-        "mediaCollection": [
-          {
-            "type": "liveMedia",
-            "model": {
-              "urn": "urn:bbc:pips:sid:cz9mm6r1q5et",
-              "synopses": {},
-              "mediaType": "audio_video",
-              "masterbrand": {
-                "id": "cz9mm6r1q5et"
-              },
-              "version": {
-                "serviceId": "cz9mm6r1q5et",
-                "status": "LIVE"
-              },
-              "leadMedia": true
-            }
-          }
-        ],
         "isVideoCollection": true
       }
     ],
