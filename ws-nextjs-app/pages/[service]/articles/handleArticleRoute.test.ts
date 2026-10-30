@@ -44,6 +44,35 @@ describe('handleArticleRoute', () => {
     expect(result.props.pageType).toEqual('mediaArticle');
   });
 
+  it('leaves onward journey data to the client on canonical pages', async () => {
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    const { pageData } = result.props;
+
+    if (!pageData) throw new Error('Expected article page data');
+
+    expect(pageData.secondaryColumn).toBeUndefined();
+    expect(pageData.mostRead).toBeUndefined();
+  });
+
+  it('keeps onward journey data in the response for AMP pages', async () => {
+    const ampRequest = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/pidgin/articles/cvpde7nqj92o.amp',
+    } satisfies GetServerSidePropsContext;
+
+    const result = await handleArticleRoute(ampRequest);
+    const { pageData } = result.props;
+
+    if (!pageData) throw new Error('Expected article page data');
+
+    expect(pageData.secondaryColumn).toEqual(
+      expect.objectContaining({
+        topStories: expect.anything(),
+      }),
+    );
+    expect(pageData.mostRead).toBeDefined();
+  });
+
   it('returns expected props if shouldRender succeeds', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
 
