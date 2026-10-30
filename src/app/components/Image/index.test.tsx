@@ -125,11 +125,11 @@ describe('Image - Canonical', () => {
     expect(imageEl).not.toHaveAttribute('loading', 'lazy');
   });
 
-  it('should not lazy load by default', () => {
+  it('should lazy load by default', () => {
     render(<Fixture />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl).not.toHaveAttribute('loading', 'lazy');
+    expect(imageEl).toHaveAttribute('loading', 'lazy');
   });
 
   it('should render the primary srcset and sizes', () => {
@@ -256,7 +256,7 @@ describe('Image - Canonical', () => {
      >
        <img
          alt="Test image alt text"
-         loading="eager"
+         loading="lazy"
          src="/test-image-500.jpg"
          style="aspect-ratio: 16 / 9;"
        />
@@ -280,7 +280,7 @@ describe('Image - Canonical', () => {
      >
        <img
          alt="Test image alt text"
-         loading="eager"
+         loading="lazy"
          src="/test-image-500.jpg.webp"
          srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
          style="aspect-ratio: 16 / 9;"
