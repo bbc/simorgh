@@ -40,6 +40,32 @@ describe('InlineLink', () => {
     expect(anchorEl).toHaveClass('focusIndicatorReducedWidth');
   });
 
+  it('should render rich inline children in place of the text prop', () => {
+    render(
+      <InlineLink to="/mundo/articles/ce42wzqr2mko">
+        <b>Hello</b> World!
+      </InlineLink>,
+    );
+
+    const anchorEl = screen.getByRole('link');
+
+    expect(anchorEl).toHaveTextContent('Hello World!');
+    expect(anchorEl).toHaveClass(styles.self);
+  });
+
+  it('should let a consumer supply its own aria-label when rendering children', () => {
+    render(
+      <InlineLink to="https://google.com" aria-label="Google, externo">
+        <b>Google</b>
+      </InlineLink>,
+    );
+
+    expect(screen.getByRole('link')).toHaveAttribute(
+      'aria-label',
+      'Google, externo',
+    );
+  });
+
   it.each`
     to                                | currentLocation
     ${'/'}                            | ${'https://localhost'}

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import detokenise from '#psammead/psammead-detokeniser/src';
+import detokenise from '#app/lib/utilities/detokenise';
 
 import { visuallyHiddenStyle } from '../../../lib/styles.const';
 
