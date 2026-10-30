@@ -18,12 +18,11 @@ export default () => {
       expect(getInlinedCss()).not.toContain('--brand-foreground');
     });
 
-    it('should retain the external icon masks and their forced-colours paint', () => {
-      const css = getInlinedCss();
-
-      expect(css).toContain('mask:var(--icon-source)');
-      expect(css).toContain('background-color:currentColor');
-      expect(css).toContain('forced-color-adjust:preserve-parent-color');
+    it('should exclude CSS for components that are not rendered on Lite articles', () => {
+      expect(
+        document.querySelector('[data-testid="latest-post-button"]'),
+      ).toBeNull();
+      expect(getInlinedCss()).not.toContain('.LatestPostButton_');
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {

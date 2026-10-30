@@ -1,8 +1,23 @@
+const getAmpCustomStyle = () =>
+  document.querySelector('head > style[amp-custom]');
+
+export const runAmpCssSizeTest = () => {
+  it('should stay below the AMP CSS limit including inline styles', () => {
+    const styleElement = getAmpCustomStyle();
+    expect(styleElement).toBeInTheDocument();
+    const css = styleElement?.textContent ?? '';
+    const inlineStyles = Array.from(document.querySelectorAll('[style]'))
+      .map(element => element.getAttribute('style') ?? '')
+      .join('');
+
+    expect(
+      new TextEncoder().encode(css + inlineStyles).byteLength,
+    ).toBeLessThanOrEqual(75_000);
+  });
+};
+
 export default () => {
   describe('SCSS module CSS — AMP inlined styles', () => {
-    const getAmpCustomStyle = () =>
-      document.querySelector('head > style[amp-custom]');
-
     it('should have a non-empty <style amp-custom> tag', () => {
       const styleEl = getAmpCustomStyle();
 
@@ -16,19 +31,16 @@ export default () => {
       expect(css).not.toContain('--brand-foreground');
     });
 
-    it('should retain the external icon masks and their forced-colours paint', () => {
+    it('should exclude CSS for components that are not rendered on AMP articles', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
 
-      expect(css).toContain('mask:var(--icon-source)');
-      expect(css).toContain('background-color:currentColor');
-      expect(css).toContain('forced-color-adjust:preserve-parent-color');
+      expect(
+        document.querySelector('[data-testid="latest-post-button"]'),
+      ).toBeNull();
+      expect(css).not.toContain('.LatestPostButton_');
     });
 
-    it('should stay below the AMP custom CSS limit', () => {
-      const css = getAmpCustomStyle()?.textContent ?? '';
-
-      expect(new TextEncoder().encode(css).byteLength).toBeLessThan(75_000);
-    });
+    runAmpCssSizeTest();
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
