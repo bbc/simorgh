@@ -19,11 +19,7 @@ import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleP
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
-
-enum UASAction {
-  SAVE = 'save',
-  REMOVE = 'remove',
-}
+import { UASAction } from '#app/models/types/action';
 
 export type UASActionResult = {
   status: 'success' | 'error';

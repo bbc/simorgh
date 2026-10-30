@@ -1,12 +1,17 @@
 import userEvent from '@testing-library/user-event';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#lib/config/services/hindi';
+import { service as mundoServiceConfig } from '#lib/config/services/mundo';
+import { service as portugueseServiceConfig } from '#lib/config/services/portuguese';
 import {
+  act,
+  fireEvent,
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import useTopicFollowButton, {
   FollowAction,
+  type FollowActionResult,
 } from '#app/hooks/useTopicFollowButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import type { Services, Toggles } from '#app/models/types/global';
@@ -18,6 +23,14 @@ jest.mock('./FollowTopicButtonAuthenticated/lazy', () =>
 
 jest.mock('#app/hooks/useTopicFollowButton');
 jest.mock('#app/hooks/useHydrationDetection');
+
+const mockTrackClick = jest.fn();
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  default: jest.fn(({ componentName }) => ({
+    onClick: (event: React.MouseEvent) => mockTrackClick(componentName, event),
+  })),
+}));
 
 jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
@@ -52,13 +65,14 @@ const mockedUseHydrationDetection =
   useHydrationDetection as jest.MockedFunction<typeof useHydrationDetection>;
 
 const mockHandleFollowAction = jest.fn();
+const mockResetActionResult = jest.fn();
 const followTopicButtonTranslations =
   hindiServiceConfig.default.translations.followTopicButton;
+const actionTooltipTranslations =
+  hindiServiceConfig.default.translations.followTopicTooltip;
 
-if (!followTopicButtonTranslations) {
-  throw new Error(
-    'Hindi config must include translations.followTopicButton for FollowTopicButton tests',
-  );
+if (!followTopicButtonTranslations || !actionTooltipTranslations) {
+  throw new Error('FollowTopicButton tests require configured translations');
 }
 
 const LOADING_LABEL = followTopicButtonTranslations.loading;
@@ -72,18 +86,96 @@ const topicData = {
   url: 'https://www.bbc.com/hindi/topics/cw90edn9kw4t',
 };
 
+const signedInOptions = {
+  idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+};
+
+const mockFollowState = (
+  overrides: Partial<ReturnType<typeof useTopicFollowButton>> = {},
+) =>
+  mockedUseTopicFollowButton.mockReturnValue({
+    isFollowed: false,
+    isLoading: false,
+    isUpdating: false,
+    error: null,
+    actionResult: null,
+    resetActionResult: mockResetActionResult,
+    handleFollowAction: mockHandleFollowAction,
+    ...overrides,
+  });
+
+const observers = new Map();
+
+const IntersectionObserver = jest.fn(cb => {
+  const item = {
+    callback: cb,
+    elements: new Set(),
+  };
+
+  const instance = {
+    observe: jest.fn(element => {
+      item.elements.add(element);
+    }),
+    disconnect: jest.fn(() => {
+      item.elements.clear();
+    }),
+  };
+
+  observers.set(instance, item);
+
+  return instance;
+});
+
+const getObserverInstance = (element: HTMLElement) => {
+  const [instance] =
+    Array.from(observers).find(([, item]) => item.elements.has(element)) || [];
+
+  if (!instance) {
+    throw new Error('Failed to find IntersectionObserver for element.');
+  }
+
+  return instance;
+};
+
+const triggerIntersection = ({
+  changes,
+  observer,
+}: {
+  changes: Partial<IntersectionObserverEntry>[];
+  observer: IntersectionObserver;
+}) => {
+  const item = observers.get(observer);
+
+  item.callback(changes);
+};
+
+const reverbMock = {
+  isReady: jest.fn(() => true),
+  initialise: jest.fn(() => Promise.resolve()),
+  viewEvent: jest.fn(),
+  userActionEvent: jest.fn(),
+};
+
+// eslint-disable-next-line no-underscore-dangle
+window.__reverb = {
+  __reverbLoadedPromise: Promise.resolve(reverbMock),
+};
+
 describe('FollowTopicButton', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
+    // @ts-expect-error mocking required for tests
+    global.IntersectionObserver = IntersectionObserver;
+    observers.clear();
+
     mockedUseHydrationDetection.mockReturnValue(true);
-    mockedUseTopicFollowButton.mockReturnValue({
-      isFollowed: false,
-      isLoading: false,
-      isUpdating: false,
-      error: null,
-      handleFollowAction: mockHandleFollowAction,
-    });
+    mockFollowState();
+  });
+
+  afterEach(() => {
+    observers.clear();
+    jest.useRealTimers();
   });
 
   const renderFollowTopicButton = ({
@@ -92,15 +184,21 @@ describe('FollowTopicButton', () => {
     toggles = {
       topicUasPersonalization: { enabled: true, value: 'hindi' },
     },
+    pageMetadata,
   }: {
     service?: Services;
     idctaConfig?: typeof mockIdctaConfig;
     toggles?: Toggles;
+    pageMetadata?: {
+      type: 'article';
+      atiAnalytics: { pageIdentifier: string };
+    };
   } = {}) => {
-    render(<FollowTopicButton topicData={topicData} />, {
+    return render(<FollowTopicButton topicData={topicData} />, {
       service,
       idctaConfig,
       toggles,
+      pageMetadata,
     });
   };
 
@@ -129,12 +227,7 @@ describe('FollowTopicButton', () => {
   });
 
   it('renders authenticated button when topicUasPersonalization is enabled and user is signed in', () => {
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
-      toggles: {
-        topicUasPersonalization: { enabled: true, value: 'hindi' },
-      },
-    });
+    renderFollowTopicButton(signedInOptions);
 
     expect(
       screen.getByTestId('follow-topic-btn-authorized'),
@@ -171,70 +264,314 @@ describe('FollowTopicButton', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('renders loading state for authenticated button', () => {
-    mockedUseTopicFollowButton.mockReturnValue({
-      isFollowed: false,
-      isLoading: true,
-      isUpdating: false,
-      error: null,
-      handleFollowAction: mockHandleFollowAction,
+  it.each([
+    {
+      state: 'loading',
+      hookState: { isLoading: true },
+      label: LOADING_LABEL,
+    },
+    {
+      state: 'followed',
+      hookState: { isFollowed: true },
+      label: FOLLOWED_ACCESSIBLE_LABEL,
+    },
+  ])(
+    'renders the accessible label for the authenticated $state state',
+    ({ hookState, label }) => {
+      mockFollowState(hookState);
+      renderFollowTopicButton(signedInOptions);
+
+      expect(
+        screen.getByTestId('follow-topic-btn-authorized'),
+      ).toHaveAccessibleName(label);
+    },
+  );
+
+  it.each([
+    { isFollowed: false, action: FollowAction.FOLLOW },
+    { isFollowed: true, action: FollowAction.UNFOLLOW },
+  ])(
+    'triggers $action on authenticated button click',
+    async ({ isFollowed, action }) => {
+      mockFollowState({ isFollowed });
+      renderFollowTopicButton(signedInOptions);
+
+      await userEvent.click(screen.getByTestId('follow-topic-btn-authorized'));
+
+      expect(mockHandleFollowAction).toHaveBeenCalledWith(action);
+    },
+  );
+
+  describe('authenticated tooltip', () => {
+    const mockActionResult = (actionResult: FollowActionResult) => {
+      mockFollowState({
+        isFollowed: actionResult?.action === FollowAction.FOLLOW,
+        actionResult,
+      });
+    };
+
+    it.each([
+      {
+        action: FollowAction.FOLLOW,
+        status: 'success' as const,
+        tooltipStatus: 'success' as const,
+      },
+      {
+        action: FollowAction.UNFOLLOW,
+        status: 'success' as const,
+        tooltipStatus: 'removed' as const,
+      },
+      {
+        action: FollowAction.FOLLOW,
+        status: 'error' as const,
+        tooltipStatus: 'error' as const,
+      },
+      {
+        action: FollowAction.UNFOLLOW,
+        status: 'error' as const,
+        tooltipStatus: 'error' as const,
+      },
+    ])(
+      'renders and tracks the $tooltipStatus state after $action $status',
+      ({ action, status, tooltipStatus }) => {
+        mockActionResult({ action, status });
+        renderFollowTopicButton(signedInOptions);
+
+        expect(screen.getByRole('group')).toHaveAccessibleName(
+          actionTooltipTranslations[tooltipStatus].title.replace(
+            '{Topic Name}',
+            topicData.title,
+          ),
+        );
+        expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+      },
+    );
+
+    it('shows error feedback without a My News link', () => {
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'error' });
+      renderFollowTopicButton(signedInOptions);
+
+      expect(
+        screen.getByText(actionTooltipTranslations.error.body),
+      ).toBeInTheDocument();
+      expect(screen.queryByRole('link')).not.toBeInTheDocument();
     });
 
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    it('does not show a tooltip before an action completes', () => {
+      renderFollowTopicButton(signedInOptions);
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
 
-    const authorizedButton = screen.getByTestId('follow-topic-btn-authorized');
+    it('does not show a tooltip for guests', () => {
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      renderFollowTopicButton();
 
-    expect(authorizedButton).toBeInTheDocument();
-    expect(authorizedButton).toHaveAccessibleName(LOADING_LABEL);
-  });
-
-  it('renders followed state and accessible unfollow label for authenticated button', () => {
-    mockedUseTopicFollowButton.mockReturnValue({
-      isFollowed: true,
-      isLoading: false,
-      isUpdating: false,
-      error: null,
-      handleFollowAction: mockHandleFollowAction,
+      expect(screen.getByTestId('follow-topic-btn-guest')).toBeInTheDocument();
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
 
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    it('closes, resets the action result and tracks dismissal on close', async () => {
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      renderFollowTopicButton(signedInOptions);
+
+      await userEvent.click(
+        screen.getByRole('button', {
+          name: actionTooltipTranslations.closeLabel,
+        }),
+      );
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+      expect(mockResetActionResult).toHaveBeenCalledTimes(1);
+      expect(mockTrackClick).toHaveBeenCalledWith(
+        'follow-topic-tooltip-close',
+        expect.anything(),
+      );
     });
 
-    const authorizedButton = screen.getByTestId('follow-topic-btn-authorized');
+    it('supports keyboard navigation, Escape dismissal and focus restoration', async () => {
+      mockHandleFollowAction.mockImplementationOnce(() => {
+        mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      });
+      const { rerender } = renderFollowTopicButton(signedInOptions);
+      const button = screen.getByTestId('follow-topic-btn-authorized');
 
-    expect(authorizedButton).toBeInTheDocument();
-    expect(authorizedButton).toHaveAccessibleName(FOLLOWED_ACCESSIBLE_LABEL);
-  });
+      await userEvent.click(button);
+      rerender(<FollowTopicButton topicData={topicData} />);
 
-  it('triggers follow action on authenticated button click when not followed', async () => {
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+      expect(screen.getByTestId('action-tooltip-close')).toHaveFocus();
+      await userEvent.tab();
+      expect(screen.getByRole('link')).toHaveFocus();
+      await userEvent.keyboard('{Escape}');
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+      expect(mockResetActionResult).toHaveBeenCalledTimes(1);
+      expect(button).toHaveFocus();
     });
 
-    await userEvent.click(screen.getByTestId('follow-topic-btn-authorized'));
+    it('dismisses on outside click after the shared grace period', () => {
+      jest.useFakeTimers();
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      renderFollowTopicButton(signedInOptions);
 
-    expect(mockHandleFollowAction).toHaveBeenCalledWith(FollowAction.FOLLOW);
-  });
+      fireEvent.click(document.body);
+      expect(screen.getByTestId('action-tooltip')).toBeInTheDocument();
 
-  it('triggers unfollow action on authenticated button click when followed', async () => {
-    mockedUseTopicFollowButton.mockReturnValue({
-      isFollowed: true,
-      isLoading: false,
-      isUpdating: false,
-      error: null,
-      handleFollowAction: mockHandleFollowAction,
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      fireEvent.click(document.body);
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+      expect(mockResetActionResult).toHaveBeenCalledTimes(1);
+      expect(mockTrackClick).toHaveBeenCalledWith(
+        'follow-topic-tooltip-close',
+        expect.anything(),
+      );
+      jest.useRealTimers();
     });
 
-    renderFollowTopicButton({
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    it('shows and tracks follow and unfollow tooltip results', async () => {
+      jest.useFakeTimers();
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      const { rerender } = renderFollowTopicButton({
+        ...signedInOptions,
+        pageMetadata: {
+          type: 'article',
+          atiAnalytics: { pageIdentifier: 'follow-topic-test' },
+        },
+        toggles: {
+          eventTracking: { enabled: true },
+          topicUasPersonalization: { enabled: true, value: 'hindi' },
+        },
+      });
+
+      await act(async () => Promise.resolve());
+      const followTooltip = screen.getByTestId('action-tooltip').parentElement;
+      const followObserver = getObserverInstance(followTooltip as HTMLElement);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: followObserver,
+        });
+      });
+      await act(async () => {
+        jest.advanceTimersByTime(1100);
+        await Promise.resolve();
+      });
+
+      fireEvent.click(screen.getByTestId('action-tooltip-close'));
+      mockActionResult(null);
+      rerender(<FollowTopicButton topicData={topicData} />);
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+
+      mockActionResult({ action: FollowAction.UNFOLLOW, status: 'success' });
+      rerender(<FollowTopicButton topicData={topicData} />);
+
+      await act(async () => Promise.resolve());
+      const unfollowTooltip =
+        screen.getByTestId('action-tooltip').parentElement;
+      const unfollowObserver = getObserverInstance(
+        unfollowTooltip as HTMLElement,
+      );
+
+      expect(screen.getByRole('group')).toHaveAccessibleName(
+        actionTooltipTranslations.removed.title.replace(
+          '{Topic Name}',
+          topicData.title,
+        ),
+      );
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: unfollowObserver,
+        });
+      });
+      await act(async () => {
+        jest.advanceTimersByTime(1100);
+        await Promise.resolve();
+      });
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(2);
+      expect(reverbMock.userActionEvent).toHaveBeenNthCalledWith(
+        1,
+        'viewability',
+        '',
+        expect.objectContaining({
+          item: expect.objectContaining({
+            name: 'follow-topic-tooltip-view-success',
+          }),
+        }),
+        undefined,
+        undefined,
+        false,
+      );
+      expect(reverbMock.userActionEvent).toHaveBeenNthCalledWith(
+        2,
+        'viewability',
+        '',
+        expect.objectContaining({
+          item: expect.objectContaining({
+            name: 'follow-topic-tooltip-view-removed',
+          }),
+        }),
+        undefined,
+        undefined,
+        false,
+      );
     });
 
-    await userEvent.click(screen.getByTestId('follow-topic-btn-authorized'));
+    it.each([
+      { service: 'hindi' as const, config: hindiServiceConfig },
+      { service: 'mundo' as const, config: mundoServiceConfig },
+      { service: 'portuguese' as const, config: portugueseServiceConfig },
+    ])('uses the $service tooltip translations', ({ service, config }) => {
+      const tooltipTranslations =
+        config.default.translations.followTopicTooltip;
 
-    expect(mockHandleFollowAction).toHaveBeenCalledWith(FollowAction.UNFOLLOW);
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      renderFollowTopicButton({
+        ...signedInOptions,
+        service,
+        toggles: {
+          topicUasPersonalization: { enabled: true, value: service },
+        },
+      });
+
+      expect(screen.getByRole('group')).toHaveAccessibleName(
+        tooltipTranslations?.success.title.replace(
+          '{Topic Name}',
+          topicData.title,
+        ),
+      );
+      expect(screen.getByTestId('action-tooltip-close')).toHaveAccessibleName(
+        tooltipTranslations?.closeLabel,
+      );
+      expect(screen.getByRole('link')).toHaveAccessibleName(
+        tooltipTranslations?.myNewsLinkText,
+      );
+      expect(screen.getByRole('link')).toHaveAttribute(
+        'href',
+        tooltipTranslations?.myNewsUrl,
+      );
+    });
+
+    it('tracks My News link clicks', () => {
+      mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
+      renderFollowTopicButton(signedInOptions);
+      const link = screen.getByRole('link');
+      link.addEventListener('click', event => event.preventDefault());
+
+      fireEvent.click(link);
+
+      expect(mockTrackClick).toHaveBeenCalledWith(
+        'follow-topic-tooltip-my-news-link',
+        expect.anything(),
+      );
+      expect(mockResetActionResult).not.toHaveBeenCalled();
+    });
   });
 
   it('does not render when service is not allowlisted in local topicUasPersonalization value', () => {

@@ -3,17 +3,24 @@ import Link from '#app/components/Footer/Link';
 import { TooltipContent } from '#app/components/ActionTooltip';
 import { Translations } from '#app/models/types/translations';
 
-type ArticleTooltipTranslations = NonNullable<Translations['actionTooltip']>;
+export type ActionTooltipTranslations = NonNullable<
+  Translations['actionTooltip']
+>;
 
-const getArticleTooltipContent = (
+interface GetActionTooltipContentOptions {
+  topicName?: string;
+  onMyNewsLinkClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
+}
+
+const getActionTooltipContent = (
   {
     success,
     error,
     removed,
     myNewsLinkText,
     myNewsUrl,
-  }: ArticleTooltipTranslations,
-  onMyNewsLinkClick?: (event: MouseEvent<HTMLAnchorElement>) => void,
+  }: ActionTooltipTranslations,
+  { topicName, onMyNewsLinkClick }: GetActionTooltipContentOptions = {},
 ): TooltipContent => {
   const myNewsLink = (
     <Link
@@ -23,10 +30,12 @@ const getArticleTooltipContent = (
       onClick={onMyNewsLinkClick}
     />
   );
+  const interpolateTopicName = (text: string) =>
+    topicName ? text.replace('{Topic Name}', topicName) : text;
 
   return {
     success: {
-      title: success.title,
+      title: interpolateTopicName(success.title),
       body: (
         <>
           {success.bodyBefore} {myNewsLink} {success.bodyAfter}
@@ -38,7 +47,7 @@ const getArticleTooltipContent = (
       body: error.body,
     },
     removed: {
-      title: removed.title,
+      title: interpolateTopicName(removed.title),
       body: (
         <>
           {removed.bodyBefore} {myNewsLink} {removed.bodyAfter}
@@ -48,4 +57,4 @@ const getArticleTooltipContent = (
   };
 };
 
-export default getArticleTooltipContent;
+export default getActionTooltipContent;

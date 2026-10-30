@@ -208,11 +208,30 @@ export const service: DefaultServiceConfig = {
         },
         error: {
           title: 'Desculpe, algo deu errado',
-          body: 'Verifique sua conexão, atualize a página e tente novamente',
+          body: 'Verifique sua conexão, atualize a página e tente novamente.',
         },
         removed: {
           title: 'Matéria removida',
           bodyBefore: 'Ela será removida de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Notícias para você',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Fechar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Você está seguindo {Topic Name}',
+          bodyBefore: 'Encontre este tópico em',
+          bodyAfter: '.',
+        },
+        error: {
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize sua página e tente novamente.',
+        },
+        removed: {
+          title: 'Você deixou de seguir {Topic Name}',
+          bodyBefore: 'Ele será removido de',
           bodyAfter: '',
         },
         myNewsLinkText: 'Notícias para você',

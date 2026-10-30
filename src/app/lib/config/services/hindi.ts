@@ -208,6 +208,25 @@ export const service: DefaultServiceConfig = {
         myNewsUrl: 'https://www.bbc.com/hindi/my-news',
         closeLabel: 'बंद करें',
       },
+      followTopicTooltip: {
+        success: {
+          title: 'अब आप {Topic Name} को फ़ॉलो कर रहे हैं',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगा',
+        },
+        error: {
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पेज रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
+        },
+        removed: {
+          title: 'आपने {Topic Name} को अनफ़ॉलो कर दिया है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
+        },
+        myNewsLinkText: 'माई न्यूज़',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'बंद करें',
+      },
       gist: 'सारांश',
       error: {
         404: {

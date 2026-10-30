@@ -124,6 +124,25 @@ export interface Translations {
     myNewsUrl: string;
     closeLabel: string;
   };
+  followTopicTooltip?: {
+    success: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
+  };
   error: {
     home?: string;
     currentPage?: string;
