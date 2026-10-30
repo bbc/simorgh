@@ -44,4 +44,3 @@ export default ({ pageMetadata }) => {
 
   return enrichedData;
 };
-
