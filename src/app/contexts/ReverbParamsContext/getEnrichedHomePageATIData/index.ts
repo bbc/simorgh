@@ -18,30 +18,30 @@ const getActiveExperimentProps = (
 export default ({ pageMetadata }) => {
   const { atiAnalytics: atiData = {} } = pageMetadata ?? {};
 
-  // EXPERIMENT: Home page AA test for Piano activation tracking
-  const testPageViewsExperimentName = 'test_page_views_aa_4';
-  const testPageViewsVariant = useOptimizelyVariation({
-    experimentName: testPageViewsExperimentName,
+  // EXPERIMENT: replace with the name of an active client side home page experiment
+  const experimentName = 'test_homepage_client_side_aa';
+  const experimentVariant = useOptimizelyVariation({
+    experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  const isTestPageViewsVariant =
-    testPageViewsVariant && testPageViewsVariant !== 'off';
+  const isActiveVariant = experimentVariant && experimentVariant !== 'off';
 
-  const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
+  const experimentProps = getActiveExperimentProps(
+    experimentName,
+    experimentVariant,
   );
 
   const enrichedData = {
     ...atiData,
-    ...(isTestPageViewsVariant &&
-      testPageViewsExperimentProps && {
-        experimentName: testPageViewsExperimentProps.experimentName,
-        experimentVariant: testPageViewsExperimentProps.experimentVariant,
-        experimentProps: testPageViewsExperimentProps,
+    ...(isActiveVariant &&
+      experimentProps && {
+        experimentName: experimentProps.experimentName,
+        experimentVariant: experimentProps.experimentVariant,
+        experimentProps,
       }),
   };
 
   return enrichedData;
 };
+

@@ -76,13 +76,16 @@ describe('getEnrichedHomePageATIData', () => {
       pageTitle: 'Labaran Duniya - BBC News Hausa',
       producerId: null,
       producerName: 'HAUSA',
-      experimentName: 'test_page_views_aa_4',
+      experimentName: 'test_homepage_client_side_aa',
       experimentVariant: 'variant_a',
       experimentProps: {
-        experimentName: 'test_page_views_aa_4',
+        experimentName: 'test_homepage_client_side_aa',
         experimentVariant: 'variant_a',
         sendOptimizelyEvents: true,
       },
     });
   });
 });
+
+
+
