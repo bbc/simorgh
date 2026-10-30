@@ -3,6 +3,7 @@ import nodeLogger from '#app/lib/logger.node';
 
 import { IdctaConfig } from '#app/models/types/account';
 import { LRUCache } from 'lru-cache';
+import deduplicateRequests from '#lib/utilities/deduplicateRequests';
 import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
 
 const logger = nodeLogger(__filename);
@@ -14,6 +15,7 @@ const cache = new LRUCache<string, IdctaConfig>({
   max: CACHE_MAX_ITEMS,
   ttl: CACHE_TTL_SECONDS * 1000,
 });
+const deduplicateRequest = deduplicateRequests<IdctaConfig | null>();
 
 /**
  * Fetches IDCTA config from the endpoint with caching
@@ -27,25 +29,27 @@ async function fetchIdctaConfig(): Promise<IdctaConfig | null> {
     return cachedConfig;
   }
 
-  try {
-    const response = await fetch(idctaConfigUrl);
+  return deduplicateRequest(idctaConfigUrl, async () => {
+    try {
+      const response = await fetch(idctaConfigUrl);
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const config = await response.json();
+
+      cache.set(idctaConfigUrl, config);
+
+      return config;
+    } catch (error) {
+      logger.error(IDCTA_FETCH_ERROR, {
+        url: idctaConfigUrl,
+        error,
+      });
+      return null;
     }
-
-    const config = await response.json();
-
-    cache.set(idctaConfigUrl, config);
-
-    return config;
-  } catch (error) {
-    logger.error(IDCTA_FETCH_ERROR, {
-      url: idctaConfigUrl,
-      error,
-    });
-    return null;
-  }
+  });
 }
 
 export default fetchIdctaConfig;

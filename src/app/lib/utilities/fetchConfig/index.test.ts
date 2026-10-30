@@ -33,6 +33,10 @@ describe('fetchConfig', () => {
     process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
   });
 
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it('should fetch configuration data', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
@@ -93,6 +97,141 @@ describe('fetchConfig', () => {
 
     // Should call fetch only once with subsequent responses from cache
     expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should share concurrent misses until the response body is parsed', async () => {
+    const { promise, resolve } =
+      Promise.withResolvers<typeof mockNavResponse>();
+    const { promise: bodyStarted, resolve: startBody } =
+      Promise.withResolvers<void>();
+    const json = jest.fn(() => {
+      startBody();
+      return promise;
+    });
+    global.fetch = jest.fn().mockResolvedValue({ ok: true, json });
+    const { default: fetchConfig } = await import('.');
+    const params = {
+      service: 'indonesia',
+      pagePath: '/indonesia?renderer_env=test',
+      configType: 'navigation',
+    } as const;
+
+    const firstRequest = fetchConfig(params);
+    await bodyStarted;
+    const secondRequest = fetchConfig(params);
+
+    resolve(mockNavResponse);
+
+    await expect(Promise.all([firstRequest, secondRequest])).resolves.toEqual([
+      mockNavResponse,
+      mockNavResponse,
+    ]);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(json).toHaveBeenCalledTimes(1);
+
+    await expect(fetchConfig(params)).resolves.toEqual(mockNavResponse);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should deduplicate a new fetch after the cached configuration expires', async () => {
+    jest.useFakeTimers();
+    jest.advanceTimersByTime(1);
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockNavResponse,
+    });
+    const { default: fetchConfig } = await import('.');
+    const params = {
+      service: 'indonesia',
+      pagePath: '/indonesia',
+      configType: 'navigation',
+    } as const;
+    await fetchConfig(params);
+
+    jest.advanceTimersByTime(300001);
+
+    await expect(
+      Promise.all([fetchConfig(params), fetchConfig(params)]),
+    ).resolves.toEqual([mockNavResponse, mockNavResponse]);
+    expect(global.fetch).toHaveBeenCalledTimes(2);
+  });
+
+  it.each([
+    ['service', { service: 'mundo' }],
+    ['variant', { variant: 'lat' }],
+    ['environment', { pagePath: '/serbian?renderer_env=live' }],
+  ] as const)(
+    'should keep concurrent requests and cached responses separate by %s',
+    async (_name, overrides) => {
+      const otherResponse = { data: { items: [] } };
+      global.fetch = jest
+        .fn()
+        .mockResolvedValueOnce({
+          ok: true,
+          json: async () => mockNavResponse,
+        })
+        .mockResolvedValueOnce({
+          ok: true,
+          json: async () => otherResponse,
+        });
+      const { default: fetchConfig } = await import('.');
+      const params = {
+        service: 'serbian',
+        variant: 'cyr',
+        pagePath: '/serbian?renderer_env=test',
+        configType: 'navigation',
+      } as const;
+      const otherParams = { ...params, ...overrides };
+
+      await expect(
+        Promise.all([fetchConfig(params), fetchConfig(otherParams)]),
+      ).resolves.toEqual([mockNavResponse, otherResponse]);
+      await expect(fetchConfig(params)).resolves.toEqual(mockNavResponse);
+      await expect(fetchConfig(otherParams)).resolves.toEqual(otherResponse);
+      expect(global.fetch).toHaveBeenCalledTimes(2);
+    },
+  );
+
+  it.each([
+    ['network error', () => Promise.reject(new Error('Network error'))],
+    ['HTTP error', async () => ({ ok: false, status: 500 })],
+    [
+      'JSON error',
+      async () => ({
+        ok: true,
+        json: async () => {
+          throw new Error('Invalid JSON');
+        },
+      }),
+    ],
+  ])('should share a %s and allow a later retry', async (_name, failure) => {
+    global.fetch = jest
+      .fn()
+      .mockImplementationOnce(failure)
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => mockNavResponse,
+      });
+    const { default: fetchConfig } = await import('.');
+    const params = {
+      service: 'indonesia',
+      pagePath: '/indonesia',
+      configType: 'navigation',
+    } as const;
+
+    const results = await Promise.allSettled([
+      fetchConfig(params),
+      fetchConfig(params),
+    ]);
+
+    expect(results).toEqual([
+      { status: 'rejected', reason: expect.any(Error) },
+      { status: 'rejected', reason: expect.any(Error) },
+    ]);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    await expect(fetchConfig(params)).resolves.toEqual(mockNavResponse);
+    expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 
   it.each(['test', 'live'])(
