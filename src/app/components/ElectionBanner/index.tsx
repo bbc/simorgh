@@ -123,6 +123,7 @@ export default function ElectionBanner({
           ? overrideClassnames?.assocPressWrapper
           : overrideClassnames?.wrapper,
       )}
+      {...(hasTitle && { role: 'region', 'aria-label': title })}
     >
       <div className={styles.electionBannerContent}>
         {hasTitle && (
