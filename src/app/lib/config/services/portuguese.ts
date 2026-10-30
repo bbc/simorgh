@@ -57,28 +57,6 @@ export const service: DefaultServiceConfig = {
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
     },
-    articleMessageBanners: [
-      {
-        thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
-        heading: 'Eleições 2026: veja como foi a votação',
-        description:
-          'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil',
-        linkText: 'Clique aqui',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
-      },
-      {
-        thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/c20yjrpxr35o',
-        heading: 'Copa do Mundo 2026 – tabela completa',
-        description:
-          'Confira aqui o calendário de jogos do torneio, com resultados e classificação',
-        linkText: 'Clique aqui para ver a tabela',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/02bc/live/37515e30-6775-11f1-8e1d-bbbb1017d210.png.webp',
-      },
-    ],
     podcastPromo: {
       title: 'Promoção Resultados eleição 2026',
       brandTitle: 'Eleições 2026: veja como foi a votação',

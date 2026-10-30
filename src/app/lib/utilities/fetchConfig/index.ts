@@ -8,6 +8,7 @@ import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
+import deduplicateRequests from '../deduplicateRequests';
 
 const logger = nodeLogger(__filename);
 
@@ -19,6 +20,7 @@ const cache = new LRUCache({
   max: CACHE_MAX_ITEMS,
   ttl: CACHE_TTL_SECONDS * 1000,
 });
+const deduplicateRequest = deduplicateRequests<unknown>();
 
 type FetchConfigParams = {
   service: Services;
@@ -46,8 +48,11 @@ const fetchConfig = async <T>({
   }
 
   const bffReqPath = fetchUrl.toString();
+  const environment = getEnvironment(pagePath);
+  const isLocal = !environment || environment === 'local';
+  const cacheKey = `${bffReqPath}:${isLocal ? 'local' : environment}`;
 
-  const cachedResponse = cache.get(bffReqPath);
+  const cachedResponse = cache.get(cacheKey);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {
     service,
@@ -59,41 +64,42 @@ const fetchConfig = async <T>({
     return cachedResponse as T;
   }
 
-  const environment = getEnvironment(pagePath);
-  const isLocal = !environment || environment === 'local';
+  const config = await deduplicateRequest(cacheKey, async () => {
+    const agent = certsRequired(pagePath) ? await getAgent() : null;
 
-  const agent = certsRequired(pagePath) ? await getAgent() : null;
+    const fetchOptions = {
+      ...(agent && { agent }),
+      ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
+      signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
+    };
 
-  const fetchOptions = {
-    ...(agent && { agent }),
-    ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
-    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
-  };
+    try {
+      const response = await fetch(bffReqPath, fetchOptions);
 
-  try {
-    const response = await fetch(bffReqPath, fetchOptions);
+      if (response.ok) {
+        const res = await response.json();
+        cache.set(cacheKey, res);
+        return res;
+      }
+      const error = new Error() as FetchError;
 
-    if (response.ok) {
-      const res = await response.json();
-      cache.set(bffReqPath, res);
-      return res as T;
+      error.status = response.status;
+      error.message = `Failed to fetch config for service: ${service}`;
+
+      throw error;
+    } catch (error) {
+      const { message } = error as FetchError;
+
+      logger.error(CONFIG_FETCH_ERROR, {
+        error: message,
+        service,
+      });
+
+      throw error;
     }
-    const error = new Error() as FetchError;
+  });
 
-    error.status = response.status;
-    error.message = `Failed to fetch config for service: ${service}`;
-
-    throw error;
-  } catch (error) {
-    const { message } = error as FetchError;
-
-    logger.error(CONFIG_FETCH_ERROR, {
-      error: message,
-      service,
-    });
-
-    throw error;
-  }
+  return config as T;
 };
 
 export default fetchConfig;
