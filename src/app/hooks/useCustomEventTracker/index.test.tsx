@@ -250,7 +250,7 @@ describe('useCustomEventTracker', () => {
         expect.objectContaining({
           event: expect.objectContaining({
             action: 'view',
-            grouping: eventName,
+            grouping: 'news::pidgin.news.story.51745682.page',
             subcategory: eventName,
           }),
           item: expect.objectContaining({

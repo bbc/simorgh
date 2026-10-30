@@ -68,7 +68,6 @@ const useCustomEventTracker = ({
           dispatchViewabilityEvent(
             buildResonanceEventConfig({
               type: VIEW_EVENT,
-              eventGroupingName: eventName,
               componentName: eventName,
               ...(stringifiedData && {
                 itemTracker: { label: stringifiedData },

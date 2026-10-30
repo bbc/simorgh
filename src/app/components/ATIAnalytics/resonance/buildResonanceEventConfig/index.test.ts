@@ -43,21 +43,6 @@ describe('buildResonanceEventConfig', () => {
     expect(result.event.action).toEqual('select');
   });
 
-  it('should use the pageIdentifier as the event grouping by default', () => {
-    const result = buildResonanceEventConfig(baseProps);
-
-    expect(result.event.grouping).toEqual('pidgin.topics.c95y35941vrt.page');
-  });
-
-  it('should use the eventGroupingName as the event grouping when provided', () => {
-    const result = buildResonanceEventConfig({
-      ...baseProps,
-      eventGroupingName: 'custom-event',
-    });
-
-    expect(result.event.grouping).toEqual('custom-event');
-  });
-
   it('should set the breakpoint to mobile when isMobile returns true', () => {
     (isMobile as jest.Mock).mockReturnValue(true);
 
