@@ -81,7 +81,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       const shouldRegisterClick = [
         trackingIsEnabled,
         // count legitimate repeat clicks; optimizely calculates unique users
-        !wasClicked || isHomepageArticlePromoClick,
+        !wasClicked,
         isDismissal || isValidClick(event),
       ].every(Boolean);
 
