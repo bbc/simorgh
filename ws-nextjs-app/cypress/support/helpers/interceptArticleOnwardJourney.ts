@@ -22,7 +22,7 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
   testContext: { skip: () => void };
 }) => {
   const onwardJourneyAlias =
-    applicationType === 'responsive'
+    applicationType === 'responsive' && path.includes('/articles/')
       ? interceptArticleOnwardJourney(onwardJourney)
       : undefined;
 
