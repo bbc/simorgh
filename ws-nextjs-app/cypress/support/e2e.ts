@@ -42,6 +42,9 @@ const KNOWN_ERRORS = [
   // This link then navigates the test to the BBC News Pidgin WhatsApp channel
   // https://www.whatsapp.com/channel/0029VawW7AjFy726zWLIFq2j
   'requireLazy is not defined',
+  // This is thrown by an external script on otherwise successful Pidgin AMP,
+  // article, and script-switching tests.
+  'require is not defined',
   'ResizeObserver loop completed with undelivered notifications',
   `Cannot read properties of null (reading 'postMessage')`,
   'Error emitting event to page/plugin, swallowed by Toucan',
