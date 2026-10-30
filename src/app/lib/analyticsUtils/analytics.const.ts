@@ -14,6 +14,7 @@ export const XTOR_CAMPAIGN_IDENTIFIER = 'xtor';
 export const VIEW_EVENT = 'view';
 export const CLICK_EVENT = 'click';
 export const VIEWABILITY_CLICK_EVENT = 'select';
+export const VIEWABILITY_EVENT_CATEGORY = 'viewability';
 export const ACTIVATION_EVENT = 'activation';
 
 // "Activation (v1.0.1) on Web" - https://broxy.tools.bbc.co.uk/bbc-event-catalogue/xbbc/viewability-events/specs/experiment/activation-web/1.0.1/

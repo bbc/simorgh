@@ -43,6 +43,12 @@ describe('buildResonanceEventConfig', () => {
     expect(result.event.action).toEqual('select');
   });
 
+  it('should set the event category to viewability', () => {
+    const result = buildResonanceEventConfig(baseProps);
+
+    expect(result.event.category).toEqual('viewability');
+  });
+
   it('should set the breakpoint to mobile when isMobile returns true', () => {
     (isMobile as jest.Mock).mockReturnValue(true);
 

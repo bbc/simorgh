@@ -1,5 +1,8 @@
 import { isMobile } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
-import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
+import {
+  VIEW_EVENT,
+  VIEWABILITY_EVENT_CATEGORY,
+} from '#app/lib/analyticsUtils/analytics.const';
 import { ATIEventTrackingProps } from '../../types';
 import { ResonanceEventModel } from '../types';
 
@@ -42,6 +45,7 @@ export default ({
   return {
     event: {
       action: type === VIEW_EVENT ? 'view' : 'select',
+      category: VIEWABILITY_EVENT_CATEGORY,
       grouping: pageIdentifier,
       pixelThreshold: viewThreshold,
       subcategory: componentName,
