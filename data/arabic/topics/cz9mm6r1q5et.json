@@ -289,7 +289,6 @@
         "visualProminence": "HIGH",
         "title": "آخر الفيديوهات",
         "visualStyle": "COLLECTION",
-        "intent": "MEDIA_PLAYER",
         "isVideoCollection": true
       },
       {
@@ -574,7 +573,6 @@
         "visualProminence": "HIGH",
         "title": "الشرق الأوسط وشمال أفريقيا",
         "visualStyle": "COLLECTION",
-        "intent": "MEDIA_PLAYER",
         "isVideoCollection": true
       },
       {
@@ -724,7 +722,6 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:f483d6d2-2c07-4de5-ad0d-f6dd4c8bf908",
         "curationType": "tipo-curation",
-        "intent": "MEDIA_PLAYER",
         "position": 2,
         "visualProminence": "NORMAL",
         "title": "بي بي سي - تقصي الحقائق",
@@ -878,7 +875,6 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b08192f6-b14e-46da-9942-c54a035db2fc",
         "curationType": "tipo-curation",
-        "intent": "MEDIA_PLAYER",
         "position": 3,
         "visualProminence": "NORMAL",
         "title": "في العمق",
@@ -1032,7 +1028,6 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:e01e0149-162d-40d6-998c-70aab76249c9",
         "curationType": "tipo-curation",
-        "intent": "MEDIA_PLAYER",
         "position": 4,
         "visualProminence": "NORMAL",
         "title": "التغير المناخي",
@@ -1185,7 +1180,6 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:aa281684-fd16-4b0d-8c8b-f92e11233ee7",
         "curationType": "tipo-curation",
-        "intent": "MEDIA_PLAYER",
         "position": 5,
         "visualProminence": "NORMAL",
         "title": "شؤون المرأة",
@@ -1339,11 +1333,28 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:280df6b0-320e-49f0-9931-6c3375ba575e",
         "curationType": "tipo-curation",
-        "intent": "MEDIA_PLAYER",
         "position": 6,
         "visualProminence": "NORMAL",
         "title": "مراسلون",
         "visualStyle": "COLLECTION",
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:cz9mm6r1q5et",
+              "synopses": {},
+              "mediaType": "audio_video",
+              "masterbrand": {
+                "id": "cz9mm6r1q5et"
+              },
+              "version": {
+                "serviceId": "cz9mm6r1q5et",
+                "status": "LIVE"
+              },
+              "leadMedia": true
+            }
+          }
+        ],
         "isVideoCollection": true
       }
     ],
