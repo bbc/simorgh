@@ -33,10 +33,6 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   height: 100%;
 }
 
-.emotion-2 {
-  height: 100%;
-}
-
 <div>
   <div
     class="componentWrapper"
@@ -62,7 +58,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-2"
+      class="lazyload-wrapper lazyloadWrapper"
     >
       <div
         class="lazyloadPlaceholder "
@@ -119,10 +115,6 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
-}
-
-.emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -133,14 +125,14 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -174,7 +166,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-2"
+      class="lazyload-wrapper lazyloadWrapper"
     >
       <div
         class="lazyloadPlaceholder "
@@ -191,7 +183,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-3 emotion-4"
+          class="timestamp timestampCanonical emotion-2 emotion-3"
           datetime="2016-05-05"
         >
           5 mayo 2016
@@ -236,10 +228,6 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
-}
-
-.emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -250,14 +238,14 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -291,7 +279,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-2"
+      class="lazyload-wrapper lazyloadWrapper"
     >
       <div
         class="lazyloadPlaceholder "
@@ -308,7 +296,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-3 emotion-4"
+          class="timestamp timestampCanonical emotion-2 emotion-3"
           datetime="2020-02-17"
         >
           17 febrero 2020
@@ -353,10 +341,6 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
-}
-
-.emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -367,14 +351,14 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -408,7 +392,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-2"
+      class="lazyload-wrapper lazyloadWrapper"
     >
       <div
         class="lazyloadPlaceholder "
@@ -425,7 +409,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-3 emotion-4"
+          class="timestamp timestampCanonical emotion-2 emotion-3"
           datetime="2023-02-02"
         >
           2 febrero 2023
@@ -470,10 +454,6 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
 }
 
 .emotion-2 {
-  height: 100%;
-}
-
-.emotion-3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -484,14 +464,14 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -524,7 +504,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-2"
+      class="lazyload-wrapper lazyloadWrapper"
     >
       <div
         class="lazyloadPlaceholder "
@@ -541,7 +521,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-3 emotion-4"
+          class="timestamp timestampCanonical emotion-2 emotion-3"
           datetime="2023-02-02"
         >
           2 febrero 2023
