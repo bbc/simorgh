@@ -19,6 +19,7 @@ export default ({
   isSignedIn = false,
   viewThreshold,
   platform,
+  eventGroupingName,
 }: ATIEventTrackingProps): ResonanceEventModel => {
   const {
     name = campaignID,
@@ -42,7 +43,7 @@ export default ({
   return {
     event: {
       action: type === VIEW_EVENT ? 'view' : 'select',
-      grouping: pageIdentifier,
+      grouping: eventGroupingName || pageIdentifier,
       pixelThreshold: viewThreshold,
       subcategory: componentName,
     },
