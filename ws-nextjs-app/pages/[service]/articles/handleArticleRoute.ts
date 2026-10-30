@@ -141,7 +141,6 @@ export default async (context: GetServerSidePropsContext) => {
     countryTopicIdToReorder = null,
   } = secondaryData || {};
 
-
   // Note: this filters the current article out of the (fixed-size) list the
   // BFF already returned, rather than fetching an extra item to backfill the
   // one removed - the BFF response for this route doesn't support a count/
