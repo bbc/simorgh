@@ -6,6 +6,9 @@ import {
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
@@ -219,6 +222,8 @@ type NavigationContainerProps = {
 
 const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
 const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
+const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
+const STICKY_NAVIGATION_COMPONENT = 'sticky-navigation';
 
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
@@ -235,6 +240,10 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   } = use(ServiceContext);
 
   const { currentPage, navMenuText } = translations;
+  const stickyNavExperimentVariant = useOptimizelyVariation({
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
@@ -250,6 +259,15 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+  const stickyNavEventTrackingMetadata = {
+    componentName: STICKY_NAVIGATION_COMPONENT,
+    sendOptimizelyEvents: true,
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentVariant: stickyNavExperimentVariant,
+  };
+  const stickyNavClickTrackerHandler = useClickTrackerHandler(
+    stickyNavEventTrackingMetadata,
+  );
 
   /**
    * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
@@ -346,6 +364,47 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     </DropdownUl>
   );
 
+  // Experiment Sticky Nav
+  const stickyTopScrollableListItems = (
+    <NavigationUl>
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: navigationItems,
+        currentPage,
+        dir,
+        activeIndex: topActiveIndex,
+        clickTracker: stickyNavClickTrackerHandler,
+        shouldAnnounce: topShouldAnnounce,
+      })}
+    </NavigationUl>
+  );
+
+  const stickyBottomScrollableListItems = (
+    <NavigationUl>
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: bottomItems,
+        currentPage,
+        dir,
+        activeIndex: activeBottomIndex,
+        clickTracker: stickyNavClickTrackerHandler,
+      })}
+    </NavigationUl>
+  );
+
+  const stickyDropdownListItems = (
+    <DropdownUl>
+      {renderListItems({
+        Li: DropdownLi,
+        navigation: dropdownSource,
+        currentPage,
+        dir,
+        activeIndex: -1,
+        clickTracker: stickyNavClickTrackerHandler,
+      })}
+    </DropdownUl>
+  );
+
   const NavigationRenderer = isAmp ? Amp : Canonical;
 
   return (
@@ -355,6 +414,11 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         topScrollableListItems={topScrollableListItems}
         bottomScrollableListItems={bottomScrollableListItems}
         dropdownListItems={dropdownListItems}
+        stickyTopScrollableListItems={stickyTopScrollableListItems}
+        stickyBottomScrollableListItems={stickyBottomScrollableListItems}
+        stickyDropdownListItems={stickyDropdownListItems}
+        stickyNavClickTracker={stickyNavClickTrackerHandler}
+        stickyNavExperimentVariant={stickyNavExperimentVariant}
         menuAnnouncedText={navMenuText}
         dir={dir}
         blocks={blocks}

@@ -30,15 +30,6 @@ export const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 // though they are neither a link nor a button.
 export const STICKY_NAV_TAB_STOP_SELECTOR = `${FOCUSABLE_ITEMS_SELECTOR}, [data-e2e^="scrollable-nav"]`;
 
-export const SERVICES_WITH_STICKY_NAV: Services[] = [
-  'mundo',
-  'portuguese',
-  'russian',
-  'indonesia',
-  'turkce',
-  'urdu',
-];
-
 const SERVICES_WITH_NEW_NAV: Services[] = [
   'afaanoromoo',
   'afrique',
