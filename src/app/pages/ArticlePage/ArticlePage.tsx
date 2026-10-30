@@ -559,6 +559,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   : []),
               ]}
               topics={topicDiscoveryTopics}
+              currentArticleId={getArticleId(pageData)}
             />
           )}
           {showRelatedTopicsComponent && (

@@ -148,4 +148,67 @@ describe('handleArticleRoute', () => {
 
     expect(result.props.country).toEqual('ng');
   });
+
+  describe('onward journey deduplication', () => {
+    // The current article's own id, as found in the fixture's metadata.id.
+    const currentArticleId = 'urn:bbc:ares::article:cvpde7nqj92o';
+    const otherArticleTopStory = {
+      ...pidginMediaArticleFixtureData.data.secondaryData.topStories[0],
+      id: 'urn:bbc:ares::asset:pidgin/some-other-story',
+    };
+    const currentArticleTopStory = {
+      ...pidginMediaArticleFixtureData.data.secondaryData.topStories[0],
+      id: currentArticleId,
+    };
+
+    it('removes the current article from topStories, countryCuration and mediaCuration summaries', async () => {
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: {
+            ...pidginMediaArticleFixtureData.data,
+            secondaryData: {
+              ...pidginMediaArticleFixtureData.data.secondaryData,
+              topStories: [otherArticleTopStory, currentArticleTopStory],
+              countryCuration: {
+                title: 'Najeriya',
+                summaries: [
+                  { id: 'other-article', title: 'Other article' },
+                  { id: 'cvpde7nqj92o', title: 'Current article' },
+                ],
+              },
+              videoCuration: {
+                title: 'Watch',
+                summaries: [
+                  { id: 'other-article', title: 'Other article' },
+                  { id: 'cvpde7nqj92o', title: 'Current article' },
+                ],
+              },
+            },
+          },
+          status: 200,
+        },
+      });
+
+      const result = await handleArticleRoute(mockGetServerSidePropsContext);
+      const { pageData } = result.props as {
+        pageData: {
+          secondaryColumn: {
+            topStories: { id: string }[];
+            mediaCuration: { summaries: { id: string }[] };
+          };
+          countryCuration: { summaries: { id: string }[] };
+        };
+      };
+
+      expect(pageData.secondaryColumn.topStories).toEqual([
+        otherArticleTopStory,
+      ]);
+      expect(pageData.countryCuration.summaries).toEqual([
+        { id: 'other-article', title: 'Other article' },
+      ]);
+      expect(pageData.secondaryColumn.mediaCuration.summaries).toEqual([
+        { id: 'other-article', title: 'Other article' },
+      ]);
+    });
+  });
 });
