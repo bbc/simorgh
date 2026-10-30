@@ -239,6 +239,10 @@ const styles = {
           display: 'block',
           fontSize: `${pixelsToRem(14)}rem`,
         },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+          fontSize: `${pixelsToRem(16)}rem`,
+        },
       },
     }),
   videoCollectionList: ({ mq }: Theme) =>
