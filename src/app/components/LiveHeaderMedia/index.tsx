@@ -171,7 +171,7 @@ const LiveHeaderMedia = ({
                 size="greatPrimer"
                 fontVariant="sansBold"
               >
-                <Play />
+                <Play isInverted />
                 {!warnings && <VisuallyHiddenText>, </VisuallyHiddenText>}
                 {watch}
               </Text>
@@ -179,7 +179,7 @@ const LiveHeaderMedia = ({
           )}
           {showMedia && (
             <div css={styles.closeContainer}>
-              <Close />
+              <Close isInverted />
             </div>
           )}
         </button>

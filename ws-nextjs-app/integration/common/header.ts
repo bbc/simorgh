@@ -6,35 +6,24 @@ export default service => {
       document.documentElement.hasAttribute('amp') ||
       window.location.pathname.endsWith('.amp');
 
-    it('I can see the branding', () => {
+    it('renders an external header brand asset with an accessible link label', () => {
       const logo = document.getElementById('brandSvgHeader');
 
       expect(logo).toBeInTheDocument();
+      if (!logo) {
+        throw new Error('Expected the header brand asset to be rendered');
+      }
 
-      const parentElement = logo?.parentNode as Element | null;
+      expect(logo.tagName).toBe('IMG');
+      expect(logo).toHaveClass('external-svg');
+      expect(logo).toHaveAttribute('alt', '');
+      expect(logo).toHaveAttribute('aria-hidden', 'true');
+      expect(logo).toHaveAttribute('src', expect.stringMatching(/brand\.svg$/));
 
-      expect(parentElement).toBeTruthy();
+      const brandingLink = logo.closest('a');
 
-      if (!logo || !parentElement) return;
-
-      const brandingLink =
-        document.getElementById('topPage') ||
-        document.getElementById('brandLink');
-
-      const brandingLabelId = brandingLink?.getAttribute('aria-labelledby');
-      const brandingTextElement = brandingLabelId
-        ? document.getElementById(brandingLabelId)
-        : null;
-
-      expect(brandingTextElement?.textContent).toBeTruthy();
-
-      const svg = logo.querySelector('g path');
-      const brandText = brandingTextElement?.textContent ?? '';
-
-      expect({
-        svg,
-        brandLink: brandText,
-      }).toMatchSnapshot();
+      expect(brandingLink).toBeInTheDocument();
+      expect(brandingLink).toHaveAccessibleName(/\S/);
     });
 
     if (service !== 'news' && service !== 'scotland') {

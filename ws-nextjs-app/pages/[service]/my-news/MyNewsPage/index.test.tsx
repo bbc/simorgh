@@ -163,11 +163,14 @@ describe('MyNewsPage', () => {
     const spinnerWrapper = await screen.findByTestId(
       'my-news-saved-articles-spinner',
     );
-    const spinnerSvg = spinnerWrapper.querySelector('svg');
+    const spinnerImage = spinnerWrapper.querySelector('.external-svg');
 
     expect(screen.getByText(myNewsTranslations.title)).toBeInTheDocument();
     expect(spinnerWrapper).toBeInTheDocument();
-    expect(spinnerSvg).toBeInTheDocument();
+    expect(spinnerImage).toBeInTheDocument();
+    expect(spinnerImage).toHaveStyle({
+      '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/spinner.svg")`,
+    });
   });
 
   it('should render saved articles after fetching', async () => {

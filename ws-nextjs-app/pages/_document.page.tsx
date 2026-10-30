@@ -28,6 +28,7 @@ import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
 import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import treeshakeCssModuleRules from '#utilities/treeshakeCssModuleRules';
 import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
 import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
@@ -151,7 +152,14 @@ export default class AppDocument extends Document<DocProps> {
 
     // Only AMP and Lite inline CSS, so canonical renders must not pay for this work.
     const getInlineCss = () =>
-      optimiseInlineCss(css + getAmpLiteCss(getNextData()), this.props.html);
+      optimiseInlineCss(
+        css +
+          treeshakeCssModuleRules(
+            getAmpLiteCss(getNextData()),
+            this.props.html,
+          ),
+        this.props.html,
+      );
 
     switch (true) {
       case isAmp && pageType === 'article': {

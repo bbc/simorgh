@@ -1,18 +1,25 @@
 export default () => {
   describe('Footer', () => {
     it('I can see the BBC branding', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.getElementById('brandSvgFooter');
 
       expect(brandingEl).toBeInTheDocument();
+      expect(brandingEl?.tagName).toBe('IMG');
+      expect(brandingEl).toHaveClass('external-svg');
     });
 
     it('I can click on the BBC branding and it would take me to the homepage', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.getElementById('brandSvgFooter');
       expect(brandingEl).toBeInTheDocument();
       if (!brandingEl) return;
 
-      const brandingLinkEl = brandingEl.parentNode as Element;
-      const brandingImageEl = brandingLinkEl?.querySelector?.('svg');
+      const brandingLinkEl = brandingEl.closest('a');
+      expect(brandingLinkEl).toBeInTheDocument();
+      if (!brandingLinkEl) {
+        throw new Error('Expected the footer brand asset to have a link');
+      }
+      const brandingImageEl =
+        brandingLinkEl?.querySelector?.('img.external-svg');
 
       expect(brandingLinkEl.tagName).toEqual('A');
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();

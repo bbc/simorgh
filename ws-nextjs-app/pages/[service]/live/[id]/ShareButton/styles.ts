@@ -1,5 +1,5 @@
 import { Theme, css } from '@emotion/react';
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
@@ -19,11 +19,8 @@ const styles = {
         color: palette.WHITE,
         border: `${pixelsToRem(2)}rem solid ${palette.BRAND_BACKGROUND}`,
         backgroundColor: palette.BRAND_BACKGROUND,
-        path: {
-          fill: palette.WHITE,
-          [mq.FORCED_COLOURS]: {
-            fill: 'canvasText',
-          },
+        '.external-svg': {
+          filter: 'invert(1) hue-rotate(180deg)',
         },
         [mq.FORCED_COLOURS]: {
           backgroundColor: 'canvas',
@@ -36,16 +33,10 @@ const styles = {
         color: 'canvasText',
         border: `${pixelsToRem(2)}rem solid canvasText`,
       },
-      svg: {
+      '.external-svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         marginInlineEnd: `${spacings.FULL}rem`,
-        path: {
-          fill: palette.BLACK,
-          [mq.FORCED_COLOURS]: {
-            fill: 'canvasText',
-          },
-        },
       },
     }),
 };

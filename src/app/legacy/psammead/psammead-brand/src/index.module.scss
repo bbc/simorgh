@@ -1,0 +1,43 @@
+@use '@scss/themeTokens' as theme;
+
+.brand {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+
+  @media (forced-colors: active), print {
+    @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+      .image {
+        visibility: hidden;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: CanvasText;
+        forced-color-adjust: none;
+        -webkit-mask: var(--brand-source) center / contain no-repeat;
+        mask: var(--brand-source) center / contain no-repeat;
+      }
+    }
+  }
+}
+
+.image {
+  box-sizing: content-box;
+  height: #{theme.pixelsToRem-px-to-rem(20)};
+  max-width: 100%;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(24)};
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(30)};
+
+    &[data-is-languages-page='true'] {
+      height: #{theme.pixelsToRem-px-to-rem(24)};
+    }
+  }
+}

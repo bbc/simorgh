@@ -6,15 +6,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import Brand from '.';
 
 const svg = {
-  group: (
-    <g fillRule="evenodd">
-      <path d="M84.32" />
-    </g>
-  ),
-  viewbox: {
-    height: 24,
-    width: 167.95,
-  },
+  path: '/news/images/brand.svg',
   ratio: 6.9979,
 };
 
@@ -22,6 +14,23 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
+  it.each(['header', 'footer'])(
+    'keeps the %s image and a decorative high-contrast mask on the same asset',
+    linkId => {
+      const { container } = render(
+        <Brand product="BBC News" svg={svg} linkId={linkId} />,
+      );
+      const image = container.querySelector('img');
+      const src = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}news/images/brand.svg`;
+
+      expect(image).toHaveAttribute('src', src);
+      expect(image).toHaveAttribute('alt', '');
+      expect(image.parentElement).toHaveAttribute('aria-hidden', 'true');
+      expect(image.parentElement.style.getPropertyValue('--brand-source')).toBe(
+        `url("${src}")`,
+      );
+    },
+  );
   it('should render correctly with link provided', () => {
     render(
       <Brand
@@ -86,9 +95,7 @@ describe('Brand', () => {
         />,
       );
 
-      expect(container.querySelector('span').getAttribute('role')).toEqual(
-        'text',
-      );
+      expect(container.querySelector('[role="text"]')).toBeInTheDocument();
     });
 
     it('should not have role of text when serviceLocalisedName is not provided', () => {
@@ -105,7 +112,7 @@ describe('Brand', () => {
         />,
       );
 
-      expect(container.querySelector('span').getAttribute('role')).toBeNull();
+      expect(container.querySelector('[role="text"]')).not.toBeInTheDocument();
     });
 
     it('should add extra props passed to the component', () => {

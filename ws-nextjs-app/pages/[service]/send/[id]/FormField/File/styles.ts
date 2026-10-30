@@ -24,9 +24,8 @@ export default {
         backgroundColor: '#0e5ec5',
         textDecoration: 'underline',
       },
-      svg: {
-        color: palette.WHITE,
-        fill: 'currentcolor',
+      '.external-svg': {
+        verticalAlign: 'middle',
       },
     });
   },
@@ -74,15 +73,12 @@ export default {
         backgroundColor: '#E11B52',
         border: `${pixelsToRem(1)}rem solid transparent`,
         cursor: 'pointer',
-        svg: {
-          color: palette.WHITE,
-          fill: 'currentcolor',
+        '.external-svg': {
           verticalAlign: 'middle',
         },
         '&:hover, &:focus': {
-          svg: {
-            color: palette.BLACK,
-            fill: 'currentcolor',
+          '.external-svg': {
+            filter: 'none',
             [mq.FORCED_COLOURS]: { stroke: palette.WHITE },
           },
         },

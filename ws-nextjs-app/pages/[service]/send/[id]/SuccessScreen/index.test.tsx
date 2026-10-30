@@ -4,6 +4,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import SuccessScreen from '.';
+import TickSvg from './svgs';
 import * as FormContext from '../FormContext';
 import { ContextProps } from '../FormContext';
 
@@ -30,6 +31,17 @@ const MOCK_EMAIL = 'test@bbc.co.uk';
 const MOCK_RETENTION_PERIOD = '270';
 
 describe('SuccessScreen', () => {
+  it('preserves the green artwork without monochrome inversion', async () => {
+    const { container } = await act(() => render(<TickSvg />));
+    const icon = container.querySelector('img');
+
+    expect(icon).toHaveAttribute(
+      'src',
+      expect.stringContaining('images/icons/success.svg'),
+    );
+    expect(icon).not.toHaveClass('externalSvg', 'inverted');
+    expect(icon).toHaveStyle({ width: '4rem', height: '4rem' });
+  });
   beforeEach(() => {
     jest.restoreAllMocks();
 

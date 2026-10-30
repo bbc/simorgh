@@ -1,0 +1,40 @@
+@use '@scss/themeTokens' as theme;
+
+.button {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: inline-flex;
+  align-items: center;
+  gap: theme.$spacings-full;
+  color: theme.$palette-white;
+  padding: #{theme.pixelsToRem-px-to-rem(12)} #{theme.pixelsToRem-px-to-rem(20)};
+  border-radius: 500px;
+  border: none;
+  background-color: var(--brand-background);
+  cursor: pointer;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    color: Canvas;
+    background-color: CanvasText;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-underline-offset: #{theme.pixelsToRem-px-to-rem(4)};
+  }
+
+  .icon {
+    width: theme.$spacings-double;
+    height: theme.$spacings-double;
+
+    @media #{theme.$mediaQueries-forced-colours} {
+      color: Canvas;
+    }
+  }
+}
+
+.container {
+  position: fixed;
+  top: theme.$spacings-triple;
+  z-index: 9999;
+}

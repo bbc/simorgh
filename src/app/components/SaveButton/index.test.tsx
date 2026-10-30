@@ -8,12 +8,15 @@ import SaveButton, { SAVE_BUTTON_VARIANTS } from '.';
 
 const noop = () => undefined;
 
-const getIconPathData = (container: HTMLElement) =>
-  container.querySelector('svg path')?.getAttribute('d');
+const getIconSource = (container: HTMLElement) => {
+  const icon = container.querySelector<HTMLElement>('.external-svg');
+  expect(icon).toBeInTheDocument();
+  return icon?.style.getPropertyValue('--icon-source');
+};
 
-const renderIconPathData = (icon: ReactElement) => {
+const renderIconSource = (icon: ReactElement) => {
   const { container } = render(icon);
-  return getIconPathData(container);
+  return getIconSource(container);
 };
 
 describe('SaveButton', () => {
@@ -208,7 +211,7 @@ describe('SaveButton', () => {
           accessibleLabel="Follow"
         />,
       );
-      expect(getIconPathData(container)).toBe(renderIconPathData(<PlusIcon />));
+      expect(getIconSource(container)).toBe(renderIconSource(<PlusIcon />));
     });
 
     it('shows the tick icon when following and not hovered or focused', () => {
@@ -222,7 +225,7 @@ describe('SaveButton', () => {
           isSaved
         />,
       );
-      expect(getIconPathData(container)).toBe(renderIconPathData(<TickIcon />));
+      expect(getIconSource(container)).toBe(renderIconSource(<TickIcon />));
     });
 
     it('shows the close icon and hover label on hover, without changing the accessible name', async () => {
@@ -238,8 +241,8 @@ describe('SaveButton', () => {
       );
       await userEvent.hover(screen.getByRole('button'));
       expect(screen.getByText('Unfollow')).toBeInTheDocument();
-      expect(getIconPathData(container)).toBe(
-        renderIconPathData(<Close width="20" height="20" />),
+      expect(getIconSource(container)).toBe(
+        renderIconSource(<Close width="20" height="20" />),
       );
       expect(
         screen.getByRole('button', { name: 'Unfollow this topic' }),
@@ -260,8 +263,8 @@ describe('SaveButton', () => {
       await userEvent.tab();
       expect(screen.getByRole('button')).toHaveFocus();
       expect(screen.getByText('Unfollow')).toBeInTheDocument();
-      expect(getIconPathData(container)).toBe(
-        renderIconPathData(<Close width="20" height="20" />),
+      expect(getIconSource(container)).toBe(
+        renderIconSource(<Close width="20" height="20" />),
       );
       expect(
         screen.getByRole('button', { name: 'Unfollow this topic' }),
@@ -278,7 +281,7 @@ describe('SaveButton', () => {
           isLoading
         />,
       );
-      expect(getIconPathData(container)).toBe(renderIconPathData(<Spinner />));
+      expect(getIconSource(container)).toBe(renderIconSource(<Spinner />));
     });
 
     it('shows the spinner while updating', () => {
@@ -291,7 +294,7 @@ describe('SaveButton', () => {
           isUpdating
         />,
       );
-      expect(getIconPathData(container)).toBe(renderIconPathData(<Spinner />));
+      expect(getIconSource(container)).toBe(renderIconSource(<Spinner />));
     });
   });
 });

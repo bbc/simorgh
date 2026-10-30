@@ -90,7 +90,7 @@ const PromotionalBanner = ({
             onClick={onClose}
           >
             <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
-            <Close css={styles.closeButtonIcon} />
+            <Close css={styles.closeButtonIcon} isInverted />
           </Text>
         )}
       </div>
