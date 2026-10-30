@@ -1,5 +1,4 @@
 import { use } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
@@ -239,11 +238,7 @@ const Post = ({
   post: PostType;
   hasShareApi?: boolean;
 }) => {
-  const headerBlocks = pathOr<PostHeadingBlock[]>(
-    [],
-    ['header', 'model', 'blocks'],
-    post,
-  );
+  const headerBlocks = (post?.header?.model?.blocks ?? []) as PostHeadingBlock[];
   const enrichedHeaderBlocks = enrichHeaderBlocksWithId({ headerBlocks });
 
   const postHeadline = filterForBlockType(
@@ -258,14 +253,10 @@ const Post = ({
     'contributor',
   );
 
-  const contentBlocks = pathOr<OptimoBlock[]>(
-    [],
-    ['content', 'model', 'blocks'],
-    post,
-  );
+  const contentBlocks: OptimoBlock[] = post?.content?.model?.blocks ?? [];
   const { urn } = post;
 
-  const isBreakingNews = pathOr(false, ['options', 'isBreakingNews'], post);
+  const isBreakingNews = post?.options?.isBreakingNews ?? false;
   const timestamp = post?.dates?.curated ?? '';
 
   return (
