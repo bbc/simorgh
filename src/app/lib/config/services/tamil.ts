@@ -98,6 +98,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
+      showMore: 'மேலும் காட்டு',
       moreOnThis: '',
       navMenuText: 'பிரிவுகள்',
       liteSite: {

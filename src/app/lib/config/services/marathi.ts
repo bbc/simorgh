@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
+      showMore: 'अधिक दाखवा',
       moreOnThis: '',
       navMenuText: 'विभाग',
       liteSite: {

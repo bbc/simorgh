@@ -104,6 +104,7 @@ const defaultCyrillicConfig = {
     },
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    showMore: 'Кўпроқ кўрсатиш',
     moreOnThis: '',
     navMenuText: 'Бўлимлар',
     liteSite: {
@@ -555,6 +556,7 @@ export const service: UzbekConfig = {
       },
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
+      showMore: 'Ko‘proq ko‘rsatish',
       navMenuText: 'Bo‘limlar',
       liteSite: {
         onboardingMessage:

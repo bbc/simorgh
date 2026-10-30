@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
+      showMore: 'Muuji wax dheeraad ah',
       moreOnThis: '',
       navMenuText: 'Qaybaha',
       liteSite: {

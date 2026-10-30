@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      showMore: 'थप देखाउनुहोस्',
       moreOnThis: '',
       navMenuText: 'सूची',
       liteSite: {
