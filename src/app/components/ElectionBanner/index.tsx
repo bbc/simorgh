@@ -89,6 +89,7 @@ export default function ElectionBanner({
             ? styles.assocPressElectionBannerWrapperAmp
             : styles.electionBannerWrapperAmp
         }
+        {...(hasTitle && { role: 'region', 'aria-label': title })}
       >
         <div className={styles.electionBannerContent}>
           {hasTitle && (
