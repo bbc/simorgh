@@ -18,7 +18,7 @@ type PromoWithId = {
  * to a reader who is already viewing it.
  */
 const excludeCurrentArticle = <Promo extends PromoWithId>(
-  promos: Promo[] | undefined,
+  promos: Promo[] | null | undefined,
   currentArticleId?: string,
 ): Promo[] => {
   const normalisedCurrentArticleId = getNormalisedId(currentArticleId);

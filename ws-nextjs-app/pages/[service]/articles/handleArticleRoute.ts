@@ -8,6 +8,7 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
+import { Curation } from '#app/models/types/curationData';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -31,6 +32,18 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
 
   return pageType;
 };
+
+// Removes the current article from a curation's summaries
+const dedupeCurationSummaries = (
+  curation: Curation | null,
+  currentArticleId?: string,
+): Curation | null =>
+  curation
+    ? {
+        ...curation,
+        summaries: excludeCurrentArticle(curation.summaries, currentArticleId),
+      }
+    : curation;
 
 export default async (context: GetServerSidePropsContext) => {
   const {
@@ -128,33 +141,31 @@ export default async (context: GetServerSidePropsContext) => {
     countryTopicIdToReorder = null,
   } = secondaryData || {};
 
-  // An article is never a useful onward journey for a reader already viewing
-  // it, so it's excluded from every OJ surface fed by this route before the page is rendered.
+
+  // Note: this filters the current article out of the (fixed-size) list the
+  // BFF already returned, rather than fetching an extra item to backfill the
+  // one removed - the BFF response for this route doesn't support a count/
+  // limit param, so on the rare occasion the current article is present,
+  // readers may see one fewer promo than usual for that surface.
+  // TODO - fetch one extra summary in the BFF
   const currentArticleId = article.metadata.id;
 
-  const dedupedTopStories = topStories
-    ? excludeCurrentArticle(topStories, currentArticleId)
-    : topStories;
+  const dedupedTopStories = excludeCurrentArticle(topStories, currentArticleId);
 
-  const dedupedMediaCuration = mediaCuration
-    ? {
-        ...mediaCuration,
-        summaries: excludeCurrentArticle(
-          mediaCuration.summaries,
-          currentArticleId,
-        ),
-      }
-    : mediaCuration;
+  const dedupedMediaCuration = dedupeCurationSummaries(
+    mediaCuration,
+    currentArticleId,
+  );
 
-  const dedupedCountryCuration = countryCuration
-    ? {
-        ...countryCuration,
-        summaries: excludeCurrentArticle(
-          countryCuration.summaries,
-          currentArticleId,
-        ),
-      }
-    : countryCuration;
+  const dedupedCountryCuration = dedupeCurationSummaries(
+    countryCuration,
+    currentArticleId,
+  );
+
+  const dedupedBillboardCuration = dedupeCurationSummaries(
+    billboardCuration,
+    currentArticleId,
+  );
 
   const transformedArticleData = transformPageData()(article);
 
@@ -177,7 +188,7 @@ export default async (context: GetServerSidePropsContext) => {
           features,
           latestMedia,
           mediaCuration: dedupedMediaCuration,
-          billboardCuration,
+          billboardCuration: dedupedBillboardCuration,
         },
         mostRead,
         portraitVideoItems,
