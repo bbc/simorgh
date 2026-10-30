@@ -54,6 +54,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
+      showMore: 'Show more',
       moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {

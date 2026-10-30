@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'اسی بارے میں',
       relatedTopics: 'متعلقہ عنوانات',
+      showMore: 'مزید دکھائیں',
       moreOnThis: '',
       navMenuText: 'سیکشن',
       liteSite: {
