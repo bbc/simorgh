@@ -1,0 +1,9 @@
+server_ready_pattern: '(https?://localhost:7081)'
+
+scripts:
+  - name: Start dev server
+    command: cd ws-nextjs-app && yarn install && yarn dev
+  - name: Start test server
+    command: cd ws-nextjs-app && yarn install && yarn build:test && yarn start
+  - name: Start live server
+    command: cd ws-nextjs-app && yarn install && yarn build:live && yarn start
