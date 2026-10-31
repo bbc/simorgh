@@ -257,6 +257,10 @@ describe('useUASButton', () => {
   });
 
   describe('offline handling', () => {
+    afterEach(() => {
+      onlineManager.setOnline(true);
+    });
+
     it('reports an error and skips the request when the user acts while offline', async () => {
       const onlineSpy = jest
         .spyOn(onlineManager, 'isOnline')
@@ -279,6 +283,53 @@ describe('useUASButton', () => {
       expect(mockTrackError).not.toHaveBeenCalled();
 
       onlineSpy.mockRestore();
+    });
+
+    it('dismisses the offline error and refreshes the button state once back online', async () => {
+      onlineManager.setOnline(false);
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.SAVE,
+      });
+
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(mockInvalidateQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.favouriteStatus(
+          mockHashedUserId,
+          defaultProps.articleId,
+        ),
+      });
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('keeps a newer action result when connectivity is restored', async () => {
+      onlineManager.setOnline(false);
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      onlineManager.setOnline(true);
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.REMOVE);
+      });
+      expect(result.current.actionResult).toEqual({
+        status: 'success',
+        action: UASAction.REMOVE,
+      });
     });
   });
 
