@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import {
   onlineManager,
   useMutation,
@@ -79,6 +79,32 @@ const useUASButton = ({
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
+  // Holds the result produced by an offline click so it can be dismissed
+  // automatically once connectivity is restored.
+  const offlineActionResultRef = useRef<UASActionResult>(null);
+
+  useEffect(
+    () =>
+      onlineManager.subscribe(async isOnline => {
+        const offlineActionResult = offlineActionResultRef.current;
+
+        if (!isOnline || !offlineActionResult) return;
+
+        offlineActionResultRef.current = null;
+
+        // Refresh the button state before dismissing, so the tooltip is only
+        // removed once the UI reflects the current saved status.
+        await queryClient.invalidateQueries({
+          queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+        });
+
+        setActionResult(current =>
+          current === offlineActionResult ? null : current,
+        );
+      }),
+    [queryClient, hashedUserId, articleId],
+  );
+
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
@@ -132,9 +158,16 @@ const useUASButton = ({
 
   const handleSaveAction = (action: UASAction) => {
     if (!onlineManager.isOnline()) {
-      setActionResult({ status: 'error', action });
+      const offlineActionResult: UASActionResult = {
+        status: 'error',
+        action,
+      };
+      offlineActionResultRef.current = offlineActionResult;
+      setActionResult(offlineActionResult);
       return undefined;
     }
+
+    offlineActionResultRef.current = null;
 
     return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
@@ -150,6 +183,7 @@ const useUASButton = ({
   };
 
   const resetActionResult = () => {
+    offlineActionResultRef.current = null;
     setActionResult(null);
     mutation.reset();
   };
