@@ -13193,7 +13193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^7.0.0":
+"postcss-selector-parser@npm:7.1.6, postcss-selector-parser@npm:^7.0.0":
   version: 7.1.6
   resolution: "postcss-selector-parser@npm:7.1.6"
   dependencies:
@@ -14627,6 +14627,7 @@ __metadata:
     next-test-api-route-handler: "npm:5.0.5"
     npm-run-all2: "npm:8.0.4"
     postcss: "npm:8.5.24"
+    postcss-selector-parser: "npm:7.1.6"
     sharp: "npm:0.35.5"
     swc-loader: "npm:0.2.7"
     temporal-polyfill: "npm:0.3.0"

@@ -82,6 +82,7 @@
     "autoprefixer": "10.5.4",
     "next": "16.4.1",
     "postcss": "8.5.24",
+    "postcss-selector-parser": "7.1.6",
     "sharp": "0.35.5",
     "temporal-polyfill": "0.3.0"
   }
