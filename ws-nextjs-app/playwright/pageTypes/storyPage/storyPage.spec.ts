@@ -204,7 +204,10 @@ const ampOnly = ({ service, variant = 'default' }: ServiceParametersType) => {
     return;
 
   test.describe('Most Read Component', () => {
-    test('should not render when data fetch fails', async ({ page }) => {
+    test('should not render when data fetch fails', async ({
+      page,
+      context,
+    }) => {
       const toggles = await fetchToggles(service);
       test.skip(!toggles.mostRead?.enabled, 'Most Read is disabled');
       const endpoint = new URL(
@@ -215,17 +218,27 @@ const ampOnly = ({ service, variant = 'default' }: ServiceParametersType) => {
         }),
         baseURL,
       );
-      await page.route(
-        url =>
-          url.pathname === endpoint.pathname &&
-          Array.from(endpoint.searchParams).every(
-            ([key, value]) => url.searchParams.get(key) === value,
-          ),
-        route => route.fulfill({ status: 404, body: '' }),
-      );
-      await page.reload({ waitUntil: 'domcontentloaded' });
-      await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
-      await expect(page.locator('[data-e2e="most-read"] li')).toHaveCount(0);
+      const matchesMostReadUrl = (url: URL) =>
+        url.pathname === endpoint.pathname &&
+        Array.from(endpoint.searchParams).every(
+          ([key, value]) => url.searchParams.get(key) === value,
+        );
+
+      const fulfilledRequests: string[] = [];
+      await context.route(matchesMostReadUrl, async route => {
+        await route.fulfill({ status: 404, body: '' });
+        fulfilledRequests.push(route.request().url());
+      });
+
+      await page.reload({ waitUntil: 'load' });
+
+      const mostRead = page.locator('[data-e2e="most-read"]');
+      await mostRead.locator('amp-list').scrollIntoViewIfNeeded();
+
+      await expect.poll(() => fulfilledRequests.length).toBeGreaterThan(0);
+
+      await expect(mostRead.locator('amp-list [fallback]')).toBeVisible();
+      await expect(mostRead.locator('li')).toHaveCount(0);
     });
   });
 };
@@ -352,11 +365,26 @@ const atiTestRunner = (testSuite: AtiStoryPageTestSuite) => {
         appEnv: appEnvFromProcess,
       };
 
-      test.beforeEach(() => {
+      test.beforeEach(async ({ page }) => {
         test.skip(
           !shouldRunForEnv(testSuite.runForEnv),
           `Skipped for APP_ENV=${appEnvFromProcess}`,
         );
+
+        const cookieAcceptLabel = getServiceConfig(testSuite.service)
+          ?.translations?.consentBanner?.cookie?.canonical?.accept;
+
+        if (cookieAcceptLabel) {
+          await page.addLocatorHandler(
+            page.getByRole('button', {
+              name: cookieAcceptLabel,
+              exact: true,
+            }),
+            async button => {
+              await button.click();
+            },
+          );
+        }
       });
 
       if (testSuite.tests.includes('assertPageView')) {

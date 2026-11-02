@@ -496,9 +496,12 @@
               }
             },
             {
-              "type": "embedHtml",
+              "type": "oEmbed",
               "model": {
-                "embeddableContent": "<iframe src=\"https://www.bbc.com/news/special/2016/newsspec_13789/content/iframe/gahuza/index.inc?responsive=true&amp;app-clickable=true&amp;app-image=http%3A%2F%2Fa.files.bbci.co.uk%2Fworldservice%2Flive%2Fassets%2Fimages%2F2016%2F08%2F08%2F160808163046_body_match_ws_app_promo_624.png\" title=\"Igereranye n'abakinnyi ngorangigo bari muri Olimpike\"></iframe>"
+
+                "oembed": {
+                   "html": "<iframe src=\"https://www.bbc.com/news/special/2016/newsspec_13789/content/iframe/gahuza/index.inc?responsive=true&amp;app-clickable=true&amp;app-image=http%3A%2F%2Fa.files.bbci.co.uk%2Fworldservice%2Flive%2Fassets%2Fimages%2F2016%2F08%2F08%2F160808163046_body_match_ws_app_promo_624.png\" title=\"Igereranye n'abakinnyi ngorangigo bari muri Olimpike\"></iframe>"
+                }
               }
             },
             {
