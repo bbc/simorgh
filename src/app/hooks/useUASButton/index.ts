@@ -80,43 +80,58 @@ const useUASButton = ({
   const offlineActionResultRef = useRef<UASActionResult>(null);
   const isRecoveringRef = useRef(false);
 
-  useEffect(
-    () =>
-      onlineManager.subscribe(async isOnline => {
-        const offlineActionResult = offlineActionResultRef.current;
+  useEffect(() => {
+    const favouriteStatusKey = uasKeys.favouriteStatus(hashedUserId, articleId);
 
-        if (!isOnline || !offlineActionResult || isRecoveringRef.current) {
-          return;
-        }
+    const refreshAndDismiss = async (): Promise<void> => {
+      const offlineActionResult = offlineActionResultRef.current;
 
-        isRecoveringRef.current = true;
+      if (!onlineManager.isOnline() || !offlineActionResult) return;
 
-        try {
-          // Refresh the button state before dismissing, so the tooltip is only
-          // removed once the UI reflects the current saved status.
-          await queryClient.invalidateQueries(
-            { queryKey: uasKeys.favouriteStatus(hashedUserId, articleId) },
-            { throwOnError: true },
-          );
-        } catch {
-          // The refresh failed, so the displayed state is still unverified.
-          // Keep the tooltip and the stored result so a later reconnect retries.
-          return;
-        } finally {
-          isRecoveringRef.current = false;
-        }
-
-        // A newer action may have replaced the result while the refresh ran.
-        if (offlineActionResultRef.current !== offlineActionResult) return;
-
-        offlineActionResultRef.current = null;
-
-        setActionResult(current =>
-          current === offlineActionResult ? null : current,
+      try {
+        // Refresh the button state before dismissing, so the tooltip is only
+        // removed once the UI reflects the current saved status.
+        await queryClient.invalidateQueries(
+          { queryKey: favouriteStatusKey },
+          { throwOnError: true },
         );
-      }),
-    [queryClient, hashedUserId, articleId],
-  );
+      } catch {
+        // The refresh failed, so the displayed state is still unverified.
+        // Keep the tooltip and stored result so a later reconnect retries.
+        return;
+      }
+
+      // A newer offline click happened while the refresh was in flight, so
+      // refresh again rather than dismissing based on a stale result.
+      if (offlineActionResultRef.current !== offlineActionResult) {
+        await refreshAndDismiss();
+        return;
+      }
+
+      offlineActionResultRef.current = null;
+
+      setActionResult(current =>
+        current === offlineActionResult ? null : current,
+      );
+    };
+
+    const recoverFromOffline = async () => {
+      // A refresh is already running; it drains any newer result before exiting.
+      if (isRecoveringRef.current) return;
+
+      isRecoveringRef.current = true;
+
+      try {
+        await refreshAndDismiss();
+      } finally {
+        isRecoveringRef.current = false;
+      }
+    };
+
+    return onlineManager.subscribe(isOnline => {
+      if (isOnline) recoverFromOffline();
+    });
+  }, [queryClient, hashedUserId, articleId]);
 
   const mutation = useMutation({
     // A status refetch (e.g. the one triggered when connectivity returns) can

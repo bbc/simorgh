@@ -290,6 +290,7 @@ describe('useUASButton', () => {
   describe('offline handling', () => {
     afterEach(() => {
       onlineManager.setOnline(true);
+      mockInvalidateQueries.mockReset();
     });
 
     it('reports an error and skips the request when the user acts while offline', async () => {
@@ -374,6 +375,59 @@ describe('useUASButton', () => {
         onlineManager.setOnline(true);
       });
 
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('dismisses an offline result queued while an earlier refresh was still pending', async () => {
+      let resolveFirstRefresh!: () => void;
+      mockInvalidateQueries
+        .mockImplementationOnce(
+          () =>
+            new Promise<void>(resolve => {
+              resolveFirstRefresh = resolve;
+            }),
+        )
+        .mockImplementation(() => Promise.resolve());
+
+      onlineManager.setOnline(false);
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      // Reconnect starts a refresh that has not settled yet.
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      // Connectivity drops again and the user clicks while that refresh is
+      // still in flight, replacing the stored offline result.
+      await act(async () => {
+        onlineManager.setOnline(false);
+      });
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.REMOVE);
+      });
+
+      // This reconnect is skipped because a refresh is already running.
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.REMOVE,
+      });
+
+      // Once the first refresh settles, recovery must rerun for the newer
+      // result instead of leaving the tooltip visible while online.
+      await act(async () => {
+        resolveFirstRefresh();
+      });
+
+      expect(mockInvalidateQueries).toHaveBeenCalledTimes(2);
       expect(result.current.actionResult).toBeNull();
     });
 
