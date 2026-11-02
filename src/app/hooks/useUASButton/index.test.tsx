@@ -361,8 +361,6 @@ describe('useUASButton', () => {
         onlineManager.setOnline(true);
       });
 
-      // The refresh failed, so the displayed status is still unverified and the
-      // tooltip must stay put rather than implying a successful recovery.
       expect(result.current.actionResult).toEqual({
         status: 'error',
         action: UASAction.SAVE,
@@ -378,7 +376,7 @@ describe('useUASButton', () => {
       expect(result.current.actionResult).toBeNull();
     });
 
-    it('dismisses an offline result queued while an earlier refresh was still pending', async () => {
+    it('dismisses an offline result produced while an earlier refresh was still pending', async () => {
       let resolveFirstRefresh!: () => void;
       mockInvalidateQueries
         .mockImplementationOnce(
@@ -402,8 +400,7 @@ describe('useUASButton', () => {
         onlineManager.setOnline(true);
       });
 
-      // Connectivity drops again and the user clicks while that refresh is
-      // still in flight, replacing the stored offline result.
+      // The user clicks again while that refresh is still in flight.
       await act(async () => {
         onlineManager.setOnline(false);
       });
@@ -411,23 +408,17 @@ describe('useUASButton', () => {
         result.current.handleSaveAction(UASAction.REMOVE);
       });
 
-      // This reconnect is skipped because a refresh is already running.
       await act(async () => {
         onlineManager.setOnline(true);
       });
 
-      expect(result.current.actionResult).toEqual({
-        status: 'error',
-        action: UASAction.REMOVE,
-      });
+      expect(result.current.actionResult).toBeNull();
 
-      // Once the first refresh settles, recovery must rerun for the newer
-      // result instead of leaving the tooltip visible while online.
+      // The earlier refresh settling must not resurface the tooltip.
       await act(async () => {
         resolveFirstRefresh();
       });
 
-      expect(mockInvalidateQueries).toHaveBeenCalledTimes(2);
       expect(result.current.actionResult).toBeNull();
     });
 

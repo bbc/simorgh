@@ -75,38 +75,32 @@ const useUASButton = ({
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
-  // Holds the result produced by an offline click so it can be dismissed
-  // automatically once connectivity is restored.
+  // Holds the result of an offline click so it can be dismissed on reconnect.
   const offlineActionResultRef = useRef<UASActionResult>(null);
-  const isRecoveringRef = useRef(false);
 
   useEffect(() => {
     const favouriteStatusKey = uasKeys.favouriteStatus(hashedUserId, articleId);
 
-    const refreshAndDismiss = async (): Promise<void> => {
+    const recoverFromOffline = async () => {
       const offlineActionResult = offlineActionResultRef.current;
 
-      if (!onlineManager.isOnline() || !offlineActionResult) return;
+      if (!offlineActionResult) return;
 
       try {
-        // Refresh the button state before dismissing, so the tooltip is only
-        // removed once the UI reflects the current saved status.
+        // Refresh first, so the tooltip is only removed once the button
+        // reflects the current saved status.
         await queryClient.invalidateQueries(
           { queryKey: favouriteStatusKey },
           { throwOnError: true },
         );
       } catch {
-        // The refresh failed, so the displayed state is still unverified.
-        // Keep the tooltip and stored result so a later reconnect retries.
+        // Status unverified, so keep the tooltip for a later reconnect to retry.
         return;
       }
 
-      // A newer offline click happened while the refresh was in flight, so
-      // refresh again rather than dismissing based on a stale result.
-      if (offlineActionResultRef.current !== offlineActionResult) {
-        await refreshAndDismiss();
-        return;
-      }
+      // A newer offline click replaced this result mid-refresh; its own
+      // reconnect will dismiss it.
+      if (offlineActionResultRef.current !== offlineActionResult) return;
 
       offlineActionResultRef.current = null;
 
@@ -115,28 +109,16 @@ const useUASButton = ({
       );
     };
 
-    const recoverFromOffline = async () => {
-      // A refresh is already running; it drains any newer result before exiting.
-      if (isRecoveringRef.current) return;
-
-      isRecoveringRef.current = true;
-
-      try {
-        await refreshAndDismiss();
-      } finally {
-        isRecoveringRef.current = false;
-      }
-    };
-
     return onlineManager.subscribe(isOnline => {
-      if (isOnline) recoverFromOffline();
+      if (isOnline) {
+        recoverFromOffline();
+      }
     });
   }, [queryClient, hashedUserId, articleId]);
 
   const mutation = useMutation({
-    // A status refetch (e.g. the one triggered when connectivity returns) can
-    // resolve after the mutation has written the new status, overwriting it
-    // with a stale value. Cancelling it first makes the mutation authoritative.
+    // An in-flight status refetch can resolve after the mutation has written
+    // the new status and overwrite it with a stale value.
     onMutate: async () => {
       await queryClient.cancelQueries({
         queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
