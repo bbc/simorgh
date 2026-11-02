@@ -20,6 +20,9 @@ import { service as indonesiaConfig } from '../../lib/config/services/indonesia'
 import Navigation from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '../../hooks/useOptimizelyVariation';
 
 jest.mock('../../hooks/useViewTracker', () => ({
   __esModule: true,
@@ -31,11 +34,83 @@ jest.mock('../../hooks/useClickTrackerHandler', () => ({
   ...jest.requireActual('../../hooks/useClickTrackerHandler'),
 }));
 
+jest.mock('../../hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
+const useOptimizelyVariationMock = jest.mocked(useOptimizelyVariation);
+
 describe('Navigation', () => {
   const navItems = [
     { title: 'Home', url: '/news' },
     { title: 'About', url: '/about' },
   ];
+
+  beforeEach(() => {
+    useOptimizelyVariationMock.mockClear();
+    useOptimizelyVariationMock.mockReturnValue(null);
+  });
+
+  const stickyExperimentDecisions = () =>
+    useOptimizelyVariationMock.mock.calls.filter(
+      ([{ experimentName }]) =>
+        experimentName === 'newswb_ws_sticky_navigation',
+    );
+
+  describe('sticky navigation experiment', () => {
+    it('does not request a decision on non-article pages', () => {
+      render(<Navigation navItems={navItems} />, {
+        pageType: HOME_PAGE,
+        service: 'news',
+      });
+
+      fireEvent.scroll(window);
+
+      expect(stickyExperimentDecisions()).toHaveLength(0);
+    });
+
+    it('adds the control variant to normal navigation click tracking', () => {
+      jest
+        .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+        .mockReturnValue({
+          x: 0,
+          y: 0,
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          width: 0,
+          height: 0,
+          toJSON: () => ({}),
+        });
+      useOptimizelyVariationMock.mockReturnValue('off');
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+      render(
+        <>
+          <Navigation navItems={navItems} />
+          <main>
+            <p data-sticky-nav-anchor>Article body</p>
+          </main>
+        </>,
+        {
+          pageType: ARTICLE_PAGE,
+          service: 'news',
+        },
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'scrollable-navigation',
+        experimentName: 'newswb_ws_sticky_navigation',
+        experimentVariant: 'off',
+        optimizelyComponentName: 'sticky-navigation',
+        sendOptimizelyEvents: true,
+        sendOptimizelyEventsForControl: true,
+      });
+    });
+  });
 
   it('does not enable sticky navigation on AMP', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
@@ -392,6 +467,21 @@ describe('Navigation', () => {
       });
     });
 
+    it('should configure Piano click tracking for sticky navigation', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+      render(<Navigation navItems={mockNavigation} />);
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'sticky-navigation',
+        experimentName: 'newswb_ws_sticky_navigation',
+        experimentVariant: null,
+        optimizelyComponentName: 'sticky-navigation',
+        sendOptimizelyEvents: true,
+        sendOptimizelyEventsForControl: true,
+      });
+    });
+
     it('should call the click tracking hook when scrollable navigation is clicked', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
       const { getByRole } = render(<Navigation navItems={mockNavigation} />);
@@ -400,6 +490,11 @@ describe('Navigation', () => {
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'scrollable-navigation',
+        experimentName: 'newswb_ws_sticky_navigation',
+        experimentVariant: null,
+        optimizelyComponentName: 'sticky-navigation',
+        sendOptimizelyEvents: true,
+        sendOptimizelyEventsForControl: true,
       });
     });
   });
