@@ -1,11 +1,13 @@
 import { Services } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ComponentProps } from 'react';
+import MockIntersectionObserver from '../intersection-observer-testing-library';
 import CanonicalNavigation from './index.canonical';
 import {
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_EXIT_BUFFER_PX,
   STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
+  STICKY_NAVIGATION_TREATMENT,
 } from './config';
 import {
   dropdownTestId,
@@ -19,8 +21,17 @@ import {
   act,
   screen,
 } from '../react-testing-library-with-providers';
+import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 
-const STICKY_NAVIGATION_TREATMENT = 'newswb_ws_sticky_navigation';
+jest.mock('../../lib/analyticsUtils/dispatchTrackingRequests', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/dispatchTrackingRequests'),
+  default: jest.fn(),
+}));
+
+const dispatchTrackingRequestsMock = jest.mocked(dispatchTrackingRequests);
+const mockIntersectionObserver = new MockIntersectionObserver();
+
 const blocks = [{ id: '1', title: 'Story' }];
 
 const navigationProps: ComponentProps<typeof CanonicalNavigation> = {
@@ -209,9 +220,11 @@ describe('Navigation - Canonical', () => {
       }));
     };
     const stickyOptions = {
+      bbcOrigin: 'https://www.bbc.com',
       service: 'mundo' as Services,
       pageType: ARTICLE_PAGE,
       toggles: {
+        eventTracking: { enabled: true },
         topBarOJs: { enabled: true },
       },
     };
@@ -246,6 +259,12 @@ describe('Navigation - Canonical', () => {
     );
 
     beforeEach(() => {
+      dispatchTrackingRequestsMock.mockClear();
+      mockIntersectionObserver.clearObservers();
+      // @ts-expect-error mocking required for tests
+      global.IntersectionObserver = jest.fn(
+        mockIntersectionObserver.getMockIntersectionObserver(),
+      );
       jest.useFakeTimers();
       jest
         .mocked(window.matchMedia)
@@ -415,7 +434,7 @@ describe('Navigation - Canonical', () => {
         'turkce',
         'urdu',
       ])(
-        'shows the sticky navigation bar on the %s edition on the test environment',
+        'shows the sticky navigation bar on the %s edition in the live environment',
         service => {
           const { container } = render(articleNavigation, {
             ...stickyOptions,
@@ -432,7 +451,7 @@ describe('Navigation - Canonical', () => {
 
       it.each([
         ['Lite', { isLite: true }],
-        ['live', { bbcOrigin: 'https://www.bbc.com' }],
+        ['non-live', { bbcOrigin: 'https://www.test.bbc.com' }],
       ])(
         'does not show the sticky navigation bar when the page is %s',
         (_, options) => {
@@ -451,6 +470,83 @@ describe('Navigation - Canonical', () => {
     });
 
     describe('showing and hiding the bar as the reader scrolls past the start of the article', () => {
+      it('sends a Piano view event when the sticky navigation first becomes visible', async () => {
+        render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        await act(() => Promise.resolve());
+        expect(mockIntersectionObserver.observers.size).toBeGreaterThan(0);
+        await act(async () => {
+          mockIntersectionObserver.triggerAllObservers();
+        });
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(dispatchTrackingRequestsMock).toHaveBeenCalledWith(
+          expect.objectContaining({
+            reverbParameters: expect.objectContaining({
+              componentName: 'sticky-navigation',
+              type: 'view',
+            }),
+          }),
+        );
+      });
+
+      it('does not send a view event if the bar is pinned but its appearance is interrupted', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450, 1);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'false');
+
+        scrollTo(500);
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(dispatchTrackingRequestsMock).not.toHaveBeenCalledWith(
+          expect.objectContaining({
+            reverbParameters: expect.objectContaining({
+              componentName: 'sticky-navigation',
+            }),
+          }),
+        );
+      });
+
+      it('only tracks one view when the sticky navigation hides and becomes visible again', async () => {
+        const stickyViewEvents = () =>
+          dispatchTrackingRequestsMock.mock.calls.filter(
+            ([{ reverbParameters, trackingFlags }]) =>
+              reverbParameters.componentName === 'sticky-navigation' &&
+              !trackingFlags.eventSent,
+          );
+
+        render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        await act(() => Promise.resolve());
+        expect(mockIntersectionObserver.observers.size).toBeGreaterThan(0);
+        await act(async () => {
+          mockIntersectionObserver.triggerAllObservers();
+        });
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(stickyViewEvents()).toHaveLength(1);
+
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
+        scrollTo(450);
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(stickyViewEvents()).toHaveLength(1);
+      });
+
       it.each([1, 0, -1])(
         'only shows the sticky navigation bar once the reader has scrolled back up to the start of the article (testing %spx from the top of the screen)',
         top => {
