@@ -34,7 +34,7 @@ type ResolvedRootJestConfig = Omit<
   transformIgnorePatterns: string[];
 };
 
-type IntegrationPlatform = 'canonical' | 'amp' | 'lite';
+type IntegrationPlatform = 'canonical' | 'amp' | 'lite' | 'app';
 
 type IntegrationTestDescriptor = {
   displayName: string;
@@ -251,17 +251,38 @@ const nextIntegrationTestDescriptors = [
   {
     displayName: 'Integration Tests - Canonical',
     platform: 'canonical',
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   },
   {
     displayName: 'Integration Tests - AMP',
     platform: 'amp',
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*canonical\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   },
   {
     displayName: 'Integration Tests - Lite',
     platform: 'lite',
-    testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*canonical\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
+  },
+  {
+    displayName: 'Integration Tests - App',
+    platform: 'app',
+    testPathIgnorePatterns: [
+      '.*canonical\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*lite\\.test\\.ts$',
+    ],
   },
 ] satisfies IntegrationTestDescriptor[];
 

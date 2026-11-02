@@ -82,6 +82,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      showMore: 'Daha fazla göster',
       moreOnThis: '',
       navMenuText: 'Kategoriler',
       liteSite: {
