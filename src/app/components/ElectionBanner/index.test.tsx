@@ -140,7 +140,8 @@ describe('ElectionBanner', () => {
         serviceContext,
       );
 
-      const iframe = getByTestId(ELEMENT_ID).querySelector('iframe, amp-iframe');
+      const iframe =
+        getByTestId(ELEMENT_ID).querySelector('iframe, amp-iframe');
 
       expect(iframe).toBeInTheDocument();
     });
