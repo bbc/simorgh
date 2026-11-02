@@ -6,7 +6,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import dispatchTrackingRequests, {
   shouldDispatchEventBeacon,
 } from '#app/lib/analyticsUtils/dispatchTrackingRequests';
-// Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
 import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
 import useTrackingToggle from '../useTrackingToggle';

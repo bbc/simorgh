@@ -17,7 +17,6 @@ import dispatchTrackingRequests, {
   shouldDispatchEventBeacon,
 } from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
-// Temporary Resonance dual-run (see ticket) - safe to remove as a unit once Reverb is retired.
 import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
