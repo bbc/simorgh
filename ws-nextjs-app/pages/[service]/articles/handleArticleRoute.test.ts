@@ -183,6 +183,40 @@ describe('handleArticleRoute', () => {
       ...pidginMediaArticleFixtureData.data.secondaryData.topStories[0],
       id: currentArticleId,
     };
+    
+    const currentArticleLinkTopStory = {
+      type: 'link',
+      uri: 'https://www.test.bbc.co.uk/pidgin/articles/cvpde7nqj92o',
+      name: 'Link promo for the current article',
+    };
+
+    it('removes a link-style topStory that has a uri but no promo id', async () => {
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: {
+            ...pidginMediaArticleFixtureData.data,
+            secondaryData: {
+              ...pidginMediaArticleFixtureData.data.secondaryData,
+              topStories: [otherArticleTopStory, currentArticleLinkTopStory],
+            },
+          },
+          status: 200,
+        },
+      });
+
+      const result = await handleArticleRoute(mockGetServerSidePropsContext);
+      const { pageData } = result.props as {
+        pageData: {
+          secondaryColumn: {
+            topStories: { id?: string; uri?: string }[];
+          };
+        };
+      };
+
+      expect(pageData.secondaryColumn.topStories).toEqual([
+        otherArticleTopStory,
+      ]);
+    });
 
     it('removes the current article from topStories, countryCuration and mediaCuration summaries', async () => {
       jest.spyOn(getPageDataModule, 'default').mockResolvedValue({

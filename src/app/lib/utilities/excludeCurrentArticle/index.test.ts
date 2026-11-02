@@ -63,6 +63,28 @@ describe('excludeCurrentArticle', () => {
     );
   });
 
+  it('removes a link-style promo using its uri when it has no promo id', () => {
+    const linkPromos = [
+      {
+        uri: 'https://www.test.bbc.co.uk/pidgin/articles/cg9yj3x13m0o',
+        title: 'Link promo for current article',
+      },
+      {
+        uri: 'https://www.test.bbc.co.uk/pidgin/articles/co00000000o',
+        title: 'Link promo for a different article',
+      },
+    ];
+
+    expect(
+      excludeCurrentArticle(linkPromos, 'urn:bbc:ares::article:cg9yj3x13m0o'),
+    ).toEqual([
+      {
+        uri: 'https://www.test.bbc.co.uk/pidgin/articles/co00000000o',
+        title: 'Link promo for a different article',
+      },
+    ]);
+  });
+
   it('defaults to an empty array when promos is not provided', () => {
     expect(excludeCurrentArticle(undefined, 'c0000000001o')).toEqual([]);
   });

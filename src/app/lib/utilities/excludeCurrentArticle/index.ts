@@ -8,8 +8,14 @@
 const getNormalisedId = (id?: string): string | undefined =>
   id?.split(':').pop();
 
+const ARTICLE_URI_ID_PATTERN = /\/articles\/([^/?#]+)/;
+
+const getIdFromArticleUri = (uri?: string): string | undefined =>
+  uri?.match(ARTICLE_URI_ID_PATTERN)?.[1];
+
 type PromoWithId = {
   id?: string;
+  uri?: string;
 };
 
 /**
@@ -26,9 +32,11 @@ const excludeCurrentArticle = <Promo extends PromoWithId>(
 
   if (!normalisedCurrentArticleId) return promoList;
 
-  return promoList.filter(
-    promo => getNormalisedId(promo.id) !== normalisedCurrentArticleId,
-  );
+  return promoList.filter(promo => {
+    const promoId = promo.id || getIdFromArticleUri(promo.uri);
+
+    return getNormalisedId(promoId) !== normalisedCurrentArticleId;
+  });
 };
 
 export default excludeCurrentArticle;
