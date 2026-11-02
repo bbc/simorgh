@@ -3,7 +3,12 @@ import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
 import { service as hindiServiceConfig } from '#lib/config/services/hindi';
-import { render, screen, act } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  act,
+  waitFor,
+} from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
 
 const saveArticleButtonTranslations =
@@ -204,6 +209,20 @@ describe('SaveArticleButton', () => {
       expect(screen.getByRole('button')).toHaveTextContent(
         saveArticleButtonTranslations.save,
       );
+    });
+
+    it('does not show the guest button for signed-in users on initial render', async () => {
+      render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions);
+
+      expect(
+        screen.queryByTestId('save-article-btn-guest'),
+      ).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('save-article-btn-loading') ??
+            screen.queryByTestId('save-article-btn-authorized'),
+        ).toBeInTheDocument();
+      });
     });
 
     it('renders Saved to My News when saved', async () => {
