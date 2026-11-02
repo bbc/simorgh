@@ -1,6 +1,7 @@
 import { use } from 'react';
-import isEmpty from 'ramda/src/isEmpty';
 import useViewTracker from '#hooks/useViewTracker';
+import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
+import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -21,10 +22,11 @@ const TopBarOJs = ({
   id = 'top-bar-onward-journeys',
 }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
-
   const viewTracker = useViewTracker(eventTrackingData);
+  const onwardJourneyContext = useOnwardJourneyRequest();
+  const hasBlocks = Boolean(blocks?.length);
 
-  if (!blocks || isEmpty(blocks)) {
+  if (!hasBlocks && !onwardJourneyContext?.isEnabled) {
     return null;
   }
 
@@ -38,12 +40,18 @@ const TopBarOJs = ({
       css={styles.topBarOJWrapper}
       {...viewTracker}
     >
-      <strong css={styles.labelComponent} id={id}>
-        {title}
-      </strong>
-      <div css={styles.promoContainer}>
-        <PromoList blocks={blocks} eventTrackingData={eventTrackingData} />
-      </div>
+      {hasBlocks ? (
+        <>
+          <strong css={styles.labelComponent} id={id}>
+            {title}
+          </strong>
+          <div css={styles.promoContainer}>
+            <PromoList blocks={blocks} eventTrackingData={eventTrackingData} />
+          </div>
+        </>
+      ) : (
+        <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
+      )}
     </div>
   );
 };

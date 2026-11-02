@@ -1,6 +1,7 @@
 import isLive from '#lib/utilities/isLive';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import {
   render,
   screen,
@@ -10,6 +11,17 @@ import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
+jest.mock('#app/components/OnwardJourneyPlaceholder', () => ({
+  __esModule: true,
+  default: () => (
+    <div data-testid="onward-journey-skeleton-topStoriesAndFeatures" />
+  ),
+}));
+jest.mock('#app/contexts/ArticleOnwardJourneysContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/contexts/ArticleOnwardJourneysContext'),
+  useOnwardJourneyRequest: jest.fn(),
+}));
 
 jest.mock('#hooks/useViewTracker', () => ({
   __esModule: true,
@@ -22,6 +34,10 @@ jest.mock('#hooks/useClickTrackerHandler', () => ({
 }));
 
 describe('TopBarOJs', () => {
+  beforeEach(() => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue(null);
+  });
+
   it('it should display Top Stories label', () => {
     const { getByText, queryByText } = render(
       // @ts-expect-error require partial data for testing purposes
@@ -51,6 +67,21 @@ describe('TopBarOJs', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(<TopBarOJs blocks={[]} />);
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders a loading placeholder while onward journey data is requested', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />);
+
+    expect(screen.getByTestId('top-bar-onward-journeys')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('onward-journey-skeleton-topStoriesAndFeatures'),
+    ).toBeInTheDocument();
   });
 
   it('should not render TopBarOJs component when isLive is true', () => {

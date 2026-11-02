@@ -4,6 +4,7 @@ import { Article } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
+import useToggle from '#app/hooks/useToggle';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
@@ -20,18 +21,22 @@ const SecondaryColumn = ({
     palette: { GREY_2 },
   } = useTheme();
   const onwardJourneyContext = useOnwardJourneyRequest();
+  const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
+  const shouldUseTopBarOJs =
+    topBarOJsEnabled && onwardJourneyContext?.isEnabled;
+  const shouldRenderTopStories = topStoriesContent && !shouldUseTopBarOJs;
 
   if (
-    !topStoriesContent &&
+    !shouldRenderTopStories &&
     !featuresContent &&
-    !onwardJourneyContext?.isEnabled
+    (!onwardJourneyContext?.isEnabled || shouldUseTopBarOJs)
   ) {
     return null;
   }
 
   return (
     <div css={styles.secondaryColumn}>
-      {topStoriesContent && (
+      {shouldRenderTopStories && (
         <div
           css={styles.topStoriesSection}
           data-testid="top-stories"
@@ -53,7 +58,7 @@ const SecondaryColumn = ({
           />
         </div>
       )}
-      {!topStoriesContent && !featuresContent && (
+      {!shouldRenderTopStories && !featuresContent && !shouldUseTopBarOJs && (
         <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
       )}
     </div>
