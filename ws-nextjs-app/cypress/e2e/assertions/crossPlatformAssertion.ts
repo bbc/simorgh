@@ -9,6 +9,14 @@ import config from '../../support/config/services';
 
 // news, newsround, and sport are services we serve on amp, but do not want to run most read tests on
 const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
+const MOST_READ_SKELETON = '[data-testid="onward-journey-skeleton-mostRead"]';
+
+const loadLazyMostRead = () =>
+  cy.get('body').then($body => {
+    if ($body.find(MOST_READ_SKELETON).length) {
+      cy.get(MOST_READ_SKELETON).scrollIntoView();
+    }
+  });
 
 export const crossPlatform = ({
   service,
@@ -29,6 +37,7 @@ export const crossPlatform = ({
         it(`should render ${numberOfItems} items`, () => {
           cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
+              loadLazyMostRead();
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"] li').should(
                 'have.length',
@@ -42,6 +51,7 @@ export const crossPlatform = ({
           cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
               const expectedMostReadRank = serviceNumerals(serviceID);
+              loadLazyMostRead();
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]')
                 .find('li span[data-e2e="most-read-rank"]')
@@ -55,6 +65,7 @@ export const crossPlatform = ({
         it(`should have links with href and title`, () => {
           cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
+              loadLazyMostRead();
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]').within(() => {
                 cy.get('a').each($el => {

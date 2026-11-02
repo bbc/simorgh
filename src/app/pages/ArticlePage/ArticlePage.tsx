@@ -96,6 +96,8 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
+import OnwardJourneyPlaceholder from '../../components/OnwardJourneyPlaceholder';
+import { useOnwardJourneyRequest } from '../../contexts/ArticleOnwardJourneysContext';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -289,6 +291,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: countryCurationEnabled } = useToggle(
     'locationTopicCuration',
   );
+  const { enabled: mostReadEnabled } = useToggle('mostRead');
+  const onwardJourneyContext = useOnwardJourneyRequest();
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -573,13 +577,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+          {showCountryCuration ? (
+            <LocationBasedTopicOJ pageData={pageData} />
+          ) : (
+            countryCurationEnabled &&
+            onwardJourneyContext?.isEnabled && (
+              <OnwardJourneyPlaceholder onwardJourney="countryCuration" />
+            )
+          )}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
+          {!showPortraitVideoCarousel &&
+            articlePortraitVideoEnabled &&
+            onwardJourneyContext?.isEnabled && (
+              <OnwardJourneyPlaceholder onwardJourney="portraitVideo" />
+            )}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
@@ -599,20 +615,32 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               </div>
             </div>
           )}
+          {!showMediaCuration &&
+            articleVideoCurationEnabled &&
+            onwardJourneyContext?.isEnabled && (
+              <OnwardJourneyPlaceholder onwardJourney="videoCuration" />
+            )}
         </div>
 
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="twoColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showRelatedTopicsComponent}
-        />
+        <>
+          <MostRead
+            css={styles.mostReadSection}
+            data={mostReadInitialData}
+            columnLayout="twoColumn"
+            size="default"
+            headingBackgroundColour={GREY_2}
+            mobileDivider={showRelatedTopicsComponent}
+          />
+          {!mostReadInitialData &&
+            mostReadEnabled &&
+            onwardJourneyContext?.isEnabled && (
+              <OnwardJourneyPlaceholder onwardJourney="mostRead" />
+            )}
+        </>
       )}
     </div>
   );

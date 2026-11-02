@@ -2,6 +2,8 @@ import { useTheme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
+import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
@@ -17,8 +19,15 @@ const SecondaryColumn = ({
   const {
     palette: { GREY_2 },
   } = useTheme();
+  const onwardJourneyContext = useOnwardJourneyRequest();
 
-  if (!topStoriesContent && !featuresContent) return null;
+  if (
+    !topStoriesContent &&
+    !featuresContent &&
+    !onwardJourneyContext?.isEnabled
+  ) {
+    return null;
+  }
 
   return (
     <div css={styles.secondaryColumn}>
@@ -43,6 +52,9 @@ const SecondaryColumn = ({
             experimentProps={experimentProps}
           />
         </div>
+      )}
+      {!topStoriesContent && !featuresContent && (
+        <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
       )}
     </div>
   );

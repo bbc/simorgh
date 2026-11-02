@@ -1,9 +1,11 @@
 import {
+  useCallback,
   createContext,
   PropsWithChildren,
   use,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -33,6 +35,17 @@ type OnwardJourneyData = {
   videoCuration?: SecondaryColumn['mediaCuration'] | null;
 };
 
+export const ONWARD_JOURNEYS = [
+  'topStoriesAndFeatures',
+  'mostRead',
+  'latestMedia',
+  'portraitVideo',
+  'countryCuration',
+  'videoCuration',
+] as const;
+
+export type OnwardJourney = (typeof ONWARD_JOURNEYS)[number];
+
 const ARTICLE_PAGE_TYPES: PageTypes[] = [
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
@@ -42,7 +55,14 @@ const ARTICLE_PAGE_TYPES: PageTypes[] = [
   PHOTO_GALLERY_PAGE,
 ];
 
-const ArticleOnwardJourneysContext = createContext<Article | null>(null);
+type ArticleOnwardJourneysContextValue = {
+  article: Article | null;
+  isEnabled: boolean;
+  requestOnwardJourney: (onwardJourney: OnwardJourney) => Promise<void>;
+};
+
+const ArticleOnwardJourneysContext =
+  createContext<ArticleOnwardJourneysContextValue | null>(null);
 
 const getOnwardJourneyUrl = ({
   onwardJourney,
@@ -194,6 +214,8 @@ export const ArticleOnwardJourneysProvider = ({
   const { service, variant, country, pathname, isAmp, isApp, isLite } =
     use(RequestContext);
   const [articlePageData, setArticlePageData] = useState(pageData);
+  const requestedOnwardJourneys = useRef<Set<OnwardJourney>>(new Set());
+  const abortControllers = useRef<Set<AbortController>>(new Set());
   const shouldFetchOnwardJourneys =
     Boolean(pageData) &&
     ARTICLE_PAGE_TYPES.includes(pageType) &&
@@ -203,76 +225,57 @@ export const ArticleOnwardJourneysProvider = ({
   const articleId = getArticleId(pathname);
 
   useEffect(() => {
-    if (!shouldFetchOnwardJourneys) return undefined;
+    setArticlePageData(pageData);
+    requestedOnwardJourneys.current.clear();
+  }, [pageData]);
 
-    const abortController = new AbortController();
-    const commonParams = {
-      service,
-      variant,
-      signal: abortController.signal,
-    };
+  useEffect(
+    () => () => {
+      abortControllers.current.forEach(abortController =>
+        abortController.abort(),
+      );
+    },
+    [],
+  );
 
-    const fetchOnwardJourneys = async () => {
-      const topStoriesAndFeaturesRequest = safelyFetchOnwardJourney(
-        fetchOnwardJourney<OnwardJourneyData['topStoriesAndFeatures']>({
-          onwardJourney: 'topStoriesAndFeatures',
-          ...commonParams,
-        }),
-      );
-      const mostReadRequest = safelyFetchOnwardJourney(
-        fetchOnwardJourney<OnwardJourneyData['mostRead']>({
-          onwardJourney: 'mostRead',
-          ...commonParams,
-        }),
-      );
-      const portraitVideoRequest = safelyFetchOnwardJourney(
-        fetchOnwardJourney<OnwardJourneyData['portraitVideo']>({
-          onwardJourney: 'portraitVideo',
-          ...commonParams,
-        }),
-      );
-      const videoCurationRequest = safelyFetchOnwardJourney(
-        fetchOnwardJourney<OnwardJourneyData['videoCuration']>({
-          onwardJourney: 'videoCuration',
-          ...commonParams,
-        }),
-      );
-      const countryCurationRequest = country
-        ? safelyFetchOnwardJourney(
-            fetchOnwardJourney<OnwardJourneyData['countryCuration']>({
-              onwardJourney: 'countryCuration',
-              country,
-              ...commonParams,
-            }),
-          )
-        : Promise.resolve(undefined);
-      const latestMediaRequest =
-        articlePageData?.metadata.consumableAsSFV && articleId
-          ? safelyFetchOnwardJourney(
-              fetchOnwardJourney<OnwardJourneyData['latestMedia']>({
-                onwardJourney: 'latestMedia',
-                id: articleId,
-                ...commonParams,
-              }),
-            )
-          : Promise.resolve(undefined);
+  const requestOnwardJourney = useCallback(
+    async (onwardJourney: OnwardJourney) => {
+      const shouldRequestLatestMedia =
+        pageData?.metadata.consumableAsSFV && articleId;
+      const shouldRequestCountryCuration = Boolean(country);
 
-      const [
-        topStoriesAndFeatures,
-        mostRead,
-        portraitVideo,
-        videoCuration,
-        countryCuration,
-        latestMedia,
-      ] = await Promise.all([
-        topStoriesAndFeaturesRequest,
-        mostReadRequest,
-        portraitVideoRequest,
-        videoCurationRequest,
-        countryCurationRequest,
-        latestMediaRequest,
-      ] as const);
+      if (
+        !shouldFetchOnwardJourneys ||
+        requestedOnwardJourneys.current.has(onwardJourney) ||
+        (onwardJourney === 'latestMedia' && !shouldRequestLatestMedia) ||
+        (onwardJourney === 'countryCuration' && !shouldRequestCountryCuration)
+      ) {
+        return;
+      }
 
+      requestedOnwardJourneys.current.add(onwardJourney);
+
+      const abortController = new AbortController();
+      abortControllers.current.add(abortController);
+      const commonParams = {
+        service,
+        variant,
+        signal: abortController.signal,
+      };
+
+      const responseParams = {
+        onwardJourney,
+        ...(onwardJourney === 'countryCuration' && { country }),
+        ...(onwardJourney === 'latestMedia' && { id: articleId }),
+        ...commonParams,
+      };
+      const onwardJourneyData = await safelyFetchOnwardJourney(
+        fetchOnwardJourney<OnwardJourneyData[typeof onwardJourney]>(
+          responseParams,
+        ),
+      );
+
+      abortControllers.current.delete(abortController);
       if (abortController.signal.aborted) return;
 
       setArticlePageData(currentArticle =>
@@ -280,33 +283,30 @@ export const ArticleOnwardJourneysProvider = ({
           ? mergeOnwardJourneyData({
               article: currentArticle,
               onwardJourneyData: {
-                topStoriesAndFeatures,
-                mostRead,
-                portraitVideo,
-                videoCuration,
-                countryCuration,
-                latestMedia,
+                [onwardJourney]: onwardJourneyData,
               },
             })
           : currentArticle,
       );
-    };
+    },
+    [
+      articleId,
+      country,
+      pageData?.metadata.consumableAsSFV,
+      service,
+      shouldFetchOnwardJourneys,
+      variant,
+    ],
+  );
 
-    fetchOnwardJourneys();
-
-    return () => {
-      abortController.abort();
-    };
-  }, [
-    articleId,
-    articlePageData?.metadata.consumableAsSFV,
-    country,
-    service,
-    shouldFetchOnwardJourneys,
-    variant,
-  ]);
-
-  const value = useMemo(() => articlePageData ?? null, [articlePageData]);
+  const value = useMemo(
+    () => ({
+      article: articlePageData ?? null,
+      isEnabled: shouldFetchOnwardJourneys,
+      requestOnwardJourney,
+    }),
+    [articlePageData, requestOnwardJourney, shouldFetchOnwardJourneys],
+  );
 
   return (
     <ArticleOnwardJourneysContext.Provider value={value}>
@@ -316,4 +316,6 @@ export const ArticleOnwardJourneysProvider = ({
 };
 
 export const useArticleOnwardJourneys = <T extends object>(pageData: T) =>
-  (use(ArticleOnwardJourneysContext) ?? pageData) as Article & T;
+  (use(ArticleOnwardJourneysContext)?.article ?? pageData) as Article & T;
+
+export const useOnwardJourneyRequest = () => use(ArticleOnwardJourneysContext);

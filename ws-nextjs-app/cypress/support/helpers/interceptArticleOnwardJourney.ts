@@ -29,6 +29,9 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
   cy.visit(path);
 
   if (onwardJourneyAlias) {
+    cy.get(
+      `[data-testid="onward-journey-skeleton-${onwardJourney}"]`,
+    ).scrollIntoView();
     cy.wait(onwardJourneyAlias).then(({ response }) => {
       if (response?.statusCode !== 200) testContext.skip();
     });

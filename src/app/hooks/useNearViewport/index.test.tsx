@@ -83,4 +83,20 @@ describe('useNearViewport', () => {
     expect(result.current).toBe(false);
     expect(global.IntersectionObserver).not.toHaveBeenCalled();
   });
+
+  it('treats the target as near when IntersectionObserver is unavailable', async () => {
+    const element = document.createElement('div');
+    element.id = ELEMENT_ID;
+    document.body.appendChild(element);
+    global.IntersectionObserver =
+      undefined as unknown as typeof IntersectionObserver;
+
+    const { result } = renderHook(() =>
+      useNearViewport({
+        elementId: ELEMENT_ID,
+      }),
+    );
+
+    await waitFor(() => expect(result.current).toBe(true));
+  });
 });

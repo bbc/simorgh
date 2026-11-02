@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
   render,
   waitFor,
@@ -5,7 +6,13 @@ import {
 import { Article } from '#app/models/types/optimo';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '../RequestContext';
-import { ArticleOnwardJourneysProvider, useArticleOnwardJourneys } from '.';
+import {
+  ArticleOnwardJourneysProvider,
+  ONWARD_JOURNEYS,
+  OnwardJourney,
+  useArticleOnwardJourneys,
+  useOnwardJourneyRequest,
+} from '.';
 
 jest.mock('#app/lib/utilities/getEnvConfig', () => ({
   getEnvConfig: jest.fn(() => ({
@@ -45,7 +52,29 @@ const ArticleData = ({ pageData }: { pageData: Article }) => {
   );
 };
 
-const TestApp = ({ country }: { country?: string }) => (
+const RequestOnwardJourneys = ({
+  onwardJourneys,
+}: {
+  onwardJourneys: OnwardJourney[];
+}) => {
+  const context = useOnwardJourneyRequest();
+
+  useEffect(() => {
+    onwardJourneys.forEach(onwardJourney => {
+      context?.requestOnwardJourney(onwardJourney);
+    });
+  }, [context, onwardJourneys]);
+
+  return null;
+};
+
+const TestApp = ({
+  country,
+  onwardJourneys = [],
+}: {
+  country?: string;
+  onwardJourneys?: OnwardJourney[];
+}) => (
   <RequestContextProvider
     service="pidgin"
     pageType={ARTICLE_PAGE}
@@ -53,6 +82,7 @@ const TestApp = ({ country }: { country?: string }) => (
     country={country}
   >
     <ArticleOnwardJourneysProvider pageData={article} pageType={ARTICLE_PAGE}>
+      <RequestOnwardJourneys onwardJourneys={onwardJourneys} />
       <ArticleData pageData={article} />
     </ArticleOnwardJourneysProvider>
   </RequestContextProvider>
@@ -90,7 +120,9 @@ describe('ArticleOnwardJourneysProvider', () => {
       });
     });
 
-    const { getByTestId } = render(<TestApp country="ng" />);
+    const { getByTestId } = render(
+      <TestApp country="ng" onwardJourneys={[...ONWARD_JOURNEYS]} />,
+    );
 
     await waitFor(() => {
       expect(getByTestId('top-stories')).toHaveTextContent('1');
@@ -122,7 +154,7 @@ describe('ArticleOnwardJourneysProvider', () => {
       json: async () => ({ data: null }),
     });
 
-    render(<TestApp />);
+    render(<TestApp onwardJourneys={[...ONWARD_JOURNEYS]} />);
 
     await waitFor(() => expect(mockFetch).toHaveBeenCalled());
 
@@ -131,5 +163,11 @@ describe('ArticleOnwardJourneysProvider', () => {
     );
 
     expect(onwardJourneys).not.toContain('countryCuration');
+  });
+
+  it('does not request onward journeys before their placeholders trigger them', () => {
+    render(<TestApp country="ng" />);
+
+    expect(mockFetch).not.toHaveBeenCalled();
   });
 });

@@ -29,6 +29,10 @@ const useNearViewport = ({
     const initialElement = document.getElementById(elementId);
 
     if (!initialElement && !bottomViewportMargin) return undefined;
+    if (!window.IntersectionObserver) {
+      setIsNearViewport(true);
+      return undefined;
+    }
 
     const resolvedRootMargin = bottomViewportMargin
       ? `0px 0px ${window.innerHeight * bottomViewportMargin}px 0px`
