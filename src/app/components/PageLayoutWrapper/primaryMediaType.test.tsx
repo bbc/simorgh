@@ -103,4 +103,18 @@ describe('PageLayoutWrapper primaryMediaType', () => {
 
     expect(receivedProps.primaryMediaType).toBeUndefined();
   });
+
+  it('passes only server-supplied top stories to the header', () => {
+    render(
+      <PageLayoutWrapper
+        pageData={{
+          metadata: { type: 'article' },
+          secondaryColumn: { topStories: [] },
+        }}
+        status={200}
+      />,
+    );
+
+    expect(receivedProps.propsForTopBarOJComponent).toEqual({ blocks: [] });
+  });
 });

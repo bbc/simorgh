@@ -7,7 +7,6 @@ import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeade
 import addInlineScript from '#app/lib/utilities/addInlineScript';
 import getPrimaryMediaType from '#lib/utilities/getPrimaryMediaType';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
-import { useArticleOnwardJourneys } from '#app/contexts/ArticleOnwardJourneysContext';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -60,7 +59,6 @@ const PageLayoutWrapper = ({
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
-  const onwardJourneyPageData = useArticleOnwardJourneys(pageData);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
@@ -140,7 +138,7 @@ const PageLayoutWrapper = ({
           navItems={navItems}
           primaryMediaType={primaryMediaType}
           propsForTopBarOJComponent={{
-            blocks: onwardJourneyPageData?.secondaryColumn?.topStories || [],
+            blocks: pageData?.secondaryColumn?.topStories || [],
           }}
         />
         <div css={styles.content}>{children}</div>
