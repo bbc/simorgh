@@ -10,6 +10,7 @@ import {
   waitFor,
 } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+import { SaveArticleButtonLoadingFallback } from './SaveArticleButtonAuthenticated/lazy';
 
 const saveArticleButtonTranslations =
   hindiServiceConfig.default.translations.saveArticleButton;
@@ -223,6 +224,22 @@ describe('SaveArticleButton', () => {
             screen.queryByTestId('save-article-btn-authorized'),
         ).toBeInTheDocument();
       });
+    });
+
+    it('renders translated loading fallback that cannot open sign-in modal', async () => {
+      await act(async () =>
+        render(<SaveArticleButtonLoadingFallback />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('save-article-btn-loading')).toHaveTextContent(
+        saveArticleButtonTranslations.loading,
+      );
+
+      await act(async () => {
+        screen.getByTestId('save-article-btn-loading').click();
+      });
+
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
 
     it('renders Saved to My News when saved', async () => {

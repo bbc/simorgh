@@ -5,7 +5,7 @@ import SaveButton from '#app/components/SaveButton';
 
 const noop = () => undefined;
 
-const SaveArticleButtonLoadingFallback = () => {
+export const SaveArticleButtonLoadingFallback = () => {
   const { translations } = use(ServiceContext);
   const loadingLabel = translations?.saveArticleButton?.loading ?? '';
 
