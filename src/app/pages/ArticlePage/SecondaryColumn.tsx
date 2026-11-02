@@ -1,10 +1,12 @@
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
-import useToggle from '#app/hooks/useToggle';
+import { RequestContext } from '#app/contexts/RequestContext';
+import isTopBarOnwardJourneyExperiment from '#app/lib/utilities/isTopBarOnwardJourneyExperiment';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
@@ -20,10 +22,11 @@ const SecondaryColumn = ({
   const {
     palette: { GREY_2 },
   } = useTheme();
+  const { serverSideExperiments } = use(RequestContext);
   const onwardJourneyContext = useOnwardJourneyRequest();
-  const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const shouldUseTopBarOJs =
-    topBarOJsEnabled && onwardJourneyContext?.isEnabled;
+    onwardJourneyContext?.isEnabled &&
+    isTopBarOnwardJourneyExperiment(serverSideExperiments);
   const shouldRenderTopStories = topStoriesContent && !shouldUseTopBarOJs;
 
   if (

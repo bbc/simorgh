@@ -69,7 +69,7 @@ describe('TopBarOJs', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('renders a loading placeholder while onward journey data is requested', () => {
+  it('does not render a loading placeholder outside the experiment', () => {
     jest.mocked(useOnwardJourneyRequest).mockReturnValue({
       article: null,
       isEnabled: true,
@@ -77,6 +77,28 @@ describe('TopBarOJs', () => {
     });
 
     render(<TopBarOJs blocks={[]} />);
+
+    expect(
+      screen.queryByTestId('top-bar-onward-journeys'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders a loading placeholder for the Top Stories treatment', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />, {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    });
 
     expect(screen.getByTestId('top-bar-onward-journeys')).toBeInTheDocument();
     expect(

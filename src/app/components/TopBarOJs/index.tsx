@@ -2,11 +2,13 @@ import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
 import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import isTopBarOnwardJourneyExperiment from '#app/lib/utilities/isTopBarOnwardJourneyExperiment';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PromoList from './PromoList';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface TopBarOJsProps {
   blocks: TopStoryItem[];
@@ -22,11 +24,18 @@ const TopBarOJs = ({
   id = 'top-bar-onward-journeys',
 }: TopBarOJsProps) => {
   const { translations } = use(ServiceContext);
+  const { serverSideExperiments } = use(RequestContext);
   const viewTracker = useViewTracker(eventTrackingData);
   const onwardJourneyContext = useOnwardJourneyRequest();
   const hasBlocks = Boolean(blocks?.length);
+  const isTopBarExperimentTreatment = isTopBarOnwardJourneyExperiment(
+    serverSideExperiments,
+  );
 
-  if (!hasBlocks && !onwardJourneyContext?.isEnabled) {
+  if (
+    !hasBlocks &&
+    (!onwardJourneyContext?.isEnabled || !isTopBarExperimentTreatment)
+  ) {
     return null;
   }
 
@@ -37,15 +46,15 @@ const TopBarOJs = ({
       role="region"
       aria-label={id}
       data-testid={id}
-      css={styles.topBarOJWrapper}
+      className={styles.topBarOJWrapper}
       {...viewTracker}
     >
       {hasBlocks ? (
         <>
-          <strong css={styles.labelComponent} id={id}>
+          <strong className={styles.labelComponent} id={id}>
             {title}
           </strong>
-          <div css={styles.promoContainer}>
+          <div className={styles.promoContainer}>
             <PromoList blocks={blocks} eventTrackingData={eventTrackingData} />
           </div>
         </>

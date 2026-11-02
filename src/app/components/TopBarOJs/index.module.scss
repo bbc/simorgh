@@ -1,0 +1,78 @@
+@use '@scss/themeTokens' as theme;
+
+.topBarOJWrapper {
+  background-color: theme.$palette-grey-2;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-inline-start: -#{theme.$spacings-full};
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: none;
+  }
+}
+
+.promoContainer {
+  background: theme.$palette-grey-2;
+  padding: 0 theme.$spacings-full theme.$spacings-double;
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding: 0 theme.$spacings-double theme.$spacings-double;
+    margin: 0 -0.2rem;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: 0 theme.$spacings-double theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: solid #{theme.pixelsToRem-px-to-rem(3)} transparent;
+    border-top: transparent;
+  }
+}
+
+.labelComponent {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+
+  display: flex;
+  align-items: center;
+  background-color: theme.$palette-grey-2;
+  width: 100vw;
+  height: theme.$spacings-quadruple;
+  color: theme.$palette-shadow;
+  padding: 0 theme.$spacings-full;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-2;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: solid #{theme.pixelsToRem-px-to-rem(3)} transparent;
+    border-bottom: transparent;
+  }
+
+  @media #{theme.$mediaQueries-group-0-max-width} {
+    margin-inline-start: theme.$spacings-full;
+    margin: 0;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline-start: theme.$spacings-double;
+    padding: 0 theme.$spacings-double;
+    margin: 0 -0.2rem;
+  }
+}
