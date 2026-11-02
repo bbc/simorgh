@@ -51,7 +51,7 @@ const baseServiceConfig = {
   showRelatedTopics: true,
   timezone: 'GMT',
   electionBanner: {
-    title: '美國大選 2026',
+    title: '2026年美國中期選舉',
     electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
     assocPressIframeSrc:
       'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
@@ -171,6 +171,7 @@ export const service: ZhongwenConfig = {
       },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      showMore: '显示更多',
       moreOnThis: '',
       navMenuText: '分类',
       liteSite: {
@@ -573,6 +574,7 @@ export const service: ZhongwenConfig = {
       },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
+      showMore: '顯示更多',
       navMenuText: '分類',
       liteSite: {
         onboardingMessage:

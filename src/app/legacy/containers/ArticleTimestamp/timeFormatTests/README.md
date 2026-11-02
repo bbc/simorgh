@@ -4,7 +4,7 @@ These are unit tests to ensure that we observe and maintain regression for the a
 
 The tests in this directory runs for all services against expectations set in [expectedFormats.json](./expectedFormats.json) and a failure would either indicate a change or breakage in the timestamp or time format logic.
 
-A change in timestamp logic would require updating the values in [expectedFormats.json](./expectedFormats.json) using the [generateTimeFormats.js](./generateTimeFormats.js) script (see below). However, proper investigation should be carried out to identify if there is a valid reason for why these tests fail before running the update script.
+A change in timestamp logic would require updating the values in [expectedFormats.json](./expectedFormats.json) using the [generateTimeFormats.js](./generateTimeFormats.js) script. However, proper investigation should be carried out to identify if there is a valid reason for why these tests fail before running the update script.
 
 A couple of scenarios that we expect these tests would fail and need updating would be:
 
@@ -18,8 +18,4 @@ A couple of scenarios that we expect these tests would fail and need updating wo
 
 ## Updating expected time formats
 
-From your local repository run this command from the root directory
-
-```
-npx -p @babel/core -p @babel/node babel-node ./src/app/containers/ArticleTimestamp/timeFormatTests/generateTimeFormats.js
-```
+After regenerating the expected formats, review the changes to [expectedFormats.json](./expectedFormats.json) and rerun the tests in this directory.

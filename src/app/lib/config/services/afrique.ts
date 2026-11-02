@@ -104,6 +104,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
+      showMore: 'Afficher plus',
       moreOnThis: '',
       navMenuText: 'Rubriques',
       liteSite: {

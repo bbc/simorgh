@@ -10,6 +10,16 @@ import {
   buildErrorEventModel,
 } from '.';
 
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/lib/utilities/getEnvConfig'),
+}));
+
+jest.mock('..', () => ({
+  __esModule: true,
+  ...jest.requireActual('..'),
+}));
+
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);

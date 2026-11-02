@@ -39,4 +39,16 @@ describe('Top Bar Onward Journey Promo', () => {
       container.querySelector('[class*="liveLabelText"]'),
     ).toBeInTheDocument();
   });
+
+  it('should include the visible live label and title in the link name', () => {
+    const { getByRole } = render(
+      <TopBarOJs blocks={[topStoriesBlocksWithLiveItem[1]]} />,
+    );
+    const link = getByRole('link');
+    const liveLabel = link.querySelector('[class*="liveLabelText"]');
+
+    expect(link).not.toHaveAttribute('aria-label');
+    expect(link.textContent).toContain(liveLabel.textContent);
+    expect(liveLabel.textContent).toMatch(/ $/);
+  });
 });

@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 import {
   AllTheProviders,
   renderHook,
@@ -7,9 +7,32 @@ import {
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import * as serviceContextModule from '../../contexts/ServiceContext';
 import useScrollDepthTracker, { getHomePageBounds } from '.';
 import fixtureData from '../useViewTracker/fixtureData.json';
+
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+};
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }: PropsWithChildren) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
@@ -55,16 +78,11 @@ beforeEach(() => {
   jest.clearAllMocks();
   mockScrollY = 0;
 
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-    }),
-  );
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  };
 });
 
 const defaultToggles: Toggles = {

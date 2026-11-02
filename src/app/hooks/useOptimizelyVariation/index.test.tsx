@@ -4,12 +4,26 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
 import useOptimizelyVariation, { ExperimentType } from '.';
-import * as serverSideHook from './useServerSide';
-import * as clientSideHook from './useClientSide';
+import useServerSide from './useServerSide';
+import useClientSide from './useClientSide';
+
+jest.mock('./useServerSide', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+jest.mock('./useClientSide', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+const mockServerSideHook = jest.mocked(useServerSide);
+const mockClientSideHook = jest.mocked(useClientSide);
 
 describe('useOptimizelyVariation custom hook', () => {
   beforeEach(() => {
-    jest.restoreAllMocks();
+    mockClientSideHook.mockReset();
+    mockServerSideHook.mockReset();
   });
 
   const renderUseOptimizelyVariation = async ({
@@ -43,10 +57,8 @@ describe('useOptimizelyVariation custom hook', () => {
   });
 
   it('should call the serverSide hook if experimentType is set to SERVER_SIDE and return the correct server side variation', async () => {
-    jest.spyOn(clientSideHook, 'default').mockReturnValueOnce(null);
-    jest
-      .spyOn(serverSideHook, 'default')
-      .mockReturnValueOnce('someServerSideVariation');
+    mockClientSideHook.mockReturnValueOnce(null);
+    mockServerSideHook.mockReturnValueOnce('someServerSideVariation');
 
     const result = await renderUseOptimizelyVariation({
       experimentName: 'correct_experiment_id',
@@ -58,10 +70,8 @@ describe('useOptimizelyVariation custom hook', () => {
   });
 
   it('should call the clientSide hook if experimentType is set to CLIENT_SIDE and return the correct client side variation', async () => {
-    jest
-      .spyOn(clientSideHook, 'default')
-      .mockReturnValueOnce('someClientSideVariation');
-    jest.spyOn(serverSideHook, 'default').mockReturnValueOnce(null);
+    mockClientSideHook.mockReturnValueOnce('someClientSideVariation');
+    mockServerSideHook.mockReturnValueOnce(null);
 
     const result = await renderUseOptimizelyVariation({
       experimentName: 'correct_experiment_id',

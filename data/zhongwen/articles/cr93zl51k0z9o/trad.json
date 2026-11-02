@@ -1,0 +1,1313 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Air+pollution~Environment~Nature~Indonesia~Conservation~Climate+change",
+          "contentId": "urn:bbc:optimo:asset:cr93zl51k0z9o",
+          "contentType": "article-sfv",
+          "language": "zh-hant",
+          "ldpThingIds": "0e6837e4-b06b-4574-96da-ebf5957d8a6d~0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~12e69b92-a7ba-4463-84e0-be107b9805d0~4aa966f9-091e-4dd1-8f10-a44ca20aec5d~bce059a1-1a05-4b8d-aac8-381699aaa2f0~e6369e45-f838-49cc-b5ac-857ed182e549",
+          "ldpThingLabels": "Air+pollution~Environment~Nature~Indonesia~Conservation~Climate+change",
+          "nationsProducer": null,
+          "pageIdentifier": "zhongwen.articles.cr93zl51k0z9o.trad.page",
+          "pageTitle": "有毒霧霾如何讓新加坡天際線消失",
+          "timePublished": "2026-10-09T08:08:10.224Z",
+          "timeUpdated": "2026-10-09T08:08:10.224Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:cr93zl51k0z9o",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:cr93zl51k0z9o",
+          "canonicalUrl": "https://www.bbc.com/zhongwen/articles/cr93zl51k0z9o/trad"
+        },
+        "type": "article",
+        "createdBy": "Zhongwen",
+        "language": "zh-hant",
+        "firstPublished": 1791533290224,
+        "lastPublished": 1791533290224,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "ldp_tags": "Air+pollution~Environment~Nature~Indonesia~Conservation~Climate+change",
+          "page": "zhongwen.articles.cr93zl51k0z9o.trad.page",
+          "irisKeyword": null,
+          "audience_motivation": "Update me~Help me understand",
+          "ldp_ids": "0e6837e4-b06b-4574-96da-ebf5957d8a6d~0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~12e69b92-a7ba-4463-84e0-be107b9805d0~4aa966f9-091e-4dd1-8f10-a44ca20aec5d~bce059a1-1a05-4b8d-aac8-381699aaa2f0~e6369e45-f838-49cc-b5ac-857ed182e549",
+          "contentId": "urn:bbc:optimo:asset:cr93zl51k0z9o",
+          "producer": "Chinese"
+        },
+        "passport": {
+          "language": "zh-hant",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-10-09T08:08:10.224Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-10-09T08:08:10.224Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "zh-hant",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                "thingLabel": "空氣污染",
+                "thingUri": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                "thingId": "0e6837e4-b06b-4574-96da-ebf5957d8a6d",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Air_pollution",
+                  "http://www.wikidata.org/entity/Q131123"
+                ],
+                "thingEnglishLabel": "Air pollution",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                "thingLabel": "環境",
+                "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "tagging:AmbiguousTerm",
+                  "tagging:Genre"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Natural_environment",
+                  "http://www.wikidata.org/entity/Q43619"
+                ],
+                "thingEnglishLabel": "Environment",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+                "thingLabel": "印度尼西亞",
+                "thingUri": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+                "thingId": "4aa966f9-091e-4dd1-8f10-a44ca20aec5d",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "tagging:AmbiguousTerm",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1643084/",
+                  "http://www.wikidata.org/entity/Q252"
+                ],
+                "thingEnglishLabel": "Indonesia",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+                "thingLabel": "保護（自然世界）",
+                "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+                "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://www.wikidata.org/entity/Q20113959",
+                  "http://dbpedia.org/resource/Nature_conservation"
+                ],
+                "thingEnglishLabel": "Conservation",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                "thingLabel": "自然",
+                "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Theme",
+                  "tagging:AmbiguousTerm",
+                  "tagging:Genre"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Nature",
+                  "http://www.wikidata.org/entity/Q7860"
+                ],
+                "thingEnglishLabel": "Nature",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                "thingLabel": "氣候變化",
+                "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Climate_change",
+                  "http://www.wikidata.org/entity/Q125928"
+                ],
+                "thingEnglishLabel": "Climate change",
+                "type": "about"
+              }
+            ]
+          },
+          "transliterations": ["zh-hans"]
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "空氣污染",
+              "thingUri": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+              "thingId": "0e6837e4-b06b-4574-96da-ebf5957d8a6d",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Air_pollution",
+                "http://www.wikidata.org/entity/Q131123"
+              ],
+              "topicName": "空氣污染",
+              "topicId": "c32p4k5r0ert",
+              "curationList": [
+                {
+                  "curationId": "594502af-18a7-4a40-915e-a96fee789aa2",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Air pollution",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Air pollution"
+            },
+            {
+              "thingLabel": "環境",
+              "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+              "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Theme",
+                "tagging:AmbiguousTerm",
+                "tagging:Genre"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Natural_environment",
+                "http://www.wikidata.org/entity/Q43619"
+              ],
+              "topicName": "環境",
+              "topicId": "ckr7mn6k4g3t",
+              "curationList": [
+                {
+                  "curationId": "86d0f06d-63fb-417d-9887-2512dc1dfde5",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Environment",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Environment"
+            },
+            {
+              "thingLabel": "印度尼西亞",
+              "thingUri": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+              "thingId": "4aa966f9-091e-4dd1-8f10-a44ca20aec5d",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "tagging:AmbiguousTerm",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1643084/",
+                "http://www.wikidata.org/entity/Q252"
+              ],
+              "topicName": "印度尼西亞",
+              "topicId": "c5835q06wg4t",
+              "curationList": [
+                {
+                  "curationId": "0589071f-fa43-45ec-9b8f-b0429ea3ace9",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Indonesia",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Indonesia"
+            },
+            {
+              "thingLabel": "保護（自然世界）",
+              "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+              "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q20113959",
+                "http://dbpedia.org/resource/Nature_conservation"
+              ],
+              "topicName": "保護（自然世界）",
+              "topicId": "c5835qmpwzjt",
+              "curationList": [
+                {
+                  "curationId": "19141941-8708-4d5f-aa79-10a20ea791f2",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Conservation",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Conservation"
+            },
+            {
+              "thingLabel": "自然",
+              "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+              "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Theme",
+                "tagging:AmbiguousTerm",
+                "tagging:Genre"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Nature",
+                "http://www.wikidata.org/entity/Q7860"
+              ],
+              "topicName": "自然",
+              "topicId": "cw51e0n7rymt",
+              "curationList": [
+                {
+                  "curationId": "560bfd9c-25d7-48a9-917d-c6904486a23f",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Nature",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Nature"
+            },
+            {
+              "thingLabel": "氣候變化",
+              "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+              "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Climate_change",
+                "http://www.wikidata.org/entity/Q125928"
+              ],
+              "topicName": "氣候變化",
+              "topicId": "cn745ez8megt",
+              "curationList": [
+                {
+                  "curationId": "b20a818f-1c28-4587-a298-672ee4993eec",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Climate change",
+              "thingLabelLanguage": "zh-hant",
+              "thingPreferredLabel": "Climate change"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "空氣污染",
+            "topicId": "c32p4k5r0ert",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/0e6837e4-b06b-4574-96da-ebf5957d8a6d#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "594502af-18a7-4a40-915e-a96fee789aa2",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/c32p4k5r0ert/trad",
+            "meta": {
+              "created": "2020-04-06T10:21:14.837Z",
+              "updated": "2024-09-18T14:11:54.800Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "c32p4k5r0ert:zh-hant"
+            }
+          },
+          {
+            "topicName": "環境",
+            "topicId": "ckr7mn6k4g3t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "86d0f06d-63fb-417d-9887-2512dc1dfde5",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:Genre"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/ckr7mn6k4g3t/trad",
+            "meta": {
+              "created": "2020-04-06T10:19:53.590Z",
+              "updated": "2024-09-18T14:10:47.337Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "ckr7mn6k4g3t:zh-hant"
+            }
+          },
+          {
+            "topicName": "印度尼西亞",
+            "topicId": "c5835q06wg4t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "0589071f-fa43-45ec-9b8f-b0429ea3ace9",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "tagging:AmbiguousTerm",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/c5835q06wg4t/trad",
+            "meta": {
+              "created": "2020-04-06T10:20:32.862Z",
+              "updated": "2024-09-18T14:11:45.856Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "c5835q06wg4t:zh-hant"
+            }
+          },
+          {
+            "topicName": "保護（自然世界）",
+            "topicId": "c5835qmpwzjt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "19141941-8708-4d5f-aa79-10a20ea791f2",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/c5835qmpwzjt/trad",
+            "meta": {
+              "created": "2020-04-06T10:21:46.139Z",
+              "updated": "2024-09-18T14:11:45.144Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "c5835qmpwzjt:zh-hant"
+            }
+          },
+          {
+            "topicName": "自然",
+            "topicId": "cw51e0n7rymt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "560bfd9c-25d7-48a9-917d-c6904486a23f",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:Genre"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/cw51e0n7rymt/trad",
+            "meta": {
+              "created": "2020-04-06T10:22:31.693Z",
+              "updated": "2024-09-18T14:10:04.642Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "cw51e0n7rymt:zh-hant"
+            }
+          },
+          {
+            "topicName": "氣候變化",
+            "topicId": "cn745ez8megt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "b20a818f-1c28-4587-a298-672ee4993eec",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Zhongwen",
+            "topicUrl": "/zhongwen/topics/cn745ez8megt/trad",
+            "meta": {
+              "created": "2020-04-06T10:21:29.103Z",
+              "updated": "2024-09-18T14:10:33.348Z",
+              "transliterated": false,
+              "script": "zh-hant",
+              "variantId": "cn745ez8megt:zh-hant"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 77 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "cc0481d6",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "84c7b73a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "cb842a0e",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "有毒煙霾如何讓新加坡天際線消失",
+                            "blocks": [
+                              {
+                                "id": "45565748",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "有毒煙霾如何讓新加坡天際線消失",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "37f8a5ab",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0pfv45k",
+                "blocks": [
+                  {
+                    "id": "5c6ac9f7",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "15ac1570",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "0bc078e1",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "有毒霧霾如何讓新加坡天際線消失",
+                                  "blocks": [
+                                    {
+                                      "id": "65a7b734",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "有毒霧霾如何讓新加坡天際線消失",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "0ee2a732",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f88b634b",
+                          "blockId": "urn:bbc:ares::clip:p0pfv45k",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0pfv45k",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "有毒霧霾如何讓新加坡天際線消失",
+                            "synopses": {
+                              "short": "有毒霧霾如何讓新加坡天際線消失",
+                              "medium": "在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。",
+                              "long": "印尼正面臨有史以來最嚴重的野火季之一，今年迄今為止已有約100萬公頃土地被燒毀。\n\n在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0pfv4kw.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0pfv45p",
+                                "types": ["Portrait"],
+                                "duration": 68,
+                                "durationISO8601": "PT1M8S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1791533176000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "cfd68339",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "14706bb0",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1080,
+                                  "height": 1920,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0pfv4kw.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "34f96e4c",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "021426eb",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "9fc3ec99",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "有毒霧霾如何讓新加坡天際線消失",
+                                              "blocks": [
+                                                {
+                                                  "id": "feac4647",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "有毒霧霾如何讓新加坡天際線消失",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "60ab6778",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "ffcdcd84",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "f9f75535",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "有毒煙霾如何讓新加坡天際線消失",
+                            "blocks": [
+                              {
+                                "id": "947f8d57",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "有毒煙霾如何讓新加坡天際線消失",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "4096d735",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1791533290224,
+                "lastPublished": 1791533290224
+              },
+              "position": [4]
+            },
+            {
+              "id": "6ced9a20",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "6774a430",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "印尼正面臨有史以來最嚴重的野火季之一，今年迄今為止已有約100萬公頃土地被燒毀。",
+                      "blocks": [
+                        {
+                          "id": "82f8c976",
+                          "type": "fragment",
+                          "model": {
+                            "text": "印尼正面臨有史以來最嚴重的野火季之一，今年迄今為止已有約100萬公頃土地被燒毀。",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  },
+                  {
+                    "id": "84b4793d",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "在新加坡，標誌性建築正被山火產生的有毒煙霾籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霾如何影響東南亞各國。",
+                      "blocks": [
+                        {
+                          "id": "a0c5e676",
+                          "type": "fragment",
+                          "model": {
+                            "text": "在新加坡，標誌性建築正被山火產生的有毒煙霾籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霾如何影響東南亞各國。",
+                            "attributes": []
+                          },
+                          "position": [5, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 2]
+                  }
+                ]
+              },
+              "position": [5]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "有毒霧霾如何讓新加坡天際線消失",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "有毒煙霾如何讓新加坡天際線消失",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "有毒煙霾如何讓新加坡天際線消失",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": { "text": "", "attributes": [] }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "BBC記者",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "BBC記者",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1080,
+                  "height": 1920,
+                  "locator": "33b3/live/78a39020-c3b8-11f1-bc2e-018d645d8d21.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "passport": { "transliterations": ["zh-hans"] },
+        "serviceIdentifier": "Zhongwen",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0pfv45k",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "有毒霧霾如何讓新加坡天際線消失",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "有毒霧霾如何讓新加坡天際線消失",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0pfv45k",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0pfv45k",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "有毒霧霾如何讓新加坡天際線消失",
+                            "synopses": {
+                              "short": "有毒霧霾如何讓新加坡天際線消失",
+                              "medium": "在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。",
+                              "long": "印尼正面臨有史以來最嚴重的野火季之一，今年迄今為止已有約100萬公頃土地被燒毀。\n\n在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。"
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0pfv4kw.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0pfv45p",
+                                "types": ["Portrait"],
+                                "duration": 68,
+                                "durationISO8601": "PT1M8S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1791533176000
+                              }
+                            ],
+                            "syndication": { "destinations": [] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 1080,
+                                  "height": 1920,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0pfv4kw.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "有毒霧霾如何讓新加坡天際線消失",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "有毒霧霾如何讓新加坡天際線消失",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT2M51S",
+          "isLive": false,
+          "title": "台灣「雙十國慶」有哪些看點？",
+          "firstPublished": "2026-10-10T10:31:35.396Z",
+          "lastPublished": "2026-10-10T10:31:35.396Z",
+          "link": "https://www.bbc.com/zhongwen/articles/cmly04xye12no/trad",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3af1/live/acfd0b50-c492-11f1-a64c-550be9e3c66b.jpg.webp",
+          "description": "台灣一年一度的「雙十國慶」典禮週六（10月10日）在總統府前的凱達格蘭大道登場，總統賴清德的談話再度成為各界關注焦點，現場也吸引許多海內外民眾到場參與。",
+          "imageAlt": "與往年不同的是，今年國慶前，美中領導人才剛在華盛頓舉行「習特會」，而再過一個多月，台灣四年一度的九合一地方選舉也將登場。",
+          "isPortraitImage": true,
+          "id": "cmly04xye12no",
+          "attributions": [
+            {
+              "title": "Zhongwen",
+              "link": {
+                "url": "https://www.bbc.co.uk/zhongwen",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/zhongwen"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "台灣",
+            "link": {
+              "url": "https://www.bbc.com/zhongwen/topics/cd6qem06z92t/trad",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/zhongwen/topics/cd6qem06z92t/trad"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1H25M46S",
+          "isLive": false,
+          "title": "賴清德雙十講話：武力不能凌駕規則 台灣強化防衛不是放棄對話——直播回放",
+          "firstPublished": "2026-10-10T05:01:42.065Z",
+          "lastPublished": "2026-10-10T05:01:42.065Z",
+          "link": "https://www.bbc.com/zhongwen/articles/c58jz8w7kmjyo/trad",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8366/live/eb76b650-c466-11f1-a64c-550be9e3c66b.jpg.webp",
+          "description": "台灣舉行2026年雙十國慶大會，總統賴清德發表講話，引用基督教《聖經》提出要建設「山巔之城」，讓台灣成為「維護印太和平與穩定的關鍵力量」。",
+          "imageAlt": "台灣總統賴清德在台北總統府前發表雙十國慶講話，他舉起右手作振臂高呼之勢（10/10/2026）",
+          "isPortraitImage": false,
+          "id": "c58jz8w7kmjyo",
+          "attributions": [
+            {
+              "title": "Zhongwen",
+              "link": {
+                "url": "https://www.bbc.co.uk/zhongwen",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/zhongwen"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "台灣",
+            "link": {
+              "url": "https://www.bbc.com/zhongwen/topics/cd6qem06z92t/trad",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/zhongwen/topics/cd6qem06z92t/trad"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M8S",
+          "isLive": false,
+          "title": "有毒煙霾如何讓新加坡天際線消失",
+          "firstPublished": "2026-10-09T08:08:10.224Z",
+          "lastPublished": "2026-10-09T08:08:10.224Z",
+          "link": "https://www.bbc.com/zhongwen/articles/cr93zl51k0z9o/trad",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/33b3/live/78a39020-c3b8-11f1-bc2e-018d645d8d21.jpg.webp",
+          "description": "在新加坡，標誌性建築正被山火產生的有毒煙霧籠罩。BBC記者黃曉恩在現場報道，分析了山火煙霧如何影響東南亞各國。",
+          "imageAlt": "BBC記者",
+          "isPortraitImage": true,
+          "id": "cr93zl51k0z9o",
+          "attributions": [
+            {
+              "title": "Zhongwen",
+              "link": {
+                "url": "https://www.bbc.co.uk/zhongwen",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/zhongwen"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "空氣污染",
+            "link": {
+              "url": "https://www.bbc.com/zhongwen/topics/c32p4k5r0ert/trad",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/zhongwen/topics/c32p4k5r0ert/trad"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT3M48S",
+          "isLive": false,
+          "title": "台灣AV產業為何由盛轉衰？中國市場扮演什麼角色？",
+          "firstPublished": "2026-10-09T01:06:35.021Z",
+          "lastPublished": "2026-10-09T01:06:35.021Z",
+          "link": "https://www.bbc.com/zhongwen/articles/ck05r559n4l4o/trad",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d5a6/live/50b1a190-be47-11f1-a64c-550be9e3c66b.jpg.webp",
+          "description": "台灣成人影片產業曾在2020年前後快速擴張，但隨着大型片商「麻豆傳媒」於2026年停運，產業的興衰再度受到關注。從業者指出，中國市場需求、線上博弈廣告及灰色資金可能曾推動產業發展。",
+          "imageAlt": "「麻豆傳媒」與台灣AV女優",
+          "isPortraitImage": true,
+          "id": "ck05r559n4l4o",
+          "attributions": [
+            {
+              "title": "Zhongwen",
+              "link": {
+                "url": "https://www.bbc.co.uk/zhongwen",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/zhongwen"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "女人",
+            "link": {
+              "url": "https://www.bbc.com/zhongwen/topics/cq8nqyw32w0t/trad",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/zhongwen/topics/cq8nqyw32w0t/trad"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "electionBanner": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

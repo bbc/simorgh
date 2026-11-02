@@ -28,7 +28,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-5ku87v"
+      class="VisuallyHiddenText_visuallyHiddenText__NazL3"
     >
       Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
     </span>
@@ -105,7 +105,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-5ku87v"
+      class="VisuallyHiddenText_visuallyHiddenText__NazL3"
     >
       Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
     </span>
@@ -190,7 +190,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
         type="button"
       >
         <span
-          class="css-5ku87v"
+          class="VisuallyHiddenText_visuallyHiddenText__NazL3"
         >
           Play video, ""มหาวิหารน้ำแข็ง" สถาปัตยกรรมงดงามที่ธรรมชาติรังสรรค์ในสวิตเซอร์แลนด์", Durée 0,30
         </span>
@@ -252,7 +252,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       role="text"
     >
       <span
-        class="css-5ku87v"
+        class="VisuallyHiddenText_visuallyHiddenText__NazL3"
       >
         Légende vidéo, 
       </span>

@@ -25,7 +25,13 @@ const mockStreamContentSingle = {
 };
 
 const mockStreamDataMoreThanOne = {
-  results: [postFixture, postFixture],
+  results: [
+    postFixture,
+    {
+      ...postFixture,
+      urn: `${postFixture.urn}-second`,
+    },
+  ],
 };
 
 const mockIntersectionObserver = new MockIntersectionObserver();

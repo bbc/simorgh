@@ -2,7 +2,6 @@ import {
   AresMediaBlock,
   AresMediaMetadataBlock,
 } from '#app/components/MediaLoader/types';
-import { ArticleContent } from '#app/models/types/optimo';
 import getAppEnv from '#nextjs/cypress/support/helpers/getAppEnv';
 import { ServiceParametersType } from '#nextjs/cypress/types';
 import { getBlockData } from '../articlePage/helpers';
@@ -15,7 +14,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
   describeOrSkip(`Tests for ${service} ${pageType}`, () => {
     describe(
-      'Video Player',
+      'Audio Player',
       {
         retries: 3,
       },
@@ -24,18 +23,20 @@ export default ({ service, pageType }: ServiceParametersType) => {
           cy.window()
             .getPageDataFromWindow()
             .then(pageData => {
-              const media = getBlockData('video', pageData);
+              const media = getBlockData('audio', pageData);
 
-              if (media) {
-                cy.get('[data-e2e="media-loader__container"]')
-                  .first()
-                  .within(() => {
-                    cy.get('[data-e2e="media-player"]')
-                      .should('be.visible')
-                      .should('have.attr', 'id')
-                      .and('eq', 'bbcMediaPlayer0');
-                  });
+              if (!media) {
+                throw new Error('Expected an audio block in listen page data');
               }
+
+              cy.get('[data-e2e="media-loader__container"]')
+                .first()
+                .within(() => {
+                  cy.get('[data-e2e="media-player"]')
+                    .should('be.visible')
+                    .should('have.attr', 'id')
+                    .and('eq', 'bbcMediaPlayer0');
+                });
             });
         });
 
@@ -46,32 +47,37 @@ export default ({ service, pageType }: ServiceParametersType) => {
             cy.window()
               .getPageDataFromWindow()
               .then(pageData => {
-                const media = getBlockData<ArticleContent & { type: string }>(
-                  'video',
-                  pageData,
-                );
+                const media = getBlockData('audio', pageData);
 
-                if (media && media.type === 'video') {
-                  const aresMediaMetaDataBlock = (
-                    media.model.blocks[1] as AresMediaBlock
-                  ).model.blocks[0] as AresMediaMetadataBlock;
-                  const { durationISO8601 } =
-                    aresMediaMetaDataBlock.model.versions[0];
-                  cy.get('[data-e2e="media-loader__container"]')
-                    .first()
-                    .within(() => {
-                      cy.get('button.button.has_duration')
-                        .should('be.visible')
-                        .within(() => {
-                          cy.get('svg').should('be.visible');
-                        });
-
-                      cy.get('time')
-                        .should('be.visible')
-                        .should('have.attr', 'datetime')
-                        .and('eq', durationISO8601);
-                    });
+                if (!media) {
+                  throw new Error(
+                    'Expected an audio block in listen page data',
+                  );
                 }
+
+                const aresMediaMetaDataBlock = (
+                  media.model.blocks[1] as AresMediaBlock
+                ).model.blocks[0] as AresMediaMetadataBlock;
+                const { durationISO8601 } =
+                  aresMediaMetaDataBlock.model.versions[0];
+                cy.get('[data-e2e="media-loader__container"]')
+                  .first()
+                  .within(() => {
+                    cy.get('button.button.has_duration')
+                      .should('be.visible')
+                      .within(() => {
+                        cy.get('svg').should('be.visible');
+                      });
+
+                    cy.get('time')
+                      .should('be.visible')
+                      .should('have.attr', 'datetime')
+                      .and(
+                        'satisfy',
+                        datetime =>
+                          datetime.replace('T0M', 'T') === durationISO8601,
+                      );
+                  });
               });
           },
         );

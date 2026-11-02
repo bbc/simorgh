@@ -44,7 +44,7 @@ exports[`AmpMostRead should render as expected 1`] = `
   padding-bottom: 1.5rem;
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-1 {
     display: block;
     width: initial;
@@ -263,16 +263,6 @@ exports[`AmpMostRead should render as expected 1`] = `
   }
 }
 
-.emotion-10 {
-  color: #006666;
-  display: inline-block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-margin-end: 0.5rem;
-  margin-inline-end: 0.5rem;
-}
-
 <div>
   <amp-script
     id="dataFunctions"
@@ -349,10 +339,10 @@ exports[`AmpMostRead should render as expected 1`] = `
                     role="text"
                   >
                     <span
-                      class="emotion-10"
+                      class="liveLabelText"
                       dir="ltr"
                     >
-                      EN VIVO
+                      EN VIVO 
                     </span>
                   </span>
                 </span>

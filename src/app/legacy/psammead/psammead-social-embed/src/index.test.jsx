@@ -16,6 +16,11 @@ import { CanonicalSocialEmbed, AmpSocialEmbed } from './index';
 import fixtures from './fixtures';
 import * as useScript from './Canonical/useScript';
 
+jest.mock('./Canonical/useScript', () => ({
+  __esModule: true,
+  ...jest.requireActual('./Canonical/useScript'),
+}));
+
 const useScriptSpy = jest.spyOn(useScript, 'default');
 const mockOnRender = jest.fn();
 

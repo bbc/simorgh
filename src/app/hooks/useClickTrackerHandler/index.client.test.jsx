@@ -6,9 +6,9 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
-import * as trackingToggle from '#hooks/useTrackingToggle';
+import useTrackingToggle from '#hooks/useTrackingToggle';
 
-import * as useOptimizelyVariation from '../useOptimizelyVariation';
+import useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,
   render,
@@ -17,11 +17,54 @@ import {
   fireEvent,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
-import * as serviceContextModule from '../../contexts/ServiceContext';
 import pidginData from './fixtureData/tori-51745682.json';
 import useClickTrackerHandler from '.';
 
-const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+};
+
+jest.mock('#hooks/useTrackingToggle', () => {
+  const actual = jest.requireActual('#hooks/useTrackingToggle');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('../useOptimizelyVariation', () => {
+  const actual = jest.requireActual('../useOptimizelyVariation');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
+
+const trackingToggleSpy = useTrackingToggle;
 
 const windowLocationAssignSpy = jest.spyOn(window.location, 'assign');
 
@@ -106,17 +149,12 @@ beforeEach(() => {
   jest.clearAllMocks();
   console.error = jest.fn();
 
-  jest.spyOn(useOptimizelyVariation, 'default').mockReturnValue(null);
-
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-    }),
-  );
+  useOptimizelyVariation.mockReturnValue(null);
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+  };
 });
 
 afterEach(() => {
@@ -130,15 +168,11 @@ describe('useClickTrackerHandler', () => {
 
   describe('Click tracking - Reverb', () => {
     beforeEach(() => {
-      jest.replaceProperty(
-        serviceContextModule,
-        'ServiceContext',
-        createContext({
-          atiAnalyticsProducerId: '70',
-          atiAnalyticsProducerName: 'PIDGIN',
-          service: 'pidgin',
-        }),
-      );
+      mockServiceContextValue = {
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+      };
 
       // eslint-disable-next-line no-underscore-dangle
       window.__reverb = {

@@ -5,11 +5,11 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
-import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import styles from './index.styles';
 
 export interface HighImpactPromoProps extends Summary {
   relatedTopic?: RelatedTopic | null;
+  showRelatedTopic?: boolean;
 }
 
 const HighImpactPromo = ({
@@ -21,17 +21,19 @@ const HighImpactPromo = ({
   headingLevel = 3,
   eventTrackingData,
   relatedTopic,
+  showRelatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
+  const relatedTopicToShow = showRelatedTopic ? relatedTopic : null;
   const subjectLink =
-    relatedTopic?.link?.url || (service ? getBrandPath(service) : undefined);
-  const subjectText = relatedTopic?.title || brandName;
+    relatedTopicToShow?.link?.url ||
+    (service ? getBrandPath(service) : undefined);
+  const subjectText = relatedTopicToShow?.title || brandName;
   const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  // experiment: keep topic and brand links out of article click metrics
   const relatedTopicClickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
     itemTracker: {
@@ -40,10 +42,9 @@ const HighImpactPromo = ({
       text: subjectText,
     },
   });
-  const subjectClickTrackerHandler =
-    eventTrackingData?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT
-      ? relatedTopicClickTrackerHandler
-      : clickTrackerHandler;
+  const subjectClickTrackerHandler = relatedTopicToShow
+    ? relatedTopicClickTrackerHandler
+    : clickTrackerHandler;
 
   return (
     <div data-testid="high-impact-promo" css={styles.promo} dir={dir}>

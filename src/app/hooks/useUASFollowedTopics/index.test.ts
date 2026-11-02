@@ -69,7 +69,11 @@ describe('useUASFollowedTopics', () => {
     mockUseQueryReturn = { data: undefined, isLoading: false, error: null };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserId: mockHashedUserId };
+      if (context === AccountContext)
+        return {
+          hashedUserId: mockHashedUserId,
+          isTopicPersonalizationEnabled: true,
+        };
       return {};
     });
   });
@@ -135,8 +139,8 @@ describe('useUASFollowedTopics', () => {
 
     expect(mockTrackError).toHaveBeenCalledWith({
       error,
-      feature: ERROR_TRACKING_FEATURES.UAS,
-      action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
+      feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+      action: UAS_ERROR_ACTIONS.FETCH_ACTIVITY,
     });
   });
 
@@ -164,7 +168,22 @@ describe('useUASFollowedTopics', () => {
     expect(mockEnabled).toBe(false);
   });
 
-  it('should be enabled when hashedUserId is present', () => {
+  it('should be disabled when isTopicPersonalizationEnabled is false', () => {
+    (use as jest.Mock).mockImplementation((context: unknown) => {
+      if (context === AccountContext)
+        return {
+          hashedUserId: mockHashedUserId,
+          isTopicPersonalizationEnabled: false,
+        };
+      return {};
+    });
+
+    renderHook(() => useUASFollowedTopics());
+
+    expect(mockEnabled).toBe(false);
+  });
+
+  it('should be enabled when hashedUserId is present and isTopicPersonalizationEnabled is true', () => {
     renderHook(() => useUASFollowedTopics());
 
     expect(mockEnabled).toBe(true);

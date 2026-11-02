@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
       relatedTopics: 'সম্পর্কিত বিষয়',
+      showMore: 'আরও দেখুন',
       moreOnThis: '',
       liteSite: {
         onboardingMessage:

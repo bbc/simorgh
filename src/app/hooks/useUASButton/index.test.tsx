@@ -10,6 +10,10 @@ import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync/index';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
@@ -117,7 +121,11 @@ const mockUseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
 const mockUseUASMetadataSync = useUASMetadataSync as jest.Mock;
 
+const mockError = new Error('UAS request failed with status 500');
+
 describe('useUASButton', () => {
+  const mockHashedUserId = 'user-123';
+
   const defaultProps = {
     articleId: '123',
     saveArticlePageData: {
@@ -133,12 +141,12 @@ describe('useUASButton', () => {
       isLoading: false,
       isUpdating: false,
       error: null,
-      savedMetadata: undefined,
+      metadata: undefined,
     });
 
     (use as jest.Mock).mockImplementation(context => {
       if (context === AccountContext)
-        return { hashedUserId: 'user-123', isRefreshAvailable: true };
+        return { hashedUserId: mockHashedUserId, isRefreshAvailable: true };
       if (context === ServiceContext) return { service: 'hindi' };
       return {};
     });
@@ -149,7 +157,9 @@ describe('useUASButton', () => {
   it('passes articleId to useUASFetchSaveStatus', () => {
     renderHook(() => useUASButton(defaultProps));
 
-    expect(mockUseUASFetchSaveStatus).toHaveBeenCalledWith('123');
+    expect(mockUseUASFetchSaveStatus).toHaveBeenCalledWith(
+      defaultProps.articleId,
+    );
   });
 
   describe('handleSaveAction', () => {
@@ -184,7 +194,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
-        uasKeys.favouriteStatus('user-123', '123'),
+        uasKeys.favouriteStatus(mockHashedUserId, defaultProps.articleId),
         expect.objectContaining({
           isSaved: true,
         }),
@@ -199,7 +209,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
-        globalId: 'urn:bbc:world-service-news:article:123',
+        globalId: `urn:bbc:world-service-news:article:${defaultProps.articleId}`,
         isRefreshAvailable: true,
       });
     });
@@ -212,7 +222,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockSetQueryData).toHaveBeenCalledWith(
-        uasKeys.favouriteStatus('user-123', '123'),
+        uasKeys.favouriteStatus(mockHashedUserId, defaultProps.articleId),
         expect.objectContaining({
           isSaved: false,
         }),
@@ -220,16 +230,14 @@ describe('useUASButton', () => {
     });
 
     it('does not update query cache when request fails', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
 
       expect(mockSetQueryData).not.toHaveBeenCalled();
@@ -243,7 +251,7 @@ describe('useUASButton', () => {
       });
 
       expect(mockInvalidateQueries).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouritesList('user-123'),
+        queryKey: uasKeys.favouritesList(mockHashedUserId),
       });
     });
   });
@@ -276,29 +284,25 @@ describe('useUASButton', () => {
 
   describe('error tracking', () => {
     it('tracks a failed user-initiated save/remove action', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
         action: UASAction.REMOVE,
       });
     });
 
     it('tracks a failed background metadata resync', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(
-        new Error('UAS request failed with status 500'),
-      );
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
 
       let onMetadataOutOfDate: (() => unknown) | undefined;
       mockUseUASMetadataSync.mockImplementation(
@@ -317,8 +321,8 @@ describe('useUASButton', () => {
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
-        action: 'metadata-sync',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+        action: UAS_ERROR_ACTIONS.METADATA_SYNC,
       });
     });
 
@@ -327,15 +331,15 @@ describe('useUASButton', () => {
         isSaved: false,
         isLoading: false,
         error: new Error('failed to fetch save status'),
-        savedMetadata: undefined,
+        metadata: undefined,
       });
 
       renderHook(() => useUASButton(defaultProps));
 
       expect(mockTrackError).toHaveBeenCalledWith({
         error: expect.any(Error),
-        feature: 'uas',
-        action: 'fetch-status',
+        feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+        action: UAS_ERROR_ACTIONS.FETCH_STATUS,
       });
     });
 
@@ -357,7 +361,7 @@ describe('useUASButton', () => {
         isSaved: true,
         isLoading: false,
         error: null,
-        savedMetadata: mockMetadata,
+        metadata: mockMetadata,
       });
 
       renderHook(() => useUASButton(defaultProps));
@@ -365,7 +369,7 @@ describe('useUASButton', () => {
       expect(mockUseUASMetadataSync).toHaveBeenCalledWith(
         expect.objectContaining({
           saveArticlePageData: defaultProps.saveArticlePageData,
-          articleId: '123',
+          articleId: defaultProps.articleId,
           service: 'hindi',
           isSaved: true,
           savedArticleMetadata: mockMetadata,
@@ -397,13 +401,13 @@ describe('useUASButton', () => {
     });
 
     it('reflects a failed user-triggered remove', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(new Error('UAS request failed'));
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
       const { result, rerender } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed');
+        ).rejects.toThrow(mockError);
       });
       rerender();
 
@@ -461,18 +465,17 @@ describe('useUASButton', () => {
     });
 
     it('exposes the underlying error when a genuine request fails', async () => {
-      const failure = new Error('UAS request failed with status 500');
-      mockUasApiRequest.mockRejectedValueOnce(failure);
+      mockUasApiRequest.mockRejectedValueOnce(mockError);
       const { result, rerender } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
         await expect(
           result.current.handleSaveAction(UASAction.REMOVE),
-        ).rejects.toThrow('UAS request failed with status 500');
+        ).rejects.toThrow(mockError);
       });
       rerender();
 
-      expect(result.current.error).toBe(failure);
+      expect(result.current.error).toBe(mockError);
     });
   });
 });

@@ -20,12 +20,13 @@ import logCodes from '#app/lib/logger.const';
 //   - CSS chunks are written to build/ directory relative to project root
 //
 // We check both locations in order, so the same code handles all environments.
-const CSS_SEARCH_ROOTS = ['public/_next', 'build'];
+const getCssFilePaths = (file: string): string[] => [
+  join(process.cwd(), 'public/_next', file),
+  join(process.cwd(), 'build', file),
+];
 
 const resolveCssFilePath = (file: string): string | null =>
-  CSS_SEARCH_ROOTS.map(root => join(process.cwd(), root, file)).find(
-    existsSync,
-  ) ?? null;
+  getCssFilePaths(file).find(existsSync) ?? null;
 
 const logger = nodeLogger(__filename);
 
@@ -62,9 +63,7 @@ const readCssFiles = (files: string[], logCode: string): string =>
     if (filePath === null) {
       logger.warn(logCode, {
         file,
-        rootsChecked: CSS_SEARCH_ROOTS.map(root =>
-          join(process.cwd(), root, file),
-        ),
+        rootsChecked: getCssFilePaths(file),
       });
       return css;
     }

@@ -41,6 +41,7 @@ const styles = {
         textDecoration: 'none',
         color: isDarkUi ? palette.GREY_2 : palette.EBON,
         '&:hover, &:focus': {
+          color: palette.POSTBOX,
           textDecoration: 'underline',
         },
       },

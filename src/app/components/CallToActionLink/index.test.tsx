@@ -2,6 +2,11 @@ import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { render, screen } from '../react-testing-library-with-providers';
 import CallToActionLink from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 describe('Call To Action Link', () => {
   beforeEach(() => {
     jest.clearAllMocks();

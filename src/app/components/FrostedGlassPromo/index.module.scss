@@ -1,0 +1,133 @@
+@use '@scss/themeTokens' as theme;
+
+$blur-radius: 15px;
+$scale-amount: 1.15;
+
+.componentWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+
+  &:hover a {
+    text-decoration: underline;
+  }
+
+  &:visited a {
+    color: theme.$palette-grey-3;
+  }
+}
+
+.clickableArea {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.header {
+  margin: 0;
+}
+
+.anchor {
+  @include theme.fontVariants-gel-font-variant('serif-regular');
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.33;
+  display: inline-block;
+  color: theme.$palette-white;
+  text-decoration: none;
+  margin: #{theme.pixelsToRem-px-to-rem(14)} theme.$spacings-full 0;
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: theme.$palette-grey-3;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-inline: theme.$spacings-double;
+  }
+}
+
+.anchorAmp {
+  color: theme.$palette-black;
+
+  &:visited {
+    color: theme.$palette-metal;
+  }
+}
+
+.lazyloadPlaceholder {
+  min-height: 100px;
+  padding-bottom: theme.$spacings-double;
+  background-color: theme.$palette-grey-8;
+}
+
+.lazyloadPlaceholderAmp {
+  background-color: theme.$palette-white;
+}
+
+.panelWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panelBackground {
+  display: none;
+
+  @supports (filter: blur($blur-radius)) {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    inset: -$blur-radius 0 0;
+    background-color: theme.$palette-grey-8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    transform: scaleX($scale-amount) scaleY(-$scale-amount);
+    filter: blur($blur-radius);
+  }
+}
+
+.panelChildren {
+  position: relative;
+  z-index: 3;
+  padding-bottom: theme.$spacings-double;
+  transition: background 0.5s ease-in-out;
+  height: 100%;
+  background: rgb(var(--panel-colour-rgb, 32, 34, 36));
+
+  &[data-is-loading='false'] {
+    @supports (filter: blur($blur-radius)) {
+      background: rgba(var(--panel-colour-rgb, 32, 34, 36), 0.62);
+    }
+  }
+}
+
+time.timestamp {
+  @include theme.fontVariants-gel-font-variant('sans-regular');
+  font-size: 0.8125rem;
+  padding: 0.75rem theme.$spacings-full 0;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    font-size: 0.875rem;
+    padding-inline: theme.$spacings-double;
+  }
+}
+
+time.timestampAmp {
+  color: theme.$palette-black;
+}
+
+time.timestampCanonical {
+  color: theme.$palette-grey-3;
+}
