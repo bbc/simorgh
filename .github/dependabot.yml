@@ -50,8 +50,8 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-      day: 'monday'
-      time: '10:00'
+      day: 'wednesday'
+      time: '16:00'
     cooldown:
       default-days: 7
     labels:
