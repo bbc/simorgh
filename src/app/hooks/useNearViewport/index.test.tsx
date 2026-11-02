@@ -17,7 +17,12 @@ const triggerIntersectionObserver = (isIntersecting = true) => {
 
   act(() => {
     callback(
-      [{ isIntersecting } as IntersectionObserverEntry],
+      [
+        {
+          isIntersecting,
+          boundingClientRect: { height: 1 },
+        } as IntersectionObserverEntry,
+      ],
       {} as IntersectionObserver,
     );
   });
@@ -57,14 +62,14 @@ describe('useNearViewport', () => {
     const { result } = renderHook(() =>
       useNearViewport({
         elementId: ELEMENT_ID,
-        rootMargin: '200px 0px',
+        rootMargin: '0px 0px 200px 0px',
       }),
     );
 
     expect(result.current).toBe(false);
     expect(global.IntersectionObserver).toHaveBeenCalledWith(
       expect.any(Function),
-      { rootMargin: '200px 0px' },
+      { rootMargin: '0px 0px 200px 0px' },
     );
 
     triggerIntersectionObserver(true);
@@ -98,5 +103,33 @@ describe('useNearViewport', () => {
     );
 
     await waitFor(() => expect(result.current).toBe(true));
+  });
+
+  it('does not treat a zero-height target as near the viewport', () => {
+    const element = document.createElement('div');
+    element.id = ELEMENT_ID;
+    document.body.appendChild(element);
+
+    const { result } = renderHook(() =>
+      useNearViewport({
+        elementId: ELEMENT_ID,
+        rootMargin: '0px 0px 200px 0px',
+      }),
+    );
+
+    act(() => {
+      intersectionObserverCallback?.(
+        [
+          {
+            isIntersecting: true,
+            boundingClientRect: { height: 0 },
+          } as IntersectionObserverEntry,
+        ],
+        {} as IntersectionObserver,
+      );
+    });
+
+    expect(result.current).toBe(false);
+    expect(mockDisconnect).not.toHaveBeenCalled();
   });
 });

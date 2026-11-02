@@ -40,7 +40,7 @@ const useNearViewport = ({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.boundingClientRect.height > 0) {
           setIsNearViewport(true);
           observer.disconnect();
         }

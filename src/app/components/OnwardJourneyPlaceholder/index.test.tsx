@@ -70,7 +70,12 @@ describe('OnwardJourneyPlaceholder', () => {
 
     act(() => {
       intersectionObserverCallback?.(
-        [{ isIntersecting: true } as IntersectionObserverEntry],
+        [
+          {
+            isIntersecting: true,
+            boundingClientRect: { height: 1 },
+          } as IntersectionObserverEntry,
+        ],
         {} as IntersectionObserver,
       );
     });

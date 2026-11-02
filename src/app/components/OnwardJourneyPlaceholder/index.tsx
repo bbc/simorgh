@@ -20,7 +20,7 @@ const OnwardJourneyPlaceholder = ({ onwardJourney }: Props) => {
   const placeholderId = getPlaceholderId(onwardJourney);
   const isNearViewport = useNearViewport({
     elementId: placeholderId,
-    rootMargin: isMounted ? '200px 0px' : undefined,
+    rootMargin: isMounted ? '0px 0px 200px 0px' : undefined,
   });
 
   useEffect(() => {
