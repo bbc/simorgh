@@ -183,7 +183,7 @@ export default async (context: GetServerSidePropsContext) => {
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
-          topStories: dedupedTopStories,
+          topStories: dedupedTopStories.length ? dedupedTopStories : null,
           features,
           latestMedia,
           mediaCuration: dedupedMediaCuration,
