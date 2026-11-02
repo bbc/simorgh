@@ -669,6 +669,79 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
+    it('should send the control group Optimizely event without changing the Piano component name', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = pidginData;
+
+      const { getByTestId } = render(
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+          <TestComponent
+            hookProps={{
+              ...eventTrackingData,
+              optimizelyComponentName: 'sticky-navigation',
+              experimentName: 'mockExperiment',
+              experimentVariant: 'off',
+              sendOptimizelyEvents: true,
+              sendOptimizelyEventsForControl: true,
+            }}
+          />
+        </OptimizelyProvider>,
+        {
+          pageMetadata: { atiAnalytics, type },
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      fireEvent.click(getByTestId('test-component'));
+
+      expect(defaultOptimizely.track).toHaveBeenCalledWith(
+        'sticky-navigation-clicks',
+        defaultOptimizely.user.id,
+        { foo: 'bar' },
+      );
+      expect(defaultOptimizely.track).not.toHaveBeenCalledWith(
+        'brand-clicks',
+        expect.anything(),
+        expect.anything(),
+      );
+    });
+
+    it('should not send an Optimizely event for an off variation without control group tracking enabled', async () => {
+      const {
+        metadata: { atiAnalytics, type },
+      } = pidginData;
+
+      const { getByTestId } = render(
+        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+          <TestComponent
+            hookProps={{
+              ...eventTrackingData,
+              experimentName: 'mockExperiment',
+              experimentVariant: 'off',
+              sendOptimizelyEvents: true,
+            }}
+          />
+        </OptimizelyProvider>,
+        {
+          pageMetadata: { atiAnalytics, type },
+          pageData: pidginData,
+          pageType: STORY_PAGE,
+          pathname: '/pidgin',
+          service: 'pidgin',
+          toggles: defaultToggles,
+        },
+      );
+
+      fireEvent.click(getByTestId('test-component'));
+
+      expect(defaultOptimizely.track).not.toHaveBeenCalled();
+    });
+
     it('should fire event to Optimizely if optimizely object exists', async () => {
       const {
         metadata: { atiAnalytics, type },
