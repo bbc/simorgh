@@ -7,6 +7,7 @@ import {
   ResonanceBeaconConfig,
 } from '#app/components/ATIAnalytics/types';
 import { waitFor } from '#app/components/react-testing-library-with-providers';
+import { markResonanceReady } from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
 
@@ -14,6 +15,15 @@ jest.mock('../../utilities/onClient', () => ({
   __esModule: true,
   ...jest.requireActual('../../utilities/onClient'),
 }));
+
+jest.mock(
+  '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent',
+  () => ({
+    __esModule: true,
+    default: jest.fn(),
+    markResonanceReady: jest.fn(),
+  }),
+);
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let isOnClient: any;
@@ -400,6 +410,33 @@ describe('sendBeacon', () => {
       await sendBeacon(reverbConfig, resonanceConfig);
 
       expect(callOrder).toEqual(['reverb', 'resonance']);
+    });
+
+    it('should mark Resonance as ready after Resonance.initialise', async () => {
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(markResonanceReady).toHaveBeenCalledTimes(1);
+      expect(
+        (Resonance.initialise as jest.Mock).mock.invocationCallOrder[0],
+      ).toBeLessThan(
+        (markResonanceReady as jest.Mock).mock.invocationCallOrder[0],
+      );
+    });
+
+    it('should not mark Resonance as ready when Resonance.initialise throws', async () => {
+      (Resonance.initialise as jest.Mock).mockImplementationOnce(() => {
+        throw new Error('Resonance failed');
+      });
+
+      await sendBeacon(reverbConfig, resonanceConfig);
+
+      expect(markResonanceReady).not.toHaveBeenCalled();
+    });
+
+    it('should not mark Resonance as ready when resonanceBeaconConfig is null', async () => {
+      await sendBeacon(reverbConfig, null);
+
+      expect(markResonanceReady).not.toHaveBeenCalled();
     });
   });
 });
