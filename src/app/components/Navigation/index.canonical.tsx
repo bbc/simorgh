@@ -21,15 +21,15 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { Direction } from '#app/models/types/global';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { FOCUSABLE_ITEMS_SELECTOR } from './config';
+import {
+  FOCUSABLE_ITEMS_SELECTOR,
+  STICKY_NAVIGATION_COMPONENT,
+  STICKY_NAVIGATION_EXPERIMENT,
+} from './config';
 import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
 
 const DROPDOWN_MAX_WIDTH_QUERY = `(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
-// Experiment Sticky Nav
-const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
-const STICKY_NAVIGATION_COMPONENT = 'sticky-navigation';
-
 const StickyNavigationViewTracking = ({
   experimentVariant,
 }: {
@@ -40,7 +40,6 @@ const StickyNavigationViewTracking = ({
     sendOptimizelyEvents: true,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant,
-    alwaysInView: true,
   });
 
   return <span ref={viewTracker.ref} aria-hidden="true" />;
@@ -361,7 +360,7 @@ const CanonicalNavigationContainer = ({
     ],
   );
 
-  const stickyNavViewTracking = sticky.hasBeenPinned ? (
+  const stickyNavViewTracking = sticky.hasBeenVisible ? (
     <StickyNavigationViewTracking
       experimentVariant={stickyNavExperimentVariant}
     />
