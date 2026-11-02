@@ -11,13 +11,13 @@ import subscribeToMediaQuery from '#hooks/useMediaQuery/subscribeToMediaQuery';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   STICKY_MIN_VIEWPORT_HEIGHT,
+  STICKY_NAV_ARTICLE_START_SELECTOR,
   STICKY_NAV_EXIT_BUFFER_PX,
   STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
   STICKY_NAV_TAB_STOP_SELECTOR,
+  STICKY_NAVIGATION_TREATMENT,
   STICKY_TRANSITION_DURATION_MS,
 } from './config';
-
-const STICKY_NAVIGATION_TREATMENT = 'newswb_ws_sticky_navigation';
 
 // Resizing fires in bursts, and only the bar's measured height can change as
 // a result, so the work is deferred until the burst has settled.
@@ -28,7 +28,6 @@ const RESIZE_DEBOUNCE_MS = 150;
 // this long after a forward Tab so that the bar isn't dragged into view, or
 // swept away mid-use, by the browser's own correction.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
-const ARTICLE_START_SELECTOR = 'main [data-sticky-nav-anchor]';
 
 // Every one of these has to hold before the bar is allowed to pin. Some
 // qualify the viewport by matching ("wide enough to fit the bar"), others by
@@ -111,7 +110,7 @@ const useStickyNavigation = ({
   // listeners below are only ever attached on pages that could use them.
   const isSupported =
     experimentVariant === STICKY_NAVIGATION_TREATMENT &&
-    env !== 'live' &&
+    env === 'live' &&
     pageType === ARTICLE_PAGE &&
     !isLite;
 
@@ -121,7 +120,7 @@ const useStickyNavigation = ({
   const [{ shouldBePinned, shouldBeVisible, height }, setScrollState] =
     useState(INITIAL_SCROLL_STATE);
   const [phase, setPhase] = useState<StickyPhase>('idle');
-  const [hasBeenPinned, setHasBeenPinned] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
@@ -207,7 +206,7 @@ const useStickyNavigation = ({
     const resolveArticleStart = () => {
       if (!measurements.articleStart?.isConnected) {
         measurements.articleStart = document.querySelector(
-          ARTICLE_START_SELECTOR,
+          STICKY_NAV_ARTICLE_START_SELECTOR,
         );
       }
       return measurements.articleStart;
@@ -431,8 +430,8 @@ const useStickyNavigation = ({
   const isPinned = phase !== 'idle';
 
   useEffect(() => {
-    if (isPinned) setHasBeenPinned(true);
-  }, [isPinned]);
+    if (isVisible) setHasBeenVisible(true);
+  }, [isVisible]);
 
   // Retires the bar from fixed positioning the moment it has finished
   // sliding away, instead of waiting out the fallback timeout above.
@@ -518,7 +517,7 @@ const useStickyNavigation = ({
 
   return {
     isEnabled,
-    hasBeenPinned,
+    hasBeenVisible,
     /** Whether the bar is out of the page flow and fixed to the viewport. */
     isPinned,
     /** Pinned but not yet painted, so it must not be shown to anyone. */
