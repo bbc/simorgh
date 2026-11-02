@@ -78,21 +78,38 @@ const useUASButton = ({
   // Holds the result produced by an offline click so it can be dismissed
   // automatically once connectivity is restored.
   const offlineActionResultRef = useRef<UASActionResult>(null);
+  const isRecoveringRef = useRef(false);
 
   useEffect(
     () =>
       onlineManager.subscribe(async isOnline => {
         const offlineActionResult = offlineActionResultRef.current;
 
-        if (!isOnline || !offlineActionResult) return;
+        if (!isOnline || !offlineActionResult || isRecoveringRef.current) {
+          return;
+        }
+
+        isRecoveringRef.current = true;
+
+        try {
+          // Refresh the button state before dismissing, so the tooltip is only
+          // removed once the UI reflects the current saved status.
+          await queryClient.invalidateQueries(
+            { queryKey: uasKeys.favouriteStatus(hashedUserId, articleId) },
+            { throwOnError: true },
+          );
+        } catch {
+          // The refresh failed, so the displayed state is still unverified.
+          // Keep the tooltip and the stored result so a later reconnect retries.
+          return;
+        } finally {
+          isRecoveringRef.current = false;
+        }
+
+        // A newer action may have replaced the result while the refresh ran.
+        if (offlineActionResultRef.current !== offlineActionResult) return;
 
         offlineActionResultRef.current = null;
-
-        // Refresh the button state before dismissing, so the tooltip is only
-        // removed once the UI reflects the current saved status.
-        await queryClient.invalidateQueries({
-          queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
-        });
 
         setActionResult(current =>
           current === offlineActionResult ? null : current,
@@ -102,6 +119,14 @@ const useUASButton = ({
   );
 
   const mutation = useMutation({
+    // A status refetch (e.g. the one triggered when connectivity returns) can
+    // resolve after the mutation has written the new status, overwriting it
+    // with a stale value. Cancelling it first makes the mutation authoritative.
+    onMutate: async () => {
+      await queryClient.cancelQueries({
+        queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+      });
+    },
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
         return upsertArticleData({

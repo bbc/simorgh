@@ -32,9 +32,11 @@ jest.mock('react', () => ({
 
 const mockSetQueryData = jest.fn();
 const mockInvalidateQueries = jest.fn();
+const mockCancelQueries = jest.fn();
 
 jest.mock('@tanstack/react-query', () => {
   let capturedMutationConfig: {
+    onMutate?: (action: string) => Promise<unknown>;
     mutationFn?: (action: string) => Promise<unknown>;
     onSuccess?: (result: unknown, action: string) => void;
     onError?: (error: unknown) => void;
@@ -58,8 +60,10 @@ jest.mock('@tanstack/react-query', () => {
     useQueryClient: () => ({
       setQueryData: mockSetQueryData,
       invalidateQueries: mockInvalidateQueries,
+      cancelQueries: mockCancelQueries,
     }),
     useMutation: (config: {
+      onMutate?: (action: string) => Promise<unknown>;
       mutationFn?: (action: string) => Promise<unknown>;
       onSuccess?: (result: unknown, action: string) => void;
       onError?: (error: unknown) => void;
@@ -75,6 +79,7 @@ jest.mock('@tanstack/react-query', () => {
           },
         ) => {
           try {
+            await capturedMutationConfig.onMutate?.(action);
             const result = await capturedMutationConfig.mutationFn?.(action);
             capturedMutationConfig.onSuccess?.(result, action);
             options?.onSuccess?.(result, action);
@@ -254,6 +259,32 @@ describe('useUASButton', () => {
         queryKey: uasKeys.favouritesList(mockHashedUserId),
       });
     });
+
+    it('cancels an in-flight status fetch before sending the request, so a stale response cannot overwrite the new status', async () => {
+      const callOrder: string[] = [];
+      mockCancelQueries.mockImplementation(() => {
+        callOrder.push('cancelQueries');
+        return Promise.resolve();
+      });
+      mockUasApiRequest.mockImplementation(() => {
+        callOrder.push('uasApiRequest');
+        return Promise.resolve({ ok: true, status: 202 });
+      });
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.SAVE);
+      });
+
+      expect(mockCancelQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.favouriteStatus(
+          mockHashedUserId,
+          defaultProps.articleId,
+        ),
+      });
+      expect(callOrder).toEqual(['cancelQueries', 'uasApiRequest']);
+    });
   });
 
   describe('offline handling', () => {
@@ -303,12 +334,46 @@ describe('useUASButton', () => {
         onlineManager.setOnline(true);
       });
 
-      expect(mockInvalidateQueries).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouriteStatus(
-          mockHashedUserId,
-          defaultProps.articleId,
-        ),
+      expect(mockInvalidateQueries).toHaveBeenCalledWith(
+        {
+          queryKey: uasKeys.favouriteStatus(
+            mockHashedUserId,
+            defaultProps.articleId,
+          ),
+        },
+        { throwOnError: true },
+      );
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it('keeps the tooltip and retries on a later reconnect when the status refresh fails', async () => {
+      mockInvalidateQueries.mockRejectedValueOnce(mockError);
+      onlineManager.setOnline(false);
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        result.current.handleSaveAction(UASAction.SAVE);
       });
+
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      // The refresh failed, so the displayed status is still unverified and the
+      // tooltip must stay put rather than implying a successful recovery.
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: UASAction.SAVE,
+      });
+
+      await act(async () => {
+        onlineManager.setOnline(false);
+      });
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
       expect(result.current.actionResult).toBeNull();
     });
 
