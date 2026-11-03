@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import {
   render,
   screen,
@@ -38,7 +39,10 @@ describe('Live Page Header', () => {
     mockMatchMedia();
   });
 
-  const renderElectionHeader = async (props = {}) => {
+  const renderElectionHeader = async (
+    props?: Partial<ComponentProps<typeof Header>>,
+    options?: Parameters<typeof render>[1],
+  ) => {
     const results: ReturnType<typeof render>[] = [];
 
     await act(async () => {
@@ -57,6 +61,7 @@ describe('Live Page Header', () => {
               electionBanner: { enabled: true },
               livePageElectionBanner: { enabled: true },
             },
+            ...options,
           },
         ),
       );
@@ -107,7 +112,58 @@ describe('Live Page Header', () => {
     });
   });
 
-  describe('election banner', () => {
+  describe.each(['test', 'live'])('election banner in %s', appEnv => {
+    const originalEnv = process.env;
+
+    beforeEach(() => {
+      process.env = { ...originalEnv, SIMORGH_APP_ENV: appEnv };
+    });
+
+    afterEach(() => {
+      process.env = originalEnv;
+    });
+
+    it('should not render on Lite', async () => {
+      const { queryByTestId } = await renderElectionHeader(
+        {},
+        { isLite: true },
+      );
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
+
+    it('should not render when the toggle is disabled', async () => {
+      const { queryByTestId } = await renderElectionHeader(
+        {},
+        { toggles: { livePageElectionBanner: { enabled: false } } },
+      );
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
+
+    it('should not render when election taggings do not match', async () => {
+      const { queryByTestId } = await renderElectionHeader({
+        taggings: [],
+      });
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
+
+    it('should not render for editorially sensitive content', async () => {
+      const { queryByTestId } = await renderElectionHeader({
+        taggings: [
+          ...electionTaggings,
+          {
+            predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+            value:
+              'http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id',
+          },
+        ],
+      });
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
+
     it('should not render when a live media stream is present', async () => {
       const { queryByTestId } = await renderElectionHeader({
         mediaCollections: liveMediaCollections,
