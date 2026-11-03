@@ -23,7 +23,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   },
   {
     pageType: HOME_PAGE,
-    activeExperiments: [],
+    activeExperiments: ['test_server_side_experiment_visits_aa'],
   },
 ];
 
