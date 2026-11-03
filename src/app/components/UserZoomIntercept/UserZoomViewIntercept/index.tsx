@@ -21,6 +21,11 @@ export default ({ trigger = 'immediate' }: UserZoomViewInterceptProps = {}) => {
       return undefined;
     }
 
+    if (trigger === 'immediate') {
+      setHasTriggered(true);
+      return undefined;
+    }
+
     if (trigger === 'view') {
       const target = markerRef.current;
       if (!target) return undefined;
