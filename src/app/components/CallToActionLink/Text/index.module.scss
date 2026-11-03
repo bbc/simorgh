@@ -1,0 +1,28 @@
+@use '@scss/themeTokens' as theme;
+
+.text {
+  color: inherit;
+}
+
+.defaultTextStyles {
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-10;
+
+  :global(a:visited) & {
+    color: theme.$palette-metal;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-metal;
+  }
+
+  :global(a:focus) &,
+  :global(a:hover) & {
+    color: theme.$palette-postbox;
+    border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid
+      theme.$palette-postbox;
+  }
+}
+
+.underlineOnHoverFocus {
+  :global(a:focus) &,
+  :global(a:hover) & {
+    text-decoration: underline;
+  }
+}

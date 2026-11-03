@@ -1,0 +1,48 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  margin: theme.$spacings-triple theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin: theme.$spacings-triple theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin: theme.$spacings-triple 0;
+  }
+}
+
+.card {
+  background-color: theme.$palette-white;
+  padding: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: 0.1875rem solid transparent;
+  }
+}
+
+.text {
+  padding-top: #{theme.pixelsToRem-px-to-rem(12)};
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: start;
+
+  .callToActionLink {
+    padding: #{theme.pixelsToRem-px-to-rem(12)} theme.$spacings-double;
+    margin-top: theme.$spacings-double;
+    background-color: theme.$palette-grey-10;
+    width: auto;
+    color: theme.$palette-white;
+
+    &:hover,
+    &:focus {
+      color: theme.$palette-white;
+    }
+  }
+
+  .chevronSpacing {
+    margin-inline-start: #{theme.pixelsToRem-px-to-rem(12)};
+  }
+}

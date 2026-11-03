@@ -1,4 +1,5 @@
 import { useTheme } from '@emotion/react';
+import clsx from 'clsx';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import {
@@ -7,8 +8,11 @@ import {
 } from '#app/utilities/imageSrcSets';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import CallToActionLink from '../CallToActionLink';
+
+const IMAGE_WIDTH = 184;
+const IMAGE_WIDTH_GROUP_3_MIN_WIDTH = 224;
 
 interface MessageBannerProps {
   description?: string;
@@ -42,36 +46,35 @@ const MessageBanner = ({
 
   const imgSrcLarge = image?.replace(
     '{width}',
-    `${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}`,
+    `${IMAGE_WIDTH_GROUP_3_MIN_WIDTH}`,
   );
 
   const responsiveImage = createResponsiveSrcSet({
     imageUrlTemplate: image,
     mq,
-    imageWidthSmall: styles.IMAGE_WIDTH,
-    imageWidthLarge: styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
+    imageWidthSmall: IMAGE_WIDTH,
+    imageWidthLarge: IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   return (
-    <div {...viewTracker} css={styles.card}>
-      <div css={styles.textWrap}>
+    <div {...viewTracker} className={styles.card}>
+      <div className={styles.textWrap}>
         {children}
-        <Paragraph size="longPrimer" css={styles.paragraph}>
+        <Paragraph size="longPrimer" className={styles.paragraph}>
           {description}
         </Paragraph>
       </div>
-      <div css={styles.flex}>
+      <div className={styles.flex}>
         <CallToActionLink
           url={link}
-          className="focusIndicatorInvert"
+          className={clsx('focusIndicatorInvert', styles.callToActionLink)}
           eventTrackingData={eventTrackingDataWithoutItemCount}
-          css={styles.callToActionLink}
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text
               shouldUnderlineOnHoverFocus
-              css={styles.callToActionLinkText}
+              className={styles.callToActionLinkText}
             >
               {linkText}
               <CallToActionLink.Chevron />
@@ -79,7 +82,7 @@ const MessageBanner = ({
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>
         {image && (
-          <div css={styles.image}>
+          <div className={styles.image}>
             <Image
               alt=""
               src={imgSrcLarge as string}

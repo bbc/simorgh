@@ -1,0 +1,94 @@
+@use '@scss/themeTokens' as theme;
+
+.card {
+  height: auto;
+  background: radial-gradient(
+    circle at 20% 90%,
+    #a20219,
+    #180109 60%,
+    #500115 90%
+  );
+  padding-inline: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    background: linear-gradient(-120deg, #a20219 0%, #180109 54%, #180109 90%);
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: 0.1875rem solid transparent;
+  }
+}
+
+.textWrap {
+  @media #{theme.$mediaQueries-group-3-min-width} and #{theme.$mediaQueries-group-3-max-width} {
+    width: 66%;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    width: 75%;
+  }
+}
+
+.paragraph {
+  padding-bottom: theme.$spacings-full;
+  color: theme.$palette-white;
+}
+
+.image {
+  max-width: 184px;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    max-width: 224px;
+    inset-inline-end: 0;
+    position: absolute;
+  }
+
+  img {
+    object-position: top;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .callToActionLink {
+    padding: theme.$spacings-double;
+    background-color: theme.$palette-white;
+    margin-block-end: theme.$spacings-double;
+    margin-inline: theme.$spacings-double;
+    width: 100%;
+    color: theme.$palette-black;
+
+    &:hover,
+    &:focus {
+      background-color: theme.$palette-grey-2;
+      color: theme.$palette-black;
+    }
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      width: auto;
+      max-width: calc(100% - 240px);
+      margin-block: 0 theme.$spacings-triple;
+      margin-inline: 0;
+      padding-bottom: theme.$spacings-full;
+    }
+
+    span {
+      padding-inline-start: theme.$spacings-half;
+    }
+  }
+
+  .callToActionLinkText {
+    color: theme.$palette-black;
+  }
+}
