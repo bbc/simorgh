@@ -15,7 +15,6 @@ import {
   STICKY_NAV_EXIT_BUFFER_PX,
   STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
   STICKY_NAV_TAB_STOP_SELECTOR,
-  STICKY_NAVIGATION_TREATMENT,
   STICKY_TRANSITION_DURATION_MS,
 } from './config';
 
@@ -88,7 +87,7 @@ const useLatestRef = <T>(value: T) => {
 type UseStickyNavigationProps = {
   isOpen: boolean;
   closeMenu: () => void;
-  experimentVariant: string | null;
+  isExperimentEnabled: boolean;
 };
 
 /**
@@ -102,17 +101,14 @@ type UseStickyNavigationProps = {
 const useStickyNavigation = ({
   isOpen,
   closeMenu,
-  experimentVariant,
+  isExperimentEnabled,
 }: UseStickyNavigationProps) => {
-  const { isLite, env, pageType } = use(RequestContext);
+  const { isLite, pageType } = use(RequestContext);
 
   // None of these can change without a new page load, so the viewport
   // listeners below are only ever attached on pages that could use them.
   const isSupported =
-    experimentVariant === STICKY_NAVIGATION_TREATMENT &&
-    env === 'live' &&
-    pageType === ARTICLE_PAGE &&
-    !isLite;
+    isExperimentEnabled && pageType === ARTICLE_PAGE && !isLite;
 
   const [isViewportEligible, setIsViewportEligible] = useState(false);
   const isEnabled = isSupported && isViewportEligible;
