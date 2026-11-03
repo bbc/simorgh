@@ -34,18 +34,22 @@ test.describe('articlePage', () => {
       waitUntil: 'domcontentloaded',
     });
 
-    await Promise.all(
-      ONWARD_JOURNEYS.map(async onwardJourney => {
-        if (!onwardJourneyRequests.has(onwardJourney)) {
-          await page
-            .getByTestId(`onward-journey-skeleton-${onwardJourney}`)
-            .scrollIntoViewIfNeeded();
-        }
+    const requestOnwardJourney = async (onwardJourney: string) => {
+      if (!onwardJourneyRequests.has(onwardJourney)) {
+        await page
+          .getByTestId(`onward-journey-skeleton-${onwardJourney}`)
+          .scrollIntoViewIfNeeded();
+      }
 
-        await expect
-          .poll(() => onwardJourneyRequests.has(onwardJourney))
-          .toBe(true);
-      }),
+      await expect
+        .poll(() => onwardJourneyRequests.has(onwardJourney))
+        .toBe(true);
+    };
+
+    await ONWARD_JOURNEYS.reduce(
+      (requestChain, onwardJourney) =>
+        requestChain.then(() => requestOnwardJourney(onwardJourney)),
+      Promise.resolve(),
     );
 
     expect(new Set(onwardJourneyRequests.keys())).toEqual(
