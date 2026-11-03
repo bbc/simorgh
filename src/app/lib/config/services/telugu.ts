@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'సంబంధిత కథనాలు',
       relatedTopics: 'సంబంధిత అంశాలు',
+      showMore: 'మరింత చూపించు',
       moreOnThis: '',
       navMenuText: 'విభాగాలు',
       liteSite: {
