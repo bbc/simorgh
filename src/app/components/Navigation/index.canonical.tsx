@@ -20,7 +20,6 @@ import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import {
   FOCUSABLE_ITEMS_SELECTOR,
   STICKY_NAVIGATION_COMPONENT,
@@ -77,7 +76,6 @@ type CanonicalNavigationContainerProps = {
   stickyTopScrollableListItems: React.ReactNode;
   stickyBottomScrollableListItems: React.ReactNode;
   stickyDropdownListItems: React.ReactNode;
-  stickyNavClickTracker: ReturnType<typeof useClickTrackerHandler>;
   stickyNavExperimentVariant: string | null;
   blocks?: TopStoryItem[];
 };
@@ -91,7 +89,6 @@ const CanonicalNavigationContainer = ({
   stickyTopScrollableListItems,
   stickyBottomScrollableListItems,
   stickyDropdownListItems,
-  stickyNavClickTracker,
   stickyNavExperimentVariant,
   blocks,
 }: CanonicalNavigationContainerProps) => {
@@ -105,15 +102,10 @@ const CanonicalNavigationContainer = ({
   const sticky = useStickyNavigation({
     isOpen,
     closeMenu,
-    experimentVariant: stickyNavExperimentVariant,
+    isExperimentEnabled:
+      Boolean(stickyNavExperimentVariant) &&
+      stickyNavExperimentVariant !== 'off',
   });
-  const handleStickyMenuClick = useCallback(
-    async (event: React.MouseEvent<HTMLButtonElement>) => {
-      toggleMenu();
-      await stickyNavClickTracker.onClick?.(event);
-    },
-    [stickyNavClickTracker, toggleMenu],
-  );
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -319,7 +311,7 @@ const CanonicalNavigationContainer = ({
                   css={styles.menuButton}
                   announcedText={menuAnnouncedText}
                   isOpen={isOpen}
-                  onClick={handleStickyMenuClick}
+                  onClick={toggleMenu}
                   dir={dir}
                 />
               )}
@@ -352,7 +344,7 @@ const CanonicalNavigationContainer = ({
       stickyTopScrollableListItems,
       stickyBottomScrollableListItems,
       stickyDropdownListItems,
-      handleStickyMenuClick,
+      toggleMenu,
       navRef,
       dropDownNavRef,
       secondaryScrollRef,
