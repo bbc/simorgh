@@ -106,6 +106,28 @@ describe('TopBarOJs', () => {
     ).toBeInTheDocument();
   });
 
+  it('renders hydrated Top Stories for the Top Stories treatment', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: {
+        secondaryColumn: { topStories: topStoriesBlocks },
+      } as never,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />, {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    });
+
+    expect(screen.getAllByRole('listitem')).toHaveLength(3);
+  });
+
   it('should not render TopBarOJs component when isLive is true', () => {
     const mockedIsLive = isLive as jest.Mock;
     mockedIsLive.mockReturnValue(true);

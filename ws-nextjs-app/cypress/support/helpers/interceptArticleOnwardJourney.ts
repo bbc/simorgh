@@ -20,11 +20,15 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
   applicationType,
   onwardJourney,
   testContext,
+  headers,
+  triggerSelector,
 }: {
   path: string;
   applicationType: string;
   onwardJourney: string;
   testContext: { skip: () => void };
+  headers?: Record<string, string>;
+  triggerSelector?: string;
 }) => {
   const onwardJourneyAlias =
     applicationType === 'responsive' && path.includes('/articles/')
@@ -35,11 +39,14 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
     clearOnwardJourneyCache();
   }
 
-  cy.visit(path);
+  cy.visit(path, {
+    ...(headers && { headers }),
+  });
 
   if (onwardJourneyAlias) {
     cy.get(
-      `[data-testid="onward-journey-skeleton-${onwardJourney}"]`,
+      triggerSelector ??
+        `[data-testid="onward-journey-skeleton-${onwardJourney}"], [data-testid="onward-journey-reservation-${onwardJourney}"]`,
     ).scrollIntoView();
     cy.wait(onwardJourneyAlias).then(({ response }) => {
       if (response?.statusCode !== 200) testContext.skip();

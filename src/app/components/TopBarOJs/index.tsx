@@ -27,7 +27,10 @@ const TopBarOJs = ({
   const { serverSideExperiments } = use(RequestContext);
   const viewTracker = useViewTracker(eventTrackingData);
   const onwardJourneyContext = useOnwardJourneyRequest();
-  const hasBlocks = Boolean(blocks?.length);
+  const hydratedBlocks =
+    onwardJourneyContext?.article?.secondaryColumn?.topStories;
+  const topStoriesBlocks = blocks?.length ? blocks : hydratedBlocks;
+  const hasBlocks = Boolean(topStoriesBlocks?.length);
   const isTopBarExperimentTreatment = isTopBarOnwardJourneyExperiment(
     serverSideExperiments,
   );
@@ -55,7 +58,10 @@ const TopBarOJs = ({
             {title}
           </strong>
           <div css={styles.promoContainer}>
-            <PromoList blocks={blocks} eventTrackingData={eventTrackingData} />
+            <PromoList
+              blocks={topStoriesBlocks ?? []}
+              eventTrackingData={eventTrackingData}
+            />
           </div>
         </>
       ) : (
