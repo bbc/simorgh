@@ -16,6 +16,23 @@ type ServerSideExperimentConfig = {
   pageTypes: PageTypes[];
 };
 
-const enabledExperimentList: ServerSideExperimentConfig[] = [];
+const enabledExperimentList: ServerSideExperimentConfig[] = [
+
+  // experiment: test_server_side_experiment_visits_aa
+  {
+    name: 'test_server_side_experiment_visits_aa',
+    services: [
+      'afaanoromoo',
+      'afrique',
+      'amharic',
+      'igbo',
+      'somali',
+      'swahili',
+      'tigrinya',
+      'yoruba',
+    ],
+    pageTypes: ['home'],
+  },
+];
 
 export default enabledExperimentList;
