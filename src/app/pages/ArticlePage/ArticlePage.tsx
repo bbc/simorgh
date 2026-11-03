@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, use } from 'react';
+import { useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
