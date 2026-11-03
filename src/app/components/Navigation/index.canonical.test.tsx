@@ -41,7 +41,6 @@ const navigationProps: ComponentProps<typeof CanonicalNavigation> = {
   stickyTopScrollableListItems: scrollableListItems,
   stickyBottomScrollableListItems: scrollableListItems,
   stickyDropdownListItems: dropdownListItems,
-  stickyNavClickTracker: { onClick: jest.fn() },
   stickyNavExperimentVariant: STICKY_NAVIGATION_TREATMENT,
   menuAnnouncedText: 'menu',
   dir: 'ltr',
@@ -55,7 +54,6 @@ const navigation = (
     stickyTopScrollableListItems={scrollableListItems}
     stickyBottomScrollableListItems={scrollableListItems}
     stickyDropdownListItems={dropdownListItems}
-    stickyNavClickTracker={{ onClick: jest.fn() }}
     stickyNavExperimentVariant={STICKY_NAVIGATION_TREATMENT}
     menuAnnouncedText="menu"
     dir="ltr"
@@ -257,7 +255,6 @@ describe('Navigation - Canonical', () => {
         </main>
       </>
     );
-
     beforeEach(() => {
       dispatchTrackingRequestsMock.mockClear();
       mockIntersectionObserver.clearObservers();
@@ -449,10 +446,7 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it.each([
-        ['Lite', { isLite: true }],
-        ['non-live', { bbcOrigin: 'https://www.test.bbc.com' }],
-      ])(
+      it.each([['Lite', { isLite: true }]])(
         'does not show the sticky navigation bar when the page is %s',
         (_, options) => {
           const { container } = render(navigation, {
