@@ -53,6 +53,9 @@ const baseServiceConfig = {
   electionBanner: {
     title: '2026年美國中期選舉',
     electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+    electionCurationIds: [
+      'urn:bbc:vivo:curation:8ba8969d-1960-4456-a923-b8be920e687e',
+    ],
     assocPressIframeSrc:
       'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
   },
