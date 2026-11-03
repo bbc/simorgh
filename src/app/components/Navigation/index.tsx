@@ -489,7 +489,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         stickyTopScrollableListItems={stickyTopScrollableListItems}
         stickyBottomScrollableListItems={stickyBottomScrollableListItems}
         stickyDropdownListItems={stickyDropdownListItems}
-        stickyNavClickTracker={stickyNavClickTrackerHandler}
         stickyNavExperimentVariant={stickyNavExperimentVariant}
         menuAnnouncedText={navMenuText}
         dir={dir}
