@@ -2,7 +2,7 @@ import { use, useEffect, useRef, useState, RefObject } from 'react';
 import Script from 'next/script';
 import { RequestContext } from '#contexts/RequestContext';
 import getIntersectionObserver from '#hooks/useViewTracker/getIntersectionObserver';
-import styles from './ViewIntercept/index.module.scss';
+import styles from './UserZoomViewIntercept/index.module.scss';
 
 // Permanent UserZoom Site Intercept code - spike only, article pages
 const USERZOOM_SRC =

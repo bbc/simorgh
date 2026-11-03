@@ -1,20 +1,16 @@
-import { use, useEffect, useRef, useState, RefObject } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import getIntersectionObserver from '#hooks/useViewTracker/getIntersectionObserver';
 import styles from './index.module.scss';
 import UserZoomScript from '../UserZoomScript';
 
-export type UserZoomInterceptProps = {
+export type UserZoomViewInterceptProps = {
   // 'view': fires when this component scrolls into view (place it at the trigger point).
   // 'immediate': loads as soon as the component mounts.
   trigger?: 'immediate' | 'view';
-  targetRef?: RefObject<HTMLElement | null>;
 };
 
-export default ({
-  trigger = 'immediate',
-  targetRef,
-}: UserZoomInterceptProps = {}) => {
+export default ({ trigger = 'immediate' }: UserZoomViewInterceptProps = {}) => {
   const { isAmp, isApp, isLite } = use(RequestContext);
   const [hasTriggered, setHasTriggered] = useState(trigger === 'immediate');
   const markerRef = useRef<HTMLSpanElement>(null);
@@ -43,7 +39,7 @@ export default ({
     }
 
     return undefined;
-  }, [trigger, targetRef, hasTriggered]);
+  }, [trigger, hasTriggered]);
 
   if (isAmp || isApp || isLite) {
     return null;

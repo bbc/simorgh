@@ -65,8 +65,6 @@ import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCou
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
-import ButtonIntercept from '#app/components/UserZoomIntercept/UserZoomButtonIntercept';
-import ViewIntercept from '#app/components/UserZoomIntercept/UserZoomViewIntercept';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -546,12 +544,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             role="main"
             ref={scrollDepthRef}
           >
-            <ButtonIntercept />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <ViewIntercept trigger="view" />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
