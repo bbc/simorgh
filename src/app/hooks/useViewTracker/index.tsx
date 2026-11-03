@@ -71,8 +71,6 @@ const getComponentViewTracker = (
   useEffect(() => {
     setComponentHasComeIntoView(alwaysInView);
     setEventSent(false);
-    (observer.current as unknown as IntersectionObserver)?.disconnect();
-    observer.current = null;
   }, [viewTrackerKey, alwaysInView]);
 
   useEffect(() => {
@@ -203,10 +201,16 @@ const getComponentViewTracker = (
     viewThreshold,
   ]);
   const viewTracker = useCallback(
-    async (element: HTMLElement) => {
+    async (element: HTMLElement | null) => {
+      if (!element) {
+        (observer.current as unknown as IntersectionObserver)?.disconnect();
+        observer.current = null;
+        return;
+      }
+
       const shouldSetupIntersectionObserver = alwaysInView
         ? false
-        : !(!element || !trackingIsEnabled || eventSent);
+        : trackingIsEnabled && !eventSent;
 
       if (shouldSetupIntersectionObserver) {
         if (!observer.current) {
@@ -219,6 +223,8 @@ const getComponentViewTracker = (
         (observer.current as unknown as IntersectionObserver)?.observe(element);
       }
     },
+    // The ref callback must change with the key so React reattaches tracked elements.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [trackingIsEnabled, eventSent, viewThreshold, alwaysInView, viewTrackerKey],
   );
 
