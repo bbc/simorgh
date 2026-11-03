@@ -181,10 +181,15 @@ describe('Service Worker', () => {
 
     describe('when url is not cacheable', () => {
       it.each`
-        assetUrl                  | reason
-        ${'woff2'}                | ${'url is missing leading .'}
-        ${'modern.frosted_promo'} | ${'full static files path is missing'}
-        ${'not-cached'}           | ${'url is not in the allow list of cacheable urls'}
+        assetUrl                                                                                             | reason
+        ${'woff2'}                                                                                           | ${'url is missing leading .'}
+        ${'modern.frosted_promo'}                                                                            | ${'full static files path is missing'}
+        ${'not-cached'}                                                                                      | ${'url is not in the allow list of cacheable urls'}
+        ${'https://example.com/images/icons/close.svg'}                                                      | ${'SVG is on an unrelated origin'}
+        ${'https://static.files.bbci.co.uk/other/images/icons/close.svg'}                                    | ${'SVG is outside Simorgh static assets'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg.png'}             | ${'file is not an SVG'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/api/og/article.svg'}                     | ${'generated SVG is not a static icon, logo, or font'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.png?asset=close.svg'} | ${'SVG occurs only in a query parameter'}
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
         async ({ assetUrl }) => {
@@ -194,6 +199,7 @@ describe('Service Worker', () => {
             request: {
               url: assetUrl,
               mode: 'same-origin',
+              method: 'GET',
             },
             respondWith: jest.fn(),
           };
@@ -207,6 +213,17 @@ describe('Service Worker', () => {
     });
 
     const cacheableAssets = [
+      // External SVG icons, service logos, and legacy fonts
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/ws-header-logo.svg?v=2',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/brand.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/brand.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/images/icons/share.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/zhongwen/images/brand.svg',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/NotoSansEthiopic/v1.901/normal.svg',
+      'http://localhost/images/icons/close.svg',
+      'http://localhost:7080/images/icons/play.svg',
+      'http://localhost:7080/hindi/images/brand.svg',
       // Fonts
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
@@ -247,8 +264,44 @@ describe('Service Worker', () => {
           const responseBody = await response.text();
 
           expect(responseBody).toBe(`${assetUrl}-cached`);
+          expect(global.fetch).not.toHaveBeenCalled();
         },
       );
+    });
+
+    it('serves an SVG from cache when the network is unavailable', async () => {
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+      global.fetch.mockRejectedValue(new Error('Offline'));
+      const event = {
+        request: new Request(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+        ),
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+      const response = await event.respondWith.mock.calls[0][0];
+
+      expect(await response.text()).toBe(
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg-cached',
+      );
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it('does not intercept SVG POST requests', async () => {
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+      const event = {
+        request: new Request(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+          { method: 'POST' },
+        ),
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).not.toHaveBeenCalled();
+      expect(global.fetch).not.toHaveBeenCalled();
     });
 
     describe('when cache does not contain asset', () => {
@@ -259,6 +312,25 @@ describe('Service Worker', () => {
         };
 
         fetchedCache = {};
+      });
+
+      it('does not cache failed SVG responses', async () => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
+        const url =
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg';
+        global.fetch.mockResolvedValueOnce(
+          new Response('Not found', { status: 404 }),
+        );
+        const event = {
+          request: new Request(url),
+          respondWith: jest.fn(),
+        };
+
+        await fetchEventHandler(event);
+        const response = await event.respondWith.mock.calls[0][0];
+
+        expect(response.status).toBe(404);
+        expect(fetchedCache[url]).toBeUndefined();
       });
 
       it.each(cacheableAssets)(
@@ -620,8 +692,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.8',
-      fileContentHash: '8b0ba8bb11dd447960259e1e8f7b2fc5',
+      number: 'v0.3.9',
+      fileContentHash: '490ecb106ee13906c61a041deaf1760a',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

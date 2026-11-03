@@ -4,9 +4,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.8';
+const version = 'v0.3.9';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v4';
+const cacheName = 'simorghCache_v5';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -87,6 +87,28 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
+const isSvgAsset = url => {
+  const assetUrl = new URL(url, self.location.origin);
+  const staticAssetsPath = /^\/ws\/simorgh(?:[12]-preview)?-assets\/public\//;
+  const isStaticAssetsCdn =
+    /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk$/.test(assetUrl.origin) &&
+    staticAssetsPath.test(assetUrl.pathname);
+  const isLocalAsset =
+    assetUrl.origin === self.location.origin ||
+    (self.location.hostname === 'localhost' &&
+      assetUrl.origin === 'http://localhost:7080');
+  const assetPath = isStaticAssetsCdn
+    ? assetUrl.pathname.replace(staticAssetsPath, '/')
+    : assetUrl.pathname;
+
+  return (
+    (isStaticAssetsCdn || isLocalAsset) &&
+    /^\/(?:images\/icons\/[^/]+|[a-z]+\/images\/brand|fonts\/.+)\.svg$/.test(
+      assetPath,
+    )
+  );
+};
+
 // -------------Install event -------
 self.addEventListener('install', () => {
   self.skipWaiting();
@@ -122,9 +144,11 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
-  );
+  const isRequestForCacheableFile =
+    CACHEABLE_FILES.some(cacheableFile =>
+      new RegExp(cacheableFile).test(event.request.url),
+    ) ||
+    (event.request.method === 'GET' && isSvgAsset(event.request.url));
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
 

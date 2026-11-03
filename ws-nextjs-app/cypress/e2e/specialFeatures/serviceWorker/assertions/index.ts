@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-expressions */
 import { Services } from '#app/models/types/global';
 
-const SERVICE_WORKER_CACHE = 'simorghCache_v1';
+const SERVICE_WORKER_CACHE = 'simorghCache_v5';
 
 export const serviceWorkerIsAvailable = () => {
   it('Service Worker is available', () => {
@@ -37,7 +37,7 @@ export const serviceWorkerCaching = () => {
         win.caches
           .keys()
           .then(keys => {
-            expect(keys).to.include('simorghCache_v1');
+            expect(keys).to.include(SERVICE_WORKER_CACHE);
           })
           .catch(err => console.error(err));
       });
@@ -63,6 +63,7 @@ export const serviceWorkerCaching = () => {
     });
 
     const cacheableItems = [
+      '.svg',
       'woff2',
       'frosted_promo',
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.14.0.js',
