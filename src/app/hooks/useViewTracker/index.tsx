@@ -22,7 +22,14 @@ import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/di
 
 const VIEWED_DURATION_MS = 1000;
 
-const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
+type ViewTrackerEventTrackingData = EventTrackingData & {
+  viewTrackerKey?: unknown;
+};
+
+const getComponentViewTracker = (
+  eventTrackingData?: ViewTrackerEventTrackingData,
+) => {
+  const { viewTrackerKey } = eventTrackingData || {};
   const {
     componentName,
     format,
@@ -59,6 +66,11 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const { service, resonanceEnabled } = use(ServiceContext);
+
+  useEffect(() => {
+    setComponentHasComeIntoView(alwaysInView);
+    setEventSent(false);
+  }, [viewTrackerKey, alwaysInView]);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -188,10 +200,16 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     viewThreshold,
   ]);
   const viewTracker = useCallback(
-    async (element: HTMLElement) => {
+    async (element: HTMLElement | null) => {
+      if (!element) {
+        (observer.current as unknown as IntersectionObserver)?.disconnect();
+        observer.current = null;
+        return;
+      }
+
       const shouldSetupIntersectionObserver = alwaysInView
         ? false
-        : !(!element || !trackingIsEnabled || eventSent);
+        : trackingIsEnabled && !eventSent;
 
       if (shouldSetupIntersectionObserver) {
         if (!observer.current) {
@@ -204,13 +222,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         (observer.current as unknown as IntersectionObserver)?.observe(element);
       }
     },
-    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
+    // The ref callback must change with the key so React reattaches tracked elements.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView, viewTrackerKey],
   );
 
   return viewTracker;
 };
 
-export default (eventTrackingData?: EventTrackingData): any => {
+export default (eventTrackingData?: ViewTrackerEventTrackingData): any => {
   const { isLite } = use(RequestContext);
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
