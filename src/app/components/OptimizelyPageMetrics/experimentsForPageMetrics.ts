@@ -15,15 +15,15 @@ type ExperimentsForPageTypeMetrics = {
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['test_page_views_aa_3', 'newswb_ws_sticky_navigation'],
+    activeExperiments: ['newswb_ws_sticky_navigation'],
   },
   {
     pageType: MEDIA_ARTICLE_PAGE,
-    activeExperiments: ['test_page_views_aa_3'],
+    activeExperiments: [],
   },
   {
     pageType: HOME_PAGE,
-    activeExperiments: ['test_page_views_aa_4'],
+    activeExperiments: [],
   },
 ];
 
