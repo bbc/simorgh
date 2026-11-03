@@ -130,6 +130,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      showMore: 'Mostrar más',
       moreOnThis: '',
       navMenuText: 'Secciones',
       liteSite: {

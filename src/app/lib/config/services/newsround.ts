@@ -42,6 +42,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
+      showMore: 'Show more',
       ads: {
         advertisementLabel: 'Advertisement',
       },
