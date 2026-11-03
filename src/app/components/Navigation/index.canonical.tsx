@@ -190,8 +190,8 @@ const CanonicalNavigationContainer = ({
   }, [isOpen, dropDownNavRef, navRef, closeMenu]);
 
   const topBarOJs = useMemo(
-    () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
-    [topBarOJsEnabled, blocks],
+    () => !isLite && topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
+    [isLite, topBarOJsEnabled, blocks],
   );
   // Scrolling updates the sticky state several times a second. Nothing in
   // this subtree depends on that state, so it is rebuilt only when something

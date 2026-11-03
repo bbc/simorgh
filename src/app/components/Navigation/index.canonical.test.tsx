@@ -176,6 +176,19 @@ describe('Navigation - Canonical', () => {
         });
         await waitFor(() => assertion(queryByTestId));
       });
+
+      it('does not show the related articles block on Lite pages', () => {
+        // @ts-expect-error partial data for testing purposes
+        const { queryByTestId } = render(
+          <CanonicalNavigation {...navigationProps} blocks={blocks} />,
+          {
+            isLite: true,
+            toggles: { topBarOJs: { enabled: true } },
+          },
+        );
+
+        expect(queryByTestId('top-bar-onward-journeys')).toBeNull();
+      });
     });
   });
 
