@@ -11,7 +11,7 @@ import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
-jest.mock('#app/components/OnwardJourneyPlaceholder', () => ({
+jest.mock('#app/components/OnwardJourneyPlaceholder/lazy', () => ({
   __esModule: true,
   default: () => (
     <div data-testid="onward-journey-skeleton-topStoriesAndFeatures" />

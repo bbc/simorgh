@@ -6,7 +6,7 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import SecondaryColumn from './SecondaryColumn';
 
-jest.mock('#app/components/OnwardJourneyPlaceholder', () => ({
+jest.mock('#app/components/OnwardJourneyPlaceholder/lazy', () => ({
   __esModule: true,
   default: () => <div data-testid="secondary-column-placeholder" />,
 }));

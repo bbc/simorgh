@@ -21,9 +21,9 @@ export const assertFeaturesAnalysisComponentView = ({
       testContext: this,
     });
 
-    // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
-    cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-testid="features"] li')
+      .first()
+      .scrollIntoView({ duration: 1000 });
 
     assertATIComponentViewEvent({
       component: FEATURES,

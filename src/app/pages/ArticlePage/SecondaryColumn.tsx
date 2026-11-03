@@ -3,7 +3,7 @@ import { useTheme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
-import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
+import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder/lazy';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isTopBarOnwardJourneyExperiment from '#app/lib/utilities/isTopBarOnwardJourneyExperiment';

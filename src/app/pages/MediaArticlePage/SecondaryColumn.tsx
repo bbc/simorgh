@@ -1,5 +1,5 @@
 import { Article } from '#app/models/types/optimo';
-import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
+import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder/lazy';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import LatestMediaSection from './PagePromoSections/LatestMediaSection';
 import styles from './MediaArticlePage.styles';

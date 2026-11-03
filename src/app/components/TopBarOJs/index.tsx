@@ -1,6 +1,6 @@
 import { use } from 'react';
 import useViewTracker from '#hooks/useViewTracker';
-import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder';
+import OnwardJourneyPlaceholder from '#app/components/OnwardJourneyPlaceholder/lazy';
 import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isTopBarOnwardJourneyExperiment from '#app/lib/utilities/isTopBarOnwardJourneyExperiment';
@@ -8,7 +8,7 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import PromoList from './PromoList';
-import styles from './index.module.scss';
+import styles from './index.styles';
 
 interface TopBarOJsProps {
   blocks: TopStoryItem[];
@@ -46,15 +46,15 @@ const TopBarOJs = ({
       role="region"
       aria-label={id}
       data-testid={id}
-      className={styles.topBarOJWrapper}
+      css={styles.topBarOJWrapper}
       {...viewTracker}
     >
       {hasBlocks ? (
         <>
-          <strong className={styles.labelComponent} id={id}>
+          <strong css={styles.labelComponent} id={id}>
             {title}
           </strong>
-          <div className={styles.promoContainer}>
+          <div css={styles.promoContainer}>
             <PromoList blocks={blocks} eventTrackingData={eventTrackingData} />
           </div>
         </>

@@ -10,6 +10,11 @@ const interceptArticleOnwardJourney = (onwardJourney: string) => {
   return `@${alias}`;
 };
 
+const clearOnwardJourneyCache = () =>
+  cy
+    .window()
+    .then(window => window.caches?.delete('simorghOnwardJourneysCache_v1'));
+
 export const visitArticlePageAndWaitForOnwardJourney = ({
   path,
   applicationType,
@@ -25,6 +30,10 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
     applicationType === 'responsive' && path.includes('/articles/')
       ? interceptArticleOnwardJourney(onwardJourney)
       : undefined;
+
+  if (onwardJourneyAlias) {
+    clearOnwardJourneyCache();
+  }
 
   cy.visit(path);
 

@@ -96,7 +96,7 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
-import OnwardJourneyPlaceholder from '../../components/OnwardJourneyPlaceholder';
+import OnwardJourneyPlaceholder from '../../components/OnwardJourneyPlaceholder/lazy';
 import { useOnwardJourneyRequest } from '../../contexts/ArticleOnwardJourneysContext';
 
 const getImageComponent =

@@ -19,6 +19,7 @@ import {
   fireEvent,
   act,
   screen,
+  waitFor,
 } from '../react-testing-library-with-providers';
 
 const blocks = [{ id: '1', title: 'Story' }];
@@ -168,12 +169,12 @@ describe('Navigation - Canonical', () => {
           queryByTestId =>
             expect(queryByTestId('top-bar-onward-journeys')).toBeNull(),
         ],
-      ])('%s', (_, props, toggles, assertion) => {
+      ])('%s', async (_, props, toggles, assertion) => {
         // @ts-expect-error partial data for testing purposes
         const { queryByTestId } = render(<CanonicalNavigation {...props} />, {
           toggles,
         });
-        assertion(queryByTestId);
+        await waitFor(() => assertion(queryByTestId));
       });
     });
   });
