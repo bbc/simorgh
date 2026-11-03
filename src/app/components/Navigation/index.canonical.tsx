@@ -24,6 +24,7 @@ import {
   FOCUSABLE_ITEMS_SELECTOR,
   STICKY_NAVIGATION_COMPONENT,
   STICKY_NAVIGATION_EXPERIMENT,
+  STICKY_NAVIGATION_TREATMENT,
 } from './config';
 import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
@@ -103,8 +104,7 @@ const CanonicalNavigationContainer = ({
     isOpen,
     closeMenu,
     isExperimentEnabled:
-      Boolean(stickyNavExperimentVariant) &&
-      stickyNavExperimentVariant !== 'off',
+      stickyNavExperimentVariant === STICKY_NAVIGATION_TREATMENT,
   });
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
