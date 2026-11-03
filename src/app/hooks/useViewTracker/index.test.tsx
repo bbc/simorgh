@@ -3,8 +3,10 @@
 import { createContext, PropsWithChildren, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
+  render,
   renderHook,
   act,
+  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -295,6 +297,50 @@ describe('useViewTracker', () => {
         const { observe } = getObserverInstance(element);
 
         expect(observe).toHaveBeenCalledWith(element);
+      });
+
+      it('should keep the observer connected on mount and reconnect it when the tracking key changes', async () => {
+        const TrackedElement = ({
+          viewTrackerKey,
+        }: {
+          viewTrackerKey: string;
+        }) => {
+          const { ref } = useViewTracker({ ...trackingData, viewTrackerKey });
+
+          return <div data-testid="tracked-element" ref={ref} />;
+        };
+
+        const renderTrackedElement = (viewTrackerKey: string) => (
+          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+            {wrapper({
+              children: <TrackedElement viewTrackerKey={viewTrackerKey} />,
+            })}
+          </OptimizelyProvider>
+        );
+        const { getByTestId, rerender } = render(renderTrackedElement('first'));
+        const element = getByTestId('tracked-element');
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const firstObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).not.toHaveBeenCalled();
+
+        await act(async () => {
+          rerender(renderTrackedElement('second'));
+          await Promise.resolve();
+          await Promise.resolve();
+        });
+
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const nextObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).toHaveBeenCalled();
+        expect(nextObserver).not.toBe(firstObserver);
+        expect(nextObserver.observe).toHaveBeenCalledWith(element);
+        expect(nextObserver.disconnect).not.toHaveBeenCalled();
       });
 
       it('should not send event to ATI when element is not in view', async () => {
