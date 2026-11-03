@@ -6,7 +6,7 @@
 
 const version = 'v0.3.9';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v5';
+const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -82,32 +82,13 @@ const CACHEABLE_FILES = [
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
+  // SVG icons, service logos and fonts
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh(?:[12]-preview)?-assets\/public\/(?:images\/icons\/[^/?#]+|[a-z]+\/images\/brand|fonts\/[^?#]+)\.svg(?:\?[^#]*)?$/,
+  /^https?:\/\/(?:localhost(?::\d+)?|127\.0\.0\.1(?::\d+)?|(?:www\.)?bbc\.(?:com|co\.uk))\/(?:images\/icons\/[^/?#]+|[a-z]+\/images\/brand|fonts\/[^?#]+)\.svg(?:\?[^#]*)?$/,
 ];
 
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
-
-const isSvgAsset = url => {
-  const assetUrl = new URL(url, self.location.origin);
-  const staticAssetsPath = /^\/ws\/simorgh(?:[12]-preview)?-assets\/public\//;
-  const isStaticAssetsCdn =
-    /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk$/.test(assetUrl.origin) &&
-    staticAssetsPath.test(assetUrl.pathname);
-  const isLocalAsset =
-    assetUrl.origin === self.location.origin ||
-    (self.location.hostname === 'localhost' &&
-      assetUrl.origin === 'http://localhost:7080');
-  const assetPath = isStaticAssetsCdn
-    ? assetUrl.pathname.replace(staticAssetsPath, '/')
-    : assetUrl.pathname;
-
-  return (
-    (isStaticAssetsCdn || isLocalAsset) &&
-    /^\/(?:images\/icons\/[^/]+|[a-z]+\/images\/brand|fonts\/.+)\.svg$/.test(
-      assetPath,
-    )
-  );
-};
 
 // -------------Install event -------
 self.addEventListener('install', () => {
@@ -145,10 +126,10 @@ self.addEventListener('message', async event => {
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
   const isRequestForCacheableFile =
+    event.request.method === 'GET' &&
     CACHEABLE_FILES.some(cacheableFile =>
       new RegExp(cacheableFile).test(event.request.url),
-    ) ||
-    (event.request.method === 'GET' && isSvgAsset(event.request.url));
+    );
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
 

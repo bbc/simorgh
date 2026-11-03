@@ -175,7 +175,7 @@ describe('Service Worker', () => {
     beforeEach(() => {
       // set up global cache
       global.caches = {
-        open: () => Promise.resolve(serviceWorkerCache),
+        open: jest.fn(() => Promise.resolve(serviceWorkerCache)),
       };
     });
 
@@ -224,6 +224,9 @@ describe('Service Worker', () => {
       'http://localhost/images/icons/close.svg',
       'http://localhost:7080/images/icons/play.svg',
       'http://localhost:7080/hindi/images/brand.svg',
+      'http://127.0.0.1:7181/images/icons/close.svg',
+      'https://www.bbc.com/mundo/images/brand.svg',
+      'https://www.bbc.co.uk/images/icons/close.svg',
       // Fonts
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
@@ -265,6 +268,7 @@ describe('Service Worker', () => {
 
           expect(responseBody).toBe(`${assetUrl}-cached`);
           expect(global.fetch).not.toHaveBeenCalled();
+          expect(caches.open).toHaveBeenCalledWith('simorghCache_v4');
         },
       );
     });
@@ -693,7 +697,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.9',
-      fileContentHash: '490ecb106ee13906c61a041deaf1760a',
+      fileContentHash: 'bf12e040b32561cdd8c41f4dbe31a1bd',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-expressions */
 import { Services } from '#app/models/types/global';
 
-const SERVICE_WORKER_CACHE = 'simorghCache_v5';
+const SERVICE_WORKER_CACHE = 'simorghCache_v4';
 
 export const serviceWorkerIsAvailable = () => {
   it('Service Worker is available', () => {
