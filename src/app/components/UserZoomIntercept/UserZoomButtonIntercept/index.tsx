@@ -1,14 +1,10 @@
-import { use, useEffect, useRef, useState, RefObject } from 'react';
-import Script from 'next/script';
+import { use, useEffect, useRef, useState } from 'react';
+
 import { RequestContext } from '#contexts/RequestContext';
-import { USERZOOM_SRC } from '../config';
+import UserZoomScript from '../UserZoomScript';
 
-export type UserZoomInterceptProps = {
-  targetRef: RefObject<HTMLElement | null>;
-};
-
-const UserZoomIntercept = () => {
-  const { isAmp, isApp, isLite, nonce } = use(RequestContext);
+export default () => {
+  const { isAmp, isApp, isLite } = use(RequestContext);
   const [hasTriggered, setHasTriggered] = useState(false);
   const targetRef = useRef<HTMLButtonElement>(null);
 
@@ -29,18 +25,10 @@ const UserZoomIntercept = () => {
 
   return (
     <>
-      {hasTriggered && (
-        <Script
-          src={USERZOOM_SRC}
-          strategy="lazyOnload"
-          nonce={nonce ?? undefined}
-        />
-      )}
+      {hasTriggered && <UserZoomScript />}
       <button type="button" ref={targetRef}>
         Give feedback
       </button>
     </>
   );
 };
-
-export default UserZoomIntercept;

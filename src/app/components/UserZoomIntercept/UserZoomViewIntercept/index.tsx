@@ -1,9 +1,8 @@
 import { use, useEffect, useRef, useState, RefObject } from 'react';
-import Script from 'next/script';
 import { RequestContext } from '#contexts/RequestContext';
 import getIntersectionObserver from '#hooks/useViewTracker/getIntersectionObserver';
 import styles from './index.module.scss';
-import { USERZOOM_SRC } from '../config';
+import UserZoomScript from '../UserZoomScript';
 
 export type UserZoomInterceptProps = {
   // 'view': fires when this component scrolls into view (place it at the trigger point).
@@ -12,11 +11,11 @@ export type UserZoomInterceptProps = {
   targetRef?: RefObject<HTMLElement | null>;
 };
 
-const UserZoomIntercept = ({
+export default ({
   trigger = 'immediate',
   targetRef,
 }: UserZoomInterceptProps = {}) => {
-  const { isAmp, isApp, isLite, nonce } = use(RequestContext);
+  const { isAmp, isApp, isLite } = use(RequestContext);
   const [hasTriggered, setHasTriggered] = useState(trigger === 'immediate');
   const markerRef = useRef<HTMLSpanElement>(null);
   const observer = useRef<IntersectionObserver | null>(null);
@@ -61,13 +60,5 @@ const UserZoomIntercept = ({
     return null;
   }
 
-  return (
-    <Script
-      src={USERZOOM_SRC}
-      strategy="lazyOnload"
-      nonce={nonce ?? undefined}
-    />
-  );
+  return <UserZoomScript />;
 };
-
-export default UserZoomIntercept;

@@ -6,7 +6,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import UserZoomIntercept from '.';
-import { USERZOOM_SRC } from '../config';
+import { USERZOOM_SRC } from '../UserZoomScript';
 
 const ContextWrap = ({
   children,
