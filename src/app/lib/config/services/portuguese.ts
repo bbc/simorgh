@@ -60,7 +60,8 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Promoção app',
       brandTitle: 'Temos um novo app!',
-      brandDescription: 'Veja notícias do Brasil e do mundo no BBC World Service',
+      brandDescription:
+        'Veja notícias do Brasil e do mundo no BBC World Service',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pkzzq8.jpg',
         alt: 'Novo app da BBC Brasil',
