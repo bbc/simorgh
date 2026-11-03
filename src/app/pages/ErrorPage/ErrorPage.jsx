@@ -4,6 +4,7 @@ import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ArticleNotFoundUASCleanup from '#app/components/ArticleNotFoundUASCleanup';
+import QueryProvider from '#app/contexts/QueryContext';
 import { NOT_FOUND } from '#lib/statusCodes.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -53,7 +54,11 @@ const ErrorPage = ({ errorCode }) => {
 
   return (
     <>
-      {shouldRenderArticleCleanup && <ArticleNotFoundUASCleanup />}
+      {shouldRenderArticleCleanup && (
+        <QueryProvider>
+          <ArticleNotFoundUASCleanup />
+        </QueryProvider>
+      )}
       <ErrorMetadata
         brandName={brandName}
         dir={dir}

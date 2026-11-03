@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
+import QueryProvider from '#app/contexts/QueryContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
@@ -57,11 +58,13 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
         </noscript>
         <div css={styles.innerContent}>
           {isPersonalizationEnabled ? (
-            <MyNewsPageContent
-              page={page}
-              showSavedArticles={isArticlePersonalizationEnabled}
-              showFollowedTopics={isTopicPersonalizationEnabled}
-            />
+            <QueryProvider>
+              <MyNewsPageContent
+                page={page}
+                showSavedArticles={isArticlePersonalizationEnabled}
+                showFollowedTopics={isTopicPersonalizationEnabled}
+              />
+            </QueryProvider>
           ) : (
             <MyNewsPageGuest />
           )}

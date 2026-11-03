@@ -128,7 +128,7 @@ describe('FollowTopicButton', () => {
     expect(screen.getByTestId('follow-topic-btn-guest')).toBeInTheDocument();
   });
 
-  it('renders authenticated button when topicUasPersonalization is enabled and user is signed in', () => {
+  it('renders authenticated button when topicUasPersonalization is enabled and user is signed in', async () => {
     renderFollowTopicButton({
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
       toggles: {
@@ -137,7 +137,7 @@ describe('FollowTopicButton', () => {
     });
 
     expect(
-      screen.getByTestId('follow-topic-btn-authorized'),
+      await screen.findByTestId('follow-topic-btn-authorized'),
     ).toBeInTheDocument();
   });
 
@@ -171,7 +171,7 @@ describe('FollowTopicButton', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('renders loading state for authenticated button', () => {
+  it('renders loading state for authenticated button', async () => {
     mockedUseTopicFollowButton.mockReturnValue({
       isFollowed: false,
       isLoading: true,
@@ -184,13 +184,15 @@ describe('FollowTopicButton', () => {
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
     });
 
-    const authorizedButton = screen.getByTestId('follow-topic-btn-authorized');
+    const authorizedButton = await screen.findByTestId(
+      'follow-topic-btn-authorized',
+    );
 
     expect(authorizedButton).toBeInTheDocument();
     expect(authorizedButton).toHaveAccessibleName(LOADING_LABEL);
   });
 
-  it('renders followed state and accessible unfollow label for authenticated button', () => {
+  it('renders followed state and accessible unfollow label for authenticated button', async () => {
     mockedUseTopicFollowButton.mockReturnValue({
       isFollowed: true,
       isLoading: false,
@@ -203,7 +205,9 @@ describe('FollowTopicButton', () => {
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
     });
 
-    const authorizedButton = screen.getByTestId('follow-topic-btn-authorized');
+    const authorizedButton = await screen.findByTestId(
+      'follow-topic-btn-authorized',
+    );
 
     expect(authorizedButton).toBeInTheDocument();
     expect(authorizedButton).toHaveAccessibleName(FOLLOWED_ACCESSIBLE_LABEL);
