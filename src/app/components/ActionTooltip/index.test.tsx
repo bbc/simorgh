@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '../react-testing-library-with-providers';
 import ActionTooltip from '.';
-import getArticleTooltipContent from './ArticleTooltipContent';
+import getActionTooltipContent from './ActionTooltipContent';
 
 const onClose = jest.fn();
 
@@ -25,7 +25,7 @@ const mockTranslations = {
   closeLabel: 'Close',
 };
 
-const content = getArticleTooltipContent(mockTranslations);
+const content = getActionTooltipContent(mockTranslations);
 const { closeLabel } = mockTranslations;
 
 describe('ActionTooltip', () => {

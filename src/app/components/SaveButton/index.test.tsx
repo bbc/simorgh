@@ -281,6 +281,7 @@ describe('SaveButton', () => {
           isLoading
         />,
       );
+      expect(screen.getByRole('button').className).toContain('loadingState');
       expect(getIconSource(container)).toBe(renderIconSource(<Spinner />));
     });
 

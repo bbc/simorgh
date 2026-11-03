@@ -1,35 +1,69 @@
-import postcss from 'postcss';
+import postcss, { AtRule } from 'postcss';
+import selectorParser from 'postcss-selector-parser';
+import nodeLogger from '#lib/logger.node';
+import logCodes from '#app/lib/logger.const';
 
-const MODULE_CLASS_NAME = '[A-Za-z][\\w-]*__[\\w-]+';
-const LEADING_MODULE_CLASS = new RegExp(
-  `^(?:[a-z][\\w-]*)?\\.(${MODULE_CLASS_NAME})(?=[\\s.:#>+~\\[]|$)`,
-);
+const CSS_MODULE_CLASS = /^[A-Za-z_][\w-]*_[\w-]+__[\w-]+$/;
+const logger = nodeLogger(__filename);
 
 const treeshakeCssModuleRules = (css: string, renderedHtml: string): string => {
-  const referencedClasses = new Set(
-    renderedHtml.match(new RegExp(MODULE_CLASS_NAME, 'g')) ?? [],
-  );
-  const root = postcss.parse(css);
+  // Include all HTML tokens, not just class attributes, to retain classes used
+  // in AMP bindings. Extra matches only retain CSS; they cannot remove styles.
+  const renderedTokens = new Set(renderedHtml.match(/[\w-]+/g) ?? []);
 
-  root.walkRules(rule => {
-    const selectors = rule.selectors.filter(selector => {
-      // Only a leading class is guaranteed to be required, unlike :not() or :is().
-      const requiredClass = selector.match(LEADING_MODULE_CLASS)?.[1];
-      return !requiredClass || referencedClasses.has(requiredClass);
+  try {
+    const root = postcss.parse(css);
+
+    root.walkRules(rule => {
+      if (!rule.selector.includes('__')) return;
+
+      const selectors = selectorParser().astSync(rule.selector);
+      let changed = false;
+
+      selectors.each(selector => {
+        // Only direct class nodes are required matches. Classes inside :not(),
+        // :is(), :has(), etc. do not prove that a selector is unused.
+        const hasMissingClass = selector.nodes.some(
+          node =>
+            node.type === 'class' &&
+            CSS_MODULE_CLASS.test(node.value) &&
+            !renderedTokens.has(node.value),
+        );
+
+        if (hasMissingClass) {
+          selector.remove();
+          changed = true;
+        }
+      });
+
+      if (!selectors.nodes.length) {
+        rule.remove();
+      } else if (changed) {
+        rule.assign({ selector: selectors.toString() });
+      }
     });
 
-    if (selectors.length === 0) {
-      rule.remove();
-    } else if (selectors.length !== rule.selectors.length) {
-      rule.replaceWith(rule.clone({ selector: selectors.join(',') }));
-    }
-  });
+    const atRules: AtRule[] = [];
+    root.walkAtRules(atRule => {
+      atRules.push(atRule);
+    });
+    atRules.reverse().forEach(atRule => {
+      if (
+        ['media', 'supports', 'container'].includes(atRule.name) &&
+        atRule.nodes?.length === 0
+      ) {
+        atRule.remove();
+      }
+    });
 
-  root.walkAtRules('container', rule => {
-    if (rule.nodes?.length === 0) rule.remove();
-  });
-
-  return root.toString();
+    return root.toString();
+  } catch (e) {
+    logger.error(logCodes.AMP_LITE_CSS_TREE_SHAKE_ERROR, {
+      message: e instanceof Error ? e.message : String(e),
+      stack: e instanceof Error ? e.stack : undefined,
+    });
+    return css;
+  }
 };
 
 export default treeshakeCssModuleRules;

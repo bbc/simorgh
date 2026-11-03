@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      showMore: 'نمایش بیشتر',
       moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {
