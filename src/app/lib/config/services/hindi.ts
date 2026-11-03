@@ -52,7 +52,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'पॉडकास्ट',
       brandTitle: 'आपके लिए चुनी गईं खास कहानियाँ, नितिन श्रीवास्तव द्वारा',
-      brandDescription: 
+      brandDescription:
         'आपके लिए नितिन श्रीवास्तव द्वारा चुनी गईं खास कहानियाँ',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pj9ylt.jpg',
