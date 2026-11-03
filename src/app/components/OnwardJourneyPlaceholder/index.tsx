@@ -8,12 +8,16 @@ import styles from './index.module.scss';
 
 type Props = {
   onwardJourney: OnwardJourney;
+  onSkeletonReady?: () => void;
 };
 
 const getPlaceholderId = (onwardJourney: OnwardJourney) =>
   `onward-journey-placeholder-${onwardJourney}`;
 
-const OnwardJourneyPlaceholder = ({ onwardJourney }: Props) => {
+const OnwardJourneyPlaceholder = ({
+  onwardJourney,
+  onSkeletonReady,
+}: Props) => {
   const [isMounted, setIsMounted] = useState(false);
   const [isResolved, setIsResolved] = useState(false);
   const context = useOnwardJourneyRequest();
@@ -26,6 +30,12 @@ const OnwardJourneyPlaceholder = ({ onwardJourney }: Props) => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (isMounted && context?.isEnabled && !isResolved) {
+      onSkeletonReady?.();
+    }
+  }, [context?.isEnabled, isMounted, isResolved, onSkeletonReady]);
 
   useEffect(() => {
     if (isResolved || !isNearViewport || !context?.isEnabled) return;

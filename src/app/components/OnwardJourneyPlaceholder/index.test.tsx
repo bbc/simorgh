@@ -46,6 +46,7 @@ describe('OnwardJourneyPlaceholder', () => {
   });
 
   it('requests its onward journey when it is near the viewport', async () => {
+    const onSkeletonReady = jest.fn();
     const { getByTestId } = render(
       <RequestContextProvider
         service="pidgin"
@@ -56,7 +57,10 @@ describe('OnwardJourneyPlaceholder', () => {
           pageData={article}
           pageType={ARTICLE_PAGE}
         >
-          <OnwardJourneyPlaceholder onwardJourney="mostRead" />
+          <OnwardJourneyPlaceholder
+            onwardJourney="mostRead"
+            onSkeletonReady={onSkeletonReady}
+          />
         </ArticleOnwardJourneysProvider>
       </RequestContextProvider>,
     );
@@ -67,6 +71,7 @@ describe('OnwardJourneyPlaceholder', () => {
     await waitFor(() =>
       expect(global.IntersectionObserver).toHaveBeenCalledTimes(1),
     );
+    expect(onSkeletonReady).toHaveBeenCalledTimes(1);
 
     act(() => {
       intersectionObserverCallback?.(
