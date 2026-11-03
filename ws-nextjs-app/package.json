@@ -61,7 +61,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "7.1.1",
     "@jest/environment": "30.2.0",
-    "@playwright/test": "1.64.0",
+    "@playwright/test": "1.64.1",
     "@swc/core": "1.15.24",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.1",
