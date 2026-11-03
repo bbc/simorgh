@@ -309,3 +309,182 @@ export const pidginPromosWithMedia = [
     readTime: 1,
   },
 ];
+
+export const pidginVideoPromos = [
+  {
+    type: 'video',
+    duration: 'PT3M4S',
+    isLive: false,
+    title: 'Mama and pikin win same beauty pageant for different era',
+    firstPublished: '2026-10-30T20:57:25.351Z',
+    lastPublished: '2026-10-30T20:57:25.351Z',
+    link: 'https://www.bbc.com/pidgin/watch/cjy5629qpkzro',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e48c/live/454a7a70-d4a4-11f1-b441-2b33b063138f.jpg.webp',
+    imageAlt: 'Mother and daughter',
+    isPortraitImage: true,
+    id: 'cjy5629qpkzro',
+    attributions: [
+      {
+        title: 'Pidgin',
+        link: {
+          url: 'https://www.bbc.co.uk/pidgin',
+          scheme: 'https',
+          host: 'www.bbc.co.uk',
+          path: '/pidgin',
+        },
+      },
+    ],
+    relatedTopic: {
+      title: 'Women',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c1gdqg448w1t',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/c1gdqg448w1t',
+      },
+    },
+  },
+  {
+    type: 'video',
+    duration: 'PT57S',
+    isLive: false,
+    title: "President Tinubu visit Saudi Arabia to 'pray for Nigeria'",
+    firstPublished: '2026-10-29T13:45:41.683Z',
+    lastPublished: '2026-10-29T13:45:41.683Z',
+    link: 'https://www.bbc.com/pidgin/watch/cwzrdezg5kzmo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7cb0/live/8b211290-d39e-11f1-abc7-23eff3a47521.jpg.webp',
+    description:
+      'Nigeria President Bola Tinubu go leave Abuja for Makkah on Thursday to perform Umrah.',
+    imageAlt: 'Tinubu wit cap wit mouth open',
+    isPortraitImage: false,
+    id: 'cwzrdezg5kzmo',
+    attributions: [
+      {
+        title: 'Pidgin',
+        link: {
+          url: 'https://www.bbc.co.uk/pidgin',
+          scheme: 'https',
+          host: 'www.bbc.co.uk',
+          path: '/pidgin',
+        },
+      },
+    ],
+    relatedTopic: {
+      title: 'Bola Tinubu',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c06gq617y08t',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/c06gq617y08t',
+      },
+    },
+  },
+  {
+    type: 'video',
+    duration: 'PT40S',
+    isLive: false,
+    title: 'Who be Sheikh Ibrahim Yahaya Masussuka wey gunmen kill',
+    firstPublished: '2026-10-27T14:07:34.335Z',
+    lastPublished: '2026-10-27T14:07:34.335Z',
+    link: 'https://www.bbc.com/pidgin/watch/c6rryx1qky7ro',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/00af/live/76bb3a00-d20f-11f1-a701-fddedf244c16.png.webp',
+    description:
+      'Sheikh Yahya Masussuka, wey be popular Islamic cleric from Katsina State, spend more dan 30 years dey preach',
+    imageAlt: 'Man wear cap wit red dress',
+    isPortraitImage: true,
+    id: 'c6rryx1qky7ro',
+    attributions: [
+      {
+        title: 'Pidgin',
+        link: {
+          url: 'https://www.bbc.co.uk/pidgin',
+          scheme: 'https',
+          host: 'www.bbc.co.uk',
+          path: '/pidgin',
+        },
+      },
+    ],
+    relatedTopic: {
+      title: 'Nigeria',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/c2dwqd1zr92t',
+      },
+    },
+  },
+  {
+    type: 'video',
+    duration: 'PT3M11S',
+    isLive: false,
+    title: "'Woman wey carry Ebola enta Nigeria dey tok now' - Pate",
+    firstPublished: '2026-10-27T14:03:27.773Z',
+    lastPublished: '2026-10-27T14:03:27.773Z',
+    link: 'https://www.bbc.com/pidgin/watch/cj20vl3w42z7o',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/825f/live/d659cae0-d20e-11f1-b3b6-c1e79e957e40.jpg.webp',
+    description:
+      'Nigeria minister of health Prof. Muhammad Ali Pate don give update ontop di single confirmed case of Ebola virus patient wey dey hospital.',
+    imageAlt: 'Man on glass wit cap',
+    isPortraitImage: false,
+    id: 'cj20vl3w42z7o',
+    attributions: [
+      {
+        title: 'Pidgin',
+        link: {
+          url: 'https://www.bbc.co.uk/pidgin',
+          scheme: 'https',
+          host: 'www.bbc.co.uk',
+          path: '/pidgin',
+        },
+      },
+    ],
+    relatedTopic: {
+      title: 'Ebola problem',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/cjgn7gjkdz4t',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/cjgn7gjkdz4t',
+      },
+    },
+  },
+  {
+    type: 'video',
+    duration: 'PT1M18S',
+    isLive: false,
+    title: 'Tins to know about actor Francis Duru wey die at 57',
+    firstPublished: '2026-10-23T13:22:13.438Z',
+    lastPublished: '2026-10-23T13:22:13.438Z',
+    link: 'https://www.bbc.com/pidgin/watch/c6073518lr0yo',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9011/live/8dca5970-cee4-11f1-b441-2b33b063138f.jpg.webp',
+    imageAlt: 'Francis Duru',
+    isPortraitImage: true,
+    id: 'c6073518lr0yo',
+    attributions: [
+      {
+        title: 'Pidgin',
+        link: {
+          url: 'https://www.bbc.co.uk/pidgin',
+          scheme: 'https',
+          host: 'www.bbc.co.uk',
+          path: '/pidgin',
+        },
+      },
+    ],
+    relatedTopic: {
+      title: 'Jollificate',
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/cqywjyzk2vyt',
+        scheme: 'https',
+        host: 'www.bbc.com',
+        path: '/pidgin/topics/cqywjyzk2vyt',
+      },
+    },
+  },
+];
