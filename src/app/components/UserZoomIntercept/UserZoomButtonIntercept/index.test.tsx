@@ -1,7 +1,6 @@
 import { RequestContextProvider } from '#contexts/RequestContext';
 import {
   render,
-  act,
   fireEvent,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
@@ -32,13 +31,11 @@ const ContextWrap = ({
 );
 
 describe('UserZoomIntercept (ButtonIntercept)', () => {
-  it('renders the button but not the script before it is clicked', async () => {
-    const { container } = await act(async () =>
-      render(
-        <ContextWrap>
-          <UserZoomIntercept />
-        </ContextWrap>,
-      ),
+  it('renders the button but not the script before it is clicked', () => {
+    const { container } = render(
+      <ContextWrap>
+        <UserZoomIntercept />
+      </ContextWrap>,
     );
 
     expect(container.querySelector('script')).toBeNull();
@@ -49,13 +46,11 @@ describe('UserZoomIntercept (ButtonIntercept)', () => {
 
   it.each(['isAmp', 'isApp', 'isLite'])(
     'does not render anything when %s is true',
-    async flag => {
-      const { container } = await act(async () =>
-        render(
-          <ContextWrap {...{ [flag]: true }}>
-            <UserZoomIntercept />
-          </ContextWrap>,
-        ),
+    flag => {
+      const { container } = render(
+        <ContextWrap {...{ [flag]: true }}>
+          <UserZoomIntercept />
+        </ContextWrap>,
       );
 
       expect(container.querySelector('script')).toBeNull();
@@ -64,21 +59,17 @@ describe('UserZoomIntercept (ButtonIntercept)', () => {
   );
 
   it('renders the script once the button is clicked, while keeping the button', async () => {
-    const { container } = await act(async () =>
-      render(
-        <ContextWrap>
-          <UserZoomIntercept />
-        </ContextWrap>,
-      ),
+    const { container } = render(
+      <ContextWrap>
+        <UserZoomIntercept />
+      </ContextWrap>,
     );
 
     const button = container.querySelector(
       'button[type="button"]',
     ) as HTMLButtonElement;
 
-    act(() => {
-      fireEvent.click(button);
-    });
+    fireEvent.click(button);
 
     await waitFor(() => {
       expect(
