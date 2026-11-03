@@ -50,7 +50,10 @@ rule.use.splice(cssLoaderIndex, 0, DevCssExtractLoader);
 
 **At SSR time (`_document.page.tsx`):**
 
-`getAmpLiteCss` reads the entire `build/dev-css-modules.css` file and inlines it. This is intentionally a full dump — in development correctness is prioritised over payload size, and the file only exists locally.
+`getAmpLiteCss` reads the entire `build/dev-css-modules.css` file. The same
+per-page CSS-module pruning and inline CSS optimizations used in production are
+then applied before inlining. The extracted file itself remains a full dump so
+subsequent requests and HMR updates can use different components.
 
 ### Cautionary Note
 This solution is quite complex as [identified in review](https://github.com/bbc/simorgh/pull/13992#pullrequestreview-4389134898), we may wish to remove this solution if it becomes difficult to maintain. It is tightly coupled to Next implementation details so if changes are frequently made it may not be economical to maintain. In this case we could fallback to using a production build for amp and lite pages to test css changes.
@@ -98,6 +101,25 @@ inlined CSS = emotion critical CSS
 ## Where this runs in `_document.page.tsx`
 
 CSS extraction is isolated to the `isAmp` (article only — AMP is only supported for articles) and `isLite` branches of the `render()` switch. Canonical renders never call `getAmpLiteCss` or access `__NEXT_DATA__`, so an error in the extraction logic cannot affect the default page experience.
+
+Before inlining, `treeshakeCssModuleRules` removes selectors that require a
+CSS-module class absent from the rendered HTML. This avoids shipping entire
+component variants and unrelated components bundled into shared CSS chunks.
+Selector lists are filtered individually using `postcss-selector-parser`;
+global rules, Emotion styles, font faces, keyframes and classes inside functional
+pseudo-classes are retained. Classes mentioned in AMP bindings or templates are
+also retained, along with hover, focus, attribute-dependent and responsive rules
+for rendered classes. No DOM matching is used, so transient interactive states
+are not mistaken for unused styles.
+
+This runs before custom-property pruning, font-source trimming and vendor-prefix
+optimization, allowing variables used only by removed rules to be removed too.
+Pruning is per request, never cached by route or service: different articles and
+service variants can render different components. Canonical CSS chunks are unchanged.
+If CSS or selector parsing fails, the original CSS is retained and an
+`amp_lite_css_tree_shake_error` is logged. The AMP integration suites assert the
+75,000-byte UTF-8 limit for the author stylesheet plus inline style attributes to
+catch future payload regressions.
 
 ```tsx
 switch (true) {
