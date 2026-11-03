@@ -6,7 +6,6 @@ import AmpIframe from '#app/components/AmpIframe';
 import { Tag } from '#app/components/Metadata/types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import isLive from '#app/lib/utilities/isLive';
 import styles from './index.module.scss';
 
 // Consumers (e.g. the Live, Home and Topic pages) own any page-specific style
@@ -39,7 +38,7 @@ export const DEFAULT_HEIGHTS_AP = {
 };
 
 // Callers decide editorial visibility via isElectionBannerVisible; this guards
-// the isLite/isLive runtime cases so every consumer doesn't have to repeat them.
+// the isLite runtime case so every consumer doesn't have to repeat it.
 export default function ElectionBanner({
   aboutTags,
   overrideClassnames,
@@ -47,7 +46,7 @@ export default function ElectionBanner({
   const { electionBanner } = use(ServiceContext);
   const { isAmp, isLite } = use(RequestContext);
 
-  if (!electionBanner || isLive() || isLite) return null;
+  if (!electionBanner || isLite) return null;
 
   const {
     title,
@@ -89,6 +88,7 @@ export default function ElectionBanner({
             ? styles.assocPressElectionBannerWrapperAmp
             : styles.electionBannerWrapperAmp
         }
+        {...(hasTitle && { role: 'region', 'aria-label': title })}
       >
         <div className={styles.electionBannerContent}>
           {hasTitle && (
@@ -123,6 +123,7 @@ export default function ElectionBanner({
           ? overrideClassnames?.assocPressWrapper
           : overrideClassnames?.wrapper,
       )}
+      {...(hasTitle && { role: 'region', 'aria-label': title })}
     >
       <div className={styles.electionBannerContent}>
         {hasTitle && (
