@@ -73,6 +73,30 @@ describe('AccountActionButtons', () => {
     });
   });
 
+  describe('focus indicator', () => {
+    it('applies the inverted focus indicator to both links by default', () => {
+      renderComponent();
+
+      expect(screen.getByTestId('test-sign-in')).toHaveClass(
+        'focusIndicatorInvert',
+      );
+      expect(screen.getByTestId('test-register')).toHaveClass(
+        'focusIndicatorInvert',
+      );
+    });
+
+    it('does not apply the inverted focus indicator on a light background', () => {
+      renderComponent({ onLightBackground: true });
+
+      expect(screen.getByTestId('test-sign-in')).not.toHaveClass(
+        'focusIndicatorInvert',
+      );
+      expect(screen.getByTestId('test-register')).not.toHaveClass(
+        'focusIndicatorInvert',
+      );
+    });
+  });
+
   it('returns null when URLs are unavailable', () => {
     render(<AccountActionButtons {...defaultProps} />, {
       service: 'ws',

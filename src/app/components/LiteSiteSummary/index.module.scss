@@ -1,0 +1,56 @@
+@use '@scss/themeTokens' as theme;
+
+.outerContainer {
+  margin: 0 theme.$spacings-full;
+  background-color: theme.$palette-white;
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-3;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin: 0 theme.$spacings-double;
+  }
+}
+
+.container {
+  padding: theme.$spacings-double 0 0 0;
+  max-width: 63.4rem;
+  position: relative;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    padding: theme.$spacings-triple 0 theme.$spacings-full 0;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin: 0 auto;
+  }
+}
+
+p.message {
+  margin-bottom: theme.$spacings-half;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    margin-bottom: theme.$spacings-full;
+  }
+}
+
+.bottomLinkSpacing {
+  padding: theme.$spacings-half 0 theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    padding: theme.$spacings-full 0 theme.$spacings-double;
+  }
+}
+
+.topLinkSpacing {
+  padding: #{theme.$spacings-full + theme.$spacings-half} 0
+    #{theme.$spacings-full + theme.$spacings-half};
+}
+
+.singleLinkSpacing {
+  padding: #{theme.$spacings-full + theme.$spacings-half} 0
+    #{theme.$spacings-full + theme.$spacings-half};
+  margin-bottom: #{theme.$spacings-full + theme.$spacings-half};
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    margin-bottom: theme.$spacings-half;
+  }
+}

@@ -7,6 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
+import moduleStyles from './index.module.scss';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite, isAmp, isApp } = use(RequestContext);
@@ -37,14 +38,14 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
       />
       {showArticleLiteSiteLink && (
         <div
-          css={styles.liteSiteLinkContainer}
+          className={moduleStyles.liteSiteLinkContainer}
           {...viewTracker}
           data-e2e="article-lite-site-link"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.liteSiteLink}
+            className={moduleStyles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

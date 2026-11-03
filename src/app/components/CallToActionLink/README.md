@@ -16,7 +16,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 | url               | string                         | Yes      | The url for the Call to Action Link                                                                                                                                                                                                     |
 | children          | node                           | No       | The content included between the opening and closing tags of the Call to Action Link                                                                                                                                                    |
 | alignWithMargin   | boolean                        | No       | Applies display styling to align link with text. (Left margin for LTR, right margin for RTL). Component is centered by default                                                                                                          |
-| className         | string                         | No       | Permits `css` prop to be applied                                                                                                                                                                                                        |
+| className         | string                         | No       | Permits a class name (e.g. from a CSS Module) to be applied alongside the default styles                                                                                                                                                |
 | htmlAttributes    | string                         | No       | Permits custom html attributes to be applied. E.g. `data-ignore-lite` for .lite                                                                                                                                                         |
 | eventTrackingData | shape({componentName: string}) | No       | Tracking data needed for ati to track view and click of the Call to Action Link                                                                                                                                                         |
 | download          | boolean                        | No       | Permits download                                                                                                                                                                                                                        |
@@ -72,14 +72,16 @@ The `alignWithMargin` prop applies `display: 'inline-block'` styles. Otherwise t
 
 Interaction state (`hover`, `focus` and `visited`) styles are applied by default to ensure the component is accessible out of the box.
 
-The css prop can be used to apply further styles, such as spacing and colours. These can be applied to interaction states. For example:
+The `className` prop can be used to apply further styles, such as spacing and colours. These can be applied to interaction states. CSS Modules do not guarantee stylesheet order, so qualify the selector with the `a` element to take precedence over the default `.link` styles. The default `:visited` colour is not overridden by a plain `a.callToActionLink` rule; add an explicit `:visited` rule if it needs to change. For example:
 
 ```javascript
+import clsx from 'clsx';
+import styles from './index.module.scss';
+
 <CallToActionLink
   url={link}
-  className="focusIndicatorInvert"
+  className={clsx('focusIndicatorInvert', styles.callToActionLink)}
   eventTrackingData={eventTrackingData}
-  css={styles.callToActionLink}
 >
   <CallToActionLink.ButtonLikeWrapper>
     <CallToActionLink.Text>
@@ -87,25 +89,25 @@ The css prop can be used to apply further styles, such as spacing and colours. T
       <CallToActionLink.Chevron />
     </CallToActionLink.Text>
   </CallToActionLink.ButtonLikeWrapper>
-</CallToActionLink>
+</CallToActionLink>;
 ```
 
-In `index.styles.ts`:
+In `index.module.scss`:
 
-```javascript
-calltoActionLink: ({ palette }: Theme) =>
-  css(
-    {
-    padding: '1rem',
-    backgroundColor: palette.WHITE,
-    margin: '0 1rem 1rem 1rem',
-    width: '100%',
-    color: palette.BLACK,
-    '&:hover, &:focus':
-      {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      }
-    }
-  );
+```scss
+@use '@scss/themeTokens' as theme;
+
+a.callToActionLink {
+  padding: 1rem;
+  background-color: theme.$palette-white;
+  margin: 0 1rem 1rem 1rem;
+  width: 100%;
+  color: theme.$palette-black;
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+}
 ```

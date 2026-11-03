@@ -1,0 +1,59 @@
+@use '@scss/themeTokens' as theme;
+
+.grid {
+  max-width: theme.$gridWidths-grid-width-1008;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 1rem;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    column-gap: theme.$spacings-full;
+  }
+}
+
+.primaryColumn {
+  grid-column: 1 / span 12;
+  padding-bottom: 2rem;
+}
+
+.mainContent {
+  padding-bottom: theme.$spacings-triple;
+}
+
+.orderedList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  list-style-type: none;
+  padding: 0;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+
+.listItem {
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 8px;
+  margin-right: 0;
+  padding-right: 5px;
+
+  time {
+    @include theme.fontSizes-gel-font-size(greatPrimer);
+
+    margin-bottom: 8px;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  a {
+    color: theme.$palette-rhino;
+
+    &:focus {
+      color: theme.$palette-rhino;
+    }
+  }
+}

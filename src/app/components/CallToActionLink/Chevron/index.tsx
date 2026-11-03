@@ -1,36 +1,28 @@
-import { SerializedStyles, Theme } from '@emotion/react';
 import { use } from 'react';
+import clsx from 'clsx';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
 import CallToActionLinkContext from '../CallToActionLinkContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type ChevronProps = {
   className?: string;
-};
-
-const getChevronCss = (size = 'pica') => {
-  const chevronCss: Array<(_theme: Theme) => SerializedStyles> = [];
-
-  if (size === 'brevier') {
-    chevronCss.push(styles.brevierSize);
-  } else {
-    chevronCss.push(styles.picaSize);
-  }
-
-  chevronCss.push(styles.chevron);
-
-  return chevronCss;
 };
 
 const Chevron = ({ className }: ChevronProps) => {
   const { size } = use(CallToActionLinkContext);
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
-  return isRtl ? (
-    <LeftChevron className={className} css={getChevronCss(size)} />
-  ) : (
-    <RightChevron className={className} css={getChevronCss(size)} />
+  const ChevronIcon = isRtl ? LeftChevron : RightChevron;
+
+  return (
+    <ChevronIcon
+      className={clsx(
+        size === 'brevier' ? styles.brevierSize : styles.picaSize,
+        styles.chevron,
+        className,
+      )}
+    />
   );
 };
 

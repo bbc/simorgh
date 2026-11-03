@@ -1,0 +1,25 @@
+@use '@scss/themeTokens' as theme;
+
+a .text {
+  color: inherit;
+}
+
+.defaultTextStyles {
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-10;
+}
+
+a:visited .defaultTextStyles {
+  color: theme.$palette-metal;
+  border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-metal;
+}
+
+a:focus .defaultTextStyles,
+a:hover .defaultTextStyles {
+  color: theme.$palette-postbox;
+  border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-postbox;
+}
+
+a:focus .underlineOnHoverFocus,
+a:hover .underlineOnHoverFocus {
+  text-decoration: underline;
+}

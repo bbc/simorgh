@@ -1,0 +1,94 @@
+@use '@scss/themeTokens' as theme;
+
+$image-width: 184px;
+$image-width-group-3-min-width: 224px;
+
+.card {
+  height: auto;
+  background: radial-gradient(
+    circle at 20% 90%,
+    #a20219,
+    #180109 60%,
+    #500115 90%
+  );
+  padding-inline: 1rem;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    background: linear-gradient(-120deg, #a20219 0%, #180109 54%, #180109 90%);
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: 0.1875rem solid transparent;
+  }
+}
+
+.textWrap {
+  @media #{theme.$mediaQueries-group-3-min-width} and #{theme.$mediaQueries-group-3-max-width} {
+    width: 66%;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    width: 75%;
+  }
+}
+
+p.paragraph {
+  padding-bottom: 1rem;
+  color: theme.$palette-white;
+}
+
+.image {
+  max-width: $image-width;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    max-width: $image-width-group-3-min-width;
+    inset-inline-end: 0;
+    position: absolute;
+  }
+
+  img {
+    object-position: top;
+  }
+}
+
+a.callToActionLink {
+  padding: 1rem;
+  background-color: theme.$palette-white;
+  margin: 0 1rem 1rem 1rem;
+  width: 100%;
+  color: theme.$palette-black;
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: auto;
+    max-width: calc(100% - 240px);
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+  }
+
+  span {
+    padding-inline-start: 0.5rem;
+  }
+
+  .callToActionLinkText {
+    color: theme.$palette-black;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: flex-end;
+    position: relative;
+  }
+}

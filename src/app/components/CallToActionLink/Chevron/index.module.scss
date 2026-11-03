@@ -1,0 +1,18 @@
+@use '@scss/themeTokens' as theme;
+
+.chevron {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.brevierSize {
+  margin-inline-start: theme.$spacings-full;
+  width: theme.pixelsToRem-px-to-rem(14);
+  height: theme.pixelsToRem-px-to-rem(14);
+}
+
+.picaSize {
+  margin-inline-start: theme.$spacings-full;
+  width: theme.$spacings-double;
+  height: theme.$spacings-double;
+}

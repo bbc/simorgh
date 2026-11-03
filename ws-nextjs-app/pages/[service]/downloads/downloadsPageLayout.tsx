@@ -6,7 +6,7 @@ import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
-import styles from './styles';
+import styles from './styles.module.scss';
 import { PageProps } from './types';
 
 const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
@@ -37,14 +37,14 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <div css={styles.grid}>
-        <div css={styles.primaryColumn}>
-          <main css={styles.mainContent}>
+      <div className={styles.grid}>
+        <div className={styles.primaryColumn}>
+          <main className={styles.mainContent}>
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
-            <ol css={styles.orderedList}>
+            <ol className={styles.orderedList}>
               {pageData.downloadData?.map(item => (
-                <li css={styles.listItem} key={item.fileCreated}>
+                <li className={styles.listItem} key={item.fileCreated}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"
@@ -56,7 +56,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     isRelative={false}
                   />
                   <CallToActionLink
-                    css={styles.cta}
                     url={item.files[0].fileLink}
                     download
                     eventTrackingData={{

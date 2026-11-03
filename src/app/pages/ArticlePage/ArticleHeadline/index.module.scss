@@ -1,0 +1,22 @@
+@use '@scss/themeTokens' as theme;
+
+.liteSiteLinkContainer {
+  margin-bottom: theme.pixelsToRem-px-to-rem(20);
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-bottom: theme.pixelsToRem-px-to-rem(28);
+  }
+}
+
+.liteSiteLink {
+  padding: theme.pixelsToRem-px-to-rem(13) 0;
+  margin-inline-start: theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline-start: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline-start: 0;
+  }
+}

@@ -82,4 +82,43 @@ describe('Call To Action Link', () => {
     const link = screen.getByRole('link');
     expect(link.getAttribute('data-ignore-lite')).toBeTruthy();
   });
+
+  it('should merge a passed className onto the link', () => {
+    render(
+      <CallToActionLink
+        url="https://www.bbc.com/ws/languages"
+        className="consumer-class"
+      >
+        <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
+      </CallToActionLink>,
+    );
+
+    expect(screen.getByRole('link')).toHaveClass('consumer-class');
+  });
+
+  it('should not add a "false" class when alignWithMargin is not set', () => {
+    render(
+      <CallToActionLink url="https://www.bbc.com/ws/languages">
+        <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
+      </CallToActionLink>,
+    );
+
+    expect(screen.getByRole('link')).not.toHaveClass('false');
+  });
+
+  it('should merge a passed className onto the text and chevron', () => {
+    const { container } = render(
+      <CallToActionLink url="https://www.bbc.com/ws/languages">
+        <CallToActionLink.Text className="text-consumer-class">
+          My Link Text
+          <CallToActionLink.Chevron className="chevron-consumer-class" />
+        </CallToActionLink.Text>
+      </CallToActionLink>,
+    );
+
+    expect(screen.getByText('My Link Text')).toHaveClass('text-consumer-class');
+    expect(container.querySelector('svg')).toHaveClass(
+      'chevron-consumer-class',
+    );
+  });
 });
