@@ -1,4 +1,4 @@
-import { use, FC, HTMLAttributes } from 'react';
+import { use, FC, HTMLAttributes, PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -10,7 +10,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
   fontVariant?: FontVariant;
   size?: GelFontSize;
-  text: string;
+  text?: string;
   to: string;
 }
 
@@ -24,7 +24,8 @@ const bbcDomains = [
   'bbcrussian.com',
 ];
 
-const InlineLink: FC<Props> = ({
+const InlineLink: FC<PropsWithChildren<Props>> = ({
+  children,
   className,
   fontVariant,
   size,
@@ -32,7 +33,7 @@ const InlineLink: FC<Props> = ({
   to,
   style,
   ...htmlAttributes
-}: Props) => {
+}: PropsWithChildren<Props>) => {
   const { externalLinkText } = use(ServiceContext);
   const { hostname } = new URL(to, 'https://www.bbc.com');
   const isExternalLink =
@@ -52,7 +53,7 @@ const InlineLink: FC<Props> = ({
 
   return (
     <a {...linkProps} href={to}>
-      {text}
+      {children ?? text}
     </a>
   );
 };

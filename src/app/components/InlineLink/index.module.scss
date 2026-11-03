@@ -8,6 +8,10 @@
     theme.$palette-postbox;
   text-decoration: none;
 
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-2;
+  }
+
   &:visited {
     color: theme.$palette-metal;
     border-bottom: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-metal;
@@ -18,5 +22,4 @@
     border-bottom: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-postbox;
     color: theme.$palette-postbox;
   }
-
 }
