@@ -92,6 +92,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      showMore: 'ተጨማሪ አሳይ',
       moreOnThis: '',
       navMenuText: 'ክፍሎች',
       liteSite: {

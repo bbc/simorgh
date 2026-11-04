@@ -96,6 +96,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      showMore: 'ተወሳኺ ኣርእይ',
       moreOnThis: '',
       navMenuText: 'ክፍልታት',
       liteSite: {

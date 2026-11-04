@@ -7,6 +7,9 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import isLive from '#app/lib/utilities/isLive';
+import { useContext } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
@@ -76,6 +79,7 @@ export default ({
   mediaCollection,
   curationContentType,
   pageType,
+  isVideoCollection = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -87,6 +91,15 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+
+  const { service } = useContext(ServiceContext);
+
+  const shouldStyleAsVideoCollection =
+    !isLive() &&
+    service === 'arabic' &&
+    componentName === SIMPLE_CURATION_GRID &&
+    isVideoCollection;
+
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic =
     !isLiveEnvironment &&
@@ -111,7 +124,9 @@ export default ({
   } = firstSummary || {};
 
   const eventTrackingData: EventTrackingData = {
-    componentName,
+    componentName: shouldStyleAsVideoCollection
+      ? `${componentName}-video`
+      : componentName,
     groupTracker: {
       name: curationSubheading,
       type: componentName,
@@ -266,6 +281,7 @@ export default ({
                 summaries={summaries}
                 headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
+                isVideoCollection={shouldStyleAsVideoCollection}
                 eventTrackingData={eventTrackingData}
                 showRelatedTopic={showRelatedTopic}
               />
@@ -277,6 +293,7 @@ export default ({
               summaries={summaries}
               headingLevel={2}
               isFirstCuration={isFirstCuration}
+              isVideoCollection={shouldStyleAsVideoCollection}
               eventTrackingData={eventTrackingData}
               showRelatedTopic={showRelatedTopic}
             />

@@ -51,16 +51,16 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'Dinbhar: आवाज़ वही, अंदाज़ नया',
+      brandTitle: 'आपके लिए चुनी गईं खास कहानियाँ, नितिन श्रीवास्तव द्वारा',
       brandDescription:
-        'देश - दुनिया की बड़ी ख़बरें  जिन्होंने बटोरी सुर्खियां.',
+        'आपके लिए नितिन श्रीवास्तव द्वारा चुनी गईं खास कहानियाँ',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0nq9t7p.jpg',
-        alt: 'दिनभर',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pj9ylt.jpg',
+        alt: 'नितिन श्रीवास्तव',
       },
       linkLabel: {
-        text: 'एपिसोड',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        text: 'और जानें',
+        href: 'https://www.bbc.com/hindi/topics/crvgyj0g9d5lt',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -97,6 +97,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
+      showMore: 'और दिखाएं',
       moreOnThis: '',
       navMenuText: 'सेक्शन',
       liteSite: {
@@ -201,6 +202,25 @@ export const service: DefaultServiceConfig = {
         },
         removed: {
           title: 'ये आर्टिकल अब हटा लिया गया है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
+        },
+        myNewsLinkText: 'माई न्यूज़',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'बंद करें',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'अब आप {Topic Name} को फ़ॉलो कर रहे हैं',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगा',
+        },
+        error: {
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पेज रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
+        },
+        removed: {
+          title: 'आपने {Topic Name} को अनफ़ॉलो कर दिया है',
           bodyBefore: 'ये',
           bodyAfter: 'सेक्शन से हटा ली गई है',
         },
