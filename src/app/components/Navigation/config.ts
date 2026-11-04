@@ -2,7 +2,7 @@ import { Services } from '#app/models/types/global';
 
 export const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
 export const STICKY_NAVIGATION_TREATMENT = 'sticky_navigation_variant';
-export const STICKY_NAVIGATION_COMPONENT = 'sticky-navigation';
+export const STICKY_NAVIGATION_COMPONENT = 'navigation';
 
 // The two-tier bar is roughly 88px tall. Requiring at least this much
 // viewport height keeps it under about a fifth of the screen, and has the
