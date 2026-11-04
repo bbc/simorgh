@@ -387,6 +387,27 @@ describe('FollowTopicButton', () => {
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
 
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'removes the offline %s tooltip when the refreshed hook clears its result',
+      action => {
+        mockActionResult({ action, status: 'error' });
+        const { rerender } = renderFollowTopicButton(signedInOptions);
+
+        expect(
+          screen.getByText(actionTooltipTranslations.error.body),
+        ).toBeInTheDocument();
+
+        mockFollowState({ actionResult: null });
+        rerender(<FollowTopicButton topicData={topicData} />);
+
+        expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+        expect(
+          screen.getByTestId('follow-topic-btn-authorized'),
+        ).toHaveAccessibleName(followTopicButtonTranslations.follow);
+        expect(mockResetActionResult).not.toHaveBeenCalled();
+      },
+    );
+
     it('does not show a tooltip for guests', () => {
       mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });
       renderFollowTopicButton();
