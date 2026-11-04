@@ -9,6 +9,7 @@ import {
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   act,
@@ -20,7 +21,6 @@ import { service as indonesiaConfig } from '../../lib/config/services/indonesia'
 import Navigation from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 
 jest.mock('../../hooks/useViewTracker', () => ({
   __esModule: true,
