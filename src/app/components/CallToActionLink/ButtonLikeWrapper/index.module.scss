@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
 
+.glow {
   @supports selector(a:has(> div)) and (mask-composite: exclude) {
     :global(a):has(> &) {
       position: relative;
@@ -34,7 +36,7 @@
         linear-gradient(theme.$palette-white 0 0);
       mask-composite: exclude;
       opacity: 0;
-      animation: revealGlow 4s ease-out 3s;
+      animation: revealGlow 4s ease-out;
     }
 
     &::after {
@@ -50,8 +52,8 @@
       &::before,
       &::after {
         animation:
-          revealGlow 4s ease-out 3s,
-          sweepGlow 4s ease-in-out 3s;
+          revealGlow 4s ease-out,
+          sweepGlow 4s ease-in-out;
       }
     }
 
