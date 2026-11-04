@@ -108,5 +108,4 @@ export const getServerSideProps = withRequestProps(async context => {
   };
 });
 
-// EXPERIMENT: Hindi Editorial Picks follow promo
 export default withOptimizelyProvider(TopicPage);
