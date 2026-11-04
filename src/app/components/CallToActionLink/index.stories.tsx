@@ -50,3 +50,20 @@ export const WithButtonLikeWrapperAndChevronOutsideTextAndUnderlineOnHover =
       </CallToActionLink>
     );
   };
+
+export const WithGlow = () => {
+  return (
+    <CallToActionLink
+      url="https://www.bbc.com/ws/languages"
+      enableGlow
+      size="brevier"
+    >
+      <CallToActionLink.ButtonLikeWrapper>
+        <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+          Call to Action Link
+        </CallToActionLink.Text>
+        <CallToActionLink.Chevron />
+      </CallToActionLink.ButtonLikeWrapper>
+    </CallToActionLink>
+  );
+};

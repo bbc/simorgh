@@ -4,6 +4,7 @@ import { GelFontSize, FontVariant } from '../../models/types/theming';
 interface ContextProps {
   size?: GelFontSize;
   fontVariant?: FontVariant;
+  isGlowing?: boolean;
 }
 
 const CallToActionLinkContext = createContext({} as ContextProps);
