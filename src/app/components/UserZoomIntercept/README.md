@@ -1,4 +1,4 @@
-# UserZoom Intercept Combined
+# UserZoom Intercept
 
 Loads the UserZoom Site Intercept script on canonical pages. The script is not
 loaded on AMP, App, or Lite pages. Once triggered, it is added using Next.js

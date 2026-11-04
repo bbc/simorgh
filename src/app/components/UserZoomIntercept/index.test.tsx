@@ -5,12 +5,10 @@ import {
   fireEvent,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import {
-  UserZoomClickIntercept,
-  UserZoomImmediateIntercept,
-  UserZoomViewIntercept,
-} from '.';
-import { USERZOOM_SRC } from '../UserZoomIntercept/UserZoomScript';
+import UserZoomIntercept from '.';
+
+const USERZOOM_SRC =
+  'https://cdn4.userzoom.com/files/js/QzI4NFQx.js?t=uz_til&cuid=286685F149F6DF1188490022196C4538';
 
 const ContextWrap = ({
   children,
@@ -76,12 +74,12 @@ beforeEach(() => {
   global.IntersectionObserver = IntersectionObserver;
 });
 
-describe('UserZoomImmediateIntercept', () => {
-  it('renders the UserZoom script immediately', async () => {
+describe('UserZoomIntercept', () => {
+  it('renders the script immediately by default', async () => {
     await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomImmediateIntercept />
+          <UserZoomIntercept />
         </ContextWrap>,
       ),
     );
@@ -99,7 +97,7 @@ describe('UserZoomImmediateIntercept', () => {
       const { container } = await act(async () =>
         render(
           <ContextWrap {...{ [flag]: true }}>
-            <UserZoomImmediateIntercept />
+            <UserZoomIntercept />
           </ContextWrap>,
         ),
       );
@@ -107,19 +105,29 @@ describe('UserZoomImmediateIntercept', () => {
       expect(container.querySelector('script')).toBeNull();
     },
   );
-});
 
-describe('UserZoomViewIntercept', () => {
-  it('renders the script once its marker scrolls into view', async () => {
+  it('does not render the script before the view trigger marker intersects', async () => {
     const { container } = await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomViewIntercept />
+          <UserZoomIntercept trigger="view" />
         </ContextWrap>,
       ),
     );
 
     expect(container.querySelector('script')).toBeNull();
+    expect(container.querySelector('span[aria-hidden="true"]')).toBeTruthy();
+  });
+
+  it('renders the script once the view trigger marker intersects', async () => {
+    const { container } = await act(async () =>
+      render(
+        <ContextWrap>
+          <UserZoomIntercept trigger="view" />
+        </ContextWrap>,
+      ),
+    );
+
     const marker = container.querySelector(
       'span[aria-hidden="true"]',
     ) as HTMLElement;
@@ -136,58 +144,37 @@ describe('UserZoomViewIntercept', () => {
     });
   });
 
-  it.each(['isAmp', 'isApp', 'isLite'])(
-    'does not render when %s is true',
-    async flag => {
-      const { container } = await act(async () =>
-        render(
-          <ContextWrap {...{ [flag]: true }}>
-            <UserZoomViewIntercept />
-          </ContextWrap>,
-        ),
-      );
+  it('does not render the script before the click target is clicked', async () => {
+    const targetRef = { current: document.createElement('button') };
 
-      expect(container.querySelector('script')).toBeNull();
-      expect(container.querySelector('span')).toBeNull();
-    },
-  );
-});
-
-describe('UserZoomClickIntercept', () => {
-  it('renders the script when its feedback button is clicked', async () => {
-    const { container } = render(
-      <ContextWrap>
-        <UserZoomClickIntercept />
-      </ContextWrap>,
+    const { container } = await act(async () =>
+      render(
+        <ContextWrap>
+          <UserZoomIntercept trigger="click" targetRef={targetRef} />
+        </ContextWrap>,
+      ),
     );
 
-    const button = container.querySelector(
-      'button[type="button"]',
-    ) as HTMLButtonElement;
-    expect(button).toHaveTextContent('Give feedback');
     expect(container.querySelector('script')).toBeNull();
+  });
 
-    fireEvent.click(button);
+  it('renders the script once the click target is clicked', async () => {
+    const targetRef = { current: document.createElement('button') };
+
+    await act(async () =>
+      render(
+        <ContextWrap>
+          <UserZoomIntercept trigger="click" targetRef={targetRef} />
+        </ContextWrap>,
+      ),
+    );
+
+    fireEvent.click(targetRef.current);
 
     await waitFor(() => {
       expect(
         document.querySelector(`script[src="${USERZOOM_SRC}"]`),
       ).toBeInTheDocument();
     });
-    expect(container.querySelector('button[type="button"]')).toBe(button);
   });
-
-  it.each(['isAmp', 'isApp', 'isLite'])(
-    'does not render when %s is true',
-    flag => {
-      const { container } = render(
-        <ContextWrap {...{ [flag]: true }}>
-          <UserZoomClickIntercept />
-        </ContextWrap>,
-      );
-
-      expect(container.querySelector('script')).toBeNull();
-      expect(container.querySelector('button')).toBeNull();
-    },
-  );
 });

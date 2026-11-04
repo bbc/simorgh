@@ -15,7 +15,7 @@ const Component = ({ trigger, targetRef }: UserZoomInterceptProps) => (
 );
 
 export default {
-  title: 'Components/UserZoomInterceptCombined',
+  title: 'Components/UserZoomIntercept',
   component: UserZoomIntercept,
   parameters: {
     docs: { readme },
