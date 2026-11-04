@@ -701,7 +701,7 @@ describe('useClickTrackerHandler', () => {
       );
     });
 
-    it('should send the control group Optimizely event without changing the Piano component name', async () => {
+    it('should use the Optimizely component name without changing the Piano component name', async () => {
       const {
         metadata: { atiAnalytics, type },
       } = pidginData;
@@ -713,7 +713,7 @@ describe('useClickTrackerHandler', () => {
               ...eventTrackingData,
               optimizelyComponentName: 'sticky-navigation',
               experimentName: 'mockExperiment',
-              experimentVariant: 'off',
+              experimentVariant: 'variation_a',
               sendOptimizelyEvents: true,
             }}
           />
