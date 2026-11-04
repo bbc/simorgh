@@ -265,13 +265,6 @@ export default ({
         const gridHeadingLevel =
           pageType === 'article' || curationLength > 1 ? 3 : 2;
 
-        // eslint-disable-next-line no-console
-        console.log('HELLO:', {
-          isLite,
-          isVideoCollection,
-          shouldStyleAsVideoCollection,
-        });
-
         return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
