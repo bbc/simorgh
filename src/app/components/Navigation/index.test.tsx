@@ -103,9 +103,8 @@ describe('Navigation', () => {
         componentName: 'scrollable-navigation',
         experimentName: 'newswb_ws_sticky_navigation',
         experimentVariant: 'off',
-        optimizelyComponentName: 'sticky-navigation',
+        optimizelyComponentName: 'navigation',
         sendOptimizelyEvents: true,
-        sendOptimizelyEventsForControl: true,
       });
     });
   });
@@ -465,18 +464,17 @@ describe('Navigation', () => {
       });
     });
 
-    it('should configure Piano click tracking for sticky navigation', () => {
+    it('configures click tracking for the sticky navigation experiment', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
       render(<Navigation navItems={mockNavigation} />);
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'sticky-navigation',
+        componentName: 'navigation',
         experimentName: 'newswb_ws_sticky_navigation',
         experimentVariant: null,
-        optimizelyComponentName: 'sticky-navigation',
+        optimizelyComponentName: 'navigation',
         sendOptimizelyEvents: true,
-        sendOptimizelyEventsForControl: true,
       });
     });
 
@@ -490,9 +488,8 @@ describe('Navigation', () => {
         componentName: 'scrollable-navigation',
         experimentName: 'newswb_ws_sticky_navigation',
         experimentVariant: null,
-        optimizelyComponentName: 'sticky-navigation',
+        optimizelyComponentName: 'navigation',
         sendOptimizelyEvents: true,
-        sendOptimizelyEventsForControl: true,
       });
     });
   });
