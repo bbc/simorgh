@@ -1,48 +1,41 @@
+import { useRef } from 'react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import { PropsWithChildren } from 'react';
+import UserZoomIntercept, { UserZoomInterceptProps } from '.';
 import readme from './README.md';
 import metadata from './metadata.json';
-import UserZoomViewIntercept, {
-  UserZoomViewInterceptProps,
-} from './UserZoomViewIntercept';
-import UserZoomButtonIntercept from './UserZoomButtonIntercept';
 
-const Component = ({ children }: PropsWithChildren) => (
+const Component = ({ trigger, targetRef }: UserZoomInterceptProps) => (
   <RequestContextProvider
     pageType="article"
     service="pidgin"
     pathname="/pathname"
   >
-    {children}
+    <UserZoomIntercept trigger={trigger} targetRef={targetRef} />
   </RequestContextProvider>
 );
 
 export default {
-  title: 'Components/UserZoomIntercept',
-  component: Component,
+  title: 'Components/UserZoomInterceptCombined',
+  component: UserZoomIntercept,
   parameters: {
     docs: { readme },
     metadata,
   },
-  args: {
-    trigger: 'view',
-  },
-  argTypes: {
-    trigger: {
-      control: { type: 'select' },
-      options: ['immediate', 'view'],
-    },
-  },
 };
 
-export const ViewIntercept = ({ trigger }: UserZoomViewInterceptProps) => (
-  <Component>
-    <UserZoomViewIntercept trigger={trigger} />
-  </Component>
-);
+export const Immediate = () => <Component trigger="immediate" />;
 
-export const ClickIntercept = () => (
-  <Component>
-    <UserZoomButtonIntercept />
-  </Component>
-);
+export const View = () => <Component trigger="view" />;
+
+export const Click = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  return (
+    <>
+      <button ref={buttonRef} type="button">
+        Give feedback
+      </button>
+      <Component trigger="click" targetRef={buttonRef} />
+    </>
+  );
+};
