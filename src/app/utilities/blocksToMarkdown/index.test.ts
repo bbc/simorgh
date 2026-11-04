@@ -64,6 +64,61 @@ describe('blocksToMarkdown', () => {
     );
   });
 
+  it.each([
+    ['1. Literal numbered text', '1\\. Literal numbered text'],
+    ['# Literal heading', '\\# Literal heading'],
+    ['> Literal quote', '\\> Literal quote'],
+    ['- Literal list', '\\- Literal list'],
+    [
+      '*literal* _text_ [link](url)',
+      '\\*literal\\* \\_text\\_ \\[link\\]\\(url\\)',
+    ],
+    ['`code` <tag> &copy;', '\\`code\\` \\<tag\\> \\&copy;'],
+    ['Literal\n===', 'Literal\n\\=\\=\\='],
+    ['A \\ B', 'A \\\\ B'],
+  ])('escapes literal paragraph text: %s', (text, expected) => {
+    expect(blocksToMarkdown([{ type: 'paragraph', model: { text } }])).toBe(
+      expected,
+    );
+  });
+
+  it('escapes text fragments before adding heading syntax', () => {
+    expect(
+      blocksToMarkdown([
+        {
+          type: 'headline',
+          model: {
+            blocks: [
+              { type: 'fragment', model: { text: '# [Literal]' } },
+              { type: 'fragment', model: { text: '*heading*' } },
+            ],
+          },
+        },
+      ]),
+    ).toBe('# \\# \\[Literal\\]\\*heading\\*');
+  });
+
+  it('escapes image descriptions without breaking image syntax', () => {
+    expect(
+      blocksToMarkdown([
+        {
+          type: 'image',
+          model: {
+            blocks: [
+              {
+                type: 'rawImage',
+                model: { locator: 'image.jpg', originCode: 'cpsprodpb' },
+              },
+              { type: 'altText', model: { text: 'An unmatched ] and *star*' } },
+            ],
+          },
+        },
+      ]),
+    ).toBe(
+      '![An unmatched \\] and \\*star\\*](https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/image.jpg.webp)',
+    );
+  });
+
   it('omits unsupported blocks and images without image data', () => {
     expect(
       blocksToMarkdown([

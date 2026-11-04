@@ -23,7 +23,8 @@ also includes `rel="canonical"` pointing to the public BBC URL without `.md` or
 query parameters. `x-markdown-tokens` provides an approximate token count.
 
 The renderer supports headlines, subheadlines, paragraph text and images;
-unsupported block types are omitted.
+unsupported block types are omitted. Markdown control characters in article
+text and image descriptions are escaped to preserve their literal content.
 
 ## How routes are handled
 
