@@ -66,6 +66,7 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
+      <EditorialPicksPromoExperiment topicId={topicId} />
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
@@ -101,8 +102,6 @@ const TopicPage = ({ pageData }) => {
               />
             )}
           </div>
-          {/* EXPERIMENT: Hindi Editorial Picks follow promo */}
-          <EditorialPicksPromoExperiment topicId={topicId} />
           <TopicPageElectionBanner
             curationIds={curations.map(({ curationId }) => curationId)}
           />

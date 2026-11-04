@@ -2,6 +2,7 @@
 
 .buttonWrapper {
   position: relative;
+  z-index: 6;
   margin-block: #{theme.$spacings-double};
 
   @media #{theme.$mediaQueries-group-3-min-width} {
