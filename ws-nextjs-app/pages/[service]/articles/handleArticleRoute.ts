@@ -9,7 +9,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes, ToggleDefinition } from '#app/models/types/global';
 import { MARKDOWN_REGEX } from '#app/lib/regex.const';
-import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
+import articleToMarkdown from '#app/utilities/articleToMarkdown';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -144,8 +144,8 @@ export default async (
   );
 
   if (isMarkdown) {
-    const markdown = blocksToMarkdown(article.content.model.blocks);
     const canonicalUrl = `https://www.bbc.com${canonicalPathname.replace(MARKDOWN_REGEX, '')}`;
+    const markdown = articleToMarkdown({ article, canonicalUrl });
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,
       status,

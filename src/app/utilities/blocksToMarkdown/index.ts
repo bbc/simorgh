@@ -8,10 +8,11 @@ type MarkdownBlock = {
   };
 };
 
-const inlineText = ({ model }: MarkdownBlock): string =>
-  model.text?.replace(/[\\`*_{}[\]()#+.!<>|~=&-]/g, '\\$&') ??
-  model.blocks?.map(inlineText).join('') ??
-  '';
+export const getBlockText = ({ model }: MarkdownBlock): string =>
+  model.text ?? model.blocks?.map(getBlockText).join('') ?? '';
+
+const inlineText = (block: MarkdownBlock): string =>
+  getBlockText(block).replace(/[\\`*_{}[\]()#+.!<>|~=&-]/g, '\\$&');
 
 const renderBlock = (block: MarkdownBlock): string => {
   switch (block.type) {

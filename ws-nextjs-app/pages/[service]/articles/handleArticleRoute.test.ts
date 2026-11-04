@@ -3,7 +3,7 @@ import { GetServerSidePropsContext } from 'next';
 import { IncomingMessage, ServerResponse } from 'node:http';
 import { Socket } from 'node:net';
 import { ToggleDefinition } from '#app/models/types/global';
-import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
+import articleToMarkdown from '#app/utilities/articleToMarkdown';
 import localToggles from '#app/lib/config/toggles/localConfig';
 import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
@@ -64,9 +64,10 @@ describe('handleArticleRoute', () => {
       const context = createContext(
         '/pidgin/articles/cvpde7nqj92o.md?renderer_env=test',
       );
-      const markdown = blocksToMarkdown(
-        pidginMediaArticleFixtureData.data.article.content.model.blocks,
-      );
+      const markdown = articleToMarkdown({
+        article: pidginMediaArticleFixtureData.data.article,
+        canonicalUrl: 'https://www.bbc.com/pidgin/articles/cvpde7nqj92o',
+      });
 
       await handleArticleRoute(context, {
         toggles: { renderMarkDown: { enabled: true } },
@@ -85,6 +86,10 @@ describe('handleArticleRoute', () => {
         Math.floor(markdown.length / 3),
       );
       expect(context.res.end).toHaveBeenCalledWith(markdown);
+      expect(markdown).toMatch(/^---\ntitle: /);
+      expect(markdown).toContain(
+        'canonical: "https://www.bbc.com/pidgin/articles/cvpde7nqj92o"',
+      );
       expect(getPageDataModule.default).toHaveBeenCalledWith(
         expect.objectContaining({ id: '/pidgin/articles/cvpde7nqj92o' }),
       );
