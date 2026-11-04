@@ -1,4 +1,3 @@
-// EXPERIMENT: Hindi Editorial Picks follow promo
 import { use } from 'react';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
@@ -11,8 +10,7 @@ export const EXPERIMENT_NAME = 'newswb_ws_hindi_editorial_picks_follow_promo';
 export const EDITORIAL_PICKS_TOPIC_ID = 'crvgyj0g9d5lt';
 export const VARIANT_KEY = 'variant';
 
-// TODO: replace with final UX-approved Hindi copy (TBC). Falls back to the
-// existing accountPromoBanner translations while undefined.
+// TODO: add UX-approved Hindi copy.
 const BANNER_COPY: { title?: string; description?: string } = {
   title: undefined,
   description: undefined,
@@ -36,7 +34,6 @@ const BannerExperiment = () => {
   );
 };
 
-// Gates activation so only signed-out visitors on Hindi Editorial Picks are bucketed.
 const EditorialPicksPromoExperiment = ({ topicId }: { topicId?: string }) => {
   const { service } = use(ServiceContext);
   const isEligible = useAccountPromoBannerEligibility();
