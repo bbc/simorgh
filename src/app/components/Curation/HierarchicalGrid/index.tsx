@@ -260,6 +260,9 @@ const HiearchicalGrid = ({
                     fetchPriority={fetchpriority}
                     isAmp={isAmp}
                     isPortraitImage={promo.isPortraitImage}
+                    {...(isVideoCollection && { mobileSize: '100vw' })}
+                    {...(isVideoCollection &&
+                      i === 0 && { tabletSize: '100vw' })}
                   >
                     {isMedia && (
                       <Promo.MediaIcon type={promo.type}>
