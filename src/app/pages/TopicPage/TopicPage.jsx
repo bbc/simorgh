@@ -19,6 +19,7 @@ import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import TopicPageElectionBanner from './TopicPageElectionBanner';
+import EditorialPicksPromoExperiment from './EditorialPicksPromoExperiment';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName, service } = use(ServiceContext);
@@ -100,6 +101,8 @@ const TopicPage = ({ pageData }) => {
               />
             )}
           </div>
+          {/* EXPERIMENT: Hindi Editorial Picks follow promo */}
+          <EditorialPicksPromoExperiment topicId={topicId} />
           <TopicPageElectionBanner
             curationIds={curations.map(({ curationId }) => curationId)}
           />
