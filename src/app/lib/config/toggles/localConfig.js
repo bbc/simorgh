@@ -93,7 +93,6 @@ export default {
   },
   renderMarkDown: {
     enabled: true,
-    value: 'russian',
   },
   scriptLink: {
     enabled: true,

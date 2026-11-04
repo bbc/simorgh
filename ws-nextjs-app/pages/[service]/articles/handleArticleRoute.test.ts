@@ -4,6 +4,7 @@ import { IncomingMessage, ServerResponse } from 'node:http';
 import { Socket } from 'node:net';
 import { ToggleDefinition } from '#app/models/types/global';
 import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
+import localToggles from '#app/lib/config/toggles/localConfig';
 import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
@@ -98,10 +99,6 @@ describe('handleArticleRoute', () => {
         description: 'disabled',
         toggles: { renderMarkDown: { enabled: false } },
       },
-      {
-        description: 'enabled for another service',
-        toggles: { renderMarkDown: { enabled: true, value: 'russian' } },
-      },
     ])('returns 404 when the toggle is $description', async ({ toggles }) => {
       const context = createContext();
 
@@ -114,22 +111,25 @@ describe('handleArticleRoute', () => {
       expect(context.res.getHeader('Content-Type')).toBeUndefined();
     });
 
-    it('allows the service selected in the local stub toggle', async () => {
-      const context = {
-        ...createContext('/russian/articles/c6wyzl2xdyz2o.md'),
-        query: { service: 'russian' },
-      };
-      jest.spyOn(shouldRender, 'default').mockReturnValue({
-        hasRequestSucceeded: true,
-        status: 200,
-      });
+    it.each(['russian', 'pidgin'] as const)(
+      'enables %s using the local stub toggle',
+      async service => {
+        const context = {
+          ...createContext(`/${service}/articles/cvpde7nqj92o.md`),
+          query: { service },
+        };
+        jest.spyOn(shouldRender, 'default').mockReturnValue({
+          hasRequestSucceeded: true,
+          status: 200,
+        });
 
-      await handleArticleRoute(context, {
-        toggles: { renderMarkDown: { enabled: true, value: 'russian' } },
-      });
+        await handleArticleRoute(context, {
+          toggles: { renderMarkDown: localToggles.renderMarkDown },
+        });
 
-      expect(context.res.end).toHaveBeenCalledWith(expect.any(String));
-    });
+        expect(context.res.end).toHaveBeenCalledWith(expect.any(String));
+      },
+    );
 
     it('preserves script variants in data requests and canonical links', async () => {
       const context = {

@@ -50,11 +50,7 @@ export default async (
 
   const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
-  const markdownToggle = toggles.renderMarkDown;
-  const canRenderMarkdown =
-    markdownToggle?.enabled === true &&
-    (!markdownToggle.value ||
-      String(markdownToggle.value).split('|').includes(service));
+  const canRenderMarkdown = toggles.renderMarkDown?.enabled === true;
 
   if (isMarkdown && !canRenderMarkdown) {
     context.res.statusCode = NOT_FOUND;

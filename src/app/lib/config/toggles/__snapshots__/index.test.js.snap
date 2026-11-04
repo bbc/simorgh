@@ -208,7 +208,6 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "renderMarkDown": {
     "enabled": true,
-    "value": "russian",
   },
   "scriptLink": {
     "enabled": true,
