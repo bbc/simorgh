@@ -145,7 +145,7 @@ File:
 ## Error handling
 
 - non-2xx responses throw `UasError` with parsed JSON or text message body when available
-- service-level retrieval helpers (for example `getRecentActivity`) log and rethrow
+- service-level retrieval helpers (for example `getRecentActivity`) log and rethrow failures, but skip API error logging when the caller's signal is aborted; errors are always rethrown
 - save/remove/status hooks report failures through error tracking hooks
 
 Files:

@@ -3,6 +3,11 @@ import viewTracker from '.';
 
 jest.useFakeTimers();
 
+const evaluateStringifiedTracker = (tracker: () => void): (() => void) => {
+  // eslint-disable-next-line no-new-func
+  return new Function(`return (${tracker.toString()})`)() as () => void;
+};
+
 describe('View tracking script', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -12,19 +17,7 @@ describe('View tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  it('STATIC_REVERB_VIEW_TRACKING variable is correct', () => {
-    const viewTrackerString = viewTracker.toString();
-
-    const pattern = /STATIC_REVERB_VIEW_TRACKING = '([^']+)'/;
-
-    const matches = viewTrackerString.match(pattern) || [];
-    const [, liteReverbViewTracking] = matches;
-
-    // STATIC_REVERB_VIEW_TRACKING in ./index.ts must match the value of STATIC_REVERB_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(liteReverbViewTracking).toBe(STATIC_REVERB_VIEW_TRACKING);
-  });
-
-  it('Calls processClientDeviceAndSendStaticBeacon() when the IntersectionObserver marks it as intersecting.', () => {
+  it('uses the exported tracking attribute with the stringified view tracker when the IntersectionObserver marks it as intersecting.', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
       STATIC_REVERB_VIEW_TRACKING,
@@ -36,7 +29,7 @@ describe('View tracking script', () => {
       .spyOn(document, 'querySelectorAll')
       .mockReturnValueOnce([mockElement] as unknown as NodeListOf<Element>);
 
-    viewTracker();
+    evaluateStringifiedTracker(viewTracker)();
     document.dispatchEvent(new Event('triggerMockObserver'));
     jest.runAllTimers();
 
@@ -60,7 +53,7 @@ describe('View tracking script', () => {
         mockElement,
       ] as unknown as NodeListOf<Element>);
 
-    viewTracker();
+    evaluateStringifiedTracker(viewTracker)();
     document.dispatchEvent(new Event('triggerMockObserver'));
     jest.runAllTimers();
 

@@ -31,7 +31,7 @@ const ChildWrapper = styled.div`
 
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
-const buildSizes = (useLargeImages, isProgrammeImage) => {
+const buildSizes = (useLargeImages, isProgrammeImage, mobileSize = '33vw') => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages
     ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
@@ -47,7 +47,7 @@ const buildSizes = (useLargeImages, isProgrammeImage) => {
     : `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
 
   // 1 column of 100% screen width - images are 33% of the column
-  const MOBILE_SIZE = useLargeImages ? `100vw` : `33vw`;
+  const MOBILE_SIZE = useLargeImages ? `100vw` : mobileSize;
 
   return [
     isProgrammeImage ? DESKTOP_SIZE_PROGRAMMES : DESKTOP_SIZE,
@@ -64,33 +64,36 @@ const Image = props => {
     className,
     isPortraitImage,
     isLite,
+    mobileSize,
     ...rest
   } = props;
-  const isProgrammeImage = src.startsWith(
+  const isProgrammeImage = src?.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
-  const suffix = src.endsWith('.webp') ? '' : '.webp';
+  const suffix = src?.endsWith('.webp') ? '' : '.webp';
   const resolutions = isProgrammeImage
     ? PROGRAMME_IMAGE_RESOLUTIONS
     : IMAGE_RESOLUTIONS;
-  const sizes = buildSizes(useLargeImages, isProgrammeImage);
+  const sizes = buildSizes(useLargeImages, isProgrammeImage, mobileSize);
   const primarySrcSet = createResponsiveSrcSet({
-    imageUrlTemplate: `${src}${suffix}`,
+    imageUrlTemplate: src ? `${src}${suffix}` : undefined,
     widths: resolutions,
     mq: { GROUP_2_MAX_WIDTH: '' },
     sizesBuilder: () => sizes,
-  }).srcSet;
+  })?.srcSet;
   const fallbackSrcSet = createResponsiveSrcSet({
-    imageUrlTemplate: src.replaceAll('.webp', ''),
+    imageUrlTemplate: src ? src.replaceAll('.webp', '') : undefined,
     widths: resolutions,
     mq: { GROUP_2_MAX_WIDTH: '' },
     sizesBuilder: () => sizes,
-  }).srcSet;
-  const srcWith240Width = src.replace('{width}', 240);
+  })?.srcSet;
+  const srcWith240Width = src?.replace('{width}', 240);
 
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
+      {isPortraitImage && srcWith240Width && (
+        <BlurredBackground src={srcWith240Width} />
+      )}
       <IMAGE
         {...rest}
         src={srcWith240Width}

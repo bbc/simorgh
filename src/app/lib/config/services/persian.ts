@@ -51,7 +51,11 @@ export const service: DefaultServiceConfig = {
     electionBanner: {
       title: 'انتخابات میان‌دوره‌ای آمریکا ۲۰۲۶',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:bfb7e45d-785b-4694-8e24-56279c635a12',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/35021.html',
     },
     podcastPromo: {
       title: 'معرفی خبرنامه',
@@ -105,6 +109,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      showMore: 'نمایش بیشتر',
       moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {

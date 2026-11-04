@@ -1,11 +1,10 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { DOWNLOADS_PAGE } from '#app/routes/utils/pageTypes';
 import logResponseTime from '#utilities/logResponseTime';
 
 import deriveVariant from '#utilities/deriveVariant';
 import PageDataParams from '#app/models/types/pageDataParams';
-import fetchToggles from '#app/lib/utilities/fetchToggles';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import dataFetch from './dataFetch';
 
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));
@@ -25,7 +24,8 @@ const atiData = {
   producerName: 'KOREAN',
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async (context, props) => {
+  const { toggles } = props;
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -42,7 +42,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const variant = deriveVariant(variantFromUrl);
 
   const downloadData = await dataFetch(service);
-  const toggles = await fetchToggles({ service });
 
   return {
     props: {
@@ -64,6 +63,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       variant,
     },
   };
-};
+});
 
 export default downloadsPageLayout;

@@ -1,6 +1,11 @@
 import { getEnvConfig } from '.';
 import * as onClient from '../onClient';
 
+jest.mock('../onClient', () => ({
+  __esModule: true,
+  ...jest.requireActual('../onClient'),
+}));
+
 const onClientSpy = jest.spyOn(onClient, 'default');
 
 describe('getEnvConfig', () => {

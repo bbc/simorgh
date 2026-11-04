@@ -1,12 +1,33 @@
 /* eslint-disable no-underscore-dangle */
 import colours from 'colors';
 import '@testing-library/jest-dom';
+import { TextEncoder, TextDecoder } from 'node:util';
+import { ReadableStream } from 'node:stream/web';
+import { MessageChannel, MessagePort } from 'node:worker_threads';
+
+Object.assign(global, {
+  TextEncoder,
+  TextDecoder,
+  ReadableStream,
+  MessageChannel,
+  MessagePort,
+});
+
+Object.defineProperty(global, 'crypto', {
+  value: {
+    randomUUID: jest.fn(),
+    getRandomValues: jest.fn(),
+  },
+});
+
+global.setImmediate =
+  global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
 /**
  * Suppress JSDOM errors relating to navigation not implemented
  * https://github.com/jsdom/jsdom/issues/2112 -> code snippet from https://github.com/jsdom/jsdom/issues/2112#issuecomment-673540137
  *  */
-if (window?._virtualConsole) {
+if (global.window?._virtualConsole) {
   const listeners = window._virtualConsole.listeners('jsdomError');
   const originalListener = listeners && listeners[0];
 
@@ -22,36 +43,6 @@ if (window?._virtualConsole) {
     }
   });
 }
-
-global.originalWindowLocation = window.location;
-
-beforeAll(() => {
-  window.location = Object.defineProperties(
-    {},
-    {
-      ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
-      assign: {
-        configurable: true,
-        value: jest.fn(),
-      },
-      host: {
-        configurable: true,
-      },
-      hostname: {
-        configurable: true,
-      },
-      href: {
-        configurable: true,
-      },
-      origin: {
-        configurable: true,
-      },
-      pathname: {
-        configurable: true,
-      },
-    },
-  );
-});
 
 // Errors
 const FAILED_PROP = 'Failed prop';
@@ -88,7 +79,7 @@ const getFormattedMessage = (message, rest) => {
 };
 
 const didSuppressWarning = (message, ...rest) => {
-  const { expectedWarnings } = window;
+  const { expectedWarnings } = global.window || {};
   if (SUPPRESSED_REGEX.test(message)) {
     return true;
   }
@@ -101,7 +92,7 @@ const didSuppressWarning = (message, ...rest) => {
       const consoleFormattedMessage = getFormattedMessage(message, rest);
 
       if (warningsRegex.test(consoleFormattedMessage)) {
-        window.expectedWarnings.splice(i, 1);
+        expectedWarnings.splice(i, 1);
         return true;
       }
     }
@@ -128,9 +119,6 @@ Please fix the following:
     ].join('\n'),
   );
 };
-
-global.setImmediate =
-  global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
 
 // eslint-disable-next-line no-console
 console.warn = (message, ...rest) => {

@@ -6,6 +6,11 @@ import {
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import EpisodeDescriptionFormatter from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const CHAPTER_TEXT = '00:00 Introduction\n00:43 Chapter one\n06:25 Chapter two';
 
 describe('EpisodeDescriptionFormatter', () => {

@@ -11,26 +11,18 @@ interface UseUASFetchSaveStatusReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
-  savedMetadata?: Record<string, unknown>;
+  metadata?: Record<string, unknown>;
 }
 
 const useUASFetchSaveStatus = (
   articleId: string,
-): UseUASFetchSaveStatusReturn => {
-  const { isSaved, isLoading, error, metadata } = useUASStatusHook({
+): UseUASFetchSaveStatusReturn =>
+  useUASStatusHook({
     resourceId: articleId,
     config: FAVOURITES_CONFIG,
     queryKeyFn: (hashedUserId, id) => uasKeys.favouriteStatus(hashedUserId, id),
     statusField: UASStatusField.SAVED,
     enabledFn: id => !!id,
   });
-
-  return {
-    isSaved,
-    isLoading,
-    error,
-    savedMetadata: metadata,
-  };
-};
 
 export default useUASFetchSaveStatus;

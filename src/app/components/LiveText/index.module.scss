@@ -1,0 +1,8 @@
+@use '@scss/themeTokens' as theme;
+
+.liveLabelText {
+  color: theme.$palette-live-dark;
+  display: inline-block;
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  margin-inline-end: theme.$spacings-full;
+}

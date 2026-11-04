@@ -6,7 +6,7 @@ const addVaryHeader = ({
   ctx,
   serverSideExperiments,
 }: {
-  ctx: NextPageContext;
+  ctx: Pick<NextPageContext, 'res'>;
   serverSideExperiments: ServerSideExperiment[] | null;
 }) => {
   const allVaryHeaders = ['X-Country'];

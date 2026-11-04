@@ -6,6 +6,11 @@ import buttonLikeWrapperStyles from './ButtonLikeWrapper/index.module.scss';
 import chevronStyles from './Chevron/index.module.scss';
 import textStyles from './Text/index.module.scss';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 describe('Call To Action Link', () => {
   beforeEach(() => {
     jest.clearAllMocks();

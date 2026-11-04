@@ -4,13 +4,15 @@ import {
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import getEnrichedArticleATIData from '.';
-import * as useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
+
+const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -183,9 +185,7 @@ describe('getEnrichedArticleATIData', () => {
   });
 
   it('should include experiment details when present', () => {
-    jest
-      .spyOn(useOptimizelyVariation, 'default')
-      .mockImplementation(() => 'experimentVariant');
+    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
 
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata,

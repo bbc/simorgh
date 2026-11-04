@@ -22,6 +22,11 @@ import { MediaBlock } from './types';
 import { fakeFullscreenStyles } from './index.styles';
 import * as buildConfig from './utils/buildSettings';
 
+jest.mock('./utils/buildSettings', () => ({
+  __esModule: true,
+  ...jest.requireActual('./utils/buildSettings'),
+}));
+
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
   useState: jest.fn(),
