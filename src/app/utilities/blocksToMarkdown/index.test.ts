@@ -65,6 +65,78 @@ describe('blocksToMarkdown', () => {
   });
 
   it.each([
+    {
+      originCode: 'cpsprodpb',
+      locator: 'image.jpg.webp',
+      expectedUrl:
+        'https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/image.jpg.webp',
+    },
+    {
+      originCode: 'mpv',
+      locator: 'https://ichef.bbci.co.uk/images/ic/640xn/p01k6mtv.jpg',
+      expectedUrl: 'https://ichef.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg.webp',
+    },
+    {
+      originCode: 'pips',
+      locator:
+        'https://ichef.bbci.co.uk/ace/standard/{width}/galileo/p0p4qjjk.jpg',
+      expectedUrl:
+        'https://ichef.bbci.co.uk/ace/standard/800/galileo/p0p4qjjk.jpg.webp',
+    },
+    {
+      originCode: undefined,
+      locator: 'image.png',
+      expectedUrl:
+        'https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/image.png.webp',
+    },
+  ])(
+    'builds image URLs for $originCode and $locator',
+    ({ originCode, locator, expectedUrl }) => {
+      expect(
+        blocksToMarkdown([
+          {
+            type: 'image',
+            model: {
+              blocks: [{ type: 'rawImage', model: { originCode, locator } }],
+            },
+          },
+        ]),
+      ).toBe(`![](${expectedUrl})`);
+    },
+  );
+
+  it('uses the configured iChef host for body images', () => {
+    const originalHost = process.env.SIMORGH_ICHEF_BASE_URL;
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+
+    try {
+      expect(
+        blocksToMarkdown([
+          {
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  type: 'rawImage',
+                  model: { originCode: 'cpsdevpb', locator: 'image.jpg' },
+                },
+              ],
+            },
+          },
+        ]),
+      ).toBe(
+        '![](https://ichef.test.bbci.co.uk/ace/ws/800/cpsdevpb/image.jpg.webp)',
+      );
+    } finally {
+      if (originalHost === undefined) {
+        delete process.env.SIMORGH_ICHEF_BASE_URL;
+      } else {
+        process.env.SIMORGH_ICHEF_BASE_URL = originalHost;
+      }
+    }
+  });
+
+  it.each([
     ['1. Literal numbered text', '1\\. Literal numbered text'],
     ['# Literal heading', '\\# Literal heading'],
     ['> Literal quote', '\\> Literal quote'],

@@ -1,3 +1,5 @@
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+
 type MarkdownBlock = {
   type: string;
   model: {
@@ -34,7 +36,13 @@ const renderBlock = (block: MarkdownBlock): string => {
 
       if (!image?.model.locator) return '';
 
-      return `![${altText ? inlineText(altText) : ''}](https://ichef.bbci.co.uk/ace/ws/800/${image.model.originCode || 'cpsprodpb'}/${image.model.locator}.webp)`;
+      const imageUrl = buildIChefURL({
+        originCode: image.model.originCode || 'cpsprodpb',
+        locator: image.model.locator,
+        resolution: 800,
+      });
+
+      return `![${altText ? inlineText(altText) : ''}](${imageUrl})`;
     }
     default:
       return '';
