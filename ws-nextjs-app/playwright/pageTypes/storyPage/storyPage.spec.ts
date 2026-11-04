@@ -792,7 +792,7 @@ test.describe('storyPage', () => {
         }
 
         const parameters = { ...testSuite, pageType: 'STY' };
-        test.describe('Most Read and Ads', () => {
+        test.describe('Most Read and  Ads', () => {
           test.beforeEach(async ({ page }) => {
             await gotoStoryPage(page, testSuite.path);
           });
