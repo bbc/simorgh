@@ -17,7 +17,6 @@ type ServerSideExperimentConfig = {
 };
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
-
   // experiment: test_server_side_experiment_visits_aa
   {
     name: 'test_server_side_experiment_visits_aa',
@@ -31,6 +30,11 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
       'tigrinya',
       'yoruba',
     ],
+    pageTypes: ['home'],
+  },
+  {
+    name: 'newswb_ws_homepage_account_promo_banner_copy_rerun',
+    services: ['hindi'],
     pageTypes: ['home'],
   },
 ];
