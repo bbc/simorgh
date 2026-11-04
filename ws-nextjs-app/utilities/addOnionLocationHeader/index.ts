@@ -1,6 +1,10 @@
 import { NextPageContext } from 'next/types';
 
-const addOnionLocationHeader = ({ ctx }: { ctx: NextPageContext }) => {
+const addOnionLocationHeader = ({
+  ctx,
+}: {
+  ctx: Pick<NextPageContext, 'asPath' | 'res'>;
+}) => {
   const { asPath } = ctx;
 
   ctx.res?.setHeader(

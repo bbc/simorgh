@@ -12,7 +12,11 @@ interface ExternalProps {
 }
 
 const Component = ({ relatedTopic }: ExternalProps) => (
-  <HighImpactPromo {...baseProps} relatedTopic={relatedTopic} />
+  <HighImpactPromo
+    {...baseProps}
+    relatedTopic={relatedTopic}
+    showRelatedTopic
+  />
 );
 
 export default {

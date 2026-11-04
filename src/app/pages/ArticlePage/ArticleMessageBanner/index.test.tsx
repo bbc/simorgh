@@ -1,10 +1,14 @@
+import type { ComponentProps } from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { MetadataTaggings } from '#app/models/types/metadata';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import ArticleMessageBanner from '.';
 
 const BRAZIL_ELECTION_THING_ID = 'b91eaef4-fdf2-47a6-b3ec-05b5a55a4843';
 const BRAZIL_WORLD_CUP_THING_ID = 'f30c1edd-b1de-449c-a57e-1003edc03174';
+const ELECTION_LINK_HREF = '/portuguese/articles/c61m430mdek2o';
 
 const brazilElectionAboutTags = [
   { thingId: BRAZIL_ELECTION_THING_ID, thingLabel: 'Eleições 2026' },
@@ -36,13 +40,42 @@ const sensitiveTagging: MetadataTaggings = [
   },
 ];
 
+const mockServiceContext = {
+  articleMessageBanners: [
+    {
+      thingIds: [BRAZIL_ELECTION_THING_ID],
+      heading: 'Eleições 2026: veja como foi a votação',
+      linkHref: ELECTION_LINK_HREF,
+      linkText: 'Ver resultados',
+    },
+    {
+      thingIds: [BRAZIL_WORLD_CUP_THING_ID],
+      heading: 'Copa do Mundo 2026 – tabela completa',
+      linkHref: '/portuguese/topics/copa-do-mundo-2026',
+      linkText: 'Ver tabela',
+    },
+  ],
+} as ServiceConfig;
+
+const renderBanner = (
+  props: ComponentProps<typeof ArticleMessageBanner>,
+  options?: Parameters<typeof render>[1],
+  serviceContext: ServiceConfig = mockServiceContext,
+) =>
+  render(
+    <ServiceContext.Provider value={serviceContext}>
+      <ArticleMessageBanner {...props} />
+    </ServiceContext.Provider>,
+    options,
+  );
+
 describe('ArticleMessageBanner', () => {
   it('renders the Brazil election message banner when election thingId matches', () => {
-    const { getByText } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilElectionAboutTags}
-        taggings={mockTaggings}
-      />,
+    const { getByText } = renderBanner(
+      {
+        aboutTags: brazilElectionAboutTags,
+        taggings: mockTaggings,
+      },
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
@@ -55,11 +88,11 @@ describe('ArticleMessageBanner', () => {
   });
 
   it('renders the World Cup message banner when world cup thingId matches', () => {
-    const { getByText } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilWorldCupAboutTags}
-        taggings={mockTaggings}
-      />,
+    const { getByText } = renderBanner(
+      {
+        aboutTags: brazilWorldCupAboutTags,
+        taggings: mockTaggings,
+      },
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
@@ -72,11 +105,11 @@ describe('ArticleMessageBanner', () => {
   });
 
   it('prefers election banner when both IDs are present', () => {
-    const { getByText, queryByText } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilBothAboutTags}
-        taggings={mockTaggings}
-      />,
+    const { getByText, queryByText } = renderBanner(
+      {
+        aboutTags: brazilBothAboutTags,
+        taggings: mockTaggings,
+      },
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
@@ -93,11 +126,11 @@ describe('ArticleMessageBanner', () => {
   });
 
   it('does not render when sensitivity tagging exists', () => {
-    const { queryByTestId } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilElectionAboutTags}
-        taggings={sensitiveTagging}
-      />,
+    const { queryByTestId } = renderBanner(
+      {
+        aboutTags: brazilElectionAboutTags,
+        taggings: sensitiveTagging,
+      },
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
@@ -108,15 +141,15 @@ describe('ArticleMessageBanner', () => {
   });
 
   it('does not render when the banner linkHref matches the current page path', () => {
-    const { queryByTestId } = render(
-      <ArticleMessageBanner
-        aboutTags={brazilElectionAboutTags}
-        taggings={mockTaggings}
-      />,
+    const { queryByTestId } = renderBanner(
+      {
+        aboutTags: brazilElectionAboutTags,
+        taggings: mockTaggings,
+      },
       {
         toggles: { electionBanner: { enabled: true } },
         service: 'portuguese',
-        pathname: '/portuguese/articles/c61m430mdek2o',
+        pathname: ELECTION_LINK_HREF,
       },
     );
 

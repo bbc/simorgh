@@ -5,6 +5,10 @@ import * as getPageDataModule from '../../../../utilities/pageRequests/getPageDa
 import { getServerSideProps as handleMostReadRoute } from './[[...variant]].page';
 
 jest.mock('../../../../utilities/pageRequests/getPageData');
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
 
 describe('handleMostReadRoute', () => {
   const mockSetHeader = jest.fn();

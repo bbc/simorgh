@@ -26,6 +26,9 @@ export default {
   electionBanner: {
     enabled: true,
   },
+  livePageElectionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
     value: `(${SERVICES.join('|')})`,

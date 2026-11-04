@@ -53,7 +53,10 @@ const Text = ({
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveLabel}`}
+        {/* The trailing space isn't rendered (the label is inline-block) but
+        stops the label running into the following text in the accessible
+        name (WCAG 2.5.3) */}
+        {`${liveLabel} `}
       </span>
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>

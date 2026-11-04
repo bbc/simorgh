@@ -109,6 +109,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
+      showMore: 'عرض المزيد',
       moreOnThis: '',
       navMenuText: 'أقسام',
       liteSite: {

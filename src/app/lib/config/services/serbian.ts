@@ -159,6 +159,7 @@ export const service: SerbianConfig = {
       },
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      showMore: 'Prikaži više',
       moreOnThis: '',
       navMenuText: 'Odeljci',
       liteSite: {
@@ -655,6 +656,7 @@ export const service: SerbianConfig = {
       },
       relatedContent: 'Повезано',
       relatedTopics: 'Повезане теме',
+      showMore: 'Прикажи више',
       navMenuText: 'Одељци',
       liteSite: {
         onboardingMessage:

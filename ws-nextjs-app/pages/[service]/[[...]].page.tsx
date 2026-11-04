@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { IncomingHttpHeaders } from 'node:http';
 
@@ -30,6 +29,7 @@ import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaErro
 import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
 import logResponseTime from '#utilities/logResponseTime';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -108,7 +108,7 @@ const ROUTE_HANDLERS = {
   [OFFLINE_PAGE]: handleOfflineRoute,
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   const {
     resolvedUrl,
     req: { headers: reqHeaders },
@@ -140,7 +140,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       variant,
     },
   };
-};
+});
 
 type PageProps = {
   pageType?: PageTypes;
