@@ -20,9 +20,7 @@ import { service as indonesiaConfig } from '../../lib/config/services/indonesia'
 import Navigation from './index';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '../../hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 
 jest.mock('../../hooks/useViewTracker', () => ({
   __esModule: true,
