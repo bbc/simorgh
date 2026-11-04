@@ -1,7 +1,13 @@
 import { screen } from '@testing-library/react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import AccountActionButtons from '.';
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
 
 const defaultProps = {
   signInComponentName: 'test-sign-in',
@@ -81,5 +87,30 @@ describe('AccountActionButtons', () => {
 
     expect(screen.queryByTestId('test-sign-in')).toBeNull();
     expect(screen.queryByTestId('test-register')).toBeNull();
+  });
+
+  it('configures one Optimizely click event for sign-in and register', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+    renderComponent({
+      experimentName: 'account-promotion-experiment',
+      experimentVariant: 'account-promotion-variant',
+      optimizelyComponentName: 'account-promotional-banner',
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'test-sign-in',
+      experimentName: 'account-promotion-experiment',
+      experimentVariant: 'account-promotion-variant',
+      optimizelyComponentName: 'account-promotional-banner',
+      sendOptimizelyEvents: true,
+    });
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'test-register',
+      experimentName: 'account-promotion-experiment',
+      experimentVariant: 'account-promotion-variant',
+      optimizelyComponentName: 'account-promotional-banner',
+      sendOptimizelyEvents: true,
+    });
   });
 });
