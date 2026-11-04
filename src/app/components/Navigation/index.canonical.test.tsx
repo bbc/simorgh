@@ -480,7 +480,7 @@ describe('Navigation - Canonical', () => {
         expect(dispatchTrackingRequestsMock).toHaveBeenCalledWith(
           expect.objectContaining({
             reverbParameters: expect.objectContaining({
-              componentName: 'sticky-navigation',
+              componentName: 'navigation',
               type: 'view',
             }),
           }),
@@ -504,7 +504,7 @@ describe('Navigation - Canonical', () => {
         expect(dispatchTrackingRequestsMock).not.toHaveBeenCalledWith(
           expect.objectContaining({
             reverbParameters: expect.objectContaining({
-              componentName: 'sticky-navigation',
+              componentName: 'navigation',
             }),
           }),
         );
@@ -514,7 +514,7 @@ describe('Navigation - Canonical', () => {
         const stickyViewEvents = () =>
           dispatchTrackingRequestsMock.mock.calls.filter(
             ([{ reverbParameters, trackingFlags }]) =>
-              reverbParameters.componentName === 'sticky-navigation' &&
+              reverbParameters.componentName === 'navigation' &&
               !trackingFlags.eventSent,
           );
 
