@@ -67,7 +67,7 @@ const MessageBanner = ({
         <CallToActionLink
           url={link}
           className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
-          enableGlow
+          enableGlow // to check
           eventTrackingData={eventTrackingDataWithoutItemCount}
         >
           <CallToActionLink.ButtonLikeWrapper>
