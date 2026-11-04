@@ -1,6 +1,6 @@
 # Simorgh
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/bbc/simorgh)
+[<img src="https://devin.ai/assets/askdeepwiki.png" alt="Ask DeepWiki about Simorgh" height="20"/>](https://deepwiki.com/bbc/simorgh)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
@@ -208,6 +208,8 @@ We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascrip
 
 ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
+Both `yarn test:lint` and `yarn test:lint:fix` use a content-based cache in `.eslintcache` to skip unchanged files on subsequent runs. The existing lint scope and rules are unchanged. Use `yarn test:lint --no-cache` for a full uncached run, for example after updating dependencies or Prettier configuration. ESLint's per-file cache does not track changes to imported files, so use an uncached run when checking cross-file changes.
+
 We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
 
 The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
@@ -310,7 +312,21 @@ CYPRESS_SMOKE can be true or false. It is true by default and runs a specific su
 
 ### Lighthouse Best Practice tests
 
-We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.
+We use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) to test our pages. A single config, [`lighthouse/lighthouserc.js`](./lighthouse/lighthouserc.js), is shared by local runs, GitHub Actions and our CodeBuild pipelines. `LIGHTHOUSE_APP_ENV` selects which URLs are audited and which thresholds apply.
+
+To run it against a local Next.js server on port 7081:
+
+```
+yarn lighthouse
+```
+
+To run it against the test or live environments (as CodeBuild does):
+
+```
+LIGHTHOUSE_APP_ENV=test yarn lighthouse
+```
+
+Local reports are written to `.lighthouseci/`.
 
 ### Why is it called Simorgh?!
 

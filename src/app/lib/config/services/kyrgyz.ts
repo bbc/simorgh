@@ -97,6 +97,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
+      showMore: 'Көбүрөөк көрсөтүү',
       moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
       liteSite: {

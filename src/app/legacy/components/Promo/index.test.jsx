@@ -68,6 +68,28 @@ const FixtureProgrammesWithWebp = ({ useLargeImages = false }) => (
 );
 
 describe('Promo component - Image', () => {
+  it.each([undefined, null, ''])(
+    'renders a placeholder without requesting an image when src is %s',
+    src => {
+      const { container } = render(
+        <Promo.Image src={src} alt="" isPortraitImage>
+          <span>Media overlay</span>
+        </Promo.Image>,
+      );
+
+      expect(container.querySelector('img')).not.toBeInTheDocument();
+      expect(container.querySelector('picture')).not.toBeInTheDocument();
+      expect(container.querySelector('[srcset]')).not.toBeInTheDocument();
+      expect(screen.getByText('Media overlay')).toBeInTheDocument();
+      expect(
+        container.querySelector('span[aria-hidden="true"]'),
+      ).not.toBeInTheDocument();
+      expect(container.firstChild.firstChild).toHaveStyle({
+        backgroundRepeat: 'no-repeat',
+      });
+    },
+  );
+
   it('should render image using correct resolution and no large image on desktop', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');

@@ -28,6 +28,7 @@ import handleServerLogging from '#utilities/handleServerLogging';
 import getAmpLiteCss from '#utilities/getAmpLiteCss';
 import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
 import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import treeshakeCssModuleRules from '#utilities/treeshakeCssModuleRules';
 import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
 import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
 import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
@@ -57,7 +58,12 @@ type DocProps = {
 
 const optimiseInlineCss = (css: string, renderedHtml: string): string =>
   optimiseCssPrefixes(
-    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
+    trimFontFaceSourcesToWoff2(
+      treeshakeCssCustomProperties(
+        treeshakeCssModuleRules(css, renderedHtml),
+        renderedHtml,
+      ),
+    ),
   );
 
 export default class AppDocument extends Document<DocProps> {
@@ -201,6 +207,7 @@ export default class AppDocument extends Document<DocProps> {
               {pageType === 'live' && (
                 <script
                   src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
+                  defer
                   {...(nonce ? { nonce } : {})}
                 />
               )}

@@ -342,7 +342,7 @@ exports[`AmpMostRead should render as expected 1`] = `
                       class="liveLabelText"
                       dir="ltr"
                     >
-                      EN VIVO
+                      EN VIVO 
                     </span>
                   </span>
                 </span>

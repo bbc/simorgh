@@ -130,6 +130,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      showMore: 'Mostrar más',
       moreOnThis: '',
       navMenuText: 'Secciones',
       liteSite: {
@@ -175,6 +176,11 @@ export const service: DefaultServiceConfig = {
         title: 'Inicia sesión para guardar en Mis Noticias',
         description: 'Guarda artículos y léelos cuando quieras',
         closeLabel: 'Cerrar',
+        followTopic: {
+          title: 'Inicia sesión para seguir temas',
+          description:
+            'Accede directamente a las noticias que te interesan y no te pierdas ninguna historia',
+        },
       },
       saveArticleButton: {
         loading: 'Cargando',
@@ -201,11 +207,19 @@ export const service: DefaultServiceConfig = {
         guestDescription:
           'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
         noArticles: 'Aún no has guardado ningún artículo',
-        errorText:
-          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
+        savedArticlesErrorText:
+          'Estamos teniendo problemas para cargar tus artículos guardados',
         loading: 'Cargando',
         noJsDescription:
           'Habilita JavaScript o utiliza otro navegador para ver este contenido.',
+        followedTopicsTitle: 'Temas que sigues',
+        followedTopicsErrorText:
+          'Estamos teniendo problemas para cargar los temas que sigues',
+        noFollowedTopics: 'Aún no has seguido ningún tema',
+        seeMoreTopics: 'Ver más',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
       },
       actionTooltip: {
         success: {
@@ -219,6 +233,25 @@ export const service: DefaultServiceConfig = {
         },
         removed: {
           title: 'Este artículo ya no está guardado',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Sigues {Topic Name}',
+          bodyBefore: 'Encuentra este tema en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Has dejado de seguir {Topic Name}',
           bodyBefore: 'Se eliminará de',
           bodyAfter: '',
         },

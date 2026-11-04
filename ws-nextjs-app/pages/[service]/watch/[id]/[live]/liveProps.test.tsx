@@ -3,6 +3,10 @@ import * as getPageDataModule from '#utilities/pageRequests/getPageData';
 import { getServerSideProps } from './[[...variant]].page';
 
 jest.mock('#utilities/pageRequests/getPageData');
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
 jest.mock('#utilities/logResponseTime');
 
 jest.mock('#app/lib/utilities/isTest', () => {
