@@ -68,7 +68,7 @@ const MessageBanner = ({
       <div className={styles.flex}>
         <CallToActionLink
           url={link}
-          enableGlow
+          enableGlow // to check
           className={clsx('focusIndicatorInvert', styles.callToActionLink)}
           eventTrackingData={eventTrackingDataWithoutItemCount}
         >
