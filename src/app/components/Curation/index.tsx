@@ -8,9 +8,10 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import isLive from '#app/lib/utilities/isLive';
-import { useContext } from 'react';
+import { use, useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -92,6 +93,8 @@ export default ({
 
   const GridComponent = getGridComponent(componentName);
 
+  const { isLite } = use(RequestContext);
+
   const isCurationGrid =
     componentName === SIMPLE_CURATION_GRID ||
     componentName === HIERARCHICAL_CURATION_GRID;
@@ -99,7 +102,11 @@ export default ({
   const { service } = useContext(ServiceContext);
 
   const shouldStyleAsVideoCollection =
-    !isLive() && service === 'arabic' && isCurationGrid && isVideoCollection;
+    !isLive() &&
+    !isLite &&
+    service === 'arabic' &&
+    isCurationGrid &&
+    isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic = !isLiveEnvironment && isCurationGrid;
@@ -257,6 +264,13 @@ export default ({
 
         const gridHeadingLevel =
           pageType === 'article' || curationLength > 1 ? 3 : 2;
+
+        // eslint-disable-next-line no-console
+        console.log('HELLO:', {
+          isLite,
+          isVideoCollection,
+          shouldStyleAsVideoCollection,
+        });
 
         return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
