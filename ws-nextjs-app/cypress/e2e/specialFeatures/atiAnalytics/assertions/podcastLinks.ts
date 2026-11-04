@@ -36,9 +36,7 @@ export const assertPodcastLinksComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="podcast-links"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="podcast-links"]').scrollIntoView();
 
     // Click on the RSS link
     cy.get('[data-e2e="podcast-links"]').contains('RSS').click();

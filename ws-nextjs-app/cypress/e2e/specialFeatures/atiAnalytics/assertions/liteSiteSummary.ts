@@ -14,9 +14,7 @@ export const assertLiteSiteSummaryComponentToMainSiteClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="to-main-site"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="to-main-site"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="to-main-site"]').find('a').first().click();

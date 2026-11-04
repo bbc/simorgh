@@ -36,9 +36,7 @@ export const assertRecentAudioEpisodesComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="recent-episodes-list"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="recent-episodes-list"]').find('a').first().click();

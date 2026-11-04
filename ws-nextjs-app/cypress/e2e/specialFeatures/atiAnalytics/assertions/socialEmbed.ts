@@ -42,9 +42,7 @@ export const assertSocialEmbedComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="consentBanner"]').first().scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="consentBanner"]').first().scrollIntoView();
 
     // Click on accept and continue button
     cy.get('[data-testid="consentBanner"]').first().find('button').click();

@@ -38,9 +38,7 @@ export const assertTopStoriesComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="top-stories"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="top-stories"]').scrollIntoView();
 
     // Click on first visible item
     cy.get('[data-testid="top-stories"]').find('a').first().click();

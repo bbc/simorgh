@@ -42,9 +42,7 @@ export const assertScrollableNavigationComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView();
 
     // Click on first item & return to the original url
     cy.get('[data-e2e="scrollable-nav"]').find('a').last().click();

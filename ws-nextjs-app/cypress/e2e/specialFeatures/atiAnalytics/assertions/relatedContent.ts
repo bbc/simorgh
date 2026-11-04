@@ -42,9 +42,7 @@ export const assertRelatedContentComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="related-content-heading"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="related-content-heading"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="related-content-heading"]').find('a').first().click();

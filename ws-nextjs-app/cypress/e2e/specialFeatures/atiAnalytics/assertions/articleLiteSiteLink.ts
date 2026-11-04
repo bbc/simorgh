@@ -38,9 +38,7 @@ export const assertArticleLiteSiteLinkComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="article-lite-site-link"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="article-lite-site-link"]').find('a').first().click();

@@ -49,9 +49,7 @@ export const assertContinueReadingButtonComponentClick = ({
       // Reload the page to show the continue reading button again
       cy.reload();
 
-      cy.get('[data-testid="continue-reading-button"]').scrollIntoView({
-        duration: 1000,
-      });
+      cy.get('[data-testid="continue-reading-button"]').scrollIntoView();
 
       cy.get('[data-testid="continue-reading-button"]').click({ force: true });
 

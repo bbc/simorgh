@@ -36,9 +36,7 @@ export const assertBillboardComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="billboard-maximum-1"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="billboard-maximum-1"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-testid="billboard-maximum-1"]').find('a').first().click();

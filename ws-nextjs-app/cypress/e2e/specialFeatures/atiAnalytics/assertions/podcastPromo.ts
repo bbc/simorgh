@@ -44,9 +44,7 @@ export const assertPodcastPromoComponentClick = ({
     cy.visit(path);
     interceptExternalLinks({ httpCode: 200 });
 
-    cy.get('[data-e2e="podcast-promo"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="podcast-promo"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="podcast-promo"]').find('a').last().click();

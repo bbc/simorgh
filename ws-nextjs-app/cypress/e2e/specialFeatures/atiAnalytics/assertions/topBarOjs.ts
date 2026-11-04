@@ -40,9 +40,7 @@ export const assertTopBarOJComponentClick = ({
 
     cy.visit(path);
 
-    cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="top-bar-onward-journeys"]').scrollIntoView();
 
     cy.get('[data-testid="top-bar-onward-journeys"]').find('a').first().click();
 

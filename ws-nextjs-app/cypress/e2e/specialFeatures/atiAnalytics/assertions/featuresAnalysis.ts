@@ -38,7 +38,7 @@ export const assertFeaturesAnalysisComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="features"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-testid="features"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-testid="features"]').find('a').first().click({ force: true });

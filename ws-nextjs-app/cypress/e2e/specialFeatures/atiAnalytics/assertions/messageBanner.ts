@@ -38,9 +38,7 @@ export const assertMessageBannerComponentClick = ({
     cy.visit(path);
     interceptExternalLinks({ httpCode: 200 });
 
-    cy.get('[data-testid="message-banner-1"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="message-banner-1"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-testid="message-banner-1"]').find('a').first().click();

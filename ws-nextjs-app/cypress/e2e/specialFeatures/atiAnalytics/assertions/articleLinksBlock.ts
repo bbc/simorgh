@@ -42,9 +42,7 @@ export const assertArticleLinksBlockComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView();
 
     // Click on first item
     cy.get(

@@ -42,9 +42,7 @@ export const assertRelatedTopicsComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="related-topics"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="related-topics"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-testid="related-topics"]').find('a').first().click();

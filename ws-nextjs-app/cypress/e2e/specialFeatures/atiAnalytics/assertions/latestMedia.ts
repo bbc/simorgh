@@ -38,9 +38,7 @@ export const assertLatestMediaComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="latest-media"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="latest-media"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-testid="latest-media"]').find('a').first().click();

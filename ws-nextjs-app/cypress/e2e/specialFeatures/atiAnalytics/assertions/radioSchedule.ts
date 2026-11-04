@@ -36,9 +36,7 @@ export const assertRadioScheduleComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="radio-schedule"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="radio-schedule"]').scrollIntoView();
 
     // Click on last item which will be an on-demand episode
     cy.get('[data-e2e="onDemand"]').find('a').first().click();

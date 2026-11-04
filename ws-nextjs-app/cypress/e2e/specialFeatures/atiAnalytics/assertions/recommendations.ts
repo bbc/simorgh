@@ -42,9 +42,7 @@ export const assertRecommendationsComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="recommendations-heading"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-e2e="recommendations-heading"]').scrollIntoView();
 
     // Click on last item
     cy.get('[data-e2e="recommendations-heading"]')

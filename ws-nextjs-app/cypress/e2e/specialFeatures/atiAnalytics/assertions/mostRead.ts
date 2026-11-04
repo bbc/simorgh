@@ -54,7 +54,7 @@ export const assertMostReadComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-e2e="most-read"]').scrollIntoView();
 
     // Click on first item
     cy.get('[data-e2e="most-read"]').find('a').first().click();
