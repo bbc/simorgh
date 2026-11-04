@@ -64,6 +64,7 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 | `nielsenAnalytics`      | Capture Nielsen Analytics in Australia on AMP pages                                 |                                                                          |                                                       |
 | `preloadLeadImage`      | Display preload image tag on Story (STY) Pages                                      |                                                                          |                                                       |
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
+| `renderMarkDown`        | Serve article URLs ending in `.md` as Markdown; disabled requests return 404        | Optional pipe-separated list of services; omitted means all services      | enabled: true, value: 'russian'                        |
 | `scriptLink`            | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`         | Set variant cookie for services with variants                                       |                                                                          |                                                       |
 | `adsNonce`              | Serve the nonce-based CSP tier. "enabled" switches the service on                   | Comma-separated ISO country codes. Empty value means all countries.       | enabled: true, value: 'es,mx' or enabled: true, value: '' |
@@ -82,3 +83,8 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 [Test Environment](testConfig.js)
 
 [Live Environment](liveConfig.js)
+
+`renderMarkDown` defaults to enabled for `russian` only in the local stub
+configuration. It is disabled when absent, including in test and live unless
+enabled by the service's remote iSite configuration. Remote toggles override the
+local default, so setting `enabled: false` also disables Markdown for Russian.

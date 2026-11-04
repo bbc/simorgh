@@ -1,7 +1,9 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import { IncomingMessage } from 'node:http';
+import { IncomingMessage, ServerResponse } from 'node:http';
 import { Socket } from 'node:net';
+import { ToggleDefinition } from '#app/models/types/global';
+import blocksToMarkdown from '#app/utilities/blocksToMarkdown';
 import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
@@ -36,6 +38,155 @@ describe('handleArticleRoute', () => {
         pageData: pidginMediaArticleFixtureData.data,
         status: 200,
       },
+    });
+  });
+
+  describe('Markdown requests', () => {
+    const createContext = (path = '/pidgin/articles/cvpde7nqj92o.md') => {
+      const req = Object.assign(new IncomingMessage(new Socket()), {
+        cookies: {},
+        url: path,
+      });
+      const res = new ServerResponse(req);
+      res.setHeader('Link', '<https://ichef.bbci.co.uk>; rel="preconnect"');
+      jest.spyOn(res, 'end').mockReturnValue(res);
+
+      return {
+        ...mockGetServerSidePropsContext,
+        req,
+        res,
+        resolvedUrl: path,
+      };
+    };
+
+    it('serves Markdown and appends the canonical link without losing resource hints', async () => {
+      const context = createContext(
+        '/pidgin/articles/cvpde7nqj92o.md?renderer_env=test',
+      );
+      const markdown = blocksToMarkdown(
+        pidginMediaArticleFixtureData.data.article.content.model.blocks,
+      );
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(context.res.statusCode).toBe(200);
+      expect(context.res.getHeader('Content-Type')).toBe(
+        'text/markdown; charset=utf-8',
+      );
+      expect(context.res.getHeader('Link')).toEqual([
+        '<https://ichef.bbci.co.uk>; rel="preconnect"',
+        '<https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
+      ]);
+      expect(context.res.getHeader('Cache-Control')).toContain('public');
+      expect(context.res.getHeader('x-markdown-tokens')).toBe(
+        Math.floor(markdown.length / 3),
+      );
+      expect(context.res.end).toHaveBeenCalledWith(markdown);
+      expect(getPageDataModule.default).toHaveBeenCalledWith(
+        expect.objectContaining({ id: '/pidgin/articles/cvpde7nqj92o' }),
+      );
+    });
+
+    it.each<{
+      description: string;
+      toggles: Record<string, ToggleDefinition>;
+    }>([
+      { description: 'missing', toggles: {} },
+      {
+        description: 'disabled',
+        toggles: { renderMarkDown: { enabled: false } },
+      },
+      {
+        description: 'enabled for another service',
+        toggles: { renderMarkDown: { enabled: true, value: 'russian' } },
+      },
+    ])('returns 404 when the toggle is $description', async ({ toggles }) => {
+      const context = createContext();
+
+      const result = await handleArticleRoute(context, { toggles });
+
+      expect(context.res.statusCode).toBe(404);
+      expect(result.props.status).toBe(404);
+      expect(getPageDataModule.default).not.toHaveBeenCalled();
+      expect(context.res.end).not.toHaveBeenCalled();
+      expect(context.res.getHeader('Content-Type')).toBeUndefined();
+    });
+
+    it('allows the service selected in the local stub toggle', async () => {
+      const context = {
+        ...createContext('/russian/articles/c6wyzl2xdyz2o.md'),
+        query: { service: 'russian' },
+      };
+      jest.spyOn(shouldRender, 'default').mockReturnValue({
+        hasRequestSucceeded: true,
+        status: 200,
+      });
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true, value: 'russian' } },
+      });
+
+      expect(context.res.end).toHaveBeenCalledWith(expect.any(String));
+    });
+
+    it('preserves script variants in data requests and canonical links', async () => {
+      const context = {
+        ...createContext('/serbian/articles/cvpde7nqj92o/lat.md'),
+        query: { service: 'serbian' },
+      };
+      jest.spyOn(shouldRender, 'default').mockReturnValue({
+        hasRequestSucceeded: true,
+        status: 200,
+      });
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(context.res.getHeader('Link')).toContain(
+        '<https://www.bbc.com/serbian/articles/cvpde7nqj92o/lat>; rel="canonical"',
+      );
+      expect(getPageDataModule.default).toHaveBeenCalledWith(
+        expect.objectContaining({
+          id: '/serbian/articles/cvpde7nqj92o/lat',
+          variant: 'lat',
+        }),
+      );
+    });
+
+    it.each([404, 500])(
+      'does not render Markdown for an article error (%s)',
+      async status => {
+        jest.spyOn(shouldRender, 'default').mockReturnValue({
+          hasRequestSucceeded: false,
+          status,
+        });
+        const context = createContext();
+
+        const result = await handleArticleRoute(context, {
+          toggles: { renderMarkDown: { enabled: true } },
+        });
+
+        expect(result.props.status).toBe(status);
+        expect(context.res.end).not.toHaveBeenCalled();
+        expect(context.res.getHeader('Content-Type')).toBeUndefined();
+      },
+    );
+
+    it('does not render Markdown for an ordinary article even when enabled', async () => {
+      const context = createContext('/pidgin/articles/cvpde7nqj92o');
+
+      const result = await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(result.props.pageType).toBe('mediaArticle');
+      expect(context.res.end).not.toHaveBeenCalled();
+      expect(context.res.getHeader('Link')).toBe(
+        '<https://ichef.bbci.co.uk>; rel="preconnect"',
+      );
     });
   });
 

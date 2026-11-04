@@ -9,6 +9,22 @@ This route is used to render article pages, story pages (STY), photo gallery pag
 BFF details for Live pages can be found here:
 [BFF Article Response](https://github.com/bbc/fabl-modules/tree/main/modules/application/simorgh-bff#articles)
 
+## Markdown articles
+
+Append `.md` to an article URL (including after a script variant) to request
+Markdown, for example `/russian/articles/c6wyzl2xdyz2o.md` or
+`/serbian/articles/c6294n8el2ro/lat.md`. The `renderMarkDown` toggle must be
+enabled for the service; otherwise the request returns 404. Local stub toggles
+enable Russian only by default.
+
+Successful responses use `Content-Type: text/markdown; charset=utf-8` and retain
+the article's cache headers and existing Link resource hints. The Link header
+also includes `rel="canonical"` pointing to the public BBC URL without `.md` or
+query parameters. `x-markdown-tokens` provides an approximate token count.
+
+The renderer supports headlines, subheadlines, paragraph text and images;
+unsupported block types are omitted.
+
 ## How routes are handled
 
 Our Article Page is served through the following route:
