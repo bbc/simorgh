@@ -83,9 +83,3 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 [Test Environment](testConfig.js)
 
 [Live Environment](liveConfig.js)
-
-`renderMarkDown` defaults to enabled for all services in the local stub
-configuration. Only its `enabled` flag is used; there is no service-list value.
-It is disabled when absent, including in test and live unless
-enabled by the service's remote iSite configuration. Remote toggles override the
-local default, so setting `enabled: false` disables Markdown for that service.
