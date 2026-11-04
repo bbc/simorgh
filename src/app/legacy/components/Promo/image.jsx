@@ -74,6 +74,7 @@ const Image = props => {
     className,
     isPortraitImage,
     isLite,
+    tabletSize,
     mobileSize,
     ...rest
   } = props;
@@ -84,7 +85,12 @@ const Image = props => {
   const resolutions = isProgrammeImage
     ? PROGRAMME_IMAGE_RESOLUTIONS
     : IMAGE_RESOLUTIONS;
-  const sizes = buildSizes(useLargeImages, isProgrammeImage, mobileSize);
+  const sizes = buildSizes(
+    useLargeImages,
+    isProgrammeImage,
+    tabletSize,
+    mobileSize,
+  );
   const primarySrcSet = createResponsiveSrcSet({
     imageUrlTemplate: src ? `${src}${suffix}` : undefined,
     widths: resolutions,
