@@ -30,20 +30,6 @@ import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
 
 const DROPDOWN_MAX_WIDTH_QUERY = `(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
-const StickyNavigationViewTracking = ({
-  experimentVariant,
-}: {
-  experimentVariant: string | null;
-}) => {
-  const viewTracker = useViewTracker({
-    componentName: STICKY_NAVIGATION_COMPONENT,
-    sendOptimizelyEvents: true,
-    experimentName: STICKY_NAVIGATION_EXPERIMENT,
-    experimentVariant,
-  });
-
-  return <span ref={viewTracker.ref} aria-hidden="true" />;
-};
 
 // Walks the document forwards from the navigation and stops at the first
 // focusable element outside it, rather than collecting every focusable
@@ -105,6 +91,12 @@ const CanonicalNavigationContainer = ({
     closeMenu,
     isExperimentEnabled:
       stickyNavExperimentVariant === STICKY_NAVIGATION_TREATMENT,
+  });
+  const stickyNavViewTracker = useViewTracker({
+    componentName: STICKY_NAVIGATION_COMPONENT,
+    sendOptimizelyEvents: true,
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentVariant: stickyNavExperimentVariant,
   });
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -352,12 +344,6 @@ const CanonicalNavigationContainer = ({
     ],
   );
 
-  const stickyNavViewTracking = sticky.hasBeenVisible ? (
-    <StickyNavigationViewTracking
-      experimentVariant={stickyNavExperimentVariant}
-    />
-  ) : null;
-
   if (!sticky.isEnabled) return navigation;
 
   return (
@@ -367,6 +353,7 @@ const CanonicalNavigationContainer = ({
         style={sticky.isPinned ? { height: sticky.height } : undefined}
       >
         <div
+          {...stickyNavViewTracker}
           data-e2e="sticky-nav"
           data-sticky-visible={sticky.isVisible}
           hidden={sticky.isAwaitingFirstPaint}
@@ -380,7 +367,6 @@ const CanonicalNavigationContainer = ({
         >
           {stickyNavigation}
         </div>
-        {stickyNavViewTracking}
       </div>
       {topBarOJs && (
         <Navigation dir={dir} role="presentation">
