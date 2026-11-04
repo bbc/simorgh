@@ -307,7 +307,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const stickyNavExperimentTrackingMetadata = {
     sendOptimizelyEvents: true,
-    sendOptimizelyEventsForControl: true,
     optimizelyComponentName: STICKY_NAVIGATION_COMPONENT,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant: stickyNavExperimentVariant,

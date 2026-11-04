@@ -715,7 +715,6 @@ describe('useClickTrackerHandler', () => {
               experimentName: 'mockExperiment',
               experimentVariant: 'off',
               sendOptimizelyEvents: true,
-              sendOptimizelyEventsForControl: true,
             }}
           />
         </OptimizelyProvider>,
