@@ -353,7 +353,7 @@ const CanonicalNavigationContainer = ({
         style={sticky.isPinned ? { height: sticky.height } : undefined}
       >
         <div
-          {...stickyNavViewTracker}
+          {...(sticky.isPinned && stickyNavViewTracker)}
           data-e2e="sticky-nav"
           data-sticky-visible={sticky.isVisible}
           hidden={sticky.isAwaitingFirstPaint}

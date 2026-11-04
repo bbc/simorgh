@@ -464,6 +464,13 @@ describe('Navigation - Canonical', () => {
     });
 
     describe('showing and hiding the bar as the reader scrolls past the start of the article', () => {
+      it('does not track the navigation while it is in ordinary page flow', async () => {
+        render(articleNavigation, stickyOptions);
+        await act(() => Promise.resolve());
+
+        expect(mockIntersectionObserver.observers.size).toBe(0);
+      });
+
       it('sends a Piano view event when the sticky navigation first becomes visible', async () => {
         render(articleNavigation, stickyOptions);
         scrollTo(500);
