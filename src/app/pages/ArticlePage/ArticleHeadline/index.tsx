@@ -1,4 +1,5 @@
 import { use } from 'react';
+import clsx from 'clsx';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
@@ -6,8 +7,7 @@ import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
-import styles from './index.styles';
-import moduleStyles from './index.module.scss';
+import styles from './index.module.scss';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
   const { pathname, isLite, isAmp, isApp } = use(RequestContext);
@@ -30,22 +30,22 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
   return (
     <>
       <Headings
-        className="article-heading"
         {...props}
-        {...(showArticleLiteSiteLink && {
-          css: styles.reducePadding,
-        })}
+        className={clsx(
+          'article-heading',
+          showArticleLiteSiteLink && styles.reducePadding,
+        )}
       />
       {showArticleLiteSiteLink && (
         <div
-          className={moduleStyles.liteSiteLinkContainer}
+          className={styles.liteSiteLinkContainer}
           {...viewTracker}
           data-e2e="article-lite-site-link"
         >
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            className={moduleStyles.liteSiteLink}
+            className={styles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

@@ -1,5 +1,14 @@
 @use '@scss/themeTokens' as theme;
 
+// Qualified by element so it outranks the legacy Headline's own padding rules.
+:is(h1, strong).reducePadding {
+  padding-bottom: theme.$spacings-half;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding-bottom: theme.pixelsToRem-px-to-rem(12);
+  }
+}
+
 .liteSiteLinkContainer {
   margin-bottom: theme.pixelsToRem-px-to-rem(20);
 
