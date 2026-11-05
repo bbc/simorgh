@@ -75,12 +75,10 @@ describe('loadQueryConsumer', () => {
   });
 
   it('shares and persists query data across independently loaded consumers and subsequent mounts', async () => {
-    const FirstConsumer = await loadQueryConsumer(
-      Promise.resolve({ default: QueryConsumer }),
-    );
-    const SecondConsumer = await loadQueryConsumer(
-      Promise.resolve({ default: QueryConsumer }),
-    );
+    const loadConsumer = () =>
+      loadQueryConsumer(Promise.resolve({ default: QueryConsumer }));
+    const FirstConsumer = await loadConsumer();
+    const SecondConsumer = await loadConsumer();
     const { unmount } = render(
       <>
         <FirstConsumer name="First consumer" />
@@ -88,23 +86,21 @@ describe('loadQueryConsumer', () => {
       </>,
       renderOptions,
     );
+    const firstButton = screen.getByRole('button', { name: 'First consumer' });
+    const secondButton = screen.getByRole('button', {
+      name: 'Second consumer',
+    });
 
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'First consumer' }),
-      ).toHaveTextContent('Not saved');
-      expect(
-        screen.getByRole('button', { name: 'Second consumer' }),
-      ).toBeEnabled();
+      expect(firstButton).toHaveTextContent('Not saved');
+      expect(secondButton).toBeEnabled();
     });
     expect(fetchStatus).toHaveBeenCalledTimes(1);
 
-    fireEvent.click(screen.getByRole('button', { name: 'First consumer' }));
+    fireEvent.click(firstButton);
 
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'Second consumer' }),
-      ).toHaveTextContent('Saved');
+      expect(secondButton).toHaveTextContent('Saved');
     });
     await waitFor(
       () => {
@@ -116,9 +112,7 @@ describe('loadQueryConsumer', () => {
     );
 
     unmount();
-    const NextConsumer = await loadQueryConsumer(
-      Promise.resolve({ default: QueryConsumer }),
-    );
+    const NextConsumer = await loadConsumer();
     render(<NextConsumer name="Next page" />, renderOptions);
 
     await waitFor(() => {
