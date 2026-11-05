@@ -1,11 +1,17 @@
 name: Cypress E2E - Page Types
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
     branches:
       - '**'
   merge_group:
 permissions:
   contents: read
+
+# E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
+# The job itself always runs so its required check still reports on PRs.
+env:
+  RUN_E2E: ${{ github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e') }}
 
 jobs:
   build-matrix:
@@ -138,27 +144,37 @@ jobs:
       CYPRESS_APP_ENV: 'local'
 
     steps:
+      - name: E2Es skipped
+        if: env.RUN_E2E != 'true'
+        run: echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here."
+
       - name: Checkout
+        if: env.RUN_E2E == 'true'
         uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix['node-version'] }}
+        if: env.RUN_E2E == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix['node-version'] }}
 
       - name: Add bbc.com domain
+        if: env.RUN_E2E == 'true'
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
       - name: Install Cypress dependency (Next.js app)
+        if: env.RUN_E2E == 'true'
         run: |
           chmod +x ./scripts/installCypress.sh
           ./scripts/installCypress.sh ws-nextjs-app
 
       - name: Install Cypress binary (Next.js app)
+        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: yarn cypress:install
 
       - name: Build group spec list (${{ matrix['group-name'] }})
+        if: env.RUN_E2E == 'true'
         id: build-specs
         shell: bash
         run: |
@@ -181,6 +197,7 @@ jobs:
           echo "specs=$specs" >> "$GITHUB_OUTPUT"
 
       - name: Run Simorgh NextJS E2Es (${{ matrix['group-name'] }})
+        if: env.RUN_E2E == 'true'
         uses: cypress-io/github-action@v7
         with:
           install: false
@@ -190,7 +207,7 @@ jobs:
           command: yarn exec cypress run --browser chrome --spec ${{ steps.build-specs.outputs.specs }}
 
       - name: Upload Cypress reports (${{ matrix['group-name'] }})
-        if: always()
+        if: always() && env.RUN_E2E == 'true'
         uses: actions/upload-artifact@v6
         with:
           name: cypress-page-types-reports-${{ matrix['group-name'] }}
