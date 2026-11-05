@@ -10,6 +10,8 @@ import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 import MediaLoader from '#app/components/MediaLoader';
+import AudioWaveformDiagnostic from '#app/components/AudioWaveformDiagnostic';
+import AudioWaveform from '#app/components/AudioWaveform';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
@@ -177,6 +179,12 @@ const OnDemandAudioPage = ({
                 className="imageStyles"
                 isPodcastEpisodePage
               />
+              {isPodcast && mediaIsAvailable && !isLite && (
+                <>
+                  <AudioWaveformDiagnostic playerId={PLAYER_ID} />
+                  <AudioWaveform />
+                </>
+              )}
             </div>
             <div css={summaryStyles}>
               {isPodcastEpisodePage ? (
