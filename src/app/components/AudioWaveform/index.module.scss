@@ -21,6 +21,10 @@
   .panel[data-playing='true'] & {
     visibility: visible;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
 }
 
 .error {

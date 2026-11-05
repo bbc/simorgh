@@ -28,7 +28,8 @@ animation, stops captured tracks, and closes the prototype's audio context.
 
 The waveform becomes flat when playback buffers or is muted. Amplitude
 is scaled by the native media element's volume. Reduced-motion users
-get a flat line rather than animation. Hidden tabs do not
+do not see the waveform, and canvas drawing is skipped. Changes to the device's
+motion preference take effect immediately. Hidden tabs do not
 draw. Newly discovered media elements connect automatically. Capture failures
 are logged and exposed as a visually hidden status once per element rather than repeatedly attempting capture; reload
 the page to retry. If a browser blocks automatic Web Audio startup, the waveform

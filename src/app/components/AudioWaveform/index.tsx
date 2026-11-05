@@ -200,7 +200,11 @@ const AudioWaveform = () => {
           });
           return;
         }
-        if (now - lastFrame >= 1000 / 30 && !document.hidden) {
+        if (
+          now - lastFrame >= 1000 / 30 &&
+          !document.hidden &&
+          !reducedMotion.matches
+        ) {
           lastFrame = now;
           analyser.getFloatTimeDomainData(samples);
           const peak = samples.reduce(
