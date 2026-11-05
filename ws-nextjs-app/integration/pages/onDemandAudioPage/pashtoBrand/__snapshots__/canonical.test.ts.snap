@@ -167,28 +167,28 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۴ نومبر ۲۰۲۴",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۲۴ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cnw",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۳ نومبر ۲۰۲۴",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۲۳ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cmr",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۲ نومبر ۲۰۲۴",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۲۲ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7ckh",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۱ نومبر ۲۰۲۴",
+  "text": "غږ, ماښامنۍ خپرونه, Current Affairs Evening Programme ,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۲۱ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cq0",
 }
 `;

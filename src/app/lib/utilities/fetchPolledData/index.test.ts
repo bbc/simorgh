@@ -11,6 +11,11 @@ jest.mock('#app/lib/logger.node', () => ({
   })),
 }));
 
+jest.mock('../getEnvConfig', () => ({
+  __esModule: true,
+  ...jest.requireActual('../getEnvConfig'),
+}));
+
 const mockLoggerInstance = {
   error: jest.fn(),
   info: jest.fn(),

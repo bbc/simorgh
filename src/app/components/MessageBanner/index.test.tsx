@@ -9,6 +9,16 @@ import { kyrgyzMessageBannerOnePromo } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
   const eventTrackingData = {

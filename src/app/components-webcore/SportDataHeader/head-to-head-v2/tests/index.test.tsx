@@ -37,6 +37,11 @@ jest.mock('#app/hooks/usePolling', () => ({
   default: jest.fn(({ initialData }) => initialData),
 }));
 
+jest.mock('#app/lib/utilities/fetchPolledData', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/lib/utilities/fetchPolledData'),
+}));
+
 jest.mock('../helpers/localise-datetime', () => ({
   getLocalisedDate: jest.fn(date => date),
   getLocalisedTime: jest.fn((date, time) => time),

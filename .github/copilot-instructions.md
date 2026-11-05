@@ -78,3 +78,7 @@ The codebase has migrated its styling foundation from Emotion CSS-in-JS (`ThemeP
 - Font face `@use` aliases must be consistent with the variable names used in `@font-face` declarations within the same file.
 - All services and variants must be registered in `ThemeProviderSCSSModules/themes/loadableConfig.ts`.
 - `ThemeProviderSCSSModules` must be passed the actual `service` and `variant` values at each call site (not hardcoded strings).
+
+### Code Reviewing
+
+- When performing a code review, highlight any code comments and question whether they are necessary for the context.

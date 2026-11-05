@@ -18,6 +18,7 @@ import TopicDescription from './TopicDescription';
 import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import TopicPageElectionBanner from './TopicPageElectionBanner';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName, service } = use(ServiceContext);
@@ -99,6 +100,9 @@ const TopicPage = ({ pageData }) => {
               />
             )}
           </div>
+          <TopicPageElectionBanner
+            curationIds={curations.map(({ curationId }) => curationId)}
+          />
           {curations.map(
             ({
               visualProminence,

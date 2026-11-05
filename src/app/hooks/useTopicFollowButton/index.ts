@@ -1,5 +1,9 @@
-import { use } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { use, useEffect, useRef, useState } from 'react';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import {
   createFollowsPayload,
@@ -8,20 +12,30 @@ import {
   buildGlobalId,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { FollowAction } from '#app/models/types/action';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useUASMetadataSync from '../useUASMetadataSync';
 
-enum FollowAction {
-  FOLLOW = 'follow',
-  UNFOLLOW = 'unfollow',
-}
+export type FollowActionResult = {
+  status: 'success' | 'error';
+  action: FollowAction;
+} | null;
 
 interface UseTopicFollowButtonReturn {
   isFollowed: boolean;
   isLoading: boolean;
   isUpdating: boolean;
   error: Error | null;
+  actionResult: FollowActionResult;
+  resetActionResult: () => void;
   handleFollowAction: (action: FollowAction) => void;
 }
 
@@ -32,9 +46,65 @@ const useTopicFollowButton = (
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
-  const { isFollowed, isLoading, error } = useTopicFollowStatus(topicId);
+  const trackError = useErrorTracking();
+  const {
+    isFollowed,
+    isLoading,
+    error,
+    metadata: savedMetadata,
+  } = useTopicFollowStatus(topicId);
+
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+  });
+
+  const [actionResult, setActionResult] = useState<FollowActionResult>(null);
+  const offlineActionResultRef = useRef<FollowActionResult>(null);
+
+  useEffect(() => {
+    const followStatusKey = uasKeys.followStatus(hashedUserId, topicId);
+
+    const recoverFromOffline = async () => {
+      const offlineActionResult = offlineActionResultRef.current;
+
+      if (!offlineActionResult) return;
+
+      try {
+        // Dismiss only once the button reflects the current follow status.
+        await queryClient.invalidateQueries(
+          { queryKey: followStatusKey },
+          { throwOnError: true },
+        );
+      } catch {
+        // Status unverified, so keep the tooltip for a later reconnect to retry.
+        return;
+      }
+
+      // A newer offline click needs its own successful reconnect refresh.
+      if (offlineActionResultRef.current !== offlineActionResult) return;
+
+      offlineActionResultRef.current = null;
+      setActionResult(current =>
+        current === offlineActionResult ? null : current,
+      );
+    };
+
+    return onlineManager.subscribe(isOnline => {
+      if (isOnline) {
+        recoverFromOffline();
+      }
+    });
+  }, [queryClient, hashedUserId, topicId]);
 
   const mutation = useMutation({
+    // Prevent a stale status refetch from overwriting the mutation result.
+    onMutate: async () => {
+      await queryClient.cancelQueries({
+        queryKey: uasKeys.followStatus(hashedUserId, topicId),
+      });
+    },
     mutationFn: async (action: FollowAction) => {
       if (action === FollowAction.FOLLOW) {
         const body = createFollowsPayload(topicData, service);
@@ -69,12 +139,65 @@ const useTopicFollowButton = (
     },
   });
 
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(FollowAction.FOLLOW, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+        }),
+    });
+
+  useUASMetadataSync({
+    followTopicPageData: topicData,
+    topicId,
+    service,
+    isFollowed,
+    savedTopicMetadata: savedMetadata,
+    onMetadataOutOfDate: handleMetadataOutOfDate,
+  });
+
+  const handleFollowAction = (action: FollowAction) => {
+    if (!onlineManager.isOnline()) {
+      const offlineActionResult: FollowActionResult = {
+        status: 'error',
+        action,
+      };
+      offlineActionResultRef.current = offlineActionResult;
+      setActionResult(offlineActionResult);
+      return undefined;
+    }
+
+    offlineActionResultRef.current = null;
+
+    return mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
+      onError: mutationError => {
+        setActionResult({ status: 'error', action });
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+          action,
+        });
+      },
+    });
+  };
+
+  const resetActionResult = () => {
+    offlineActionResultRef.current = null;
+    setActionResult(null);
+    mutation.reset();
+  };
+
   return {
     isFollowed,
     isLoading,
     isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
-    handleFollowAction: mutation.mutate,
+    actionResult,
+    resetActionResult,
+    handleFollowAction,
   };
 };
 

@@ -1,14 +1,16 @@
 import { PropsWithChildren } from 'react';
 import { renderHook } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import * as useCustomEventTrackerModule from '../useCustomEventTracker';
+import useCustomEventTracker from '../useCustomEventTracker';
 import usePWAInstallTracker from '.';
 
+jest.mock('../useCustomEventTracker', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
 const mockTrackEvent = jest.fn();
-const mockUseCustomEventTracker = jest.spyOn(
-  useCustomEventTrackerModule,
-  'default',
-);
+const mockUseCustomEventTracker = jest.mocked(useCustomEventTracker);
 
 const wrapper = ({ children }: PropsWithChildren) => (
   <ToggleContextProvider>{children}</ToggleContextProvider>

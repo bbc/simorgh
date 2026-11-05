@@ -167,28 +167,28 @@ exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:3022 Januari 2023",
+  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:30 22 Januari 2023",
   "url": "/indonesia/bbc_indonesian_radio/w172ywztppckjfb",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:3022 Januari 2023",
+  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:30 22 Januari 2023",
   "url": "/indonesia/bbc_indonesian_radio/w172ywztppckdp6",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:3019 Januari 2023",
+  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:30 19 Januari 2023",
   "url": "/indonesia/bbc_indonesian_radio/w172ywztppc8tq1",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:3019 Januari 2023",
+  "text": "Audio, Dunia Pagi Ini, Dunia Pagi Ini,  Durasi 15,30  Durasi 15:30 19 Januari 2023",
   "url": "/indonesia/bbc_indonesian_radio/w172ywztppc8pyx",
 }
 `;

@@ -10,6 +10,16 @@ import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
 import { ResonanceBeaconConfig, ReverbBeaconConfig } from '../types';
 
+jest.mock('#app/lib/utilities/isOperaProxy', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/lib/utilities/isOperaProxy'),
+}));
+
+jest.mock('../../../lib/analyticsUtils/sendBeacon', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../lib/analyticsUtils/sendBeacon'),
+}));
+
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
     jest.clearAllMocks();

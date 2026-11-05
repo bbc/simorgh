@@ -8,6 +8,11 @@ import serviceConfigs from '#utilities/serviceConfigs';
 import getFontFaces, * as fontFaces from './fontFaces';
 import { themes, pwaThemes } from './__mocks__/themes';
 
+jest.mock('@emotion/react', () => ({
+  __esModule: true,
+  ...jest.requireActual('@emotion/react'),
+}));
+
 const themeSpy = jest.spyOn(emotionReact, 'useTheme');
 
 interface LoadFontFaces extends ServicesVariantsProps {

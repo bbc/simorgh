@@ -804,8 +804,10 @@ export const assertRadioScheduleComponentClick = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
-  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the click handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
   await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="onDemand"] a').first().waitFor();
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({
@@ -1051,5 +1053,162 @@ export const assertPodcastLinksComponentClick = async ({
     siteId,
     applicationType,
     'select',
+  );
+};
+
+export const assertBillboardComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.BILLBOARD,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  await page
+    .locator('[data-testid="billboard-maximum-1"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertBillboardComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the click handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  await page
+    .locator('[data-testid="billboard-maximum-1"]')
+    .scrollIntoViewIfNeeded();
+  await page
+    .locator('[data-testid="billboard-maximum-1"] a')
+    .first()
+    .waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.BILLBOARD,
+    }),
+    page
+      .locator('[data-testid="billboard-maximum-1"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPortraitVideoCarouselComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  if (applicationType === 'lite') return;
+
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PORTRAIT_VIDEO_CAROUSEL,
+  });
+
+  // 'load' (rather than 'domcontentloaded') ensures hydration has mounted the carousel
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  const portraitVideoCarousel = page.locator(
+    '[data-testid="portrait-video-carousel"]',
+  );
+  await expect(portraitVideoCarousel).toHaveCount(1);
+  await expect(portraitVideoCarousel).toBeVisible();
+  await portraitVideoCarousel.scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPortraitVideoModalComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  if (applicationType === 'lite') return;
+
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PORTRAIT_VIDEO_MODAL,
+  });
+
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the promo-button handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  const portraitVideoCarousel = page.locator(
+    '[data-testid="portrait-video-carousel"]',
+  );
+  await expect(portraitVideoCarousel).toHaveCount(1);
+  await expect(portraitVideoCarousel).toBeVisible();
+  await portraitVideoCarousel.scrollIntoViewIfNeeded();
+
+  await page.locator('[data-testid="promo-button"]').first().click();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
   );
 };

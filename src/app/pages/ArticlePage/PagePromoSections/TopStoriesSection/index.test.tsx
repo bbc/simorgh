@@ -19,6 +19,16 @@ import {
 } from './fixture';
 import { TopStoryItem } from './types';
 
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
 type Props = {
   fixtureData: TopStoryItem[];
   service?: Services;

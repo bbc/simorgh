@@ -49,7 +49,8 @@ const ErrorSummaryBox = forwardRef(
     const errorListItems = validationErrors.map(({ id }) => {
       const labelText = labelMap[id];
 
-      if (isSingleError) return <Component id={id} labelText={labelText} />;
+      if (isSingleError)
+        return <Component key={id} id={id} labelText={labelText} />;
 
       return (
         <BulletedListItem css={styles.listItem} key={`listItemFor-${id}`}>

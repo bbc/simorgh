@@ -51,6 +51,54 @@ describe('Topic Page', () => {
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
 
+  it.each([
+    ['mundo', '874d2084-631c-4ee8-b582-f88920fcd960', '33021'],
+    ['portuguese', 'abdb1274-d3c1-48fd-b6c7-d1a0576cc551', '33042'],
+    ['arabic', 'c7c9ac42-0101-4cb2-b8a6-f059e591f3a4', '33031'],
+    ['russian', '9bcbbe46-d21c-4e95-8c61-53fa233fcc8a', '33043'],
+  ])(
+    'renders the matching AP banner on %s topics',
+    (service, curationId, layoutId) => {
+      const pageData = {
+        ...mundoMultipleCurations,
+        curations: [
+          mundoMultipleCurations.curations[0],
+          {
+            ...mundoMultipleCurations.curations[1],
+            curationId: `urn:bbc:vivo:curation:${curationId}`,
+          },
+        ],
+      };
+      const { getByTestId } = render(<TopicPage pageData={pageData} />, {
+        service,
+        pageType: TOPIC_PAGE,
+        toggles: { electionBanner: { enabled: true } },
+      });
+
+      const banner = getByTestId('election-banner');
+      expect(banner.querySelector('iframe')).toHaveAttribute(
+        'src',
+        `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/${layoutId}.html`,
+      );
+    },
+  );
+
+  it.each([true, false])(
+    'hides banners on unrelated topics when enabled is %s',
+    enabled => {
+      const { queryByTestId } = render(
+        <TopicPage pageData={mundoMultipleCurations} />,
+        {
+          service: 'mundo',
+          pageType: TOPIC_PAGE,
+          toggles: { electionBanner: { enabled } },
+        },
+      );
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    },
+  );
+
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
       <TopicPage pageData={amharicSingleItem} />,

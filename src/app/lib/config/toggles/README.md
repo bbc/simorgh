@@ -66,7 +66,14 @@ Both commands enable remote toggle fetching (`FETCH_TOGGLES=true`) and set the `
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
 | `scriptLink`            | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`         | Set variant cookie for services with variants                                       |                                                                          |                                                       |
-| `adsNonce`              | Uses "enabled" to check service as a boolean and "value" as countries list          | value is a coma separated countries                                      | enabled: true, value: 'es,mx'                         |
+| `adsNonce`              | Serve the nonce-based CSP tier. "enabled" switches the service on                   | Comma-separated ISO country codes. Empty value means all countries.       | enabled: true, value: 'es,mx' or enabled: true, value: '' |
+| `relaxedCsp`            | Serve the relaxed CSP tier. "enabled" switches the service on                       | Comma-separated ISO country codes. Empty value means all countries.       | enabled: true, value: 'in' or enabled: true, value: ''    |
+
+> [!NOTE]
+> CSP tier precedence is `nonce` → `relaxed` → `strict`.
+> - If both `adsNonce` and `relaxedCsp` match the request country, `nonce` is applied.
+> - If neither matches, the request falls back to `strict` CSP.
+> - AMP and Lite pages always use `strict` CSP.
 
 ## Default Toggle (Fallback) Values
 

@@ -4,6 +4,38 @@ const fs = require('fs');
 jest.mock('fs');
 
 let winston;
+const loggerEnvironmentKeys = [
+  'LOG_DIR',
+  'LOG_TO_CONSOLE',
+  'LOG_LEVEL',
+  'NEXTJS',
+];
+const originalLoggerEnvironment = Object.fromEntries(
+  loggerEnvironmentKeys.map(key => [key, process.env[key]]),
+);
+
+const restoreLoggerEnvironment = () => {
+  loggerEnvironmentKeys.forEach(key => {
+    const value = originalLoggerEnvironment[key];
+
+    if (value === undefined) {
+      delete process.env[key];
+    } else {
+      process.env[key] = value;
+    }
+  });
+};
+
+beforeEach(() => {
+  delete process.env.LOG_DIR;
+  delete process.env.LOG_LEVEL;
+  delete process.env.LOG_TO_CONSOLE;
+  delete process.env.NEXTJS;
+});
+
+afterEach(() => {
+  restoreLoggerEnvironment();
+});
 
 describe('Logger folder creation', () => {
   it('creates folder log-temp', () => {
@@ -31,7 +63,7 @@ describe('Logger node - for the server', () => {
   });
 
   afterAll(() => {
-    delete process.env.LOG_LEVEL;
+    restoreLoggerEnvironment();
   });
 
   afterEach(() => {

@@ -93,18 +93,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   padding-bottom: 0;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
 <div>
   <figure
     class="emotion-0"
@@ -133,7 +121,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image caption, 
         </span>
@@ -210,18 +198,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
 <div>
   <figure
     class="emotion-0"
@@ -246,7 +222,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image source, 
         </span>
@@ -319,18 +295,6 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-  white-space: nowrap;
-}
-
 <div>
   <figure
     class="emotion-0"
@@ -355,7 +319,7 @@ exports[`Image with data should render an image with other originCode - this wou
         role="text"
       >
         <span
-          class="emotion-4"
+          class="visuallyHiddenText"
         >
           Image source, 
         </span>

@@ -102,10 +102,11 @@ const RadioSchedule = ({ schedule, ...props }) => {
           data-e2e={program.state}
           role="listitem"
         >
-          <StartTimeWrapper>
+          <StartTimeWrapper key="start-time">
             <StartTime timestamp={program.startTime} />
           </StartTimeWrapper>
           <ProgramCard
+            key="program-card"
             {...props}
             eventTrackingData={eventTrackingDataExtended}
             position={index}

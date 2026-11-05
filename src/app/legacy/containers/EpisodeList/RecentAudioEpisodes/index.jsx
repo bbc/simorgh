@@ -45,6 +45,13 @@ const InlineDiv = styled.div`
   display: inline;
 `;
 
+// inline-block so its trailing space separates the duration and date in the
+// accessible name without being rendered. The duration always starts its own
+// line, so this doesn't change how it wraps.
+const VisibleDuration = styled.span`
+  display: inline-block;
+`;
+
 const RecentAudioEpisodes = ({
   masterBrand,
   episodes,
@@ -114,10 +121,11 @@ const RecentAudioEpisodes = ({
             >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
+              {/* Plain spaces ({' '}) stop visible words running together in the accessible name (WCAG 2.5.3) */}
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
-              <VisuallyHiddenText>, </VisuallyHiddenText>
+              <VisuallyHiddenText>,</VisuallyHiddenText>{' '}
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
@@ -136,12 +144,12 @@ const RecentAudioEpisodes = ({
                 })} `}
               </VisuallyHiddenText>
               <EpisodeList.DateTimeDuration>
-                <span aria-hidden="true">
+                <VisibleDuration aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: datetimeLocale,
-                  })}`}
-                </span>
+                  })} `}
+                </VisibleDuration>
               </EpisodeList.DateTimeDuration>
               {episode.episodeTitle && (
                 <InlineDiv>
