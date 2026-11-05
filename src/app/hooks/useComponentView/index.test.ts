@@ -104,10 +104,71 @@ describe('useComponentView', () => {
     expect(result.current.isInView).toBe(true);
   });
 
+  it('uses the latest entry when several are delivered together', () => {
+    const { result } = renderHook(() => useComponentView());
+
+    act(() => {
+      result.current.ref(document.createElement('div'));
+    });
+
+    act(() => {
+      observerCallback(
+        [
+          { intersectionRatio: 1, isIntersecting: true },
+          { intersectionRatio: 0, isIntersecting: false },
+        ] as IntersectionObserverEntry[],
+        observer as unknown as IntersectionObserver,
+      );
+    });
+
+    expect(result.current.isInView).toBe(false);
+  });
+
   it('does not observe when disabled', () => {
-    renderHook(() => useComponentView({ enabled: false }));
+    const { result } = renderHook(() => useComponentView({ enabled: false }));
+
+    act(() => {
+      result.current.ref(document.createElement('div'));
+    });
 
     expect(intersectionObserver).not.toHaveBeenCalled();
+  });
+
+  it('resets isInView when the element is removed', () => {
+    const { result } = renderHook(() => useComponentView());
+
+    act(() => {
+      result.current.ref(document.createElement('div'));
+    });
+    act(() => {
+      triggerIntersection({ intersectionRatio: 1 });
+    });
+    expect(result.current.isInView).toBe(true);
+
+    act(() => {
+      result.current.ref(null);
+    });
+
+    expect(result.current.isInView).toBe(false);
+  });
+
+  it('resets isInView when observation is disabled', () => {
+    const { result, rerender } = renderHook(
+      ({ enabled }) => useComponentView({ enabled }),
+      { initialProps: { enabled: true } },
+    );
+
+    act(() => {
+      result.current.ref(document.createElement('div'));
+    });
+    act(() => {
+      triggerIntersection({ intersectionRatio: 1 });
+    });
+    expect(result.current.isInView).toBe(true);
+
+    rerender({ enabled: false });
+
+    expect(result.current.isInView).toBe(false);
   });
 
   it('disconnects when observation is disabled or the hook unmounts', () => {

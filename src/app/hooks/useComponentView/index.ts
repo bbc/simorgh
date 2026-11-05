@@ -21,15 +21,17 @@ const useComponentView = ({
 
   useEffect(() => {
     if (!enabled || !element || typeof IntersectionObserver === 'undefined') {
-      setIsInView(false);
       return undefined;
     }
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      entries => {
+        const latestEntry = entries[entries.length - 1];
+
         setIsInView(
           Boolean(
-            entry?.isIntersecting && entry.intersectionRatio >= threshold,
+            latestEntry?.isIntersecting &&
+            latestEntry.intersectionRatio >= threshold,
           ),
         );
       },
@@ -38,7 +40,10 @@ const useComponentView = ({
 
     observer.observe(element);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      setIsInView(false);
+    };
   }, [element, enabled, threshold]);
 
   return { isInView, ref: setElement };

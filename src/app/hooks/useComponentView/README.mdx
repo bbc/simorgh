@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="hooks/useComponentView" />
+
+# useComponentView hook
+
+The `useComponentView` hook reports whether an element currently meets a visibility threshold in the viewport. It uses `IntersectionObserver` and has no analytics or timing behaviour, so it can be used by any component that needs to react to visibility.
+
+To send view events to ATI or Optimizely use [`useViewTracker`](?path=/docs/hooks-useviewtracker--docs) instead.
+
+`useComponentView` returns:
+
+- `ref`: a callback ref to assign to the element you want to observe
+- `isInView`: `true` while at least `threshold` of the element is visible, otherwise `false`
+
+`isInView` updates every time the element crosses the threshold, so it is `true` again if the element scrolls back into view. It is reset to `false` when the element is removed, observation is disabled or `IntersectionObserver` is not available.
+
+### Options
+
+| Option    | Type    | Required | Default | Description                                                                                                                    |
+| --------- | ------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| enabled   | boolean | no       | `true`  | Set to `false` to stop observing and disconnect the observer, e.g. once the element has been seen and no longer needs tracking |
+| threshold | number  | no       | `0.5`   | The proportion of the element, between 0 and 1, that must be visible for `isInView` to be `true`                               |
+
+### Usage
+
+```jsx
+const Banner = () => {
+  const { isInView, ref } = useComponentView();
+
+  return <div ref={ref}>{isInView ? 'Visible' : 'Not visible'}</div>;
+};
+```
+
+Run something once after the element has been in view for a period of time:
+
+```jsx
+const Highlight = () => {
+  const [hasHighlighted, setHasHighlighted] = useState(false);
+  const { isInView, ref } = useComponentView({ enabled: !hasHighlighted });
+
+  useEffect(() => {
+    if (!isInView) return undefined;
+
+    const timer = setTimeout(() => setHasHighlighted(true), 5000);
+
+    return () => clearTimeout(timer);
+  }, [isInView]);
+
+  return <div ref={ref} className={hasHighlighted ? 'highlight' : undefined} />;
+};
+```
+
+Setting `enabled` to `false` once the work is done disconnects the observer. See `CallToActionLink` for a real example.
+
+If the element also needs its own ref, call both refs from a single callback ref.
