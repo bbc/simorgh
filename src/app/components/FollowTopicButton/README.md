@@ -36,6 +36,8 @@ interface FollowTopicData {
 - Handles label transitions for loading, updating, followed and unfollow intent.
 - Sends click and view tracking events.
 - Loads alongside the shared persistent query provider in a client-only boundary.
+  The shared `loadQueryConsumer` helper loads both modules in parallel and wraps
+  the authenticated component only once they are ready.
   Only the button uses this boundary; page content and embeds remain mounted
   while the provider and button code load. The guest button remains the loading
   placeholder.

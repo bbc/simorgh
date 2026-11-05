@@ -1,16 +1,8 @@
 import dynamic from 'next/dynamic';
+import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 
 const ArticleNotFoundUASCleanup = dynamic(
-  () =>
-    Promise.all([
-      import(
-        /* webpackChunkName: "query_provider" */
-        '#app/contexts/QueryContext'
-      ),
-      import('./ArticleNotFoundUASCleanup'),
-    ]).then(([{ withQueryProvider }, { default: Component }]) =>
-      withQueryProvider(Component),
-    ),
+  () => loadQueryConsumer(import('./ArticleNotFoundUASCleanup')),
   { ssr: false },
 );
 

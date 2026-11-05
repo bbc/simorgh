@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -13,16 +14,7 @@ import GenericMessage from '../../send/[id]/GenericMessage';
 import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
 const MyNewsPageContent = dynamic(
-  () =>
-    Promise.all([
-      import(
-        /* webpackChunkName: "query_provider" */
-        '#app/contexts/QueryContext'
-      ),
-      import('./MyNewsPageContent'),
-    ]).then(([{ withQueryProvider }, { default: Component }]) =>
-      withQueryProvider(Component),
-    ),
+  () => loadQueryConsumer(import('./MyNewsPageContent')),
   {
     ssr: false,
     loading: () => <MyNewsPageLoading />,

@@ -1,0 +1,130 @@
+import {
+  useIsRestoring,
+  useQuery,
+  useQueryClient,
+} from '@tanstack/react-query';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from '#app/components/react-testing-library-with-providers';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import loadQueryConsumer from './loadQueryConsumer';
+
+const renderOptions = {
+  service: 'hindi' as const,
+  idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'hindi' },
+  },
+};
+const queryKey = ['query-provider-test'];
+const fetchStatus = jest.fn(async () => 'Not saved');
+
+const QueryConsumer = ({ name }: { name: string }) => {
+  const queryClient = useQueryClient();
+  const isRestoring = useIsRestoring();
+  const { data } = useQuery({ queryKey, queryFn: fetchStatus });
+
+  return (
+    <button
+      type="button"
+      aria-label={name}
+      disabled={isRestoring}
+      onClick={() => queryClient.setQueryData(queryKey, 'Saved')}
+    >
+      {data}
+    </button>
+  );
+};
+
+describe('loadQueryConsumer', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+    fetchStatus.mockClear();
+  });
+
+  it('waits for the consumer and supplies its query context and props', async () => {
+    const Consumer = ({ label }: { label: string }) => {
+      const queryClient = useQueryClient();
+      const isRestoring = useIsRestoring();
+      if (isRestoring) return <p>Restoring queries</p>;
+      return <p>{queryClient ? label : 'Query unavailable'}</p>;
+    };
+    const pending = Promise.withResolvers<{ default: typeof Consumer }>();
+    const loading = loadQueryConsumer(pending.promise);
+    const onLoaded = jest.fn();
+    loading.then(onLoaded);
+
+    await Promise.resolve();
+    expect(onLoaded).not.toHaveBeenCalled();
+    pending.resolve({ default: Consumer });
+    const LoadedConsumer = await loading;
+
+    render(<LoadedConsumer label="Query consumer" />, renderOptions);
+    expect(await screen.findByText('Query consumer')).toBeInTheDocument();
+  });
+
+  it('propagates loading failures instead of mounting an unwrapped consumer', async () => {
+    const error = new Error('Failed to load query consumer');
+
+    await expect(loadQueryConsumer(Promise.reject(error))).rejects.toBe(error);
+  });
+
+  it('shares and persists query data across independently loaded consumers and subsequent mounts', async () => {
+    const FirstConsumer = await loadQueryConsumer(
+      Promise.resolve({ default: QueryConsumer }),
+    );
+    const SecondConsumer = await loadQueryConsumer(
+      Promise.resolve({ default: QueryConsumer }),
+    );
+    const { unmount } = render(
+      <>
+        <FirstConsumer name="First consumer" />
+        <SecondConsumer name="Second consumer" />
+      </>,
+      renderOptions,
+    );
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'First consumer' }),
+      ).toHaveTextContent('Not saved');
+      expect(
+        screen.getByRole('button', { name: 'Second consumer' }),
+      ).toBeEnabled();
+    });
+    expect(fetchStatus).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(screen.getByRole('button', { name: 'First consumer' }));
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'Second consumer' }),
+      ).toHaveTextContent('Saved');
+    });
+    await waitFor(
+      () => {
+        expect(
+          window.localStorage.getItem('REACT_QUERY_OFFLINE_CACHE'),
+        ).toContain('"data":"Saved"');
+      },
+      { timeout: 2500 },
+    );
+
+    unmount();
+    const NextConsumer = await loadQueryConsumer(
+      Promise.resolve({ default: QueryConsumer }),
+    );
+    render(<NextConsumer name="Next page" />, renderOptions);
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'Next page' }),
+      ).toHaveTextContent('Saved');
+      expect(screen.getByRole('button', { name: 'Next page' })).toBeEnabled();
+    });
+    expect(fetchStatus).toHaveBeenCalledTimes(1);
+  });
+});
