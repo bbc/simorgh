@@ -14,7 +14,6 @@ interface AccountActionButtonsProps {
   signInRef?: React.Ref<HTMLAnchorElement>;
   experimentName?: string;
   experimentVariant?: string;
-  optimizelyComponentName?: string;
   signInAccessibleLabel?: string;
 }
 
@@ -25,7 +24,6 @@ const AccountActionButtons = ({
   signInRef,
   experimentName,
   experimentVariant,
-  optimizelyComponentName,
   signInAccessibleLabel,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
@@ -68,7 +66,6 @@ const AccountActionButtons = ({
           componentName: signInComponentName,
           ...(experimentName && { experimentName }),
           ...(experimentVariant && { experimentVariant }),
-          ...(optimizelyComponentName && { optimizelyComponentName }),
           ...(experimentVariant && { sendOptimizelyEvents: true }),
         }}
         data-testid={signInComponentName}
@@ -100,7 +97,6 @@ const AccountActionButtons = ({
           componentName: registerComponentName,
           ...(experimentName && { experimentName }),
           ...(experimentVariant && { experimentVariant }),
-          ...(optimizelyComponentName && { optimizelyComponentName }),
           ...(experimentVariant && { sendOptimizelyEvents: true }),
         }}
         data-testid={registerComponentName}
