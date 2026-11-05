@@ -35,12 +35,7 @@ interface FollowTopicData {
 - Reuses `SaveButton` for consistent visual and interaction patterns.
 - Handles label transitions for loading, updating, followed and unfollow intent.
 - Sends click and view tracking events.
-- Loads alongside the shared persistent query provider in a client-only boundary.
-  The shared `loadQueryConsumer` helper loads both modules in parallel and wraps
-  the authenticated component only once they are ready.
-  Only the button uses this boundary; page content and embeds remain mounted
-  while the provider and button code load. The guest button remains the loading
-  placeholder.
+- `loadQueryConsumer` loads the button and provider in parallel, client-side. The guest button is shown while loading; page content and embeds remain mounted.
 
 ### Guest (`FollowTopicButtonGuest`)
 

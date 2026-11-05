@@ -1,4 +1,4 @@
-import type { ComponentType } from 'react';
+import { createElement, type ComponentType } from 'react';
 
 const loadQueryConsumer = <Props extends object>(
   consumerModule: Promise<{ default: ComponentType<Props> }>,
@@ -9,8 +9,11 @@ const loadQueryConsumer = <Props extends object>(
       './index'
     ),
     consumerModule,
-  ]).then(([{ withQueryProvider }, { default: Component }]) =>
-    withQueryProvider(Component),
+  ]).then(
+    ([{ default: QueryProvider }, { default: Component }]) =>
+      function QueryConsumer(props: Props) {
+        return <QueryProvider>{createElement(Component, props)}</QueryProvider>;
+      },
   );
 
 export default loadQueryConsumer;

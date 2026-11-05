@@ -1,9 +1,4 @@
-import {
-  createElement,
-  use,
-  type ComponentType,
-  type PropsWithChildren,
-} from 'react';
+import { use, type PropsWithChildren } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import PersistentQueryProvider from './lazy';
 
@@ -19,12 +14,5 @@ const QueryProvider = ({ children }: PropsWithChildren) => {
 
   return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
 };
-
-export const withQueryProvider = <Props extends object>(
-  Component: ComponentType<Props>,
-) =>
-  function QueryConsumer(props: Props) {
-    return <QueryProvider>{createElement(Component, props)}</QueryProvider>;
-  };
 
 export default QueryProvider;
