@@ -714,10 +714,12 @@ describe('Curation', () => {
       service,
       isLiveEnvironment,
       isVideoCollection,
+      isLite,
     }: {
       service: 'arabic' | 'mundo';
       isLiveEnvironment: boolean;
       isVideoCollection: boolean;
+      isLite?: boolean;
     }) => {
       mockIsLive.mockReturnValue(isLiveEnvironment);
 
@@ -729,7 +731,7 @@ describe('Curation', () => {
           summaries={fixture.data.curations[0].summaries}
           isVideoCollection={isVideoCollection}
         />,
-        { service },
+        { service, isLite },
       );
 
       return getByTestId('topic-promos');
@@ -740,6 +742,7 @@ describe('Curation', () => {
         service: 'arabic',
         isLiveEnvironment: false,
         isVideoCollection: true,
+        isLite: false,
       });
 
       expect(list).toHaveStyleRule(...gridColumnsStyleRule);
@@ -751,6 +754,14 @@ describe('Curation', () => {
         service: 'arabic',
         isLiveEnvironment: true,
         isVideoCollection: true,
+        isLite: false,
+      },
+      {
+        description: 'Arabic Lite page',
+        service: 'arabic',
+        isLiveEnvironment: false,
+        isVideoCollection: true,
+        isLite: true,
       },
       {
         description: 'Mundo on test',
@@ -766,11 +777,12 @@ describe('Curation', () => {
       },
     ] as const)(
       'does not apply video collection styling for $description',
-      ({ service, isLiveEnvironment, isVideoCollection }) => {
+      ({ service, isLiveEnvironment, isVideoCollection, isLite }) => {
         const list = renderCuration({
           service,
           isLiveEnvironment,
           isVideoCollection,
+          isLite,
         });
 
         expect(list).not.toHaveStyleRule(...gridColumnsStyleRule);
