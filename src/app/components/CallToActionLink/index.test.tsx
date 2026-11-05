@@ -1,10 +1,6 @@
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { render, screen } from '../react-testing-library-with-providers';
 import CallToActionLink from '.';
-import styles from './index.module.scss';
-import buttonLikeWrapperStyles from './ButtonLikeWrapper/index.module.scss';
-import chevronStyles from './Chevron/index.module.scss';
-import textStyles from './Text/index.module.scss';
 
 jest.mock('#app/hooks/useClickTrackerHandler', () => ({
   __esModule: true,
@@ -51,25 +47,10 @@ describe('Call To Action Link', () => {
     const text = screen.getByText('My Link Text');
     const [chevron] = container.getElementsByTagName('svg');
 
-    expect(link).toHaveClass(
-      styles.link,
-      styles.alignWithMargin,
-      'custom-link',
-    );
-    expect(text).toHaveClass(
-      textStyles.text,
-      textStyles.defaultTextStyles,
-      'custom-text',
-    );
-    expect(text.parentElement).toHaveClass(
-      buttonLikeWrapperStyles.flexWrapper,
-      'custom-wrapper',
-    );
-    expect(chevron).toHaveClass(
-      chevronStyles.chevron,
-      chevronStyles.picaSize,
-      'custom-chevron',
-    );
+    expect(link).toHaveClass('link', 'alignWithMargin', 'custom-link');
+    expect(text).toHaveClass('text', 'defaultTextStyles', 'custom-text');
+    expect(text.parentElement).toHaveClass('flexWrapper', 'custom-wrapper');
+    expect(chevron).toHaveClass('chevron', 'picaSize', 'custom-chevron');
   });
 
   it('should render a link with the correct href', () => {
