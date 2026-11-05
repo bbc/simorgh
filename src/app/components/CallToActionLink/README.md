@@ -22,6 +22,7 @@ The Compound Component pattern can be found inside the `index.tsx` entry point w
 | download          | boolean                        | No       | Permits download                                                                                                                                                                                                                        |
 | fontVariant       | string                         | No       | Used to render the correct `font-family`, `font-style` and `font-weight`. See FontVariant in [theming](https://github.com/bbc/simorgh/blob/latest/src/app/models/types/theming.ts) for possible values. The default value is `sansBold` |
 | size              | string                         | No       | The [BBC GEL size](https://www.bbc.co.uk/gel/features/typography#type-sizes). See GelFontSize in [theming](https://github.com/bbc/simorgh/blob/latest/src/app/models/types/theming.ts) for possible values. The default value is `pica` |
+| enableGlow        | boolean                        | No       | Starts a one-time outline glow after the link has been at least 50% visible for 5 seconds. The default value is `false`                                                                                                                 |
 
 ## Examples
 
