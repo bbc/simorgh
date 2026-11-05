@@ -1,11 +1,17 @@
 name: Playwright E2E - Page Types
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
     branches:
       - '**'
   merge_group:
 permissions:
   contents: read
+
+# E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
+# The job itself always runs so its required check still reports on PRs.
+env:
+  RUN_E2E: ${{ github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e') }}
 
 jobs:
   playwright-run:
@@ -19,30 +25,41 @@ jobs:
       APP_ENV: 'local'
 
     steps:
+      - name: E2Es skipped
+        if: env.RUN_E2E != 'true'
+        run: echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here."
+
       - name: Checkout
+        if: env.RUN_E2E == 'true'
         uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix.node-version }}
+        if: env.RUN_E2E == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
 
       - name: Enable Corepack
+        if: env.RUN_E2E == 'true'
         run: corepack enable
 
       - name: Install dependencies
+        if: env.RUN_E2E == 'true'
         run: yarn install --immutable
 
       - name: Install Playwright browser
+        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: npx playwright install --with-deps chromium
 
       - name: Build Simorgh NextJS app
+        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: yarn build
 
       - name: Start Simorgh NextJS app and run Playwright tests
+        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: |
           set -euo pipefail
@@ -64,7 +81,7 @@ jobs:
           yarn playwright:e2e
 
       - name: Upload Playwright test artifacts
-        if: always()
+        if: always() && env.RUN_E2E == 'true'
         uses: actions/upload-artifact@v6
         with:
           name: playwright-error-page404-artifacts
