@@ -12,6 +12,10 @@ export const STICKY_MIN_VIEWPORT_HEIGHT = 450;
 // towards it can hide it out from under the cursor.
 export const STICKY_NAV_EXIT_BUFFER_PX = 500;
 
+// Require a deliberate downward scroll before hiding the bar so small,
+// accidental direction changes do not make it jump in and out of view.
+export const STICKY_NAV_HIDE_SCROLL_DISTANCE_PX = 24;
+
 // How long the bar takes to slide in and out. Shared between the JavaScript
 // animation lifecycle and the CSS transition declared on `stickyContainer`,
 // so the two can never drift out of step.

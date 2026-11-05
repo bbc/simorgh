@@ -84,6 +84,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Articole similare',
       relatedTopics: 'Subiecte similare',
+      showMore: 'Afișează mai multe',
       moreOnThis: '',
       navMenuText: 'Secțiuni',
       liteSite: {

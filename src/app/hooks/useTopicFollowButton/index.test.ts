@@ -1,4 +1,5 @@
 import { use } from 'react';
+import { onlineManager } from '@tanstack/react-query';
 import {
   renderHook,
   act,
@@ -44,6 +45,7 @@ jest.mock('react', () => ({
 
 const mockSetQueryData = jest.fn();
 const mockInvalidateQueries = jest.fn();
+const mockMutationReset = jest.fn();
 const mutationState: {
   isPending: boolean;
   isPaused: boolean;
@@ -94,6 +96,7 @@ jest.mock('@tanstack/react-query', () => {
         isPending: mutationState.isPending,
         isPaused: mutationState.isPaused,
         error: mutationState.error,
+        reset: mockMutationReset,
       };
     },
   };
@@ -118,6 +121,7 @@ describe('useTopicFollowButton', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    onlineManager.setOnline(true);
     mutationState.isPending = false;
     mutationState.isPaused = false;
     mutationState.error = null;
@@ -158,6 +162,10 @@ describe('useTopicFollowButton', () => {
     );
 
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 202 } as Response);
+  });
+
+  afterEach(() => {
+    onlineManager.setOnline(true);
   });
 
   it('passes topicId to useTopicFollowStatus', () => {
@@ -293,38 +301,8 @@ describe('useTopicFollowButton', () => {
       });
     });
 
-    it('does not update query cache when follow request fails', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(mockError);
-      const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-      await act(async () => {
-        await expect(
-          result.current.handleFollowAction(FollowAction.FOLLOW),
-        ).rejects.toThrow(mockError);
-      });
-
-      expect(mockSetQueryData).not.toHaveBeenCalled();
-      expect(mockInvalidateQueries).not.toHaveBeenCalled();
-    });
-
-    it('does not update query cache when unfollow request fails', async () => {
-      mockUasApiRequest.mockRejectedValueOnce(mockError);
-      const { result } = renderHook(() => useTopicFollowButton(topicData));
-
-      await act(async () => {
-        await expect(
-          result.current.handleFollowAction(FollowAction.UNFOLLOW),
-        ).rejects.toThrow(mockError);
-      });
-
-      expect(mockSetQueryData).not.toHaveBeenCalled();
-      expect(mockInvalidateQueries).not.toHaveBeenCalled();
-    });
-  });
-
-  describe('error tracking', () => {
     it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
-      'tracks a failed user-initiated %s action',
+      'reports and tracks a failed %s action without updating cache',
       async action => {
         mockUasApiRequest.mockRejectedValueOnce(mockError);
         const { result } = renderHook(() => useTopicFollowButton(topicData));
@@ -335,6 +313,13 @@ describe('useTopicFollowButton', () => {
           ).rejects.toThrow(mockError);
         });
 
+        expect(result.current.actionResult).toEqual({
+          status: 'error',
+          action,
+        });
+        expect(result.current.error).toBe(mockError);
+        expect(mockSetQueryData).not.toHaveBeenCalled();
+        expect(mockInvalidateQueries).not.toHaveBeenCalled();
         expect(mockTrackError).toHaveBeenCalledWith({
           error: mockError,
           feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
@@ -342,7 +327,103 @@ describe('useTopicFollowButton', () => {
         });
       },
     );
+  });
 
+  describe('action results', () => {
+    it('does not report a result before a user action', () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'reports success after a user-initiated %s action',
+      async action => {
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+        await act(async () => {
+          await result.current.handleFollowAction(action);
+        });
+
+        expect(result.current.actionResult).toEqual({
+          status: 'success',
+          action,
+        });
+      },
+    );
+
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'reports an offline error without queuing a %s request',
+      action => {
+        onlineManager.setOnline(false);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+        act(() => {
+          result.current.handleFollowAction(action);
+        });
+
+        expect(result.current.actionResult).toEqual({
+          status: 'error',
+          action,
+        });
+        expect(mockUasApiRequest).not.toHaveBeenCalled();
+        expect(mockSetQueryData).not.toHaveBeenCalled();
+      },
+    );
+
+    it('clears dismissed action results and reports subsequent actions', async () => {
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+
+      act(() => {
+        result.current.resetActionResult();
+      });
+
+      expect(result.current.actionResult).toBeNull();
+      expect(mockMutationReset).toHaveBeenCalledTimes(1);
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.UNFOLLOW);
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'success',
+        action: FollowAction.UNFOLLOW,
+      });
+    });
+
+    it.each([false, true])(
+      'does not report background metadata sync results (failure: %s)',
+      async shouldFail => {
+        if (shouldFail) mockUasApiRequest.mockRejectedValueOnce(mockError);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+        const { onMetadataOutOfDate } = mockUseUASMetadataSync.mock.calls[0][0];
+
+        await act(async () => {
+          await onMetadataOutOfDate().catch(() => undefined);
+        });
+
+        expect(result.current.actionResult).toBeNull();
+      },
+    );
+
+    it('does not report status fetch errors as action results', () => {
+      mockUseTopicFollowStatus.mockReturnValue({
+        isFollowed: false,
+        isLoading: false,
+        error: mockError,
+        metadata: undefined,
+      });
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      expect(result.current.actionResult).toBeNull();
+    });
+  });
+
+  describe('error tracking', () => {
     it('tracks a failed background metadata resync', async () => {
       mockUasApiRequest.mockRejectedValueOnce(mockError);
 

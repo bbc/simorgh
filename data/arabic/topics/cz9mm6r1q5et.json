@@ -1,0 +1,1365 @@
+{
+  "data": {
+    "title": "فيديو",
+    "description": "",
+    "seoDescription": "فيديوهات بي بي سي نيوز عربي: تابع أحدث الفيديوهات والتقارير التحليلية التي تشرح أبرز الأخبار والقضايا العربية والعالمية، من السياسة والاقتصاد إلى التكنولوجيا والتحقق من الحقائق، عبر محتوى مرئي موثوق ومحدث باستمرار.",
+    "primaryMediaType": "video",
+    "imageData": null,
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT10M25S",
+            "isLive": false,
+            "title": "ما يمكننا أن نتعلمه من أخطر ظاهرة \"النينيو الخارق\" في التاريخ",
+            "firstPublished": "2026-10-10T08:33:34.896Z",
+            "lastPublished": "2026-10-10T08:33:34.896Z",
+            "link": "https://www.bbc.com/arabic/articles/cqm2d98mjg9po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fd0c/live/9c368f90-c482-11f1-9a39-31b474234113.jpg.webp",
+            "description": "بينما يستعد العالم لما قد يكون ظاهرة نينيو غير مسبوقة، في هذا التقرير نستكشف بالرسوم المتحركة والخرائط كيفية عمل هذه الظاهرة المناخية وأهميتها.",
+            "imageAlt": "ظاهرة \"النينيو الخارق\"",
+            "isPortraitImage": false,
+            "id": "cqm2d98mjg9po",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الطقس العاصف",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cz74k9j01d8t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cz74k9j01d8t"
+              }
+            },
+            "inSituMedia": [
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p0pg0w40",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p0pg0w40",
+                        "subType": "clip",
+                        "format": "video",
+                        "title": "ما يمكننا أن نتعلمه من أخطر ظاهرة \"النينيو الخارق\" في التاريخ",
+                        "synopses": {
+                          "short": "ما يمكننا أن نتعلمه من أخطر ظاهرة \"النينيو الخارق\" في التاريخ",
+                          "medium": "بينما يستعد العالم لما قد يكون ظاهرة نينيو غير مسبوقة، في هذا التقرير نستكشف بالرسوم المتحركة والخرائط كيفية عمل هذه الظاهرة المناخية وأهميتها.",
+                          "long": "كيف ساهمت ظاهرة النينيو عام 1877 في وفاة 50 مليون شخص، أي ما يقارب 3% من سكان العالم؟\nبينما يواجه العالم ظاهرة نينيو غير مسبوقة، نتحدث مع مؤرخين وعلماء حول ما حدث عام 1877 وما يمكننا تعلمه من واحدة من أشد الكوارث المناخية فتكًا على الإطلاق.\nنشرح ماهية ظاهرة النينيو وكيف يعتقد العلماء أن ارتفاع درجة حرارة كوكبنا قد يؤثر على الأحداث المستقبلية."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0pg0wk7.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p0pg0w44",
+                            "types": ["Original"],
+                            "duration": 625,
+                            "durationISO8601": "PT10M25S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1791620061000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": ["default"]
+                        },
+                        "smpKind": "programme",
+                        "webcastVersions": []
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1079,
+                              "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0pg0wk7.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "بينما يستعد العالم لما قد يكون ظاهرة نينيو غير مسبوقة، في هذا التقرير نستكشف بالرسوم المتحركة والخرائط كيفية عمل هذه الظاهرة المناخية وأهميتها.",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "بينما يستعد العالم لما قد يكون ظاهرة نينيو غير مسبوقة، في هذا التقرير نستكشف بالرسوم المتحركة والخرائط كيفية عمل هذه الظاهرة المناخية وأهميتها.",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "captionText",
+                      "model": {
+                        "caption": "ما يمكننا أن نتعلمه من أخطر ظاهرة \"النينيو الخارق\" في التاريخ"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT3M41S",
+            "isLive": false,
+            "title": "احتجاجات الطلاب في فرنسا مستمرة.. فماذا نعرف عنها؟",
+            "firstPublished": "2026-10-08T13:31:26.159Z",
+            "lastPublished": "2026-10-08T13:31:26.159Z",
+            "link": "https://www.bbc.com/arabic/articles/c3x2wy0879d9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/f490/live/27b32390-c31f-11f1-babe-4199b0e7ccea.jpg.webp",
+            "description": "شهدت الاحتجاجات أعمال عنف واندلاع حرائق وانتشار للغاز المسيل للدموع في الشوارع وحوصرت عشرات الجامعات وتم تعليق خدمات النقل العام في عدد من المناطق.",
+            "imageAlt": "احتجاجات في فرنسا",
+            "isPortraitImage": false,
+            "id": "c3x2wy0879d9o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "فرنسا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr27zn2t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr27zn2t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M52S",
+            "isLive": false,
+            "title": "كريستا بايك.. قصة السجينة الأمريكية التي نجت من حقنتين قاتلتين",
+            "firstPublished": "2026-10-07T12:15:33.898Z",
+            "lastPublished": "2026-10-07T12:15:33.898Z",
+            "link": "https://www.bbc.com/arabic/articles/cmje50q8x83zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/06af/live/38a1d4c0-c253-11f1-babe-4199b0e7ccea.jpg.webp",
+            "description": "نُقلت بايك إلى المستشفى بعد أن نجت من محاولتين لإعدامها عن طريق الحقنة القاتلة الأسبوع الماضي.",
+            "imageAlt": "كريستا بايك",
+            "isPortraitImage": false,
+            "id": "cmje50q8x83zo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الإعدام",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/ckdxnj3vnd3t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/ckdxnj3vnd3t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M17S",
+            "isLive": false,
+            "title": "هل تدخل الإمارات وبريطانيا في أزمة بسبب نادي مانشستر سيتي؟",
+            "firstPublished": "2026-10-06T14:40:09.482Z",
+            "lastPublished": "2026-10-06T14:40:09.482Z",
+            "link": "https://www.bbc.com/arabic/articles/cr0qkd8kl1vjo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e37a/live/684d3680-c193-11f1-a64c-550be9e3c66b.jpg.webp",
+            "description": "تقارير تفيد بأن الإمارات العربية المتحدة قد توقف خطط استثمارية على مستوى المملكة المتحدة بقيمة مليارات الجنيهات نتيجة لقرار الدوري الإنجليزي الممتاز.",
+            "imageAlt": "الشيخ منصور بن زايد ومانشستر سيتي",
+            "isPortraitImage": false,
+            "id": "cr0qkd8kl1vjo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "رياضة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cyx5kw7g1j2t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cyx5kw7g1j2t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT4M30S",
+            "isLive": false,
+            "title": "لماذا تتقاتل الجارتان باكستان وأفغانستان؟",
+            "firstPublished": "2026-10-04T13:27:53.714Z",
+            "lastPublished": "2026-10-04T13:27:53.714Z",
+            "link": "https://www.bbc.com/arabic/articles/c8vgxl9g4qvqo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8fd1/live/41b4f510-c0c3-11f1-babe-4199b0e7ccea.jpg.webp",
+            "description": "اتهمت باكستان مراراً وتكراراً حركة طالبان الأفغانية بإيواء جماعات مسلحة تنفذ وتخطط لهجمات عليها من داخل الأراضي الأفغانية.",
+            "imageAlt": "باكستان وأفغانستان",
+            "isPortraitImage": false,
+            "id": "c8vgxl9g4qvqo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "باكستان",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c95y3q7j51rt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c95y3q7j51rt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:766ce171-6b87-4287-9fc2-7301d1a34953",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "HIGH",
+        "title": "آخر الفيديوهات",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M47S",
+            "isLive": false,
+            "title": "شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟",
+            "firstPublished": "2026-10-07T14:32:51.564Z",
+            "lastPublished": "2026-10-07T14:32:51.564Z",
+            "link": "https://www.bbc.com/arabic/articles/cqx2v82w27xzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/16b9/live/efbd0230-c25b-11f1-8e03-f92ed21a25ff.jpg.webp",
+            "description": "في موازاة التصعيد الميداني، برزت منشآت شركة أرامكو السعودية ضمن أهداف الحوثيين، إذ أعلنت الجماعة استهداف منشآت تابعة للشركة، مؤكدة أن الهجمات تأتي رداً على الغارات السعودية على صنعاء ومحافظات يمنية أخرى.",
+            "imageAlt": "أرامكو",
+            "isPortraitImage": false,
+            "id": "cqx2v82w27xzo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "اليمن",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cjgn721x780t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cjgn721x780t"
+              }
+            },
+            "inSituMedia": [
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p0pfg2dg",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p0pfg2dg",
+                        "subType": "clip",
+                        "format": "video",
+                        "title": "شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟",
+                        "synopses": {
+                          "short": "شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟",
+                          "long": "تشهد عدة جبهات في اليمن تصعيداً عسكرياً واسعاً، بالتزامن مع هجوم للقوات الحكومية المدعومة من السعودية بهدف استعادة مناطق سيطر عليها الحوثيون خلال الأسابيع الماضية، لا سيما على الساحل الغربي ومحيط مضيق باب المندب.\nوفي موازاة التصعيد الميداني، برزت منشآت شركة أرامكو السعودية ضمن أهداف الحوثيين، إذ أعلنت الجماعة استهداف منشآت تابعة للشركة، مؤكدة أن الهجمات تأتي رداً على الغارات السعودية على صنعاء ومحافظات يمنية أخرى."
+                        },
+                        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0pfgc12.jpg",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p0pfg2dq",
+                            "types": ["Original"],
+                            "duration": 227,
+                            "durationISO8601": "PT3M47S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1791381815000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": ["default"]
+                        },
+                        "smpKind": "programme",
+                        "webcastVersions": []
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1586,
+                              "height": 892,
+                              "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0pfgc12.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "العنوان: شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "العنوان: شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "captionText",
+                      "model": {
+                        "caption": "شركة أرامكو هدف لهجمات الحوثيين، فما أهميتها للسعودية؟"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type": "video",
+            "duration": "PT2M51S",
+            "isLive": false,
+            "title": "بعد أكثر من عقدين في العراق، كيف بدأ الوجود العسكري الأمريكي وكيف انتهى؟",
+            "firstPublished": "2026-09-30T14:45:09.899Z",
+            "lastPublished": "2026-09-30T14:45:09.899Z",
+            "link": "https://www.bbc.com/arabic/articles/ck79022dv19po",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8756/live/4c1a8a60-bce0-11f1-afec-ebbb2634c4cd.jpg.webp",
+            "description": "تستكمل الولايات المتحدة انسحابها من العراق وفقاً لجدول زمني تم التوافق عليه مع الحكومة في بغداد قبل عامين.",
+            "imageAlt": "القوات الأمريكية",
+            "isPortraitImage": false,
+            "id": "ck79022dv19po",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "العراق",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c5qvpdj0722t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c5qvpdj0722t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M2S",
+            "isLive": false,
+            "title": "من هي فاطمة الزهراء المنصوري، أول امرأة تترأس حكومة المغرب؟",
+            "firstPublished": "2026-09-30T13:34:51.834Z",
+            "lastPublished": "2026-09-30T13:34:51.834Z",
+            "link": "https://www.bbc.com/arabic/articles/ckj065lyzvjlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c00f/live/7746b210-bccf-11f1-a64c-550be9e3c66b.jpg.webp",
+            "description": "فاطمة الزهراء المنصوري قالت إنها ستبدأ مشاورات داخل حزب الأصالة والمعاصرة ثم مع الأحزاب السياسية من أجل اقتراح تشكيلة الحكومة الجديدة.",
+            "imageAlt": "محمد السادس مع فاطمة المنصوري",
+            "isPortraitImage": false,
+            "id": "ckj065lyzvjlo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "المغرب",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cyx5kw73ygjt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cyx5kw73ygjt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M14S",
+            "isLive": false,
+            "title": "هل تتدخل تركيا وباكستان لحماية السعودية أمام هجمات الحوثيين؟",
+            "firstPublished": "2026-09-22T14:15:30.917Z",
+            "lastPublished": "2026-09-22T14:15:30.917Z",
+            "link": "https://www.bbc.com/arabic/articles/c3wyzlg8lrjvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7898/live/870275e0-b68f-11f1-b1d1-571ed4d7ff2c.jpg.webp",
+            "description": "مع تصاعد التوترات بين السعودية والحوثيين، واستمرار الهجمات على مدن السعودية، تطرح التساؤلات حول دور \"حلف مكة\" في مساعدة السعودية ضد حركة أنصار الله الحوثية، فما هو موقف تركيا وباكستان من التصعيد؟",
+            "imageAlt": "بن سلمان واردوغان وشهباز شريف",
+            "isPortraitImage": false,
+            "id": "c3wyzlg8lrjvo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "جماعة الحوثي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c51zd74ze15t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c51zd74ze15t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M18S",
+            "isLive": false,
+            "title": "عبد الملك الحوثي.. من هو زعيم حركة \"أنصار الله\" في اليمن؟",
+            "firstPublished": "2026-09-17T14:27:51.022Z",
+            "lastPublished": "2026-09-17T14:27:51.022Z",
+            "link": "https://www.bbc.com/arabic/articles/cqwyz8ng092wo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d0b3/live/9883b310-b2a2-11f1-b1d1-571ed4d7ff2c.jpg.webp",
+            "description": "يلعب عبد الملك الحوثي، زعيم جماعة أنصار الله الحوثية، دوراً بارزاً في الحياة السياسية في اليمن.\nفماذا نعرف عنه؟ وما أبرز الصراعات التي انخرطت فيها الحركة تحت زعامته؟\n",
+            "imageAlt": "عبدالملك الحوثي",
+            "isPortraitImage": false,
+            "id": "cqwyz8ng092wo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "اليمن",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cjgn721x780t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cjgn721x780t"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:45c6319c-fbb4-4444-88b6-129c56d56646",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "visualProminence": "HIGH",
+        "title": "الشرق الأوسط وشمال أفريقيا",
+        "visualStyle": "COLLECTION",
+        "intent": "MEDIA_PLAYER",
+        "isVideoCollection": true
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M57S",
+            "isLive": false,
+            "title": "هل يتم بيع الأطفال على Vinted؟ بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-07-19T09:27:25.194Z",
+            "lastPublished": "2026-07-19T09:27:25.194Z",
+            "link": "https://www.bbc.com/arabic/articles/ce97gnrv5ryo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e2c9/live/fb1ced90-8352-11f1-926f-c90d1bcfbc84.jpg.webp",
+            "description": "تحقق السلطات في فرنسا وألمانيا حالياً في هذه المنشورات على منصة Vinted، فيما تؤكد الشرطة الألمانية أنه لا توجد حتى الآن أدلة موثوقة تثبت تلك المزاعم.",
+            "imageAlt": "هل يتم بيع الأطفال على Vinted؟ بي بي سي تقصي الحقائق",
+            "isPortraitImage": false,
+            "id": "ce97gnrv5ryo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "وسائل التواصل الاجتماعي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c6vzyk7dg8zt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c6vzyk7dg8zt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT1M24S",
+            "isLive": false,
+            "title": "حرب إيران: التضليل بألعاب الفيديو",
+            "firstPublished": "2026-03-12T10:27:17.615Z",
+            "lastPublished": "2026-03-12T10:27:17.615Z",
+            "link": "https://www.bbc.com/arabic/articles/c3rz0gxpeggo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a1a0/live/f445e9f0-1dfd-11f1-801d-ed3cff6bf876.jpg.webp",
+            "description": "انتشرت مقاطع فيديو مضللة مؤخراً عبر مواقع التواصل الاجتماعي تظهر مسيرات إيرانية تلاحق مقاتلات أمريكية حصدت ملايين المشاهدات..  فريق بي بي سي تقصي الحقائق ومزيد من التفاصيل",
+            "imageAlt": "ألعاب فيديو أم حرب إيران؟",
+            "isPortraitImage": false,
+            "id": "c3rz0gxpeggo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M6S",
+            "isLive": false,
+            "title": "ما تفاصيل قصف مدرسة الأطفال في إيران؟ | بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-03-10T08:33:16.944Z",
+            "lastPublished": "2026-03-10T08:33:16.944Z",
+            "link": "https://www.bbc.com/arabic/articles/cyv902nr95no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2e03/live/dff6fd20-1c60-11f1-9120-a910fc22c6ac.jpg.webp",
+            "description": "فريق بي بي سي لتقصي الحقائق، بحث في تفاصيل القصف الذي استهدف مدرسة في إيران بداية الحرب.",
+            "imageAlt": "بي بي سي تقصي الحقائق",
+            "isPortraitImage": false,
+            "id": "cyv902nr95no",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT1M43S",
+            "isLive": false,
+            "title": "صور وفيديوهات مزيفة حول الحرب في إيران والمنطقة | بي بي سي تقصي الحقائق",
+            "firstPublished": "2026-03-06T11:12:00.194Z",
+            "lastPublished": "2026-03-06T11:12:00.194Z",
+            "link": "https://www.bbc.com/arabic/articles/crl415ke74eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a158/live/18b30e40-194d-11f1-9120-a910fc22c6ac.jpg.webp",
+            "description": "كشف فريق بي بي سي لتقصّي الحقائق عدد من المقاطع والصور المزيفة المتداولة على وسائل التواصل الاجتماعي حول الحرب في إيران والمنطقة.",
+            "imageAlt": "فيديوهات حرب بالذكاء الاصطناعي",
+            "isPortraitImage": false,
+            "id": "crl415ke74eo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:f483d6d2-2c07-4de5-ad0d-f6dd4c8bf908",
+        "curationType": "tipo-curation",
+        "intent": "MEDIA_PLAYER",
+        "position": 2,
+        "visualProminence": "NORMAL",
+        "title": "بي بي سي - تقصي الحقائق",
+        "visualStyle": "COLLECTION",
+        "isVideoCollection": true
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT4M6S",
+            "isLive": false,
+            "title": "تحالفات متمردة على حكومة آبي أحمد",
+            "firstPublished": "2026-10-03T08:29:45.859Z",
+            "lastPublished": "2026-10-03T08:29:45.859Z",
+            "link": "https://www.bbc.com/arabic/articles/c9ly0ndjpe83o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/01ad/live/e2a0ad30-c09f-11f1-babe-4199b0e7ccea.jpg.webp",
+            "description": "7 جماعات متمردة من مختلف أنحاء إثيوبيا أعلنت عن تحالف جديد ضد حكومة رئيس الوزراء آبي أحمد، بعضها كان متنافساً في السابق، لكنهم الآن يؤكدون توحدهم بهدف مشترك.",
+            "imageAlt": "تحالفات متمردة على حكومة آبي أحمد",
+            "isPortraitImage": false,
+            "id": "c9ly0ndjpe83o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "إثيوبيا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c8y94kx9gwvt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c8y94kx9gwvt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT8M",
+            "isLive": false,
+            "title": "لماذا تنخفض نتائج اختبارات جيل زد؟",
+            "firstPublished": "2026-09-19T07:47:05.474Z",
+            "lastPublished": "2026-09-19T07:47:05.474Z",
+            "link": "https://www.bbc.com/arabic/articles/cm0e37qjn33zo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/6d38/live/65528280-b3fd-11f1-a430-4d16ee157c41.jpg.webp",
+            "description": "كشفت أكبر دراسة دولية في العالم تُجرى على مراهقين في الخامسة عشرة من العمر عن انخفاض مُقلق في نتائج العلوم والرياضيات والقراءة.",
+            "imageAlt": "نتائج اختبار جيل زد",
+            "isPortraitImage": false,
+            "id": "cm0e37qjn33zo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "التعليم",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c2dwq2k0xw0t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c2dwq2k0xw0t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M14S",
+            "isLive": false,
+            "title": "لماذا الجزائر والعراق في دائرة الخطر في \"عصر ما بعد النفط\"؟",
+            "firstPublished": "2026-09-14T12:46:31.136Z",
+            "lastPublished": "2026-09-14T12:46:31.136Z",
+            "link": "https://www.bbc.com/arabic/articles/c674kxxqe223o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/8186/live/96d3a300-b03a-11f1-a540-61c3f7fc4e6c.jpg.webp",
+            "description": "تشير تقارير حديثة إلى أن هناك \"تحوّلاً عالمياً\" بعيداً عن النفط، لن يقتصر على أبعاده الاقتصادية والبيئية، بل قد يخلق أزمات مالية واضطرابات تتعلّق بالسياسة والهجرة والصراعات إذا لم تستعدّ البلدان المنتِجة لمواجهة هذا التراجع.",
+            "imageAlt": "عصر ما بعد النفط",
+            "isPortraitImage": false,
+            "id": "c674kxxqe223o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "نفط",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cdr56g24z23t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cdr56g24z23t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT9M44S",
+            "isLive": false,
+            "title": "لماذا قد تكون ذكرياتنا حول 11 سبتمبر خاطئة؟",
+            "firstPublished": "2026-09-09T11:14:17.221Z",
+            "lastPublished": "2026-09-09T11:14:17.221Z",
+            "link": "https://www.bbc.com/arabic/articles/c4g5jrkgld9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e3dd/live/d894e2c0-ac3b-11f1-a540-61c3f7fc4e6c.jpg.webp",
+            "description": "في الذكرى الخامسة والعشرين لهجمات 11 سبتمبر، نقدم لكم هذا الفيديو حول \"ذكريات الوميض\"، ونشرح فيه لماذا قد تكون هذه الذكريات حول الهجمات غير موثوقة تماماً.",
+            "imageAlt": "لماذا قد تكون ذكرياتنا حول 11 سبتمبر خاطئة؟",
+            "isPortraitImage": false,
+            "id": "c4g5jrkgld9o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "هجمات 11 سبتمبر",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cjjqxkk57g8t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cjjqxkk57g8t"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:b08192f6-b14e-46da-9942-c54a035db2fc",
+        "curationType": "tipo-curation",
+        "intent": "MEDIA_PLAYER",
+        "position": 3,
+        "visualProminence": "NORMAL",
+        "title": "في العمق",
+        "visualStyle": "COLLECTION",
+        "isVideoCollection": true
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT3M32S",
+            "isLive": false,
+            "title": "حرائق الجزائر وتونس... فعل فاعل أم تغير مناخي؟",
+            "firstPublished": "2026-07-26T13:09:20.039Z",
+            "lastPublished": "2026-07-26T13:09:20.039Z",
+            "link": "https://www.bbc.com/arabic/articles/crl7d05d3wzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/210a/live/9272db60-88f2-11f1-b2ab-0dd01740f9f6.jpg.webp",
+            "description": "تتمركز قبة حرارية قوية فوق جنوب غربي البحر الأبيض المتوسط في منطقة شمال أفريقيا تتسبب بموجة حر استثنائية.",
+            "imageAlt": "حرائق",
+            "isPortraitImage": false,
+            "id": "crl7d05d3wzo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "التغير المناخي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c1gdq3kq8nzt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c1gdq3kq8nzt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M49S",
+            "isLive": false,
+            "title": "\"قبة حرارية\" مسؤولة عن لهيب أوروبا، فما سر هذه الظاهرة؟",
+            "firstPublished": "2026-07-02T14:51:22.179Z",
+            "lastPublished": "2026-07-02T14:51:22.179Z",
+            "link": "https://www.bbc.com/arabic/articles/cp8ldz25gd7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7f0e/live/837fd850-7624-11f1-b976-0b9c15b0ccfc.jpg.webp",
+            "description": "شهدت أوروبا موجة حر غير مسبوقة، تجاوزت خلالها درجات الحرارة 40 مئوية في عدة دول. ويقف وراء هذه الموجة \"قبة حرارية\" تتشكل بسبب نمط جوي يُعرف باسم \"حاجز أوميغا.\"",
+            "imageAlt": "موجة حر في أوروبا",
+            "isPortraitImage": false,
+            "id": "cp8ldz25gd7o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الطقس العاصف",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cz74k9j01d8t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cz74k9j01d8t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT3M12S",
+            "isLive": false,
+            "title": "لماذا يطفئ ملايين الأشخاص أضواء منازلهم في يوم محدد من العام؟",
+            "firstPublished": "2026-03-28T14:55:01.638Z",
+            "lastPublished": "2026-03-28T14:55:01.638Z",
+            "link": "https://www.bbc.com/arabic/articles/c0mjw8k2e48o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cf24/live/be489130-2ab5-11f1-b297-95b0a0a8331e.jpg.webp",
+            "description": "تهدف حملة ساعة الأرض العالمية إلى رفع مستوى الوعي حول آثار تغير المناخ. وقد بدأت في أستراليا عام 2007، ويشارك فيها الآن أشخاص في نحو 190 دولة.",
+            "imageAlt": "ساعة الأرض",
+            "isPortraitImage": false,
+            "id": "c0mjw8k2e48o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "التغير المناخي",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c1gdq3kq8nzt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c1gdq3kq8nzt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M57S",
+            "isLive": false,
+            "title": "ساعة القيامة، كل ما تريد معرفته عنها",
+            "firstPublished": "2026-01-29T11:21:26.003Z",
+            "lastPublished": "2026-01-29T11:21:26.003Z",
+            "link": "https://www.bbc.com/arabic/articles/cly9r1w0n10o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d32d/live/8a3326f0-fd04-11f0-b7e1-afb6d0884c18.jpg.webp",
+            "description": "أعلنت ألكسندرا بيل الرئيسة والمديرة التنفيذية، لنشرة علماء الذرة، أنه تم تحريك ساعة القيامة إلى 85 ثانية قبل منتصف الليل في 27 يناير/كانون الثاني 2026. فما السبب وماذا يعني ذلك؟",
+            "imageAlt": "صورة لساعة القيامة",
+            "isPortraitImage": false,
+            "id": "cly9r1w0n10o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الولايات المتحدة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cqywj95q3wpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cqywj95q3wpt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e01e0149-162d-40d6-998c-70aab76249c9",
+        "curationType": "tipo-curation",
+        "intent": "MEDIA_PLAYER",
+        "position": 4,
+        "visualProminence": "NORMAL",
+        "title": "التغير المناخي",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT4M7S",
+            "isLive": false,
+            "title": "طموح رئاسي لم تكسره الإدانة... من هي مارين لوبان؟",
+            "firstPublished": "2026-07-12T13:58:56.463Z",
+            "lastPublished": "2026-07-12T13:58:56.463Z",
+            "link": "https://www.bbc.com/arabic/articles/cqx150j0wz2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/01d2/live/205276c0-7df9-11f1-bee8-53ce494e1abc.jpg.webp",
+            "description": "قضت المحكمة بتغريم لوبان مئة ألف يورو (نحو 114 ألف دولار)، والحكم عليها بالسجن ثلاث سنوات، بينها سنتان مع وقف التنفيذ، وسنة واحدة تنفذ في المنزل بواسطة سوار إلكتروني.",
+            "imageAlt": "مارين لوبان",
+            "isPortraitImage": false,
+            "id": "cqx150j0wz2o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "فرنسا",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr27zn2t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr27zn2t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT11M48S",
+            "isLive": false,
+            "title": "بي بي سي تكشف أن إنستغرام يعرض إعلانات تروج لمواد استغلال جنسي للأطفال في الهند",
+            "firstPublished": "2026-07-07T11:03:16.961Z",
+            "lastPublished": "2026-07-07T11:03:16.961Z",
+            "link": "https://www.bbc.com/arabic/articles/cnv9nzzm53qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1e1e/live/594337e0-79f2-11f1-b976-0b9c15b0ccfc.jpg.webp",
+            "description": "كشف تحقيق جديد أجرته BBC Eye أن إنستغرام يعرض إعلانات تروج لمواد استغلال جنسي للأطفال في الهند، ويجني منها أرباحاً.",
+            "imageAlt": "بي بي سي تكشف أن إنستغرام يعرض إعلانات تروج لمواد استغلال جنسي للأطفال في الهند",
+            "isPortraitImage": false,
+            "id": "cnv9nzzm53qo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "الأطفال",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cpzd41x41rpt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cpzd41x41rpt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT2M58S",
+            "isLive": false,
+            "title": "ما علاقة الأرجل الاصطناعية للعارضة لورين فاسر بالدورة الشهرية؟",
+            "firstPublished": "2026-05-07T15:36:33.169Z",
+            "lastPublished": "2026-05-07T15:36:33.169Z",
+            "link": "https://www.bbc.com/arabic/articles/cx21e1r4625o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4e57/live/50aaaac0-4a2a-11f1-ac78-2112837ce2aa.jpg.webp",
+            "description": "ظهرت العارضة والناشطة لورين فاسر في حفل Met Gala 2026 بإطلالة لافتة، وخسرت لورين ساقها اليمنى عام 2012 ثم اليسرى عام 2018، بعد إصابتها بمتلازمة الصدمة التسممية نتيجة استخدام خاطئ لمنتجات الدورة الشهرية وتحديداً السدادات القطنية.",
+            "imageAlt": "العارضة لورين فاسر",
+            "isPortraitImage": false,
+            "id": "cx21e1r4625o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "شؤون المرأة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr23qydt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr23qydt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT5M1S",
+            "isLive": false,
+            "title": "هل خففت إيران قيود فرض الحجاب على النساء؟",
+            "firstPublished": "2026-04-17T12:50:08.949Z",
+            "lastPublished": "2026-04-17T12:50:08.949Z",
+            "link": "https://www.bbc.com/arabic/articles/c393298909xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/854e/live/d20601c0-3a5b-11f1-879d-1b2f5c3919b8.jpg.webp",
+            "description": "تزايدت مؤخراً رؤية سيدات دون حجاب على رؤوسهن في العاصمة الإيرانية طهران، وهو ما يثير تساؤلات حول إلزامية الحجاب، وما إذا تم تخفيف القوانين أم لا.",
+            "imageAlt": "صورة لسيدة إيرانية محجبة وأخرى دون حجاب",
+            "isPortraitImage": false,
+            "id": "c393298909xo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "شؤون المرأة",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/c404vr23qydt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/c404vr23qydt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:aa281684-fd16-4b0d-8c8b-f92e11233ee7",
+        "curationType": "tipo-curation",
+        "intent": "MEDIA_PLAYER",
+        "position": 5,
+        "visualProminence": "NORMAL",
+        "title": "شؤون المرأة",
+        "visualStyle": "COLLECTION",
+        "isVideoCollection": true
+      },
+      {
+        "summaries": [
+          {
+            "type": "video",
+            "duration": "PT2M7S",
+            "isLive": false,
+            "title": "كيف أصبحت المسيرات قادرة على استهداف بعضها؟",
+            "firstPublished": "2026-09-25T14:34:14.442Z",
+            "lastPublished": "2026-09-25T14:34:14.442Z",
+            "link": "https://www.bbc.com/arabic/articles/cv2dwwglx4xxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c6d6/live/ce2865f0-b8ed-11f1-bc1f-3f186ca4140c.jpg.webp",
+            "description": "أعلن الجيش السوداني مؤخرا عن عدة عمليات إسقاط لطائرات مسيرة صينية الصنع مملوكة لقوات الدعم السريع عبر صواريخ جو - جو أطلقت من مسيرات يملكها الجيش.\nفماذا نعرف عن  تقنيات اعتراض الطائرات المسيرة؟ ولماذا يعد ما حدث في السودان تاريخيا؟\n",
+            "imageAlt": "المسيرات",
+            "isPortraitImage": false,
+            "id": "cv2dwwglx4xxo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "السودان",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cr50yv8z9p4t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cr50yv8z9p4t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT9M23S",
+            "isLive": false,
+            "title": "هل يتحول التصعيد في اليمن إلى حرب جديدة؟",
+            "firstPublished": "2026-09-11T09:00:17.778Z",
+            "lastPublished": "2026-09-11T09:00:17.778Z",
+            "link": "https://www.bbc.com/arabic/articles/clyqx95079eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ddc0/live/f14be370-adbe-11f1-b1d1-571ed4d7ff2c.jpg.webp",
+            "description": "يعيش آلاف النازحين في اليمن حالة  من الخوف وعدم اليقينٍ بسبب تصاعد حدة القتال بين جماعة أنصار الله الحوثيين المدعومة من إيران والحكومة المعترف بها دوليًا والمدعومة من السعودية.",
+            "imageAlt": "الصراع في اليمن ",
+            "isPortraitImage": false,
+            "id": "clyqx95079eo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "اليمن",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cjgn721x780t",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cjgn721x780t"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT7M29S",
+            "isLive": false,
+            "title": "كيف تبدو مدينة سبتة بعد شهر من دخول عشرات الآلاف إليها من المغرب؟",
+            "firstPublished": "2026-09-02T09:21:40.384Z",
+            "lastPublished": "2026-09-02T09:21:40.384Z",
+            "link": "https://www.bbc.com/arabic/articles/cgqd949nqqgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1d8e/live/1a749960-a6b0-11f1-aed2-8d6da8d75094.jpg.webp",
+            "description": "مرّ شهر على العبور الجماعي غير المسبوق لعشرات الآلاف من المهاجرين من المغرب إلى سبتة، لكن تداعياته لا تزال مستمرة.",
+            "imageAlt": "داخل سبتة",
+            "isPortraitImage": false,
+            "id": "cgqd949nqqgo",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "المغرب",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/cyx5kw73ygjt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/cyx5kw73ygjt"
+              }
+            }
+          },
+          {
+            "type": "video",
+            "duration": "PT7M16S",
+            "isLive": false,
+            "title": "مسعف لبناني يروي لحظات الفقد والاستهداف بين حربي 2006 و2026",
+            "firstPublished": "2026-07-24T07:57:39.512Z",
+            "lastPublished": "2026-07-24T07:57:39.512Z",
+            "link": "https://www.bbc.com/arabic/articles/c171ql9pne5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/11b6/live/1932c490-8735-11f1-926f-c90d1bcfbc84.jpg.webp",
+            "description": "حرب 2006 وحرب اليوم في لبنان، خلفتا دمارا هائلا وموجة نزوح كبيرة وجروحا لا تندمل.",
+            "imageAlt": "مسعف في لبنان",
+            "isPortraitImage": false,
+            "id": "c171ql9pne5o",
+            "visualProminence": "NORMAL",
+            "attributions": [
+              {
+                "title": "Arabic",
+                "link": {
+                  "url": "https://www.bbc.co.uk/arabic",
+                  "scheme": "https",
+                  "host": "www.bbc.co.uk",
+                  "path": "/arabic"
+                }
+              }
+            ],
+            "relatedTopic": {
+              "title": "لبنان",
+              "link": {
+                "url": "https://www.bbc.com/arabic/topics/ckdxnj6gj6dt",
+                "scheme": "https",
+                "host": "www.bbc.com",
+                "path": "/arabic/topics/ckdxnj6gj6dt"
+              }
+            }
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:280df6b0-320e-49f0-9931-6c3375ba575e",
+        "curationType": "tipo-curation",
+        "intent": "MEDIA_PLAYER",
+        "position": 6,
+        "visualProminence": "NORMAL",
+        "title": "مراسلون",
+        "visualStyle": "COLLECTION",
+        "isVideoCollection": true
+      }
+    ],
+    "activePage": 1,
+    "pageCount": 1,
+    "metadata": {
+      "analytics": {
+        "name": "arabic.topics.cz9mm6r1q5et.page",
+        "producer": "ARABIC",
+        "contributors": ["Arabic", "Arabic - TOP"]
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cz9mm6r1q5et",
+        "contentType": "index-category",
+        "pageIdentifier": "arabic.topics.cz9mm6r1q5et.page",
+        "pageTitle": "فيديو"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

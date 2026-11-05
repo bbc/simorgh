@@ -1,17 +1,17 @@
 import dynamic from 'next/dynamic';
-import { GetServerSideProps } from 'next';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { INTERNAL_SERVER_ERROR, OK } from '#app/lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import getPageData from '../../utilities/pageRequests/getPageData';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
@@ -60,6 +60,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       },
     },
   };
-};
+});
 
 export default HomePage;

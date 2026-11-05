@@ -157,6 +157,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "include": {
     "enabled": true,
   },
+  "livePageElectionBanner": {
+    "enabled": true,
+  },
   "livePagePolling": {
     "enabled": true,
   },

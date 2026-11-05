@@ -23,7 +23,7 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
 };
 
 type AddCspHeaderProps = {
-  ctx: NextPageContext;
+  ctx: Pick<NextPageContext, 'req' | 'res' | 'asPath'>;
   service: Services;
   toggles: Toggles;
   country?: string | null;
@@ -47,7 +47,7 @@ const addCspHeader = ({
 
   if (!PRODUCTION_ONLY) return { nonce: null, cspHeader: null };
 
-  const reqUrl = ctx.req?.url || '';
+  const reqUrl = ctx.asPath || ctx.req?.url || '';
   const { isAmp, isLite } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
   const isAvEmbedsRoute = reqUrl.includes('/av-embeds/');

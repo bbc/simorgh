@@ -98,6 +98,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      showMore: 'Nuna ƙari',
       moreOnThis: '',
       navMenuText: 'Sassa',
       liteSite: {

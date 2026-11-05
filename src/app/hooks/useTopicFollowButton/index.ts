@@ -1,5 +1,9 @@
-import { use } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { use, useState } from 'react';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
 import uasApiRequest from '#app/lib/uasApi';
 import {
   createFollowsPayload,
@@ -15,20 +19,23 @@ import {
   UAS_ERROR_ACTIONS,
 } from '#app/hooks/useErrorTracking/errorTracking.const';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { FollowAction } from '#app/models/types/action';
 import useTopicFollowStatus from '#app/hooks/useTopicFollowStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useUASMetadataSync from '../useUASMetadataSync';
 
-enum FollowAction {
-  FOLLOW = 'follow',
-  UNFOLLOW = 'unfollow',
-}
+export type FollowActionResult = {
+  status: 'success' | 'error';
+  action: FollowAction;
+} | null;
 
 interface UseTopicFollowButtonReturn {
   isFollowed: boolean;
   isLoading: boolean;
   isUpdating: boolean;
   error: Error | null;
+  actionResult: FollowActionResult;
+  resetActionResult: () => void;
   handleFollowAction: (action: FollowAction) => void;
 }
 
@@ -52,6 +59,8 @@ const useTopicFollowButton = (
     feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
     action: UAS_ERROR_ACTIONS.FETCH_STATUS,
   });
+
+  const [actionResult, setActionResult] = useState<FollowActionResult>(null);
 
   const mutation = useMutation({
     mutationFn: async (action: FollowAction) => {
@@ -108,8 +117,15 @@ const useTopicFollowButton = (
   });
 
   const handleFollowAction = (action: FollowAction) => {
+    if (!onlineManager.isOnline()) {
+      setActionResult({ status: 'error', action });
+      return undefined;
+    }
+
     return mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
       onError: mutationError => {
+        setActionResult({ status: 'error', action });
         trackError({
           error: mutationError,
           feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
@@ -119,11 +135,18 @@ const useTopicFollowButton = (
     });
   };
 
+  const resetActionResult = () => {
+    setActionResult(null);
+    mutation.reset();
+  };
+
   return {
     isFollowed,
     isLoading,
     isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
+    actionResult,
+    resetActionResult,
     handleFollowAction,
   };
 };

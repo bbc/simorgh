@@ -14,6 +14,7 @@ import {
   SERVICES_WITH_STICKY_NAV,
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_EXIT_BUFFER_PX,
+  STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
   STICKY_NAV_TAB_STOP_SELECTOR,
   STICKY_TRANSITION_DURATION_MS,
 } from './config';
@@ -192,6 +193,7 @@ const useStickyNavigation = ({
       lastScrollY: window.scrollY,
       isPinned: false,
       isVisible: false,
+      downwardScrollStartY: null as number | null,
     };
     // Outstanding scheduled work, cancelled on teardown.
     const pending = {
@@ -224,6 +226,7 @@ const useStickyNavigation = ({
       if (!navSlotRef.current || !navRef.current) return;
 
       const { scrollY } = window;
+      const previousScrollY = tracking.lastScrollY;
       // See FORWARD_TAB_SCROLL_SUPPRESSION_MS: a forward Tab can make the
       // browser nudge the viewport by a pixel or two, in either direction,
       // to reveal the newly focused element. That nudge looks identical to
@@ -233,9 +236,20 @@ const useStickyNavigation = ({
       const isWithinForwardTabSuppression =
         Date.now() < suppressScrollUntilRef.current;
       const isScrollingUp =
-        scrollY < tracking.lastScrollY && !isWithinForwardTabSuppression;
-      const isScrollingDown = scrollY > tracking.lastScrollY;
+        scrollY < previousScrollY && !isWithinForwardTabSuppression;
+      const isScrollingDown =
+        scrollY > previousScrollY && !isWithinForwardTabSuppression;
       tracking.lastScrollY = scrollY;
+
+      if (isScrollingUp) {
+        tracking.downwardScrollStartY = null;
+      } else if (
+        isScrollingDown &&
+        tracking.isVisible &&
+        tracking.downwardScrollStartY === null
+      ) {
+        tracking.downwardScrollStartY = previousScrollY;
+      }
 
       const anchorTop =
         resolveArticleStart()?.getBoundingClientRect().top ?? null;
@@ -261,11 +275,21 @@ const useStickyNavigation = ({
       if (tracking.isPinned && !isPinned) closeMenuRef.current();
       tracking.isPinned = isPinned;
 
+      const hasPassedHideDistance =
+        tracking.downwardScrollStartY !== null &&
+        scrollY - tracking.downwardScrollStartY >=
+          STICKY_NAV_HIDE_SCROLL_DISTANCE_PX;
       const isVisible =
         isPinned &&
-        (isOpenRef.current ||
-          isScrollingUp ||
-          (!isScrollingDown && tracking.isVisible));
+        (isScrollingUp || (tracking.isVisible && !hasPassedHideDistance));
+
+      // The original and sticky navigation share the same menu state. If the
+      // original navigation was left open, close it before the sticky copy
+      // appears. This keeps the sticky dropdown closed until its own button
+      // is clicked, while still allowing that button to open it afterwards.
+      if (!tracking.isVisible && isVisible && isOpenRef.current) {
+        closeMenuRef.current();
+      }
 
       // Reset eagerly, in the same tick as the transition that hides the
       // bar, rather than from a separate effect that only runs once React
@@ -273,6 +297,7 @@ const useStickyNavigation = ({
       // scroll nowhere to be read back from mid-transition, so the bar can
       // never be caught showing wherever it was last left.
       if (tracking.isVisible && !isVisible) {
+        closeMenuRef.current();
         const secondaryScroll = secondaryScrollRef.current;
         if (secondaryScroll) secondaryScroll.scrollLeft = 0;
       }
@@ -351,7 +376,7 @@ const useStickyNavigation = ({
         window.cancelAnimationFrame(pending.animationFrame);
       }
     };
-  }, [isEnabled, closeMenuRef, isOpenRef]);
+  }, [isEnabled, isOpenRef, closeMenuRef]);
 
   // ---------------------------------------------------------------------
   // Animation: moving the bar between the page flow and the pinned position.

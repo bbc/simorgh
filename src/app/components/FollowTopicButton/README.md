@@ -36,6 +36,18 @@ interface FollowTopicData {
 - Handles label transitions for loading, updating, followed and unfollow intent.
 - Sends click and view tracking events.
 
+- Reuses Save Article's `ActionTooltip` for follow, unfollow and error feedback, including dismissal, accessibility and My News links.
+- Only user actions trigger tooltips; offline actions show errors immediately.
+- Tooltips use `translations.followTopicTooltip` and are hidden on dark UI pages temporarily.
+
+Tooltip tracking events:
+
+- `follow-topic-tooltip-view-success`
+- `follow-topic-tooltip-view-removed`
+- `follow-topic-tooltip-view-error`
+- `follow-topic-tooltip-close`
+- `follow-topic-tooltip-my-news-link`
+
 ### Guest (`FollowTopicButtonGuest`)
 
 - Reuses `SaveButton` and opens `AccountSignInModal` via portal on click.

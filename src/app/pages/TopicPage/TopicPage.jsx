@@ -1,7 +1,6 @@
 import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
-import ElectionBanner from '#app/components/ElectionBanner';
 import FollowTopicButton from '#app/components/FollowTopicButton';
 import parseRoute from '#app/routes/utils/parseRoute';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
@@ -19,6 +18,7 @@ import TopicDescription from './TopicDescription';
 import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import TopicPageElectionBanner from './TopicPageElectionBanner';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName, service } = use(ServiceContext);
@@ -100,8 +100,7 @@ const TopicPage = ({ pageData }) => {
               />
             )}
           </div>
-          <ElectionBanner
-            className="topic-page-election-banner"
+          <TopicPageElectionBanner
             curationIds={curations.map(({ curationId }) => curationId)}
           />
           {curations.map(

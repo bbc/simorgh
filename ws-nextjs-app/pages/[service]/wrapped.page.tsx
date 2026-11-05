@@ -1,7 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import { GetServerSideProps } from 'next';
 import { useEffect, use } from 'react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
@@ -19,6 +18,7 @@ import {
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#utilities/logResponseTime';
 import isLocal from '#lib/utilities/isLocal';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 
 import {
   ROUTING_INFORMATION,
@@ -38,7 +38,7 @@ interface PageDataParams extends ParsedUrlQuery {
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -92,7 +92,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
-};
+});
 
 const pageLayout = () => {
   const { datetimeLocale, locale } = use(ServiceContext);

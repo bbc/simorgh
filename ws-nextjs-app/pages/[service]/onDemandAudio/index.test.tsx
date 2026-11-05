@@ -16,6 +16,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { GetServerSidePropsContext } from 'next';
+import { Helmet } from 'react-helmet';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import { OnDemandAudioProps } from './types';
@@ -40,13 +41,15 @@ const mockToggles = {
 
 jest.mock('../../../utilities/pageRequests/getPageData');
 
-jest.mock('react-helmet', () => {
-  return {
-    Helmet: ({ children }: { children: React.ReactNode }) => (
-      <div>{children}</div>
-    ),
+const getLinkedData = () => {
+  const linkedDataScript = Helmet.peek().scriptTags.find(
+    ({ type }) => type === 'application/ld+json',
+  );
+
+  return JSON.parse(linkedDataScript?.innerHTML ?? '{}') as {
+    '@graph'?: Array<Record<string, unknown>>;
   };
-});
+};
 
 interface PageProps {
   pageData: OnDemandAudioProps['pageData'];
@@ -140,6 +143,9 @@ describe('OnDemand Radio Page ', () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
     mockMatchMedia();
     process.env = { ...env };
+    // Helmet appends the BUMP loader's inline script to <head>, which jsdom executes
+    // @ts-expect-error requirejs global is not typed on window
+    window.require = jest.fn();
   });
 
   it('should display podcast episode page with PodcastEpisode schema', async () => {
@@ -156,22 +162,15 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container } = await renderPage({
+    await renderPage({
       pageData: result.props.pageData,
       service: 'gahuza',
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    const linkedDataScript = container.querySelector(
-      'script[type="application/ld+json"]',
-    );
+    const graph = getLinkedData()['@graph'] ?? [];
 
-    expect(linkedDataScript).toBeInTheDocument();
-
-    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
-      '@graph'?: Array<Record<string, unknown>>;
-    };
-    const graph = linkedData['@graph'] ?? [];
+    expect(graph.length).toBeGreaterThan(0);
 
     const podcastEpisode = graph.find(
       graphEntry => graphEntry['@type'] === 'PodcastEpisode',
@@ -219,19 +218,13 @@ describe('OnDemand Radio Page ', () => {
       ],
     };
 
-    const { container } = await renderPage({
+    await renderPage({
       pageData: pageDataWithDownloadLink,
       service: 'gahuza',
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    const linkedDataScript = container.querySelector(
-      'script[type="application/ld+json"]',
-    );
-    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
-      '@graph'?: Array<Record<string, unknown>>;
-    };
-    const graph = linkedData['@graph'] ?? [];
+    const graph = getLinkedData()['@graph'] ?? [];
 
     const podcastEpisode = graph.find(
       graphEntry => graphEntry['@type'] === 'PodcastEpisode',
@@ -268,19 +261,13 @@ describe('OnDemand Radio Page ', () => {
       ),
     };
 
-    const { container } = await renderPage({
+    await renderPage({
       pageData: pageDataWithNoDownloadLink,
       service: 'gahuza',
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    const linkedDataScript = container.querySelector(
-      'script[type="application/ld+json"]',
-    );
-    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
-      '@graph'?: Array<Record<string, unknown>>;
-    };
-    const graph = linkedData['@graph'] ?? [];
+    const graph = getLinkedData()['@graph'] ?? [];
 
     const podcastEpisode = graph.find(
       graphEntry => graphEntry['@type'] === 'PodcastEpisode',
