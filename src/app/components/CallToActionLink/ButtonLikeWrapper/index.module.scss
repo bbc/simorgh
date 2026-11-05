@@ -20,14 +20,14 @@
       padding: #{theme.pixelsToRem-px-to-rem(4)};
       border-radius: inherit;
       pointer-events: none;
-      background: linear-gradient(90deg, #ffffff, #a20219, #500115, #180109, #500115, #a20219, #ffffff);
+      background: linear-gradient(90deg, #F2F2F2, #BB001B, #7E0423, #180109, #7E0423, #BB001B, #F2F2F2);
       background-size: 200% 100%;
       mask:
         linear-gradient(theme.$palette-white 0 0) content-box,
         linear-gradient(theme.$palette-white 0 0);
       mask-composite: exclude;
       opacity: 0;
-      animation: revealGlow 4s ease-out 3s forwards; // temp - remove 3s forwards
+      animation: revealGlow 4s ease-out;
     }
 
     &::after {
@@ -43,8 +43,8 @@
       &::before,
       &::after {
         animation:
-          revealGlow 4s ease-out 3s forwards, // temp - remove 3s forwards
-          sweepGlow 4s ease-in-out 3s infinite; // temp - remove 3s infinite
+          revealGlow 4s ease-out,
+          sweepGlow 4s ease-in-out;
       }
     }
 
@@ -65,14 +65,15 @@
 }
 
 @keyframes revealGlow {
-  0% {
+  0%,
+  100% {
     opacity: 0;
-  } // temp - revert 100%
+  }
 
   10%,
-  100% {
+  90% {
     opacity: 1;
-  } // temp - revert to 100% to 90% opacity
+  }
 }
 
 @keyframes staticGlow {
