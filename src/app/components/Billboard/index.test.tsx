@@ -109,6 +109,22 @@ describe('Billboard', () => {
     );
   });
 
+  it('includes a 1320w resolution in the masked image srcset', () => {
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+      />,
+    );
+
+    expect(screen.getByAltText(imageAlt).getAttribute('srcset')).toContain(
+      '1320w',
+    );
+  });
+
   it('should have an masked image with the correct alt text', () => {
     const { getByAltText } = render(
       <Billboard
@@ -308,7 +324,7 @@ describe('Billboard', () => {
       maskedImageSpy.mockRestore();
     });
 
-    it('includes an 800w resolution in the srcset', () => {
+    it('includes 800w and 1320w resolutions in the srcset', () => {
       render(
         <Billboard
           heading={title}
@@ -323,6 +339,7 @@ describe('Billboard', () => {
       const image = screen.getByAltText(imageAlt);
       const srcset = image.getAttribute('srcset');
       expect(srcset).toContain('800w');
+      expect(srcset).toContain('1320w');
     });
 
     it('renders the curation grid when promo items are present', () => {

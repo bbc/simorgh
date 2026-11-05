@@ -32,7 +32,8 @@ interface BillboardProps {
   summaries?: Summary[];
 }
 
-const IMAGE_WIDTH = 800;
+const IMAGE_WIDTH = 1320;
+const IMAGE_RESOLUTIONS = [240, 320, 480, 624, 800, 1320];
 const DEFAULT_IMAGE_RES = 480;
 
 export default ({
@@ -70,6 +71,7 @@ export default ({
           imageUrlTemplate={image}
           altText={altText}
           imageWidth={IMAGE_WIDTH}
+          imageResolutions={IMAGE_RESOLUTIONS}
           showPlaceholder={false}
           showVignette={hasPromoItems}
           singleImageLayout={isSingleImageLayout}
@@ -86,6 +88,7 @@ export default ({
     } = prepareIchefImage({
       imageUrlTemplate: image,
       originalImageWidth: IMAGE_WIDTH,
+      imageResolutions: IMAGE_RESOLUTIONS,
       srcResolution: DEFAULT_IMAGE_RES,
     });
 
