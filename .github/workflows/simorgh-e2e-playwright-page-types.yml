@@ -8,13 +8,10 @@ on:
 permissions:
   contents: read
 
-# E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
-# The job itself always runs so its required check still reports on PRs.
-env:
-  RUN_E2E: ${{ github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e') }}
-
 jobs:
   playwright-run:
+    # E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
+    if: github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e')
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,41 +22,30 @@ jobs:
       APP_ENV: 'local'
 
     steps:
-      - name: E2Es skipped
-        if: env.RUN_E2E != 'true'
-        run: echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here."
-
       - name: Checkout
-        if: env.RUN_E2E == 'true'
         uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix.node-version }}
-        if: env.RUN_E2E == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
 
       - name: Enable Corepack
-        if: env.RUN_E2E == 'true'
         run: corepack enable
 
       - name: Install dependencies
-        if: env.RUN_E2E == 'true'
         run: yarn install --immutable
 
       - name: Install Playwright browser
-        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: npx playwright install --with-deps chromium
 
       - name: Build Simorgh NextJS app
-        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: yarn build
 
       - name: Start Simorgh NextJS app and run Playwright tests
-        if: env.RUN_E2E == 'true'
         working-directory: ws-nextjs-app
         run: |
           set -euo pipefail
@@ -81,7 +67,7 @@ jobs:
           yarn playwright:e2e
 
       - name: Upload Playwright test artifacts
-        if: always() && env.RUN_E2E == 'true'
+        if: always()
         uses: actions/upload-artifact@v6
         with:
           name: playwright-error-page404-artifacts
@@ -89,3 +75,27 @@ jobs:
             ws-nextjs-app/playwright-report
             ws-nextjs-app/test-results
           if-no-files-found: ignore
+
+  # Required check for this workflow. Passes when the E2Es pass, or when they're skipped on a PR.
+  e2e-result:
+    name: Playwright Page Types E2E result
+    needs: [playwright-run]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check E2E result
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          echo "Job results: $RESULTS"
+          for result in $RESULTS; do
+            if [ "$result" = success ]; then continue; fi
+            if [ "$result" = skipped ] && [ "$EVENT" != merge_group ]; then continue; fi
+            echo "::error::E2Es did not pass ($result)."
+            exit 1
+          done
+          case " $RESULTS " in
+            *" skipped "*) echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here." ;;
+            *) echo "E2Es passed." ;;
+          esac
