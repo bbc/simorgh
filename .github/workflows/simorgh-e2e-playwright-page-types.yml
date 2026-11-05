@@ -83,19 +83,12 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - name: Check E2E result
-        env:
-          RESULTS: ${{ join(needs.*.result, ' ') }}
-          EVENT: ${{ github.event_name }}
-        run: |
-          echo "Job results: $RESULTS"
-          for result in $RESULTS; do
-            if [ "$result" = success ]; then continue; fi
-            if [ "$result" = skipped ] && [ "$EVENT" != merge_group ]; then continue; fi
-            echo "::error::E2Es did not pass ($result)."
-            exit 1
-          done
-          case " $RESULTS " in
-            *" skipped "*) echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here." ;;
-            *) echo "E2Es passed." ;;
-          esac
+      - name: E2Es failed or were cancelled
+        if: >-
+          contains(needs.*.result, 'failure') ||
+          contains(needs.*.result, 'cancelled') ||
+          (github.event_name == 'merge_group' && contains(needs.*.result, 'skipped'))
+        run: exit 1
+      - name: E2Es skipped
+        if: contains(needs.*.result, 'skipped') && github.event_name != 'merge_group'
+        run: echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here."
