@@ -1,3 +1,6 @@
+/**
+ * @jest-environment-options {"url": "https://localhost/"}
+ */
 import { StrictMode } from 'react';
 import Cookie from 'js-cookie';
 import {
@@ -50,14 +53,20 @@ describe('ArticleNotFoundUASCleanup', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    Cookie.set(USER_ID_COOKIE_KEY, HASHED_USER_ID);
+    Cookie.set(USER_ID_COOKIE_KEY, HASHED_USER_ID, {
+      secure: true,
+      sameSite: 'strict',
+    });
     mockUseIsRestoring.mockReturnValue(false);
     mockGetQueriesData.mockReturnValue(cachedPages);
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
   });
 
   afterEach(() => {
-    Cookie.remove(USER_ID_COOKIE_KEY);
+    Cookie.remove(USER_ID_COOKIE_KEY, {
+      secure: true,
+      sameSite: 'strict',
+    });
   });
 
   it('renders null', () => {
