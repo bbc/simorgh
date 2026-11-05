@@ -1,21 +1,16 @@
-import { use, StrictMode } from 'react';
+import { StrictMode } from 'react';
+import Cookie from 'js-cookie';
 import {
   render,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import { AccountContext } from '#app/contexts/AccountContext';
-import { RequestContext } from '#app/contexts/RequestContext';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import uasApiRequest from '#app/lib/uasApi';
 import uasKeys from '#app/lib/uasApi/queryKeys';
-import parseRoute from '#app/routes/utils/parseRoute';
+import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
 import ArticleNotFoundUASCleanup from './ArticleNotFoundUASCleanup';
 
 jest.mock('#app/lib/uasApi');
-jest.mock('#app/routes/utils/parseRoute');
-jest.mock('react', () => ({
-  ...jest.requireActual('react'),
-  use: jest.fn(),
-}));
 
 const mockGetQueriesData = jest.fn();
 const mockRemoveQueries = jest.fn();
@@ -31,117 +26,87 @@ jest.mock('@tanstack/react-query', () => ({
   useIsRestoring: () => mockUseIsRestoring(),
 }));
 
-const mockUse = use as jest.Mock;
 const mockUasApiRequest = uasApiRequest as jest.Mock;
-const mockParseRoute = parseRoute as jest.Mock;
 
 const HASHED_USER_ID = 'user-123';
-const ARTICLE_ID = 'article-123';
+const ARTICLE_ID = 'c0g992jmmkko';
+const renderOptions = {
+  pathname: `/news/articles/${ARTICLE_ID}`,
+  idctaConfig: mockIdctaConfig,
+};
+const unrelatedPage = [
+  uasKeys.favouritesPage(HASHED_USER_ID, 0),
+  { savedArticles: [{ id: 'some-other-article' }] },
+];
+const cachedPages = [
+  unrelatedPage,
+  [
+    uasKeys.favouritesPage(HASHED_USER_ID, 1),
+    { savedArticles: [{ id: ARTICLE_ID }] },
+  ],
+];
 
 describe('ArticleNotFoundUASCleanup', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    mockUse.mockImplementation(context => {
-      if (context === AccountContext)
-        return { hashedUserId: HASHED_USER_ID, isRefreshAvailable: true };
-      if (context === RequestContext)
-        return { pathname: '/news/articles/article-123' };
-      return jest.requireActual('react').use(context);
-    });
-
-    mockParseRoute.mockReturnValue({ assetId: ARTICLE_ID });
+    Cookie.set(USER_ID_COOKIE_KEY, HASHED_USER_ID);
     mockUseIsRestoring.mockReturnValue(false);
-    mockGetQueriesData.mockReturnValue([]);
+    mockGetQueriesData.mockReturnValue(cachedPages);
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
   });
 
+  afterEach(() => {
+    Cookie.remove(USER_ID_COOKIE_KEY);
+  });
+
   it('renders null', () => {
-    const { container } = render(<ArticleNotFoundUASCleanup />);
+    mockGetQueriesData.mockReturnValue([]);
+    const { container } = render(<ArticleNotFoundUASCleanup />, renderOptions);
 
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('calls getQueriesData with the queryKey from uasKeys.favouritesList(hashedUserId)', async () => {
-    render(<ArticleNotFoundUASCleanup />);
+  it.each([
+    { description: 'empty', pages: [] },
+    { description: 'only contains other articles', pages: [unrelatedPage] },
+  ])(
+    'does not delete an article when the favourites cache is $description',
+    async ({ pages }) => {
+      mockGetQueriesData.mockReturnValue(pages);
 
-    await waitFor(() => {
-      expect(mockGetQueriesData).toHaveBeenCalledWith({
-        queryKey: uasKeys.favouritesList(HASHED_USER_ID),
+      render(<ArticleNotFoundUASCleanup />, renderOptions);
+
+      await waitFor(() => {
+        expect(mockGetQueriesData).toHaveBeenCalledWith({
+          queryKey: uasKeys.favouritesList(HASHED_USER_ID),
+        });
       });
-    });
-  });
+      expect(mockUasApiRequest).not.toHaveBeenCalled();
+      expect(mockRemoveQueries).not.toHaveBeenCalled();
+    },
+  );
 
-  it('does not call uasApiRequest when articleId is not present in any cached favourites page', async () => {
-    mockGetQueriesData.mockReturnValue([
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 0),
-        { savedArticles: [{ id: 'some-other-article' }] },
-      ],
-    ]);
-
-    render(<ArticleNotFoundUASCleanup />);
-
-    await waitFor(() => {
-      expect(mockGetQueriesData).toHaveBeenCalled();
-    });
-    expect(mockUasApiRequest).not.toHaveBeenCalled();
-  });
-
-  it('proceeds with deletion when articleId is found on one of several cached pages', async () => {
-    mockGetQueriesData.mockReturnValue([
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 0),
-        { savedArticles: [{ id: 'some-other-article' }] },
-      ],
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 1),
-        { savedArticles: [{ id: ARTICLE_ID }] },
-      ],
-    ]);
-
-    render(<ArticleNotFoundUASCleanup />);
-
-    await waitFor(() => {
-      expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
-        globalId: `urn:bbc:world-service-news:article:${ARTICLE_ID}`,
-        isRefreshAvailable: true,
-      });
-    });
-  });
-
-  it('calls queryClient.removeQueries with the favouritesList queryKey after a successful delete', async () => {
-    mockGetQueriesData.mockReturnValue([
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 0),
-        { savedArticles: [{ id: ARTICLE_ID }] },
-      ],
-    ]);
-
-    render(<ArticleNotFoundUASCleanup />);
+  it('deletes an article found on a later cached page and clears the favourites cache', async () => {
+    render(<ArticleNotFoundUASCleanup />, renderOptions);
 
     await waitFor(() => {
       expect(mockRemoveQueries).toHaveBeenCalledWith({
         queryKey: uasKeys.favouritesList(HASHED_USER_ID),
       });
     });
+    expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
+      globalId: `urn:bbc:world-service-news:article:${ARTICLE_ID}`,
+      isRefreshAvailable: true,
+    });
   });
 
-  it('only calls uasApiRequest once even if the effect re-runs with the same hashedUserId/articleId', async () => {
-    mockGetQueriesData.mockReturnValue([
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 0),
-        { savedArticles: [{ id: ARTICLE_ID }] },
-      ],
-    ]);
-
-    // StrictMode intentionally mounts, cleans up, and remounts on initial
-    // render, invoking effects twice with identical deps. This is what
-    // hasAttemptedDeletion.current guards against in the component.
+  it('only deletes once when StrictMode re-runs effects', async () => {
     render(
       <StrictMode>
         <ArticleNotFoundUASCleanup />
       </StrictMode>,
+      renderOptions,
     );
 
     await waitFor(() => {
@@ -152,17 +117,11 @@ describe('ArticleNotFoundUASCleanup', () => {
 
   it('waits for the persisted cache before checking whether to delete the article', async () => {
     mockUseIsRestoring.mockReturnValue(true);
-    const { rerender } = render(<ArticleNotFoundUASCleanup />);
+    const { rerender } = render(<ArticleNotFoundUASCleanup />, renderOptions);
 
     expect(mockGetQueriesData).not.toHaveBeenCalled();
     expect(mockUasApiRequest).not.toHaveBeenCalled();
 
-    mockGetQueriesData.mockReturnValue([
-      [
-        uasKeys.favouritesPage(HASHED_USER_ID, 0),
-        { savedArticles: [{ id: ARTICLE_ID }] },
-      ],
-    ]);
     mockUseIsRestoring.mockReturnValue(false);
     rerender(<ArticleNotFoundUASCleanup />);
 

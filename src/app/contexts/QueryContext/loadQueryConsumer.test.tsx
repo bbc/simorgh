@@ -47,10 +47,10 @@ describe('loadQueryConsumer', () => {
 
   it('waits for the consumer and supplies its query context and props', async () => {
     const Consumer = ({ label }: { label: string }) => {
-      const queryClient = useQueryClient();
+      useQueryClient();
       const isRestoring = useIsRestoring();
       if (isRestoring) return <p>Restoring queries</p>;
-      return <p>{queryClient ? label : 'Query unavailable'}</p>;
+      return <p>{label}</p>;
     };
     const pending = Promise.withResolvers<{ default: typeof Consumer }>();
     const loading = loadQueryConsumer(pending.promise);
@@ -69,7 +69,9 @@ describe('loadQueryConsumer', () => {
   it('propagates loading failures instead of mounting an unwrapped consumer', async () => {
     const error = new Error('Failed to load query consumer');
 
-    await expect(loadQueryConsumer(Promise.reject(error))).rejects.toBe(error);
+    await expect(
+      loadQueryConsumer<{ name: string }>(Promise.reject(error)),
+    ).rejects.toBe(error);
   });
 
   it('shares and persists query data across independently loaded consumers and subsequent mounts', async () => {
@@ -120,10 +122,9 @@ describe('loadQueryConsumer', () => {
     render(<NextConsumer name="Next page" />, renderOptions);
 
     await waitFor(() => {
-      expect(
-        screen.getByRole('button', { name: 'Next page' }),
-      ).toHaveTextContent('Saved');
-      expect(screen.getByRole('button', { name: 'Next page' })).toBeEnabled();
+      const nextPage = screen.getByRole('button', { name: 'Next page' });
+      expect(nextPage).toHaveTextContent('Saved');
+      expect(nextPage).toBeEnabled();
     });
     expect(fetchStatus).toHaveBeenCalledTimes(1);
   });
