@@ -162,6 +162,104 @@ const styles = {
         textDecoration: 'underline',
       },
     }),
+
+  videoCollection: ({ mq, palette, spacings }: Theme) =>
+    css({
+      '&:first-of-type': {
+        [mq.GROUP_3_ONLY]: {
+          gridColumn: '1 / -1',
+        },
+      },
+      '&:first-of-type .promo-text': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(22)}rem`,
+          },
+        },
+      },
+      '.promo-image': {
+        position: 'relative',
+        'div div:last-child': {
+          position: 'absolute',
+          bottom: 0,
+          insetInlineStart: 0,
+          zIndex: 1,
+          div: {
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: palette.WHITE,
+            svg: {
+              position: 'static',
+              color: palette.GREY_10,
+            },
+            time: {
+              margin: 0,
+              color: palette.GREY_10,
+            },
+          },
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          width: '100%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingBottom: `${spacings.FULL}rem`,
+        },
+      },
+      '.promo-text': {
+        'h2, h3': {
+          paddingBottom: `${spacings.FULL}rem`,
+          marginBottom: 0,
+          fontWeight: 'bold',
+        },
+        time: {
+          fontSize: `${pixelsToRem(13)}rem`,
+          paddingBottom: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_2_MIN_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(18)}rem`,
+          },
+        },
+        [mq.GROUP_1_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(16)}rem`,
+          },
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(15)}rem`,
+          },
+        },
+      },
+      '.promo-paragraph': {
+        display: 'none',
+      },
+      '&:first-of-type .promo-paragraph': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          display: 'block',
+          fontSize: `${pixelsToRem(14)}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+          fontSize: `${pixelsToRem(16)}rem`,
+        },
+      },
+    }),
+  videoCollectionList: ({ mq }: Theme) =>
+    css({
+      display: 'grid',
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
+    }),
 };
 
 const DesktopBigPromo = css({

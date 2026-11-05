@@ -283,218 +283,236 @@ test.describe('onDemandAudio', () => {
           await expect(radioSchedule).toHaveCount(0);
         });
 
-        test('should have a script with src value set to chartbeat source', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
-          });
-
-          await expect(
-            page.locator(
-              'script[src="https://static.chartbeat.com/js/chartbeat.js"]',
-            ),
-          ).toHaveCount(1);
-        });
-
-        test('should have chartbeat config set to window object', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
-          });
-
-          const hasChartbeatConfig = await page.evaluate(
-            () => !!(window as OnDemandAudioWindow)._sf_async_config,
-          );
-
-          expect(hasChartbeatConfig).toBe(true);
-        });
-
-        test('should have webp images on pages', async ({ page }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
-          });
-
-          await assertWebpImages(page);
-        });
-
-        test('should render topic tags if they are in the json, and they should navigate to correct topic page', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-          test.skip(
-            ['sport', 'newsround', 'news'].includes(testSuite.service) ||
-              appEnvFromProcess === 'local',
-            'Topic tags disabled for this service or environment',
-          );
-
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
-          });
-
-          const topicTagsSection = page.locator(
-            "aside[aria-labelledby*='related-topics']",
-          );
-          const hasTopicTags = await topicTagsSection.isVisible();
-
-          if (!hasTopicTags) return;
-
-          const firstTag = topicTagsSection.locator('a').first();
-          const topicTitle = (await firstTag.textContent())?.trim();
-
-          expect(
-            topicTitle,
-            'first topic tag should have non-empty text',
-          ).toBeTruthy();
-
-          await firstTag.click();
-          await expect(page.locator('h1')).toContainText(topicTitle as string);
-        });
-
-        test('should have a noscript img tag with the ati url', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          const { atiUrl } = getATIUrls(appEnvFromProcess);
-
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
-          });
-
-          const noScriptText = await page
-            .locator('noscript[id="analytics-noscript"]')
-            .textContent();
-
-          if (noScriptText) {
-            expect(noScriptText).toContain(
-              `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
+        if (testSuite.includeSharedPageTests) {
+          test('should have a script with src value set to chartbeat source', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
             );
-          }
-        });
 
-        test('should show two tier navigation on desktop', async ({ page }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv) ||
-              !shouldTestTwoTierNav(testSuite.service),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
 
-          await page.setViewportSize({ width: 1008, height: 900 });
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
+            await expect(
+              page.locator(
+                'script[src="https://static.chartbeat.com/js/chartbeat.js"]',
+              ),
+            ).toHaveCount(1);
           });
 
-          await expect(
-            page.locator('[data-e2e="scrollable-nav"]'),
-          ).toBeVisible();
-          await expect(
-            page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
-          ).toBeVisible();
+          test('should have chartbeat config set to window object', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          const primaryHrefs = await page
-            .locator('[data-e2e="scrollable-nav"] a')
-            .evaluateAll(links => links.map(link => link.getAttribute('href')));
-          const secondaryHrefs = await page
-            .locator('[data-e2e="scrollable-nav-secondary"] ul a')
-            .evaluateAll(links => links.map(link => link.getAttribute('href')));
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
 
-          [...primaryHrefs, ...secondaryHrefs].forEach(href => {
-            expect(href).toBeTruthy();
-            expect(href).not.toBe('');
-          });
-        });
+            const hasChartbeatConfig = await page.evaluate(
+              () => !!(window as OnDemandAudioWindow)._sf_async_config,
+            );
 
-        test('should show two tier navigation on mobile', async ({ page }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv) ||
-              !shouldTestTwoTierNav(testSuite.service),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await page.setViewportSize({ width: 320, height: 480 });
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
+            expect(hasChartbeatConfig).toBe(true);
           });
 
-          await expect(
-            page.locator('[data-e2e="scrollable-nav"]'),
-          ).toBeVisible();
-          await expect(
-            page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
-          ).toBeVisible();
+          test('should have webp images on pages', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          const primaryHrefs = await page
-            .locator('[data-e2e="scrollable-nav"] a')
-            .evaluateAll(links => links.map(link => link.getAttribute('href')));
-          const secondaryHrefs = await page
-            .locator('[data-e2e="scrollable-nav-secondary"] ul a')
-            .evaluateAll(links => links.map(link => link.getAttribute('href')));
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
 
-          [...primaryHrefs, ...secondaryHrefs].forEach(href => {
-            expect(href).toBeTruthy();
-            expect(href).not.toBe('');
-          });
-        });
-
-        test('dropdown menu should open and close when the menu button is clicked', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv) ||
-              !shouldTestTwoTierNav(testSuite.service),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
-
-          await page.setViewportSize({ width: 320, height: 480 });
-          await page.goto(`${baseURL}${testSuite.path}`, {
-            waitUntil: 'domcontentloaded',
+            await assertWebpImages(page);
           });
 
-          const menuButton = page.locator('nav button[aria-expanded]').first();
+          test('should render topic tags if they are in the json, and they should navigate to correct topic page', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+            test.skip(
+              ['sport', 'newsround', 'news'].includes(testSuite.service) ||
+                appEnvFromProcess === 'local',
+              'Topic tags disabled for this service or environment',
+            );
 
-          await expect(
-            page.locator('nav [data-e2e="scrollable-nav"]'),
-          ).toBeVisible();
-          await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-          await expect(
-            page.locator('nav [data-e2e="dropdown-nav"] ul'),
-          ).not.toBeVisible();
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
 
-          await menuButton.click();
-          await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
-          await expect(
-            page.locator('nav [data-e2e="dropdown-nav"] ul'),
-          ).toBeVisible();
+            const topicTagsSection = page.locator(
+              "aside[aria-labelledby*='related-topics']",
+            );
+            const hasTopicTags = await topicTagsSection.isVisible();
 
-          await menuButton.click();
-          await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-          await expect(
-            page.locator('nav [data-e2e="dropdown-nav"] ul'),
-          ).not.toBeVisible();
-        });
+            if (!hasTopicTags) return;
+
+            const firstTag = topicTagsSection.locator('a').first();
+            const topicTitle = (await firstTag.textContent())?.trim();
+
+            expect(
+              topicTitle,
+              'first topic tag should have non-empty text',
+            ).toBeTruthy();
+
+            await firstTag.click();
+            await expect(page.locator('h1')).toContainText(
+              topicTitle as string,
+            );
+          });
+
+          test('should have a noscript img tag with the ati url', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) || !process.env.SMOKE,
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            const { atiUrl } = getATIUrls(appEnvFromProcess);
+
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            const noScriptText = await page
+              .locator('noscript[id="analytics-noscript"]')
+              .textContent();
+
+            if (noScriptText) {
+              expect(noScriptText).toContain(
+                `<img height="1px" width="1px" alt="" style="position:absolute" src="${atiUrl}`,
+              );
+            }
+          });
+
+          test('should show two tier navigation on desktop', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await page.setViewportSize({ width: 1008, height: 900 });
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(
+              page.locator('[data-e2e="scrollable-nav"]'),
+            ).toBeVisible();
+            await expect(
+              page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
+            ).toBeVisible();
+
+            const primaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav"] a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+            const secondaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav-secondary"] ul a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+
+            [...primaryHrefs, ...secondaryHrefs].forEach(href => {
+              expect(href).toBeTruthy();
+              expect(href).not.toBe('');
+            });
+          });
+
+          test('should show two tier navigation on mobile', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await page.setViewportSize({ width: 320, height: 480 });
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            await expect(
+              page.locator('[data-e2e="scrollable-nav"]'),
+            ).toBeVisible();
+            await expect(
+              page.locator('[data-e2e="scrollable-nav-secondary"] ul'),
+            ).toBeVisible();
+
+            const primaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav"] a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+            const secondaryHrefs = await page
+              .locator('[data-e2e="scrollable-nav-secondary"] ul a')
+              .evaluateAll(links =>
+                links.map(link => link.getAttribute('href')),
+              );
+
+            [...primaryHrefs, ...secondaryHrefs].forEach(href => {
+              expect(href).toBeTruthy();
+              expect(href).not.toBe('');
+            });
+          });
+
+          test('dropdown menu should open and close when the menu button is clicked', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv) ||
+                !shouldTestTwoTierNav(testSuite.service),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await page.setViewportSize({ width: 320, height: 480 });
+            await page.goto(`${baseURL}${testSuite.path}`, {
+              waitUntil: 'domcontentloaded',
+            });
+
+            const menuButton = page
+              .locator('nav button[aria-expanded]')
+              .first();
+
+            await expect(
+              page.locator('nav [data-e2e="scrollable-nav"]'),
+            ).toBeVisible();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).not.toBeVisible();
+
+            await menuButton.click();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).toBeVisible();
+
+            await menuButton.click();
+            await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            await expect(
+              page.locator('nav [data-e2e="dropdown-nav"] ul'),
+            ).not.toBeVisible();
+          });
+        }
       });
     });
   });
