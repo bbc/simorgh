@@ -12,7 +12,7 @@ type IsElectionBannerVisibleArgs = {
   taggings?: MetadataTaggings;
 };
 
-// isLite/isLive are deliberately not considered here; ElectionBanner guards against those itself.
+// isLite is deliberately not considered here; ElectionBanner guards against it itself.
 const isElectionBannerVisible = ({
   aboutTags,
   curationIds,

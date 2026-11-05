@@ -4,6 +4,9 @@ import AccountPromotionalBanner from '#app/components/Account/AccountPromotional
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
@@ -50,6 +53,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
+
+  // Activate server-side experiment to enable visit/page-view tracking
+  useOptimizelyVariation({
+    experimentName: 'test_server_side_experiment_visits_aa',
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',

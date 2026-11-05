@@ -21,6 +21,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  showMore?: string;
   moreOnThis?: string;
   navMenuText: string;
   liteSite?: LiteSiteTranslations;
@@ -106,6 +107,25 @@ export interface Translations {
     contentErrorText: string;
   };
   actionTooltip?: {
+    success: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
+  };
+  followTopicTooltip?: {
     success: {
       title: string;
       bodyBefore: string;

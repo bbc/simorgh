@@ -81,6 +81,7 @@ const SaveButton = ({
     styles.buttonWrapper,
     variant === SAVE_BUTTON_VARIANTS.FOLLOW && styles.followVariant,
     variant === SAVE_BUTTON_VARIANTS.FOLLOW && isSaved && styles.savedState,
+    variant === SAVE_BUTTON_VARIANTS.FOLLOW && isLoading && styles.loadingState,
     isUpdating && styles.updatingState,
   ]
     .filter(Boolean)

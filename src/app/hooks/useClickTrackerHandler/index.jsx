@@ -42,6 +42,7 @@ const shouldTrackOjClick = (componentName, experimentName) =>
   OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
 
 const useClickTrackerHandler = (eventTrackingData = {}) => {
+  const { isDismissal } = eventTrackingData;
   const {
     pageIdentifier,
     producerId,
@@ -81,7 +82,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         trackingIsEnabled,
         // count legitimate repeat clicks; optimizely calculates unique users
         !wasClicked,
-        isValidClick(event),
+        isDismissal || isValidClick(event),
       ].every(Boolean);
 
       if (shouldRegisterClick) {
@@ -99,8 +100,10 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          event.stopPropagation();
-          event.preventDefault();
+          if (!isDismissal) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
 
           if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
@@ -211,6 +214,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       detailedPlacement,
       groupTracker,
       itemTracker,
+      isDismissal,
       isSignedIn,
       hashedId,
       isPersonalisationOn,

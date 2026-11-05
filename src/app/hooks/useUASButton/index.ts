@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import {
   onlineManager,
   useMutation,
@@ -19,11 +19,7 @@ import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleP
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
-
-enum UASAction {
-  SAVE = 'save',
-  REMOVE = 'remove',
-}
+import { UASAction } from '#app/models/types/action';
 
 export type UASActionResult = {
   status: 'success' | 'error';
@@ -79,7 +75,55 @@ const useUASButton = ({
   // Only set by handleSaveAction, never by the background metadata resync.
   const [actionResult, setActionResult] = useState<UASActionResult>(null);
 
+  // Holds the result of an offline click so it can be dismissed on reconnect.
+  const offlineActionResultRef = useRef<UASActionResult>(null);
+
+  useEffect(() => {
+    const favouriteStatusKey = uasKeys.favouriteStatus(hashedUserId, articleId);
+
+    const recoverFromOffline = async () => {
+      const offlineActionResult = offlineActionResultRef.current;
+
+      if (!offlineActionResult) return;
+
+      try {
+        // Refresh first, so the tooltip is only removed once the button
+        // reflects the current saved status.
+        await queryClient.invalidateQueries(
+          { queryKey: favouriteStatusKey },
+          { throwOnError: true },
+        );
+      } catch {
+        // Status unverified, so keep the tooltip for a later reconnect to retry.
+        return;
+      }
+
+      // A newer offline click replaced this result mid-refresh; its own
+      // reconnect will dismiss it.
+      if (offlineActionResultRef.current !== offlineActionResult) return;
+
+      offlineActionResultRef.current = null;
+
+      setActionResult(current =>
+        current === offlineActionResult ? null : current,
+      );
+    };
+
+    return onlineManager.subscribe(isOnline => {
+      if (isOnline) {
+        recoverFromOffline();
+      }
+    });
+  }, [queryClient, hashedUserId, articleId]);
+
   const mutation = useMutation({
+    // An in-flight status refetch can resolve after the mutation has written
+    // the new status and overwrite it with a stale value.
+    onMutate: async () => {
+      await queryClient.cancelQueries({
+        queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+      });
+    },
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
         return upsertArticleData({
@@ -132,9 +176,16 @@ const useUASButton = ({
 
   const handleSaveAction = (action: UASAction) => {
     if (!onlineManager.isOnline()) {
-      setActionResult({ status: 'error', action });
+      const offlineActionResult: UASActionResult = {
+        status: 'error',
+        action,
+      };
+      offlineActionResultRef.current = offlineActionResult;
+      setActionResult(offlineActionResult);
       return undefined;
     }
+
+    offlineActionResultRef.current = null;
 
     return mutation.mutate(action, {
       onSuccess: () => setActionResult({ status: 'success', action }),
@@ -150,6 +201,7 @@ const useUASButton = ({
   };
 
   const resetActionResult = () => {
+    offlineActionResultRef.current = null;
     setActionResult(null);
     mutation.reset();
   };

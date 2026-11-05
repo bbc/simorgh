@@ -46,3 +46,13 @@ updates:
         patterns:
           - 'webpack'
           - 'webpack-*'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
+    cooldown:
+      default-days: 7
+    labels:
+      - 'dependencies'
