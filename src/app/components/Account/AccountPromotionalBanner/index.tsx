@@ -103,7 +103,6 @@ const AccountPromotionalBanner = ({
             registerComponentName="account-promotional-banner-register"
             experimentName={experimentName}
             experimentVariant={experimentVariant}
-            optimizelyComponentName="account-promotional-banner"
           />
         </PromotionalBanner>
       </div>
