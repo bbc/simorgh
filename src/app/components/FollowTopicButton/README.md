@@ -38,6 +38,7 @@ interface FollowTopicData {
 
 - Reuses Save Article's `ActionTooltip` for follow, unfollow and error feedback, including dismissal, accessibility and My News links.
 - Only user actions trigger tooltips; offline actions show errors immediately.
+- Offline follow/unfollow actions are not queued. On reconnect, the offline error tooltip is dismissed only after the topic's follow status refresh succeeds. If the refresh fails, the tooltip remains and a later reconnect retries; newer action results are preserved.
 - Tooltips use `translations.followTopicTooltip` and are hidden on dark UI pages temporarily.
 
 Tooltip tracking events:
@@ -108,3 +109,6 @@ See `index.test.tsx` for behaviour coverage including:
 - follow/unfollow action dispatch for signed-in users
 - service allowlist behaviour
 - IDCTA availability behaviour
+- offline error tooltip removal when the refreshed hook clears its action result
+
+See `../../hooks/useTopicFollowButton/index.test.ts` for reconnect recovery, failed-refresh retries, and protection against stale refresh results.
