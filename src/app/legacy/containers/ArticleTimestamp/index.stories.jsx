@@ -1,99 +1,135 @@
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import serviceVariants from '#testHelpers/serviceVariants';
 import ArticleTimestamp from '.';
-import { timestampGenerator } from './testHelpers';
 
-const threeHoursAgo = timestampGenerator({ hours: 3 });
-const fiveHoursAgo = timestampGenerator({ hours: 5 });
-const elevenHoursAgo = timestampGenerator({ hours: 11 });
-const twelveHoursAgo = timestampGenerator({ hours: 12 });
-const twentyFourHoursAgo = timestampGenerator({
-  hours: 24,
-  seconds: 1,
-});
-const twoDaysAgo = timestampGenerator({ days: 2 });
-const threeDaysAgo = timestampGenerator({ days: 3 });
+const fixedNow = Date.UTC(2025, 5, 15, 18);
+const oneHour = 60 * 60 * 1000;
+const oneDay = 24 * oneHour;
+
+const threeHoursAgo = fixedNow - 3 * oneHour;
+const fiveHoursAgo = fixedNow - 5 * oneHour;
+const elevenHoursAgo = fixedNow - 11 * oneHour;
+const twelveHoursAgo = fixedNow - 12 * oneHour;
+const twentyFourHoursAgo = fixedNow - oneDay - 1000;
+const twoDaysAgo = fixedNow - 2 * oneDay;
+const threeDaysAgo = fixedNow - 3 * oneDay;
 
 const WrappedArticleTimestamp = ({ ...rest }) => <ArticleTimestamp {...rest} />;
+
+const ServiceTimestampMatrix = props => (
+  <div>
+    {serviceVariants.map(
+      ({ service, variant, pageLang, configVariant, label }) => (
+        <div key={`${service}-${configVariant}`}>
+          <strong>{label}</strong>
+          <ServiceContextProvider
+            service={service}
+            variant={variant}
+            pageLang={pageLang}
+          >
+            <ArticleTimestamp {...props} />
+          </ServiceContextProvider>
+        </div>
+      ),
+    )}
+  </div>
+);
 
 export default {
   Component: WrappedArticleTimestamp,
   title: 'Containers/Article/Article Timestamp',
-  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
-  parameters: { chromatic: { disable: true } },
+  decorators: [
+    story => (
+      <WithTimeMachine
+        dateString="Sunday, 15 June 2025 18:00:00 GMT"
+        timestamp={fixedNow}
+      >
+        {story()}
+      </WithTimeMachine>
+    ),
+  ],
 };
 
 export const A = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={threeHoursAgo}
     lastPublished={threeHoursAgo}
   />
 );
 A.storyName =
   'lastPublished === firstPublished and firstPublished < 10 hours ago';
+A.tags = ['!dev'];
 
 export const B = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={elevenHoursAgo}
     lastPublished={elevenHoursAgo}
   />
 );
 B.storyName =
   'lastPublished === firstPublished and firstPublished today and > 10 hours ago';
+B.tags = ['!dev'];
 
 export const C = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={twentyFourHoursAgo}
     lastPublished={twentyFourHoursAgo}
   />
 );
 C.storyName =
   'lastPublished === firstPublished and firstPublished before today';
+C.tags = ['!dev'];
 
 export const D = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={fiveHoursAgo}
     lastPublished={threeHoursAgo}
   />
 );
 D.storyName =
   'lastPublished today < 10 hours ago and firstPublished today < 10 hours ago';
+D.tags = ['!dev'];
 
 export const E = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={twelveHoursAgo}
     lastPublished={elevenHoursAgo}
   />
 );
 E.storyName =
   'lastPublished today more than 10 hours ago and firstPublished today more than 10 hours ago';
+E.tags = ['!dev'];
 
 export const F = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={threeDaysAgo}
     lastPublished={threeDaysAgo}
   />
 );
 F.storyName =
   'lastPublished before today and firstPublished same day as lastPublished';
+F.tags = ['!dev'];
 
 export const G = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={threeDaysAgo}
     lastPublished={twoDaysAgo}
   />
 );
 G.storyName =
   'lastPublished before today, !==firstPublished day and firstPublished before today';
+G.tags = ['!dev'];
 
 export const H = () => (
-  <WrappedArticleTimestamp
+  <ServiceTimestampMatrix
     firstPublished={threeDaysAgo}
     lastPublished={elevenHoursAgo}
   />
 );
 H.storyName =
   'lastPublished today and more than 10 hours ago and firstPublished before today';
+H.tags = ['!dev'];
 
 // Timezone and locale migration checks for Moment → Temporal
 const timezoneLocaleServices = [
