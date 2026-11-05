@@ -1,6 +1,9 @@
 import { useRef } from 'react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
-import UserZoomIntercept, { UserZoomInterceptProps } from '.';
+import UserZoomIntercept, {
+  UserZoomInterceptProps,
+  UserZoomTrigger,
+} from '.';
 import readme from './README.md';
 import metadata from './metadata.json';
 
@@ -23,9 +26,9 @@ export default {
   },
 };
 
-export const Immediate = () => <Component trigger="immediate" />;
+export const Immediate = () => <Component trigger={UserZoomTrigger.IMMEDIATE} />;
 
-export const View = () => <Component trigger="view" />;
+export const View = () => <Component trigger={UserZoomTrigger.VIEW} />;
 
 export const Click = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -35,7 +38,7 @@ export const Click = () => {
       <button ref={buttonRef} type="button">
         Give feedback
       </button>
-      <Component trigger="click" targetRef={buttonRef} />
+      <Component trigger={UserZoomTrigger.CLICK} targetRef={buttonRef} />
     </>
   );
 };

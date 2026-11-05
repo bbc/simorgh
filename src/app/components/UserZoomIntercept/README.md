@@ -10,7 +10,7 @@ marker scrolls into view, or when a referenced element is clicked.
 
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
-| `trigger` | `'immediate' \| 'view' \| 'click'` | `'immediate'` | When to load the script. |
+| `trigger` | `UserZoomTrigger` (`'immediate' \| 'view' \| 'click'`) | `UserZoomTrigger.IMMEDIATE` | When to load the script. |
 | `targetRef` | `RefObject<HTMLElement \| null>` | — | Ref to the clickable element. Required for the `click` trigger. |
 
 ## Immediate
@@ -26,7 +26,7 @@ The default trigger loads the script when the component mounts:
 Place the component at the page position where the script should be triggered:
 
 ```tsx
-<UserZoomIntercept trigger="view" />
+<UserZoomIntercept trigger={UserZoomTrigger.VIEW} />
 ```
 
 ## Click
@@ -43,7 +43,7 @@ return (
       Give feedback
     </button>
     <UserZoomIntercept
-      trigger="click"
+      trigger={UserZoomTrigger.CLICK}
       targetRef={feedbackButtonRef}
     />
   </>

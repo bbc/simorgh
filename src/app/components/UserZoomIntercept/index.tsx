@@ -7,20 +7,25 @@ import styles from './index.module.scss';
 const USERZOOM_SRC =
   'https://cdn4.userzoom.com/files/js/QzI4NFQx.js?t=uz_til&cuid=286685F149F6DF1188490022196C4538';
 
+export enum UserZoomTrigger {
+  IMMEDIATE = 'immediate',
+  VIEW = 'view',
+  CLICK = 'click',
+}
+
 export type UserZoomInterceptProps = {
-  // 'view': fires when this component scrolls into view (place it at the trigger point).
-  // 'click': fires when targetRef is clicked - targetRef must point at an existing visible element.
-  // 'immediate': loads as soon as the component mounts.
-  trigger?: 'immediate' | 'view' | 'click';
+  trigger?: UserZoomTrigger;
   targetRef?: RefObject<HTMLElement | null>;
 };
 
 const UserZoomIntercept = ({
-  trigger = 'immediate',
+  trigger = UserZoomTrigger.IMMEDIATE,
   targetRef,
 }: UserZoomInterceptProps = {}) => {
   const { isAmp, isApp, isLite, nonce } = use(RequestContext);
-  const [hasTriggered, setHasTriggered] = useState(trigger === 'immediate');
+  const [hasTriggered, setHasTriggered] = useState(
+    trigger === UserZoomTrigger.IMMEDIATE,
+  );
   const markerRef = useRef<HTMLSpanElement>(null);
   const observer = useRef<IntersectionObserver | null>(null);
 
@@ -29,7 +34,7 @@ const UserZoomIntercept = ({
       return undefined;
     }
 
-    if (trigger === 'view') {
+    if (trigger === UserZoomTrigger.VIEW) {
       const target = markerRef.current;
       if (!target) return undefined;
 
@@ -46,7 +51,7 @@ const UserZoomIntercept = ({
       return () => observer.current?.disconnect();
     }
 
-    if (trigger === 'click') {
+    if (trigger === UserZoomTrigger.CLICK) {
       const target = targetRef?.current;
       if (!target) return undefined;
 
@@ -64,7 +69,7 @@ const UserZoomIntercept = ({
   }
 
   // Marks the page position that triggers the script once scrolled into view.
-  if (!hasTriggered && trigger === 'view') {
+  if (!hasTriggered && trigger === UserZoomTrigger.VIEW) {
     return (
       <span ref={markerRef} aria-hidden="true" className={styles.marker} />
     );

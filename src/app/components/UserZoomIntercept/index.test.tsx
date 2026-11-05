@@ -5,7 +5,7 @@ import {
   fireEvent,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import UserZoomIntercept from '.';
+import UserZoomIntercept, { UserZoomTrigger } from '.';
 
 const USERZOOM_SRC =
   'https://cdn4.userzoom.com/files/js/QzI4NFQx.js?t=uz_til&cuid=286685F149F6DF1188490022196C4538';
@@ -110,7 +110,7 @@ describe('UserZoomIntercept', () => {
     const { container } = await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger="view" />
+          <UserZoomIntercept trigger={UserZoomTrigger.VIEW} />
         </ContextWrap>,
       ),
     );
@@ -123,7 +123,7 @@ describe('UserZoomIntercept', () => {
     const { container } = await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger="view" />
+          <UserZoomIntercept trigger={UserZoomTrigger.VIEW} />
         </ContextWrap>,
       ),
     );
@@ -150,7 +150,7 @@ describe('UserZoomIntercept', () => {
     const { container } = await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger="click" targetRef={targetRef} />
+          <UserZoomIntercept trigger={UserZoomTrigger.CLICK} targetRef={targetRef} />
         </ContextWrap>,
       ),
     );
@@ -164,7 +164,7 @@ describe('UserZoomIntercept', () => {
     await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger="click" targetRef={targetRef} />
+          <UserZoomIntercept trigger={UserZoomTrigger.CLICK} targetRef={targetRef} />
         </ContextWrap>,
       ),
     );
