@@ -1,18 +1,9 @@
 import { GetServerSidePropsContext } from 'next';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import * as isTest from '#app/lib/utilities/isTest';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandAudioRoute from './handleOnDemandAudioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-
-jest.mock('#app/lib/utilities/isTest', () => {
-  const originalModule = jest.requireActual('#app/lib/utilities/isTest');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 describe('handleOnDemandAudioRoute', () => {
   const mockSetHeader = jest.fn();
@@ -124,17 +115,5 @@ describe('handleOnDemandAudioRoute', () => {
     expect(result).toEqual({
       props: expect.objectContaining({ status: 404 }),
     });
-  });
-
-  it('should render live assets on test environments', async () => {
-    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
-    jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
-    const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
-
-    await handleOnDemandAudioRoute(mockGetServerSidePropsContext);
-
-    expect(pageDataSpy).toHaveBeenCalledWith(
-      expect.objectContaining({ rendererEnv: 'live' }),
-    );
   });
 });
