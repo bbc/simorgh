@@ -1,4 +1,4 @@
-import { useState, useCallback, use, useRef } from 'react';
+import { useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -65,9 +65,6 @@ import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCou
 import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
 import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
 import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
-import UserZoomInterceptCombined, {
-  UserZoomTrigger,
-} from '#app/components/UserZoomIntercept';
 import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -302,7 +299,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
-  const userZoomCtaRef = useRef<HTMLButtonElement>(null);
+
   const countryTopicToReorder = pageData?.countryTopicIdToReorder ?? null;
 
   const topicDiscoveryTopics = repositionCountryTopic(
@@ -547,18 +544,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             role="main"
             ref={scrollDepthRef}
           >
-            <button type="button" ref={userZoomCtaRef}>
-              Give feedback
-            </button>
-            <UserZoomInterceptCombined
-              trigger={UserZoomTrigger.CLICK}
-              targetRef={userZoomCtaRef}
-            />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <UserZoomInterceptCombined trigger={UserZoomTrigger.VIEW} />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
