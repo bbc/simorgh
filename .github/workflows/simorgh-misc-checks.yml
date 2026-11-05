@@ -1,8 +1,6 @@
 name: Simorgh CI - Licences, Dependencies, Lint, Chromatic UI, NPM Audit
 on:
-  pull_request:
-    branches:
-      - '**'
+  workflow_call:
   push:
     branches:
       - 'latest'
@@ -89,6 +87,17 @@ jobs:
             "target_url": "${{ steps.get-storybook-permalink.outputs.STORYBOOK_PERMALINK }}"
           }' \
           --fail
+
+      # Chromatic changes are reviewed and accepted on the pull request, so the merge queue only needs to report the result.
+      - name: Report UI Tests status for merge queue
+        if: github.event_name == 'merge_group'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+            -f state=success \
+            -f context='UI Tests' \
+            -f description='UI changes were reviewed in Chromatic on the pull request'
 
       - name: Duplicate Dependency Checker
         if: github.ref != 'refs/heads/latest'

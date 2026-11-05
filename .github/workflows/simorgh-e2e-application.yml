@@ -1,8 +1,6 @@
 name: Cypress E2E - Application
 on:
-  pull_request:
-    branches:
-      - '**'
+  workflow_call:
 permissions:
   contents: read
 

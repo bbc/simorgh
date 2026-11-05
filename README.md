@@ -202,6 +202,14 @@ Every run of `yarn build` will update the bundle analysis files in the repo. To 
 
 ## Tests
 
+### Pull request checks
+
+Pull request checks are orchestrated by [`.github/workflows/ci.yml`](./.github/workflows/ci.yml). It runs on pull requests and in the merge queue, and calls the individual test suite workflows.
+
+- [`.github/scripts/detectAffectedTestSuites.mjs`](./.github/scripts/detectAffectedTestSuites.mjs) uses the files changed in a pull request to skip suites that cannot be affected. For example, documentation-only changes skip every test suite and unit test-only changes skip the end-to-end tests. Update its rules when adding new test suites or test directories.
+- The merge queue always runs every suite.
+- `CI Gate` is the single required check. It passes when every suite has either passed or been intentionally skipped.
+
 ### Linting and unit tests
 
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.

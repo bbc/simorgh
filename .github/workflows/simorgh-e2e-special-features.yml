@@ -1,8 +1,6 @@
 name: Cypress E2E - Special Features
 on:
-  pull_request:
-    branches:
-      - '**'
+  workflow_call:
 permissions:
   contents: read
 

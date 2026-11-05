@@ -1,0 +1,129 @@
+name: Simorgh CI
+on:
+  pull_request:
+    branches:
+      - '**'
+  merge_group:
+    types: [checks_requested]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    name: Detect affected test suites
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      unit: ${{ steps.detect.outputs.unit }}
+      integration: ${{ steps.detect.outputs.integration }}
+      localServer: ${{ steps.detect.outputs.localServer }}
+      cypress: ${{ steps.detect.outputs.cypress }}
+      playwright: ${{ steps.detect.outputs.playwright }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/scripts
+
+      - name: Detect affected test suites
+        id: detect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+
+          # The merge queue is the final safety net, so it always runs every suite.
+          # The PR files API caps at 3000 files, so run everything beyond that too.
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            changed_files=$(gh api --paginate "repos/${{ github.repository }}/pulls/${PR_NUMBER}/files" \
+              --jq '.[] | .filename, (.previous_filename // empty)')
+            if [ "$(echo "$changed_files" | wc -l)" -ge 3000 ]; then
+              changed_files=''
+            fi
+          else
+            changed_files=''
+          fi
+
+          echo "$changed_files" | node .github/scripts/detectAffectedTestSuites.mjs | tee -a "$GITHUB_OUTPUT"
+
+  misc-checks:
+    name: Licences, Dependencies, Lint, Chromatic UI, NPM Audit
+    permissions:
+      contents: read
+      statuses: write
+    uses: ./.github/workflows/simorgh-misc-checks.yml
+    secrets: inherit
+
+  unit-tests:
+    name: Unit Tests
+    needs: changes
+    if: needs.changes.outputs.unit == 'true'
+    uses: ./.github/workflows/simorgh-unit-tests.yml
+
+  integration-tests:
+    name: Integration Tests
+    needs: changes
+    if: needs.changes.outputs.integration == 'true'
+    uses: ./.github/workflows/simorgh-integration-tests.yml
+
+  local-server-tests:
+    name: AMP Validation, Lighthouse & Puppeteer Tests
+    needs: changes
+    if: needs.changes.outputs.localServer == 'true'
+    uses: ./.github/workflows/simorgh-local-server-tests.yml
+
+  cypress-application:
+    name: Cypress E2E - Application
+    needs: changes
+    if: needs.changes.outputs.cypress == 'true'
+    uses: ./.github/workflows/simorgh-e2e-application.yml
+
+  cypress-special-features:
+    name: Cypress E2E - Special Features
+    needs: changes
+    if: needs.changes.outputs.cypress == 'true'
+    uses: ./.github/workflows/simorgh-e2e-special-features.yml
+
+  cypress-page-types:
+    name: Cypress E2E - Page Types
+    needs: changes
+    if: needs.changes.outputs.cypress == 'true'
+    uses: ./.github/workflows/simorgh-e2e-page-types.yml
+
+  playwright-page-types:
+    name: Playwright E2E - Page Types
+    needs: changes
+    if: needs.changes.outputs.playwright == 'true'
+    uses: ./.github/workflows/simorgh-e2e-playwright-page-types.yml
+
+  ci-gate:
+    name: CI Gate
+    if: always()
+    needs:
+      - changes
+      - misc-checks
+      - unit-tests
+      - integration-tests
+      - local-server-tests
+      - cypress-application
+      - cypress-special-features
+      - cypress-page-types
+      - playwright-page-types
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check all required jobs passed or were intentionally skipped
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          echo "$RESULTS" | jq -r 'to_entries[] | "\(.key): \(.value.result)"'
+          if echo "$RESULTS" | jq -e 'any(.[]; .result == "failure" or .result == "cancelled")' > /dev/null; then
+            echo "One or more CI jobs failed or were cancelled."
+            exit 1
+          fi

@@ -1,8 +1,6 @@
 name: Simorgh CI - Integration Tests
 on:
-  pull_request:
-    branches:
-      - '**'
+  workflow_call:
 permissions:
   contents: read
 
