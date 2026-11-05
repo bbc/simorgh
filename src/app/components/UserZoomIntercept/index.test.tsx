@@ -150,7 +150,10 @@ describe('UserZoomIntercept', () => {
     const { container } = await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger={UserZoomTrigger.CLICK} targetRef={targetRef} />
+          <UserZoomIntercept
+            trigger={UserZoomTrigger.CLICK}
+            targetRef={targetRef}
+          />
         </ContextWrap>,
       ),
     );
@@ -164,7 +167,10 @@ describe('UserZoomIntercept', () => {
     await act(async () =>
       render(
         <ContextWrap>
-          <UserZoomIntercept trigger={UserZoomTrigger.CLICK} targetRef={targetRef} />
+          <UserZoomIntercept
+            trigger={UserZoomTrigger.CLICK}
+            targetRef={targetRef}
+          />
         </ContextWrap>,
       ),
     );
