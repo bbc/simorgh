@@ -100,6 +100,7 @@ const logCodes = {
 
   // AMP/Lite CSS vendor-prefix optimisation
   AMP_LITE_CSS_AUTOPREFIXER_ERROR: 'amp_lite_css_autoprefixer_error',
+  AMP_LITE_CSS_TREE_SHAKE_ERROR: 'amp_lite_css_tree_shake_error',
 };
 
 module.exports = logCodes;
