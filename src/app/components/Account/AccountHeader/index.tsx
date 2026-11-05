@@ -11,9 +11,15 @@ export type AccountHeaderVariant = 'legacy' | 'default';
 
 type AccountHeaderProps = {
   variant?: AccountHeaderVariant;
+  experimentName?: string;
+  experimentVariant?: string;
 };
 
-const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
+const AccountHeader = ({
+  variant = 'legacy',
+  experimentName,
+  experimentVariant,
+}: AccountHeaderProps) => {
   const { isSignedIn, signInUrl, settingsUrl, isIdctaAvailable } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -22,12 +28,20 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
     ? 'account-header-settings'
     : 'account-header-sign-in';
 
+  const optimizelyTrackingMetadata = {
+    ...(experimentName && { experimentName }),
+    ...(experimentVariant && { experimentVariant }),
+    ...(experimentVariant && { sendOptimizelyEvents: true }),
+  };
+
   const viewTracker = useViewTracker({
     componentName: 'account-header',
   });
 
   const { onClick: onClickTrack } = useClickTrackerHandler({
     componentName: clickComponentName,
+    optimizelyComponentName: 'IDCTA',
+    ...optimizelyTrackingMetadata,
   });
 
   if (!isIdctaAvailable) return null;
