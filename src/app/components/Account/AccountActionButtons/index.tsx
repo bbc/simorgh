@@ -6,7 +6,7 @@ import { AccountIcon } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import ctaStyles from './callToActionLink.module.scss';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 
 interface AccountActionButtonsProps {

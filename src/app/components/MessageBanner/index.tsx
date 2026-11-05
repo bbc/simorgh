@@ -9,7 +9,7 @@ import {
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
-import ctaStyles from './callToActionLink.module.scss';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 
 interface MessageBannerProps {

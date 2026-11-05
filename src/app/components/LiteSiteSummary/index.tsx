@@ -4,7 +4,7 @@ import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import ctaStyles from './callToActionLink.module.scss';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';

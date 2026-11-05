@@ -3,7 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import CallToActionLink from '#app/components/CallToActionLink';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
-import ctaStyles from './callToActionLink.module.scss';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 import idSanitiser from '../../../lib/utilities/idSanitiser';
 

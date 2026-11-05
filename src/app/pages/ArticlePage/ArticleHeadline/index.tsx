@@ -6,7 +6,7 @@ import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
-import ctaStyles from './callToActionLink.module.scss';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
