@@ -10,6 +10,8 @@ import {
 } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   render,
   act,
@@ -69,7 +71,7 @@ describe('Navigation', () => {
       expect(stickyExperimentDecisions()).toHaveLength(0);
     });
 
-    it('adds the control variant to normal navigation click tracking', () => {
+    it('sends a navigation click event for the control variant', () => {
       jest
         .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
         .mockReturnValue({
@@ -83,29 +85,40 @@ describe('Navigation', () => {
           height: 0,
           toJSON: () => ({}),
         });
-      useOptimizelyVariationMock.mockReturnValue('off');
-      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      useOptimizelyVariationMock.mockReturnValue('control');
+      const optimizely = {
+        track: jest.fn(),
+        close: jest.fn(),
+        user: { attributes: {}, id: 'test-user' },
+      } as unknown as ReactSDKClient;
+      const {
+        metadata: { atiAnalytics, type },
+      } = articleDataNews;
 
-      render(
-        <>
-          <Navigation navItems={navItems} />
-          <main>
-            <p data-sticky-nav-anchor>Article body</p>
-          </main>
-        </>,
+      const { getByRole } = render(
+        <OptimizelyProvider optimizely={optimizely} isServerSide>
+          <>
+            <Navigation navItems={navItems} />
+            <main>
+              <p data-sticky-nav-anchor>Article body</p>
+            </main>
+          </>
+        </OptimizelyProvider>,
         {
+          pageMetadata: { atiAnalytics, type },
           pageType: ARTICLE_PAGE,
           service: 'news',
+          toggles: { eventTracking: { enabled: true } },
         },
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'scrollable-navigation',
-        experimentName: 'newswb_ws_sticky_navigation',
-        experimentVariant: 'off',
-        optimizelyComponentName: 'navigation',
-        sendOptimizelyEvents: true,
-      });
+      fireEvent.click(getByRole('link', { name: 'Home' }));
+
+      expect(optimizely.track).toHaveBeenCalledWith(
+        'navigation-clicks',
+        optimizely.user.id,
+        optimizely.user.attributes,
+      );
     });
   });
 
