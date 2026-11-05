@@ -6,6 +6,13 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 This guide covers moving a component out of `src/app/legacy` into `src/app/components`.
 
+For AI-assisted styling conversions, use the existing
+[`migrate-component-to-scss-modules` skill](../../.github/skills/migrate-component-to-scss-modules/SKILL.md).
+It covers the mechanical conversion and verification; this guide covers the wider legacy
+relocation, dependency clusters and modernisation. Keep styling rules in
+[the styling instructions](../../.github/instructions/styling-standards.instructions.md)
+rather than creating a second migration skill.
+
 > **Target state:** migrated components use **SCSS Modules + CSS custom properties**
 > (`ThemeProviderSCSSModules`), TypeScript, and co-located tests.
 > Do **not** migrate to Emotion. Emotion (`styled`, the `css` prop, `index.styles.ts`) is
@@ -99,27 +106,24 @@ Keep the declaration next to the component when it is not used anywhere else.
 
 ## Styling
 
-### ⚠️ Check for PWA typography before migrating anything that renders text
+### PWA typography
 
-Around 20 services (pidgin, hausa, yoruba, ukrainian and others) define a `pwaTheme`
-alongside their normal theme. When `useIsPWA()` is true, `withThemeProvider` swaps
-`fontVariants` to Reith at runtime, so an installed PWA renders different fonts to the
-browser.
+Around seventeen service/variant themes (for example `pidgin`, `ukrainian`, `serbian/cyr`,
+`uzbek/lat`) swap their default Helmet font variants for Reith when the page is displayed
+as an installed PWA. `ThemeProviderSCSSModules` handles this in CSS, so migrated components
+need no PWA branching of their own:
 
-`ThemeProviderSCSSModules` does **not** yet support this. Until it does, a component that
-reads `fontVariants` or `fontSizes` from the Emotion theme **must not** be migrated to SCSS
-Modules — doing so silently drops the PWA override for those services, which is very hard
-to spot in review because it only reproduces in an installed PWA.
+- `src/app/components/ThemeProviderSCSSModules/pwaTypography/reith.scss` redeclares the
+  `--sans-*` and `--serif-*` custom properties, and declares the four Reith `@font-face`
+  rules, inside a `@media (display-mode: ...)` block.
+- Each opted-in service theme imports it after its base `fontVariants` file, so the PWA
+  block wins the cascade. Services without PWA typography never load it, and the Reith
+  fonts are only fetched when the media query matches.
 
-Before migrating, check whether the component uses `fontVariants` or `fontSizes`:
-
-- **It does** — leave it on Emotion for now. If the goal is to remove a `gel-foundations`
-  import, take the values from the theme instead (`theme.mq.*`, `theme.spacings.*`), which
-  removes the legacy coupling without changing the styling system.
-- **It does not** (layout-only components) — migrate to SCSS Modules as normal.
-
-Lifting PWA typography into `ThemeProviderSCSSModules` is a prerequisite for migrating the
-text components, and should be done before the `Text`/`Paragraph`/`Headings` cluster.
+Because the override resolves through the same `--gel-font-variant-*` aliases as every
+other variant, any component using the `fontVariants` mixins picks it up automatically.
+Do not read `useIsPWA` in an SCSS Modules component to switch fonts — that reintroduces a
+client-only render and a flash of the wrong font.
 
 ### Replace `styled` with an `index.module.scss` file
 

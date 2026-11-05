@@ -7,8 +7,8 @@
 }
 
 .videoErrorWrapper {
-  /* (9/16)*100 = 16:9 */
-  padding-top: 56.25%;
+  $landscape-ratio: 56.25%;
+  padding-top: $landscape-ratio;
   margin: #{theme.$spacings-quintuple} 0 #{theme.$spacings-triple};
   position: relative;
   overflow: hidden;
