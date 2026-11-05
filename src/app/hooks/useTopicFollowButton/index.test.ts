@@ -45,6 +45,7 @@ jest.mock('react', () => ({
 
 const mockSetQueryData = jest.fn();
 const mockInvalidateQueries = jest.fn();
+const mockCancelQueries = jest.fn();
 const mockMutationReset = jest.fn();
 const mutationState: {
   isPending: boolean;
@@ -58,6 +59,7 @@ const mutationState: {
 
 jest.mock('@tanstack/react-query', () => {
   let capturedMutationConfig: {
+    onMutate?: (action: FollowAction) => Promise<unknown>;
     mutationFn?: (action: FollowAction) => Promise<unknown>;
     onSuccess?: (result: unknown, action: FollowAction) => void;
   };
@@ -67,8 +69,10 @@ jest.mock('@tanstack/react-query', () => {
     useQueryClient: () => ({
       setQueryData: mockSetQueryData,
       invalidateQueries: mockInvalidateQueries,
+      cancelQueries: mockCancelQueries,
     }),
     useMutation: (config: {
+      onMutate?: (action: FollowAction) => Promise<unknown>;
       mutationFn?: (action: FollowAction) => Promise<unknown>;
       onSuccess?: (result: unknown, action: FollowAction) => void;
     }) => {
@@ -83,6 +87,7 @@ jest.mock('@tanstack/react-query', () => {
           },
         ) => {
           try {
+            await capturedMutationConfig.onMutate?.(action);
             const result = await capturedMutationConfig.mutationFn?.(action);
             capturedMutationConfig.onSuccess?.(result, action);
             options?.onSuccess?.(result, action);
@@ -121,6 +126,10 @@ describe('useTopicFollowButton', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    mockInvalidateQueries.mockReset();
+    mockInvalidateQueries.mockResolvedValue(undefined);
+    mockCancelQueries.mockReset();
+    mockCancelQueries.mockResolvedValue(undefined);
     onlineManager.setOnline(true);
     mutationState.isPending = false;
     mutationState.isPaused = false;
@@ -164,8 +173,10 @@ describe('useTopicFollowButton', () => {
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 202 } as Response);
   });
 
-  afterEach(() => {
-    onlineManager.setOnline(true);
+  afterEach(async () => {
+    await act(async () => {
+      onlineManager.setOnline(true);
+    });
   });
 
   it('passes topicId to useTopicFollowStatus', () => {
@@ -210,6 +221,26 @@ describe('useTopicFollowButton', () => {
   });
 
   describe('handleFollowAction', () => {
+    it('cancels an in-flight status fetch before sending the request', async () => {
+      const callOrder: string[] = [];
+      mockCancelQueries.mockImplementation(async () => {
+        callOrder.push('cancelQueries');
+      });
+      mockUasApiRequest.mockImplementationOnce(async () => {
+        callOrder.push('uasApiRequest');
+      });
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      await act(async () => {
+        await result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+
+      expect(mockCancelQueries).toHaveBeenCalledWith({
+        queryKey: uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+      });
+      expect(callOrder).toEqual(['cancelQueries', 'uasApiRequest']);
+    });
+
     it('sends POST request with follows payload when following', async () => {
       const { result } = renderHook(() => useTopicFollowButton(topicData));
 
@@ -327,6 +358,209 @@ describe('useTopicFollowButton', () => {
         });
       },
     );
+  });
+
+  describe('offline recovery', () => {
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'dismisses the offline %s error only after the status refresh succeeds',
+      async action => {
+        let resolveRefresh!: () => void;
+        mockInvalidateQueries.mockImplementationOnce(
+          () =>
+            new Promise<void>(resolve => {
+              resolveRefresh = resolve;
+            }),
+        );
+        onlineManager.setOnline(false);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+        act(() => {
+          result.current.handleFollowAction(action);
+        });
+
+        await act(async () => {
+          onlineManager.setOnline(true);
+        });
+
+        expect(mockInvalidateQueries).toHaveBeenCalledWith(
+          {
+            queryKey: uasKeys.followStatus(mockHashedUserId, topicData.topicId),
+          },
+          { throwOnError: true },
+        );
+        expect(result.current.actionResult).toEqual({
+          status: 'error',
+          action,
+        });
+
+        await act(async () => {
+          resolveRefresh();
+        });
+
+        expect(result.current.actionResult).toBeNull();
+        expect(mockUasApiRequest).not.toHaveBeenCalled();
+        expect(mockCancelQueries).not.toHaveBeenCalled();
+        expect(mockTrackError).not.toHaveBeenCalled();
+      },
+    );
+
+    it('keeps the offline error after a failed refresh and retries on a later reconnect', async () => {
+      mockInvalidateQueries.mockRejectedValueOnce(mockError);
+      onlineManager.setOnline(false);
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      act(() => {
+        result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: FollowAction.FOLLOW,
+      });
+
+      act(() => {
+        onlineManager.setOnline(false);
+      });
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(mockInvalidateQueries).toHaveBeenCalledTimes(2);
+      expect(result.current.actionResult).toBeNull();
+      expect(mockUasApiRequest).not.toHaveBeenCalled();
+    });
+
+    it('does not clear a newer offline result when an earlier refresh finishes', async () => {
+      let resolveRefresh!: () => void;
+      mockInvalidateQueries.mockImplementationOnce(
+        () =>
+          new Promise<void>(resolve => {
+            resolveRefresh = resolve;
+          }),
+      );
+      onlineManager.setOnline(false);
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      act(() => {
+        result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+      act(() => {
+        onlineManager.setOnline(false);
+        result.current.handleFollowAction(FollowAction.UNFOLLOW);
+      });
+      await act(async () => {
+        resolveRefresh();
+      });
+
+      expect(result.current.actionResult).toEqual({
+        status: 'error',
+        action: FollowAction.UNFOLLOW,
+      });
+
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(result.current.actionResult).toBeNull();
+    });
+
+    it.each(['success', 'error'] as const)(
+      'preserves a newer online %s result when the reconnect refresh finishes',
+      async status => {
+        let resolveRefresh!: () => void;
+        mockInvalidateQueries.mockImplementationOnce(
+          () =>
+            new Promise<void>(resolve => {
+              resolveRefresh = resolve;
+            }),
+        );
+        onlineManager.setOnline(false);
+        const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+        act(() => {
+          result.current.handleFollowAction(FollowAction.FOLLOW);
+        });
+        await act(async () => {
+          onlineManager.setOnline(true);
+        });
+
+        if (status === 'error')
+          mockUasApiRequest.mockRejectedValueOnce(mockError);
+
+        await act(async () => {
+          const action = result.current.handleFollowAction(
+            FollowAction.UNFOLLOW,
+          );
+          if (status === 'error') {
+            await expect(action).rejects.toThrow(mockError);
+          } else {
+            await action;
+          }
+        });
+        await act(async () => {
+          resolveRefresh();
+        });
+
+        expect(result.current.actionResult).toEqual({
+          status,
+          action: FollowAction.UNFOLLOW,
+        });
+      },
+    );
+
+    it('does not refresh on reconnect after the offline tooltip is manually dismissed', async () => {
+      onlineManager.setOnline(false);
+      const { result } = renderHook(() => useTopicFollowButton(topicData));
+
+      act(() => {
+        result.current.handleFollowAction(FollowAction.FOLLOW);
+        result.current.resetActionResult();
+      });
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(result.current.actionResult).toBeNull();
+      expect(mockMutationReset).toHaveBeenCalledTimes(1);
+      expect(mockInvalidateQueries).not.toHaveBeenCalled();
+    });
+
+    it('does not refresh on reconnect without an offline action', async () => {
+      renderHook(() => useTopicFollowButton(topicData));
+
+      act(() => {
+        onlineManager.setOnline(false);
+      });
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(mockInvalidateQueries).not.toHaveBeenCalled();
+    });
+
+    it('unsubscribes from reconnect recovery on unmount', async () => {
+      onlineManager.setOnline(false);
+      const { result, unmount } = renderHook(() =>
+        useTopicFollowButton(topicData),
+      );
+
+      act(() => {
+        result.current.handleFollowAction(FollowAction.FOLLOW);
+      });
+      unmount();
+      await act(async () => {
+        onlineManager.setOnline(true);
+      });
+
+      expect(mockInvalidateQueries).not.toHaveBeenCalled();
+    });
   });
 
   describe('action results', () => {
