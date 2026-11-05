@@ -3,9 +3,17 @@ import SaveArticleButtonGuest from '../SaveArticleButtonGuest';
 
 export default dynamic(
   () =>
-    import(
-      /* webpackChunkName: "save_article_button_authenticated" */
-      '.'
+    Promise.all([
+      import(
+        /* webpackChunkName: "query_provider" */
+        '#app/contexts/QueryContext'
+      ),
+      import(
+        /* webpackChunkName: "save_article_button_authenticated" */
+        '.'
+      ),
+    ]).then(([{ withQueryProvider }, { default: Component }]) =>
+      withQueryProvider(Component),
     ),
   {
     ssr: false,

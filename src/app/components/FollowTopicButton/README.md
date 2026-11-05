@@ -35,6 +35,10 @@ interface FollowTopicData {
 - Reuses `SaveButton` for consistent visual and interaction patterns.
 - Handles label transitions for loading, updating, followed and unfollow intent.
 - Sends click and view tracking events.
+- Loads alongside the shared persistent query provider in a client-only boundary.
+  Only the button uses this boundary; page content and embeds remain mounted
+  while the provider and button code load. The guest button remains the loading
+  placeholder.
 
 ### Guest (`FollowTopicButtonGuest`)
 

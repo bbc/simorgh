@@ -1,5 +1,8 @@
 import { use, StrictMode } from 'react';
-import { render, waitFor } from '@testing-library/react';
+import {
+  render,
+  waitFor,
+} from '#app/components/react-testing-library-with-providers';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import uasApiRequest from '#app/lib/uasApi';
@@ -16,6 +19,7 @@ jest.mock('react', () => ({
 
 const mockGetQueriesData = jest.fn();
 const mockRemoveQueries = jest.fn();
+const mockUseIsRestoring = jest.fn();
 const mockQueryClient = {
   getQueriesData: mockGetQueriesData,
   removeQueries: mockRemoveQueries,
@@ -24,6 +28,7 @@ const mockQueryClient = {
 jest.mock('@tanstack/react-query', () => ({
   ...jest.requireActual('@tanstack/react-query'),
   useQueryClient: () => mockQueryClient,
+  useIsRestoring: () => mockUseIsRestoring(),
 }));
 
 const mockUse = use as jest.Mock;
@@ -42,10 +47,11 @@ describe('ArticleNotFoundUASCleanup', () => {
         return { hashedUserId: HASHED_USER_ID, isRefreshAvailable: true };
       if (context === RequestContext)
         return { pathname: '/news/articles/article-123' };
-      return {};
+      return jest.requireActual('react').use(context);
     });
 
     mockParseRoute.mockReturnValue({ assetId: ARTICLE_ID });
+    mockUseIsRestoring.mockReturnValue(false);
     mockGetQueriesData.mockReturnValue([]);
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
   });
@@ -137,6 +143,28 @@ describe('ArticleNotFoundUASCleanup', () => {
         <ArticleNotFoundUASCleanup />
       </StrictMode>,
     );
+
+    await waitFor(() => {
+      expect(mockRemoveQueries).toHaveBeenCalledTimes(1);
+    });
+    expect(mockUasApiRequest).toHaveBeenCalledTimes(1);
+  });
+
+  it('waits for the persisted cache before checking whether to delete the article', async () => {
+    mockUseIsRestoring.mockReturnValue(true);
+    const { rerender } = render(<ArticleNotFoundUASCleanup />);
+
+    expect(mockGetQueriesData).not.toHaveBeenCalled();
+    expect(mockUasApiRequest).not.toHaveBeenCalled();
+
+    mockGetQueriesData.mockReturnValue([
+      [
+        uasKeys.favouritesPage(HASHED_USER_ID, 0),
+        { savedArticles: [{ id: ARTICLE_ID }] },
+      ],
+    ]);
+    mockUseIsRestoring.mockReturnValue(false);
+    rerender(<ArticleNotFoundUASCleanup />);
 
     await waitFor(() => {
       expect(mockRemoveQueries).toHaveBeenCalledTimes(1);

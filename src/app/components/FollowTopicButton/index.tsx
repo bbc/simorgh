@@ -2,7 +2,6 @@ import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import type { FollowTopicData } from '#app/lib/uasApi/uasUtility';
 import ErrorBoundary from '#app/components/ErrorBoundary';
-import QueryProvider from '#app/contexts/QueryContext';
 import styles from './index.module.scss';
 import FollowTopicButtonAuthenticated from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButtonGuest from './FollowTopicButtonGuest';
@@ -30,9 +29,7 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
       </noscript>
       <div className={styles.buttonWrapper} id={FOLLOW_TOPIC_BUTTON_ID}>
         {isTopicPersonalizationEnabled ? (
-          <QueryProvider>
-            <FollowTopicButtonAuthenticated topicData={topicData} />
-          </QueryProvider>
+          <FollowTopicButtonAuthenticated topicData={topicData} />
         ) : (
           <FollowTopicButtonGuest topicId={topicId} />
         )}

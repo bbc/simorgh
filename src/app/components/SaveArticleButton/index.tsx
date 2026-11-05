@@ -4,10 +4,9 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import ErrorBoundary from '#app/components/ErrorBoundary';
-import QueryProvider from '#app/contexts/QueryContext';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 export interface SaveArticleButtonProps {
   saveArticlePageData: SaveArticlePageData;
@@ -34,11 +33,9 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
       <noscript>
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
-      <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
+      <div className={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
         {isArticlePersonalizationEnabled ? (
-          <QueryProvider>
-            <SaveArticleButtonAuthenticated {...props} />
-          </QueryProvider>
+          <SaveArticleButtonAuthenticated {...props} />
         ) : (
           <SaveArticleButtonGuest />
         )}

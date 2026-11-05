@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
-import QueryProvider from '#app/contexts/QueryContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
@@ -13,10 +12,22 @@ import MyNewsPageLoading from './MyNewsPageLoading';
 import GenericMessage from '../../send/[id]/GenericMessage';
 import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
-const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
-  ssr: false,
-  loading: () => <MyNewsPageLoading />,
-});
+const MyNewsPageContent = dynamic(
+  () =>
+    Promise.all([
+      import(
+        /* webpackChunkName: "query_provider" */
+        '#app/contexts/QueryContext'
+      ),
+      import('./MyNewsPageContent'),
+    ]).then(([{ withQueryProvider }, { default: Component }]) =>
+      withQueryProvider(Component),
+    ),
+  {
+    ssr: false,
+    loading: () => <MyNewsPageLoading />,
+  },
+);
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const {
@@ -58,13 +69,11 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
         </noscript>
         <div css={styles.innerContent}>
           {isPersonalizationEnabled ? (
-            <QueryProvider>
-              <MyNewsPageContent
-                page={page}
-                showSavedArticles={isArticlePersonalizationEnabled}
-                showFollowedTopics={isTopicPersonalizationEnabled}
-              />
-            </QueryProvider>
+            <MyNewsPageContent
+              page={page}
+              showSavedArticles={isArticlePersonalizationEnabled}
+              showFollowedTopics={isTopicPersonalizationEnabled}
+            />
           ) : (
             <MyNewsPageGuest />
           )}

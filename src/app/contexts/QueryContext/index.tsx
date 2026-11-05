@@ -1,10 +1,13 @@
-import { use, type PropsWithChildren } from 'react';
+import {
+  createElement,
+  use,
+  type ComponentType,
+  type PropsWithChildren,
+} from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import PersistentQueryProvider from './lazy';
 
-// TanstackQuery Provider is only needed when personalization features are available.
-// Keep the wrapper stable from first render when enabled, so children are not mounted
-// outside the provider first and then remounted once a lazy provider resolves.
+// Load this module with query consumers, not around page content or embeds.
 const QueryProvider = ({ children }: PropsWithChildren) => {
   const { isArticlePersonalizationAvailable, isTopicPersonalizationAvailable } =
     use(AccountContext);
@@ -16,5 +19,12 @@ const QueryProvider = ({ children }: PropsWithChildren) => {
 
   return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
 };
+
+export const withQueryProvider = <Props extends object>(
+  Component: ComponentType<Props>,
+) =>
+  function QueryConsumer(props: Props) {
+    return <QueryProvider>{createElement(Component, props)}</QueryProvider>;
+  };
 
 export default QueryProvider;
