@@ -1,6 +1,6 @@
 import bengali from '../../../components/ThemeProvider/fontScripts/bengali';
 import '#psammead/moment-timezone-include/tz/Asia/Dhaka';
-import '#psammead/psammead-locales/moment/bn';
+import '#lib/locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 

@@ -14,7 +14,7 @@ npm install #legacy/psammead-calendars/src --save
 
 Converts a Gregorian calendar date represented by a [moment](https://momentjs.com) object into its Jalaali calendar equivalent and outputs it as a string to be used by other components. This helper relies on `jalaali-js` which contains the logic to carry out the conversions from Gregorian to Jalaali. Documentation of this dependency can be found [here](https://www.npmjs.com/package/jalaali-js).
 
-This helper currently only supports Pashto and Persian/Farsi Jalaali calendar month names and Eastern Arabic numerals (translated using [psammead-locales](../psammead-locales)).
+This helper currently only supports Pashto and Persian/Farsi Jalaali calendar month names and Eastern Arabic numerals (translated using [locales](../../../lib/locales)).
 
 ## Usage
 

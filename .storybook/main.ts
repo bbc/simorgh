@@ -38,7 +38,7 @@ const storybookConfig: StorybookConfig = {
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
-    '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
+    '../src/app/lib/locales/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/components-webcore/**/*.stories.@(t|j)sx',

@@ -1,7 +1,7 @@
 import { Services } from '#app/models/types/global';
 import { Translations } from '#app/models/types/translations';
 import getServiceNumerals from '#app/components/MostRead/utilities/getServiceNumerals';
-import { WesternArabic } from '#app/legacy/psammead/psammead-locales/src/numerals';
+import { WesternArabic } from '#lib/locales/numerals';
 import { HeadToHeadV2Data, Team } from '../types';
 
 const DEFAULT_TRANSLATIONS_MAP = {
