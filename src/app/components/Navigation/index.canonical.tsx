@@ -6,6 +6,7 @@ import React, {
   useMemo,
   useRef,
 } from 'react';
+import dynamic from 'next/dynamic';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -15,7 +16,6 @@ import {
 import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
-import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
@@ -24,6 +24,7 @@ import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
 
 const DROPDOWN_MAX_WIDTH_QUERY = `(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`;
+const TopBarOJs = dynamic(() => import('#app/components/TopBarOJs'));
 
 // Walks the document forwards from the navigation and stops at the first
 // focusable element outside it, rather than collecting every focusable
@@ -189,8 +190,8 @@ const CanonicalNavigationContainer = ({
   }, [isOpen, dropDownNavRef, navRef, closeMenu]);
 
   const topBarOJs = useMemo(
-    () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
-    [topBarOJsEnabled, blocks],
+    () => !isLite && topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
+    [isLite, topBarOJsEnabled, blocks],
   );
   // Scrolling updates the sticky state several times a second. Nothing in
   // this subtree depends on that state, so it is rebuilt only when something

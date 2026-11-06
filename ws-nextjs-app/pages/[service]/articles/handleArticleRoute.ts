@@ -43,7 +43,7 @@ export default async (context: GetServerSidePropsContext) => {
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
   const canonicalPathname = getRequestUrl(context).split('?')[0];
 
-  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
   const countryHeader =
@@ -115,6 +115,8 @@ export default async (context: GetServerSidePropsContext) => {
     `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
   );
 
+  const shouldFetchOnwardJourneysClient = !isAmp && !isApp && !isLite;
+
   const {
     topStories = null,
     features = null,
@@ -143,17 +145,19 @@ export default async (context: GetServerSidePropsContext) => {
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...transformedArticleData,
-        secondaryColumn: {
-          topStories,
-          features,
-          latestMedia,
-          mediaCuration,
-          billboardCuration,
-        },
-        mostRead,
-        portraitVideoItems,
-        countryCuration,
-        countryTopicIdToReorder,
+        ...(!shouldFetchOnwardJourneysClient && {
+          secondaryColumn: {
+            topStories,
+            features,
+            latestMedia,
+            mediaCuration,
+            billboardCuration,
+          },
+          mostRead,
+          portraitVideoItems,
+          countryCuration,
+          countryTopicIdToReorder,
+        }),
       },
       pageType: derivedPageType,
       pathname: canonicalPathname,

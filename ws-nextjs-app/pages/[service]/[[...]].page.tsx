@@ -35,6 +35,7 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
+import ArticlePageWithOnwardJourneys from './articles/ArticlePageWithOnwardJourneys';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
 
 // On Demand Audio
@@ -68,6 +69,7 @@ const LiveRadioPage = dynamic(
 );
 
 const OfflinePage = dynamic(() => import('./offline/OfflinePage'));
+const ArticlePageWithOptimizely = withOptimizelyProvider(ArticlePage);
 
 const getPageType = ({
   resolvedUrl,
@@ -161,10 +163,17 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return withOptimizelyProvider(ArticlePage)({ ...props });
+      return (
+        <ArticlePageWithOnwardJourneys
+          Page={ArticlePageWithOptimizely}
+          {...props}
+        />
+      );
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
-      return <MediaArticlePage {...props} />;
+      return (
+        <ArticlePageWithOnwardJourneys Page={MediaArticlePage} {...props} />
+      );
     case AUDIO_PAGE:
       return withMediaError(OnDemandAudioPage)({ ...props });
     case TV_PAGE:

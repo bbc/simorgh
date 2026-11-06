@@ -290,6 +290,95 @@ describe('Service Worker', () => {
     });
   });
 
+  describe('onward journey caching', () => {
+    const onwardJourneyRequest = new Request(
+      'https://web.test.bbc.com/fd/simorgh-bff?onwardJourney=mostRead&service=pidgin',
+    );
+    const cacheName = 'simorghOnwardJourneysCache_v1';
+    let onwardJourneyCache;
+
+    beforeEach(() => {
+      onwardJourneyCache = {
+        delete: jest.fn(),
+        match: jest.fn(),
+        put: jest.fn(),
+      };
+      global.caches = {
+        open: jest.fn(name =>
+          Promise.resolve(name === cacheName ? onwardJourneyCache : {}),
+        ),
+      };
+    });
+
+    const getResponse = async request => {
+      const event = {
+        request,
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+
+      const [response] = event.respondWith.mock.calls[0];
+      return response;
+    };
+
+    it('returns a fresh cached onward journey response', async () => {
+      const cachedResponse = new Response('cached onward journey', {
+        headers: {
+          'X-Simorgh-Onward-Journey-Cache-Time': Date.now().toString(),
+        },
+      });
+      onwardJourneyCache.match.mockResolvedValue(cachedResponse);
+
+      const response = await getResponse(onwardJourneyRequest);
+
+      expect(await response.text()).toBe('cached onward journey');
+      expect(global.fetch).not.toHaveBeenCalled();
+      expect(onwardJourneyCache.put).not.toHaveBeenCalled();
+    });
+
+    it('refreshes an expired onward journey response', async () => {
+      const cachedResponse = new Response('expired onward journey', {
+        headers: {
+          'X-Simorgh-Onward-Journey-Cache-Time': (
+            Date.now() -
+            10 * 60 * 1000
+          ).toString(),
+        },
+      });
+      const networkResponse = new Response('fresh onward journey');
+      onwardJourneyCache.match.mockResolvedValue(cachedResponse);
+      global.fetch.mockResolvedValueOnce(networkResponse);
+
+      const response = await getResponse(onwardJourneyRequest);
+
+      expect(await response.text()).toBe('fresh onward journey');
+      expect(onwardJourneyCache.delete).toHaveBeenCalledWith(
+        onwardJourneyRequest,
+      );
+      expect(global.fetch).toHaveBeenCalledWith(onwardJourneyRequest);
+      expect(onwardJourneyCache.put).toHaveBeenCalledWith(
+        onwardJourneyRequest,
+        expect.any(Response),
+      );
+    });
+
+    it('does not cache BFF requests without an onward journey parameter', async () => {
+      const request = new Request(
+        'https://web.test.bbc.com/fd/simorgh-bff?service=pidgin',
+      );
+      const event = {
+        request,
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).not.toHaveBeenCalled();
+      expect(onwardJourneyCache.match).not.toHaveBeenCalled();
+    });
+  });
+
   describe('PWA offline page caching (message event)', () => {
     let messageHandler;
     let cachePut;
@@ -620,8 +709,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.8',
-      fileContentHash: '8b0ba8bb11dd447960259e1e8f7b2fc5',
+      number: 'v0.3.9',
+      fileContentHash: 'ebe6b48d3159a8ccbb826832ce3198a1',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

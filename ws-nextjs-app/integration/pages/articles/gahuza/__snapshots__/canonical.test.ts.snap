@@ -158,41 +158,6 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 
 exports[`Canonical Articles Main heading should match text 1`] = `"‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny"`;
 
-exports[`Canonical Articles Most Read has item with rank 1`] = `
-{
-  "text": "M23 'yinjiye muri Teritwari ya Walikale'",
-  "url": "https://www.bbc.com/gahuza/articles/cn03d60pp08o",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 2`] = `
-{
-  "text": "‘Nziyamamariza kuba perezida w’Uburusiya Putin navaho’ - Umupfakazi wa Navalny",
-  "url": "https://www.bbc.com/gahuza/articles/c5y51yxeg53o",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 3`] = `
-{
-  "text": "Amerika iri gukora iperereza ku itangazwa rya gahunda y'ibanga ya Israel yo gutera Iran ",
-  "url": "https://www.bbc.com/gahuza/articles/c4gln7xlrdxo",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 4`] = `
-{
-  "text": "Misiri yatangajwe ko nta malaria ikiyirangwamo nyuma y'umuhate umaze imyaka 100 ",
-  "url": "https://www.bbc.com/gahuza/articles/cn4ze4382jzo",
-}
-`;
-
-exports[`Canonical Articles Most Read has item with rank 5`] = `
-{
-  "text": "Hamas: Ni ibiki byabaye ku bayobozi bakuru bayo?",
-  "url": "https://www.bbc.com/gahuza/articles/cgxqxnxylgzo",
-}
-`;
-
 exports[`Canonical Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

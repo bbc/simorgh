@@ -448,6 +448,9 @@ const atiAnalyticsTestSuites = [
     path: '/polska/articles/c639526lxlro',
     runforEnv: ['local'],
     service: 'polska',
+    headers: {
+      'mvt-newswb_ws_topbarojs_read_more': 'experiment;top-bar-top-stories',
+    },
     pageIdentifier: 'polska.articles.c639526lxlro.page',
     siteId: 135,
     applicationType: 'responsive',
@@ -522,6 +525,7 @@ const atiLiteTestSuites = atiAnalyticsTestSuites
       assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
       assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
       assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
+      assertTopBarOJComponentView, // Top Bar onward journeys are not shown on Lite pages
     ];
 
     const liteSiteTests = testSuite.tests
