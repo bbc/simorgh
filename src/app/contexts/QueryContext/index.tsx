@@ -1,6 +1,6 @@
 import { use, type PropsWithChildren } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
-import PersistentQueryProvider from './lazy';
+import PersistentQueryProvider from './PersistentQueryProvider';
 
 // Load this module with query consumers, not around page content or embeds.
 const QueryProvider = ({ children }: PropsWithChildren) => {

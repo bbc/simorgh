@@ -8,7 +8,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import QueryProvider from '.';
 
-jest.mock('./lazy', () => ({
+jest.mock('./PersistentQueryProvider', () => ({
   __esModule: true,
   default: ({ children }: PropsWithChildren) => (
     <div data-testid="persistent-query-provider">{children}</div>
