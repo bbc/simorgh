@@ -18,6 +18,7 @@ import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import { GetServerSidePropsContext } from 'next';
 import { Helmet } from 'react-helmet';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import * as fetchTogglesModule from '#app/lib/utilities/fetchToggles';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import { OnDemandAudioProps } from './types';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
@@ -41,6 +42,7 @@ const mockToggles = {
 };
 
 jest.mock('../../../utilities/pageRequests/getPageData');
+jest.mock('#app/lib/utilities/fetchToggles');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -54,23 +56,18 @@ jest.mock('#app/components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-jest.mock('#app/components/ATIAnalytics', () => () => (
-  <div>ATI Analytics</div>
-));
+jest.mock('#app/components/ATIAnalytics', () => () => <div>ATI Analytics</div>);
 
-jest.mock(
-  '#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks',
-  () => ({
-    __esModule: true,
-    default: jest.fn().mockResolvedValue([
-      {
-        linkText: 'Apple Podcasts',
-        linkUrl: 'https://apple.test',
-        linkType: 'platform',
-      },
-    ]),
-  }),
-);
+jest.mock('#nextjs/pages/[service]/onDemandAudio/podcastExternalLinks', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue([
+    {
+      linkText: 'Apple Podcasts',
+      linkUrl: 'https://apple.test',
+      linkType: 'platform',
+    },
+  ]),
+}));
 
 const getLinkedData = () => {
   const linkedDataScript = Helmet.peek().scriptTags.find(
@@ -106,10 +103,7 @@ const renderPage = async ({
   await act(async () => {
     result = render(
       <ToggleContextProvider toggles={toggles}>
-        <OnDemandAudioPage
-          service={service}
-          pageData={pageData}
-        />
+        <OnDemandAudioPage service={service} pageData={pageData} />
       </ToggleContextProvider>,
       {
         service,
@@ -135,17 +129,13 @@ const renderPage = async ({
  * Call this with podcast data for podcast tests and radio data
  * for on-demand radio tests.
  */
-const mockPageData = (
-  pageData: OnDemandAudioProps['pageData'],
-) => {
-  jest
-    .spyOn(getPageDataModule, 'default')
-    .mockResolvedValue({
-      data: {
-        pageData,
-        status: 200,
-      },
-    });
+const mockPageData = (pageData: OnDemandAudioProps['pageData']) => {
+  jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+    data: {
+      pageData,
+      status: 200,
+    },
+  });
 };
 
 const { env } = process;
@@ -161,8 +151,7 @@ describe('OnDemand Audio Page', () => {
       setHeader: mockSetHeader,
       removeHeader: jest.fn(),
     } as unknown as GetServerSidePropsContext['res'],
-    resolvedUrl:
-      '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+    resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
     query: {
       service: 'gahuza',
     },
@@ -171,11 +160,24 @@ describe('OnDemand Audio Page', () => {
   const getRouteResult = ({
     pathname,
     pageData,
+    toggles = mockToggles,
   }: {
     pathname: string;
     pageData: OnDemandAudioProps['pageData'];
+    toggles?: typeof mockToggles;
   }) => {
     mockPageData(pageData);
+
+    // Mocking fetchToggles here ensures the handler slices
+    // recentEpisodes/radioScheduleData server-side using the
+    // same toggles object the test later passes to the
+    // ToggleContextProvider via renderPage. Without this, the
+    // real fetchToggles call fails (fetch is a no-op mock) and
+    // silently falls back to the local/test default toggle
+    // config, which can disagree with what renderPage renders.
+    jest
+      .spyOn(fetchTogglesModule, 'default')
+      .mockResolvedValue(toggles as never);
 
     return handleOnDemandAudioRoute({
       ...mockGetServerSidePropsContext,
@@ -187,9 +189,7 @@ describe('OnDemand Audio Page', () => {
     jest.restoreAllMocks();
     jest.clearAllMocks();
 
-    jest
-      .spyOn(Date, 'now')
-      .mockImplementation(() => 1234567890000);
+    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
 
     mockMatchMedia();
 
@@ -200,17 +200,17 @@ describe('OnDemand Audio Page', () => {
     // @ts-expect-error requirejs global is not typed on window
     window.require = jest.fn();
   });
-    describe('Podcast pages', () => {
+  describe('Podcast pages', () => {
     const podcastEpisodePathname =
       '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm';
 
-    const podcastSeriesPathname =
-      '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb';
+    const podcastSeriesPathname = '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb';
 
     it('should display podcast episode page with PodcastEpisode schema', async () => {
       const result = await getRouteResult({
         pathname: podcastEpisodePathname,
-        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       await renderPage({
@@ -224,13 +224,11 @@ describe('OnDemand Audio Page', () => {
       expect(graph.length).toBeGreaterThan(0);
 
       const podcastEpisode = graph.find(
-        graphEntry =>
-          graphEntry['@type'] === 'PodcastEpisode',
+        graphEntry => graphEntry['@type'] === 'PodcastEpisode',
       );
 
       const podcastSeries = graph.find(
-        graphEntry =>
-          graphEntry['@type'] === 'PodcastSeries',
+        graphEntry => graphEntry['@type'] === 'PodcastSeries',
       );
 
       const webPageSchema = graph.find(
@@ -243,9 +241,7 @@ describe('OnDemand Audio Page', () => {
 
       const podcastEpisodeId = podcastEpisode?.['@id'];
 
-      expect(podcastEpisodeId).toEqual(
-        expect.any(String),
-      );
+      expect(podcastEpisodeId).toEqual(expect.any(String));
 
       expect(webPageSchema?.mainEntity).toEqual({
         '@id': podcastEpisodeId,
@@ -267,11 +263,12 @@ describe('OnDemand Audio Page', () => {
           linkUrl: downloadUrl,
           linkType: 'download',
         },
-      ] as never);
+      ]);
 
       const result = await getRouteResult({
         pathname: podcastEpisodePathname,
-        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       await renderPage({
@@ -283,22 +280,18 @@ describe('OnDemand Audio Page', () => {
       const graph = getLinkedData()['@graph'] ?? [];
 
       const podcastEpisode = graph.find(
-        graphEntry =>
-          graphEntry['@type'] === 'PodcastEpisode',
+        graphEntry => graphEntry['@type'] === 'PodcastEpisode',
       ) as Record<string, unknown> | undefined;
 
-      const associatedMedia =
-        podcastEpisode?.associatedMedia as
-          | Record<string, unknown>
-          | undefined;
+      const associatedMedia = podcastEpisode?.associatedMedia as
+        | Record<string, unknown>
+        | undefined;
 
       expect(associatedMedia?.contentUrl).toMatch(
         /^https:\/\/open\.live\.bbc\.co\.uk\/mediaselector\//,
       );
 
-      expect(
-        associatedMedia?.encodingFormat,
-      ).toBe('audio/mpeg');
+      expect(associatedMedia?.encodingFormat).toBe('audio/mpeg');
     });
 
     it('should not include contentUrl in associatedMedia when no download link is present', async () => {
@@ -308,11 +301,12 @@ describe('OnDemand Audio Page', () => {
           linkUrl: 'https://apple.test',
           linkType: 'platform',
         },
-      ] as never);
+      ]);
 
       const result = await getRouteResult({
         pathname: podcastEpisodePathname,
-        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       await renderPage({
@@ -324,28 +318,23 @@ describe('OnDemand Audio Page', () => {
       const graph = getLinkedData()['@graph'] ?? [];
 
       const podcastEpisode = graph.find(
-        graphEntry =>
-          graphEntry['@type'] === 'PodcastEpisode',
+        graphEntry => graphEntry['@type'] === 'PodcastEpisode',
       ) as Record<string, unknown> | undefined;
 
-      const associatedMedia =
-        podcastEpisode?.associatedMedia as
-          | Record<string, unknown>
-          | undefined;
+      const associatedMedia = podcastEpisode?.associatedMedia as
+        | Record<string, unknown>
+        | undefined;
 
-      expect(
-        associatedMedia?.contentUrl,
-      ).toBeUndefined();
+      expect(associatedMedia?.contentUrl).toBeUndefined();
 
-      expect(
-        associatedMedia?.encodingFormat,
-      ).toBeUndefined();
+      expect(associatedMedia?.encodingFormat).toBeUndefined();
     });
 
     it('should show the external links for podcast pages', async () => {
       const result = await getRouteResult({
         pathname: podcastSeriesPathname,
-        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -354,9 +343,7 @@ describe('OnDemand Audio Page', () => {
         pathname: podcastSeriesPathname,
       });
 
-      expect(
-        getByText('Iyi podcast iraboneka kandi kuri'),
-      ).toBeInTheDocument();
+      expect(getByText('Iyi podcast iraboneka kandi kuri')).toBeInTheDocument();
     });
 
     it('expands a long podcast synopsis when continue reading is clicked', async () => {
@@ -372,34 +359,23 @@ describe('OnDemand Audio Page', () => {
         pageData: pageData as unknown as OnDemandAudioProps['pageData'],
       });
 
-      const {
-        getByTestId,
-        queryByTestId,
-      } = await renderPage({
+      const { getByTestId, queryByTestId } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname: podcastEpisodePathname,
       });
 
-      expect(
-        getByTestId('continue-reading-button'),
-      ).toBeInTheDocument();
+      expect(getByTestId('continue-reading-button')).toBeInTheDocument();
 
-      expect(
-        getByTestId('synopsis'),
-      ).toHaveTextContent('This is a podcast episode');
-
-      fireEvent.click(
-        getByTestId('continue-reading-button'),
+      expect(getByTestId('synopsis')).toHaveTextContent(
+        'This is a podcast episode',
       );
 
-      expect(
-        queryByTestId('continue-reading-button'),
-      ).not.toBeInTheDocument();
+      fireEvent.click(getByTestId('continue-reading-button'));
 
-      expect(
-        getByTestId('synopsis'),
-      ).toHaveTextContent(
+      expect(queryByTestId('continue-reading-button')).not.toBeInTheDocument();
+
+      expect(getByTestId('synopsis')).toHaveTextContent(
         'This is a podcast episode about interesting topics. We dive deep into the subject matter with expert guests and detailed analysis.',
       );
     });
@@ -407,8 +383,7 @@ describe('OnDemand Audio Page', () => {
     it('does not show continue reading on Lite podcast pages', async () => {
       const pageData = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        longSynopsis:
-          'A longer podcast synopsis to read in full.',
+        longSynopsis: 'A longer podcast synopsis to read in full.',
       };
 
       const result = await getRouteResult({
@@ -416,63 +391,59 @@ describe('OnDemand Audio Page', () => {
         pageData: pageData as unknown as OnDemandAudioProps['pageData'],
       });
 
-      const {
-        getByTestId,
-        queryByTestId,
-      } = await renderPage({
+      const { getByTestId, queryByTestId } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname: podcastEpisodePathname,
         isLite: true,
       });
 
-      expect(
-        queryByTestId('continue-reading-button'),
-      ).not.toBeInTheDocument();
+      expect(queryByTestId('continue-reading-button')).not.toBeInTheDocument();
 
-      expect(
-        getByTestId('synopsis'),
-      ).toHaveTextContent('A longer podcast synopsis');
+      expect(getByTestId('synopsis')).toHaveTextContent(
+        'A longer podcast synopsis',
+      );
     });
 
     it('renders recent episodes when the recent episodes toggle is enabled', async () => {
-      const pageData = {
-        ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        recentEpisodes:
-          gahuzaPodcastPage.data.recentEpisodes?.slice(
-            0,
-            1,
-          ),
+      // Pass the fixture through unsliced: the handler itself
+      // must perform the slice using the overridden toggle value
+      // below, rather than the test pre-slicing the fixture.
+      const toggles = {
+        ...mockToggles,
+        recentPodcastEpisodes: {
+          enabled: true,
+          value: 1,
+        },
       };
 
       const result = await getRouteResult({
         pathname: podcastSeriesPathname,
-        pageData: pageData as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
+        toggles,
       });
 
-      const { getByText, getAllByText } = await renderPage({
+      const { getByText, getAllByText, queryByText } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname: podcastSeriesPathname,
-        toggles: {
-          ...mockToggles,
-          recentPodcastEpisodes: {
-            enabled: true,
-            value: 1,
-          },
-        },
+        toggles,
       });
 
       // Check for brand title in header
-      expect(
-        getAllByText('Baza Muganga')[0],
-      ).toBeInTheDocument();
+      expect(getAllByText('Baza Muganga')[0]).toBeInTheDocument();
 
+      // First recent episode renders, proving the handler sliced
+      // server-side using the toggle value of 1.
+      expect(getByText('Ikiganiro cyo kuwa 08/11/2024')).toBeInTheDocument();
+
+      // The fixture has further episodes after the first; none of
+      // them should be present, proving the slice actually
+      // happened rather than the full list being rendered.
       expect(
-        getByText(
-          'Ikiganiro cyo kuwa 08/11/2024',
-        ),
-      ).toBeInTheDocument();
+        queryByText('Ikiganiro cyo kuwa 01/11/2024'),
+      ).not.toBeInTheDocument();
     });
 
     it('shows multiple external links with different types on podcast pages', async () => {
@@ -496,7 +467,7 @@ describe('OnDemand Audio Page', () => {
 
       jest
         .mocked(getPodcastExternalLinks)
-        .mockResolvedValueOnce(customExternalLinks as never);
+        .mockResolvedValueOnce(customExternalLinks);
 
       const pageDataWithMultipleLinks = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
@@ -505,7 +476,8 @@ describe('OnDemand Audio Page', () => {
 
       const result = await getRouteResult({
         pathname: podcastSeriesPathname,
-        pageData: pageDataWithMultipleLinks as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          pageDataWithMultipleLinks as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText, getAllByRole } = await renderPage({
@@ -535,7 +507,8 @@ describe('OnDemand Audio Page', () => {
 
       const result = await getRouteResult({
         pathname: podcastSeriesPathname,
-        pageData: pageDataWithoutLinks as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          pageDataWithoutLinks as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { queryByText } = await renderPage({
@@ -545,49 +518,40 @@ describe('OnDemand Audio Page', () => {
       });
 
       expect(
-        queryByText(
-          'This podcast is also available on',
-        ),
+        queryByText('This podcast is also available on'),
       ).not.toBeInTheDocument();
     });
   });
-    describe('On-demand radio pages', () => {
+  describe('On-demand radio pages', () => {
     it('should show the brand title for OnDemand Radio Pages', async () => {
-      const pathname =
-        '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
-        pageData: gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
-      const {
-        queryByText,
-        getByTestId,
-      } = await renderPage({
+      const { queryByText, getByTestId } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname,
       });
 
-      expect(
-        getByTestId('brand-title'),
-      ).toHaveTextContent("Imvo n'imvano");
+      expect(getByTestId('brand-title')).toHaveTextContent("Imvo n'imvano");
 
       expect(
-        queryByText(
-          'This podcast is also available on',
-        ),
+        queryByText('This podcast is also available on'),
       ).not.toBeInTheDocument();
     });
 
     it('should show the episode title when it is available', async () => {
-      const pathname =
-        '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
-        pageData: gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -596,16 +560,12 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      const element = getByText(
-        "Imvo n'Imvano 16/11/2024",
-      );
+      const element = getByText("Imvo n'Imvano 16/11/2024");
 
       expect(element.tagName).toEqual('SPAN');
 
       await waitFor(() => {
-        const actual = document.querySelector(
-          'head > title',
-        )?.innerHTML;
+        const actual = document.querySelector('head > title')?.innerHTML;
 
         expect(actual).toEqual(
           "Imvo n'Imvano 16/11/2024 - Imvo  n'imvano - Gahuza - BBC News Gahuza",
@@ -614,12 +574,12 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
-      const pathname =
-        '/pashto/bbc_pashto_radio/w3ct26m6';
+      const pathname = '/pashto/bbc_pashto_radio/w3ct26m6';
 
       const result = await getRouteResult({
         pathname,
-        pageData: pashtoOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          pashtoOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -628,18 +588,16 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByText('۱۷ می ۲۰۲۱'),
-      ).toBeInTheDocument();
+      expect(getByText('۱۷ می ۲۰۲۱')).toBeInTheDocument();
     });
 
     it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
-      const pathname =
-        '/korean/bbc_korean_radio/w3ct1vk5';
+      const pathname = '/korean/bbc_korean_radio/w3ct1vk5';
 
       const result = await getRouteResult({
         pathname,
-        pageData: koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -648,18 +606,16 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByText('2021년 6월 8일'),
-      ).toBeInTheDocument();
+      expect(getByText('2021년 6월 8일')).toBeInTheDocument();
     });
 
     it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
-      const pathname =
-        '/indonesia/bbc_indonesian_radio/w172xybnvm6718v';
+      const pathname = '/indonesia/bbc_indonesian_radio/w172xybnvm6718v';
 
       const result = await getRouteResult({
         pathname,
-        pageData: indonesianOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          indonesianOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -668,18 +624,16 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByText('9 Juni 2021'),
-      ).toBeInTheDocument();
+      expect(getByText('9 Juni 2021')).toBeInTheDocument();
     });
 
     it('should show the summary for OnDemand Radio Pages', async () => {
-      const pathname =
-        '/gahuza/bbc_gahuza_radio/podcasts/p0k1qjp9';
+      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/p0k1qjp9';
 
       const result = await getRouteResult({
         pathname,
-        pageData: gahuzaOnDemandAudioEpisode.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaOnDemandAudioEpisode.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByTestId } = await renderPage({
@@ -688,20 +642,18 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByTestId('summary'),
-      ).toHaveTextContent(
+      expect(getByTestId('summary')).toHaveTextContent(
         "Imvo n'Imvano yo kuwa gatandatu 02/11/2024",
       );
     });
 
     it('should show the audio player', async () => {
-      const pathname =
-        '/korean/bbc_korean_radio/w3ct1vk5';
+      const pathname = '/korean/bbc_korean_radio/w3ct1vk5';
 
       const result = await getRouteResult({
         pathname,
-        pageData: koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { container } = await renderPage({
@@ -718,12 +670,12 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('should show the expired content message if episode is expired', async () => {
-      const pathname =
-        '/swahili/bbc_swahili_radio/w3ct1y1s';
+      const pathname = '/swahili/bbc_swahili_radio/w3ct1y1s';
 
       const result = await getRouteResult({
         pathname,
-        pageData: swahiliExpiredOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          swahiliExpiredOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByText } = await renderPage({
@@ -732,14 +684,11 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByText('Taarifa hii haipatikani tena.'),
-      ).toBeInTheDocument();
+      expect(getByText('Taarifa hii haipatikani tena.')).toBeInTheDocument();
     });
 
     it("should show the 'content not yet available' message if episode is not yet available", async () => {
-      const pathname =
-        '/korean/bbc_korean_radio/w3ct1vk5';
+      const pathname = '/korean/bbc_korean_radio/w3ct1vk5';
 
       const result = await getRouteResult({
         pathname,
@@ -756,19 +705,17 @@ describe('OnDemand Audio Page', () => {
       });
 
       expect(
-        getByText(
-          '아직 재생할 수 없는 프로그램입니다.',
-        ),
+        getByText('아직 재생할 수 없는 프로그램입니다.'),
       ).toBeInTheDocument();
     });
 
     it('should show the radio schedule for the On Demand radio page', async () => {
-      const pathname =
-        '/korean/bbc_korean_radio/w3ct1vk5';
+      const pathname = '/korean/bbc_korean_radio/w3ct1vk5';
 
       const result = await getRouteResult({
         pathname,
-        pageData: koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByTestId } = await renderPage({
@@ -777,18 +724,16 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        getByTestId('radio-schedule'),
-      ).toBeInTheDocument();
+      expect(getByTestId('radio-schedule')).toBeInTheDocument();
     });
 
     it('renders with variant parameter passed through correctly', async () => {
-      const pathname =
-        '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
-        pageData: gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          gahuzaOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { getByTestId } = await renderPage({
@@ -802,14 +747,13 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('renders populated recent episodes when toggle is enabled', async () => {
-      const pathname =
-        '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
 
       const recentEpisodesData = [
         {
           id: 'p0k39nk4',
           brandTitle: "Imvo n'imvano",
-          episodeTitle: 'Imvo n\'Imvano 9/11/2024',
+          episodeTitle: "Imvo n'Imvano 9/11/2024",
           timestamp: '2024-11-09T00:00:00.000Z',
           duration: 'PT59M',
           image: '//ichef.bbci.co.uk/images/ic/768x432/p0gdh4dw.png',
@@ -818,7 +762,7 @@ describe('OnDemand Audio Page', () => {
         {
           id: 'p0k1qjp9',
           brandTitle: "Imvo n'imvano",
-          episodeTitle: 'Imvo n\'Imvano 2/11/2024',
+          episodeTitle: "Imvo n'Imvano 2/11/2024",
           timestamp: '2024-11-02T00:00:00.000Z',
           duration: 'PT59M',
           image: '//ichef.bbci.co.uk/images/ic/768x432/p0gdh4dw.png',
@@ -831,32 +775,46 @@ describe('OnDemand Audio Page', () => {
         recentEpisodes: recentEpisodesData,
       };
 
+      // This URL contains "/podcasts/", so handleOnDemandAudioRoute's
+      // isPodcast pathname heuristic treats this genuine on-demand
+      // radio page as a podcast, meaning it reads the
+      // recentPodcastEpisodes toggle (not recentAudioEpisodes) to
+      // decide whether to keep recentEpisodes. Enabling it here
+      // documents that quirk and is required for the handler to
+      // keep (rather than null) the recentEpisodes below.
+      const toggles = {
+        ...mockToggles,
+        recentPodcastEpisodes: {
+          enabled: true,
+          value: 2,
+        },
+      };
+
       const result = await getRouteResult({
         pathname,
-        pageData: pageDataWithRecentEpisodes as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          pageDataWithRecentEpisodes as unknown as OnDemandAudioProps['pageData'],
+        toggles,
       });
 
       const { getByText } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname,
+        toggles,
       });
 
-      expect(
-        getByText("Imvo n'Imvano 9/11/2024"),
-      ).toBeInTheDocument();
-      expect(
-        getByText("Imvo n'Imvano 2/11/2024"),
-      ).toBeInTheDocument();
+      expect(getByText("Imvo n'Imvano 9/11/2024")).toBeInTheDocument();
+      expect(getByText("Imvo n'Imvano 2/11/2024")).toBeInTheDocument();
     });
 
     it('should not show the radio schedule for services without schedules', async () => {
-      const pathname =
-        '/korean/bbc_korean_radio/w3ct1vk5';
+      const pathname = '/korean/bbc_korean_radio/w3ct1vk5';
 
       const result = await getRouteResult({
         pathname,
-        pageData: koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
+        pageData:
+          koreanOnDemandAudio.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       const { queryByTestId } = await renderPage({
@@ -869,9 +827,7 @@ describe('OnDemand Audio Page', () => {
         pathname,
       });
 
-      expect(
-        queryByTestId('radio-schedule'),
-      ).not.toBeInTheDocument();
+      expect(queryByTestId('radio-schedule')).not.toBeInTheDocument();
     });
   });
 });

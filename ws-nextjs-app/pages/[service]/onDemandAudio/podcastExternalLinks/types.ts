@@ -7,10 +7,10 @@ export type PodcastExternalLinksParams = {
   versionId: string;
 };
 
-export type ExternalLinks = {
-  [key: string]: {
-    linkText: string;
-    linkUrl: string;
-    linkType: string;
-  };
+export type ExternalLink = {
+  linkText: string;
+  linkUrl: string;
+  linkType: string;
 };
+
+export type ExternalLinks = ExternalLink[];

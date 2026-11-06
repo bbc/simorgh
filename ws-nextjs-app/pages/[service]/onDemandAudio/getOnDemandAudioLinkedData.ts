@@ -10,8 +10,10 @@ export type OnDemandAudioRecentEpisode = {
   id: string;
   episodeTitle?: string;
   brandTitle?: string;
-  timestamp: number;
+  timestamp: number | string;
   duration: string;
+  image?: string;
+  altText?: string;
 };
 
 interface GetOnDemandAudioLinkedDataProps {

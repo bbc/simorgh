@@ -12,9 +12,7 @@ jest.mock('../../../utilities/pageRequests/getPageData');
 jest.mock('#app/lib/utilities/fetchToggles');
 
 jest.mock('#app/lib/utilities/isTest', () => {
-  const originalModule = jest.requireActual(
-    '#app/lib/utilities/isTest',
-  );
+  const originalModule = jest.requireActual('#app/lib/utilities/isTest');
 
   return {
     __esModule: true,
@@ -51,8 +49,7 @@ describe('handleOnDemandAudioRoute', () => {
       setHeader: mockSetHeader,
       removeHeader: jest.fn(),
     } as unknown as GetServerSidePropsContext['res'],
-    resolvedUrl:
-      '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+    resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
     query: {
       service: 'gahuza',
     },
@@ -62,9 +59,7 @@ describe('handleOnDemandAudioRoute', () => {
     jest.restoreAllMocks();
     jest.clearAllMocks();
 
-    jest
-      .spyOn(Date, 'now')
-      .mockImplementation(() => 1234567890000);
+    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
 
     jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
       onDemandRadioSchedule: {
@@ -96,9 +91,7 @@ describe('handleOnDemandAudioRoute', () => {
     });
 
     it('sets correct cache-control header', async () => {
-      await handleOnDemandAudioRoute(
-        mockGetServerSidePropsContext,
-      );
+      await handleOnDemandAudioRoute(mockGetServerSidePropsContext);
 
       expect(mockSetHeader).toHaveBeenCalledWith(
         'Cache-Control',
@@ -107,24 +100,78 @@ describe('handleOnDemandAudioRoute', () => {
     });
 
     it('renders live assets on test environments', async () => {
-      jest
-        .spyOn(isTest, 'default')
-        .mockReturnValueOnce(true);
+      jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
 
-      const pageDataSpy = jest.spyOn(
-        getPageDataModule,
-        'default',
-      );
+      const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
 
-      await handleOnDemandAudioRoute(
-        mockGetServerSidePropsContext,
-      );
+      await handleOnDemandAudioRoute(mockGetServerSidePropsContext);
 
       expect(pageDataSpy).toHaveBeenCalledWith(
         expect.objectContaining({
           rendererEnv: 'live',
         }),
       );
+    });
+
+    // Note: this URL does not contain "podcast", so the handler's
+    // isPodcast heuristic correctly treats it as genuine on-demand radio
+    // (unlike mockGetServerSidePropsContext.resolvedUrl above, which does
+    // contain "/podcasts/" and is therefore treated as a podcast).
+    const genuineRadioPageUrl = '/gahuza/bbc_gahuza_radio/p02pcb5c';
+
+    it('nulls recentEpisodes when the recentAudioEpisodes toggle is disabled', async () => {
+      jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
+        onDemandRadioSchedule: {
+          enabled: true,
+        },
+        recentAudioEpisodes: {
+          enabled: false,
+          value: 4,
+        },
+        recentPodcastEpisodes: {
+          enabled: true,
+          value: 1,
+        },
+      } as never);
+
+      const result = await handleOnDemandAudioRoute({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl: genuineRadioPageUrl,
+      });
+
+      expect(result.props.pageData.recentEpisodes).toBeNull();
+    });
+
+    it('nulls radioScheduleData when the onDemandRadioSchedule toggle is disabled', async () => {
+      jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
+        onDemandRadioSchedule: {
+          enabled: false,
+        },
+        recentAudioEpisodes: {
+          enabled: false,
+          value: 4,
+        },
+        recentPodcastEpisodes: {
+          enabled: true,
+          value: 1,
+        },
+      } as never);
+
+      const result = await handleOnDemandAudioRoute({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl: genuineRadioPageUrl,
+      });
+
+      expect(result.props.pageData.radioScheduleData).toBeNull();
+    });
+
+    it('returns no external links for a genuine on-demand radio page', async () => {
+      const result = await handleOnDemandAudioRoute({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl: genuineRadioPageUrl,
+      });
+
+      expect(result.props.pageData.externalLinks).toEqual([]);
     });
   });
 
@@ -136,34 +183,50 @@ describe('handleOnDemandAudioRoute', () => {
     it('includes recent podcast episodes when the toggle is enabled', async () => {
       const result = await handleOnDemandAudioRoute({
         ...mockGetServerSidePropsContext,
-        resolvedUrl:
-          '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+        resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
       });
 
-      expect(
-        result.props.pageData.recentEpisodes,
-      ).toHaveLength(1);
+      expect(result.props.pageData.recentEpisodes).toHaveLength(1);
 
-      expect(
-        result.props.pageData.recentEpisodes?.[0],
-      ).toEqual(
+      expect(result.props.pageData.recentEpisodes?.[0]).toEqual(
         expect.objectContaining({
           id: 'p0k396c8',
         }),
       );
     });
+
+    it('nulls recentEpisodes when the recentPodcastEpisodes toggle is disabled', async () => {
+      jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
+        onDemandRadioSchedule: {
+          enabled: true,
+        },
+        recentAudioEpisodes: {
+          enabled: false,
+          value: 4,
+        },
+        recentPodcastEpisodes: {
+          enabled: false,
+          value: 1,
+        },
+      } as never);
+
+      const result = await handleOnDemandAudioRoute({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+      });
+
+      expect(result.props.pageData.recentEpisodes).toBeNull();
+    });
   });
 
   describe('when the page-data request fails', () => {
     it('returns error props if data fetch returns 500', async () => {
-      jest
-        .spyOn(getPageDataModule, 'default')
-        .mockResolvedValue({
-          data: {
-            pageData: gahuzaOnDemandAudio.data,
-            status: 500,
-          },
-        });
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: gahuzaOnDemandAudio.data,
+          status: 500,
+        },
+      });
 
       const result = await handleOnDemandAudioRoute(
         mockGetServerSidePropsContext,
@@ -173,21 +236,18 @@ describe('handleOnDemandAudioRoute', () => {
         props: expect.objectContaining({
           status: 500,
           pageType: 'audio',
-          pathname:
-            '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+          pathname: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
         }),
       });
     });
 
     it('returns error props if data fetch returns 404', async () => {
-      jest
-        .spyOn(getPageDataModule, 'default')
-        .mockResolvedValue({
-          data: {
-            pageData: gahuzaOnDemandAudio.data,
-            status: 404,
-          },
-        });
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: gahuzaOnDemandAudio.data,
+          status: 404,
+        },
+      });
 
       const result = await handleOnDemandAudioRoute(
         mockGetServerSidePropsContext,
@@ -197,26 +257,21 @@ describe('handleOnDemandAudioRoute', () => {
         props: expect.objectContaining({
           status: 404,
           pageType: 'audio',
-          pathname:
-            '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+          pathname: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
         }),
       });
     });
 
     it('throws if pageData is missing', async () => {
-      jest
-        .spyOn(getPageDataModule, 'default')
-        .mockResolvedValue({
-          data: {
-            pageData: null,
-            status: 200,
-          },
-        });
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: null,
+          status: 200,
+        },
+      });
 
       await expect(
-        handleOnDemandAudioRoute(
-          mockGetServerSidePropsContext,
-        ),
+        handleOnDemandAudioRoute(mockGetServerSidePropsContext),
       ).rejects.toThrow('AudioPage data is malformed');
     });
   });
