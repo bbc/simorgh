@@ -4,6 +4,7 @@ import AccountPromotionalBanner from '#app/components/Account/AccountPromotional
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
+import Riddle from '#app/components/Riddle';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -101,6 +102,12 @@ const HomePage = ({ pageData }: HomePageProps) => {
         <div css={styles.inner}>
           <HomePageElectionBanner />
           <div css={styles.margins}>
+            <div css={styles.riddleContainer}>
+              <div css={styles.riddleMaxWidth}>
+                <Riddle />
+              </div>
+            </div>
+
             {curations.map(
               (
                 {
