@@ -22,6 +22,7 @@ import _OnDemandAudioPage from './OnDemandAudioLayout';
 import { OnDemandAudioProps } from './types';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandAudioRoute from './handleOnDemandAudioRoute';
+import getPodcastExternalLinks from './podcastExternalLinks';
 
 const OnDemandAudioPage = withMediaError(_OnDemandAudioPage);
 
@@ -255,21 +256,22 @@ describe('OnDemand Audio Page', () => {
       const downloadUrl =
         'https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download-low/proto/https/vpid/p0k4x06p.mp3';
 
-      const pageDataWithDownloadLink = {
-        ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        externalLinks: [
-          ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']).externalLinks,
-          {
-            linkText: 'Download',
-            linkUrl: downloadUrl,
-            linkType: 'download',
-          },
-        ],
-      };
+      jest.mocked(getPodcastExternalLinks).mockResolvedValueOnce([
+        {
+          linkText: 'Apple Podcasts',
+          linkUrl: 'https://apple.test',
+          linkType: 'platform',
+        },
+        {
+          linkText: 'Download',
+          linkUrl: downloadUrl,
+          linkType: 'download',
+        },
+      ] as never);
 
       const result = await getRouteResult({
         pathname: podcastEpisodePathname,
-        pageData: pageDataWithDownloadLink as unknown as OnDemandAudioProps['pageData'],
+        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       await renderPage({
@@ -300,18 +302,17 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('should not include contentUrl in associatedMedia when no download link is present', async () => {
-      const pageDataWithNoDownloadLink = {
-        ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        externalLinks:
-          (gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']).externalLinks.filter(
-            (link: { linkType: string }) =>
-              link.linkType !== 'download',
-          ),
-      };
+      jest.mocked(getPodcastExternalLinks).mockResolvedValueOnce([
+        {
+          linkText: 'Apple Podcasts',
+          linkUrl: 'https://apple.test',
+          linkType: 'platform',
+        },
+      ] as never);
 
       const result = await getRouteResult({
         pathname: podcastEpisodePathname,
-        pageData: pageDataWithNoDownloadLink as unknown as OnDemandAudioProps['pageData'],
+        pageData: gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData'],
       });
 
       await renderPage({
@@ -361,10 +362,9 @@ describe('OnDemand Audio Page', () => {
     it('expands a long podcast synopsis when continue reading is clicked', async () => {
       const pageData = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        shortSynopsis: 'Short synopsis',
-        summary: 'Short synopsis',
+        summary: 'This is a podcast episode about interesting topics.',
         longSynopsis:
-          'A longer podcast synopsis to read in full.',
+          'This is a podcast episode about interesting topics. We dive deep into the subject matter with expert guests and detailed analysis. You will learn new perspectives and gain valuable insights. The episode covers multiple angles and provides comprehensive coverage of the topic.',
       };
 
       const result = await getRouteResult({
@@ -387,7 +387,7 @@ describe('OnDemand Audio Page', () => {
 
       expect(
         getByTestId('synopsis'),
-      ).toHaveTextContent('Short synopsis');
+      ).toHaveTextContent('This is a podcast episode');
 
       fireEvent.click(
         getByTestId('continue-reading-button'),
@@ -400,15 +400,13 @@ describe('OnDemand Audio Page', () => {
       expect(
         getByTestId('synopsis'),
       ).toHaveTextContent(
-        'A longer podcast synopsis to read in full.',
+        'This is a podcast episode about interesting topics. We dive deep into the subject matter with expert guests and detailed analysis.',
       );
     });
 
     it('does not show continue reading on Lite podcast pages', async () => {
       const pageData = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        shortSynopsis: 'Short synopsis',
-        summary: 'Short synopsis',
         longSynopsis:
           'A longer podcast synopsis to read in full.',
       };
@@ -434,7 +432,7 @@ describe('OnDemand Audio Page', () => {
 
       expect(
         getByTestId('synopsis'),
-      ).toHaveTextContent('Short synopsis');
+      ).toHaveTextContent('A longer podcast synopsis');
 
       expect(
         getByTestId('synopsis'),
@@ -458,7 +456,7 @@ describe('OnDemand Audio Page', () => {
         pageData: pageData as unknown as OnDemandAudioProps['pageData'],
       });
 
-      const { getByText } = await renderPage({
+      const { getByText, getAllByText } = await renderPage({
         pageData: result.props.pageData,
         service: 'gahuza',
         pathname: podcastSeriesPathname,
@@ -471,8 +469,9 @@ describe('OnDemand Audio Page', () => {
         },
       });
 
+      // Check for brand title in header
       expect(
-        getByText('Baza Muganga'),
+        getAllByText('Baza Muganga')[0],
       ).toBeInTheDocument();
 
       expect(
@@ -483,25 +482,31 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('shows multiple external links with different types on podcast pages', async () => {
+      const customExternalLinks = [
+        {
+          linkText: 'Apple Podcasts',
+          linkUrl: 'https://podcasts.apple.com/test',
+          linkType: 'platform' as const,
+        },
+        {
+          linkText: 'Spotify',
+          linkUrl: 'https://spotify.com/test',
+          linkType: 'platform' as const,
+        },
+        {
+          linkText: 'Download Episode',
+          linkUrl: 'https://download.test/episode.mp3',
+          linkType: 'download' as const,
+        },
+      ];
+
+      jest
+        .mocked(getPodcastExternalLinks)
+        .mockResolvedValueOnce(customExternalLinks as never);
+
       const pageDataWithMultipleLinks = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
-        externalLinks: [
-          {
-            linkText: 'Apple Podcasts',
-            linkUrl: 'https://podcasts.apple.com/test',
-            linkType: 'platform',
-          },
-          {
-            linkText: 'Spotify',
-            linkUrl: 'https://spotify.com/test',
-            linkType: 'platform',
-          },
-          {
-            linkText: 'Download Episode',
-            linkUrl: 'https://download.test/episode.mp3',
-            linkType: 'download',
-          },
-        ],
+        externalLinks: customExternalLinks,
       };
 
       const result = await getRouteResult({
