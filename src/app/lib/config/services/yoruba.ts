@@ -92,6 +92,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
+      showMore: 'Fi diẹ sii han',
       moreOnThis: '',
       navMenuText: 'Àwọn abala',
       liteSite: {

@@ -2,6 +2,7 @@ import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleP
 import {
   sanitiseMetadataString,
   buildCurrentMetadata,
+  compareMetadataWithSaved,
   createFavouritesPayload,
 } from './uasUtility';
 
@@ -113,6 +114,39 @@ describe('buildCurrentMetadata', () => {
       locatorUrl: 'https://www.bbc.com/hindi/articles/cwy0pz7qydzo',
       promoImageAltText: 'Image description',
     });
+  });
+});
+
+describe('compareMetadataWithSaved', () => {
+  it('returns false when the tracked metadata matches', () => {
+    expect(
+      compareMetadataWithSaved(
+        { articleId: 'cwy0pz7qydzo', service: 'hindi' },
+        { articleId: 'cwy0pz7qydzo', service: 'hindi' },
+      ),
+    ).toEqual({ hasChanges: false });
+  });
+
+  it('returns true when tracked metadata has changed', () => {
+    expect(
+      compareMetadataWithSaved(
+        { articleId: 'cwy0pz7qydzo', service: 'hindi' },
+        { articleId: 'cwy0pz7qydzo', service: 'mundo' },
+      ),
+    ).toEqual({ hasChanges: true });
+  });
+
+  it('ignores additional saved metadata fields', () => {
+    expect(
+      compareMetadataWithSaved(
+        { articleId: 'cwy0pz7qydzo', service: 'hindi' },
+        {
+          articleId: 'cwy0pz7qydzo',
+          service: 'hindi',
+          activityTime: '2026-11-02T10:51:00.426Z',
+        },
+      ),
+    ).toEqual({ hasChanges: false });
   });
 });
 

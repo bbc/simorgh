@@ -3,7 +3,11 @@ import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import dispatchTrackingRequests from '#app/lib/analyticsUtils/dispatchTrackingRequests';
+import dispatchTrackingRequests, {
+  shouldDispatchEventBeacon,
+} from '#app/lib/analyticsUtils/dispatchTrackingRequests';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
 import useTrackingToggle from '../useTrackingToggle';
 
 const SCROLL_DEPTH_THRESHOLDS = [25, 50, 75, 100] as const;
@@ -69,7 +73,7 @@ const useScrollDepthTracker = (
   getBounds: GetTrackingBounds = getArticleBounds,
 ) => {
   const { isAmp, isLite } = use(RequestContext);
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
   const {
@@ -79,6 +83,7 @@ const useScrollDepthTracker = (
     producerId,
     producerName,
     statsDestination,
+    isSignedIn,
   } = extractATITrackingProps({
     eventTrackingData: { componentName },
     eventType: VIEW_EVENT,
@@ -134,6 +139,36 @@ const useScrollDepthTracker = (
               alwaysInView: false,
             },
           });
+
+          // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
+          if (resonanceEnabled) {
+            const shouldSendResonanceEvent = shouldDispatchEventBeacon({
+              campaignID,
+              componentName: `${componentName}-${threshold}`,
+              pageIdentifier,
+              platform,
+              producerId,
+              producerName,
+              service,
+              statsDestination,
+              trackingIsEnabled,
+              eventSent: false,
+              alwaysInView: false,
+            });
+            if (shouldSendResonanceEvent) {
+              dispatchViewabilityEvent(
+                buildResonanceEventConfig({
+                  pageIdentifier,
+                  campaignID,
+                  componentName: `${componentName}-${threshold}`,
+                  producerName,
+                  type: VIEW_EVENT,
+                  platform,
+                  isSignedIn,
+                }),
+              );
+            }
+          }
         }
       });
       tickingRef.current = false;
@@ -159,9 +194,11 @@ const useScrollDepthTracker = (
     producerId,
     producerName,
     service,
+    resonanceEnabled,
     shouldTrack,
     statsDestination,
     trackingIsEnabled,
+    isSignedIn,
   ]);
 
   return useCallback((element: HTMLElement | null) => {

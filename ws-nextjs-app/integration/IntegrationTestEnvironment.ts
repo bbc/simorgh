@@ -37,7 +37,7 @@ class CustomTestEnvironment extends TestEnvironment {
 
     const pageType = getPageTypeFromTestPath(context.testPath);
 
-    const platformForPath = ['amp', 'lite'].includes(platform)
+    const platformForPath = ['amp', 'lite', 'app'].includes(platform)
       ? `.${platform}`
       : '';
 

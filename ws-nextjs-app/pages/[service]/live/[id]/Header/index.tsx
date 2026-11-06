@@ -13,7 +13,6 @@ import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#app/lib/utilities/imageSrcHelpers/locator';
 import { MetadataTaggings } from '#app/models/types/metadata';
-import isLive from '#app/lib/utilities/isLive';
 import styles from './styles';
 import LiveLabelHeader from './LiveLabelHeader';
 import LiveElectionBanner from './LiveElectionBanner';
@@ -45,7 +44,9 @@ const Header = ({
 
   const [isMediaOpen, setLiveMediaOpen] = useState(false);
   const { isLite } = use(RequestContext);
-  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
+  const { enabled: electionBannerEnabled } = useToggle(
+    'livePageElectionBanner',
+  );
   const hasHeaderImage = !!imageUrl && !!imageUrlTemplate && !!imageWidth;
   const hasLiveMediaStream = Boolean(mediaCollections?.length);
   const {
@@ -63,7 +64,6 @@ const Header = ({
   // isLite is checked here (rather than inside isElectionBannerVisible) because this
   // page also needs it to decide its own layout, not just whether to render the banner.
   const shouldShowElectionBanner =
-    !isLive() &&
     !isLite &&
     isElectionBannerVisible({
       electionBannerEnabled,

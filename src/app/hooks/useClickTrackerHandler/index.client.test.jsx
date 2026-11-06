@@ -7,6 +7,7 @@ import userEvent from '@testing-library/user-event';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '#hooks/useTrackingToggle';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 import useOptimizelyVariation from '../useOptimizelyVariation';
 import {
@@ -64,6 +65,10 @@ jest.mock('../../contexts/ServiceContext', () => {
   };
 });
 
+jest.mock('#app/components/ATIAnalytics/resonance/dispatchResonanceEvent', () =>
+  jest.fn(),
+);
+
 const trackingToggleSpy = useTrackingToggle;
 
 const windowLocationAssignSpy = jest.spyOn(window.location, 'assign');
@@ -104,19 +109,28 @@ const defaultOptimizely = {
   user: { attributes: { foo: 'bar' }, id: 'test' },
 };
 
-const wrapper = ({ children }) => (
-  <AllTheProviders
-    bbcOrigin="https://www.test.bbc.com"
-    pageData={pidginData}
-    pageType={STORY_PAGE}
-    isAmp={false}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
-    toggles={defaultToggles}
-  >
-    {children}
-  </AllTheProviders>
-);
+const createWrapper =
+  pageMetadata =>
+  ({ children }) => (
+    <AllTheProviders
+      bbcOrigin="https://www.test.bbc.com"
+      pageData={pidginData}
+      pageMetadata={pageMetadata}
+      pageType={STORY_PAGE}
+      isAmp={false}
+      service="pidgin"
+      pathname="/pidgin/tori-51745682"
+      toggles={defaultToggles}
+    >
+      {children}
+    </AllTheProviders>
+  );
+
+const wrapper = createWrapper();
+const trackingWrapper = createWrapper({
+  atiAnalytics: pidginData.metadata.atiAnalytics,
+  type: pidginData.metadata.type,
+});
 
 const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
@@ -269,6 +283,29 @@ describe('useClickTrackerHandler', () => {
       const { onClick } = result.current;
 
       expect(onClick).toBeInstanceOf(Function);
+    });
+
+    it('should track dismissal events without cancelling them', async () => {
+      const { result } = renderHook(
+        () =>
+          useClickTrackerHandler({
+            ...eventTrackingData,
+            isDismissal: true,
+          }),
+        { wrapper: trackingWrapper },
+      );
+      const event = {
+        currentTarget: document,
+        key: 'Escape',
+        preventDefault: jest.fn(),
+        stopPropagation: jest.fn(),
+      };
+
+      await act(() => result.current.onClick(event));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(event.preventDefault).not.toHaveBeenCalled();
+      expect(event.stopPropagation).not.toHaveBeenCalled();
     });
 
     it('should send a single tracking request on click', async () => {
@@ -730,6 +767,184 @@ describe('useClickTrackerHandler', () => {
       fireEvent.click(getByTestId('test-component'));
 
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+    });
+  });
+
+  describe('Resonance dual-run', () => {
+    const {
+      metadata: { atiAnalytics, type },
+    } = pidginData;
+
+    const nextPageUrl = 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o';
+
+    const TestLink = ({ trackingData }) => {
+      const { onClick: handleClick } = useClickTrackerHandler(trackingData);
+
+      return (
+        <a href={nextPageUrl} onClick={handleClick}>
+          Link
+        </a>
+      );
+    };
+
+    const renderTestLink = ({
+      trackingData = eventTrackingData,
+      pageMetadata = { atiAnalytics, type },
+      toggles = defaultToggles,
+    } = {}) =>
+      render(<TestLink trackingData={trackingData} />, {
+        pageMetadata,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles,
+      });
+
+    beforeEach(() => {
+      mockServiceContextValue = {
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+        resonanceEnabled: true,
+      };
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(reverbMock),
+      };
+    });
+
+    it('should dispatch a select event with the destination URL when resonanceEnabled is true', async () => {
+      const { getByText } = renderTestLink();
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          event: expect.objectContaining({
+            action: 'select',
+            grouping: atiAnalytics.pageIdentifier,
+            subcategory: 'brand',
+          }),
+          item: expect.objectContaining({ link: nextPageUrl }),
+        }),
+      );
+    });
+
+    it('should prefer the url from the tracking data over the destination URL', async () => {
+      const { getByText } = renderTestLink({
+        trackingData: {
+          ...eventTrackingData,
+          url: 'https://www.bbc.com/pidgin/custom-url',
+        },
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          item: expect.objectContaining({
+            link: 'https://www.bbc.com/pidgin/custom-url',
+          }),
+        }),
+      );
+    });
+
+    it('should include item and group tracker data', async () => {
+      const { getByText } = renderTestLink({
+        trackingData: {
+          ...eventTrackingData,
+          groupTracker: { name: 'group name', itemCount: 20 },
+          itemTracker: { type: 'portrait-video-promo', position: 1 },
+        },
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          group: expect.objectContaining({
+            name: 'group name',
+            itemCount: 20,
+          }),
+          item: expect.objectContaining({
+            type: 'portrait-video-promo',
+            position: 1,
+          }),
+        }),
+      );
+    });
+
+    it('should navigate to the destination URL after dispatching', async () => {
+      const { getByText } = renderTestLink();
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(windowLocationAssignSpy).toHaveBeenCalledWith(nextPageUrl);
+      expect(dispatchViewabilityEvent.mock.invocationCallOrder[0]).toBeLessThan(
+        windowLocationAssignSpy.mock.invocationCallOrder[0],
+      );
+    });
+
+    it('should still dispatch and navigate when the Reverb event fails', async () => {
+      reverbMock.userActionEvent.mockRejectedValueOnce(
+        new Error('Reverb failed'),
+      );
+
+      const { getByText } = renderTestLink();
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(windowLocationAssignSpy).toHaveBeenCalledWith(nextPageUrl);
+    });
+
+    it('should only dispatch once for repeat clicks on the same link', async () => {
+      const { getByText } = renderTestLink();
+
+      await act(() => userEvent.click(getByText('Link')));
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+    });
+
+    it('should not dispatch when resonanceEnabled is false', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: false,
+      };
+
+      const { getByText } = renderTestLink();
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+      expect(windowLocationAssignSpy).toHaveBeenCalledWith(nextPageUrl);
+    });
+
+    it('should not dispatch when tracking is disabled', async () => {
+      const { getByText } = renderTestLink({
+        toggles: { eventTracking: { enabled: false } },
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not dispatch when required ATI tracking props are missing', async () => {
+      const { getByText } = renderTestLink({
+        pageMetadata: null,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
     });
   });
 

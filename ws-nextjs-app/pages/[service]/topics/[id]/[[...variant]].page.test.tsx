@@ -4,6 +4,10 @@ import * as getPageDataModule from '../../../../utilities/pageRequests/getPageDa
 import { getServerSideProps as handleTopicRoute } from './[[...variant]].page';
 
 jest.mock('../../../../utilities/pageRequests/getPageData');
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
 
 describe('handleTopicRoute', () => {
   const mockSetHeader = jest.fn();

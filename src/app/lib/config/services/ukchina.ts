@@ -132,6 +132,7 @@ export const service: ChineseConfig = {
       },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      showMore: '显示更多',
       moreOnThis: '',
       navMenuText: '分类',
       liteSite: {
@@ -414,6 +415,7 @@ export const service: ChineseConfig = {
       },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
+      showMore: '顯示更多',
       navMenuText: '分類',
       liteSite: {
         onboardingMessage:

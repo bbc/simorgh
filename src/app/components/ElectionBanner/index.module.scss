@@ -125,3 +125,13 @@ $ap-election-banner-iframe-heights: (
     margin: 0 auto;
   }
 }
+
+// The banner iframes don't render usefully below 320px, so hide them entirely.
+.electionBannerWrapper,
+.electionBannerWrapperAmp,
+.assocPressElectionBannerWrapper,
+.assocPressElectionBannerWrapperAmp {
+  @media (max-width: #{theme.pixelsToRem-px-to-rem(319)}) {
+    display: none;
+  }
+}

@@ -76,11 +76,15 @@ describe('ElectionBanner', () => {
     process.env = originalEnv;
   });
 
-  it('should not render when isLite is true', () => {
-    const { queryByTestId } = renderElectionBanner({}, { isLite: true });
+  it.each(['test', 'live'])(
+    'should not render when isLite is true in "%s"',
+    appEnv => {
+      process.env.SIMORGH_APP_ENV = appEnv;
+      const { queryByTestId } = renderElectionBanner({}, { isLite: true });
 
-    expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
-  });
+      expect(queryByTestId(ELEMENT_ID)).not.toBeInTheDocument();
+    },
+  );
 
   it('should not render when electionBanner is not configured', () => {
     const { queryByTestId } = renderElectionBanner(
@@ -95,7 +99,7 @@ describe('ElectionBanner', () => {
   describe.each(['canonical', 'amp'])('%s', platform => {
     const isAmp = platform === 'amp';
 
-    it.each(['local', 'test'])(
+    it.each(['local', 'test', 'live'])(
       'should use the correct URL for the iframe when SIMORGH_APP_ENV is "%s"',
       appEnv => {
         process.env.SIMORGH_INCLUDES_BASE_URL =
@@ -119,7 +123,7 @@ describe('ElectionBanner', () => {
           : process.env.SIMORGH_INCLUDES_BASE_URL;
 
         expect(iframeSrc).toEqual(
-          `${domain}/${MOCK_IFRAME_DEV_SRC}${isAmp ? '/amp' : ''}`,
+          `${domain}/${appEnv === 'live' ? MOCK_IFRAME_LIVE_SRC : MOCK_IFRAME_DEV_SRC}${isAmp ? '/amp' : ''}`,
         );
       },
     );
@@ -127,16 +131,19 @@ describe('ElectionBanner', () => {
     it.each([
       ['VJ', mockServiceContext],
       ['Associated Press', mockAssocPressServiceContext],
-    ])('should not render the %s banner in Live', (_, serviceContext) => {
+    ])('should render the %s banner in Live', (_, serviceContext) => {
       process.env.SIMORGH_APP_ENV = 'live';
 
-      const { container } = renderElectionBanner(
+      const { getByTestId } = renderElectionBanner(
         { aboutTags: mockAboutTags },
         { isAmp, service: 'mundo' },
         serviceContext,
       );
 
-      expect(container).toBeEmptyDOMElement();
+      const iframe =
+        getByTestId(ELEMENT_ID).querySelector('iframe, amp-iframe');
+
+      expect(iframe).toBeInTheDocument();
     });
 
     it('should use the matching aboutTag as the banner title when provided', () => {
