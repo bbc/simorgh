@@ -8,7 +8,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import QueryProvider from '.';
 
-jest.mock('./lazy', () => ({
+jest.mock('./PersistentQueryProvider', () => ({
   __esModule: true,
   default: ({ children }: PropsWithChildren) => (
     <div data-testid="persistent-query-provider">{children}</div>
@@ -17,7 +17,6 @@ jest.mock('./lazy', () => ({
 
 const accountContext: AccountContextProps = {
   isIdctaAvailable: true,
-  isHydrated: true,
   isRefreshAvailable: false,
   isSignedIn: false,
   isArticlePersonalizationAvailable: false,
@@ -49,58 +48,17 @@ const StatefulChild = () => {
 };
 
 describe('QueryProvider', () => {
-  it('should render children when no personalization features are available', () => {
+  it('should always wrap children regardless of personalization availability', () => {
     render(
       <TestProvider>
         <p>Page content</p>
       </TestProvider>,
     );
 
-    expect(screen.getByText('Page content')).toBeInTheDocument();
-    expect(
-      screen.queryByTestId('persistent-query-provider'),
-    ).not.toBeInTheDocument();
+    expect(screen.getByTestId('persistent-query-provider')).toContainElement(
+      screen.getByText('Page content'),
+    );
   });
-
-  it.each([
-    {
-      feature: 'articles',
-      isArticlePersonalizationAvailable: true,
-      isTopicPersonalizationAvailable: false,
-    },
-    {
-      feature: 'topics',
-      isArticlePersonalizationAvailable: false,
-      isTopicPersonalizationAvailable: true,
-    },
-    {
-      feature: 'articles and topics',
-      isArticlePersonalizationAvailable: true,
-      isTopicPersonalizationAvailable: true,
-    },
-  ])(
-    'should wrap children when $feature are available even while signed out',
-    ({
-      isArticlePersonalizationAvailable,
-      isTopicPersonalizationAvailable,
-    }) => {
-      render(
-        <TestProvider
-          value={{
-            ...accountContext,
-            isArticlePersonalizationAvailable,
-            isTopicPersonalizationAvailable,
-          }}
-        >
-          <p>Page content</p>
-        </TestProvider>,
-      );
-
-      expect(screen.getByTestId('persistent-query-provider')).toContainElement(
-        screen.getByText('Page content'),
-      );
-    },
-  );
 
   it.each([true, false])(
     'should preserve child state when sign-in changes from %s',
