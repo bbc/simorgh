@@ -23,7 +23,10 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   },
   {
     pageType: HOME_PAGE,
-    activeExperiments: ['test_server_side_experiment_visits_aa'],
+    activeExperiments: [
+      'test_server_side_experiment_visits_aa',
+      'newswb_ws_homepage_account_promo_banner_copy_rerun',
+    ],
   },
 ];
 
