@@ -1,6 +1,5 @@
 import Navigation from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import type {
   Navigation as NavigationType,
   Services,
@@ -134,7 +133,7 @@ export const PidginAmp = () => (
 );
 
 export const StickyNavigation = () => (
-  <ToggleContextProvider toggles={{ stickyNavigation: { enabled: true } }}>
+  <>
     <Component
       service="mundo"
       bbcOrigin="https://www.test.bbc.com"
@@ -155,30 +154,30 @@ export const StickyNavigation = () => (
       ]}
     />
     <main css={{ minHeight: '200vh', maxWidth: '40rem', margin: '0 auto' }}>
-      <h1>{mundoArticleFixture.headline}</h1>
-      <p>Scroll down, then up to reveal the sticky navigation.</p>
-      <figure>
-        <img
-          src={mundoArticleFixture.image.src}
-          alt={mundoArticleFixture.image.alt}
-          css={{ width: '100%', height: 'auto' }}
-        />
-        <figcaption>{mundoArticleFixture.image.alt}</figcaption>
-      </figure>
-      <p>
-        {mundoArticleFixture.byline.name} · {mundoArticleFixture.byline.role}
+    <h1>{mundoArticleFixture.headline}</h1>
+    <p>Scroll down, then up to reveal the sticky navigation.</p>
+    <figure>
+      <img
+        src={mundoArticleFixture.image.src}
+        alt={mundoArticleFixture.image.alt}
+        css={{ width: '100%', height: 'auto' }}
+      />
+      <figcaption>{mundoArticleFixture.image.alt}</figcaption>
+    </figure>
+    <p>
+      {mundoArticleFixture.byline.name} · {mundoArticleFixture.byline.role}
+    </p>
+    {mundoArticleFixture.bodyParagraphs.map((paragraph, index) => (
+      <p
+        // eslint-disable-next-line react/no-array-index-key
+        key={index}
+        data-sticky-nav-anchor={index === 0 || undefined}
+      >
+        {paragraph}
       </p>
-      {mundoArticleFixture.bodyParagraphs.map((paragraph, index) => (
-        <p
-          // eslint-disable-next-line react/no-array-index-key
-          key={index}
-          data-sticky-nav-anchor={index === 0 || undefined}
-        >
-          {paragraph}
-        </p>
-      ))}
+    ))}
     </main>
-  </ToggleContextProvider>
+  </>
 );
 
 PidginAmp.decorators = [AmpDecorator];
