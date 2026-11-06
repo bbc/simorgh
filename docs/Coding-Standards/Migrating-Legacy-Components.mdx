@@ -6,12 +6,14 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 This guide covers moving a component out of `src/app/legacy` into `src/app/components`.
 
-For AI-assisted styling conversions, use the existing
-[`migrate-component-to-scss-modules` skill](../../.github/skills/migrate-component-to-scss-modules/SKILL.md).
-It covers the mechanical conversion and verification; this guide covers the wider legacy
-relocation, dependency clusters and modernisation. Keep styling rules in
-[the styling instructions](../../.github/instructions/styling-standards.instructions.md)
-rather than creating a second migration skill.
+For AI-assisted legacy migrations, use the
+[`modernise-legacy-component` skill](../../.github/skills/modernise-legacy-component/SKILL.md).
+It covers dependency analysis, relocation, TypeScript, consumer compatibility and tests,
+and reuses the
+[`migrate-component-to-scss-modules` skill](../../.github/skills/migrate-component-to-scss-modules/SKILL.md)
+for styling conversion. This guide remains the human-readable reference; shared styling
+rules live in
+[the styling instructions](../../.github/instructions/styling-standards.instructions.md).
 
 > **Target state:** migrated components use **SCSS Modules + CSS custom properties**
 > (`ThemeProviderSCSSModules`), TypeScript, and co-located tests.
