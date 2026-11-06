@@ -12,6 +12,7 @@ import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import {
   render,
   act,
+  fireEvent,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
@@ -58,6 +59,7 @@ interface PageProps {
   lang?: string;
   pathname?: string;
   toggles?: typeof mockToggles;
+  isLite?: boolean;
 }
 
 const renderPage = async ({
@@ -67,6 +69,7 @@ const renderPage = async ({
   lang = 'ko',
   pathname = '/some-podcast',
   toggles = mockToggles,
+  isLite = false,
 }: PageProps) => {
   let result;
   await act(async () => {
@@ -82,6 +85,7 @@ const renderPage = async ({
         pageType: AUDIO_PAGE,
         derivedPageType: 'On Demand Radio',
         pathname,
+        isLite,
         statusCode: 200,
         toggles,
       },
@@ -338,6 +342,79 @@ describe('OnDemand Radio Page ', () => {
     });
 
     expect(getByText('Iyi podcast iraboneka kandi kuri')).toBeInTheDocument();
+  });
+
+  it('expands a long podcast synopsis when continue reading is clicked', async () => {
+    const result = await handleOnDemandAudioRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    });
+    const pageData = {
+      ...result.props.pageData,
+      shortSynopsis: 'Short synopsis',
+      summary: 'Short synopsis',
+      longSynopsis: 'A longer podcast synopsis to read in full.',
+    };
+
+    const { getByTestId, queryByTestId } = await renderPage({
+      pageData,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    });
+
+    expect(getByTestId('continue-reading-button')).toBeInTheDocument();
+
+    fireEvent.click(getByTestId('continue-reading-button'));
+
+    expect(queryByTestId('continue-reading-button')).not.toBeInTheDocument();
+    expect(getByTestId('synopsis')).toHaveTextContent(
+      'A longer podcast synopsis to read in full.',
+    );
+  });
+
+  it('does not show continue reading on Lite podcast pages', async () => {
+    const result = await handleOnDemandAudioRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    });
+    const pageData = {
+      ...result.props.pageData,
+      shortSynopsis: 'Short synopsis',
+      summary: 'Short synopsis',
+      longSynopsis: 'A longer podcast synopsis to read in full.',
+    };
+
+    const { queryByTestId } = await renderPage({
+      pageData,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      isLite: true,
+    });
+
+    expect(queryByTestId('continue-reading-button')).not.toBeInTheDocument();
+  });
+
+  it('renders recent episodes when the recent episodes toggle is enabled', async () => {
+    const result = await handleOnDemandAudioRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+    });
+    const pageData = {
+      ...result.props.pageData,
+      recentEpisodes: gahuzaPodcastPage.data.recentEpisodes?.slice(0, 1),
+    };
+
+    const { getByText } = await renderPage({
+      pageData,
+      service: 'gahuza',
+      toggles: {
+        ...mockToggles,
+        recentPodcastEpisodes: { enabled: true, value: 1 },
+      },
+    });
+
+    expect(getByText('Baza Muganga')).toBeInTheDocument();
+    expect(getByText('Ikiganiro cyo kuwa 08/11/2024')).toBeInTheDocument();
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {

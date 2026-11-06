@@ -1,10 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import * as isTest from '#app/lib/utilities/isTest';
+import * as fetchTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandAudioRoute from './handleOnDemandAudioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
+jest.mock('#app/lib/utilities/fetchToggles');
 
 jest.mock('#app/lib/utilities/isTest', () => {
   const originalModule = jest.requireActual('#app/lib/utilities/isTest');
@@ -37,6 +39,11 @@ describe('handleOnDemandAudioRoute', () => {
         status: 200,
       },
     });
+    jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
+      onDemandRadioSchedule: { enabled: true },
+      recentAudioEpisodes: { enabled: false, value: 4 },
+      recentPodcastEpisodes: { enabled: true, value: 1 },
+    } as never);
   });
 
   it('returns expected props if data fetch succeeds', async () => {
@@ -112,6 +119,18 @@ describe('handleOnDemandAudioRoute', () => {
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
       expect.stringContaining('max-age=30'),
+    );
+  });
+
+  it('includes recent podcast episodes when the toggle is enabled', async () => {
+    const result = await handleOnDemandAudioRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+    });
+
+    expect(result.props.pageData.recentEpisodes).toHaveLength(1);
+    expect(result.props.pageData.recentEpisodes?.[0]).toEqual(
+      expect.objectContaining({ id: 'p0k396c8' }),
     );
   });
 
