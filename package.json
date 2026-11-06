@@ -97,6 +97,7 @@
     "react-router-config": "5.1.1",
     "react-router-dom": "5.3.4",
     "temporal-polyfill": "0.3.0",
+    "three": "0.184.0",
     "undici": "8.12.3",
     "winston": "3.19.0"
   },
