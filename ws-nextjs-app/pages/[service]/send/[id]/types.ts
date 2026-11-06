@@ -129,6 +129,7 @@ export type PageProps = {
       replyEmailAddress: string;
       retentionPeriodDays: string;
       pageBackgroundTemplateUrl?: string;
+      signinRequired?: boolean;
     };
     sections: Section[];
     privacyNotice: {
