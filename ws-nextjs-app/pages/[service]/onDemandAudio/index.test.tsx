@@ -516,10 +516,15 @@ describe('OnDemand Audio Page', () => {
 
       expect(getByText('Apple Podcasts')).toBeInTheDocument();
       expect(getByText('Spotify')).toBeInTheDocument();
-      expect(getByText('Download')).toBeInTheDocument();
 
       const links = getAllByRole('link');
-      expect(links.length).toBeGreaterThanOrEqual(3);
+      expect(links.map(link => link.getAttribute('href'))).toEqual(
+        expect.arrayContaining([
+          'https://podcasts.apple.com/test',
+          'https://spotify.com/test',
+          'https://download.test/episode.mp3',
+        ]),
+      );
     });
 
     it('does not show external links section when links array is empty', async () => {
