@@ -26,7 +26,7 @@ import Amp from './index.amp';
 import {
   STICKY_NAV_ARTICLE_IMAGE_SELECTOR,
   STICKY_NAV_ARTICLE_START_SELECTOR,
-  STICKY_NAVIGATION_COMPONENT,
+  NAVIGATION_TRACKING_COMPONENT,
   STICKY_NAVIGATION_EXPERIMENT,
 } from './config';
 import styles from './index.styles';
@@ -307,7 +307,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const stickyNavExperimentTrackingMetadata = {
     sendOptimizelyEvents: true,
-    optimizelyComponentName: STICKY_NAVIGATION_COMPONENT,
+    optimizelyComponentName: NAVIGATION_TRACKING_COMPONENT,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant: stickyNavExperimentVariant,
   };
@@ -328,7 +328,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
   const stickyNavEventTrackingMetadata = {
-    componentName: STICKY_NAVIGATION_COMPONENT,
+    componentName: NAVIGATION_TRACKING_COMPONENT,
     ...stickyNavExperimentTrackingMetadata,
   };
   const stickyNavClickTrackerHandler = useClickTrackerHandler(

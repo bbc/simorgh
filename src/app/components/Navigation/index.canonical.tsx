@@ -22,7 +22,7 @@ import { Direction } from '#app/models/types/global';
 import useViewTracker from '#app/hooks/useViewTracker';
 import {
   FOCUSABLE_ITEMS_SELECTOR,
-  STICKY_NAVIGATION_COMPONENT,
+  NAVIGATION_TRACKING_COMPONENT,
   STICKY_NAVIGATION_EXPERIMENT,
   STICKY_NAVIGATION_TREATMENT,
 } from './config';
@@ -93,7 +93,7 @@ const CanonicalNavigationContainer = ({
       stickyNavExperimentVariant === STICKY_NAVIGATION_TREATMENT,
   });
   const stickyNavViewTracker = useViewTracker({
-    componentName: STICKY_NAVIGATION_COMPONENT,
+    componentName: NAVIGATION_TRACKING_COMPONENT,
     sendOptimizelyEvents: true,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant: stickyNavExperimentVariant,
