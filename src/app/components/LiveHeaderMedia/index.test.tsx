@@ -1,8 +1,10 @@
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import LiveHeaderMedia from '.';
-import { MediaCollection, Player } from '../MediaLoader/types';
+import { BumpType, MediaCollection, Player } from '../MediaLoader/types';
 import {
+  act,
   screen,
+  waitFor,
   render,
   fireEvent,
 } from '../react-testing-library-with-providers';
@@ -26,18 +28,104 @@ describe('liveMediaStream', () => {
     jest.clearAllMocks();
   });
 
-  it('Displays all components on intial render.', () => {
+  it('Only renders the media player once the watch button is clicked.', () => {
     const { container } = render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
     );
 
-    const playCloseButton = container.querySelector(
-      'button[data-testid="watch-now-close-button"]',
-    );
-    const mediaLoader = container.querySelector('figure');
+    const playCloseButton = screen.getByTestId('watch-now-close-button');
 
     expect(playCloseButton).toBeInTheDocument();
-    expect(mediaLoader).toBeInTheDocument();
+    expect(container.querySelector('figure')).not.toBeInTheDocument();
+
+    fireEvent.click(playCloseButton);
+
+    expect(container.querySelector('figure')).toBeInTheDocument();
+  });
+
+  it('Loads RequireJS before the watch button is clicked.', async () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+
+    await waitFor(() =>
+      expect(
+        document.querySelector(
+          'script[src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"]',
+        ),
+      ).toBeInTheDocument(),
+    );
+  });
+
+  it.each([
+    {
+      title:
+        'Plays the media once the player has loaded after the first click.',
+      warning: null,
+      closeBeforeReady: false,
+      playCalls: 1,
+    },
+    {
+      title:
+        'Does not play the media once the player has loaded for Level 1 warnings and above.',
+      warning: [
+        {
+          warning_code: 'L1',
+          short_description: 'some strong language',
+        },
+      ],
+      closeBeforeReady: false,
+      playCalls: 0,
+    },
+    {
+      title:
+        'Does not play the media if it is closed before the player has loaded.',
+      warning: null,
+      closeBeforeReady: true,
+      playCalls: 0,
+    },
+  ])('$title', async ({ warning, closeBeforeReady, playCalls }) => {
+    const mockPlayer = {
+      load: jest.fn(),
+      bind: jest.fn(),
+      play: jest.fn(),
+      pause: jest.fn(),
+    } satisfies Partial<Player>;
+    const mockBump = { player: () => mockPlayer } as unknown as BumpType;
+    const mockRequire = jest.fn();
+    window.requirejs = mockRequire;
+    window.mediaPlayers = {};
+
+    const mediaCollection = JSON.parse(JSON.stringify(fixtureData));
+    const { version } = mediaCollection[0].model;
+    if (warning) {
+      version.warnings = { warning_text: '', warning };
+    } else {
+      delete version.warnings;
+    }
+
+    render(
+      <LiveHeaderMedia
+        mediaCollection={mediaCollection as MediaCollection[]}
+      />,
+    );
+
+    const playCloseButton = screen.getByTestId('watch-now-close-button');
+    fireEvent.click(playCloseButton);
+    if (closeBeforeReady) fireEvent.click(playCloseButton);
+
+    const initialisePlayer = mockRequire.mock.calls[0][1];
+    await act(async () => initialisePlayer(mockBump));
+
+    expect(mockPlayer.play).not.toHaveBeenCalled();
+
+    const playlistLoaded = mockPlayer.bind.mock.calls.find(
+      ([event]) => event === 'playlistLoaded',
+    )?.[1];
+    playlistLoaded();
+    playlistLoaded();
+
+    expect(mockPlayer.play).toHaveBeenCalledTimes(playCalls);
   });
 
   it('Displays a warning message when needed.', () => {

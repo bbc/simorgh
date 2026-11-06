@@ -75,6 +75,7 @@ jest.mock('#app/components/PortraitVideoCarousel', () => ({
 jest.mock('#app/components/MediaLoader', () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="media-loader" />),
+  BumpLoader: () => null,
 }));
 
 jest.mock('#app/hooks/useToggle', () => ({
