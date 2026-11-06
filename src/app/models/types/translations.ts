@@ -24,6 +24,12 @@ export interface Translations {
   showMore?: string;
   moreOnThis?: string;
   navMenuText: string;
+  serviceDiscovery?: {
+    title: string;
+    intro: string;
+    learnMoreLabel: string;
+    learnMoreUrl: string;
+  };
   liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;
