@@ -35,6 +35,7 @@ interface FollowTopicData {
 - Reuses `SaveButton` for consistent visual and interaction patterns.
 - Handles label transitions for loading, updating, followed and unfollow intent.
 - Sends click and view tracking events.
+- `loadQueryConsumer` loads the button and provider in parallel, client-side. A translated loading button is shown while loading; the guest button is shown only if loading fails. Failures are logged, and page content and embeds remain mounted.
 
 - Reuses Save Article's `ActionTooltip` for follow, unfollow and error feedback, including dismissal, accessibility and My News links.
 - Only user actions trigger tooltips; offline actions show errors immediately.
