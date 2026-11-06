@@ -36,7 +36,7 @@ interface GetOnDemandAudioLinkedDataProps {
   durationISO8601: string;
   releaseDateTimeStamp?: number;
   externalLinks?: OnDemandAudioExternalLink[];
-  recentEpisodes?: OnDemandAudioRecentEpisode[];
+  recentEpisodes?: OnDemandAudioRecentEpisode[] | null;
 }
 
 const PODCAST_EPISODE_PATHNAME_REGEX =
