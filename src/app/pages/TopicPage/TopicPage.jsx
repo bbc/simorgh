@@ -2,6 +2,7 @@ import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import FollowTopicButton from '#app/components/FollowTopicButton';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import parseRoute from '#app/routes/utils/parseRoute';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
@@ -72,6 +73,7 @@ const TopicPage = ({ pageData }) => {
         <div css={styles.inner}>
           <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
+          <OptimizelyPageMetrics trackPageComplete trackPageDepth />
           <MetadataContainer
             title={metadataTitle}
             socialHeadline={metadataBaseTitle}
