@@ -10,6 +10,8 @@ permissions:
 
 jobs:
   cypress-run:
+    # Fixed name so the check is the same whether the job runs or is skipped. This is the required check.
+    name: Cypress Application E2E
     # E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
     if: github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e')
     runs-on: ubuntu-latest
@@ -52,20 +54,3 @@ jobs:
           build: yarn build
           start: yarn start
           command: yarn cypress:application
-
-  # Required check for this workflow. Passes when the E2Es pass, or when they're skipped on a PR.
-  e2e-result:
-    name: Cypress Application E2E result
-    needs: [cypress-run]
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: E2Es failed or were cancelled
-        if: >-
-          contains(needs.*.result, 'failure') ||
-          contains(needs.*.result, 'cancelled') ||
-          (github.event_name == 'merge_group' && contains(needs.*.result, 'skipped'))
-        run: exit 1
-      - name: E2Es skipped
-        if: contains(needs.*.result, 'skipped') && github.event_name != 'merge_group'
-        run: echo "::notice::E2Es skipped on this PR. They run in the merge queue, or add the 'run-e2e' label to run them here."
