@@ -312,15 +312,55 @@ describe('FollowTopicButton', () => {
     },
   );
 
-  it('renders translated loading fallback that cannot open sign-in modal', async () => {
-    render(<FollowTopicButtonLoadingFallback />, { service: 'hindi' });
+  it.each([
+    { error: undefined, isLoading: undefined },
+    { error: null, isLoading: true },
+    { error: new Error('Chunk failed'), isLoading: true },
+    { error: null, isLoading: false },
+  ])(
+    'keeps translated loading UI without opening sign-in ($isLoading, $error)',
+    async ({ error, isLoading }) => {
+      render(
+        <FollowTopicButtonLoadingFallback
+          error={error}
+          isLoading={isLoading}
+        />,
+        { service: 'hindi', ...signedInOptions },
+      );
 
-    expect(screen.getByTestId('follow-topic-btn-loading')).toHaveTextContent(
-      LOADING_LABEL,
+      const loadingButton = screen.getByTestId('follow-topic-btn-loading');
+      expect(loadingButton).toHaveTextContent(LOADING_LABEL);
+      expect(
+        screen.queryByTestId('follow-topic-btn-guest'),
+      ).not.toBeInTheDocument();
+      await userEvent.click(loadingButton);
+      expect(
+        screen.queryByTestId('follow-topic-sign-in-modal'),
+      ).not.toBeInTheDocument();
+    },
+  );
+
+  it('shows an interactive guest button only after chunk loading fails', async () => {
+    const error = new Error('Chunk failed');
+    const { rerender } = render(
+      <FollowTopicButtonLoadingFallback isLoading />,
+      { service: 'hindi', ...signedInOptions },
     );
 
-    await userEvent.click(screen.getByTestId('follow-topic-btn-loading'));
+    rerender(
+      <FollowTopicButtonLoadingFallback error={error} isLoading={false} />,
+    );
 
+    expect(
+      screen.queryByTestId('follow-topic-btn-loading'),
+    ).not.toBeInTheDocument();
+    await userEvent.click(screen.getByTestId('follow-topic-btn-guest'));
+    expect(
+      screen.getByTestId('follow-topic-sign-in-modal'),
+    ).toBeInTheDocument();
+
+    rerender(<FollowTopicButtonLoadingFallback error={error} isLoading />);
+    expect(screen.getByTestId('follow-topic-btn-loading')).toBeInTheDocument();
     expect(
       screen.queryByTestId('follow-topic-sign-in-modal'),
     ).not.toBeInTheDocument();

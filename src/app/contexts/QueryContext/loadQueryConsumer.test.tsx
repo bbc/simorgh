@@ -10,6 +10,8 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import loggerMock from '#testHelpers/loggerMock';
+import { CLIENT_COMPONENT_RENDER_ERROR } from '#lib/logger.const';
 import loadQueryConsumer from './loadQueryConsumer';
 
 const renderOptions = {
@@ -43,6 +45,7 @@ describe('loadQueryConsumer', () => {
   beforeEach(() => {
     window.localStorage.clear();
     fetchStatus.mockClear();
+    loggerMock.error.mockClear();
   });
 
   it('waits for the consumer and supplies its query context and props', async () => {
@@ -66,12 +69,19 @@ describe('loadQueryConsumer', () => {
     expect(await screen.findByText('Query consumer')).toBeInTheDocument();
   });
 
-  it('propagates loading failures instead of mounting an unwrapped consumer', async () => {
+  it('logs and propagates loading failures instead of mounting an unwrapped consumer', async () => {
     const error = new Error('Failed to load query consumer');
 
     await expect(
       loadQueryConsumer<{ name: string }>(Promise.reject(error)),
     ).rejects.toBe(error);
+    expect(loggerMock.error).toHaveBeenCalledWith(
+      CLIENT_COMPONENT_RENDER_ERROR,
+      {
+        componentName: 'QueryConsumer',
+        error: error.message,
+      },
+    );
   });
 
   it('shares and persists query data across independently loaded consumers and subsequent mounts', async () => {
