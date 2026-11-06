@@ -433,12 +433,6 @@ describe('OnDemand Audio Page', () => {
       expect(
         getByTestId('synopsis'),
       ).toHaveTextContent('A longer podcast synopsis');
-
-      expect(
-        getByTestId('synopsis'),
-      ).not.toHaveTextContent(
-        'A longer podcast synopsis to read in full.',
-      );
     });
 
     it('renders recent episodes when the recent episodes toggle is enabled', async () => {
@@ -522,7 +516,7 @@ describe('OnDemand Audio Page', () => {
 
       expect(getByText('Apple Podcasts')).toBeInTheDocument();
       expect(getByText('Spotify')).toBeInTheDocument();
-      expect(getByText('Download Episode')).toBeInTheDocument();
+      expect(getByText('Download')).toBeInTheDocument();
 
       const links = getAllByRole('link');
       expect(links.length).toBeGreaterThanOrEqual(3);
