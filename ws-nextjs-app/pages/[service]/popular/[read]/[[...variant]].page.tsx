@@ -67,7 +67,6 @@ export const getServerSideProps = withRequestProps(async context => {
       props: {
         service,
         status,
-        timeOnServer: Date.now(),
         variant,
         pageType: MOST_READ_PAGE,
         pathname: resolvedUrlWithoutQuery,
@@ -110,7 +109,6 @@ export const getServerSideProps = withRequestProps(async context => {
       pathname: resolvedUrlWithoutQuery,
       service,
       status: data.status,
-      timeOnServer: Date.now(),
       variant,
     },
   };

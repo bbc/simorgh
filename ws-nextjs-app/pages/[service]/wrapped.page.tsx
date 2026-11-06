@@ -89,7 +89,6 @@ export const getServerSideProps = withRequestProps(async context => {
       pathname: context.resolvedUrl,
       service,
       status: 200,
-      timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
 });
