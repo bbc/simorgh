@@ -1,0 +1,12 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  padding-top: theme.$spacings-quadruple;
+  padding-bottom: theme.$spacings-quadruple;
+}
+
+h2.heading {
+  padding-top: theme.$spacings-triple;
+  padding-bottom: theme.$spacings-full;
+  color: theme.$palette-white;
+}
