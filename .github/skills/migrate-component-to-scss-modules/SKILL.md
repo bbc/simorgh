@@ -9,6 +9,11 @@ Converts a component in `src/app/components/**` from Emotion (`index.styles.ts` 
 
 Styling *rules* live in `.github/instructions/styling-standards.instructions.md` and auto-apply to `src/app/components/**`. This skill covers the *mechanical conversion*: token mapping, workflow and verification.
 
+When the work also involves moving code out of `src/app/legacy`, use the
+[`modernise-legacy-component` skill](../modernise-legacy-component/SKILL.md)
+for dependency-cluster planning, relocation and broader modernisation. It reuses
+this skill for styling; apply the triage below before starting the conversion.
+
 ## Step 1: Triage before starting
 
 Check the component against these exclusions and **stop and report** if any apply, rather than working around them:

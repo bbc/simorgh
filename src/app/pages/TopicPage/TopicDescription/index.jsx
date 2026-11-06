@@ -1,13 +1,4 @@
 import styled from '@emotion/styled';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
 
 const Paragraph = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
@@ -16,13 +7,13 @@ const Paragraph = styled.p`
     props.theme.isDarkUi
       ? props.theme.palette.WHITE
       : props.theme.palette.GREY_10};
-  padding-top: ${GEL_SPACING_DBL};
+  padding-top: ${({ theme: { spacings } }) => `${spacings.DOUBLE}rem`};
   margin: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_TRPL};
+  ${({ theme: { mq } }) => mq.GROUP_3_MIN_WIDTH} {
+    padding-top: ${({ theme: { spacings } }) => `${spacings.TRIPLE}rem`};
   }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: calc(50% - ${GEL_SPACING});
+  ${({ theme: { mq } }) => mq.GROUP_4_MIN_WIDTH} {
+    width: ${({ theme: { spacings } }) => `calc(50% - ${spacings.FULL}rem)`};
   }
 `;
 
