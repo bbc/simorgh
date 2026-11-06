@@ -2,7 +2,11 @@ import { act, PropsWithChildren } from 'react';
 import { screen, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { PageTypes, Services } from '#app/models/types/global';
-import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  HOME_PAGE,
+  TOPIC_PAGE,
+} from '#app/routes/utils/pageTypes';
 import {
   notifyDecision,
   resetDecisionStore,
@@ -50,6 +54,40 @@ describe('OptimizelyPageMetrics', () => {
     experimentsForPageMetrics.splice(0, experimentsForPageMetrics.length);
     resetDecisionStore();
   });
+
+  it.each([true, false])(
+    'tracks Hindi topic page metrics only after activation (activated: %s)',
+    activated => {
+      const actualExperiments = jest.requireActual<
+        typeof import('./experimentsForPageMetrics')
+      >('./experimentsForPageMetrics').default;
+      experimentsForPageMetrics.push(...actualExperiments);
+
+      if (activated) {
+        notifyDecision('newswb_ws_hindi_editorial_picks_follow_promo');
+      }
+
+      render(
+        <ContextWrap pageType={TOPIC_PAGE} service="hindi">
+          <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+        </ContextWrap>,
+      );
+
+      if (activated) {
+        expect(
+          screen.getByTestId('page-complete-tracking'),
+        ).toBeInTheDocument();
+        expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
+      } else {
+        expect(
+          screen.queryByTestId('page-complete-tracking'),
+        ).not.toBeInTheDocument();
+        expect(
+          screen.queryByTestId('scroll-depth-tracking'),
+        ).not.toBeInTheDocument();
+      }
+    },
+  );
 
   it('should not include tracking when isAmp is true', () => {
     experimentsForPageMetrics.push({
