@@ -6,7 +6,7 @@ import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleP
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveArticleButtonAuthenticated from './SaveArticleButtonAuthenticated/lazy';
 import SaveArticleButtonGuest from './SaveArticleButtonGuest';
-import styles from './index.module.scss';
+import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
   saveArticlePageData: SaveArticlePageData;
@@ -33,7 +33,7 @@ const SaveArticleButton = (props: SaveArticleButtonProps) => {
       <noscript>
         <style>{`#${SAVE_ARTICLE_BUTTON_ID} { display: none; }`}</style>
       </noscript>
-      <div className={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
+      <div css={styles.buttonWrapper} id={SAVE_ARTICLE_BUTTON_ID}>
         {isArticlePersonalizationEnabled ? (
           <SaveArticleButtonAuthenticated {...props} />
         ) : (

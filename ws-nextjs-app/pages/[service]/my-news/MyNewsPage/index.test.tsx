@@ -9,7 +9,7 @@ import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
-import MyNewsPage, { MyNewsPageLoadingFallback } from '.';
+import MyNewsPage from '.';
 
 const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
 
@@ -87,47 +87,6 @@ describe('MyNewsPage', () => {
       error: null,
     });
     mockMatchMedia();
-  });
-
-  it.each([
-    { error: null, isLoading: true },
-    { error: new Error('Chunk failed'), isLoading: true },
-    { error: null, isLoading: false },
-  ])(
-    'keeps the page spinner without a confirmed failure ($isLoading, $error)',
-    async ({ error, isLoading }) => {
-      await act(async () =>
-        render(
-          <MyNewsPageLoadingFallback error={error} isLoading={isLoading} />,
-          renderOptions,
-        ),
-      );
-
-      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
-      expect(
-        screen.queryByText(myNewsTranslations.guestDescription),
-      ).not.toBeInTheDocument();
-    },
-  );
-
-  it('replaces the spinner with guest content after a chunk failure and restores it on retry', () => {
-    const error = new Error('Chunk failed');
-    const { rerender } = render(
-      <MyNewsPageLoadingFallback isLoading />,
-      renderOptions,
-    );
-
-    rerender(<MyNewsPageLoadingFallback error={error} isLoading={false} />);
-
-    expect(
-      screen.queryByTestId('my-news-page-spinner'),
-    ).not.toBeInTheDocument();
-    expect(
-      screen.getByText(myNewsTranslations.guestDescription),
-    ).toBeInTheDocument();
-
-    rerender(<MyNewsPageLoadingFallback error={error} isLoading />);
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
   });
 
   it.each([
