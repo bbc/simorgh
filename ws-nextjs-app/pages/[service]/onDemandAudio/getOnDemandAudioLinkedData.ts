@@ -10,8 +10,10 @@ export type OnDemandAudioRecentEpisode = {
   id: string;
   episodeTitle?: string;
   brandTitle?: string;
-  timestamp: number;
+  timestamp: number | string;
   duration: string;
+  image?: string;
+  altText?: string;
 };
 
 interface GetOnDemandAudioLinkedDataProps {
@@ -34,7 +36,7 @@ interface GetOnDemandAudioLinkedDataProps {
   durationISO8601: string;
   releaseDateTimeStamp?: number;
   externalLinks?: OnDemandAudioExternalLink[];
-  recentEpisodes?: OnDemandAudioRecentEpisode[];
+  recentEpisodes?: OnDemandAudioRecentEpisode[] | null;
 }
 
 const PODCAST_EPISODE_PATHNAME_REGEX =

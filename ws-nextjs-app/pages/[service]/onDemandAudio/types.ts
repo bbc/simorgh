@@ -7,6 +7,7 @@ import {
 } from '#app/models/types/media';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { Component } from 'react';
+import { OnDemandAudioRecentEpisode } from './getOnDemandAudioLinkedData';
 
 export interface OnDemandAudioProps {
   pageData: {
@@ -37,7 +38,7 @@ export interface OnDemandAudioProps {
     durationISO8601: string;
     thumbnailImageUrl: string;
     radioScheduleData?: RadioScheduleData[];
-    recentEpisodes: [];
+    recentEpisodes: OnDemandAudioRecentEpisode[] | null;
     brandId: string;
     episodeTitle: string;
     externalLinks: Array<{

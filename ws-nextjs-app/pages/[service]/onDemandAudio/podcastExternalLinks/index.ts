@@ -21,7 +21,7 @@ export default async ({
   variant,
   brandId,
   versionId,
-}: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
+}: PodcastExternalLinksParams): Promise<ExternalLinks> => {
   try {
     const { default: externalLinks } = await import(`./${service}`);
     if (!externalLinks) return [];
