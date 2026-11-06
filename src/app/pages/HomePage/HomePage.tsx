@@ -1,21 +1,14 @@
 import { Fragment, use } from 'react';
 import dynamic from 'next/dynamic';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import ElectionBanner from '#app/components/ElectionBanner';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
-import {
-  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
-  HOMEPAGE_RELATED_TOPIC_SERVICES,
-  isHomepageRelatedTopicVariation,
-} from '#app/lib/experiments/homepageRelatedTopicPromos';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
-import { RequestContext } from '#app/contexts/RequestContext';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -33,6 +26,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 const Globe = dynamic(() => import('#app/components/3d/3dComponents/Globe'), {
   ssr: false,
@@ -62,7 +56,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-    service,
   } = use(ServiceContext);
   const { pathname } = use(RequestContext);
   const isLanguagesPage = pathname === LANGUAGES_PATHNAME;
@@ -70,24 +63,11 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
 
-  // experiment: newswb_ws_homepage_related_topic_promos
-  // read the server assignment before rendering and activate both groups on load
-  const relatedTopicVariant = useOptimizelyVariation({
-    experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
+  // Activate server-side experiment to enable visit/page-view tracking
+  useOptimizelyVariation({
+    experimentName: 'test_server_side_experiment_visits_aa',
     experimentType: ExperimentType.SERVER_SIDE,
   });
-  const relatedTopicExperimentProps =
-    HOMEPAGE_RELATED_TOPIC_SERVICES.includes(service) &&
-    isHomepageRelatedTopicVariation(relatedTopicVariant)
-      ? {
-          experimentName: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
-          experimentVariant: relatedTopicVariant,
-          sendOptimizelyEvents: true,
-        }
-      : undefined;
-  const showRelatedTopicExperiment =
-    Boolean(relatedTopicExperimentProps) &&
-    relatedTopicVariant === 'related_topic';
 
   const scrollDepthRef = useScrollDepthTracker(
     'homepage-scroll-depth',
@@ -104,6 +84,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
+      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer
         title={metadataTitle}
         lang={lang}
@@ -127,12 +108,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
-          <ElectionBanner className="home-page-election-banner" />
-          {isLanguagesPage && (
-            <div css={styles.margins}>
-              <Globe />
-            </div>
-          )}
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             {curations.map(
               (
@@ -175,8 +151,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       {...curationProps}
-                      experimentProps={relatedTopicExperimentProps}
-                      showRelatedTopicExperiment={showRelatedTopicExperiment}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </Fragment>
@@ -186,9 +160,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {relatedTopicExperimentProps && (
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
-      )}
     </>
   );
 };

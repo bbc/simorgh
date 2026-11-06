@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (forced-colors: active) {
+  .spinner {
+    fill: CanvasText;
+  }
+}

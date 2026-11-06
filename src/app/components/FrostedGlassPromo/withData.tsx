@@ -10,7 +10,7 @@ import getOriginCode from '../../lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '../../lib/utilities/imageSrcHelpers/locator';
 import { RequestContext } from '../../contexts/RequestContext';
 
-import styles from './styles';
+import styles from './index.module.scss';
 import { FormattedPromo, ImageProps, PromoProps } from './types';
 import { OptimoBlock } from '../../models/types/optimo';
 
@@ -77,12 +77,9 @@ const TimestampFooterWithAmp = (props: PromoProps) => {
 
   return (
     <PromoTimestamp
-      css={theme => [
-        styles.timestamp,
-        {
-          color: isAmp ? theme.palette.BLACK : theme.palette.GREY_3,
-        },
-      ]}
+      className={`${styles.timestamp} ${
+        isAmp ? styles.timestampAmp : styles.timestampCanonical
+      }`}
       serviceDatetimeLocale={props?.item?.serviceDatetimeLocale}
     >
       {props?.item?.timestamp}

@@ -1,47 +1,76 @@
 import { useEffect, useRef } from 'react';
 import {
   buildCurrentMetadata,
+  buildTopicMetadata,
   compareMetadataWithSaved,
+  type FollowTopicData,
 } from '#app/lib/uasApi/uasUtility';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { Services } from '#app/models/types/global';
 
-interface UseUASMetadataSyncParams {
+interface ArticleMetadataSyncParams {
   saveArticlePageData: SaveArticlePageData;
   articleId: string;
-  service: Services;
   isSaved: boolean;
   savedArticleMetadata?: Record<string, unknown>;
-  onMetadataOutOfDate?: () => void;
 }
 
+interface TopicMetadataSyncParams {
+  followTopicPageData: FollowTopicData;
+  topicId: string;
+  isFollowed: boolean;
+  savedTopicMetadata?: Record<string, unknown>;
+}
+
+type UseUASMetadataSyncParams = (
+  | ArticleMetadataSyncParams
+  | TopicMetadataSyncParams
+) & {
+  service: Services;
+  onMetadataOutOfDate?: () => void;
+};
+
+const getMetadataSyncData = (params: UseUASMetadataSyncParams) => {
+  if ('followTopicPageData' in params) {
+    const { followTopicPageData, topicId, isFollowed, savedTopicMetadata } =
+      params;
+
+    return {
+      pageData: followTopicPageData,
+      resourceId: topicId,
+      resourceType: 'topic',
+      isActive: isFollowed,
+      savedMetadata: savedTopicMetadata,
+    };
+  }
+
+  const { saveArticlePageData, articleId, isSaved, savedArticleMetadata } =
+    params;
+
+  return {
+    pageData: saveArticlePageData,
+    resourceId: articleId,
+    resourceType: 'article',
+    isActive: isSaved,
+    savedMetadata: savedArticleMetadata,
+  };
+};
+
 /**
- * Hook that automatically detects when saved article metadata is out of date
- * by comparing current article metadata with the last saved version.
- *
- * Uses hasSyncedRef to prevent duplicate sync calls on the same article load,
- * ensuring the comparison only happens once when conditions are met.
- *
- * @param saveArticlePageData - Current article data from the page
- * @param articleId - Unique identifier for the article
- * @param service - BBC service name
- * @param isSaved - Whether the article is currently saved to UAS
- * @param savedArticleMetadata - Previously saved article metadata
- * @param onMetadataOutOfDate - Callback triggered when metadata changes are detected
+ * Detects stale metadata for saved articles and followed topics.
+ * Syncs at most once per resource and service until it is removed or its
+ * saved metadata becomes unavailable.
  */
 
-const useUASMetadataSync = ({
-  saveArticlePageData,
-  articleId,
-  service,
-  isSaved,
-  savedArticleMetadata,
-  onMetadataOutOfDate,
-}: UseUASMetadataSyncParams): void => {
+const useUASMetadataSync = (params: UseUASMetadataSyncParams): void => {
   const hasSyncedRef = useRef(false);
 
+  const { service, onMetadataOutOfDate } = params;
+  const { pageData, resourceId, resourceType, isActive, savedMetadata } =
+    getMetadataSyncData(params);
+
   useEffect(() => {
-    if (!isSaved || !savedArticleMetadata) {
+    if (!isActive || !savedMetadata) {
       hasSyncedRef.current = false;
       return;
     }
@@ -51,26 +80,27 @@ const useUASMetadataSync = ({
       return;
     }
 
-    const currentMetadata = buildCurrentMetadata(saveArticlePageData, {
-      articleId,
-      service,
-    });
+    const currentMetadata =
+      'topicId' in pageData
+        ? buildTopicMetadata(pageData, service)
+        : buildCurrentMetadata(pageData, { articleId: resourceId, service });
+
     const comparisonResult = compareMetadataWithSaved(
       currentMetadata,
-      savedArticleMetadata,
+      savedMetadata,
     );
 
     if (comparisonResult.hasChanges) {
       hasSyncedRef.current = true;
       onMetadataOutOfDate?.();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
-    saveArticlePageData,
-    articleId,
+    pageData,
+    resourceId,
     service,
-    isSaved,
-    savedArticleMetadata,
+    isActive,
+    savedMetadata,
+    resourceType,
     onMetadataOutOfDate,
   ]);
 };

@@ -19,23 +19,19 @@ const cookieSetterSpy = jest.spyOn(Cookies, 'set');
 
 describe('useConsentBanners', () => {
   beforeEach(() => {
+    window.location.href = 'https://www.bbc.com';
+
     Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
     Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
     Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
-
-    jest
-      .spyOn(window.location, 'hostname', 'get')
-      .mockImplementation(() => 'www.bbc.com');
-
-    jest
-      .spyOn(window.location, 'origin', 'get')
-      .mockImplementation(() => 'https://www.bbc.com');
-    jest
-      .spyOn(window.location, 'protocol', 'get')
-      .mockImplementation(() => 'https:');
   });
 
   afterEach(() => {
+    [PRIVACY_COOKIE, EXPLICIT_COOKIE, POLICY_COOKIE].forEach(name => {
+      Cookies.remove(name);
+      Cookies.remove(name, { domain: '.bbc.com' });
+      Cookies.remove(name, { domain: '.bbc.co.uk' });
+    });
     jest.clearAllMocks();
   });
 
@@ -146,9 +142,7 @@ describe('useConsentBanners', () => {
     });
 
     it('sets PRIVACY_COOKIE without domain restrictions', () => {
-      jest
-        .spyOn(window.location, 'hostname', 'get')
-        .mockImplementation(() => 'www.bbc.co.uk');
+      window.location.href = 'https://www.bbc.co.uk';
 
       Cookies.set(PRIVACY_COOKIE, null);
       cookieSetterSpy.mockClear();

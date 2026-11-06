@@ -5,7 +5,6 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -19,28 +18,37 @@ import { Summary } from '../../../models/types/curationData';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
 
-const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
+const getStyles = (
+  promoCount: number,
+  i: number,
+  mq: Theme['mq'],
+  desktopOnly = false,
+) => {
   return css({
-    [mq.GROUP_1_MAX_WIDTH]: {
-      ...SMALL[promoCount - 1][i],
-    },
-    [mq.GROUP_2_ONLY]: {
-      ...MOBILE[promoCount - 1][i],
-    },
-    [mq.GROUP_3_ONLY]: {
-      ...TABLET[promoCount - 1][i],
-    },
+    ...(!desktopOnly && {
+      [mq.GROUP_1_MAX_WIDTH]: {
+        ...SMALL[promoCount - 1][i],
+      },
+      [mq.GROUP_2_ONLY]: {
+        ...MOBILE[promoCount - 1][i],
+      },
+      [mq.GROUP_3_ONLY]: {
+        ...TABLET[promoCount - 1][i],
+      },
+    }),
     [mq.GROUP_4_MIN_WIDTH]: {
       ...DESKTOP[promoCount - 1][i],
     },
   });
 };
+
 const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  showRelatedTopicExperiment = false,
+  showRelatedTopic,
+  isVideoCollection = false,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -73,7 +81,11 @@ const HiearchicalGrid = ({
 
   return (
     <div data-testid="hierarchical-grid">
-      <ul role="list" css={styles.list} data-testid="topic-promos">
+      <ul
+        role="list"
+        css={[isVideoCollection ? styles.videoCollectionList : styles.list]}
+        data-testid="topic-promos"
+      >
         {promoItems.map((promo, i) => {
           const duration = moment.duration(promo.duration, 'seconds');
           const separator = ',';
@@ -90,11 +102,13 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, relatedTopic } = promo;
-          const relatedTopicToShow = getRelatedTopicForPromo(
-            relatedTopic,
-            promo.type,
-            showRelatedTopicExperiment,
-          );
+          const relatedTopicToShow =
+            showRelatedTopic &&
+            promo.type === 'article' &&
+            relatedTopic?.title?.trim() &&
+            relatedTopic.link?.url
+              ? relatedTopic
+              : null;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
@@ -219,7 +233,8 @@ const HiearchicalGrid = ({
               key={promo.id}
               css={({ mq }: Theme) => [
                 styles.item,
-                getStyles(promoItems.length, i, mq),
+                isVideoCollection && styles.videoCollection,
+                getStyles(promoItems.length, i, mq, isVideoCollection),
               ]}
             >
               {inSituMediaBlocks ? (
@@ -245,6 +260,9 @@ const HiearchicalGrid = ({
                     fetchPriority={fetchpriority}
                     isAmp={isAmp}
                     isPortraitImage={promo.isPortraitImage}
+                    {...(isVideoCollection && { mobileSize: '100vw' })}
+                    {...(isVideoCollection &&
+                      i === 0 && { tabletSize: '100vw' })}
                   >
                     {isMedia && (
                       <Promo.MediaIcon type={promo.type}>

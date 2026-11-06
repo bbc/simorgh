@@ -21,6 +21,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  showMore?: string;
   moreOnThis?: string;
   navMenuText: string;
   serviceDiscovery?: {
@@ -69,6 +70,10 @@ export interface Translations {
     title: string;
     description: string;
     closeLabel: string;
+    followTopic?: {
+      title: string;
+      description: string;
+    };
   };
   googlePreferredSource?: {
     linkText: string;
@@ -97,11 +102,36 @@ export interface Translations {
     description: string;
     guestDescription: string;
     noArticles: string;
-    errorText: string;
+    savedArticlesErrorText: string;
     loading: string;
     noJsDescription: string;
+    followedTopicsTitle: string;
+    followedTopicsErrorText: string;
+    noFollowedTopics: string;
+    seeMoreTopics: string;
+    seeLessTopics: string;
+    contentErrorText: string;
   };
   actionTooltip?: {
+    success: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    error: {
+      title: string;
+      body: string;
+    };
+    removed: {
+      title: string;
+      bodyBefore: string;
+      bodyAfter: string;
+    };
+    myNewsLinkText: string;
+    myNewsUrl: string;
+    closeLabel: string;
+  };
+  followTopicTooltip?: {
     success: {
       title: string;
       bodyBefore: string;

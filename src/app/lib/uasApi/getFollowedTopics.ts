@@ -61,7 +61,7 @@ const belongsToService = (item: UasFollowItem, service?: Services): boolean => {
 
 interface SafeFollowsResponse {
   items: UasFollowItem[];
-  pagination?: UasFollowsResponse['pagination'];
+  total?: number;
 }
 
 const isUasFollowItem = (item: unknown): item is UasFollowItem =>
@@ -75,7 +75,7 @@ const toSafeFollowsResponse = (data: unknown): SafeFollowsResponse => {
 
   return {
     items: Array.isArray(body.items) ? body.items.filter(isUasFollowItem) : [],
-    pagination: body.pagination,
+    total: typeof body.total === 'number' ? body.total : undefined,
   };
 };
 
@@ -107,7 +107,7 @@ const getFollowedTopics = async ({
     });
 
     const data: unknown = await response.json();
-    const { items, pagination } = toSafeFollowsResponse(data);
+    const { items, total } = toSafeFollowsResponse(data);
 
     const followedTopics = items
       .filter(hasRenderableMetadata)
@@ -116,14 +116,17 @@ const getFollowedTopics = async ({
 
     return {
       followedTopics,
-      total: followedTopics.length,
-      itemsPerPage: pagination?.itemsPerPage ?? itemsPerPage,
-      startIndex: pagination?.startIndex ?? startIndex,
+      // Raw UAS total drives pagination math; matches getRecentActivity's precedent.
+      total: total ?? 0,
+      itemsPerPage,
+      startIndex,
     };
   } catch (error) {
-    logger.error(UAS_API_ERROR, {
-      error: error instanceof Error ? error.message : 'Unknown error',
-    });
+    if (!signal?.aborted) {
+      logger.error(UAS_API_ERROR, {
+        error: error instanceof Error ? error.message : 'Unknown error',
+      });
+    }
 
     throw error;
   }

@@ -1,6 +1,6 @@
 import deriveVariant from '#utilities/deriveVariant';
 import dynamic from 'next/dynamic';
-import { GetServerSidePropsContext } from 'next';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -43,9 +43,7 @@ const isValidRoute = (slugs: SlugTypes) => {
   return false;
 };
 
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext,
-) => {
+export const getServerSideProps = withRequestProps(async context => {
   let routingInfoLogger = logger.debug;
   const { resolvedUrl, params } = context;
   const {
@@ -138,6 +136,6 @@ export const getServerSideProps = async (
       ...baseProps,
     },
   };
-};
+});
 
 export default LiveTvLayout;

@@ -139,8 +139,8 @@ describe('useUASFollowedTopics', () => {
 
     expect(mockTrackError).toHaveBeenCalledWith({
       error,
-      feature: ERROR_TRACKING_FEATURES.UAS,
-      action: UAS_ERROR_ACTIONS.FOLLOWED_TOPICS,
+      feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+      action: UAS_ERROR_ACTIONS.FETCH_ACTIVITY,
     });
   });
 

@@ -80,6 +80,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Tin liên quan',
       relatedTopics: 'Chủ đề liên quan',
+      showMore: 'Xem thêm',
       moreOnThis: '',
       navMenuText: 'Mục',
       liteSite: {

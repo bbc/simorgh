@@ -67,19 +67,19 @@ module.exports = {
         destination: '/sw.js',
       },
       {
-        source: `/:service/watch/:id(${optimoIdPattern})`,
+        source: `/:service/watch/:id(${optimoIdPattern})(\\.app)?`,
         destination: '/:service/articles/:id',
       },
       {
-        source: `/:service/watch/:id(${optimoIdPattern})/:variant`,
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
         destination: '/:service/articles/:id/:variant',
       },
       {
-        source: `/:service/listen/:id(${optimoIdPattern})`,
+        source: `/:service/listen/:id(${optimoIdPattern})(\\.app)?`,
         destination: '/:service/articles/:id',
       },
       {
-        source: `/:service/listen/:id(${optimoIdPattern})/:variant`,
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
         destination: '/:service/articles/:id/:variant',
       },
     ];

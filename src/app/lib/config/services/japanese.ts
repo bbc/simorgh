@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: '関連コンテンツ',
       relatedTopics: '関連トピックス',
+      showMore: 'もっと見る',
       moreOnThis: '',
       navMenuText: 'ジャンル',
       mediaAssetPage: {

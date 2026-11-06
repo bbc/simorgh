@@ -26,6 +26,9 @@ const mockSendErrorEvent = sendErrorEvent as jest.MockedFunction<
   typeof sendErrorEvent
 >;
 
+const mockUasFeature = 'save-article-uas';
+const mockSaveAction = 'save';
+
 describe('useErrorTracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -39,14 +42,14 @@ describe('useErrorTracking', () => {
 
     result.current({
       error: new TypeError('boom'),
-      feature: 'uas',
-      action: 'save',
+      feature: mockUasFeature,
+      action: mockSaveAction,
     });
 
     expect(mockSendErrorEvent).toHaveBeenCalledTimes(1);
     expect(mockSendErrorEvent).toHaveBeenCalledWith({
-      feature: 'uas',
-      errorName: 'save',
+      feature: mockUasFeature,
+      errorName: mockSaveAction,
       statusCode: undefined,
       errorKey: undefined,
       errorMessage: 'boom',
@@ -72,13 +75,13 @@ describe('useErrorTracking', () => {
         key: 'unknownTokenKey',
         message: 'An unknown error occurred.',
       }),
-      feature: 'uas',
+      feature: mockUasFeature,
       action: 'remove',
     });
 
     expect(mockSendErrorEvent).toHaveBeenCalledWith(
       expect.objectContaining({
-        feature: 'uas',
+        feature: mockUasFeature,
         errorName: 'remove',
         statusCode: 500,
         errorKey: 'unknownTokenKey',
@@ -99,8 +102,8 @@ describe('useErrorTracking', () => {
 
       result.current({
         error: invalidError,
-        feature: 'uas',
-        action: 'save',
+        feature: mockUasFeature,
+        action: mockSaveAction,
       });
 
       expect(mockSendErrorEvent).not.toHaveBeenCalled();
@@ -117,8 +120,8 @@ describe('useErrorTracking', () => {
 
     result.current({
       error: new Error('offline'),
-      feature: 'uas',
-      action: 'save',
+      feature: mockUasFeature,
+      action: mockSaveAction,
     });
 
     expect(mockSendErrorEvent).not.toHaveBeenCalled();
@@ -133,8 +136,8 @@ describe('useErrorTracking', () => {
     const { result } = renderHook(() => useErrorTracking());
     const error = new TypeError('boom');
 
-    result.current({ error, feature: 'uas', action: 'save' });
-    result.current({ error, feature: 'uas', action: 'save' });
+    result.current({ error, feature: mockUasFeature, action: mockSaveAction });
+    result.current({ error, feature: mockUasFeature, action: mockSaveAction });
 
     expect(mockSendErrorEvent).toHaveBeenCalledTimes(1);
 
@@ -149,13 +152,13 @@ describe('useErrorTracking', () => {
 
     result.current({
       error: new TypeError('boom'),
-      feature: 'uas',
-      action: 'save',
+      feature: mockUasFeature,
+      action: mockSaveAction,
     });
     result.current({
       error: new TypeError('boom again'),
-      feature: 'uas',
-      action: 'save',
+      feature: mockUasFeature,
+      action: mockSaveAction,
     });
 
     expect(mockSendErrorEvent).toHaveBeenCalledTimes(2);

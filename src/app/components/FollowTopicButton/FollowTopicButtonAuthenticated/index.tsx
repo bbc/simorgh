@@ -3,21 +3,37 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useTopicFollowButton, {
   FollowAction,
 } from '#app/hooks/useTopicFollowButton';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useActionTooltip from '#app/hooks/useActionTooltip';
+import ErrorBoundary from '#app/components/ErrorBoundary';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
+import ActionTooltip from '#app/components/ActionTooltip';
+import getActionTooltipContent from '#app/components/ActionTooltip/ActionTooltipContent';
+import getActionTooltipStatus from '#app/components/ActionTooltip/getActionTooltipStatus';
 
 import type { FollowTopicButtonProps } from '../index';
 
-const FollowTopicButtonAuthenticated = ({
+const FollowTopicButtonAuthenticatedInner = ({
   topicData,
 }: FollowTopicButtonProps) => {
   const { translations } = use(ServiceContext);
-  const { followTopicButton } = translations || {};
+  const { followTopicButton, followTopicTooltip } = translations || {};
   const { topicId } = topicData;
 
-  const { isFollowed, isLoading, isUpdating, handleFollowAction } =
-    useTopicFollowButton(topicData);
+  const {
+    isFollowed,
+    isLoading,
+    isUpdating,
+    actionResult,
+    resetActionResult,
+    handleFollowAction,
+  } = useTopicFollowButton(topicData);
 
   const clickComponentName = `follow-topic-button-click-${
     isFollowed ? FollowAction.UNFOLLOW : FollowAction.FOLLOW
@@ -32,6 +48,18 @@ const FollowTopicButtonAuthenticated = ({
     itemTracker: {
       resourceId: topicId,
     },
+  });
+
+  const {
+    isTooltipVisible,
+    handleTooltipClose,
+    onMyNewsLinkClickTrack,
+    tooltipViewTracker,
+  } = useActionTooltip({
+    actionResult,
+    resetActionResult,
+    trackingNamePrefix: 'follow-topic',
+    resourceId: topicId,
   });
 
   if (!followTopicButton) return null;
@@ -70,19 +98,56 @@ const FollowTopicButtonAuthenticated = ({
   };
 
   return (
-    <SaveButton
-      variant={SAVE_BUTTON_VARIANTS.FOLLOW}
-      onClick={handleClick}
-      isLoading={isLoading}
-      isUpdating={isUpdating}
-      isSaved={isFollowed}
-      visualLabel={getVisualLabel()}
-      hoverVisualLabel={hoverVisualLabel}
-      accessibleLabel={getAccessibleLabel()}
-      testId="follow-topic-btn-authorized"
-      {...viewTracker}
-    />
+    <>
+      <SaveButton
+        variant={SAVE_BUTTON_VARIANTS.FOLLOW}
+        onClick={handleClick}
+        isLoading={isLoading}
+        isUpdating={isUpdating}
+        isSaved={isFollowed}
+        visualLabel={getVisualLabel()}
+        hoverVisualLabel={hoverVisualLabel}
+        accessibleLabel={getAccessibleLabel()}
+        testId="follow-topic-btn-authorized"
+        {...viewTracker}
+      />
+      {isTooltipVisible && actionResult && followTopicTooltip && (
+        <ActionTooltip
+          status={getActionTooltipStatus(actionResult)}
+          content={getActionTooltipContent(followTopicTooltip, {
+            topicName: topicData.title,
+            onMyNewsLinkClick: onMyNewsLinkClickTrack,
+          })}
+          closeLabel={followTopicTooltip.closeLabel}
+          onClose={handleTooltipClose}
+          {...tooltipViewTracker}
+        />
+      )}
+    </>
   );
 };
+
+const FollowTopicButtonErrorFallback = ({ error }: { error: Error }) => {
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.FOLLOW_TOPIC_UAS,
+    action: UAS_ERROR_ACTIONS.RENDER,
+  });
+
+  return null;
+};
+
+const renderFollowTopicButtonErrorFallback = (error: Error) => (
+  <FollowTopicButtonErrorFallback error={error} />
+);
+
+const FollowTopicButtonAuthenticated = (props: FollowTopicButtonProps) => (
+  <ErrorBoundary
+    componentName="FollowTopicButtonAuthenticated"
+    fallback={renderFollowTopicButtonErrorFallback}
+  >
+    <FollowTopicButtonAuthenticatedInner {...props} />
+  </ErrorBoundary>
+);
 
 export default FollowTopicButtonAuthenticated;

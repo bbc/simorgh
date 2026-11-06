@@ -67,6 +67,7 @@ export type ComponentProps = {
       sportDataEvent: HeadToHeadV2Data;
       title: string;
     } | null;
+    taggings?: { predicate: string; value: string }[]; // TODO
   };
 };
 
@@ -104,6 +105,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     mediaCollections,
     portraitVideoItems,
     sportDataEventContent,
+    taggings,
   } = pageData;
 
   const initialStreamData = liveTextStream?.content?.data ?? null;
@@ -244,6 +246,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
           showSportData={showSportData}
+          taggings={taggings}
         />
         {showSportData && (
           <HeadToHeadV2

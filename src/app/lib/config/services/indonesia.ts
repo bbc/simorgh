@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Berita terkait',
       relatedTopics: 'Topik terkait',
+      showMore: 'Tampilkan lebih banyak',
       moreOnThis: '',
       navMenuText: 'Kategori',
       liteSite: {

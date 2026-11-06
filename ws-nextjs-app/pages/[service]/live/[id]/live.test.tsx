@@ -8,6 +8,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
+import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
@@ -20,6 +21,11 @@ import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
 import livePageData from './fixture/livePageData';
 import streamDataUpdate from './fixture/streamDataUpdate';
+
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -65,6 +71,12 @@ jest.mock('#app/components/PortraitVideoCarousel', () => ({
   default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
 }));
 
+// Real media collections pull in the actual player bootstrap, which injects scripts jsdom can't run.
+jest.mock('#app/components/MediaLoader', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="media-loader" />),
+}));
+
 jest.mock('#app/hooks/useToggle', () => ({
   __esModule: true,
   default: jest.fn(() => ({ enabled: true })),
@@ -105,6 +117,14 @@ const mockPageData = {
   },
   metadata: { atiAnalytics: {} },
 } as unknown as ComponentProps['pageData'];
+
+const electionTaggings = [
+  {
+    predicate: 'http://www.bbc.co.uk/ontologies/creativework/about',
+    value:
+      'http://www.bbc.co.uk/things/19994837-27b8-463f-965d-fbb0ac1622a3#id',
+  },
+];
 
 const mockPageDataWithPosts = {
   ...liveFixture.data,
@@ -245,6 +265,7 @@ describe('Live Page', () => {
 
   it('Should set Cache-Control header to correct values', async () => {
     const context = {
+      resolvedUrl: '/pidgin/live/c7p765ynk9qt',
       query: {
         service: 'pidgin',
         id: 'c7p765ynk9qt',
@@ -531,6 +552,40 @@ describe('Live Page', () => {
       'src',
       'https://ichef.bbci.co.uk/ace/ws/480/cpsdevpb/1d5b/test/5f969ec0-c4d8-11ed-8319-9b394d8ed0dd.jpg.webp',
     );
+  });
+
+  describe('election banner', () => {
+    it('should render without the header image when there is no live media stream', async () => {
+      const pageData = {
+        ...mockPageData,
+        isLive: true,
+        taggings: electionTaggings,
+      } as unknown as ComponentProps['pageData'];
+
+      mockPollingUpdate(pageData);
+      await act(async () => {
+        render(<Live pageData={pageData} />, { service: 'mundo' });
+      });
+
+      expect(screen.getByTestId('election-banner')).toBeInTheDocument();
+      expect(screen.queryByRole('presentation')).not.toBeInTheDocument();
+    });
+
+    it('should not render when there is a live media stream', async () => {
+      const pageData = {
+        ...mockPageData,
+        isLive: true,
+        mediaCollections: mundoLiveFixture.data.mediaCollections,
+        taggings: electionTaggings,
+      } as unknown as ComponentProps['pageData'];
+
+      mockPollingUpdate(pageData);
+      await act(async () => {
+        render(<Live pageData={pageData} />, { service: 'mundo' });
+      });
+
+      expect(screen.queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
   });
 
   it('should render the key points section', async () => {

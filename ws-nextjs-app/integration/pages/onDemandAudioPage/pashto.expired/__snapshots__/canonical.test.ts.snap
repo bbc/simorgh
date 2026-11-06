@@ -148,28 +148,28 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"�
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۲۹،۳۰  موده ۲۹:۳۰۲۵ نومبر ۲۰۲۴",
+  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۲۵ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cwp",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۵۹،۳۰  موده ۵۹:۳۰۱۹ نومبر ۲۰۲۴",
+  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۵۹،۳۰  موده ۵۹:۳۰ ۱۹ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cxr",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۲۹،۳۰  موده ۲۹:۳۰۱۸ نومبر ۲۰۲۴",
+  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۲۹،۳۰  موده ۲۹:۳۰ ۱۸ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cwn",
 }
 `;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 4`] = `
 {
-  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۵۹،۳۰  موده ۵۹:۳۰۱۲ نومبر ۲۰۲۴",
+  "text": "غږ, ځانگړې مرکه او عيني شاهد خپرونه , Monday Feature,  موده ۵۹،۳۰  موده ۵۹:۳۰ ۱۲ نومبر ۲۰۲۴",
   "url": "/pashto/bbc_pashto_radio/w3ct7cxq",
 }
 `;

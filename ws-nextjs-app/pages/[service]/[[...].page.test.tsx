@@ -8,6 +8,11 @@ import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 import handleOfflineRoute from './offline/handleOfflineRoute';
 
+jest.mock('#utilities/pageRequests/getRequestProps', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
 jest.mock('#utilities/logResponseTime', () => ({
   __esModule: true,
   default: jest.fn(),
@@ -44,6 +49,7 @@ jest.mock('./offline/handleOfflineRoute', () => ({
 }));
 
 const commonContext = {
+  resolvedUrl: '/pidgin',
   req: { headers: {} },
   query: { service: 'pidgin' },
   res: {},
@@ -275,7 +281,6 @@ describe('catch-all route', () => {
       resolvedUrl: '/pidgin/some-unsupported-page-type',
     };
 
-    // @ts-expect-error - props is not typed on the return value of getServerSideProps
     const { props } = await getServerSideProps(context);
 
     expect(props.status).toBe(404);

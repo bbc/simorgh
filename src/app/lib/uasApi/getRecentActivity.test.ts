@@ -1,11 +1,13 @@
 import getRecentActivity, { UasActivityItem } from './getRecentActivity';
 import uasApiRequest from './index';
+import { UAS_API_ERROR } from '../logger.const';
 
+const mockLoggerError = jest.fn();
 jest.mock('./index');
 jest.mock('#lib/logger.node', () => ({
   __esModule: true,
   default: jest.fn(() => ({
-    error: jest.fn(),
+    error: (...args: unknown[]) => mockLoggerError(...args),
   })),
 }));
 
@@ -235,6 +237,24 @@ describe('getRecentActivity', () => {
     mockUasApiRequest.mockRejectedValueOnce(error);
 
     await expect(getRecentActivity({})).rejects.toThrow('API Error');
+    expect(mockLoggerError).toHaveBeenCalledWith(UAS_API_ERROR, {
+      error: 'API Error',
+    });
+  });
+
+  it('should rethrow request cancellation without logging an API error', async () => {
+    const controller = new AbortController();
+    controller.abort();
+    mockUasApiRequest.mockRejectedValueOnce(controller.signal.reason);
+
+    await expect(
+      getRecentActivity({
+        signal: controller.signal,
+        isRefreshAvailable: false,
+      }),
+    ).rejects.toBe(controller.signal.reason);
+
+    expect(mockLoggerError).not.toHaveBeenCalled();
   });
 
   describe('service filtering', () => {

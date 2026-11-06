@@ -97,6 +97,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
+      showMore: 'Dabalataa ilaali',
       moreOnThis: '',
       navMenuText: 'Kutaawwan',
       liteSite: {
