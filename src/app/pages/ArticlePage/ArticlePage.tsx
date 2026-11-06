@@ -552,7 +552,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <ReadMeter wordCount={wordCount} />
+          <aside>
+            <ReadMeter wordCount={wordCount} />
+          </aside>
           <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery
