@@ -3,6 +3,7 @@ import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 // Any running serverside and client side experiments which collect Optimizely Page Metrics; page view, page complete, scroll depth
 // Includes PageType so that different experiments can be run on different pageTypes
@@ -24,6 +25,10 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: HOME_PAGE,
     activeExperiments: ['test_server_side_experiment_visits_aa'],
+  },
+  {
+    pageType: TOPIC_PAGE,
+    activeExperiments: ['newswb_ws_hindi_editorial_picks_follow_promo'],
   },
 ];
 

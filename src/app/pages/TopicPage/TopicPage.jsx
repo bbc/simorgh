@@ -2,6 +2,7 @@ import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import FollowTopicButton from '#app/components/FollowTopicButton';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import parseRoute from '#app/routes/utils/parseRoute';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
@@ -19,6 +20,7 @@ import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import TopicPageElectionBanner from './TopicPageElectionBanner';
+import EditorialPicksPromoExperiment from './EditorialPicksPromoExperiment';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName, service } = use(ServiceContext);
@@ -65,11 +67,13 @@ const TopicPage = ({ pageData }) => {
 
   return (
     <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
+      <EditorialPicksPromoExperiment topicId={topicId} />
       <AdContainer slotType="leaderboard" />
       <main css={styles.main} role="main">
         <div css={styles.inner}>
           <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
+          <OptimizelyPageMetrics trackPageComplete trackPageDepth />
           <MetadataContainer
             title={metadataTitle}
             socialHeadline={metadataBaseTitle}
