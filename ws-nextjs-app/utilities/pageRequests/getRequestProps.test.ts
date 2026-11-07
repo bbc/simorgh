@@ -167,6 +167,32 @@ describe('getRequestProps', () => {
     );
   });
 
+  it('loads IDCTA configuration without waiting for navigation', async () => {
+    let resolveNavigation: (
+      value: Awaited<ReturnType<typeof fetchConfig>>,
+    ) => void;
+    mockFetchConfig.mockImplementation(
+      () =>
+        new Promise(resolve => {
+          resolveNavigation = resolve;
+        }),
+    );
+
+    const requestPropsPromise = getRequestProps(createContext());
+
+    await Promise.resolve();
+    await Promise.resolve();
+
+    expect(mockGetIdctaConfig).toHaveBeenCalledWith(
+      toggles,
+      'serbian',
+      expect.any(Object),
+    );
+
+    resolveNavigation({ data: { items: [] } });
+    await requestPropsPromise;
+  });
+
   it('uses the news service for unrecognised error routes', async () => {
     const props = await getRequestProps(createContext('/not-a-service'));
 
