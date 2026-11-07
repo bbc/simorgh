@@ -1,4 +1,8 @@
 import { GetServerSidePropsContext } from 'next/types';
+import { IncomingMessage, ServerResponse } from 'node:http';
+import { Socket } from 'node:net';
+import pidginArticle from '#data/pidgin/articles/cvpde7nqj92o.json';
+import getPageData from '#utilities/pageRequests/getPageData';
 
 import { getServerSideProps } from './[[...]].page';
 import handleAvRoute from './av-embeds/handleAvRoute';
@@ -10,8 +14,12 @@ import handleOfflineRoute from './offline/handleOfflineRoute';
 
 jest.mock('#utilities/pageRequests/getRequestProps', () => ({
   __esModule: true,
-  default: jest.fn().mockResolvedValue({}),
+  default: jest.fn().mockResolvedValue({
+    toggles: { renderMarkDown: { enabled: true } },
+  }),
 }));
+
+jest.mock('#utilities/pageRequests/getPageData');
 
 jest.mock('#utilities/logResponseTime', () => ({
   __esModule: true,
@@ -89,6 +97,43 @@ describe('catch-all route', () => {
   });
 
   describe('Article page type', () => {
+    it('serves Markdown through the catch-all handler when the request toggle is enabled', async () => {
+      jest.mocked(getPageData).mockResolvedValueOnce({
+        data: { pageData: pidginArticle.data, status: 200 },
+      });
+      jest
+        .mocked(handleArticleRoute)
+        .mockImplementationOnce(
+          jest.requireActual<typeof import('./articles/handleArticleRoute')>(
+            './articles/handleArticleRoute',
+          ).default,
+        );
+      const req = Object.assign(new IncomingMessage(new Socket()), {
+        headers: { 'page-type': 'article' },
+        url: '/pidgin/articles/cvpde7nqj92o.md',
+        cookies: {},
+      });
+      const res = new ServerResponse(req);
+      jest.spyOn(res, 'end').mockReturnValue(res);
+      const context = {
+        ...commonContext,
+        req,
+        res,
+        resolvedUrl: '/pidgin/articles/cvpde7nqj92o.md',
+      };
+
+      await getServerSideProps(context);
+
+      expect(res.statusCode).toBe(200);
+      expect(res.getHeader('Content-Type')).toBe(
+        'text/markdown; charset=utf-8',
+      );
+      expect(res.end).toHaveBeenCalledWith(expect.stringContaining('# '));
+      expect(res.getHeader('Link')).toBe(
+        '<https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
+      );
+    });
+
     it('should call the Article route handler if an article is requested using URL', async () => {
       const context = {
         ...commonContext,
