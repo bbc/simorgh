@@ -121,7 +121,6 @@ export default async (
       props: {
         service,
         status: renderStatus,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: canonicalPathname,

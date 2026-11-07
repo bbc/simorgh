@@ -23,7 +23,6 @@ export default async (context: GetServerSidePropsContext) => {
       variant,
       pageType: OFFLINE_PAGE,
       status: 200,
-      timeOnServer: Date.now(),
       pathname: resolvedUrlWithoutQuery,
       pageData: {
         metadata: {
