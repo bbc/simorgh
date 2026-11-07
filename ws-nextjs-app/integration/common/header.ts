@@ -14,7 +14,10 @@ export default service => {
         throw new Error('Expected the header brand asset to be rendered');
       }
 
-      expect(logo.tagName).toBe('IMG');
+      expect(logo.tagName).toBe(isAmpPage ? 'AMP-IMG' : 'IMG');
+      if (isAmpPage) {
+        expect(logo).toHaveAttribute('layout', 'fill');
+      }
       expect(logo).toHaveClass('external-svg');
       expect(logo).toHaveAttribute('alt', '');
       expect(logo).toHaveAttribute('aria-hidden', 'true');

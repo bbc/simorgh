@@ -15,6 +15,34 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
   it.each(['header', 'footer'])(
+    'renders the %s external asset with AMP-compatible markup',
+    linkId => {
+      const { container } = render(
+        <Brand product="BBC News" svg={svg} linkId={linkId} />,
+        { isAmp: true },
+      );
+      const image = container.querySelector('amp-img');
+
+      expect(container.querySelector('img')).not.toBeInTheDocument();
+      expect(image).toHaveAttribute(
+        'id',
+        linkId === 'header' ? 'brandSvgHeader' : 'brandSvgFooter',
+      );
+      expect(image).toHaveAttribute('layout', 'fill');
+      expect(image).toHaveAttribute('alt', '');
+      expect(image).toHaveAttribute('aria-hidden', 'true');
+      expect(image).toHaveAttribute(
+        'src',
+        expect.stringContaining('news/images/brand.svg'),
+      );
+      expect(image.parentElement).toHaveClass('ampBrand');
+      expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
+        '6.9979',
+      );
+      expect(screen.getByText('BBC News')).toBeInTheDocument();
+    },
+  );
+  it.each(['header', 'footer'])(
     'keeps the %s image and a decorative high-contrast mask on the same asset',
     linkId => {
       const { container } = render(

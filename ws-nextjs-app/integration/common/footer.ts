@@ -1,10 +1,17 @@
 export default () => {
   describe('Footer', () => {
+    const isAmpPage =
+      document.documentElement.hasAttribute('amp') ||
+      window.location.pathname.endsWith('.amp');
+
     it('I can see the BBC branding', () => {
       const brandingEl = document.getElementById('brandSvgFooter');
 
       expect(brandingEl).toBeInTheDocument();
-      expect(brandingEl?.tagName).toBe('IMG');
+      expect(brandingEl?.tagName).toBe(isAmpPage ? 'AMP-IMG' : 'IMG');
+      if (isAmpPage) {
+        expect(brandingEl).toHaveAttribute('layout', 'fill');
+      }
       expect(brandingEl).toHaveClass('external-svg');
     });
 
@@ -18,8 +25,9 @@ export default () => {
       if (!brandingLinkEl) {
         throw new Error('Expected the footer brand asset to have a link');
       }
-      const brandingImageEl =
-        brandingLinkEl?.querySelector?.('img.external-svg');
+      const brandingImageEl = brandingLinkEl.querySelector(
+        isAmpPage ? 'amp-img.external-svg' : 'img.external-svg',
+      );
 
       expect(brandingLinkEl.tagName).toEqual('A');
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();

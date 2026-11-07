@@ -71,6 +71,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                       className="ws-o-download-icon"
                       width="16"
                       height="16"
+                      useCurrentColor
                     />
                     <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                       {item.files[0].fileName}

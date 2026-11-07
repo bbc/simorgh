@@ -7,10 +7,15 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ExternalSvg } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './styles';
+import styles from './index.module.scss';
 
 const ShareSvg = () => (
-  <ExternalSvg path="images/icons/share.svg" width="16" height="16" />
+  <ExternalSvg
+    path="images/icons/share.svg"
+    width="16"
+    height="16"
+    useCurrentColor
+  />
 );
 
 const ShareButton = ({
@@ -64,7 +69,7 @@ const ShareButton = ({
         type="button"
         ref={focusRef}
         onClick={handleShare}
-        css={styles.button}
+        className={styles.button}
       >
         <ShareSvg />
         <span role="text">

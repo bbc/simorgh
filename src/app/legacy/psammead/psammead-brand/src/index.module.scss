@@ -1,13 +1,27 @@
 @use '@scss/themeTokens' as theme;
 
 .brand {
+  --brand-height: #{theme.pixelsToRem-px-to-rem(20)};
   position: relative;
   display: inline-flex;
   max-width: 100%;
 
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    --brand-height: #{theme.pixelsToRem-px-to-rem(24)};
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    --brand-height: #{theme.pixelsToRem-px-to-rem(30)};
+
+    &[data-is-languages-page='true'] {
+      --brand-height: #{theme.pixelsToRem-px-to-rem(24)};
+    }
+  }
+
   @media (forced-colors: active), print {
     @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
-      .image {
+      .image,
+      .ampImage {
         visibility: hidden;
       }
 
@@ -26,18 +40,11 @@
 
 .image {
   box-sizing: content-box;
-  height: #{theme.pixelsToRem-px-to-rem(20)};
+  height: var(--brand-height);
   max-width: 100%;
+}
 
-  @media #{theme.$mediaQueries-group-2-min-width} {
-    height: #{theme.pixelsToRem-px-to-rem(24)};
-  }
-
-  @media #{theme.$mediaQueries-group-3-min-width} {
-    height: #{theme.pixelsToRem-px-to-rem(30)};
-
-    &[data-is-languages-page='true'] {
-      height: #{theme.pixelsToRem-px-to-rem(24)};
-    }
-  }
+.ampBrand {
+  height: var(--brand-height);
+  width: calc(var(--brand-height) * var(--brand-ratio));
 }

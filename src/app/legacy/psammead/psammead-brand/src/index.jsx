@@ -1,4 +1,5 @@
-import { forwardRef } from 'react';
+import { forwardRef, use } from 'react';
+import clsx from 'clsx';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
@@ -11,6 +12,7 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.module.scss';
 
@@ -106,6 +108,7 @@ const StyledBrand = ({
   svg,
   isLanguagesPage = false,
 }) => {
+  const { isAmp } = use(RequestContext);
   const {
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
@@ -117,18 +120,32 @@ const StyledBrand = ({
   return svg ? (
     <>
       <span
-        className={styles.brand}
+        className={clsx(styles.brand, isAmp && styles.ampBrand)}
         aria-hidden="true"
-        style={{ '--brand-source': `url("${src}")` }}
+        data-is-languages-page={isLanguagesPage && linkId !== 'footer'}
+        style={{
+          '--brand-source': `url("${src}")`,
+          ...(isAmp && { '--brand-ratio': svg.ratio }),
+        }}
       >
-        <img
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          className={`external-svg ${styles.image}`}
-          aria-hidden="true"
-          alt=""
-          src={src}
-          data-is-languages-page={isLanguagesPage && linkId !== 'footer'}
-        />
+        {isAmp ? (
+          <amp-img
+            id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+            class={`external-svg ${styles.ampImage}`}
+            aria-hidden="true"
+            alt=""
+            src={src}
+            layout="fill"
+          />
+        ) : (
+          <img
+            id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+            className={`external-svg ${styles.image}`}
+            aria-hidden="true"
+            alt=""
+            src={src}
+          />
+        )}
       </span>
       <LocalisedBrandName
         linkId={linkId}

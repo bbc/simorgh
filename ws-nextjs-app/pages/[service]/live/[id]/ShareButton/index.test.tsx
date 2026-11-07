@@ -35,6 +35,22 @@ describe('ShareButton', () => {
     headline: 'bar',
   };
 
+  it('renders a decorative share mask that follows the button foreground', async () => {
+    await act(async () => {
+      render(<ShareButton {...mockShareButtonProps} />);
+    });
+    const icon = screen
+      .getByRole('button')
+      .querySelector<HTMLElement>('.external-svg');
+
+    expect(icon?.tagName).toBe('SPAN');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/share.svg',
+    );
+  });
+
   it('should call the navigator share api when clicked', async () => {
     const user = userEvent.setup();
     await act(async () => {
