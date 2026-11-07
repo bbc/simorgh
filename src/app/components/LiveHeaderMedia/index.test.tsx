@@ -65,6 +65,24 @@ describe('liveMediaStream', () => {
     );
   });
 
+  it('renders the close icon as a foreground-coloured mask', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    fireEvent.click(button);
+    const icon = button.querySelector<HTMLElement>(
+      '.closeContainer .external-svg',
+    );
+
+    expect(icon?.tagName).toBe('SPAN');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/close.svg',
+    );
+  });
+
   it('Plays the media loader when the watch button is clicked.', () => {
     window.mediaPlayers = {
       p0gh4n67: {

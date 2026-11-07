@@ -1,0 +1,39 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: theme.$palette-grey-10;
+  background-color: theme.$palette-grey-2;
+  margin: theme.$spacings-double 0;
+  padding: theme.$spacings-full;
+  min-height: #{theme.pixelsToRem-px-to-rem(260)};
+  flex-direction: column;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    padding: theme.$spacings-full theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin: theme.$spacings-triple 0 theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    min-height: #{theme.pixelsToRem-px-to-rem(350)};
+  }
+}
+
+.message {
+  text-align: center;
+}
+
+.container .icon {
+  display: none;
+  width: #{theme.pixelsToRem-px-to-rem(24)};
+  height: #{theme.pixelsToRem-px-to-rem(24)};
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    display: block;
+  }
+}

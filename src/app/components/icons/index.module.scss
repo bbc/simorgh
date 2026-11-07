@@ -1,0 +1,64 @@
+@use '@scss/themeTokens' as theme;
+
+.mask {
+  display: inline-block;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  flex-shrink: 0;
+  background: var(--icon-source) center / contain no-repeat;
+
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    background-color: currentColor;
+    background-image: none;
+    -webkit-mask: var(--icon-source) center / contain no-repeat;
+    mask: var(--icon-source) center / contain no-repeat;
+
+    @media (forced-colors: active) {
+      color: CanvasText;
+      forced-color-adjust: none;
+
+      @supports not (forced-color-adjust: preserve-parent-color) {
+        :global(a) & {
+          color: LinkText;
+        }
+
+        :global(button) & {
+          color: ButtonText;
+        }
+
+        :global(button:disabled) & {
+          color: GrayText;
+        }
+      }
+
+      @supports (forced-color-adjust: preserve-parent-color) {
+        color: inherit;
+        forced-color-adjust: preserve-parent-color;
+      }
+    }
+  }
+}
+
+.fallbackInverted {
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+.blue {
+  color: theme.$palette-service-neutral-core;
+
+  @media (forced-colors: active) {
+    color: LinkText;
+  }
+}
+
+.externalSvg {
+  :global([data-is-dark-ui='true']) & {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+.inverted {
+  filter: invert(1) hue-rotate(180deg);
+}

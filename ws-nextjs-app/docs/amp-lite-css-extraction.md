@@ -74,7 +74,7 @@ At SSR time, the current page route is read from `__NEXT_DATA__.page`. CSS files
 
 CSS file contents are resolved from disk on first access and then cached in-process (`cssFileCache`), so each chunk file is only read from disk once per server lifetime regardless of request volume.
 
-> **Current state:** In this project, all CSS is emitted via `next/dynamic` (react-loadable) rather than as direct page-entry imports. As a result, `build-manifest.json` contains no CSS entries and `getBuildManifestCss` currently returns `''` for every request. It is retained as a safety net — if a static CSS import is ever added at the page or `_app` level it will be captured automatically without any code changes.
+Shared components imported by `_app.tsx` can contribute CSS to every page, even when those components are not rendered. These chunks must still be read; unused CSS-module selectors are removed before inlining.
 
 ### 2. Runtime dynamic import CSS from `react-loadable-manifest.json` (`getDynamicImportCss`)
 
@@ -84,17 +84,34 @@ Next.js tracks which dynamic components were rendered for each request via `__NE
 
 **CSS chunk file path resolution:** CSS chunk files are looked up in `public/_next/` first (the location used in production standalone mode, where the server chdir's into `build/standalone/ws-nextjs-app/`), then in `build/` as a fallback (used during development and at build time). This means the same code runs correctly in both environments. File contents are cached in-process after first read (`cssFileCache`), so repeated requests for the same chunk do not incur additional disk I/O.
 
-**This is currently the only source of CSS in production.** All CSS module chunks are associated with `next/dynamic` component entries.
-
 **Combined:**
 
 ```
 inlined CSS = emotion critical CSS
-            + build-manifest[/_app] CSS              (static app-level — currently empty)
-            + build-manifest[pageRoute] CSS          (static page deps — currently empty)
-            + loadable-manifest[dynamicIds] CSS      (runtime dynamic imports — all CSS today)
+            + build-manifest[/_app] CSS              (static app-level)
+            + build-manifest[pageRoute] CSS          (static page dependencies)
+            + loadable-manifest[dynamicIds] CSS      (runtime dynamic imports)
             (each source is deduplicated independently before concatenation)
 ```
+
+### Removing unused CSS-module rules
+
+Before combining extracted CSS-module chunks with Emotion's critical CSS,
+`treeshakeCssModuleRules` removes selectors whose required hashed module class
+is not referenced in the rendered HTML. This avoids shipping styles for
+unrendered components, such as live-page controls on AMP articles.
+
+The removal is deliberately conservative: global rules, Emotion rules, font
+faces, keyframes, and selectors without a required module class remain.
+Selectors in a comma-separated list are checked independently. Classes
+referenced by AMP actions or bindings are retained, even if they are absent from
+the initial `class` attributes. Canonical CSS is unchanged.
+
+Unused custom properties are removed after selector pruning, then font sources
+and vendor prefixes are optimised. AMP regression fixtures include the large
+Hindi and Russian articles and check the combined byte size of `amp-custom`
+and inline `style` attributes against the 75,000-byte limit. The AMP validator
+remains the authoritative check.
 
 ---
 

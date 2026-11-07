@@ -4,8 +4,8 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 
 export default ({ service }) => {
   describe('Images', () => {
-    it('should have a picture tag around images', () => {
-      cy.get('img').each($img => {
+    it('should have a picture tag around content images', () => {
+      cy.get('img:not(.external-svg)').each($img => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');
@@ -19,7 +19,7 @@ export default ({ service }) => {
         }
       });
     });
-    it('should have two sources one with webp and one with fallback jpg/png', () => {
+    it('should have WebP and fallback sources for content images', () => {
       cy.get('picture').each($picture => {
         cy.wrap($picture)
           .find('source')

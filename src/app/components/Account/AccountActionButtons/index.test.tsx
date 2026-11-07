@@ -45,7 +45,10 @@ describe('AccountActionButtons', () => {
 
       const signInLink = screen.getByRole('link', { name: /sign in/i });
       expect(signInLink).toBeInTheDocument();
-      expect(signInLink.querySelector('span[aria-hidden="true"]')).toBeNull();
+      expect(signInLink).toHaveAccessibleName('Sign In');
+      expect(
+        screen.getByText('Sign In').closest('[aria-hidden="true"]'),
+      ).toBeNull();
     });
 
     it('renders with the correct data-testid', () => {

@@ -6,6 +6,17 @@ import {
 import NewLogoBanner from './NewLogoBanner';
 
 describe('NewLogoBanner', () => {
+  it('renders a decorative, recolourable World Service logo at 112 by 32 pixels', () => {
+    const { container } = render(<NewLogoBanner />);
+    const logo = container.querySelector('.external-svg');
+
+    expect(logo).toHaveAttribute('aria-hidden', 'true');
+    expect(logo).toHaveStyle({
+      '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/ws-header-logo.svg")`,
+      '--icon-width': '112px',
+      '--icon-height': '32px',
+    });
+  });
   it('links to the global languages homepage on language homepages', () => {
     render(<NewLogoBanner />, {
       pageType: HOME_PAGE,

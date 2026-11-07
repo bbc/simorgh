@@ -1,18 +1,33 @@
 export default () => {
   describe('Footer', () => {
+    const isAmpPage =
+      document.documentElement.hasAttribute('amp') ||
+      window.location.pathname.endsWith('.amp');
+
     it('I can see the BBC branding', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.getElementById('brandSvgFooter');
 
       expect(brandingEl).toBeInTheDocument();
+      expect(brandingEl?.tagName).toBe(isAmpPage ? 'AMP-IMG' : 'IMG');
+      if (isAmpPage) {
+        expect(brandingEl).toHaveAttribute('layout', 'fill');
+      }
+      expect(brandingEl).toHaveClass('external-svg');
     });
 
     it('I can click on the BBC branding and it would take me to the homepage', () => {
-      const brandingEl = document.querySelector('footer svg');
+      const brandingEl = document.getElementById('brandSvgFooter');
       expect(brandingEl).toBeInTheDocument();
       if (!brandingEl) return;
 
-      const brandingLinkEl = brandingEl.parentNode as Element;
-      const brandingImageEl = brandingLinkEl?.querySelector?.('svg');
+      const brandingLinkEl = brandingEl.closest('a');
+      expect(brandingLinkEl).toBeInTheDocument();
+      if (!brandingLinkEl) {
+        throw new Error('Expected the footer brand asset to have a link');
+      }
+      const brandingImageEl = brandingLinkEl.querySelector(
+        isAmpPage ? 'amp-img.external-svg' : 'img.external-svg',
+      );
 
       expect(brandingLinkEl.tagName).toEqual('A');
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();

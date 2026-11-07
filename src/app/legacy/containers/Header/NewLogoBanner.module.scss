@@ -1,0 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
+.logo {
+  color: theme.$palette-black;
+
+  @media (forced-colors: active) {
+    color: LinkText;
+  }
+}

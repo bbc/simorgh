@@ -16,6 +16,11 @@ const defaultProps = {
 };
 
 describe('CurationMessageBanner', () => {
+  const getContentImages = () =>
+    screen
+      .queryAllByAltText('')
+      .filter(image => !image.classList.contains('external-svg'));
+
   it('renders a section with role="region"', () => {
     render(<CurationMessageBanner {...defaultProps} />);
     expect(screen.getByRole('region')).toBeInTheDocument();
@@ -50,13 +55,13 @@ describe('CurationMessageBanner', () => {
 
   it('renders an image when image prop is provided', () => {
     render(<CurationMessageBanner {...defaultProps} />);
-    expect(screen.getByAltText('')).toBeInTheDocument();
+    expect(getContentImages()).toHaveLength(1);
   });
 
   it('does not render an image when image prop is omitted', () => {
     const { image: _, ...propsWithoutImage } = defaultProps;
     render(<CurationMessageBanner {...propsWithoutImage} />);
-    expect(screen.queryByAltText('')).not.toBeInTheDocument();
+    expect(getContentImages()).toHaveLength(0);
   });
 
   it('applies the id as data-testid on the section', () => {

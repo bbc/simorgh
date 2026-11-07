@@ -44,7 +44,7 @@ const AccountActionButtons = ({
       <CallToActionLink.ButtonLikeWrapper
         aria-hidden={signInAccessibleLabel ? true : undefined}
       >
-        <AccountIcon css={styles.accountIcon} />
+        <AccountIcon css={styles.accountIcon} isInverted={!onLightBackground} />
         <CallToActionLink.Text shouldUnderlineOnHoverFocus>
           {signInText}
         </CallToActionLink.Text>
