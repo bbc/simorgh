@@ -168,7 +168,7 @@ describe('getRequestProps', () => {
   });
 
   it('loads IDCTA configuration without waiting for navigation', async () => {
-    let resolveNavigation: (
+    let resolveNavigation!: (
       value: Awaited<ReturnType<typeof fetchConfig>>,
     ) => void;
     mockFetchConfig.mockImplementation(
