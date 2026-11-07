@@ -5,7 +5,7 @@ We use the free dependency update tool [Dependabot](https://github.com/dependabo
 
 ## Base Config
 [Our config](https://github.com/bbc/simorgh/blob/c17b20ef183e8bc94afb66d2414bc7e5ac14a845/.github/dependabot.yml#L1) applies a lot of sensible defaults to how it manages dependencies including:
-- Seperating major dependency bumps into their own dedicated PRs
+- Separating major dependency bumps into their own dedicated PRs
 - Grouping of common monorepos into their own PRs, e.g. Storybook
 
 We also choose to [only enable dependabot for `npm` packages](https://github.com/bbc/simorgh/blob/c17b20ef183e8bc94afb66d2414bc7e5ac14a845/.github/dependabot.yml#L3), it supports many dependency types including github actions and `nvm` to keep our version of node up-to-date, but at this stage we chose to stick to `npm` packages and do other dependencies manually.
