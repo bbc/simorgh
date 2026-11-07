@@ -22,7 +22,10 @@ const getRequestProps = async (
   const { service: routeService, variant } = parseRoute(asPath);
   const service = routeService || 'news';
 
-  const togglesPromise = fetchToggles({ service, isAmp }).catch(() => ({}));
+  const togglesPromise: ReturnType<typeof fetchToggles> = fetchToggles({
+    service,
+    isAmp,
+  }).catch(() => ({}));
   const navItemsPromise = fetchConfig<{ data: { items: Navigation[] } }>({
     service,
     pagePath: asPath,
