@@ -49,7 +49,9 @@ const EligibleAccountPromotionalBannerHomePageExperiment = () => {
 
 const AccountPromotionalBannerHomePageExperiment = () => {
   const { service } = use(ServiceContext);
-  const isEligible = useAccountPromoBannerEligibility();
+  const isEligible = useAccountPromoBannerEligibility({
+    excludeSignedInUsers: false,
+  });
 
   if (!isEligible || service !== EXPERIMENT_SERVICE) {
     return <AccountPromotionalBanner />;
