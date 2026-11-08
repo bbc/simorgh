@@ -48,7 +48,6 @@ interface Props {
     showAdsBasedOnLocation: boolean;
     showCookieBannerBasedOnCountry?: boolean;
     status: number;
-    timeOnServer?: number;
     toggles: Toggles;
     navItems: Navigation[] | null;
     variant?: Variants;
@@ -85,7 +84,6 @@ export default function CustomApp({
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry = true,
     status,
-    timeOnServer,
     toggles,
     variant,
     isUK,
@@ -126,7 +124,6 @@ export default function CustomApp({
           statusCode={status}
           pathname={pathname}
           variant={variant}
-          timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
           showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           serverSideExperiments={serverSideExperiments}

@@ -129,7 +129,6 @@ describe('handleArticleRoute', () => {
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        timeOnServer: 1234567890000,
         variant: null,
       },
     });
@@ -151,7 +150,6 @@ describe('handleArticleRoute', () => {
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        timeOnServer: 1234567890000,
         variant: null,
       },
     });

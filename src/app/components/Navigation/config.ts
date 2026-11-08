@@ -1,5 +1,9 @@
 import { Services } from '#app/models/types/global';
 
+export const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
+export const STICKY_NAVIGATION_TREATMENT = 'sticky_navigation_variant';
+export const NAVIGATION_TRACKING_COMPONENT = 'navigation';
+
 // The two-tier bar is roughly 88px tall. Requiring at least this much
 // viewport height keeps it under about a fifth of the screen, and has the
 // side effect of switching the feature off beyond roughly 200% zoom, where a
@@ -30,14 +34,10 @@ export const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 // though they are neither a link nor a button.
 export const STICKY_NAV_TAB_STOP_SELECTOR = `${FOCUSABLE_ITEMS_SELECTOR}, [data-e2e^="scrollable-nav"]`;
 
-export const SERVICES_WITH_STICKY_NAV: Services[] = [
-  'mundo',
-  'portuguese',
-  'russian',
-  'indonesia',
-  'turkce',
-  'urdu',
-];
+export const STICKY_NAV_ARTICLE_START_SELECTOR =
+  'main [data-sticky-nav-anchor]';
+
+export const STICKY_NAV_ARTICLE_IMAGE_SELECTOR = 'main figure img';
 
 const SERVICES_WITH_NEW_NAV: Services[] = [
   'afaanoromoo',
