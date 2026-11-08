@@ -28,11 +28,9 @@ const EligibleAccountPromotionalBannerHomePageExperiment = () => {
     return <AccountPromotionalBanner />;
   }
 
-  const normalizedExperimentVariant = experimentVariant.replace('-', '_');
-
   const variantCopy =
     experimentVariantCopy[
-      normalizedExperimentVariant as keyof typeof experimentVariantCopy
+      experimentVariant as keyof typeof experimentVariantCopy
     ];
 
   return (
