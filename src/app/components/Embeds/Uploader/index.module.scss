@@ -13,6 +13,6 @@ a.callToActionLink {
   }
 }
 
-svg.chevronSpacing {
+.callToActionLink .chevronSpacing {
   margin-inline-start: #{theme.pixelsToRem-px-to-rem(12)};
 }
