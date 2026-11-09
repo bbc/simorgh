@@ -709,7 +709,7 @@ exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 exports[`Canonical Home Page messageBanner has a decorative external icon 1`] = `
 <span
   aria-hidden="true"
-  class="external-svg icons_mask__cO6__ css-4xk39v"
+  class="Chevron_chevron__zmc2y Chevron_picaSize__dDekw external-svg icons_mask__cO6__ css-0"
   style="--icon-source:url("http://localhost:7081/images/icons/chevron-forward.svg");--icon-width:12px;--icon-height:12px"
 />
 `;

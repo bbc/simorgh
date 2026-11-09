@@ -1128,15 +1128,18 @@ body.simorgh-player-fullscreen .emotion-1 {
               <span
                 aria-hidden="true"
                 class="brand"
-                style="--brand-source: url("http://localhost:7080/news/images/brand.svg");"
+                data-brand-logo=""
+                data-is-languages-page="false"
+                style="--brand-source: url("http://localhost:7080/news/images/brand.svg"); --brand-ratio: 6.901408450704225;"
               >
                 <img
                   alt=""
                   aria-hidden="true"
                   class="external-svg image"
-                  data-is-languages-page="false"
+                  height="32"
                   id="brandSvgHeader"
                   src="http://localhost:7080/news/images/brand.svg"
+                  width="220.8450704225352"
                 />
               </span>
               <span
@@ -1557,15 +1560,18 @@ body.simorgh-player-fullscreen .emotion-1 {
             <span
               aria-hidden="true"
               class="brand"
-              style="--brand-source: url("http://localhost:7080/news/images/brand.svg");"
+              data-brand-logo=""
+              data-is-languages-page="false"
+              style="--brand-source: url("http://localhost:7080/news/images/brand.svg"); --brand-ratio: 6.901408450704225;"
             >
               <img
                 alt=""
                 aria-hidden="true"
                 class="external-svg image"
-                data-is-languages-page="false"
+                height="32"
                 id="brandSvgFooter"
                 src="http://localhost:7080/news/images/brand.svg"
+                width="220.8450704225352"
               />
             </span>
             <span
