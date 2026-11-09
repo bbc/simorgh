@@ -10,6 +10,7 @@ import { use, useEffect, useRef, useState } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import Text from '#app/components/Text';
+import TopicRecommendations from './TopicRecommendations';
 import styles from './styles';
 
 const ITEMS_PER_PAGE = 24;
@@ -21,9 +22,35 @@ interface MyNewsPageContentProps {
   page?: string;
   showSavedArticles: boolean;
   showFollowedTopics: boolean;
+  showPageHeading?: boolean;
 }
 
-const MyNewsPageContent = ({
+const MyNewsRecommendationsOnly = ({
+  showPageHeading = true,
+}: Pick<MyNewsPageContentProps, 'showPageHeading'>) => {
+  const { translations, lang } = use(ServiceContext);
+
+  if (!translations?.myNews) return null;
+
+  return (
+    <>
+      <MetadataContainer
+        title={translations.myNews.title}
+        openGraphType="website"
+        hasAmpPage={false}
+        lang={lang}
+      />
+      {showPageHeading && (
+        <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
+          {translations.myNews.title}
+        </Heading>
+      )}
+      <TopicRecommendations />
+    </>
+  );
+};
+
+const MyNewsPagePersonalizedContent = ({
   page,
   showSavedArticles,
   showFollowedTopics,
@@ -222,6 +249,7 @@ const MyNewsPageContent = ({
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
+      <TopicRecommendations />
       {bothSectionsFailed ? (
         <Text>{contentErrorText}</Text>
       ) : (
@@ -232,6 +260,16 @@ const MyNewsPageContent = ({
       )}
     </>
   );
+};
+
+const MyNewsPageContent = (props: MyNewsPageContentProps) => {
+  const { showSavedArticles, showFollowedTopics, showPageHeading } = props;
+
+  if (!showSavedArticles && !showFollowedTopics) {
+    return <MyNewsRecommendationsOnly showPageHeading={showPageHeading} />;
+  }
+
+  return <MyNewsPagePersonalizedContent {...props} />;
 };
 
 export default MyNewsPageContent;

@@ -10,9 +10,13 @@ import useViewTracker from '#app/hooks/useViewTracker';
 
 interface FollowTopicButtonGuestProps {
   topicId?: string;
+  compact?: boolean;
 }
 
-const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
+const FollowTopicButtonGuest = ({
+  topicId,
+  compact = false,
+}: FollowTopicButtonGuestProps) => {
   const { translations } = use(ServiceContext);
   const { signInUrl, registerUrl } = use(AccountContext);
   const isHydrated = useHydrationDetection();
@@ -49,6 +53,7 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
         accessibleLabel={label ?? ''}
         testId="follow-topic-btn-guest"
         isLoading={!isHydrated}
+        iconOnly={compact}
         {...viewTracker}
       />
       {isModalOpen &&

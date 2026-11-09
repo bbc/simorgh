@@ -8,11 +8,15 @@ import FollowTopicButtonGuest from './FollowTopicButtonGuest';
 
 export interface FollowTopicButtonProps {
   topicData: FollowTopicData;
+  compact?: boolean;
 }
 
-const FOLLOW_TOPIC_BUTTON_ID = 'follow-topic-button';
+const FOLLOW_TOPIC_BUTTON_SELECTOR = '[data-follow-topic-button]';
 
-const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
+const FollowTopicButton = ({
+  topicData,
+  compact = false,
+}: FollowTopicButtonProps) => {
   const topicId = topicData?.topicId;
 
   const { isTopicPersonalizationAvailable, isTopicPersonalizationEnabled } =
@@ -25,13 +29,21 @@ const FollowTopicButton = ({ topicData }: FollowTopicButtonProps) => {
   return (
     <ErrorBoundary componentName="FollowTopicButton">
       <noscript>
-        <style>{`#${FOLLOW_TOPIC_BUTTON_ID} { display: none; }`}</style>
+        <style>{`${FOLLOW_TOPIC_BUTTON_SELECTOR} { display: none; }`}</style>
       </noscript>
-      <div className={styles.buttonWrapper} id={FOLLOW_TOPIC_BUTTON_ID}>
+      <div
+        className={[styles.buttonWrapper, compact && styles.compact]
+          .filter(Boolean)
+          .join(' ')}
+        data-follow-topic-button=""
+      >
         {isTopicPersonalizationEnabled ? (
-          <FollowTopicButtonAuthenticated topicData={topicData} />
+          <FollowTopicButtonAuthenticated
+            topicData={topicData}
+            compact={compact}
+          />
         ) : (
-          <FollowTopicButtonGuest topicId={topicId} />
+          <FollowTopicButtonGuest topicId={topicId} compact={compact} />
         )}
       </div>
     </ErrorBoundary>
