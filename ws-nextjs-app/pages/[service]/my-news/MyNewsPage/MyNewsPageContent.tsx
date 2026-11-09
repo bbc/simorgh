@@ -249,7 +249,9 @@ const MyNewsPagePersonalizedContent = ({
       <Heading level={1} id="content" tabIndex={-1} css={styles.heading}>
         {title}
       </Heading>
-      <TopicRecommendations />
+      <TopicRecommendations
+        followedTopicIds={followedTopics.map(topic => topic.id)}
+      />
       {bothSectionsFailed ? (
         <Text>{contentErrorText}</Text>
       ) : (
