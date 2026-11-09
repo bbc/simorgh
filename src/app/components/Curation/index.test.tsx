@@ -721,7 +721,7 @@ describe('Curation', () => {
       return getByTestId('topic-promos');
     };
 
-    it('applies video collection styling for Arabic on test', () => {
+    it('applies video collection styling for Arabic', () => {
       const list = renderCuration({
         service: 'arabic',
         isVideoCollection: true,
@@ -733,19 +733,13 @@ describe('Curation', () => {
 
     it.each([
       {
-        description: 'Arabic on live',
-        service: 'arabic',
-        isVideoCollection: true,
-        isLite: false,
-      },
-      {
         description: 'Arabic Lite page',
         service: 'arabic',
         isVideoCollection: true,
         isLite: true,
       },
       {
-        description: 'Mundo on test',
+        description: 'Mundo',
         service: 'mundo',
         isVideoCollection: true,
       },
