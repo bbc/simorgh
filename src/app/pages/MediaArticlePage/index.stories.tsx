@@ -1,6 +1,8 @@
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { PageTypes, Services } from '#app/models/types/global';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -17,7 +19,6 @@ import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json'
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaArticlePageComponent from './MediaArticlePage';
-import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Page = withOptimizelyProvider(MediaArticlePageComponent);
 
@@ -54,16 +55,18 @@ const ComponentWithContext = ({
           id="c000000000o"
         >
           <UserContextProvider>
-            <ThemeProvider service={service}>
-              <PageLayoutWrapper pageData={data.article} status={200}>
-                <Page
-                  pageData={{
-                    ...data.article,
-                    secondaryColumn: data.secondaryData,
-                  }}
-                />
-              </PageLayoutWrapper>
-            </ThemeProvider>
+            <ThemeProviderSCSSModules service={service}>
+              <ThemeProvider service={service}>
+                <PageLayoutWrapper pageData={data.article} status={200}>
+                  <Page
+                    pageData={{
+                      ...data.article,
+                      secondaryColumn: data.secondaryData,
+                    }}
+                  />
+                </PageLayoutWrapper>
+              </ThemeProvider>
+            </ThemeProviderSCSSModules>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>

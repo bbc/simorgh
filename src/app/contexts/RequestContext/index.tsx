@@ -38,7 +38,6 @@ export type RequestContextProps = {
   statsDestination: string;
   destinationSiteId: number | null;
   statusCode: number | null;
-  timeOnServer: number | null;
   variant: Variants | null;
   country?: string | null;
   primaryMediaType: string | null;
@@ -65,7 +64,6 @@ type RequestProviderProps = {
   showAdsBasedOnLocation?: boolean;
   showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
-  timeOnServer?: number | null;
   serverSideExperiments?: ServerSideExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
@@ -93,7 +91,6 @@ export const RequestContextProvider = ({
   nonce = null,
   cspHeader = null,
   statusCode = null,
-  timeOnServer = null,
   variant = null,
   isUK = null,
   primaryMediaType = null,
@@ -142,7 +139,6 @@ export const RequestContextProvider = ({
       destinationSiteId,
       statusCode,
       variant,
-      timeOnServer,
       showAdsBasedOnLocation,
       showCookieBannerBasedOnCountry,
       service,
@@ -174,7 +170,6 @@ export const RequestContextProvider = ({
       statsDestination,
       destinationSiteId,
       statusCode,
-      timeOnServer,
       variant,
       country,
       cspHeader,

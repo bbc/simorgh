@@ -42,7 +42,7 @@ const styles = {
           fontSize: `${pixelsToRem(13)}rem`,
           paddingBottom: `${spacings.DOUBLE}rem`,
         },
-        [mq.GROUP_2_MAX_WIDTH]: {
+        [mq.GROUP_2_MIN_WIDTH]: {
           'h2, h3': {
             fontSize: `${pixelsToRem(18)}rem`,
           },

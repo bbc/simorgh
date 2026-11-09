@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -6,6 +6,9 @@ import {
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
@@ -20,6 +23,12 @@ import {
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
+import {
+  STICKY_NAV_ARTICLE_IMAGE_SELECTOR,
+  STICKY_NAV_ARTICLE_START_SELECTOR,
+  NAVIGATION_TRACKING_COMPONENT,
+  STICKY_NAVIGATION_EXPERIMENT,
+} from './config';
 import styles from './index.styles';
 
 /**
@@ -220,6 +229,23 @@ type NavigationContainerProps = {
 const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
 const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 
+const StickyNavigationExperiment = ({
+  setExperimentVariant,
+}: {
+  setExperimentVariant: React.Dispatch<React.SetStateAction<string | null>>;
+}) => {
+  const experimentVariant = useOptimizelyVariation({
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  useEffect(() => {
+    setExperimentVariant(experimentVariant);
+  }, [experimentVariant, setExperimentVariant]);
+
+  return null;
+};
+
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
@@ -235,21 +261,79 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   } = use(ServiceContext);
 
   const { currentPage, navMenuText } = translations;
+  const [shouldActivateStickyNavExperiment, setShouldActivate] =
+    useState(false);
+  const [stickyNavExperimentVariant, setStickyNavExperimentVariant] = useState<
+    string | null
+  >(null);
+
+  useEffect(() => {
+    if (
+      isAmp ||
+      isLite ||
+      pageType !== ARTICLE_PAGE ||
+      shouldActivateStickyNavExperiment
+    ) {
+      return undefined;
+    }
+
+    const activateWhenPastArticleImage = () => {
+      const articleImage = document.querySelector(
+        STICKY_NAV_ARTICLE_IMAGE_SELECTOR,
+      );
+      const articleImageBoundary = articleImage?.closest('figure');
+      const articleStart = articleImageBoundary
+        ? null
+        : document.querySelector(STICKY_NAV_ARTICLE_START_SELECTOR);
+      const activationPoint = articleImageBoundary
+        ? articleImageBoundary.getBoundingClientRect().bottom
+        : articleStart?.getBoundingClientRect().top;
+
+      if (activationPoint !== undefined && activationPoint <= 0) {
+        setShouldActivate(true);
+      }
+    };
+
+    window.addEventListener('scroll', activateWhenPastArticleImage, {
+      passive: true,
+    });
+    activateWhenPastArticleImage();
+
+    return () =>
+      window.removeEventListener('scroll', activateWhenPastArticleImage);
+  }, [isAmp, isLite, pageType, shouldActivateStickyNavExperiment]);
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
-  const topNavClickTrackerHandler = useClickTrackerHandler(
-    navEventTrackingMetadata,
-  );
-  const bottomNavClickTrackerHandler = useClickTrackerHandler(
-    navEventTrackingMetadata,
-  );
-  const dropdownNavClickTrackerHandler = useClickTrackerHandler(
-    dropdownNavEventTrackingData,
-  );
+  const stickyNavExperimentTrackingMetadata = {
+    sendOptimizelyEvents: true,
+    optimizelyComponentName: NAVIGATION_TRACKING_COMPONENT,
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentVariant: stickyNavExperimentVariant,
+  };
+
+  const topNavClickTrackerHandler = useClickTrackerHandler({
+    ...navEventTrackingMetadata,
+    ...stickyNavExperimentTrackingMetadata,
+  });
+  const bottomNavClickTrackerHandler = useClickTrackerHandler({
+    ...navEventTrackingMetadata,
+    ...stickyNavExperimentTrackingMetadata,
+  });
+  const dropdownNavClickTrackerHandler = useClickTrackerHandler({
+    ...dropdownNavEventTrackingData,
+    ...stickyNavExperimentTrackingMetadata,
+  });
 
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+  const stickyNavEventTrackingMetadata = {
+    componentName: NAVIGATION_TRACKING_COMPONENT,
+    ...stickyNavExperimentTrackingMetadata,
+  };
+  const stickyNavClickTrackerHandler = useClickTrackerHandler(
+    stickyNavEventTrackingMetadata,
+  );
 
   /**
    * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
@@ -346,15 +430,65 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     </DropdownUl>
   );
 
+  // Experiment Sticky Nav
+  const stickyTopScrollableListItems = (
+    <NavigationUl>
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: navigationItems,
+        currentPage,
+        dir,
+        activeIndex: topActiveIndex,
+        clickTracker: stickyNavClickTrackerHandler,
+        shouldAnnounce: topShouldAnnounce,
+      })}
+    </NavigationUl>
+  );
+
+  const stickyBottomScrollableListItems = (
+    <NavigationUl>
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: bottomItems,
+        currentPage,
+        dir,
+        activeIndex: activeBottomIndex,
+        clickTracker: stickyNavClickTrackerHandler,
+      })}
+    </NavigationUl>
+  );
+
+  const stickyDropdownListItems = (
+    <DropdownUl>
+      {renderListItems({
+        Li: DropdownLi,
+        navigation: dropdownSource,
+        currentPage,
+        dir,
+        activeIndex: -1,
+        clickTracker: stickyNavClickTrackerHandler,
+      })}
+    </DropdownUl>
+  );
+
   const NavigationRenderer = isAmp ? Amp : Canonical;
 
   return (
     <>
+      {shouldActivateStickyNavExperiment && (
+        <StickyNavigationExperiment
+          setExperimentVariant={setStickyNavExperimentVariant}
+        />
+      )}
       <div css={styles.brandDivider} />
       <NavigationRenderer
         topScrollableListItems={topScrollableListItems}
         bottomScrollableListItems={bottomScrollableListItems}
         dropdownListItems={dropdownListItems}
+        stickyTopScrollableListItems={stickyTopScrollableListItems}
+        stickyBottomScrollableListItems={stickyBottomScrollableListItems}
+        stickyDropdownListItems={stickyDropdownListItems}
+        stickyNavExperimentVariant={stickyNavExperimentVariant}
         menuAnnouncedText={navMenuText}
         dir={dir}
         blocks={blocks}

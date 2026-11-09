@@ -15,7 +15,7 @@ type ExperimentsForPageTypeMetrics = {
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     pageType: ARTICLE_PAGE,
-    activeExperiments: [],
+    activeExperiments: ['newswb_ws_sticky_navigation'],
   },
   {
     pageType: MEDIA_ARTICLE_PAGE,
@@ -23,7 +23,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   },
   {
     pageType: HOME_PAGE,
-    activeExperiments: [],
+    activeExperiments: ['test_server_side_experiment_visits_aa'],
   },
 ];
 

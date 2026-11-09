@@ -58,17 +58,17 @@ export const service: DefaultServiceConfig = {
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
     },
     podcastPromo: {
-      title: 'Promoção Resultados eleição 2026',
-      brandTitle: 'Eleições 2026: veja como foi a votação',
+      title: 'Promoção app',
+      brandTitle: 'Temos um novo app!',
       brandDescription:
-        'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil ',
+        'Veja notícias do Brasil e do mundo no BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
-        alt: 'Agregador de Pesquisas da BBC News Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pkzzq8.jpg',
+        alt: 'Novo app da BBC Brasil',
       },
       linkLabel: {
-        text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
+        text: 'Baixe aqui',
+        href: 'https://www.bbc.com/portuguese/articles/cqe9l2z988g5o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
