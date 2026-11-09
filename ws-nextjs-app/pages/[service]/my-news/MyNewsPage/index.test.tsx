@@ -28,6 +28,10 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 jest.mock('#app/hooks/useUASRecentActivity');
 jest.mock('#app/hooks/useUASFollowedTopics');
+jest.mock('#app/components/FollowTopicButton', () => ({
+  __esModule: true,
+  default: () => null,
+}));
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
@@ -697,7 +701,9 @@ describe('MyNewsPage', () => {
             name: 'Previously visited title',
           }),
         ).not.toBeInTheDocument();
-        expect(within(recommendations).getAllByRole('listitem')).toHaveLength(1);
+        expect(within(recommendations).getAllByRole('listitem')).toHaveLength(
+          1,
+        );
       },
     );
 
