@@ -148,6 +148,8 @@ Use the `:global([data-is-dark-ui='true']) &` selector inside a component's `.mo
 
 ## Handling Opera Mini fallbacks
 
+Shared external SVG icons retain a literal image URL and dimensions as their baseline, without depending on CSS custom properties. Browsers supporting custom properties progressively enhance this to a background image and, where supported, a `currentColor` mask. AMP uses a literal CSS background for the baseline instead of an `<img>` so the markup remains AMP-valid.
+
 [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) is a popular layout mechanism suitable for many use cases, unfortunately, one of our supported browsers Opera Mini does [not support the API](https://caniuse.com/css-grid). Based on this we have the following guidelines.
 
 ### CSS Grid can only be used for page layout

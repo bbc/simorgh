@@ -47,7 +47,14 @@ describe('icons', () => {
     });
     expect(icon).toHaveClass('mask');
     expect(icon).toHaveAttribute('aria-hidden', 'true');
-    expect(container.querySelector('img, svg')).not.toBeInTheDocument();
+    expect(container.querySelector('svg')).not.toBeInTheDocument();
+    expect(icon?.querySelector('img')).toHaveAttribute(
+      'src',
+      `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/close.svg`,
+    );
+    expect(icon?.querySelector('img')).toHaveAttribute('width', '12');
+    expect(icon?.querySelector('img')).toHaveAttribute('height', '12');
+    expect(icon?.querySelector('img')).toHaveAttribute('alt', '');
   });
 
   it('uses the direction-appropriate chevron asset', () => {
@@ -114,6 +121,10 @@ describe('icons', () => {
       '--icon-width': '1em',
       '--icon-height': '1em',
     });
+    expect(container.querySelector('img')).toHaveStyle({
+      width: '1em',
+      height: '1em',
+    });
   });
 
   it('preserves CSS-unit dimensions for masks', () => {
@@ -124,6 +135,24 @@ describe('icons', () => {
     expect(container.querySelector('.external-svg')).toHaveStyle({
       '--icon-width': '2rem',
       '--icon-height': '1.5rem',
+    });
+    expect(container.querySelector('img')).toHaveStyle({
+      width: '2rem',
+      height: '1.5rem',
+    });
+    expect(container.querySelector('img')).not.toHaveAttribute('width');
+    expect(container.querySelector('img')).not.toHaveAttribute('height');
+  });
+
+  it('uses a literal external background and dimensions for the AMP baseline', () => {
+    const { container } = render(<Close />, { isAmp: true });
+    const fallback = container.querySelector('.fallback');
+
+    expect(container.querySelector('img, amp-img')).not.toBeInTheDocument();
+    expect(fallback).toHaveStyle({
+      width: '12px',
+      height: '12px',
+      backgroundImage: `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/close.svg")`,
     });
   });
 

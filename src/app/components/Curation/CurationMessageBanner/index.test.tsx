@@ -19,7 +19,7 @@ describe('CurationMessageBanner', () => {
   const getContentImages = () =>
     screen
       .queryAllByAltText('')
-      .filter(image => !image.classList.contains('external-svg'));
+      .filter(image => !image.closest('.external-svg'));
 
   it('renders a section with role="region"', () => {
     render(<CurationMessageBanner {...defaultProps} />);

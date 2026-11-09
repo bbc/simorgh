@@ -284,7 +284,7 @@ describe('Home Page', () => {
       });
 
       const messageBannerImages = document.querySelectorAll(
-        '[data-testid^="message-banner"] img:not(.external-svg)',
+        '[data-testid^="message-banner"] img:not([aria-hidden="true"])',
       );
 
       messageBannerImages.forEach(image => {
@@ -302,13 +302,13 @@ describe('Home Page', () => {
 
       billboardSections.forEach(billboardSection => {
         const allImages = Array.from(
-          billboardSection.querySelectorAll('img:not(.external-svg)'),
+          billboardSection.querySelectorAll('img:not([aria-hidden="true"])'),
         );
         const grid = billboardSection.querySelector(
           '[data-testid="billboard-curation-grid"]',
         );
         const gridImages = grid
-          ? Array.from(grid.querySelectorAll('img:not(.external-svg)'))
+          ? Array.from(grid.querySelectorAll('img:not([aria-hidden="true"])'))
           : [];
 
         // The main billboard image is the first image in the section that is not in the grid
@@ -334,16 +334,16 @@ describe('Home Page', () => {
       });
 
       const allImages = Array.from(
-        document.querySelectorAll('img:not(.external-svg)'),
+        document.querySelectorAll('img:not([aria-hidden="true"])'),
       );
       const billboardImages = Array.from(
         document.querySelectorAll(
-          '[data-testid^="billboard"] img:not(.external-svg)',
+          '[data-testid^="billboard"] img:not([aria-hidden="true"])',
         ),
       );
       const messageBannerImages = Array.from(
         document.querySelectorAll(
-          '[data-testid^="message-banner"] img:not(.external-svg)',
+          '[data-testid^="message-banner"] img:not([aria-hidden="true"])',
         ),
       );
       const billboardAndBannerImages = new Set([

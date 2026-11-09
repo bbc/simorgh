@@ -2,47 +2,63 @@
 
 .mask {
   display: inline-block;
-  width: var(--icon-width);
-  height: var(--icon-height);
   flex-shrink: 0;
-  background: var(--icon-source) center / contain no-repeat;
 
-  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
-    background-color: currentColor;
-    background-image: none;
-    -webkit-mask: var(--icon-source) center / contain no-repeat;
-    mask: var(--icon-source) center / contain no-repeat;
+  @supports (--icon-source: url('')) {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    background: var(--icon-source) center / contain no-repeat;
 
-    @media (forced-colors: active) {
-      color: CanvasText;
-      forced-color-adjust: none;
+    > .fallback {
+      display: none;
+    }
 
-      @supports not (forced-color-adjust: preserve-parent-color) {
-        :global(a) & {
-          color: LinkText;
-        }
+    @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+      background-color: currentColor;
+      background-image: none;
+      -webkit-mask: var(--icon-source) center / contain no-repeat;
+      mask: var(--icon-source) center / contain no-repeat;
 
-        :global(button) & {
-          color: ButtonText;
-        }
-
-        :global(button:disabled) & {
-          color: GrayText;
-        }
+      &.fallbackInverted {
+        filter: none;
       }
 
-      @supports (forced-color-adjust: preserve-parent-color) {
-        color: inherit;
-        forced-color-adjust: preserve-parent-color;
+      @media (forced-colors: active) {
+        color: CanvasText;
+        forced-color-adjust: none;
+
+        @supports not (forced-color-adjust: preserve-parent-color) {
+          :global(a) & {
+            color: LinkText;
+          }
+
+          :global(button) & {
+            color: ButtonText;
+          }
+
+          :global(button:disabled) & {
+            color: GrayText;
+          }
+        }
+
+        @supports (forced-color-adjust: preserve-parent-color) {
+          color: inherit;
+          forced-color-adjust: preserve-parent-color;
+        }
       }
     }
   }
 }
 
+.fallback {
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .fallbackInverted {
-  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
-    filter: invert(1) hue-rotate(180deg);
-  }
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .blue {

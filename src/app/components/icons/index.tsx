@@ -1,5 +1,6 @@
 import type { Interpolation, Theme } from '@emotion/react';
-import type { CSSProperties } from 'react';
+import { use, type CSSProperties } from 'react';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { Direction } from '#app/models/types/global';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -33,6 +34,7 @@ export const ExternalSvg = ({
   useCurrentColor = false,
   width,
 }: IconProps) => {
+  const { isAmp } = use(RequestContext);
   const {
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
@@ -43,14 +45,18 @@ export const ExternalSvg = ({
   }`;
 
   if (useCurrentColor) {
+    const fallbackDimensions = {
+      width: toCssLength(width),
+      height: toCssLength(height),
+    };
     const maskStyle: CSSProperties & {
       '--icon-source': string;
       '--icon-width': string;
       '--icon-height': string;
     } = {
       '--icon-source': `url("${src}")`,
-      '--icon-width': toCssLength(width),
-      '--icon-height': toCssLength(height),
+      '--icon-width': fallbackDimensions.width,
+      '--icon-height': fallbackDimensions.height,
     };
 
     return (
@@ -65,7 +71,27 @@ export const ExternalSvg = ({
           .join(' ')}
         css={css}
         style={maskStyle}
-      />
+      >
+        {isAmp ? (
+          <span
+            className={styles.fallback}
+            style={{
+              ...fallbackDimensions,
+              backgroundImage: `url("${src}")`,
+            }}
+          />
+        ) : (
+          <img
+            alt=""
+            aria-hidden="true"
+            className={styles.fallback}
+            src={src}
+            width={Number.isNaN(Number(width)) ? undefined : width}
+            height={Number.isNaN(Number(height)) ? undefined : height}
+            style={fallbackDimensions}
+          />
+        )}
+      </span>
     );
   }
   const hasCssLength = [width, height].some(

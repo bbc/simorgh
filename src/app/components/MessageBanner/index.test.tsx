@@ -36,7 +36,7 @@ describe('MessageBanner', () => {
   const getContentImage = () => {
     const contentImage = screen
       .getAllByAltText('')
-      .find(image => !image.classList.contains('external-svg'));
+      .find(image => !image.closest('.external-svg'));
 
     if (!contentImage) {
       throw new Error('Expected a message banner content image');
