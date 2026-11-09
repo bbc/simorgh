@@ -1,4 +1,6 @@
 import { render } from '#app/components/react-testing-library-with-providers';
+import { readFileSync } from 'fs';
+import path from 'path';
 import {
   AccountIconRounded,
   Chevron,
@@ -10,6 +12,31 @@ import {
 } from '.';
 
 describe('icons', () => {
+  it('keeps the non-rounded account artwork distinct from the rounded icon', () => {
+    const accountSvg = readFileSync(
+      path.resolve(__dirname, '../../../../public/images/icons/account.svg'),
+      'utf8',
+    );
+    const roundedSvg = readFileSync(
+      path.resolve(
+        __dirname,
+        '../../../../public/images/icons/account-rounded.svg',
+      ),
+      'utf8',
+    );
+    const parser = new DOMParser();
+    const account = parser.parseFromString(accountSvg, 'image/svg+xml');
+    const rounded = parser.parseFromString(roundedSvg, 'image/svg+xml');
+
+    expect(account.documentElement.getAttribute('viewBox')).toBe('0 0 32 32');
+    expect(account.querySelector('path')?.getAttribute('fill-rule')).toBe(
+      'evenodd',
+    );
+    expect(account.querySelector('path')?.getAttribute('d')).not.toBe(
+      rounded.querySelector('path')?.getAttribute('d'),
+    );
+  });
+
   it('loads shared icons from the static-assets CDN', () => {
     const { container } = render(<Close />);
     const icon = container.querySelector('.external-svg');

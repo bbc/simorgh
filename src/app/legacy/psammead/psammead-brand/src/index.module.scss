@@ -34,6 +34,24 @@
         -webkit-mask: var(--brand-source) center / contain no-repeat;
         mask: var(--brand-source) center / contain no-repeat;
       }
+
+      @media (forced-colors: active) {
+        &::after {
+          color: CanvasText;
+          background-color: currentColor;
+
+          @supports not (forced-color-adjust: preserve-parent-color) {
+            :global(a) & {
+              color: LinkText;
+            }
+          }
+
+          @supports (forced-color-adjust: preserve-parent-color) {
+            color: inherit;
+            forced-color-adjust: preserve-parent-color;
+          }
+        }
+      }
     }
   }
 }
