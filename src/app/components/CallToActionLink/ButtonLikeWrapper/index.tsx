@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
-import styles from './index.styles';
+import clsx from 'clsx';
+import styles from './index.module.scss';
 
 type ButtonLikeWrapperProps = {
   className?: string;
@@ -11,7 +12,7 @@ const ButtonLikeWrapper = ({
   ...rest
 }: PropsWithChildren<ButtonLikeWrapperProps>) => {
   return (
-    <div css={styles.flexWrapper} className={className} {...rest}>
+    <div className={clsx(styles.flexWrapper, className)} {...rest}>
       {children}
     </div>
   );
