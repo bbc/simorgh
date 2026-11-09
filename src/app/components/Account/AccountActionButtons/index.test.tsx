@@ -16,6 +16,19 @@ const renderComponent = (props = {}) =>
 
 describe('AccountActionButtons', () => {
   describe('sign-in link', () => {
+    it.each([false, true])(
+      'keeps the white icon fallback when onLightBackground is %s',
+      onLightBackground => {
+        renderComponent({ onLightBackground });
+
+        const icon = screen
+          .getByTestId('test-sign-in')
+          .querySelector('.external-svg');
+
+        expect(icon).toHaveClass('mask', 'fallbackInverted');
+      },
+    );
+
     it('renders with accessible label from signInAccessibleLabel when provided', () => {
       renderComponent({ signInAccessibleLabel: 'Sign in to My News' });
 

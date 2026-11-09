@@ -35,7 +35,7 @@ describe('Brand', () => {
         'src',
         expect.stringContaining('news/images/brand.svg'),
       );
-      expect(image.parentElement).toHaveClass('ampBrand');
+      expect(image.parentElement).toHaveClass('brand');
       expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
         '6.9979',
       );
@@ -53,6 +53,11 @@ describe('Brand', () => {
 
       expect(image).toHaveAttribute('src', src);
       expect(image).toHaveAttribute('alt', '');
+      expect(image).toHaveAttribute('width', String(svg.ratio * 32));
+      expect(image).toHaveAttribute('height', '32');
+      expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
+        '6.9979',
+      );
       expect(image.parentElement).toHaveAttribute('aria-hidden', 'true');
       expect(image.parentElement.style.getPropertyValue('--brand-source')).toBe(
         `url("${src}")`,

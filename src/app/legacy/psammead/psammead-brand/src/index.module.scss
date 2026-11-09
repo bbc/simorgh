@@ -5,6 +5,8 @@
   position: relative;
   display: inline-flex;
   max-width: 100%;
+  height: var(--brand-height);
+  width: calc(var(--brand-height) * var(--brand-ratio));
 
   @media #{theme.$mediaQueries-group-2-min-width} {
     --brand-height: #{theme.pixelsToRem-px-to-rem(24)};
@@ -60,9 +62,5 @@
   box-sizing: content-box;
   height: var(--brand-height);
   max-width: 100%;
-}
-
-.ampBrand {
-  height: var(--brand-height);
-  width: calc(var(--brand-height) * var(--brand-ratio));
+  width: 100%;
 }

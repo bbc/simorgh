@@ -29,7 +29,7 @@ A custom webpack loader (`ws-nextjs-app/scripts/DevCssExtractLoader.cjs`) is inj
 1. `css-loader` processes each `.module.scss` file and outputs a JavaScript module. The CSS string inside this JS output already has **hashed class names** applied (e.g. `.Subhead_h2__K8gJ6`), which is the correct form needed for SSR injection.
 2. The loader is inserted immediately **before** `css-loader` in webpack's `use` array. Because webpack processes loaders right-to-left, this means the loader runs _after_ `css-loader` and receives its JS output.
 3. The loader extracts the CSS string from the JS output using a regex that matches `css-loader`'s `.push([module.id, "<css>", ""])` pattern.
-4. Each module's extracted CSS is stored in an in-memory `Map` keyed by file path. This map persists across HMR (Hot Module Rebuild) rebuilds within the same process, so unchanged files are retained without re-processing.
+4. Each module's extracted CSS is stored in an in-memory `Map` keyed by file path. The loader disables webpack caching so restarts replay CSS extraction instead of reusing JavaScript output without rebuilding the CSS file. The map retains previously extracted modules during HMR (Hot Module Rebuild) rebuilds.
 5. On every change, the full concatenated CSS is written to `build/dev-css-modules.css`.
 
 **Global (non-module) SCSS — theme variables and font faces:**
@@ -56,6 +56,7 @@ then applied before inlining. The extracted file itself remains a full dump so
 subsequent requests and HMR updates can use different components.
 
 ### Cautionary Note
+
 This solution is quite complex as [identified in review](https://github.com/bbc/simorgh/pull/13992#pullrequestreview-4389134898), we may wish to remove this solution if it becomes difficult to maintain. It is tightly coupled to Next implementation details so if changes are frequently made it may not be economical to maintain. In this case we could fallback to using a production build for amp and lite pages to test css changes.
 
 ---
@@ -149,6 +150,6 @@ switch (true) {
     // ...
   }
   default:
-    // getAmpLiteCss and getNextData are never called here
+  // getAmpLiteCss and getNextData are never called here
 }
 ```

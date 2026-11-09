@@ -63,6 +63,20 @@ export default () => {
       expect(css).toMatch(/\.[A-Za-z]+_[a-zA-Z]+__[A-Za-z0-9]+/);
     });
 
+    it('should retain the visually hidden brand label and logo sizing rules', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+      const label = document.querySelector('[id^="BrandLink-"]');
+      const labelClass = label?.className;
+
+      expect(label).toBeInTheDocument();
+      expect(labelClass).toMatch(/VisuallyHiddenText_visuallyHiddenText__/);
+      expect(css).toContain(`.${labelClass}{`);
+      expect(css).toContain('clip:rect(1px,1px,1px,1px)');
+      expect(css).toContain(
+        'width:calc(var(--brand-height)*var(--brand-ratio))',
+      );
+    });
+
     it('should strip unnecessary vendor prefixes left in by Emotion', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
 

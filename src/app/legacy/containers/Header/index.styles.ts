@@ -50,11 +50,11 @@ export default {
       '.brand-link': {
         paddingTop: `${pixelsToRem(2)}rem`,
 
-        '.external-svg': {
-          height: '1.5rem',
+        '[data-brand-logo]': {
+          '--brand-height': '1.5rem',
 
           [mq.GROUP_3_MIN_WIDTH]: {
-            height: '1.875rem',
+            '--brand-height': '1.875rem',
           },
         },
         [mq.GROUP_1_MIN_WIDTH]: {

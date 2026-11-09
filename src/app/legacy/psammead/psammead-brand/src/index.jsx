@@ -1,5 +1,4 @@
 import { forwardRef, use } from 'react';
-import clsx from 'clsx';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
@@ -120,12 +119,13 @@ const StyledBrand = ({
   return svg ? (
     <>
       <span
-        className={clsx(styles.brand, isAmp && styles.ampBrand)}
+        className={styles.brand}
         aria-hidden="true"
+        data-brand-logo=""
         data-is-languages-page={isLanguagesPage && linkId !== 'footer'}
         style={{
           '--brand-source': `url("${src}")`,
-          ...(isAmp && { '--brand-ratio': svg.ratio }),
+          '--brand-ratio': svg.ratio,
         }}
       >
         {isAmp ? (
@@ -144,6 +144,8 @@ const StyledBrand = ({
             aria-hidden="true"
             alt=""
             src={src}
+            width={svg.ratio * 32}
+            height="32"
           />
         )}
       </span>
