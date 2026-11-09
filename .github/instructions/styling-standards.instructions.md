@@ -8,10 +8,9 @@ Simorgh is progressively migrating its styling foundation from Emotion (CSS-in-J
 
 - Always use SCSS Modules for new component styling. Do not add new Emotion usage: no new `index.styles.ts` files, `styled` components, or `css` props on elements that don't already have one. Small in-place edits to an existing Emotion style object are allowed.
 - When modifying an existing Emotion-styled component, decide whether to migrate it based on the scope of the change:
-  - **Change the styles themselves** (adding or changing rules in `index.styles.ts` or a `css` prop): migrate the component to SCSS Modules instead of extending the Emotion styles.
-  - **Make a small or non-styling change** (logic, props, copy, tests, types, a one-line style tweak): do **not** migrate. Make the change in place and keep the diff focused.
-  - **Unsure, or the migration would roughly double the diff or touch files you otherwise wouldn't change:** don't migrate without asking. Use the `ask_user` tool if it's available; otherwise end your response with: "This component still uses Emotion. Do you want me to migrate it to SCSS Modules using the `migrate-component-to-scss-modules` skill, either in this change or as a follow-up?"
-- Never start an unrequested migration on your own.
+  - **Small or non-styling change** (logic, props, copy, tests, types, or a small in-place tweak to existing style values): do **not** migrate. Make the change in place and keep the diff focused.
+  - **Larger styling change** (adding new rules or restyling the component), or you're unsure: propose a migration and get the user's agreement before starting. Use the `ask_user` tool if it's available; otherwise end your response with: "This component still uses Emotion. Do you want me to migrate it to SCSS Modules using the `migrate-component-to-scss-modules` skill, either in this change or as a follow-up?"
+- Never start a migration the user hasn't requested or agreed to.
 
 ## Rules
 - Co-locate an `index.module.scss` file next to the component, import it as `styles`, and apply classes via `className`.
