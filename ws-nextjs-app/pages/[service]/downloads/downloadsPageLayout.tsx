@@ -7,6 +7,7 @@ import CallToActionLink from '#app/components/CallToActionLink';
 import { ExternalSvg } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import ctaStyles from './downloadsPageLayout.module.scss';
 import styles from './styles';
 import { PageProps } from './types';
 
@@ -57,7 +58,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     isRelative={false}
                   />
                   <CallToActionLink
-                    css={styles.cta}
+                    className={ctaStyles.cta}
                     url={item.files[0].fileLink}
                     download
                     eventTrackingData={{

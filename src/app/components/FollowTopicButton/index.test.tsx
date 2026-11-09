@@ -15,11 +15,21 @@ import useTopicFollowButton, {
 } from '#app/hooks/useTopicFollowButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import type { Services, Toggles } from '#app/models/types/global';
+import { FollowTopicButtonLoadingFallback } from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButton from '.';
 
-jest.mock('./FollowTopicButtonAuthenticated/lazy', () =>
-  jest.requireActual('./FollowTopicButtonAuthenticated'),
-);
+jest.mock('./FollowTopicButtonAuthenticated/lazy', () => {
+  const actualLazy = jest.requireActual(
+    './FollowTopicButtonAuthenticated/lazy',
+  );
+  const authenticated = jest.requireActual('./FollowTopicButtonAuthenticated');
+
+  return {
+    __esModule: true,
+    ...actualLazy,
+    default: authenticated.default,
+  };
+});
 
 jest.mock('#app/hooks/useTopicFollowButton');
 jest.mock('#app/hooks/useHydrationDetection');
@@ -302,6 +312,20 @@ describe('FollowTopicButton', () => {
     },
   );
 
+  it('renders translated loading fallback that cannot open sign-in modal', async () => {
+    render(<FollowTopicButtonLoadingFallback />, { service: 'hindi' });
+
+    expect(screen.getByTestId('follow-topic-btn-loading')).toHaveTextContent(
+      LOADING_LABEL,
+    );
+
+    await userEvent.click(screen.getByTestId('follow-topic-btn-loading'));
+
+    expect(
+      screen.queryByTestId('follow-topic-sign-in-modal'),
+    ).not.toBeInTheDocument();
+  });
+
   describe('authenticated tooltip', () => {
     const mockActionResult = (actionResult: FollowActionResult) => {
       mockFollowState({
@@ -362,6 +386,27 @@ describe('FollowTopicButton', () => {
 
       expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
+
+    it.each([FollowAction.FOLLOW, FollowAction.UNFOLLOW])(
+      'removes the offline %s tooltip when the refreshed hook clears its result',
+      action => {
+        mockActionResult({ action, status: 'error' });
+        const { rerender } = renderFollowTopicButton(signedInOptions);
+
+        expect(
+          screen.getByText(actionTooltipTranslations.error.body),
+        ).toBeInTheDocument();
+
+        mockFollowState({ actionResult: null });
+        rerender(<FollowTopicButton topicData={topicData} />);
+
+        expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+        expect(
+          screen.getByTestId('follow-topic-btn-authorized'),
+        ).toHaveAccessibleName(followTopicButtonTranslations.follow);
+        expect(mockResetActionResult).not.toHaveBeenCalled();
+      },
+    );
 
     it('does not show a tooltip for guests', () => {
       mockActionResult({ action: FollowAction.FOLLOW, status: 'success' });

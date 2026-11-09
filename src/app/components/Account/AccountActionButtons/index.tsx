@@ -1,11 +1,12 @@
 import React, { use } from 'react';
+import clsx from 'clsx';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface AccountActionButtonsProps {
   signInComponentName: string;
@@ -44,7 +45,10 @@ const AccountActionButtons = ({
       <CallToActionLink.ButtonLikeWrapper
         aria-hidden={signInAccessibleLabel ? true : undefined}
       >
-        <AccountIcon css={styles.accountIcon} isInverted={!onLightBackground} />
+        <AccountIcon
+          className={styles.accountIcon}
+          isInverted={!onLightBackground}
+        />
         <CallToActionLink.Text shouldUnderlineOnHoverFocus>
           {signInText}
         </CallToActionLink.Text>
@@ -60,8 +64,11 @@ const AccountActionButtons = ({
       <CallToActionLink
         ref={signInRef}
         url={signInUrl}
-        className={focusIndicatorClassName}
-        css={[styles.callToActionLink, styles.signInLink]}
+        className={clsx(
+          focusIndicatorClassName,
+          styles.callToActionLink,
+          styles.signInLink,
+        )}
         eventTrackingData={{
           componentName: signInComponentName,
           ...(experimentName && { experimentName }),
@@ -76,10 +83,10 @@ const AccountActionButtons = ({
       {separatorText && (
         <Paragraph
           size="bodyCopy"
-          css={[
+          className={clsx(
             styles.separatorText,
             onLightBackground && styles.separatorTextOnLightBackground,
-          ]}
+          )}
         >
           {separatorText}
         </Paragraph>
@@ -87,12 +94,12 @@ const AccountActionButtons = ({
 
       <CallToActionLink
         url={registerUrl}
-        className={focusIndicatorClassName}
-        css={[
+        className={clsx(
+          focusIndicatorClassName,
           styles.callToActionLink,
           styles.registerLink,
           onLightBackground && styles.registerLinkOnLightBackground,
-        ]}
+        )}
         eventTrackingData={{
           componentName: registerComponentName,
           ...(experimentName && { experimentName }),

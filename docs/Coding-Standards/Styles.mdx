@@ -30,7 +30,7 @@ image. Cross-origin mask assets must be served with CORS headers.
 Simorgh is progressively migrating its styling foundation from [Emotion](https://emotion.sh/docs/introduction) (CSS-in-JS, `ThemeProvider`) to **SCSS Modules + CSS custom properties** (`ThemeProviderSCSSModules`). Both approaches co-exist in the codebase during the migration, but:
 
 - **All new component styling must use SCSS Modules.** Do not add new Emotion `css` prop or `styled` usage.
-- **When you modify an existing Emotion-styled component, migrate it to SCSS Modules as part of that change.**
+- **Whether to migrate an existing Emotion-styled component depends on the scope of your change.** For small or non-styling changes (logic, props, copy, tests, types, or small tweaks to existing style values), make the change in place without migrating. For larger styling changes, consider migrating to SCSS Modules, either in the same change or as a follow-up. See `.github/instructions/styling-standards.instructions.md` for the full guidance.
 
 ### How to style a component
 

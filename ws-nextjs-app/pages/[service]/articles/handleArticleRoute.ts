@@ -93,7 +93,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: renderStatus,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: canonicalPathname,

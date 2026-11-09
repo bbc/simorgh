@@ -136,7 +136,6 @@ export const getServerSideProps = withRequestProps(async context => {
       pathname: resolvedUrl?.split('?')?.[0],
       service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
       status: NOT_FOUND,
-      timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant,
     },
   };

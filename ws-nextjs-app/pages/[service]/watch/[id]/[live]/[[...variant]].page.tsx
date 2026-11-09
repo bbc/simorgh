@@ -66,7 +66,6 @@ export const getServerSideProps = withRequestProps(async context => {
       props: {
         service,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         variant: variantFromUrl || null,
         pageType: LIVE_TV_PAGE,
         pathname: resolvedUrl,

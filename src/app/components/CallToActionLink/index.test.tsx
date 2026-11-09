@@ -27,6 +27,32 @@ describe('Call To Action Link', () => {
     expect(chevron).toBeInTheDocument();
   });
 
+  it('should preserve component and consumer classes', () => {
+    const { container } = render(
+      <CallToActionLink
+        url="https://www.bbc.com/ws/languages"
+        alignWithMargin
+        className="custom-link"
+      >
+        <CallToActionLink.ButtonLikeWrapper className="custom-wrapper">
+          <CallToActionLink.Text className="custom-text">
+            My Link Text
+          </CallToActionLink.Text>
+          <CallToActionLink.Chevron className="custom-chevron" />
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>,
+    );
+
+    const link = screen.getByRole('link');
+    const text = screen.getByText('My Link Text');
+    const [chevron] = container.getElementsByClassName('external-svg');
+
+    expect(link).toHaveClass('link', 'alignWithMargin', 'custom-link');
+    expect(text).toHaveClass('text', 'defaultTextStyles', 'custom-text');
+    expect(text.parentElement).toHaveClass('flexWrapper', 'custom-wrapper');
+    expect(chevron).toHaveClass('chevron', 'picaSize', 'custom-chevron');
+  });
+
   it('should render a link with the correct href', () => {
     render(
       <CallToActionLink url="https://www.bbc.com/ws/languages">

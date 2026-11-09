@@ -4,6 +4,7 @@ export type OnDemandAudioTestSuite = {
   path: string;
   service: string;
   runForEnv: AppEnv[];
+  includeSharedPageTests: boolean;
 };
 
 export type OnDemandAudioAtiTest =
@@ -41,156 +42,74 @@ const getPathWithSuffix = ({
   return `${path}${normalizedSuffix}`;
 };
 
+// Pages are chosen to cover radio/podcast, brand/episode, LTR/RTL,
+// script variants and services with toggles both on and off.
 const canonicalTestSuites: OnDemandAudioTestSuite[] = [
   {
-    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq', // Radio Brand, LTR
     service: 'afrique',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: true,
   },
   {
-    path: '/afrique/bbc_afrique_radio/w172y1g3d9108lh',
+    path: '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // Radio Episode, LTR
     service: 'afrique',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/arabic/bbc_arabic_radio/programmes/p030vh2y',
+    path: '/arabic/bbc_arabic_radio/programmes/p030vh2y', // Radio Brand, RTL
     service: 'arabic',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/arabic/bbc_arabic_radio/w172y3wn75cm441',
+    path: '/arabic/bbc_arabic_radio/w172y3wn75cm441', // Radio Episode, RTL
     service: 'arabic',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: true,
   },
   {
-    path: '/arabic/podcasts/p02pc9qc',
+    path: '/arabic/podcasts/p02pc9qc', // Podcast Brand, RTL
     service: 'arabic',
     runForEnv: ['local', 'test', 'live'],
+    includeSharedPageTests: true,
   },
   {
-    path: '/arabic/podcasts/p02pc9qc/p09kwwfs',
-    service: 'arabic',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/dari/bbc_dari_radio/programmes/p0340v0s',
+    path: '/dari/bbc_dari_radio/programmes/p0340v0s', // Radio Brand, recent audio episodes toggled off
     service: 'dari',
     runForEnv: ['test'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/dari/bbc_dari_radio/w172y2n5p9pfj6x',
-    service: 'dari',
-    runForEnv: ['test'],
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/programmes/p030s4mh',
+    path: '/hausa/podcasts/p08mlgcb', // Podcast Brand, LTR
     service: 'hausa',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/hausa/bbc_hausa_radio/w3ct1qzn',
+    path: '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode, LTR
     service: 'hausa',
     runForEnv: ['test', 'live'],
+    includeSharedPageTests: true,
   },
   {
-    path: '/hausa/podcasts/p08mlgcb',
-    service: 'hausa',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/hausa/podcasts/p08mlgcb/p09l0fw6',
-    service: 'hausa',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/hindi/podcasts/p0552909',
-    service: 'hindi',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/hindi/podcasts/p0552909/p09kjqjm',
-    service: 'hindi',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/persian/podcasts/p02pc9wf',
+    path: '/persian/podcasts/p02pc9wf', // Podcast Brand
     service: 'persian',
     runForEnv: ['local', 'test', 'live'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/persian/podcasts/p02pc9wf/p09knl1v',
-    service: 'persian',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/portuguese/podcasts/p07r3r3t',
+    path: '/portuguese/podcasts/p07r3r3t', // Podcast Brand
     service: 'portuguese',
     runForEnv: ['local', 'test', 'live'],
+    includeSharedPageTests: false,
   },
   {
-    path: '/portuguese/podcasts/p07r3r3t/p09clrrg',
-    service: 'portuguese',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/russian/podcasts/p05607v8/p06x0tn3',
-    service: 'russian',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/russian/podcasts/p05607v8',
-    service: 'russian',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/programmes/p03413l5',
-    service: 'urdu',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/w172y03qq2blt8p',
-    service: 'urdu',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy',
+    path: '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // Radio Episode, script variant, radio schedule toggled off
     service: 'zhongwen',
     runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/simp/podcasts/p02pc9xp',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
-  },
-  {
-    path: '/zhongwen/trad/podcasts/p02pc9xp',
-    service: 'zhongwen',
-    runForEnv: ['test', 'live'],
+    includeSharedPageTests: true,
   },
 ];
 
@@ -284,8 +203,15 @@ const atiTestSuites: AtiOnDemandAudioTestSuite[] = [
   },
 ];
 
-const atiLiteTestSuites: AtiOnDemandAudioTestSuite[] = atiTestSuites.map(
-  testSuite => {
+const liteTestPaths = [
+  '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+  '/portuguese/podcasts/p07r3r3t',
+  '/portuguese/podcasts/p07r3r3t/p0ldy4p8',
+];
+
+const atiLiteTestSuites: AtiOnDemandAudioTestSuite[] = atiTestSuites
+  .filter(({ path }) => liteTestPaths.includes(path))
+  .map(testSuite => {
     const excludedLiteTests: OnDemandAudioAtiTest[] = [
       'assertPodcastPromoComponentView',
       'assertPodcastPromoComponentClick',
@@ -303,8 +229,7 @@ const atiLiteTestSuites: AtiOnDemandAudioTestSuite[] = atiTestSuites.map(
       applicationType: 'lite',
       tests: [...liteSiteTests],
     };
-  },
-);
+  });
 
 export const onDemandAudioSuites = {
   canonical: canonicalTestSuites,
