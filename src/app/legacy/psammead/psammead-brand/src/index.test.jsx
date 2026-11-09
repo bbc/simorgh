@@ -15,26 +15,26 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
   it.each(['header', 'footer'])(
-    'renders the %s external asset with AMP-compatible markup',
+    'renders the %s external asset without the AMP image runtime',
     linkId => {
       const { container } = render(
         <Brand product="BBC News" svg={svg} linkId={linkId} />,
         { isAmp: true },
       );
-      const image = container.querySelector('amp-img');
+      const image = container.querySelector('.external-svg');
 
       expect(container.querySelector('img')).not.toBeInTheDocument();
+      expect(container.querySelector('amp-img')).not.toBeInTheDocument();
+      expect(image.tagName).toBe('SPAN');
       expect(image).toHaveAttribute(
         'id',
         linkId === 'header' ? 'brandSvgHeader' : 'brandSvgFooter',
       );
-      expect(image).toHaveAttribute('layout', 'fill');
-      expect(image).toHaveAttribute('alt', '');
+      expect(image).toHaveClass('external-svg', 'ampImage');
       expect(image).toHaveAttribute('aria-hidden', 'true');
-      expect(image).toHaveAttribute(
-        'src',
-        expect.stringContaining('news/images/brand.svg'),
-      );
+      expect(
+        image.parentElement.style.getPropertyValue('--brand-source'),
+      ).toContain('news/images/brand.svg');
       expect(image.parentElement).toHaveClass('brand');
       expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
         '6.9979',

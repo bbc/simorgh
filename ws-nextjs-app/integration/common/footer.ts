@@ -8,9 +8,11 @@ export default () => {
       const brandingEl = document.getElementById('brandSvgFooter');
 
       expect(brandingEl).toBeInTheDocument();
-      expect(brandingEl?.tagName).toBe(isAmpPage ? 'AMP-IMG' : 'IMG');
+      expect(brandingEl?.tagName).toBe(isAmpPage ? 'SPAN' : 'IMG');
       if (isAmpPage) {
-        expect(brandingEl).toHaveAttribute('layout', 'fill');
+        expect(
+          brandingEl?.parentElement?.style.getPropertyValue('--brand-source'),
+        ).toContain('/images/brand.svg');
       }
       expect(brandingEl).toHaveClass('external-svg');
     });
@@ -26,7 +28,7 @@ export default () => {
         throw new Error('Expected the footer brand asset to have a link');
       }
       const brandingImageEl = brandingLinkEl.querySelector(
-        isAmpPage ? 'amp-img.external-svg' : 'img.external-svg',
+        isAmpPage ? 'span.external-svg' : 'img.external-svg',
       );
 
       expect(brandingLinkEl.tagName).toEqual('A');

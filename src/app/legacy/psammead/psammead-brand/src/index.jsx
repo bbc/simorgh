@@ -132,13 +132,10 @@ const StyledBrand = ({
         }}
       >
         {isAmp ? (
-          <amp-img
+          <span
             id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-            class={`external-svg ${styles.ampImage}`}
+            className={`external-svg ${styles.ampImage}`}
             aria-hidden="true"
-            alt=""
-            src={src}
-            layout="fill"
           />
         ) : (
           <img

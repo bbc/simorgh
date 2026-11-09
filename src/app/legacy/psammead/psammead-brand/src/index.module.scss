@@ -64,3 +64,9 @@
   max-width: 100%;
   width: 100%;
 }
+
+.ampImage {
+  position: absolute;
+  inset: 0;
+  background: var(--brand-source) center / contain no-repeat;
+}

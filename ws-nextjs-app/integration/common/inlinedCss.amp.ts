@@ -76,6 +76,7 @@ export default () => {
         'width:calc(var(--brand-height)*var(--brand-ratio))',
       );
       expect(css).toContain('aspect-ratio:var(--brand-ratio)');
+      expect(css).toContain('background:var(--brand-source)');
     });
 
     it('should strip unnecessary vendor prefixes left in by Emotion', () => {

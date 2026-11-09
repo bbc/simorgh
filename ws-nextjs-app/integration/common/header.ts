@@ -14,14 +14,20 @@ export default service => {
         throw new Error('Expected the header brand asset to be rendered');
       }
 
-      expect(logo.tagName).toBe(isAmpPage ? 'AMP-IMG' : 'IMG');
+      expect(logo.tagName).toBe(isAmpPage ? 'SPAN' : 'IMG');
       if (isAmpPage) {
-        expect(logo).toHaveAttribute('layout', 'fill');
+        expect(
+          logo.parentElement?.style.getPropertyValue('--brand-source'),
+        ).toContain('/images/brand.svg');
+      } else {
+        expect(logo).toHaveAttribute('alt', '');
+        expect(logo).toHaveAttribute(
+          'src',
+          expect.stringMatching(/brand\.svg$/),
+        );
       }
       expect(logo).toHaveClass('external-svg');
-      expect(logo).toHaveAttribute('alt', '');
       expect(logo).toHaveAttribute('aria-hidden', 'true');
-      expect(logo).toHaveAttribute('src', expect.stringMatching(/brand\.svg$/));
 
       const brandingLink = logo.closest('a');
 
