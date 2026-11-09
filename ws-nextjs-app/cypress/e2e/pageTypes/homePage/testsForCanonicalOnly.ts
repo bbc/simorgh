@@ -5,7 +5,7 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 export default ({ service }) => {
   describe('Images', () => {
     it('should have a picture tag around content images', () => {
-      cy.get('img:not(.external-svg)').each($img => {
+      cy.get('img:not(.external-svg):not(.external-svg img)').each($img => {
         const $section = $img.parents('section');
         if ($section.length > 0) {
           const testId = $section.attr('data-testid');

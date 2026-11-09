@@ -674,7 +674,7 @@ test.describe('homePage', () => {
             await gotoHomePage(page, testSuite.path);
 
             const images = page.locator(
-              'img:not(.external-svg):not([data-testid="embed"] img)',
+              'img:not(.external-svg):not(.external-svg img):not([data-testid="embed"] img)',
             );
             const imageCount = await images.count();
 
