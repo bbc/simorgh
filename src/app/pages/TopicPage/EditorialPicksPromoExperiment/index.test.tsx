@@ -51,6 +51,17 @@ describe('EditorialPicksPromoExperiment', () => {
 
     expect(getBanner()).toBeInTheDocument();
     expect(
+      screen.getByRole('heading', {
+        name: 'BBC News Hindi के एडिटोरियल पिक्स को फ़ॉलो करें',
+        hidden: true,
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'इस टॉपिक को My News में जोड़ने के लिए मुफ़्त में साइन इन या रजिस्टर करें.',
+      ),
+    ).toBeInTheDocument();
+    expect(
       screen
         .getByTestId('account-promotional-banner-register')
         .getAttribute('href'),

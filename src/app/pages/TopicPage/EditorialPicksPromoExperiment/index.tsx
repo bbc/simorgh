@@ -10,10 +10,10 @@ export const EXPERIMENT_NAME = 'newswb_ws_hindi_editorial_picks_follow_promo';
 export const EDITORIAL_PICKS_TOPIC_ID = 'crvgyj0g9d5lt';
 export const VARIANT_KEY = 'variant';
 
-// TODO: add UX-approved Hindi copy.
-const BANNER_COPY: { title?: string; description?: string } = {
-  title: undefined,
-  description: undefined,
+const BANNER_COPY = {
+  title: 'BBC News Hindi के एडिटोरियल पिक्स को फ़ॉलो करें',
+  description:
+    'इस टॉपिक को My News में जोड़ने के लिए मुफ़्त में साइन इन या रजिस्टर करें.',
 };
 
 const BannerExperiment = () => {
