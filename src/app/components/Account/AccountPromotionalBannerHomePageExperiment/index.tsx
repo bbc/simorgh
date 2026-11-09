@@ -6,7 +6,7 @@ import AccountPromotionalBanner from '#app/components/Account/AccountPromotional
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
-const HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
+export const HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
   'newswb_ws_homepage_account_promo_banner_copy_rerun';
 const EXPERIMENT_SERVICE = 'hindi';
 
