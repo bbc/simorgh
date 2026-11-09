@@ -20,6 +20,7 @@ const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const SvgWrapper = styled.div`
   flex: 1;
+  min-width: 0;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -61,6 +62,8 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   position: relative;
+  min-width: 0;
+  max-width: 100%;
   min-height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX};
 
   &:hover::before,

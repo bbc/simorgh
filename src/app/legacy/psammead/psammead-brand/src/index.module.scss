@@ -5,7 +5,7 @@
   position: relative;
   display: inline-flex;
   max-width: 100%;
-  height: var(--brand-height);
+  aspect-ratio: var(--brand-ratio);
   width: calc(var(--brand-height) * var(--brand-ratio));
 
   @media #{theme.$mediaQueries-group-2-min-width} {
@@ -60,7 +60,7 @@
 
 .image {
   box-sizing: content-box;
-  height: var(--brand-height);
+  height: auto;
   max-width: 100%;
   width: 100%;
 }

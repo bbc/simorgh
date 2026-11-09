@@ -166,9 +166,9 @@ const LiveHeaderMedia = ({
             )}
           </div>
           {!showMedia && (
-            <div className={clsx('hoverStylesCTA', styles.watchLiveCTA)}>
+            <div className={clsx('hoverStylesCTA', styles.watchLiveCta)}>
               <Text
-                className={styles.watchLiveCTAText}
+                className={styles.watchLiveCtaText}
                 size="greatPrimer"
                 fontVariant="sansBold"
               >

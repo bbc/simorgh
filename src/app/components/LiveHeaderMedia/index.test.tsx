@@ -40,6 +40,23 @@ describe('liveMediaStream', () => {
     expect(mediaLoader).toBeInTheDocument();
   });
 
+  it('applies the watch control styles to the label and external play icon', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    const watchControl = button.querySelector('.watchLiveCta');
+    const label = watchControl?.querySelector('.watchLiveCtaText');
+    const icon = label?.querySelector<HTMLElement>('.external-svg');
+
+    expect(watchControl).toBeInTheDocument();
+    expect(label).toHaveTextContent('Watch');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/play.svg',
+    );
+  });
+
   it('Displays a warning message when needed.', () => {
     const mediaBlock = fixtureData[0];
     mediaBlock.model.version.warnings = {
