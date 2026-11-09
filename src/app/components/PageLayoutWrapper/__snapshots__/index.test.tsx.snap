@@ -344,6 +344,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  min-width: 0;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -379,6 +380,8 @@ body.simorgh-player-fullscreen .emotion-1 {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  min-width: 0;
+  max-width: 100%;
   min-height: 2.625rem;
 }
 
