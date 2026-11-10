@@ -24,47 +24,42 @@ const atiData = {
   producerName: 'KOREAN',
 };
 
-export const getServerSideProps = withRequestProps(
-  async (context, requestPropsPromise) => {
-    const { toggles } = await requestPropsPromise;
-    logResponseTime(
-      {
-        path: context.resolvedUrl,
-      },
-      context.res,
-      () => null,
-    );
-    context.res.setHeader(
-      'Cache-Control',
-      'public, stale-if-error=600, stale-while-revalidate=240, max-age=60',
-    );
+export const getServerSideProps = withRequestProps(async context => {
+  logResponseTime(
+    {
+      path: context.resolvedUrl,
+    },
+    context.res,
+    () => null,
+  );
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=600, stale-while-revalidate=240, max-age=60',
+  );
 
-    const { service, variant: variantFromUrl } =
-      context.query as PageDataParams;
-    const variant = deriveVariant(variantFromUrl);
+  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const variant = deriveVariant(variantFromUrl);
 
-    const downloadData = await dataFetch(service);
+  const downloadData = await dataFetch(service);
 
-    return {
-      props: {
-        error: null,
-        pageData: {
-          downloadData,
-          metadata: {
-            atiAnalytics: atiData,
-            type: DOWNLOADS_PAGE,
-            pageTitle,
-          },
+  return {
+    props: {
+      error: null,
+      pageData: {
+        downloadData,
+        metadata: {
+          atiAnalytics: atiData,
+          type: DOWNLOADS_PAGE,
+          pageTitle,
         },
-        pageType: DOWNLOADS_PAGE,
-        pathname: `${service}/downloads`,
-        service,
-        status: 200,
-        toggles,
-        variant,
       },
-    };
-  },
-);
+      pageType: DOWNLOADS_PAGE,
+      pathname: `${service}/downloads`,
+      service,
+      status: 200,
+      variant,
+    },
+  };
+});
 
 export default downloadsPageLayout;
