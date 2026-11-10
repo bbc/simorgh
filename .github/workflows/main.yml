@@ -8,7 +8,7 @@ on:
 
 jobs:
   notify-on-comments:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Get PR comments count
         id: get_comments
