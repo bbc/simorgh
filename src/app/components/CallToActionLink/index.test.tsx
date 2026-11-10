@@ -211,7 +211,7 @@ describe('Call To Action Link', () => {
         </CallToActionLink>,
       );
 
-    it('triggers the glow after five seconds at the visibility threshold', () => {
+    it('triggers the glow after delay at the visibility threshold', () => {
       const { container } = renderGlowLink();
       const wrapper = container.querySelector('a > div');
 
