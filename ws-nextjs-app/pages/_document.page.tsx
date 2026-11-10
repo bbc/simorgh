@@ -56,6 +56,17 @@ type DocProps = {
   title: ReactElement;
 };
 
+// react-helmet stores head state globally, so it must be read in the same
+// synchronous render pass, before another request can render and add to it.
+const CaptureHelmetState = ({
+  onCapture,
+}: {
+  onCapture: (helmet: HelmetData) => void;
+}) => {
+  onCapture(Helmet.renderStatic());
+  return null;
+};
+
 const optimiseInlineCss = (css: string, renderedHtml: string): string =>
   optimiseCssPrefixes(
     trimFontFaceSourcesToWoff2(
@@ -76,12 +87,19 @@ export default class AppDocument extends Document<DocProps> {
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
 
+    const helmetState: { current?: HelmetData } = {};
+
     const originalRenderPage = ctx.renderPage;
     ctx.renderPage = () =>
       originalRenderPage({
         enhanceApp: App => props => (
           <CacheProvider value={cache}>
             <App {...props} />
+            <CaptureHelmetState
+              onCapture={helmet => {
+                helmetState.current = helmet;
+              }}
+            />
           </CacheProvider>
         ),
       });
@@ -110,7 +128,7 @@ export default class AppDocument extends Document<DocProps> {
       ...initialProps,
       clientSideEnvVariables,
       css,
-      helmet: Helmet.renderStatic(),
+      helmet: helmetState.current ?? Helmet.renderStatic(),
       ids,
       pageType,
       isAmp,
