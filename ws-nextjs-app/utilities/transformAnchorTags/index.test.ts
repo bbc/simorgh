@@ -50,4 +50,15 @@ describe('transformAnchorTags', () => {
     );
   });
 
+  it('should leave an anchor with an unparseable href untouched and still transform the anchors after it', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="http://[invalid">Bad</a><a href="/news">News</a>';
+
+    expect(transform(html)).toEqual(
+      '<a href="http://[invalid">Bad</a><a href="/news.lite">News</a>',
+    );
+  });
 });
