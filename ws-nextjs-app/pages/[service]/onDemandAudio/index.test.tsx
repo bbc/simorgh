@@ -1,5 +1,5 @@
 import gahuzaOnDemandAudioEpisode from '#data/gahuza/bbc_gahuza_radio/p0k1qjp9.json';
-import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
+import gahuzaPodcastPage from '#data/gahuza/podcasts/p07yh8hb.json';
 import pashtoOnDemandAudio from '#data/pashto/bbc_pashto_radio/w3ct26m6.json';
 import indonesianOnDemandAudio from '#data/indonesia/bbc_indonesian_radio/w172xybnvm6718v.json';
 import swahiliExpiredOnDemandAudio from '#data/swahili/bbc_swahili_radio/w3ct1y1s.json';
@@ -435,14 +435,12 @@ describe('OnDemand Audio Page', () => {
 
       // First recent episode renders, proving the handler sliced
       // server-side using the toggle value of 1.
-      expect(getByText('Ikiganiro cyo kuwa 08/11/2024')).toBeInTheDocument();
+      expect(getByText('BBC Gahuzamiryango/ Baza Muganga')).toBeInTheDocument();
 
       // The fixture has further episodes after the first; none of
       // them should be present, proving the slice actually
       // happened rather than the full list being rendered.
-      expect(
-        queryByText('Ikiganiro cyo kuwa 01/11/2024'),
-      ).not.toBeInTheDocument();
+      expect(queryByText('Baza Muganga 15/11/2024')).not.toBeInTheDocument();
     });
 
     it('shows multiple external links with different types on podcast pages', async () => {

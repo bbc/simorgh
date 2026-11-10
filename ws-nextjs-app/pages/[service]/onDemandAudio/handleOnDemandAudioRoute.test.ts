@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext } from 'next';
 
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
-import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
+import gahuzaPodcastPage from '#data/gahuza/podcasts/p07yh8hb.json';
 import * as isTest from '#app/lib/utilities/isTest';
 import * as fetchTogglesModule from '#app/lib/utilities/fetchToggles';
 
@@ -181,7 +181,7 @@ describe('handleOnDemandAudioRoute', () => {
 
       expect(result.props.pageData.recentEpisodes?.[0]).toEqual(
         expect.objectContaining({
-          id: 'p0k396c8',
+          id: 'p0k6cby1',
         }),
       );
     });
