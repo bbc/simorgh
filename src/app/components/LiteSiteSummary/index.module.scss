@@ -1,0 +1,22 @@
+@use '@scss/themeTokens' as theme;
+
+.bottomLinkSpacing {
+  padding: #{theme.$spacings-half} 0 #{theme.$spacings-double};
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    padding: #{theme.$spacings-full} 0 #{theme.$spacings-double};
+  }
+}
+
+.topLinkSpacing {
+  padding: #{theme.$spacings-full + theme.$spacings-half} 0;
+}
+
+.singleLinkSpacing {
+  padding: #{theme.$spacings-full + theme.$spacings-half} 0;
+  margin-bottom: #{theme.$spacings-full + theme.$spacings-half};
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    margin-bottom: theme.$spacings-half;
+  }
+}

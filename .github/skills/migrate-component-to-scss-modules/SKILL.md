@@ -1,11 +1,13 @@
 ---
 name: migrate-component-to-scss-modules
-description: Migrates an existing Emotion-styled React component in src/app/components to SCSS Modules. Use when asked to migrate, convert or batch-migrate components off Emotion (index.styles.ts / css prop) to index.module.scss, or when removing Emotion from a component.
+description: Migrates an existing Emotion-styled React component in src/app/components to SCSS Modules. Use only when the user explicitly asks to migrate, convert or batch-migrate components off Emotion (index.styles.ts / css prop) to index.module.scss, or has agreed to a migration when asked. Do not use just because a task touches an Emotion-styled component.
 ---
 
 # Migrate Component to SCSS Modules
 
 Converts a component in `src/app/components/**` from Emotion (`index.styles.ts` + `css` prop) to SCSS Modules (`index.module.scss` + `className`).
+
+Only use this when the user explicitly asks for a migration or agrees to one. For small or non-styling changes to an Emotion component, follow the scope guidance in `.github/instructions/styling-standards.instructions.md` instead.
 
 Styling *rules* live in `.github/instructions/styling-standards.instructions.md` and auto-apply to `src/app/components/**`. This skill covers the *mechanical conversion*: token mapping, workflow and verification.
 

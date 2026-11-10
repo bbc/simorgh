@@ -1,20 +1,13 @@
-import dynamic, { type DynamicOptionsLoadingProps } from 'next/dynamic';
-import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
+import dynamic from 'next/dynamic';
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import SaveButton from '#app/components/SaveButton';
-import SaveArticleButtonGuest from '../SaveArticleButtonGuest';
 
 const noop = () => undefined;
 
-export const SaveArticleButtonLoadingFallback = ({
-  error,
-  isLoading,
-}: DynamicOptionsLoadingProps) => {
+export const SaveArticleButtonLoadingFallback = () => {
   const { translations } = use(ServiceContext);
   const loadingLabel = translations?.saveArticleButton?.loading ?? '';
-
-  if (error && !isLoading) return <SaveArticleButtonGuest />;
 
   return (
     <SaveButton
@@ -29,14 +22,12 @@ export const SaveArticleButtonLoadingFallback = ({
 
 export default dynamic(
   () =>
-    loadQueryConsumer(
-      import(
-        /* webpackChunkName: "save_article_button_authenticated" */
-        '.'
-      ),
+    import(
+      /* webpackChunkName: "save_article_button_authenticated" */
+      '.'
     ),
   {
     ssr: false,
-    loading: props => <SaveArticleButtonLoadingFallback {...props} />,
+    loading: () => <SaveArticleButtonLoadingFallback />,
   },
 );

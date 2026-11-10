@@ -1,5 +1,4 @@
-import dynamic, { type DynamicOptionsLoadingProps } from 'next/dynamic';
-import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
+import dynamic from 'next/dynamic';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -13,19 +12,10 @@ import MyNewsPageLoading from './MyNewsPageLoading';
 import GenericMessage from '../../send/[id]/GenericMessage';
 import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
-export const MyNewsPageLoadingFallback = ({
-  error,
-  isLoading,
-}: DynamicOptionsLoadingProps) =>
-  error && !isLoading ? <MyNewsPageGuest /> : <MyNewsPageLoading />;
-
-const MyNewsPageContent = dynamic(
-  () => loadQueryConsumer(import('./MyNewsPageContent')),
-  {
-    ssr: false,
-    loading: props => <MyNewsPageLoadingFallback {...props} />,
-  },
-);
+const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
+  ssr: false,
+  loading: () => <MyNewsPageLoading />,
+});
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const {

@@ -1,0 +1,32 @@
+@use '@scss/themeTokens' as theme;
+
+.link {
+  color: theme.$palette-grey-10;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$palette-metal;
+  }
+
+  &:focus,
+  &:hover {
+    color: theme.$palette-postbox;
+    text-decoration: none;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    fill: linkText;
+
+    &:visited {
+      fill: visitedText;
+    }
+
+    &:active {
+      fill: activeText;
+    }
+  }
+}
+
+.alignWithMargin {
+  display: inline-block;
+}

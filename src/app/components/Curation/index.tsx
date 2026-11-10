@@ -7,7 +7,6 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import isLive from '#app/lib/utilities/isLive';
 import { use, useContext } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -102,11 +101,7 @@ export default ({
   const { service } = useContext(ServiceContext);
 
   const shouldStyleAsVideoCollection =
-    !isLive() &&
-    !isLite &&
-    service === 'arabic' &&
-    isCurationGrid &&
-    isVideoCollection;
+    !isLite && service === 'arabic' && isCurationGrid && isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic = !isLiveEnvironment && isCurationGrid;

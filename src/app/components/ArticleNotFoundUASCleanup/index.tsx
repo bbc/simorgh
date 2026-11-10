@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic';
-import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 
+// TanStack Query must not be bundled server-side — ssr: false ensures the
+// client component (and its useQueryClient call) only loads after hydration.
 const ArticleNotFoundUASCleanup = dynamic(
-  () => loadQueryConsumer(import('./ArticleNotFoundUASCleanup')),
-  { ssr: false, loading: () => null },
+  () => import('./ArticleNotFoundUASCleanup'),
+  { ssr: false },
 );
 
 export default ArticleNotFoundUASCleanup;
