@@ -67,12 +67,34 @@ const getObserverItem = (element: Element) => {
   return item;
 };
 
-jest.mock('next/script', () => ({
-  __esModule: true,
-  default: ({ src, nonce }: { src: string; nonce?: string }) => (
-    <script src={src} nonce={nonce} />
-  ),
-}));
+jest.mock('next/script', () => {
+  const { useEffect } = jest.requireActual('react');
+
+  // Mirrors the real next/script "lazyOnload" behaviour, which inserts
+  // the script element into the DOM imperatively rather than via JSX,
+  // so it never renders a literal <script> tag through React.
+  const MockScript = ({ src, nonce }: { src: string; nonce?: string }) => {
+    useEffect(() => {
+      const script = document.createElement('script');
+      script.src = src;
+      if (nonce) {
+        script.setAttribute('nonce', nonce);
+      }
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }, [src, nonce]);
+
+    return null;
+  };
+
+  return {
+    __esModule: true,
+    default: MockScript,
+  };
+});
 
 beforeEach(() => {
   jest.clearAllMocks();
