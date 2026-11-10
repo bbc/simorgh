@@ -151,7 +151,7 @@ describe('OnDemand Audio Page', () => {
       setHeader: mockSetHeader,
       removeHeader: jest.fn(),
     } as unknown as GetServerSidePropsContext['res'],
-    resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+    resolvedUrl: '/gahuza/bbc_gahuza_radio/p02pcb5c',
     query: {
       service: 'gahuza',
     },
@@ -201,10 +201,9 @@ describe('OnDemand Audio Page', () => {
     window.require = jest.fn();
   });
   describe('Podcast pages', () => {
-    const podcastEpisodePathname =
-      '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm';
+    const podcastEpisodePathname = '/gahuza/podcasts/p07yh8hb/p0k4x0jm';
 
-    const podcastSeriesPathname = '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb';
+    const podcastSeriesPathname = '/gahuza/podcasts/p07yh8hb';
 
     it('should display podcast episode page with PodcastEpisode schema', async () => {
       const result = await getRouteResult({
@@ -524,7 +523,7 @@ describe('OnDemand Audio Page', () => {
   });
   describe('On-demand radio pages', () => {
     it('should show the brand title for OnDemand Radio Pages', async () => {
-      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
@@ -546,7 +545,7 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('should show the episode title when it is available', async () => {
-      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
@@ -628,7 +627,7 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('should show the summary for OnDemand Radio Pages', async () => {
-      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/p0k1qjp9';
+      const pathname = '/gahuza/bbc_gahuza_radio/p0k1qjp9';
 
       const result = await getRouteResult({
         pathname,
@@ -728,7 +727,7 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('renders with variant parameter passed through correctly', async () => {
-      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/p02pcb5c';
 
       const result = await getRouteResult({
         pathname,
@@ -747,7 +746,7 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('renders populated recent episodes when toggle is enabled', async () => {
-      const pathname = '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c';
+      const pathname = '/gahuza/bbc_gahuza_radio/p02pcb5c';
 
       const recentEpisodesData = [
         {
@@ -775,16 +774,14 @@ describe('OnDemand Audio Page', () => {
         recentEpisodes: recentEpisodesData,
       };
 
-      // This URL contains "/podcasts/", so handleOnDemandAudioRoute's
-      // isPodcast pathname heuristic treats this genuine on-demand
-      // radio page as a podcast, meaning it reads the
-      // recentPodcastEpisodes toggle (not recentAudioEpisodes) to
-      // decide whether to keep recentEpisodes. Enabling it here
-      // documents that quirk and is required for the handler to
-      // keep (rather than null) the recentEpisodes below.
+      // This is a genuine on-demand radio URL (no "/podcasts/"
+      // segment), so handleOnDemandAudioRoute's isPodcast pathname
+      // heuristic correctly treats it as radio and reads the
+      // recentAudioEpisodes toggle (not recentPodcastEpisodes) to
+      // decide whether to keep recentEpisodes.
       const toggles = {
         ...mockToggles,
-        recentPodcastEpisodes: {
+        recentAudioEpisodes: {
           enabled: true,
           value: 2,
         },

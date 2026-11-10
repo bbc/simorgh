@@ -49,7 +49,7 @@ describe('handleOnDemandAudioRoute', () => {
       setHeader: mockSetHeader,
       removeHeader: jest.fn(),
     } as unknown as GetServerSidePropsContext['res'],
-    resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+    resolvedUrl: '/gahuza/bbc_gahuza_radio/p02pcb5c',
     query: {
       service: 'gahuza',
     },
@@ -113,12 +113,6 @@ describe('handleOnDemandAudioRoute', () => {
       );
     });
 
-    // Note: this URL does not contain "podcast", so the handler's
-    // isPodcast heuristic correctly treats it as genuine on-demand radio
-    // (unlike mockGetServerSidePropsContext.resolvedUrl above, which does
-    // contain "/podcasts/" and is therefore treated as a podcast).
-    const genuineRadioPageUrl = '/gahuza/bbc_gahuza_radio/p02pcb5c';
-
     it('nulls recentEpisodes when the recentAudioEpisodes toggle is disabled', async () => {
       jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
         onDemandRadioSchedule: {
@@ -134,10 +128,9 @@ describe('handleOnDemandAudioRoute', () => {
         },
       } as never);
 
-      const result = await handleOnDemandAudioRoute({
-        ...mockGetServerSidePropsContext,
-        resolvedUrl: genuineRadioPageUrl,
-      });
+      const result = await handleOnDemandAudioRoute(
+        mockGetServerSidePropsContext,
+      );
 
       expect(result.props.pageData.recentEpisodes).toBeNull();
     });
@@ -157,19 +150,17 @@ describe('handleOnDemandAudioRoute', () => {
         },
       } as never);
 
-      const result = await handleOnDemandAudioRoute({
-        ...mockGetServerSidePropsContext,
-        resolvedUrl: genuineRadioPageUrl,
-      });
+      const result = await handleOnDemandAudioRoute(
+        mockGetServerSidePropsContext,
+      );
 
       expect(result.props.pageData.radioScheduleData).toBeNull();
     });
 
     it('returns no external links for a genuine on-demand radio page', async () => {
-      const result = await handleOnDemandAudioRoute({
-        ...mockGetServerSidePropsContext,
-        resolvedUrl: genuineRadioPageUrl,
-      });
+      const result = await handleOnDemandAudioRoute(
+        mockGetServerSidePropsContext,
+      );
 
       expect(result.props.pageData.externalLinks).toEqual([]);
     });
@@ -183,7 +174,7 @@ describe('handleOnDemandAudioRoute', () => {
     it('includes recent podcast episodes when the toggle is enabled', async () => {
       const result = await handleOnDemandAudioRoute({
         ...mockGetServerSidePropsContext,
-        resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+        resolvedUrl: '/gahuza/podcasts/p07yh8hb',
       });
 
       expect(result.props.pageData.recentEpisodes).toHaveLength(1);
@@ -212,7 +203,7 @@ describe('handleOnDemandAudioRoute', () => {
 
       const result = await handleOnDemandAudioRoute({
         ...mockGetServerSidePropsContext,
-        resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb',
+        resolvedUrl: '/gahuza/podcasts/p07yh8hb',
       });
 
       expect(result.props.pageData.recentEpisodes).toBeNull();
@@ -236,7 +227,7 @@ describe('handleOnDemandAudioRoute', () => {
         props: expect.objectContaining({
           status: 500,
           pageType: 'audio',
-          pathname: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+          pathname: '/gahuza/bbc_gahuza_radio/p02pcb5c',
         }),
       });
     });
@@ -257,7 +248,7 @@ describe('handleOnDemandAudioRoute', () => {
         props: expect.objectContaining({
           status: 404,
           pageType: 'audio',
-          pathname: '/gahuza/bbc_gahuza_radio/podcasts/programmes/p02pcb5c',
+          pathname: '/gahuza/bbc_gahuza_radio/p02pcb5c',
         }),
       });
     });
