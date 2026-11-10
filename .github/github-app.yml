@@ -1,4 +1,4 @@
-server_ready_pattern: '(https?://localhost:7081)'
+server_ready_pattern: '(https?://(?:localhost|127\.0\.0\.1):7081)'
 
 scripts:
   - name: Start dev server
