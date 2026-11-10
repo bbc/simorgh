@@ -1,4 +1,5 @@
 import { createRef } from 'react';
+import userEvent from '@testing-library/user-event';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { act, render, screen } from '../react-testing-library-with-providers';
 import CallToActionLink from '.';
@@ -261,6 +262,45 @@ describe('Call To Action Link', () => {
       });
 
       expect(wrapper).toHaveClass('glow');
+    });
+
+    it('cancels a pending glow when the link receives keyboard focus', async () => {
+      const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+      const { container } = renderGlowLink();
+      const wrapper = container.querySelector('a > div');
+
+      act(() => {
+        triggerIntersection({ intersectionRatio: 0.5 });
+      });
+
+      await user.tab();
+
+      act(() => {
+        jest.advanceTimersByTime(5000);
+      });
+
+      expect(wrapper).not.toHaveClass('glow');
+    });
+
+    it('permanently removes a finished glow after keyboard focus', async () => {
+      const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+      const { container } = renderGlowLink();
+      const wrapper = container.querySelector('a > div');
+
+      act(() => {
+        triggerIntersection({ intersectionRatio: 0.5 });
+      });
+
+      act(() => {
+        jest.advanceTimersByTime(5000);
+      });
+      expect(wrapper).toHaveClass('glow');
+
+      await user.tab();
+      expect(wrapper).not.toHaveClass('glow');
+
+      await user.tab();
+      expect(wrapper).not.toHaveClass('glow');
     });
 
     it('does not observe or glow unless enabled', () => {

@@ -1,4 +1,5 @@
 import {
+  FocusEvent,
   PropsWithChildren,
   Ref,
   useCallback,
@@ -57,19 +58,27 @@ const CallToActionLink = ({
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const [hasGlowed, setHasGlowed] = useState(false);
+  const [isGlowCancelled, setIsGlowCancelled] = useState(false);
+  const canGlow = enableGlow && !isGlowCancelled;
   const { isInView, ref: componentViewRef } = useComponentView({
-    enabled: enableGlow && !hasGlowed,
+    enabled: canGlow && !hasGlowed,
   });
 
   useEffect(() => {
-    if (!enableGlow || hasGlowed || !isInView) return undefined;
+    if (!canGlow || hasGlowed || !isInView) return undefined;
 
     const glowTimer = setTimeout(() => {
       setHasGlowed(true);
     }, GLOW_DELAY_MS);
 
     return () => clearTimeout(glowTimer);
-  }, [enableGlow, hasGlowed, isInView]);
+  }, [canGlow, hasGlowed, isInView]);
+
+  const cancelGlowOnKeyboardFocus = (event: FocusEvent<HTMLAnchorElement>) => {
+    if (event.currentTarget.matches(':focus-visible')) {
+      setIsGlowCancelled(true);
+    }
+  };
 
   const mergedRef = useCallback(
     (element: HTMLAnchorElement | null) => {
@@ -83,9 +92,9 @@ const CallToActionLink = ({
     () => ({
       fontVariant,
       size,
-      isGlowing: hasGlowed,
+      isGlowing: hasGlowed && canGlow,
     }),
-    [fontVariant, hasGlowed, size],
+    [fontVariant, hasGlowed, canGlow, size],
   );
 
   if (!url) return null;
@@ -102,6 +111,7 @@ const CallToActionLink = ({
         className,
       )}
       download={download}
+      {...(enableGlow && { onFocus: cancelGlowOnKeyboardFocus })}
       {...htmlAttributes}
     >
       <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>

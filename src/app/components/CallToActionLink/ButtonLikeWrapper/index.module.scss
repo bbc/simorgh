@@ -34,11 +34,6 @@
       filter: blur(#{theme.pixelsToRem-px-to-rem(4)});
     }
 
-    :global(a:focus-visible) > &::before,
-    :global(a:focus-visible) > &::after {
-      display: none;
-    }
-
     @media (prefers-reduced-motion: no-preference) {
       &::before,
       &::after {
