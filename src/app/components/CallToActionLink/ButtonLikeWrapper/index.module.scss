@@ -51,7 +51,7 @@
     @media (prefers-reduced-motion: reduce) {
       &::before,
       &::after {
-        animation: staticGlow 4s step-end 3s;
+        animation: staticGlow 4s step-end;
       }
     }
 
