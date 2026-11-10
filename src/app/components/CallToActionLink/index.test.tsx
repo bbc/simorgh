@@ -107,7 +107,7 @@ describe('Call To Action Link', () => {
 
   it('should not render if no url is supplied', () => {
     const { container } = render(
-      // @ts-expect-error mocking required for tests
+      // @ts-expect-error Missing attributes
       <CallToActionLink>
         <CallToActionLink.Text>My Link Text</CallToActionLink.Text>
       </CallToActionLink>,
