@@ -67,6 +67,13 @@ const getObserverItem = (element: Element) => {
   return item;
 };
 
+jest.mock('next/script', () => ({
+  __esModule: true,
+  default: ({ src, nonce }: { src: string; nonce?: string }) => (
+    <script src={src} nonce={nonce} />
+  ),
+}));
+
 beforeEach(() => {
   jest.clearAllMocks();
   observers.clear();
