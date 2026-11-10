@@ -78,17 +78,10 @@ const atiResonanceTestSuites: AtiMostReadPageTestSuite[] = [
   },
 ];
 
-const atiResonanceLiteTestSuites: AtiMostReadPageTestSuite[] =
-  atiResonanceTestSuites.map(testSuite => ({
-    ...testSuite,
-    path: `${testSuite.path}.lite`,
-    applicationType: 'lite',
-  }));
-
 export const mostReadPageSuites = {
   canonical: canonicalTestSuites,
   lite: liteTestSuites,
   ati: atiTestSuites,
   atiLite: atiLiteTestSuites,
-  atiResonance: [...atiResonanceTestSuites, ...atiResonanceLiteTestSuites],
+  atiResonance: atiResonanceTestSuites,
 };

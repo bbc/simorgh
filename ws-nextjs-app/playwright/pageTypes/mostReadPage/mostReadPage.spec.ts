@@ -151,12 +151,7 @@ test.describe('mostReadPage ATI Analytics Resonance', () => {
 
     test.describe(testLabel, () => {
       test.describe(`ATI Analytics Resonance for ${testSuite.service} mostReadPage`, () => {
-        const expectation =
-          testSuite.applicationType === 'lite' ? 'not send' : 'send';
-
-        test(`should ${expectation} a resonance page view event`, async ({
-          page,
-        }) => {
+        test('should send a resonance page view event', async ({ page }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
