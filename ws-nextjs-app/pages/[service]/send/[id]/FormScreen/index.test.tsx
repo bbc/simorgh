@@ -202,6 +202,7 @@ describe('Form', () => {
       'a[href="https://www.bbc.com/mundo/institucional-36400009"]',
     );
 
+    // @ts-expect-error: privacyLink may be null, but we want to call focus() if it exists
     privacyLink?.focus();
 
     await act(() => {
