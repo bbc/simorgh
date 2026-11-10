@@ -38,17 +38,27 @@ const UserZoomIntercept = ({
       const target = markerRef.current;
       if (!target) return undefined;
 
+      let cancelled = false;
+
       getIntersectionObserver({
         threshold: 0,
         componentViewStateSetter: isInView => {
           if (isInView) setHasTriggered(true);
         },
       }).then(createdObserver => {
+        if (cancelled) {
+          createdObserver.disconnect();
+          return;
+        }
+
         observer.current = createdObserver;
         createdObserver.observe(target);
       });
 
-      return () => observer.current?.disconnect();
+      return () => {
+        cancelled = true;
+        observer.current?.disconnect();
+      };
     }
 
     if (trigger === UserZoomTrigger.CLICK) {
