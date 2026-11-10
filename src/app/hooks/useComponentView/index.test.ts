@@ -83,6 +83,9 @@ describe('useComponentView', () => {
 
     act(() => {
       result.current.ref(element);
+    });
+
+    act(() => {
       triggerIntersection({ intersectionRatio: 0.5, isIntersecting: false });
     });
 
