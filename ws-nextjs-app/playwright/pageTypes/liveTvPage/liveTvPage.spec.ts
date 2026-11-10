@@ -7,6 +7,7 @@ import {
   shouldRunForEnv,
 } from '../../utilities/env';
 import assert200HtmlResponse from '../../utilities/response';
+import { assertResonancePageView } from '../../specialFeatures/atiAnalytics/assertions';
 
 const getPageTitleFromWindow = (page: Page) =>
   page.evaluate(
@@ -64,6 +65,36 @@ test.describe('liveTvPage', () => {
           await expect(page.locator('h1')).toHaveText(
             expectedHeading as string,
           );
+        });
+      });
+    });
+  });
+});
+
+test.describe('liveTvPage ATI Analytics', () => {
+  liveTvPageSuites.ati.forEach(testSuite => {
+    const testLabel = `${baseURL}${testSuite.path}`;
+
+    test.describe(testLabel, () => {
+      test.describe(`ATI Analytics for ${testSuite.service} liveTvPage`, () => {
+        const atiProps = {
+          path: testSuite.path,
+          baseURL,
+          pageIdentifier: testSuite.pageIdentifier,
+          siteId: testSuite.siteId,
+          applicationType: testSuite.applicationType,
+          contentType: testSuite.contentType,
+          service: testSuite.service,
+          appEnv: appEnvFromProcess,
+        };
+
+        test('should send a resonance page view event', async ({ page }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertResonancePageView({ page, ...atiProps });
         });
       });
     });

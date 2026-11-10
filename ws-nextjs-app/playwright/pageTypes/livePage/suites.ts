@@ -16,6 +16,7 @@ export type AtiLivePageTestSuite = {
   siteId: number;
   applicationType: string;
   contentType: string;
+  includeResonancePageView?: boolean;
 };
 
 const livePageTestSuites: LivePageTestSuite[] = [
@@ -41,6 +42,7 @@ const livePageAtiTestSuites: AtiLivePageTestSuite[] = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'live-coverage',
+    includeResonancePageView: true,
   },
   {
     path: '/pidgin/live/c7p765ynk9qt',

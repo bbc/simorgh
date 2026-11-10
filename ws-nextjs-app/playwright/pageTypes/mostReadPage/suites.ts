@@ -66,9 +66,29 @@ const atiLiteTestSuites: AtiMostReadPageTestSuite[] = atiTestSuites.map(
   }),
 );
 
+const atiResonanceTestSuites: AtiMostReadPageTestSuite[] = [
+  {
+    path: '/marathi/popular/read',
+    service: 'marathi',
+    runForEnv: ['live'],
+    pageIdentifier: 'marathi.popular.read.page',
+    siteId: 59,
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+  },
+];
+
+const atiResonanceLiteTestSuites: AtiMostReadPageTestSuite[] =
+  atiResonanceTestSuites.map(testSuite => ({
+    ...testSuite,
+    path: `${testSuite.path}.lite`,
+    applicationType: 'lite',
+  }));
+
 export const mostReadPageSuites = {
   canonical: canonicalTestSuites,
   lite: liteTestSuites,
   ati: atiTestSuites,
   atiLite: atiLiteTestSuites,
+  atiResonance: [...atiResonanceTestSuites, ...atiResonanceLiteTestSuites],
 };

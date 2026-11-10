@@ -8,6 +8,7 @@ import {
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertPageView,
+  assertResonancePageView,
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -138,6 +139,40 @@ test.describe('mostReadPage ATI Analytics', () => {
           );
 
           await assertMostReadComponentClick({ page, ...atiProps });
+        });
+      });
+    });
+  });
+});
+
+test.describe('mostReadPage ATI Analytics Resonance', () => {
+  mostReadPageSuites.atiResonance.forEach(testSuite => {
+    const testLabel = `${baseURL}${testSuite.path}`;
+
+    test.describe(testLabel, () => {
+      test.describe(`ATI Analytics Resonance for ${testSuite.service} mostReadPage`, () => {
+        const expectation =
+          testSuite.applicationType === 'lite' ? 'not send' : 'send';
+
+        test(`should ${expectation} a resonance page view event`, async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertResonancePageView({
+            page,
+            path: testSuite.path,
+            baseURL,
+            pageIdentifier: testSuite.pageIdentifier,
+            siteId: testSuite.siteId,
+            applicationType: testSuite.applicationType,
+            contentType: testSuite.contentType,
+            service: testSuite.service,
+            appEnv: appEnvFromProcess,
+          });
         });
       });
     });
