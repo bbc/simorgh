@@ -8,54 +8,56 @@ import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 
-export const getServerSideProps = withRequestProps(async (context, props) => {
-  const { toggles } = props;
-  const {
-    service,
-    variant: variantFromUrl,
-    page,
-  } = context.query as PageDataParams;
-  const variant = deriveVariant(variantFromUrl);
+export const getServerSideProps = withRequestProps(
+  async (context, requestPropsPromise) => {
+    const { toggles } = await requestPropsPromise;
+    const {
+      service,
+      variant: variantFromUrl,
+      page,
+    } = context.query as PageDataParams;
+    const variant = deriveVariant(variantFromUrl);
 
-  const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
+    const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
-  if (!isUasPersonalizationEnabled) {
-    context.res.statusCode = NOT_FOUND;
+    if (!isUasPersonalizationEnabled) {
+      context.res.statusCode = NOT_FOUND;
+      return {
+        props: {
+          service,
+          variant,
+          status: NOT_FOUND,
+          pathname: `/${service}/my-news`,
+        },
+      };
+    }
+
+    logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+
+    context.res.setHeader(
+      'Cache-Control',
+      'public, max-age=300, stale-while-revalidate=600, stale-if-error=3600',
+    );
+
     return {
       props: {
         service,
         variant,
-        status: NOT_FOUND,
+        pageType: MY_NEWS_PAGE,
+        status: OK,
         pathname: `/${service}/my-news`,
-      },
-    };
-  }
-
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
-
-  context.res.setHeader(
-    'Cache-Control',
-    'public, max-age=300, stale-while-revalidate=600, stale-if-error=3600',
-  );
-
-  return {
-    props: {
-      service,
-      variant,
-      pageType: MY_NEWS_PAGE,
-      status: OK,
-      pathname: `/${service}/my-news`,
-      page: page || null,
-      pageData: {
-        metadata: {
-          type: MY_NEWS_PAGE,
-          atiAnalytics: {
-            pageIdentifier: 'my-news.page',
+        page: page || null,
+        pageData: {
+          metadata: {
+            type: MY_NEWS_PAGE,
+            atiAnalytics: {
+              pageIdentifier: 'my-news.page',
+            },
           },
         },
       },
-    },
-  };
-});
+    };
+  },
+);
 
 export default MyNewsPage;

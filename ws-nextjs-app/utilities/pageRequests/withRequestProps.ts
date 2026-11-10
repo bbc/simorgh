@@ -8,17 +8,20 @@ const withRequestProps =
   <Result extends GetServerSidePropsResult<Record<string, unknown>>>(
     handler: (
       context: GetServerSidePropsContext,
-      requestProps: RequestProps,
+      requestPropsPromise: Promise<RequestProps>,
     ) => Promise<Result>,
   ) =>
   async (context: GetServerSidePropsContext) => {
     const asPath = getRequestUrl(context);
-    const requestProps = await getRequestProps({
+    const requestPropsPromise = getRequestProps({
       ...context,
       asPath,
       pathname: asPath.split('?')[0],
     });
-    const result = await handler(context, requestProps);
+    const [result, requestProps] = await Promise.all([
+      handler(context, requestPropsPromise),
+      requestPropsPromise,
+    ]);
 
     if ('props' in result) {
       return {
