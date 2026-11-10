@@ -23,28 +23,30 @@ const context = {
   resolvedUrl: '/pidgin/articles/c0000000000o?renderer_env=test',
 } satisfies GetServerSidePropsContext;
 
+const resolvedRequestProps: Awaited<ReturnType<typeof getRequestProps>> = {
+  bbcOrigin: null,
+  cspHeader: null,
+  isApp: false,
+  isAmp: false,
+  isLite: false,
+  isNextJs: true,
+  serverSideExperiments: [],
+  idctaConfig: null,
+  navItems: null,
+  service: 'pidgin',
+  variant: null,
+  pageType: 'article',
+  pathname: '/pidgin/articles/c0000000000o',
+  isUK: true,
+  showAdsBasedOnLocation: false,
+  showCookieBannerBasedOnCountry: true,
+  ...requestProps,
+};
+
 describe('withRequestProps', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    mockGetRequestProps.mockResolvedValue({
-      bbcOrigin: null,
-      cspHeader: null,
-      isApp: false,
-      isAmp: false,
-      isLite: false,
-      isNextJs: true,
-      serverSideExperiments: [],
-      idctaConfig: null,
-      navItems: null,
-      service: 'pidgin',
-      variant: null,
-      pageType: 'article',
-      pathname: '/pidgin/articles/c0000000000o',
-      isUK: true,
-      showAdsBasedOnLocation: false,
-      showCookieBannerBasedOnCountry: true,
-      ...requestProps,
-    });
+    mockGetRequestProps.mockResolvedValue(resolvedRequestProps);
   });
 
   it('sets up the resolved page URL before calling the handler', async () => {
@@ -56,16 +58,43 @@ describe('withRequestProps', () => {
       asPath: context.resolvedUrl,
       pathname: '/pidgin/articles/c0000000000o',
     });
-    expect(handler).toHaveBeenCalledWith(
-      context,
-      expect.objectContaining(requestProps),
-    );
+    expect(handler).toHaveBeenCalledWith(context, expect.any(Promise));
+    await expect(handler.mock.calls[0][1]).resolves.toMatchObject(requestProps);
     expect(mockGetRequestProps.mock.invocationCallOrder[0]).toBeLessThan(
       handler.mock.invocationCallOrder[0],
     );
     expect(result).toEqual({
       props: expect.objectContaining({ ...requestProps, status: 200 }),
     });
+  });
+
+  it('starts the page handler without waiting for request props', async () => {
+    let resolveRequestProps!: (value: typeof resolvedRequestProps) => void;
+    const pendingRequestProps = new Promise<typeof resolvedRequestProps>(
+      resolve => {
+        resolveRequestProps = resolve;
+      },
+    );
+    mockGetRequestProps.mockReturnValue(pendingRequestProps);
+    const handler = jest.fn().mockResolvedValue({ props: { status: 200 } });
+
+    const resultPromise = withRequestProps(handler)(context);
+
+    expect(handler).toHaveBeenCalled();
+
+    resolveRequestProps(resolvedRequestProps);
+
+    await expect(resultPromise).resolves.toEqual({
+      props: expect.objectContaining({ ...requestProps, status: 200 }),
+    });
+  });
+
+  it('propagates request props failures', async () => {
+    const error = new Error('Request setup failed');
+    mockGetRequestProps.mockRejectedValue(error);
+    const handler = jest.fn().mockResolvedValue({ props: { status: 200 } });
+
+    await expect(withRequestProps(handler)(context)).rejects.toThrow(error);
   });
 
   it('gives page props precedence and resolves promised props', async () => {
