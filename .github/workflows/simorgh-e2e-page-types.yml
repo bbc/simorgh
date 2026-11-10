@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build-matrix:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
     steps:
