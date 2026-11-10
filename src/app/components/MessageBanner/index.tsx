@@ -6,6 +6,7 @@ import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
+import isLive from '#app/lib/utilities/isLive';
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -55,6 +56,9 @@ const MessageBanner = ({
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
+  // EXPERIMENT: CTA Glow - remove this flag and place behind Optimizely check
+  const shouldEnableGlow = !isLive();
+
   return (
     <div {...viewTracker} css={styles.card}>
       <div css={styles.textWrap}>
@@ -67,7 +71,7 @@ const MessageBanner = ({
         <CallToActionLink
           url={link}
           className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
-          enableGlow // to check
+          enableGlow={shouldEnableGlow}
           eventTrackingData={eventTrackingDataWithoutItemCount}
         >
           <CallToActionLink.ButtonLikeWrapper>
