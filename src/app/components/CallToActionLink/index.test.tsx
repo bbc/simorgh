@@ -2,7 +2,7 @@ import { createRef } from 'react';
 import userEvent from '@testing-library/user-event';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { act, render, screen } from '../react-testing-library-with-providers';
-import CallToActionLink from '.';
+import CallToActionLink, { GLOW_DELAY_MS } from '.';
 
 jest.mock('#app/hooks/useClickTrackerHandler', () => ({
   __esModule: true,
@@ -220,7 +220,7 @@ describe('Call To Action Link', () => {
       });
 
       act(() => {
-        jest.advanceTimersByTime(4999);
+        jest.advanceTimersByTime(GLOW_DELAY_MS - 1);
       });
       expect(wrapper).not.toHaveClass('glow');
 
@@ -241,7 +241,7 @@ describe('Call To Action Link', () => {
       });
 
       act(() => {
-        jest.advanceTimersByTime(4000);
+        jest.advanceTimersByTime(GLOW_DELAY_MS - 1000);
       });
 
       act(() => {
@@ -258,7 +258,7 @@ describe('Call To Action Link', () => {
       });
 
       act(() => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(GLOW_DELAY_MS);
       });
 
       expect(wrapper).toHaveClass('glow');
@@ -276,7 +276,7 @@ describe('Call To Action Link', () => {
       await user.tab();
 
       act(() => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(GLOW_DELAY_MS);
       });
 
       expect(wrapper).not.toHaveClass('glow');
@@ -292,7 +292,7 @@ describe('Call To Action Link', () => {
       });
 
       act(() => {
-        jest.advanceTimersByTime(5000);
+        jest.advanceTimersByTime(GLOW_DELAY_MS);
       });
       expect(wrapper).toHaveClass('glow');
 

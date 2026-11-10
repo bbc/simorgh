@@ -18,7 +18,7 @@ import Text from './Text';
 import styles from './index.module.scss';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
-const GLOW_DELAY_MS = 5000;
+export const GLOW_DELAY_MS = 2000;
 
 type CallToActionLinkProps = {
   id?: string;
