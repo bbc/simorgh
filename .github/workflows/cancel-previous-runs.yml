@@ -14,7 +14,7 @@ jobs:
     permissions:
       actions: write  # for rokroskar/workflow-run-cleanup-action to obtain workflow name & cancel it
       contents: read  # for rokroskar/workflow-run-cleanup-action to obtain branch
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - uses: rokroskar/workflow-run-cleanup-action@master
         env:
