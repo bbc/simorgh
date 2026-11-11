@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
 import { use, useEffect, useState } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
+import isLocal from '#app/lib/utilities/isLocal';
+import isTest from '#app/lib/utilities/isTest';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
@@ -18,7 +20,7 @@ const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
 });
 
 const isMockFollowedTopicsEnabled = () =>
-  process.env.NODE_ENV !== 'production' &&
+  (isLocal() || isTest()) &&
   typeof window !== 'undefined' &&
   new URLSearchParams(window.location.search).get('mockFollowedTopics') ===
     'true';

@@ -10,6 +10,8 @@ import { use, useEffect, useRef, useState } from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import Text from '#app/components/Text';
+import isLocal from '#app/lib/utilities/isLocal';
+import isTest from '#app/lib/utilities/isTest';
 import styles from './styles';
 
 const ITEMS_PER_PAGE = 24;
@@ -17,12 +19,12 @@ const ITEMS_PER_PAGE = 24;
 const FOLLOWED_TOPICS_ITEMS_PER_PAGE = 100;
 const FOLLOWED_TOPICS_VISIBLE_LIMIT = 9;
 const MOCK_FOLLOWED_TOPICS =
-  process.env.NODE_ENV === 'production'
-    ? []
-    : Array.from({ length: 150 }, (_, index) => ({
+  isLocal() || isTest()
+    ? Array.from({ length: 150 }, (_, index) => ({
         id: `mock-topic-${index + 1}`,
         title: `Fictitious topic ${index + 1}`,
-      }));
+      }))
+    : [];
 
 interface MyNewsPageContentProps {
   page?: string;

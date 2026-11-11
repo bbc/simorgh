@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import * as envConfig from '#app/lib/utilities/getEnvConfig';
 import {
   render,
   screen,
@@ -73,6 +74,10 @@ const mockFollowedTopics = [
 ];
 
 describe('MyNewsPage', () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   beforeEach(() => {
     jest.clearAllMocks();
     window.history.replaceState({}, '', '/');
@@ -356,6 +361,49 @@ describe('MyNewsPage', () => {
       expect.objectContaining({ enabled: false }),
     );
   });
+
+  it.each(['local', 'test', 'live'] as const)(
+    'only allows mock topics in local/test environments (environment: %s)',
+    async environment => {
+      const currentConfig = envConfig.getEnvConfig();
+      jest.spyOn(envConfig, 'getEnvConfig').mockReturnValue({
+        ...currentConfig,
+        SIMORGH_APP_ENV: environment,
+      });
+      jest.replaceProperty(process.env, 'NODE_ENV', 'production');
+      window.history.replaceState(
+        {},
+        '',
+        '/hindi/my-news?mockFollowedTopics=true',
+      );
+      mockUseFollowedTopics.mockReturnValue({
+        followedTopics: mockFollowedTopics,
+        total: mockFollowedTopics.length,
+        isLoading: false,
+        error: null,
+      });
+
+      await act(async () => {
+        render(<MyNewsPage />, renderOptions);
+      });
+
+      expect(
+        screen.getByRole('heading', {
+          name: `${myNewsTranslations.followedTopicsTitle} (${environment === 'live' ? 2 : 150})`,
+          level: 2,
+        }),
+      ).toBeInTheDocument();
+      if (environment === 'live') {
+        expect(
+          screen.queryByRole('link', { name: 'Fictitious topic 1' }),
+        ).not.toBeInTheDocument();
+      } else {
+        expect(
+          screen.getByRole('link', { name: 'Fictitious topic 1' }),
+        ).toBeInTheDocument();
+      }
+    },
+  );
 
   it('should show the count of actually rendered topics, not the raw API total', async () => {
     mockUseFollowedTopics.mockReturnValue({
