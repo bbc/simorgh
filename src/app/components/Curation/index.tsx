@@ -98,8 +98,6 @@ export default ({
     componentName === SIMPLE_CURATION_GRID ||
     componentName === HIERARCHICAL_CURATION_GRID;
 
-  const { service } = useContext(ServiceContext);
-
   const shouldStyleAsVideoCollection =
     !isLite && isCurationGrid && isVideoCollection;
 
