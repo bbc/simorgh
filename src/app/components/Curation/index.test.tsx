@@ -24,6 +24,7 @@ import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+import { Services } from '#app/models/types/global';
 
 jest.mock('#app/lib/utilities/getEnvConfig', () => ({
   getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
@@ -703,7 +704,7 @@ describe('Curation', () => {
       isVideoCollection,
       isLite,
     }: {
-      service: 'arabic' | 'mundo';
+      service: Services;
       isVideoCollection: boolean;
       isLite?: boolean;
     }) => {
@@ -721,15 +722,18 @@ describe('Curation', () => {
       return getByTestId('topic-promos');
     };
 
-    it('applies video collection styling for Arabic', () => {
-      const list = renderCuration({
-        service: 'arabic',
-        isVideoCollection: true,
-        isLite: false,
-      });
+    it.each(['arabic', 'mundo', 'pidgin', 'tamil'] as const)(
+      'applies video collection styling for %s',
+      service => {
+        const list = renderCuration({
+          service,
+          isVideoCollection: true,
+          isLite: false,
+        });
 
-      expect(list).toHaveStyleRule(...gridColumnsStyleRule);
-    });
+        expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
 
     it.each([
       {
@@ -739,9 +743,10 @@ describe('Curation', () => {
         isLite: true,
       },
       {
-        description: 'Mundo',
+        description: 'Mundo Lite page',
         service: 'mundo',
         isVideoCollection: true,
+        isLite: true,
       },
       {
         description: 'Non-video collection on test',
