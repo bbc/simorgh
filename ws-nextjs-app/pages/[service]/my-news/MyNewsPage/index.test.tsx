@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
@@ -508,6 +509,7 @@ describe('MyNewsPage', () => {
   });
 
   it('should cap followed topics at 9 and toggle the rest via the "see more"/"see less" button', async () => {
+    const user = userEvent.setup();
     const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
       id: `topic-${i}`,
       title: `Topic ${i}`,
@@ -540,9 +542,7 @@ describe('MyNewsPage', () => {
     });
     expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
 
-    await act(async () => {
-      seeMoreButton.click();
-    });
+    await user.click(seeMoreButton);
 
     await waitFor(() => {
       expect(
@@ -554,6 +554,16 @@ describe('MyNewsPage', () => {
       name: myNewsTranslations.seeLessTopics,
     });
     expect(seeLessButton).toHaveAttribute('aria-expanded', 'true');
+    expect(seeLessButton).toHaveFocus();
+
+    await user.tab();
+    expect(
+      screen.getByRole('link', { name: manyFollowedTopics[9].title }),
+    ).toHaveFocus();
+    await user.tab();
+    expect(
+      screen.getByRole('link', { name: manyFollowedTopics[10].title }),
+    ).toHaveFocus();
 
     await act(async () => {
       seeLessButton.click();

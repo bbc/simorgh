@@ -31,6 +31,8 @@ const MyNewsPageContent = ({
   const { translations, lang } = use(ServiceContext);
   const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
   const wasTopicsExpandedRef = useRef(areAllTopicsVisible);
+  const shouldFocusFirstNewTopicRef = useRef(false);
+  const followedTopicsSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const wasExpanded = wasTopicsExpandedRef.current;
@@ -126,7 +128,7 @@ const MyNewsPageContent = ({
     }));
 
   const renderFollowedTopicsSection = () => (
-    <section css={styles.section}>
+    <section ref={followedTopicsSectionRef} css={styles.section}>
       <Heading level={2} css={styles.subheading} size="doublePica">
         {topicsLoading || topicsError || !hasTopics
           ? followedTopicsTitle
@@ -150,7 +152,33 @@ const MyNewsPageContent = ({
               type="button"
               css={styles.seeMoreButton}
               aria-expanded={areAllTopicsVisible}
-              onClick={() => setAreAllTopicsVisible(!areAllTopicsVisible)}
+              onClick={event => {
+                shouldFocusFirstNewTopicRef.current = !areAllTopicsVisible;
+                event.currentTarget.focus();
+                setAreAllTopicsVisible(!areAllTopicsVisible);
+              }}
+              onKeyDown={event => {
+                if (
+                  event.key !== 'Tab' ||
+                  event.shiftKey ||
+                  !shouldFocusFirstNewTopicRef.current
+                ) {
+                  return;
+                }
+
+                const firstNewTopic =
+                  followedTopicsSectionRef.current?.querySelectorAll<HTMLAnchorElement>(
+                    'ul[role="list"] a',
+                  )[FOLLOWED_TOPICS_VISIBLE_LIMIT];
+
+                if (firstNewTopic) {
+                  event.preventDefault();
+                  firstNewTopic.focus();
+                }
+              }}
+              onBlur={() => {
+                shouldFocusFirstNewTopicRef.current = false;
+              }}
             >
               {areAllTopicsVisible ? seeLessTopics : seeMoreTopics}
               <RightChevron
