@@ -101,7 +101,7 @@ export default ({
   const { service } = useContext(ServiceContext);
 
   const shouldStyleAsVideoCollection =
-    !isLite && service === 'arabic' && isCurationGrid && isVideoCollection;
+    !isLite && isCurationGrid && isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic = !isLiveEnvironment && isCurationGrid;
