@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import { matchers } from '@emotion/jest';
 import {
   render,
   screen,
@@ -11,6 +12,8 @@ import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage from '.';
+
+expect.extend(matchers);
 
 const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
 
@@ -248,6 +251,31 @@ describe('MyNewsPage', () => {
       expect(screen.getByRole('link', { name: '2' })).toBeInTheDocument();
     });
   });
+
+  it.each([
+    { total: 2, paginationCount: 0 },
+    { total: 25, paginationCount: 1 },
+  ])(
+    'keeps bottom spacing before the footer with $total saved articles',
+    async ({ total, paginationCount }) => {
+      mockUseRecentActivity.mockReturnValue({
+        savedArticles: mockSavedArticles,
+        total,
+        isLoading: false,
+        error: null,
+      });
+
+      await act(async () => {
+        render(<MyNewsPage />, renderOptions);
+      });
+
+      expect(screen.getByRole('main')).toHaveStyleRule(
+        'margin-block',
+        '0 1rem',
+      );
+      expect(screen.queryAllByRole('navigation')).toHaveLength(paginationCount);
+    },
+  );
 
   it('should call useUASRecentActivity with correct pagination params', async () => {
     await act(async () => {
