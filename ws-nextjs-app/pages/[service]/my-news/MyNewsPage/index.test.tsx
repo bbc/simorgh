@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
@@ -308,6 +309,7 @@ describe('MyNewsPage', () => {
   });
 
   it('should display 150 fictitious followed topics when requested locally', async () => {
+    const user = userEvent.setup();
     window.history.replaceState(
       {},
       '',
@@ -339,13 +341,16 @@ describe('MyNewsPage', () => {
     });
     expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
 
-    await act(async () => {
-      seeMoreButton.click();
-    });
+    await user.click(seeMoreButton);
 
     const topicLinks = within(topicsList).getAllByRole('link');
     expect(topicLinks).toHaveLength(150);
     expect(topicLinks[0]).toHaveTextContent('Fictitious topic 1');
+    expect(seeMoreButton).toHaveFocus();
+    await user.tab();
+    expect(topicLinks[9]).toHaveFocus();
+    await user.tab();
+    expect(topicLinks[10]).toHaveFocus();
     expect(topicLinks[149]).toHaveTextContent('Fictitious topic 150');
     expect(mockUseFollowedTopics).toHaveBeenCalledWith(
       expect.objectContaining({ enabled: false }),
