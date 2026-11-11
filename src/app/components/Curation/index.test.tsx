@@ -1,6 +1,7 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { matchers } from '@emotion/jest';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Services } from '#app/models/types/global';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -24,7 +25,6 @@ import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import { Services } from '#app/models/types/global';
 
 jest.mock('#app/lib/utilities/getEnvConfig', () => ({
   getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
