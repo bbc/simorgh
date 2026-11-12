@@ -1,4 +1,3 @@
-import { safeLoad } from 'js-yaml';
 import russianArticle from '#data/russian/articles/c6wyzl2xdyz2o.json';
 import pidginArticle from '#data/pidgin/articles/cvpde7nqj92o.json';
 import articleToMarkdown from '.';
@@ -6,8 +5,23 @@ import articleToMarkdown from '.';
 const canonicalUrl = 'https://www.bbc.com/russian/articles/c6wyzl2xdyz2o';
 const { article } = russianArticle.data;
 
-const readFrontMatter = (markdown: string) =>
-  safeLoad(markdown.split('---\n')[1]);
+const readFrontMatter = (markdown: string): Record<string, unknown> => {
+  const frontMatter = /^---\n([\s\S]*?)\n---\n\n/.exec(markdown)?.[1];
+
+  if (!frontMatter) {
+    throw new Error('Markdown front matter is missing');
+  }
+
+  return Object.fromEntries(
+    frontMatter.split('\n').map(line => {
+      const separatorIndex = line.indexOf(': ');
+      const key = line.slice(0, separatorIndex);
+      const value = line.slice(separatorIndex + 2);
+
+      return [key, JSON.parse(value)];
+    }),
+  );
+};
 
 describe('articleToMarkdown', () => {
   it('renders the BBC article metadata as valid YAML before the body', () => {

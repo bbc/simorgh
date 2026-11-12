@@ -143,7 +143,9 @@ export default async (
   );
 
   if (isMarkdown) {
-    const canonicalUrl = `https://www.bbc.com${canonicalPathname.replace(MARKDOWN_REGEX, '')}`;
+    const canonicalUrl =
+      article.metadata.locators?.canonicalUrl ||
+      `https://www.bbc.com${canonicalPathname.replace(MARKDOWN_REGEX, '')}`;
     const markdown = articleToMarkdown({ article, canonicalUrl });
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,

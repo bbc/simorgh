@@ -95,6 +95,42 @@ describe('handleArticleRoute', () => {
       );
     });
 
+    it('uses the article metadata canonical URL for the Link header and front matter', async () => {
+      const canonicalUrl = 'https://www.bbc.com/pidgin/canonical-article';
+      jest.spyOn(shouldRender, 'default').mockReturnValue({
+        hasRequestSucceeded: true,
+        status: 200,
+      });
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValueOnce({
+        data: {
+          pageData: {
+            ...pidginMediaArticleFixtureData.data,
+            article: {
+              ...pidginMediaArticleFixtureData.data.article,
+              metadata: {
+                ...pidginMediaArticleFixtureData.data.article.metadata,
+                locators: { canonicalUrl },
+              },
+            },
+          },
+          status: 200,
+        },
+      });
+      const context = createContext();
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(context.res.getHeader('Link')).toEqual([
+        '<https://ichef.bbci.co.uk>; rel="preconnect"',
+        `<${canonicalUrl}>; rel="canonical"`,
+      ]);
+      expect(context.res.end).toHaveBeenCalledWith(
+        expect.stringContaining(`canonical: "${canonicalUrl}"`),
+      );
+    });
+
     it.each<{
       description: string;
       toggles: Record<string, ToggleDefinition>;
@@ -141,6 +177,25 @@ describe('handleArticleRoute', () => {
         ...createContext('/serbian/articles/cvpde7nqj92o/lat.md'),
         query: { service: 'serbian' },
       };
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValueOnce({
+        data: {
+          pageData: {
+            ...pidginMediaArticleFixtureData.data,
+            article: {
+              ...pidginMediaArticleFixtureData.data.article,
+              metadata: {
+                ...pidginMediaArticleFixtureData.data.article.metadata,
+                locators: {
+                  ...pidginMediaArticleFixtureData.data.article.metadata
+                    .locators,
+                  canonicalUrl: undefined,
+                },
+              },
+            },
+          },
+          status: 200,
+        },
+      });
       jest.spyOn(shouldRender, 'default').mockReturnValue({
         hasRequestSucceeded: true,
         status: 200,
