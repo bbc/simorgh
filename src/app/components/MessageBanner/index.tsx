@@ -1,3 +1,4 @@
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import clsx from 'clsx';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -6,6 +7,9 @@ import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
+import isLive from '#app/lib/utilities/isLive';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -40,6 +44,8 @@ const MessageBanner = ({
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
 
+  const { pageType } = use(RequestContext);
+
   const { mq } = useTheme();
 
   const imgSrcLarge = image?.replace(
@@ -55,6 +61,9 @@ const MessageBanner = ({
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
+  // EXPERIMENT: CTA Glow - remove this flag and place behind Optimizely check
+  const shouldEnableGlow = !isLive() && pageType === HOME_PAGE;
+
   return (
     <div {...viewTracker} css={styles.card}>
       <div css={styles.textWrap}>
@@ -67,6 +76,7 @@ const MessageBanner = ({
         <CallToActionLink
           url={link}
           className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
+          enableGlow={shouldEnableGlow}
           eventTrackingData={eventTrackingDataWithoutItemCount}
         >
           <CallToActionLink.ButtonLikeWrapper>
