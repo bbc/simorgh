@@ -67,6 +67,16 @@ describe('validateFunctions', () => {
       expectedValid: true,
     },
     {
+      inputRequired: true,
+      inputValue: 'Hello@Example.COM',
+      expectedValid: true,
+    },
+    {
+      inputRequired: true,
+      inputValue: 'JANE.DOE@BBC.CO.UK',
+      expectedValid: true,
+    },
+    {
       inputRequired: false,
       inputValue: 'helloworld',
       expectedValid: false,
