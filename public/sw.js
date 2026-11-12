@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.9';
+const version = 'v0.3.10';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -82,9 +82,8 @@ const CACHEABLE_FILES = [
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
-  // SVG icons, service logos and fonts
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh(?:[12]-preview)?-assets\/public\/(?:images\/icons\/[^/?#]+|[a-z]+\/images\/brand|fonts\/[^?#]+)\.svg(?:\?[^#]*)?$/,
-  /^https?:\/\/(?:localhost(?::\d+)?|127\.0\.0\.1(?::\d+)?|(?:www\.)?bbc\.(?:com|co\.uk))\/(?:images\/icons\/[^/?#]+|[a-z]+\/images\/brand|fonts\/[^?#]+)\.svg(?:\?[^#]*)?$/,
+  // SVGs
+  /^[^?#]+\.svg(?:\?[^#]*)?$/i,
 ];
 
 const WEBP_IMAGE =

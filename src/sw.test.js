@@ -185,10 +185,7 @@ describe('Service Worker', () => {
         ${'woff2'}                                                                                           | ${'url is missing leading .'}
         ${'modern.frosted_promo'}                                                                            | ${'full static files path is missing'}
         ${'not-cached'}                                                                                      | ${'url is not in the allow list of cacheable urls'}
-        ${'https://example.com/images/icons/close.svg'}                                                      | ${'SVG is on an unrelated origin'}
-        ${'https://static.files.bbci.co.uk/other/images/icons/close.svg'}                                    | ${'SVG is outside Simorgh static assets'}
         ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg.png'}             | ${'file is not an SVG'}
-        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/api/og/article.svg'}                     | ${'generated SVG is not a static icon, logo, or font'}
         ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.png?asset=close.svg'} | ${'SVG occurs only in a query parameter'}
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
@@ -213,7 +210,11 @@ describe('Service Worker', () => {
     });
 
     const cacheableAssets = [
-      // External SVG icons, service logos, and legacy fonts
+      // SVGs from any origin or path
+      'https://example.com/images/icons/close.svg',
+      'https://example.com/any/path/image.SVG?v=2&size=32',
+      'https://static.files.bbci.co.uk/other/images/icons/close.svg',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/api/og/article.svg',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/ws-header-logo.svg?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/brand.svg',
@@ -696,8 +697,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.9',
-      fileContentHash: 'bf12e040b32561cdd8c41f4dbe31a1bd',
+      number: 'v0.3.10',
+      fileContentHash: '0b5800684962f8cf7f85011f670f05c7',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {
