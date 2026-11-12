@@ -12,6 +12,7 @@ type IconProps = {
   height?: string;
   isColoured?: boolean;
   isInverted?: boolean;
+  loading?: 'eager' | 'lazy';
   name?: string;
   path?: string;
   useCurrentColor?: boolean;
@@ -29,6 +30,7 @@ export const ExternalSvg = ({
   height,
   isColoured = false,
   isInverted = false,
+  loading = 'lazy',
   name,
   path,
   useCurrentColor = false,
@@ -85,6 +87,8 @@ export const ExternalSvg = ({
             alt=""
             aria-hidden="true"
             className={styles.fallback}
+            crossOrigin="anonymous"
+            loading={loading}
             src={src}
             width={Number.isNaN(Number(width)) ? undefined : width}
             height={Number.isNaN(Number(height)) ? undefined : height}
@@ -114,6 +118,7 @@ export const ExternalSvg = ({
       className={classes.filter(Boolean).join(' ')}
       css={css}
       height={height}
+      loading={loading}
       src={src}
       style={dimensions}
       width={width}

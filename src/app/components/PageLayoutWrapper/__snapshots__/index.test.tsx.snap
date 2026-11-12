@@ -1141,6 +1141,7 @@ body.simorgh-player-fullscreen .emotion-1 {
                   class="external-svg image"
                   height="32"
                   id="brandSvgHeader"
+                  loading="eager"
                   src="http://localhost:7080/news/images/brand.svg"
                   width="220.8450704225352"
                 />
@@ -1573,6 +1574,7 @@ body.simorgh-player-fullscreen .emotion-1 {
                 class="external-svg image"
                 height="32"
                 id="brandSvgFooter"
+                loading="eager"
                 src="http://localhost:7080/news/images/brand.svg"
                 width="220.8450704225352"
               />

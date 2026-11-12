@@ -55,6 +55,7 @@ describe('Brand', () => {
       expect(image).toHaveAttribute('alt', '');
       expect(image).toHaveAttribute('width', String(svg.ratio * 32));
       expect(image).toHaveAttribute('height', '32');
+      expect(image).toHaveAttribute('loading', 'eager');
       expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
         '6.9979',
       );

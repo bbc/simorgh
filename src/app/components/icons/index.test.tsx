@@ -55,6 +55,11 @@ describe('icons', () => {
     expect(icon?.querySelector('img')).toHaveAttribute('width', '12');
     expect(icon?.querySelector('img')).toHaveAttribute('height', '12');
     expect(icon?.querySelector('img')).toHaveAttribute('alt', '');
+    expect(icon?.querySelector('img')).toHaveAttribute('loading', 'lazy');
+    expect(icon?.querySelector('img')).toHaveAttribute(
+      'crossorigin',
+      'anonymous',
+    );
   });
 
   it('uses the direction-appropriate chevron asset', () => {
@@ -164,5 +169,6 @@ describe('icons', () => {
       expect.stringContaining('images/icons/red-card.svg'),
     );
     expect(container.querySelector('.mask')).not.toBeInTheDocument();
+    expect(container.querySelector('img')).toHaveAttribute('loading', 'lazy');
   });
 });

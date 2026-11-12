@@ -29,6 +29,7 @@ const NewLogoBanner = () => {
           className={logoStyles.logo}
           width="112"
           height="32"
+          loading="eager"
           useCurrentColor
         />
       </a>

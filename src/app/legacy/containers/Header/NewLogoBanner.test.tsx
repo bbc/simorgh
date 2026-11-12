@@ -11,6 +11,11 @@ describe('NewLogoBanner', () => {
     const logo = container.querySelector('.external-svg');
 
     expect(logo).toHaveAttribute('aria-hidden', 'true');
+    expect(logo?.querySelector('img')).toHaveAttribute('loading', 'eager');
+    expect(logo?.querySelector('img')).toHaveAttribute(
+      'crossorigin',
+      'anonymous',
+    );
     expect(logo).toHaveStyle({
       '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/ws-header-logo.svg")`,
       '--icon-width': '112px',

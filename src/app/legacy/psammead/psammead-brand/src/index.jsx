@@ -146,6 +146,7 @@ const StyledBrand = ({
             src={src}
             width={svg.ratio * 32}
             height="32"
+            loading="eager"
           />
         )}
       </span>
