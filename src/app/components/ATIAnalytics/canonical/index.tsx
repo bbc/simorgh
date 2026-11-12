@@ -17,6 +17,7 @@ import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
+import initResonanceLite from './initResonanceLite';
 
 const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
@@ -84,6 +85,22 @@ const CanonicalATIAnalytics = ({
           parameters: [operaMiniPageViewReverbURL, isOperaProxy],
           nonce,
         })}
+      {isLite && resonanceParams && (
+        <>
+          <Helmet>
+            <script
+              async
+              src="/spike/resonance-lite.js"
+              {...(nonce ? { nonce } : {})}
+            />
+          </Helmet>
+          {addScript({
+            script: initResonanceLite,
+            parameters: [resonanceParams],
+            nonce,
+          })}
+        </>
+      )}
       {renderNoScriptTrackingPixel({ reverbParams })}
     </>
   );
