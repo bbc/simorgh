@@ -189,6 +189,40 @@ describe('Promo component - Image', () => {
 });
 
 describe('Promo component - Timestamp', () => {
+  describe('Publication year', () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(new Date('2026-11-12T12:00:00Z'));
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('omits the year for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'mundo' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^3 noviembre$/,
+      );
+      expect(container.querySelector('time')).toHaveAttribute(
+        'datetime',
+        '2026-11-03',
+      );
+    });
+
+    it('includes the year for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'mundo',
+      });
+
+      expect(screen.getByText('3 noviembre 2025')).toBeInTheDocument();
+    });
+  });
+
   describe('Past dates', () => {
     it('should render timestamp in string format', () => {
       const stringTimestamp = '2023-11-03T05:17:09.393Z';
@@ -207,7 +241,16 @@ describe('Promo component - Timestamp', () => {
   });
 
   describe('Relative times', () => {
-    const epochTimeNow = Date.now();
+    const epochTimeNow = new Date('2026-11-12T12:00:00Z').getTime();
+
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(epochTimeNow);
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
 
     const calcTimestampMinutesAgo = minutes =>
       new Date(epochTimeNow - 60 * 1000 * minutes);
@@ -285,10 +328,9 @@ describe('Promo component - Timestamp', () => {
     });
     describe('Relative time more than 10 hours ago', () => {
       moment.locale('es');
-      // We are using 10 to test more than 10 hours, because by the time the test has reached the expect assertion, milliseconds have passed.
       it('should render timestamp in ISO string format', () => {
-        const overTenHoursString = calcTimestampHoursAgo(10).toISOString();
-        const dateTenHoursAgo = moment.utc(overTenHoursString).format('LL');
+        const overTenHoursString = calcTimestampHoursAgo(11).toISOString();
+        const dateTenHoursAgo = moment.utc(overTenHoursString).format('D MMMM');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursString} />,
           {
@@ -298,8 +340,8 @@ describe('Promo component - Timestamp', () => {
         expect(getByText(dateTenHoursAgo)).toBeInTheDocument();
       });
       it('should render timestamp in epoch format', () => {
-        const overTenHoursEpoch = calcTimestampHoursAgo(10).getTime();
-        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('LL');
+        const overTenHoursEpoch = calcTimestampHoursAgo(11).getTime();
+        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('D MMMM');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursEpoch} />,
           {
