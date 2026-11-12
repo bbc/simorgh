@@ -1,15 +1,25 @@
 import ReadTimeArticle from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { Services, Variants } from '#app/models/types/global';
+import serviceVariants from '#testHelpers/serviceVariants';
 import readme from './README.md';
 import metadata from './metadata.json';
 
-// Example for pidgin service and default variant
-const service = 'pidgin';
-const variant = 'default';
-
-const Component = ({ readTime }: { readTime: number }) => (
-  <ServiceContextProvider service={service} variant={variant}>
-    <ReadTimeArticle readTimeValue={readTime} />
+const Component = ({
+  service,
+  variant,
+  pageLang,
+}: {
+  service: Services;
+  variant: Variants;
+  pageLang?: string;
+}) => (
+  <ServiceContextProvider
+    service={service}
+    variant={variant}
+    pageLang={pageLang}
+  >
+    <ReadTimeArticle readTimeValue={5} />
   </ServiceContextProvider>
 );
 
@@ -22,5 +32,29 @@ export default {
   },
 };
 
-export const SevenMinuteReadTime = () => <Component readTime={7} />;
-export const OneMinuteReadTime = () => <Component readTime={1} />;
+export const FiveMinuteReadTime = () => (
+  <Component service="pidgin" variant="default" />
+);
+
+export const AllServices = () => (
+  <div>
+    {serviceVariants.map(
+      ({ service, variant, pageLang, configVariant, label }) => (
+        <div key={`${service}-${configVariant}`}>
+          <strong>{label}</strong>
+          <Component
+            service={service as Services}
+            variant={variant as Variants}
+            pageLang={pageLang}
+          />
+        </div>
+      ),
+    )}
+  </div>
+);
+AllServices.tags = ['!dev'];
+AllServices.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
