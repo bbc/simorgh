@@ -6,4 +6,5 @@ export type AtiAssertionFnProps = {
   applicationType: string;
   siteId: string;
   service: Services;
+  headers?: Record<string, string>;
 };
