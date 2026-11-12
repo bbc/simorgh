@@ -12,5 +12,3 @@ export type ExternalLink = {
   linkUrl: string;
   linkType: string;
 };
-
-export type ExternalLinks = ExternalLink[];
