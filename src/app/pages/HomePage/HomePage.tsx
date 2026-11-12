@@ -1,4 +1,5 @@
 import { Fragment, use } from 'react';
+import dynamic from 'next/dynamic';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import useScrollDepthTracker, {
@@ -27,6 +28,12 @@ import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAn
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 import HomePageElectionBanner from './HomePageElectionBanner';
 
+const Globe = dynamic(() => import('#app/components/3d/3dComponents/Globe'), {
+  ssr: false,
+});
+
+const LANGUAGES_PATHNAME = '/ws/languages';
+
 export interface HomePageProps {
   pageData: {
     id?: string;
@@ -50,6 +57,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
     lang,
     brandName,
   } = use(ServiceContext);
+  const { pathname } = use(RequestContext);
+  const isLanguagesPage = pathname === LANGUAGES_PATHNAME;
   const { topStoriesTitle, home } = translations;
   const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
