@@ -1,38 +1,25 @@
-import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '../makeRelativeUrlPath';
 import { variants } from '../variantHandler';
 
-export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);
+export const getAssetTypeCode = item => item?.assetTypeCode ?? null;
 
 export const getHeadline = item => {
-  const overtypedHeadline = pathOr('', ['headlines', 'overtyped'], item);
+  const overtypedHeadline = item?.headlines?.overtyped ?? '';
   const headline =
     overtypedHeadline ||
-    pathOr('', ['headlines', 'headline'], item) ||
-    pathOr(
-      '',
-      [
-        'headlines',
-        'promoHeadline',
-        'blocks',
-        0,
-        'model',
-        'blocks',
-        0,
-        'model',
-        'text',
-      ],
-      item,
-    ) ||
-    pathOr('', ['name'], item);
+    (item?.headlines?.headline ?? '') ||
+    (item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ??
+      '') ||
+    (item?.name ?? '');
 
   return headline;
 };
 
 export const getUrl = (item, variant = null) => {
-  const assetUri = pathOr(null, ['locators', 'assetUri'], item);
-  const canonicalUrl = pathOr(null, ['locators', 'canonicalUrl'], item);
-  let uri = pathOr(null, ['uri'], item);
+  const assetUri = item?.locators?.assetUri ?? null;
+  const canonicalUrl = item?.locators?.canonicalUrl ?? null;
+  let uri = item?.uri ?? null;
   if (uri && variant) {
     const hasVariantPath =
       uri.indexOf('/articles/') !== -1 ||
@@ -52,6 +39,4 @@ export const getUrl = (item, variant = null) => {
 };
 
 export const getIsLive = item =>
-  getAssetTypeCode(item) === null
-    ? pathOr(false, ['cpsType'], item) === 'LIV'
-    : false;
+  getAssetTypeCode(item) === null ? item?.cpsType === 'LIV' : false;
