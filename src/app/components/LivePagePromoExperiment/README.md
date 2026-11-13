@@ -9,7 +9,6 @@ All code for this experiment lives in this directory, so it can be removed by de
 | Name   | type           | Description                                                      |
 | ------ | -------------- | ---------------------------------------------------------------- |
 | blocks | TopStoryItem[] | Array of Top Stories items, used to find an eligible live page.  |
-| id     | string         | Unique ID for the `TopBarOJs` region landmark when falling back. |
 
 ## How to use
 
