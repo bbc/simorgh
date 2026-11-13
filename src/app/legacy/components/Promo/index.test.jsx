@@ -221,6 +221,58 @@ describe('Promo component - Timestamp', () => {
 
       expect(screen.getByText('3 noviembre 2025')).toBeInTheDocument();
     });
+
+    it('renders the native Japanese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'japanese' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Japanese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'japanese',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
+    it('renders the native Simplified Chinese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'zhongwen', variant: 'simp' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Simplified Chinese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'zhongwen',
+        variant: 'simp',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
+    it('renders the native Korean date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'korean' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11월 3일$/);
+    });
+
+    it('renders the Korean date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'korean',
+      });
+
+      expect(screen.getByText('2025년 11월 3일')).toBeInTheDocument();
+    });
   });
 
   describe('Past dates', () => {
