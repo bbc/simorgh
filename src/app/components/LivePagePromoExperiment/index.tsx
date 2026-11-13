@@ -2,7 +2,6 @@ import Promo from '#components/OptimoPromos';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import getLivePageBlock from './helpers/getLivePageBlock';
 import styles from './index.module.scss';
 
 interface LivePagePromoExperimentProps {
@@ -14,6 +13,9 @@ const eventTrackingData: EventTrackingMetadata = {
 };
 
 const ariaLabelledBy = 'live-page-promo-experiment';
+
+const getLivePageBlock = (blocks: TopStoryItem[] = []) =>
+  blocks.find(block => block?.type === 'tipo-live' && block?.isLive);
 
 const LivePagePromoExperiment = ({ blocks }: LivePagePromoExperimentProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
