@@ -1,6 +1,20 @@
 import getPathExtension from '.';
 
 describe('getPathExtension', () => {
+  describe('isMarkdown', () => {
+    it.each([
+      ['/russian/articles/c6wyzl2xdyz2o.md', true],
+      ['/russian/articles/c6wyzl2xdyz2o.md?renderer_env=live', true],
+      ['/serbian/articles/c6294n8el2ro/lat.md', true],
+      ['/russian/articles/c6wyzl2xdyz2o', false],
+      ['/russian/articles/c6wyzl2xdyz2o.mdfoo', false],
+      ['/russian/articles/c6wyzl2xdyz2o?format=.md', false],
+      ['/russian/articles/md', false],
+    ])('detects %s as %s', (path, expected) => {
+      expect(getPathExtension(path).isMarkdown).toBe(expected);
+    });
+  });
+
   describe('isLitePath', () => {
     [
       {

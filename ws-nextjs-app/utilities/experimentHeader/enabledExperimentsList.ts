@@ -1,4 +1,5 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME } from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 
 /* 
 This is a maintained list of serverside experiments that we are running.
@@ -17,7 +18,6 @@ type ServerSideExperimentConfig = {
 };
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
-
   // experiment: test_server_side_experiment_visits_aa
   {
     name: 'test_server_side_experiment_visits_aa',
@@ -31,6 +31,11 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
       'tigrinya',
       'yoruba',
     ],
+    pageTypes: ['home'],
+  },
+  {
+    name: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
+    services: ['hindi'],
     pageTypes: ['home'],
   },
 ];
