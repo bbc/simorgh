@@ -1,4 +1,4 @@
-import { ComponentType, use } from 'react';
+import { ComponentType, PropsWithChildren, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -124,33 +124,39 @@ optimizely?.notificationCenter?.addNotificationListener(
   },
 );
 
+export const AppOptimizelyProvider = ({ children }: PropsWithChildren) => {
+  if (disableOptimizely) return children;
+
+  const { service } = use(ServiceContext);
+  const { country } = use(RequestContext);
+
+  return (
+    <OptimizelyProvider
+      optimizely={optimizely}
+      isServerSide
+      timeout={1000}
+      user={{
+        id: getUserId(),
+        attributes: {
+          country: country ?? null,
+          service,
+          mobile: isMobile(),
+          referrer: getReferrer(),
+          timeOfDay: getClientTimeOfDay(),
+        },
+      }}
+    >
+      {children}
+    </OptimizelyProvider>
+  );
+};
+
 const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
-  return props => {
-    if (disableOptimizely) return <Component {...props} />;
-
-    const { service } = use(ServiceContext);
-    const { country } = use(RequestContext);
-
-    return (
-      <OptimizelyProvider
-        optimizely={optimizely}
-        isServerSide
-        timeout={1000}
-        user={{
-          id: getUserId(),
-          attributes: {
-            country: country ?? null,
-            service,
-            mobile: isMobile(),
-            referrer: getReferrer(),
-            timeOfDay: getClientTimeOfDay(),
-          },
-        }}
-      >
-        <Component {...props} />
-      </OptimizelyProvider>
-    );
-  };
+  return props => (
+    <AppOptimizelyProvider>
+      <Component {...props} />
+    </AppOptimizelyProvider>
+  );
 };
 
 export default withOptimizelyProvider;
