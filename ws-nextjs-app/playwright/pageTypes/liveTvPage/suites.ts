@@ -7,6 +7,16 @@ export type LiveTvPageTestSuite = {
   runForEnv: AppEnv[];
 };
 
+export type AtiLiveTvPageTestSuite = {
+  path: string;
+  service: string;
+  runForEnv: AppEnv[];
+  pageIdentifier: string;
+  siteId: number;
+  applicationType: string;
+  contentType: string;
+};
+
 const canonicalTestSuites: LiveTvPageTestSuite[] = [
   {
     path: '/dari/watch/bbc_afghan_tv/live',
@@ -15,6 +25,19 @@ const canonicalTestSuites: LiveTvPageTestSuite[] = [
   },
 ];
 
+const atiTestSuites: AtiLiveTvPageTestSuite[] = [
+  {
+    path: '/arabic/watch/bbc_arabic_tv/live',
+    runForEnv: ['live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.bbc_arabic_tv.livetv.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'player-live',
+  },
+];
+
 export const liveTvPageSuites = {
   canonical: canonicalTestSuites,
+  ati: atiTestSuites,
 };
