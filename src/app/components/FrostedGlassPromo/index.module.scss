@@ -63,6 +63,10 @@ $scale-amount: 1.15;
   }
 }
 
+.lazyloadWrapper {
+  height: 100%;
+}
+
 .lazyloadPlaceholder {
   min-height: 100px;
   padding-bottom: theme.$spacings-double;

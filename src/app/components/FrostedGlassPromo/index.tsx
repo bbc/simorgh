@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import { PropsWithChildren, use } from 'react';
 import Lazyload from 'react-lazyload';
+import clsx from 'clsx';
 
 import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
@@ -49,7 +50,7 @@ const FrostedGlassPromo = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
-  const { isAmp } = use(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
   const {
@@ -73,7 +74,7 @@ const FrostedGlassPromo = ({
     <>
       <h3 className={styles.header}>
         <a
-          className={`${styles.anchor} ${isAmp ? styles.anchorAmp : ''}`}
+          className={clsx(styles.anchor, isAmp && styles.anchorAmp)}
           href={relativeUrl}
           {...(eventTrackingData && clickTracker)}
         >
@@ -82,6 +83,18 @@ const FrostedGlassPromo = ({
       </h3>
       {footer}
     </>
+  );
+
+  const staticPanel = (
+    <div
+      className={clsx(
+        styles.lazyloadPlaceholder,
+        isAmp && styles.lazyloadPlaceholderAmp,
+      )}
+      data-testid="frosted-glass-lazyload-placeholder"
+    >
+      {promoText}
+    </div>
   );
 
   // The ClickableArea component is an anchor ("a") element
@@ -114,30 +127,24 @@ const FrostedGlassPromo = ({
           height,
         }}
       />
-      <Lazyload
-        css={{ height: '100%' }}
-        offset={PANEL_OFFSET}
-        once
-        placeholder={
-          // Placeholder always gets rendered on AMP
-          <div
-            className={`${styles.lazyloadPlaceholder} ${
-              isAmp ? styles.lazyloadPlaceholderAmp : ''
-            }`}
-            data-testid="frosted-glass-lazyload-placeholder"
+      {isAmp || isLite ? (
+        staticPanel
+      ) : (
+        <Lazyload
+          className={styles.lazyloadWrapper}
+          offset={PANEL_OFFSET}
+          once
+          placeholder={staticPanel}
+        >
+          <FrostedGlassPanel
+            image={image.src}
+            minimumContrast={minimumContrast}
+            paletteSize={paletteSize}
           >
             {promoText}
-          </div>
-        }
-      >
-        <FrostedGlassPanel
-          image={image.src}
-          minimumContrast={minimumContrast}
-          paletteSize={paletteSize}
-        >
-          {promoText}
-        </FrostedGlassPanel>
-      </Lazyload>
+          </FrostedGlassPanel>
+        </Lazyload>
+      )}
     </div>
   );
 };
