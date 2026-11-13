@@ -327,6 +327,17 @@ For example, the shared `InlineLink` styles every link state with its own `.self
 
 The override's `(0,5,0)` beats `.self` `(0,1,0)` in the default state. It does not match visited, hover or focus, so `InlineLink`'s `(0,2,0)` state rules still apply there. Without the exclusions, `.errorLinkWrapper .inlineLink` would be `(0,2,0)`, tying with `InlineLink`'s `:visited`, `:hover` and `:focus` rules. Whichever stylesheet loads later would win, so the link could stay black when visited, hovered or focused.
 
+The context can also be an element rendered by the child component, if it carries one of the consumer's own classes. `MessageBanner` passes `ctaStyles.callToActionLink` to `CallToActionLink`, which applies it to the `<a>` around `CallToActionLink.Text`. `MessageBanner` uses that class to make the text black:
+
+```scss
+// MessageBanner/index.module.scss
+.callToActionLink .callToActionLinkText {
+  color: theme.$palette-black;
+}
+```
+
+`(0,2,0)` beats both `Text`'s Emotion default `(0,1,0)` and `CallToActionLink.Text`'s `a .text` `(0,1,1)`.
+
 If there is no real DOM context, use an element-qualified selector when the component always renders the same element (for example `p.copyright`, a `<p>` with class `copyright`). Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
 
 As a documented last resort, when no meaningful context exists, repeat the class to raise its specificity:
@@ -343,6 +354,7 @@ As a documented last resort, when no meaningful context exists, repeat the class
 #### Rules for both patterns
 
 - **Make the override strictly more specific.** Equal specificity falls back to source order, which differs between canonical, AMP and Lite because stylesheet order and inlining differ by edition.
+- **Compare against every rule that sets the property on that element.** That includes the shared primitive's default and any rules from a compound component's part, not just the style you're replacing. Count classes and elements rather than judging by shape: `span.callToActionLinkText` and `a .text` are both `(0,1,1)`, because the space between parts adds no specificity. An earlier `MessageBanner` override used `span.callToActionLinkText`, which beat `Text`'s default but only tied with `a .text`.
 - **Use the smallest specificity that wins.** Every increase sets the bar for any later override of the same element.
 
 ## Step 4: Apply the change
@@ -365,6 +377,7 @@ yarn jest src/app/components/<ComponentName>
 - Confirm no `@emotion` imports remain in the component: `grep -rn "@emotion" src/app/components/<ComponentName>`
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
 - `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so `yarn jest` never compiles or validates the SCSS itself — a typo or invalid selector won't fail a test. Catching that relies on the Next.js build (fails on invalid SCSS) and Storybook/Chromatic (catches visually broken output), not on Jest.
+- For overrides across component boundaries, check the result in a browser in the default, hover, focus and visited states. Inheritance can hide a lost override in some states: in `MessageBanner`, the `<a>` is already black by default and on hover and focus, so a tied text override only showed up when the link was visited.
 - For a `data-*` enum, assert the attribute value rather than a generated class. For a compact inline CSS custom-property bridge, assert `element.style.getPropertyValue(...)` against explicit expected values in the `it.each` table; do not repeat the production value-conversion logic in the assertion.
 - Do not use `toHaveStyle` to validate declarations that only come from the mocked `.module.scss` stylesheet. Inline custom properties deliberately emitted by React are different: their values are present in jsdom and can be asserted directly.
 - Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
