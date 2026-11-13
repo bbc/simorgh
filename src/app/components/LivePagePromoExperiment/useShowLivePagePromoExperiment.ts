@@ -9,11 +9,11 @@ import {
 
 const useShowLivePagePromoExperiment = () => {
   const experimentVariant = useOptimizelyVariation({
-    experimentName: isLive() ? '' : LIVE_PAGE_PROMO_EXPERIMENT_NAME,
+    experimentName: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  return experimentVariant === LIVE_PAGE_PROMO_EXPERIMENT_VARIANT;
+  return !isLive() && experimentVariant === LIVE_PAGE_PROMO_EXPERIMENT_VARIANT;
 };
 
 export default useShowLivePagePromoExperiment;
