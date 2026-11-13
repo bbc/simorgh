@@ -6,6 +6,7 @@ import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { matchers } from '@emotion/jest';
+import { AccountContext } from '#app/contexts/AccountContext';
 import UGCPageLayout from './UGCPageLayout';
 import { PageProps } from './types';
 
@@ -36,6 +37,60 @@ describe('UGC Page Layout', () => {
 
       return render(<UGCPageLayout pageData={pageData} />);
     }));
+  });
+
+  describe('Sign-in gate', () => {
+    const pageData = {
+      ...(mundoFixture.data as PageProps['pageData']),
+      settings: {
+        ...(mundoFixture.data as PageProps['pageData']).settings,
+        signinRequired: true,
+      },
+    };
+
+    const signInUrl = 'https://account.bbc.com/signin';
+
+    const accountContext = {
+      isIdctaAvailable: true,
+      isRefreshAvailable: true,
+      isSignedIn: false,
+      signInUrl,
+      registerUrl: 'https://account.bbc.com/register',
+      isArticlePersonalizationEnabled: false,
+      isArticlePersonalizationAvailable: false,
+      isTopicPersonalizationEnabled: false,
+      isTopicPersonalizationAvailable: false,
+      isPersonalisationOn: false,
+    };
+
+    it('Does not render the form when the visitor is signed out', async () => {
+      await act(() =>
+        render(
+          <AccountContext.Provider value={accountContext}>
+            <UGCPageLayout pageData={pageData} />
+          </AccountContext.Provider>,
+        ),
+      );
+
+      expect(document.querySelector('form')).not.toBeInTheDocument();
+      expect(
+        document.querySelector(`a[href="${signInUrl}"]`),
+      ).toBeInTheDocument();
+    });
+
+    it('Renders the form when the visitor is signed in', async () => {
+      await act(() =>
+        render(
+          <AccountContext.Provider
+            value={{ ...accountContext, isSignedIn: true }}
+          >
+            <UGCPageLayout pageData={pageData} />
+          </AccountContext.Provider>,
+        ),
+      );
+
+      expect(document.querySelector('form')).toBeInTheDocument();
+    });
   });
 
   it('Renders a level 1 heading', () => {
