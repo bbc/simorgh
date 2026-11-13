@@ -502,6 +502,13 @@ export const service: DefaultServiceConfig = {
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
+        // Draft translations; official translations for Mundo, Portuguese and Hindi
+        // will be provided as part of WS-3535.
+        signInRequiredHeading: 'Inicia sesión para enviar una pregunta',
+        signInRequiredDescription:
+          'Inicia sesión con tu cuenta de BBC antes de enviar una pregunta o crea una cuenta nueva.',
+        signInRequiredSignIn: 'Iniciar sesión',
+        signInRequiredRegister: 'Crear cuenta',
 
         // Uploading Screen
         uploadingHeading: 'Enviando…',
