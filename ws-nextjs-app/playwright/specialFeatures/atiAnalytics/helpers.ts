@@ -40,7 +40,6 @@ type WindowWithResonanceCapture = Window & {
   reportResonanceRequest: (url: string, payload: string) => void;
 };
 
-// Resonance sends Blob payloads, which Playwright reports as null postData, so capture them in-page.
 export const captureResonanceRequests = async (page: Page) => {
   const capturedRequests: CapturedResonanceRequest[] = [];
 
