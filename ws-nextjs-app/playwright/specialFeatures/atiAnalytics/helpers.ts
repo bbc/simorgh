@@ -1,4 +1,4 @@
-import type { Request } from '@playwright/test';
+import type { Page, Request } from '@playwright/test';
 
 export type AppEnv = 'local' | 'test' | 'live';
 
@@ -26,6 +26,88 @@ export const getATIUrls = (env: AppEnv) => ({
 });
 
 export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
+
+/* eslint-disable camelcase */
+export type ResonancePayload = {
+  bag_metadata?: Record<string, unknown>;
+  events?: Array<Record<string, unknown>>;
+};
+/* eslint-enable camelcase */
+
+export type CapturedResonanceRequest = { url: string; payload: string };
+
+type WindowWithResonanceCapture = Window & {
+  reportResonanceRequest: (url: string, payload: string) => void;
+};
+
+export const captureResonanceRequests = async (page: Page) => {
+  const capturedRequests: CapturedResonanceRequest[] = [];
+
+  await page.exposeFunction(
+    'reportResonanceRequest',
+    (url: string, payload: string) => {
+      capturedRequests.push({ url, payload });
+    },
+  );
+
+  await page.addInitScript(() => {
+    const capture = (url: string, data: unknown) => {
+      if (data instanceof Blob) {
+        data
+          .text()
+          .then(payload =>
+            (
+              window as unknown as WindowWithResonanceCapture
+            ).reportResonanceRequest(url, payload),
+          );
+      }
+    };
+
+    const originalFetch = window.fetch;
+    window.fetch = (input, init) => {
+      capture(String(input instanceof Request ? input.url : input), init?.body);
+      return originalFetch(input, init);
+    };
+
+    const originalSendBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = (url, data) => {
+      capture(String(url), data);
+      return originalSendBeacon(url, data);
+    };
+  });
+
+  return capturedRequests;
+};
+
+const parseResonancePayload = (rawPayload: string): ResonancePayload | null => {
+  try {
+    const parsedPayload = JSON.parse(rawPayload);
+
+    return parsedPayload && typeof parsedPayload === 'object'
+      ? (parsedPayload as ResonancePayload)
+      : null;
+  } catch {
+    return null;
+  }
+};
+
+export const getCapturedResonancePayloads = (
+  capturedRequests: CapturedResonanceRequest[],
+  resonanceBagUrl: string,
+): ResonancePayload[] => {
+  const resonanceOrigin = new URL(resonanceBagUrl).origin;
+
+  return capturedRequests
+    .filter(({ url }) => {
+      const requestUrl = new URL(url);
+      return (
+        requestUrl.origin === resonanceOrigin &&
+        /^\/v\d+\/event$/.test(requestUrl.pathname)
+      );
+    })
+    .map(({ payload }) => parseResonancePayload(payload))
+    .filter((payload): payload is ResonancePayload => payload !== null);
+};
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
