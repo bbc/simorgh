@@ -257,6 +257,24 @@ describe('Promo component - Timestamp', () => {
       expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
     });
 
+    it('renders the native Traditional Chinese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'zhongwen', variant: 'trad' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Traditional Chinese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'zhongwen',
+        variant: 'trad',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
     it('renders the native Korean date format for dates published this year', () => {
       const { container } = render(
         <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
@@ -272,6 +290,76 @@ describe('Promo component - Timestamp', () => {
       });
 
       expect(screen.getByText('2025년 11월 3일')).toBeInTheDocument();
+    });
+
+    // Persian/Pashto also render an alternative Jalaali calendar date
+    // alongside the Gregorian one. The year should be omitted from both
+    // calendars together for same-year dates, so they stay consistent.
+    it('renders the Persian date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'persian' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^۱۲ آبان - ۳ نوامبر$/,
+      );
+    });
+
+    it('renders the Persian date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'persian',
+      });
+
+      expect(
+        screen.getByText('۱۲ آبان ۱۴۰۴ - ۳ نوامبر ۲۰۲۵'),
+      ).toBeInTheDocument();
+    });
+
+    it('renders the Pashto date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'pashto' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^۱۲ لړم - ۳ نومبر$/,
+      );
+    });
+
+    it('renders the Pashto date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'pashto',
+      });
+
+      expect(
+        screen.getByText('۱۲ لړم ۱۴۰۴ - ۳ نومبر ۲۰۲۵'),
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe('Publication year across a timezone boundary', () => {
+    // The Japanese service uses the Asia/Tokyo timezone (UTC+9). A timestamp
+    // that falls in the previous calendar year in UTC can already be in the
+    // "current" year once converted to the service's local timezone. This
+    // confirms the year comparison is timezone-aware rather than comparing
+    // raw UTC years.
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(new Date('2026-01-01T10:00:00Z')); // 2026-01-01 19:00 in Tokyo
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('omits the year when the UTC year differs but the local year matches', () => {
+      const { container } = render(
+        <Fixture timestamp="2025-12-31T16:00:00Z" />, // 2026-01-01 01:00 in Tokyo
+        { service: 'japanese' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^1月1日$/);
     });
   });
 

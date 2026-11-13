@@ -31,8 +31,11 @@
 | suffix | string | No | `null` | `This is a suffix` |
 | locale | string | no | `null` | `en` |
 | altCalendar | object | no | `null` | See the `jalaali` calendar in [psammead-calendars](https://github.com/bbc/psammead/blob/566e8115e5bc4a92313bdf352d56b9d5efcf0278/packages/utilities/psammead-calendars/src/calendars/jalaali.js#L47) as an example |
+| isPublishedThisYear | boolean | No | `false` | `true` |
 
 `locale` should be a momentjs locale.
+
+When `isPublishedThisYear` is `true`, it is passed through to `altCalendar.formatDate()` as `{ omitYear: true }`, so an `altCalendar` implementation can choose to omit its own year segment to stay consistent with a `format` that also omits the year during the current year.
 
 ## Usage
 
