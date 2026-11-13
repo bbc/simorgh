@@ -16,6 +16,7 @@ import {
   assertScrollableNavigationResonanceComponentClick,
   assertDropdownNavigationResonanceComponentView,
   assertDropdownNavigationResonanceComponentClick,
+  assertResonancePageView,
 } from '../../specialFeatures/atiAnalytics/assertions';
 // import assert200HtmlResponse from '../../utilities/response';
 
@@ -214,6 +215,15 @@ test.describe('livePage ATI Analytics', () => {
           );
 
           await assertPageView({ page, ...atiProps });
+        });
+
+        test('should send a Resonance page view event', async ({ page }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertResonancePageView({ page, ...atiProps });
         });
 
         test('should send a view event for the Scrollable Navigation component', async ({

@@ -1,4 +1,4 @@
-import type { Request } from '@playwright/test';
+import type { Page, Request } from '@playwright/test';
 
 export type AppEnv = 'local' | 'test' | 'live';
 
@@ -48,11 +48,57 @@ export type ResonanceRequestBody = {
 };
 /* eslint-enable camelcase */
 
-export const parseResonanceRequestBody = (
-  request: Request,
+export type CapturedResonanceRequest = { url: string; body: string };
+
+type WindowWithResonanceCapture = Window & {
+  reportResonanceRequest: (url: string, body: string) => void;
+};
+
+// Resonance sends Blob bodies, which Playwright reports as null postData, so capture them in-page.
+export const captureResonanceRequestBodies = async (page: Page) => {
+  const capturedRequests: CapturedResonanceRequest[] = [];
+
+  await page.exposeFunction(
+    'reportResonanceRequest',
+    (url: string, body: string) => {
+      capturedRequests.push({ url, body });
+    },
+  );
+
+  await page.addInitScript(() => {
+    const capture = (url: string, data: unknown) => {
+      if (data instanceof Blob) {
+        data
+          .text()
+          .then(body =>
+            (
+              window as unknown as WindowWithResonanceCapture
+            ).reportResonanceRequest(url, body),
+          );
+      }
+    };
+
+    const originalFetch = window.fetch;
+    window.fetch = (input, init) => {
+      capture(String(input instanceof Request ? input.url : input), init?.body);
+      return originalFetch(input, init);
+    };
+
+    const originalSendBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = (url, data) => {
+      capture(String(url), data);
+      return originalSendBeacon(url, data);
+    };
+  });
+
+  return capturedRequests;
+};
+
+const parseResonanceRequestBody = (
+  rawBody: string,
 ): ResonanceRequestBody | null => {
   try {
-    const parsedBody = request.postDataJSON();
+    const parsedBody = JSON.parse(rawBody);
 
     return parsedBody && typeof parsedBody === 'object'
       ? (parsedBody as ResonanceRequestBody)
@@ -62,32 +108,35 @@ export const parseResonanceRequestBody = (
   }
 };
 
-export const isResonanceViewabilityRequest =
-  (resonanceBagUrl: string, component: string, action: ResonanceEventAction) =>
-  (request: Request): boolean => {
-    const requestUrl = new URL(request.url());
-    const resonanceUrl = new URL(resonanceBagUrl);
+export const getCapturedResonanceBodies = (
+  capturedRequests: CapturedResonanceRequest[],
+  resonanceBagUrl: string,
+): ResonanceRequestBody[] => {
+  const resonanceOrigin = new URL(resonanceBagUrl).origin;
 
-    if (
-      request.method() !== 'POST' ||
-      requestUrl.origin !== resonanceUrl.origin ||
-      !/^\/v\d+\/event$/.test(requestUrl.pathname)
-    ) {
-      return false;
-    }
+  return capturedRequests
+    .filter(({ url }) => {
+      const requestUrl = new URL(url);
+      return (
+        requestUrl.origin === resonanceOrigin &&
+        /^\/v\d+\/event$/.test(requestUrl.pathname)
+      );
+    })
+    .map(({ body }) => parseResonanceRequestBody(body))
+    .filter((body): body is ResonanceRequestBody => body !== null);
+};
 
-    const body = parseResonanceRequestBody(request);
-
-    const hasMatchingEvent = body?.events?.some(
-      event =>
-        event.event?.action === action &&
-        event.event?.subcategory === component,
+export const isResonanceViewabilityBody =
+  (component: string, action: ResonanceEventAction) =>
+  (body: ResonanceRequestBody): boolean =>
+    body.bag_metadata?.event_category === 'viewability' &&
+    Boolean(
+      body.events?.some(
+        event =>
+          event.event?.action === action &&
+          event.event?.subcategory === component,
+      ),
     );
-
-    return Boolean(
-      body?.bag_metadata?.event_category === 'viewability' && hasMatchingEvent,
-    );
-  };
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
