@@ -9,7 +9,14 @@ export default {
     metadata,
     docs: { readme },
   },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: Object.values(SAVE_BUTTON_VARIANTS),
+    },
+  },
   args: {
+    variant: SAVE_BUTTON_VARIANTS.SAVE,
     onClick: () => {},
     isLoading: false,
     isUpdating: false,

@@ -6,7 +6,14 @@ import TopicTags from '#app/components/TopicTags';
 import MyNewsSpinner from '#app/components/MyNewsSpinner';
 import { RightChevron } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use, useEffect, useRef, useState } from 'react';
+import {
+  use,
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type MouseEvent,
+} from 'react';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import Text from '#app/components/Text';
@@ -31,6 +38,8 @@ const MyNewsPageContent = ({
   const { translations, lang } = use(ServiceContext);
   const [areAllTopicsVisible, setAreAllTopicsVisible] = useState(false);
   const wasTopicsExpandedRef = useRef(areAllTopicsVisible);
+  const shouldFocusFirstNewTopicRef = useRef(false);
+  const followedTopicsSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const wasExpanded = wasTopicsExpandedRef.current;
@@ -119,6 +128,36 @@ const MyNewsPageContent = ({
     ? followedTopics
     : followedTopics.slice(0, FOLLOWED_TOPICS_VISIBLE_LIMIT);
 
+  const handleSeeMoreClick = (event: MouseEvent<HTMLButtonElement>) => {
+    shouldFocusFirstNewTopicRef.current = !areAllTopicsVisible;
+    event.currentTarget.focus();
+    setAreAllTopicsVisible(!areAllTopicsVisible);
+  };
+
+  const handleSeeMoreKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    if (
+      event.key !== 'Tab' ||
+      event.shiftKey ||
+      !shouldFocusFirstNewTopicRef.current
+    ) {
+      return;
+    }
+
+    const firstNewTopic =
+      followedTopicsSectionRef.current?.querySelectorAll<HTMLAnchorElement>(
+        'ul[role="list"] a',
+      )[FOLLOWED_TOPICS_VISIBLE_LIMIT];
+
+    if (firstNewTopic) {
+      event.preventDefault();
+      firstNewTopic.focus();
+    }
+  };
+
+  const handleSeeMoreBlur = () => {
+    shouldFocusFirstNewTopicRef.current = false;
+  };
+
   const transformTopicsForRelatedTopics = () =>
     visibleTopics.map(topic => ({
       topicId: topic.id,
@@ -126,7 +165,7 @@ const MyNewsPageContent = ({
     }));
 
   const renderFollowedTopicsSection = () => (
-    <section css={styles.section}>
+    <section ref={followedTopicsSectionRef} css={styles.section}>
       <Heading level={2} css={styles.subheading} size="doublePica">
         {topicsLoading || topicsError || !hasTopics
           ? followedTopicsTitle
@@ -150,7 +189,9 @@ const MyNewsPageContent = ({
               type="button"
               css={styles.seeMoreButton}
               aria-expanded={areAllTopicsVisible}
-              onClick={() => setAreAllTopicsVisible(!areAllTopicsVisible)}
+              onClick={handleSeeMoreClick}
+              onKeyDown={handleSeeMoreKeyDown}
+              onBlur={handleSeeMoreBlur}
             >
               {areAllTopicsVisible ? seeLessTopics : seeMoreTopics}
               <RightChevron

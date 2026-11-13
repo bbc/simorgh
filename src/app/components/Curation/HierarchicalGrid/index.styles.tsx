@@ -100,6 +100,7 @@ const styles = {
       padding: 0,
       paddingInlineEnd: `${spacings.HALF}rem`,
       marginInlineStart: `-${spacings.HALF}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
 
