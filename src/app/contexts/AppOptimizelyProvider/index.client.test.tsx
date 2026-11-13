@@ -8,24 +8,9 @@ import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider from '.';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import { AppOptimizelyProvider } from '.';
 import { REFERRER_CATEGORIES } from './userAttributes';
-
-const props = {
-  bbcOrigin: 'https://www.bbc.com',
-  id: 'c0000000000o',
-  service: 'news',
-  isAmp: true,
-  pathname: '/pathname',
-  status: 200,
-  showAdsBasedOnLocation: true,
-  toggles: {
-    testToggle: {
-      enabled: false,
-    },
-  },
-};
 
 const optimizelyProviderSpy = jest.spyOn(
   optimizelyReactSdk,
@@ -35,8 +20,6 @@ const optimizelyProviderSpy = jest.spyOn(
 const Component = () => <h1>Hola Optimizely</h1>;
 
 const TestComponent = ({ country }: { country?: string }) => {
-  const OptimizelyComponent = withOptimizelyProvider(Component);
-
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
@@ -50,7 +33,9 @@ const TestComponent = ({ country }: { country?: string }) => {
   return (
     <ServiceContext.Provider value={memoizedServiceContextValue}>
       <RequestContext.Provider value={memoizedRequestContextValue}>
-        <OptimizelyComponent {...props} />
+        <AppOptimizelyProvider>
+          <Component />
+        </AppOptimizelyProvider>
       </RequestContext.Provider>
     </ServiceContext.Provider>
   );
@@ -59,7 +44,7 @@ const TestComponent = ({ country }: { country?: string }) => {
 jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
 jest.mock('@optimizely/react-sdk');
 
-describe('withOptimizelyProvider HOC', () => {
+describe('AppOptimizelyProvider', () => {
   const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
@@ -72,7 +57,7 @@ describe('withOptimizelyProvider HOC', () => {
     window.matchMedia = originalMatchMedia;
   });
 
-  it('should enrich the component with the Optimizely API', () => {
+  it('should provide the Optimizely API to its children', () => {
     const optimizelyProviderRenderSpy = jest.spyOn(
       optimizelyReactSdk.OptimizelyProvider.prototype,
       'render',

@@ -1,4 +1,4 @@
-import { ComponentType, PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -150,13 +150,3 @@ export const AppOptimizelyProvider = ({ children }: PropsWithChildren) => {
     </OptimizelyProvider>
   );
 };
-
-const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
-  return props => (
-    <AppOptimizelyProvider>
-      <Component {...props} />
-    </AppOptimizelyProvider>
-  );
-};
-
-export default withOptimizelyProvider;

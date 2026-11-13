@@ -2,12 +2,12 @@ import {
   VIEW_EVENT,
   CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import { isMobile } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
+import { isMobile } from '#app/contexts/AppOptimizelyProvider/userAttributes';
 import { ATIEventTrackingProps } from '../../types';
 import buildResonanceEventConfig from '.';
 
 jest.mock(
-  '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes',
+  '#app/contexts/AppOptimizelyProvider/userAttributes',
   () => ({
     isMobile: jest.fn(),
   }),

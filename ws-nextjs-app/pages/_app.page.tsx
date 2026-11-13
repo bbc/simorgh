@@ -19,7 +19,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
-import { AppOptimizelyProvider } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { AppOptimizelyProvider } from '#app/contexts/AppOptimizelyProvider';
 import QueryProvider from '#app/contexts/QueryContext';
 import { IdctaConfig } from '#app/models/types/account';
 

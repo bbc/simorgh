@@ -3,7 +3,7 @@ import { render, RenderOptions } from '@testing-library/react';
 
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { IdctaConfig } from '#app/models/types/account';
-import { AppOptimizelyProvider } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { AppOptimizelyProvider } from '#app/contexts/AppOptimizelyProvider';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
