@@ -26,7 +26,7 @@
   }
 
   @media #{theme.$mediaQueries-group-3-min-width} {
-    padding: theme.$spacings-full theme.$spacings-double;
+    padding: theme.pixelsToRem-px-to-rem(10) theme.$spacings-double;
   }
 
   @media #{theme.$mediaQueries-forced-colours} {
