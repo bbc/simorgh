@@ -5,6 +5,7 @@ import {
   screen,
   act,
   waitFor,
+  within,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
@@ -31,6 +32,10 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 jest.mock('#app/hooks/useUASRecentActivity');
 jest.mock('#app/hooks/useUASFollowedTopics');
+jest.mock('#app/components/FollowTopicButton', () => ({
+  __esModule: true,
+  default: () => null,
+}));
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
@@ -686,6 +691,98 @@ describe('MyNewsPage', () => {
     expect(
       screen.queryByRole('link', { name: mockFollowedTopics[0].title }),
     ).not.toBeInTheDocument();
+  });
+
+  describe('recommended topics', () => {
+    afterEach(() => {
+      window.localStorage.removeItem('ws_bbc_topics');
+    });
+
+    it.each([0, 9])(
+      'should exclude followed topic %i even when it is hidden behind see more',
+      async followedTopicIndex => {
+        const followedTopics = Array.from({ length: 10 }, (_, index) => ({
+          id: `topic-${index}`,
+          title: `Followed topic ${index}`,
+          service: 'hindi',
+        }));
+        mockUseFollowedTopics.mockReturnValue({
+          followedTopics,
+          total: followedTopics.length,
+          isLoading: false,
+          error: null,
+        });
+        window.localStorage.setItem(
+          'ws_bbc_topics',
+          JSON.stringify({
+            hindi: {
+              'Previously visited title': {
+                id: `topic-${followedTopicIndex}`,
+                count: 5,
+              },
+              'Unfollowed topic': { id: 'unfollowed-topic', count: 2 },
+            },
+          }),
+        );
+
+        await act(async () => {
+          render(<MyNewsPage />, renderOptions);
+        });
+
+        const recommendations = await screen.findByRole('region', {
+          name: myNewsTranslations.recommendedTopicsTitle,
+        });
+        expect(
+          within(recommendations).getByRole('link', {
+            name: 'Unfollowed topic',
+          }),
+        ).toBeInTheDocument();
+        expect(
+          within(recommendations).queryByRole('link', {
+            name: 'Previously visited title',
+          }),
+        ).not.toBeInTheDocument();
+        expect(within(recommendations).getAllByRole('listitem')).toHaveLength(
+          1,
+        );
+      },
+    );
+
+    it('should hide the recommendations section when all recommended topics are followed', async () => {
+      mockUseFollowedTopics.mockReturnValue({
+        followedTopics: mockFollowedTopics,
+        total: mockFollowedTopics.length,
+        isLoading: false,
+        error: null,
+      });
+      window.localStorage.setItem(
+        'ws_bbc_topics',
+        JSON.stringify({
+          hindi: {
+            Cricket: { id: 'topic-1', count: 5 },
+            Elections: { id: 'topic-2', count: 2 },
+          },
+        }),
+      );
+
+      await act(async () => {
+        render(<MyNewsPage />, renderOptions);
+      });
+
+      expect(
+        await screen.findByRole('link', { name: 'Cricket' }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByRole('region', {
+          name: myNewsTranslations.recommendedTopicsTitle,
+        }),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.queryByRole('heading', {
+          name: myNewsTranslations.recommendedTopicsTitle,
+        }),
+      ).not.toBeInTheDocument();
+    });
   });
 
   it('should only render the followed topics section when article personalization is disabled', async () => {

@@ -128,6 +128,7 @@ export const service: DefaultServiceConfig = {
         loading: 'Loading',
         noJsDescription:
           'Please enable JavaScript or use a different browser to view this content.',
+        recommendedTopicsTitle: 'Topics you may like',
         followedTopicsTitle: 'Followed Topics',
         followedTopicsErrorText:
           "We're having trouble loading your followed topics",

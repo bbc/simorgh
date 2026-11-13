@@ -36,7 +36,7 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const isPersonalizationEnabled =
     isArticlePersonalizationEnabled || isTopicPersonalizationEnabled;
 
-  if (!isPersonalizationAvailable || !translations?.myNews) return null;
+  if (!translations?.myNews) return null;
 
   return (
     <main css={styles.main}>
@@ -63,7 +63,15 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
               showFollowedTopics={isTopicPersonalizationEnabled}
             />
           ) : (
-            <MyNewsPageGuest />
+            <>
+              {isPersonalizationAvailable && <MyNewsPageGuest />}
+              <MyNewsPageContent
+                page={page}
+                showSavedArticles={false}
+                showFollowedTopics={false}
+                showPageHeading={!isPersonalizationAvailable}
+              />
+            </>
           )}
         </div>
       </div>
