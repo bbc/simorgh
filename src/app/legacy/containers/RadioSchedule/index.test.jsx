@@ -1,4 +1,4 @@
-import podcastProgramme from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
+import onDemandRadioProgramme from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import {
   render,
   waitFor,
@@ -7,7 +7,7 @@ import RadioSchedulesWithContext from './utilities/testHelpers';
 
 describe('RadioScheduleData', () => {
   it('does not render when radio schedule toggle is disabled', async () => {
-    const { radioScheduleData } = podcastProgramme.data;
+    const { radioScheduleData } = onDemandRadioProgramme.data;
     const { container } = render(
       <RadioSchedulesWithContext
         service="gahuza"
@@ -20,7 +20,7 @@ describe('RadioScheduleData', () => {
   });
 
   it('does render when radio schedule toggle is enabled', async () => {
-    const { radioScheduleData } = podcastProgramme.data;
+    const { radioScheduleData } = onDemandRadioProgramme.data;
     const { container } = render(
       <RadioSchedulesWithContext
         service="gahuza"
@@ -35,7 +35,7 @@ describe('RadioScheduleData', () => {
   });
 
   it('does not render on AMP pages', async () => {
-    const { radioScheduleData } = podcastProgramme.data;
+    const { radioScheduleData } = onDemandRadioProgramme.data;
 
     const { container } = render(
       <RadioSchedulesWithContext

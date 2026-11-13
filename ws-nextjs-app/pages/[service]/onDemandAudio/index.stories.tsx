@@ -2,7 +2,7 @@ import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import koreanAudioResponse from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import gahuzaAudioResponse from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import portugueseAudioResponse from '#data/portuguese/podcasts/p07r3r3t.json';
-import russianAudioResponse from '#data/russian/bbc_russian_radio/p076qqzl.json';
+import russianAudioResponse from '#data/russian/podcasts/p076qqzl.json';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
