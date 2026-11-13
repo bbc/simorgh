@@ -41,11 +41,15 @@ export default {
   parameters: { layout: 'fullscreen' },
 };
 
-export const SaveArticle = () => <ModalStory />;
+export const SaveArticle = (args: ModalStoryProps) => <ModalStory {...args} />;
+SaveArticle.args = {
+  context: ACCOUNT_SIGN_IN_MODAL_CONTEXT.SAVE_ARTICLE,
+};
 
-export const FollowTopic = () => (
-  <ModalStory context={ACCOUNT_SIGN_IN_MODAL_CONTEXT.FOLLOW_TOPIC} />
-);
+export const FollowTopic = (args: ModalStoryProps) => <ModalStory {...args} />;
+FollowTopic.args = {
+  context: ACCOUNT_SIGN_IN_MODAL_CONTEXT.FOLLOW_TOPIC,
+};
 FollowTopic.globals = {
   service: { service: 'ws', variant: 'default' },
 };
