@@ -138,7 +138,7 @@ describe('Navigation', () => {
           // @ts-expect-error require partial data for testing purposes
           propsForTopBarOJComponent={{ blocks: topStoriesBlocksWithLiveItem }}
         />,
-        { pageType: ARTICLE_PAGE, service: 'pidgin' },
+        { pageType: ARTICLE_PAGE, service: 'mundo' },
       );
     };
 
