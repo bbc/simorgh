@@ -11,9 +11,8 @@ export const EDITORIAL_PICKS_TOPIC_ID = 'crvgyj0g9d5lt';
 export const VARIANT_KEY = 'variant';
 
 const BANNER_COPY = {
-  title: 'BBC News Hindi के एडिटोरियल पिक्स को फ़ॉलो करें',
-  description:
-    'इस टॉपिक को My News में जोड़ने के लिए मुफ़्त में साइन इन या रजिस्टर करें.',
+  title: 'एडिटोरियल पिक्स को फ़ॉलो करें',
+  description: "इसे 'मेरी ख़बरें' में फिर से पाएँ",
 };
 
 const BannerExperiment = () => {

@@ -51,6 +51,18 @@ describe('Topic Page', () => {
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
 
+  it('applies the page layout classes', () => {
+    const { container, getByRole } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+    const main = getByRole('main');
+
+    expect(container.querySelector('.pageWrapper')).toContainElement(main);
+    expect(main).toHaveClass('main');
+    expect(main.querySelector('.inner .title .inline')).toBeInTheDocument();
+  });
+
   it.each([
     ['mundo', '874d2084-631c-4ee8-b582-f88920fcd960', '33021'],
     ['portuguese', 'abdb1274-d3c1-48fd-b6c7-d1a0576cc551', '33042'],
