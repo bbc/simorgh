@@ -27,6 +27,68 @@ export const getATIUrls = (env: AppEnv) => ({
 
 export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
 
+export type ResonanceEventAction = 'view' | 'select';
+
+/* eslint-disable camelcase */
+export type ResonanceEvent = Record<string, unknown> & {
+  event?: {
+    action?: ResonanceEventAction;
+    grouping?: string;
+    subcategory?: string;
+  };
+  event_name?: string;
+  page_name?: string;
+};
+
+export type ResonanceRequestBody = {
+  bag_metadata?: {
+    event_category?: string;
+  };
+  events?: ResonanceEvent[];
+};
+/* eslint-enable camelcase */
+
+export const parseResonanceRequestBody = (
+  request: Request,
+): ResonanceRequestBody | null => {
+  try {
+    const parsedBody = request.postDataJSON();
+
+    return parsedBody && typeof parsedBody === 'object'
+      ? (parsedBody as ResonanceRequestBody)
+      : null;
+  } catch {
+    return null;
+  }
+};
+
+export const isResonanceViewabilityRequest =
+  (resonanceBagUrl: string, component: string, action: ResonanceEventAction) =>
+  (request: Request): boolean => {
+    const requestUrl = new URL(request.url());
+    const resonanceUrl = new URL(resonanceBagUrl);
+
+    if (
+      request.method() !== 'POST' ||
+      requestUrl.origin !== resonanceUrl.origin ||
+      !/^\/v\d+\/event$/.test(requestUrl.pathname)
+    ) {
+      return false;
+    }
+
+    const body = parseResonanceRequestBody(request);
+
+    const hasMatchingEvent = body?.events?.some(
+      event =>
+        event.event?.action === action &&
+        event.event?.subcategory === component,
+    );
+
+    return Boolean(
+      body?.bag_metadata?.event_category === 'viewability' && hasMatchingEvent,
+    );
+  };
+
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
   return Object.fromEntries(parsedUrl.searchParams);

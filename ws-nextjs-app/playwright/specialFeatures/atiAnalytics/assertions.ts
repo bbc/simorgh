@@ -7,7 +7,10 @@ import {
   getResonanceBagUrl,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
+  isResonanceViewabilityRequest,
+  parseResonanceRequestBody,
   COMPONENTS,
+  type ResonanceEventAction,
   type AppEnv,
 } from './helpers';
 
@@ -293,6 +296,67 @@ const waitForComponentClickRequest = ({
     isViewabilityClickRequest(getViewabilityHosts(appEnv), component),
   );
 
+const waitForResonanceComponentRequest = ({
+  page,
+  appEnv,
+  component,
+  action,
+}: {
+  page: Page;
+  appEnv: AppEnv;
+  component: string;
+  action: ResonanceEventAction;
+}) =>
+  page.waitForRequest(
+    isResonanceViewabilityRequest(
+      getResonanceBagUrl(appEnv),
+      component,
+      action,
+    ),
+  );
+
+/* eslint-disable camelcase */
+const assertResonanceComponentEvent = ({
+  request,
+  action,
+  component,
+  pageIdentifier,
+}: {
+  request: Request;
+  action: ResonanceEventAction;
+  component: string;
+  pageIdentifier: string;
+}) => {
+  const body = parseResonanceRequestBody(request);
+  expect(body).not.toBeNull();
+
+  if (!body) return;
+
+  const event = body.events?.find(
+    candidate =>
+      candidate.event?.action === action &&
+      candidate.event?.grouping === pageIdentifier &&
+      candidate.event?.subcategory === component,
+  );
+
+  expect(body.bag_metadata?.event_category).toBe('viewability');
+  expect(event).toBeDefined();
+
+  if (!event) return;
+
+  expect(event.event_name).toBe(`${component}.${action}`);
+  expect(event.page_name).toBe(pageIdentifier);
+  expect(event).toHaveProperty('site_id');
+  expect(event.event).toEqual(
+    expect.objectContaining({
+      action,
+      grouping: pageIdentifier,
+      subcategory: component,
+    }),
+  );
+};
+/* eslint-enable camelcase */
+
 export const assertPageView = async ({
   page,
   path,
@@ -343,6 +407,7 @@ export const assertResonancePageView = async ({
   );
 
   const matchedRequests: Request[] = [];
+  /* eslint-disable camelcase */
   const parseResonanceBody = (request: Request) => {
     const rawPostData = request.postData();
     if (!rawPostData) return null;
@@ -356,6 +421,7 @@ export const assertResonancePageView = async ({
       return null;
     }
   };
+  /* eslint-enable camelcase */
 
   const requestListener = (request: Request) => {
     if (
@@ -388,27 +454,32 @@ export const assertResonancePageView = async ({
         () =>
           matchedRequests
             .map(parseResonanceBody)
-            .find(body => body?.bag_metadata && body?.events),
+            .find(
+              resonanceBody =>
+                resonanceBody?.bag_metadata && resonanceBody?.events,
+            ),
         {
           timeout: 15000,
         },
       )
       .not.toBeNull();
 
-    const body = matchedRequests
+    const resonanceBody = matchedRequests
       .map(parseResonanceBody)
-      .find(body => body?.bag_metadata && body?.events);
+      .find(
+        candidateBody => candidateBody?.bag_metadata && candidateBody?.events,
+      );
 
-    if (!body) {
+    if (!resonanceBody) {
       expect(matchedRequests.length).toBeGreaterThan(0);
       return;
     }
 
-    expect(body).toHaveProperty('bag_metadata');
-    expect(body).toHaveProperty('events');
+    expect(resonanceBody).toHaveProperty('bag_metadata');
+    expect(resonanceBody).toHaveProperty('events');
 
-    const metadata = body?.bag_metadata ?? {};
-    const event = body?.events?.[0] ?? {};
+    const metadata = resonanceBody.bag_metadata ?? {};
+    const event = resonanceBody.events?.[0] ?? {};
 
     assertResonancePageViewParamsExist({
       metadata,
@@ -563,6 +634,139 @@ export const assertDropdownNavigationComponentClick = async ({
     applicationType,
     'select',
   );
+};
+
+export const assertScrollableNavigationResonanceComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForResonanceComponentRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.SCROLLABLE_NAVIGATION,
+    action: 'view',
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+
+  console.log('I am a request logging', request);
+
+  assertResonanceComponentEvent({
+    request,
+    action: 'view',
+    component: COMPONENTS.SCROLLABLE_NAVIGATION,
+    pageIdentifier,
+  });
+};
+
+export const assertScrollableNavigationResonanceComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="scrollable-nav"] a').first().waitFor();
+
+  const navLinkToClick = await getScrollableNavClickTarget(page);
+  const [request] = await Promise.all([
+    waitForResonanceComponentRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.SCROLLABLE_NAVIGATION,
+      action: 'select',
+    }),
+    navLinkToClick.click(),
+  ]);
+
+  assertResonanceComponentEvent({
+    request,
+    action: 'select',
+    component: COMPONENTS.SCROLLABLE_NAVIGATION,
+    pageIdentifier,
+  });
+};
+
+export const assertDropdownNavigationResonanceComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForResonanceComponentRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.DROPDOWN_NAVIGATION,
+    action: 'view',
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page.locator('nav button').click();
+
+  const request = await viewPromise;
+
+  assertResonanceComponentEvent({
+    request,
+    action: 'view',
+    component: COMPONENTS.DROPDOWN_NAVIGATION,
+    pageIdentifier,
+  });
+};
+
+export const assertDropdownNavigationResonanceComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page.locator('nav button').click();
+
+  const [request] = await Promise.all([
+    waitForResonanceComponentRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.DROPDOWN_NAVIGATION,
+      action: 'select',
+    }),
+    page.locator('[data-e2e="dropdown-nav"]').locator('a').first().click(),
+  ]);
+
+  assertResonanceComponentEvent({
+    request,
+    action: 'select',
+    component: COMPONENTS.DROPDOWN_NAVIGATION,
+    pageIdentifier,
+  });
 };
 
 export const assertMostReadComponentView = async ({
@@ -1033,7 +1237,9 @@ export const assertPodcastLinksComponentClick = async ({
   const rssLink = podcastLinks.getByRole('link', { name: /rss/i });
 
   const linkToClick =
-    (await rssLink.count()) > 0 ? rssLink.first() : podcastLinks.locator('a').first();
+    (await rssLink.count()) > 0
+      ? rssLink.first()
+      : podcastLinks.locator('a').first();
   await linkToClick.waitFor();
 
   const [request] = await Promise.all([
@@ -1104,10 +1310,7 @@ export const assertBillboardComponentClick = async ({
   await page
     .locator('[data-testid="billboard-maximum-1"]')
     .scrollIntoViewIfNeeded();
-  await page
-    .locator('[data-testid="billboard-maximum-1"] a')
-    .first()
-    .waitFor();
+  await page.locator('[data-testid="billboard-maximum-1"] a').first().waitFor();
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({

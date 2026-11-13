@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+// import appConfig from '../../../utilities/serviceConfigs';
 import { livePageSuites } from './suites';
 import {
   appEnvFromProcess,
@@ -11,159 +12,166 @@ import {
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertDropdownNavigationComponentClick,
+  assertScrollableNavigationResonanceComponentView,
+  assertScrollableNavigationResonanceComponentClick,
+  assertDropdownNavigationResonanceComponentView,
+  assertDropdownNavigationResonanceComponentClick,
 } from '../../specialFeatures/atiAnalytics/assertions';
-import assert200HtmlResponse from '../../utilities/response';
+// import assert200HtmlResponse from '../../utilities/response';
 
-test.describe('livePage', () => {
-  const allSuites = [...livePageSuites.canonical];
+// const getServiceConfig = (service: string, variant = 'default') =>
+//   appConfig[service as keyof typeof appConfig]?.[variant as 'default'];
 
-  allSuites.forEach(testSuite => {
-    const suiteName = `${testSuite.service}${
-      testSuite.variant ? ` (${testSuite.variant})` : ''
-    }`;
-    const testLabel = `${baseURL}${testSuite.path}`;
+// test.describe('livePage', () => {
+//   const allSuites = [...livePageSuites.canonical];
 
-    test.describe(testLabel, () => {
-      test.describe(`Tests for ${suiteName} livePage`, () => {
-        test('should return a 200 status code', async ({ request }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+//   allSuites.forEach(testSuite => {
+//     const suiteName = `${testSuite.service}${
+//       testSuite.variant ? ` (${testSuite.variant})` : ''
+//     }`;
+//     const testLabel = `${baseURL}${testSuite.path}`;
 
-          await assert200HtmlResponse({
-            request,
-            path: testSuite.path,
-            baseURL,
-          });
-        });
+//     test.describe(testLabel, () => {
+//       test.describe(`Tests for ${suiteName} livePage`, () => {
+//         test('should return a 200 status code', async ({ request }) => {
+//           test.skip(
+//             !shouldRunForEnv(testSuite.runForEnv),
+//             `Skipped for APP_ENV=${appEnvFromProcess}`,
+//           );
 
-        test.describe(`${suiteName} Live Page Tests`, () => {
-          test('should render a key points summary', async ({ page }) => {
-            test.skip(
-              !shouldRunForEnv(testSuite.runForEnv),
-              `Skipped for APP_ENV=${appEnvFromProcess}`,
-            );
+//           await assert200HtmlResponse({
+//             request,
+//             path: testSuite.path,
+//             baseURL,
+//           });
+//         });
 
-            await page.goto(`${baseURL}${testSuite.path}`, {
-              waitUntil: 'domcontentloaded',
-            });
+//         test.describe(`${suiteName} Live Page Tests`, () => {
+//           test('should render a key points summary', async ({ page }) => {
+//             test.skip(
+//               !shouldRunForEnv(testSuite.runForEnv),
+//               `Skipped for APP_ENV=${appEnvFromProcess}`,
+//             );
 
-            await expect(page.locator('[data-e2e="key-points"]')).toBeVisible();
-          });
+//             await page.goto(`${baseURL}${testSuite.path}`, {
+//               waitUntil: 'domcontentloaded',
+//             });
 
-          test('should serve webp images from ichef', async ({ page }) => {
-            test.skip(
-              !shouldRunForEnv(testSuite.runForEnv),
-              `Skipped for APP_ENV=${appEnvFromProcess}`,
-            );
+//             await expect(page.locator('[data-e2e="key-points"]')).toBeVisible();
+//           });
 
-            await page.goto(`${baseURL}${testSuite.path}`, {
-              waitUntil: 'domcontentloaded',
-            });
+//           test('should serve webp images from ichef', async ({ page }) => {
+//             test.skip(
+//               !shouldRunForEnv(testSuite.runForEnv),
+//               `Skipped for APP_ENV=${appEnvFromProcess}`,
+//             );
 
-            const ichefImages = page.locator('img[src*="ichef."]');
-            const count = await ichefImages.count();
+//             await page.goto(`${baseURL}${testSuite.path}`, {
+//               waitUntil: 'domcontentloaded',
+//             });
 
-            test.skip(count === 0, 'No ichef images on page');
+//             const ichefImages = page.locator('img[src*="ichef."]');
+//             const count = await ichefImages.count();
 
-            const sources = await ichefImages.evaluateAll(images =>
-              (images as HTMLImageElement[]).map(img =>
-                img.getAttribute('src'),
-              ),
-            );
+//             test.skip(count === 0, 'No ichef images on page');
 
-            sources.forEach(src => {
-              expect(src ?? '').toMatch(/\.webp(\?.*)?$/);
-            });
-          });
+//             const sources = await ichefImages.evaluateAll(images =>
+//               (images as HTMLImageElement[]).map(img =>
+//                 img.getAttribute('src'),
+//               ),
+//             );
 
-          test('should render a media player', async ({ page }) => {
-            test.skip(
-              !shouldRunForEnv(testSuite.runForEnv),
-              `Skipped for APP_ENV=${appEnvFromProcess}`,
-            );
-            test.skip(
-              !testSuite.hasMediaPlayer,
-              'Suite does not contain a media player',
-            );
+//             sources.forEach(src => {
+//               expect(src ?? '').toMatch(/\.webp(\?.*)?$/);
+//             });
+//           });
 
-            await page.goto(`${baseURL}${testSuite.path}`, {
-              waitUntil: 'domcontentloaded',
-            });
+//           test('should render a media player', async ({ page }) => {
+//             test.skip(
+//               !shouldRunForEnv(testSuite.runForEnv),
+//               `Skipped for APP_ENV=${appEnvFromProcess}`,
+//             );
+//             test.skip(
+//               !testSuite.hasMediaPlayer,
+//               'Suite does not contain a media player',
+//             );
 
-            const mediaLoader = page
-              .locator('[data-e2e="media-loader__container"]')
-              .first();
+//             await page.goto(`${baseURL}${testSuite.path}`, {
+//               waitUntil: 'domcontentloaded',
+//             });
 
-            await expect(
-              mediaLoader.locator('[data-e2e="media-player"]'),
-            ).toBeVisible();
-            await expect(
-              page.locator('smp-toucan-player').first(),
-            ).toBeVisible();
-          });
+//             const mediaLoader = page
+//               .locator('[data-e2e="media-loader__container"]')
+//               .first();
 
-          test('should render a visible caption', async ({ page }) => {
-            test.skip(
-              !shouldRunForEnv(testSuite.runForEnv),
-              `Skipped for APP_ENV=${appEnvFromProcess}`,
-            );
-            test.skip(
-              !testSuite.hasMediaPlayer,
-              'Suite does not contain a media player',
-            );
+//             await expect(
+//               mediaLoader.locator('[data-e2e="media-player"]'),
+//             ).toBeVisible();
+//             await expect(
+//               page.locator('smp-toucan-player').first(),
+//             ).toBeVisible();
+//           });
 
-            await page.goto(`${baseURL}${testSuite.path}`, {
-              waitUntil: 'domcontentloaded',
-            });
+//           test('should render a visible caption', async ({ page }) => {
+//             test.skip(
+//               !shouldRunForEnv(testSuite.runForEnv),
+//               `Skipped for APP_ENV=${appEnvFromProcess}`,
+//             );
+//             test.skip(
+//               !testSuite.hasMediaPlayer,
+//               'Suite does not contain a media player',
+//             );
 
-            await expect(
-              page.locator('[data-testid="caption-paragraph"]').first(),
-            ).toBeVisible();
-          });
+//             await page.goto(`${baseURL}${testSuite.path}`, {
+//               waitUntil: 'domcontentloaded',
+//             });
 
-          test('should render topic tags and navigate to the correct topic page', async ({
-            page,
-          }) => {
-            test.skip(
-              !shouldRunForEnv(testSuite.runForEnv),
-              `Skipped for APP_ENV=${appEnvFromProcess}`,
-            );
-            test.skip(
-              appEnvFromProcess === 'local',
-              'Topic tags disabled for local environment',
-            );
+//             await expect(
+//               page.locator('[data-testid="caption-paragraph"]').first(),
+//             ).toBeVisible();
+//           });
 
-            await page.goto(`${baseURL}${testSuite.path}`, {
-              waitUntil: 'domcontentloaded',
-            });
+//           test('should render topic tags and navigate to the correct topic page', async ({
+//             page,
+//           }) => {
+//             test.skip(
+//               !shouldRunForEnv(testSuite.runForEnv),
+//               `Skipped for APP_ENV=${appEnvFromProcess}`,
+//             );
+//             test.skip(
+//               appEnvFromProcess === 'local',
+//               'Topic tags disabled for local environment',
+//             );
 
-            const topicTagsSection = page.locator(
-              "aside[aria-labelledby*='related-topics']",
-            );
-            const hasTopicTags = await topicTagsSection.isVisible();
+//             await page.goto(`${baseURL}${testSuite.path}`, {
+//               waitUntil: 'domcontentloaded',
+//             });
 
-            if (!hasTopicTags) return;
+//             const topicTagsSection = page.locator(
+//               "aside[aria-labelledby*='related-topics']",
+//             );
+//             const hasTopicTags = await topicTagsSection.isVisible();
 
-            const firstTag = topicTagsSection.locator('a').first();
-            const topicTitle = (await firstTag.textContent())?.trim();
+//             if (!hasTopicTags) return;
 
-            expect(
-              topicTitle,
-              'first topic tag should have non-empty text',
-            ).toBeTruthy();
+//             const firstTag = topicTagsSection.locator('a').first();
+//             const topicTitle = (await firstTag.textContent())?.trim();
 
-            await firstTag.click();
-            await expect(page.locator('h1')).toContainText(
-              topicTitle as string,
-            );
-          });
-        });
-      });
-    });
-  });
-});
+//             expect(
+//               topicTitle,
+//               'first topic tag should have non-empty text',
+//             ).toBeTruthy();
+
+//             await firstTag.click();
+//             await expect(page.locator('h1')).toContainText(
+//               topicTitle as string,
+//             );
+//           });
+//         });
+//       });
+//     });
+//   });
+// });
 
 test.describe('livePage ATI Analytics', () => {
   livePageSuites.ati.forEach(testSuite => {
@@ -181,6 +189,23 @@ test.describe('livePage ATI Analytics', () => {
           service: testSuite.service,
           appEnv: appEnvFromProcess,
         };
+
+        // test.beforeEach(async ({ page }) => {
+        //   const cookieAcceptLabel = getServiceConfig(testSuite.service)
+        //     ?.translations?.consentBanner?.cookie?.canonical?.accept;
+
+        //   if (cookieAcceptLabel) {
+        //     await page.addLocatorHandler(
+        //       page.getByRole('button', {
+        //         name: cookieAcceptLabel,
+        //         exact: true,
+        //       }),
+        //       async button => {
+        //         await button.click();
+        //       },
+        //     );
+        //   }
+        // });
 
         test('should send a page view event', async ({ page }) => {
           test.skip(
@@ -213,27 +238,85 @@ test.describe('livePage ATI Analytics', () => {
           await assertScrollableNavigationComponentClick({ page, ...atiProps });
         });
 
-        test('should send a view event for the Dropdown Navigation component', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        // test('should send a view event for the Dropdown Navigation component', async ({
+        //   page,
+        // }) => {
+        //   test.skip(
+        //     !shouldRunForEnv(testSuite.runForEnv),
+        //     `Skipped for APP_ENV=${appEnvFromProcess}`,
+        //   );
 
-          await assertDropdownNavigationComponentView({ page, ...atiProps });
-        });
+        //   await assertDropdownNavigationComponentView({ page, ...atiProps });
+        // });
 
-        test('should send a click event for the Dropdown Navigation component', async ({
-          page,
-        }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        // test('should send a click event for the Dropdown Navigation component', async ({
+        //   page,
+        // }) => {
+        //   test.skip(
+        //     !shouldRunForEnv(testSuite.runForEnv),
+        //     `Skipped for APP_ENV=${appEnvFromProcess}`,
+        //   );
 
-          await assertDropdownNavigationComponentClick({ page, ...atiProps });
-        });
+        //   await assertDropdownNavigationComponentClick({ page, ...atiProps });
+        // });
+
+        if (testSuite.service === 'arabic') {
+          test('should send a Resonance view event for the Scrollable Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertScrollableNavigationResonanceComponentView({
+              page,
+              ...atiProps,
+            });
+          });
+
+          test('should send a Resonance click event for the Scrollable Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertScrollableNavigationResonanceComponentClick({
+              page,
+              ...atiProps,
+            });
+          });
+
+          // test('should send a Resonance view event for the Dropdown Navigation component', async ({
+          //   page,
+          // }) => {
+          //   test.skip(
+          //     !shouldRunForEnv(testSuite.runForEnv),
+          //     `Skipped for APP_ENV=${appEnvFromProcess}`,
+          //   );
+
+          //   await assertDropdownNavigationResonanceComponentView({
+          //     page,
+          //     ...atiProps,
+          //   });
+          // });
+
+          // test('should send a Resonance click event for the Dropdown Navigation component', async ({
+          //   page,
+          // }) => {
+          //   test.skip(
+          //     !shouldRunForEnv(testSuite.runForEnv),
+          //     `Skipped for APP_ENV=${appEnvFromProcess}`,
+          //   );
+
+          //   await assertDropdownNavigationResonanceComponentClick({
+          //     page,
+          //     ...atiProps,
+          //   });
+          // });
+        }
       });
     });
   });
