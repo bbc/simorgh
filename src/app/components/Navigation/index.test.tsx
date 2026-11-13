@@ -158,6 +158,15 @@ describe('Navigation', () => {
         expect(queryByTestId('top-bar-live-promo')).not.toBeInTheDocument();
       },
     );
+
+    it('should not render the live page promo on the live environment', () => {
+      process.env.SIMORGH_APP_ENV = 'live';
+
+      const { queryByTestId } = renderWithLivePageExperiment('on');
+      delete process.env.SIMORGH_APP_ENV;
+
+      expect(queryByTestId('top-bar-live-promo')).not.toBeInTheDocument();
+    });
   });
 
   it('does not enable sticky navigation on AMP', () => {
