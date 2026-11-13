@@ -3,6 +3,7 @@ import { render, RenderOptions } from '@testing-library/react';
 
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { IdctaConfig } from '#app/models/types/account';
+import { AppOptimizelyProvider } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
@@ -101,17 +102,19 @@ const AllTheProviders: FC<Props> = ({
           serverSideExperiments={serverSideExperiments}
         >
           <AccountProvider initialConfig={idctaConfig}>
-            <ReverbParamsContextProvider metadata={pageMetadata}>
-              <EventTrackingContextProvider
-                atiData={pageMetadata?.atiAnalytics}
-              >
-                <UserContextProvider>
-                  <ThemeProvider service={service} variant={variant}>
-                    {children}
-                  </ThemeProvider>
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            </ReverbParamsContextProvider>
+            <AppOptimizelyProvider>
+              <ReverbParamsContextProvider metadata={pageMetadata}>
+                <EventTrackingContextProvider
+                  atiData={pageMetadata?.atiAnalytics}
+                >
+                  <UserContextProvider>
+                    <ThemeProvider service={service} variant={variant}>
+                      {children}
+                    </ThemeProvider>
+                  </UserContextProvider>
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
+            </AppOptimizelyProvider>
           </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
