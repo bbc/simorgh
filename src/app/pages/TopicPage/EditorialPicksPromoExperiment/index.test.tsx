@@ -56,9 +56,7 @@ describe('EditorialPicksPromoExperiment', () => {
       }),
     ).toBeVisible();
     expect(
-      screen.getByText(
-        "इसे 'मेरी ख़बरें' में फिर से पाएँ",
-      ),
+      screen.getByText("इसे 'मेरी ख़बरें' में फिर से पाएँ"),
     ).toBeInTheDocument();
     expect(
       screen
