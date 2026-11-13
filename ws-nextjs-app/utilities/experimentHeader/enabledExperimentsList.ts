@@ -1,5 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME } from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import { LIVE_PAGE_PROMO_EXPERIMENT_NAME } from '#app/components/LivePagePromoExperiment/config';
 
 /* 
 This is a maintained list of serverside experiments that we are running.
@@ -37,6 +38,11 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
     name: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     services: ['hindi'],
     pageTypes: ['home'],
+  },
+  {
+    name: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
+    services: ['pidgin'],
+    pageTypes: ['article'],
   },
 ];
 
