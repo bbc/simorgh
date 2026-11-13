@@ -15,7 +15,7 @@ All code for this experiment lives in this directory, so it can be removed by de
 ## How to use
 
 ```tsx
-const showLivePagePromo = useShowLivePagePromoExperiment(blocks);
+const showLivePagePromo = useShowLivePagePromoExperiment();
 
 return showLivePagePromo && <LivePagePromoExperiment blocks={blocks} />;
 ```

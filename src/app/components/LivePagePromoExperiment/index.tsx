@@ -14,7 +14,7 @@ const eventTrackingData: EventTrackingMetadata = {
 
 const ariaLabelledBy = 'live-page-promo-experiment';
 
-export const getLivePageBlock = (blocks: TopStoryItem[] = []) =>
+const getLivePageBlock = (blocks: TopStoryItem[] = []) =>
   blocks.find(block => block?.type === 'tipo-live' && block?.isLive);
 
 const LivePagePromoExperiment = ({ blocks }: LivePagePromoExperimentProps) => {

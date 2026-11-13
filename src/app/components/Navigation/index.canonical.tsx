@@ -83,7 +83,7 @@ const CanonicalNavigationContainer = ({
 }: CanonicalNavigationContainerProps) => {
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
-  const showLivePagePromo = useShowLivePagePromoExperiment(blocks);
+  const showLivePagePromo = useShowLivePagePromoExperiment();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = useCallback(() => setIsOpen(false), []);
