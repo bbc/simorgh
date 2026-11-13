@@ -14,7 +14,7 @@
 
   // Bleed through the navigation wrapper's inline margin
   @media #{theme.$mediaQueries-group-3-min-width} {
-    margin-inline: -0.8rem;
+    margin-inline: theme.pixelsToRem-px-to-rem(-12.8);
   }
 
   @media #{theme.$mediaQueries-group-4-min-width} {
