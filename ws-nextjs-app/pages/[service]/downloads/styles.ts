@@ -44,9 +44,6 @@ export default {
         ...fontSizes.greatPrimer,
         marginBottom: '8px',
       },
-      svg: {
-        marginRight: '8px',
-      },
       a: {
         color: palette.RHINO,
         '&:focus': {

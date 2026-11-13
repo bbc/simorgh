@@ -63,7 +63,7 @@ describe('Call To Action Link', () => {
       </CallToActionLink>,
     );
     const link = screen.getByText('My Link Text');
-    const [chevron] = container.getElementsByTagName('svg');
+    const [chevron] = container.getElementsByClassName('external-svg');
     expect(link).toBeInTheDocument();
     expect(chevron).toBeInTheDocument();
   });
@@ -86,7 +86,7 @@ describe('Call To Action Link', () => {
 
     const link = screen.getByRole('link');
     const text = screen.getByText('My Link Text');
-    const [chevron] = container.getElementsByTagName('svg');
+    const [chevron] = container.getElementsByClassName('external-svg');
 
     expect(link).toHaveClass('link', 'alignWithMargin', 'custom-link');
     expect(text).toHaveClass('text', 'defaultTextStyles', 'custom-text');
@@ -184,7 +184,7 @@ describe('Call To Action Link', () => {
     );
 
     expect(screen.getByText('My Link Text')).toHaveClass('text-consumer-class');
-    expect(container.querySelector('svg')).toHaveClass(
+    expect(container.querySelector('.external-svg')).toHaveClass(
       'chevron-consumer-class',
     );
   });

@@ -1,4 +1,5 @@
 import { memo, use, useState } from 'react';
+import clsx from 'clsx';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
@@ -10,7 +11,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
 import { service as newsConfig } from '#lib/config/services/news';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { Close, Play } from '../icons';
@@ -117,11 +118,11 @@ const LiveHeaderMedia = ({
       size="pica"
       fontVariant="sansBold"
       as="span"
-      css={[
+      className={clsx(
         styles.mediaDescription,
         showMedia ? styles.closeMediaDescription : styles.openMediaDescription,
-      ]}
-      className="hoverStylesText"
+        'hoverStylesText',
+      )}
     >
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
@@ -132,20 +133,20 @@ const LiveHeaderMedia = ({
 
   return (
     <>
-      <noscript css={styles.nojs}>
+      <noscript className={styles.nojs}>
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} {...viewTracker}>
+      <div className={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}
           data-testid="watch-now-close-button"
-          className="focusIndicatorInvert"
-          css={[
+          className={clsx(
+            'focusIndicatorInvert',
             showMedia ? styles.closeButton : styles.openButton,
             styles.mediaButton,
-          ]}
+          )}
         >
           <div>
             {description}
@@ -154,7 +155,7 @@ const LiveHeaderMedia = ({
                 as="span"
                 size="brevier"
                 fontVariant="sansRegular"
-                css={styles.guidanceMessage}
+                className={styles.guidanceMessage}
                 data-testid="warning-message"
               >
                 <VisuallyHiddenText>
@@ -165,25 +166,25 @@ const LiveHeaderMedia = ({
             )}
           </div>
           {!showMedia && (
-            <div className="hoverStylesCTA" css={styles.watchLiveCTA}>
+            <div className={clsx('hoverStylesCTA', styles.watchLiveCta)}>
               <Text
-                css={styles.watchLiveCTAText}
+                className={styles.watchLiveCtaText}
                 size="greatPrimer"
                 fontVariant="sansBold"
               >
-                <Play />
+                <Play isInverted />
                 {!warnings && <VisuallyHiddenText>, </VisuallyHiddenText>}
                 {watch}
               </Text>
             </div>
           )}
           {showMedia && (
-            <div css={styles.closeContainer}>
-              <Close />
+            <div className={styles.closeContainer}>
+              <Close isInverted />
             </div>
           )}
         </button>
-        <div css={showMedia ? styles.mediaLoader : styles.hideComponent}>
+        <div className={showMedia ? styles.mediaLoader : styles.hideComponent}>
           <MemoizedMediaPlayer blocks={mediaCollection} uniqueId={vpid} />
         </div>
       </div>

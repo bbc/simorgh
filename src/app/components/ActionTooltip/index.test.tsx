@@ -31,6 +31,23 @@ const { closeLabel } = mockTranslations;
 describe('ActionTooltip', () => {
   beforeEach(() => jest.clearAllMocks());
 
+  it('lets the close button state control its decorative mask colour', () => {
+    render(
+      <ActionTooltip
+        status="success"
+        content={content}
+        closeLabel={closeLabel}
+        onClose={onClose}
+      />,
+    );
+    const icon = screen
+      .getByRole('button', { name: closeLabel })
+      .querySelector('.external-svg');
+
+    expect(icon).toHaveClass('mask');
+    expect(icon).not.toHaveClass('fallbackInverted');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+  });
   it('renders the success title with a My News link', () => {
     render(
       <ActionTooltip

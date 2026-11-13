@@ -14,8 +14,15 @@ export default () => {
       expect(hasContent).toBe(true);
     });
 
-    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
-      expect(getInlinedCss()).not.toContain('--brand-background');
+    it('should tree-shake unused SCSS module palette custom properties (--brand-foreground)', () => {
+      expect(getInlinedCss()).not.toContain('--brand-foreground');
+    });
+
+    it('should exclude CSS for components that are not rendered on Lite articles', () => {
+      expect(
+        document.querySelector('[data-testid="latest-post-button"]'),
+      ).toBeNull();
+      expect(getInlinedCss()).not.toContain('.LatestPostButton_');
     });
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {

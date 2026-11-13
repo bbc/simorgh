@@ -1,4 +1,4 @@
-import type { ComponentType, JSX } from 'react';
+import type { ComponentType } from 'react';
 import {
   SerbianService,
   ServicesWithNoVariants,
@@ -450,16 +450,8 @@ export type FontVariant =
   | 'serifLight';
 
 export type BrandSVG = {
-  width?: number;
-  height?: number;
-  group: JSX.Element;
-  ratio?: number;
-  viewbox?: {
-    height?: number;
-    width?: number;
-    minY?: number;
-    minX?: number;
-  };
+  path: string;
+  ratio: number;
 };
 
 export type GridWidths = {

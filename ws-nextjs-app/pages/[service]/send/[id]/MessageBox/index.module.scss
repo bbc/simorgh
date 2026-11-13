@@ -1,0 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
+.errorIcon {
+  color: theme.$palette-white;
+
+  @media (forced-colors: active) {
+    color: CanvasText;
+  }
+}

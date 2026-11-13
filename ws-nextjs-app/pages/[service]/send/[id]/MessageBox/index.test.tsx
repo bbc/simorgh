@@ -1,10 +1,12 @@
 import {
   act,
   render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import * as AndroidDetectionModule from '#hooks/useAdroidDetection';
 import ErrorSummaryBox from './ErrorSummaryBox';
+import InvalidMessageBox from './InvalidMessageBox';
 import * as FormContextModule from '../FormContext';
 import { InvalidMessageCodes } from '../types';
 
@@ -43,6 +45,23 @@ const labelMap = {
 } as Record<string, string>;
 
 describe('ErrorSummaryBox', () => {
+  it('renders the error symbol as a decorative recolourable mask', async () => {
+    const { container } = await act(() =>
+      render(
+        <InvalidMessageBox
+          id="error"
+          messageCode={InvalidMessageCodes.FieldRequired}
+        />,
+      ),
+    );
+    const icon = container.querySelector('.external-svg');
+
+    expect(icon).toHaveClass('mask', 'errorIcon');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveStyle({
+      '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/error.svg")`,
+    });
+  });
   beforeEach(() => {
     jest.restoreAllMocks();
 
@@ -137,13 +156,13 @@ describe('ErrorSummaryBox', () => {
           },
         ],
       }));
-    const { container } = await act(() => {
+    await act(() => {
       return render(<ErrorSummaryBox labelMap={labelMap} />);
     });
 
-    const inputWithError = container.querySelectorAll('span')[1];
+    const inputWithError = screen.getByText(labelMap.txt49018765);
     expect(inputWithError).toBeInTheDocument();
-    expect(inputWithError?.textContent).toEqual(`Nombre`);
+    expect(inputWithError.closest('a')).toBeNull();
   });
 
   it('should prefix fileUpload href so that focus is taken to Upload button label', async () => {

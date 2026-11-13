@@ -1,0 +1,75 @@
+@use '@scss/themeTokens' as theme;
+@use '../../ThemeProviderSCSSModules/fontMediaQueries' as fontMq;
+
+.wrapper {
+  padding-block: theme.$spacings-half;
+}
+
+a.link {
+  display: flex;
+  align-items: center;
+  gap: theme.$spacings-half;
+  min-height: #{theme.pixelsToRem-px-to-rem(44)};
+  padding-inline: #{theme.pixelsToRem-px-to-rem(12)};
+  color: theme.$palette-white;
+  text-decoration: none;
+  border: 1px solid theme.$palette-white;
+
+  &:hover,
+  &:focus {
+    outline: 4px solid theme.$palette-white;
+    text-decoration: underline;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+}
+
+.wrapperDefault {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline-start: #{theme.pixelsToRem-px-to-rem(23)};
+  }
+}
+
+a.linkDefault {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: flex;
+  align-items: center;
+  gap: #{theme.pixelsToRem-px-to-rem(5)};
+  height: theme.$spacings-quintuple;
+  padding: theme.$spacings-half 0;
+  color: theme.$palette-black;
+  text-decoration: none;
+  border: #{theme.pixelsToRem-px-to-rem(2)} solid transparent;
+
+  &:hover {
+    box-shadow: none;
+    text-decoration: none;
+    border-bottom-color: theme.$palette-service-neutral-core;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: theme.$palette-black;
+  }
+
+  @media #{theme.$mediaQueries-group-0-max-width} {
+    margin-inline-start: #{theme.pixelsToRem-px-to-rem(22)};
+  }
+
+  @media #{fontMq.$group-a-max-width} {
+    .label {
+      display: none;
+    }
+  }
+
+  .iconDefault {
+    width: #{theme.pixelsToRem-px-to-rem(32)};
+    height: #{theme.pixelsToRem-px-to-rem(32)};
+  }
+}

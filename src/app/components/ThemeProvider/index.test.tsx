@@ -8,8 +8,6 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
 
-const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
-
 describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
     await act(async () => {
@@ -225,17 +223,8 @@ describe('ThemeProvider', () => {
   });
 
   describe.each(SERVICES)(`brandSVG for %s`, service => {
-    beforeAll(() => {
-      // TODO: Consider removing this one this check is removed: https://github.com/bbc/simorgh/blob/4bfea6e86e65e3fdd374ff5432bae575366a343b/src/app/legacy/psammead/psammead-brand/src/index.jsx#L155
-      process.env.SIMORGH_APP_ENV = 'live';
-    });
-
-    afterAll(() => {
-      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
-    });
-
     const children = <span data-testid="brand-child">child</span>;
-    it(`should match chameleonLogos/${service}.tsx`, async () => {
+    it(`should use the CDN asset from chameleonLogos/${service}.tsx`, async () => {
       await act(async () => {
         render(
           <ThemeProvider
@@ -249,17 +238,15 @@ describe('ThemeProvider', () => {
         );
       });
 
-      const themeBrandSVG = document.body.querySelector('svg')?.innerHTML;
-
       const { default: svg } = await import(`./chameleonLogos/${service}`);
 
-      const { getByTestId } = render(
-        <svg data-testid={service}>{svg.group}</svg>,
+      expect(
+        document.body.querySelector('img.external-svg')?.getAttribute('src'),
+      ).toBe(
+        `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${svg.path.slice(
+          1,
+        )}`,
       );
-
-      const chameleonSVG = getByTestId(service).innerHTML;
-
-      expect(themeBrandSVG).toEqual(chameleonSVG);
     });
   });
 });

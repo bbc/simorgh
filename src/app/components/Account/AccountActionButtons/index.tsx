@@ -6,8 +6,7 @@ import { AccountIcon } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import ctaStyles from './index.module.scss';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface AccountActionButtonsProps {
   signInComponentName: string;
@@ -46,7 +45,7 @@ const AccountActionButtons = ({
       <CallToActionLink.ButtonLikeWrapper
         aria-hidden={signInAccessibleLabel ? true : undefined}
       >
-        <AccountIcon css={styles.accountIcon} />
+        <AccountIcon className={styles.accountIcon} isInverted />
         <CallToActionLink.Text shouldUnderlineOnHoverFocus>
           {signInText}
         </CallToActionLink.Text>
@@ -64,8 +63,8 @@ const AccountActionButtons = ({
         url={signInUrl}
         className={clsx(
           focusIndicatorClassName,
-          ctaStyles.callToActionLink,
-          ctaStyles.signInLink,
+          styles.callToActionLink,
+          styles.signInLink,
         )}
         eventTrackingData={{
           componentName: signInComponentName,
@@ -81,10 +80,10 @@ const AccountActionButtons = ({
       {separatorText && (
         <Paragraph
           size="bodyCopy"
-          css={[
+          className={clsx(
             styles.separatorText,
             onLightBackground && styles.separatorTextOnLightBackground,
-          ]}
+          )}
         >
           {separatorText}
         </Paragraph>
@@ -94,9 +93,9 @@ const AccountActionButtons = ({
         url={registerUrl}
         className={clsx(
           focusIndicatorClassName,
-          ctaStyles.callToActionLink,
-          ctaStyles.registerLink,
-          onLightBackground && ctaStyles.registerLinkOnLightBackground,
+          styles.callToActionLink,
+          styles.registerLink,
+          onLightBackground && styles.registerLinkOnLightBackground,
         )}
         eventTrackingData={{
           componentName: registerComponentName,

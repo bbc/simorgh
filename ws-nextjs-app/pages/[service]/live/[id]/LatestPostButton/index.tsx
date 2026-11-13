@@ -1,15 +1,21 @@
 import { RefObject, use, useRef, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { ExternalSvg } from '#app/components/icons';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
-import styles from './styles';
+import styles from './index.module.scss';
 
 const TEN_SECONDS = 10 * 1000;
 
 const RefreshSvg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-    <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
-  </svg>
+  <ExternalSvg
+    path="images/icons/refresh.svg"
+    width="16"
+    height="16"
+    isInverted
+    useCurrentColor
+    className={styles.icon}
+  />
 );
 
 interface LatestPostButtonProps {
@@ -103,7 +109,7 @@ const LatestPostButton = ({
   }, [isFirstPostVisible, hasPendingUpdate, trackButtonShown, pageId]);
 
   return (
-    <div css={styles.container}>
+    <div className={styles.container}>
       <VisuallyHiddenText aria-live="polite">
         {showButton && <span>{visuallyHiddenButtonText}</span>}
       </VisuallyHiddenText>
@@ -112,7 +118,7 @@ const LatestPostButton = ({
           data-testid="latest-post-button"
           type="button"
           onClick={handleClick}
-          css={styles.button}
+          className={styles.button}
           tabIndex={showButton ? 0 : -1}
         >
           <RefreshSvg />

@@ -1,0 +1,21 @@
+@use '@scss/themeTokens' as theme;
+
+button > span.deleteIcon {
+  color: theme.$palette-white;
+  flex: 0 0 auto;
+  margin: 0;
+  overflow: visible;
+
+  @media (forced-colors: active) {
+    color: ButtonText;
+  }
+}
+
+button:hover > span.deleteIcon,
+button:focus > span.deleteIcon {
+  color: theme.$palette-black;
+
+  @media (forced-colors: active) {
+    color: ButtonText;
+  }
+}

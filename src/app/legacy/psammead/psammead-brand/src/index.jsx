@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
@@ -10,13 +10,17 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import styles from './index.module.scss';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const SvgWrapper = styled.div`
   flex: 1;
+  min-width: 0;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -58,6 +62,8 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   position: relative;
+  min-width: 0;
+  max-width: 100%;
   min-height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX};
 
   &:hover::before,
@@ -76,28 +82,6 @@ const StyledLink = styled.a`
     inset: 0px -${GEL_SPACING};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
     outline-offset: -${GEL_SPACING_HLF};
-  }
-`;
-
-// `currentColor` has been used to address high contrast mode in Firefox.
-const BrandSvg = styled.svg`
-  box-sizing: content-box;
-  color: ${props => props.theme.palette.BRAND_LOGO};
-  fill: currentColor;
-  height: ${20 / 16}rem;
-  max-width: 100%;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: ${24 / 16}rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${props =>
-      props.isLanguagesPage ? `${24 / 16}rem` : `${30 / 16}rem`};
-  }
-
-  @media screen and (-ms-high-contrast: active), print {
-    fill: windowText;
   }
 `;
 
@@ -126,24 +110,46 @@ const StyledBrand = ({
   svg,
   isLanguagesPage = false,
 }) => {
+  const { isAmp } = use(RequestContext);
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
+  const src = svg
+    ? `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${svg.path.slice(1)}`
+    : undefined;
+
   return svg ? (
     <>
-      <BrandSvg
-        id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-        viewBox={[
-          svg.viewbox.minX || 0,
-          svg.viewbox.minY || 0,
-          svg.viewbox.width,
-          svg.viewbox.height,
-        ].join(' ')}
-        xmlns="http://www.w3.org/2000/svg"
-        focusable="false"
+      <span
+        className={styles.brand}
         aria-hidden="true"
-        height="32"
-        isLanguagesPage={isLanguagesPage && linkId !== 'footer'}
+        data-brand-logo=""
+        data-is-languages-page={isLanguagesPage && linkId !== 'footer'}
+        style={{
+          '--brand-source': `url("${src}")`,
+          '--brand-ratio': svg.ratio,
+        }}
       >
-        {svg.group}
-      </BrandSvg>
+        {isAmp ? (
+          <span
+            id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+            className={`external-svg ${styles.ampImage}`}
+            aria-hidden="true"
+          />
+        ) : (
+          <img
+            id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
+            className={`external-svg ${styles.image}`}
+            aria-hidden="true"
+            alt=""
+            src={src}
+            width={svg.ratio * 32}
+            height="32"
+            loading="eager"
+          />
+        )}
+      </span>
       <LocalisedBrandName
         linkId={linkId}
         product={product}

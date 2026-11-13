@@ -25,7 +25,11 @@ const Subhead = ({
           {...curationSubheadingClickTracker}
         >
           <span>{innerChildren}</span>
-          {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
+          {dir === 'ltr' ? (
+            <RightChevron className={styles.chevron} />
+          ) : (
+            <LeftChevron className={styles.chevron} />
+          )}
         </a>
       )
     : Fragment;

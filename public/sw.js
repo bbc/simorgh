@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.8';
+const version = 'v0.3.10';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
@@ -82,6 +82,8 @@ const CACHEABLE_FILES = [
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
+  // SVGs
+  /^[^?#]+\.svg(?:\?[^#]*)?$/i,
 ];
 
 const WEBP_IMAGE =
@@ -122,9 +124,11 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
-  );
+  const isRequestForCacheableFile =
+    event.request.method === 'GET' &&
+    CACHEABLE_FILES.some(cacheableFile =>
+      new RegExp(cacheableFile).test(event.request.url),
+    );
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
 
