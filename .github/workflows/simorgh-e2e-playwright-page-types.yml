@@ -1,13 +1,17 @@
 name: Playwright E2E - Page Types
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
     branches:
       - '**'
+  merge_group:
 permissions:
   contents: read
 
 jobs:
   playwright-run:
+    # E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
+    if: github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e')
     runs-on: ubuntu-latest
     strategy:
       matrix:

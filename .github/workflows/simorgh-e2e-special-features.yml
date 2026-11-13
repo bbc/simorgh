@@ -1,6 +1,7 @@
 name: Cypress E2E - Special Features
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
     branches:
       - '**'
   merge_group:
@@ -9,6 +10,10 @@ permissions:
 
 jobs:
   cypress-run:
+    # Fixed name so the check is the same whether the job runs or is skipped. This is the required check.
+    name: Cypress Special Features E2E
+    # E2Es only run in the merge queue, or on PRs with the 'run-e2e' label.
+    if: github.event_name == 'merge_group' || contains(github.event.pull_request.labels.*.name, 'run-e2e')
     runs-on: ubuntu-latest
     strategy:
       matrix:
