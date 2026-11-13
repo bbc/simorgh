@@ -257,16 +257,15 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
+            cy.get(CONTINUE_READING_BUTTON_ID).nextAll().should('not.be.empty');
             cy.get(CONTINUE_READING_BUTTON_ID).click();
+            cy.get(CONTINUE_READING_BUTTON_ID).should('not.exist');
 
             cy.get('main')
-              .find('*')
-              .each($el => {
-                cy.wrap($el).should($elWrapped => {
-                  const display = window
-                    .getComputedStyle($elWrapped[0])
-                    .getPropertyValue('display');
-                  expect(display).to.not.equal('none');
+              .children()
+              .should($content => {
+                $content.each((_, element) => {
+                  expect(Cypress.$(element)).not.to.have.css('display', 'none');
                 });
               });
           } else {
