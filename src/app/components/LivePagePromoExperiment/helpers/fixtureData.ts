@@ -1,11 +1,10 @@
 const pidginLivePageBlock = {
-  headline: 'Humza Yousaf resigns',
-  destinationUrl: '/pidgin/live/cemy52djeq5t',
+  headline:
+    'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+  destinationUrl: '/pidgin/live/c7p765ynk9qt',
   isLive: true,
-  summary:
-    'Yousaf says he “underestimated” the level of hurt after ending a power-sharing deal with the Scottish Greens last week.',
   serviceIdentifier: 'pidgin',
-  id: 'urn:bbc:tipo:topic:cemy52djeq5t',
+  id: 'urn:bbc:tipo:topic:c7p765ynk9qt',
   type: 'tipo-live',
 };
 

@@ -24,7 +24,6 @@ export default {
         360, // Group 1
         400, // Group 2
         600, // Group 3
-        1008, // Group 4
       ],
     },
   },
