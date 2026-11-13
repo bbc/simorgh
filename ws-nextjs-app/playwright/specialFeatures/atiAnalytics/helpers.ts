@@ -1,4 +1,4 @@
-import type { Request } from '@playwright/test';
+import type { Page, Request } from '@playwright/test';
 
 export type AppEnv = 'local' | 'test' | 'live';
 
@@ -26,6 +26,91 @@ export const getATIUrls = (env: AppEnv) => ({
 });
 
 export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
+
+/* eslint-disable camelcase */
+export type ResonanceRequestBody = {
+  bag_metadata?: Record<string, unknown>;
+  events?: Array<Record<string, unknown>>;
+};
+/* eslint-enable camelcase */
+
+export type CapturedResonanceRequest = { url: string; body: string };
+
+type WindowWithResonanceCapture = Window & {
+  reportResonanceRequest: (url: string, body: string) => void;
+};
+
+// Resonance sends Blob bodies, which Playwright reports as null postData, so capture them in-page.
+export const captureResonanceRequestBodies = async (page: Page) => {
+  const capturedRequests: CapturedResonanceRequest[] = [];
+
+  await page.exposeFunction(
+    'reportResonanceRequest',
+    (url: string, body: string) => {
+      capturedRequests.push({ url, body });
+    },
+  );
+
+  await page.addInitScript(() => {
+    const capture = (url: string, data: unknown) => {
+      if (data instanceof Blob) {
+        data
+          .text()
+          .then(body =>
+            (
+              window as unknown as WindowWithResonanceCapture
+            ).reportResonanceRequest(url, body),
+          );
+      }
+    };
+
+    const originalFetch = window.fetch;
+    window.fetch = (input, init) => {
+      capture(String(input instanceof Request ? input.url : input), init?.body);
+      return originalFetch(input, init);
+    };
+
+    const originalSendBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = (url, data) => {
+      capture(String(url), data);
+      return originalSendBeacon(url, data);
+    };
+  });
+
+  return capturedRequests;
+};
+
+const parseResonanceRequestBody = (
+  rawBody: string,
+): ResonanceRequestBody | null => {
+  try {
+    const parsedBody = JSON.parse(rawBody);
+
+    return parsedBody && typeof parsedBody === 'object'
+      ? (parsedBody as ResonanceRequestBody)
+      : null;
+  } catch {
+    return null;
+  }
+};
+
+export const getCapturedResonanceBodies = (
+  capturedRequests: CapturedResonanceRequest[],
+  resonanceBagUrl: string,
+): ResonanceRequestBody[] => {
+  const resonanceOrigin = new URL(resonanceBagUrl).origin;
+
+  return capturedRequests
+    .filter(({ url }) => {
+      const requestUrl = new URL(url);
+      return (
+        requestUrl.origin === resonanceOrigin &&
+        /^\/v\d+\/event$/.test(requestUrl.pathname)
+      );
+    })
+    .map(({ body }) => parseResonanceRequestBody(body))
+    .filter((body): body is ResonanceRequestBody => body !== null);
+};
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);

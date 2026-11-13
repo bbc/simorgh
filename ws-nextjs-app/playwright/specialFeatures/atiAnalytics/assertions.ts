@@ -7,6 +7,8 @@ import {
   getResonanceBagUrl,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
+  captureResonanceRequestBodies,
+  getCapturedResonanceBodies,
   COMPONENTS,
   type AppEnv,
 } from './helpers';
@@ -329,7 +331,6 @@ export const assertResonancePageView = async ({
   path,
   baseURL,
   pageIdentifier,
-  siteId,
   applicationType,
   contentType,
   service,
@@ -337,93 +338,46 @@ export const assertResonancePageView = async ({
 }: AtiAssertionFnProps) => {
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
-  const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const resonanceBagEventUrlPattern = new RegExp(
-    `^${escapedBagUrl}/v\\d+/event(?:\\?.*)?$`,
-  );
+  const capturedRequests = await captureResonanceRequestBodies(page);
+  const getPageViewBody = () =>
+    getCapturedResonanceBodies(capturedRequests, resonanceBagUrl).find(body =>
+      body.events?.some(event => event.event_name === 'page.display'),
+    );
 
-  const matchedRequests: Request[] = [];
-  const parseResonanceBody = (request: Request) => {
-    const rawPostData = request.postData();
-    if (!rawPostData) return null;
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-    try {
-      return JSON.parse(rawPostData) as {
-        bag_metadata?: Record<string, unknown>;
-        events?: Array<Record<string, unknown>>;
-      };
-    } catch {
-      return null;
-    }
-  };
-
-  const requestListener = (request: Request) => {
-    if (
-      request.method() === 'POST' &&
-      resonanceBagEventUrlPattern.test(request.url())
-    ) {
-      matchedRequests.push(request);
-    }
-  };
-
-  page.on('request', requestListener);
-
-  try {
-    await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
-
-    if (!sendsResonanceEvents) {
-      await page.waitForLoadState('networkidle');
-      expect(matchedRequests).toHaveLength(0);
-      return;
-    }
-
-    await expect
-      .poll(() => matchedRequests.length, {
-        timeout: 15000,
-      })
-      .toBeGreaterThan(0);
-
-    await expect
-      .poll(
-        () =>
-          matchedRequests
-            .map(parseResonanceBody)
-            .find(body => body?.bag_metadata && body?.events),
-        {
-          timeout: 15000,
-        },
-      )
-      .not.toBeNull();
-
-    const body = matchedRequests
-      .map(parseResonanceBody)
-      .find(body => body?.bag_metadata && body?.events);
-
-    if (!body) {
-      expect(matchedRequests.length).toBeGreaterThan(0);
-      return;
-    }
-
-    expect(body).toHaveProperty('bag_metadata');
-    expect(body).toHaveProperty('events');
-
-    const metadata = body?.bag_metadata ?? {};
-    const event = body?.events?.[0] ?? {};
-
-    assertResonancePageViewParamsExist({
-      metadata,
-      event,
-      contentType,
-    });
-
-    expect(event.app_name).toBe(getResonanceAppName(service));
-    expect(event.content_type).toBe(contentType);
-    expect(event.event_name).toBe('page.display');
-    expect(event.page_name).toBe(pageIdentifier);
-    expect(event.producer).toBe(siteId);
-  } finally {
-    page.off('request', requestListener);
+  if (!sendsResonanceEvents) {
+    await page.waitForLoadState('networkidle');
+    expect(
+      getCapturedResonanceBodies(capturedRequests, resonanceBagUrl),
+    ).toHaveLength(0);
+    return;
   }
+
+  await expect.poll(getPageViewBody, { timeout: 15000 }).toBeDefined();
+
+  const body = getPageViewBody();
+
+  expect(body).toHaveProperty('bag_metadata');
+  expect(body).toHaveProperty('events');
+
+  const metadata = body?.bag_metadata ?? {};
+  const event =
+    body?.events?.find(({ event_name: name }) => name === 'page.display') ?? {};
+
+  assertResonancePageViewParamsExist({
+    metadata,
+    event,
+    contentType,
+  });
+
+  expect(event.app_name).toBe(getResonanceAppName(service));
+  expect(event.content_type).toBe(contentType);
+  expect(event.event_name).toBe('page.display');
+  expect(event.page_name).toBe(pageIdentifier);
+  expect(metadata.event_category).toBe('page-view');
+  expect(fieldIsValidString(event.producer)).toBe(true);
+  expect(typeof event.site_id).toBe('number');
 };
 
 export const assertScrollableNavigationComponentView = async ({
@@ -1033,7 +987,9 @@ export const assertPodcastLinksComponentClick = async ({
   const rssLink = podcastLinks.getByRole('link', { name: /rss/i });
 
   const linkToClick =
-    (await rssLink.count()) > 0 ? rssLink.first() : podcastLinks.locator('a').first();
+    (await rssLink.count()) > 0
+      ? rssLink.first()
+      : podcastLinks.locator('a').first();
   await linkToClick.waitFor();
 
   const [request] = await Promise.all([
@@ -1104,10 +1060,7 @@ export const assertBillboardComponentClick = async ({
   await page
     .locator('[data-testid="billboard-maximum-1"]')
     .scrollIntoViewIfNeeded();
-  await page
-    .locator('[data-testid="billboard-maximum-1"] a')
-    .first()
-    .waitFor();
+  await page.locator('[data-testid="billboard-maximum-1"] a').first().waitFor();
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({
