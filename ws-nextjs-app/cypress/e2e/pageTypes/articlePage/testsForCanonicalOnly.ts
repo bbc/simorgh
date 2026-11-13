@@ -257,7 +257,10 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
-            cy.get(CONTINUE_READING_BUTTON_ID).nextAll().should('not.be.empty');
+            cy.get(CONTINUE_READING_BUTTON_ID)
+              .nextAll()
+              .its('length')
+              .should('be.greaterThan', 0);
             cy.get(CONTINUE_READING_BUTTON_ID).click();
             cy.get(CONTINUE_READING_BUTTON_ID).should('not.exist');
 
