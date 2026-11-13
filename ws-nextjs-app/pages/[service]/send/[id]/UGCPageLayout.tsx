@@ -46,48 +46,11 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     : fallbackBackground;
 
   const fields = sections?.flatMap(section => section.fields ?? []) ?? [];
-  const openCampaignContent =
-    settings.signinRequired && !isSignedIn ? (
-      <SignInRequiredScreen />
-    ) : (
-      <FormContextProvider
-        initialScreen={initialScreen}
-        fields={fields}
-        signinRequired={settings.signinRequired}
-      >
-        <FormContext.Consumer>
-          {({ screen }) => {
-            switch (screen) {
-              case 'form':
-                return (
-                  <FormScreen
-                    title={title}
-                    description={description}
-                    privacyNotice={privacyNotice?.default}
-                    sections={sections}
-                  />
-                );
-              case 'uploading':
-                return <UploadingScreen title={title} />;
-              case 'success':
-                return (
-                  <SuccessScreen
-                    title={title}
-                    replyEmailAddress={settings.replyEmailAddress}
-                    retentionPeriod={settings.retentionPeriodDays}
-                  />
-                );
-              case 'error':
-              default:
-                return <ErrorScreen title={title} />;
-            }
-          }}
-        </FormContext.Consumer>
-      </FormContextProvider>
-    );
+  const isOpenCampaign = campaignStatus === 'open';
+  const showSignIn = settings.signinRequired && !isSignedIn;
 
   const metadataTitle =
-    campaignStatus === 'open' ? title : `${closedHeading}: ${title}`;
+    isOpenCampaign ? title : `${closedHeading}: ${title}`;
 
   return (
     <>
@@ -114,9 +77,44 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
-              {campaignStatus === 'open' ? (
-                openCampaignContent
-              ) : (
+              {isOpenCampaign && showSignIn && <SignInRequiredScreen />}
+              {isOpenCampaign && !showSignIn && (
+                <FormContextProvider
+                  initialScreen={initialScreen}
+                  fields={fields}
+                  signinRequired={settings.signinRequired}
+                >
+                  <FormContext.Consumer>
+                    {({ screen }) => {
+                      switch (screen) {
+                        case 'form':
+                          return (
+                            <FormScreen
+                              title={title}
+                              description={description}
+                              privacyNotice={privacyNotice?.default}
+                              sections={sections}
+                            />
+                          );
+                        case 'uploading':
+                          return <UploadingScreen title={title} />;
+                        case 'success':
+                          return (
+                            <SuccessScreen
+                              title={title}
+                              replyEmailAddress={settings.replyEmailAddress}
+                              retentionPeriod={settings.retentionPeriodDays}
+                            />
+                          );
+                        case 'error':
+                        default:
+                          return <ErrorScreen title={title} />;
+                      }
+                    }}
+                  </FormContext.Consumer>
+                </FormContextProvider>
+              )}
+              {!isOpenCampaign && (
                 <ClosedScreen title={title} closingTime={closingTime} />
               )}
             </div>
