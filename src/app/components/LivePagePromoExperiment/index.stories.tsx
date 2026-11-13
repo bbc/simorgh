@@ -1,5 +1,5 @@
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import pidginLivePageBlock from './helpers/fixtureData';
+import pidginLivePageBlock from './fixtureData';
 import metadata from './metadata.json';
 import readme from './README.md';
 import LivePagePromoExperiment from '.';
