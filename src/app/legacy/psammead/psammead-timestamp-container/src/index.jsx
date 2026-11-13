@@ -9,6 +9,7 @@ const TimestampContainer = ({
   timestamp,
   dateTimeFormat,
   format = '',
+  isPublishedThisYear = false,
   isRelative = false,
   padding = true,
   prefix = '',
@@ -34,6 +35,7 @@ const TimestampContainer = ({
   if (altCalendar && !isRelative) {
     altDateTime = `${altCalendar.formatDate(
       localisedMoment({ locale, timestamp }),
+      { omitYear: isPublishedThisYear },
     )} -`;
   }
 

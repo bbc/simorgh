@@ -189,6 +189,218 @@ describe('Promo component - Image', () => {
 });
 
 describe('Promo component - Timestamp', () => {
+  describe('Publication year', () => {
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(new Date('2026-11-12T12:00:00Z'));
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('omits the year for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'mundo' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^3 noviembre$/,
+      );
+      expect(container.querySelector('time')).toHaveAttribute(
+        'datetime',
+        '2026-11-03',
+      );
+    });
+
+    it('includes the year for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'mundo',
+      });
+
+      expect(screen.getByText('3 noviembre 2025')).toBeInTheDocument();
+    });
+
+    it('renders the native Japanese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'japanese' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Japanese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'japanese',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
+    it('renders the native Simplified Chinese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'zhongwen', variant: 'simp' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Simplified Chinese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'zhongwen',
+        variant: 'simp',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
+    it('renders the native Traditional Chinese date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'zhongwen', variant: 'trad' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11月3日$/);
+    });
+
+    it('renders the Traditional Chinese date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'zhongwen',
+        variant: 'trad',
+      });
+
+      expect(screen.getByText('2025年11月3日')).toBeInTheDocument();
+    });
+
+    it('renders the native Korean date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'korean' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^11월 3일$/);
+    });
+
+    it('renders the Korean date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'korean',
+      });
+
+      expect(screen.getByText('2025년 11월 3일')).toBeInTheDocument();
+    });
+
+    // Persian/Pashto also render an alternative Jalaali calendar date
+    // alongside the Gregorian one. The year should be omitted from both
+    // calendars together for same-year dates, so they stay consistent.
+    it('renders the Persian date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'persian' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^۱۲ آبان - ۳ نوامبر$/,
+      );
+    });
+
+    it('renders the Persian date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'persian',
+      });
+
+      expect(
+        screen.getByText('۱۲ آبان ۱۴۰۴ - ۳ نوامبر ۲۰۲۵'),
+      ).toBeInTheDocument();
+    });
+
+    it('renders the Pashto date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'pashto' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^۱۲ لړم - ۳ نومبر$/,
+      );
+    });
+
+    it('renders the Pashto date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'pashto',
+      });
+
+      expect(
+        screen.getByText('۱۲ لړم ۱۴۰۴ - ۳ نومبر ۲۰۲۵'),
+      ).toBeInTheDocument();
+    });
+
+    it('renders the native Hungarian date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'magyarul' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^november 3\.$/,
+      );
+    });
+
+    it('renders the Hungarian date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'magyarul',
+      });
+
+      expect(screen.getByText('2025. november 3.')).toBeInTheDocument();
+    });
+
+    it('renders the native Sinhala date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'sinhala' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^නොවැම්බර් 3$/,
+      );
+    });
+
+    it('renders the Sinhala date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'sinhala',
+      });
+
+      expect(screen.getByText('2025 නොවැම්බර් 3')).toBeInTheDocument();
+    });
+  });
+
+  describe('Publication year across a timezone boundary', () => {
+    // The Japanese service uses the Asia/Tokyo timezone (UTC+9). A timestamp
+    // that falls in the previous calendar year in UTC can already be in the
+    // "current" year once converted to the service's local timezone. This
+    // confirms the year comparison is timezone-aware rather than comparing
+    // raw UTC years.
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(new Date('2026-01-01T10:00:00Z')); // 2026-01-01 19:00 in Tokyo
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('omits the year when the UTC year differs but the local year matches', () => {
+      const { container } = render(
+        <Fixture timestamp="2025-12-31T16:00:00Z" />, // 2026-01-01 01:00 in Tokyo
+        { service: 'japanese' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(/^1月1日$/);
+    });
+  });
+
   describe('Past dates', () => {
     it('should render timestamp in string format', () => {
       const stringTimestamp = '2023-11-03T05:17:09.393Z';
@@ -207,7 +419,16 @@ describe('Promo component - Timestamp', () => {
   });
 
   describe('Relative times', () => {
-    const epochTimeNow = Date.now();
+    const epochTimeNow = new Date('2026-11-12T12:00:00Z').getTime();
+
+    beforeEach(() => {
+      jest.useFakeTimers();
+      jest.setSystemTime(epochTimeNow);
+    });
+
+    afterEach(() => {
+      jest.useRealTimers();
+    });
 
     const calcTimestampMinutesAgo = minutes =>
       new Date(epochTimeNow - 60 * 1000 * minutes);
@@ -285,10 +506,9 @@ describe('Promo component - Timestamp', () => {
     });
     describe('Relative time more than 10 hours ago', () => {
       moment.locale('es');
-      // We are using 10 to test more than 10 hours, because by the time the test has reached the expect assertion, milliseconds have passed.
       it('should render timestamp in ISO string format', () => {
-        const overTenHoursString = calcTimestampHoursAgo(10).toISOString();
-        const dateTenHoursAgo = moment.utc(overTenHoursString).format('LL');
+        const overTenHoursString = calcTimestampHoursAgo(11).toISOString();
+        const dateTenHoursAgo = moment.utc(overTenHoursString).format('D MMMM');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursString} />,
           {
@@ -298,8 +518,8 @@ describe('Promo component - Timestamp', () => {
         expect(getByText(dateTenHoursAgo)).toBeInTheDocument();
       });
       it('should render timestamp in epoch format', () => {
-        const overTenHoursEpoch = calcTimestampHoursAgo(10).getTime();
-        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('LL');
+        const overTenHoursEpoch = calcTimestampHoursAgo(11).getTime();
+        const dateTenHoursAgo = moment.utc(overTenHoursEpoch).format('D MMMM');
         const { getByText } = render(
           <Fixture timestamp={overTenHoursEpoch} />,
           {

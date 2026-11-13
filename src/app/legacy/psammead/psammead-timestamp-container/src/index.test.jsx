@@ -10,9 +10,9 @@ const elevenMonthsFromNow = moment(Date.now()).subtract(11, 'months').valueOf();
 const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidData = '8640000000000001'; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 const mockCalendar = {
-  formatDate: momentLocale => {
+  formatDate: (momentLocale, { omitYear = false } = {}) => {
     if (momentLocale) {
-      return '27 مهر 1397';
+      return omitYear ? '27 مهر' : '27 مهر 1397';
     }
     return null;
   },
@@ -113,6 +113,24 @@ describe('Timestamp', () => {
 
         const time = container.querySelector('time');
         expect(time.textContent).toEqual('۱۱ ماه پیش');
+      });
+
+      it('should omit the year from the alternative calendar when isPublishedThisYear is true', () => {
+        const { container } = render(
+          <Timestamp
+            timestamp={defaultTimestamp}
+            dateTimeFormat="YYYY-MM-DD"
+            format="D MMMM"
+            isRelative={false}
+            isPublishedThisYear
+            locale="fa"
+            altCalendar={mockCalendar}
+          />,
+          { service: 'persian' },
+        );
+
+        const time = container.querySelector('time');
+        expect(time.textContent).toEqual('27 مهر - ۱۹ اکتبر');
       });
     });
 
