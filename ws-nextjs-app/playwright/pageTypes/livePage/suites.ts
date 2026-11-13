@@ -42,24 +42,24 @@ const livePageAtiTestSuites: AtiLivePageTestSuite[] = [
     applicationType: 'responsive',
     contentType: 'live-coverage',
   },
-  // {
-  //   path: '/pidgin/live/c7p765ynk9qt',
-  //   service: 'pidgin',
-  //   runForEnv: ['local'],
-  //   pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
-  //   siteId: 70,
-  //   applicationType: 'responsive',
-  //   contentType: 'live-coverage',
-  // },
-  // {
-  //   path: '/urdu/live/cx2qdkezzzvt',
-  //   service: 'urdu',
-  //   runForEnv: ['live'],
-  //   pageIdentifier: 'live_coverage.cx2qdkezzzvt.page',
-  //   siteId: 95,
-  //   applicationType: 'responsive',
-  //   contentType: 'live-coverage',
-  // },
+  {
+    path: '/pidgin/live/c7p765ynk9qt',
+    service: 'pidgin',
+    runForEnv: ['local'],
+    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+  },
+  {
+    path: '/urdu/live/cx2qdkezzzvt',
+    service: 'urdu',
+    runForEnv: ['live'],
+    pageIdentifier: 'live_coverage.cx2qdkezzzvt.page',
+    siteId: 95,
+    applicationType: 'responsive',
+    contentType: 'live-coverage',
+  },
 ];
 
 export const livePageSuites = {

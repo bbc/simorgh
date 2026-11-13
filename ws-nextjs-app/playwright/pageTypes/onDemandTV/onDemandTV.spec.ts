@@ -29,6 +29,7 @@ type OnDemandTVPageData = {
   }>;
 };
 
+/* eslint-disable camelcase */
 type OnDemandTVWindow = Window & {
   __NEXT_DATA__?: {
     props?: {
@@ -39,6 +40,7 @@ type OnDemandTVWindow = Window & {
   };
   _sf_async_config?: unknown;
 };
+/* eslint-enable camelcase */
 
 type ServiceToggleConfig = {
   recentVideoEpisodes?: {
@@ -270,7 +272,6 @@ test.describe('onDemandTV', () => {
             '[data-e2e="recent-episodes-list"]',
           );
 
-        
           if (recentEpisodesEnabled) {
             // Assertions are limited to Canonical where __NEXT_DATA__ is available
             if (!isLite) {

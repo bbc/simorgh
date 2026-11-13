@@ -176,9 +176,6 @@ const assertResonancePageViewParamsExist = ({
   event: Record<string, unknown>;
   contentType: string;
 }) => {
-  console.log('metadata:', metadata);
-  console.log('event:', event);
-
   expect(metadata).toHaveProperty('client_name');
   expect(metadata).toHaveProperty('collection_library_name');
   expect(metadata).toHaveProperty('collection_library_version');
@@ -325,7 +322,7 @@ const waitForResonanceComponentBody = async ({
 };
 
 /* eslint-disable camelcase */
-const assertResonanceComponentEvent = ({
+const assertResonanceViewabilityEvent = ({
   body,
   action,
   component,
@@ -407,7 +404,6 @@ export const assertResonancePageView = async ({
   service,
   appEnv,
 }: AtiAssertionFnProps) => {
-  console.log('Resonance page view being asserted');
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
   const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -420,8 +416,6 @@ export const assertResonancePageView = async ({
   const parseResonanceBody = (request: Request) => {
     const rawPostData = request.postData();
     if (!rawPostData) return null;
-
-    console.log('Raw post data:', rawPostData);
 
     try {
       return JSON.parse(rawPostData) as {
@@ -448,12 +442,9 @@ export const assertResonancePageView = async ({
   try {
     await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-    console.log('Page navigated to:', `${baseURL}${path}`);
-
     if (!sendsResonanceEvents) {
       await page.waitForLoadState('networkidle');
       expect(matchedRequests).toHaveLength(0);
-      console.log('No resonance events sent');
       return;
     }
 
@@ -462,7 +453,6 @@ export const assertResonancePageView = async ({
         timeout: 15000,
       })
       .toBeGreaterThan(0);
-    console.log('Resonance events detected:', matchedRequests.length);
 
     await expect
       .poll(
@@ -485,11 +475,8 @@ export const assertResonancePageView = async ({
         candidateBody => candidateBody?.bag_metadata && candidateBody?.events,
       );
 
-    console.log('Resonance body blah:', resonanceBody);
-
     if (!resonanceBody) {
       expect(matchedRequests.length).toBeGreaterThan(0);
-      console.log('No valid resonance body found');
       return;
     }
 
@@ -506,7 +493,6 @@ export const assertResonancePageView = async ({
     });
 
     expect(event.app_name).toBe(getResonanceAppName(service));
-    console.log('Asserting resonance event app_name:', event.app_name);
     expect(event.content_type).toBe(contentType);
     expect(event.event_name).toBe('page.display');
     expect(event.page_name).toBe(pageIdentifier);
@@ -675,7 +661,7 @@ export const assertScrollableNavigationResonanceComponentView = async ({
     action: 'view',
   });
 
-  assertResonanceComponentEvent({
+  assertResonanceViewabilityEvent({
     body,
     action: 'view',
     component: COMPONENTS.SCROLLABLE_NAVIGATION,
@@ -714,7 +700,7 @@ export const assertScrollableNavigationResonanceComponentClick = async ({
     action: 'select',
   });
 
-  assertResonanceComponentEvent({
+  assertResonanceViewabilityEvent({
     body,
     action: 'select',
     component: COMPONENTS.SCROLLABLE_NAVIGATION,
@@ -742,7 +728,7 @@ export const assertDropdownNavigationResonanceComponentView = async ({
     action: 'view',
   });
 
-  assertResonanceComponentEvent({
+  assertResonanceViewabilityEvent({
     body,
     action: 'view',
     component: COMPONENTS.DROPDOWN_NAVIGATION,
@@ -779,7 +765,7 @@ export const assertDropdownNavigationResonanceComponentClick = async ({
     action: 'select',
   });
 
-  assertResonanceComponentEvent({
+  assertResonanceViewabilityEvent({
     body,
     action: 'select',
     component: COMPONENTS.DROPDOWN_NAVIGATION,
