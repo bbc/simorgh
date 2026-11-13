@@ -1,0 +1,36 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  background-color: theme.$palette-grey-2;
+  padding: theme.$spacings-double theme.$spacings-full;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding: theme.$spacings-double;
+  }
+
+  // Bleed through the navigation wrapper's inline margin
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-inline: theme.pixelsToRem-px-to-rem(-12.8);
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: none;
+  }
+}
+
+.promo {
+  @include theme.typography-from-scale-and-variant(pica, 'serif-bold');
+  padding: theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: theme.pixelsToRem-px-to-rem(10) theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: theme.pixelsToRem-px-to-rem(1) solid transparent;
+  }
+}
