@@ -11,11 +11,13 @@ import {
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import { topStoriesBlocksWithLiveItem } from '#app/components/TopBarOJs/helpers/fixtureData';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   render,
   act,
   fireEvent,
+  within,
 } from '../react-testing-library-with-providers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { service as newsConfig } from '../../lib/config/services/news';
@@ -120,6 +122,42 @@ describe('Navigation', () => {
         optimizely.user.attributes,
       );
     });
+  });
+
+  describe('live page promo experiment', () => {
+    const livePageBlock = topStoriesBlocksWithLiveItem[1];
+
+    const renderWithLivePageExperiment = (variation: string | null) => {
+      useOptimizelyVariationMock.mockImplementation(({ experimentName }) =>
+        experimentName === 'newswb_ws_contextual_live_promo' ? variation : null,
+      );
+
+      return render(
+        <Navigation
+          navItems={navItems}
+          // @ts-expect-error require partial data for testing purposes
+          propsForTopBarOJComponent={{ blocks: topStoriesBlocksWithLiveItem }}
+        />,
+        { pageType: ARTICLE_PAGE, service: 'pidgin' },
+      );
+    };
+
+    it('should render the live page promo for the "on" variation', () => {
+      const { getByTestId } = renderWithLivePageExperiment('on');
+
+      expect(
+        within(getByTestId('top-bar-live-promo')).getByRole('link'),
+      ).toHaveAttribute('href', livePageBlock.destinationUrl);
+    });
+
+    it.each([null, 'off'])(
+      'should not render the live page promo for the %s variation',
+      variation => {
+        const { queryByTestId } = renderWithLivePageExperiment(variation);
+
+        expect(queryByTestId('top-bar-live-promo')).not.toBeInTheDocument();
+      },
+    );
   });
 
   it('does not enable sticky navigation on AMP', () => {

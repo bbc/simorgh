@@ -16,6 +16,8 @@ import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
+import LivePagePromoExperiment from '#app/components/LivePagePromoExperiment';
+import useShowLivePagePromoExperiment from '#app/components/LivePagePromoExperiment/useShowLivePagePromoExperiment';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
@@ -81,6 +83,7 @@ const CanonicalNavigationContainer = ({
 }: CanonicalNavigationContainerProps) => {
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
+  const showLivePagePromo = useShowLivePagePromoExperiment(blocks);
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = useCallback(() => setIsOpen(false), []);
@@ -217,6 +220,11 @@ const CanonicalNavigationContainer = ({
     () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
     [topBarOJsEnabled, blocks],
   );
+  const livePagePromo = useMemo(
+    () =>
+      showLivePagePromo && <LivePagePromoExperiment blocks={blocks ?? []} />,
+    [showLivePagePromo, blocks],
+  );
   // Scrolling updates the sticky state several times a second. Nothing in
   // this subtree depends on that state, so it is rebuilt only when something
   // it actually uses changes.
@@ -262,6 +270,7 @@ const CanonicalNavigationContainer = ({
           </div>
         </div>
         <div css={styles.bottomDivider} />
+        {!sticky.isEnabled && livePagePromo}
         {!sticky.isEnabled && topBarOJs}
       </Navigation>
     ),
@@ -274,6 +283,7 @@ const CanonicalNavigationContainer = ({
       bottomScrollableListItems,
       dropdownListItems,
       sticky.isEnabled,
+      livePagePromo,
       topBarOJs,
       toggleMenu,
       navRef,
@@ -368,8 +378,9 @@ const CanonicalNavigationContainer = ({
           {stickyNavigation}
         </div>
       </div>
-      {topBarOJs && (
+      {(livePagePromo || topBarOJs) && (
         <Navigation dir={dir} role="presentation">
+          {livePagePromo}
           {topBarOJs}
         </Navigation>
       )}
