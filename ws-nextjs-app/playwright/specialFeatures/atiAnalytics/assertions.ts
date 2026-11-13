@@ -7,8 +7,8 @@ import {
   getResonanceBagUrl,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
-  captureResonanceRequestBodies,
-  getCapturedResonanceBodies,
+  captureResonanceRequests,
+  getCapturedResonancePayloads,
   COMPONENTS,
   type AppEnv,
 } from './helpers';
@@ -338,10 +338,11 @@ export const assertResonancePageView = async ({
 }: AtiAssertionFnProps) => {
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
-  const capturedRequests = await captureResonanceRequestBodies(page);
-  const getPageViewBody = () =>
-    getCapturedResonanceBodies(capturedRequests, resonanceBagUrl).find(body =>
-      body.events?.some(event => event.event_name === 'page.display'),
+  const capturedRequests = await captureResonanceRequests(page);
+  const getPageViewPayload = () =>
+    getCapturedResonancePayloads(capturedRequests, resonanceBagUrl).find(
+      payload =>
+        payload.events?.some(event => event.event_name === 'page.display'),
     );
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
@@ -349,21 +350,22 @@ export const assertResonancePageView = async ({
   if (!sendsResonanceEvents) {
     await page.waitForLoadState('networkidle');
     expect(
-      getCapturedResonanceBodies(capturedRequests, resonanceBagUrl),
+      getCapturedResonancePayloads(capturedRequests, resonanceBagUrl),
     ).toHaveLength(0);
     return;
   }
 
-  await expect.poll(getPageViewBody, { timeout: 15000 }).toBeDefined();
+  await expect.poll(getPageViewPayload, { timeout: 15000 }).toBeDefined();
 
-  const body = getPageViewBody();
+  const payload = getPageViewPayload();
 
-  expect(body).toHaveProperty('bag_metadata');
-  expect(body).toHaveProperty('events');
+  expect(payload).toHaveProperty('bag_metadata');
+  expect(payload).toHaveProperty('events');
 
-  const metadata = body?.bag_metadata ?? {};
+  const metadata = payload?.bag_metadata ?? {};
   const event =
-    body?.events?.find(({ event_name: name }) => name === 'page.display') ?? {};
+    payload?.events?.find(({ event_name: name }) => name === 'page.display') ??
+    {};
 
   assertResonancePageViewParamsExist({
     metadata,
