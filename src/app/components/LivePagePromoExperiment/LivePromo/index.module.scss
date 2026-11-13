@@ -1,0 +1,55 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  background-color: theme.$palette-grey-2;
+  padding: theme.$spacings-double theme.$spacings-full;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: none;
+  }
+}
+
+.promo {
+  background-color: theme.$palette-white;
+  padding: theme.$spacings-full;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-3;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: theme.$spacings-full theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: theme.pixelsToRem-px-to-rem(1) solid transparent;
+  }
+}
+
+.link {
+  @include theme.typography-from-scale-and-variant(pica, 'serif-bold');
+  display: block;
+  text-decoration: none;
+  color: theme.$palette-grey-8;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: theme.$palette-grey-6;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-10;
+  }
+}
