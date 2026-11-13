@@ -1,5 +1,5 @@
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { topStoriesBlocksWithLiveItem } from '../TopBarOJs/helpers/fixtureData';
+import pidginLivePageBlock from './helpers/fixtureData';
 import metadata from './metadata.json';
 import readme from './README.md';
 import LivePagePromoExperiment from '.';
@@ -32,5 +32,9 @@ export default {
 
 export const WithLivePage = () => (
   // @ts-expect-error partial data for storybook
-  <Component blocks={topStoriesBlocksWithLiveItem} />
+  <Component blocks={[pidginLivePageBlock]} />
 );
+
+WithLivePage.globals = {
+  service: { service: 'pidgin', variant: 'default' },
+};
