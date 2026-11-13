@@ -1,13 +1,8 @@
+import Promo from '#components/OptimoPromos';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
-import LiveLabel from '../LiveLabel';
-import {
-  getLivePageBlock,
-  getPromoHref,
-  getPromoTitle,
-} from './helpers/getPromoDetails';
+import getLivePageBlock from './helpers/getLivePageBlock';
 import styles from './index.module.scss';
 
 interface LivePagePromoExperimentProps {
@@ -18,9 +13,10 @@ const eventTrackingData: EventTrackingMetadata = {
   componentName: 'top-bar-live-promo',
 };
 
+const ariaLabelledBy = 'live-page-promo-experiment';
+
 const LivePagePromoExperiment = ({ blocks }: LivePagePromoExperimentProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const livePageBlock = getLivePageBlock(blocks);
 
@@ -34,16 +30,18 @@ const LivePagePromoExperiment = ({ blocks }: LivePagePromoExperimentProps) => {
       data-testid="top-bar-live-promo"
       {...viewTracker}
     >
-      <div className={styles.promo}>
-        <a
-          className={styles.link}
-          href={getPromoHref(livePageBlock)}
-          {...clickTrackerHandler}
-        >
-          <LiveLabel />
-          {getPromoTitle(livePageBlock)}
-        </a>
-      </div>
+      <Promo
+        className={styles.promo}
+        to={livePageBlock.destinationUrl}
+        ariaLabelledBy={ariaLabelledBy}
+        eventTrackingData={{ block: eventTrackingData }}
+      >
+        <Promo.Link>
+          <Promo.LiveLabel id={ariaLabelledBy}>
+            <Promo.Content headline={livePageBlock.headline} isLive />
+          </Promo.LiveLabel>
+        </Promo.Link>
+      </Promo>
     </div>
   );
 };

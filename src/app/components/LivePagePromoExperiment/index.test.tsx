@@ -1,5 +1,5 @@
 import * as viewTracking from '#hooks/useViewTracker';
-import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as clickTracking from '#hooks/useCombinedClickTrackerHandler';
 import { render } from '../react-testing-library-with-providers';
 import {
   topStoriesBlocks,
@@ -12,9 +12,9 @@ jest.mock('#hooks/useViewTracker', () => ({
   ...jest.requireActual('#hooks/useViewTracker'),
 }));
 
-jest.mock('#hooks/useClickTrackerHandler', () => ({
+jest.mock('#hooks/useCombinedClickTrackerHandler', () => ({
   __esModule: true,
-  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+  ...jest.requireActual('#hooks/useCombinedClickTrackerHandler'),
 }));
 
 describe('LivePagePromoExperiment', () => {
@@ -27,12 +27,11 @@ describe('LivePagePromoExperiment', () => {
       <LivePagePromoExperiment blocks={topStoriesBlocksWithLiveItem} />,
     );
 
-    expect(getByRole('link')).toHaveAttribute(
-      'href',
-      `https://www.bbc.com${livePageBlock.destinationUrl}`,
-    );
-    expect(getByRole('link')).toHaveTextContent(/^LIVE/);
-    expect(getByRole('link')).toHaveTextContent(`${livePageBlock.headline}`);
+    const link = getByRole('link', {
+      name: `Live, ${livePageBlock.headline}`,
+    });
+
+    expect(link).toHaveAttribute('href', livePageBlock.destinationUrl);
   });
 
   it.each([
@@ -61,6 +60,8 @@ describe('LivePagePromoExperiment', () => {
     );
 
     expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
-    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      block: eventTrackingData,
+    });
   });
 });
