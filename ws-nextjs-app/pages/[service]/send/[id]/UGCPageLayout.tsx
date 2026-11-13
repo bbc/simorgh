@@ -49,8 +49,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const isOpenCampaign = campaignStatus === 'open';
   const showSignIn = settings.signinRequired && !isSignedIn;
 
-  const metadataTitle =
-    isOpenCampaign ? title : `${closedHeading}: ${title}`;
+  const metadataTitle = isOpenCampaign ? title : `${closedHeading}: ${title}`;
 
   return (
     <>

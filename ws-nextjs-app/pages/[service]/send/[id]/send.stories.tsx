@@ -75,10 +75,10 @@ export const ClosedScreen = () => (
 export const FormWithMultipleSections = () => (
   <Component initialScreen="form" fixtureData={swahiliFormFixture} />
 );
-export const HindiAmaForm = () => (
+export const FormSignInRequiredSignedOut = () => (
   <Component initialScreen="form" fixtureData={hindiFormFixture} />
 );
-export const HindiAmaFormSignedIn = () => (
+export const FormSignInRequiredSignedIn = () => (
   <AccountContext.Provider
     value={
       {

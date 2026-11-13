@@ -43,6 +43,7 @@ const fallbackTranslations: UgcTranslations = {
 
   // Form Screen
   dataPolicyHeading: 'Our data policy',
+  // Draft copy; confirmation required as part of WS-3535.
   signInRequiredHeading: 'Sign in to submit',
   signInRequiredDescription:
     'You need to sign in or register for a BBC Account before submitting this form.',

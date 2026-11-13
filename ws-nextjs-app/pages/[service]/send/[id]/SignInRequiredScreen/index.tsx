@@ -6,6 +6,7 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import fallbackTranslations from '../fallbackTranslations';
 
+// This component will be fully implemented and tested as part of WS-3535.
 const SignInRequiredScreen = () => {
   const { signInUrl, registerUrl } = use(AccountContext);
   const {
