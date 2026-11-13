@@ -1,24 +1,19 @@
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import TopBarOJs from '../TopBarOJs';
 import LivePromo from './LivePromo';
 import { getLivePageBlock } from './helpers/getPromoDetails';
 
 interface LivePagePromoExperimentProps {
   blocks: TopStoryItem[];
-  id?: string;
 }
 
-const LivePagePromoExperiment = ({
-  blocks,
-  id,
-}: LivePagePromoExperimentProps) => {
+const LivePagePromoExperiment = ({ blocks }: LivePagePromoExperimentProps) => {
   const livePageBlock = getLivePageBlock(blocks);
 
-  if (livePageBlock) {
-    return <LivePromo block={livePageBlock} />;
+  if (!livePageBlock) {
+    return null;
   }
 
-  return <TopBarOJs blocks={blocks} id={id} />;
+  return <LivePromo block={livePageBlock} />;
 };
 
 export default LivePagePromoExperiment;

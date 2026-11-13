@@ -1,8 +1,5 @@
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import {
-  topStoriesBlocks,
-  topStoriesBlocksWithLiveItem,
-} from '../TopBarOJs/helpers/fixtureData';
+import { topStoriesBlocksWithLiveItem } from '../TopBarOJs/helpers/fixtureData';
 import metadata from './metadata.json';
 import readme from './README.md';
 import LivePagePromoExperiment from '.';
@@ -28,6 +25,3 @@ export const WithLivePage = () => (
   // @ts-expect-error partial data for storybook
   <Component blocks={topStoriesBlocksWithLiveItem} />
 );
-
-// @ts-expect-error partial data for storybook
-export const WithoutLivePage = () => <Component blocks={topStoriesBlocks} />;
