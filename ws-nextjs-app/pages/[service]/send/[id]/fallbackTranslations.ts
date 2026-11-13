@@ -43,6 +43,11 @@ const fallbackTranslations: UgcTranslations = {
 
   // Form Screen
   dataPolicyHeading: 'Our data policy',
+  signInRequiredHeading: 'Sign in to submit',
+  signInRequiredDescription:
+    'You need to sign in or register for a BBC Account before submitting this form.',
+  signInRequiredSignIn: 'Sign in',
+  signInRequiredRegister: 'Register',
 
   // Uploading Screen
   uploadingHeading: 'Uploading',
