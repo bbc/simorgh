@@ -6,12 +6,9 @@ import { isMobile } from '#app/contexts/AppOptimizelyProvider/userAttributes';
 import { ATIEventTrackingProps } from '../../types';
 import buildResonanceEventConfig from '.';
 
-jest.mock(
-  '#app/contexts/AppOptimizelyProvider/userAttributes',
-  () => ({
-    isMobile: jest.fn(),
-  }),
-);
+jest.mock('#app/contexts/AppOptimizelyProvider/userAttributes', () => ({
+  isMobile: jest.fn(),
+}));
 
 describe('buildResonanceEventConfig', () => {
   afterEach(() => {

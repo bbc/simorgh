@@ -124,7 +124,7 @@ optimizely?.notificationCenter?.addNotificationListener(
   },
 );
 
-export const AppOptimizelyProvider = ({ children }: PropsWithChildren) => {
+const AppOptimizelyProvider = ({ children }: PropsWithChildren) => {
   if (disableOptimizely) return children;
 
   const { service } = use(ServiceContext);
@@ -150,3 +150,5 @@ export const AppOptimizelyProvider = ({ children }: PropsWithChildren) => {
     </OptimizelyProvider>
   );
 };
+
+export default AppOptimizelyProvider;

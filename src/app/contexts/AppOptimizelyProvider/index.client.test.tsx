@@ -9,7 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '#app/components/ThemeProvider/fontScripts/latin';
-import { AppOptimizelyProvider } from '.';
+import AppOptimizelyProvider from '.';
 import { REFERRER_CATEGORIES } from './userAttributes';
 
 const optimizelyProviderSpy = jest.spyOn(
