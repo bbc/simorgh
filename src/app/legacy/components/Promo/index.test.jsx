@@ -336,6 +336,44 @@ describe('Promo component - Timestamp', () => {
         screen.getByText('۱۲ لړم ۱۴۰۴ - ۳ نومبر ۲۰۲۵'),
       ).toBeInTheDocument();
     });
+
+    it('renders the native Hungarian date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'magyarul' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^november 3\.$/,
+      );
+    });
+
+    it('renders the Hungarian date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'magyarul',
+      });
+
+      expect(screen.getByText('2025. november 3.')).toBeInTheDocument();
+    });
+
+    it('renders the native Sinhala date format for dates published this year', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'sinhala' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^නොවැම්බර් 3$/,
+      );
+    });
+
+    it('renders the Sinhala date format for dates published in a different year', () => {
+      render(<Fixture timestamp="2025-11-03T05:17:09.393Z" />, {
+        service: 'sinhala',
+      });
+
+      expect(screen.getByText('2025 නොවැම්බර් 3')).toBeInTheDocument();
+    });
   });
 
   describe('Publication year across a timezone boundary', () => {
