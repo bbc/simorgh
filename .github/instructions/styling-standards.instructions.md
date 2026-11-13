@@ -6,8 +6,11 @@ applyTo: "src/app/components/**"
 
 Simorgh is progressively migrating its styling foundation from Emotion (CSS-in-JS, `ThemeProvider`) to **SCSS Modules + CSS custom properties** (`ThemeProviderSCSSModules`). Both approaches co-exist during the migration, but:
 
-- Always use SCSS Modules for new component styling. Do not add new Emotion `css` prop or `styled` usage.
-- When modifying an existing Emotion-styled component, migrate it to SCSS Modules as part of that change.
+- Always use SCSS Modules for new component styling. Do not add new Emotion usage: no new `index.styles.ts` files, `styled` components, or `css` props on elements that don't already have one. Small in-place edits to an existing Emotion style object are allowed.
+- When modifying an existing Emotion-styled component, decide whether to migrate it based on the scope of the change:
+  - **Small or non-styling change** (logic, props, copy, tests, types, or a small in-place tweak to existing style values): do **not** migrate. Make the change in place and keep the diff focused.
+  - **Larger styling change** (adding new rules or restyling the component), or you're unsure: propose a migration and get the user's agreement before starting. Use the `ask_user` tool if it's available; otherwise end your response with: "This component still uses Emotion. Do you want me to migrate it to SCSS Modules using the `migrate-component-to-scss-modules` skill, either in this change or as a follow-up?"
+- Never start a migration the user hasn't requested or agreed to.
 
 ## Rules
 - Co-locate an `index.module.scss` file next to the component, import it as `styles`, and apply classes via `className`.

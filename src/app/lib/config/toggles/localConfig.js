@@ -91,6 +91,9 @@ export default {
     enabled: true,
     value: 'in',
   },
+  renderMarkDown: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },
@@ -98,9 +101,6 @@ export default {
     enabled: true,
   },
   showSportDataHeader: {
-    enabled: true,
-  },
-  stickyNavigation: {
     enabled: true,
   },
   topBarOJs: {

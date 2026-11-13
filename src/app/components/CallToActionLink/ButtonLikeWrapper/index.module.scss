@@ -1,0 +1,88 @@
+@use '@scss/themeTokens' as theme;
+
+.flexWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.glow {
+  @supports selector(a:has(> div)) and (mask-composite: exclude) {
+    :global(a):has(> &) {
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -#{theme.pixelsToRem-px-to-rem(4)};
+      padding: #{theme.pixelsToRem-px-to-rem(4)};
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(90deg, #F2F2F2, #BB001B, #7E0423, #180109, #7E0423, #BB001B, #F2F2F2);
+      background-size: 200% 100%;
+      mask:
+        linear-gradient(theme.$palette-white 0 0) content-box,
+        linear-gradient(theme.$palette-white 0 0);
+      mask-composite: exclude;
+      opacity: 0;
+      animation: revealGlow 4s ease-out;
+    }
+
+    &::after {
+      filter: blur(#{theme.pixelsToRem-px-to-rem(4)});
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      &::before,
+      &::after {
+        animation:
+          revealGlow 4s ease-out,
+          sweepGlow 4s ease-in-out;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::before,
+      &::after {
+        animation: staticGlow 4s step-end;
+      }
+    }
+
+    @media (forced-colors: active) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes revealGlow {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes staticGlow {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sweepGlow {
+  50% {
+    background-position: 100% 50%;
+  }
+}

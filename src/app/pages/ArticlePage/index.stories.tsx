@@ -26,8 +26,9 @@ import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
-import ArticlePageComponent from './ArticlePage';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import ArticlePageComponent from './ArticlePage';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
 
@@ -76,6 +77,7 @@ type Props = {
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
+  pathname?: string;
 };
 
 const ComponentWithContext = ({
@@ -85,6 +87,7 @@ const ComponentWithContext = ({
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
+  pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -106,7 +109,7 @@ const ComponentWithContext = ({
           isApp={false}
           pageType={ARTICLE_PAGE}
           service={service}
-          pathname="/news/articles/c000000000o"
+          pathname={pathname}
           id="c000000000o"
           isUK
         >
@@ -344,6 +347,21 @@ export const ArticlePageWithTopicDiscovery = {
   ),
   globals: {
     service: { service: 'portuguese', variant: 'default' },
+  },
+};
+
+export const ArticlePageWithSaveArticleButton = () => (
+  <ComponentWithContext
+    data={articleWithTopicDiscovery}
+    service="portuguese"
+    pathname="/portuguese/articles/cgmpgpllnp7o"
+  />
+);
+ArticlePageWithSaveArticleButton.globals = {
+  service: { service: 'portuguese', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'portuguese' },
   },
 };
 

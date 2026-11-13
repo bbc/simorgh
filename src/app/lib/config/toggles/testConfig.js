@@ -88,9 +88,6 @@ export default {
   showSportDataHeader: {
     enabled: false,
   },
-  stickyNavigation: {
-    enabled: true,
-  },
   topBarOJs: {
     enabled: true,
   },

@@ -1,3 +1,5 @@
+import userEvent from '@testing-library/user-event';
+import { matchers } from '@emotion/jest';
 import {
   render,
   screen,
@@ -10,6 +12,8 @@ import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage from '.';
+
+expect.extend(matchers);
 
 const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
 
@@ -247,6 +251,31 @@ describe('MyNewsPage', () => {
       expect(screen.getByRole('link', { name: '2' })).toBeInTheDocument();
     });
   });
+
+  it.each([
+    { total: 2, paginationCount: 0 },
+    { total: 25, paginationCount: 1 },
+  ])(
+    'keeps bottom spacing before the footer with $total saved articles',
+    async ({ total, paginationCount }) => {
+      mockUseRecentActivity.mockReturnValue({
+        savedArticles: mockSavedArticles,
+        total,
+        isLoading: false,
+        error: null,
+      });
+
+      await act(async () => {
+        render(<MyNewsPage />, renderOptions);
+      });
+
+      expect(screen.getByRole('main')).toHaveStyleRule(
+        'margin-block',
+        '0 1rem',
+      );
+      expect(screen.queryAllByRole('navigation')).toHaveLength(paginationCount);
+    },
+  );
 
   it('should call useUASRecentActivity with correct pagination params', async () => {
     await act(async () => {
@@ -508,6 +537,7 @@ describe('MyNewsPage', () => {
   });
 
   it('should cap followed topics at 9 and toggle the rest via the "see more"/"see less" button', async () => {
+    const user = userEvent.setup();
     const manyFollowedTopics = Array.from({ length: 13 }, (_, i) => ({
       id: `topic-${i}`,
       title: `Topic ${i}`,
@@ -540,9 +570,7 @@ describe('MyNewsPage', () => {
     });
     expect(seeMoreButton).toHaveAttribute('aria-expanded', 'false');
 
-    await act(async () => {
-      seeMoreButton.click();
-    });
+    await user.click(seeMoreButton);
 
     await waitFor(() => {
       expect(
@@ -554,6 +582,16 @@ describe('MyNewsPage', () => {
       name: myNewsTranslations.seeLessTopics,
     });
     expect(seeLessButton).toHaveAttribute('aria-expanded', 'true');
+    expect(seeLessButton).toHaveFocus();
+
+    await user.tab();
+    expect(
+      screen.getByRole('link', { name: manyFollowedTopics[9].title }),
+    ).toHaveFocus();
+    await user.tab();
+    expect(
+      screen.getByRole('link', { name: manyFollowedTopics[10].title }),
+    ).toHaveFocus();
 
     await act(async () => {
       seeLessButton.click();

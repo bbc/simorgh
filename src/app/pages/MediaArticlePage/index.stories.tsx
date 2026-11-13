@@ -1,6 +1,9 @@
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { PageTypes, Services } from '#app/models/types/global';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -17,7 +20,6 @@ import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json'
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaArticlePageComponent from './MediaArticlePage';
-import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 
 const Page = withOptimizelyProvider(MediaArticlePageComponent);
 
@@ -27,6 +29,7 @@ type Props = {
   service?: Services;
   isLite?: boolean;
   pageType?: PageTypes;
+  pathname?: string;
 };
 
 const ComponentWithContext = ({
@@ -34,6 +37,7 @@ const ComponentWithContext = ({
   service = 'news',
   isLite,
   pageType = MEDIA_ARTICLE_PAGE,
+  pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -49,21 +53,23 @@ const ComponentWithContext = ({
           isLite={isLite}
           pageType={pageType}
           service={service}
-          pathname="/news/articles/c000000000o"
+          pathname={pathname}
           isUK
           id="c000000000o"
         >
           <UserContextProvider>
-            <ThemeProvider service={service}>
-              <PageLayoutWrapper pageData={data.article} status={200}>
-                <Page
-                  pageData={{
-                    ...data.article,
-                    secondaryColumn: data.secondaryData,
-                  }}
-                />
-              </PageLayoutWrapper>
-            </ThemeProvider>
+            <ThemeProviderSCSSModules service={service}>
+              <ThemeProvider service={service}>
+                <PageLayoutWrapper pageData={data.article} status={200}>
+                  <Page
+                    pageData={{
+                      ...data.article,
+                      secondaryColumn: data.secondaryData,
+                    }}
+                  />
+                </PageLayoutWrapper>
+              </ThemeProvider>
+            </ThemeProviderSCSSModules>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -121,3 +127,18 @@ export const MediaArticlePageWithPortraitVideoWithCaption = (
     isLite={isLite}
   />
 );
+
+export const MediaArticlePageWithSaveArticleButton = () => (
+  <ComponentWithContext
+    data={portraitVideoArticle}
+    service="portuguese"
+    pathname="/portuguese/articles/cn7v03e37eko"
+  />
+);
+MediaArticlePageWithSaveArticleButton.globals = {
+  service: { service: 'portuguese', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'portuguese' },
+  },
+};
