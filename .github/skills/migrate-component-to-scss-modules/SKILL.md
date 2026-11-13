@@ -31,9 +31,7 @@ Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlo
 
 Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
 
-Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked.
-
-When a consumer owns a real DOM context for an override, express that relationship in SCSS rather than adding a wrapper solely to increase specificity. Use an ancestor selector (for example `.errorLinkWrapper .inlineLink`) or an element-qualified selector when the component fixes the element type (for example `p.copyright`). Exclude pseudo-states that remain owned by the shared component, such as `:visited`, `:hover`, and `:focus`. CSS Modules scopes class names but does not give a parent component automatic precedence. Use duplicated selectors only as a documented last resort when no meaningful context exists.
+Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked. When migrating the consumer's override, follow [Overrides across component boundaries](#overrides-across-component-boundaries).
 
 Keep migrations focused on preserving existing behaviour and public APIs.
 Justify any API or typing changes separately using actual consumer needs;
@@ -271,11 +269,53 @@ the final inlined `style[amp-custom]` payload and keep the total below AMP's
 hard 75 KB limit. This is an additional AMP requirement; the CSS-minimization
 guidance applies to all editions.
 
-### Consumer-owned style overrides
+### Overrides across component boundaries
 
-When a migrated component needs a consumer-specific default style, keep the shared component's state rules and scope the override to the consumer's DOM context:
+With Emotion, a `className` passed by a parent took precedence over the child's `css` prop. CSS Modules have no equivalent: they scope class names but do not give a React parent automatic precedence, and the order of classes in the HTML does not control the cascade.
+
+Put each override in the stylesheet of the component that renders the child, and give it a selector that wins on specificity. Where that stylesheet sits determines where the override applies:
+
+- **Inside a compound component's part:** the rule applies wherever that part is used, however consumers arrange the parts.
+- **Inside one consumer:** the rule applies only within that consumer.
+
+#### Overrides inside a compound component's part
+
+When a part of a compound component needs to change a shared primitive it renders, pass a locally scoped class through the primitive's `className` prop and express the DOM relationship in the selector. `CallToActionLink.Text` passes `styles.text` to the shared `Text` component, which still sets a default colour with a single Emotion class:
 
 ```scss
+a .text {
+  color: inherit;
+}
+```
+
+`a .text` has specificity `(0,1,1)`, which beats `Text`'s single-class default `(0,1,0)`, so the text inherits the link's colour. This relies on `.Text` being rendered inside `CallToActionLink`, which renders the `<a>`. Consumers can add their own elements in between, because a descendant selector matches at any depth.
+
+#### Overrides inside one consumer
+
+When one consumer needs a different default style for a child, keep the child's state rules and scope the override to a real DOM context: an element the consumer already renders around the child for its own reasons. Exclude pseudo-states the child still owns.
+
+For example, the shared `InlineLink` styles every link state with its own `.self` class:
+
+```scss
+// InlineLink/index.module.scss
+.self {
+  color: theme.$palette-ebon;
+
+  &:visited {
+    color: theme.$palette-metal;
+  }
+
+  &:focus,
+  &:hover {
+    color: theme.$palette-postbox;
+  }
+}
+```
+
+`EmbedError` renders `InlineLink` inside its own layout wrapper, `<div className={styles.errorLinkWrapper}>`, and passes `className={styles.inlineLink}`. To make only the default state black, it names the wrapper and excludes the states `InlineLink` still owns:
+
+```scss
+// EmbedError/index.module.scss
 .errorLinkWrapper {
   .inlineLink:not(:visited):not(:hover):not(:focus) {
     color: theme.$palette-black;
@@ -285,7 +325,25 @@ When a migrated component needs a consumer-specific default style, keep the shar
 }
 ```
 
-Do not assume the order of classes in the HTML or the React parent-child relationship controls the CSS cascade. Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+The override's `(0,5,0)` beats `.self` `(0,1,0)` in the default state. It does not match visited, hover or focus, so `InlineLink`'s `(0,2,0)` state rules still apply there. Without the exclusions, `.errorLinkWrapper .inlineLink` would be `(0,2,0)`, tying with `InlineLink`'s `:visited`, `:hover` and `:focus` rules. Whichever stylesheet loads later would win, so the link could stay black when visited, hovered or focused.
+
+If there is no real DOM context, use an element-qualified selector when the component always renders the same element (for example `p.copyright`, a `<p>` with class `copyright`). Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+
+As a documented last resort, when no meaningful context exists, repeat the class to raise its specificity:
+
+```scss
+// Last resort: no wrapper or fixed element type to qualify the selector.
+.inlineLink.inlineLink {
+  color: theme.$palette-black;
+}
+```
+
+`.inlineLink.inlineLink` matches the same element as `.inlineLink` but has specificity `(0,2,0)`.
+
+#### Rules for both patterns
+
+- **Make the override strictly more specific.** Equal specificity falls back to source order, which differs between canonical, AMP and Lite because stylesheet order and inlining differ by edition.
+- **Use the smallest specificity that wins.** Every increase sets the bar for any later override of the same element.
 
 ## Step 4: Apply the change
 
