@@ -1,6 +1,6 @@
 const pidginLivePageBlock = {
   headline:
-    'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
   destinationUrl: '/pidgin/live/c7p765ynk9qt',
   isLive: true,
   serviceIdentifier: 'pidgin',
