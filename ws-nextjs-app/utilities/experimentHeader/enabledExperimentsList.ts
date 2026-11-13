@@ -41,7 +41,7 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
   },
   {
     name: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
-    services: ['pidgin'],
+    services: ['mundo'],
     pageTypes: ['article'],
   },
 ];
