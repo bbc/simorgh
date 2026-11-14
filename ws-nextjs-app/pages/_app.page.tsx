@@ -133,8 +133,8 @@ export default function CustomApp({
           isUK={isUK ?? false}
           primaryMediaType={primaryMediaType}
         >
-          <AccountProvider initialConfig={idctaConfig}>
-            <AppOptimizelyProvider>
+          <AppOptimizelyProvider>
+            <AccountProvider initialConfig={idctaConfig}>
               <ReverbParamsContextProvider metadata={pageData?.metadata}>
                 <EventTrackingContextProvider atiData={atiAnalytics}>
                   {isAvEmbeds ? (
@@ -163,8 +163,8 @@ export default function CustomApp({
                   )}
                 </EventTrackingContextProvider>
               </ReverbParamsContextProvider>
-            </AppOptimizelyProvider>
-          </AccountProvider>
+            </AccountProvider>
+          </AppOptimizelyProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

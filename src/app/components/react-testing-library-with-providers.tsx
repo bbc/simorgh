@@ -101,8 +101,8 @@ const AllTheProviders: FC<Props> = ({
           isUK={isUK}
           serverSideExperiments={serverSideExperiments}
         >
-          <AccountProvider initialConfig={idctaConfig}>
-            <AppOptimizelyProvider>
+          <AppOptimizelyProvider>
+            <AccountProvider initialConfig={idctaConfig}>
               <ReverbParamsContextProvider metadata={pageMetadata}>
                 <EventTrackingContextProvider
                   atiData={pageMetadata?.atiAnalytics}
@@ -114,8 +114,8 @@ const AllTheProviders: FC<Props> = ({
                   </UserContextProvider>
                 </EventTrackingContextProvider>
               </ReverbParamsContextProvider>
-            </AppOptimizelyProvider>
-          </AccountProvider>
+            </AccountProvider>
+          </AppOptimizelyProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
