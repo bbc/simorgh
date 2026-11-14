@@ -5,7 +5,7 @@ import LiveElectionBanner from '.';
 
 const ELEMENT_ID = 'election-banner';
 
-// Rendered through the Next.js provider tree, which lazy-loads withOptimizelyProvider;
+// Rendered through the test provider tree, which includes AppOptimizelyProvider;
 // await act so that resolves before assertions run.
 const renderLiveElectionBanner = async (
   options?: Parameters<typeof render>[1],

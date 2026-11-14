@@ -22,7 +22,7 @@ The `OptimizelyPageMetric` component:
 | trackPageDepth    | boolean | false   | Enables tracking of scroll depth.   |
 | trackPageComplete | boolean | false   | Enables tracking of page completes. |
 
-> Page view (`page-views`) and visit (`visit`) events are not controlled by this component. They are tracked from the Optimizely `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx). See [Page views per visit ratio metric](#page-views-per-visit-ratio-metric) below.
+> Page view (`page-views`) and visit (`visit`) events are not controlled by this component. They are tracked from the Optimizely `DECISION` notification listener in [`AppOptimizelyProvider`](../../contexts/AppOptimizelyProvider/index.tsx). See [Page views per visit ratio metric](#page-views-per-visit-ratio-metric) below.
 
 ## experimentsForPageMetrics Array
 
@@ -87,7 +87,7 @@ The page views per visit ratio metric is built from two Optimizely events:
 - numerator: `page-views`
 - denominator: `visit`
 
-Both events are tracked from the `DECISION` notification listener in [`withOptimizelyProvider`](../../legacy/containers/PageHandlers/withOptimizelyProvider/index.tsx), not from this component. Tracking them from the listener ensures the visit (denominator) is always sent before the page view (numerator) on the same page load, so the page view falls inside Optimizely's 48 hour attribution window for the denominator. Tracking from the listener also guarantees the events fire for every activated experiment, independent of this component's render lifecycle.
+Both events are tracked from the `DECISION` notification listener in [`AppOptimizelyProvider`](../../contexts/AppOptimizelyProvider/index.tsx), not from this component. Tracking them from the listener ensures the visit (denominator) is always sent before the page view (numerator) on the same page load, so the page view falls inside Optimizely's 48 hour attribution window for the denominator. Tracking from the listener also guarantees the events fire for every activated experiment, independent of this component's render lifecycle.
 
 Events are de-duplicated per navigation: while the current URL (pathname + query string) is unchanged, multiple `DECISION` notifications will only emit `page-views` (and `visit`) once; navigating to a different URL and later returning may emit `page-views` again, and `visit` will only emit when the 30-minute inactivity window has elapsed.
 

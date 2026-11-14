@@ -8,24 +8,9 @@ import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider from '.';
+import latin from '#app/components/ThemeProvider/fontScripts/latin';
+import AppOptimizelyProvider from '.';
 import { REFERRER_CATEGORIES } from './userAttributes';
-
-const props = {
-  bbcOrigin: 'https://www.bbc.com',
-  id: 'c0000000000o',
-  service: 'news',
-  isAmp: true,
-  pathname: '/pathname',
-  status: 200,
-  showAdsBasedOnLocation: true,
-  toggles: {
-    testToggle: {
-      enabled: false,
-    },
-  },
-};
 
 const optimizelyProviderSpy = jest.spyOn(
   optimizelyReactSdk,
@@ -35,8 +20,6 @@ const optimizelyProviderSpy = jest.spyOn(
 const Component = () => <h1>Hola Optimizely</h1>;
 
 const TestComponent = ({ country }: { country?: string }) => {
-  const OptimizelyComponent = withOptimizelyProvider(Component);
-
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
@@ -50,7 +33,9 @@ const TestComponent = ({ country }: { country?: string }) => {
   return (
     <ServiceContext.Provider value={memoizedServiceContextValue}>
       <RequestContext.Provider value={memoizedRequestContextValue}>
-        <OptimizelyComponent {...props} />
+        <AppOptimizelyProvider>
+          <Component />
+        </AppOptimizelyProvider>
       </RequestContext.Provider>
     </ServiceContext.Provider>
   );
@@ -59,7 +44,7 @@ const TestComponent = ({ country }: { country?: string }) => {
 jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
 jest.mock('@optimizely/react-sdk');
 
-describe('withOptimizelyProvider HOC', () => {
+describe('AppOptimizelyProvider', () => {
   const originalMatchMedia = window.matchMedia;
 
   beforeEach(() => {
@@ -72,7 +57,7 @@ describe('withOptimizelyProvider HOC', () => {
     window.matchMedia = originalMatchMedia;
   });
 
-  it('should enrich the component with the Optimizely API', () => {
+  it('should provide the Optimizely API to its children', () => {
     const optimizelyProviderRenderSpy = jest.spyOn(
       optimizelyReactSdk.OptimizelyProvider.prototype,
       'render',
@@ -83,22 +68,37 @@ describe('withOptimizelyProvider HOC', () => {
     expect(optimizelyProviderRenderSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('should return undefined when ckns_mvt is fetched with Cookie.get', () => {
-    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    render(<TestComponent />);
+  describe('user id', () => {
+    const getUserId = () =>
+      (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.id;
 
-    expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
-    expect(cookieGetterSpy).toHaveReturnedWith(undefined);
-  });
+    it('should use the existing ckns_mvt cookie value as the user id', () => {
+      Cookie.set('ckns_mvt', 'random-uuid');
 
-  it('should return the correct ckns_mvt cookie value from Cookie.get', () => {
-    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    Cookie.set('ckns_mvt', 'random-uuid');
+      render(<TestComponent />);
 
-    render(<TestComponent />);
+      expect(getUserId()).toBe('random-uuid');
+    });
 
-    expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
-    expect(cookieGetterSpy).toHaveReturnedWith('random-uuid');
+    it('should create the ckns_mvt cookie and use it as the user id on a first visit', () => {
+      expect(Cookie.get('ckns_mvt')).toBeUndefined();
+
+      render(<TestComponent />);
+
+      const cookieValue = Cookie.get('ckns_mvt');
+      expect(cookieValue).toEqual(expect.any(String));
+      expect(getUserId()).toBe(cookieValue);
+    });
+
+    it('should not replace an existing ckns_mvt cookie', () => {
+      Cookie.set('ckns_mvt', 'random-uuid');
+      const cookieSetterSpy = jest.spyOn(Cookie, 'set');
+
+      render(<TestComponent />);
+
+      expect(cookieSetterSpy).not.toHaveBeenCalled();
+      expect(Cookie.get('ckns_mvt')).toBe('random-uuid');
+    });
   });
 
   describe('mobile attribute', () => {

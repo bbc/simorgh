@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import withRequestProps from '#utilities/pageRequests/withRequestProps';
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ArticlePageProps } from './types';
 import handleArticleRoute from './handleArticleRoute';
 
@@ -15,10 +14,7 @@ type PageProps = {
   pageType?: PageTypes;
 } & ArticlePageProps;
 
-const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
-  pageType,
-  ...rest
-}: PageProps) {
+const PageTypeToRender = ({ pageType, ...rest }: PageProps) => {
   switch (pageType) {
     case ARTICLE_PAGE:
       return <ArticlePage {...rest} />;
@@ -27,7 +23,7 @@ const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
     default:
       return null;
   }
-});
+};
 
 export default PageTypeToRender;
 

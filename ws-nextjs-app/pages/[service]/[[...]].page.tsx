@@ -18,7 +18,6 @@ import {
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#utilities/derivePageType';
@@ -162,7 +161,7 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return withOptimizelyProvider(ArticlePage)({ ...props });
+      return <ArticlePage {...props} />;
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
@@ -174,7 +173,7 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
       return withMediaError(LiveRadioPage)({ ...props });
     // Home Page
     case HOME_PAGE:
-      return withOptimizelyProvider(HomePage)({ ...props });
+      return <HomePage {...props} />;
     // Offline Page
     case OFFLINE_PAGE:
       return <OfflinePage />;
