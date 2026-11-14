@@ -6,11 +6,9 @@ import {
   SetStateAction,
   useMemo,
 } from 'react';
-import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import setCookie from '#app/lib/utilities/setCookie';
-import getUUID from '#app/lib/utilities/getUUID';
+import getOrCreateCknsMvtCookie from '#app/lib/utilities/getOrCreateCknsMvtCookie';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
 
 export type UserContextProps = {
@@ -23,21 +21,11 @@ export const UserContext = createContext<UserContextProps>(
   {} as UserContextProps,
 );
 
-const cknsMvtCookie = () => {
-  const cookieName = 'ckns_mvt';
-  const cookieValue = Cookie.get(cookieName);
-
-  if (!cookieValue) {
-    const cookieUuid = getUUID();
-    setCookie({ name: cookieName, value: cookieUuid });
-  }
-};
-
 export const UserContextProvider = ({ children }: PropsWithChildren) => {
   const [cookiePolicy, setCookiePolicy] = useState(getCookiePolicy());
 
   if (onClient() && !isOperaProxy()) {
-    cknsMvtCookie();
+    getOrCreateCknsMvtCookie();
   }
 
   const value = useMemo(

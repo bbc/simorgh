@@ -68,22 +68,37 @@ describe('AppOptimizelyProvider', () => {
     expect(optimizelyProviderRenderSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('should return undefined when ckns_mvt is fetched with Cookie.get', () => {
-    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    render(<TestComponent />);
+  describe('user id', () => {
+    const getUserId = () =>
+      (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.id;
 
-    expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
-    expect(cookieGetterSpy).toHaveReturnedWith(undefined);
-  });
+    it('should use the existing ckns_mvt cookie value as the user id', () => {
+      Cookie.set('ckns_mvt', 'random-uuid');
 
-  it('should return the correct ckns_mvt cookie value from Cookie.get', () => {
-    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    Cookie.set('ckns_mvt', 'random-uuid');
+      render(<TestComponent />);
 
-    render(<TestComponent />);
+      expect(getUserId()).toBe('random-uuid');
+    });
 
-    expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
-    expect(cookieGetterSpy).toHaveReturnedWith('random-uuid');
+    it('should create the ckns_mvt cookie and use it as the user id on a first visit', () => {
+      expect(Cookie.get('ckns_mvt')).toBeUndefined();
+
+      render(<TestComponent />);
+
+      const cookieValue = Cookie.get('ckns_mvt');
+      expect(cookieValue).toEqual(expect.any(String));
+      expect(getUserId()).toBe(cookieValue);
+    });
+
+    it('should not replace an existing ckns_mvt cookie', () => {
+      Cookie.set('ckns_mvt', 'random-uuid');
+      const cookieSetterSpy = jest.spyOn(Cookie, 'set');
+
+      render(<TestComponent />);
+
+      expect(cookieSetterSpy).not.toHaveBeenCalled();
+      expect(Cookie.get('ckns_mvt')).toBe('random-uuid');
+    });
   });
 
   describe('mobile attribute', () => {

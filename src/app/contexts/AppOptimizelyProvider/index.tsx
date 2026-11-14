@@ -10,6 +10,7 @@ import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import getOrCreateCknsMvtCookie from '#app/lib/utilities/getOrCreateCknsMvtCookie';
 import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
 import { getActivationTrackingData } from '#app/lib/analyticsUtils/activationTrackingData';
@@ -35,7 +36,9 @@ if (isLive() || isInCypress) {
 const getUserId = () => {
   if (disableOptimizely || !onClient() || isOperaProxy()) return null;
 
-  return Cookie.get('ckns_mvt') ?? null;
+  // Create the cookie here rather than relying on UserContextProvider, which renders
+  // below this provider, so first-time visitors get an ID before Optimizely reads it
+  return getOrCreateCknsMvtCookie();
 };
 
 const isSignedIn = () => {
