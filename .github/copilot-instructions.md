@@ -15,7 +15,8 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 * Our directory aliases can be found in dirAlias.js.
 
 ## Big picture architecture
-- Simorgh serves BBC World Service pages using two React runtimes in one repo: legacy/custom Express + Next.js Pages Router (`ws-nextjs-app`).
+- Simorgh serves BBC World Service pages using the Next.js Pages Router app in `ws-nextjs-app`. Shared components, models, utilities and legacy code still live under `src/app` (the retired Express app's folder structure).
+- Next.js only treats files ending in `.page.tsx`/`.page.ts` as pages and `.api.ts`/`.api.tsx` as API routes (see `pageExtensions` in `ws-nextjs-app/next.config.js`). Name new route files accordingly.
 - Treat each `service` (for example `arabic`, `mundo`, `portuguese`) as a first-class boundary: routes, variants, toggles, analytics, and rendering behavior are often service-specific.
 - Key service/toggle config lives in `src/app/lib/config/services`, `src/app/lib/config/toggles`, and `data/`.
 
@@ -25,8 +26,15 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 - Page handlers set status and headers on `context.res`; preserve this behavior because downstream infrastructure relies on response metadata.
 
 ## Project-specific coding conventions
-- Follow eslint + prettier config in `.eslintrc.js`; use repo aliases from `dirAlias.js` (`#app`, `#lib`, `#nextjs`, etc.).
+- Follow eslint + prettier config in `.eslintrc.js`; use repo aliases from `dirAlias.js` (`#app`, `#lib`, `#nextjs`, etc., plus `@scss` for `ThemeProviderSCSSModules` in SCSS files).
 - Avoid new dependencies unless clearly necessary.
+
+## Common commands
+- Dev server: `cd ws-nextjs-app && yarn dev` (port 7081).
+- Unit tests: `yarn test:unit`, or a single path with `yarn jest <path>`.
+- Lint: `yarn test:lint` (auto-fix with `yarn test:lint:fix`).
+- Integration tests (Canonical, AMP, Lite): `yarn test:integration` from the repo root; add `-u` to update snapshots.
+- Production build (also type-checks): `cd ws-nextjs-app && yarn build`.
 
 ## Integration points and external dependencies
 - BFF contracts for page data are aligned with `fabl-modules` (see page README references such as `ws-nextjs-app/pages/[service]/articles/README.md` and `ws-nextjs-app/pages/[service]/live/[id]/README.md`).
