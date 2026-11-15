@@ -1,6 +1,6 @@
 ---
 name: convert-webcore-component
-description: Converts webcore-style React components to Simorgh coding standards using SCSS Modules and TypeScript
+description: Converts webcore-style React components (@emotion/styled, styled-components, @bbc/web-* imports) to Simorgh coding standards using SCSS Modules and TypeScript. Use when asked to port or convert a component from webcore into Simorgh. For migrating an existing Simorgh component off Emotion, use migrate-component-to-scss-modules instead.
 ---
 
 # Convert Webcore Component
@@ -383,7 +383,7 @@ After conversion, run linting and formatting to ensure code quality:
 
 ```bash
 # Run ESLint to fix issues
-yarn lint --fix
+yarn test:lint:fix
 
 # Run Prettier to format code
 yarn prettier --write "path/to/converted/files/**/*.{ts,tsx}"
