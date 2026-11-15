@@ -154,32 +154,7 @@ If the converted component renders a shared Simorgh component and needs to overr
 
 ### Combining Class Names
 
-Emotion's `css` array silently ignores falsy entries. `className` is a plain string and does not, so translating the array directly introduces a bug.
-
-Note that the condition is a **prop**, not the style object — `styles.linkWithMargin` always exists and is always truthy. Most components name the two differently (`isActive && styles.tabActive`), but `CallToActionLink` uses `alignWithMargin && styles.alignWithMargin`, which is easy to misread as a single reference.
-
-**Before:**
-```tsx
-<a css={[styles.link, hasMargin && styles.linkWithMargin]}>
-```
-
-**After:**
-```tsx
-import clsx from 'clsx';
-
-<a className={clsx(styles.link, hasMargin && styles.linkWithMargin)}>
-```
-
-`clsx` drops falsy entries the same way Emotion's `css` array did, so this is a direct translation rather than a rewrite.
-
-❌ A plain template literal carries `&&` across as the literal string `false`:
-
-```tsx
-// produces class="link_x1 false" when hasMargin is false
-<a className={`${styles.link} ${hasMargin && styles.linkWithMargin}`}>
-```
-
-Use `clsx` for any conditional combination of classes, however many branches are involved.
+Use `clsx` for conditional class combinations; never a template literal with `&&`. See [Conditional style arrays](../migrate-component-to-scss-modules/SKILL.md#conditional-style-arrays).
 
 ### Dynamic Styles
 
@@ -211,58 +186,7 @@ Where a value is truly dynamic (a computed height, an image offset):
 
 ### Props with many possible values
 
-When a prop has many possible values, avoid creating a separate class and CSS
-rule for every value unless the list is small. The browser downloads all of
-those rules, even though each instance uses only one value.
-
-For a small list, keep the value in a `data-*` attribute and select the matching
-rule in SCSS:
-
-```tsx
-<a className={styles.link} data-size={size} />
-```
-
-```scss
-.link[data-size='small'] {
-  font-size: 1rem;
-}
-```
-
-For a larger list, use one set of responsive rules and pass the selected values
-as CSS custom properties:
-
-```tsx
-import type { CSSProperties } from 'react';
-
-type LinkSize = 'small' | 'large';
-
-type LinkStyles = CSSProperties & {
-  '--link-font-size': string;
-  '--link-line-height': string;
-};
-
-const getStylesForSize = (size: LinkSize): LinkStyles => ({
-  '--link-font-size': size === 'small' ? '1rem' : '1.25rem',
-  '--link-line-height': size === 'small' ? '1.5' : '1.25',
-});
-
-<a className={styles.link} style={getStylesForSize(size)} />
-```
-
-```scss
-.link {
-  font-size: var(--link-font-size, inherit);
-  line-height: var(--link-line-height, inherit);
-}
-```
-
-Keep the code that maps prop values to custom-property values in one typed
-helper or at the component boundary. Do not repeat that mapping in both
-TypeScript and SCSS.
-
-When the component renders in AMP, measure the final inlined `style[amp-custom]`
-payload and keep the total below AMP's hard 75 KB limit. This is an additional
-AMP requirement; the CSS-minimization guidance applies to all editions.
+Use a `data-*` attribute for a small set of values, or a typed helper that sets inline CSS custom properties for a large set. See [Props with many possible values](../migrate-component-to-scss-modules/SKILL.md#props-with-many-possible-values), including the AMP 75 KB CSS limit.
 
 ### Styling Mistakes to Avoid
 
