@@ -1,6 +1,6 @@
 import nodeLogger from '#lib/logger.node';
 import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
-import { PodcastExternalLinksParams, ExternalLinks } from './types';
+import { PodcastExternalLinksParams, ExternalLink } from './types';
 
 const logger = nodeLogger(__filename);
 
@@ -21,7 +21,7 @@ export default async ({
   variant,
   brandId,
   versionId,
-}: PodcastExternalLinksParams): Promise<ExternalLinks[]> => {
+}: PodcastExternalLinksParams): Promise<ExternalLink[]> => {
   try {
     const { default: externalLinks } = await import(`./${service}`);
     if (!externalLinks) return [];
