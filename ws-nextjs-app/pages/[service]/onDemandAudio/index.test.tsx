@@ -497,6 +497,8 @@ describe('OnDemand Audio Page', () => {
     });
 
     it('does not show external links section when links array is empty', async () => {
+      jest.mocked(getPodcastExternalLinks).mockResolvedValueOnce([]);
+
       const pageDataWithoutLinks = {
         ...(gahuzaPodcastPage.data as unknown as OnDemandAudioProps['pageData']),
         externalLinks: [],
@@ -515,7 +517,7 @@ describe('OnDemand Audio Page', () => {
       });
 
       expect(
-        queryByText('This podcast is also available on'),
+        queryByText('Iyi podcast iraboneka kandi kuri'),
       ).not.toBeInTheDocument();
     });
   });
