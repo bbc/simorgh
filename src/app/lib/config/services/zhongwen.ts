@@ -71,6 +71,7 @@ export const service: ZhongwenConfig = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     datetimeLocale: 'zh-cn',
+    datetimeMonthDayFormat: 'M月D日',
     defaultCaptionOffscreenText: '说明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
     videoCaptionOffscreenText: '视频加注文字，',
@@ -472,6 +473,7 @@ export const service: ZhongwenConfig = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',
+    datetimeMonthDayFormat: 'M月D日',
     externalLinkText: ', 外部',
     homePageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',

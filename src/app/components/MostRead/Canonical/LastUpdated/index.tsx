@@ -1,5 +1,4 @@
 import moment from 'moment-timezone';
-import MONTH_AND_DAY_FORMATS from '#lib/utilities/timestampFormats';
 import Timestamp from '../../../../legacy/psammead/psammead-timestamp-container/src';
 
 interface LastUpdatedProps {
@@ -7,6 +6,7 @@ interface LastUpdatedProps {
   prefix: string;
   timestamp: number | string;
   timezone: string;
+  datetimeMonthDayFormat?: string;
 }
 
 const LastUpdated = ({
@@ -14,6 +14,7 @@ const LastUpdated = ({
   prefix,
   timestamp,
   timezone,
+  datetimeMonthDayFormat,
 }: LastUpdatedProps) => {
   const publicationDate = moment(timestamp).locale(locale).tz(timezone);
   const isPublishedThisYear = publicationDate.isSame(
@@ -26,9 +27,7 @@ const LastUpdated = ({
       timestamp={timestamp}
       dateTimeFormat="YYYY-MM-DD"
       prefix={prefix}
-      format={
-        isPublishedThisYear ? MONTH_AND_DAY_FORMATS[locale] || 'D MMMM' : 'LL'
-      }
+      format={isPublishedThisYear ? datetimeMonthDayFormat || 'D MMMM' : 'LL'}
       locale={locale}
       timezone={timezone}
       isPublishedThisYear={isPublishedThisYear}

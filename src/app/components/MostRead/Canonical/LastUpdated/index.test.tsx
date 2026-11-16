@@ -52,6 +52,7 @@ describe('MostReadCanonical - LastUpdated', () => {
         prefix="Frissítve:"
         locale="hu"
         timezone="Europe/Budapest"
+        datetimeMonthDayFormat="MMMM D."
       />,
     );
 
