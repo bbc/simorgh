@@ -20,6 +20,12 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
+jest.mock('#app/components/OptimizelyPageMetrics', () => {
+  const OptimizelyPageMetrics = () => (
+    <div data-testid="optimizely-page-metrics" />
+  );
+  return OptimizelyPageMetrics;
+});
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
@@ -50,6 +56,31 @@ describe('Topic Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
+  it.each([
+    ['hindi', 'crvgyj0g9d5lt', true],
+    ['hindi', 'c0000000000t', false],
+    ['mundo', 'crvgyj0g9d5lt', false],
+  ])(
+    'scopes page metrics for service %s and topic %s (enabled: %s)',
+    (service, topicId, enabled) => {
+      const { queryByTestId } = render(
+        <TopicPage pageData={mundoWithBadgeAndDescr} />,
+        {
+          ...getOptionParams({ service }),
+          pathname: `/${service}/topics/${topicId}`,
+        },
+      );
+
+      if (enabled) {
+        expect(queryByTestId('optimizely-page-metrics')).toBeInTheDocument();
+      } else {
+        expect(
+          queryByTestId('optimizely-page-metrics'),
+        ).not.toBeInTheDocument();
+      }
+    },
+  );
 
   it('applies the page layout classes', () => {
     const { container, getByRole } = render(
