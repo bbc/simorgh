@@ -9,7 +9,8 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
-import { ArticleMetadata } from '#app/models/types/optimo';
+import { Article, ArticleMetadata } from '#app/models/types/optimo';
+import { MostReadData } from '#app/components/MostRead/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
@@ -20,6 +21,68 @@ const logger = nodeLogger(__filename);
 
 const transformPageData = () =>
   augmentWithDisclaimer({ positionFromTimestamp: 0 });
+
+const isMostReadWsojData = ({
+  data,
+  mostReadIds,
+}: {
+  data: unknown;
+  mostReadIds: Set<string>;
+}) =>
+  Array.isArray(data) &&
+  data.length > 0 &&
+  data.every(
+    item =>
+      typeof item === 'object' &&
+      item !== null &&
+      'id' in item &&
+      typeof item.id === 'string' &&
+      mostReadIds.has(item.id),
+  );
+
+const removeMostReadWsojData = ({
+  article,
+  mostRead,
+}: {
+  article: Article;
+  mostRead: MostReadData | null;
+}): Article => {
+  const mostReadIds = new Set(mostRead?.items.map(({ id }) => id));
+
+  return {
+    ...article,
+    content: {
+      ...article.content,
+      model: {
+        ...article.content.model,
+        blocks: article.content.model.blocks.map(block => {
+          const model = block.model as {
+            type?: string;
+            data?: unknown;
+          };
+
+          if (
+            block.type !== 'wsoj' ||
+            model.type !== 'recommendations' ||
+            !isMostReadWsojData({ data: model.data, mostReadIds })
+          ) {
+            return block;
+          }
+
+          const { data: _, ...wsojModel } = model;
+
+          return {
+            ...block,
+            model: {
+              ...wsojModel,
+              onwardJourney: 'mostRead',
+            },
+          };
+        }),
+      },
+    },
+  };
+};
 
 const getDerivedArticleType = (metadata: ArticleMetadata) => {
   let pageType: PageTypes = metadata?.type;
@@ -130,6 +193,9 @@ export default async (context: GetServerSidePropsContext) => {
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
+  const articlePageData = shouldFetchOnwardJourneysClient
+    ? removeMostReadWsojData({ article: transformedArticleData, mostRead })
+    : transformedArticleData;
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
@@ -144,7 +210,7 @@ export default async (context: GetServerSidePropsContext) => {
       country,
       id: resolvedUrlWithoutQuery,
       pageData: {
-        ...transformedArticleData,
+        ...articlePageData,
         ...(!shouldFetchOnwardJourneysClient && {
           secondaryColumn: {
             topStories,

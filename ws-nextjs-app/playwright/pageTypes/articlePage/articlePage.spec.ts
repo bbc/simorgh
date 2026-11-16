@@ -38,6 +38,7 @@ test.describe('articlePage', () => {
       if (!onwardJourneyRequests.has(onwardJourney)) {
         await page
           .getByTestId(`onward-journey-skeleton-${onwardJourney}`)
+          .first()
           .scrollIntoViewIfNeeded();
       }
 

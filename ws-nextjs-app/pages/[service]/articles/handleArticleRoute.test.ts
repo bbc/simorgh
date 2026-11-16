@@ -16,6 +16,49 @@ jest.mock('../../../utilities/shouldRender', () => {
 });
 
 describe('handleArticleRoute', () => {
+  const mostReadItem = {
+    id: 'urn:bbc:optimo:asset:c1234567890o',
+    rank: 1,
+    title: 'Most Read story',
+    href: 'https://www.bbc.com/pidgin/articles/c1234567890o',
+    timestamp: '2026-11-16T00:00:00.000Z',
+  };
+  const generatedWsoj = {
+    type: 'wsoj',
+    model: {
+      type: 'recommendations',
+      data: [
+        {
+          id: mostReadItem.id,
+          title: mostReadItem.title,
+          href: mostReadItem.href,
+        },
+      ],
+    },
+  };
+  const pageDataWithGeneratedWsoj = {
+    ...pidginMediaArticleFixtureData.data,
+    article: {
+      ...pidginMediaArticleFixtureData.data.article,
+      content: {
+        ...pidginMediaArticleFixtureData.data.article.content,
+        model: {
+          ...pidginMediaArticleFixtureData.data.article.content.model,
+          blocks: [
+            ...pidginMediaArticleFixtureData.data.article.content.model.blocks,
+            generatedWsoj,
+          ],
+        },
+      },
+    },
+    secondaryData: {
+      ...pidginMediaArticleFixtureData.data.secondaryData,
+      mostRead: {
+        items: [mostReadItem],
+        lastRecordTimeStamp: '2026-11-16T00:00:00.000Z',
+      },
+    },
+  };
   const mockSetHeader = jest.fn();
   const mockGetServerSidePropsContext = {
     req: {
@@ -33,7 +76,7 @@ describe('handleArticleRoute', () => {
     jest.clearAllMocks();
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
       data: {
-        pageData: pidginMediaArticleFixtureData.data,
+        pageData: pageDataWithGeneratedWsoj,
         status: 200,
       },
     });
@@ -52,6 +95,17 @@ describe('handleArticleRoute', () => {
 
     expect(pageData.secondaryColumn).toBeUndefined();
     expect(pageData.mostRead).toBeUndefined();
+    const wsojBlocks = pageData.content.model.blocks.filter(
+      block => block.type === 'wsoj',
+    );
+    const wsojModel = wsojBlocks[wsojBlocks.length - 1]?.model;
+
+    expect(wsojModel).toEqual(
+      expect.objectContaining({
+        onwardJourney: 'mostRead',
+      }),
+    );
+    expect(wsojModel).not.toHaveProperty('data');
   });
 
   it('keeps onward journey data in the response for AMP pages', async () => {
@@ -71,6 +125,113 @@ describe('handleArticleRoute', () => {
       }),
     );
     expect(pageData.mostRead).toBeDefined();
+    const wsojBlocks = pageData.content.model.blocks.filter(
+      block => block.type === 'wsoj',
+    );
+    expect(wsojBlocks[wsojBlocks.length - 1]?.model).toHaveProperty('data');
+  });
+
+  it('keeps article-link WSOJs in the canonical response', async () => {
+    const articleLinkWsoj = {
+      ...generatedWsoj,
+      model: {
+        ...generatedWsoj.model,
+        data: [
+          {
+            id: 'article-link',
+            title: 'Article link',
+            href: 'https://www.bbc.com/pidgin/articles/c9876543210o',
+          },
+        ],
+      },
+    };
+    const articleLinkData = {
+      ...pageDataWithGeneratedWsoj,
+      article: {
+        ...pageDataWithGeneratedWsoj.article,
+        content: {
+          ...pageDataWithGeneratedWsoj.article.content,
+          model: {
+            ...pageDataWithGeneratedWsoj.article.content.model,
+            blocks: [
+              ...pageDataWithGeneratedWsoj.article.content.model.blocks.slice(
+                0,
+                -1,
+              ),
+              articleLinkWsoj,
+            ],
+          },
+        },
+      },
+    };
+
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: articleLinkData,
+        status: 200,
+      },
+    });
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    const { pageData } = result.props;
+
+    if (!pageData) throw new Error('Expected article page data');
+
+    const wsojBlocks = pageData.content.model.blocks.filter(
+      block => block.type === 'wsoj',
+    );
+    const wsojModel = wsojBlocks[wsojBlocks.length - 1]?.model;
+
+    expect(wsojModel).toHaveProperty('data');
+    expect(wsojModel).not.toHaveProperty('onwardJourney');
+  });
+
+  it('keeps empty WSOJs in the canonical response', async () => {
+    const emptyWsojData = {
+      ...pageDataWithGeneratedWsoj,
+      article: {
+        ...pageDataWithGeneratedWsoj.article,
+        content: {
+          ...pageDataWithGeneratedWsoj.article.content,
+          model: {
+            ...pageDataWithGeneratedWsoj.article.content.model,
+            blocks: [
+              ...pageDataWithGeneratedWsoj.article.content.model.blocks.slice(
+                0,
+                -1,
+              ),
+              {
+                ...generatedWsoj,
+                model: {
+                  ...generatedWsoj.model,
+                  data: [],
+                },
+              },
+            ],
+          },
+        },
+      },
+    };
+
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: emptyWsojData,
+        status: 200,
+      },
+    });
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    const { pageData } = result.props;
+
+    if (!pageData) throw new Error('Expected article page data');
+
+    const wsojBlocks = pageData.content.model.blocks.filter(
+      block => block.type === 'wsoj',
+    );
+    const wsojModel = wsojBlocks[wsojBlocks.length - 1]?.model;
+
+    expect(wsojModel).toHaveProperty('data', []);
+    expect(wsojModel).not.toHaveProperty('onwardJourney');
   });
 
   it('returns expected props if shouldRender succeeds', async () => {

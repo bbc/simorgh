@@ -90,14 +90,18 @@ export interface MostReadData {
     timestamp: number | string;
     isLive?: boolean;
     images?: {
-      defaultPromoImage: OptimoBlock[];
+      defaultPromoImage?: {
+        blocks: OptimoBlock[];
+      };
     };
     indexImage?: {
       width: number;
       height: number;
       altText: string;
-      originCode: string;
-      locator: string;
+      originCode?: string;
+      locator?: string;
+      path?: string;
+      copyrightHolder?: string;
     };
   }[];
 }

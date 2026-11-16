@@ -1,5 +1,6 @@
 import { useState, useCallback, use } from 'react';
 import { useTheme } from '@emotion/react';
+import pathOr from 'ramda/src/pathOr';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
@@ -97,7 +98,11 @@ import {
 } from '../../components/MediaLoader/utils/isPortraitVideo';
 import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
 import OnwardJourneyPlaceholder from '../../components/OnwardJourneyPlaceholder/lazy';
-import { useOnwardJourneyRequest } from '../../contexts/ArticleOnwardJourneysContext';
+import {
+  OnwardJourney,
+  useOnwardJourneyRequest,
+} from '../../contexts/ArticleOnwardJourneysContext';
+import { MostReadData } from '../../components/MostRead/types';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -178,15 +183,134 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({
+type RawImageModel = {
+  width: number;
+  height: number;
+  locator: string;
+  originCode: string;
+  copyrightHolder: string;
+};
+
+const isRawImageBlock = (
+  block: OptimoBlock,
+): block is OptimoBlock & { model: RawImageModel } =>
+  block.type === 'rawImage' &&
+  'locator' in block.model &&
+  'originCode' in block.model &&
+  'width' in block.model &&
+  'height' in block.model &&
+  'copyrightHolder' in block.model;
+
+const getRecommendationImage = (item: MostReadData['items'][number]) => {
+  if (item.indexImage) {
+    const {
+      width,
+      height,
+      altText,
+      originCode,
+      locator: indexImageLocator,
+      path,
+      copyrightHolder = '',
+    } = item.indexImage;
+    const [pathOriginCode, ...pathLocator] =
+      path?.split('/').filter(Boolean) ?? [];
+    const locator = indexImageLocator ?? pathLocator.join('/');
+    const resolvedOriginCode = originCode ?? pathOriginCode;
+
+    if (resolvedOriginCode && locator) {
+      return {
+        width,
+        height,
+        altText: altText === item.title ? '' : altText,
+        originCode: resolvedOriginCode,
+        locator,
+        copyrightHolder,
+      };
+    }
+  }
+
+  const promoImageBlocks =
+    item.images?.defaultPromoImage?.blocks?.filter(isRawImageBlock) ?? [];
+  const rawImage = promoImageBlocks[0];
+  const altTextBlock = item.images?.defaultPromoImage?.blocks?.find(
+    block => block.type === 'altText',
+  );
+  const altText = pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    altTextBlock,
+  );
+
+  if (!rawImage || !altText) return undefined;
+
+  return {
+    ...rawImage.model,
+    altText: altText === item.title ? '' : altText,
+  };
+};
+
+export const getRecommendationsFromMostRead = ({
+  mostRead,
+  articleId,
+}: {
+  mostRead?: MostReadData;
+  articleId?: string;
+}): Recommendation[] => {
+  const articleIdParts = articleId?.split(':');
+  const currentArticleId = articleIdParts?.[articleIdParts.length - 1];
+
+  return (
+    mostRead?.items
+      .filter(({ id }) => {
+        const itemIdParts = id.split(':');
+        return itemIdParts[itemIdParts.length - 1] !== currentArticleId;
+      })
+      .slice(0, 4)
+      .map(item => {
+        const image = getRecommendationImage(item);
+
+        return {
+          id: item.id,
+          title: item.title,
+          href: item.href,
+          ...(image && { image }),
+        };
+      }) ?? []
+  );
+};
+
+const Wsoj = ({
   data,
+  onwardJourney,
   experimentProps,
 }: {
-  data: Recommendation[];
+  data?: Recommendation[];
+  onwardJourney?: OnwardJourney;
   experimentProps?: ComponentExperimentProps;
-}) => (
-  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
-);
+}) => {
+  const onwardJourneyContext = useOnwardJourneyRequest();
+  const recommendations =
+    data ??
+    getRecommendationsFromMostRead({
+      mostRead: onwardJourneyContext?.article?.mostRead,
+      articleId: onwardJourneyContext?.article?.metadata.id,
+    });
+
+  if (
+    onwardJourney === 'mostRead' &&
+    recommendations.length === 0 &&
+    onwardJourneyContext?.isEnabled
+  ) {
+    return <OnwardJourneyPlaceholder onwardJourney="mostRead" />;
+  }
+
+  return (
+    <Recommendations
+      data={recommendations}
+      {...(experimentProps && { experimentProps })}
+    />
+  );
+};
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -444,7 +568,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: Wsoj,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
