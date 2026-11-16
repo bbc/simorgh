@@ -1,50 +1,44 @@
 import { Global } from '@emotion/react';
-import { use, useCallback } from 'react';
+import { useCallback } from 'react';
 import { Close } from '#app/components/icons';
 import useTrappedFocus from '#app/hooks/useTrappedFocus';
 import useDismissOnOutsideInteraction from '#app/hooks/useDismissOnOutsideInteraction';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
-import AccountActionButtons from '#app/components/Account/AccountActionButtons';
+import AccountActionButtons, {
+  AccountActionButtonsProps,
+} from '#app/components/Account/AccountActionButtons';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
-type AccountSignInModalProps = {
+export type AccountSignInModalProps = Omit<
+  AccountActionButtonsProps,
+  | 'signInRef'
+  | 'onLightBackground'
+  | 'signInComponentName'
+  | 'registerComponentName'
+> & {
   onClose: () => void;
-  context?: 'saveArticle' | 'followTopic';
-  signInUrl?: string | undefined;
-  registerUrl?: string | undefined;
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
+  closeLabel: string;
   isDismissible?: boolean;
 };
 
 const AccountSignInModal = ({
   onClose,
-  context = 'saveArticle',
-  title: titleOverride,
-  description: descriptionOverride,
+  title,
+  description,
+  closeLabel,
   isDismissible = true,
+  ...actionProps
 }: AccountSignInModalProps) => {
   const { containerRef, firstElementRef, lastElementRef } = useTrappedFocus<
     HTMLDivElement,
     HTMLAnchorElement,
     HTMLButtonElement
   >();
-
-  const { translations } = use(ServiceContext);
-  const modalTranslations = translations.accountSignInModal;
-  const copy =
-    context === 'followTopic'
-      ? modalTranslations?.followTopic
-      : modalTranslations;
-  const { title: defaultTitle = '', description: defaultDescription = '' } =
-    copy ?? {};
-  const title = titleOverride ?? defaultTitle;
-  const description = descriptionOverride ?? defaultDescription;
-  const { closeLabel = 'Close' } = modalTranslations ?? {};
 
   const viewTracker = useViewTracker({
     componentName: 'account-sign-in-modal',
@@ -96,10 +90,8 @@ const AccountSignInModal = ({
             </Paragraph>
             <div css={styles.actionsContainer}>
               <AccountActionButtons
+                {...actionProps}
                 signInRef={firstElementRef}
-                signInAccessibleLabel={
-                  translations?.account?.signInAccessibleLabel
-                }
                 signInComponentName="account-sign-in-modal-sign-in"
                 registerComponentName="account-sign-in-modal-register"
               />

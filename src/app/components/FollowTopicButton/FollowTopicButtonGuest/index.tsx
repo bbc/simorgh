@@ -54,7 +54,15 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
       {isModalOpen &&
         createPortal(
           <AccountSignInModal
-            context="followTopic"
+            title={translations.accountSignInModal?.followTopic?.title ?? ''}
+            description={
+              translations.accountSignInModal?.followTopic?.description ?? ''
+            }
+            closeLabel={translations.accountSignInModal?.closeLabel ?? 'Close'}
+            signInText={translations.account?.signIn ?? ''}
+            registerText={translations.account?.register ?? ''}
+            signInAccessibleLabel={translations.account?.signInAccessibleLabel}
+            separatorText={translations.accountPromoBanner?.buttonSeparatorText}
             onClose={() => setIsModalOpen(false)}
             signInUrl={signInUrl}
             registerUrl={registerUrl}

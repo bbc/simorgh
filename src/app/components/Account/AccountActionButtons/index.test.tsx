@@ -6,6 +6,10 @@ import AccountActionButtons from '.';
 const defaultProps = {
   signInComponentName: 'test-sign-in',
   registerComponentName: 'test-register',
+  signInUrl: 'https://example.com/signin',
+  registerUrl: 'https://example.com/register',
+  signInText: 'Sign In',
+  registerText: 'Register',
 };
 
 const renderComponent = (props = {}) =>
@@ -90,10 +94,17 @@ describe('AccountActionButtons', () => {
   });
 
   it('returns null when URLs are unavailable', () => {
-    render(<AccountActionButtons {...defaultProps} />, {
-      service: 'ws',
-      idctaConfig: null,
-    });
+    render(
+      <AccountActionButtons
+        {...defaultProps}
+        signInUrl={undefined}
+        registerUrl={undefined}
+      />,
+      {
+        service: 'ws',
+        idctaConfig: null,
+      },
+    );
 
     expect(screen.queryByTestId('test-sign-in')).toBeNull();
     expect(screen.queryByTestId('test-register')).toBeNull();

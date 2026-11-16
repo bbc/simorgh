@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -34,6 +35,7 @@ const AccountPromotionalBanner = ({
 }: AccountPromotionalBannerProps = {}) => {
   const isEligible = useAccountPromoBannerEligibility();
   const { translations } = use(ServiceContext);
+  const { signInUrl, registerUrl } = use(AccountContext);
   const { nonce } = use(RequestContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const [isDismissed, setIsDismissed] = useState(false);
@@ -128,6 +130,11 @@ const AccountPromotionalBanner = ({
           onClose={handleCloseClick}
         >
           <AccountActionButtons
+            signInUrl={signInUrl}
+            registerUrl={registerUrl}
+            signInText={translations.account?.signIn ?? ''}
+            registerText={translations.account?.register ?? ''}
+            separatorText={buttonSeparatorText}
             signInComponentName="account-promotional-banner-sign-in"
             registerComponentName="account-promotional-banner-register"
             experimentName={experimentName}

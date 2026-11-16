@@ -55,6 +55,13 @@ const SaveArticleButtonGuest = () => {
       {isModalOpen &&
         createPortal(
           <AccountSignInModal
+            title={translations.accountSignInModal?.title ?? ''}
+            description={translations.accountSignInModal?.description ?? ''}
+            closeLabel={translations.accountSignInModal?.closeLabel ?? 'Close'}
+            signInText={translations.account?.signIn ?? ''}
+            registerText={translations.account?.register ?? ''}
+            signInAccessibleLabel={translations.account?.signInAccessibleLabel}
+            separatorText={translations.accountPromoBanner?.buttonSeparatorText}
             onClose={() => setIsModalOpen(false)}
             signInUrl={signInUrl}
             registerUrl={registerUrl}

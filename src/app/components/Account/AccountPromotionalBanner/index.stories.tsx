@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import AccountPromotionalBanner from '.';
+import { use, useState } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import AccountPromotionalBanner from '.';
 import readme from './README.md';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 import AccountSignInModal from '../AccountSignInModal';
@@ -35,6 +37,8 @@ SignedIn.globals = {
 
 export const SignedOutModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { translations } = use(ServiceContext);
+  const { signInUrl, registerUrl } = use(AccountContext);
 
   return (
     <>
@@ -47,9 +51,16 @@ export const SignedOutModal = () => {
       </button>
       {isOpen && (
         <AccountSignInModal
+          title={translations.accountSignInModal?.title ?? ''}
+          description={translations.accountSignInModal?.description ?? ''}
+          closeLabel={translations.accountSignInModal?.closeLabel ?? 'Close'}
+          signInText={translations.account?.signIn ?? ''}
+          registerText={translations.account?.register ?? ''}
+          signInAccessibleLabel={translations.account?.signInAccessibleLabel}
+          separatorText={translations.accountPromoBanner?.buttonSeparatorText}
           onClose={() => setIsOpen(false)}
-          signInUrl="https://example.com/signin"
-          registerUrl="https://example.com/register"
+          signInUrl={signInUrl}
+          registerUrl={registerUrl}
         />
       )}
     </>
