@@ -16,11 +16,17 @@ type AccountSignInModalProps = {
   context?: 'saveArticle' | 'followTopic';
   signInUrl?: string | undefined;
   registerUrl?: string | undefined;
+  title?: string;
+  description?: string;
+  isDismissible?: boolean;
 };
 
 const AccountSignInModal = ({
   onClose,
   context = 'saveArticle',
+  title: titleOverride,
+  description: descriptionOverride,
+  isDismissible = true,
 }: AccountSignInModalProps) => {
   const { containerRef, firstElementRef, lastElementRef } = useTrappedFocus<
     HTMLDivElement,
@@ -34,7 +40,10 @@ const AccountSignInModal = ({
     context === 'followTopic'
       ? modalTranslations?.followTopic
       : modalTranslations;
-  const { title = '', description = '' } = copy ?? {};
+  const { title: defaultTitle = '', description: defaultDescription = '' } =
+    copy ?? {};
+  const title = titleOverride ?? defaultTitle;
+  const description = descriptionOverride ?? defaultDescription;
   const { closeLabel = 'Close' } = modalTranslations ?? {};
 
   const viewTracker = useViewTracker({
@@ -56,6 +65,8 @@ const AccountSignInModal = ({
   useDismissOnOutsideInteraction({
     onDismiss: handleClose,
     containerRef,
+    enableOutsideClick: isDismissible,
+    enableEscape: isDismissible,
   });
 
   return (
@@ -94,15 +105,17 @@ const AccountSignInModal = ({
               />
             </div>
           </div>
-          <button
-            ref={lastElementRef}
-            type="button"
-            onClick={handleClose}
-            css={styles.closeButton}
-            aria-label={closeLabel}
-          >
-            <Close css={styles.closeButtonIcon} />
-          </button>
+          {isDismissible && (
+            <button
+              ref={lastElementRef}
+              type="button"
+              onClick={handleClose}
+              css={styles.closeButton}
+              aria-label={closeLabel}
+            >
+              <Close css={styles.closeButtonIcon} />
+            </button>
+          )}
         </div>
       </div>
     </>

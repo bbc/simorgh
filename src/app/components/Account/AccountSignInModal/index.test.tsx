@@ -71,6 +71,23 @@ describe('AccountSignInModal', () => {
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
 
+  it('uses custom title and description when provided', () => {
+    render(
+      <AccountSignInModal
+        onClose={onClose}
+        title="Sign in to read more"
+        description="Create an account to continue your journey."
+      />,
+    );
+
+    expect(screen.getByRole('dialog')).toHaveAccessibleName(
+      'Sign in to read more',
+    );
+    expect(
+      screen.getByText('Create an account to continue your journey.'),
+    ).toBeInTheDocument();
+  });
+
   it('renders the sign-in link with the accessible label from translations', () => {
     renderComponent();
 
@@ -110,5 +127,16 @@ describe('AccountSignInModal', () => {
     screen.getByRole('button', { name: /close/i }).click();
 
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not allow dismissal when isDismissible is false', () => {
+    render(<AccountSignInModal onClose={onClose} isDismissible={false} />);
+
+    expect(
+      screen.queryByRole('button', { name: /close/i }),
+    ).not.toBeInTheDocument();
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+
+    expect(onClose).not.toHaveBeenCalled();
   });
 });
