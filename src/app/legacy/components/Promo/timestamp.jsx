@@ -2,16 +2,8 @@ import { use } from 'react';
 import moment from 'moment-timezone';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import MONTH_AND_DAY_FORMATS from '#lib/utilities/timestampFormats';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-
-const MONTH_AND_DAY_FORMATS = {
-  ja: 'M月D日', // japanese
-  ko: 'M월 D일', // korean
-  'zh-cn': 'M月D日', // simplified chinese
-  'zh-tw': 'M月D日', // traditional chinese
-  hu: 'MMMM D.', // hungarian
-  si: 'MMMM D', // sinhala
-};
 
 const PromoTimestamp = ({
   children,
