@@ -31,9 +31,14 @@ const AccountSignInModal = ({
   title,
   description,
   closeLabel,
-  isDismissible = true,
+  isDismissible: requestedIsDismissible = true,
   ...actionProps
 }: AccountSignInModalProps) => {
+  const isDismissible =
+    requestedIsDismissible ||
+    !actionProps.signInUrl ||
+    !actionProps.registerUrl;
+
   const { containerRef, firstElementRef, lastElementRef } = useTrappedFocus<
     HTMLDivElement,
     HTMLAnchorElement,

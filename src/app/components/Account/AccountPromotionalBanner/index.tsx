@@ -45,16 +45,22 @@ const AccountPromotionalBanner = ({
     let visible = false;
 
     if (isEligible && accountPromoBannerTranslations && !isDismissed) {
+      let dismissalCount: string | null = null;
+      let lastDismissed: string | null = null;
       try {
-        visible = isAccountPromoBannerVisible({
-          cookies: document.cookie,
-          dismissalCount: localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY),
-          lastDismissed: localStorage.getItem(ACCOUNT_BANNER_LAST_DISMISS_KEY),
-        });
+        dismissalCount = localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY);
+        lastDismissed = localStorage.getItem(ACCOUNT_BANNER_LAST_DISMISS_KEY);
       } catch (error) {
+        dismissalCount = null;
+        lastDismissed = null;
         // eslint-disable-next-line no-console
         console.error('Unable to check account banner dismissal state', error);
       }
+      visible = isAccountPromoBannerVisible({
+        cookies: document.cookie,
+        dismissalCount,
+        lastDismissed,
+      });
     }
 
     root.classList.toggle(
@@ -85,7 +91,12 @@ const AccountPromotionalBanner = ({
       if (onCloseClickTrack) {
         await onCloseClickTrack(event);
       }
-      setAccountPromoBannerDismissed();
+      try {
+        setAccountPromoBannerDismissed();
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Unable to store account banner dismissal state', error);
+      }
       setIsDismissed(true);
       document
         .querySelector('html')

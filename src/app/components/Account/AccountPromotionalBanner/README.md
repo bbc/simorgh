@@ -17,6 +17,9 @@ Displays the Account Promotional Banner under the header and navigation.
 - Visibility and dismissal count are tracked via `localStorage` (`account_promotional_banner_dismissals` and `account_promotional_banner_last_dismissed`).
 - On first render the component reads localStorage to decide whether to show the banner.
 - On dismissal the counts are written back to localStorage.
+- If localStorage is unavailable, the banner remains subject to the sign-in
+  cookie check and can still be dismissed for the current page view. Dismissal
+  frequency cannot be persisted until storage is available.
 
 ## Storybook
 

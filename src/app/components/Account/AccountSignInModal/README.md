@@ -18,8 +18,9 @@ prop and no default copy in the modal.
 Dismissal is enabled by default via the close button, Escape and outside click.
 `onClose` lets the caller update visibility. Focus trapping, restoration and
 scroll locking remain internal to the dialog. With `isDismissible={false}`,
-dismissal is disabled but sign-in and registration links remain available.
-This option does not restrict access to article content.
+dismissal is disabled only when both account URLs are present. If either URL is
+missing or empty, the modal remains dismissible because the account actions
+cannot be displayed. This option does not restrict access to article content.
 
 Storybook examples cover save-article, follow-topic, custom copy, existing Hindi
 translations and non-dismissible presentation. Story callbacks prevent

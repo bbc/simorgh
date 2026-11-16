@@ -53,19 +53,7 @@ export const buildAccountBannerClientScript = (): string => `(() => {
     return;
   }
 
-  function localStorageIsAvailable() {
-    try {
-      var storage = window && window.localStorage;
-      if (typeof storage.getItem === 'function') {
-        return true;
-      }
-      return false;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  if (localStorageIsAvailable()) {
+  try {
     var dismissCount = Number(window.localStorage.getItem('${ACCOUNT_BANNER_DISMISS_KEY}'));
     if (dismissCount >= ${ACCOUNT_BANNER_MAX_DISMISSALS}) {
       return;
@@ -75,6 +63,8 @@ export const buildAccountBannerClientScript = (): string => `(() => {
     if (lastDismissedDate && Date.now() - lastDismissedDate < ${ACCOUNT_BANNER_DISMISS_INTERVAL_MS}) {
       return;
     }
+  } catch (error) {
+    console.error('Unable to check account banner dismissal state', error);
   }
 
   document.querySelector('html').classList.add('${DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS}');

@@ -142,6 +142,62 @@ describe('AccountSignInModal', () => {
     expect(screen.getAllByRole('link')).toHaveLength(2);
   });
 
+  it.each([
+    { signInUrl: undefined, registerUrl: defaultProps.registerUrl },
+    { signInUrl: defaultProps.signInUrl, registerUrl: undefined },
+    { signInUrl: undefined, registerUrl: undefined },
+    { signInUrl: '', registerUrl: defaultProps.registerUrl },
+    { signInUrl: defaultProps.signInUrl, registerUrl: '' },
+  ])(
+    'allows dismissal when non-dismissible is requested and account URLs are missing: %o',
+    urls => {
+      jest.useFakeTimers();
+      try {
+        render(
+          <AccountSignInModal
+            {...defaultProps}
+            {...urls}
+            isDismissible={false}
+          />,
+        );
+        const close = screen.getByRole('button', {
+          name: defaultProps.closeLabel,
+        });
+        expect(close).toHaveFocus();
+        expect(screen.queryAllByRole('link')).toHaveLength(0);
+        fireEvent.click(close);
+        fireEvent.keyDown(document, { key: 'Escape' });
+        act(() => jest.advanceTimersByTime(500));
+        fireEvent.click(document.body);
+        expect(onClose).toHaveBeenCalledTimes(3);
+      } finally {
+        jest.useRealTimers();
+      }
+    },
+  );
+
+  it('updates dismissal when account URLs become unavailable', () => {
+    const { rerender } = render(
+      <AccountSignInModal {...defaultProps} isDismissible={false} />,
+    );
+    expect(
+      screen.queryByRole('button', { name: defaultProps.closeLabel }),
+    ).not.toBeInTheDocument();
+
+    rerender(
+      <AccountSignInModal
+        {...defaultProps}
+        registerUrl={undefined}
+        isDismissible={false}
+      />,
+    );
+    expect(
+      screen.getByRole('button', { name: defaultProps.closeLabel }),
+    ).toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
   it.each([true, false])(
     'traps focus when isDismissible=%s and restores focus on unmount',
     async isDismissible => {
