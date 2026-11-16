@@ -2,6 +2,7 @@ import { use } from 'react';
 import moment from 'moment-timezone';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import getDayAndMonthFormat from '#lib/utilities/getDayAndMonthFormat';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const PromoTimestamp = ({
@@ -28,7 +29,11 @@ const PromoTimestamp = ({
       altCalendar={altCalendar}
       locale={locale}
       dateTimeFormat="YYYY-MM-DD"
-      format={isPublishedThisYear ? datetimeMonthDayFormat || 'D MMMM' : 'LL'}
+      format={
+        isPublishedThisYear
+          ? datetimeMonthDayFormat || getDayAndMonthFormat(locale)
+          : 'LL'
+      }
       isPublishedThisYear={isPublishedThisYear}
       padding={false}
       timezone={timezone}

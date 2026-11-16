@@ -374,6 +374,17 @@ describe('Promo component - Timestamp', () => {
 
       expect(screen.getByText('2025 නොවැම්බර් 3')).toBeInTheDocument();
     });
+
+    it('preserves the ordinal day suffix for pidgin when the year is omitted', () => {
+      const { container } = render(
+        <Fixture timestamp="2026-11-03T05:17:09.393Z" />,
+        { service: 'pidgin' },
+      );
+
+      expect(container.querySelector('time')).toHaveTextContent(
+        /^3rd November$/,
+      );
+    });
   });
 
   describe('Publication year across a timezone boundary', () => {

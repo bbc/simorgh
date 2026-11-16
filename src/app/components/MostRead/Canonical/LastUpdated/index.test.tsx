@@ -1,3 +1,4 @@
+import '#psammead/psammead-locales/moment/pcm';
 import { render, screen } from '../../../react-testing-library-with-providers';
 import LastUpdated from '.';
 
@@ -57,5 +58,22 @@ describe('MostReadCanonical - LastUpdated', () => {
     );
 
     expect(screen.getByText('Frissítve: november 3.')).toBeInTheDocument();
+  });
+
+  it('preserves the ordinal day suffix for pidgin when the year is omitted', () => {
+    jest.setSystemTime(new Date('2026-11-12T12:00:00Z'));
+
+    render(
+      <LastUpdated
+        timestamp="2026-11-03T05:17:09.393Z"
+        prefix="De one we dem update for:"
+        locale="pcm"
+        timezone="Africa/Lagos"
+      />,
+    );
+
+    expect(
+      screen.getByText('De one we dem update for: 3rd November'),
+    ).toBeInTheDocument();
   });
 });
