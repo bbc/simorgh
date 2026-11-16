@@ -37,4 +37,28 @@ describe('transformAnchorTags', () => {
 
     expect(transform(html)).toEqual(html);
   });
+
+  it('should append the extension to every occurrence of a repeated anchor', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="/news">One</a><a href="/news">Two</a>';
+
+    expect(transform(html)).toEqual(
+      '<a href="/news.lite">One</a><a href="/news.lite">Two</a>',
+    );
+  });
+
+  it('should leave an anchor with an unparseable href untouched and still transform the anchors after it', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="http://[invalid">Bad</a><a href="/news">News</a>';
+
+    expect(transform(html)).toEqual(
+      '<a href="http://[invalid">Bad</a><a href="/news.lite">News</a>',
+    );
+  });
 });

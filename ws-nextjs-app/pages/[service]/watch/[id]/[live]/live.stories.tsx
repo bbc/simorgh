@@ -14,7 +14,6 @@ const Component = ({ service }: StoryProps) => (
       pageData={liveTvFixture}
       pathname=""
       status={200}
-      timeOnServer={0}
     />
   </PageLayoutWrapper>
 );

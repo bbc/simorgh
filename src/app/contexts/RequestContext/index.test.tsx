@@ -88,7 +88,6 @@ const expectedOutput = {
   isLite: false,
   platform: 'amp',
   variant: 'simp',
-  timeOnServer: null,
   statsDestination: 'getStatsDestination',
   destinationSiteId: 12345,
   statusCode: 200,

@@ -12,13 +12,24 @@ import { Toggles } from '#app/models/types/global';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 import useCustomEventTracker from '.';
 
-let mockServiceContextValue = {
+let mockServiceContextValue: {
+  atiAnalyticsProducerId: string;
+  atiAnalyticsProducerName: string;
+  service: string;
+  resonanceEnabled?: boolean;
+} = {
   atiAnalyticsProducerId: '70',
   atiAnalyticsProducerName: 'PIDGIN',
   service: 'pidgin',
 };
+
+jest.mock(
+  '../../components/ATIAnalytics/resonance/dispatchResonanceEvent',
+  () => jest.fn(),
+);
 
 jest.mock('../../contexts/ServiceContext', () => {
   const serviceContext = createContext({
@@ -211,5 +222,151 @@ describe('useCustomEventTracker', () => {
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
+  });
+
+  describe('Resonance dual-run', () => {
+    const eventName = 'test-custom-event';
+
+    it('should dispatch a resonance event when resonanceEnabled is true', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalyticsFixture }),
+        },
+      );
+
+      await act(async () => {
+        await result.current('custom-component-data');
+      });
+
+      expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          event: expect.objectContaining({
+            action: 'view',
+            grouping: 'news::pidgin.news.story.51745682.page',
+            subcategory: eventName,
+          }),
+          item: expect.objectContaining({
+            label: 'custom-component-data',
+            name: 'custom-component-data',
+          }),
+        }),
+      );
+    });
+
+    it('should use the event name as the subcategory and leave the item name unset when there is no payload', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalyticsFixture }),
+        },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledWith(
+        expect.objectContaining({
+          event: expect.objectContaining({ subcategory: eventName }),
+          item: expect.objectContaining({ name: undefined }),
+        }),
+      );
+    });
+
+    it('should still dispatch a resonance event when the Reverb beacon fails', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+      mockSendEventBeacon.mockRejectedValueOnce(new Error('beacon failed'));
+      const consoleWarn = jest.spyOn(console, 'warn').mockImplementation();
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalyticsFixture }),
+        },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+
+      consoleWarn.mockRestore();
+    });
+
+    it('should not dispatch a resonance event when resonanceEnabled is false', async () => {
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalyticsFixture }),
+        },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not dispatch a resonance event when tracking is disabled', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        {
+          wrapper: props =>
+            wrapper({
+              ...props,
+              atiData: atiAnalyticsFixture,
+              toggles: { eventTracking: { enabled: false } },
+            }),
+        },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+    });
+
+    it('should not dispatch a resonance event when required ATI tracking props are missing', async () => {
+      mockServiceContextValue = {
+        ...mockServiceContextValue,
+        resonanceEnabled: true,
+      };
+
+      const { result } = renderHook(
+        () => useCustomEventTracker({ eventName }),
+        { wrapper },
+      );
+
+      await act(async () => {
+        await result.current();
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+    });
   });
 });
