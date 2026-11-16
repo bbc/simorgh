@@ -37,8 +37,10 @@ Before opening a PR:
    are pulled in by most clusters.
 3. Where several entry points share the same interior modules, migrate them as a single
    unit rather than repeating the same interior work in multiple PRs.
-4. Watch for cycles. `Header` ↔ `Brand` ↔ `Footer` are mutually dependent and cannot be
-   split across PRs.
+4. Verify cycles at the module level before grouping components. Shared dependencies
+   are not cycles: `Header` and `Footer` both import `Brand`, while `Brand` imports
+   `Header/NewLogoBanner`, not the Header entry point. Those imports alone do not
+   require migrating all three components in one PR.
 
 Do not leave a migrated copy alongside the legacy original. Update all importers and delete
 the legacy module in the same PR.
