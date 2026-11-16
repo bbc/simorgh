@@ -22,8 +22,7 @@ dismissal is disabled only when both account URLs are present. If either URL is
 missing or empty, the modal remains dismissible because the account actions
 cannot be displayed. This option does not restrict access to article content.
 
-Storybook examples cover save-article, follow-topic, custom copy, existing Hindi
-translations and non-dismissible presentation. Story callbacks prevent
-navigation to the example URLs and are visible in the Actions panel.
-The Hindi example uses existing save-article copy, not newly approved campaign
-wording.
+Storybook examples cover save-article, follow-topic, custom copy and
+non-dismissible presentation. Use the controls to try different copy and
+labels. Story callbacks prevent navigation to the example URLs and are visible
+in the Actions panel.

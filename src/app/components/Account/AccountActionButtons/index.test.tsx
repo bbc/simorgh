@@ -94,17 +94,7 @@ describe('AccountActionButtons', () => {
   });
 
   it('returns null when URLs are unavailable', () => {
-    render(
-      <AccountActionButtons
-        {...defaultProps}
-        signInUrl={undefined}
-        registerUrl={undefined}
-      />,
-      {
-        service: 'ws',
-        idctaConfig: null,
-      },
-    );
+    renderComponent({ signInUrl: undefined, registerUrl: undefined });
 
     expect(screen.queryByTestId('test-sign-in')).toBeNull();
     expect(screen.queryByTestId('test-register')).toBeNull();

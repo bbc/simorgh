@@ -1,6 +1,5 @@
 import { MouseEvent, useState } from 'react';
 import { fn } from 'storybook/test';
-import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import AccountSignInModal, { AccountSignInModalProps } from '.';
 import readme from './README.md';
 
@@ -47,18 +46,6 @@ export default {
       event.preventDefault(),
     ),
   },
-  argTypes: {
-    title: { control: 'text' },
-    description: { control: 'text' },
-    closeLabel: { control: 'text' },
-    signInText: { control: 'text' },
-    signInAccessibleLabel: { control: 'text' },
-    registerText: { control: 'text' },
-    separatorText: { control: 'text' },
-    signInUrl: { control: 'text' },
-    registerUrl: { control: 'text' },
-    isDismissible: { control: 'boolean' },
-  },
   parameters: { layout: 'fullscreen', docs: { readme } },
 };
 
@@ -84,24 +71,6 @@ CustomCopy.args = {
   signInText: 'Sign in to your account',
   registerText: 'Create an account',
   signInAccessibleLabel: 'Sign in to your BBC Account',
-};
-
-const hindiTranslations = hindiServiceConfig.default.translations;
-
-export const Hindi = (args: AccountSignInModalProps) => (
-  <ModalStory {...args} />
-);
-Hindi.args = {
-  title: hindiTranslations.accountSignInModal?.title,
-  description: hindiTranslations.accountSignInModal?.description,
-  closeLabel: hindiTranslations.accountSignInModal?.closeLabel,
-  signInText: hindiTranslations.account?.signIn,
-  signInAccessibleLabel: hindiTranslations.account?.signInAccessibleLabel,
-  registerText: hindiTranslations.account?.register,
-  separatorText: hindiTranslations.accountPromoBanner?.buttonSeparatorText,
-};
-Hindi.globals = {
-  service: { service: 'hindi', variant: 'default' },
 };
 
 export const NonDismissible = (args: AccountSignInModalProps) => (

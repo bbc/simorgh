@@ -1,6 +1,4 @@
-import { use, useState } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { AccountContext } from '#app/contexts/AccountContext';
+import { useState } from 'react';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import AccountPromotionalBanner from '.';
 import readme from './README.md';
@@ -37,8 +35,17 @@ SignedIn.globals = {
 
 export const SignedOutModal = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { translations } = use(ServiceContext);
-  const { signInUrl, registerUrl } = use(AccountContext);
+  const modalProps = {
+    title: 'Sign in to save stories',
+    description: 'Save stories and read them at your convenience',
+    closeLabel: 'Close',
+    signInText: 'Sign In',
+    registerText: 'Register',
+    signInAccessibleLabel: 'Sign in to My News',
+    separatorText: 'or',
+    signInUrl: 'https://example.com/signin',
+    registerUrl: 'https://example.com/register',
+  };
 
   return (
     <>
@@ -50,18 +57,7 @@ export const SignedOutModal = () => {
         Open Sign In Modal
       </button>
       {isOpen && (
-        <AccountSignInModal
-          title={translations.accountSignInModal?.title ?? ''}
-          description={translations.accountSignInModal?.description ?? ''}
-          closeLabel={translations.accountSignInModal?.closeLabel ?? 'Close'}
-          signInText={translations.account?.signIn ?? ''}
-          registerText={translations.account?.register ?? ''}
-          signInAccessibleLabel={translations.account?.signInAccessibleLabel}
-          separatorText={translations.accountPromoBanner?.buttonSeparatorText}
-          onClose={() => setIsOpen(false)}
-          signInUrl={signInUrl}
-          registerUrl={registerUrl}
-        />
+        <AccountSignInModal {...modalProps} onClose={() => setIsOpen(false)} />
       )}
     </>
   );
