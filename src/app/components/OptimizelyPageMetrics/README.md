@@ -4,8 +4,6 @@
 
 This component ensures that tracking is only enabled for users who are part of specific Optimizely experiments, and only on supported page types.
 
-Topic-page tracking is rendered only on the Hindi Editorial Picks topic. The caller checks the service and topic ID so a previously activated experiment cannot enable tracking on unrelated topic pages.
-
 The `OptimizelyPageMetric` component:
 
 - Accesses the `Optimizely` client.

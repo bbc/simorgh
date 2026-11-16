@@ -1,4 +1,4 @@
-import { use, useState, useCallback, useEffect } from 'react';
+import { use, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
@@ -14,9 +14,6 @@ import {
   setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
   DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
-  ACCOUNT_BANNER_DISMISS_KEY,
-  ACCOUNT_BANNER_LAST_DISMISS_KEY,
-  isAccountPromoBannerVisible,
 } from './utilities';
 import styles from './index.styles';
 
@@ -40,38 +37,6 @@ const AccountPromotionalBanner = ({
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const [isDismissed, setIsDismissed] = useState(false);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    let visible = false;
-
-    if (isEligible && accountPromoBannerTranslations && !isDismissed) {
-      let dismissalCount: string | null = null;
-      let lastDismissed: string | null = null;
-      try {
-        dismissalCount = localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY);
-        lastDismissed = localStorage.getItem(ACCOUNT_BANNER_LAST_DISMISS_KEY);
-      } catch (error) {
-        dismissalCount = null;
-        lastDismissed = null;
-        // eslint-disable-next-line no-console
-        console.error('Unable to check account banner dismissal state', error);
-      }
-      visible = isAccountPromoBannerVisible({
-        cookies: document.cookie,
-        dismissalCount,
-        lastDismissed,
-      });
-    }
-
-    root.classList.toggle(
-      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
-      visible,
-    );
-    return () => {
-      root.classList.remove(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
-    };
-  }, [isEligible, accountPromoBannerTranslations, isDismissed]);
-
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
     ...(experimentName && { experimentName }),
@@ -91,12 +56,7 @@ const AccountPromotionalBanner = ({
       if (onCloseClickTrack) {
         await onCloseClickTrack(event);
       }
-      try {
-        setAccountPromoBannerDismissed();
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.error('Unable to store account banner dismissal state', error);
-      }
+      setAccountPromoBannerDismissed();
       setIsDismissed(true);
       document
         .querySelector('html')

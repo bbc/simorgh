@@ -2,14 +2,13 @@ import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import FollowTopicButton from '#app/components/FollowTopicButton';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import parseRoute from '#app/routes/utils/parseRoute';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import styles from './index.module.scss';
+import styles from './index.styles';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -20,9 +19,6 @@ import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import TopicPageElectionBanner from './TopicPageElectionBanner';
-import EditorialPicksPromoExperiment, {
-  EDITORIAL_PICKS_TOPIC_ID,
-} from './EditorialPicksPromoExperiment';
 
 const TopicPage = ({ pageData }) => {
   const { lang, translations, brandName, service } = use(ServiceContext);
@@ -68,16 +64,12 @@ const TopicPage = ({ pageData }) => {
   });
 
   return (
-    <div className={styles.pageWrapper}>
-      <EditorialPicksPromoExperiment topicId={topicId} />
+    <div css={theme => (theme.isDarkUi ? styles.pageWrapper : undefined)}>
       <AdContainer slotType="leaderboard" />
-      <main className={styles.main} role="main">
-        <div className={styles.inner}>
+      <main css={styles.main} role="main">
+        <div css={styles.inner}>
           <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
-          {service === 'hindi' && topicId === EDITORIAL_PICKS_TOPIC_ID && (
-            <OptimizelyPageMetrics trackPageComplete trackPageDepth />
-          )}
           <MetadataContainer
             title={metadataTitle}
             socialHeadline={metadataBaseTitle}
@@ -92,8 +84,8 @@ const TopicPage = ({ pageData }) => {
             headline={title}
             entities={[itemList]}
           />
-          <div className={styles.title}>
-            <div className={styles.inline}>
+          <div css={styles.title}>
+            <div css={styles.inline}>
               {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
             </div>

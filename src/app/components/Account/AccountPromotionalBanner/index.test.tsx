@@ -106,69 +106,6 @@ describe('AccountPromotionalBanner', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('remains visible and can be dismissed when storage access is blocked', async () => {
-    const error = new Error('Storage access blocked');
-    const storage = jest
-      .spyOn(Storage.prototype, 'getItem')
-      .mockImplementation(() => {
-        throw error;
-      });
-    const consoleError = jest.spyOn(console, 'error').mockImplementation();
-
-    try {
-      renderWithProviders();
-      expect(document.documentElement).toHaveClass(
-        DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
-      );
-      expect(
-        screen.getByRole('heading', { name: 'Your very own BBC' }),
-      ).toBeInTheDocument();
-      await userEvent.click(screen.getByRole('button', { name: /close/i }));
-      expect(
-        screen.queryByRole('heading', { name: 'Your very own BBC' }),
-      ).not.toBeInTheDocument();
-      expect(document.documentElement).not.toHaveClass(
-        DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
-      );
-      expect(consoleError).toHaveBeenCalledWith(
-        'Unable to check account banner dismissal state',
-        error,
-      );
-      expect(consoleError).toHaveBeenCalledWith(
-        'Unable to store account banner dismissal state',
-        error,
-      );
-    } finally {
-      storage.mockRestore();
-      consoleError.mockRestore();
-    }
-  });
-
-  it('still dismisses the banner when storage writes fail', async () => {
-    const error = new Error('Storage write blocked');
-    const storage = jest
-      .spyOn(Storage.prototype, 'setItem')
-      .mockImplementation(() => {
-        throw error;
-      });
-    const consoleError = jest.spyOn(console, 'error').mockImplementation();
-
-    try {
-      renderWithProviders();
-      await userEvent.click(screen.getByRole('button', { name: /close/i }));
-      expect(
-        screen.queryByRole('heading', { name: 'Your very own BBC' }),
-      ).not.toBeInTheDocument();
-      expect(consoleError).toHaveBeenCalledWith(
-        'Unable to store account banner dismissal state',
-        error,
-      );
-    } finally {
-      storage.mockRestore();
-      consoleError.mockRestore();
-    }
-  });
-
   it('does not render when IDCTA is not available', () => {
     renderWithProviders({ 'id-availability': 'RED' });
 
