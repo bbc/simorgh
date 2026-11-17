@@ -8,6 +8,7 @@ import {
 } from '../../utilities/env';
 import {
   assertPageView,
+  assertResonancePageView,
   assertScrollableNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -197,14 +198,16 @@ test.describe('livePage ATI Analytics', () => {
           await assertPageView({ page, ...atiProps });
         });
 
-        test('should send a Resonance page view event', async ({ page }) => {
-          test.skip(
-            !shouldRunForEnv(testSuite.runForEnv),
-            `Skipped for APP_ENV=${appEnvFromProcess}`,
-          );
+        if (testSuite.includeResonancePageView) {
+          test('should send a resonance page view event', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
 
-          await assertResonancePageView({ page, ...atiProps });
-        });
+            await assertResonancePageView({ page, ...atiProps });
+          });
+        }
 
         test('should send a view event for the Scrollable Navigation component', async ({
           page,

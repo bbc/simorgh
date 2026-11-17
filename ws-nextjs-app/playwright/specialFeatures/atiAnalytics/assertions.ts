@@ -10,6 +10,9 @@ import {
   captureResonanceRequestBodies,
   getCapturedResonanceBodies,
   isResonanceViewabilityBody,
+  captureResonanceRequests,
+  getCapturedResonancePayloads,
+  trackResonanceEventRequests,
   COMPONENTS,
   type ResonanceEventAction,
   type ResonanceRequestBody,
@@ -398,7 +401,6 @@ export const assertResonancePageView = async ({
   path,
   baseURL,
   pageIdentifier,
-  siteId,
   applicationType,
   contentType,
   service,
@@ -406,10 +408,16 @@ export const assertResonancePageView = async ({
 }: AtiAssertionFnProps) => {
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
-  const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const resonanceBagEventUrlPattern = new RegExp(
-    `^${escapedBagUrl}/v\\d+/event(?:\\?.*)?$`,
+  const resonanceEventRequests = trackResonanceEventRequests(
+    page,
+    resonanceBagUrl,
   );
+  const capturedRequests = await captureResonanceRequests(page);
+  const getPageViewPayload = () =>
+    getCapturedResonancePayloads(capturedRequests, resonanceBagUrl).find(
+      payload =>
+        payload.events?.some(event => event.event_name === 'page.display'),
+    );
 
   const matchedRequests: Request[] = [];
   /* eslint-disable camelcase */
@@ -499,7 +507,42 @@ export const assertResonancePageView = async ({
     expect(event.producer).toBe(siteId);
   } finally {
     page.off('request', requestListener);
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  if (!sendsResonanceEvents) {
+    await page.waitForLoadState('networkidle');
+    expect(resonanceEventRequests).toHaveLength(0);
+    return;
   }
+
+  await expect
+    .poll(() => resonanceEventRequests.length, { timeout: 15000 })
+    .toBeGreaterThan(0);
+  await expect.poll(getPageViewPayload, { timeout: 15000 }).toBeDefined();
+
+  const payload = getPageViewPayload();
+
+  expect(payload).toHaveProperty('bag_metadata');
+  expect(payload).toHaveProperty('events');
+
+  const metadata = payload?.bag_metadata ?? {};
+  const event =
+    payload?.events?.find(({ event_name: name }) => name === 'page.display') ??
+    {};
+
+  assertResonancePageViewParamsExist({
+    metadata,
+    event,
+    contentType,
+  });
+
+  expect(event.app_name).toBe(getResonanceAppName(service));
+  expect(event.content_type).toBe(contentType);
+  expect(event.event_name).toBe('page.display');
+  expect(event.page_name).toBe(pageIdentifier);
+  expect(metadata.event_category).toBe('page-view');
+  expect(fieldIsValidString(event.producer)).toBe(true);
+  expect(typeof event.site_id).toBe('number');
 };
 
 export const assertScrollableNavigationComponentView = async ({

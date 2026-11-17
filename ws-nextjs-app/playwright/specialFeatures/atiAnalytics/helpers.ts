@@ -27,41 +27,26 @@ export const getATIUrls = (env: AppEnv) => ({
 
 export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
 
-export type ResonanceEventAction = 'view' | 'select';
-
 /* eslint-disable camelcase */
-export type ResonanceEvent = Record<string, unknown> & {
-  event?: {
-    action?: ResonanceEventAction;
-    grouping?: string;
-    subcategory?: string;
-  };
-  event_name?: string;
-  page_name?: string;
-};
-
-export type ResonanceRequestBody = {
-  bag_metadata?: {
-    event_category?: string;
-  };
-  events?: ResonanceEvent[];
+export type ResonancePayload = {
+  bag_metadata?: Record<string, unknown>;
+  events?: Array<Record<string, unknown>>;
 };
 /* eslint-enable camelcase */
 
-export type CapturedResonanceRequest = { url: string; body: string };
+export type CapturedResonanceRequest = { url: string; payload: string };
 
 type WindowWithResonanceCapture = Window & {
-  reportResonanceRequest: (url: string, body: string) => void;
+  reportResonanceRequest: (url: string, payload: string) => void;
 };
 
-// Resonance sends Blob bodies, which Playwright reports as null postData, so capture them in-page.
-export const captureResonanceRequestBodies = async (page: Page) => {
+export const captureResonanceRequests = async (page: Page) => {
   const capturedRequests: CapturedResonanceRequest[] = [];
 
   await page.exposeFunction(
     'reportResonanceRequest',
-    (url: string, body: string) => {
-      capturedRequests.push({ url, body });
+    (url: string, payload: string) => {
+      capturedRequests.push({ url, payload });
     },
   );
 
@@ -70,17 +55,20 @@ export const captureResonanceRequestBodies = async (page: Page) => {
       if (data instanceof Blob) {
         data
           .text()
-          .then(body =>
+          .then(payload =>
             (
               window as unknown as WindowWithResonanceCapture
-            ).reportResonanceRequest(url, body),
+            ).reportResonanceRequest(url, payload),
           );
       }
     };
 
     const originalFetch = window.fetch;
     window.fetch = (input, init) => {
-      capture(String(input instanceof Request ? input.url : input), init?.body);
+      capture(
+        String(input instanceof globalThis.Request ? input.url : input),
+        init?.body,
+      );
       return originalFetch(input, init);
     };
 
@@ -94,14 +82,12 @@ export const captureResonanceRequestBodies = async (page: Page) => {
   return capturedRequests;
 };
 
-const parseResonanceRequestBody = (
-  rawBody: string,
-): ResonanceRequestBody | null => {
+const parseResonancePayload = (rawPayload: string): ResonancePayload | null => {
   try {
-    const parsedBody = JSON.parse(rawBody);
+    const parsedPayload = JSON.parse(rawPayload);
 
-    return parsedBody && typeof parsedBody === 'object'
-      ? (parsedBody as ResonanceRequestBody)
+    return parsedPayload && typeof parsedPayload === 'object'
+      ? (parsedPayload as ResonancePayload)
       : null;
   } catch {
     return null;
@@ -137,6 +123,40 @@ export const isResonanceViewabilityBody =
           event.event?.subcategory === component,
       ),
     );
+const isResonanceEventUrl = (url: string, resonanceBagUrl: string): boolean => {
+  const requestUrl = new URL(url);
+  return (
+    requestUrl.origin === new URL(resonanceBagUrl).origin &&
+    /^\/v\d+\/event$/.test(requestUrl.pathname)
+  );
+};
+
+export const trackResonanceEventRequests = (
+  page: Page,
+  resonanceBagUrl: string,
+) => {
+  const resonanceEventRequests: Request[] = [];
+
+  page.on('request', request => {
+    if (
+      request.method() === 'POST' &&
+      isResonanceEventUrl(request.url(), resonanceBagUrl)
+    ) {
+      resonanceEventRequests.push(request);
+    }
+  });
+
+  return resonanceEventRequests;
+};
+
+export const getCapturedResonancePayloads = (
+  capturedRequests: CapturedResonanceRequest[],
+  resonanceBagUrl: string,
+): ResonancePayload[] =>
+  capturedRequests
+    .filter(({ url }) => isResonanceEventUrl(url, resonanceBagUrl))
+    .map(({ payload }) => parseResonancePayload(payload))
+    .filter((payload): payload is ResonancePayload => payload !== null);
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
