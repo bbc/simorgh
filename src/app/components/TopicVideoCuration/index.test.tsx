@@ -102,6 +102,18 @@ describe('TopicVideoCuration', () => {
     expect(screen.queryByRole('heading')).not.toBeInTheDocument();
   });
 
+  it('renders nothing when fewer than 2 videos are available', () => {
+    mockHook.mockReturnValue({
+      resultsByTopic: [[item('a')]],
+      isLoading: false,
+      isError: false,
+    });
+    render(<TopicVideoCuration topics={[{ topicId: '1' }]} />, {
+      service: 'portuguese',
+    });
+    expect(screen.queryByRole('heading')).not.toBeInTheDocument();
+  });
+
   it('renders an error message on failure', () => {
     mockHook.mockReturnValue({
       resultsByTopic: [],

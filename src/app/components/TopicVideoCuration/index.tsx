@@ -5,7 +5,10 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
-import selectTopicVideos, { normaliseTopicIds } from './selectTopicVideos';
+import selectTopicVideos, {
+  MIN_VIDEOS,
+  normaliseTopicIds,
+} from './selectTopicVideos';
 import useFetchTopicVideos, {
   TOPIC_VIDEO_CURATION_COMPONENT_ID,
 } from './useFetchTopicVideos';
@@ -44,7 +47,7 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
   if (topicIds.length === 0) return null;
 
   // The wrapper stays mounted so the near-viewport observer can find it.
-  const showGrid = !isLoading && !isError && videos.length > 0;
+  const showGrid = !isLoading && !isError && videos.length >= MIN_VIDEOS;
   const showError = !isLoading && isError;
 
   return (

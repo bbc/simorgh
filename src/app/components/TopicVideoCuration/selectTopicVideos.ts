@@ -2,6 +2,7 @@ import { TopicDiscoveryItem } from '../TopicDiscovery/types';
 
 export const MAX_TOPICS = 5;
 export const MAX_VIDEOS = 4;
+export const MIN_VIDEOS = 2;
 
 const hasText = (value?: string) => Boolean(value && value.trim());
 
