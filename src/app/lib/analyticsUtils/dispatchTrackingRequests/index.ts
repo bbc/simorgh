@@ -1,15 +1,5 @@
-/* eslint-disable import/no-unresolved */
-import { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
-
-type OptimizelyParameters =
-  | (Pick<OptimizelyContextInterface, 'optimizely'> &
-      Pick<
-        EventTrackingData,
-        'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
-      >)
-  | undefined;
 
 type RequiredEventProps = Pick<
   EventTrackingData,
@@ -24,7 +14,6 @@ type RequiredEventProps = Pick<
 > & { trackingIsEnabled: boolean; eventSent?: boolean; alwaysInView?: boolean };
 
 type ViewTrackerRequestsParameters = {
-  optimizelyParameters?: OptimizelyParameters;
   reverbParameters: EventTrackingData;
   trackingFlags: {
     trackingIsEnabled: boolean;
@@ -64,32 +53,7 @@ export const shouldDispatchEventBeacon = ({
   ].every(Boolean);
 };
 
-const trackComponentInOptimizely = (
-  optimizelyParameters: OptimizelyParameters,
-) => {
-  if (!optimizelyParameters) return;
-
-  const { optimizely, sendOptimizelyEvents, experimentVariant, componentName } =
-    optimizelyParameters;
-
-  if (
-    optimizely &&
-    sendOptimizelyEvents &&
-    experimentVariant &&
-    experimentVariant !== 'off'
-  ) {
-    const overrideAttributes = optimizely.user.attributes;
-
-    optimizely.track(
-      `${componentName}-views`,
-      optimizely.user.id as string,
-      overrideAttributes,
-    );
-  }
-};
-
 const dispatchTrackingRequests = async ({
-  optimizelyParameters,
   reverbParameters,
   trackingFlags,
 }: ViewTrackerRequestsParameters) => {
@@ -121,8 +85,6 @@ const dispatchTrackingRequests = async ({
   });
 
   if (shouldSendEvent) {
-    trackComponentInOptimizely(optimizelyParameters);
-
     await sendEventBeacon(reverbParameters);
   }
 };

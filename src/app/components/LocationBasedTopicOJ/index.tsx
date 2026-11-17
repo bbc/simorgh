@@ -13,7 +13,6 @@ const LocationBasedTopicOJ = ({ pageData }: { pageData: Article }) => {
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'location-based-topic-oj',
-    sendOptimizelyEvents: true,
     groupTracker: {
       name: title,
       type: 'location-based-topic-oj',

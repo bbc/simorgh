@@ -63,14 +63,14 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
 const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
 
-  const eventTrackingDataWithOptimizely = {
+  const eventTrackingDataWithExperiment = {
     block: {
       ...eventTrackingData.block,
       ...(experimentProps && experimentProps),
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
+  const viewTracker = useViewTracker(eventTrackingDataWithExperiment.block);
 
   return (
     <StoryPromoUlFeatures role="list">
@@ -89,7 +89,7 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingDataWithOptimizely}
+              eventTrackingData={eventTrackingDataWithExperiment}
               sectionType="features-and-analysis"
             />
           </StoryPromoLiFeatures>
@@ -102,14 +102,14 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
 const PromoComponent = ({ promo, dir = 'ltr', experimentProps }) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
 
-  const eventTrackingDataWithOptimizely = {
+  const eventTrackingDataWithExperiment = {
     block: {
       ...eventTrackingData.block,
       ...(experimentProps && experimentProps),
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
+  const viewTracker = useViewTracker(eventTrackingDataWithExperiment.block);
 
   return (
     <div {...viewTracker}>
@@ -118,7 +118,7 @@ const PromoComponent = ({ promo, dir = 'ltr', experimentProps }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
-        eventTrackingData={eventTrackingDataWithOptimizely}
+        eventTrackingData={eventTrackingDataWithExperiment}
         sectionType="features-and-analysis"
       />
     </div>

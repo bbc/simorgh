@@ -3,7 +3,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
   STATIC_REVERB_VIEW_TRACKING,
   VIEW_EVENT,
@@ -42,7 +41,6 @@ const getComponentViewTracker = (
     statsDestination,
     campaignID,
     detailedPlacement,
-    sendOptimizelyEvents,
     experimentName,
     experimentVariant,
     groupTracker,
@@ -56,7 +54,6 @@ const getComponentViewTracker = (
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
-  const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
   const timer = useRef(null);
@@ -77,12 +74,6 @@ const getComponentViewTracker = (
       // @ts-expect-error timer ref won't be null
       timer.current = setTimeout(() => {
         dispatchTrackingRequests({
-          optimizelyParameters: {
-            optimizely,
-            sendOptimizelyEvents,
-            experimentVariant,
-            componentName,
-          },
           reverbParameters: {
             campaignID,
             componentName,
@@ -186,8 +177,6 @@ const getComponentViewTracker = (
     eventSent,
     advertiserID,
     url,
-    sendOptimizelyEvents,
-    optimizely,
     experimentName,
     experimentVariant,
     detailedPlacement,

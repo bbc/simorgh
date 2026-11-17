@@ -33,7 +33,6 @@ export type Navigation = {
 };
 
 export type ComponentExperimentProps = {
-  sendOptimizelyEvents?: boolean;
   experimentName?: string;
   experimentVariant?: string;
 };

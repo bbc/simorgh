@@ -53,14 +53,8 @@ export default ({
   const isSingleImageLayout = !hasPromoItems;
   const isHighProminence = prominence === VISUAL_PROMINENCE.HIGH;
 
-  const eventTrackingDataWithOptimizelyEvents = {
-    ...eventTrackingData,
-  };
-
-  const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
-  const clickTrackerHandler = useClickTrackerHandler(
-    eventTrackingDataWithOptimizelyEvents,
-  );
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const renderImage = () => {
     if (!isHighProminence) {

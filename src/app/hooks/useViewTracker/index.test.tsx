@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 
 import { createContext, PropsWithChildren, ReactNode } from 'react';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   render,
   renderHook,
@@ -144,11 +143,6 @@ const defaultToggles = {
   },
 };
 
-const defaultOptimizely = {
-  track: jest.fn(),
-  user: { attributes: { foo: 'bar' }, id: 'test' },
-} as unknown as ReactSDKClient;
-
 const reverbMock = {
   isReady: jest.fn(),
   initialise: jest.fn(() => Promise.resolve()),
@@ -165,30 +159,26 @@ const wrapper = ({
   atiData,
   children,
   toggles = defaultToggles,
-  mockOptimizely = defaultOptimizely,
 }: {
   atiData?: ATIData;
   children?: ReactNode | null;
   toggles?: Toggles;
-  mockOptimizely?: ReactSDKClient;
 }) => (
-  <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      pageType={STORY_PAGE}
-      isAmp={false}
-      service="pidgin"
-      pathname="/pidgin/tori-51745682"
-    >
-      <ServiceContextProvider service="pidgin">
-        <ToggleContextProvider toggles={toggles}>
-          <EventTrackingContextProvider atiData={atiData}>
-            {children}
-          </EventTrackingContextProvider>
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </OptimizelyProvider>
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.com"
+    pageType={STORY_PAGE}
+    isAmp={false}
+    service="pidgin"
+    pathname="/pidgin/tori-51745682"
+  >
+    <ServiceContextProvider service="pidgin">
+      <ToggleContextProvider toggles={toggles}>
+        <EventTrackingContextProvider atiData={atiData}>
+          {children}
+        </EventTrackingContextProvider>
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 describe('useViewTracker', () => {
@@ -198,92 +188,6 @@ describe('useViewTracker', () => {
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
-
-    describe('Optimizely', () => {
-      it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
-        const { result } = renderHook(
-          () =>
-            useViewTracker({
-              ...trackingData,
-              sendOptimizelyEvents: true,
-              experimentName: 'dummy_experiment',
-              experimentVariant: 'variation_a',
-            }),
-          {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-          },
-        );
-        const element = document.createElement('div');
-
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
-        });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-        expect(defaultOptimizely.track).toHaveBeenCalledWith(
-          'most-read-views',
-          defaultOptimizely.user.id,
-          defaultOptimizely.user.attributes,
-        );
-      });
-
-      it('should not send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object is undefined', async () => {
-        const mockOptimizelyTrack = jest.fn();
-        const mockOptimizely = undefined;
-
-        const { result } = renderHook(
-          () =>
-            useViewTracker({
-              ...trackingData,
-              // @ts-expect-error partial data for tests
-              ...mockOptimizely,
-            }),
-          {
-            wrapper,
-            initialProps: {},
-          },
-        );
-        const element = document.createElement('div');
-
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
-        });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
-      });
-    });
 
     describe('View tracking - Reverb', () => {
       it('should return a function that can be assigned to an element to observe for intersections', async () => {
@@ -310,13 +214,10 @@ describe('useViewTracker', () => {
           return <div data-testid="tracked-element" ref={ref} />;
         };
 
-        const renderTrackedElement = (viewTrackerKey: string) => (
-          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-            {wrapper({
-              children: <TrackedElement viewTrackerKey={viewTrackerKey} />,
-            })}
-          </OptimizelyProvider>
-        );
+        const renderTrackedElement = (viewTrackerKey: string) =>
+          wrapper({
+            children: <TrackedElement viewTrackerKey={viewTrackerKey} />,
+          });
         const { getByTestId, rerender } = render(renderTrackedElement('first'));
         const element = getByTestId('tracked-element');
         await waitFor(() =>
@@ -408,49 +309,6 @@ describe('useViewTracker', () => {
 
         expect(global.IntersectionObserver).not.toHaveBeenCalled();
         expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
-      });
-
-      it('should use componentName property if provided in eventTrackingData object', async () => {
-        const { result } = renderHook(
-          () =>
-            useViewTracker({
-              ...trackingData,
-              experimentName: 'dummy_experiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }),
-          {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-          },
-        );
-        const element = document.createElement('div');
-
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
-        });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [0.5] });
-        expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-        expect(defaultOptimizely.track).toHaveBeenCalledWith(
-          'most-read-views',
-          defaultOptimizely.user.id,
-          { foo: 'bar' },
-        );
       });
 
       it.each([

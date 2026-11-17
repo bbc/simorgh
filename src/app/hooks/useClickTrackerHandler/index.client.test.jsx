@@ -2,14 +2,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { createContext } from 'react';
-import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '#hooks/useTrackingToggle';
 import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
-import useOptimizelyVariation from '../useOptimizelyVariation';
 import {
   AllTheProviders,
   render,
@@ -29,16 +27,6 @@ let mockServiceContextValue = {
 
 jest.mock('#hooks/useTrackingToggle', () => {
   const actual = jest.requireActual('#hooks/useTrackingToggle');
-
-  return {
-    __esModule: true,
-    ...actual,
-    default: jest.fn(actual.default),
-  };
-});
-
-jest.mock('../useOptimizelyVariation', () => {
-  const actual = jest.requireActual('../useOptimizelyVariation');
 
   return {
     __esModule: true,
@@ -103,12 +91,6 @@ const reverbMock = {
   userActionEvent: jest.fn(),
 };
 
-const defaultOptimizely = {
-  track: jest.fn(),
-  close: jest.fn(),
-  user: { attributes: { foo: 'bar' }, id: 'test' },
-};
-
 const createWrapper =
   pageMetadata =>
   ({ children }) => (
@@ -163,7 +145,6 @@ beforeEach(() => {
   jest.clearAllMocks();
   console.error = jest.fn();
 
-  useOptimizelyVariation.mockReturnValue(null);
   mockServiceContextValue = {
     atiAnalyticsProducerId: '70',
     atiAnalyticsProducerName: 'PIDGIN',
@@ -668,177 +649,6 @@ describe('useClickTrackerHandler', () => {
         undefined,
         true,
       );
-    });
-
-    it('should use componentName property if provided in eventTrackingData object', async () => {
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-      expect(defaultOptimizely.track).toHaveBeenCalledWith(
-        'brand-clicks',
-        defaultOptimizely.user.id,
-        { foo: 'bar' },
-      );
-    });
-
-    it('should use the Optimizely component name without changing the Piano component name', async () => {
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              optimizelyComponentName: 'sticky-navigation',
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(defaultOptimizely.track).toHaveBeenCalledWith(
-        'sticky-navigation-clicks',
-        defaultOptimizely.user.id,
-        { foo: 'bar' },
-      );
-      expect(defaultOptimizely.track).not.toHaveBeenCalledWith(
-        'brand-clicks',
-        expect.anything(),
-        expect.anything(),
-      );
-    });
-
-    it('should not send an Optimizely event for an off variation without control group tracking enabled', async () => {
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'off',
-              sendOptimizelyEvents: true,
-            }}
-          />
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(defaultOptimizely.track).not.toHaveBeenCalled();
-    });
-
-    it('should fire event to Optimizely if optimizely object exists', async () => {
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-      expect(defaultOptimizely.track).toHaveBeenCalledWith(
-        'brand-clicks',
-        defaultOptimizely.user.id,
-        { foo: 'bar' },
-      );
-    });
-
-    it('should not fire event to Optimizely if optimizely object is undefined', async () => {
-      const mockOptimizelyTrack = jest.fn();
-      const mockOptimizely = undefined;
-
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <TestComponent
-          hookProps={{ ...eventTrackingData, ...mockOptimizely }}
-        />,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
   });
 
