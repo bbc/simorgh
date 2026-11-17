@@ -153,7 +153,7 @@ describe('useFetchTopicVideos', () => {
     let signal: AbortSignal | undefined;
     mockFetch.mockImplementation((_url, init) => {
       signal = init?.signal;
-      return new Promise(() => {});
+      return new Promise<never>(jest.fn());
     });
 
     const { unmount } = renderHook(
