@@ -94,23 +94,40 @@ const parseResonancePayload = (rawPayload: string): ResonancePayload | null => {
   }
 };
 
+const isResonanceEventUrl = (url: string, resonanceBagUrl: string): boolean => {
+  const requestUrl = new URL(url);
+  return (
+    requestUrl.origin === new URL(resonanceBagUrl).origin &&
+    /^\/v\d+\/event$/.test(requestUrl.pathname)
+  );
+};
+
+export const trackResonanceEventRequests = (
+  page: Page,
+  resonanceBagUrl: string,
+) => {
+  const resonanceEventRequests: Request[] = [];
+
+  page.on('request', request => {
+    if (
+      request.method() === 'POST' &&
+      isResonanceEventUrl(request.url(), resonanceBagUrl)
+    ) {
+      resonanceEventRequests.push(request);
+    }
+  });
+
+  return resonanceEventRequests;
+};
+
 export const getCapturedResonancePayloads = (
   capturedRequests: CapturedResonanceRequest[],
   resonanceBagUrl: string,
-): ResonancePayload[] => {
-  const resonanceOrigin = new URL(resonanceBagUrl).origin;
-
-  return capturedRequests
-    .filter(({ url }) => {
-      const requestUrl = new URL(url);
-      return (
-        requestUrl.origin === resonanceOrigin &&
-        /^\/v\d+\/event$/.test(requestUrl.pathname)
-      );
-    })
+): ResonancePayload[] =>
+  capturedRequests
+    .filter(({ url }) => isResonanceEventUrl(url, resonanceBagUrl))
     .map(({ payload }) => parseResonancePayload(payload))
     .filter((payload): payload is ResonancePayload => payload !== null);
-};
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);

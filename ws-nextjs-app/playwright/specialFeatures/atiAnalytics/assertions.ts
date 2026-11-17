@@ -9,6 +9,7 @@ import {
   isViewabilityClickRequest,
   captureResonanceRequests,
   getCapturedResonancePayloads,
+  trackResonanceEventRequests,
   COMPONENTS,
   type AppEnv,
 } from './helpers';
@@ -338,6 +339,10 @@ export const assertResonancePageView = async ({
 }: AtiAssertionFnProps) => {
   const sendsResonanceEvents = usesResonance(applicationType);
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
+  const resonanceEventRequests = trackResonanceEventRequests(
+    page,
+    resonanceBagUrl,
+  );
   const capturedRequests = await captureResonanceRequests(page);
   const getPageViewPayload = () =>
     getCapturedResonancePayloads(capturedRequests, resonanceBagUrl).find(
@@ -349,12 +354,13 @@ export const assertResonancePageView = async ({
 
   if (!sendsResonanceEvents) {
     await page.waitForLoadState('networkidle');
-    expect(
-      getCapturedResonancePayloads(capturedRequests, resonanceBagUrl),
-    ).toHaveLength(0);
+    expect(resonanceEventRequests).toHaveLength(0);
     return;
   }
 
+  await expect
+    .poll(() => resonanceEventRequests.length, { timeout: 15000 })
+    .toBeGreaterThan(0);
   await expect.poll(getPageViewPayload, { timeout: 15000 }).toBeDefined();
 
   const payload = getPageViewPayload();
