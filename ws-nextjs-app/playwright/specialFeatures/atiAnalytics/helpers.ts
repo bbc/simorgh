@@ -116,29 +116,6 @@ const isResonanceEventUrl = (url: string, resonanceBagUrl: string): boolean => {
   );
 };
 
-export const isResonancePageViewRequest =
-  (resonanceBagUrl: string) =>
-  (request: Request): boolean => {
-    if (
-      request.method() !== 'POST' ||
-      !isResonanceEventUrl(request.url(), resonanceBagUrl)
-    ) {
-      return false;
-    }
-
-    const postData = request.postData();
-    if (!postData) return false;
-
-    try {
-      const payload = JSON.parse(postData) as ResonancePayload;
-      return Boolean(
-        payload.events?.some(event => event.event_name === 'page.display'),
-      );
-    } catch {
-      return false;
-    }
-  };
-
 export const trackResonanceEventRequests = (
   page: Page,
   resonanceBagUrl: string,

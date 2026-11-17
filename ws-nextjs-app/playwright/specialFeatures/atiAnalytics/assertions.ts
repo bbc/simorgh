@@ -7,7 +7,6 @@ import {
   getResonanceBagUrl,
   isViewabilityViewRequest,
   isViewabilityClickRequest,
-  isResonancePageViewRequest,
   isResonanceViewabilityPayload,
   captureResonanceRequests,
   getCapturedResonancePayloads,
@@ -271,13 +270,22 @@ const waitForPageViewRequest = ({
 };
 
 const waitForPageViewRequestResonance = ({
-  page,
+  capturedRequests,
   appEnv,
 }: {
-  page: Page;
+  capturedRequests: CapturedResonanceRequest[];
   appEnv: AppEnv;
-}) =>
-  page.waitForRequest(isResonancePageViewRequest(getResonanceBagUrl(appEnv)));
+}) => {
+  const findPageViewPayload = () =>
+    getCapturedResonancePayloads(
+      capturedRequests,
+      getResonanceBagUrl(appEnv),
+    ).find(payload =>
+      payload.events?.some(event => event.event_name === 'page.display'),
+    );
+
+  return expect.poll(findPageViewPayload, { timeout: 15000 }).toBeDefined();
+};
 
 const getViewabilityHosts = (appEnv: AppEnv) => {
   const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
@@ -642,7 +650,7 @@ export const assertScrollableNavigationResonanceComponentClick = async ({
   const capturedRequests = await captureResonanceRequests(page);
 
   const pageViewPromise = waitForPageViewRequestResonance({
-    page,
+    capturedRequests,
     appEnv,
   });
 
@@ -707,7 +715,7 @@ export const assertDropdownNavigationResonanceComponentClick = async ({
   const capturedRequests = await captureResonanceRequests(page);
 
   const pageViewPromise = waitForPageViewRequestResonance({
-    page,
+    capturedRequests,
     appEnv,
   });
 
