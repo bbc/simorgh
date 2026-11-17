@@ -4,7 +4,7 @@ export const MAX_TOPICS = 5;
 export const MAX_VIDEOS = 4;
 export const MIN_VIDEOS = 2;
 
-const hasText = (value?: string) => Boolean(value && value.trim());
+const hasText = (value?: string) => Boolean(value?.trim());
 
 const getPath = (link: string) => {
   try {
@@ -49,7 +49,7 @@ const selectTopicVideos = (
   const longest = Math.max(0, ...queues.map(queue => queue.length));
 
   for (let i = 0; i < longest && selected.length < limit; i += 1) {
-    for (const queue of queues) {
+    queues.forEach(queue => {
       const item = queue[i];
       if (item && selected.length < limit) {
         const path = getPath(item.link) as string;
@@ -59,7 +59,7 @@ const selectTopicVideos = (
           selected.push(item);
         }
       }
-    }
+    });
   }
 
   return selected;

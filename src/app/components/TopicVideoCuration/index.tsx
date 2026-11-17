@@ -6,6 +6,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
 import selectTopicVideos, {
+  MAX_VIDEOS,
   MIN_VIDEOS,
   normaliseTopicIds,
 } from './selectTopicVideos';
@@ -49,30 +50,49 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
   // The wrapper stays mounted so the near-viewport observer can find it.
   const showGrid = !isLoading && !isError && videos.length >= MIN_VIDEOS;
   const showError = !isLoading && isError;
+  const showSkeleton = isLoading;
 
   return (
     <div
       id={TOPIC_VIDEO_CURATION_COMPONENT_ID}
       data-testid="topic-video-curation"
     >
-      {(showGrid || showError) && (
+      {(showGrid || showError || showSkeleton) && (
         <section
           aria-labelledby={HEADING_ID}
           css={styles.section}
           className={className}
           dir={dir}
           {...(showGrid ? viewTracker : {})}
+          aria-busy={showSkeleton || undefined}
         >
           <h2 id={HEADING_ID} css={styles.heading}>
             {heading}
           </h2>
+          {showSkeleton && (
+            <div
+              css={styles.skeletonGrid}
+              data-testid="topic-video-skeleton"
+              aria-hidden
+            >
+              {Array.from({ length: MAX_VIDEOS }, (_, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <div key={index} css={styles.skeletonCard}>
+                  <div css={styles.skeletonImage} />
+                  <div css={styles.skeletonLine} />
+                </div>
+              ))}
+            </div>
+          )}
           {showError ? (
             <div role="alert" css={styles.errorMessage}>
               {fetchErrorMessage}
             </div>
-          ) : (
+          ) : null}
+          {showGrid && (
             <CurationGrid
               summaries={videos}
+              isFirstCuration={false}
               eventTrackingData={{
                 componentName: 'topic-video-curation-grid',
                 groupTracker: {
