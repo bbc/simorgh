@@ -2,7 +2,6 @@
 import { PageTypes } from '#app/models/types/global';
 import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
-import getOptimizelyKey from './getOptimizelyKey';
 
 type TestType = (props: ServiceParametersType) => void;
 
@@ -92,15 +91,6 @@ export default ({
             handleContinueReadingButton();
 
             beforeEachFns.forEach(runBeforeEach => runBeforeEach());
-
-            cy.intercept(
-              {
-                url: `https://cdn.optimizely.com/datafiles/${getOptimizelyKey()}.json`,
-              },
-              request => {
-                request.reply({ statusCode: 404 });
-              },
-            ).as('disable-optimizely');
           });
 
           const testParams = {
