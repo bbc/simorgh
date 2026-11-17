@@ -56,13 +56,29 @@ const CallToActionLink = ({
   ref,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const [hasGlowed, setHasGlowed] = useState(false);
   const [isGlowCancelled, setIsGlowCancelled] = useState(false);
   const canGlow = enableGlow && !isGlowCancelled;
   const { isInView, ref: componentViewRef } = useComponentView({
     enabled: canGlow && !hasGlowed,
   });
+
+  const glowState = () => {
+    if (enableGlow) {
+      if (hasGlowed) {
+        return 'after-glow';
+      }
+      return 'before-glow';
+    }
+    return 'na';
+  };
+
+  const enrichedTrackingData = {
+    ...eventTrackingData,
+    additionalOptimizelyEvents: [`cta-${glowState()}-clicks`],
+  };
+
+  const clickTrackerHandler = useClickTrackerHandler(enrichedTrackingData);
 
   useEffect(() => {
     if (!canGlow || hasGlowed || !isInView) return undefined;
