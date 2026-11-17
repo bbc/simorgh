@@ -171,6 +171,7 @@ const getComponentViewTracker = (
     return () => {
       // @ts-expect-error current timer will not be null
       clearTimeout(timer.current);
+      timer.current = null;
     };
   }, [
     campaignID,
