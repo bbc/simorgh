@@ -68,6 +68,18 @@ export interface Translations {
       title: string;
       description: string;
     };
+    inline?: {
+      title: string;
+      description: string;
+    };
+    articleLink?: {
+      title: string;
+      description: string;
+    };
+    articleBottom?: {
+      title: string;
+      description: string;
+    };
   };
   googlePreferredSource?: {
     linkText: string;
