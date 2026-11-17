@@ -65,7 +65,10 @@ export const captureResonanceRequests = async (page: Page) => {
 
     const originalFetch = window.fetch;
     window.fetch = (input, init) => {
-      capture(String(input instanceof Request ? input.url : input), init?.body);
+      capture(
+        String(input instanceof globalThis.Request ? input.url : input),
+        init?.body,
+      );
       return originalFetch(input, init);
     };
 
