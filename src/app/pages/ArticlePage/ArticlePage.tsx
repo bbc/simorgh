@@ -86,6 +86,7 @@ import {
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
+import TopicVideoCuration from '../../components/TopicVideoCuration';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -466,6 +467,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopicDiscovery =
     topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
+  // Prototype: topic-related videos replace the Portrait Video collection
+  // directly beneath TopicDiscovery.
+  const showTopicVideoCuration = showTopicDiscovery;
+
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
@@ -574,7 +579,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          {showPortraitVideoCarousel && (
+          {showTopicVideoCuration && (
+            <TopicVideoCuration
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topics={topicDiscoveryTopics}
+            />
+          )}
+          {showPortraitVideoCarousel && !showTopicVideoCuration && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
