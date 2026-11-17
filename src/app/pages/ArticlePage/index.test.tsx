@@ -22,6 +22,7 @@ import {
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
+import { recommendationsFixtures } from '#app/components/Recommendations/fixtures';
 import { textBlock, singleTextBlock } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
@@ -1424,6 +1425,64 @@ describe('Article Page', () => {
         ],
       },
     } as Article;
+
+    const dataWithRecommendations = {
+      ...data,
+      content: {
+        ...data.content,
+        model: {
+          ...data.content.model,
+          blocks: [
+            ...data.content.model.blocks,
+            {
+              id: 'recommendations',
+              type: 'wsoj',
+              model: {
+                type: 'recommendations',
+                data: recommendationsFixtures,
+              },
+            },
+          ],
+        },
+      },
+    };
+
+    it('renders the Mundo recommendations carousel once, below the article and above TopicDiscovery', () => {
+      render(<ArticlePage pageData={dataWithRecommendations} />, {
+        service: 'mundo',
+        toggles: {
+          topicDiscovery: { enabled: true },
+          midArticleOnwardJourney: { enabled: true },
+        },
+      });
+
+      const carousel = screen.getByTestId('recommendations-carousel');
+      const topicDiscovery = screen.getByTestId('topic-discovery');
+      expect(carousel.closest('main')).not.toBeInTheDocument();
+      expect(carousel.compareDocumentPosition(topicDiscovery)).toBe(
+        Node.DOCUMENT_POSITION_FOLLOWING,
+      );
+    });
+
+    it.each([
+      { service: 'mundo', isAmp: true },
+      { service: 'mundo', isLite: true },
+      { service: 'pidgin' },
+    ] as const)('keeps recommendations inline for %o', options => {
+      render(<ArticlePage pageData={dataWithRecommendations} />, {
+        ...options,
+        toggles: {
+          midArticleOnwardJourney: { enabled: true },
+        },
+      });
+
+      expect(
+        screen.queryByTestId('recommendations-carousel'),
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByText(recommendationsFixtures[0].title).closest('main'),
+      ).toBeInTheDocument();
+    });
 
     it('should render TopicDiscovery when topicDiscovery toggle is enabled', () => {
       const { queryByTestId } = render(<ArticlePage pageData={data} />, {

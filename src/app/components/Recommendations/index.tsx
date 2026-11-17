@@ -6,9 +6,12 @@ import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import RecommendationsCarousel from '#app/components/RecommendationsCarousel';
 import styles from './index.styles';
 import RecommendationsItem from './RecommendationsItem';
 
@@ -18,7 +21,8 @@ interface RecommendationsProps {
 }
 
 const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
-  const { recommendations, mostRead, dir } = use(ServiceContext);
+  const { recommendations, mostRead, dir, service } = use(ServiceContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
 
   const {
     palette: { GREY_2 },
@@ -64,6 +68,8 @@ const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
   const terms = { '%title%': title };
 
   const isSinglePromo = data.length === 1;
+  const showCarousel =
+    service === 'mundo' && pageType === ARTICLE_PAGE && !isAmp && !isLite;
 
   const endTextId = `end-of-recommendations`;
 
@@ -81,40 +87,50 @@ const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
       {...a11yAttributes}
     >
       <SkipLinkWrapper {...skipLinkProps}>
-        {title ? (
-          <SectionLabel
-            css={styles.labelComponent}
-            dir={dir}
-            labelId={labelId}
-            columnType="main"
-            mobileDivider={false}
-            overrideHeadingAs="strong"
-            bar={false}
-            backgroundColor={GREY_2}
-          >
-            {title}
-          </SectionLabel>
-        ) : null}
-        {isSinglePromo ? (
-          <RecommendationsItem recommendation={data?.[0]} />
+        {showCarousel ? (
+          <RecommendationsCarousel
+            data={data}
+            title={title}
+            eventTrackingData={eventTrackingData}
+          />
         ) : (
-          <ul css={styles.recommendationsList} role="list" {...viewTracker}>
-            {data?.map((recommendation, index) => (
-              <li key={recommendation.id} role="listitem">
-                <RecommendationsItem
-                  recommendation={recommendation}
-                  eventTrackingData={{
-                    ...eventTrackingData,
-                    itemTracker: {
-                      type: 'midarticle-mostread-promo',
-                      text: recommendation.title,
-                      position: index + 1,
-                    },
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
+          <>
+            {title ? (
+              <SectionLabel
+                css={styles.labelComponent}
+                dir={dir}
+                labelId={labelId}
+                columnType="main"
+                mobileDivider={false}
+                overrideHeadingAs="strong"
+                bar={false}
+                backgroundColor={GREY_2}
+              >
+                {title}
+              </SectionLabel>
+            ) : null}
+            {isSinglePromo ? (
+              <RecommendationsItem recommendation={data?.[0]} />
+            ) : (
+              <ul css={styles.recommendationsList} role="list" {...viewTracker}>
+                {data?.map((recommendation, index) => (
+                  <li key={recommendation.id} role="listitem">
+                    <RecommendationsItem
+                      recommendation={recommendation}
+                      eventTrackingData={{
+                        ...eventTrackingData,
+                        itemTracker: {
+                          type: 'midarticle-mostread-promo',
+                          text: recommendation.title,
+                          position: index + 1,
+                        },
+                      }}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
         )}
       </SkipLinkWrapper>
     </section>
