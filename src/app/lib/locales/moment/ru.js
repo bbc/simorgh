@@ -5,7 +5,7 @@ moment.updateLocale('ru', {
   months: {
     standalone:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
-        '_'
+        '_',
       ),
   },
   longDateFormat: {

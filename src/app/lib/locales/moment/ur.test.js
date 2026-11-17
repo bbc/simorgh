@@ -9,7 +9,7 @@ const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 
 const months =
   'جنوری_فروری_مارچ_اپریل_مئی_جون_جولائی_اگست_ستمبر_اکتوبر_نومبر_دسمبر'.split(
-    '_'
+    '_',
   );
 
 test('parse', () => {
@@ -17,7 +17,7 @@ test('parse', () => {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      `${input} should be month ${i + 1}`
+      `${input} should be month ${i + 1}`,
     );
   }
   for (let i = 0; i < 12; i += 1) {
@@ -102,7 +102,7 @@ test('format week', () => {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       `${days[i]} ${days[i]} ${days[i]}`,
-      `${days[i]} ${days[i]} ${days[i]}`
+      `${days[i]} ${days[i]} ${days[i]}`,
     );
   }
 });
@@ -112,142 +112,142 @@ test('from', () => {
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'چند سیکنڈ',
-    '44 seconds = چند سیکنڈ'
+    '44 seconds = چند سیکنڈ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'ایک منٹ',
-    '45 seconds = ایک منٹ'
+    '45 seconds = ایک منٹ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
     'ایک منٹ',
-    '89 seconds = ایک منٹ'
+    '89 seconds = ایک منٹ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
     '2 منٹ',
-    '90 seconds = 2 منٹ'
+    '90 seconds = 2 منٹ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
     '44 منٹ',
-    '44 minutes = 44 منٹ'
+    '44 minutes = 44 منٹ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
     'ایک گھنٹہ',
-    '45 minutes = ایک گھنٹہ'
+    '45 minutes = ایک گھنٹہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
     'ایک گھنٹہ',
-    '89 minutes = ایک گھنٹہ'
+    '89 minutes = ایک گھنٹہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
     '2 گھنٹے',
-    '90 minutes = 2 گھنٹے'
+    '90 minutes = 2 گھنٹے',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
     '5 گھنٹے',
-    '5 hours = 5 گھنٹے'
+    '5 hours = 5 گھنٹے',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
     '21 گھنٹے',
-    '21 hours = 21 گھنٹے'
+    '21 hours = 21 گھنٹے',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
     'ایک دن',
-    '22 hours = ایک دن'
+    '22 hours = ایک دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
     'ایک دن',
-    '35 hours = ایک دن'
+    '35 hours = ایک دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
     '2 دن',
-    '36 hours = 2 دن'
+    '36 hours = 2 دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
     'ایک دن',
-    '1 day = ایک دن'
+    '1 day = ایک دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
     '5 دن',
-    '5 days = 5 دن'
+    '5 days = 5 دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
     '25 دن',
-    '25 days = 25 دن'
+    '25 days = 25 دن',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
     'ایک ماہ',
-    '26 days = ایک ماہ'
+    '26 days = ایک ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
     'ایک ماہ',
-    '30 days = ایک ماہ'
+    '30 days = ایک ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 43 }), true),
     'ایک ماہ',
-    '43 days = ایک ماہ'
+    '43 days = ایک ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 46 }), true),
     '2 ماہ',
-    '46 days = 2 ماہ'
+    '46 days = 2 ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 74 }), true),
     '2 ماہ',
-    '75 days = 2 ماہ'
+    '75 days = 2 ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 76 }), true),
     '3 ماہ',
-    '76 days = 3 ماہ'
+    '76 days = 3 ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
     'ایک ماہ',
-    '1 month = ایک ماہ'
+    '1 month = ایک ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 5 }), true),
     '5 ماہ',
-    '5 months = 5 ماہ'
+    '5 months = 5 ماہ',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
     'ایک سال',
-    '345 days = ایک سال'
+    '345 days = ایک سال',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 548 }), true),
     '2 سال',
-    '548 days = 2 سال'
+    '548 days = 2 سال',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
     'ایک سال',
-    '1 year = ایک سال'
+    '1 year = ایک سال',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 5 }), true),
     '5 سال',
-    '5 years = 5 سال'
+    '5 years = 5 سال',
   );
 });
 
@@ -260,7 +260,7 @@ test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'چند سیکنڈ قبل',
-    'now from now should display as in the past'
+    'now from now should display as in the past',
   );
 });
 
@@ -268,7 +268,7 @@ test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'چند سیکنڈ بعد',
-    'in a few seconds'
+    'in a few seconds',
   );
   assert.equal(moment().add({ d: 5 }).fromNow(), '5 دن بعد', 'in 5 days');
 });
@@ -280,27 +280,27 @@ test('calendar day', () => {
   assert.equal(
     moment(a).add({ m: 25 }).calendar(),
     'آج بوقت 12:25',
-    'Now plus 25 min'
+    'Now plus 25 min',
   );
   assert.equal(
     moment(a).add({ h: 1 }).calendar(),
     'آج بوقت 13:00',
-    'Now plus 1 hour'
+    'Now plus 1 hour',
   );
   assert.equal(
     moment(a).add({ d: 1 }).calendar(),
     'کل بوقت 12:00',
-    'tomorrow at the same time'
+    'tomorrow at the same time',
   );
   assert.equal(
     moment(a).subtract({ h: 1 }).calendar(),
     'آج بوقت 11:00',
-    'Now minus 1 hour'
+    'Now minus 1 hour',
   );
   assert.equal(
     moment(a).subtract({ d: 1 }).calendar(),
     'گذشتہ روز بوقت 12:00',
-    'yesterday at the same time'
+    'yesterday at the same time',
   );
 });
 
@@ -312,19 +312,19 @@ test('calendar next week', () => {
     assert.equal(
       m.calendar(),
       m.format('dddd [بوقت] LT'),
-      `Today + ${i} days current time`
+      `Today + ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [بوقت] LT'),
-      `Today + ${i} days beginning of day`
+      `Today + ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [بوقت] LT'),
-      `Today + ${i} days end of day`
+      `Today + ${i} days end of day`,
     );
   }
 });
@@ -338,19 +338,19 @@ test('calendar last week', () => {
     assert.equal(
       m.calendar(),
       m.format('[گذشتہ] dddd [بوقت] LT'),
-      `Today - ${i} days current time`
+      `Today - ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('[گذشتہ] dddd [بوقت] LT'),
-      `Today - ${i} days beginning of day`
+      `Today - ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('[گذشتہ] dddd [بوقت] LT'),
-      `Today - ${i} days end of day`
+      `Today - ${i} days end of day`,
     );
   }
 });
@@ -373,26 +373,26 @@ test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '52 52 52',
-    'Jan  1 2012 should be week 52'
+    'Jan  1 2012 should be week 52',
   );
   assert.equal(
     moment([2012, 0, 2]).format('w ww wo'),
     '1 01 1',
-    'Jan  2 2012 should be week 1'
+    'Jan  2 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 8]).format('w ww wo'),
     '1 01 1',
-    'Jan  8 2012 should be week 1'
+    'Jan  8 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 9]).format('w ww wo'),
     '2 02 2',
-    'Jan  9 2012 should be week 2'
+    'Jan  9 2012 should be week 2',
   );
   assert.equal(
     moment([2012, 0, 15]).format('w ww wo'),
     '2 02 2',
-    'Jan 15 2012 should be week 2'
+    'Jan 15 2012 should be week 2',
   );
 });

@@ -21,7 +21,7 @@ function calendarLastWeek() {
 
 moment.updateLocale('uk', {
   weekdays: 'неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота'.split(
-    '_'
+    '_',
   ),
   longDateFormat: {
     LL: 'D MMMM YYYY',

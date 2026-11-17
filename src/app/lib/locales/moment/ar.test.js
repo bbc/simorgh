@@ -36,8 +36,8 @@ test('parse', () => {
       i,
       `${input} should be month ${i + 1} instead is month ${moment(
         input,
-        mmm
-      ).month()}`
+        mmm,
+      ).month()}`,
     );
   }
 
@@ -137,14 +137,14 @@ test('format month', () => {
 test('format week', () => {
   const expected =
     'الأحد أحد ح_الإثنين إثنين ن_الثلاثاء ثلاثاء ث_الأربعاء أربعاء ر_الخميس خميس خ_الجمعة جمعة ج_السبت سبت س'.split(
-      '_'
+      '_',
     );
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
-      expected[i]
+      expected[i],
     );
   }
 });
@@ -154,142 +154,142 @@ test('from', () => {
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     '44 ثانية',
-    '44 seconds = a few seconds'
+    '44 seconds = a few seconds',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'قبل دقيقة واحدة',
-    '45 seconds = a minute'
+    '45 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
     'قبل دقيقة واحدة',
-    '89 seconds = a minute'
+    '89 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
     'قبل 2 دقيقة',
-    '90 seconds = 2 minutes'
+    '90 seconds = 2 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
     'قبل 44 دقيقة',
-    '44 minutes = 44 minutes'
+    '44 minutes = 44 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
     'قبل ساعة واحدة',
-    '45 minutes = an hour'
+    '45 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
     'قبل ساعة واحدة',
-    '89 minutes = an hour'
+    '89 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
     'قبل 2 ساعة',
-    '90 minutes = 2 hours'
+    '90 minutes = 2 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
     'قبل 5 ساعة',
-    '5 hours = 5 hours'
+    '5 hours = 5 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
     'قبل 21 ساعة',
-    '21 hours = 21 hours'
+    '21 hours = 21 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
     'يوم واحد',
-    '22 hours = a day'
+    '22 hours = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
     'يوم واحد',
-    '35 hours = a day'
+    '35 hours = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
     'يومان',
-    '36 hours = 2 days'
+    '36 hours = 2 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
     'يوم واحد',
-    '1 day = a day'
+    '1 day = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
     '5 أيام',
-    '5 days = 5 days'
+    '5 days = 5 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
     '25 يومًا',
-    '25 days = 25 days'
+    '25 days = 25 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
     'شهر واحد',
-    '26 days = a month'
+    '26 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
     'شهر واحد',
-    '30 days = a month'
+    '30 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 43 }), true),
     'شهر واحد',
-    '43 days = a month'
+    '43 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 46 }), true),
     'شهران',
-    '46 days = 2 months'
+    '46 days = 2 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 74 }), true),
     'شهران',
-    '75 days = 2 months'
+    '75 days = 2 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 76 }), true),
     '3 أشهر',
-    '76 days = 3 months'
+    '76 days = 3 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
     'شهر واحد',
-    '1 month = a month'
+    '1 month = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 5 }), true),
     '5 أشهر',
-    '5 months = 5 months'
+    '5 months = 5 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
     'عام واحد',
-    '345 days = a year'
+    '345 days = a year',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 548 }), true),
     'عامان',
-    '548 days = 2 years'
+    '548 days = 2 years',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
     'عام واحد',
-    '1 year = a year'
+    '1 year = a year',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 5 }), true),
     '5 أعوام',
-    '5 years = 5 years'
+    '5 years = 5 years',
   );
 });
 
@@ -302,7 +302,7 @@ test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'ثانية واحدة',
-    'now from now should display as in the past'
+    'now from now should display as in the past',
   );
 });
 
@@ -310,7 +310,7 @@ test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'بعد 30 ثانية',
-    'in a few seconds'
+    'in a few seconds',
   );
   assert.equal(moment().add({ d: 5 }).fromNow(), 'بعد 5 أيام', 'in 5 days');
 });
@@ -321,32 +321,32 @@ test('calendar day', () => {
   assert.equal(
     moment(a).calendar(),
     'اليوم عند الساعة 12:00',
-    'today at the same time'
+    'today at the same time',
   );
   assert.equal(
     moment(a).add({ m: 25 }).calendar(),
     'اليوم عند الساعة 12:25',
-    'Now plus 25 min'
+    'Now plus 25 min',
   );
   assert.equal(
     moment(a).add({ h: 1 }).calendar(),
     'اليوم عند الساعة 13:00',
-    'Now plus 1 hour'
+    'Now plus 1 hour',
   );
   assert.equal(
     moment(a).add({ d: 1 }).calendar(),
     'غدًا عند الساعة 12:00',
-    'tomorrow at the same time'
+    'tomorrow at the same time',
   );
   assert.equal(
     moment(a).subtract({ h: 1 }).calendar(),
     'اليوم عند الساعة 11:00',
-    'Now minus 1 hour'
+    'Now minus 1 hour',
   );
   assert.equal(
     moment(a).subtract({ d: 1 }).calendar(),
     'أمس عند الساعة 12:00',
-    'yesterday at the same time'
+    'yesterday at the same time',
   );
 });
 
@@ -358,19 +358,19 @@ test('calendar next week', () => {
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today + ${i} days current time`
+      `Today + ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today + ${i} days beginning of day`
+      `Today + ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today + ${i} days end of day`
+      `Today + ${i} days end of day`,
     );
   }
 });
@@ -383,19 +383,19 @@ test('calendar last week', () => {
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today - ${i} days current time`
+      `Today - ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today - ${i} days beginning of day`
+      `Today - ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [عند الساعة] LT'),
-      `Today - ${i} days end of day`
+      `Today - ${i} days end of day`,
     );
   }
 });
@@ -418,22 +418,22 @@ test('weeks year starting wednesday custom', () => {
   assert.equal(
     moment('2003 1 6', 'gggg w d').format('YYYY-MM-DD'),
     '2002-12-28',
-    'Week 1 of 2003 should be Dec 28 2002'
+    'Week 1 of 2003 should be Dec 28 2002',
   );
   assert.equal(
     moment('2003 1 0', 'gggg w e').format('YYYY-MM-DD'),
     '2002-12-28',
-    'Week 1 of 2003 should be Dec 28 2002'
+    'Week 1 of 2003 should be Dec 28 2002',
   );
   assert.equal(
     moment('2003 1 6', 'gggg w d').format('gggg w d'),
     '2003 1 6',
-    'Saturday of week 1 of 2003 parsed should be formatted as 2003 1 6'
+    'Saturday of week 1 of 2003 parsed should be formatted as 2003 1 6',
   );
   assert.equal(
     moment('2003 1 0', 'gggg w e').format('gggg w e'),
     '2003 1 0',
-    '1st day of week 1 of 2003 parsed should be formatted as 2003 1 0'
+    '1st day of week 1 of 2003 parsed should be formatted as 2003 1 0',
   );
 });
 
@@ -441,27 +441,27 @@ test('weeks year starting sunday formatted', () => {
   assert.equal(
     moment([2011, 11, 31]).format('w ww wo'),
     '1 01 1',
-    'Dec 31 2011 should be week 1'
+    'Dec 31 2011 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 6]).format('w ww wo'),
     '1 01 1',
-    'Jan  6 2012 should be week 1'
+    'Jan  6 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 7]).format('w ww wo'),
     '2 02 2',
-    'Jan  7 2012 should be week 2'
+    'Jan  7 2012 should be week 2',
   );
   assert.equal(
     moment([2012, 0, 13]).format('w ww wo'),
     '2 02 2',
-    'Jan 13 2012 should be week 2'
+    'Jan 13 2012 should be week 2',
   );
   assert.equal(
     moment([2012, 0, 14]).format('w ww wo'),
     '3 03 3',
-    'Jan 14 2012 should be week 3'
+    'Jan 14 2012 should be week 3',
   );
 });
 
@@ -477,7 +477,7 @@ test('no leading zeros in long date formats', () => {
       assert.equal(
         longDateStr,
         shortDateStr,
-        'should not have leading zeros in month or day'
+        'should not have leading zeros in month or day',
       );
     }
   }
@@ -490,11 +490,11 @@ test('ar strict mode parsing works', () => {
   assert.equal(
     moment.utc(formattedDate, 'l', 'ar', false).isValid(),
     true,
-    'Non-strict parsing works'
+    'Non-strict parsing works',
   );
   assert.equal(
     moment.utc(formattedDate, 'l', 'ar', true).isValid(),
     true,
-    'Strict parsing must work'
+    'Strict parsing must work',
   );
 });

@@ -11,21 +11,21 @@ const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 test('parse', () => {
   const tests =
     'январь янв._февраль февр._март март_апрель апр._май май_июнь июнь_июль июль_август авг._сентябрь сент._октябрь окт._ноябрь нояб._декабрь дек.'.split(
-      '_'
+      '_',
     );
 
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      `${input} should be month ${i + 1}`
+      `${input} should be month ${i + 1}`,
     );
   }
   function equalTestStrict(input, mmm, monthIndex) {
     assert.equal(
       moment(input, mmm, true).month(),
       monthIndex,
-      `${input} ${mmm} should be strict month ${monthIndex + 1}`
+      `${input} ${mmm} should be strict month ${monthIndex + 1}`,
     );
   }
 
@@ -53,7 +53,7 @@ test('parse', () => {
 test('parse exceptional case', () => {
   assert.equal(
     moment('11 Мая 1989', ['DD MMMM YYYY']).format('DD-MM-YYYY'),
-    '11-05-1989'
+    '11-05-1989',
   );
 });
 
@@ -145,14 +145,14 @@ test('format ordinal', () => {
 test('format month', () => {
   const expected =
     'января янв._февраля февр._марта март_апреля апр._мая май_июня июнь_июля июль_августа авг._сентября сент._октября окт._ноября нояб._декабря дек.'.split(
-      '_'
+      '_',
     );
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
-      expected[i]
+      expected[i],
     );
   }
 });
@@ -161,11 +161,11 @@ test('format month case', () => {
   const months = {
     nominative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
-        '_'
+        '_',
       ),
     accusative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
-        '_'
+        '_',
       ),
   };
   let i;
@@ -173,12 +173,12 @@ test('format month case', () => {
     assert.equal(
       moment([2011, i, 1]).format('D MMMM'),
       `1 ${months.accusative[i]}`,
-      `1 ${months.accusative[i]}`
+      `1 ${months.accusative[i]}`,
     );
     assert.equal(
       moment([2011, i, 1]).format('MMMM'),
       months.nominative[i],
-      `1 ${months.nominative[i]}`
+      `1 ${months.nominative[i]}`,
     );
   }
 });
@@ -187,11 +187,11 @@ test('format month short case', () => {
   const monthsShort = {
     nominative:
       'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
-        '_'
+        '_',
       ),
     accusative:
       'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split(
-        '_'
+        '_',
       ),
   };
   let i;
@@ -199,12 +199,12 @@ test('format month short case', () => {
     assert.equal(
       moment([2011, i, 1]).format('D MMM'),
       `1 ${monthsShort.accusative[i]}`,
-      `1 ${monthsShort.accusative[i]}`
+      `1 ${monthsShort.accusative[i]}`,
     );
     assert.equal(
       moment([2011, i, 1]).format('MMM'),
       monthsShort.nominative[i],
-      `1 ${monthsShort.nominative[i]}`
+      `1 ${monthsShort.nominative[i]}`,
     );
   }
 });
@@ -213,11 +213,11 @@ test('format month case with escaped symbols', () => {
   const months = {
     nominative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
-        '_'
+        '_',
       ),
     accusative:
       'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
-        '_'
+        '_',
       ),
   };
   let i;
@@ -225,22 +225,22 @@ test('format month case with escaped symbols', () => {
     assert.equal(
       moment([2013, i, 1]).format('D[] MMMM'),
       `1 ${months.accusative[i]}`,
-      `1 ${months.accusative[i]}`
+      `1 ${months.accusative[i]}`,
     );
     assert.equal(
       moment([2013, i, 1]).format('[<i>]D[</i>] [<b>]MMMM[</b>]'),
       `<i>1</i> <b>${months.accusative[i]}</b>`,
-      `1 <b>${months.accusative[i]}</b>`
+      `1 <b>${months.accusative[i]}</b>`,
     );
     assert.equal(
       moment([2013, i, 1]).format('D[-й день] MMMM'),
       `1-й день ${months.accusative[i]}`,
-      `1-й день ${months.accusative[i]}`
+      `1-й день ${months.accusative[i]}`,
     );
     assert.equal(
       moment([2013, i, 1]).format('D, MMMM'),
       `1, ${months.nominative[i]}`,
-      `1, ${months.nominative[i]}`
+      `1, ${months.nominative[i]}`,
     );
   }
 });
@@ -249,11 +249,11 @@ test('format month short case with escaped symbols', () => {
   const monthsShort = {
     nominative:
       'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
-        '_'
+        '_',
       ),
     accusative:
       'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split(
-        '_'
+        '_',
       ),
   };
   let i;
@@ -261,22 +261,22 @@ test('format month short case with escaped symbols', () => {
     assert.equal(
       moment([2013, i, 1]).format('D[] MMM'),
       `1 ${monthsShort.accusative[i]}`,
-      `1 ${monthsShort.accusative[i]}`
+      `1 ${monthsShort.accusative[i]}`,
     );
     assert.equal(
       moment([2013, i, 1]).format('[<i>]D[</i>] [<b>]MMM[</b>]'),
       `<i>1</i> <b>${monthsShort.accusative[i]}</b>`,
-      `1 <b>${monthsShort.accusative[i]}</b>`
+      `1 <b>${monthsShort.accusative[i]}</b>`,
     );
     assert.equal(
       moment([2013, i, 1]).format('D[-й день] MMM'),
       `1-й день ${monthsShort.accusative[i]}`,
-      `1-й день ${monthsShort.accusative[i]}`
+      `1-й день ${monthsShort.accusative[i]}`,
     );
     assert.equal(
       moment([2013, i, 1]).format('D, MMM'),
       `1, ${monthsShort.nominative[i]}`,
-      `1, ${monthsShort.nominative[i]}`
+      `1, ${monthsShort.nominative[i]}`,
     );
   }
 });
@@ -284,14 +284,14 @@ test('format month short case with escaped symbols', () => {
 test('format week', () => {
   const expected =
     'воскресенье вс вс_понедельник пн пн_вторник вт вт_среда ср ср_четверг чт чт_пятница пт пт_суббота сб сб'.split(
-      '_'
+      '_',
     );
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
-      expected[i]
+      expected[i],
     );
   }
 });
@@ -301,157 +301,157 @@ test('from', () => {
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'несколько секунд',
-    '44 seconds = seconds'
+    '44 seconds = seconds',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'минута',
-    '45 seconds = a minute'
+    '45 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
     'минута',
-    '89 seconds = a minute'
+    '89 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
     '2 минуты',
-    '90 seconds = 2 minutes'
+    '90 seconds = 2 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 31 }), true),
     '31 минута',
-    '31 minutes = 31 minutes'
+    '31 minutes = 31 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
     '44 минуты',
-    '44 minutes = 44 minutes'
+    '44 minutes = 44 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
     'час',
-    '45 minutes = an hour'
+    '45 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
     'час',
-    '89 minutes = an hour'
+    '89 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
     '2 часа',
-    '90 minutes = 2 hours'
+    '90 minutes = 2 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
     '5 часов',
-    '5 hours = 5 hours'
+    '5 hours = 5 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
     '21 час',
-    '21 hours = 21 hours'
+    '21 hours = 21 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
     'день',
-    '22 hours = a day'
+    '22 hours = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
     'день',
-    '35 hours = a day'
+    '35 hours = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
     '2 дня',
-    '36 hours = 2 days'
+    '36 hours = 2 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
     'день',
-    '1 day = a day'
+    '1 day = a day',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
     '5 дней',
-    '5 days = 5 days'
+    '5 days = 5 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 11 }), true),
     '11 дней',
-    '11 days = 11 days'
+    '11 days = 11 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 21 }), true),
     '21 день',
-    '21 days = 21 days'
+    '21 days = 21 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
     '25 дней',
-    '25 days = 25 days'
+    '25 days = 25 days',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
     'месяц',
-    '26 days = a month'
+    '26 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
     'месяц',
-    '30 days = a month'
+    '30 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 43 }), true),
     'месяц',
-    '43 days = a month'
+    '43 days = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 46 }), true),
     '2 месяца',
-    '46 days = 2 months'
+    '46 days = 2 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 74 }), true),
     '2 месяца',
-    '75 days = 2 months'
+    '75 days = 2 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 76 }), true),
     '3 месяца',
-    '76 days = 3 months'
+    '76 days = 3 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
     'месяц',
-    '1 month = a month'
+    '1 month = a month',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 5 }), true),
     '5 месяцев',
-    '5 months = 5 months'
+    '5 months = 5 months',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
     'год',
-    '345 days = a year'
+    '345 days = a year',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 548 }), true),
     '2 года',
-    '548 days = 2 years'
+    '548 days = 2 years',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
     'год',
-    '1 year = a year'
+    '1 year = a year',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 5 }), true),
     '5 лет',
-    '5 years = 5 years'
+    '5 years = 5 years',
   );
 });
 
@@ -464,18 +464,18 @@ test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'через несколько секунд',
-    'in seconds'
+    'in seconds',
   );
   assert.equal(moment().add({ d: 5 }).fromNow(), 'через 5 дней', 'in 5 days');
   assert.equal(
     moment().add({ m: 31 }).fromNow(),
     'через 31 минуту',
-    'in 31 minutes = in 31 minutes'
+    'in 31 minutes = in 31 minutes',
   );
   assert.equal(
     moment().subtract({ m: 31 }).fromNow(),
     '31 минуту назад',
-    '31 minutes ago = 31 minutes ago'
+    '31 minutes ago = 31 minutes ago',
   );
 });
 
@@ -485,37 +485,37 @@ test('calendar day', () => {
   assert.equal(
     moment(a).calendar(),
     'Сегодня, в 12:00',
-    'today at the same time'
+    'today at the same time',
   );
   assert.equal(
     moment(a).add({ m: 25 }).calendar(),
     'Сегодня, в 12:25',
-    'Now plus 25 min'
+    'Now plus 25 min',
   );
   assert.equal(
     moment(a).add({ h: 1 }).calendar(),
     'Сегодня, в 13:00',
-    'Now plus 1 hour'
+    'Now plus 1 hour',
   );
   assert.equal(
     moment(a).add({ d: 1 }).calendar(),
     'Завтра, в 12:00',
-    'tomorrow at the same time'
+    'tomorrow at the same time',
   );
   assert.equal(
     moment(a).subtract({ h: 1 }).calendar(),
     'Сегодня, в 11:00',
-    'Now minus 1 hour'
+    'Now minus 1 hour',
   );
   assert.equal(
     moment(a).subtract({ h: 4 }).calendar(),
     'Сегодня, в 8:00',
-    'Now minus 4 hours'
+    'Now minus 4 hours',
   );
   assert.equal(
     moment(a).subtract({ d: 1 }).calendar(),
     'Вчера, в 12:00',
-    'yesterday at the same time'
+    'yesterday at the same time',
   );
 });
 
@@ -554,19 +554,19 @@ test('calendar next week', () => {
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today + ${i} days current time`
+      `Today + ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today + ${i} days beginning of day`
+      `Today + ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today + ${i} days end of day`
+      `Today + ${i} days end of day`,
     );
   }
 
@@ -576,19 +576,19 @@ test('calendar next week', () => {
     assert.equal(
       m.calendar(now),
       m.format(makeFormatNext(m)),
-      `Today + ${i} days current time`
+      `Today + ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatNext(m)),
-      `Today + ${i} days beginning of day`
+      `Today + ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatNext(m)),
-      `Today + ${i} days end of day`
+      `Today + ${i} days end of day`,
     );
   }
 });
@@ -628,19 +628,19 @@ test('calendar last week', () => {
     assert.equal(
       m.calendar(now),
       m.format(makeFormatLast(m)),
-      `Today - ${i} days current time`
+      `Today - ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatLast(m)),
-      `Today - ${i} days beginning of day`
+      `Today - ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatLast(m)),
-      `Today - ${i} days end of day`
+      `Today - ${i} days end of day`,
     );
   }
 
@@ -650,19 +650,19 @@ test('calendar last week', () => {
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today - ${i} days current time`
+      `Today - ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today - ${i} days beginning of day`
+      `Today - ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(now),
       m.format(makeFormatThis(m)),
-      `Today - ${i} days end of day`
+      `Today - ${i} days end of day`,
     );
   }
 });
@@ -685,26 +685,26 @@ test('weeks year starting monday formatted', () => {
   assert.equal(
     moment([2011, 11, 26]).format('w ww wo'),
     '52 52 52-я',
-    'Dec 26 2011 should be week 52'
+    'Dec 26 2011 should be week 52',
   );
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '52 52 52-я',
-    'Jan  1 2012 should be week 52'
+    'Jan  1 2012 should be week 52',
   );
   assert.equal(
     moment([2012, 0, 2]).format('w ww wo'),
     '1 01 1-я',
-    'Jan  2 2012 should be week 1'
+    'Jan  2 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 8]).format('w ww wo'),
     '1 01 1-я',
-    'Jan  8 2012 should be week 1'
+    'Jan  8 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 9]).format('w ww wo'),
     '2 02 2-я',
-    'Jan  9 2012 should be week 2'
+    'Jan  9 2012 should be week 2',
   );
 });

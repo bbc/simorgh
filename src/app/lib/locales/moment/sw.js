@@ -4,7 +4,7 @@ require('moment/locale/sw');
 moment.updateLocale('sw', {
   months:
     'Januari_Februari_Machi_Aprili_Mei_Juni_Julai_Agosti_Septemba_Oktoba_Novemba_Disemba'.split(
-      '_'
+      '_',
     ),
   calendar: {
     sameDay: '[leo saa] LT',

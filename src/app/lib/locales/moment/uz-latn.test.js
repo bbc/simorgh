@@ -19,14 +19,14 @@ describe('uz-latn', () => {
   describe('parse', () => {
     const tests =
       'Yanvar Yan_Fevral Fev_Mart Mar_Aprel Apr_May May_Iyun Iyun_Iyul Iyul_Avgust Avg_Sentabr Sen_Oktabr Okt_Noyabr Noy_Dekabr Dek'.split(
-        '_'
+        '_',
       );
 
     function equalTest(input, mmm, i) {
       assert.equal(
         moment(input, mmm).month(),
         i,
-        `${input} should be month ${i + 1}`
+        `${input} should be month ${i + 1}`,
       );
     }
 
@@ -117,14 +117,14 @@ describe('uz-latn', () => {
   describe('format month', () => {
     const expected =
       'Yanvar Yan_Fevral Fev_Mart Mar_Aprel Apr_May May_Iyun Iyun_Iyul Iyul_Avgust Avg_Sentabr Sen_Oktabr Okt_Noyabr Noy_Dekabr Dek'.split(
-        '_'
+        '_',
       );
     let i;
     for (i = 0; i < expected.length; i += 1) {
       assert.equal(
         moment([2011, i, 1]).format('MMMM MMM'),
         expected[i],
-        expected[i]
+        expected[i],
       );
     }
   });
@@ -132,14 +132,14 @@ describe('uz-latn', () => {
   describe('format week', () => {
     const expected =
       'Yakshanba Yak Ya_Dushanba Dush Du_Seshanba Sesh Se_Chorshanba Chor Cho_Payshanba Pay Pa_Juma Jum Ju_Shanba Shan Sha'.split(
-        '_'
+        '_',
       );
     let i;
     for (i = 0; i < expected.length; i += 1) {
       assert.equal(
         moment([2011, 0, 2 + i]).format('dddd ddd dd'),
         expected[i],
-        expected[i]
+        expected[i],
       );
     }
   });
@@ -149,132 +149,132 @@ describe('uz-latn', () => {
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ s: 89 }), true),
       '1 daqiqa',
-      '89 seconds = 1 daqiqa'
+      '89 seconds = 1 daqiqa',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ s: 90 }), true),
       '2 daqiqalar',
-      '90 seconds = 2 daqiqalar'
+      '90 seconds = 2 daqiqalar',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ m: 44 }), true),
       '44 daqiqalar',
-      '44 seconds = 44 daqiqalar'
+      '44 seconds = 44 daqiqalar',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ m: 45 }), true),
       '1 soat',
-      '45 minut = 1 soat'
+      '45 minut = 1 soat',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ m: 89 }), true),
       '1 soat',
-      '89 minut = 1 soat'
+      '89 minut = 1 soat',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ m: 90 }), true),
       '2 soatlar',
-      '90 minut = 2 soatlar'
+      '90 minut = 2 soatlar',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ h: 5 }), true),
       '5 soatlar',
-      '5 hours = 5 soatlar'
+      '5 hours = 5 soatlar',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ h: 21 }), true),
       '21 soatlar',
-      '21 hours = 21 soatlar'
+      '21 hours = 21 soatlar',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ h: 22 }), true),
       'bir kun',
-      '22 soat = bir kun'
+      '22 soat = bir kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ h: 35 }), true),
       'bir kun',
-      '35 soat = bir kun'
+      '35 soat = bir kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ h: 36 }), true),
       '2 kun',
-      '36 soat = 2 kun'
+      '36 soat = 2 kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 1 }), true),
       'bir kun',
-      '1 kun = 1 kun'
+      '1 kun = 1 kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 5 }), true),
       '5 kun',
-      '5 kun = 5 kun'
+      '5 kun = 5 kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 25 }), true),
       '25 kun',
-      '25 kun = 25 kun'
+      '25 kun = 25 kun',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 26 }), true),
       'bir oy',
-      '26 kun = bir oy'
+      '26 kun = bir oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 30 }), true),
       'bir oy',
-      '30 kun = bir oy'
+      '30 kun = bir oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 43 }), true),
       'bir oy',
-      '45 kun = bir oy'
+      '45 kun = bir oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 46 }), true),
       '2 oy',
-      '46 kun = 2 oy'
+      '46 kun = 2 oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 74 }), true),
       '2 oy',
-      '75 kun = 2 oy'
+      '75 kun = 2 oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 76 }), true),
       '3 oy',
-      '76 kun = 3 oy'
+      '76 kun = 3 oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ M: 1 }), true),
       'bir oy',
-      'bir oy = bir oy'
+      'bir oy = bir oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ M: 5 }), true),
       '5 oy',
-      '5 oy = 5 oy'
+      '5 oy = 5 oy',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 345 }), true),
       'bir yil',
-      '345 kun = bir yil'
+      '345 kun = bir yil',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ d: 548 }), true),
       '2 yil',
-      '548 kun = 2 yil'
+      '548 kun = 2 yil',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ y: 1 }), true),
       'bir yil',
-      '1 yil = bir yil'
+      '1 yil = bir yil',
     );
     assert.equal(
       start.from(moment([2017, 1, 28]).add({ y: 5 }), true),
       '5 yil',
-      '5 yil = 5 yil'
+      '5 yil = 5 yil',
     );
   });
 
@@ -287,7 +287,7 @@ describe('uz-latn', () => {
     assert.equal(
       moment().fromNow(),
       'soniya avval',
-      'now from now should display as in the past'
+      'now from now should display as in the past',
     );
   });
 
@@ -295,12 +295,12 @@ describe('uz-latn', () => {
     assert.equal(
       moment().add({ s: 30 }).fromNow(),
       'Yaqin soniya ichida',
-      'in a few seconds'
+      'in a few seconds',
     );
     assert.equal(
       moment().add({ d: 5 }).fromNow(),
       'Yaqin 5 kun ichida',
-      'in 5 days'
+      'in 5 days',
     );
   });
 
@@ -310,32 +310,32 @@ describe('uz-latn', () => {
     assert.equal(
       moment(a).calendar(),
       'Bugun soat 12:00 da',
-      'today at the same time'
+      'today at the same time',
     );
     assert.equal(
       moment(a).add({ m: 25 }).calendar(),
       'Bugun soat 12:25 da',
-      'Now plus 25 min'
+      'Now plus 25 min',
     );
     assert.equal(
       moment(a).add({ h: 1 }).calendar(),
       'Bugun soat 13:00 da',
-      'Now plus 1 hour'
+      'Now plus 1 hour',
     );
     assert.equal(
       moment(a).add({ d: 1 }).calendar(),
       'Ertaga 12:00 da',
-      'tomorrow at the same time'
+      'tomorrow at the same time',
     );
     assert.equal(
       moment(a).subtract({ h: 1 }).calendar(),
       'Bugun soat 11:00 da',
-      'Now minus 1 hour'
+      'Now minus 1 hour',
     );
     assert.equal(
       moment(a).subtract({ d: 1 }).calendar(),
       'Kecha soat 12:00 da',
-      'yesterday at the same time'
+      'yesterday at the same time',
     );
   });
 
@@ -347,19 +347,19 @@ describe('uz-latn', () => {
       assert.equal(
         m.calendar(),
         m.format('dddd [kuni soat] LT [da]'),
-        `Today + ${i} days current time`
+        `Today + ${i} days current time`,
       );
       m.hours(0).minutes(0).seconds(0).milliseconds(0);
       assert.equal(
         m.calendar(),
         m.format('dddd [kuni soat] LT [da]'),
-        `Today + ${i} days beginning of day`
+        `Today + ${i} days beginning of day`,
       );
       m.hours(23).minutes(59).seconds(59).milliseconds(999);
       assert.equal(
         m.calendar(),
         m.format('dddd [kuni soat] LT [da]'),
-        `Today + ${i} days end of day`
+        `Today + ${i} days end of day`,
       );
     }
   });
@@ -373,19 +373,19 @@ describe('uz-latn', () => {
       assert.equal(
         m.calendar(),
         m.format("[O'tgan] dddd [kuni soat] LT [da]"),
-        `Today - ${i} days current time`
+        `Today - ${i} days current time`,
       );
       m.hours(0).minutes(0).seconds(0).milliseconds(0);
       assert.equal(
         m.calendar(),
         m.format("[O'tgan] dddd [kuni soat] LT [da]"),
-        `Today - ${i} days beginning of day`
+        `Today - ${i} days beginning of day`,
       );
       m.hours(23).minutes(59).seconds(59).milliseconds(999);
       assert.equal(
         m.calendar(),
         m.format("[O'tgan] dddd [kuni soat] LT [da]"),
-        `Today - ${i} days end of day`
+        `Today - ${i} days end of day`,
       );
     }
   });
@@ -398,7 +398,7 @@ describe('uz-latn', () => {
     assert.equal(
       weeksFromNow.calendar(),
       weeksFromNow.format('L'),
-      'in 1 week'
+      'in 1 week',
     );
 
     weeksAgo = moment().subtract({ w: 2 });
@@ -408,7 +408,7 @@ describe('uz-latn', () => {
     assert.equal(
       weeksFromNow.calendar(),
       weeksFromNow.format('L'),
-      'in 2 weeks'
+      'in 2 weeks',
     );
   });
 
@@ -416,27 +416,27 @@ describe('uz-latn', () => {
     assert.equal(
       moment([2012, 0, 1]).format('w ww wo'),
       '1 01 1',
-      'Jan  1 2012 should be week 52'
+      'Jan  1 2012 should be week 52',
     );
     assert.equal(
       moment([2012, 0, 2]).format('w ww wo'),
       '2 02 2',
-      'Jan  2 2012 should be week 1'
+      'Jan  2 2012 should be week 1',
     );
     assert.equal(
       moment([2012, 0, 8]).format('w ww wo'),
       '2 02 2',
-      'Jan  8 2012 should be week 1'
+      'Jan  8 2012 should be week 1',
     );
     assert.equal(
       moment([2012, 0, 9]).format('w ww wo'),
       '3 03 3',
-      'Jan  9 2012 should be week 2'
+      'Jan  9 2012 should be week 2',
     );
     assert.equal(
       moment([2012, 0, 15]).format('w ww wo'),
       '3 03 3',
-      'Jan 15 2012 should be week 2'
+      'Jan 15 2012 should be week 2',
     );
   });
 });
