@@ -18,6 +18,15 @@ const logger = nodeLogger(__filename);
 
 export default async (context: GetServerSidePropsContext) => {
   const { resolvedUrl } = context;
+  const { renderer_env: rendererEnv } = context.query;
+  const dataUrl = new URL(resolvedUrl, 'https://www.bbc.com');
+  if (typeof rendererEnv === 'string') {
+    dataUrl.searchParams.set('renderer_env', rendererEnv);
+  }
+  const dataPath =
+    typeof rendererEnv === 'string'
+      ? `${dataUrl.pathname}${dataUrl.search}`
+      : resolvedUrl;
 
   let pageStatus;
   let pageJson;
@@ -37,13 +46,13 @@ export default async (context: GetServerSidePropsContext) => {
 
   const avEmbedsUrl = constructPageFetchUrl({
     pageType: AV_EMBEDS,
-    pathname: resolvedUrl,
+    pathname: dataPath,
     mediaId: parsedRoute.mediaId,
     lang: parsedRoute.lang,
   });
 
-  const env = getEnvironment(resolvedUrl);
-  const agent = certsRequired(resolvedUrl) ? await getAgent() : null;
+  const env = getEnvironment(dataPath);
+  const agent = certsRequired(dataPath) ? await getAgent() : null;
 
   const path = avEmbedsUrl.toString();
 

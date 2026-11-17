@@ -118,6 +118,34 @@ describe('getRequestProps', () => {
   });
 
   it.each([
+    ['/serbian/articles/c0000000000o/lat', 'live', '?renderer_env=live'],
+    [
+      '/serbian/articles/c0000000000o/lat?foo=bar',
+      'test',
+      '&renderer_env=test',
+    ],
+  ] as const)(
+    'uses the header environment for navigation at %s without changing the rendered path',
+    async (asPath, rendererEnv, suffix) => {
+      const ctx = createContext(asPath);
+      const props = await getRequestProps({ ...ctx, rendererEnv });
+
+      expect(mockFetchConfig).toHaveBeenCalledWith({
+        service: 'serbian',
+        variant: 'lat',
+        configType: 'navigation',
+        pagePath: `${asPath}${suffix}`,
+      });
+      expect(mockFetchToggles).toHaveBeenCalledWith({
+        service: 'serbian',
+        isAmp: false,
+      });
+      expect(props.pathname).toBe(asPath.split('?')[0]);
+      expect(ctx.res.getHeader('onion-location')).not.toContain('renderer_env');
+    },
+  );
+
+  it.each([
     ['.amp', true, false, false],
     ['.lite', false, true, false],
     ['.app', false, false, true],
