@@ -18,12 +18,13 @@ import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.jso
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
+import articleDataWithRecommendations from '#data/mundo/articles/cddylv9g8z0o.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import { Services } from '#app/models/types/global';
+import { Services, Toggles } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
@@ -78,6 +79,7 @@ type Props = {
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
   pathname?: string;
+  toggles?: Toggles;
 };
 
 const ComponentWithContext = ({
@@ -88,6 +90,7 @@ const ComponentWithContext = ({
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
   pathname = '/news/articles/c000000000o',
+  toggles = {},
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -100,6 +103,7 @@ const ComponentWithContext = ({
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
         articleVideoCuration: { enabled: true },
         googlePreferredSource: { enabled: googlePreferredSourceEnabled },
+        ...toggles,
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -276,6 +280,23 @@ export const ArticlePageWithPortraitVideo = () => (
 
 ArticlePageWithPortraitVideo.globals = {
   service: { service: 'mundo', variant: 'default' },
+};
+
+export const ArticlePageWithRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataWithRecommendations}
+      service="mundo"
+      pathname="/mundo/articles/cddylv9g8z0o"
+      toggles={{
+        midArticleOnwardJourney: { enabled: true },
+        topicDiscovery: { enabled: true },
+      }}
+    />
+  ),
+  globals: {
+    service: { service: 'mundo', variant: 'default' },
+  },
 };
 
 export const ArticlePageWithPortraitVideoRightToLeft = () => (

@@ -19,3 +19,16 @@ JavaScript. Images are lazy-loaded, and long headlines are not truncated.
 | `data`              | Existing `Recommendation[]` data, without reordering or transformation. |
 | `title`             | Localised recommendations heading.                                      |
 | `eventTrackingData` | Existing recommendations analytics and experiment data.                 |
+
+## Previewing
+
+Run `yarn storybook`, then open:
+
+- **Components / RecommendationsCarousel / Multiple Items** for the standalone
+  component, or **Single Item** for a single recommendation.
+- **Pages / Article Page / Article Page With Recommendations Carousel** for a
+  Mundo article with the carousel immediately above Topic Discovery.
+
+The article story enables the required recommendation and Topic Discovery
+toggles and uses the existing Mundo article fixture. The same article is
+available in the local app at `/mundo/articles/cddylv9g8z0o`.
