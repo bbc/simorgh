@@ -1,5 +1,21 @@
 @use '@scss/themeTokens' as theme;
 
+.accountIcon {
+  width: #{theme.pixelsToRem-px-to-rem(14)};
+  height: #{theme.pixelsToRem-px-to-rem(14)};
+  align-self: center;
+  margin-inline-end: theme.$spacings-half;
+}
+
+p.separatorText {
+  color: theme.$palette-white;
+  padding: theme.$spacings-half;
+}
+
+p.separatorTextOnLightBackground {
+  color: theme.$palette-grey-10;
+}
+
 a.callToActionLink {
   padding: theme.$spacings-double;
   display: inline-flex;

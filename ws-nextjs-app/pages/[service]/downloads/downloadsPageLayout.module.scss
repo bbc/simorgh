@@ -1,3 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
 a.cta div {
   display: block;
+}
+
+.cta :global(.ws-o-download-icon) {
+  margin-inline-end: theme.$spacings-full;
 }
