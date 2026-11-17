@@ -7,13 +7,11 @@ import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
-import isLive from '#app/lib/utilities/isLive';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import sendOptimizelyActivationEvent from '#app/lib/analyticsUtils/sendOptimizelyActivationEvent';
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -36,31 +34,39 @@ const MessageBanner = ({
   children,
   eventTrackingData,
 }: MessageBannerProps) => {
+  const { pageType } = use(RequestContext);
+
+  const { mq } = useTheme();
+
+  let shouldEnableGlow = false;
+  let optimizelyAttributes = {};
+  if (pageType === HOME_PAGE) {
+    const experimentName = 'newswb_ws_message_banner_cta_glow';
+    // pageType is a constant throughout this components lifecycle, so this condition is garunteed to be a constant.
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const variant = useOptimizelyVariation({
+      experimentName,
+      experimentType: ExperimentType.CLIENT_SIDE,
+    });
+
+    shouldEnableGlow = variant === 'variant';
+    optimizelyAttributes = {
+      experimentName,
+      sendOptimizelyEvents: true,
+      experimentVariant: variant,
+      optimizelyComponentName: 'cta',
+    };
+  }
+
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { itemCount, ...groupTrackerRest } =
     eventTrackingData?.groupTracker || {};
 
-  const { pageType } = use(RequestContext);
-
-  const { mq } = useTheme();
-
-  const experimentName = 'newswb_ws_message_banner_cta_glow';
-  const variant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const isInExperiment = variant !== 'off' && pageType === HOME_PAGE;
   const eventTrackingDataWithoutItemCount = eventTrackingData && {
     ...eventTrackingData,
     groupTracker: groupTrackerRest,
-    ...(isInExperiment && {
-      experimentName,
-      sendOptimizelyEvents: true,
-      experimentVariant: variant,
-      optimizelyComponentName: 'cta',
-    }),
+    ...optimizelyAttributes,
   };
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
@@ -77,8 +83,6 @@ const MessageBanner = ({
     imageWidthLarge: styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
-
-  const shouldEnableGlow = variant === 'variant' && pageType === HOME_PAGE;
 
   return (
     <div {...viewTracker} css={styles.card}>
