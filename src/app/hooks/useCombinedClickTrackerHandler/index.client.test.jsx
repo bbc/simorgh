@@ -24,7 +24,7 @@ const wrapper = ({ children }) => (
 
 describe('useCombinedClickTrackerHandler', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    jest.resetAllMocks();
     useClickTrackerHandler.mockReturnValue({ onClick: trackClick });
   });
 
@@ -41,6 +41,7 @@ describe('useCombinedClickTrackerHandler', () => {
       { wrapper },
     );
     const event = {
+      button: 0,
       currentTarget: { href: destination },
       target: {},
     };
@@ -79,7 +80,10 @@ describe('useCombinedClickTrackerHandler', () => {
     );
 
     await expect(
-      result.current.onClick({ currentTarget: { href: destination } }),
+      result.current.onClick({
+        button: 0,
+        currentTarget: { href: destination },
+      }),
     ).rejects.toThrow(error);
 
     expect(navigate).toHaveBeenCalledWith(destination);
@@ -91,9 +95,97 @@ describe('useCombinedClickTrackerHandler', () => {
       useCombinedClickTrackerHandler({ block, url: destination }),
     );
 
-    await result.current.onClick({ target: {} });
+    await result.current.onClick({ button: 0, target: {} });
 
     expect(navigate).toHaveBeenCalledWith(destination);
     expect(optimizely.close).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['Ctrl-click', { ctrlKey: true }],
+    ['Cmd-click', { metaKey: true }],
+    ['Shift-click', { shiftKey: true }],
+    ['Alt-click', { altKey: true }],
+    ['Ctrl+Shift-click', { ctrlKey: true, shiftKey: true }],
+    ['Cmd+Shift-click', { metaKey: true, shiftKey: true }],
+    ['middle-click', { button: 1 }],
+    ['right-click', { button: 2 }],
+  ])('leaves %s on a nested headline to the browser', async (_, modifiers) => {
+    const navigate = jest.spyOn(window.location, 'assign');
+    const { result } = renderHook(
+      () => useCombinedClickTrackerHandler({ block }),
+      { wrapper },
+    );
+    const event = {
+      button: 0,
+      currentTarget: { href: destination },
+      target: document.createElement('span'),
+      preventDefault: jest.fn(),
+      ...modifiers,
+    };
+
+    await result.current.onClick(event);
+
+    expect(trackClick).not.toHaveBeenCalled();
+    expect(event.preventDefault).not.toHaveBeenCalled();
+    expect(optimizely.close).not.toHaveBeenCalled();
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  it.each(['_blank', '_parent', '_top', 'other-window'])(
+    'leaves links targeting %s to the browser',
+    async target => {
+      const navigate = jest.spyOn(window.location, 'assign');
+      const { result } = renderHook(
+        () => useCombinedClickTrackerHandler({ block }),
+        { wrapper },
+      );
+
+      await result.current.onClick({
+        button: 0,
+        currentTarget: { href: destination, target },
+      });
+
+      expect(trackClick).not.toHaveBeenCalled();
+      expect(optimizely.close).not.toHaveBeenCalled();
+      expect(navigate).not.toHaveBeenCalled();
+    },
+  );
+
+  it('leaves download links to the browser', async () => {
+    const navigate = jest.spyOn(window.location, 'assign');
+    const link = document.createElement('a');
+    link.href = destination;
+    link.setAttribute('download', '');
+    const { result } = renderHook(
+      () => useCombinedClickTrackerHandler({ block }),
+      { wrapper },
+    );
+
+    await result.current.onClick({ button: 0, currentTarget: link });
+
+    expect(trackClick).not.toHaveBeenCalled();
+    expect(optimizely.close).not.toHaveBeenCalled();
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ['keyboard activation', { button: 0, detail: 0 }],
+    ['touch-generated click', { button: 0, pointerType: 'touch' }],
+  ])('preserves same-tab %s', async (_, activation) => {
+    const navigate = jest.spyOn(window.location, 'assign');
+    const { result } = renderHook(
+      () => useCombinedClickTrackerHandler({ block }),
+      { wrapper },
+    );
+
+    await result.current.onClick({
+      ...activation,
+      currentTarget: { href: destination, target: '_self' },
+    });
+
+    expect(trackClick).toHaveBeenCalledTimes(1);
+    expect(optimizely.close).toHaveBeenCalledTimes(1);
+    expect(navigate).toHaveBeenCalledWith(destination);
   });
 });

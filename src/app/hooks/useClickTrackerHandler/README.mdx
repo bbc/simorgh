@@ -40,7 +40,9 @@ Article components receive experiment props from `ReverbParamsContext`; those in
 `OJ_COMPONENT_NAMES` also send `oj_clicks` for `test_page_views_aa_3`.
 
 `useCombinedClickTrackerHandler` flushes the SDK after tracking, before navigating.
-Navigation proceeds even if flushing fails.
+Navigation proceeds even if flushing fails. Modified clicks, non-primary buttons,
+downloads and links targeting other windows bypass this handler's tracking and
+SDK shutdown, preserving native browser behavior.
 
 ### Props
 

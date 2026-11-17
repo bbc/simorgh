@@ -278,6 +278,48 @@ describe('Article Page', () => {
         );
       },
     );
+
+    it('preserves recommendations across article rerenders and experiment updates', () => {
+      mockVariation.mockReturnValue('control');
+      jest.spyOn(clickTracking, 'default');
+      const viewTracker = jest.spyOn(viewTracking, 'default');
+      const { container, rerender } = render(
+        <ArticlePage pageData={pageData} />,
+        {
+          service: 'pidgin',
+          pageMetadata: pageData.metadata,
+          toggles: {
+            midArticleOnwardJourney: { enabled: true },
+          },
+        },
+      );
+      const recommendations = container.querySelector(
+        '[data-e2e="recommendations-heading"]',
+      );
+
+      expect(recommendations).toBeInTheDocument();
+
+      rerender(<ArticlePage pageData={pageData} />);
+
+      expect(
+        container.querySelector('[data-e2e="recommendations-heading"]'),
+      ).toBe(recommendations);
+
+      mockVariation.mockReturnValue('variant');
+      viewTracker.mockClear();
+      rerender(<ArticlePage pageData={pageData} />);
+
+      expect(
+        container.querySelector('[data-e2e="recommendations-heading"]'),
+      ).toBe(recommendations);
+      expect(viewTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'midarticle-mostread',
+          experimentVariant: 'variant',
+          sendOptimizelyEvents: true,
+        }),
+      );
+    });
   });
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {

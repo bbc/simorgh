@@ -44,7 +44,6 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
@@ -177,11 +176,11 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent =
-  (experimentProps?: ComponentExperimentProps) =>
-  ({ data }: { data: Recommendation[] }) => (
-    <Recommendations data={data} experimentProps={experimentProps} />
-  );
+const WsojComponent = ({ data }: { data: Recommendation[] }) => {
+  const { experimentProps } = use(ReverbParamsContext);
+
+  return <Recommendations data={data} experimentProps={experimentProps} />;
+};
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -439,7 +438,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent(experimentProps),
+    wsoj: WsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
