@@ -24,7 +24,6 @@ Dependency,Type,Most Recent Version,Most Recent Version Date,Our Version,Our Ver
 @loadable/component,commonjs,5.16.4,2024-04-20,5.16.4,2024-04-20,158
 @loadable/server,commonjs,5.16.5,2024-04-20,5.16.5,2024-04-20,157
 @loadable/webpack-plugin,commonjs,5.15.2,2022-04-06,5.15.2,2021-12-12,1017
-@optimizely/react-sdk,commonjs,3.2.2,2024-08-22,2.9.2,2023-03-15,559
 @storybook/addon-a11y,commonjs,8.4.0-alpha.1,2024-09-24,8.2.9,2024-08-13,42
 @storybook/addon-backgrounds,commonjs,8.4.0-alpha.1,2024-09-24,8.2.9,2024-08-13,42
 @storybook/addon-controls,commonjs,8.4.0-alpha.1,2024-09-24,8.2.9,2024-08-13,42

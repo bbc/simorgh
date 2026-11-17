@@ -24,7 +24,6 @@ dependency,Days since last activity,Freshness of our version in days,Downloads L
 @loadable/component,158,158,435333
 @loadable/server,157,157,123751
 @loadable/webpack-plugin,903,1017,128768
-@optimizely/react-sdk,33,559,127926
 @storybook/addon-a11y,0,42,1660245
 @storybook/addon-backgrounds,0,42,5098111
 @storybook/addon-controls,0,42,5310845
