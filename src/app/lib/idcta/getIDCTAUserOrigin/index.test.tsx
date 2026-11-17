@@ -22,6 +22,12 @@ describe('getIdctaUserOrigin', () => {
     expect(result).toBe('WS_NEWS_HINDI_TEST');
   });
 
+  it('should return WS_NEWS_HINDI_TEST for local/dev/sandbox env', () => {
+    mockIsLive.mockReturnValue(false);
+    const result = getIdctaUserOrigin('HINDI');
+    expect(result).toBe('WS_NEWS_HINDI_TEST');
+  });
+
   it('should work with any producer name', () => {
     mockIsLive.mockReturnValue(true);
     const result = getIdctaUserOrigin('MUNDO');

@@ -155,11 +155,11 @@ describe('Captions', () => {
         <ServiceContext.Provider
           value={persianServiceContextStub as ServiceConfig}
         >
-          <CaptionContainer block={captionBlock} type="video" />
+          <CaptionContainer block={captionBlock} type="image" />
         </ServiceContext.Provider>,
       );
       expect(container.querySelector('span')?.textContent).toEqual(
-        ' ، عنوان ویدئوSome caption text...',
+        ' ، عنوان تصویرSome caption text...',
       );
     });
 

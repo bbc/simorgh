@@ -21,7 +21,7 @@ describe('Media Player: Guidance', () => {
     expect(message).toHaveAttribute('aria-hidden', 'true');
   });
 
-  it('should render the no-js message in a noscript element', () => {
+  it('should render no-js styles when noJsClassName prop is used', () => {
     const { container, getByText } = render(
       <Guidance
         guidanceMessage="Guidance: Contains strong language with adult humor"

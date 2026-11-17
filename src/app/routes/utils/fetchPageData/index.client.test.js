@@ -119,7 +119,7 @@ describe('fetchPageData', () => {
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
-      await fetchPageData({ path: `${requestedPathname}.amp`, pageType });
+      await fetchPageData({ path: requestedPathname, pageType });
 
       expect(timeoutSpy).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);

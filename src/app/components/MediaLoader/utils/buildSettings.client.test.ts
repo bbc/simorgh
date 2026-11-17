@@ -927,6 +927,19 @@ describe('buildSettings', () => {
       expect(result).toBe(null);
     });
 
+    it('Should return the statsObject with required values for tracking.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+      });
+
+      expect(result?.playerConfig.statsObject).toStrictEqual({
+        clipPID: 'p01k6msm',
+        destination: 'WS_NEWS_LANGUAGES',
+        producer: 'SERBIAN',
+      });
+    });
+
     it('Should return required settings for tracking.', () => {
       const result = buildSettings({
         ...baseSettings,

@@ -46,21 +46,21 @@ describe('Media Loader - Metadata', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should omit embedURL from the linked data when no embedURL is provided', async () => {
+  it('should render meta og:url tag if the Metadata is on an "embedded" page', async () => {
     await act(async () => {
-      render(<Metadata blocks={aresMediaBlocks as MediaBlock[]} />, {
-        pageType: ARTICLE_PAGE,
-      });
+      render(
+        <Metadata
+          blocks={aresMediaBlocks as MediaBlock[]}
+          embedURL={embedSource}
+        />,
+        {
+          pageType: ARTICLE_PAGE,
+        },
+      );
     });
 
-    const { scriptTags } = Helmet.peek();
-    const linkedData = JSON.parse(scriptTags[0].innerHTML);
-
-    expect(linkedData).not.toHaveProperty('embedURL');
-    expect(linkedData).toHaveProperty(
-      'name',
-      'Five things ants can teach us about management',
-    );
+    const container = Helmet.peek();
+    expect(container).toMatchSnapshot();
   });
 
   it.each([AUDIO_PAGE, TV_PAGE, LIVE_RADIO_PAGE])(

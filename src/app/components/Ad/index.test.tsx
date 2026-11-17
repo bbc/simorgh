@@ -137,6 +137,32 @@ describe('Ad Container', () => {
         );
         expect(container).toMatchSnapshot();
       });
+
+      it('should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false', () => {
+        const { container } = render(
+          <ServiceContext.Provider
+            // @ts-expect-error require partial data for testing purposes
+            value={{ showAdPlaceholder: false, ...context }}
+          >
+            <RequestContextProvider
+              bbcOrigin="https://www.test.bbc.co.uk"
+              id="c0000000000o"
+              isAmp
+              isApp={false}
+              pageType={HOME_PAGE}
+              service="mundo"
+              statusCode={200}
+              pathname="/mundo"
+              showAdsBasedOnLocation
+            >
+              <ToggleContext.Provider value={toggleContextMock}>
+                <AdContainer slotType="leaderboard" />
+              </ToggleContext.Provider>
+            </RequestContextProvider>
+          </ServiceContext.Provider>,
+        );
+        expect(container).toMatchSnapshot();
+      });
     });
 
     describe('Canonical', () => {

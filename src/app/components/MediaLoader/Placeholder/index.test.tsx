@@ -105,4 +105,22 @@ describe('Media Player: Placeholder', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it('should render no-js styles when noJsClassName prop is used', () => {
+    const { container } = render(
+      <Placeholder
+        onClick={mockOnClick}
+        src="http://foo.bar/placeholder.png"
+        mediaInfo={{
+          title: 'Dog chases cat.',
+          guidanceMessage:
+            'Guidance: May contain strong language, sexual or violent content that may offend.',
+          ...withDuration,
+        }}
+        noJsMessage="no js"
+      />,
+      { service: 'news' },
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

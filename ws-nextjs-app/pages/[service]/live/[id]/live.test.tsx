@@ -917,6 +917,20 @@ describe('Live Page', () => {
 
       (useToggle as jest.Mock).mockReturnValue({ enabled: true });
     });
+
+    it('should render Header when sportDataEventContent is not present', async () => {
+      mockPollingUpdate(mockPageData);
+
+      await act(async () => {
+        render(<Live pageData={mockPageData} />);
+      });
+
+      expect(
+        screen.getByText(
+          'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+        ),
+      ).toBeInTheDocument();
+    });
   });
 });
 
