@@ -65,6 +65,23 @@ describe('AccountSignInModal', () => {
     },
   );
 
+  it.each(['saveArticle', 'inline', 'articleLink', 'articleBottom'] as const)(
+    'falls back to save-article copy when %s copy is not configured',
+    context => {
+      render(<AccountSignInModal onClose={onClose} context={context} />, {
+        service: 'hindi',
+        idctaConfig: mockIdctaConfig,
+      });
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName(
+        'माई न्यूज़ में सेव करने के लिए साइन इन करें',
+      );
+      expect(
+        screen.getByText('स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें'),
+      ).toBeInTheDocument();
+    },
+  );
+
   it('renders as a dialog', () => {
     renderComponent();
 

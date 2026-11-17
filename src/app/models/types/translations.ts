@@ -64,6 +64,10 @@ export interface Translations {
     title: string;
     description: string;
     closeLabel: string;
+    saveArticle?: {
+      title: string;
+      description: string;
+    };
     followTopic?: {
       title: string;
       description: string;

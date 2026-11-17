@@ -35,10 +35,7 @@ const AccountSignInModal = ({
 
   const { translations } = use(ServiceContext);
   const modalTranslations = translations.accountSignInModal;
-  const copy =
-    context === 'saveArticle'
-      ? modalTranslations
-      : modalTranslations?.[context];
+  const copy = modalTranslations?.[context] ?? modalTranslations;
   const { title = '', description = '' } = copy ?? {};
   const { closeLabel = 'Close' } = modalTranslations ?? {};
 
