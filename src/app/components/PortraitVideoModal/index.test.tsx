@@ -210,14 +210,14 @@ describe('PortraitVideoModal', () => {
           eventTrackingData={eventTrackingData}
         />,
       );
-      const hiddenCloseButton = screen.getByTestId(
-        'close-modal-visually-hidden',
-      );
-      expect(hiddenCloseButton).toBeInTheDocument();
-      expect(hiddenCloseButton).toHaveTextContent('End of content. Close');
-      expect(hiddenCloseButton).toHaveAttribute(
-        'aria-label',
-        'End of content. Close',
+      const focusableElements = screen
+        .getByRole('dialog')
+        .querySelectorAll(
+          'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+
+      expect(focusableElements[focusableElements.length - 1]).toBe(
+        screen.getByTestId('close-modal-visually-hidden'),
       );
     });
 

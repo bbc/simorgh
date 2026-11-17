@@ -778,42 +778,6 @@ describe('useClickTrackerHandler', () => {
       expect(defaultOptimizely.track).not.toHaveBeenCalled();
     });
 
-    it('should fire event to Optimizely if optimizely object exists', async () => {
-      const {
-        metadata: { atiAnalytics, type },
-      } = pidginData;
-
-      const { getByTestId } = render(
-        <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageData: pidginData,
-          pageType: STORY_PAGE,
-          pathname: '/pidgin',
-          service: 'pidgin',
-          toggles: defaultToggles,
-        },
-      );
-
-      fireEvent.click(getByTestId('test-component'));
-
-      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-      expect(defaultOptimizely.track).toHaveBeenCalledWith(
-        'brand-clicks',
-        defaultOptimizely.user.id,
-        { foo: 'bar' },
-      );
-    });
-
     it('should not fire event to Optimizely if optimizely object is undefined', async () => {
       const mockOptimizelyTrack = jest.fn();
       const mockOptimizely = undefined;

@@ -43,16 +43,6 @@ describe('appendCtaQueryParams', () => {
     );
   });
 
-  it('should set userOrigin to WS_NEWS_HINDI_TEST for local/dev/sandbox env', () => {
-    const url = 'https://example.com/signin';
-    const result = appendCtaQueryParams(url, {
-      userOrigin: 'WS_NEWS_HINDI_TEST',
-    });
-    expect(result).toBe(
-      'https://example.com/signin?skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
-    );
-  });
-
   it('should preserve existing non-conflicting query parameters', () => {
     const url = 'https://example.com/signin?existing=param';
     const result = appendCtaQueryParams(url, {

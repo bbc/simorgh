@@ -167,15 +167,7 @@ describe('Image - Canonical', () => {
     });
   });
 
-  it('should render a placeholder image when placeholder is true', () => {
-    render(<Fixture />);
-    const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-    });
-  });
-
-  it('should render a placeholder image when placeholder is true', () => {
+  it('should render a dark placeholder image when darkPlaceholder is true', () => {
     render(<Fixture darkPlaceholder />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
@@ -361,14 +353,6 @@ describe('Image - AMP pages', () => {
     render(<Fixture />, { isAmp: true });
     const imageEl = screen.getAllByAltText('Test image alt text')[0];
 
-    expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-    });
-  });
-
-  it('should render a placeholder image when placeholder is true', () => {
-    render(<Fixture />, { isAmp: true });
-    const imageEl = screen.getAllByAltText('Test image alt text')[0];
     expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });

@@ -28,22 +28,6 @@ describe('RadioSchedule', () => {
   });
 
   describe('With initial data', () => {
-    it('renders correctly for a service', async () => {
-      const initialData = processRadioSchedule(
-        arabicRadioScheduleData,
-        'arabic',
-        Date.now(),
-      );
-      let container;
-      await act(async () => {
-        container = render(
-          <RadioScheduleWithContext radioSchedule={initialData} />,
-          { service: 'arabic' },
-        ).container;
-      });
-      expect(container.querySelectorAll('li').length).toEqual(4);
-    });
-
     it('contains four programs for a service with a radio schedule', async () => {
       const initialData = processRadioSchedule(
         arabicRadioScheduleData,
