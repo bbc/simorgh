@@ -470,9 +470,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopicDiscovery =
     topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
-  const readTimeTopicId = topicDiscoveryTopics[0]?.topicId;
+  const readTimeTopicIds = topicDiscoveryTopics.map(({ topicId }) => topicId);
   const showReadTimeTabs = Boolean(
-    readTimeRecommendationsEnabled && showTopicDiscovery && readTimeTopicId,
+    readTimeRecommendationsEnabled &&
+    showTopicDiscovery &&
+    readTimeTopicIds.length > 0,
   );
 
   const showRelatedTopicsComponent = Boolean(
@@ -567,7 +569,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   ? [!showAllContent && styles.hideTopicDiscovery]
                   : []),
               ]}
-              topicId={readTimeTopicId}
+              topicIds={readTimeTopicIds}
             />
           )}
           {showTopicDiscovery && !showReadTimeTabs && (

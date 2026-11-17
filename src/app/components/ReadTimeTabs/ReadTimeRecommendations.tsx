@@ -2,16 +2,16 @@ import ReadTimeTabs from '.';
 import useFetchReadTimeRecommendations from './useFetchReadTimeRecommendations';
 
 type ReadTimeRecommendationsProps = {
-  topicId: string;
+  topicIds: string[];
   className?: string;
 };
 
 const ReadTimeRecommendations = ({
-  topicId,
+  topicIds,
   className,
 }: ReadTimeRecommendationsProps) => {
   const { items, isLoading, isError } = useFetchReadTimeRecommendations({
-    topicId,
+    topicIds,
   });
 
   return (

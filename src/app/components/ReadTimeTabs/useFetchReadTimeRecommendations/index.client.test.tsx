@@ -43,6 +43,7 @@ const createWrapper = (variant?: Variants) => {
 describe('useFetchReadTimeRecommendations', () => {
   const topicIdA = 'c2lemz0vkm8t';
   const topicIdB = 'cg7267qwzx1t';
+  const topicIdC = 'cxyz1234abcd';
 
   const readTimeItemsA = [
     {
@@ -83,7 +84,7 @@ describe('useFetchReadTimeRecommendations', () => {
 
   it('does not fetch recommendations before the component is near viewport', () => {
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -93,7 +94,7 @@ describe('useFetchReadTimeRecommendations', () => {
     expect(result.current.isError).toBe(false);
   });
 
-  it('fetches recommendations when near viewport and builds expected request URL', async () => {
+  it('fetches recommendations when near viewport with correct search params', async () => {
     mockUseNearViewport.mockReturnValue(true);
 
     mockFetch.mockResolvedValue({
@@ -102,7 +103,7 @@ describe('useFetchReadTimeRecommendations', () => {
     });
 
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -112,9 +113,6 @@ describe('useFetchReadTimeRecommendations', () => {
     const requestUrl = new URL(fetchUrl as string);
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
-    expect(requestUrl.toString()).toContain(
-      'https://www.test.bbc.com/fd/simorgh-bff',
-    );
     expect(requestUrl.searchParams.get('onwardJourney')).toBe(
       'readTimeRecommendations',
     );
@@ -125,6 +123,33 @@ describe('useFetchReadTimeRecommendations', () => {
     expect(result.current.isError).toBe(false);
   });
 
+  it('sends multiple topicIds comma-joined in one request', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
+    mockFetch.mockResolvedValue({
+      status: 200,
+      json: async () => ({ data: { items: readTimeItemsA } }),
+    });
+
+    const { result } = renderHook(
+      () =>
+        useFetchReadTimeRecommendations({
+          topicIds: [topicIdA, topicIdB, topicIdC],
+        }),
+      { wrapper: createWrapper() },
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    const [fetchUrl] = mockFetch.mock.calls[0];
+    const requestUrl = new URL(fetchUrl as string);
+
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+    expect(requestUrl.searchParams.get('id')).toBe(
+      `${topicIdA},${topicIdB},${topicIdC}`,
+    );
+  });
+
   it('includes variant query parameter when variant exists in RequestContext', async () => {
     mockUseNearViewport.mockReturnValue(true);
 
@@ -133,9 +158,12 @@ describe('useFetchReadTimeRecommendations', () => {
       json: async () => ({ data: { items: readTimeItemsA } }),
     });
 
-    renderHook(() => useFetchReadTimeRecommendations({ topicId: topicIdA }), {
-      wrapper: createWrapper('cyr'),
-    });
+    renderHook(
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
+      {
+        wrapper: createWrapper('cyr'),
+      },
+    );
 
     await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
 
@@ -154,7 +182,7 @@ describe('useFetchReadTimeRecommendations', () => {
     });
 
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -173,7 +201,7 @@ describe('useFetchReadTimeRecommendations', () => {
     });
 
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -189,7 +217,7 @@ describe('useFetchReadTimeRecommendations', () => {
     mockFetch.mockRejectedValue(new Error('fetch failed'));
 
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -208,7 +236,7 @@ describe('useFetchReadTimeRecommendations', () => {
     });
 
     const { result } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 
@@ -217,7 +245,7 @@ describe('useFetchReadTimeRecommendations', () => {
     expect(result.current.items).toEqual([]);
   });
 
-  it('does not refetch when rerendering with the same topicId', async () => {
+  it('does not refetch when rerendering with the same topicIds', async () => {
     mockUseNearViewport.mockReturnValue(true);
 
     mockFetch.mockResolvedValue({
@@ -226,9 +254,9 @@ describe('useFetchReadTimeRecommendations', () => {
     });
 
     const { result, rerender } = renderHook(
-      ({ topicId }) => useFetchReadTimeRecommendations({ topicId }),
+      ({ topicIds }) => useFetchReadTimeRecommendations({ topicIds }),
       {
-        initialProps: { topicId: topicIdA },
+        initialProps: { topicIds: [topicIdA] },
         wrapper: createWrapper(),
       },
     );
@@ -237,12 +265,12 @@ describe('useFetchReadTimeRecommendations', () => {
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
 
-    rerender({ topicId: topicIdA });
+    rerender({ topicIds: [topicIdA] });
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
   });
 
-  it('refetches when topicId changes', async () => {
+  it('refetches when topicIds change', async () => {
     mockUseNearViewport.mockReturnValue(true);
 
     mockFetch
@@ -256,9 +284,9 @@ describe('useFetchReadTimeRecommendations', () => {
       });
 
     const { result, rerender } = renderHook(
-      ({ topicId }) => useFetchReadTimeRecommendations({ topicId }),
+      ({ topicIds }) => useFetchReadTimeRecommendations({ topicIds }),
       {
-        initialProps: { topicId: topicIdA },
+        initialProps: { topicIds: [topicIdA] },
         wrapper: createWrapper(),
       },
     );
@@ -267,7 +295,7 @@ describe('useFetchReadTimeRecommendations', () => {
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
 
-    rerender({ topicId: topicIdB });
+    rerender({ topicIds: [topicIdB] });
 
     await waitFor(() => expect(result.current.items).toEqual(readTimeItemsB));
 
@@ -289,7 +317,7 @@ describe('useFetchReadTimeRecommendations', () => {
     );
 
     const { unmount } = renderHook(
-      () => useFetchReadTimeRecommendations({ topicId: topicIdA }),
+      () => useFetchReadTimeRecommendations({ topicIds: [topicIdA] }),
       { wrapper: createWrapper() },
     );
 

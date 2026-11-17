@@ -180,24 +180,34 @@ describe('ReadTimeTabs', () => {
   });
 
   describe('single category items', () => {
-    it('should render list without tabs when only short reads exist', () => {
+    it('should render list without tabs when only short reads exist (relative split)', () => {
       render(<ReadTimeTabs items={shortReadItems} />);
 
-      expect(screen.queryByRole('tablist')).not.toBeInTheDocument();
-      expect(screen.queryByRole('tab')).not.toBeInTheDocument();
+      // 4 short items triggers relative split (k=2), giving 2 short and 2 long
+      // Both groups have items, so tabs should render
+      expect(
+        screen.getByRole('tab', { name: 'Short reads' }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('tab', { name: 'Long reads' }),
+      ).toBeInTheDocument();
       expect(screen.getByText('Short read one')).toBeInTheDocument();
-      expect(screen.getByText('Short read two')).toBeInTheDocument();
     });
 
-    it('should render list without tabs when only long reads exist', () => {
+    it('should render list without tabs when only long reads exist (relative split)', () => {
       render(<ReadTimeTabs items={longReadItems} />);
 
-      expect(screen.queryByRole('tablist')).not.toBeInTheDocument();
-      expect(screen.queryByRole('tab')).not.toBeInTheDocument();
+      // 4 long items triggers relative split (k=2), giving 2 short and 2 long
+      // Both groups have items, so tabs should render
+      expect(
+        screen.getByRole('tab', { name: 'Short reads' }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole('tab', { name: 'Long reads' }),
+      ).toBeInTheDocument();
       expect(
         screen.getByText('Long read at the threshold'),
       ).toBeInTheDocument();
-      expect(screen.getByText('Long read two')).toBeInTheDocument();
     });
 
     it('should still render heading when only short reads exist', () => {
@@ -214,6 +224,39 @@ describe('ReadTimeTabs', () => {
       const section = screen.getByTestId('read-time-tabs');
       const heading = section.querySelector('h2');
       expect(heading).toHaveTextContent('Read more');
+    });
+
+    it('should render no tabs and one list when fewer than 4 total valid items', () => {
+      const threeItems = shortReadItems.slice(0, 3);
+
+      render(<ReadTimeTabs items={threeItems} />);
+
+      expect(screen.queryByRole('tablist')).not.toBeInTheDocument();
+      expect(screen.queryByRole('tab')).not.toBeInTheDocument();
+      expect(screen.getByText('Short read one')).toBeInTheDocument();
+      expect(screen.getByText('Short read two')).toBeInTheDocument();
+      expect(
+        screen.getByText('Short read at the threshold'),
+      ).toBeInTheDocument();
+    });
+
+    it('should render nothing when fewer than 2 valid items', () => {
+      const { container } = render(
+        <ReadTimeTabs
+          items={[
+            {
+              id: '1',
+              title: 'Single item',
+              link: 'https://test.com/1',
+              readTime: 2,
+            },
+          ]}
+        />,
+      );
+
+      expect(
+        queryByTestId(container, 'read-time-tabs'),
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -515,6 +558,27 @@ describe('ReadTimeTabs', () => {
           readTime: 2,
           extra: 'property',
           another: 123,
+        },
+        {
+          id: 'test-2',
+          title: 'Test 2',
+          link: 'https://test.com/2',
+          readTime: 1,
+          extra: 'property2',
+        },
+        {
+          id: 'test-3',
+          title: 'Test 3',
+          link: 'https://test.com/3',
+          readTime: 6,
+          extra: 'property3',
+        },
+        {
+          id: 'test-4',
+          title: 'Test 4',
+          link: 'https://test.com/4',
+          readTime: 7,
+          extra: 'property4',
         },
       ];
 

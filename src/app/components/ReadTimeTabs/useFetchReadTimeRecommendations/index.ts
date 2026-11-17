@@ -10,13 +10,15 @@ const FETCH_ROOT_MARGIN = '200px 0px';
 export const READ_TIME_TABS_COMPONENT_ID = 'read-time-tabs-component';
 
 type Props = {
-  topicId: string;
+  topicIds: string[];
 };
 
-// A single request per topic: tab switching is local state, so this never
+// A single request for all of the article's topics: tab switching is local state, so this never
 // refetches when the user changes tabs.
-const useFetchReadTimeRecommendations = ({ topicId }: Props) => {
+const useFetchReadTimeRecommendations = ({ topicIds }: Props) => {
   const { service, variant } = use(RequestContext);
+
+  const topicIdsParam = topicIds.join(',');
 
   const [items, setItems] = useState<unknown[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,14 +30,14 @@ const useFetchReadTimeRecommendations = ({ topicId }: Props) => {
   });
 
   useEffect(() => {
-    if (!isNearViewport || !topicId) return undefined;
+    if (!isNearViewport || !topicIdsParam) return undefined;
 
     const abortController = new AbortController();
     const fetchUrl = new URL(`${WEB_CDN_URL}/fd/simorgh-bff`);
 
     fetchUrl.searchParams.append('onwardJourney', 'readTimeRecommendations');
     fetchUrl.searchParams.append('service', service);
-    fetchUrl.searchParams.append('id', topicId);
+    fetchUrl.searchParams.append('id', topicIdsParam);
 
     if (variant) fetchUrl.searchParams.append('variant', variant);
 
@@ -71,7 +73,7 @@ const useFetchReadTimeRecommendations = ({ topicId }: Props) => {
     return () => {
       abortController.abort();
     };
-  }, [isNearViewport, topicId, service, variant]);
+  }, [isNearViewport, topicIdsParam, service, variant]);
 
   return { items, isLoading, isError };
 };
