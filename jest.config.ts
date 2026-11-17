@@ -49,8 +49,6 @@ const nextBuildPath = path.resolve(nextRoot, 'build');
 const sharedSetupPath = path.resolve(repoRoot, 'src/testHelpers/setupTests.js');
 
 const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
-const puppeteerNodeModulesPattern =
-  'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)';
 
 const rootProjectPaths = {
   rootDir: repoRoot,
@@ -90,7 +88,6 @@ const unitTests = {
     '**/?(*.)+(test).{js,jsx,ts,tsx}',
     '!**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
-    '!**/puppeteer/**/*',
   ],
 } satisfies JestProjectConfig;
 
@@ -101,16 +98,7 @@ const clientUnitTests = {
   testMatch: [
     '**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/**/*',
-    '!**/puppeteer/**/*',
   ],
-} satisfies JestProjectConfig;
-
-const puppeteerTests = {
-  ...rootProjectPaths,
-  setupFiles: [path.resolve(repoRoot, 'puppeteer/jest-setup.js')],
-  moduleNameMapper: jestDirAlias,
-  displayName: 'Puppeteer Tests',
-  testMatch: ['**/puppeteer/**/*.test.js'],
 } satisfies JestProjectConfig;
 
 const rootCreateJestConfig = nextJest({});
@@ -161,17 +149,6 @@ const buildRootProject = async (
   })()) as ResolvedRootJestConfig;
 
   return withRootEmotion(resolvedConfig);
-};
-
-const buildPuppeteerProject = async (): Promise<ResolvedRootJestConfig> => {
-  const resolvedConfig = await buildRootProject(puppeteerTests);
-
-  return {
-    ...resolvedConfig,
-    transformIgnorePatterns: resolvedConfig.transformIgnorePatterns
-      .filter(pattern => !pattern.includes('node_modules'))
-      .concat(puppeteerNodeModulesPattern),
-  };
 };
 
 const configFile = ts.readConfigFile(nextTsConfigPath, ts.sys.readFile);
@@ -306,7 +283,6 @@ export default async function createJestConfig(): Promise<JestConfig> {
     projects: [
       await buildRootProject(unitTests),
       await buildRootProject(clientUnitTests),
-      await buildPuppeteerProject(),
       await buildNextProject(nextUnitTests),
       ...(await Promise.all(nextIntegrationTests.map(buildNextProject))),
     ],
