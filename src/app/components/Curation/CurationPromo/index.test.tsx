@@ -278,4 +278,38 @@ describe('Curation Promo', () => {
       clickTrackerSpy.mockRestore();
     });
   });
+
+  describe('Video Engagement', () => {
+    beforeEach(() => {
+      localStorage.clear();
+    });
+
+    afterEach(() => {
+      localStorage.clear();
+    });
+
+    it('should set the video engagement flag when clicking a video promo link', async () => {
+      render(<Fixture type="video" />);
+
+      const videoLink = screen.getByRole('link', {
+        name: /Promo title/,
+      });
+
+      await userEvent.click(videoLink);
+
+      expect(localStorage.getItem('ws_video_engagement')).toBe('true');
+    });
+
+    it('should not set the video engagement flag when clicking an article promo link', async () => {
+      render(<Fixture type="article" />);
+
+      const articleLink = screen.getByRole('link', {
+        name: 'Promo title',
+      });
+
+      await userEvent.click(articleLink);
+
+      expect(localStorage.getItem('ws_video_engagement')).toBeNull();
+    });
+  });
 });

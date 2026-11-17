@@ -7,6 +7,7 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
+import { markVideoEngagement } from '#app/lib/utilities/videoEngagement';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -60,7 +61,17 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const trackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandler =
+    type === 'video'
+      ? {
+          ...trackerHandler,
+          onClick: (event: React.MouseEvent<HTMLAnchorElement>) => {
+            markVideoEngagement();
+            trackerHandler?.onClick?.(event);
+          },
+        }
+      : trackerHandler;
 
   const relatedTopicToShow =
     showRelatedTopic &&

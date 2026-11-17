@@ -3,6 +3,7 @@ import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import useHasVideoEngagement from '#app/hooks/useHasVideoEngagement';
 import { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
 import selectTopicVideos, {
@@ -28,7 +29,12 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
   const { fetchErrorMessage = 'Failed to load. Please try again later.' } =
     translations?.topicDiscovery || {};
 
-  const topicIds = normaliseTopicIds((topics || []).map(t => t?.topicId));
+  const hasVideoEngagement = useHasVideoEngagement();
+
+  // Without prior video engagement no topic requests are made at all.
+  const topicIds = hasVideoEngagement
+    ? normaliseTopicIds((topics || []).map(t => t?.topicId))
+    : [];
   const { resultsByTopic, isLoading, isError } = useFetchTopicVideos({
     topicIds,
   });

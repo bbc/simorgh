@@ -2,6 +2,7 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import { VIDEO_ENGAGEMENT_KEY } from '#app/lib/utilities/videoEngagement';
 import { TopicDiscoveryItem } from '../TopicDiscovery/types';
 import selectTopicVideos, { normaliseTopicIds } from './selectTopicVideos';
 import useFetchTopicVideos from './useFetchTopicVideos';
@@ -71,6 +72,14 @@ describe('normaliseTopicIds', () => {
 
 describe('TopicVideoCuration', () => {
   const mockHook = useFetchTopicVideos as jest.Mock;
+
+  beforeEach(() => {
+    localStorage.setItem(VIDEO_ENGAGEMENT_KEY, 'true');
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+  });
 
   it('renders a translated heading and a grid of videos', () => {
     mockHook.mockReturnValue({
@@ -149,5 +158,26 @@ describe('TopicVideoCuration', () => {
       service: 'portuguese',
     });
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders nothing and passes empty topicIds to useFetchTopicVideos when video engagement flag is not set', () => {
+    localStorage.removeItem(VIDEO_ENGAGEMENT_KEY);
+    mockHook.mockReturnValue({
+      resultsByTopic: [],
+      isLoading: false,
+      isError: false,
+    });
+    const { container } = render(
+      <TopicVideoCuration topics={[{ topicId: '1' }, { topicId: '2' }]} />,
+      {
+        service: 'portuguese',
+      },
+    );
+    expect(container).toBeEmptyDOMElement();
+    expect(mockHook).toHaveBeenCalledWith(
+      expect.objectContaining({
+        topicIds: [],
+      }),
+    );
   });
 });
