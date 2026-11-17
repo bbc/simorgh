@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import appConfig from '../../../utilities/serviceConfigs';
 import { livePageSuites } from './suites';
 import {
   appEnvFromProcess,
@@ -17,7 +16,6 @@ import {
   assertScrollableNavigationResonanceComponentClick,
   assertDropdownNavigationResonanceComponentView,
   assertDropdownNavigationResonanceComponentClick,
-  assertResonancePageView,
 } from '../../specialFeatures/atiAnalytics/assertions';
 import assert200HtmlResponse from '../../utilities/response';
 

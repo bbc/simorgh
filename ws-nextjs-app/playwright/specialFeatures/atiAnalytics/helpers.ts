@@ -27,10 +27,24 @@ export const getATIUrls = (env: AppEnv) => ({
 
 export const getResonanceBagUrl = (env: AppEnv) => resonanceBagUrlByEnv[env];
 
+export type ResonanceEventAction = 'view' | 'select';
+
 /* eslint-disable camelcase */
+export type ResonanceEvent = Record<string, unknown> & {
+  event?: {
+    action?: ResonanceEventAction;
+    grouping?: string;
+    subcategory?: string;
+  };
+  event_name?: string;
+  page_name?: string;
+};
+
 export type ResonancePayload = {
-  bag_metadata?: Record<string, unknown>;
-  events?: Array<Record<string, unknown>>;
+  bag_metadata?: {
+    event_category?: string;
+  };
+  events?: ResonanceEvent[];
 };
 /* eslint-enable camelcase */
 
@@ -94,35 +108,6 @@ const parseResonancePayload = (rawPayload: string): ResonancePayload | null => {
   }
 };
 
-export const getCapturedResonanceBodies = (
-  capturedRequests: CapturedResonanceRequest[],
-  resonanceBagUrl: string,
-): ResonanceRequestBody[] => {
-  const resonanceOrigin = new URL(resonanceBagUrl).origin;
-
-  return capturedRequests
-    .filter(({ url }) => {
-      const requestUrl = new URL(url);
-      return (
-        requestUrl.origin === resonanceOrigin &&
-        /^\/v\d+\/event$/.test(requestUrl.pathname)
-      );
-    })
-    .map(({ body }) => parseResonanceRequestBody(body))
-    .filter((body): body is ResonanceRequestBody => body !== null);
-};
-
-export const isResonanceViewabilityBody =
-  (component: string, action: ResonanceEventAction) =>
-  (body: ResonanceRequestBody): boolean =>
-    body.bag_metadata?.event_category === 'viewability' &&
-    Boolean(
-      body.events?.some(
-        event =>
-          event.event?.action === action &&
-          event.event?.subcategory === component,
-      ),
-    );
 const isResonanceEventUrl = (url: string, resonanceBagUrl: string): boolean => {
   const requestUrl = new URL(url);
   return (
@@ -157,6 +142,18 @@ export const getCapturedResonancePayloads = (
     .filter(({ url }) => isResonanceEventUrl(url, resonanceBagUrl))
     .map(({ payload }) => parseResonancePayload(payload))
     .filter((payload): payload is ResonancePayload => payload !== null);
+
+export const isResonanceViewabilityPayload =
+  (component: string, action: ResonanceEventAction) =>
+  (payload: ResonancePayload): boolean =>
+    payload.bag_metadata?.event_category === 'viewability' &&
+    Boolean(
+      payload.events?.some(
+        event =>
+          event.event?.action === action &&
+          event.event?.subcategory === component,
+      ),
+    );
 
 export const getATIParamsFromURL = (url: string): Record<string, string> => {
   const parsedUrl = new URL(url);
