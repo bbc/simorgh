@@ -24,191 +24,87 @@ import {
   assertPageView,
   assertResonancePageView,
 } from '../../specialFeatures/atiAnalytics/assertions';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import e2eTests from './tests';
 import testsForAllPages from '../../testsForAllPages';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 
-const tests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
+const coreTests = [e2eTests];
+const fullTests = [
+  e2eTests,
+  chartbeatTests,
+  testsForAllPages,
+  testsForAllCanonicalPages,
+];
+
+// Pages are chosen to cover radio/podcast, brand/episode, LTR/RTL,
+// script variants and services with toggles both on and off.
 const testSuites = [
   {
-    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq', // On Demand Brand,
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq', // Radio Brand, LTR
     service: 'afrique',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: fullTests,
   },
   {
-    path: '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // On Demand Episode
+    path: '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // Radio Episode, LTR
     service: 'afrique',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: coreTests,
   },
   {
-    path: '/arabic/bbc_arabic_radio/programmes/p030vh2y', // On Demand Brand
+    path: '/arabic/bbc_arabic_radio/programmes/p030vh2y', // Radio Brand, RTL
     service: 'arabic',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: coreTests,
   },
   {
-    path: '/arabic/bbc_arabic_radio/w172y3wn75cm441', // On Demand Episode
+    path: '/arabic/bbc_arabic_radio/w172y3wn75cm441', // Radio Episode, RTL
     service: 'arabic',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: fullTests,
   },
   {
-    path: '/arabic/podcasts/p02pc9qc', // Podcast Brand
+    path: '/arabic/podcasts/p02pc9qc', // Podcast Brand, RTL
     service: 'arabic',
     runforEnv: ['local', 'test', 'live'],
-    tests,
+    tests: fullTests,
   },
   {
-    path: '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
-    service: 'arabic',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/dari/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
+    path: '/dari/bbc_dari_radio/programmes/p0340v0s', // Radio Brand, recent audio episodes toggled off
     service: 'dari',
     runforEnv: ['test'],
-    tests,
+    tests: coreTests,
   },
   {
-    path: '/dari/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
-    service: 'dari',
-    runforEnv: ['test'],
-    tests,
-  },
-  {
-    path: '/hausa/bbc_hausa_radio/programmes/p030s4mh', // On Demand Brand
+    path: '/hausa/podcasts/p08mlgcb', // Podcast Brand, LTR
     service: 'hausa',
     runforEnv: ['test', 'live'],
-    tests,
+    tests: coreTests,
   },
   {
-    path: '/hausa/bbc_hausa_radio/w3ct1qzn', // On Demand Episode
+    path: '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode, LTR
     service: 'hausa',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/hausa/podcasts/p08mlgcb', // Podcast Brand
-    service: 'hausa',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode
-    service: 'hausa',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/hindi/podcasts/p0552909', // Podcast Brand
-    service: 'hindi',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
-    service: 'hindi',
-    runforEnv: ['test', 'live'],
-    tests,
+    tests: fullTests,
   },
   {
     path: '/persian/podcasts/p02pc9wf', // Podcast Brand
     service: 'persian',
     runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
-    service: 'persian',
-    runforEnv: ['test', 'live'],
-    tests,
+    tests: coreTests,
   },
   {
     path: '/portuguese/podcasts/p07r3r3t', // Podcast Brand
     service: 'portuguese',
     runforEnv: ['local', 'test', 'live'],
-    tests,
+    tests: coreTests,
   },
   {
-    path: '/portuguese/podcasts/p07r3r3t/p09clrrg', // Podcast Episode
-    service: 'portuguese',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
-    service: 'russian',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/russian/podcasts/p05607v8', // Podcast Brand
-    service: 'russian',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
-    service: 'urdu',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/w172y03qq2blt8p', // On Demand Episode
-    service: 'urdu',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
+    path: '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // Radio Episode, script variant, radio schedule toggled off
     service: 'zhongwen',
     runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
-  },
-  {
-    path: '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
-    service: 'zhongwen',
-    runforEnv: ['test', 'live'],
-    tests,
+    tests: fullTests,
   },
 ] as unknown as TestDataType[];
 
@@ -300,27 +196,35 @@ const atiAnalyticsTestSuites = [
   },
 ] as unknown as TestDataType[];
 
-const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
-  const excludedLiteTests = [
-    assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
-    assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
-  ];
+const liteTestPaths = [
+  '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+  '/portuguese/podcasts/p07r3r3t',
+  '/portuguese/podcasts/p07r3r3t/p0ldy4p8',
+];
 
-  const liteSiteTests = testSuite.tests.filter(
-    test => !excludedLiteTests.includes(test),
-  );
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites
+  .filter(({ path }) => liteTestPaths.includes(path))
+  .map(testSuite => {
+    const excludedLiteTests = [
+      assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
+    ];
 
-  // All lite enabled pages should have the Lite Site Summary component
-  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+    const liteSiteTests = testSuite.tests.filter(
+      test => !excludedLiteTests.includes(test),
+    );
 
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
-    applicationType: 'lite',
-    siteId: testSuite.siteId,
-    tests: [...liteSiteTests],
-  };
-});
+    // All lite enabled pages should have the Lite Site Summary component
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+      applicationType: 'lite',
+      siteId: testSuite.siteId,
+      tests: [...liteSiteTests],
+    };
+  });
 
 runTestsForPage({
   pageType: AUDIO_PAGE,

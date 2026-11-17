@@ -39,7 +39,7 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 - `./.github/instructions/styling-standards.instructions.md` - Styling related queries.
 * Write self-documenting code. Try to avoid comments by using descriptive variable / function names, split functionality into smaller functions.
 * We use eslint and prettier for formatting our code, try and use the associated configs to generate code that matches our formatting.
-* We are progressively migrating styling from Emotion CSS-in-JS to SCSS Modules + CSS custom properties. Both approaches co-exist in the codebase during this migration. **Always use the SCSS Modules approach for new component styling work and when modifying existing components.** See the migration context section below for details.
+* We are progressively migrating styling from Emotion CSS-in-JS to SCSS Modules + CSS custom properties. Both approaches co-exist in the codebase during this migration. **Always use the SCSS Modules approach for new component styling work.** Whether to migrate an existing Emotion component depends on the scope of the change; see `.github/instructions/styling-standards.instructions.md`.
 * Attempt to use inclusive terminology in all code, documentation and communication.
 * Always use const where possible.
 * Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
@@ -59,7 +59,7 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 
 ## SCSS Modules migration context
 
-The codebase has migrated its styling foundation from Emotion CSS-in-JS (`ThemeProvider`) to SCSS Modules + CSS custom properties (`ThemeProviderSCSSModules`). The initial migration (PR #13013, including all BBC World Service language/service themes from PR #13845) has landed on `latest`. **All new component styling work must use SCSS Modules. When touching an existing Emotion-styled component, migrate it to SCSS Modules as part of that change.**
+The codebase has migrated its styling foundation from Emotion CSS-in-JS (`ThemeProvider`) to SCSS Modules + CSS custom properties (`ThemeProviderSCSSModules`). The initial migration (PR #13013, including all BBC World Service language/service themes from PR #13845) has landed on `latest`. **All new component styling work must use SCSS Modules.** Don't migrate existing Emotion components by default for small or non-styling changes. See `.github/instructions/styling-standards.instructions.md` for when to migrate and when to ask the user first.
 
 ### How the new approach works
 
@@ -68,7 +68,7 @@ The codebase has migrated its styling foundation from Emotion CSS-in-JS (`ThemeP
 - **Shared SCSS utilities** (palette tokens, font sizes, spacings, font family variables, font script variables) live under `ThemeProviderSCSSModules/` and are imported by service themes.
 - **Component styles** are `.module.scss` files co-located with the component. They reference theme values via CSS custom properties (e.g. `var(--brand-background)`) and SCSS mixins.
 - **CSS custom properties** on `:root` are the mechanism by which service-specific theme values (colours, font variants, font scales) are expressed — replacing the runtime JS objects Emotion used.
-- **Emotion and SCSS Modules co-exist** — components not yet migrated continue to use Emotion. When modifying an Emotion-styled component, migrate it to SCSS Modules as part of that change. Do not add new Emotion styling.
+- **Emotion and SCSS Modules co-exist** — components not yet migrated continue to use Emotion. Do not add new Emotion styling. Follow the scope guidance in `.github/instructions/styling-standards.instructions.md` to decide whether to migrate, leave in place, or ask the user.
 - **Multi-variant services** (e.g. Serbian `cyr`/`lat`, Uzbek `cyr`/`lat`) have a variant sub-folder per variant inside `themes/<service>/`.
 - **AMP/Lite CSS inlining** for SCSS/CSS chunks is handled via `getAmpLiteCss` in the Next.js app's custom `_document`, with a dev-only webpack loader that writes extracted CSS to disk.
 

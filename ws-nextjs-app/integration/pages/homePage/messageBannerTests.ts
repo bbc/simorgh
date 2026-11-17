@@ -18,9 +18,11 @@ export default () => {
       expect(link?.href).toMatchSnapshot();
     });
 
-    it('has an image', () => {
-      const image = messageBanner.querySelector('img');
-      expect(image).toMatchSnapshot();
+    it('has a decorative external icon', () => {
+      const icon = messageBanner.querySelector('.external-svg');
+      expect(icon).toBeInTheDocument();
+      expect(icon).toHaveAttribute('aria-hidden', 'true');
+      expect(icon).toMatchSnapshot();
     });
   });
 };

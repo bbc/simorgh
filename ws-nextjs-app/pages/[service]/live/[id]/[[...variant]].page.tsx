@@ -56,7 +56,6 @@ export const getServerSideProps = withRequestProps(async context => {
       props: {
         service,
         status: 404,
-        timeOnServer: Date.now(),
         variant,
       },
     };
@@ -109,7 +108,6 @@ export const getServerSideProps = withRequestProps(async context => {
       pathname: context.resolvedUrl,
       service,
       status: data.status,
-      timeOnServer: Date.now(), // TODO: check if needed?
       variant,
     },
   };

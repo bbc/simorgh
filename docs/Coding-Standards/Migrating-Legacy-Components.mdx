@@ -6,6 +6,15 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 This guide covers moving a component out of `src/app/legacy` into `src/app/components`.
 
+For AI-assisted legacy migrations, use the
+[`modernise-legacy-component` skill](../../.github/skills/modernise-legacy-component/SKILL.md).
+It covers dependency analysis, relocation, TypeScript, consumer compatibility and tests,
+and reuses the
+[`migrate-component-to-scss-modules` skill](../../.github/skills/migrate-component-to-scss-modules/SKILL.md)
+for styling conversion. This guide remains the human-readable reference; shared styling
+rules live in
+[the styling instructions](../../.github/instructions/styling-standards.instructions.md).
+
 > **Target state:** migrated components use **SCSS Modules + CSS custom properties**
 > (`ThemeProviderSCSSModules`), TypeScript, and co-located tests.
 > Do **not** migrate to Emotion. Emotion (`styled`, the `css` prop, `index.styles.ts`) is
@@ -28,8 +37,10 @@ Before opening a PR:
    are pulled in by most clusters.
 3. Where several entry points share the same interior modules, migrate them as a single
    unit rather than repeating the same interior work in multiple PRs.
-4. Watch for cycles. `Header` ↔ `Brand` ↔ `Footer` are mutually dependent and cannot be
-   split across PRs.
+4. Verify cycles at the module level before grouping components. Shared dependencies
+   are not cycles: `Header` and `Footer` both import `Brand`, while `Brand` imports
+   `Header/NewLogoBanner`, not the Header entry point. Those imports alone do not
+   require migrating all three components in one PR.
 
 Do not leave a migrated copy alongside the legacy original. Update all importers and delete
 the legacy module in the same PR.
@@ -99,205 +110,20 @@ Keep the declaration next to the component when it is not used anywhere else.
 
 ## Styling
 
-### ⚠️ Check for PWA typography before migrating anything that renders text
+Follow the
+[`migrate-component-to-scss-modules` skill](../../.github/skills/migrate-component-to-scss-modules/SKILL.md)
+for styling triage, token mapping, conditional classes, conversion and verification.
+The [styling instructions](../../.github/instructions/styling-standards.instructions.md)
+are the source of truth for styling rules. This guide does not repeat those mechanics.
 
-Around 20 services (pidgin, hausa, yoruba, ukrainian and others) define a `pwaTheme`
-alongside their normal theme. When `useIsPWA()` is true, `withThemeProvider` swaps
-`fontVariants` to Reith at runtime, so an installed PWA renders different fonts to the
-browser.
+Before converting a legacy cluster, inspect its consumers for Emotion `css` props and
+`styled(Component)` extensions. Relocation alone does not make those overrides compatible
+with CSS Modules; migrate the coupled consumer or identify it as a prerequisite.
 
-`ThemeProviderSCSSModules` does **not** yet support this. Until it does, a component that
-reads `fontVariants` or `fontSizes` from the Emotion theme **must not** be migrated to SCSS
-Modules — doing so silently drops the PWA override for those services, which is very hard
-to spot in review because it only reproduces in an installed PWA.
-
-Before migrating, check whether the component uses `fontVariants` or `fontSizes`:
-
-- **It does** — leave it on Emotion for now. If the goal is to remove a `gel-foundations`
-  import, take the values from the theme instead (`theme.mq.*`, `theme.spacings.*`), which
-  removes the legacy coupling without changing the styling system.
-- **It does not** (layout-only components) — migrate to SCSS Modules as normal.
-
-Lifting PWA typography into `ThemeProviderSCSSModules` is a prerequisite for migrating the
-text components, and should be done before the `Text`/`Paragraph`/`Headings` cluster.
-
-### Replace `styled` with an `index.module.scss` file
-
-Import the shared design tokens with `@use '@scss/themeTokens' as theme;` and apply classes
-via `className`. Never hard-code colours, spacings, font values or breakpoints.
-
-#### Before
-
-**(index.jsx)**
-
-```jsx
-const StyledContainer = styled.div`
-  color: ${props => props.theme.palette.BLACK};
-  text-align: center;
-  padding: ${GEL_SPACING_DBL};
-`;
-```
-
-#### After
-
-**(index.module.scss)**
-
-```scss
-@use '@scss/themeTokens' as theme;
-
-.container {
-  color: theme.$palette-black;
-  text-align: center;
-  padding: theme.$spacings-double;
-}
-```
-
-**(index.tsx)**
-
-```tsx
-import styles from './index.module.scss';
-
-const MyComponent = () => <div className={styles.container}>...</div>;
-```
-
-### Migrating media queries
-
-Media query variables are strings, so they are used with interpolation:
-`@media #{theme.$mediaQueries-group-2-min-width} { ... }`.
-
-Prefer a mobile-first approach: write base styles for mobile, then layer on `min-width`
-queries for larger viewports.
-
-#### Before
-
-```jsx
-const StyledLink = styled.a`
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    ...cssForGroup
-  }
-`;
-```
-
-#### After
-
-```scss
-@use '@scss/themeTokens' as theme;
-
-.link {
-  @media #{theme.$mediaQueries-group-2-min-width} {
-    /* cssForGroup */
-  }
-}
-```
-
-### Media query / breakpoint mappings
-
-| Before                                             | After                                        |
-| -------------------------------------------------- | -------------------------------------------- |
-| **Min widths**                                      |                                              |
-| `@media (min-width: 240px) {`                       | `theme.$mediaQueries-group-1-min-width`      |
-| `@media (min-width: 400px) {`                       | `theme.$mediaQueries-group-2-min-width`      |
-| `@media (min-width: 600px) {`                       | `theme.$mediaQueries-group-3-min-width`      |
-| `@media (min-width: 1008px) {`                      | `theme.$mediaQueries-group-4-min-width`      |
-| `@media (min-width: 1280px) {`                      | `theme.$mediaQueries-group-5-min-width`      |
-| **Max widths**                                      |                                              |
-| `@media (max-width: 239px) {`                       | `theme.$mediaQueries-group-0-max-width`      |
-| `@media (max-width: 399px) {`                       | `theme.$mediaQueries-group-1-max-width`      |
-| `@media (max-width: 599px) {`                       | `theme.$mediaQueries-group-2-max-width`      |
-| `@media (max-width: 1007px) {`                      | `theme.$mediaQueries-group-3-max-width`      |
-| `@media (max-width: 1279px) {`                      | `theme.$mediaQueries-group-4-max-width`      |
-| **Forced colours / high contrast**                  |                                              |
-| `@media screen and (forced-colors: active)`         | `theme.$mediaQueries-forced-colours`         |
-
-There are no combined "only" / "group 1 and 2" variables. Compose the min and max variables
-instead:
-
-```scss
-@media #{theme.$mediaQueries-group-1-min-width} and #{theme.$mediaQueries-group-2-max-width} {
-  /* previously GROUP_1_AND_GROUP_2 */
-}
-```
-
-### Migrating GEL spacing
-
-| Pixels | GEL spacing              | New SCSS token               |
-| ------ | ------------------------ | ---------------------------- |
-| 4px    | `GEL_SPACING_HLF`        | `theme.$spacings-half`       |
-| 8px    | `GEL_SPACING`            | `theme.$spacings-full`       |
-| 16px   | `GEL_SPACING_DBL`        | `theme.$spacings-double`     |
-| 24px   | `GEL_SPACING_TRPL`       | `theme.$spacings-triple`     |
-| 32px   | `GEL_SPACING_QUAD`       | `theme.$spacings-quadruple`  |
-| 40px   | `GEL_SPACING_QUIN`       | `theme.$spacings-quintuple`  |
-| 48px   | `GEL_SPACING_SEXT`       | `theme.$spacings-sextuple`   |
-| 8px    | `GEL_MARGIN_BELOW_400PX` | `theme.$spacings-margin-below-400px` |
-| 16px   | `GEL_MARGIN_ABOVE_400PX` | `theme.$spacings-margin-above-400px` |
-| 8px    | `GEL_GUTTER_BELOW_600PX` | `theme.$spacings-gutter-below-600px` |
-| 16px   | `GEL_GUTTER_ABOVE_600PX` | `theme.$spacings-gutter-above-600px` |
-
-`GEL_SPACING_HLF_TRPL` (12px) and `GEL_SPACING_SEPT` (56px) have no token. Use
-`theme.pixelsToRem-px-to-rem(12)` / `theme.pixelsToRem-px-to-rem(56)`.
-
-### Values driven by props
-
-With `styled` it was possible to vary CSS from any prop. With SCSS Modules, keep the
-conditional logic in the component and select between classes.
-
-#### Before
-
-```jsx
-const Timestamp = styled.time`
-  color: ${props =>
-    props.isAmp ? props.theme.palette.BLACK : props.theme.palette.GREY_3};
-`;
-```
-
-#### After
-
-**(index.module.scss)**
-
-```scss
-@use '@scss/themeTokens' as theme;
-
-.timestamp {
-  color: theme.$palette-grey-6;
-}
-
-.timestampAmp {
-  color: theme.$palette-black;
-}
-```
-
-**(index.tsx)**
-
-```tsx
-<time className={isAmp ? styles.timestampAmp : styles.timestamp}>
-```
-
-For a genuinely per-instance numeric value, set a single CSS custom property inline and
-reference it from the stylesheet, rather than generating dynamic class names:
-
-```tsx
-<ul className={styles.list} style={{ '--row-count': rowCount } as CSSProperties}>
-```
-
-```scss
-.list {
-  grid-template-rows: repeat(var(--row-count), auto);
-}
-```
-
-### Dark UI and directionality
-
-- Handle dark UI with `:global([data-is-dark-ui='true']) &` inside the `.module.scss`,
-  rather than branching in TypeScript.
-- Use logical properties (`padding-inline-start`, `margin-inline-end`) for RTL support.
-  Do not branch `className` on `dir`, and do not use `[dir='rtl']` selectors.
-
-### Grid
-
-`psammead-grid` must not be used in migrated components. CSS Grid is permitted for page
-layout only, because Opera Mini falls back to inline layout. Scope any unavoidable Opera
-Mini override with `:global(.is-opera-mini) &`.
+Preserve service-specific typography through `ThemeProviderSCSSModules`, including its
+[PWA override](../../src/app/components/ThemeProviderSCSSModules/pwaTypography/reith.scss).
+Verify the relevant service and display mode rather than adding component-level font
+switching.
 
 ## Tests
 
