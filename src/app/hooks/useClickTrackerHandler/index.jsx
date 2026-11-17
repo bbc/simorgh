@@ -65,7 +65,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     isSignedIn,
     hashedId,
     isPersonalisationOn,
-    additionalOptimizelyEvents,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -116,14 +115,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
                 optimizely.user.id,
                 overrideAttributes,
               );
-
-              additionalOptimizelyEvents.forEach(eventName => {
-                optimizely.track(
-                  eventName,
-                  optimizely.user.id,
-                  overrideAttributes,
-                );
-              });
             }
 
             // send the extra optimizely event for the total oj clicks metric
@@ -218,7 +209,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       optimizely,
       experimentVariant,
       sendOptimizelyEvents,
-      additionalOptimizelyEvents,
       experimentName,
       optimizelyComponentName,
       format,

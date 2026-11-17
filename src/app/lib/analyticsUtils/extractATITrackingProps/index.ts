@@ -25,7 +25,6 @@ export default ({
     groupTracker,
     viewThreshold,
     alwaysInView,
-    additionalOptimizelyEvents,
   } = eventTrackingData || {};
 
   const {
@@ -67,6 +66,5 @@ export default ({
     isSignedIn,
     hashedId,
     isPersonalisationOn,
-    additionalOptimizelyEvents,
   };
 };

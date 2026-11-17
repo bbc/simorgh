@@ -17,7 +17,6 @@ export type EventTrackingMetadata = {
   optimizelyComponentName?: string;
   alwaysInView?: boolean;
   preventNavigation?: boolean;
-  additionalOptimizelyEvents?: string[];
 };
 
 export type EventTrackingBlock = {
