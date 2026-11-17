@@ -1,7 +1,7 @@
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import '#psammead/psammead-locales/moment/ha';
+import '#lib/locales/moment/ha';
 import Timestamp from '.';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018
