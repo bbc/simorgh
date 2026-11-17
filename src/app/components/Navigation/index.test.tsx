@@ -9,10 +9,8 @@ import {
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
-import { articleDataNews } from '#pages/ArticlePage/fixtureData';
+import useExperimentVariation from '#app/hooks/useExperimentVariation';
 import { topStoriesBlocksWithLiveItem } from '#app/components/TopBarOJs/helpers/fixtureData';
-import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
   render,
   act,
@@ -36,13 +34,13 @@ jest.mock('../../hooks/useClickTrackerHandler', () => ({
   ...jest.requireActual('../../hooks/useClickTrackerHandler'),
 }));
 
-jest.mock('../../hooks/useOptimizelyVariation', () => ({
+jest.mock('../../hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('../../hooks/useOptimizelyVariation'),
+  ...jest.requireActual('../../hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 
-const useOptimizelyVariationMock = jest.mocked(useOptimizelyVariation);
+const useExperimentVariationMock = jest.mocked(useExperimentVariation);
 
 describe('Navigation', () => {
   const navItems = [
@@ -51,12 +49,12 @@ describe('Navigation', () => {
   ];
 
   beforeEach(() => {
-    useOptimizelyVariationMock.mockClear();
-    useOptimizelyVariationMock.mockReturnValue(null);
+    useExperimentVariationMock.mockClear();
+    useExperimentVariationMock.mockReturnValue(null);
   });
 
   const stickyExperimentDecisions = () =>
-    useOptimizelyVariationMock.mock.calls.filter(
+    useExperimentVariationMock.mock.calls.filter(
       ([{ experimentName }]) =>
         experimentName === 'newswb_ws_sticky_navigation',
     );
@@ -72,63 +70,13 @@ describe('Navigation', () => {
 
       expect(stickyExperimentDecisions()).toHaveLength(0);
     });
-
-    it('sends a navigation click event for the control variant', () => {
-      jest
-        .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
-        .mockReturnValue({
-          x: 0,
-          y: 0,
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
-          width: 0,
-          height: 0,
-          toJSON: () => ({}),
-        });
-      useOptimizelyVariationMock.mockReturnValue('control');
-      const optimizely = {
-        track: jest.fn(),
-        close: jest.fn(),
-        user: { attributes: {}, id: 'test-user' },
-      } as unknown as ReactSDKClient;
-      const {
-        metadata: { atiAnalytics, type },
-      } = articleDataNews;
-
-      const { getByRole } = render(
-        <OptimizelyProvider optimizely={optimizely} isServerSide>
-          <>
-            <Navigation navItems={navItems} />
-            <main>
-              <p data-sticky-nav-anchor>Article body</p>
-            </main>
-          </>
-        </OptimizelyProvider>,
-        {
-          pageMetadata: { atiAnalytics, type },
-          pageType: ARTICLE_PAGE,
-          service: 'news',
-          toggles: { eventTracking: { enabled: true } },
-        },
-      );
-
-      fireEvent.click(getByRole('link', { name: 'Home' }));
-
-      expect(optimizely.track).toHaveBeenCalledWith(
-        'navigation-clicks',
-        optimizely.user.id,
-        optimizely.user.attributes,
-      );
-    });
   });
 
   describe('live page promo experiment', () => {
     const livePageBlock = topStoriesBlocksWithLiveItem[1];
 
     const renderWithLivePageExperiment = (variation: string | null) => {
-      useOptimizelyVariationMock.mockImplementation(({ experimentName }) =>
+      useExperimentVariationMock.mockImplementation(({ experimentName }) =>
         experimentName === 'newswb_ws_contextual_live_promo' ? variation : null,
       );
 
@@ -533,8 +481,6 @@ describe('Navigation', () => {
         componentName: 'navigation',
         experimentName: 'newswb_ws_sticky_navigation',
         experimentVariant: null,
-        optimizelyComponentName: 'navigation',
-        sendOptimizelyEvents: true,
       });
     });
 
@@ -548,8 +494,6 @@ describe('Navigation', () => {
         componentName: 'scrollable-navigation',
         experimentName: 'newswb_ws_sticky_navigation',
         experimentVariant: null,
-        optimizelyComponentName: 'navigation',
-        sendOptimizelyEvents: true,
       });
     });
   });

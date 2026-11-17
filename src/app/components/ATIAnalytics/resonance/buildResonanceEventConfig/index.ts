@@ -1,4 +1,4 @@
-import { isMobile } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
+import isMobile from '#app/lib/utilities/isMobile';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import { ATIEventTrackingProps } from '../../types';
 import { ResonanceEventModel } from '../types';

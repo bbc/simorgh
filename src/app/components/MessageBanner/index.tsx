@@ -61,7 +61,7 @@ const MessageBanner = ({
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
-  // EXPERIMENT: CTA Glow - remove this flag and place behind Optimizely check
+  // EXPERIMENT: CTA Glow - remove this flag and place behind an experiment check
   const shouldEnableGlow = !isLive() && pageType === HOME_PAGE;
 
   return (

@@ -27,9 +27,9 @@ jest.mock('#utilities/pageRequests/getRequestProps', () => ({
   default: jest.fn().mockResolvedValue({}),
 }));
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

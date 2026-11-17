@@ -1,6 +1,6 @@
-import useOptimizelyVariation, {
+import useExperimentVariation, {
   ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+} from '#app/hooks/useExperimentVariation';
 import { ComponentExperimentProps } from '#app/models/types/global';
 
 const getActiveExperimentProps = (
@@ -9,7 +9,6 @@ const getActiveExperimentProps = (
 ): ComponentExperimentProps | null =>
   experimentVariant
     ? {
-        sendOptimizelyEvents: true,
         experimentName,
         experimentVariant,
       }
@@ -20,7 +19,7 @@ export default ({ pageMetadata }) => {
 
   // EXPERIMENT: replace with the name of an active client side home page experiment
   const experimentName = 'test_homepage_client_side_aa';
-  const experimentVariant = useOptimizelyVariation({
+  const experimentVariant = useExperimentVariation({
     experimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });

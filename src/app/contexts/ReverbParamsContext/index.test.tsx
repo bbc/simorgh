@@ -11,11 +11,11 @@ import {
   MOST_READ_PAGE,
 } from '../../routes/utils/pageTypes';
 import { ReverbParamsContext, PageMetadata } from '.';
-import useOptimizelyVariation from '../../hooks/useOptimizelyVariation';
+import useExperimentVariation from '../../hooks/useExperimentVariation';
 import { buildAnalyticsParams } from '../../lib/analyticsUtils/params/buildParams';
 
-jest.mock('../../hooks/useOptimizelyVariation', () => {
-  const actual = jest.requireActual('../../hooks/useOptimizelyVariation');
+jest.mock('../../hooks/useExperimentVariation', () => {
+  const actual = jest.requireActual('../../hooks/useExperimentVariation');
 
   return {
     __esModule: true,
@@ -36,7 +36,7 @@ jest.mock('../../lib/analyticsUtils/params/buildParams', () => {
   };
 });
 
-const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
+const mockUseExperimentVariation = jest.mocked(useExperimentVariation);
 const mockBuildAnalyticsParams = jest.mocked(buildAnalyticsParams);
 const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
@@ -300,7 +300,7 @@ describe('ReverbParamsContext', () => {
   });
 
   it('should include experiment details when present', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
+    mockUseExperimentVariation.mockImplementation(() => 'experimentVariant');
 
     render(<TestComponent />, {
       pageMetadata,
@@ -354,7 +354,6 @@ describe('ReverbParamsContext', () => {
       experimentProps: {
         experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
-        sendOptimizelyEvents: true,
       },
     });
   });

@@ -10,7 +10,6 @@ import {
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { MediaOverrides } from '#app/models/types/media';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import useToggle from '../../hooks/useToggle';
@@ -314,7 +313,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />

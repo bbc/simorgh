@@ -8,9 +8,9 @@ import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import TopicsIndexPage from './TopicsIndexPage';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

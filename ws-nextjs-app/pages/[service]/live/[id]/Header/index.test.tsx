@@ -12,9 +12,9 @@ import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import Header from './index';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

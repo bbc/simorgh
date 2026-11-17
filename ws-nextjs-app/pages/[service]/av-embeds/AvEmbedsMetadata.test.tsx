@@ -8,9 +8,9 @@ import { AV_EMBEDS } from '#app/routes/utils/pageTypes';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import AvEmbedsMetadata from './AvEmbedsMetadata';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

@@ -44,9 +44,9 @@ const mockToggles = {
 jest.mock('../../../utilities/pageRequests/getPageData');
 jest.mock('#app/lib/utilities/fetchToggles');
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 
