@@ -1,4 +1,10 @@
-import { render, waitFor } from '../react-testing-library-with-providers';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
+import {
+  AllTheProviders,
+  render,
+  waitFor,
+} from '../react-testing-library-with-providers';
 import AmpIframe from './index';
 
 const vjProps = {
@@ -32,5 +38,43 @@ describe('VJ include container on Amp', () => {
 
       expect(scripts).toHaveLength(1);
     });
+  });
+});
+
+describe('AmpIframe show more button translation', () => {
+  it('should render the show more label in the service language', () => {
+    const { getByRole } = render(
+      <AllTheProviders service="mundo">
+        <AmpIframe ampMetadata={vjProps} />
+      </AllTheProviders>,
+    );
+
+    expect(getByRole('button', { name: 'Mostrar más' })).toBeInTheDocument();
+  });
+
+  it('should render the show more label from the service translations', () => {
+    const { getByRole } = render(
+      <ServiceContext.Provider
+        value={
+          { translations: { showMore: 'Ver más' } } as unknown as ServiceConfig
+        }
+      >
+        <AmpIframe ampMetadata={vjProps} />
+      </ServiceContext.Provider>,
+    );
+
+    expect(getByRole('button', { name: 'Ver más' })).toBeInTheDocument();
+  });
+
+  it('should fall back to English when the service has no show more translation', () => {
+    const { getByRole } = render(
+      <ServiceContext.Provider
+        value={{ translations: {} } as unknown as ServiceConfig}
+      >
+        <AmpIframe ampMetadata={vjProps} />
+      </ServiceContext.Provider>,
+    );
+
+    expect(getByRole('button', { name: 'Show more' })).toBeInTheDocument();
   });
 });

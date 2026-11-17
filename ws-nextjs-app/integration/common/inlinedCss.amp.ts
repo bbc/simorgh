@@ -10,6 +10,22 @@ export default () => {
       expect(styleEl?.textContent?.trim()).not.toBe('');
     });
 
+    it('should keep the author stylesheet and inline styles within the AMP 75,000-byte limit', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+      const inlineStyleBytes = Array.from(
+        document.querySelectorAll('[style]'),
+      ).reduce(
+        (bytes, element) =>
+          bytes +
+          Buffer.byteLength(element.getAttribute('style') ?? '', 'utf8'),
+        0,
+      );
+
+      expect(
+        Buffer.byteLength(css, 'utf8') + inlineStyleBytes,
+      ).toBeLessThanOrEqual(75000);
+    });
+
     it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
 

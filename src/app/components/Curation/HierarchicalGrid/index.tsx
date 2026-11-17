@@ -5,7 +5,6 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { getRelatedTopicForPromo } from '#app/lib/experiments/homepageRelatedTopicPromos';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -40,7 +39,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  showRelatedTopicExperiment = false,
+  showRelatedTopic,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -90,11 +89,13 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive, relatedTopic } = promo;
-          const relatedTopicToShow = getRelatedTopicForPromo(
-            relatedTopic,
-            promo.type,
-            showRelatedTopicExperiment,
-          );
+          const relatedTopicToShow =
+            showRelatedTopic &&
+            promo.type === 'article' &&
+            relatedTopic?.title?.trim() &&
+            relatedTopic.link?.url
+              ? relatedTopic
+              : null;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(

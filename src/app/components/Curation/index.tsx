@@ -3,12 +3,14 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import { HOMEPAGE_RELATED_TOPIC_EXPERIMENT } from '#app/lib/experiments/homepageRelatedTopicPromos';
+import isLive from '#app/lib/utilities/isLive';
+import { useContext } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
@@ -54,12 +56,8 @@ const getGridComponent = (componentName: string | null) => {
 };
 
 interface CurationProps extends Curation {
-  // keep this local so we do not change the shared bff curation data shape
-  experimentProps?: ComponentExperimentProps;
   curationContentType?: string;
   pageType?: string;
-  // experiment: newswb_ws_homepage_related_topic_promos
-  showRelatedTopicExperiment?: boolean;
 }
 
 export default ({
@@ -79,10 +77,9 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
   mediaCollection,
-  experimentProps,
   curationContentType,
   pageType,
-  showRelatedTopicExperiment = false,
+  isVideoCollection = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -94,6 +91,20 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+
+  const { service } = useContext(ServiceContext);
+
+  const shouldStyleAsVideoCollection =
+    !isLive() &&
+    service === 'arabic' &&
+    componentName === SIMPLE_CURATION_GRID &&
+    isVideoCollection;
+
+  const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
+  const showRelatedTopic =
+    !isLiveEnvironment &&
+    (componentName === SIMPLE_CURATION_GRID ||
+      componentName === HIERARCHICAL_CURATION_GRID);
 
   const isFirstCuration = position === 0;
 
@@ -112,18 +123,10 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  // experiment: only simple and hierarchical grids take part in promo tracking
-  const isRelatedTopicGrid =
-    componentName === SIMPLE_CURATION_GRID ||
-    componentName === HIERARCHICAL_CURATION_GRID;
-  const experimentTrackingProps =
-    experimentProps?.experimentName === HOMEPAGE_RELATED_TOPIC_EXPERIMENT &&
-    !isRelatedTopicGrid
-      ? {}
-      : experimentProps || {};
-
   const eventTrackingData: EventTrackingData = {
-    componentName,
+    componentName: shouldStyleAsVideoCollection
+      ? `${componentName}-video`
+      : componentName,
     groupTracker: {
       name: curationSubheading,
       type: componentName,
@@ -132,7 +135,6 @@ export default ({
       ...(curationId && { resourceId: curationId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
-    ...experimentTrackingProps,
   };
 
   switch (componentName) {
@@ -279,10 +281,9 @@ export default ({
                 summaries={summaries}
                 headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
+                isVideoCollection={shouldStyleAsVideoCollection}
                 eventTrackingData={eventTrackingData}
-                showRelatedTopicExperiment={
-                  showRelatedTopicExperiment && isRelatedTopicGrid
-                }
+                showRelatedTopic={showRelatedTopic}
               />
             </div>
           </section>
@@ -292,10 +293,9 @@ export default ({
               summaries={summaries}
               headingLevel={2}
               isFirstCuration={isFirstCuration}
+              isVideoCollection={shouldStyleAsVideoCollection}
               eventTrackingData={eventTrackingData}
-              showRelatedTopicExperiment={
-                showRelatedTopicExperiment && isRelatedTopicGrid
-              }
+              showRelatedTopic={showRelatedTopic}
             />
           </div>
         );

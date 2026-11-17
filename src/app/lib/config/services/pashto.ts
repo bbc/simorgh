@@ -81,6 +81,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      showMore: 'نور وښایاست',
       moreOnThis: '',
       navMenuText: 'برخې',
       liteSite: {

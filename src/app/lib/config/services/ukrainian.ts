@@ -308,6 +308,7 @@ const baseServiceConfig = {
     },
     relatedContent: 'Статті на цю ж тему',
     relatedTopics: 'Також на цю тему',
+    showMore: 'Показати більше',
     sport: {
       matchSummary: 'Огляд матчу',
       assists: 'Асисти',
@@ -478,6 +479,7 @@ export const service: UkrainianConfig = {
       ...russianUkrainianSharedTranslations,
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
+      showMore: 'Показати більше',
       sport: {
         keyEventsTitle: 'Ключові події',
         worldCupTeamNames: {

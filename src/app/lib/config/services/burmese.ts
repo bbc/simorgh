@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
+      showMore: 'ပိုမိုကြည့်ရန်',
       moreOnThis: '',
       navMenuText: 'ကဏ္ဍများ',
       liteSite: {

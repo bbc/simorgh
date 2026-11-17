@@ -97,6 +97,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      showMore: 'Gosi ọzọ',
       moreOnThis: '',
       navMenuText: 'Ngalaba',
       liteSite: {

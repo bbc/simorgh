@@ -167,21 +167,21 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:4323 julho 2024",
+  "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:43 23 julho 2024",
   "url": "/portuguese/podcasts/p07r3r3t/p0jd7041",
 }
 `;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:4931 março 2021",
+  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:49 31 março 2021",
   "url": "/portuguese/podcasts/p07r3r3t/p09chbv1",
 }
 `;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "Áudio, Que História!, Bem-vindo a Que História!,  Duration 00,39  Duration 00:3914 outubro 2019",
+  "text": "Áudio, Que História!, Bem-vindo a Que História!,  Duration 00,39  Duration 00:39 14 outubro 2019",
   "url": "/portuguese/podcasts/p07r3r3t/p07r3s60",
 }
 `;

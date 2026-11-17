@@ -57,40 +57,18 @@ export const service: DefaultServiceConfig = {
       assocPressIframeSrc:
         'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
     },
-    articleMessageBanners: [
-      {
-        thingIds: ['b91eaef4-fdf2-47a6-b3ec-05b5a55a4843'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
-        heading: 'Eleições 2026: veja como foi a votação',
-        description:
-          'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil',
-        linkText: 'Clique aqui',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3605/live/c8960690-bcaf-11f1-a64c-550be9e3c66b.png.webp',
-      },
-      {
-        thingIds: ['f30c1edd-b1de-449c-a57e-1003edc03174'],
-        linkHref: 'https://www.bbc.com/portuguese/articles/c20yjrpxr35o',
-        heading: 'Copa do Mundo 2026 – tabela completa',
-        description:
-          'Confira aqui o calendário de jogos do torneio, com resultados e classificação',
-        linkText: 'Clique aqui para ver a tabela',
-        image:
-          'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/02bc/live/37515e30-6775-11f1-8e1d-bbbb1017d210.png.webp',
-      },
-    ],
     podcastPromo: {
-      title: 'Promoção Resultados eleição 2026',
-      brandTitle: 'Eleições 2026: veja como foi a votação',
+      title: 'Promoção app',
+      brandTitle: 'Temos um novo app!',
       brandDescription:
-        'Confira a apuração para presidente e governador em seu Estado e município no mapa interativo da BBC News Brasil ',
+        'Veja notícias do Brasil e do mundo no BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pd013r.png',
-        alt: 'Agregador de Pesquisas da BBC News Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pkzzq8.jpg',
+        alt: 'Novo app da BBC Brasil',
       },
       linkLabel: {
-        text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
+        text: 'Baixe aqui',
+        href: 'https://www.bbc.com/portuguese/articles/cqe9l2z988g5o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -132,6 +110,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
+      showMore: 'Mostrar mais',
       moreOnThis: '',
       navMenuText: 'Seções',
       liteSite: {
@@ -230,11 +209,30 @@ export const service: DefaultServiceConfig = {
         },
         error: {
           title: 'Desculpe, algo deu errado',
-          body: 'Verifique sua conexão, atualize a página e tente novamente',
+          body: 'Verifique sua conexão, atualize a página e tente novamente.',
         },
         removed: {
           title: 'Matéria removida',
           bodyBefore: 'Ela será removida de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Notícias para você',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Fechar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Você está seguindo {Topic Name}',
+          bodyBefore: 'Encontre este tópico em',
+          bodyAfter: '.',
+        },
+        error: {
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize sua página e tente novamente.',
+        },
+        removed: {
+          title: 'Você deixou de seguir {Topic Name}',
+          bodyBefore: 'Ele será removido de',
           bodyAfter: '',
         },
         myNewsLinkText: 'Notícias para você',

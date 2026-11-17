@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      showMore: 'Onyesha zaidi',
       moreOnThis: '',
       navMenuText: 'Yaliyomo',
       liteSite: {

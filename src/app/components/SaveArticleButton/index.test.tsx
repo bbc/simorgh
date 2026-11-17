@@ -3,8 +3,14 @@ import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
 import { service as hindiServiceConfig } from '#lib/config/services/hindi';
-import { render, screen, act } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  act,
+  waitFor,
+} from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+import { SaveArticleButtonLoadingFallback } from './SaveArticleButtonAuthenticated/lazy';
 
 const saveArticleButtonTranslations =
   hindiServiceConfig.default.translations.saveArticleButton;
@@ -204,6 +210,36 @@ describe('SaveArticleButton', () => {
       expect(screen.getByRole('button')).toHaveTextContent(
         saveArticleButtonTranslations.save,
       );
+    });
+
+    it('does not show the guest button for signed-in users on initial render', async () => {
+      render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions);
+
+      expect(
+        screen.queryByTestId('save-article-btn-guest'),
+      ).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('save-article-btn-loading') ??
+            screen.queryByTestId('save-article-btn-authorized'),
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('renders translated loading fallback that cannot open sign-in modal', async () => {
+      await act(async () =>
+        render(<SaveArticleButtonLoadingFallback />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('save-article-btn-loading')).toHaveTextContent(
+        saveArticleButtonTranslations.loading,
+      );
+
+      await act(async () => {
+        screen.getByTestId('save-article-btn-loading').click();
+      });
+
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
 
     it('renders Saved to My News when saved', async () => {

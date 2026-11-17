@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   headerContainer: () =>
@@ -41,6 +41,10 @@ export default {
       top: 0,
       bottom: 0,
       position: 'absolute',
+    }),
+  backgroundColorElectionBanner: () =>
+    css({
+      backgroundColor: '#2d0059',
     }),
   backgroundColorSportData: ({ palette }: Theme) =>
     css({
@@ -169,7 +173,7 @@ export default {
         width: '75%',
       },
     }),
-  sportTitleRow: ({ mq, palette, spacings }: Theme) =>
+  singleColumnTitleRow: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -183,6 +187,9 @@ export default {
         marginTop: `${spacings.DOUBLE}rem`,
         paddingBlockEnd: `${spacings.DOUBLE}rem`,
       },
+    }),
+  sportTitleRow: ({ palette, spacings }: Theme) =>
+    css({
       '&::after': {
         content: '""',
         position: 'absolute',
@@ -193,7 +200,7 @@ export default {
         borderBlockEnd: `${pixelsToRem(1)}rem solid ${palette.GREY_6}`,
       },
     }),
-  sportTitleText: ({ palette, spacings }: Theme) =>
+  singleColumnTitleText: ({ palette, spacings }: Theme) =>
     css({
       display: 'block',
       width: '100%',

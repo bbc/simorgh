@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      showMore: 'แสดงเพิ่มเติม',
       moreOnThis: '',
       navMenuText: 'หมวดข่าว',
       liteSite: {

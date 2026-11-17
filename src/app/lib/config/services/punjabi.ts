@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      showMore: 'ਹੋਰ ਦਿਖਾਓ',
       moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       liteSite: {

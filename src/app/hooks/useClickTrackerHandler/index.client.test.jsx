@@ -104,19 +104,28 @@ const defaultOptimizely = {
   user: { attributes: { foo: 'bar' }, id: 'test' },
 };
 
-const wrapper = ({ children }) => (
-  <AllTheProviders
-    bbcOrigin="https://www.test.bbc.com"
-    pageData={pidginData}
-    pageType={STORY_PAGE}
-    isAmp={false}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
-    toggles={defaultToggles}
-  >
-    {children}
-  </AllTheProviders>
-);
+const createWrapper =
+  pageMetadata =>
+  ({ children }) => (
+    <AllTheProviders
+      bbcOrigin="https://www.test.bbc.com"
+      pageData={pidginData}
+      pageMetadata={pageMetadata}
+      pageType={STORY_PAGE}
+      isAmp={false}
+      service="pidgin"
+      pathname="/pidgin/tori-51745682"
+      toggles={defaultToggles}
+    >
+      {children}
+    </AllTheProviders>
+  );
+
+const wrapper = createWrapper();
+const trackingWrapper = createWrapper({
+  atiAnalytics: pidginData.metadata.atiAnalytics,
+  type: pidginData.metadata.type,
+});
 
 const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
@@ -269,6 +278,29 @@ describe('useClickTrackerHandler', () => {
       const { onClick } = result.current;
 
       expect(onClick).toBeInstanceOf(Function);
+    });
+
+    it('should track dismissal events without cancelling them', async () => {
+      const { result } = renderHook(
+        () =>
+          useClickTrackerHandler({
+            ...eventTrackingData,
+            isDismissal: true,
+          }),
+        { wrapper: trackingWrapper },
+      );
+      const event = {
+        currentTarget: document,
+        key: 'Escape',
+        preventDefault: jest.fn(),
+        stopPropagation: jest.fn(),
+      };
+
+      await act(() => result.current.onClick(event));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(event.preventDefault).not.toHaveBeenCalled();
+      expect(event.stopPropagation).not.toHaveBeenCalled();
     });
 
     it('should send a single tracking request on click', async () => {
