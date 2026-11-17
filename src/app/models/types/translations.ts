@@ -157,6 +157,12 @@ export interface Translations {
     moreAboutTopic: string;
     fetchErrorMessage?: string;
   };
+  readTimeRecommendations?: {
+    heading: string;
+    shortReads: string;
+    longReads: string;
+    fetchErrorMessage?: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
