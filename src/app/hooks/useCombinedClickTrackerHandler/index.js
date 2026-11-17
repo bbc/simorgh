@@ -1,11 +1,13 @@
 import path from 'ramda/src/path';
+import { use } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
-  const optimizely = path(['block', 'optimizely'], eventTrackingData);
+  const { optimizely } = use(OptimizelyContext);
 
   const {
     onClick: handleBlockLevelClick,
@@ -19,14 +21,19 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
 
   const combinedClickTacker = async event => {
     const nextPageUrl =
-      path(['target', 'href'], event) || path(['url'], eventTrackingData);
+      path(['currentTarget', 'href'], event) ||
+      path(['target', 'href'], event) ||
+      path(['url'], eventTrackingData);
 
     if (blockData && handleBlockLevelClick) {
       await handleBlockLevelClick(event);
     }
     if (nextPageUrl) {
-      if (optimizely) optimizely.close();
-      window.location.assign(nextPageUrl);
+      try {
+        await optimizely?.close();
+      } finally {
+        window.location.assign(nextPageUrl);
+      }
     }
   };
 

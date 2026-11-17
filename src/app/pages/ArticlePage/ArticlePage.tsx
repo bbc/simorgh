@@ -9,6 +9,7 @@ import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
+import { ReverbParamsContext } from '#app/contexts/ReverbParamsContext';
 import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
@@ -176,15 +177,11 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({
-  data,
-  experimentProps,
-}: {
-  data: Recommendation[];
-  experimentProps?: ComponentExperimentProps;
-}) => (
-  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
-);
+const getWsojComponent =
+  (experimentProps?: ComponentExperimentProps) =>
+  ({ data }: { data: Recommendation[] }) => (
+    <Recommendations data={data} experimentProps={experimentProps} />
+  );
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -239,6 +236,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  const { experimentProps } = use(ReverbParamsContext);
 
   const {
     articleAuthor,
@@ -364,6 +362,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     eventTrackingData: {
       componentName: 'portrait-video-carousel-article',
       groupTracker: { name: portraitVideoCarouselTitle },
+      ...experimentProps,
     },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
@@ -440,13 +439,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: getWsojComponent(experimentProps),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        experimentProps,
       }),
     }),
   };
@@ -559,6 +559,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   : []),
               ]}
               topics={topicDiscoveryTopics}
+              experimentProps={experimentProps}
             />
           )}
           {showRelatedTopicsComponent && (
@@ -571,16 +572,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
+              experimentProps={experimentProps}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+          {showCountryCuration && (
+            <LocationBasedTopicOJ
+              pageData={pageData}
+              experimentProps={experimentProps}
+            />
+          )}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          <RelatedContentSection
+            content={blocks}
+            experimentProps={experimentProps}
+          />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -595,13 +605,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   link={mediaCurationContent?.link}
                   curationContentType="video"
                   pageType={pageType}
+                  experimentProps={experimentProps}
                 />
               </div>
             </div>
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            experimentProps={experimentProps}
+          />
+        )}
       </div>
 
       {!isApp && !isPGL && (
@@ -612,6 +628,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showRelatedTopicsComponent}
+          experimentProps={experimentProps}
         />
       )}
     </div>

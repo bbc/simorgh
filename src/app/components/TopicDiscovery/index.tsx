@@ -3,6 +3,7 @@ import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { TopicTag } from '#app/models/types/metadata';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
@@ -18,11 +19,16 @@ export type ExtractedTopic = Pick<
 type TopicDiscoveryProps = {
   topics: ExtractedTopic[];
   className?: string;
+  experimentProps?: ComponentExperimentProps;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
+const TopicDiscovery = ({
+  topics,
+  className,
+  experimentProps,
+}: TopicDiscoveryProps) => {
   const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const {
@@ -62,6 +68,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const eventTrackingData = {
     componentName: 'topic-discovery',
     groupTracker,
+    ...experimentProps,
   };
 
   const { topicPromos, isLoading, isError } = useFetchTopicPromos({
@@ -76,6 +83,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
 
   const moreAboutLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-about-link',
+    ...experimentProps,
     groupTracker,
     itemTracker: {
       type: 'topic-discovery-more-about-link',
@@ -167,6 +175,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
         onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
         groupTracker={groupTracker}
+        experimentProps={experimentProps}
         setShouldFocusPromos={setShouldFocusPromos}
         onTabKeyDown={handleTabKeyDown}
       />
@@ -217,6 +226,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                     summaries={topicPromos}
                     eventTrackingData={{
                       componentName: 'topic-discovery-curation-grid',
+                      ...experimentProps,
                       groupTracker: {
                         name: selectedTopic.topicName,
                         type: 'topic-discovery-curation-grid',

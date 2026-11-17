@@ -1,5 +1,11 @@
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import { render, screen } from '../react-testing-library-with-providers';
 import LocationBasedTopicOJ from '.';
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
 
 const mockCountryCuration = {
   title: 'Najeriya',
@@ -24,6 +30,41 @@ const basePageData = {
 };
 
 describe('LocationBasedTopicOJ', () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('passes active experiment data to the heading and promo click trackers', () => {
+    const clickTracker = jest.spyOn(clickTracking, 'default');
+    const experimentProps = {
+      experimentName: 'test_page_views_aa_3',
+      experimentVariant: 'control',
+      sendOptimizelyEvents: true,
+    };
+
+    render(
+      <LocationBasedTopicOJ
+        // @ts-expect-error: Test fixture data does not need to match Article type exactly
+        pageData={basePageData}
+        experimentProps={experimentProps}
+      />,
+    );
+
+    expect(clickTracker).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'location-based-topic-oj',
+        ...experimentProps,
+      }),
+    );
+    expect(clickTracker).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'location-based-topic-oj',
+        ...experimentProps,
+        itemTracker: expect.objectContaining({ text: 'Promo Title' }),
+      }),
+    );
+  });
+
   it('renders nothing if there is no countryCuration data', () => {
     render(
       <LocationBasedTopicOJ
