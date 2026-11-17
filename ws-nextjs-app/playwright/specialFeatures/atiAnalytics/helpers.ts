@@ -65,15 +65,32 @@ export const captureResonanceRequests = async (page: Page) => {
   );
 
   await page.addInitScript(() => {
+    const report = (url: string, payload: string) =>
+      (window as unknown as WindowWithResonanceCapture).reportResonanceRequest(
+        url,
+        payload,
+      );
+
+    // Blob.text() is async and gets lost if the page unloads on click, so keep string parts to read synchronously
+    const textByBlob = new WeakMap<Blob, string>();
+    const OriginalBlob = window.Blob;
+    window.Blob = class extends OriginalBlob {
+      constructor(parts?: BlobPart[], options?: BlobPropertyBag) {
+        super(parts, options);
+        if (parts?.every(part => typeof part === 'string')) {
+          textByBlob.set(this, parts.join(''));
+        }
+      }
+    };
+
     const capture = (url: string, data: unknown) => {
-      if (data instanceof Blob) {
-        data
-          .text()
-          .then(payload =>
-            (
-              window as unknown as WindowWithResonanceCapture
-            ).reportResonanceRequest(url, payload),
-          );
+      if (!(data instanceof OriginalBlob)) return;
+
+      const text = textByBlob.get(data);
+      if (text !== undefined) {
+        report(url, text);
+      } else {
+        data.text().then(payload => report(url, payload));
       }
     };
 

@@ -272,6 +272,11 @@ const excludedLiteTests: HomePageAtiTest[] = [
   // Dropdown navigation removed from all pages, as it requires JS
   'assertDropdownNavigationComponentView',
   'assertDropdownNavigationComponentClick',
+  'assertDropdownNavigationResonanceComponentView',
+  'assertDropdownNavigationResonanceComponentClick',
+  // Resonance events are not sent on Lite pages
+  'assertScrollableNavigationResonanceComponentView',
+  'assertScrollableNavigationResonanceComponentClick',
 ];
 
 const atiLiteTestSuites: AtiHomePageTestSuite[] = atiTestSuites.map(
