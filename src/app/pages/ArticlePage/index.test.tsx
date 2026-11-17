@@ -29,6 +29,7 @@ import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import { MostReadData } from '#app/components/MostRead/types';
+import { ArticleOnwardJourneysProvider } from '#app/contexts/ArticleOnwardJourneysContext';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
@@ -254,6 +255,50 @@ describe('Article Page', () => {
         },
       },
     ]);
+  });
+
+  it('does not populate an unmarked WSOJ from Most Read data', () => {
+    const pageData = {
+      ...articleDataPidgin,
+      content: {
+        ...articleDataPidgin.content,
+        model: {
+          ...articleDataPidgin.content.model,
+          blocks: [
+            ...articleDataPidgin.content.model.blocks,
+            {
+              id: 'empty-wsoj',
+              type: 'wsoj',
+              model: { type: 'recommendations' },
+              position: [3],
+            },
+          ],
+        },
+      },
+      mostRead: newsMostReadData,
+    } as Article;
+
+    const { container } = render(
+      <ArticleOnwardJourneysProvider
+        pageData={pageData}
+        pageType={ARTICLE_PAGE}
+      >
+        <ArticlePage pageData={pageData} />
+      </ArticleOnwardJourneysProvider>,
+      {
+        service: 'pidgin',
+        isLite: true,
+        toggles: {
+          midArticleOnwardJourney: { enabled: true },
+          mostRead: { enabled: true },
+        },
+      },
+    );
+
+    expect(container.querySelector('[data-e2e="most-read"]')).not.toBeNull();
+    expect(
+      container.querySelector('[data-e2e="recommendations-heading"]'),
+    ).toBeNull();
   });
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {

@@ -49,7 +49,7 @@ const removeMostReadWsojData = ({
   article: Article;
   mostRead: MostReadData | null;
 }): Article => {
-  const mostReadIds = new Set(mostRead?.items.map(({ id }) => id));
+  const mostReadIds = new Set(mostRead?.items?.map(({ id }) => id));
 
   return {
     ...article,
@@ -111,8 +111,9 @@ export default async (
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
   const canonicalPathname = getRequestUrl(context).split('?')[0];
 
-  const { isAmp, isApp, isLite, isMarkdown } =
-    getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp, isApp, isLite, isMarkdown } = getPathExtension(
+    resolvedUrlWithoutQuery,
+  );
   const { variant } = parseRoute(resolvedUrl);
   const canRenderMarkdown = toggles.renderMarkDown?.enabled === true;
 

@@ -155,9 +155,15 @@ const crossPlatform = ({
   const { numberOfItems } = config.mostRead;
 
   test.describe('Most Read Component', () => {
-    test.beforeEach(async () => {
+    test.beforeEach(async ({ page }) => {
       const toggles = await fetchToggles(service);
       test.skip(!toggles.mostRead?.enabled, 'Most Read is disabled');
+      await page
+        .locator(
+          '[data-e2e="most-read"], [data-testid="onward-journey-reservation-mostRead"], [data-testid="onward-journey-skeleton-mostRead"]',
+        )
+        .first()
+        .scrollIntoViewIfNeeded();
     });
 
     test(`should render ${numberOfItems} items`, async ({ page }) => {

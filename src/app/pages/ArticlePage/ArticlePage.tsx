@@ -261,7 +261,7 @@ export const getRecommendationsFromMostRead = ({
 
   return (
     mostRead?.items
-      .filter(({ id }) => {
+      ?.filter(({ id }) => {
         const itemIdParts = id.split(':');
         return itemIdParts[itemIdParts.length - 1] !== currentArticleId;
       })
@@ -291,10 +291,12 @@ const Wsoj = ({
   const onwardJourneyContext = useOnwardJourneyRequest();
   const recommendations =
     data ??
-    getRecommendationsFromMostRead({
-      mostRead: onwardJourneyContext?.article?.mostRead,
-      articleId: onwardJourneyContext?.article?.metadata.id,
-    });
+    (onwardJourney === 'mostRead'
+      ? getRecommendationsFromMostRead({
+          mostRead: onwardJourneyContext?.article?.mostRead,
+          articleId: onwardJourneyContext?.article?.metadata.id,
+        })
+      : []);
 
   if (
     onwardJourney === 'mostRead' &&

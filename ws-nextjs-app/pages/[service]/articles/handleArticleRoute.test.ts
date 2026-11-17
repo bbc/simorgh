@@ -1,4 +1,5 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
+import hausaArticleFixtureData from '#data/hausa/articles/c2nr6xqmnewo.json';
 import { GetServerSidePropsContext } from 'next';
 import { IncomingMessage, ServerResponse } from 'node:http';
 import { Socket } from 'node:net';
@@ -340,6 +341,30 @@ describe('handleArticleRoute', () => {
       block => block.type === 'wsoj',
     );
     expect(wsojBlocks[wsojBlocks.length - 1]?.model).toHaveProperty('data');
+  });
+
+  it('handles legacy Most Read records without converting article WSOJs', async () => {
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValueOnce({
+      data: {
+        pageData: hausaArticleFixtureData.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleArticleRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/hausa/articles/c2nr6xqmnewo',
+      query: { service: 'hausa' },
+    });
+
+    expect(result.props.status).toBe(200);
+    expect(result.props.pageData?.mostRead).toBeUndefined();
+    expect(result.props.pageData?.content.model.blocks).toContainEqual(
+      expect.objectContaining({
+        type: 'wsoj',
+        model: { type: 'recommendations' },
+      }),
+    );
   });
 
   it('keeps article-link WSOJs in the canonical response', async () => {

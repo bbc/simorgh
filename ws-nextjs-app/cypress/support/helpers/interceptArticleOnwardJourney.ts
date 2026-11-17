@@ -47,7 +47,9 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
     cy.get(
       triggerSelector ??
         `[data-testid="onward-journey-skeleton-${onwardJourney}"], [data-testid="onward-journey-reservation-${onwardJourney}"]`,
-    ).scrollIntoView();
+    )
+      .first()
+      .scrollIntoView();
     cy.wait(onwardJourneyAlias).then(({ response }) => {
       if (response?.statusCode !== 200) testContext.skip();
     });
