@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import { PropsWithChildren, use } from 'react';
 import Lazyload from 'react-lazyload';
+import clsx from 'clsx';
 
 import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
@@ -73,7 +74,7 @@ const FrostedGlassPromo = ({
     <>
       <h3 className={styles.header}>
         <a
-          className={`${styles.anchor} ${isAmp ? styles.anchorAmp : ''}`}
+          className={clsx(styles.anchor, isAmp && styles.anchorAmp)}
           href={relativeUrl}
           {...(eventTrackingData && clickTracker)}
         >
@@ -86,9 +87,10 @@ const FrostedGlassPromo = ({
 
   const staticPanel = (
     <div
-      className={`${styles.lazyloadPlaceholder} ${
-        isAmp ? styles.lazyloadPlaceholderAmp : ''
-      }`}
+      className={clsx(
+        styles.lazyloadPlaceholder,
+        isAmp && styles.lazyloadPlaceholderAmp,
+      )}
       data-testid="frosted-glass-lazyload-placeholder"
     >
       {promoText}

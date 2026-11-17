@@ -26,7 +26,6 @@ export const getServerSideProps = withRequestProps(async (context, props) => {
         service,
         variant,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         pathname: `/${service}/my-news`,
       },
     };
@@ -45,7 +44,6 @@ export const getServerSideProps = withRequestProps(async (context, props) => {
       variant,
       pageType: MY_NEWS_PAGE,
       status: OK,
-      timeOnServer: Date.now(),
       pathname: `/${service}/my-news`,
       page: page || null,
       pageData: {

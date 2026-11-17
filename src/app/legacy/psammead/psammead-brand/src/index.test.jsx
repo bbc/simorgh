@@ -6,15 +6,7 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import Brand from '.';
 
 const svg = {
-  group: (
-    <g fillRule="evenodd">
-      <path d="M84.32" />
-    </g>
-  ),
-  viewbox: {
-    height: 24,
-    width: 167.95,
-  },
+  path: '/news/images/brand.svg',
   ratio: 6.9979,
 };
 
@@ -22,6 +14,57 @@ describe('Brand', () => {
   suppressPropWarnings(['linkId', 'StyledBrand', 'null']);
   suppressPropWarnings(['linkId', 'LocalisedBrandName', 'null']);
 
+  it.each(['header', 'footer'])(
+    'renders the %s external asset without the AMP image runtime',
+    linkId => {
+      const { container } = render(
+        <Brand product="BBC News" svg={svg} linkId={linkId} />,
+        { isAmp: true },
+      );
+      const image = container.querySelector('.external-svg');
+
+      expect(container.querySelector('img')).not.toBeInTheDocument();
+      expect(container.querySelector('amp-img')).not.toBeInTheDocument();
+      expect(image.tagName).toBe('SPAN');
+      expect(image).toHaveAttribute(
+        'id',
+        linkId === 'header' ? 'brandSvgHeader' : 'brandSvgFooter',
+      );
+      expect(image).toHaveClass('external-svg', 'ampImage');
+      expect(image).toHaveAttribute('aria-hidden', 'true');
+      expect(
+        image.parentElement.style.getPropertyValue('--brand-source'),
+      ).toContain('news/images/brand.svg');
+      expect(image.parentElement).toHaveClass('brand');
+      expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
+        '6.9979',
+      );
+      expect(screen.getByText('BBC News')).toBeInTheDocument();
+    },
+  );
+  it.each(['header', 'footer'])(
+    'keeps the %s image and a decorative high-contrast mask on the same asset',
+    linkId => {
+      const { container } = render(
+        <Brand product="BBC News" svg={svg} linkId={linkId} />,
+      );
+      const image = container.querySelector('img');
+      const src = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}news/images/brand.svg`;
+
+      expect(image).toHaveAttribute('src', src);
+      expect(image).toHaveAttribute('alt', '');
+      expect(image).toHaveAttribute('width', String(svg.ratio * 32));
+      expect(image).toHaveAttribute('height', '32');
+      expect(image).toHaveAttribute('loading', 'eager');
+      expect(image.parentElement.style.getPropertyValue('--brand-ratio')).toBe(
+        '6.9979',
+      );
+      expect(image.parentElement).toHaveAttribute('aria-hidden', 'true');
+      expect(image.parentElement.style.getPropertyValue('--brand-source')).toBe(
+        `url("${src}")`,
+      );
+    },
+  );
   it('should render correctly with link provided', () => {
     render(
       <Brand
@@ -86,9 +129,7 @@ describe('Brand', () => {
         />,
       );
 
-      expect(container.querySelector('span').getAttribute('role')).toEqual(
-        'text',
-      );
+      expect(container.querySelector('[role="text"]')).toBeInTheDocument();
     });
 
     it('should not have role of text when serviceLocalisedName is not provided', () => {
@@ -105,7 +146,7 @@ describe('Brand', () => {
         />,
       );
 
-      expect(container.querySelector('span').getAttribute('role')).toBeNull();
+      expect(container.querySelector('[role="text"]')).not.toBeInTheDocument();
     });
 
     it('should add extra props passed to the component', () => {

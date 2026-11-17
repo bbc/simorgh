@@ -58,7 +58,6 @@ export const getServerSideProps = withRequestProps(async (context, props) => {
       pathname: `${service}/downloads`,
       service,
       status: 200,
-      timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant,
     },

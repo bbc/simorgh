@@ -51,7 +51,6 @@ export const getServerSideProps = withRequestProps(async context => {
       service,
       status: status ?? 500,
       variant,
-      timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
 });

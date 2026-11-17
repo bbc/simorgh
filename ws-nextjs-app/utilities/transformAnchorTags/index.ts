@@ -61,29 +61,26 @@ export default ({ extension, isEligiblePath = () => true }: Config) => {
     return null;
   };
 
-  return (html: string) => {
-    let modifiedHtml = html;
+  const ignoreFlag = `${ignoreAttribute}="true"`;
+
+  const transformTag = (tag: string) => {
+    if (tag.includes(ignoreFlag)) return tag;
+
+    const href = tag.match(/href="([^"]*)"/)?.[1];
 
     try {
-      const anchorTags = modifiedHtml.match(/<a[^>]*>/g) || [];
+      const hrefWithExtension = addExtension(href);
 
-      anchorTags.forEach(tag => {
-        const ignoreFlag = tag?.includes(`${ignoreAttribute}="true"`);
-        const href = tag?.match(/href="([^"]*)"/)?.[1];
-        const hrefWithExtension = addExtension(href);
-
-        if (href && hrefWithExtension && !ignoreFlag) {
-          modifiedHtml = modifiedHtml.replace(
-            tag,
-            tag.replace(href, hrefWithExtension),
-          );
-        }
-      });
-    } catch (error) {
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      (() => {})();
+      return href && hrefWithExtension
+        ? tag.replace(href, hrefWithExtension)
+        : tag;
+    } catch {
+      // Leave anchors with unparseable hrefs untouched
+      return tag;
     }
-
-    return modifiedHtml;
   };
+
+  // Rewrite every anchor in a single pass over the document, rather than
+  // re-scanning and copying the whole HTML string once per anchor.
+  return (html: string) => html.replace(/<a[^>]*>/g, transformTag);
 };

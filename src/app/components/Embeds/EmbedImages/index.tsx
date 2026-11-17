@@ -35,7 +35,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
 
   return (
     <div css={styles.embedDiv} data-e2e="embed-image">
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image src={src} alt={alt} width={width} height={height} lazyLoad />
     </div>
   );
 };
