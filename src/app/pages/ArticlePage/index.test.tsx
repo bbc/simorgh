@@ -1440,6 +1440,43 @@ describe('Article Page', () => {
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
+
+    describe('TopicVideoCuration', () => {
+      const dataWithCarousel = {
+        ...data,
+        portraitVideoItems: {
+          title: 'Portrait Video Carousel',
+          portraitVideo: { blocks: [...portraitVideoFixture.blocks] },
+        },
+      } as Article;
+      const toggles = {
+        topicDiscovery: { enabled: true },
+        articlePortraitVideo: { enabled: true },
+      };
+
+      it('should render topic video curation instead of the portrait video carousel when TopicDiscovery is shown', () => {
+        const { queryByTestId, queryAllByTestId } = render(
+          <ArticlePage pageData={dataWithCarousel} />,
+          { service: 'portuguese', toggles },
+        );
+        expect(queryByTestId('topic-video-curation')).toBeInTheDocument();
+        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+      });
+
+      it('should keep the portrait video carousel and omit topic video curation when TopicDiscovery is hidden', () => {
+        const { queryByTestId, queryAllByTestId } = render(
+          <ArticlePage pageData={dataWithCarousel} />,
+          {
+            service: 'portuguese',
+            toggles: { ...toggles, topicDiscovery: { enabled: false } },
+          },
+        );
+        expect(queryByTestId('topic-video-curation')).not.toBeInTheDocument();
+        expect(
+          queryAllByTestId('portrait-video-carousel').length,
+        ).toBeGreaterThan(0);
+      });
+    });
   });
 
   describe('LocationBasedTopicOJ', () => {
