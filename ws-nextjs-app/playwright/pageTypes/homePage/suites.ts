@@ -9,6 +9,10 @@ export type HomePageTestSuite = {
 export type HomePageAtiTest =
   | 'assertPageView'
   | 'assertResonancePageView'
+  | 'assertScrollableNavigationResonanceComponentView'
+  | 'assertScrollableNavigationResonanceComponentClick'
+  | 'assertDropdownNavigationResonanceComponentView'
+  | 'assertDropdownNavigationResonanceComponentClick'
   | 'assertBillboardComponentView'
   | 'assertBillboardComponentClick'
   | 'assertScrollableNavigationComponentView'
@@ -179,7 +183,13 @@ const atiTestSuites: AtiHomePageTestSuite[] = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-home',
-    tests: ['assertResonancePageView'],
+    tests: [
+      'assertResonancePageView',
+      'assertScrollableNavigationResonanceComponentView',
+      'assertScrollableNavigationResonanceComponentClick',
+      'assertDropdownNavigationResonanceComponentView',
+      'assertDropdownNavigationResonanceComponentClick',
+    ],
   },
   {
     path: '/pashto',

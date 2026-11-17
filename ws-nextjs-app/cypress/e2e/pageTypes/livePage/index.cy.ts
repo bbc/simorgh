@@ -98,6 +98,10 @@ const atiAnalyticsTestSuites = [
       assertScrollableNavigationComponentClick,
       assertDropdownNavigationComponentView,
       assertDropdownNavigationComponentClick,
+      assertScrollableNavigationResonanceComponentView,
+      assertScrollableNavigationResonanceComponentClick,
+      assertDropdownNavigationResonanceComponentView,
+      assertDropdownNavigationResonanceComponentClick,
     ],
   },
   {
