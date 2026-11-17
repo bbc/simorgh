@@ -1458,23 +1458,27 @@ describe('Article Page', () => {
         localStorage.clear();
       });
 
-      it('should not render topic video curation or the carousel for users with no video engagement', () => {
+      it('should not render topic video curation for users with no video engagement but keep the carousel', () => {
         const { queryByTestId, queryAllByTestId } = render(
           <ArticlePage pageData={dataWithCarousel} />,
           { service: 'portuguese', toggles },
         );
         expect(queryByTestId('topic-video-curation')).not.toBeInTheDocument();
-        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+        expect(
+          queryAllByTestId('portrait-video-carousel').length,
+        ).toBeGreaterThan(0);
       });
 
-      it('should render topic video curation instead of the portrait video carousel for users with video engagement', () => {
+      it('should render topic video curation alongside the portrait video carousel for users with video engagement', () => {
         localStorage.setItem('ws_video_engagement', 'true');
         const { queryByTestId, queryAllByTestId } = render(
           <ArticlePage pageData={dataWithCarousel} />,
           { service: 'portuguese', toggles },
         );
         expect(queryByTestId('topic-video-curation')).toBeInTheDocument();
-        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+        expect(
+          queryAllByTestId('portrait-video-carousel').length,
+        ).toBeGreaterThan(0);
       });
 
       it('should keep the portrait video carousel and omit topic video curation when TopicDiscovery is hidden', () => {

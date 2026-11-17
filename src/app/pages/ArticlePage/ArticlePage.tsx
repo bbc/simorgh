@@ -467,8 +467,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopicDiscovery =
     topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
-  // Prototype: topic-related videos replace the Portrait Video collection
-  // directly beneath TopicDiscovery.
+  // Prototype: topic-related videos render directly beneath TopicDiscovery,
+  // alongside the existing Portrait Video collection.
   const showTopicVideoCuration = showTopicDiscovery;
 
   const showRelatedTopicsComponent = Boolean(
@@ -589,7 +589,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               topics={topicDiscoveryTopics}
             />
           )}
-          {showPortraitVideoCarousel && !showTopicVideoCuration && (
+          {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
