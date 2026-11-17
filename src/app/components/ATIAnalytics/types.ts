@@ -136,11 +136,8 @@ export type ReverbEventDetails = {
   };
   event?: {
     category: string;
-    action?: 'select' | 'view' | 'serve';
+    action?: 'select' | 'view';
     grouping?: string;
-    interaction_type?: string;
-    spec_id?: string;
-    spec_version?: string;
   };
   error?: {
     engine?: string;
@@ -149,12 +146,7 @@ export type ReverbEventDetails = {
     code?: string;
     type?: string;
   };
-  eventName:
-    | 'pageView'
-    | 'sectionView'
-    | 'sectionClick'
-    | 'activation'
-    | 'error';
+  eventName: 'pageView' | 'sectionView' | 'sectionClick' | 'error';
   eventPublisher?: string;
   group?: string | object;
   isClick?: boolean;
