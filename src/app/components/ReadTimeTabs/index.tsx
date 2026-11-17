@@ -146,6 +146,7 @@ const ReadTimeTabs = ({
 
   return (
     <section
+      id="read-time-tabs-component"
       aria-labelledby={HEADING_ID}
       css={styles.section}
       className={className}

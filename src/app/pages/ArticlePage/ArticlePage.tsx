@@ -86,6 +86,7 @@ import {
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
+import ReadTimeRecommendations from '../../components/ReadTimeTabs/ReadTimeRecommendations';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -263,6 +264,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
+  const { enabled: readTimeRecommendationsEnabled } = useToggle(
+    'readTimeRecommendations',
+  );
   const { enabled: googlePreferredSourceEnabled } = useToggle(
     'googlePreferredSource',
   );
@@ -466,6 +470,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopicDiscovery =
     topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
+  const readTimeTopicId = topicDiscoveryTopics[0]?.topicId;
+  const showReadTimeTabs = Boolean(
+    readTimeRecommendationsEnabled && showTopicDiscovery && readTimeTopicId,
+  );
+
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
@@ -551,7 +560,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showTopicDiscovery && (
+          {showReadTimeTabs && (
+            <ReadTimeRecommendations
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topicId={readTimeTopicId}
+            />
+          )}
+          {showTopicDiscovery && !showReadTimeTabs && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
