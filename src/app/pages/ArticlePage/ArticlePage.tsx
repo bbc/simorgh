@@ -55,6 +55,7 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import ArticleEnd from '#app/components/ArticleEnd';
 import SwipeableArticleRecommendations from '#app/components/SwipeableArticleRecommendations';
 import { getRecommendations } from '#app/components/SwipeableArticleRecommendations/utilities';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
@@ -310,6 +311,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const lastTextBlockIndex = blocks
     .map(block => block.type)
     .lastIndexOf('text');
+  const [primaryTopic] = topics;
   const blocksWithArticleEnd = showArticleEnd
     ? blocks.flatMap((block, index) =>
         index === lastTextBlockIndex
@@ -329,7 +331,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                           blocks,
                           currentArticleId: getArticleId(pageData),
                           environment: SIMORGH_APP_ENV,
-                        }),
+                        }).slice(0, 4),
+                        topic: primaryTopic && {
+                          name: primaryTopic.topicName,
+                          href: getTopicPageUrl({
+                            service,
+                            topicId: primaryTopic.topicId,
+                            topicsPath: translations.topicsPath,
+                          }),
+                        },
                       },
                       id: `swipeable-recommendations-${getArticleId(pageData)}`,
                     },

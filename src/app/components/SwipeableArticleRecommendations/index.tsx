@@ -21,6 +21,7 @@ import styles from './index.module.scss';
 
 type Props = {
   recommendations: Recommendation[];
+  topic?: { name: string; href: string };
 };
 
 type Direction = 'left' | 'right';
@@ -33,11 +34,12 @@ type Gesture = {
   horizontal: boolean;
 };
 
-const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
+const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
   const { translations } = use(ServiceContext);
   const copy = translations.swipeableRecommendations;
   const location = useLocation();
   const headingId = useId();
+  const endHeadingId = useId();
   const instructionsId = useId();
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<'idle' | 'dragging' | Direction>('idle');
@@ -45,6 +47,7 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   const stackRef = useRef<HTMLDivElement>(null);
   const dismissRef = useRef<HTMLButtonElement>(null);
   const endRef = useRef<HTMLElement>(null);
+  const topicLinkRef = useRef<HTMLAnchorElement>(null);
   const controlsRef = useRef<HTMLDivElement>(null);
   const gestureRef = useRef<Gesture | null>(null);
   const exitRef = useRef<Direction | null>(null);
@@ -54,6 +57,10 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   const focusEndRef = useRef(false);
   const activeArticle = recommendations[activeIndex];
   const hasArticles = Boolean(activeArticle);
+  const topicLinkText = translations.topicDiscovery?.moreAboutTopic;
+  const showTopicCta = Boolean(
+    !activeArticle && topic && copy?.exploreHeading && topicLinkText,
+  );
 
   useEffect(
     () => () => {
@@ -63,7 +70,9 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   );
 
   useEffect(() => {
-    if (!activeArticle && focusEndRef.current) endRef.current?.focus();
+    if (!activeArticle && focusEndRef.current) {
+      (topicLinkRef.current ?? endRef.current)?.focus();
+    }
   }, [activeArticle]);
 
   useEffect(() => {
@@ -246,12 +255,14 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   return (
     <section
       className={styles.wrapper}
-      aria-labelledby={headingId}
+      aria-labelledby={showTopicCta ? endHeadingId : headingId}
       data-testid="swipeable-recommendations"
     >
-      <Heading level={2} size="greatPrimer" id={headingId}>
-        {copy.heading}
-      </Heading>
+      {!showTopicCta && (
+        <Heading level={2} size="greatPrimer" id={headingId}>
+          {copy.heading}
+        </Heading>
+      )}
       {activeArticle ? (
         <>
           <Text
@@ -387,14 +398,30 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
       <Text
         as="p"
         role="status"
+        id={endHeadingId}
         ref={endRef}
         tabIndex={activeArticle ? undefined : -1}
-        className={activeArticle ? styles.visuallyHidden : styles.end}
+        size={showTopicCta ? 'greatPrimer' : 'pica'}
+        fontVariant={showTopicCta ? 'sansBold' : 'sansRegular'}
+        className={clsx(activeArticle ? styles.visuallyHidden : styles.end, {
+          [styles.exploreHeading]: showTopicCta,
+        })}
       >
         {activeArticle
           ? activeIndex > 0 && `${position}: ${activeArticle.title}`
-          : copy.end}
+          : (showTopicCta && copy.exploreHeading) || copy.end}
       </Text>
+      {showTopicCta && topic && topicLinkText && (
+        <div className={styles.controls}>
+          <a
+            ref={topicLinkRef}
+            href={getPrototypeHref(topic.href, location.search)}
+            className={styles.topicLink}
+          >
+            {topicLinkText.replace('{topic}', topic.name)}
+          </a>
+        </div>
+      )}
     </section>
   );
 };

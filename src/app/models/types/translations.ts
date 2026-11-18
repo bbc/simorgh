@@ -9,6 +9,7 @@ export interface Translations {
     read: string;
     end: string;
     position: string;
+    exploreHeading?: string;
   };
   pagination?: {
     page?: string;

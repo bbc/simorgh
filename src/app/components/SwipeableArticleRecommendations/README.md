@@ -17,7 +17,8 @@ Scroll to **FIN DEL ARTÍCULO**, expanding Continue reading if present. The stac
 - Drag/swipe left or select **No me interesa** to dismiss.
 - Drag/swipe right, click **Leer artículo**, or activate that control with the keyboard to animate right and then navigate. Modified clicks retain normal new-tab/window link behaviour; the headline remains an ordinary link.
 - The threshold is 25% of card width, capped at 100px. Smaller movements return to the starting position. Vertical gestures remain page scrolls.
-- Only the active card is accessible/focusable. The next card is inert and hidden from assistive technology; it smoothly moves forward when the current card is dismissed. Card changes are announced, and exhaustion displays **No hay más recomendaciones**.
+- Only the active card is accessible/focusable. The next card is inert and hidden from assistive technology; it sits behind on a light-grey background and smoothly moves forward, fading to white, when the current card is dismissed. Card changes are announced.
+- The stack holds at most four cards. Once every card has been dismissed, the cards, buttons and **Sigue descubriendo** heading are replaced with **¿Quieres seguir explorando?** and a **Más sobre {topic}** link to the original article's first related topic (from `metadata.topics`). Keyboard users dismissing the final card get focus moved to that link. Articles without a topic show **No hay más recomendaciones** instead. Topic pages need the usual internal BFF access when run locally.
 - Reduced-motion preferences remove rotation and transition delays.
 - Dismissal is local to this mounted stack. Reloading, or visiting another article, starts a new stack.
 

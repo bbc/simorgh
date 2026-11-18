@@ -48,7 +48,9 @@
   box-shadow: 0 2px 6px rgba(theme.$palette-black, 0.1);
   transform: translateX(calc(var(--drag-progress, 0) * 100%))
     rotate(calc(var(--drag-progress, 0) * 12deg));
-  transition: transform 240ms ease-out;
+  transition:
+    transform 240ms ease-out,
+    background-color 240ms ease-out;
 
   & + & {
     margin-inline-start: -100%;
@@ -63,6 +65,7 @@
 .preview {
   z-index: 0;
   pointer-events: none;
+  background: theme.$palette-grey-2;
   transform: translateY(theme.$spacings-triple) scale(0.94);
   transform-origin: center bottom;
 }
@@ -74,6 +77,7 @@
 }
 
 .promoting {
+  background: theme.$palette-white;
   transform: translateY(0) scale(1);
 }
 
@@ -134,7 +138,8 @@
 }
 
 .dismiss,
-.controls .read {
+.controls .read,
+.controls .topicLink {
   @include theme.typography-from-scale-and-variant('brevier', 'sans-bold');
   display: inline-flex;
   align-items: center;
@@ -160,7 +165,8 @@
   }
 }
 
-.controls .read {
+.controls .read,
+.controls .topicLink {
   color: theme.$palette-white;
   background: theme.$palette-postbox;
   border-color: theme.$palette-postbox;
@@ -169,6 +175,7 @@
 
 .dismiss:focus-visible,
 .controls .read:focus-visible,
+.controls .topicLink:focus-visible,
 .end:focus-visible {
   outline: 3px solid theme.$palette-black;
   outline-offset: 3px;
@@ -176,6 +183,10 @@
 
 .end {
   padding-block: theme.$spacings-double;
+}
+
+.exploreHeading {
+  text-align: center;
 }
 
 .visuallyHidden {
