@@ -53,6 +53,8 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import ArticleEnd from '#app/components/ArticleEnd';
+import SwipeableArticleRecommendations from '#app/components/SwipeableArticleRecommendations';
+import { getRecommendations } from '#app/components/SwipeableArticleRecommendations/utilities';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
@@ -318,6 +320,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 model: { label: translations.articleEnd },
                 id: 'article-end',
               },
+              ...(!isAmp && !isLite && !isApp
+                ? [
+                    {
+                      type: 'swipeableRecommendations',
+                      model: {
+                        recommendations: getRecommendations({
+                          blocks,
+                          currentArticleId: getArticleId(pageData),
+                          environment: SIMORGH_APP_ENV,
+                        }),
+                      },
+                      id: `swipeable-recommendations-${getArticleId(pageData)}`,
+                    },
+                  ]
+                : []),
             ]
           : [block],
       )
@@ -441,6 +458,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text: ArticleBodyText,
     articleEnd: ArticleEnd,
+    swipeableRecommendations: SwipeableArticleRecommendations,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
       hasByline,

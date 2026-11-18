@@ -96,6 +96,15 @@ export const service: DefaultServiceConfig = {
     translations: {
       and: 'y',
       articleEnd: 'Fin del artículo',
+      swipeableRecommendations: {
+        heading: 'Sigue descubriendo',
+        instructions:
+          'Desliza a la izquierda para descartar o a la derecha para leer. También puedes usar los botones.',
+        dismiss: 'No me interesa',
+        read: 'Leer artículo',
+        end: 'No hay más recomendaciones',
+        position: 'Artículo {current} de {total}',
+      },
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',

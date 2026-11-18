@@ -2,6 +2,14 @@
 export interface Translations {
   and?: string;
   articleEnd?: string;
+  swipeableRecommendations?: {
+    heading: string;
+    instructions: string;
+    dismiss: string;
+    read: string;
+    end: string;
+    position: string;
+  };
   pagination?: {
     page?: string;
     previousPage: string;

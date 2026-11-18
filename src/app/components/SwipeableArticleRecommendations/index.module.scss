@@ -1,0 +1,145 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  margin-block: theme.$spacings-quadruple;
+  margin-inline: theme.$spacings-full;
+  min-inline-size: 0;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline: 0;
+  }
+}
+
+.instructions {
+  margin-block: theme.$spacings-full theme.$spacings-double;
+}
+
+.viewport {
+  overflow: hidden;
+  padding: theme.$spacings-double;
+}
+
+.stack {
+  position: relative;
+  padding-block-end: theme.$spacings-double;
+}
+
+.card,
+.preview {
+  background: theme.$palette-white;
+  border: 1px solid theme.$palette-grey-4;
+  border-radius: theme.$spacings-half;
+}
+
+.preview {
+  position: absolute;
+  inset: theme.$spacings-double theme.$spacings-full 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: scale(0.98);
+}
+
+.card {
+  position: relative;
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+  transform: translateX(calc(var(--drag-progress, 0) * 100%))
+    rotate(calc(var(--drag-progress, 0) * 12deg));
+  transition: transform 240ms ease-out;
+}
+
+.dragging {
+  cursor: grabbing;
+  user-select: none;
+  transition: none;
+}
+
+.exitLeft {
+  transform: translateX(-140%) rotate(-12deg);
+}
+
+.exitRight {
+  transform: translateX(140%) rotate(12deg);
+}
+
+.content {
+  padding: theme.$spacings-double;
+}
+
+.position {
+  margin-block: 0 theme.$spacings-full;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: theme.$spacings-double;
+}
+
+.dismiss,
+.controls .read {
+  @include theme.typography-from-scale-and-variant('brevier', 'sans-bold');
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: theme.pixelsToRem-px-to-rem(44);
+  padding: theme.$spacings-full theme.$spacings-double;
+  border: 1px solid theme.$palette-grey-6;
+  border-radius: theme.$spacings-half;
+  cursor: pointer;
+  text-align: center;
+
+  &[aria-disabled='true'] {
+    cursor: wait;
+  }
+}
+
+.dismiss {
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+
+  &:hover {
+    background: theme.$palette-grey-3;
+  }
+}
+
+.controls .read {
+  color: theme.$palette-white;
+  background: theme.$palette-postbox;
+  border-color: theme.$palette-postbox;
+  text-decoration: none;
+}
+
+.dismiss:focus-visible,
+.controls .read:focus-visible,
+.end:focus-visible {
+  outline: 3px solid theme.$palette-black;
+  outline-offset: 3px;
+}
+
+.end {
+  padding-block: theme.$spacings-double;
+}
+
+.visuallyHidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+    transform: translateX(calc(var(--drag-progress, 0) * 100%));
+  }
+}
