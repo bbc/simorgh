@@ -1,0 +1,279 @@
+{
+  "cwe9k0d7x9z0o": [
+    {
+      "id": "cqvg2449m4mjo",
+      "title": "Sobreviviente de Epstein denuncia a un exsocio del abusador",
+      "href": "https://www.bbc.com/mundo/watch/cqvg2449m4mjo",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/d992/live/93a10dc0-dd4a-11f1-a701-fddedf244c16.png.webp",
+      "imageAlt": "Dos fotogramas juntos. El el superior hay una mujer con el torso desnudo. En el inferior una mujer que viste una blusa verde y pantalones azules. Ambas imágenes tienen el rostro tapado por cuadrados negros.",
+      "description": "Una modelo violada por Jeffrey Epstein dice que el jefe de la agencia que la representaba la puso en peligro al enviarla a sesiones de fotos en la casa del delincuente sexual.",
+      "format": "portrait",
+      "relationship": "Selección sobre Jeffrey Epstein",
+      "duration": "PT2M24S",
+      "media": {
+        "id": "fa1f3c10",
+        "type": "aresMedia",
+        "model": {
+          "blocks": [
+            {
+              "id": "b2d26d70",
+              "blockId": "urn:bbc:ares::clip:p0pmc08h",
+              "type": "aresMediaMetadata",
+              "model": {
+                "id": "p0pmc08h",
+                "subType": "clip",
+                "format": "video",
+                "title": "Sobreviviente de Epstein denuncia a un exsocio del abusador",
+                "synopses": {
+                  "short": "Una modelo que sufrió abusos de Jeffrey Epstein denuncia a un exsocio del exfinancista",
+                  "medium": "Una modelo violada por Jeffrey Epstein dice que el jefe de la agencia que la representaba la puso en peligro al enviarla a sesiones de fotos en la casa del delincuente sexual.",
+                  "long": "Una mujer violada por Jeffrey Epstein asegura que el jefe de la agencia de modelos que la representaba la puso en peligro al enviarla a dos sesiones de fotos en la casa de Florida del delincuente sexual convicto.\n\nEn aquel momento, en 2009, Epstein estaba cumpliendo una condena de cárcel por delitos sexuales contra una menor, pero se le permitía trabajar a diario desde su casa.\n\n\"El trabajo de mi agencia era protegerme, y fallaron. De hecho, me pusieron en peligro. Y por eso, deberían rendir cuentas\", le dice al Servicio Mundial de la BBC."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0pmc1hm.jpg",
+                "imageCopyright": "BBC",
+                "embedding": true,
+                "advertising": true,
+                "caption": "La modelo afirma haber sufrido abusos de forma repetida por parte de Epstein.",
+                "versions": [
+                  {
+                    "versionId": "p0pmc08m",
+                    "types": ["Portrait"],
+                    "duration": 144,
+                    "durationISO8601": "PT2M24S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1794344585000
+                  }
+                ],
+                "syndication": {
+                  "destinations": []
+                },
+                "smpKind": "programme",
+                "webcastVersions": []
+              },
+              "position": [2, 2, 1]
+            },
+            {
+              "id": "5966a61b",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "6f1bcc7b",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1080,
+                      "height": 1920,
+                      "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0pmc1hm.jpg",
+                      "originCode": "mpv",
+                      "copyrightHolder": "BBC"
+                    },
+                    "position": [2, 2, 2, 1]
+                  },
+                  {
+                    "id": "c67f3c7b",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "a31dc6a2",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "016c5836",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Promo historia modelo abusada por Epstein",
+                                  "blocks": [
+                                    {
+                                      "id": "c7c392d8",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Promo historia modelo abusada por Epstein",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2, 2, 2]
+                  }
+                ]
+              },
+              "position": [2, 2, 2]
+            }
+          ]
+        },
+        "position": [2, 2]
+      }
+    },
+    {
+      "id": "cq0mem48n7yzo",
+      "title": "\"Epstein me violó más de 200 veces\": los nuevos testimonios de mujeres que fueron reclutadas por un socio del financiero mediante una agencia de modelos",
+      "href": "https://www.bbc.com/mundo/articles/cq0mem48n7yzo",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/9349/live/97006970-dc5a-11f1-a701-fddedf244c16.jpg.webp",
+      "imageAlt": "Roza tiene el pelo largo y oscuro y ojos color avellana; lleva una blusa negra. ",
+      "description": "Una mujer afirma que el jefe de una agencia la envió a sesiones de fotos en la casa de playa del delincuente sexual.",
+      "format": "article",
+      "relationship": "Selección sobre Jeffrey Epstein"
+    },
+    {
+      "id": "cz6e0y2d4x9t",
+      "title": "Jeffrey Epstein",
+      "href": "https://www.bbc.com/mundo/topics/cz6e0y2d4x9t",
+      "format": "topic",
+      "description": "Consulta la cobertura y las últimas noticias de BBC Mundo.",
+      "relationship": "Tema de este artículo",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/f4ce/live/59eafa00-e1c3-11f1-8a52-0b287ff76f43.jpg.webp",
+      "imageAlt": "Una foto policial de Epstein "
+    }
+  ],
+  "c77mp3nkjr2o": [
+    {
+      "id": "c3r3gwlwqw7o",
+      "title": "En video: la BBC visita Chernobyl y reconstruye los eventos que llevaron al peor desastre nuclear de la historia hace 40 años",
+      "href": "https://www.bbc.com/mundo/articles/c3r3gwlwqw7o",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/5e4b/live/46b73c20-3fff-11f1-b11d-6552be9f85b2.jpg.webp",
+      "imageAlt": "Hombre con ropa de protección mira por una ventana donde se ve la planta nuclear de Chernobyl",
+      "description": "El 26 de abril de 1986 el reactor 4 de la central nuclear de Chernobyl explotó. Fue el accidente nuclear más devastador del mundo y un catalizador del colapso de la Unión Soviética.",
+      "format": "video",
+      "relationship": "Documental sobre Chernóbil",
+      "media": {
+        "id": "ff3700aa",
+        "type": "aresMedia",
+        "model": {
+          "blocks": [
+            {
+              "id": "071731b3",
+              "blockId": "urn:bbc:ares::clip:p0ngg0sl",
+              "type": "aresMediaMetadata",
+              "model": {
+                "id": "p0ngg0sl",
+                "subType": "clip",
+                "format": "video",
+                "title": "Chernobyl, 40 años después: la BBC habla con quienes vivieron el peor desastre nuclear",
+                "synopses": {
+                  "short": "El 26 de abril de 1986 todo cambió cuando el reactor 4 de la central nuclear explotó."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0ngg35z.jpg",
+                "embedding": true,
+                "advertising": true,
+                "versions": [
+                  {
+                    "versionId": "p0ngg0sq",
+                    "types": ["Original"],
+                    "duration": 1784,
+                    "durationISO8601": "PT29M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true
+                    },
+                    "availableFrom": 1777047666000
+                  }
+                ],
+                "syndication": {
+                  "destinations": []
+                },
+                "smpKind": "programme",
+                "webcastVersions": []
+              },
+              "position": [2, 2, 1]
+            },
+            {
+              "id": "61aa04c3",
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "80c94471",
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1920,
+                      "height": 1080,
+                      "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0ngg35z.jpg",
+                      "originCode": "mpv"
+                    },
+                    "position": [2, 2, 2, 1]
+                  },
+                  {
+                    "id": "c5f1429f",
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "643ef476",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "41eac511",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "El 26 de abril de 1986 todo cambió cuando el reactor 4 de la central nuclear explotó.",
+                                  "blocks": [
+                                    {
+                                      "id": "c7a0740a",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "El 26 de abril de 1986 todo cambió cuando el reactor 4 de la central nuclear explotó.",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 2, 2, 2, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2, 2, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 2, 2, 2]
+                  }
+                ]
+              },
+              "position": [2, 2, 2]
+            }
+          ]
+        },
+        "position": [2, 2]
+      },
+      "duration": "PT29M44S"
+    },
+    {
+      "id": "clyd42pe4j0o",
+      "title": "Los niños de Chernobyl en Cuba: la historia de los afectados por la catástrofe nuclear ocurrida hace 40 años que recibieron tratamiento en la playa de Tarará",
+      "href": "https://www.bbc.com/mundo/articles/clyd42pe4j0o",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/4b4d/live/413faaa0-3e85-11f1-ac78-2112837ce2aa.jpg.webp",
+      "imageAlt": "Varios niños con secuelas de la exposición a la radiación",
+      "description": "A 40 años del desastre nuclear de Chernobyl, recordamos la historia de los niños afectados que recibió Cuba.",
+      "format": "article",
+      "relationship": "Relacionado con este artículo"
+    },
+    {
+      "id": "c1gdq9w9xn5t",
+      "title": "Energía nuclear",
+      "href": "https://www.bbc.com/mundo/topics/c1gdq9w9xn5t",
+      "format": "topic",
+      "description": "Consulta la cobertura y las últimas noticias de BBC Mundo.",
+      "relationship": "Tema de este artículo",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/644f/live/3e14cd10-85ed-11f1-8ade-a7a676c613b9.jpg.webp",
+      "imageAlt": "El príncipe Mohammed bin Salman saluda a Donald Trump en la Oficina Oval"
+    }
+  ]
+}

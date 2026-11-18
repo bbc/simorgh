@@ -21,6 +21,8 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
+import EndOfArticleTreatment from '#app/components/EndOfArticleTreatment';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getArticleId,
   getHeadline,
@@ -238,7 +240,7 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
-  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType, service } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -463,8 +465,22 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  const showEndOfArticleTreatment =
+    service === 'mundo' &&
+    ['local', 'test'].includes(getEnvConfig().SIMORGH_APP_ENV) &&
+    pageType === 'article' &&
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    (pageData.articleEndItems?.length || 0) >= 2;
+
+  // Include the existing discovery section in the prototype journey even when
+  // the local fixture toggles do not enable it. Live behaviour is unchanged.
   const showTopicDiscovery =
-    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
+    (topicDiscoveryEnabled || showEndOfArticleTreatment) &&
+    !isAmp &&
+    !isLite &&
+    !isApp;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -551,6 +567,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
+          {showEndOfArticleTreatment && (
+            <EndOfArticleTreatment
+              key={pageData.metadata.id}
+              items={pageData.articleEndItems || []}
+              isVisible={
+                !showContinueReadingButton ||
+                showAllContent ||
+                isDesktopViewport
+              }
+              css={
+                shouldApplyCollapsedArticleSpacing &&
+                styles.hideEndOfArticleTreatment
+              }
+            />
+          )}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

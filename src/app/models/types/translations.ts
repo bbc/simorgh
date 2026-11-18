@@ -1,5 +1,23 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  endOfArticleTreatment?: {
+    endLabel: string;
+    heading: string;
+    introduction: string;
+    previous: string;
+    next: string;
+    position: string;
+    chooseContent: string;
+    readArticle: string;
+    exploreTopic: string;
+    openContent: string;
+    loadingMedia: string;
+    unavailableMedia: string;
+    formats: Record<
+      'article' | 'video' | 'portrait' | 'audio' | 'live' | 'topic',
+      string
+    >;
+  };
   and?: string;
   pagination?: {
     page?: string;
