@@ -42,7 +42,7 @@ const MessageBanner = ({
   let optimizelyAttributes = {};
   if (pageType === HOME_PAGE) {
     const experimentName = 'newswb_ws_message_banner_cta_glow';
-    // pageType is a constant throughout this components lifecycle, so this condition is garunteed to be a constant.
+    // pageType is a constant throughout this component's lifecycle, so this condition is guaranteed to be a constant.
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const variant = useOptimizelyVariation({
       experimentName,
