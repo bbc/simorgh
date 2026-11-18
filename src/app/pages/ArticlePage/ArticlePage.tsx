@@ -54,6 +54,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
+import RecommendationsCarousel from '#app/components/RecommendationsCarousel';
 import ReadTimeArticle from '#app/components/ReadTime';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
@@ -297,6 +298,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const recommendationsBlock = blocks.find(
+    (block): block is OptimoBlock & { model: { data?: Recommendation[] } } =>
+      block.type === 'wsoj',
+  );
+  const recommendationsData = recommendationsBlock?.model.data ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
@@ -551,6 +557,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
+          {(!showContinueReadingButton || showAllContent) && (
+            <RecommendationsCarousel data={recommendationsData} />
+          )}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

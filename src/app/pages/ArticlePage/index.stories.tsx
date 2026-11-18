@@ -105,6 +105,7 @@ const ComponentWithContext = ({
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
         <RequestContextProvider
+          bbcOrigin="http://localhost:9001"
           isAmp={false}
           isApp={false}
           pageType={ARTICLE_PAGE}
@@ -347,6 +348,31 @@ export const ArticlePageWithTopicDiscovery = {
   ),
   globals: {
     service: { service: 'portuguese', variant: 'default' },
+  },
+};
+
+export const MundoArticleWithRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={{
+        data: {
+          ...articleDataWithPortraitVideo.data,
+          article: {
+            ...articleDataWithPortraitVideo.data.article,
+            metadata: {
+              ...articleDataWithPortraitVideo.data.article.metadata,
+              topics: articleDataWithElectionTag.data.article.metadata.topics,
+            },
+          },
+        },
+      }}
+      service="mundo"
+      pathname="/mundo/articles/c1xv2q1gewvo"
+    />
+  ),
+  globals: {
+    service: { service: 'mundo', variant: 'default' },
+    toggles: { topicDiscovery: { enabled: true } },
   },
 };
 

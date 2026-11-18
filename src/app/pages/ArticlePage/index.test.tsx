@@ -22,6 +22,7 @@ import {
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
+import { recommendationsFixtures } from '#app/components/Recommendations/fixtures';
 import { textBlock, singleTextBlock } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
@@ -184,6 +185,51 @@ describe('Article Page', () => {
     jest.clearAllMocks();
   });
 
+  it('places the recommendations feed after the article and before topic discovery', () => {
+    const pageData = {
+      ...articleDataPidgin,
+      metadata: {
+        ...articleDataPidgin.metadata,
+        topics: [{ topicId: 'test-topic', topicName: 'Test topic' }],
+      },
+      content: {
+        model: {
+          blocks: [
+            ...articleDataPidgin.content.model.blocks.filter(
+              block => block.type !== 'wsoj',
+            ),
+            {
+              id: 'recommendations-carousel-test-feed',
+              type: 'wsoj',
+              model: {
+                type: 'recommendations',
+                data: recommendationsFixtures,
+              },
+            },
+          ],
+        },
+      },
+    };
+    const { container } = render(<ArticlePage pageData={pageData} />, {
+      service: 'mundo',
+      toggles: { topicDiscovery: { enabled: true } },
+    });
+
+    const carousel = screen.getByTestId('recommendations-carousel');
+    const main = container.querySelector('main');
+    const topicDiscovery = container.querySelector('#topic-discovery-heading');
+    expect(main?.compareDocumentPosition(carousel)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+    expect(topicDiscovery).toBeInTheDocument();
+    expect(topicDiscovery?.compareDocumentPosition(carousel)).toBe(
+      Node.DOCUMENT_POSITION_PRECEDING,
+    );
+    recommendationsFixtures.forEach(({ title }) => {
+      expect(carousel).toHaveTextContent(title);
+    });
+  });
+
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
     const { container } = render(
       <ArticlePage pageData={articleDataPersian} />,
@@ -195,6 +241,46 @@ describe('Article Page', () => {
     expect(anchor?.tagName).toBe('P');
     expect(anchor).toHaveTextContent(/\S/);
     expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
+  });
+
+  it('reveals the recommendations carousel only after a collapsed article is expanded', () => {
+    const pageData = {
+      ...articleDataPidgin,
+      content: {
+        model: {
+          blocks: [
+            ...articleDataPidgin.content.model.blocks.filter(
+              block => block.type !== 'wsoj',
+            ),
+            {
+              id: 'recommendations-continue-reading',
+              type: 'continueReading',
+              model: {},
+            },
+            {
+              id: 'recommendations-after-continue-reading',
+              type: 'wsoj',
+              model: {
+                type: 'recommendations',
+                data: recommendationsFixtures,
+              },
+            },
+          ],
+        },
+      },
+    };
+    render(<ArticlePage pageData={pageData} />, {
+      service: 'mundo',
+      toggles: { continueReadingButton: { enabled: true } },
+    });
+
+    expect(
+      screen.queryByTestId('recommendations-carousel'),
+    ).not.toBeInTheDocument();
+
+    act(() => screen.getByTestId('continue-reading-button').click());
+
+    expect(screen.getByTestId('recommendations-carousel')).toBeInTheDocument();
   });
 
   it.each([
