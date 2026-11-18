@@ -15,6 +15,7 @@ import subscribeToMediaQuery from '#app/hooks/useMediaQuery/subscribeToMediaQuer
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import InlineLink from '#app/components/InlineLink';
+import { UpArrowIcon } from '#app/components/icons';
 import RecommendationsImage from '#app/components/Recommendations/RecommendationsPromoImage';
 import { getPrototypeHref } from './utilities';
 import styles from './index.module.scss';
@@ -326,6 +327,16 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                       }}
                     >
                       <RecommendationsImage image={article.image} lazyLoad />
+                      {isActive && (
+                        <div className={styles.dragFeedback} aria-hidden="true">
+                          <span className={styles.dismissFeedback}>
+                            {copy.dismiss}
+                          </span>
+                          <span className={styles.readFeedback}>
+                            {copy.read}
+                          </span>
+                        </div>
+                      )}
                       <div className={styles.content}>
                         <Text as="p" size="minion" className={styles.position}>
                           {copy.position
@@ -368,13 +379,13 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
               aria-disabled={phase === 'left' || phase === 'right'}
               onClick={() => exit('left')}
             >
+              <span className={styles.leftArrow} aria-hidden="true">
+                <UpArrowIcon />
+              </span>
               {copy.dismiss}
             </button>
-            <InlineLink
-              to={articleHref}
-              text={copy.read}
-              size="brevier"
-              fontVariant="sansBold"
+            <a
+              href={articleHref}
               className={styles.read}
               aria-disabled={phase === 'left' || phase === 'right'}
               aria-label={`${copy.read}: ${activeArticle.title}`}
@@ -391,7 +402,12 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                 event.preventDefault();
                 exit('right');
               }}
-            />
+            >
+              {copy.read}
+              <span className={styles.rightArrow} aria-hidden="true">
+                <UpArrowIcon />
+              </span>
+            </a>
           </div>
         </>
       ) : null}

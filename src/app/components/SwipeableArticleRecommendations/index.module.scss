@@ -118,6 +118,42 @@
   transition: opacity 240ms ease-out;
 }
 
+.dragFeedback {
+  position: absolute;
+  inset-block-start: theme.$spacings-full;
+  inset-inline: theme.$spacings-full;
+  pointer-events: none;
+}
+
+.dismissFeedback,
+.readFeedback {
+  @include theme.typography-from-scale-and-variant('brevier', 'sans-bold');
+  position: absolute;
+  max-inline-size: 100%;
+  padding: theme.$spacings-half theme.$spacings-full;
+  border-radius: theme.$spacings-half;
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+  box-shadow: 0 1px 4px rgba(theme.$palette-black, 0.2);
+  opacity: 0;
+}
+
+.dismissFeedback {
+  inset-inline-end: 0;
+}
+
+.readFeedback {
+  inset-inline-start: 0;
+}
+
+.dragging .dismissFeedback {
+  opacity: clamp(0, calc(var(--drag-progress, 0) * -4), 1);
+}
+
+.dragging .readFeedback {
+  opacity: clamp(0, calc(var(--drag-progress, 0) * 4), 1);
+}
+
 .preview .content {
   opacity: 0;
 }
@@ -163,6 +199,25 @@
   &:hover {
     background: theme.$palette-grey-3;
   }
+}
+
+.dismiss,
+.controls .read {
+  gap: theme.$spacings-full;
+}
+
+.leftArrow,
+.rightArrow {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.leftArrow {
+  transform: rotate(-90deg);
+}
+
+.rightArrow {
+  transform: rotate(90deg);
 }
 
 .controls .read,

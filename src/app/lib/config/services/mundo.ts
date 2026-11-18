@@ -97,9 +97,8 @@ export const service: DefaultServiceConfig = {
       and: 'y',
       articleEnd: 'Fin del artículo',
       swipeableRecommendations: {
-        heading: 'Sigue descubriendo',
-        instructions:
-          'Desliza a la izquierda para descartar o a la derecha para leer. También puedes usar los botones.',
+        heading: '¿Qué quieres leer ahora?',
+        instructions: 'Desliza para explorar',
         dismiss: 'No me interesa',
         read: 'Leer artículo',
         end: 'No hay más recomendaciones',
