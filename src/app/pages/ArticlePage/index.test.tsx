@@ -1454,13 +1454,15 @@ describe('Article Page', () => {
         articlePortraitVideo: { enabled: true },
       };
 
-      it('should render topic video curation instead of the portrait video carousel when TopicDiscovery is shown', () => {
+      it('should render topic video curation alongside the portrait video carousel when TopicDiscovery is shown', () => {
         const { queryByTestId, queryAllByTestId } = render(
           <ArticlePage pageData={dataWithCarousel} />,
           { service: 'portuguese', toggles },
         );
         expect(queryByTestId('topic-video-curation')).toBeInTheDocument();
-        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+        expect(
+          queryAllByTestId('portrait-video-carousel').length,
+        ).toBeGreaterThan(0);
       });
 
       it('should keep the portrait video carousel and omit topic video curation when TopicDiscovery is hidden', () => {
