@@ -83,7 +83,14 @@ const withLiveTopStory = ({ data }: { data: any }) => ({
     secondaryData: {
       ...data.secondaryData,
       topStories: data.secondaryData.topStories.map(story =>
-        story.type === 'tipo-live' ? { ...story, isLive: true } : story,
+        story.type === 'tipo-live'
+          ? {
+              ...story,
+              headline:
+                'Follow live as astronomers explore the night sky and share the latest discoveries from observatories around the world',
+              isLive: true,
+            }
+          : story,
       ),
     },
   },
