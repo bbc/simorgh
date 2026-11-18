@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useMemo } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
+import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
@@ -23,14 +24,70 @@ import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import { Services } from '#app/models/types/global';
+import { ServerSideExperiment, Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import {
+  LIVE_PAGE_PROMO_EXPERIMENT_NAME,
+  LIVE_PAGE_PROMO_EXPERIMENT_VARIANT,
+} from '#app/components/LivePagePromoExperiment/config';
 import ArticlePageComponent from './ArticlePage';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
+
+// Offline client: an empty datafile means it never fetches config, and the
+// no-op dispatcher means no events are sent to Optimizely.
+const offlineOptimizely = createInstance({
+  datafile: {
+    version: '4',
+    projectId: 'storybook',
+    accountId: 'storybook',
+    revision: '1',
+    experiments: [],
+    featureFlags: [],
+    events: [],
+    audiences: [],
+    groups: [],
+    attributes: [],
+    rollouts: [],
+  },
+  eventDispatcher: {
+    dispatchEvent: () => Promise.resolve({ statusCode: 204 }),
+  },
+  logLevel: 'error',
+});
+
+const OfflineOptimizelyProvider = ({ children }: PropsWithChildren) => (
+  <OptimizelyProvider
+    optimizely={offlineOptimizely}
+    isServerSide
+    user={{ id: 'storybook' }}
+  >
+    {children}
+  </OptimizelyProvider>
+);
+
+const livePagePromoExperimentOn: ServerSideExperiment[] = [
+  {
+    experimentName: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
+    variation: LIVE_PAGE_PROMO_EXPERIMENT_VARIANT,
+    enabled: true,
+  },
+];
+
+const withLiveTopStory = ({ data }: { data: any }) => ({
+  data: {
+    ...data,
+    secondaryData: {
+      ...data.secondaryData,
+      topStories: data.secondaryData.topStories.map(story =>
+        story.type === 'tipo-live' ? { ...story, isLive: true } : story,
+      ),
+    },
+  },
+});
 
 const withGoogleReferral = Story => {
   Object.defineProperty(document, 'referrer', {
@@ -78,6 +135,7 @@ type Props = {
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
   pathname?: string;
+  serverSideExperiments?: ServerSideExperiment[];
 };
 
 const ComponentWithContext = ({
@@ -88,7 +146,23 @@ const ComponentWithContext = ({
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
   pathname = '/news/articles/c000000000o',
+  serverSideExperiments,
 }: Props) => {
+  const page = (
+    <PageLayoutWrapper
+      pageData={{ ...data.article, secondaryColumn: data.secondaryData }}
+      status={200}
+    >
+      <Page
+        pageData={{
+          ...data.article,
+          secondaryColumn: data.secondaryData,
+          mostRead: data.secondaryData.mostRead,
+        }}
+      />
+    </PageLayoutWrapper>
+  );
+
   return (
     <ToggleContextProvider
       toggles={{
@@ -112,17 +186,14 @@ const ComponentWithContext = ({
           pathname={pathname}
           id="c000000000o"
           isUK
+          serverSideExperiments={serverSideExperiments}
         >
           <ThemeProvider service={service}>
-            <PageLayoutWrapper pageData={data.article} status={200}>
-              <Page
-                pageData={{
-                  ...data.article,
-                  secondaryColumn: data.secondaryData,
-                  mostRead: data.secondaryData.mostRead,
-                }}
-              />
-            </PageLayoutWrapper>
+            {serverSideExperiments ? (
+              <OfflineOptimizelyProvider>{page}</OfflineOptimizelyProvider>
+            ) : (
+              page
+            )}
           </ThemeProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -402,5 +473,18 @@ export const TestArticlePageWithVideoCuration = {
   ),
   globals: {
     service: { service: 'pidgin', variant: 'default' },
+  },
+};
+
+export const ArticlePageWithLivePagePromoExperiment = {
+  render: () => (
+    <ComponentWithContext
+      data={withLiveTopStory(articleDataWithPortraitVideo)}
+      service="mundo"
+      serverSideExperiments={livePagePromoExperimentOn}
+    />
+  ),
+  globals: {
+    service: { service: 'mundo', variant: 'default' },
   },
 };
