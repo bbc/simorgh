@@ -1,5 +1,59 @@
 @use '@scss/themeTokens' as theme;
 
+div.groupedArticleColumn {
+  padding-block-end: 0;
+}
+
+.groupedArticleEnd {
+  max-width: theme.$gridWidths-grid-width-1008;
+  margin-inline: auto;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding-inline: theme.$spacings-double;
+  }
+}
+
+.groupedSecondaryColumn > div {
+  grid-column: auto;
+  grid-row: auto;
+  margin-block-start: 0;
+}
+
+// Features normally occupy a narrow sidebar on desktop. In Option B they
+// share the full panel width, so keep the cards in compact, wrapping rows.
+.groupedSecondaryColumn [data-testid='features'] {
+  [role='list'] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: theme.$spacings-double;
+  }
+
+  [role='list'] > li {
+    flex: 0 0 100%;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      flex-basis: calc((100% - #{theme.$spacings-double}) / 2);
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      flex-basis: calc((100% - #{theme.$spacings-quadruple}) / 3);
+    }
+  }
+
+  [data-e2e='features-analysis-heading'] > div:last-child:not(:first-child) {
+    @media #{theme.$mediaQueries-group-3-min-width} {
+      max-width: calc((100% - #{theme.$spacings-double}) / 2);
+    }
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      max-width: calc((100% - #{theme.$spacings-quadruple}) / 3);
+    }
+  }
+}
+
 section.hideEndOfArticleTreatment {
   display: none;
 

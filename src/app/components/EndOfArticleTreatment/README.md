@@ -1,11 +1,36 @@
 # EndOfArticleTreatment — WS-3523 prototype
 
 Research prototype under WS-3508. Makes the end of a standard Mundo article
-explicit and offers a small mixed-format onward journey before Topic Discovery.
+explicit and groups mixed-format recommendations and existing onward journeys
+inside one article-end treatment.
 It is enabled on **local and Test deployments only**, for canonical Mundo text
 articles. MAP/SFV, photo galleries, AMP, Lite, App and live deployments are excluded.
 The entire treatment is hidden when fewer than two promos are available.
 No BFF change, recommendation service, new dependency or live deployment is needed.
+
+## Option B: grouped onward journeys
+
+This version is on `WS-3523-prototype-article-end-treatment-option-b`, branched
+from `WS-3523-prototype-article-end-treatment` at `16aa9f4c13`. Use the original
+branch to compare Option A at the same article URLs below.
+
+The mixed-format cards stay first. Below them, a dark surface inside the same
+boundary contains Topic Discovery (or related-topic links), location-based
+promos, the portrait carousel, Related Content and video curation when available.
+Top Stories and Features move from the desktop sidebar into this group, followed
+by Most Read. Existing headings, links, controls, data and toggle conditions are
+retained; these sections are moved, not duplicated. The treatment spans the
+normal page width beneath the article, while the article keeps its reading width.
+Features use three columns on desktop, two on tablet and one on mobile, rather
+than stretching their original sidebar layout across the panel. Existing dark-UI
+styles are enabled only for the grouped sections (the legacy theme context and
+the SCSS dark-UI marker); the new layout and colour overrides remain in SCSS.
+
+On mobile the entire group waits until Continue Reading is expanded. If the
+treatment is ineligible or has fewer than two mixed-format promos, the existing
+page layout is retained. Without JavaScript, the ordinary links and supported
+onward sections remain available. This layout comparison does not force users
+to choose a promo or prevent them from leaving the page.
 
 The panel and inline player use co-located SCSS Modules, BBC theme tokens and
 flex layouts. Shared Heading, Image, icon and MediaLoader overrides are scoped
@@ -84,7 +109,8 @@ prototype. Without JavaScript, ordinary destination links remain available.
 
 The prototype also enables the existing Topic Discovery section for these pages
 when local fixture toggles omit it, so the intended placement can be reviewed.
-Existing related-content and portrait sections below it retain their normal toggles.
+Existing related-content and portrait sections retain their normal toggles within
+the grouped treatment.
 
 ## Test and research handover
 
@@ -162,6 +188,10 @@ guaranteed: feeds change and a page may lack enough distinct relevant formats.
 
 ## Productionisation considerations
 
+- Option B preserves existing section tracking metadata despite changing placement.
+  Review attribution and exposure measurement before using the grouped layout in
+  an experiment. The longer, full-width onward area is an exploratory layout for
+  team comparison, not a validated improvement over Option A.
 - Establish editorial ownership: a dedicated Tipo curation or explicit related
   content relationship should replace the study fixture and broad-topic heuristic.
   Ideally the BFF returns a typed, deduplicated selection with media metadata in one
