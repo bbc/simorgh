@@ -50,6 +50,8 @@ import {
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
+  assertMostReadResonanceComponentClick,
+  assertMostReadResonanceComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/mostRead';
 import {
   assertLatestMediaComponentClick,
@@ -322,7 +324,11 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'article',
-    tests: [assertResonancePageView],
+    tests: [
+      assertResonancePageView,
+      assertMostReadResonanceComponentView,
+      assertMostReadResonanceComponentClick,
+    ],
   },
   {
     path: '/hausa/articles/cw43vy8zdjvo',
@@ -522,6 +528,7 @@ const atiLiteTestSuites = atiAnalyticsTestSuites
       assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
       assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
       assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
+      assertMostReadResonanceComponentView, // Resonance events are not sent on Lite pages
     ];
 
     const liteSiteTests = testSuite.tests
