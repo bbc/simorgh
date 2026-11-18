@@ -38,10 +38,10 @@ section.section {
 }
 
 .endLabel {
-  @include theme.typography-from-scale-and-variant(longPrimer, 'sans-regular');
-  color: theme.$palette-grey-3;
+  @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-regular');
+  color: theme.$palette-white;
   margin: 0;
-  margin-block-end: theme.$spacings-full;
+  margin-block-end: theme.$spacings-full + theme.$spacings-half;
 }
 
 // Beat the shared Heading/Text colour without relying on stylesheet order.
