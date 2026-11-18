@@ -1,5 +1,5 @@
 import { use, useEffect, useId, useMemo, useState } from 'react';
-import { css, Theme } from '@emotion/react';
+import clsx from 'clsx';
 import { RequestContext } from '#app/contexts/RequestContext';
 import MediaLoader, { BumpLoader } from '#app/components/MediaLoader';
 import {
@@ -7,6 +7,7 @@ import {
   MediaBlock,
 } from '#app/components/MediaLoader/types';
 import getMediaOrientation from '#app/components/MediaLoader/utils/getMediaOrientation';
+import styles from './index.module.scss';
 
 type Props = {
   mediaBlock: MediaBlock;
@@ -15,38 +16,11 @@ type Props = {
   unavailableMessage?: string;
 };
 
-const containerStyles = ({ palette }: Theme) =>
-  css({
-    display: 'grid',
-    placeItems: 'center',
-    width: '100%',
-    height: 'var(--article-end-media-height, 300px)',
-    minWidth: 0,
-    backgroundColor: palette.BLACK,
-    color: palette.WHITE,
-    '& > p': { padding: '1rem' },
-  });
-
-const playerStyles = (isPortrait: boolean) =>
-  css({
-    '&.media-container': {
-      margin: 0,
-      marginInline: 0,
-      // Match the poster's frame without stretching portrait or landscape media.
-      // Leave overflow visible so the native player and fullscreen controls work.
-      width: `min(100%, calc(var(--article-end-media-height, 300px) * ${
-        isPortrait ? '9 / 16' : '16 / 9'
-      }))`,
-      maxWidth: 'none',
-      minWidth: 0,
-    },
-  });
-
 const isPortraitMedia = (mediaBlock: MediaBlock) => {
   if (mediaBlock.type === 'portraitClipMedia') return true;
 
   if (mediaBlock.type === 'clipMedia') {
-    const orientation = mediaBlock.model.video.version.orientation;
+    const { orientation } = mediaBlock.model.video.version;
     return (
       getMediaOrientation(orientation ? [orientation] : undefined) ===
       'portrait'
@@ -99,7 +73,10 @@ export default function InlineMedia({
   }, []);
 
   return (
-    <div css={containerStyles} className={className}>
+    <div
+      className={clsx(styles.container, className)}
+      data-orientation={isPortraitMedia(mediaBlock) ? 'portrait' : 'landscape'}
+    >
       <BumpLoader nonce={nonce} />
       {loaderState === 'ready' ? (
         <MediaLoader
@@ -107,7 +84,7 @@ export default function InlineMedia({
           uniqueId={`article-end-${playerId}`}
           loadPlayerOnInitialRender
           singleItemPlayback
-          css={playerStyles(isPortraitMedia(mediaBlock))}
+          className={styles.player}
         />
       ) : (
         <p role="status">

@@ -1,4 +1,5 @@
 import { use, useRef, useState, useEffect, KeyboardEvent } from 'react';
+import clsx from 'clsx';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { BumpLoader } from '#app/components/MediaLoader';
@@ -8,7 +9,7 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useNearViewport from '#app/hooks/useNearViewport';
 import { ArticleEndItem } from './types';
 import PromoCard from './PromoCard';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type Props = {
   items: ArticleEndItem[];
@@ -132,26 +133,25 @@ const EndOfArticleTreatment = ({
       id="end-of-article-treatment"
       data-testid="end-of-article-treatment"
       aria-labelledby="end-of-article-heading"
-      css={styles.section}
-      className={className}
+      className={clsx(styles.section, className)}
     >
       {items.some(item => item.media) && <BumpLoader nonce={nonce} />}
-      <p css={styles.endLabel}>{copy.endLabel}</p>
-      <Heading level={2} id="end-of-article-heading" css={styles.heading}>
+      <p className={styles.endLabel}>{copy.endLabel}</p>
+      <Heading level={2} id="end-of-article-heading" className={styles.heading}>
         {copy.heading}
       </Heading>
-      <p css={styles.introduction}>{copy.introduction}</p>
-      <div css={styles.interactive}>
+      <p className={styles.introduction}>{copy.introduction}</p>
+      <div className={styles.interactive}>
         <ul
           ref={scrollPane}
-          css={styles.rail}
+          className={styles.rail}
           aria-label={copy.chooseContent}
           onScroll={onScroll}
         >
           {items.map((item, index) => (
             <li
               key={item.id}
-              css={styles.slide}
+              className={styles.slide}
               ref={element => {
                 cards.current[index] = element;
               }}
@@ -168,12 +168,12 @@ const EndOfArticleTreatment = ({
             </li>
           ))}
         </ul>
-        <div css={styles.navigation}>
-          <span css={styles.count}>{count}</span>
-          <div css={styles.arrows}>
+        <div className={styles.navigation}>
+          <span className={styles.count}>{count}</span>
+          <div className={styles.arrows}>
             <button
               type="button"
-              css={styles.arrow}
+              className={styles.arrow}
               disabled={activeIndex === 0}
               onClick={() => select(activeIndex - 1)}
               aria-label={copy.previous}
@@ -181,12 +181,12 @@ const EndOfArticleTreatment = ({
               <Chevron
                 orientation={ChevronOrientation.BACKWARD}
                 dir={dir}
-                css={styles.chevron}
+                className={styles.chevron}
               />
             </button>
             <button
               type="button"
-              css={styles.arrow}
+              className={styles.arrow}
               disabled={activeIndex === items.length - 1}
               onClick={() => select(activeIndex + 1)}
               aria-label={copy.next}
@@ -194,17 +194,17 @@ const EndOfArticleTreatment = ({
               <Chevron
                 orientation={ChevronOrientation.FORWARD}
                 dir={dir}
-                css={styles.chevron}
+                className={styles.chevron}
               />
             </button>
           </div>
         </div>
-        <ul css={styles.choices} aria-label={copy.chooseContent}>
+        <ul className={styles.choices} aria-label={copy.chooseContent}>
           {items.map((item, index) => (
             <li key={item.id}>
               <button
                 type="button"
-                css={styles.choice}
+                className={styles.choice}
                 aria-pressed={activeIndex === index}
                 onClick={() => select(index)}
                 onKeyDown={event => navigateChoices(event, index)}
@@ -212,7 +212,7 @@ const EndOfArticleTreatment = ({
                   choices.current[index] = element;
                 }}
               >
-                <span css={styles.choiceFormat}>
+                <span className={styles.choiceFormat}>
                   {String(index + 1).padStart(2, '0')} /{' '}
                   {copy.formats[item.format]}
                 </span>
@@ -225,7 +225,7 @@ const EndOfArticleTreatment = ({
           {count}: {activeItem.title}
         </VisuallyHiddenText>
       </div>
-      <ul css={styles.noJs}>
+      <ul className={styles.noJs}>
         {items.map(item => (
           <li key={item.id}>
             <a href={item.href}>

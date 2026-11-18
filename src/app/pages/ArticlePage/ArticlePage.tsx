@@ -1,4 +1,5 @@
 import { useState, useCallback, use } from 'react';
+import clsx from 'clsx';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -91,6 +92,7 @@ import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
+import scssStyles from './index.module.scss';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
 import {
@@ -576,10 +578,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 showAllContent ||
                 isDesktopViewport
               }
-              css={
+              className={clsx(
                 shouldApplyCollapsedArticleSpacing &&
-                styles.hideEndOfArticleTreatment
-              }
+                  scssStyles.hideEndOfArticleTreatment,
+              )}
             />
           )}
           {showTopicDiscovery && (

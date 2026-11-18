@@ -1,9 +1,11 @@
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import studyCurations from '#nextjs/pages/[service]/articles/articleEnd/studyCurations.json';
 import EndOfArticleTreatment from '.';
 import { ArticleEndItem } from './types';
+import styles from './index.stories.module.scss';
 
 const studyItems = studyCurations.cwe9k0d7x9z0o as ArticleEndItem[];
 
@@ -14,11 +16,13 @@ const Example = ({ items }: { items: ArticleEndItem[] }) => (
     pathname="/mundo/articles/cwe9k0d7x9z0o?renderer_env=live"
   >
     <ServiceContextProvider service="mundo">
-      <ThemeProvider service="mundo">
-        <div css={{ maxWidth: '42rem', margin: '2rem auto' }}>
-          <EndOfArticleTreatment items={items} />
-        </div>
-      </ThemeProvider>
+      <ThemeProviderSCSSModules service="mundo">
+        <ThemeProvider service="mundo">
+          <div className={styles.wrapper}>
+            <EndOfArticleTreatment items={items} />
+          </div>
+        </ThemeProvider>
+      </ThemeProviderSCSSModules>
     </ServiceContextProvider>
   </RequestContextProvider>
 );

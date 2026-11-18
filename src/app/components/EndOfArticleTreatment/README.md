@@ -7,6 +7,12 @@ articles. MAP/SFV, photo galleries, AMP, Lite, App and live deployments are excl
 The entire treatment is hidden when fewer than two promos are available.
 No BFF change, recommendation service, new dependency or live deployment is needed.
 
+The panel and inline player use co-located SCSS Modules, BBC theme tokens and
+flex layouts. Shared Heading, Image, icon and MediaLoader overrides are scoped
+to this component with explicit specificity. ArticlePage's collapsed-article
+visibility override also uses a module; Storybook supplies the Mundo SCSS theme.
+The fixed media frame and mobile card peek retain their sizes when text is enlarged.
+
 ## Load locally
 
 Use the repository Node version (`nvm use` from the repository root). Normally

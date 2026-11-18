@@ -7,7 +7,7 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import InlineMedia from './InlineMedia';
 import { ArticleEndItem } from './types';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type Props = {
   item: ArticleEndItem;
@@ -33,8 +33,8 @@ const PromoCard = ({ item, showPlayer }: Props) => {
   const destinationLabel = destinationLabels[item.format] || copy.openContent;
 
   return (
-    <div css={styles.card}>
-      <div css={styles.mediaFrame}>
+    <div className={styles.card}>
+      <div className={styles.mediaFrame}>
         {showPlayer && item.media ? (
           <InlineMedia
             mediaBlock={item.media}
@@ -42,24 +42,19 @@ const PromoCard = ({ item, showPlayer }: Props) => {
             unavailableMessage={copy.unavailableMedia}
           />
         ) : (
-          <div css={styles.artwork}>
+          <div className={styles.artwork} data-format={item.format}>
             {item.imageUrl && (
               <Image
                 src={item.imageUrl.replace('{width}', '800')}
                 alt=""
                 lazyLoad
                 placeholder={false}
-                style={{
-                  objectFit: item.format === 'portrait' ? 'contain' : 'cover',
-                }}
               />
             )}
             {(item.format === 'topic' || !item.imageUrl) && (
               <div
-                css={[
-                  styles.topicArtwork,
-                  Boolean(item.imageUrl) && styles.topicImageOverlay,
-                ]}
+                className={styles.topicArtwork}
+                data-has-image={Boolean(item.imageUrl)}
                 aria-hidden="true"
               >
                 {item.format === 'topic' ? item.title : copy.heading}
@@ -68,18 +63,20 @@ const PromoCard = ({ item, showPlayer }: Props) => {
           </div>
         )}
       </div>
-      <div css={styles.cardBody}>
-        <span css={styles.format}>
+      <div className={styles.cardBody}>
+        <span className={styles.format}>
           {copy.formats[item.format]}
           {formattedDuration && ` · ${formattedDuration}`}
         </span>
-        <Heading level={3} size="doublePica" css={styles.title}>
+        <Heading level={3} size="doublePica" className={styles.title}>
           {item.title}
         </Heading>
-        <p css={styles.description}>{item.relationship}</p>
-        {item.description && <p css={styles.description}>{item.description}</p>}
-        <div css={styles.actions}>
-          <a href={item.href} css={styles.action}>
+        <p className={styles.description}>{item.relationship}</p>
+        {item.description && (
+          <p className={styles.description}>{item.description}</p>
+        )}
+        <div className={styles.actions}>
+          <a href={item.href} className={styles.action}>
             {destinationLabel}
             <VisuallyHiddenText>: {item.title}</VisuallyHiddenText>
             <span aria-hidden="true">&nbsp;↗</span>

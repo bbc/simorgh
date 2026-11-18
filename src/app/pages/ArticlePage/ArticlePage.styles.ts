@@ -133,12 +133,6 @@ export default {
         display: 'block',
       },
     }),
-  hideEndOfArticleTreatment: ({ mq }: Theme) =>
-    css({
-      display: 'none',
-      [mq.GROUP_4_MIN_WIDTH]: { display: 'block' },
-      [`.${NO_JS_CLASSNAME} &`]: { display: 'block' },
-    }),
   adContainer: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
