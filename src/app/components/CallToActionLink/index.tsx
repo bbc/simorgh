@@ -1,5 +1,6 @@
 import {
   FocusEvent,
+  MouseEventHandler,
   PropsWithChildren,
   Ref,
   useCallback,
@@ -31,6 +32,7 @@ type CallToActionLinkProps = {
   size?: GelFontSize;
   enableGlow?: boolean;
   ref?: Ref<HTMLAnchorElement>;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
 const setRef = <T,>(ref: Ref<T> | undefined, value: T | null) => {
@@ -54,6 +56,7 @@ const CallToActionLink = ({
   size = 'pica',
   enableGlow = false,
   ref,
+  onClick,
   ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -105,6 +108,14 @@ const CallToActionLink = ({
       {...(id && { id })}
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
+      {...(onClick && {
+        onClick: event => {
+          onClick(event);
+          if (eventTrackingData && !event.defaultPrevented) {
+            clickTrackerHandler.onClick?.(event);
+          }
+        },
+      })}
       className={clsx(
         styles.link,
         alignWithMargin && styles.alignWithMargin,

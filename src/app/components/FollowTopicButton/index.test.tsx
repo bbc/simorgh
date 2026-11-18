@@ -46,12 +46,16 @@ jest.mock('#app/components/Account/AccountSignInModal', () => ({
   __esModule: true,
   default: ({
     onClose,
-    context,
+    title,
+    description,
   }: {
     onClose: () => void;
-    context?: string;
+    title: string;
+    description: string;
   }) => (
-    <div data-testid="follow-topic-sign-in-modal" data-context={context}>
+    <div data-testid="follow-topic-sign-in-modal">
+      <h2>{title}</h2>
+      <p>{description}</p>
       <button
         type="button"
         onClick={onClose}
@@ -260,9 +264,13 @@ describe('FollowTopicButton', () => {
 
     await userEvent.click(screen.getByTestId('follow-topic-btn-guest'));
 
-    expect(screen.getByTestId('follow-topic-sign-in-modal')).toHaveAttribute(
-      'data-context',
-      'followTopic',
+    expect(screen.getByTestId('follow-topic-sign-in-modal')).toHaveTextContent(
+      hindiServiceConfig.default.translations.accountSignInModal?.followTopic
+        ?.title ?? '',
+    );
+    expect(screen.getByTestId('follow-topic-sign-in-modal')).toHaveTextContent(
+      hindiServiceConfig.default.translations.accountSignInModal?.followTopic
+        ?.description ?? '',
     );
 
     await userEvent.click(

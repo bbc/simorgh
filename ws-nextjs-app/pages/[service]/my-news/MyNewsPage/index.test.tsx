@@ -11,11 +11,18 @@ import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
+import { service as mundoServiceConfig } from '#app/lib/config/services/mundo';
+import { service as portugueseServiceConfig } from '#app/lib/config/services/portuguese';
 import MyNewsPage from '.';
 
 expect.extend(matchers);
 
 const myNewsTranslations = hindiServiceConfig.default.translations.myNews;
+const serviceTranslations = {
+  hindi: hindiServiceConfig.default.translations,
+  mundo: mundoServiceConfig.default.translations,
+  portuguese: portugueseServiceConfig.default.translations,
+};
 
 if (!myNewsTranslations) {
   throw new Error(
@@ -134,6 +141,26 @@ describe('MyNewsPage', () => {
       });
 
       expect(await screen.findByText(guestDescription)).toBeInTheDocument();
+      const translations = serviceTranslations[service];
+      expect(
+        screen.getByTestId('my-news-guest-sign-in-link'),
+      ).toHaveTextContent(translations.account?.signIn ?? '');
+      expect(screen.getByTestId('my-news-guest-sign-in-link')).toHaveAttribute(
+        'href',
+        expect.stringContaining('https://example.com/signin'),
+      );
+      expect(screen.getByTestId('my-news-register-link')).toHaveTextContent(
+        translations.account?.register ?? '',
+      );
+      expect(screen.getByTestId('my-news-register-link')).toHaveAttribute(
+        'href',
+        expect.stringContaining('https://example.com/register'),
+      );
+      if (translations.accountPromoBanner?.buttonSeparatorText) {
+        expect(
+          screen.getByText(translations.accountPromoBanner.buttonSeparatorText),
+        ).toBeInTheDocument();
+      }
       unmount();
 
       await act(async () => {

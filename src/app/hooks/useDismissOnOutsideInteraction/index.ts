@@ -4,6 +4,7 @@ type UseDismissOnOutsideInteractionOptions = {
   onDismiss: (event?: KeyboardEvent | MouseEvent) => void;
   containerRef?: RefObject<HTMLElement | null>;
   enableOutsideClick?: boolean;
+  enableEscape?: boolean;
   outsideClickGracePeriodMs?: number;
 };
 
@@ -17,6 +18,7 @@ const useDismissOnOutsideInteraction = ({
   onDismiss,
   containerRef,
   enableOutsideClick = true,
+  enableEscape = true,
   outsideClickGracePeriodMs = DEFAULT_OUTSIDE_CLICK_GRACE_PERIOD_MS,
 }: UseDismissOnOutsideInteractionOptions) => {
   const canDismissOnOutsideClickRef = useRef(false);
@@ -46,18 +48,22 @@ const useDismissOnOutsideInteraction = ({
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    if (enableEscape) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
     if (enableOutsideClick && containerRef) {
       document.addEventListener('click', handleClickOutside, true);
     }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      if (enableEscape) {
+        document.removeEventListener('keydown', handleKeyDown);
+      }
       if (enableOutsideClick && containerRef) {
         document.removeEventListener('click', handleClickOutside, true);
       }
     };
-  }, [containerRef, onDismiss, enableOutsideClick]);
+  }, [containerRef, onDismiss, enableOutsideClick, enableEscape]);
 };
 
 export default useDismissOnOutsideInteraction;

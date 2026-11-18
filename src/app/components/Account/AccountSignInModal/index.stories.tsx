@@ -1,23 +1,19 @@
-import { useState } from 'react';
-import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
-import AccountSignInModal from '.';
+import { MouseEvent, useState } from 'react';
+import { fn } from 'storybook/test';
+import AccountSignInModal, { AccountSignInModalProps } from '.';
+import readme from './README.md';
 
-const ACCOUNT_SIGN_IN_MODAL_CONTEXT = {
-  SAVE_ARTICLE: 'saveArticle',
-  FOLLOW_TOPIC: 'followTopic',
-} as const;
-
-type ModalStoryProps = {
-  context?: (typeof ACCOUNT_SIGN_IN_MODAL_CONTEXT)[keyof typeof ACCOUNT_SIGN_IN_MODAL_CONTEXT];
-};
-
-const ModalStory = ({
-  context = ACCOUNT_SIGN_IN_MODAL_CONTEXT.SAVE_ARTICLE,
-}: ModalStoryProps) => {
+const ModalStory = ({ onClose, ...args }: AccountSignInModalProps) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return isOpen ? (
-    <AccountSignInModal context={context} onClose={() => setIsOpen(false)} />
+    <AccountSignInModal
+      {...args}
+      onClose={() => {
+        onClose();
+        setIsOpen(false);
+      }}
+    />
   ) : (
     <button type="button" onClick={() => setIsOpen(true)}>
       Open Sign In Modal
@@ -30,26 +26,56 @@ export default {
   component: AccountSignInModal,
   globals: {
     service: { service: 'ws', variant: 'default' },
-    idctaConfig: mockIdctaConfig,
   },
-  argTypes: {
-    context: {
-      control: 'select',
-      options: Object.values(ACCOUNT_SIGN_IN_MODAL_CONTEXT),
-    },
+  args: {
+    title: 'Sign in to save stories',
+    description: 'Save stories and read them at your convenience',
+    closeLabel: 'Close',
+    signInText: 'Sign In',
+    signInAccessibleLabel: 'Sign in to My News',
+    registerText: 'Register',
+    separatorText: 'or',
+    signInUrl: 'https://example.com/signin',
+    registerUrl: 'https://example.com/register',
+    isDismissible: true,
+    onClose: fn(),
+    onSignInClick: fn((event: MouseEvent<HTMLAnchorElement>) =>
+      event.preventDefault(),
+    ),
+    onRegisterClick: fn((event: MouseEvent<HTMLAnchorElement>) =>
+      event.preventDefault(),
+    ),
   },
-  parameters: { layout: 'fullscreen' },
+  parameters: { layout: 'fullscreen', docs: { readme } },
 };
 
-export const SaveArticle = (args: ModalStoryProps) => <ModalStory {...args} />;
-SaveArticle.args = {
-  context: ACCOUNT_SIGN_IN_MODAL_CONTEXT.SAVE_ARTICLE,
-};
+export const SaveArticle = (args: AccountSignInModalProps) => (
+  <ModalStory {...args} />
+);
 
-export const FollowTopic = (args: ModalStoryProps) => <ModalStory {...args} />;
+export const FollowTopic = (args: AccountSignInModalProps) => (
+  <ModalStory {...args} />
+);
 FollowTopic.args = {
-  context: ACCOUNT_SIGN_IN_MODAL_CONTEXT.FOLLOW_TOPIC,
+  title: 'Sign in to follow topics',
+  description:
+    'Get straight to the news that interests you and never miss a story',
 };
-FollowTopic.globals = {
-  service: { service: 'ws', variant: 'default' },
+
+export const CustomCopy = (args: AccountSignInModalProps) => (
+  <ModalStory {...args} />
+);
+CustomCopy.args = {
+  title: 'Discover more with BBC Account',
+  description: 'Create an account to get more from BBC News.',
+  signInText: 'Sign in to your account',
+  registerText: 'Create an account',
+  signInAccessibleLabel: 'Sign in to your BBC Account',
+};
+
+export const NonDismissible = (args: AccountSignInModalProps) => (
+  <ModalStory {...args} />
+);
+NonDismissible.args = {
+  isDismissible: false,
 };

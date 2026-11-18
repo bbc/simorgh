@@ -18,7 +18,9 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
   const isHydrated = useHydrationDetection();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { followTopicButton } = translations || {};
+  const { followTopicButton, accountSignInModal } = translations || {};
+  const { title, description } = accountSignInModal?.followTopic ?? {};
+  const { closeLabel } = accountSignInModal ?? {};
 
   const label = isHydrated
     ? followTopicButton?.follow
@@ -54,7 +56,13 @@ const FollowTopicButtonGuest = ({ topicId }: FollowTopicButtonGuestProps) => {
       {isModalOpen &&
         createPortal(
           <AccountSignInModal
-            context="followTopic"
+            title={title ?? ''}
+            description={description ?? ''}
+            closeLabel={closeLabel ?? 'Close'}
+            signInText={translations.account?.signIn ?? ''}
+            registerText={translations.account?.register ?? ''}
+            signInAccessibleLabel={translations.account?.signInAccessibleLabel}
+            separatorText={translations.accountPromoBanner?.buttonSeparatorText}
             onClose={() => setIsModalOpen(false)}
             signInUrl={signInUrl}
             registerUrl={registerUrl}

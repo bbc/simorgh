@@ -1,14 +1,19 @@
-import React, { use } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import { AccountContext } from '#contexts/AccountContext';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.module.scss';
 
-interface AccountActionButtonsProps {
+export interface AccountActionButtonsProps {
+  signInUrl?: string;
+  registerUrl?: string;
+  signInText: string;
+  registerText: string;
+  separatorText?: string;
+  onSignInClick?: React.MouseEventHandler<HTMLAnchorElement>;
+  onRegisterClick?: React.MouseEventHandler<HTMLAnchorElement>;
   signInComponentName: string;
   registerComponentName: string;
   onLightBackground?: boolean;
@@ -19,6 +24,13 @@ interface AccountActionButtonsProps {
 }
 
 const AccountActionButtons = ({
+  signInUrl,
+  registerUrl,
+  signInText,
+  registerText,
+  separatorText,
+  onSignInClick,
+  onRegisterClick,
   signInComponentName,
   registerComponentName,
   onLightBackground = false,
@@ -27,13 +39,6 @@ const AccountActionButtons = ({
   experimentVariant,
   signInAccessibleLabel,
 }: AccountActionButtonsProps) => {
-  const { signInUrl, registerUrl } = use(AccountContext);
-  const { translations } = use(ServiceContext);
-
-  const signInText = translations?.account?.signIn;
-  const registerText = translations?.account?.register;
-  const separatorText = translations?.accountPromoBanner?.buttonSeparatorText;
-
   if (!signInUrl || !registerUrl) return null;
 
   const focusIndicatorClassName = onLightBackground
@@ -61,6 +66,7 @@ const AccountActionButtons = ({
       <CallToActionLink
         ref={signInRef}
         url={signInUrl}
+        onClick={onSignInClick}
         className={clsx(
           focusIndicatorClassName,
           styles.callToActionLink,
@@ -91,6 +97,7 @@ const AccountActionButtons = ({
 
       <CallToActionLink
         url={registerUrl}
+        onClick={onRegisterClick}
         className={clsx(
           focusIndicatorClassName,
           styles.callToActionLink,
