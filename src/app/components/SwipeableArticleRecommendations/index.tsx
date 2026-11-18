@@ -1,8 +1,17 @@
-import { use, useEffect, useId, useRef, useState, PointerEvent } from 'react';
+import {
+  use,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  PointerEvent,
+} from 'react';
 import clsx from 'clsx';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import useLocation from '#app/hooks/useLocation';
+import subscribeToMediaQuery from '#app/hooks/useMediaQuery/subscribeToMediaQuery';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import InlineLink from '#app/components/InlineLink';
@@ -24,8 +33,6 @@ type Gesture = {
   horizontal: boolean;
 };
 
-const EXIT_DURATION = 240;
-
 const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   const { translations } = use(ServiceContext);
   const copy = translations.swipeableRecommendations;
@@ -35,6 +42,7 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<'idle' | 'dragging' | Direction>('idle');
   const cardRef = useRef<HTMLElement>(null);
+  const stackRef = useRef<HTMLDivElement>(null);
   const dismissRef = useRef<HTMLButtonElement>(null);
   const endRef = useRef<HTMLElement>(null);
   const controlsRef = useRef<HTMLDivElement>(null);
@@ -42,16 +50,14 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
   const exitRef = useRef<Direction | null>(null);
   const navigatingRef = useRef(false);
   const frameRef = useRef<number | null>(null);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const suppressClickRef = useRef(false);
   const focusEndRef = useRef(false);
   const activeArticle = recommendations[activeIndex];
-  const nextArticle = recommendations[activeIndex + 1];
+  const hasArticles = Boolean(activeArticle);
 
   useEffect(
     () => () => {
       if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
-      if (timerRef.current !== null) clearTimeout(timerRef.current);
     },
     [],
   );
@@ -60,18 +66,31 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
     if (!activeArticle && focusEndRef.current) endRef.current?.focus();
   }, [activeArticle]);
 
-  const resetDrag = () => {
+  useEffect(() => {
+    const stack = stackRef.current;
+    if (!stack || typeof ResizeObserver === 'undefined') return undefined;
+    let { width } = stack.getBoundingClientRect();
+    const observer = new ResizeObserver(() => {
+      const newWidth = stack.getBoundingClientRect().width;
+      if (width !== newWidth) {
+        width = newWidth;
+        stack.style.removeProperty('--stack-min-height');
+      }
+    });
+    observer.observe(stack);
+    return () => observer.disconnect();
+  }, [hasArticles]);
+
+  const resetDrag = useCallback(() => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
     gestureRef.current = null;
     cardRef.current?.style.removeProperty('--drag-progress');
-  };
+  }, []);
 
-  const finishExit = () => {
+  const finishExit = useCallback(() => {
     const direction = exitRef.current;
     if (!direction || navigatingRef.current) return;
-    if (timerRef.current !== null) clearTimeout(timerRef.current);
-    timerRef.current = null;
 
     if (direction === 'right') {
       navigatingRef.current = true;
@@ -85,10 +104,43 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
       }
       setActiveIndex(index => index + 1);
     }
-  };
+  }, [activeArticle, location, resetDrag]);
+
+  useEffect(() => {
+    if (phase !== 'left' && phase !== 'right') return undefined;
+    const card = cardRef.current;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const unsubscribe = subscribeToMediaQuery(mediaQuery, event => {
+      if (event.matches) finishExit();
+    });
+    const cancelExit = (event: AnimationEvent) => {
+      if (event.target !== card || event.animationName !== styles.swipeExit) {
+        return;
+      }
+      if (mediaQuery.matches) {
+        finishExit();
+      } else {
+        exitRef.current = null;
+        resetDrag();
+        setPhase('idle');
+      }
+    };
+    card?.addEventListener('animationcancel', cancelExit);
+    return () => {
+      unsubscribe();
+      card?.removeEventListener('animationcancel', cancelExit);
+    };
+  }, [phase, finishExit, resetDrag]);
 
   const exit = (direction: Direction) => {
     if (exitRef.current || !activeArticle) return;
+    const stack = stackRef.current;
+    if (stack) {
+      stack.style.setProperty(
+        '--stack-min-height',
+        `${stack.getBoundingClientRect().height}px`,
+      );
+    }
     focusEndRef.current =
       controlsRef.current?.contains(document.activeElement) ||
       cardRef.current?.contains(document.activeElement) ||
@@ -98,13 +150,17 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       finishExit();
-    } else {
-      timerRef.current = setTimeout(finishExit, EXIT_DURATION + 80);
     }
   };
 
   const onPointerDown = (event: PointerEvent<HTMLElement>) => {
-    if (exitRef.current || !event.isPrimary || event.button !== 0) return;
+    if (
+      exitRef.current ||
+      !event.isPrimary ||
+      (event.pointerType === 'mouse' && event.button !== 0)
+    ) {
+      return;
+    }
     suppressClickRef.current = false;
     gestureRef.current = {
       pointerId: event.pointerId,
@@ -114,6 +170,7 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
       width: event.currentTarget.getBoundingClientRect().width,
       horizontal: false,
     };
+    event.currentTarget.setPointerCapture(event.pointerId);
   };
 
   const onPointerMove = (event: PointerEvent<HTMLElement>) => {
@@ -126,14 +183,17 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
       if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 8) return;
       if (Math.abs(deltaY) >= Math.abs(deltaX)) {
         resetDrag();
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+          event.currentTarget.releasePointerCapture(event.pointerId);
+        }
         return;
       }
       gesture.horizontal = true;
       suppressClickRef.current = true;
-      event.currentTarget.setPointerCapture(event.pointerId);
       setPhase('dragging');
     }
 
+    event.preventDefault();
     gesture.deltaX = deltaX;
     if (frameRef.current !== null) return;
     frameRef.current = requestAnimationFrame(() => {
@@ -203,61 +263,90 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
             {copy.instructions}
           </Text>
           <div className={styles.viewport}>
-            <div className={styles.stack}>
-              {nextArticle && (
-                <div className={styles.preview} aria-hidden="true">
-                  <RecommendationsImage image={nextArticle.image} lazyLoad />
-                </div>
-              )}
-              <article
-                key={activeArticle.id}
-                ref={cardRef}
-                className={clsx(styles.card, {
-                  [styles.dragging]: phase === 'dragging',
-                  [styles.exitLeft]: phase === 'left',
-                  [styles.exitRight]: phase === 'right',
-                })}
-                aria-describedby={instructionsId}
-                onPointerDown={onPointerDown}
-                onPointerMove={onPointerMove}
-                onPointerUp={onPointerUp}
-                onPointerCancel={cancelDrag}
-                onLostPointerCapture={cancelDrag}
-                onDragStart={event => event.preventDefault()}
-                onTransitionEnd={event => {
-                  if (
-                    event.target === event.currentTarget &&
-                    event.propertyName === 'transform'
-                  ) {
-                    finishExit();
-                  }
-                }}
-              >
-                <RecommendationsImage image={activeArticle.image} lazyLoad />
-                <div className={styles.content}>
-                  <Text as="p" size="minion" className={styles.position}>
-                    {position}
-                  </Text>
-                  <Heading level={3} size="greatPrimer">
-                    <InlineLink
-                      to={articleHref}
-                      text={activeArticle.title}
-                      fontVariant="sansBold"
-                      size="greatPrimer"
-                      onClick={event => {
-                        if (suppressClickRef.current || exitRef.current) {
-                          event.preventDefault();
-                          suppressClickRef.current = false;
+            <div ref={stackRef} className={styles.stack}>
+              {recommendations
+                .slice(activeIndex, activeIndex + 2)
+                .map((article, index) => {
+                  const isActive = index === 0;
+                  return (
+                    <article
+                      key={article.id}
+                      ref={isActive ? cardRef : undefined}
+                      inert={!isActive}
+                      aria-hidden={!isActive}
+                      className={clsx(styles.card, {
+                        [styles.active]: isActive,
+                        [styles.preview]: !isActive,
+                        [styles.promoting]: !isActive && phase === 'left',
+                        [styles.dragging]: isActive && phase === 'dragging',
+                        [styles.exitLeft]: isActive && phase === 'left',
+                        [styles.exitRight]: isActive && phase === 'right',
+                      })}
+                      aria-describedby={isActive ? instructionsId : undefined}
+                      onPointerDown={isActive ? onPointerDown : undefined}
+                      onPointerMove={isActive ? onPointerMove : undefined}
+                      onPointerUp={isActive ? onPointerUp : undefined}
+                      onPointerCancel={event => {
+                        if (event.pointerId === gestureRef.current?.pointerId) {
+                          cancelDrag();
                         }
                       }}
-                      onKeyDown={event => {
-                        if (event.key === 'Escape') cancelDrag();
-                        suppressClickRef.current = false;
+                      onLostPointerCapture={event => {
+                        // Touch capture handover can bubble a loss event from the image.
+                        if (
+                          event.target === event.currentTarget &&
+                          event.pointerId === gestureRef.current?.pointerId &&
+                          !event.currentTarget.hasPointerCapture(
+                            event.pointerId,
+                          )
+                        ) {
+                          cancelDrag();
+                        }
                       }}
-                    />
-                  </Heading>
-                </div>
-              </article>
+                      onDragStart={event => event.preventDefault()}
+                      onAnimationEnd={event => {
+                        if (
+                          isActive &&
+                          event.target === event.currentTarget &&
+                          event.animationName === styles.swipeExit
+                        ) {
+                          finishExit();
+                        }
+                      }}
+                    >
+                      <RecommendationsImage image={article.image} lazyLoad />
+                      <div className={styles.content}>
+                        <Text as="p" size="minion" className={styles.position}>
+                          {copy.position
+                            .replace(
+                              '{current}',
+                              String(activeIndex + index + 1),
+                            )
+                            .replace('{total}', String(recommendations.length))}
+                        </Text>
+                        <Heading level={3} size="greatPrimer">
+                          <InlineLink
+                            to={getPrototypeHref(article.href, location.search)}
+                            text={article.title}
+                            fontVariant="sansBold"
+                            size="greatPrimer"
+                            tabIndex={isActive ? undefined : -1}
+                            onClick={event => {
+                              if (suppressClickRef.current || exitRef.current) {
+                                event.preventDefault();
+                                suppressClickRef.current = false;
+                              }
+                            }}
+                            onKeyDown={event => {
+                              if (event.key === 'Escape') cancelDrag();
+                              suppressClickRef.current = false;
+                            }}
+                          />
+                        </Heading>
+                      </div>
+                    </article>
+                  );
+                })}
             </div>
           </div>
           <div ref={controlsRef} className={styles.controls}>
@@ -279,7 +368,17 @@ const SwipeableArticleRecommendations = ({ recommendations }: Props) => {
               aria-disabled={phase === 'left' || phase === 'right'}
               aria-label={`${copy.read}: ${activeArticle.title}`}
               onClick={event => {
-                if (exitRef.current) event.preventDefault();
+                if (
+                  event.button !== 0 ||
+                  event.metaKey ||
+                  event.ctrlKey ||
+                  event.shiftKey ||
+                  event.altKey
+                ) {
+                  return;
+                }
+                event.preventDefault();
+                exit('right');
               }}
             />
           </div>

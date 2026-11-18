@@ -4,9 +4,14 @@
   margin-block: theme.$spacings-quadruple;
   margin-inline: theme.$spacings-full;
   min-inline-size: 0;
+  padding: theme.$spacings-double theme.$spacings-full;
+  background: theme.$palette-white;
+  border: 1px solid theme.$palette-grey-3;
+  border-radius: theme.$spacings-half;
 
   @media #{theme.$mediaQueries-group-2-min-width} {
     margin-inline: theme.$spacings-double;
+    padding: theme.$spacings-triple theme.$spacings-double;
   }
 
   @media #{theme.$mediaQueries-group-4-min-width} {
@@ -20,36 +25,56 @@
 
 .viewport {
   overflow: hidden;
-  padding: theme.$spacings-double;
+  padding: theme.$spacings-full;
 }
 
 .stack {
+  display: flex;
+  align-items: stretch;
   position: relative;
-  padding-block-end: theme.$spacings-double;
-}
-
-.card,
-.preview {
-  background: theme.$palette-white;
-  border: 1px solid theme.$palette-grey-4;
-  border-radius: theme.$spacings-half;
-}
-
-.preview {
-  position: absolute;
-  inset: theme.$spacings-double theme.$spacings-full 0;
-  pointer-events: none;
-  overflow: hidden;
-  transform: scale(0.98);
+  box-sizing: border-box;
+  min-block-size: var(--stack-min-height, 0);
+  padding-block-end: theme.$spacings-quadruple;
 }
 
 .card {
+  flex: 0 0 100%;
+  min-inline-size: 0;
+  box-sizing: border-box;
   position: relative;
-  touch-action: pan-y pinch-zoom;
-  cursor: grab;
+  background: theme.$palette-white;
+  border: 1px solid theme.$palette-grey-3;
+  border-radius: theme.$spacings-half;
+  box-shadow: 0 2px 6px rgba(theme.$palette-black, 0.1);
   transform: translateX(calc(var(--drag-progress, 0) * 100%))
     rotate(calc(var(--drag-progress, 0) * 12deg));
   transition: transform 240ms ease-out;
+
+  & + & {
+    margin-inline-start: -100%;
+  }
+
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}
+
+.preview {
+  z-index: 0;
+  pointer-events: none;
+  transform: translateY(theme.$spacings-triple) scale(0.94);
+  transform-origin: center bottom;
+}
+
+.active {
+  z-index: 1;
+  touch-action: pan-y pinch-zoom;
+  cursor: grab;
+}
+
+.promoting {
+  transform: translateY(0) scale(1);
 }
 
 .dragging {
@@ -59,15 +84,42 @@
 }
 
 .exitLeft {
-  transform: translateX(-140%) rotate(-12deg);
+  --exit-direction: -1;
 }
 
 .exitRight {
-  transform: translateX(140%) rotate(12deg);
+  --exit-direction: 1;
+}
+
+.exitLeft,
+.exitRight {
+  transition: none;
+  animation: swipeExit 240ms ease-out both;
+}
+
+@keyframes swipeExit {
+  from {
+    transform: translateX(calc(var(--drag-progress, 0) * 100%))
+      rotate(calc(var(--drag-progress, 0) * 12deg));
+  }
+
+  to {
+    transform: translateX(calc(var(--exit-direction) * 140%))
+      rotate(calc(var(--exit-direction) * 12deg));
+  }
 }
 
 .content {
   padding: theme.$spacings-double;
+  transition: opacity 240ms ease-out;
+}
+
+.preview .content {
+  opacity: 0;
+}
+
+.promoting .content {
+  opacity: 1;
 }
 
 .position {
@@ -138,8 +190,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .content {
+    transition: none;
+  }
+
   .card {
     transition: none;
+    animation: none;
+  }
+
+  .active {
     transform: translateX(calc(var(--drag-progress, 0) * 100%));
   }
 }

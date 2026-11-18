@@ -15,9 +15,9 @@ The last two URLs need the usual internal BFF/network configuration. After deplo
 Scroll to **FIN DEL ARTÍCULO**, expanding Continue reading if present. The stack appears directly after that unchanged divider on canonical Mundo articles in local/Test, including previews configured as Test. AMP, Lite, app and Live are unchanged.
 
 - Drag/swipe left or select **No me interesa** to dismiss.
-- Drag/swipe right to read; **Leer artículo** and the headline are ordinary links and also work with the keyboard.
+- Drag/swipe right, click **Leer artículo**, or activate that control with the keyboard to animate right and then navigate. Modified clicks retain normal new-tab/window link behaviour; the headline remains an ordinary link.
 - The threshold is 25% of card width, capped at 100px. Smaller movements return to the starting position. Vertical gestures remain page scrolls.
-- Only the active card is accessible/focusable; the next image is a decorative preview. Card changes are announced, and exhaustion displays **No hay más recomendaciones**.
+- Only the active card is accessible/focusable. The next card is inert and hidden from assistive technology; it smoothly moves forward when the current card is dismissed. Card changes are announced, and exhaustion displays **No hay más recomendaciones**.
 - Reduced-motion preferences remove rotation and transition delays.
 - Dismissal is local to this mounted stack. Reloading, or visiting another article, starts a new stack.
 
@@ -33,7 +33,11 @@ URLs are relative so navigation stays on the current local/Test host. After hydr
 
 ## Implementation and removal
 
-Native Pointer Events, pointer capture and a horizontal-intent threshold provide mouse/touch dragging. A single CSS custom property drives transforms via animation frames; React state tracks the active card and exit phase. Transition completion has a bounded timeout fallback, with pending work cancelled on unmount. No animation dependency is added.
+Native Pointer Events, card-level pointer capture and a horizontal-intent threshold provide mouse/touch dragging. Descendant capture-loss events are ignored so a touch capture handover from an image cannot cancel the drag. Native image dragging is disabled; vertical touch scrolling and pinch-zoom remain available.
+
+A CSS custom property drives dragging via animation frames; React state tracks the active card and exit phase. A dedicated exit animation's `animationend` event completes dismissal/navigation, not a timeout or snap-back transition. Reduced motion completes immediately, including when enabled mid-animation. Unexpected animation cancellation returns to idle without navigation; pending frames and listeners are cleaned up on unmount.
+
+The containing panel groups the stack and controls. The two rendered cards keep stable keys, overlap in a flex layout and use transforms for promotion. Stack height is retained across dismissals to avoid shrinking during the handover, and recalculated when the available width changes. No animation dependency is added.
 
 The integration is a separate synthetic block immediately after the divider in `ArticlePage`. Remove that block, its imports/renderer mapping, this directory and the associated translation to remove the spike. Existing recommendation sections are not replaced.
 
