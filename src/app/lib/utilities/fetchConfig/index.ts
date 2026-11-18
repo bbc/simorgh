@@ -6,7 +6,6 @@ import getAgent from '#utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 import deduplicateRequests from '../deduplicateRequests';
 
@@ -41,10 +40,6 @@ const fetchConfig = async <T>({
 
   if (variant) {
     fetchUrl.searchParams.set('variant', variant);
-  }
-
-  if (SERVICES_WITH_NEW_NAV.includes(service)) {
-    fetchUrl.searchParams.set('useNewNav', 'true');
   }
 
   const bffReqPath = fetchUrl.toString();
