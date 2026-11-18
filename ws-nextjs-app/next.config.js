@@ -95,6 +95,26 @@ module.exports = {
   generateEtags: false,
   output: 'standalone',
   /*
+    Build-time tooling (webpack, its optional minifiers and sass) gets traced into
+    the standalone output because the monorepo hoists these packages to the root
+    node_modules. None of them are used at runtime, so exclude them to keep the
+    Lambda bundle small.
+  */
+  outputFileTracingExcludes: {
+    '*': [
+      '**/node_modules/webpack/**',
+      '**/node_modules/minimizer-webpack-plugin/**',
+      '**/node_modules/@swc/core/**',
+      '**/node_modules/@swc/core-*/**',
+      '**/node_modules/esbuild/**',
+      '**/node_modules/@esbuild/**',
+      '**/node_modules/sass/**',
+      '**/node_modules/terser/**',
+      '**/node_modules/uglify-js/**',
+      '**/node_modules/clean-css/**',
+    ],
+  },
+  /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
