@@ -23,7 +23,9 @@ export default () => {
     it('should contain the correct Vary header', async () => {
       const fetchResponse = await fetch(window.location.href);
       const varyHeader = fetchResponse.headers.get('Vary');
-      expect(varyHeader).toContain('X-Country, Accept-Encoding');
+      expect(varyHeader).toContain(
+        'X-Country, X-Renderer-Env, Accept-Encoding',
+      );
     });
   });
 
