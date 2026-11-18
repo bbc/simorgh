@@ -169,6 +169,9 @@ export const assertDropdownNavigationResonanceComponentView = ({
     cy.visit(path);
 
     cy.viewport(320, 480);
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
+      duration: 1000,
+    }); // handles consent banner overlapping button
     cy.get('nav button').click();
     cy.get('[data-e2e="dropdown-nav"]').scrollIntoView({
       duration: 1000,
@@ -191,7 +194,13 @@ export const assertDropdownNavigationResonanceComponentClick = ({
     cy.visit(path);
 
     cy.viewport(320, 480);
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
+      duration: 1000,
+    }); // handles consent banner overlapping button
     cy.get('nav button').click();
+    cy.get('[data-e2e="dropdown-nav"]').scrollIntoView({
+      duration: 1000,
+    });
     cy.get('[data-e2e="dropdown-nav"]').find('a').first().click();
 
     assertResonanceComponentClickEvent({
