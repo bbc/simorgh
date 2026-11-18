@@ -2,6 +2,7 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import { VIDEO_ENGAGEMENT_KEY } from '#app/lib/utilities/videoEngagement';
 import { TopicDiscoveryItem } from '../TopicDiscovery/types';
 import selectTopicVideos, { normaliseTopicIds } from './selectTopicVideos';
 import useFetchTopicVideos from './useFetchTopicVideos';
@@ -71,6 +72,14 @@ describe('normaliseTopicIds', () => {
 
 describe('TopicVideoCuration', () => {
   const mockHook = useFetchTopicVideos as jest.Mock;
+
+  beforeEach(() => {
+    localStorage.setItem(VIDEO_ENGAGEMENT_KEY, 'true');
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+  });
 
   it('renders a translated heading and a grid of videos', () => {
     mockHook.mockReturnValue({
@@ -149,5 +158,33 @@ describe('TopicVideoCuration', () => {
       service: 'portuguese',
     });
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('shows no content and requests no topics without video engagement, but keeps the observed wrapper mounted', () => {
+    localStorage.removeItem(VIDEO_ENGAGEMENT_KEY);
+    mockHook.mockReturnValue({
+      resultsByTopic: [],
+      isLoading: false,
+      isError: false,
+    });
+    const { container } = render(
+      <TopicVideoCuration topics={[{ topicId: '1' }, { topicId: '2' }]} />,
+      {
+        service: 'portuguese',
+      },
+    );
+    // The near-viewport observer looks for this element once, on mount.
+    expect(
+      container.querySelector('#topic-video-curation'),
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('heading')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('topic-video-skeleton'),
+    ).not.toBeInTheDocument();
+    expect(mockHook).toHaveBeenCalledWith(
+      expect.objectContaining({
+        topicIds: [],
+      }),
+    );
   });
 });

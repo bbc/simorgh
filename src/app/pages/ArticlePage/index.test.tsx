@@ -1454,7 +1454,23 @@ describe('Article Page', () => {
         articlePortraitVideo: { enabled: true },
       };
 
-      it('should render topic video curation alongside the portrait video carousel when TopicDiscovery is shown', () => {
+      afterEach(() => {
+        localStorage.clear();
+      });
+
+      it('should not render topic video curation for users with no video engagement but keep the carousel', () => {
+        const { queryByTestId, queryAllByTestId } = render(
+          <ArticlePage pageData={dataWithCarousel} />,
+          { service: 'portuguese', toggles },
+        );
+        expect(queryByTestId('topic-video-skeleton')).not.toBeInTheDocument();
+        expect(
+          queryAllByTestId('portrait-video-carousel').length,
+        ).toBeGreaterThan(0);
+      });
+
+      it('should render topic video curation alongside the portrait video carousel for users with video engagement', () => {
+        localStorage.setItem('ws_video_engagement', 'true');
         const { queryByTestId, queryAllByTestId } = render(
           <ArticlePage pageData={dataWithCarousel} />,
           { service: 'portuguese', toggles },

@@ -341,6 +341,74 @@ describe('MediaLoader', () => {
 
       expect(fakeFullscreenBindings).toHaveLength(0);
     });
+
+    it('sets the video engagement flag when a video player is initialized', async () => {
+      localStorage.clear();
+
+      const mockRequire = jest.fn();
+      const mockPlayer = {
+        load: jest.fn(),
+        bind: jest.fn(),
+      };
+      const mockBump = {
+        player: jest.fn(() => mockPlayer),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
+      });
+
+      expect(mockRequire).toHaveBeenCalledWith(
+        ['bump-4'],
+        expect.any(Function),
+      );
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      await act(async () => callbackFn(mockBump));
+
+      expect(localStorage.getItem('ws_video_engagement')).toBe('true');
+    });
+
+    it('does not set the video engagement flag when an audio player is initialized', async () => {
+      localStorage.clear();
+
+      const mockRequire = jest.fn();
+      const mockPlayer = {
+        load: jest.fn(),
+        bind: jest.fn(),
+      };
+      const mockBump = {
+        player: jest.fn(() => mockPlayer),
+      };
+
+      window.requirejs = mockRequire;
+
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={[livePageAudioClipMediaBlock] as MediaBlock[]}
+          />,
+          {
+            id: 'testId',
+            pageType: LIVE_PAGE,
+          },
+        );
+      });
+
+      expect(mockRequire).toHaveBeenCalledWith(
+        ['bump-4'],
+        expect.any(Function),
+      );
+
+      const callbackFn = mockRequire.mock.calls[0][1];
+      await act(async () => callbackFn(mockBump));
+
+      expect(localStorage.getItem('ws_video_engagement')).toBeNull();
+    });
   });
 
   describe('Placeholder', () => {

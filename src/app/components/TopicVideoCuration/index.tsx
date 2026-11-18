@@ -3,6 +3,7 @@ import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import useHasVideoEngagement from '#app/hooks/useHasVideoEngagement';
 import { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
 import selectTopicVideos, {
@@ -28,7 +29,11 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
   const { fetchErrorMessage = 'Failed to load. Please try again later.' } =
     translations?.topicDiscovery || {};
 
-  const topicIds = normaliseTopicIds((topics || []).map(t => t?.topicId));
+  const hasVideoEngagement = useHasVideoEngagement();
+
+  const pageTopicIds = normaliseTopicIds((topics || []).map(t => t?.topicId));
+  // Without prior video engagement no topic requests are made at all.
+  const topicIds = hasVideoEngagement ? pageTopicIds : [];
   const { resultsByTopic, isLoading, isError } = useFetchTopicVideos({
     topicIds,
   });
@@ -45,12 +50,14 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
     groupTracker,
   });
 
-  if (topicIds.length === 0) return null;
+  if (pageTopicIds.length === 0) return null;
 
-  // The wrapper stays mounted so the near-viewport observer can find it.
-  const showGrid = !isLoading && !isError && videos.length >= MIN_VIDEOS;
-  const showError = !isLoading && isError;
-  const showSkeleton = isLoading;
+  // The wrapper is mounted before engagement is read (it is read after mount)
+  // because the near-viewport observer only looks for it once, on mount.
+  const showGrid =
+    hasVideoEngagement && !isLoading && !isError && videos.length >= MIN_VIDEOS;
+  const showError = hasVideoEngagement && !isLoading && isError;
+  const showSkeleton = hasVideoEngagement && isLoading;
 
   return (
     <div

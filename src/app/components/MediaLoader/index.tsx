@@ -15,6 +15,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import onClient from '#app/lib/utilities/onClient';
+import { markVideoEngagement } from '#app/lib/utilities/videoEngagement';
 import {
   BumpType,
   EventMapping,
@@ -198,6 +199,8 @@ const MediaContainer = ({
               effectiveConfig,
             );
 
+            if (!isAudio) markVideoEngagement();
+
             if (uniqueId != null) {
               const { mediaPlayers } = window;
               if (mediaPlayers == null) {
@@ -273,6 +276,7 @@ const MediaContainer = ({
     eventMapping,
     shouldHandleFakeFullscreen,
     loadPlayerOnInitialRender,
+    isAudio,
   ]);
 
   return (
