@@ -37,13 +37,6 @@ jest.mock('#app/components/PageLayoutWrapper', () => ({
   __esModule: true,
   default: ({ children }: React.PropsWithChildren) => children,
 }));
-jest.mock(
-  '../../legacy/containers/PageHandlers/withOptimizelyProvider',
-  () => ({
-    __esModule: true,
-    default: (Component: React.ComponentType) => Component,
-  }),
-);
 
 describe('Media article page stories', () => {
   it('sets SCSS dark UI within the page request context, overriding the outer decorator', () => {

@@ -6,7 +6,6 @@ import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
 import { BylineLinkedData } from '#app/components/LinkedData/types';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -548,9 +547,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

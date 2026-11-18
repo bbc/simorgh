@@ -21,16 +21,13 @@ import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
-import ArticlePageComponent from './ArticlePage';
-
-const Page = withOptimizelyProvider(ArticlePageComponent);
+import Page from './ArticlePage';
 
 const withGoogleReferral = Story => {
   Object.defineProperty(document, 'referrer', {

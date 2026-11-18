@@ -69,7 +69,6 @@ const reverbHandlers = {
   pageView: reverbPageViews,
   sectionView: reverbComponentTracking,
   sectionClick: reverbComponentTracking,
-  activation: reverbComponentTracking,
   error: reverbComponentTracking,
 };
 

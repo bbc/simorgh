@@ -10,7 +10,7 @@ type UseAccountPromoBannerEligibilityOptions = {
 // Server-side-knowable eligibility for the account promotional banner. Excludes
 // the client-only frequency-cap/dismissal checks, handled separately.
 //
-// `excludeSignedInUsers` lets the experiment wrapper activate Optimizely for
+// `excludeSignedInUsers` lets the experiment wrapper activate the experiment for
 // signed-in users while still gating the banner/view tracking to signed-out users.
 const useAccountPromoBannerEligibility = ({
   excludeSignedInUsers = true,

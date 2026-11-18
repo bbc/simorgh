@@ -87,10 +87,9 @@ const buildReverbParamsSpy = jest.spyOn(
   'buildAnalyticsParams',
 );
 
-jest.mock('#app/components/OptimizelyPageMetrics');
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

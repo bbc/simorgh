@@ -2498,46 +2498,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/optimizely-sdk@npm:5.4.1, @optimizely/optimizely-sdk@npm:^5.4.1":
-  version: 5.4.1
-  resolution: "@optimizely/optimizely-sdk@npm:5.4.1"
-  dependencies:
-    decompress-response: "npm:^4.2.1"
-    json-schema: "npm:^0.4.0"
-    murmurhash: "npm:^2.0.1"
-    ua-parser-js: "npm:^1.0.37"
-    uuid: "npm:^9.0.1"
-  peerDependencies:
-    "@babel/runtime": ^7.0.0
-    "@react-native-async-storage/async-storage": ">=1.0.0 <3.0.0"
-    "@react-native-community/netinfo": ">=5.0.0 <12.0.0"
-    fast-text-encoding: ^1.0.6
-    react-native-get-random-values: ">=1.11.0 <3.0.0"
-  peerDependenciesMeta:
-    "@react-native-async-storage/async-storage":
-      optional: true
-    "@react-native-community/netinfo":
-      optional: true
-    fast-text-encoding:
-      optional: true
-    react-native-get-random-values:
-      optional: true
-  checksum: 10/01a210a79cc6abbed3f8f07450c594d3ce075bec28d5cc35a0eb5d4a1cdb04837376811799a71792c2e59a87e0be275107959f7f9202cef3748e61058cc4cfc8
-  languageName: node
-  linkType: hard
-
-"@optimizely/react-sdk@npm:3.3.1":
-  version: 3.3.1
-  resolution: "@optimizely/react-sdk@npm:3.3.1"
-  dependencies:
-    "@optimizely/optimizely-sdk": "npm:^5.4.1"
-    hoist-non-react-statics: "npm:^3.3.2"
-  peerDependencies:
-    react: ">=16.8.0"
-  checksum: 10/26cff67c569cc4b55d3665a239f4e4fbf5b3ef8aeda0918ff21c506a5c604317f3afc613a8b2426d488e3cf8733d956271169a0f1cfc9a52cb8c34d5230683ed
-  languageName: node
-  linkType: hard
-
 "@oxc-parser/binding-android-arm-eabi@npm:0.127.0":
   version: 0.127.0
   resolution: "@oxc-parser/binding-android-arm-eabi@npm:0.127.0"
@@ -7153,15 +7113,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decompress-response@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "decompress-response@npm:4.2.1"
-  dependencies:
-    mimic-response: "npm:^2.0.0"
-  checksum: 10/4e783ca4dfe9417354d61349750fe05236f565a4415a6ca20983a311be2371debaedd9104c0b0e7b36e5f167aeaae04f84f1a0b3f8be4162f1d7d15598b8fdba
-  languageName: node
-  linkType: hard
-
 "dedent@npm:^0.7.0":
   version: 0.7.0
   resolution: "dedent@npm:0.7.0"
@@ -9400,7 +9351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
+"hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -11154,7 +11105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-schema@npm:0.4.0, json-schema@npm:^0.4.0":
+"json-schema@npm:0.4.0":
   version: 0.4.0
   resolution: "json-schema@npm:0.4.0"
   checksum: 10/8b3b64eff4a807dc2a3045b104ed1b9335cd8d57aa74c58718f07f0f48b8baa3293b00af4dcfbdc9144c3aafea1e97982cc27cc8e150fc5d93c540649507a458
@@ -11869,13 +11820,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mimic-response@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "mimic-response@npm:2.1.0"
-  checksum: 10/014fad6ab936657e5f2f48bd87af62a8e928ebe84472aaf9e14fec4fcb31257a5edff77324d8ac13ddc6685ba5135cf16e381efac324e5f174fb4ddbf902bf07
-  languageName: node
-  linkType: hard
-
 "min-indent@npm:^1.0.0, min-indent@npm:^1.0.1":
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
@@ -12158,13 +12102,6 @@ __metadata:
     duplexer2: "npm:^0.1.2"
     object-assign: "npm:^4.1.0"
   checksum: 10/313d208e8954d367a25c725c8d64482b54f335264d4a6fd2bf6845274efc41313338922a3f55a7031d6c239f6080605bb800454e7ba9e400ef28387f8b64779a
-  languageName: node
-  linkType: hard
-
-"murmurhash@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "murmurhash@npm:2.0.1"
-  checksum: 10/8bb90f43b1c41b1d046efe662a02dcc3cdbda4b42fbbadf7488046772d9eecf2b37ffb6cb73d0d96f2ff489d9f4a8252c674bbae588a6179f60854fe0bfe3325
   languageName: node
   linkType: hard
 
@@ -14674,8 +14611,6 @@ __metadata:
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@lhci/cli": "npm:0.15.1"
-    "@optimizely/optimizely-sdk": "npm:5.4.1"
-    "@optimizely/react-sdk": "npm:3.3.1"
     "@storybook/addon-a11y": "npm:10.6.5"
     "@storybook/addon-docs": "npm:10.6.5"
     "@storybook/addon-styling-webpack": "npm:3.0.2"
@@ -16173,15 +16108,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ua-parser-js@npm:^1.0.37":
-  version: 1.0.40
-  resolution: "ua-parser-js@npm:1.0.40"
-  bin:
-    ua-parser-js: script/cli.js
-  checksum: 10/7fced5f74ed570c83addffd4d367888d90c58803ff4bdd4a7b04b3f01d293263b8605e92ac560eb1c6a201ef3b11fcc46f3dbcbe764fbe54974924d542bc0135
-  languageName: node
-  linkType: hard
-
 "uglify-js@npm:^3.1.4":
   version: 3.19.3
   resolution: "uglify-js@npm:3.19.3"
@@ -16440,15 +16366,6 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 10/9a5f7aa1d6f56dd1e8d5f2478f855f25c645e64e26e347a98e98d95781d5ed20062d6cca2eecb58ba7c84bc3910be95c0451ef4161906abaab44f9cb68ffbdd1
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "uuid@npm:9.0.1"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10/9d0b6adb72b736e36f2b1b53da0d559125ba3e39d913b6072f6f033e0c87835b414f0836b45bcfaf2bdf698f92297fea1c3cc19b0b258bc182c9c43cc0fab9f2
   languageName: node
   linkType: hard
 

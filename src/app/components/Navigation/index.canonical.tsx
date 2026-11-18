@@ -97,7 +97,6 @@ const CanonicalNavigationContainer = ({
   });
   const stickyNavViewTracker = useViewTracker({
     componentName: NAVIGATION_TRACKING_COMPONENT,
-    sendOptimizelyEvents: true,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant: stickyNavExperimentVariant,
   });

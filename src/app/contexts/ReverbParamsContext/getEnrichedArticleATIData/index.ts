@@ -1,6 +1,6 @@
-import useOptimizelyVariation, {
+import useExperimentVariation, {
   ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+} from '#app/hooks/useExperimentVariation';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   CORRESPONDENT_STORY_PAGE,
@@ -14,7 +14,6 @@ const getActiveExperimentProps = (
 ): ComponentExperimentProps | null =>
   experimentVariant
     ? {
-        sendOptimizelyEvents: true,
         experimentName,
         experimentVariant,
       }
@@ -32,7 +31,7 @@ export default ({ pageMetadata, serviceContext }) => {
 
   // EXPERIMENT: Topic Discovery
   const testPageViewsExperimentName = 'test_page_views_aa_3';
-  const testPageViewsVariant = useOptimizelyVariation({
+  const testPageViewsVariant = useExperimentVariation({
     experimentName: testPageViewsExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });

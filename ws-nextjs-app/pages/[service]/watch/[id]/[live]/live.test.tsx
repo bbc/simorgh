@@ -8,9 +8,9 @@ import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
 import LiveTv from './LiveTvPageLayout';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

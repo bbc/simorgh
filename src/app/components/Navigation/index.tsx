@@ -6,9 +6,9 @@ import {
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useOptimizelyVariation, {
+import useExperimentVariation, {
   ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+} from '#app/hooks/useExperimentVariation';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
@@ -234,7 +234,7 @@ const StickyNavigationExperiment = ({
 }: {
   setExperimentVariant: React.Dispatch<React.SetStateAction<string | null>>;
 }) => {
-  const experimentVariant = useOptimizelyVariation({
+  const experimentVariant = useExperimentVariation({
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
@@ -306,8 +306,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
   const stickyNavExperimentTrackingMetadata = {
-    sendOptimizelyEvents: true,
-    optimizelyComponentName: NAVIGATION_TRACKING_COMPONENT,
     experimentName: STICKY_NAVIGATION_EXPERIMENT,
     experimentVariant: stickyNavExperimentVariant,
   };

@@ -4,15 +4,15 @@ import {
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import getEnrichedArticleATIData from '.';
-import useOptimizelyVariation from '../../../hooks/useOptimizelyVariation';
+import useExperimentVariation from '../../../hooks/useExperimentVariation';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 
-const mockUseOptimizelyVariation = jest.mocked(useOptimizelyVariation);
+const mockUseExperimentVariation = jest.mocked(useExperimentVariation);
 
 const pageMetadata = {
   atiAnalytics: {
@@ -185,7 +185,7 @@ describe('getEnrichedArticleATIData', () => {
   });
 
   it('should include experiment details when present', () => {
-    mockUseOptimizelyVariation.mockImplementation(() => 'experimentVariant');
+    mockUseExperimentVariation.mockImplementation(() => 'experimentVariant');
 
     const enrichedData = getEnrichedArticleATIData({
       pageMetadata,
@@ -210,7 +210,6 @@ describe('getEnrichedArticleATIData', () => {
       experimentProps: {
         experimentName: 'test_page_views_aa_3',
         experimentVariant: 'experimentVariant',
-        sendOptimizelyEvents: true,
       },
       experimentVariant: 'experimentVariant',
       language: 'pcm',

@@ -3,9 +3,9 @@ import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useOptimizelyVariation, {
+import useExperimentVariation, {
   ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+} from '#app/hooks/useExperimentVariation';
 import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -73,40 +73,40 @@ const PWAPromotionalBannerTreatment = ({
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   // EXPERIMENT: PWA Promotional Banner
-  const optimizelyExperimentData = {
+  const experimentTrackingData = {
     experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
     experimentVariant,
   };
 
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
 
   const { onClick: onPrimaryClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-primary',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
   const { onClick: onSecondaryClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-secondary',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
   const { onClick: onCloseClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-close',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
 
   const trackPwaPromptShown = useCustomEventTracker({
     eventName: 'pwa-prompt-shown',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
   const trackPwaPromptAccepted = useCustomEventTracker({
     eventName: 'pwa-prompt-accepted',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
   const trackPwaPromptDismissed = useCustomEventTracker({
     eventName: 'pwa-prompt-dismissed',
-    ...optimizelyExperimentData,
+    ...experimentTrackingData,
   });
 
   const handleBannerDismiss = useCallback(() => {
@@ -185,7 +185,7 @@ const PWAPromotionalBanner = () => {
   const isAndroid = useAndroidDetection();
 
   const pwaPromoBannerExperimentName = PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME;
-  const pwaPromoBannerVariant = useOptimizelyVariation({
+  const pwaPromoBannerVariant = useExperimentVariation({
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
   });

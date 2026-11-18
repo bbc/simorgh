@@ -8,9 +8,9 @@ import MockIntersectionObserver from '#app/components/intersection-observer-test
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 
-jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+jest.mock('#app/hooks/useExperimentVariation', () => ({
   __esModule: true,
-  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  ...jest.requireActual('#app/hooks/useExperimentVariation'),
   default: jest.fn(),
 }));
 

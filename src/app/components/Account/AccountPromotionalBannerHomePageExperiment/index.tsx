@@ -1,7 +1,7 @@
 import { use } from 'react';
-import useOptimizelyVariation, {
+import useExperimentVariation, {
   ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+} from '#app/hooks/useExperimentVariation';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -19,7 +19,7 @@ const experimentVariantCopy = {
 } as const;
 
 const EligibleAccountPromotionalBannerHomePageExperiment = () => {
-  const experimentVariant = useOptimizelyVariation({
+  const experimentVariant = useExperimentVariation({
     experimentName: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });

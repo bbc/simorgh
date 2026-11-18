@@ -46,7 +46,6 @@ const PersonalisedContent = ({
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'personalised-topic-curation',
-    sendOptimizelyEvents: true,
     experimentName: 'newswb_ws_location_based_topics',
     experimentVariant: personalisedTopicCurationExperimentVariant,
     groupTracker: {

@@ -5,7 +5,6 @@ import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.con
 
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
-  const optimizely = path(['block', 'optimizely'], eventTrackingData);
 
   const {
     onClick: handleBlockLevelClick,
@@ -25,7 +24,6 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
       await handleBlockLevelClick(event);
     }
     if (nextPageUrl) {
-      if (optimizely) optimizely.close();
       window.location.assign(nextPageUrl);
     }
   };
