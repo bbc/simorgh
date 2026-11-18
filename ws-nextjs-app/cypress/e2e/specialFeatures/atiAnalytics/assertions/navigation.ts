@@ -126,7 +126,10 @@ export const assertScrollableNavigationResonanceComponentView = ({
 }: AtiAssertionFnProps) => {
   it('should send a Resonance view event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: SCROLLABLE_NAVIGATION,
+      action: 'view',
+    });
     cy.visit(path);
 
     cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
@@ -149,7 +152,10 @@ export const assertScrollableNavigationResonanceComponentClick = ({
 }: AtiAssertionFnProps) => {
   it('should send a Resonance click event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: SCROLLABLE_NAVIGATION,
+      action: 'select',
+    });
     cy.visit(path);
 
     cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
@@ -170,7 +176,10 @@ export const assertDropdownNavigationResonanceComponentView = ({
 }: AtiAssertionFnProps) => {
   it('should send a Resonance view event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: DROPDOWN_NAVIGATION,
+      action: 'view',
+    });
     preventConsentBannerFromAppearing();
     cy.visit(path);
 
@@ -190,7 +199,10 @@ export const assertDropdownNavigationResonanceComponentClick = ({
 }: AtiAssertionFnProps) => {
   it('should send a Resonance click event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: DROPDOWN_NAVIGATION,
+      action: 'select',
+    });
     preventConsentBannerFromAppearing();
     cy.visit(path);
 
