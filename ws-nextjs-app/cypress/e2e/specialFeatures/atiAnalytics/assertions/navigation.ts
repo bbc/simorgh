@@ -170,6 +170,9 @@ export const assertDropdownNavigationResonanceComponentView = ({
 
     cy.viewport(320, 480);
     cy.get('nav button').click();
+    cy.get('[data-e2e="dropdown-nav"]').scrollIntoView({
+      duration: 1000,
+    });
 
     assertResonanceComponentViewEvent({
       component: DROPDOWN_NAVIGATION,
