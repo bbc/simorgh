@@ -14,6 +14,11 @@ import { AtiAssertionFnProps } from './type';
 
 const { SCROLLABLE_NAVIGATION, DROPDOWN_NAVIGATION } = COMPONENTS;
 
+const preventConsentBannerFromAppearing = () => {
+  cy.setCookie('ckns_explicit', '1');
+  cy.setCookie('ckns_privacy', 'july2019');
+};
+
 export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
   path,
@@ -166,6 +171,7 @@ export const assertDropdownNavigationResonanceComponentView = ({
   it('should send a Resonance view event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
     interceptResonanceAnalyticsBeacons();
+    preventConsentBannerFromAppearing();
     cy.visit(path);
 
     cy.viewport(320, 480);
@@ -185,6 +191,7 @@ export const assertDropdownNavigationResonanceComponentClick = ({
   it('should send a Resonance click event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
     interceptResonanceAnalyticsBeacons();
+    preventConsentBannerFromAppearing();
     cy.visit(path);
 
     cy.viewport(320, 480);
