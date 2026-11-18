@@ -1,7 +1,14 @@
-import { useCallback, use, useEffect, useState, RefObject } from 'react';
+import {
+  useCallback,
+  use,
+  useEffect,
+  useState,
+  RefObject,
+  CSSProperties,
+} from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
 const DEFAULT_TRANSLATION = {
@@ -62,30 +69,45 @@ export default ({
     };
   }, [checkScrollButtons, scrollPaneRef]);
 
+  const overlayStyle: CSSProperties & { '--navigation-background'?: string } =
+    backgroundColor ? { '--navigation-background': backgroundColor } : {};
+
   return (
-    <div css={styles.buttonGroupOverlay(backgroundColor)} aria-hidden="true">
-      <div css={styles.buttonGroup}>
+    <div
+      className={styles.buttonGroupOverlay}
+      style={overlayStyle}
+      aria-hidden="true"
+    >
+      <div className={styles.buttonGroup}>
         <button
           type="button"
           aria-label={isScrollableLeft}
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
-          css={styles.navButton}
+          className={styles.navButton}
           tabIndex={-1}
           data-testid="pv-scroll-left"
         >
-          <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
+          <Chevron
+            orientation={ChevronOrientation.BACKWARD}
+            dir={dir}
+            className={styles.icon}
+          />
         </button>
         <button
           type="button"
           aria-label={isScrollableRight}
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
-          css={styles.navButton}
+          className={styles.navButton}
           tabIndex={-1}
           data-testid="pv-scroll-right"
         >
-          <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
+          <Chevron
+            orientation={ChevronOrientation.FORWARD}
+            dir={dir}
+            className={styles.icon}
+          />
         </button>
       </div>
     </div>

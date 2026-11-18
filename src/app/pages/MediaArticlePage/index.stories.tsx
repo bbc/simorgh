@@ -1,4 +1,5 @@
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import ThemeProvider from '#app/components/ThemeProvider';
 import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { PageTypes, Services } from '#app/models/types/global';
@@ -28,6 +29,7 @@ type Props = {
   service?: Services;
   isLite?: boolean;
   pageType?: PageTypes;
+  pathname?: string;
 };
 
 const ComponentWithContext = ({
@@ -35,6 +37,7 @@ const ComponentWithContext = ({
   service = 'news',
   isLite,
   pageType = MEDIA_ARTICLE_PAGE,
+  pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -50,7 +53,7 @@ const ComponentWithContext = ({
           isLite={isLite}
           pageType={pageType}
           service={service}
-          pathname="/news/articles/c000000000o"
+          pathname={pathname}
           isUK
           id="c000000000o"
         >
@@ -124,3 +127,18 @@ export const MediaArticlePageWithPortraitVideoWithCaption = (
     isLite={isLite}
   />
 );
+
+export const MediaArticlePageWithSaveArticleButton = () => (
+  <ComponentWithContext
+    data={portraitVideoArticle}
+    service="portuguese"
+    pathname="/portuguese/articles/cn7v03e37eko"
+  />
+);
+MediaArticlePageWithSaveArticleButton.globals = {
+  service: { service: 'portuguese', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'portuguese' },
+  },
+};

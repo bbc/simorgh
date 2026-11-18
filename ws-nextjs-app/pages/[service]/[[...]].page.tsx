@@ -108,38 +108,40 @@ const ROUTE_HANDLERS = {
   [OFFLINE_PAGE]: handleOfflineRoute,
 };
 
-export const getServerSideProps = withRequestProps(async context => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
+export const getServerSideProps = withRequestProps(
+  async (context, requestProps) => {
+    const {
+      resolvedUrl,
+      req: { headers: reqHeaders },
+    } = context;
 
-  const { service: serviceFromUrl, variant: variantFromUrl } =
-    context.query as PageDataParams;
+    const { service: serviceFromUrl, variant: variantFromUrl } =
+      context.query as PageDataParams;
 
-  const service = SERVICES.find(s => serviceFromUrl === s);
-  const variant = deriveVariant(variantFromUrl);
+    const service = SERVICES.find(s => serviceFromUrl === s);
+    const variant = deriveVariant(variantFromUrl);
 
-  const pageType = getPageType({ resolvedUrl, reqHeaders });
+    const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  // If a route handler exists for the derived page type, render that page
-  if (ROUTE_HANDLERS?.[pageType]) {
-    return ROUTE_HANDLERS[pageType](context);
-  }
+    // If a route handler exists for the derived page type, render that page
+    if (ROUTE_HANDLERS?.[pageType]) {
+      return ROUTE_HANDLERS[pageType](context, requestProps);
+    }
 
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+    logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
-  context.res.statusCode = NOT_FOUND;
+    context.res.statusCode = NOT_FOUND;
 
-  return {
-    props: {
-      pathname: resolvedUrl?.split('?')?.[0],
-      service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
-      status: NOT_FOUND,
-      variant,
-    },
-  };
-});
+    return {
+      props: {
+        pathname: resolvedUrl?.split('?')?.[0],
+        service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
+        status: NOT_FOUND,
+        variant,
+      },
+    };
+  },
+);
 
 type PageProps = {
   pageType?: PageTypes;

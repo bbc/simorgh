@@ -91,6 +91,9 @@ export default {
     enabled: true,
     value: 'in',
   },
+  renderMarkDown: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },

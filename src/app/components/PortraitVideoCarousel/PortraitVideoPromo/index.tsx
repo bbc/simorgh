@@ -147,7 +147,7 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+                <Play css={styles.playIcon} isInverted />
                 <time dateTime={mediaISO8601Duration}>
                   <Text size="brevier" css={styles.duration}>
                     {durationString}
