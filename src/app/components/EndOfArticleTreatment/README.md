@@ -29,6 +29,14 @@ SIMORGH_BASE_URL=http://localhost.bbc.com:7081 SIMORGH_PUBLIC_STATIC_ASSETS_ORIG
 already does on the development machine used for this prototype. See the existing
 [MediaLoader instructions](../MediaLoader/README.md) for other machines.
 
+For prototype demos, a temporary development-only header in `next.config.js`
+allows cross-origin requests to `/images/icons/*`. Normal `yarn dev` serves these
+shared SVG masks from `localhost`, while SMP demos use `localhost.bbc.com`.
+This mismatch also blocks carousel icons on `latest`; it is not introduced by
+this component's SCSS migration. The explicit startup command above aligns both
+hosts and avoids the mismatch. Remove the workaround once local asset origins
+are aligned; it does not apply to production builds, including Test deployments.
+
 - **Fixed portrait-video development example:** <http://localhost.bbc.com:7081/mundo/articles/cwe9k0d7x9z0o?renderer_env=live>
 - **Landscape video example:** <http://localhost.bbc.com:7081/mundo/articles/c77mp3nkjr2o?renderer_env=live>
 - **General selection example:** <http://localhost.bbc.com:7081/mundo/articles/c64gn38yj4ygo?renderer_env=live>
