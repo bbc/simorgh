@@ -160,7 +160,7 @@ describe('TopicVideoCuration', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('renders nothing and passes empty topicIds to useFetchTopicVideos when video engagement flag is not set', () => {
+  it('shows no content and requests no topics without video engagement, but keeps the observed wrapper mounted', () => {
     localStorage.removeItem(VIDEO_ENGAGEMENT_KEY);
     mockHook.mockReturnValue({
       resultsByTopic: [],
@@ -173,7 +173,14 @@ describe('TopicVideoCuration', () => {
         service: 'portuguese',
       },
     );
-    expect(container).toBeEmptyDOMElement();
+    // The near-viewport observer looks for this element once, on mount.
+    expect(
+      container.querySelector('#topic-video-curation'),
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('heading')).not.toBeInTheDocument();
+    expect(
+      screen.queryByTestId('topic-video-skeleton'),
+    ).not.toBeInTheDocument();
     expect(mockHook).toHaveBeenCalledWith(
       expect.objectContaining({
         topicIds: [],

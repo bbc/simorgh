@@ -31,10 +31,9 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
 
   const hasVideoEngagement = useHasVideoEngagement();
 
+  const pageTopicIds = normaliseTopicIds((topics || []).map(t => t?.topicId));
   // Without prior video engagement no topic requests are made at all.
-  const topicIds = hasVideoEngagement
-    ? normaliseTopicIds((topics || []).map(t => t?.topicId))
-    : [];
+  const topicIds = hasVideoEngagement ? pageTopicIds : [];
   const { resultsByTopic, isLoading, isError } = useFetchTopicVideos({
     topicIds,
   });
@@ -51,12 +50,14 @@ const TopicVideoCuration = ({ topics, className }: Props) => {
     groupTracker,
   });
 
-  if (topicIds.length === 0) return null;
+  if (pageTopicIds.length === 0) return null;
 
-  // The wrapper stays mounted so the near-viewport observer can find it.
-  const showGrid = !isLoading && !isError && videos.length >= MIN_VIDEOS;
-  const showError = !isLoading && isError;
-  const showSkeleton = isLoading;
+  // The wrapper is mounted before engagement is read (it is read after mount)
+  // because the near-viewport observer only looks for it once, on mount.
+  const showGrid =
+    hasVideoEngagement && !isLoading && !isError && videos.length >= MIN_VIDEOS;
+  const showError = hasVideoEngagement && !isLoading && isError;
+  const showSkeleton = hasVideoEngagement && isLoading;
 
   return (
     <div

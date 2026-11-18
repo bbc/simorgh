@@ -1463,7 +1463,7 @@ describe('Article Page', () => {
           <ArticlePage pageData={dataWithCarousel} />,
           { service: 'portuguese', toggles },
         );
-        expect(queryByTestId('topic-video-curation')).not.toBeInTheDocument();
+        expect(queryByTestId('topic-video-skeleton')).not.toBeInTheDocument();
         expect(
           queryAllByTestId('portrait-video-carousel').length,
         ).toBeGreaterThan(0);
