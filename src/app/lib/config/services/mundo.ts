@@ -95,6 +95,7 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'y',
+      articleEnd: 'Fin del artículo',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
