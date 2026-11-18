@@ -155,6 +155,13 @@ module.exports = {
       Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
     */
     if (!isServer) {
+      // `crypto` is server-only (AMP CSP hash); exclude crypto-browserify from the client bundle.
+      // Alias, not fallback: Next's rule-level fallback would override ours.
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        crypto: false,
+      };
+
       config.plugins.push(
         new webpack.NormalModuleReplacementPlugin(
           /(.*)logger.node(\.*)/,
