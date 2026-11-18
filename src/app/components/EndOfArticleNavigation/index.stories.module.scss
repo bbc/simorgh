@@ -1,0 +1,33 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  max-width: 42rem;
+  margin: theme.$spacings-quadruple auto;
+}
+
+.articleEnding {
+  padding-inline: theme.$spacings-double;
+}
+
+.destinationSection {
+  min-height: 16rem;
+  margin-block: theme.$spacings-quadruple;
+  padding: theme.$spacings-triple;
+  border-block-start: 1px solid theme.$palette-grey-4;
+}
+
+.destinationHeading {
+  scroll-margin-block-start: calc(
+    var(--article-end-navigation-offset, 0px) + #{theme.$spacings-double}
+  );
+
+  &:focus {
+    outline: 3px solid theme.$palette-black;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px theme.$palette-white;
+  }
+}
+
+p.destinationCopy {
+  margin-block: theme.$spacings-double;
+}

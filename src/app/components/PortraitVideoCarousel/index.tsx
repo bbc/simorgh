@@ -18,6 +18,7 @@ import { PortraitClipMediaBlock } from '../MediaLoader/types';
 import Subheading from '../Curation/Subhead';
 
 type PortraitVideoCarouselProps = {
+  id?: string;
   title?: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
@@ -27,6 +28,7 @@ type PortraitVideoCarouselProps = {
 };
 
 const PortraitVideoCarousel = ({
+  id,
   title,
   blocks,
   eventTrackingData,
@@ -83,6 +85,7 @@ const PortraitVideoCarousel = ({
     <>
       <BumpLoader nonce={nonce} />
       <section
+        id={id}
         aria-label={title || translations.media.watch}
         role="region"
         data-testid="portrait-video-carousel"

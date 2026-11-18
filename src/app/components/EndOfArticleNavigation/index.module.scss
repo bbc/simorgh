@@ -1,0 +1,107 @@
+@use '@scss/themeTokens' as theme;
+
+.section {
+  margin-block: theme.$spacings-double theme.$spacings-quadruple;
+  margin-inline: theme.$spacings-full;
+  padding: theme.$spacings-triple theme.$spacings-double;
+  color: theme.$palette-white;
+  background: theme.$palette-grey-10;
+  border-block-start: 4px solid theme.$palette-postbox;
+  border-block-end: 1px solid theme.$palette-grey-7;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline: theme.$spacings-double;
+    padding-inline: theme.$spacings-triple;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline: 0;
+  }
+}
+
+p.endLabel {
+  color: theme.$palette-white;
+  margin-block-end: theme.$spacings-double;
+}
+
+h2.heading {
+  color: theme.$palette-white;
+}
+
+p.introduction {
+  color: theme.$palette-grey-3;
+  margin-block: theme.$spacings-full theme.$spacings-triple;
+}
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-double;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.destination {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 100%;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-basis: calc((100% - #{theme.$spacings-double}) / 2);
+  }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-full;
+  width: 100%;
+  min-width: 0;
+  min-height: theme.pixelsToRem-px-to-rem(44);
+  padding: theme.$spacings-double;
+  color: theme.$palette-white;
+  background: theme.$palette-black;
+  border: 1px solid theme.$palette-white;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    background: theme.$palette-grey-7;
+  }
+
+  &:hover .label,
+  &:focus-visible .label {
+    text-decoration: underline;
+  }
+}
+
+.label {
+  @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-bold');
+}
+
+.description {
+  @include theme.typography-from-scale-and-variant(longPrimer, 'sans-regular');
+  color: theme.$palette-grey-3;
+}
+
+.direction {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: theme.$spacings-full;
+  margin-block-start: auto;
+  padding-block-start: theme.$spacings-double;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+section.section a:focus-visible {
+  outline: 3px solid theme.$palette-white;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px theme.$palette-black;
+}

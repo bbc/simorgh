@@ -22,7 +22,16 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-import EndOfArticleTreatment from '#app/components/EndOfArticleTreatment';
+import EndOfArticleNavigation from '#app/components/EndOfArticleNavigation';
+import {
+  type ArticleEndDestination,
+  TOPIC_DISCOVERY_TARGET,
+  PORTRAIT_VIDEO_TARGET,
+  RELATED_CONTENT_TARGET,
+  MOST_READ_TARGET,
+  COUNTRY_CURATION_TARGET,
+  MEDIA_CURATION_TARGET,
+} from '#app/components/EndOfArticleNavigation/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getArticleId,
@@ -87,7 +96,9 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import RelatedContentSection from '../../components/RelatedContentSection';
+import RelatedContentSection, {
+  getRelatedContentData,
+} from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
@@ -250,6 +261,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     translations,
+    mostRead: { hasMostRead, numberOfItems: mostReadCount = 5 },
   } = use(ServiceContext);
 
   // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
@@ -267,6 +279,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
+  const { enabled: mostReadEnabled } = useToggle('mostRead');
   const { enabled: googlePreferredSourceEnabled } = useToggle(
     'googlePreferredSource',
   );
@@ -467,19 +480,30 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showEndOfArticleTreatment =
+  const showEndOfArticleNavigation =
     service === 'mundo' &&
     ['local', 'test'].includes(getEnvConfig().SIMORGH_APP_ENV) &&
     pageType === 'article' &&
     !isAmp &&
     !isLite &&
+    !isApp;
+
+  const hasRelatedContentDestination =
+    getRelatedContentData(blocks)?.hasMeaningfulItems ?? false;
+  const hasMostReadDestination = Boolean(
     !isApp &&
-    (pageData.articleEndItems?.length || 0) >= 2;
+    !isPGL &&
+    mostReadEnabled &&
+    hasMostRead &&
+    mostReadInitialData?.items
+      ?.slice(0, mostReadCount)
+      .some(item => item.title && item.href),
+  );
 
   // Include the existing discovery section in the prototype journey even when
   // the local fixture toggles do not enable it. Live behaviour is unchanged.
   const showTopicDiscovery =
-    (topicDiscoveryEnabled || showEndOfArticleTreatment) &&
+    (topicDiscoveryEnabled || showEndOfArticleNavigation) &&
     !isAmp &&
     !isLite &&
     !isApp;
@@ -497,11 +521,60 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     articleVideoCurationEnabled,
   );
 
+  const endNavigationCopy = translations.endOfArticleNavigation;
+  const endNavigationDestinations: ArticleEndDestination[] = [];
+  if (showEndOfArticleNavigation && endNavigationCopy) {
+    if (showTopicDiscovery && topicDiscoveryTopics.length > 0) {
+      endNavigationDestinations.push({
+        id: TOPIC_DISCOVERY_TARGET,
+        ...endNavigationCopy.topics,
+        requiresJs: true,
+      });
+    }
+    if (showCountryCuration && pageData.countryCuration?.title) {
+      endNavigationDestinations.push({
+        id: COUNTRY_CURATION_TARGET,
+        ...endNavigationCopy.country,
+      });
+    }
+    if (showPortraitVideoCarousel) {
+      endNavigationDestinations.push({
+        id: PORTRAIT_VIDEO_TARGET,
+        ...endNavigationCopy.portrait,
+        requiresJs: true,
+        hideInOperaMini: true,
+      });
+    }
+    if (hasRelatedContentDestination) {
+      endNavigationDestinations.push({
+        id: RELATED_CONTENT_TARGET,
+        ...endNavigationCopy.related,
+      });
+    }
+    if (showMediaCuration && mediaCurationContent?.title) {
+      endNavigationDestinations.push({
+        id: MEDIA_CURATION_TARGET,
+        ...endNavigationCopy.media,
+      });
+    }
+    if (hasMostReadDestination) {
+      endNavigationDestinations.push({
+        id: MOST_READ_TARGET,
+        ...endNavigationCopy.mostRead,
+      });
+    }
+  }
+
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
   return (
-    <div css={styles.pageWrapper}>
+    <div
+      css={styles.pageWrapper}
+      className={clsx(
+        showEndOfArticleNavigation && scssStyles.articleWithEndNavigation,
+      )}
+    >
       <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -569,15 +642,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showEndOfArticleTreatment && (
-            <EndOfArticleTreatment
-              key={pageData.metadata.id}
-              items={pageData.articleEndItems || []}
-              isVisible={
-                !showContinueReadingButton ||
-                showAllContent ||
-                isDesktopViewport
-              }
+          {showEndOfArticleNavigation && (
+            <EndOfArticleNavigation
+              destinations={endNavigationDestinations}
               className={clsx(
                 shouldApplyCollapsedArticleSpacing &&
                   scssStyles.hideEndOfArticleTreatment,
@@ -610,13 +677,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
+              id={
+                showEndOfArticleNavigation ? PORTRAIT_VIDEO_TARGET : undefined
+              }
               css={styles.portraitVideoCarousel}
             />
           )}
           <RelatedContentSection content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
-              <div data-testid="media-curation">
+              <div
+                data-testid="media-curation"
+                id={
+                  showEndOfArticleNavigation ? MEDIA_CURATION_TARGET : undefined
+                }
+              >
                 <Curation
                   visualStyle={VISUAL_STYLE.FEED}
                   visualProminence={VISUAL_PROMINENCE.NORMAL}

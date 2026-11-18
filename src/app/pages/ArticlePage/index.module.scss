@@ -1,5 +1,18 @@
 @use '@scss/themeTokens' as theme;
 
+.articleWithEndNavigation {
+  [id='topic-discovery-heading'],
+  [id='location-based-topic-oj'],
+  [id='article-portrait-video-carousel'],
+  [id='section-label-heading-related-content-heading'],
+  [id='article-onward-media'],
+  [id='section-label-heading-Most-Read'] {
+    scroll-margin-block-start: calc(
+      var(--article-end-navigation-offset, 6rem) + #{theme.$spacings-double}
+    );
+  }
+}
+
 section.hideEndOfArticleTreatment {
   display: none;
 

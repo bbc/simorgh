@@ -1,5 +1,19 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  endOfArticleNavigation?: {
+    endLabel: string;
+    heading: string;
+    introduction: string;
+    onThisPage: string;
+    homepageDestination: string;
+    topics: { label: string; description: string };
+    portrait: { label: string; description: string };
+    country: { label: string; description: string };
+    media: { label: string; description: string };
+    related: { label: string; description: string };
+    mostRead: { label: string; description: string };
+    homepage: { label: string; description: string };
+  };
   endOfArticleTreatment?: {
     endLabel: string;
     heading: string;

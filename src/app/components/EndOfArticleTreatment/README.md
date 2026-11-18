@@ -1,5 +1,11 @@
 # EndOfArticleTreatment — WS-3523 prototype
 
+**Option C branch note:** this original mixed-format component is retained for
+comparison but is not rendered by ArticlePage on
+`WS-3523-prototype-article-end-treatment-option-c`. See
+[EndOfArticleNavigation](../EndOfArticleNavigation/README.md) for the compact
+navigation prototype and its current usage instructions.
+
 Research prototype under WS-3508. Makes the end of a standard Mundo article
 explicit and offers a small mixed-format onward journey before Topic Discovery.
 It is enabled on **local and Test deployments only**, for canonical Mundo text
