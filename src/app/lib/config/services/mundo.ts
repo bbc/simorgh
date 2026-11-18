@@ -94,6 +94,44 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      endOfArticleNavigation: {
+        endLabel: 'Has llegado al final del artículo',
+        heading: '¿Qué te gustaría hacer ahora?',
+        introduction: 'Elige cómo seguir explorando BBC Mundo.',
+        onThisPage: 'Más abajo en esta página',
+        homepageDestination: 'Ir a la portada',
+        topics: {
+          label: 'Explorar los temas del artículo',
+          description:
+            'Encuentra más historias sobre los temas que te interesan.',
+        },
+        portrait: {
+          label: 'Ver videos cortos',
+          description:
+            'Descubre las historias de BBC Mundo en formato vertical.',
+        },
+        country: {
+          label: 'Ver cobertura del país',
+          description: 'Encuentra más noticias del país en esta sección.',
+        },
+        media: {
+          label: 'Ver más videos',
+          description: 'Explora la selección de videos de BBC Mundo.',
+        },
+        related: {
+          label: 'Ver contenido relacionado',
+          description: 'Encuentra más contexto y otras noticias relacionadas.',
+        },
+        mostRead: {
+          label: 'Ver lo más leído',
+          description: 'Descubre las historias que más leen otros lectores.',
+        },
+        homepage: {
+          label: 'Explorar BBC Mundo',
+          description:
+            'Encuentra otras noticias e historias en nuestra portada.',
+        },
+      },
       endOfArticleTreatment: {
         endLabel: 'Has llegado al final del artículo',
         heading: 'Ahora, explora más',

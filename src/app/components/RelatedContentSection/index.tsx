@@ -34,6 +34,48 @@ const isHeadlineFirst = (item: object) => {
   );
 };
 
+export const getRelatedContentData = (content: OptimoBlock[]) => {
+  const block = removeCustomBlocks(content);
+  if (!block || !pathEq('relatedContent', ['type'], block)) return null;
+
+  const blocks = pathOr<OptimoBlock[]>([], ['model', 'blocks'], block);
+  const customTitle =
+    pathEq('title', [0, 'type'], blocks) &&
+    pathOr(
+      [],
+      [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+      blocks,
+    );
+  const items = slice(0, 6, customTitle ? tail(blocks) : identity(blocks));
+
+  // Match the two supported headline/link positions in RelatedContentItem.
+  // Keep malformed items in the existing render, but do not offer an empty
+  // destination from the article-end navigation.
+  const hasMeaningfulItems = items.some(item => {
+    const headlineModels = [0, 1].map(index =>
+      pathOr<Record<string, unknown>>(
+        {},
+        ['model', 'blocks', index, 'model', 'blocks', 0, 'model'],
+        item,
+      ),
+    );
+    const headline = headlineModels[0].text || headlineModels[1].text;
+    const destinations = headlineModels.map(model =>
+      pathOr<string>('', ['blocks', 0, 'model', 'locator'], model),
+    );
+    const destination = destinations[0] || destinations[1];
+
+    return (
+      typeof headline === 'string' &&
+      headline.trim().length > 0 &&
+      typeof destination === 'string' &&
+      destination.trim().length > 0
+    );
+  });
+
+  return { customTitle, items, hasMeaningfulItems };
+};
+
 type Props = {
   content: OptimoBlock[];
   experimentProps?: ComponentExperimentProps;
@@ -45,7 +87,7 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
     palette: { GREY_2 },
   } = useTheme();
 
-  const blocks = removeCustomBlocks(content);
+  const relatedContent = getRelatedContentData(content);
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
@@ -54,29 +96,13 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
   };
   const viewTracker = useViewTracker(eventTrackingData.block);
 
-  if (!pathEq('relatedContent', ['type'], blocks)) return null;
+  if (!relatedContent) return null;
 
-  if (!blocks) return null;
-
-  const items = pathOr([], ['model', 'blocks'], blocks);
+  const { customTitle, items: reducedStoryPromoItems } = relatedContent;
   const LABEL_ID = 'related-content-heading';
-
-  const customTitle =
-    pathEq('title', [0, 'type'], items) &&
-    pathOr(
-      [],
-      [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-      items,
-    );
 
   const title =
     customTitle || pathOr('Related Content', ['relatedContent'], translations);
-
-  if (customTitle) tail(items);
-
-  const storyPromoItems = customTitle ? tail(items) : identity(items);
-
-  const reducedStoryPromoItems = slice(0, 6, storyPromoItems);
 
   const hasSingleContent = reducedStoryPromoItems.length === 1;
   const headlineFirst = isHeadlineFirst(reducedStoryPromoItems[0]);
