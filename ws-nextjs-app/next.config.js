@@ -155,6 +155,18 @@ module.exports = {
       Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
     */
     if (!isServer) {
+      /*
+        `crypto` is only used to generate the AMP Most Read CSP hash, which is
+        server-rendered. Without this, webpack ships the ~320 KB
+        crypto-browserify polyfill to the client on every page with Most Read.
+        Next.js sets the polyfill as a rule-level `resolve.fallback`, which
+        takes precedence over ours, so an alias is used instead.
+      */
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        crypto: false,
+      };
+
       config.plugins.push(
         new webpack.NormalModuleReplacementPlugin(
           /(.*)logger.node(\.*)/,
