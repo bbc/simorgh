@@ -4,12 +4,12 @@ import { recommendationsFixtures } from '../Recommendations/fixtures';
 import metadata from './metadata.json';
 import readme from './README.md';
 
-const mundoRecommendations = articleData.data.article.content.model.blocks.flatMap(
-  block =>
+const mundoRecommendations =
+  articleData.data.article.content.model.blocks.flatMap(block =>
     block.type === 'wsoj' && 'data' in block.model
       ? (block.model.data ?? [])
       : [],
-);
+  );
 
 export default {
   title: 'Components/RecommendationsCarousel',
