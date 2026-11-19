@@ -1,0 +1,31 @@
+@use '@scss/themeTokens' as theme;
+
+ul.featuredList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-double;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+    @media #{theme.$mediaQueries-group-4-min-width} {
+      flex-basis: calc((100% - #{theme.$spacings-double}) / 2);
+    }
+  }
+
+  > li:first-child {
+    flex-basis: 100%;
+  }
+}
+
+div.featuredSingleItem {
+  width: 100%;
+  margin: 0;
+}

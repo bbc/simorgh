@@ -98,6 +98,7 @@ export const service: DefaultServiceConfig = {
         endLabel: 'Has llegado al final del artículo',
         heading: 'Ahora, explora más',
         introduction: 'Elige qué quieres leer, ver o descubrir a continuación.',
+        relatedContentLead: 'Para seguir explorando',
         previous: 'Contenido anterior',
         next: 'Contenido siguiente',
         position: '{current} de {total}',

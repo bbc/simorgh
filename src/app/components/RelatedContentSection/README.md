@@ -4,9 +4,23 @@ A component constructing the Related Content section for Article pages. The sect
 
 ## Props
 
-| Name    | type   | Description                       |
-| ------- | ------ | --------------------------------- |
-| content | object | Optimo Related Content type block |
+| Name               | type    | Description                                                          |
+| ------------------ | ------- | -------------------------------------------------------------------- |
+| content            | object  | Optimo Related Content type block                                    |
+| emphasiseFirstItem | boolean | Optional lead-and-supporting layout, defaults to false               |
+| leadPreview        | object  | Optional opening paragraph and native reading time for the lead item |
+
+`emphasiseFirstItem` gives the first item in the existing editorial order a larger
+lead row and presents the remaining items as compact rows. It is enabled only
+inside the WS-3523 Option B treatment. The existing layout remains the default.
+The new layout uses SCSS Modules and the shared dark-UI marker for its colours,
+while keeping the existing promo rendering, data extraction and analytics.
+
+The lead can display a complete opening paragraph, reading time and a visible
+destination action. Its existing headline link remains the sole keyboard stop;
+the action shares that link's clickable card area. Preview text is matched to
+the lead URL and is never shown on supporting items. Missing preview data leaves
+the normal headline, image and destination available.
 
 ## Example ltr/rtl
 

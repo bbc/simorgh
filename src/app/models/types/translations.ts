@@ -4,6 +4,7 @@ export interface Translations {
     endLabel: string;
     heading: string;
     introduction: string;
+    relatedContentLead?: string;
     previous: string;
     next: string;
     position: string;

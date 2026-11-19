@@ -5,6 +5,7 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { ArticleEndItem } from '#app/components/EndOfArticleTreatment/types';
+import { RelatedContentPreview } from '#app/components/RelatedContentSection/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation, Summary } from './curationData';
@@ -173,6 +174,7 @@ export type CountryCuration = {
 
 export type Article = {
   articleEndItems?: ArticleEndItem[];
+  relatedContentPreview?: RelatedContentPreview | null;
   content: ArticleContent;
   metadata: ArticleMetadata;
   mostRead: MostReadData;

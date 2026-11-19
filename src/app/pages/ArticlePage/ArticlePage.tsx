@@ -531,7 +531,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           css={styles.portraitVideoCarousel}
         />
       )}
-      <RelatedContentSection content={blocks} />
+      <RelatedContentSection
+        content={blocks}
+        emphasiseFirstItem={showEndOfArticleTreatment}
+        leadPreview={pageData.relatedContentPreview}
+      />
       {showMediaCuration && (
         <div css={styles.mediaCurationRow}>
           <div data-testid="media-curation">

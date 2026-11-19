@@ -26,6 +26,31 @@ than stretching their original sidebar layout across the panel. Existing dark-UI
 styles are enabled only for the grouped sections (the legacy theme context and
 the SCSS dark-UI marker); the new layout and colour overrides remain in SCSS.
 
+Related Content gives the first journalist-ordered item a prominent lead row,
+with larger photography and headline on desktop and its image above the headline
+on mobile. The remaining stories use smaller thumbnail rows, in two columns
+on desktop, wrapping when enlarged text needs more room. The existing section
+title, editorial order, dates, links and tracking are retained. This is an opt-in
+presentation of the existing Related Content selection, not a new recommendation
+source or an "editor's pick" designation. A single item receives the lead style;
+an item without an image uses the available width for its headline.
+
+The lead card has a BBC red top edge, a short opening paragraph and the linked
+article's native reading time when available. Its visible reading action shares
+the existing headline link, retaining one keyboard stop and existing tracking.
+Text stays complete and readable, without a fade, line clamp or animation.
+
+For this Option B prototype, `relatedContentPreview/` fetches only the first
+displayed Related Content destination on the server, alongside the existing
+article-end selection. It adds at most one BFF request, with a two-second timeout
+and a bounded five-minute cache of successful previews. Only Mundo text articles
+are eligible: a complete opening paragraph of up to 600 characters is used, or
+a short authored promo summary if the opening is unavailable or too long.
+Unsupported content, fetch failures and missing excerpts leave the ordinary
+promo link intact. No later item is substituted for the journalist's first item.
+Production should include the preview in the existing BFF response and review
+excerpt suitability, freshness and the added request latency before an experiment.
+
 On mobile the entire group waits until Continue Reading is expanded. If the
 treatment is ineligible or has fewer than two mixed-format promos, the existing
 page layout is retained. Without JavaScript, the ordinary links and supported
