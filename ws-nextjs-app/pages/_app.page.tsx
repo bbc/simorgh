@@ -19,6 +19,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
+import AppOptimizelyProvider from '#app/contexts/AppOptimizelyProvider';
 import QueryProvider from '#app/contexts/QueryContext';
 import { IdctaConfig } from '#app/models/types/account';
 
@@ -132,36 +133,38 @@ export default function CustomApp({
           isUK={isUK ?? false}
           primaryMediaType={primaryMediaType}
         >
-          <AccountProvider initialConfig={idctaConfig}>
-            <ReverbParamsContextProvider metadata={pageData?.metadata}>
-              <EventTrackingContextProvider atiData={atiAnalytics}>
-                {isAvEmbeds ? (
-                  <ThemeProvider service={service} variant={variant}>
-                    {RenderChildrenOrError}
-                  </ThemeProvider>
-                ) : (
-                  <QueryProvider>
-                    <UserContextProvider>
-                      <ThemeProviderSCSSModules
-                        service={service}
-                        variant={variant}
-                      >
-                        <ThemeProvider service={service} variant={variant}>
-                          <PageWrapper
-                            navItems={navItems}
-                            pageData={pageData}
-                            status={status}
-                          >
-                            {RenderChildrenOrError}
-                          </PageWrapper>
-                        </ThemeProvider>
-                      </ThemeProviderSCSSModules>
-                    </UserContextProvider>
-                  </QueryProvider>
-                )}
-              </EventTrackingContextProvider>
-            </ReverbParamsContextProvider>
-          </AccountProvider>
+          <AppOptimizelyProvider>
+            <AccountProvider initialConfig={idctaConfig}>
+              <ReverbParamsContextProvider metadata={pageData?.metadata}>
+                <EventTrackingContextProvider atiData={atiAnalytics}>
+                  {isAvEmbeds ? (
+                    <ThemeProvider service={service} variant={variant}>
+                      {RenderChildrenOrError}
+                    </ThemeProvider>
+                  ) : (
+                    <QueryProvider>
+                      <UserContextProvider>
+                        <ThemeProviderSCSSModules
+                          service={service}
+                          variant={variant}
+                        >
+                          <ThemeProvider service={service} variant={variant}>
+                            <PageWrapper
+                              navItems={navItems}
+                              pageData={pageData}
+                              status={status}
+                            >
+                              {RenderChildrenOrError}
+                            </PageWrapper>
+                          </ThemeProvider>
+                        </ThemeProviderSCSSModules>
+                      </UserContextProvider>
+                    </QueryProvider>
+                  )}
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
+            </AccountProvider>
+          </AppOptimizelyProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

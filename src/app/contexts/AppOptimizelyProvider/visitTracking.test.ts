@@ -3,7 +3,7 @@ import registerVisitActivity from './visitTracking';
 const VISIT_STORAGE_KEY = 'last_visit_ts';
 
 describe('registerVisitActivity', () => {
-  const now = 1000000;
+  const now = Date.UTC(2026, 0, 1);
 
   beforeEach(() => {
     localStorage.clear();

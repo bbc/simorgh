@@ -8,7 +8,6 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { buildAnalyticsParams } from '#app/lib/analyticsUtils/params/buildParams';
 import {
   ATIData,
@@ -78,7 +77,7 @@ const getEnrichedATIData = ({ pageMetadata, serviceContext, pageType }) => {
     : pageMetadata?.atiAnalytics || {};
 };
 
-const ReverbParamsContextProviderComponent = ({
+export const ReverbParamsContextProvider = ({
   children,
   metadata,
 }: PropsWithChildren<ReverbParamsProviderProps>) => {
@@ -130,7 +129,3 @@ const ReverbParamsContextProviderComponent = ({
     </ReverbParamsContext.Provider>
   );
 };
-
-export const ReverbParamsContextProvider = withOptimizelyProvider(
-  ReverbParamsContextProviderComponent,
-);
