@@ -3,9 +3,16 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const postFixture = postsFixture.data.results[0];
 
@@ -18,7 +25,13 @@ const mockStreamContentSingle = {
 };
 
 const mockStreamDataMoreThanOne = {
-  results: [postFixture, postFixture],
+  results: [
+    postFixture,
+    {
+      ...postFixture,
+      urn: `${postFixture.urn}-second`,
+    },
+  ],
 };
 
 const mockIntersectionObserver = new MockIntersectionObserver();
@@ -29,6 +42,8 @@ describe('Live Page Stream', () => {
     global.IntersectionObserver = jest.fn(
       mockIntersectionObserver.getMockIntersectionObserver(),
     );
+
+    mockMatchMedia();
   });
 
   afterEach(() => {

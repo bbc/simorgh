@@ -70,16 +70,10 @@ export const renderAppleItunesApp = ({
   iTunesAppId,
   canonicalLink,
   isAmp,
-  hasAppleItunesAppBanner,
 }: AppleItunesApp) => {
   const isCanonical = !isAmp;
 
-  const shouldRender = [
-    iTunesAppId,
-    canonicalLink,
-    isCanonical,
-    hasAppleItunesAppBanner,
-  ].every(Boolean);
+  const shouldRender = [iTunesAppId, canonicalLink, isCanonical].every(Boolean);
 
   if (shouldRender) {
     const content = `app-id=${iTunesAppId}, app-argument=${canonicalLink}?utm_medium=banner&utm_content=apple-itunes-app`;

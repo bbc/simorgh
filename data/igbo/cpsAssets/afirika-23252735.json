@@ -72,7 +72,8 @@
         "readTime": 2,
         "siteUri": "/igbo",
         "consumableOnRedButton": false,
-        "consumableOnlyOnRedButton": false
+        "consumableOnlyOnRedButton": false,
+        "allowAdvertising": true
       },
       "content": {
         "blocks": [
@@ -282,7 +283,994 @@
             "markupType": "plain_text",
             "type": "paragraph"
           }
-        ]
+        ],
+        "model": {
+          "blocks": [
+            {
+              "type": "headline",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "model": {
+                            "text": "STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1571833139000,
+                "lastPublished": 1571833139000
+              }
+            },
+            {
+              "type": "image",
+              "model": {
+                "emphasiseImage": true,
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people went to the NTA awards recently.",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people went to the NTA awards recently.",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Some people at the NTA awards",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Some people at the NTA awards",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 976,
+                      "height": 549,
+                      "locator": "6ACE/test/_63724372_gettyimages-1098075358.jpg",
+                      "href": "http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Joe Maher",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": " This is introduction text, it should be bold by default, but also support inline links to other pages.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": " This is introduction text, it should be bold by default, but also support ",
+                            "attributes": [
+                              "bold"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "inline links",
+                            "locator": "https://bbc.com/pidgin/23248703",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "inline links",
+                                  "attributes": [
+                                    "bold"
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": " to other pages.",
+                            "attributes": [
+                              "bold"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is a subheadline! that has a link",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "This is a subheadline! that has ",
+                            "attributes": [
+                              "bold",
+                              "italic"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "a link",
+                            "locator": "https://bbc.com/pidgin/23248703",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "a link",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "mpu",
+              "model": {}
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "unorderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a unordered list",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is a unordered list",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can have bold text in it",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "It can have ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "bold text",
+                                        "attributes": [
+                                          "bold"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": " in it",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can also have links",
+                                  "blocks": [
+                                    {
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "It can also have links",
+                                        "locator": "https://bbc.com/pidgin/23248703",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "It can also have links",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can even have italic text in it!",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "It can even have italic text in it!",
+                                        "attributes": [
+                                          "italic"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Feta the big cheese macaroni cheese. Caerphilly danish fontina queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. Cow cheeseburger stilton emmental.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Feta the big cheese macaroni cheese. ",
+                            "attributes": []
+                          }
+                        },
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Caerphilly danish fontina",
+                            "locator": "https://bbc.com/pidgin/23248703",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Caerphilly danish fontina",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": " queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. ",
+                            "attributes": []
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Cow cheeseburger",
+                            "attributes": [
+                              "bold"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": " stilton emmental.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "image",
+              "model": {
+                "emphasiseImage": true,
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "That guy from bodyguard at the NTAs",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "That guy from bodyguard at the NTAs",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 976,
+                      "height": 549,
+                      "locator": "B8EE/test/_63724374_gettyimages-1098050396.jpg",
+                      "href": "http://b.files.bbci.co.uk/B8EE/test/_63724374_gettyimages-1098050396.jpg",
+                      "originCode": "cpsdevpb",
+                      "copyrightHolder": "Joe Maher",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Start of localised text",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Start of localised text",
+                            "attributes": [
+                              "bold"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "End of localised text",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "End of localised text",
+                            "attributes": [
+                              "bold"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Rubber cheese macaroni cheese cottage cheese. Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Rubber cheese macaroni ",
+                            "attributes": []
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "cheese cottage cheese",
+                            "attributes": [
+                              "italic"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": ". Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "orderedList",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "This is a ordered list",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "This is a ordered list",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can have bold text in it",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "It can have ",
+                                        "attributes": []
+                                      }
+                                    },
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "bold text",
+                                        "attributes": [
+                                          "bold"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": " in it",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can also have links",
+                                  "blocks": [
+                                    {
+                                      "type": "urlLink",
+                                      "model": {
+                                        "text": "It can also have links",
+                                        "locator": "https://bbc.com/pidgin/23248703",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "It can also have links",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "listItem",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "It can even have italic text in it!",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "It can even have italic text in it!",
+                                        "attributes": [
+                                          "italic"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "social",
+              "model": {
+                "source": "https://twitter.com/casualafro/status/1184522157050748929",
+                "blocks": [
+                  {
+                    "type": "aresOEmbed",
+                    "model": {
+                      "oembed": {
+                        "version": "1.0",
+                        "author_name": "taylor garron",
+                        "author_url": "https://twitter.com/casualafro",
+                        "provider_name": "Twitter",
+                        "provider_url": "https://twitter.com",
+                        "url": "https://twitter.com/casualafro/status/1184522157050748929",
+                        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">gonna start an asmr channel that’s just me reading the dunkin donuts menu in a thick boston accent</p>&mdash; taylor garron (@casualafro) <a href=\"https://twitter.com/casualafro/status/1184522157050748929?ref_src=twsrc%5Etfw\">October 16, 2019</a></blockquote>\n",
+                        "width": 550,
+                        "indexOfType": 0
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "video",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p01kx42s",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "トランプ氏、香港人権法案に署名　中国は反発",
+                            "synopses": {
+                              "short": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "long": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+                            },
+                            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                            "embedding": false,
+                            "advertising": true,
+                            "caption": "Video",
+                            "versions": [
+                              {
+                                "versionId": "p01kx42v",
+                                "types": [
+                                  "Original"
+                                ],
+                                "duration": 5,
+                                "durationISO8601": "PT5S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1545304011000
+                              }
+                            ],
+                            "smpKind": "programme",
+                            "type": "media",
+                            "syndication": {
+                              "destinations": []
+                            }
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
+                                  "originCode": "mpv"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "caption",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "text",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "paragraph",
+                                      "model": {
+                                        "text": "Video",
+                                        "blocks": [
+                                          {
+                                            "type": "fragment",
+                                            "model": {
+                                              "text": "Video",
+                                              "attributes": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a heading!",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a heading!",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "subheadline",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "model": {
+                            "text": "This is a crosshead!",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is a crosshead!",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "This is an external link to google!",
+                      "blocks": [
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "This is an external link to google!",
+                            "locator": "https://www.google.com/",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "This is an external link to google!",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
       "promo": {
         "headlines": {

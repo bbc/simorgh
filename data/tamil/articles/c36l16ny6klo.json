@@ -1,0 +1,1483 @@
+{
+  "data": {
+    "article": {
+      "metadata": {
+        "atiAnalytics": {
+          "categoryName": "Nepal~India~Flood~Anna+Dravida+Munnetra+Kazhagam~Dravida+Munnetra+Kazhagam~Tamilaga+Vettri+Kazhagam~Tamil+Nadu",
+          "contentId": "urn:bbc:optimo:asset:c36l16ny6klo",
+          "contentType": "article-sfv",
+          "language": "ta",
+          "ldpThingIds": "1de7eccb-d633-4e93-97c2-1771b7841345~5a08f030-710f-4168-acee-67294a90fc75~7789f256-a806-479a-b6d0-50e3d4cd9abc~c6e27093-92bb-4d37-aabe-36eb75f4ee18~df5e2b79-397b-45e3-acac-aee6ab342aa8~ee539e6f-e32d-4c65-9f2f-d578006e3ec3~fa46a306-d93a-43af-a2b8-b386773e2016",
+          "ldpThingLabels": "Nepal~India~Flood~Anna+Dravida+Munnetra+Kazhagam~Dravida+Munnetra+Kazhagam~Tamilaga+Vettri+Kazhagam~Tamil+Nadu",
+          "nationsProducer": null,
+          "pageIdentifier": "tamil.watch.c36l16ny6klo.page",
+          "pageTitle": "நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+          "timePublished": "2026-08-27T09:43:47.991Z",
+          "timeUpdated": "2026-08-27T09:43:47.991Z",
+          "readTimeMilliseconds": 60000
+        },
+        "id": "urn:bbc:ares::article:c36l16ny6klo",
+        "locators": {
+          "optimoUrn": "urn:bbc:optimo:asset:c36l16ny6klo",
+          "canonicalUrl": "https://www.bbc.com/tamil/watch/c36l16ny6klo"
+        },
+        "type": "article",
+        "createdBy": "Tamil",
+        "language": "ta",
+        "firstPublished": 1787823827991,
+        "lastPublished": 1787823827991,
+        "isOppm": false,
+        "options": { "includeComments": false },
+        "analyticsLabels": {
+          "ldp_tags": "Nepal~India~Flood~Anna+Dravida+Munnetra+Kazhagam~Dravida+Munnetra+Kazhagam~Tamilaga+Vettri+Kazhagam~Tamil+Nadu",
+          "page": "tamil.watch.c36l16ny6klo.page",
+          "irisKeyword": null,
+          "audience_motivation": "Update me",
+          "ldp_ids": "1de7eccb-d633-4e93-97c2-1771b7841345~5a08f030-710f-4168-acee-67294a90fc75~7789f256-a806-479a-b6d0-50e3d4cd9abc~c6e27093-92bb-4d37-aabe-36eb75f4ee18~df5e2b79-397b-45e3-acac-aee6ab342aa8~ee539e6f-e32d-4c65-9f2f-d578006e3ec3~fa46a306-d93a-43af-a2b8-b386773e2016",
+          "contentId": "urn:bbc:optimo:asset:c36l16ny6klo",
+          "producer": "Tamil"
+        },
+        "passport": {
+          "language": "ta",
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+          "taggings": [
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+              "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+              "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+              "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+              "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+              "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/fa46a306-d93a-43af-a2b8-b386773e2016#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/df5e2b79-397b-45e3-acac-aee6ab342aa8#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/ee539e6f-e32d-4c65-9f2f-d578006e3ec3#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/c6e27093-92bb-4d37-aabe-36eb75f4ee18#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+              "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+            },
+            {
+              "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+              "value": "2026-08-27T09:43:47.991Z"
+            }
+          ],
+          "predicates": {
+            "assetType": [
+              {
+                "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id",
+                "type": "assetType"
+              }
+            ],
+            "primaryMediaType": [
+              {
+                "value": "http://www.bbc.co.uk/things/ffc98bca-8cff-4ee6-9beb-a6ff6ef3ef9f#id",
+                "type": "primaryMediaType"
+              }
+            ],
+            "dateFirstReleased": [
+              {
+                "value": "2026-08-27T09:43:47.991Z",
+                "type": "dateFirstReleased"
+              }
+            ],
+            "infoClass": [
+              {
+                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                "type": "infoClass"
+              }
+            ],
+            "formats": [
+              {
+                "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingLabel": "News report",
+                "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+                "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+                "thingType": ["tagging:TagConcept", "tagging:Format"],
+                "thingSameAs": [],
+                "thingEnglishLabel": "Report",
+                "thingPreferredLabel": "Report",
+                "thingLabelLanguage": "ta",
+                "type": "formats"
+              }
+            ],
+            "editorialSensitivity": [
+              {
+                "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id",
+                "type": "editorialSensitivity"
+              }
+            ],
+            "about": [
+              {
+                "value": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "thingLabel": "நேபாளம்",
+                "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1282988/",
+                  "http://www.wikidata.org/entity/Q837"
+                ],
+                "thingEnglishLabel": "Nepal",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                "thingLabel": "வெள்ளம்",
+                "thingUri": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+                "thingId": "7789f256-a806-479a-b6d0-50e3d4cd9abc",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Flood",
+                  "http://www.wikidata.org/entity/Q8068"
+                ],
+                "thingEnglishLabel": "Flood",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/fa46a306-d93a-43af-a2b8-b386773e2016#id",
+                "thingLabel": "தமிழ்நாடு",
+                "thingUri": "http://www.bbc.co.uk/things/fa46a306-d93a-43af-a2b8-b386773e2016#id",
+                "thingId": "fa46a306-d93a-43af-a2b8-b386773e2016",
+                "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Tamil_Nadu",
+                  "http://www.wikidata.org/entity/Q1445",
+                  "http://sws.geonames.org/1255053/"
+                ],
+                "thingEnglishLabel": "Tamil Nadu",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/df5e2b79-397b-45e3-acac-aee6ab342aa8#id",
+                "thingLabel": "திமுக",
+                "thingUri": "http://www.bbc.co.uk/things/df5e2b79-397b-45e3-acac-aee6ab342aa8#id",
+                "thingId": "df5e2b79-397b-45e3-acac-aee6ab342aa8",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Organisation",
+                  "pol:PoliticalParty",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/Dravida_Munnetra_Kazhagam",
+                  "http://www.wikidata.org/entity/Q1255973"
+                ],
+                "thingEnglishLabel": "Dravida Munnetra Kazhagam",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/ee539e6f-e32d-4c65-9f2f-d578006e3ec3#id",
+                "thingLabel": "தமிழக வெற்றிக் கழகம் (தவெக)",
+                "thingUri": "http://www.bbc.co.uk/things/ee539e6f-e32d-4c65-9f2f-d578006e3ec3#id",
+                "thingId": "ee539e6f-e32d-4c65-9f2f-d578006e3ec3",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Organisation",
+                  "pol:PoliticalParty",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": ["http://www.wikidata.org/entity/Q124408791"],
+                "thingEnglishLabel": "Tamilaga Vettri Kazhagam",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/c6e27093-92bb-4d37-aabe-36eb75f4ee18#id",
+                "thingLabel": "அதிமுக",
+                "thingUri": "http://www.bbc.co.uk/things/c6e27093-92bb-4d37-aabe-36eb75f4ee18#id",
+                "thingId": "c6e27093-92bb-4d37-aabe-36eb75f4ee18",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "tagging:AmbiguousTerm",
+                  "core:Organisation",
+                  "pol:PoliticalParty",
+                  "tagging:Agent"
+                ],
+                "thingSameAs": [
+                  "http://dbpedia.org/resource/All_India_Anna_Dravida_Munnetra_Kazhagam",
+                  "http://www.wikidata.org/entity/Q651141"
+                ],
+                "thingEnglishLabel": "Anna Dravida Munnetra Kazhagam",
+                "type": "about"
+              },
+              {
+                "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingLabel": "இந்தியா",
+                "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+                "thingType": [
+                  "core:Thing",
+                  "tagging:TagConcept",
+                  "core:Place",
+                  "geoname:Feature",
+                  "geoname:GeoTagConcept"
+                ],
+                "thingSameAs": [
+                  "http://sws.geonames.org/1269750/",
+                  "http://dbpedia.org/resource/India",
+                  "http://www.wikidata.org/entity/Q668"
+                ],
+                "thingEnglishLabel": "India",
+                "type": "about"
+              }
+            ]
+          }
+        },
+        "tags": {
+          "about": [
+            {
+              "thingLabel": "நேபாளம்",
+              "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+              "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1282988/",
+                "http://www.wikidata.org/entity/Q837"
+              ],
+              "topicName": "நேபாளம்",
+              "topicId": "cnq68qn5n6pt",
+              "curationList": [
+                {
+                  "curationId": "5832101f-5438-4a3d-b84b-17d9c79ef3d8",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Nepal",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Nepal"
+            },
+            {
+              "thingLabel": "வெள்ளம்",
+              "thingUri": "http://www.bbc.co.uk/things/7789f256-a806-479a-b6d0-50e3d4cd9abc#id",
+              "thingId": "7789f256-a806-479a-b6d0-50e3d4cd9abc",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Flood",
+                "http://www.wikidata.org/entity/Q8068"
+              ],
+              "thingEnglishLabel": "Flood",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Flood"
+            },
+            {
+              "thingLabel": "தமிழ்நாடு",
+              "thingUri": "http://www.bbc.co.uk/things/fa46a306-d93a-43af-a2b8-b386773e2016#id",
+              "thingId": "fa46a306-d93a-43af-a2b8-b386773e2016",
+              "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Tamil_Nadu",
+                "http://www.wikidata.org/entity/Q1445",
+                "http://sws.geonames.org/1255053/"
+              ],
+              "topicName": "தமிழ்நாடு",
+              "topicId": "c6vzyv6g7yrt",
+              "curationList": [
+                {
+                  "curationId": "4e954558-1707-4812-bb8f-40215c4db583",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Tamil Nadu",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Tamil Nadu"
+            },
+            {
+              "thingLabel": "திமுக",
+              "thingUri": "http://www.bbc.co.uk/things/df5e2b79-397b-45e3-acac-aee6ab342aa8#id",
+              "thingId": "df5e2b79-397b-45e3-acac-aee6ab342aa8",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Organisation",
+                "pol:PoliticalParty",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Dravida_Munnetra_Kazhagam",
+                "http://www.wikidata.org/entity/Q1255973"
+              ],
+              "topicName": "திமுக",
+              "topicId": "cr50y569wnqt",
+              "curationList": [
+                {
+                  "curationId": "db96e415-72d9-44bf-86f7-de33f7f7edc1",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Dravida Munnetra Kazhagam",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Dravida Munnetra Kazhagam"
+            },
+            {
+              "thingLabel": "தமிழக வெற்றிக் கழகம் (தவெக)",
+              "thingUri": "http://www.bbc.co.uk/things/ee539e6f-e32d-4c65-9f2f-d578006e3ec3#id",
+              "thingId": "ee539e6f-e32d-4c65-9f2f-d578006e3ec3",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Organisation",
+                "pol:PoliticalParty",
+                "tagging:Agent"
+              ],
+              "thingSameAs": ["http://www.wikidata.org/entity/Q124408791"],
+              "topicName": "தமிழக வெற்றிக் கழகம் (தவெக)",
+              "topicId": "c1l7g24d3jqt",
+              "curationList": [
+                {
+                  "curationId": "b37e65b4-0dac-46ba-9636-c9a5d5f57478",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Tamilaga Vettri Kazhagam",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Tamilaga Vettri Kazhagam"
+            },
+            {
+              "thingLabel": "அதிமுக",
+              "thingUri": "http://www.bbc.co.uk/things/c6e27093-92bb-4d37-aabe-36eb75f4ee18#id",
+              "thingId": "c6e27093-92bb-4d37-aabe-36eb75f4ee18",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "tagging:AmbiguousTerm",
+                "core:Organisation",
+                "pol:PoliticalParty",
+                "tagging:Agent"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/All_India_Anna_Dravida_Munnetra_Kazhagam",
+                "http://www.wikidata.org/entity/Q651141"
+              ],
+              "topicName": "அதிமுக",
+              "topicId": "c7zp5zg7310t",
+              "curationList": [
+                {
+                  "curationId": "770d594c-0dd0-47c4-86b4-82d181790166",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "Anna Dravida Munnetra Kazhagam",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "Anna Dravida Munnetra Kazhagam"
+            },
+            {
+              "thingLabel": "இந்தியா",
+              "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+              "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+              "thingType": [
+                "core:Thing",
+                "tagging:TagConcept",
+                "core:Place",
+                "geoname:Feature",
+                "geoname:GeoTagConcept"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/1269750/",
+                "http://dbpedia.org/resource/India",
+                "http://www.wikidata.org/entity/Q668"
+              ],
+              "topicName": "இந்தியா",
+              "topicId": "c2dwqdn01v5t",
+              "curationList": [
+                {
+                  "curationId": "cc808102-a6f4-44e1-8662-fdc097ac77fa",
+                  "curationType": "vivo-stream"
+                }
+              ],
+              "thingEnglishLabel": "India",
+              "thingLabelLanguage": "ta",
+              "thingPreferredLabel": "India"
+            }
+          ]
+        },
+        "blockTypes": [
+          "headline",
+          "text",
+          "paragraph",
+          "fragment",
+          "video",
+          "caption",
+          "aresMedia",
+          "aresMediaMetadata",
+          "image",
+          "rawImage",
+          "altText"
+        ],
+        "includeComments": false,
+        "topics": [
+          {
+            "topicName": "நேபாளம்",
+            "topicId": "cnq68qn5n6pt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "5832101f-5438-4a3d-b84b-17d9c79ef3d8",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/cnq68qn5n6pt",
+            "meta": {
+              "created": "2019-06-13T11:45:50.976Z",
+              "updated": "2024-09-18T14:57:14.373Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "cnq68qn5n6pt:ta"
+            }
+          },
+          {
+            "topicName": "தமிழ்நாடு",
+            "topicId": "c6vzyv6g7yrt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/fa46a306-d93a-43af-a2b8-b386773e2016#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "4e954558-1707-4812-bb8f-40215c4db583",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/c6vzyv6g7yrt",
+            "meta": {
+              "created": "2019-06-13T11:45:37.411Z",
+              "updated": "2024-09-18T14:57:15.209Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "c6vzyv6g7yrt:ta"
+            }
+          },
+          {
+            "topicName": "திமுக",
+            "topicId": "cr50y569wnqt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/df5e2b79-397b-45e3-acac-aee6ab342aa8#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "db96e415-72d9-44bf-86f7-de33f7f7edc1",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "pol:PoliticalParty",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/cr50y569wnqt",
+            "meta": {
+              "created": "2019-06-13T11:44:29.306Z",
+              "updated": "2024-09-18T14:57:24.912Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "cr50y569wnqt:ta"
+            }
+          },
+          {
+            "topicName": "தமிழக வெற்றிக் கழகம் (தவெக)",
+            "topicId": "c1l7g24d3jqt",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/ee539e6f-e32d-4c65-9f2f-d578006e3ec3#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "b37e65b4-0dac-46ba-9636-c9a5d5f57478",
+                "curationType": "vivo-stream",
+                "position": 0,
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "pol:PoliticalParty",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/c1l7g24d3jqt",
+            "meta": {
+              "created": "2026-02-12T15:04:21.491Z",
+              "updated": "2026-02-12T15:04:21.491Z",
+              "dateIssued": "2026-02-12T15:04:21.489Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "c1l7g24d3jqt:ta"
+            }
+          },
+          {
+            "topicName": "அதிமுக",
+            "topicId": "c7zp5zg7310t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/c6e27093-92bb-4d37-aabe-36eb75f4ee18#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "770d594c-0dd0-47c4-86b4-82d181790166",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "pol:PoliticalParty",
+              "tagging:Agent"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/c7zp5zg7310t",
+            "meta": {
+              "created": "2019-06-13T11:44:08.809Z",
+              "updated": "2024-09-18T14:57:27.289Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "c7zp5zg7310t:ta"
+            }
+          },
+          {
+            "topicName": "இந்தியா",
+            "topicId": "c2dwqdn01v5t",
+            "subjectList": [
+              {
+                "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+                "subjectType": "tag"
+              }
+            ],
+            "curationList": [
+              {
+                "curationId": "cc808102-a6f4-44e1-8662-fdc097ac77fa",
+                "curationType": "vivo-stream",
+                "visualProminence": "NORMAL"
+              }
+            ],
+            "types": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place",
+              "geoname:Feature",
+              "geoname:GeoTagConcept"
+            ],
+            "home": "http://www.bbc.co.uk/ontologies/passport/home/Tamil",
+            "topicUrl": "/tamil/topics/c2dwqdn01v5t",
+            "meta": {
+              "created": "2019-06-13T11:44:41.796Z",
+              "updated": "2024-09-18T14:57:22.283Z",
+              "transliterated": false,
+              "script": "ta",
+              "variantId": "c2dwqdn01v5t:ta"
+            }
+          }
+        ],
+        "consumableAsSFV": true,
+        "allowAdvertising": true,
+        "consumableOnRedButton": false,
+        "consumableOnlyOnRedButton": false,
+        "useSensitiveOnwardJourneys": false,
+        "stats": { "readTime": 1, "wordCount": 44 },
+        "isTransliterated": false,
+        "isKeyPointsFormatAsset": false
+      },
+      "content": {
+        "model": {
+          "blocks": [
+            {
+              "id": "f4997c03",
+              "type": "visuallyHiddenHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "769b1f9a",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "96a29c31",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                            "blocks": [
+                              {
+                                "id": "88f8da1b",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                                  "attributes": []
+                                },
+                                "position": [1, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [1, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [1, 1]
+                  }
+                ]
+              },
+              "position": [1]
+            },
+            {
+              "id": "13649c51",
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p6j2st",
+                "blocks": [
+                  {
+                    "id": "b37f3661",
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "4a23ebad",
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "8ba1e6dd",
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                  "blocks": [
+                                    {
+                                      "id": "a40e65af",
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                        "attributes": []
+                                      },
+                                      "position": [2, 1, 1, 1, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [2, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [2, 1]
+                  },
+                  {
+                    "id": "0021e11c",
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "8faffe70",
+                          "blockId": "urn:bbc:ares::clip:p0p6j2st",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p6j2st",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                            "synopses": {
+                              "short": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                              "medium": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என சட்டப்பேரவையில் எதிர்க்கட்சிகள் அமளி",
+                              "long": "நேபாளத்தில் ஏற்பட்டுள்ள பெருவெள்ளத்தில் சிக்கியுள்ள தமிழர்களின் நிலை குறித்து எதிர்க்கட்சிகள் அரசின் கவனத்தை ஈர்க்கும் முன்பே அமைச்சர் ராஜ்மோகன் அது குறித்து பேசத்தொடங்கினார். இதற்குஎதிர்க்கட்சி உறுப்பினர்கள் எதிர்ப்பு தெரிவித்தனர்."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p6j4vf.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p6j2t2",
+                                "types": ["Portrait"],
+                                "duration": 82,
+                                "durationISO8601": "PT1M22S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787822699000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          },
+                          "position": [2, 2, 1]
+                        },
+                        {
+                          "id": "5467b29a",
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "id": "b9698b73",
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 720,
+                                  "height": 1280,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p6j4vf.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                },
+                                "position": [2, 2, 2, 1]
+                              },
+                              {
+                                "id": "650ec687",
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "id": "44c71d04",
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "id": "ac58d6d1",
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                              "blocks": [
+                                                {
+                                                  "id": "dc16c82b",
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                                    "attributes": []
+                                                  },
+                                                  "position": [
+                                                    2, 2, 2, 2, 1, 1, 1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "position": [2, 2, 2, 2, 1, 1]
+                                          }
+                                        ]
+                                      },
+                                      "position": [2, 2, 2, 2, 1]
+                                    }
+                                  ]
+                                },
+                                "position": [2, 2, 2, 2]
+                              }
+                            ]
+                          },
+                          "position": [2, 2, 2]
+                        }
+                      ]
+                    },
+                    "position": [2, 2]
+                  }
+                ]
+              },
+              "position": [2]
+            },
+            {
+              "id": "b718fd57",
+              "type": "fauxHeadline",
+              "model": {
+                "blocks": [
+                  {
+                    "id": "0a46718e",
+                    "type": "text",
+                    "model": {
+                      "blocks": [
+                        {
+                          "id": "7dadfb2f",
+                          "type": "paragraph",
+                          "model": {
+                            "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                            "blocks": [
+                              {
+                                "id": "1440e2d4",
+                                "type": "fragment",
+                                "model": {
+                                  "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                                  "attributes": []
+                                },
+                                "position": [3, 1, 1, 1]
+                              }
+                            ]
+                          },
+                          "position": [3, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [3, 1]
+                  }
+                ]
+              },
+              "position": [3]
+            },
+            {
+              "id": "bb978019",
+              "type": "timestamp",
+              "model": {
+                "firstPublished": 1787823827991,
+                "lastPublished": 1787823827991
+              },
+              "position": [4]
+            },
+            {
+              "id": "c292b392",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "1ce1b8ce",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "நேபாளத்தில் ஏற்பட்டுள்ள பெருவெள்ளத்தில் சிக்கியுள்ள தமிழர்களின் நிலை குறித்து எதிர்க்கட்சிகள் அரசின் கவனத்தை ஈர்க்கும் முன்பே அமைச்சர் ராஜ்மோகன் அது குறித்து பேசத்தொடங்கினார். இதற்குஎதிர்க்கட்சி உறுப்பினர்கள் எதிர்ப்பு தெரிவித்தனர்.",
+                      "blocks": [
+                        {
+                          "id": "380e7416",
+                          "type": "fragment",
+                          "model": {
+                            "text": "நேபாளத்தில் ஏற்பட்டுள்ள பெருவெள்ளத்தில் சிக்கியுள்ள தமிழர்களின் நிலை குறித்து எதிர்க்கட்சிகள் அரசின் கவனத்தை ஈர்க்கும் முன்பே அமைச்சர் ராஜ்மோகன் அது குறித்து பேசத்தொடங்கினார். இதற்குஎதிர்க்கட்சி உறுப்பினர்கள் எதிர்ப்பு தெரிவித்தனர்.",
+                            "attributes": []
+                          },
+                          "position": [5, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [5, 1]
+                  }
+                ]
+              },
+              "position": [5]
+            },
+            {
+              "id": "2b3b63d2",
+              "type": "text",
+              "model": {
+                "suitableForAbridgement": false,
+                "blocks": [
+                  {
+                    "id": "9505a767",
+                    "type": "paragraph",
+                    "model": {
+                      "text": "- இது, பிபிசிக்காக கலெக்டிவ் நியூஸ்ரூம் வெளியீடு",
+                      "blocks": [
+                        {
+                          "id": "cce77766",
+                          "type": "fragment",
+                          "model": {
+                            "text": "- இது, பிபிசிக்காக கலெக்டிவ் நியூஸ்ரூம் வெளியீடு",
+                            "attributes": ["bold"]
+                          },
+                          "position": [6, 1, 1]
+                        }
+                      ]
+                    },
+                    "position": [6, 1]
+                  }
+                ]
+              },
+              "position": [6]
+            }
+          ]
+        }
+      },
+      "promo": {
+        "headlines": {
+          "seoHeadline": "நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+          "promoHeadline": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "காணொளி: நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "images": {
+          "defaultPromoImage": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": { "text": "", "attributes": [] }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "நேபாள விவகாரம் தொடர்பாக சட்டப்பேரவையில் அமளி - என்ன நடந்தது?",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 364,
+                  "height": 648,
+                  "locator": "3952/live/be0507e0-a1fb-11f1-a97e-999c5aae08bf.jpg",
+                  "originCode": "cpsprodpb",
+                  "copyrightHolder": "Getty Images",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        "summary": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என சட்டப்பேரவையில் எதிர்க்கட்சிகள் அமளி",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என சட்டப்பேரவையில் எதிர்க்கட்சிகள் அமளி",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "serviceIdentifier": "Tamil",
+        "consumableAsSFV": true,
+        "media": {
+          "blocks": [
+            {
+              "type": "video",
+              "model": {
+                "locator": "urn:bbc:pips:pid:p0p6j2st",
+                "blocks": [
+                  {
+                    "type": "caption",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "aresMedia",
+                    "model": {
+                      "blocks": [
+                        {
+                          "blockId": "urn:bbc:ares::clip:p0p6j2st",
+                          "type": "aresMediaMetadata",
+                          "model": {
+                            "id": "p0p6j2st",
+                            "subType": "clip",
+                            "format": "video",
+                            "title": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                            "synopses": {
+                              "short": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                              "medium": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என சட்டப்பேரவையில் எதிர்க்கட்சிகள் அமளி",
+                              "long": "நேபாளத்தில் ஏற்பட்டுள்ள பெருவெள்ளத்தில் சிக்கியுள்ள தமிழர்களின் நிலை குறித்து எதிர்க்கட்சிகள் அரசின் கவனத்தை ஈர்க்கும் முன்பே அமைச்சர் ராஜ்மோகன் அது குறித்து பேசத்தொடங்கினார். இதற்குஎதிர்க்கட்சி உறுப்பினர்கள் எதிர்ப்பு தெரிவித்தனர்."
+                            },
+                            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0p6j4vf.jpg",
+                            "imageCopyright": "BBC",
+                            "embedding": true,
+                            "advertising": true,
+                            "versions": [
+                              {
+                                "versionId": "p0p6j2t2",
+                                "types": ["Portrait"],
+                                "duration": 82,
+                                "durationISO8601": "PT1M22S",
+                                "warnings": {},
+                                "availableTerritories": {
+                                  "uk": true,
+                                  "nonUk": true
+                                },
+                                "availableFrom": 1787822699000
+                              }
+                            ],
+                            "syndication": { "destinations": ["default"] },
+                            "smpKind": "programme",
+                            "webcastVersions": []
+                          }
+                        },
+                        {
+                          "type": "image",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "rawImage",
+                                "model": {
+                                  "width": 720,
+                                  "height": 1280,
+                                  "locator": "ichef.bbci.co.uk/images/ic/$widthxn/p0p6j4vf.jpg",
+                                  "originCode": "mpv",
+                                  "copyrightHolder": "BBC"
+                                }
+                              },
+                              {
+                                "type": "altText",
+                                "model": {
+                                  "blocks": [
+                                    {
+                                      "type": "text",
+                                      "model": {
+                                        "blocks": [
+                                          {
+                                            "type": "paragraph",
+                                            "model": {
+                                              "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                              "blocks": [
+                                                {
+                                                  "type": "fragment",
+                                                  "model": {
+                                                    "text": "நேபாள விவகாரத்தை சட்டப்பேரவையில் முதலில் எழுப்புவது யார் என அமளி",
+                                                    "attributes": []
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "secondaryData": {
+      "topStories": null,
+      "features": null,
+      "mostRead": null,
+      "latestMedia": [
+        {
+          "type": "video",
+          "duration": "PT40S",
+          "isLive": false,
+          "title": "காணொளி: '2 நாளாக சாப்பாடு சாப்பிடவில்லை' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "firstPublished": "2026-08-27T15:04:04.914Z",
+          "lastPublished": "2026-08-27T15:04:04.914Z",
+          "link": "https://www.bbc.com/tamil/watch/c5yj5552k7go",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/833e/live/750c06b0-a228-11f1-bd6a-3d72a7f54a3e.jpg.webp",
+          "description": " '2 நாளாக சாப்பாடு சாப்பிடவில்லை' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "imageAlt": " '2 நாளாக சாப்பாடு சாப்பிடவில்லை' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "isPortraitImage": true,
+          "id": "c5yj5552k7go",
+          "attributions": [
+            {
+              "title": "Tamil",
+              "link": {
+                "url": "https://www.bbc.co.uk/tamil",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/tamil"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "நேபாளம்",
+            "link": {
+              "url": "https://www.bbc.com/tamil/topics/cnq68qn5n6pt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/tamil/topics/cnq68qn5n6pt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M5S",
+          "isLive": false,
+          "title": "காணொளி: 'எங்கள் முன்னாடி போன வேன் மூழ்கியது' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "firstPublished": "2026-08-27T14:53:06.913Z",
+          "lastPublished": "2026-08-27T14:53:06.913Z",
+          "link": "https://www.bbc.com/tamil/watch/c17j0l71vw7o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/57e3/live/f2ec1090-a226-11f1-b109-879e35c24276.jpg.webp",
+          "description": " 'எங்கள் முன்னாடி போன வேன் மூழ்கியது' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "imageAlt": " 'எங்கள் முன்னாடி போன வேன் மூழ்கியது' - நேபாளத்தில் உயிர் தப்பிய தமிழ்நாட்டைச் சேர்ந்தவர்",
+          "isPortraitImage": true,
+          "id": "c17j0l71vw7o",
+          "attributions": [
+            {
+              "title": "Tamil",
+              "link": {
+                "url": "https://www.bbc.co.uk/tamil",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/tamil"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "இந்தியா",
+            "link": {
+              "url": "https://www.bbc.com/tamil/topics/c2dwqdn01v5t",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/tamil/topics/c2dwqdn01v5t"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT38S",
+          "isLive": false,
+          "title": "காணொளி: கட்டுமானத்தில் உள்ள நீர்மின் அணையை வெள்ளநீர் அடித்துச் சென்ற தருணம்",
+          "firstPublished": "2026-08-27T14:49:41.396Z",
+          "lastPublished": "2026-08-27T14:49:41.396Z",
+          "link": "https://www.bbc.com/tamil/watch/c62k4dy40zko",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9c93/live/79475150-a226-11f1-aed2-8d6da8d75094.jpg.webp",
+          "description": "கட்டுமானத்தில் உள்ள நீர்மின் அணையை வெள்ளநீர் அடித்துச் சென்ற தருணம்",
+          "imageAlt": "கட்டுமானத்தில் உள்ள நீர்மின் அணையை வெள்ளநீர் அடித்துச் சென்ற தருணம்",
+          "isPortraitImage": true,
+          "id": "c62k4dy40zko",
+          "attributions": [
+            {
+              "title": "Tamil",
+              "link": {
+                "url": "https://www.bbc.co.uk/tamil",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/tamil"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "வானிலை",
+            "link": {
+              "url": "https://www.bbc.com/tamil/topics/c6vzyv611kqt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/tamil/topics/c6vzyv611kqt"
+            }
+          }
+        },
+        {
+          "type": "video",
+          "duration": "PT1M10S",
+          "isLive": false,
+          "title": "வெள்ளத்தில் இருந்து தப்பிக்க ஓடிய தொழிலாளர்கள் -  கேமராவில் பதிவான அதிர்ச்சிகரமான காட்சி",
+          "firstPublished": "2026-08-27T14:48:30.195Z",
+          "lastPublished": "2026-08-27T14:48:30.195Z",
+          "link": "https://www.bbc.com/tamil/watch/cqlwrvlrn55o",
+          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/07a5/live/4e6a43c0-a226-11f1-a291-b542ee92de7c.png.webp",
+          "description": "வெள்ளத்தில் இருந்து தப்பிக்க ஓடிய தொழிலாளர்கள் -  கேமராவில் பதிவான அதிர்ச்சிகரமான காட்சி",
+          "imageAlt": "வெள்ளத்தில் இருந்து தப்பிக்க ஓடிய தொழிலாளர்கள் -  கேமராவில் பதிவான அதிர்ச்சிகரமான காட்சி",
+          "isPortraitImage": true,
+          "id": "cqlwrvlrn55o",
+          "attributions": [
+            {
+              "title": "Tamil",
+              "link": {
+                "url": "https://www.bbc.co.uk/tamil",
+                "scheme": "https",
+                "host": "www.bbc.co.uk",
+                "path": "/tamil"
+              }
+            }
+          ],
+          "relatedTopic": {
+            "title": "நேபாளம்",
+            "link": {
+              "url": "https://www.bbc.com/tamil/topics/cnq68qn5n6pt",
+              "scheme": "https",
+              "host": "www.bbc.com",
+              "path": "/tamil/topics/cnq68qn5n6pt"
+            }
+          }
+        }
+      ],
+      "portraitVideoItems": null,
+      "countryCuration": null,
+      "videoCuration": null,
+      "countryTopicIdToReorder": null
+    }
+  },
+  "contentType": "application/json; charset=utf-8",
+  "debug": {
+    "context": {
+      "runtimeContext": {
+        "lambdaBootstrapVersion": "5.9.0",
+        "runtimeVersion": "6.9.0",
+        "standardLibraryVersion": "6.9.0",
+        "moduleName": "simorgh-bff",
+        "moduleVersion": "0.0.2",
+        "sourceUrl": "https://github.com/bbc/fabl-modules/tree/f8c7eda0392d7e1072ab0e721cff066e06f58f21/modules/application/simorgh-bff",
+        "cosmosReleaseUrl": "https://cosmos.tools.bbc.co.uk/lambdas/fabl-module-simorgh-bff/releases/672",
+        "buildTime": "2026-08-27T09:14:13.914Z",
+        "moduleType": "reads",
+        "traceId": "Root=1-6a907917-4c5eb3a9af9bb85d2d15a148;Parent=8f11ae0bc450e699;Sampled=1;Lineage=1:2829b227:0",
+        "moduleEnvironment": "production",
+        "personalisedRequest": "false",
+        "environment": "live",
+        "nodeJSVersion": "v22.23.1"
+      },
+      "systemContext": {
+        "service-env": "live",
+        "debug": "1",
+        "call-stack": "simorgh-bff",
+        "sandboxEnabled": true,
+        "logAllDebug": false,
+        "normaliseRequest": true
+      }
+    },
+    "serviceRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 17:51:19 GMT",
+            "content-type": "application/json;charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "personalised": "false",
+            "vary": "accept-encoding, ctx-service-env",
+            "etag": "\"6634826adbe07667340ad422f56dcfab6cac3f31\"",
+            "last-modified": "Thu, 27 Aug 2026 09:43:53 GMT",
+            "cache-control": "no-transform,max-age=60",
+            "x-ares-tracking-id": "1f2a95b5-4496-442f-a477-cc58a010fd4b",
+            "expires": "Thu, 27 Aug 2026 09:44:54 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "HIT",
+            "x-local-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 2
+        },
+        "request": {
+          "service": "ares",
+          "path": "/article/c36l16ny6klo",
+          "timeout": 4000,
+          "url": "https://service-gateway.fabl.api.bbci.co.uk/service/ares/path/%2Farticle%2Fc36l16ny6klo"
+        }
+      }
+    ],
+    "moduleRequests": [
+      {
+        "response": {
+          "headers": {
+            "date": "Thu, 27 Aug 2026 17:51:19 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding, ctx-service-env, ctx-debug, ctx-unwrapped",
+            "cache-control": "max-age=5",
+            "expires": "Thu, 27 Aug 2026 17:51:12 GMT",
+            "content-encoding": "gzip",
+            "x-shared-cache": "STALE",
+            "x-local-cache": "EXPIRED"
+          },
+          "responseCode": 200,
+          "responseTime": 3
+        },
+        "request": {
+          "module": "content-summaries",
+          "params": {
+            "urn": "urn:bbc:vivo:curation:b6d16258-ebb4-474a-9e87-e150dbf33816"
+          },
+          "timeout": 4000,
+          "url": "https://fabl.api.bbci.co.uk/module/content-summaries?urn=urn%3Abbc%3Avivo%3Acuration%3Ab6d16258-ebb4-474a-9e87-e150dbf33816"
+        }
+      }
+    ],
+    "tenantLogs": [
+      {
+        "timestamp": 1787853079176,
+        "message": "fetchTopicCuration [video]: service=tamil topicId=null",
+        "code": "DEBUG"
+      }
+    ],
+    "privateContext": {},
+    "sandboxViolations": [],
+    "nonFatalErrors": [],
+    "params": {
+      "service": "tamil",
+      "pageType": "article",
+      "id": "c36l16ny6klo"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
-import '#psammead/psammead-locales/moment/hi';
+import '#lib/locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -45,21 +45,22 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'पॉडकास्ट',
-      brandTitle: 'दिनभर: पूरा दिन,पूरी ख़बर (Dinbhar)',
+      title: 'बीबीसी हिंदी मोबाइल ऐप',
+      brandTitle: 'आपके लिए चुनी गईं खास कहानियाँ, नितिन श्रीवास्तव द्वारा',
       brandDescription:
-        'वो राष्ट्रीय और अंतरराष्ट्रीय ख़बरें जो दिनभर सुर्खियां बनीं.',
+        'आपके लिए नितिन श्रीवास्तव द्वारा चुनी गईं खास कहानियाँ',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09ds7cb.jpg',
-        alt: 'दिनभर',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pj9ylt.jpg',
+        alt: 'नितिन श्रीवास्तव',
       },
       linkLabel: {
-        text: 'एपिसोड',
-        href: 'https://www.bbc.com/hindi/podcasts/p09ds7zx',
+        text: 'और जानें',
+        href: 'https://www.bbc.com/hindi/topics/crvgyj0g9d5lt',
       },
       skipLink: {
         text: 'छोड़कर %title% आगे बढ़ें',
@@ -82,13 +83,30 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सब देखें',
       home: 'होम पेज',
+      topicDiscovery: {
+        heading: 'और जानें',
+        moreAboutTopic: '{topic} के बारे में अधिक',
+        fetchErrorMessage: 'लोड नहीं हो पाया। कृपया पुनः प्रयास करें',
+      },
       continueReading: 'पढ़ना जारी रखें',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
+      skipContent: {
+        text: '%title% छोड़ें और जारी रखें',
+        endTextVisuallyHidden: '%title% का अंत',
+      },
       relatedContent: 'संबंधित समाचार',
       relatedTopics: 'मिलते-जुलते मुद्दे',
+      showMore: 'और दिखाएं',
       moreOnThis: '',
       navMenuText: 'सेक्शन',
+      liteSite: {
+        onboardingMessage:
+          'आप इस वेबसाइट का टेक्स्ट-ओनली वर्शन देख रहे हैं जो कम डेटा खर्च करता है. सभी तस्वीरों और वीडियो के साथ वेबसाइट का मुख्य वर्शन देखें.',
+        toMainSite: 'मुझे मुख्य वेबसाइट पर ले जाएं',
+        informationPage: 'डेटा बचाने वाले इस वर्शन के बारे में और जानें',
+        dataSaving: 'डेटा बचाने वाला वर्शन',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -110,33 +128,105 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'साइन इन',
+        signInAccessibleLabel: 'माय न्यूज़ में साइन इन करें',
         forYou: 'आपका एकाउंट',
         register: 'रजिस्टर',
       },
       accountPromoBanner: {
         title: 'आपका अपना BBC',
-        description: 'लॉग इन करें या निःशुल्क नया खाता बनाएं',
+        description: 'लॉग इन करें या निःशुल्क नया अकाउंट बनाएं',
         closeLabel: 'बंद करें',
         buttonSeparatorText: 'या',
       },
+      accountSignInModal: {
+        title: 'माई न्यूज़ में सेव करने के लिए साइन इन करें',
+        description: 'स्टोरीज़ सेव करें और अपनी सुविधा से पढ़ें',
+        closeLabel: 'बंद करें',
+        followTopic: {
+          title: 'टॉपिक्स फ़ॉलो करने के लिए साइन इन करें',
+          description:
+            'अपनी रुचि की खबरें सीधे पाएं और कोई भी स्टोरी मिस न करें',
+        },
+      },
+      googlePreferredSource: {
+        linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
+      },
       saveArticleButton: {
-        loading: 'Loading',
-        save: 'Save for later',
-        saving: 'Saving',
-        saved: 'Saved to My News',
-        remove: 'Remove',
-        removing: 'Removing',
+        loading: 'लोड हो रहा है',
+        save: 'बाद में पढ़ने के लिए सेव करें',
+        saving: 'सेव हो रहा है',
+        saved: 'माई न्यूज़ में सेव किया गया है',
+        remove: 'हटाएं',
+        removeAccessible: 'सेव्ड. माई न्यूज़ सेक्शन से हटा दीजिए',
+        removing: 'हटाया जा रहा है',
+      },
+      followTopicButton: {
+        loading: 'लोड हो रहा है…',
+        follow: 'फ़ॉलो करें',
+        following: 'फ़ॉलो कर रहे हैं',
+        followed: 'फ़ॉलो कर रहे हैं',
+        unfollow: 'फ़ॉलो करना बंद करें',
+        unfollowAccessible: 'फ़ॉलो करना बंद करें',
+        unfollowing: 'फ़ॉलो करना बंद करें',
       },
       myNews: {
-        title: 'My News',
-        guestTitle: 'Welcome to My News',
-        description: 'My saved articles',
+        title: 'माई न्यूज़',
+        guestTitle: 'माई न्यूज़ में आपका स्वागत है',
+        description: 'मेरे सेव किए हुए आर्टिकल',
         guestDescription:
-          'Sign in to save stories in My News, and read them when it suits you.',
-        noArticles: "You haven't saved any articles yet",
-        errorText:
-          'This content does not seem to be working. Please try again later.',
-        loading: 'Loading',
+          'अपनी पसंद के टॉपिक्स फ़ॉलो करने और आर्टिकल्स को बाद में पढ़ने के लिए सेव करने के लिए साइन इन करें.',
+        noArticles: 'आपने अभी तक कोई आर्टिकल सेव नहीं किया है',
+        savedArticlesErrorText:
+          'हमें आपके सेव किए गए आर्टिकल लोड करने में दिक्कत हो रही है',
+        loading: 'लोडिंग',
+        noJsDescription:
+          'इस सामग्री को देखने के लिए जावास्क्रिप्ट चालू करें या किसी दूसरे ब्राउज़र का इस्तेमाल करें।',
+        followedTopicsTitle: 'फॉलो किए गए टॉपिक',
+        followedTopicsErrorText:
+          'आपके फ़ॉलो किए गए टॉपिक लोड करने में दिक्कत हो रही है',
+        noFollowedTopics: 'आपने अभी तक किसी टॉपिक को फ़ॉलो नहीं किया है',
+        seeMoreTopics: 'और देखें',
+        seeLessTopics: 'कम देखें',
+        contentErrorText:
+          'लगता है यह कंटेंट लोड नहीं हो रहा है. प्लीज़ बाद में कोशिश करें.',
+      },
+      actionTooltip: {
+        success: {
+          title: 'ये आर्टिकल अब सेव्ड है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगा',
+        },
+        error: {
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पेज रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
+        },
+        removed: {
+          title: 'ये आर्टिकल अब हटा लिया गया है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
+        },
+        myNewsLinkText: 'माई न्यूज़',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'बंद करें',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'अब आप {Topic Name} को फ़ॉलो कर रहे हैं',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन में दिखेगा',
+        },
+        error: {
+          title: 'माफ़ कीजिए, कुछ गड़बड़ी हुई है',
+          body: 'अपना कनेक्शन चेक कीजिए, पेज रिफ़्रेश कीजिए और फिर कोशिश कीजिए',
+        },
+        removed: {
+          title: 'आपने {Topic Name} को अनफ़ॉलो कर दिया है',
+          bodyBefore: 'ये',
+          bodyAfter: 'सेक्शन से हटा ली गई है',
+        },
+        myNewsLinkText: 'माई न्यूज़',
+        myNewsUrl: 'https://www.bbc.com/hindi/my-news',
+        closeLabel: 'बंद करें',
       },
       gist: 'सारांश',
       error: {
@@ -408,6 +498,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'ये इस तारीख़ को बंद हो चुका है {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'प्रमुख घटनाएँ',
         matchSummary: 'मैच का सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनल्टी',
@@ -417,6 +508,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'अतिरिक्त समय के बाद',
         penaltyAbbreviation: 'पेन',
         ownGoal: 'आत्मघाती गोल',
+        versus: 'बनाम',
+        kickOff: 'किक-ऑफ',
+        timeToBeConfirmed: 'समय की पुष्टि होनी बाकी',
+        teamToBeConfirmed: 'टीम की पुष्टि होनी बाकी',
+        afterFullTime: 'पूर्ण समय के बाद',
+        atFullTime: 'पूर्ण समय पर',
+        onPenalties: 'पेनाल्टी पर',
+        onAggregate: 'कुल योग पर',
+        win: 'जीतता है',
         winOnPenalties: {
           prefix: 'पेनल्टी में',
           suffix: 'से जीतती है',
@@ -476,6 +576,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ग्रुप स्टेज',
+          last32: 'राउंड ऑफ़ 32',
+          last16: 'राउंड ऑफ़ 16',
+          quarterFinals: 'क्वार्टर फ़ाइनल्स',
+          semiFinals: 'सेमी फ़ाइनल्स',
+          final: 'फ़ाइनल',
+          thirdPlaceFinal: 'तीसरा स्थान',
         },
       },
     },

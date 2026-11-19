@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Grid should render CPSPageGrid 1`] = `
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-1 {
     display: grid;
     position: initial;
@@ -58,14 +58,14 @@ exports[`Grid should render CPSPageGrid 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width:63rem) {
   .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-3 {
     display: block;
     width: initial;
@@ -133,7 +133,7 @@ exports[`Grid should render CPSPageGrid 1`] = `
 `;
 
 exports[`Grid should render CPSPageGrid with additional props 1`] = `
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-1 {
     display: grid;
     position: initial;
@@ -190,14 +190,14 @@ exports[`Grid should render CPSPageGrid with additional props 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width:63rem) {
   .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-3 {
     display: block;
     width: initial;
@@ -266,7 +266,7 @@ exports[`Grid should render CPSPageGrid with additional props 1`] = `
 `;
 
 exports[`Grid should render Grid with columns 1`] = `
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-0 {
     display: grid;
     position: initial;
@@ -317,7 +317,7 @@ exports[`Grid should render Grid with columns 1`] = `
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-2 {
     display: block;
     width: initial;

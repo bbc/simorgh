@@ -805,10 +805,16 @@ describe('TranslateSportData', () => {
         urn: '',
       });
     });
-
     it('should return the tournament and stage name unchanged when lookup is not found', () => {
+      const dataWithUnknownStageName = {
+        ...fixtureDataDefault,
+        stage: {
+          ...fixtureDataDefault.stage,
+          name: 'Unknown Stage Name',
+        },
+      } as unknown as HeadToHeadV2Data;
       const result = translateSportData(
-        fixtureDataDefault,
+        dataWithUnknownStageName,
         afriqueServiceConfig.default.translations,
         'afrique',
       );
@@ -823,9 +829,41 @@ describe('TranslateSportData', () => {
 
       expect(result.stage).toStrictEqual({
         id: '7wxuj38kqm8bz3cmi15vu4w7o',
-        name: 'Quarter-finals',
+        name: 'Unknown Stage Name',
         urn: '',
       });
+    });
+  });
+
+  describe('Accessible Event Summary', () => {
+    const dataWithTournamentAndStageNames = {
+      ...fixtureDataDefault,
+      accessibleEventSummary: '{bologna} 2 , {aston-villa} 0 {atFullTime}',
+    } as unknown as HeadToHeadV2Data;
+    it('should add translation for accessibleEventSummary', () => {
+      const result = translateSportData(
+        dataWithTournamentAndStageNames,
+        afriqueServiceConfig.default.translations,
+        'afrique',
+      );
+      expect(result.accessibleEventSummary).toStrictEqual(
+        'Bologna 2 , Aston Villa 0 à la fin du temps réglementaire',
+      );
+    });
+
+    it('should fall back to DEFAULT_TRANSLATIONS_MAP when a sport translation key is absent', () => {
+      const dataWithSummary = {
+        ...fixtureDataDefault,
+        accessibleEventSummary: 'result {atFullTime}',
+      } as unknown as HeadToHeadV2Data;
+      const result = translateSportData(
+        dataWithSummary,
+        translationsWithMissingTranslations,
+        'afrique',
+      );
+      expect(result.accessibleEventSummary).toStrictEqual(
+        'result at Full time',
+      );
     });
   });
 });

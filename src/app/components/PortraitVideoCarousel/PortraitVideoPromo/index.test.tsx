@@ -8,6 +8,11 @@ import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import PortraitVideoPromo from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };
@@ -259,6 +264,48 @@ describe('PortraitVideoPromo', () => {
       },
       viewThreshold: 1,
     });
+  });
+
+  it('Should use portrait-video as itemTracker type on Live pages', async () => {
+    const sampleVideoData = {
+      model: {
+        video: {
+          id: 'testId',
+          title: 'Sample Heading',
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
+    const clickTrackerSpy = jest.spyOn(useViewTrackerHandler, 'default');
+
+    await act(async () => {
+      render(
+        <PortraitVideoPromo
+          block={sampleVideoData}
+          blockPosition={0}
+          eventTrackingData={{
+            ...eventTrackingData,
+            groupTracker: {
+              itemCount: 5,
+            },
+          }}
+        />,
+        { pageType: 'live' },
+      );
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        itemTracker: expect.objectContaining({
+          type: 'portrait-video',
+        }),
+      }),
+    );
   });
 
   it('Should scroll to the center when tabbed', async () => {

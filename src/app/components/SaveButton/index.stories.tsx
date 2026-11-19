@@ -1,4 +1,4 @@
-import SaveButton from '.';
+import SaveButton, { SAVE_BUTTON_VARIANTS } from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
 
@@ -9,40 +9,50 @@ export default {
     metadata,
     docs: { readme },
   },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: Object.values(SAVE_BUTTON_VARIANTS),
+    },
+  },
   args: {
+    variant: SAVE_BUTTON_VARIANTS.SAVE,
     onClick: () => {},
     isLoading: false,
     isUpdating: false,
     isSaved: false,
-    disabled: false,
   },
 };
 
 export const Unsaved = {
   args: {
-    buttonText: 'Save for later',
+    visualLabel: 'Save for later',
+    accessibleLabel: 'Save for later',
   },
 };
 
 export const Loading = {
   args: {
     isLoading: true,
-    buttonText: 'Loading',
+    visualLabel: 'Loading',
+    accessibleLabel: 'Loading',
   },
 };
 
 export const Saved = {
   args: {
     isSaved: true,
-    buttonText: 'Saved to My News',
-    removeText: 'Remove',
+    visualLabel: 'Saved to My News',
+    hoverVisualLabel: 'Remove',
+    accessibleLabel: 'Remove from My News',
   },
 };
 
 export const Saving = {
   args: {
     isUpdating: true,
-    buttonText: 'Saving',
+    visualLabel: 'Saving',
+    accessibleLabel: 'Saving',
   },
 };
 
@@ -50,6 +60,44 @@ export const Removing = {
   args: {
     isUpdating: true,
     isSaved: true,
-    buttonText: 'Removing',
+    visualLabel: 'Removing',
+    accessibleLabel: 'Removing',
+  },
+};
+
+export const Unfollowed = {
+  args: {
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
+    visualLabel: 'Follow',
+    accessibleLabel: 'Follow',
+  },
+};
+
+export const Following = {
+  args: {
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
+    isUpdating: true,
+    visualLabel: 'Following',
+    accessibleLabel: 'Following',
+  },
+};
+
+export const Followed = {
+  args: {
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
+    isSaved: true,
+    visualLabel: 'Following',
+    hoverVisualLabel: 'Unfollow',
+    accessibleLabel: 'Unfollow this topic',
+  },
+};
+
+export const Unfollowing = {
+  args: {
+    variant: SAVE_BUTTON_VARIANTS.FOLLOW,
+    isUpdating: true,
+    isSaved: true,
+    visualLabel: 'Unfollowing',
+    accessibleLabel: 'Unfollowing',
   },
 };

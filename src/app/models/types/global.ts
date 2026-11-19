@@ -27,6 +27,7 @@ export type Toggles =
 export type Navigation = {
   title: string;
   url: string;
+  type?: string;
   hideOnLiteSite?: boolean;
   subItems?: Navigation[];
 };
@@ -66,7 +67,7 @@ export type UkrainianService = {
 
 export type UzbekService = {
   service: 'uzbek';
-  variant: 'default' | 'cyr' | 'lat';
+  variant: 'cyr' | 'lat';
 };
 
 export type ServicesWithVariants =

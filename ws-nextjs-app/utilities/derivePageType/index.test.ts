@@ -11,6 +11,7 @@ import {
   TV_PAGE,
   MOST_READ_PAGE,
   LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -65,6 +66,29 @@ describe('derivePageType', () => {
 
   it('should return ARTICLE_PAGE if pathname matches Optimo ID pattern', () => {
     const pathname = '/pidgin/articles/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+  it('should return ARTICLE_PAGE for an Optimo /watch/ pathname', () => {
+    const pathname = '/gujarati/watch/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return ARTICLE_PAGE for an Optimo /watch/ pathname with variant', () => {
+    const pathname = '/zhongwen/watch/c0000000000o/trad';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return ARTICLE_PAGE for an Optimo /listen/ pathname', () => {
+    const pathname = '/tamil/listen/c0000000000o';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return ARTICLE_PAGE for an Optimo /listen/ pathname with variant', () => {
+    const pathname = '/zhongwen/listen/c0000000000o/trad';
     const result = derivePageType(pathname);
     expect(result).toEqual(ARTICLE_PAGE);
   });
@@ -127,5 +151,17 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/xxxxxxxxx';
     const result = derivePageType(pathname);
     expect(result).toEqual(UNKNOWN_PAGE);
+  });
+
+  it("should return OFFLINE_PAGE if pathname ends with 'offline'", () => {
+    const pathname = '/mundo/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
+  });
+
+  it('should return OFFLINE_PAGE for a service variant offline page', () => {
+    const pathname = '/zhongwen/trad/offline';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(OFFLINE_PAGE);
   });
 });

@@ -1,6 +1,6 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '#psammead/psammead-locales/moment/ti';
+import '#lib/locales/moment/ti';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -79,11 +79,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
+      topicDiscovery: {
+        heading: 'ተወሳኺ መርምር',
+        moreAboutTopic: 'ተወሳኩ ብዛዕባ {topic}',
+        fetchErrorMessage: 'ምጫን ኣይከኣለን። እባክካ ዳግም ፈትን',
+      },
+      googlePreferredSource: {
+        linkText: 'ኣብ Google ከም ተመራጺ ምንጪ ወስኽ',
+      },
       continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
+      skipContent: {
+        text: '%title% ዝለል እና ቀጽል',
+        endTextVisuallyHidden: 'መወዳእታ %title%',
+      },
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      showMore: 'ተወሳኺ ኣርእይ',
       moreOnThis: '',
       navMenuText: 'ክፍልታት',
       liteSite: {
@@ -282,6 +295,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
       latestMediaTitle: 'ናይ መወዳእታ',
       sport: {
+        keyEventsTitle: 'ኣገዳሲ ፍጻመታት',
         matchSummary: 'ሓፈሻዊ ጸብጻብ ግጥሚ',
         assists: 'ኣሊዓሊያ',
         penalties: 'ፔናልቲ',
@@ -291,6 +305,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'ድሕሪ ተወሳኺ ጊዜ',
         penaltyAbbreviation: 'ፔን',
         ownGoal: 'ናይ ባዕልኻ ጎል',
+        versus: 'ንስኻ',
+        kickOff: 'መጀመርታ',
+        timeToBeConfirmed: 'ሰዓት ክረጋገጽ እዩ',
+        teamToBeConfirmed: 'ጋንታ ትርጋገጽ',
+        afterFullTime: 'ድሕሪ ሙሉእ ጊዜ',
+        atFullTime: 'ኣብ ሙሉእ ጊዜ',
+        onPenalties: 'ብፔናልቲ',
+        onAggregate: 'ብድምር',
+        win: 'ይዕወት',
         winOnPenalties: {
           prefix: 'ብፔናልቲ',
           suffix: 'ይድልይ',
@@ -350,6 +373,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ናይ ምድብ ጸወታ',
+          last32: 'ዙር 32',
+          last16: 'ዙር 16',
+          quarterFinals: 'ርብዒ ፍጻም',
+          semiFinals: 'ፍርቂ ፍጻመ',
+          final: 'ፍጻመ',
+          thirdPlaceFinal: 'ንሳልሳይ ደረጃ',
         },
       },
     },

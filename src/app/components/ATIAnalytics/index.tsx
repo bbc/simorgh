@@ -1,26 +1,13 @@
 import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
-import { AccountContext } from '#contexts/AccountContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { ReverbParamsContext } from '#app/contexts/ReverbParamsContext';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
-import { ATIProps } from './types';
-import buildReverbParams from './params';
 
-const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
-  const requestContext = use(RequestContext);
-  const serviceContext = use(ServiceContext);
-  const { isAmp } = requestContext;
-  const { isSignedIn, hashedUserId: hashedId } = use(AccountContext);
-
-  const reverbParams = buildReverbParams({
-    requestContext,
-    serviceContext,
-    atiData,
-    isSignedIn,
-    hashedId,
-  });
+const ATIAnalytics = () => {
+  const { isAmp } = use(RequestContext);
+  const { reverbParams, resonanceParams } = use(ReverbParamsContext);
 
   return isAmp ? (
     <>
@@ -28,7 +15,10 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
       <AmpATIAnalytics reverbParams={reverbParams} />
     </>
   ) : (
-    <CanonicalATIAnalytics reverbParams={reverbParams} />
+    <CanonicalATIAnalytics
+      reverbParams={reverbParams}
+      resonanceParams={resonanceParams}
+    />
   );
 };
 

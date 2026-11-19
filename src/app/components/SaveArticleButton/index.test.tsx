@@ -1,8 +1,44 @@
 import useUASButton from '#app/hooks/useUASButton';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
-import { render, screen, act } from '../react-testing-library-with-providers';
+import { service as hindiServiceConfig } from '#lib/config/services/hindi';
+import {
+  render,
+  screen,
+  act,
+  waitFor,
+} from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+import { SaveArticleButtonLoadingFallback } from './SaveArticleButtonAuthenticated/lazy';
+
+const saveArticleButtonTranslations =
+  hindiServiceConfig.default.translations.saveArticleButton;
+const actionTooltipTranslations =
+  hindiServiceConfig.default.translations.actionTooltip;
+
+if (!saveArticleButtonTranslations) {
+  throw new Error(
+    'Hindi config must include translations.saveArticleButton for SaveArticleButton tests',
+  );
+}
+
+if (!actionTooltipTranslations) {
+  throw new Error(
+    'Hindi config must include translations.actionTooltip for SaveArticleButton tests',
+  );
+}
+
+jest.mock('#app/components/Account/AccountSignInModal', () => ({
+  __esModule: true,
+  default: ({ onClose }: { onClose: () => void }) => (
+    <div role="dialog" aria-label="Sign in to BBC">
+      <button type="button" onClick={onClose} aria-label="Close">
+        Close
+      </button>
+    </div>
+  ),
+}));
 
 jest.mock('#app/hooks/useUASButton');
 
@@ -13,12 +49,141 @@ const personalizationToggle = {
 };
 
 describe('SaveArticleButton', () => {
-  const defaultProps = {};
+  const articlePageData = {
+    content: {
+      model: {
+        blocks: [
+          {
+            id: '597a9704',
+            type: 'image',
+            model: {
+              blocks: [
+                {
+                  id: 'd57733c1',
+                  type: 'caption',
+                  model: {
+                    blocks: [],
+                  },
+                },
+                {
+                  id: '8ffd8707',
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        id: '7eab27b4',
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              id: '1739f732',
+                              type: 'paragraph',
+                              model: {
+                                text: 'भारतीय पीएम नरेंद्र मोदी और नेपाल के पीएम बालेन शाह',
+                                blocks: [
+                                  {
+                                    id: '7c37f3cd',
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'भारतीय पीएम नरेंद्र मोदी और नेपाल के पीएम बालेन शाह',
+                                      attributes: [],
+                                    },
+                                    position: [2, 2, 1, 1, 1],
+                                  },
+                                ],
+                              },
+                              position: [2, 2, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 2, 1],
+                      },
+                    ],
+                  },
+                  position: [2, 2],
+                },
+                {
+                  id: 'ef95269f',
+                  type: 'rawImage',
+                  model: {
+                    width: 780,
+                    height: 439,
+                    locator:
+                      '688a/live/f8441af0-5e7a-11f1-ab70-cdbb605c4a31.jpg',
+                    originCode: 'cpsprodpb',
+                    copyrightHolder: 'Getty Images',
+                    suitableForSyndication: true,
+                  },
+                  position: [2, 3],
+                },
+              ],
+            },
+            position: [2],
+          },
+        ],
+      },
+    },
+    metadata: {
+      locators: {
+        canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+      },
+    },
+    promo: {
+      images: {
+        defaultPromoImage: {
+          blocks: [],
+        },
+      },
+    },
+  } as unknown as Article;
+  const articleExtractPageData = extractArticleMetadata(articlePageData);
+
+  const defaultProps = { saveArticlePageData: articleExtractPageData };
 
   const mockHandleSaveAction = jest.fn();
 
   afterEach(() => {
     jest.clearAllMocks();
+  });
+
+  it.each([
+    { userType: 'signed-in', initialIsSignedIn: true },
+    { userType: 'guest', initialIsSignedIn: false },
+  ])(
+    'does not render when the parsed ID contains slashes even without TC2 metadata for a $userType user',
+    async ({ initialIsSignedIn }) => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, {
+          service: 'hindi',
+          pathname: '/hindi/news/2015/03/150216_example_article',
+          toggles: personalizationToggle,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+        }),
+      );
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    },
+  );
+
+  it('does not render when there is no article ID', async () => {
+    await act(async () =>
+      render(<SaveArticleButton {...defaultProps} />, {
+        service: 'hindi',
+        pathname: '/hindi',
+        toggles: personalizationToggle,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      }),
+    );
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
 
   describe('Authorized', () => {
@@ -42,7 +207,39 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Save for later');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        saveArticleButtonTranslations.save,
+      );
+    });
+
+    it('does not show the guest button for signed-in users on initial render', async () => {
+      render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions);
+
+      expect(
+        screen.queryByTestId('save-article-btn-guest'),
+      ).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('save-article-btn-loading') ??
+            screen.queryByTestId('save-article-btn-authorized'),
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('renders translated loading fallback that cannot open sign-in modal', async () => {
+      await act(async () =>
+        render(<SaveArticleButtonLoadingFallback />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('save-article-btn-loading')).toHaveTextContent(
+        saveArticleButtonTranslations.loading,
+      );
+
+      await act(async () => {
+        screen.getByTestId('save-article-btn-loading').click();
+      });
+
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
 
     it('renders Saved to My News when saved', async () => {
@@ -51,10 +248,12 @@ describe('SaveArticleButton', () => {
       await act(async () =>
         render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
       );
-      expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
+      expect(screen.getByRole('button')).toHaveTextContent(
+        saveArticleButtonTranslations.saved,
+      );
     });
 
-    it('renders loading state and disables button', async () => {
+    it('renders loading state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isLoading: true,
         isUpdating: false,
@@ -65,11 +264,11 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Loading');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.loading);
+      expect(button).toBeEnabled();
     });
 
-    it('renders saving state and disables button', async () => {
+    it('renders saving state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: false,
         isLoading: false,
@@ -83,11 +282,11 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Saving');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.saving);
+      expect(button).toBeEnabled();
     });
 
-    it('renders removing state and disables button', async () => {
+    it('renders removing state and keeps the button focusable', async () => {
       mockedUseUASButton.mockReturnValue({
         isSaved: true,
         isLoading: false,
@@ -101,8 +300,8 @@ describe('SaveArticleButton', () => {
       );
       const button = screen.getByRole('button');
 
-      expect(button).toHaveTextContent('Removing');
-      expect(button).toBeDisabled();
+      expect(button).toHaveTextContent(saveArticleButtonTranslations.removing);
+      expect(button).toBeEnabled();
     });
 
     it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
@@ -116,33 +315,104 @@ describe('SaveArticleButton', () => {
     });
 
     it('passes articleId to useUASButton hook', async () => {
-      const articlePageData = {
-        metadata: {
-          locators: {
-            canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
-          },
-        },
-      } as Article;
-
       await act(async () =>
-        render(
-          <SaveArticleButton
-            {...defaultProps}
-            articlePageData={articlePageData}
-          />,
-          {
-            ...signedInRenderOptions,
-            pathname: '/hindi/articles/c1l97706v5mo',
-          },
-        ),
+        render(<SaveArticleButton {...defaultProps} />, {
+          ...signedInRenderOptions,
+          pathname: '/hindi/articles/c1l97706v5mo',
+        }),
       );
 
       expect(mockedUseUASButton).toHaveBeenCalledWith(
         expect.objectContaining({
-          articlePageData,
+          saveArticlePageData: articleExtractPageData,
           articleId: 'c1l97706v5mo',
         }),
       );
+    });
+
+    it('shows a success tooltip after the article is saved', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'save' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('action-tooltip')).toBeInTheDocument();
+    });
+
+    it('shows an error tooltip when the save action fails', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'error', action: 'save' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(
+        screen.getByText(actionTooltipTranslations.error.title),
+      ).toBeInTheDocument();
+    });
+
+    it('shows a removed tooltip after the article is removed', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'remove' },
+        resetActionResult: jest.fn(),
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.getByTestId('action-tooltip')).toHaveTextContent(
+        `${actionTooltipTranslations.closeLabel}${actionTooltipTranslations.removed.title}${actionTooltipTranslations.removed.bodyBefore} ${actionTooltipTranslations.myNewsLinkText} ${actionTooltipTranslations.removed.bodyAfter}`,
+      );
+    });
+
+    it('closes the tooltip and resets the action result when the close button is clicked', async () => {
+      const mockResetActionResult = jest.fn();
+      mockedUseUASButton.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        isUpdating: false,
+        actionResult: { status: 'success', action: 'save' },
+        resetActionResult: mockResetActionResult,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('action-tooltip-close').click();
+      });
+
+      expect(mockResetActionResult).toHaveBeenCalledTimes(1);
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
+    });
+
+    it('does not show a tooltip when there is no action result', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+
+      expect(screen.queryByTestId('action-tooltip')).not.toBeInTheDocument();
     });
   });
 
@@ -156,6 +426,29 @@ describe('SaveArticleButton', () => {
     it('renders guest save button', async () => {
       render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions);
       expect(screen.getByTestId('save-article-btn-guest')).toBeInTheDocument();
+    });
+
+    it('opens the sign-in modal when the save button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+    });
+
+    it('closes the sign-in modal when the close button is clicked', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions),
+      );
+      await act(async () => {
+        screen.getByTestId('save-article-btn-guest').click();
+      });
+      await act(async () => {
+        screen.getByRole('button', { name: 'Close' }).click();
+      });
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
   });
 });

@@ -2,6 +2,11 @@ import { ReactSDKClient } from '@optimizely/react-sdk';
 import { Platforms, Services } from '#app/models/types/global';
 import dispatchTrackingRequests from '.';
 
+jest.mock('../../../components/ATIAnalytics/beacon', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../components/ATIAnalytics/beacon'),
+}));
+
 const sendEventBeaconSpy = jest.spyOn(
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   require('../../../components/ATIAnalytics/beacon'),

@@ -1,7 +1,7 @@
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import '#psammead/psammead-locales/moment/ha';
+import '#lib/locales/moment/ha';
 import Timestamp from '.';
 
 const defaultTimestamp = 1539969006000; // 19 October 2018
@@ -35,7 +35,9 @@ describe('Timestamp', () => {
       />,
       { service: 'persian' },
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time).toBeInTheDocument();
+    expect(time.textContent).not.toMatch(/^۰/);
   });
 
   it('should render correctly', () => {
@@ -47,7 +49,8 @@ describe('Timestamp', () => {
         isRelative={false}
       />,
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time.textContent).toEqual('19 October 2018');
   });
 
   isNull(
@@ -71,7 +74,9 @@ describe('Timestamp', () => {
         suffix="suffix here"
       />,
     );
-    expect(container).toMatchSnapshot();
+    const time = container.querySelector('time');
+    expect(time.textContent).toContain('Prefix here');
+    expect(time.textContent).toContain('suffix here');
   });
 
   describe('assertions', () => {

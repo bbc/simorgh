@@ -18,6 +18,7 @@ export default ({
     detailedPlacement,
     preventNavigation,
     sendOptimizelyEvents,
+    optimizelyComponentName,
     experimentName,
     experimentVariant,
     // allows custom events to set a grouping label in reverb/piano
@@ -36,6 +37,7 @@ export default ({
     producerName,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = eventTrackingContext;
 
   const campaignID =
@@ -56,6 +58,7 @@ export default ({
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    optimizelyComponentName,
     experimentName,
     experimentVariant,
     eventGroupingName,
@@ -65,5 +68,6 @@ export default ({
     alwaysInView,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   };
 };

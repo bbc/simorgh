@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/Warsaw';
-import '#psammead/psammead-locales/moment/pl-pl';
+import '#lib/locales/moment/pl-pl';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -69,10 +69,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Zobacz wszystkie',
       home: 'Strona główna',
+      topicDiscovery: {
+        heading: 'Odkryj więcej',
+        moreAboutTopic: 'Więcej o {topic}',
+        fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
+      },
+      googlePreferredSource: {
+        linkText: 'Dodaj jako preferowane źródło w Google',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
+      skipContent: {
+        text: 'Pomiń %title% i kontynuuj',
+        endTextVisuallyHidden: 'Koniec %title%',
+      },
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      showMore: 'Pokaż więcej',
       moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
@@ -332,6 +345,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Zamknięto dnia {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Kluczowe wydarzenia',
         matchSummary: 'Podsumowanie meczu',
         assists: 'Asysty',
         penalties: 'Rzuty karne',
@@ -341,6 +355,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Po dogrywce',
         penaltyAbbreviation: 'k.',
         ownGoal: 'gol samobójczy',
+        versus: 'kontra',
+        kickOff: 'rozpoczęcie',
+        timeToBeConfirmed: 'Godzina do potwierdzenia',
+        teamToBeConfirmed: 'Drużyna do potwierdzenia',
+        afterFullTime: 'po pełnym czasie',
+        atFullTime: 'w pełnym czasie',
+        onPenalties: 'po rzutach karnych',
+        onAggregate: 'w dwumeczu',
+        win: 'wygrywa',
         winOnPenalties: {
           prefix: 'wygrywa',
           suffix: 'w rzutach karnych',

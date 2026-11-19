@@ -13,7 +13,7 @@ export const assertBillboardComponentView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="billboard-1"]').scrollIntoView({
+    cy.get('[data-testid="billboard-maximum-1"]').scrollIntoView({
       duration: 1000,
     });
 
@@ -36,12 +36,12 @@ export const assertBillboardComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="billboard-1"]').scrollIntoView({
+    cy.get('[data-testid="billboard-maximum-1"]').scrollIntoView({
       duration: 1000,
     });
 
     // Click on first item
-    cy.get('[data-testid="billboard-1"]').find('a').first().click();
+    cy.get('[data-testid="billboard-maximum-1"]').find('a').first().click();
 
     assertATIComponentClickEvent({
       component: BILLBOARD,

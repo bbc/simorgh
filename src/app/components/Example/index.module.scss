@@ -1,0 +1,5 @@
+@use '@scss/themeTokens' as theme;
+
+.text {
+  color: theme.$palette-grey-6;
+}

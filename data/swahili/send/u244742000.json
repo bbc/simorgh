@@ -1,0 +1,786 @@
+{
+  "data": {
+    "projectId": "ugc-ws-swahili",
+    "title": "Saidia kuboresha BBC News Swahili",
+    "titleSystem": "survey-bbcnews-swahili",
+    "description": "\u003Cp\u003E\u003Cstrong\u003ETungependa kukuuliza maswali machache kuhusu habari zinazokuvutia, na jinsi unavyotumia na kufikia maudhui ya kidijitali ya BBC News Swahili.\u003C/strong\u003E\u003C/p\u003E\n\u003Cp\u003EMajibu yako yatatusaidia kuboresha habari tunazoandika, kuchapisha na kutangaza, na kutusaidia kuelewa vyema mahitaji ya hadhira mbalimbali.\u003C/p\u003E\n\u003Cp\u003EMajibu yako yatawekwa bila kutambulisha utambulisho wako.\u003C/p\u003E",
+    "campaignId": "u244742000",
+    "languageTag": "sw-KE",
+    "campaignStatus": "open",
+    "openingTime": "2026-06-30T00:00:00.000Z",
+    "closingTime": "2027-06-30T23:59:59.000Z",
+    "submissionUrl": "https://www.bbc.com/swahili",
+    "privacyNotice": {
+      "default": "\u003Cp\u003EAsante kwa kushiriki maoni yako.\u003C/p\u003E\n\u003Cp\u003EMaoni yako yatatusaidia kuboresha BBC News Swahili na kutengeneza maudhui yanayokufaa zaidi na kuwa yenye manufaa kwako.\u003C/p\u003E\n\u003Cp\u003EKwa kubofya 'Tuma', unakubaliana na \u003Ca href=\"https://www.bbc.com/swahili/taasisi-37098622\" target=\"_blank\"\u003ESheria na Masharti ya Matumizi\u003C/a\u003E. Unaweza pia kusoma \u003Ca href=\"https://www.bbc.com/swahili/taasisi-37100010\" target=\"_blank\"\u003ETaarifa yetu ya Faragha\u003C/a\u003E ili kupata maelezo kuhusu jinsi BBC World Service inavyotumia maoni yako na kushughulikia taarifa zako binafsi.\u003C/p\u003E",
+      "url": "https://www.bbc.co.uk/",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": false,
+      "brand": "BBC News Swahili",
+      "brandId": "ws-swahili",
+      "replyEmailAddress": "bbcswahili_malalamiko@bbc.co.uk",
+      "ageGroup": [],
+      "exifMetadataEnabled": true,
+      "ppGroupId": "8f589994-5269-42b0-82de-809a5e6cf8f4",
+      "pageBackgroundTemplateUrl": "https://ichef.bbci.co.uk/images/ic/$recipe/p07hjprg.png",
+      "brandLogo": "",
+      "brandType": "contact-form",
+      "webcoreBrand": "default",
+      "entryCap": "",
+      "readableRetentionPeriod": "270 days",
+      "retentionPeriodDays": "270",
+      "retentionExpiryDate": "",
+      "retentionType": "window",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": false,
+      "allowSubmissionMove": false,
+      "winnerPickerEnabled": false,
+      "cta": {
+        "title": "Get in touch",
+        "buttonText": "Contact form"
+      },
+      "allowEditing": false,
+      "signinRequired": false,
+      "accountPolicy": ""
+    },
+    "sections": [
+      {
+        "sectionText": {
+          "title": "Kabla hatujaanza: ",
+          "description": "Tafadhali thibitisha kuwa unakubali tukusanye majibu yako kwa madhumuni ya kuboresha tovuti na huduma zetu. "
+        },
+        "fields": [
+          {
+            "id": "chk241703692",
+            "type": "checkbox",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "description": "",
+            "label": "Ndiyo, ninakubali"
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Wewe uko katika kundi gani la umri?"
+        },
+        "fields": [
+          {
+            "id": "lst241887715",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Chini ya miaka 18",
+                  "value": "chini-ya-miaka-18"
+                },
+                {
+                  "label": "Miaka 18–24",
+                  "value": "miaka-18-24"
+                },
+                {
+                  "label": "Miaka 25–34 ",
+                  "value": "miaka-25-34"
+                },
+                {
+                  "label": "Miaka 35–44",
+                  "value": "miaka-35-44"
+                },
+                {
+                  "label": "Miaka 45–54",
+                  "value": "miaka-45-54"
+                },
+                {
+                  "label": "Miaka 55–64",
+                  "value": "miaka-55-64"
+                },
+                {
+                  "label": "Miaka 65 na zaidi",
+                  "value": "miaka-65-na-zaidi"
+                },
+                {
+                  "label": "Sipendi kusema",
+                  "value": "sipendi-kusema"
+                }
+              ],
+              "multiSelect": false,
+              "mandatory": true
+            },
+            "htmlType": "radiobutton",
+            "label": "Chagua kundi lako la umri",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Unajielezeaje kuhusu jinsia yako?"
+        },
+        "fields": [
+          {
+            "id": "lst241887966",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Mwanamke",
+                  "value": "mwanamke"
+                },
+                {
+                  "label": "Mwanamume",
+                  "value": "mwanamume"
+                },
+                {
+                  "label": "Sipendi kusema",
+                  "value": "sipendi-kusema"
+                },
+                {
+                  "label": "Napendelea kujitambulisha kama: ",
+                  "value": "napendelea-kujitambulisha-kama"
+                }
+              ],
+              "multiSelect": false,
+              "mandatory": true
+            },
+            "htmlType": "radiobutton",
+            "label": "Chagua jinsia unayojitambulisha nayo",
+            "description": ""
+          },
+          {
+            "id": "txt241888086",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "text",
+            "label": "If you chose to self-describe, input your gender description in this field",
+            "description": "",
+            "textArea": false
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Barua pepe yako ni ipi?",
+          "description": "Tafadhali kumbuka: Taarifa hii haitatumika kwa madhumuni ya kampeni za masoko. Inakusanywa tu ili, ikiwa utapenda kufanya hivyo siku zijazo, uweze kuomba BBC ifute data yoyote ya kibinafsi iliyokusanywa wakati wa utafiti huu."
+        },
+        "fields": [
+          {
+            "id": "txt243870223",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "email",
+            "label": "Ingiza barua pepe yako",
+            "description": "",
+            "textArea": false
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Kwa nini umetembelea BBC News Swahili leo?"
+        },
+        "fields": [
+          {
+            "id": "lst241698313",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Kupata habari za hivi punde",
+                  "value": "kupata-habari-za-hivi-punde"
+                },
+                {
+                  "label": "Kufuatilia habari inayojiri",
+                  "value": "kufuatilia-habari-inayojiri"
+                },
+                {
+                  "label": "Kuelewa habari fulani kwa undani zaidi",
+                  "value": "kuelewa-habari-fulani-kwa-undani-zaidi"
+                },
+                {
+                  "label": "Kupata mtazamo wa ndani au wa kitaifa ",
+                  "value": "kupata-mtazamo-wa-ndani-au-wa-kitaifa"
+                },
+                {
+                  "label": "Kupata mtazamo wa kimataifa ",
+                  "value": "kupata-mtazamo-wa-kimataifa"
+                },
+                {
+                  "label": "Kutazama video ",
+                  "value": "kutazama-video"
+                },
+                {
+                  "label": "Kusikiliza sauti au podikasti ",
+                  "value": "kusikiliza-sauti-au-podikasti"
+                },
+                {
+                  "label": "Mtu alinishirikisha kiungo ",
+                  "value": "mtu-alinishirikisha-kiungo"
+                },
+                {
+                  "label": "Nimefika kupitia injini ya utafutaji ",
+                  "value": "nimefika-kupitia-injini-ya-utafutaji"
+                },
+                {
+                  "label": "Hutembelea BBC News mara kwa mara ",
+                  "value": "hutembelea-bbc-news-mara-kwa-mara"
+                },
+                {
+                  "label": "Nilikuwa nikiangalia mtandaoni na nikapata jambo la kuvutia ",
+                  "value": "nilikuwa-nikiangalia-mtandaoni-na-nikapata-jambo-la-kuvutia"
+                },
+                {
+                  "label": "Nyingine:",
+                  "value": "nyingine"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "label": "Chaguo",
+            "description": ""
+          },
+          {
+            "id": "txt241698383",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": " Ni mada zipi zinazokuvutia zaidi?"
+        },
+        "fields": [
+          {
+            "id": "lst241872083",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Sayansi",
+                  "value": "sayansi"
+                },
+                {
+                  "label": "Teknolojia ",
+                  "value": "teknolojia"
+                },
+                {
+                  "label": "Tabianchi na mazingira",
+                  "value": "tabianchi-na-mazingira"
+                },
+                {
+                  "label": "Afya",
+                  "value": "afya"
+                },
+                {
+                  "label": "Afya ya akili",
+                  "value": "afya-ya-akili"
+                },
+                {
+                  "label": "Mazoezi ya mwili na ustawi",
+                  "value": "mazoezi-ya-mwili-na-ustawi"
+                },
+                {
+                  "label": "Uhalifu na usalama ",
+                  "value": "uhalifu-na-usalama"
+                },
+                {
+                  "label": "Elimu",
+                  "value": "elimu"
+                },
+                {
+                  "label": "Kazi na taaluma",
+                  "value": "kazi-na-taaluma"
+                },
+                {
+                  "label": "Ujasiriamali na mbinu za biashara",
+                  "value": "ujasiriamali-na-mbinu-za-biashara"
+                },
+                {
+                  "label": "Siasa",
+                  "value": "siasa"
+                },
+                {
+                  "label": "Jiografia ya kisiasa / mahusiano kati ya nchi",
+                  "value": "jiografia-ya-kisiasa---mahusiano-kati-ya-nchi"
+                },
+                {
+                  "label": "Biashara",
+                  "value": "biashara"
+                },
+                {
+                  "label": "Fedha, uchumi na gharama za maisha",
+                  "value": "fedha--uchumi-na-gharama-za-maisha"
+                },
+                {
+                  "label": "Habari zinazojiri",
+                  "value": "habari-zinazojiri"
+                },
+                {
+                  "label": "Habari za eneo lako",
+                  "value": "habari-za-eneo-lako"
+                },
+                {
+                  "label": "Habari za kitaifa",
+                  "value": "habari-za-kitaifa"
+                },
+                {
+                  "label": "Habari za kimataifa",
+                  "value": "habari-za-kimataifa"
+                },
+                {
+                  "label": "Utamaduni na burudani",
+                  "value": "utamaduni-na-burudani"
+                },
+                {
+                  "label": "Urembo, mitindo na maisha",
+                  "value": "urembo--mitindo-na-maisha"
+                },
+                {
+                  "label": "Familia za kifalme",
+                  "value": "familia-za-kifalme"
+                },
+                {
+                  "label": "Michezo",
+                  "value": "michezo"
+                },
+                {
+                  "label": "Hadithi binafsi za maisha ",
+                  "value": "hadithi-binafsi-za-maisha"
+                },
+                {
+                  "label": "Nyingine:",
+                  "value": "nyingine"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "label": "Chagua kutoka kwenye mada mbalimbali",
+            "description": ""
+          },
+          {
+            "id": "txt241698383-dup-1",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Unapendelea aina gani ya maudhui?"
+        },
+        "fields": [
+          {
+            "id": "lst243874310",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Habari zinazojiri",
+                  "value": "habari-zinazojiri"
+                },
+                {
+                  "label": "Makala za maandishi",
+                  "value": "makala-za-maandishi"
+                },
+                {
+                  "label": "Makala za ufafanuzi na uchambuzi kuhusu mada kama afya na sayansi",
+                  "value": "makala-za-ufafanuzi-na-uchambuzi-kuhusu-mada-kama-afya-na-sayansi"
+                },
+                {
+                  "label": "Mafunzo na mwongozo wa hatua kwa hatua ",
+                  "value": "mafunzo-na-mwongozo-wa-hatua-kwa-hatua"
+                },
+                {
+                  "label": "Makala za kina",
+                  "value": "makala-za-kina"
+                },
+                {
+                  "label": "Video fupi",
+                  "value": "video-fupi"
+                },
+                {
+                  "label": "Video ndefu",
+                  "value": "video-ndefu"
+                },
+                {
+                  "label": "Hadithi zinazolenga suluhisho",
+                  "value": "hadithi-zinazolenga-suluhisho"
+                },
+                {
+                  "label": "Hadithi zenye mtazamo chanya",
+                  "value": "hadithi-zenye-mtazamo-chanya"
+                },
+                {
+                  "label": "Mahojiano",
+                  "value": "mahojiano"
+                },
+                {
+                  "label": "Uchunguzi wa kina",
+                  "value": "uchunguzi-wa-kina"
+                },
+                {
+                  "label": "Matangazo ya moja kwa moja ya matukio makubwa",
+                  "value": "matangazo-ya-moja-kwa-moja-ya-matukio-makubwa"
+                },
+                {
+                  "label": "Nyingine:",
+                  "value": "nyingine"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": false
+            },
+            "htmlType": "checkbox",
+            "label": "Chagua aina za maudhui",
+            "description": ""
+          },
+          {
+            "id": "txt241698383-dup-2",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Je, unaifuatilia BBC News Swahili kwenye mitandao ya kijamii?"
+        },
+        "fields": [
+          {
+            "id": "lst241873201",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Instagram",
+                  "value": "instagram"
+                },
+                {
+                  "label": "TikTok",
+                  "value": "tiktok"
+                },
+                {
+                  "label": "Facebook",
+                  "value": "facebook"
+                },
+                {
+                  "label": "YouTube",
+                  "value": "youtube"
+                },
+                {
+                  "label": "X",
+                  "value": "x"
+                },
+                {
+                  "label": "Nyingine:",
+                  "value": "nyingine"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "label": "Chagua jukwaa moja au zaidi la mitandao ya kijamii",
+            "description": ""
+          },
+          {
+            "id": "txt241698383-dup-3",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Kwa kawaida hukutana wapi na maudhui ya BBC News Swahili au habari nyingine zinazofanana na hizi? Chagua yote yanayohusika."
+        },
+        "fields": [
+          {
+            "id": "lst244483392",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "Tovuti ya BBC News Swahili",
+                  "value": "tovuti-ya-bbc-news-swahili"
+                },
+                {
+                  "label": "Programu ya BBC News Swahili",
+                  "value": "programu-ya-bbc-news-swahili"
+                },
+                {
+                  "label": "Injini ya utafutaji",
+                  "value": "injini-ya-utafutaji"
+                },
+                {
+                  "label": "YouTube",
+                  "value": "youtube"
+                },
+                {
+                  "label": "Instagram",
+                  "value": "instagram"
+                },
+                {
+                  "label": "TikTok",
+                  "value": "tiktok"
+                },
+                {
+                  "label": "Facebook",
+                  "value": "facebook"
+                },
+                {
+                  "label": "WhatsApp au programu nyingine za ujumbe ",
+                  "value": "whatsapp-au-programu-nyingine-za-ujumbe"
+                },
+                {
+                  "label": "X / Twitter",
+                  "value": "x---twitter"
+                },
+                {
+                  "label": "Pinterest",
+                  "value": "pinterest"
+                },
+                {
+                  "label": "Programu za podikasti",
+                  "value": "programu-za-podikasti"
+                },
+                {
+                  "label": "Jarida pepe (Newsletter)",
+                  "value": "jarida-pepe--newsletter"
+                },
+                {
+                  "label": "Tovuti au programu za habari za eneo lako ",
+                  "value": "tovuti-au-programu-za-habari-za-eneo-lako"
+                },
+                {
+                  "label": "Tovuti au programu za habari za kitaifa",
+                  "value": "tovuti-au-programu-za-habari-za-kitaifa"
+                },
+                {
+                  "label": "Tovuti au programu za habari za kimataifa",
+                  "value": "tovuti-au-programu-za-habari-za-kimataifa"
+                },
+                {
+                  "label": "Habari za televisheni",
+                  "value": "habari-za-televisheni"
+                },
+                {
+                  "label": "Redio",
+                  "value": "redio"
+                },
+                {
+                  "label": "Magazeti",
+                  "value": "magazeti"
+                },
+                {
+                  "label": "Watu mashuhuri wa mitandaoni au waundaji wa maudhui",
+                  "value": "watu-mashuhuri-wa-mitandaoni-au-waundaji-wa-maudhui"
+                },
+                {
+                  "label": "Marafiki, familia au wafanyakazi wenzangu",
+                  "value": "marafiki--familia-au-wafanyakazi-wenzangu"
+                },
+                {
+                  "label": "Nyingine:",
+                  "value": "nyingine"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "label": "Chagua vyanzo vya habari ",
+            "description": ""
+          },
+          {
+            "id": "txt241698383-dup-4",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Ni wapi pengine unapopata habari zinazokuvutia?"
+        },
+        "fields": [
+          {
+            "id": "lst244483559",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": "DW Kiswahili",
+                  "value": "dw-kiswahili"
+                },
+                {
+                  "label": "Mwananchi",
+                  "value": "mwananchi"
+                },
+                {
+                  "label": "RFI Kiswahili",
+                  "value": "rfi-kiswahili"
+                },
+                {
+                  "label": "Taifa Leo",
+                  "value": "taifa-leo"
+                },
+                {
+                  "label": "TUKO Kiswahili",
+                  "value": "tuko-kiswahili",
+                  "description": "Nyingine:"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": false
+            },
+            "htmlType": "checkbox",
+            "label": "Vyanzo vingine vya habari",
+            "description": ""
+          },
+          {
+            "id": "txt241698383-dup-5",
+            "type": "text",
+            "validation": {
+              "mandatory": false,
+              "wordLimit": 50,
+              "wordLimitMax": 50
+            },
+            "htmlType": "textarea",
+            "label": "Ukiwa umechagua \"Nyingine\", tafadhali toa maelezo zaidi",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Ni aina gani za maudhui muhimu kwako na ungependa BBC News Swahili itengeneze ili  kukuhamasisha kutembelea mara kwa mara?"
+        },
+        "fields": [
+          {
+            "id": "txt244483706",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "textarea",
+            "label": "Andika maoni yako",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": " Je, kuna mada, habari au suala katika nchi au eneo lako ambalo unadhani BBC News Swahili inapaswa kulifuatilia zaidi?"
+        },
+        "fields": [
+          {
+            "id": "txt244483706-dup-1",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "textarea",
+            "label": "Andika maoni yako",
+            "description": "",
+            "textArea": true
+          }
+        ]
+      },
+      {
+        "sectionText": {
+          "title": "Kwa sasa unaishi katika nchi gani?"
+        },
+        "fields": [
+          {
+            "id": "txt241887832",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "text",
+            "label": "Andika jina la nchi hapa chini",
+            "description": "",
+            "textArea": false
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "label": "Yes"
+      },
+      {
+        "label": "No"
+      },
+      {
+        "label": "Maybe"
+      }
+    ],
+    "secondaryLabels": [],
+    "retentionPolicyMessage": "We’ll keep it for up to 270 days – and if we don’t use it we’ll then delete it and any other information you sent us.",
+    "includeDataRetentionText": true,
+    "includeRightToRevokeText": true,
+    "includeRemovalGuidelineText": true,
+    "emailAddressFields": ["txt243870223"],
+    "promo": {
+      "title": "",
+      "promos": []
+    },
+    "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
+}

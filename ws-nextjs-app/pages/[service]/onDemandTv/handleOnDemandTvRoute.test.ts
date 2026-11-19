@@ -1,13 +1,13 @@
 import { GetServerSidePropsContext } from 'next';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import { Toggles } from '#app/models/types/global';
+import { ToggleDefinition } from '#app/models/types/global';
 import * as isTest from '#app/lib/utilities/isTest';
-import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
+import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandTvRoute from './handleOnDemandTvRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('#app/lib/utilities/getToggles/withCache');
+jest.mock('#app/lib/utilities/fetchToggles');
 
 jest.mock('#app/lib/utilities/isTest', () => {
   const originalModule = jest.requireActual('#app/lib/utilities/isTest');
@@ -44,7 +44,7 @@ describe('handleOnDemandTvRoute', () => {
 
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       recentVideoEpisodes: { enabled: true, value: 4 },
-    } as Toggles);
+    });
   });
 
   it('returns expected props if data fetch succeeds', async () => {
@@ -59,7 +59,7 @@ describe('handleOnDemandTvRoute', () => {
   it('returns recent episodes using the toggle limit', async () => {
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       recentVideoEpisodes: { enabled: true, value: 3 },
-    } as Toggles);
+    });
 
     const result = await handleOnDemandTvRoute(mockGetServerSidePropsContext);
 
@@ -72,7 +72,7 @@ describe('handleOnDemandTvRoute', () => {
   it('returns no recent episodes when the toggle is null', async () => {
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       recentVideoEpisodes: null,
-    } as unknown as Toggles);
+    } as unknown as Record<string, ToggleDefinition>);
 
     const result = await handleOnDemandTvRoute(mockGetServerSidePropsContext);
 
@@ -82,7 +82,7 @@ describe('handleOnDemandTvRoute', () => {
   it('returns no recent episodes when the toggle is disabled', async () => {
     jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
       recentVideoEpisodes: { enabled: false, value: 4 },
-    } as Toggles);
+    });
 
     const result = await handleOnDemandTvRoute(mockGetServerSidePropsContext);
 

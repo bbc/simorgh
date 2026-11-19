@@ -12,6 +12,7 @@ import {
   TV_PAGE,
   MOST_READ_PAGE,
   LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -60,6 +61,7 @@ export default function derivePageType(pathname: string): PageTypes {
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
   if (sanitisedPathname.includes('popular/read')) return MOST_READ_PAGE;
+  if (sanitisedPathname.endsWith('/offline')) return OFFLINE_PAGE;
 
   if (isUgcIdCheck(sanitisedPathname)) return UGC_PAGE;
   if (isLiveRadioPath(sanitisedPathname)) return LIVE_RADIO_PAGE;

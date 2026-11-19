@@ -1,5 +1,5 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/fa-af';
+import '#lib/locales/moment/fa-af';
 import '#psammead/moment-timezone-include/tz/Asia/Kabul';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'توضیح صدا، ',
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
-    locale: 'fa-af',
+    locale: 'fa-AF',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'fa-af',
     datetimeLocale: 'fa-af',
@@ -62,10 +62,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      topicDiscovery: {
+        heading: 'بیشتر بخوانید',
+        moreAboutTopic: 'بیشتر درباره {topic}',
+        fetchErrorMessage: 'بارگیری ناموفق بود. لطفاً دوباره تلاش کنید',
+      },
+      googlePreferredSource: {
+        linkText: 'به عنوان منبع ترجیحی در Google اضافه کنید',
+      },
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
+      skipContent: {
+        text: 'از %title% بگذر و ادامه بده',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      showMore: 'نمایش بیشتر',
       moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {
@@ -362,6 +375,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
       sport: {
+        keyEventsTitle: 'رویدادهای مهم',
         matchSummary: 'خلاصه مسابقه',
         assists: 'پاس گل',
         penalties: 'پنالتی',
@@ -371,6 +385,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'پس از وقت اضافی',
         penaltyAbbreviation: 'پن',
         ownGoal: 'گول به دروازه خودی',
+        versus: 'در برابر',
+        kickOff: 'شروع',
+        timeToBeConfirmed: 'زمان باید تأیید شود',
+        teamToBeConfirmed: 'تیم باید تأیید شود',
+        afterFullTime: 'پس از وقت کامل',
+        atFullTime: 'در وقت کامل',
+        onPenalties: 'در پنالتی‌ها',
+        onAggregate: 'در مجموع',
+        win: 'برنده می‌شود',
         winOnPenalties: {
           prefix: 'با پنالتی',
           suffix: 'پیروز می‌شود',
@@ -430,6 +453,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'مرحله گروهی',
+          last32: 'یک شانزدهم نهایی',
+          last16: 'یک هشتم نهایی',
+          quarterFinals: 'یک چهارم نهایی',
+          semiFinals: 'نیمه نهایی',
+          final: 'نهایی',
+          thirdPlaceFinal: 'مقام سوم',
         },
       },
     },

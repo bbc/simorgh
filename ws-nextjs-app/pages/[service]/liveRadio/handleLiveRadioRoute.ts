@@ -7,7 +7,7 @@ import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 
 const logger = nodeLogger(__filename);
 
@@ -19,10 +19,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { service, variant } = parseRoute(resolvedUrl);
 
-  const toggles = await getToggles(service);
-  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
-  const disableRadioSchedule = !scheduleIsEnabled;
-
   if (!service) {
     context.res.statusCode = NOT_FOUND;
 
@@ -30,13 +26,16 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: LIVE_RADIO_PAGE,
         pathname: resolvedUrlWithoutQuery,
       },
     };
   }
+
+  const toggles = await fetchToggles({ service });
+  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
+  const disableRadioSchedule = !scheduleIsEnabled;
 
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
@@ -67,7 +66,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: LIVE_RADIO_PAGE,
         pathname: resolvedUrlWithoutQuery,

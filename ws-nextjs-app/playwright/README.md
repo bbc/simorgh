@@ -10,6 +10,11 @@ This guide explains how to set up and run Playwright tests for the Next.js app.
 
 This is intentionally general so additional page types can be added over time.
 
+## Test scenarios
+
+https://bbc.atlassian.net/wiki/spaces/PDG1/folder/905874618/WS+Test+scenarios
+
+
 ## Prerequisites
 
 1. Use the correct Node version for this repo.
@@ -139,3 +144,19 @@ Optional: add convenience scripts in `ws-nextjs-app/package.json` for frequently
 ## CI notes
 
 A Playwright workflow exists under `.github/workflows/` to run Playwright page type tests on pull requests. Keep CI commands aligned with the scripts in `ws-nextjs-app/package.json`.
+
+## Timezone module generation
+
+Playwright tests import `ws-nextjs-app/utilities/serviceConfigs`, which imports service config files that include timezone side-effect imports such as `#psammead/moment-timezone-include/tz/Africa/Addis_Ababa`.
+
+These timezone files are generated at runtime and are gitignored. Cypress and Next.js generate them through webpack plugin setup. Playwright is not webpack-driven, so the Playwright scripts run a preparation step first:
+
+```
+yarn playwright:prepare
+```
+
+If you see an error similar to the following, run the prepare script (or use `yarn playwright:e2e`, which includes it automatically):
+
+```
+Cannot find module '#psammead/moment-timezone-include/tz/...'
+```

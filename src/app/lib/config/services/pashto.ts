@@ -1,5 +1,5 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/ps';
+import '#lib/locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
@@ -65,10 +65,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
+      topicDiscovery: {
+        heading: 'نور وپلټئ',
+        moreAboutTopic: 'د {topic} په اړه نور',
+        fetchErrorMessage: 'پورته کول ناکام شول. مهرباني وکړئ بیا هڅه وکړئ',
+      },
+      googlePreferredSource: {
+        linkText: 'په Google کې د غوره سرچینې په توګه اضافه کړئ',
+      },
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
+      skipContent: {
+        text: '%title% پریږدئ او دوام ورکړئ',
+        endTextVisuallyHidden: 'د %title% پای',
+      },
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      showMore: 'نور وښایاست',
       moreOnThis: '',
       navMenuText: 'برخې',
       liteSite: {
@@ -297,6 +310,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'مهم خبرونه',
       featuresAnalysisTitle: 'ځانګړي مطالب',
       sport: {
+        keyEventsTitle: 'مهمے پېړې',
         matchSummary: 'د لوبې لنډیز',
         assists: 'اسسټ',
         penalties: 'پنالټي',
@@ -306,6 +320,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'له اضافي وخت وروسته',
         penaltyAbbreviation: 'پن',
         ownGoal: 'خپل ګول',
+        versus: 'پر وړاندې',
+        kickOff: 'پیل',
+        timeToBeConfirmed: 'وخت به تایید شي',
+        teamToBeConfirmed: 'لوبډله باید تایید شي',
+        afterFullTime: 'د بشپړ وخت وروسته',
+        atFullTime: 'د بشپړ وخت کې',
+        onPenalties: 'په پنالټیو کې',
+        onAggregate: 'په مجموعي ډول',
+        win: 'ګټي',
         winOnPenalties: {
           prefix: 'په پنالټیو کې',
           suffix: 'سره ګټي',
@@ -365,6 +388,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ګروپي پړاو',
+          last32: 'د ۳۲ لوبډلو پړاو',
+          last16: 'د ۱۶ لوبډلو پړاو',
+          quarterFinals: 'منځلوبې',
+          semiFinals: 'نیمه پایلوبې',
+          final: 'پایلوبه',
+          thirdPlaceFinal: 'درېیم ځای',
         },
       },
     },

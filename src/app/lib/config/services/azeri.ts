@@ -1,5 +1,5 @@
 import '#psammead/moment-timezone-include/tz/Asia/Baku';
-import '#psammead/psammead-locales/moment/az';
+import '#lib/locales/moment/az';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -81,12 +81,34 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hamısına baxın',
       home: 'Xəbərlər',
+      topicDiscovery: {
+        heading: 'Daha çox kəşf et',
+        moreAboutTopic: '{topic} haqqında daha çox',
+        fetchErrorMessage:
+          'Yükləmə uğursuz oldu. Zəhmət olmasa yenidən yoxlayın',
+      },
+      googlePreferredSource: {
+        linkText: 'Google-da üstün tutulan mənbə kimi əlavə et',
+      },
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
+      skipContent: {
+        text: '%title% keç və davam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      showMore: 'Daha çox göstər',
       moreOnThis: '',
       navMenuText: 'Bölümlər',
+      liteSite: {
+        onboardingMessage:
+          'Siz bu veb saytın daha az data sərf edən mətn versiyasına baxırsınız. Bütün şəkil və videoları özündə əks etdirən əsas versiyaya baxın.',
+        toMainSite: 'Məni əsas vebsaytına apar',
+        informationPage:
+          'Bu data qənaət edən versiya haqqında daha çox məlumat əldə edin',
+        dataSaving: 'Data qənaəti versiyası',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -322,6 +344,7 @@ export const service: DefaultServiceConfig = {
         privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
       sport: {
+        keyEventsTitle: 'Əsas hadisələr',
         matchSummary: 'Matçın xülasəsi',
         assists: 'Asistlər',
         penalties: 'Penaltilər',
@@ -331,6 +354,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Əlavə vaxtdan sonra',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'öz qapısına qol',
+        versus: 'qarşı',
+        kickOff: 'başlanğıc',
+        timeToBeConfirmed: 'Vaxt təsdiqlənəcək',
+        teamToBeConfirmed: 'Komanda təsdiqlənəcək',
+        afterFullTime: 'tam vaxtdan sonra',
+        atFullTime: 'tam vaxtda',
+        onPenalties: 'penaltilərlə',
+        onAggregate: 'ümumi hesabla',
+        win: 'qalib gəlir',
         winOnPenalties: {
           prefix: 'penaltilərlə',
           suffix: 'qalib gəlir',
@@ -390,6 +422,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Qrup mərhələsi',
+          last32: '1/16 mərhələ',
+          last16: '1/8 final',
+          quarterFinals: 'Dörddə bir final',
+          semiFinals: 'Yarımfinal',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncü yer',
         },
       },
     },
@@ -452,7 +490,7 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
-    timezone: 'Asia/baku',
+    timezone: 'Asia/Baku',
     navigation: [
       {
         title: 'Xəbərlər',

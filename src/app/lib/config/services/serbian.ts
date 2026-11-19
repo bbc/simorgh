@@ -1,8 +1,8 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/sr-cyrl';
-import '#psammead/psammead-locales/moment/sr';
+import '#lib/locales/moment/sr-cyrl';
+import '#lib/locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 import { SerbianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -144,17 +144,31 @@ export const service: SerbianConfig = {
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       topicDiscovery: {
-        heading: 'Otkrijte više',
-        moreFromTopic: 'Više iz {topic}',
-        fetchErrorMessage:
-          'Učitavanje nije uspelo. Molimo pokušajte ponovo kasnije.',
+        heading: 'Saznajte više',
+        moreAboutTopic: 'Više o {topic}',
+        fetchErrorMessage: 'Učitavanje nije uspelo. Pokušajte ponovo',
+      },
+      googlePreferredSource: {
+        linkText: 'Dodaj kao preferirani izvor na Google-u',
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
+      skipContent: {
+        text: 'Preskoči %title% i nastavi',
+        endTextVisuallyHidden: 'Kraj %title%',
+      },
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      showMore: 'Prikaži više',
       moreOnThis: '',
       navMenuText: 'Odeljci',
+      liteSite: {
+        onboardingMessage:
+          'Gledate tekstualnu verziju ovog sajta koja koristi manje podataka. Pogledajte glavnu verziju sajta sa svim slikama i video snimcima.',
+        toMainSite: 'Odvedi me na glavni sajt',
+        informationPage: 'Saznajte više o ovoj verziji koja štedi podatke',
+        dataSaving: 'Verzija koja štedi podatke',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
         audioPlayer: 'Audio plejer',
@@ -162,13 +176,13 @@ export const service: SerbianConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'Uživo',
-        liveCoverage: 'Pokrivenost uživo',
-        breaking: 'Vanredne',
+        liveCoverage: 'Izveštavanje uživo',
+        breaking: 'Najnovija vest',
         postedAt: 'Objavljeno u',
-        summary: 'Sažetak',
+        summary: 'Najvažnije',
         shareButtonText: 'Deli',
-        refreshButtonText: 'Najnoviji post',
-        visuallyHiddenButtonText: 'Dostupan je novi post',
+        refreshButtonText: 'Najnovija objava',
+        visuallyHiddenButtonText: 'Dostupna je nova objava',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -368,6 +382,15 @@ export const service: SerbianConfig = {
         afterExtraTime: 'Posle produžetaka',
         penaltyAbbreviation: 'pen',
         ownGoal: 'autogol',
+        versus: 'protiv',
+        kickOff: 'početak',
+        timeToBeConfirmed: 'Vreme treba da bude potvrđeno',
+        teamToBeConfirmed: 'Tim treba da bude potvrđen',
+        afterFullTime: 'posle punog vremena',
+        atFullTime: 'u punom vremenu',
+        onPenalties: 'na penale',
+        onAggregate: 'ukupno',
+        win: 'pobeđuje',
         winOnPenalties: {
           prefix: 'pobeđuje',
           suffix: 'na penale',
@@ -427,6 +450,12 @@ export const service: SerbianConfig = {
         },
         stages: {
           groupStage: 'Grupna faza',
+          last32: 'Šesnaestina finala',
+          last16: 'Osmina finala',
+          quarterFinals: 'Četvrtfinale',
+          semiFinals: 'Polufinale',
+          final: 'Finale',
+          thirdPlaceFinal: 'Utakmica za treće mesto',
         },
       },
       topStoriesTitle: 'Najvažnije',
@@ -612,16 +641,30 @@ export const service: SerbianConfig = {
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       topicDiscovery: {
-        heading: 'Откријте више',
-        moreFromTopic: 'Више из {topic}',
-        fetchErrorMessage:
-          'Учитавање није успело. Молимо покушајте поново касније.',
+        heading: 'Сазнајте више',
+        moreAboutTopic: 'Више о {topic}',
+        fetchErrorMessage: 'Учитавање није успело. Покушајте поново',
+      },
+      googlePreferredSource: {
+        linkText: 'Додај као преферирани извор на Google-у',
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
+      skipContent: {
+        text: 'Прескочи %title% и настави',
+        endTextVisuallyHidden: 'Крај %title%',
+      },
       relatedContent: 'Повезано',
       relatedTopics: 'Повезане теме',
+      showMore: 'Прикажи више',
       navMenuText: 'Одељци',
+      liteSite: {
+        onboardingMessage:
+          'Гледате текстуалну верзију овог сајта која користи мање података. Погледајте главну верзију сајта са свим сликама и видео снимцима.',
+        toMainSite: 'Одведи ме на главни сајт',
+        informationPage: 'Сазнајте више о овој верзији која штеди податке',
+        dataSaving: 'Верзија која штеди податке',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',
         audioPlayer: 'Аудио плејер',
@@ -629,13 +672,13 @@ export const service: SerbianConfig = {
       },
       liveExperiencePage: {
         liveLabel: 'Уживо',
-        liveCoverage: 'Покривеност уживо',
-        breaking: 'Ванредне',
+        liveCoverage: 'Извештавање уживо',
+        breaking: 'Најновија вест',
         postedAt: 'Објављено у',
-        summary: 'Сажетак',
+        summary: 'Најважније',
         shareButtonText: 'Дели',
-        refreshButtonText: 'Последњи пост',
-        visuallyHiddenButtonText: 'Доступан је нови пост',
+        refreshButtonText: 'Најновија објава',
+        visuallyHiddenButtonText: 'Доступна је нова објава',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -835,6 +878,15 @@ export const service: SerbianConfig = {
         afterExtraTime: 'После продужетака',
         penaltyAbbreviation: 'пен',
         ownGoal: 'аутогол',
+        versus: 'против',
+        kickOff: 'почетак',
+        timeToBeConfirmed: 'Време треба да буде потврђено',
+        teamToBeConfirmed: 'Тим треба да буде потврђен',
+        afterFullTime: 'после пуног времена',
+        atFullTime: 'у пуном времену',
+        onPenalties: 'на пенале',
+        onAggregate: 'укупно',
+        win: 'побеђује',
         winOnPenalties: {
           prefix: 'побеђује',
           suffix: 'на пенале',

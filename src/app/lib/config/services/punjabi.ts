@@ -1,5 +1,5 @@
 import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
-import '#psammead/psammead-locales/moment/pa-in';
+import '#lib/locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -62,13 +62,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ਸਭ ਦੋਖੇ',
       home: 'ਹੋਮ ਪੇਜ',
+      topicDiscovery: {
+        heading: 'ਹੋਰ ਖੋਜੋ',
+        moreAboutTopic: '{topic} ਬਾਰੇ ਹੋਰ',
+        fetchErrorMessage: 'ਲੋਡ ਨਹੀਂ ਹੋਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ',
+      },
+      googlePreferredSource: {
+        linkText: "Google 'ਤੇ ਮਨਪਸੰਦ ਸਰੋਤ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ",
+      },
       continueReading: 'ਅੱਗੇ ਪੜ੍ਹੋ',
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
+      skipContent: {
+        text: '%title% ਛੱਡੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ',
+        endTextVisuallyHidden: '%title% ਦਾ ਅੰਤ',
+      },
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      showMore: 'ਹੋਰ ਦਿਖਾਓ',
       moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
+      liteSite: {
+        onboardingMessage:
+          'ਤੁਸੀਂ ਇਸ ਵੈੱਬਸਾਈਟ ਦਾ ਸਿਰਫ਼-ਟੈਕਸਟ ਵਰਜ਼ਨ ਦੇਖ ਰਹੇ ਹੋ ਜੋ ਘੱਟ ਡਾਟਾ ਵਰਤਦਾ ਹੈ। ਸਾਰੀਆਂ ਤਸਵੀਰਾਂ ਅਤੇ ਵੀਡੀਓ ਸਮੇਤ ਵੈੱਬਸਾਈਟ ਦਾ ਮੁੱਖ ਵਰਜ਼ਨ ਦੇਖੋ।',
+        toMainSite: `ਮੈਨੂੰ ਮੁੱਖ ਵੈੱਬਸਾਈਟ 'ਤੇ ਲੈ ਜਾਓ`,
+        informationPage: 'ਇਸ ਡਾਟਾ-ਬਚਤ ਵਰਜ਼ਨ ਬਾਰੇ ਹੋਰ ਜਾਣੋ',
+        dataSaving: 'ਡਾਟਾ-ਬਚਤ ਵਰਜ਼ਨ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -275,6 +295,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
       latestMediaTitle: 'ਬਿਲਕੁਲ ਨਵਾਂ',
       sport: {
+        keyEventsTitle: 'ਮੁੱਖ ਘਟਨਾਵਾਂ',
         matchSummary: 'ਮੈਚ ਦਾ ਸਾਰ',
         assists: 'ਅਸਿਸਟ',
         penalties: 'ਪੈਨਲਟੀ',
@@ -284,6 +305,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'ਵਾਧੂ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
         penaltyAbbreviation: 'ਪੈਨ',
         ownGoal: 'ਆਪਣਾ ਹੀ ਗੋਲ',
+        versus: 'ਵਿਰੁੱਧ',
+        kickOff: 'ਸ਼ੁਰੂਆਤ',
+        timeToBeConfirmed: 'ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
+        teamToBeConfirmed: 'ਟੀਮ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣੀ ਬਾਕੀ',
+        afterFullTime: 'ਪੂਰੇ ਸਮੇਂ ਤੋਂ ਬਾਅਦ',
+        atFullTime: "ਪੂਰੇ ਸਮੇਂ 'ਤੇ",
+        onPenalties: "ਪੈਨਲਟੀ 'ਤੇ",
+        onAggregate: 'ਕੁੱਲ ਵਿੱਚ',
+        win: 'ਜਿੱਤਦਾ ਹੈ',
         winOnPenalties: {
           prefix: 'ਪੈਨਲਟੀ ਵਿੱਚ',
           suffix: 'ਨਾਲ ਜਿੱਤਦਾ ਹੈ',
@@ -343,6 +373,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ਗਰੁੱਪ ਮੁਕਾਬਲੇ',
+          last32: 'ਰਾਉਂਡ 32',
+          last16: 'ਰਾਉਂਡ 16',
+          quarterFinals: 'ਕੁਆਟਰ ਫਾਈਨਲ',
+          semiFinals: 'ਸੈਮੀ ਫਾਈਨਲ',
+          final: 'ਫਾਈਨਲ',
+          thirdPlaceFinal: 'ਤੀਜਾ ਸਥਾਨ',
         },
       },
     },

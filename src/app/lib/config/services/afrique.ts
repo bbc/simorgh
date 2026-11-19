@@ -47,6 +47,15 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33244.html',
+      title: 'Élections de 2026 aux États-Unis',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:92e189ac-6957-4846-9a80-85c1d1c9b18e',
+      ],
+    },
     podcastPromo: {
       title: 'Promotion WhatsApp',
       brandTitle: 'BBC Afrique est sur WhatsApp',
@@ -81,11 +90,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tout voir',
       home: 'Accueil',
+      topicDiscovery: {
+        heading: 'Découvrir davantage',
+        moreAboutTopic: 'Plus sur {topic}',
+        fetchErrorMessage: 'Échec du chargement. Veuillez réessayer',
+      },
+      googlePreferredSource: {
+        linkText: 'Ajouter comme source préférée sur Google',
+      },
       continueReading: 'Continuer la lecture',
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
+      skipContent: {
+        text: 'Ignorer %title% et continuer',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
+      showMore: 'Afficher plus',
       moreOnThis: '',
       navMenuText: 'Rubriques',
       liteSite: {
@@ -309,6 +331,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'À la une',
       featuresAnalysisTitle: 'Le choix de la rédaction',
       sport: {
+        keyEventsTitle: 'Faits marquants',
         matchSummary: 'Résumé du match',
         assists: 'Passes décisives',
         penalties: 'Tirs au but',
@@ -320,6 +343,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'but contre son camp',
         venue: 'Stade',
         attendance: 'Affluence',
+        versus: 'contre',
+        kickOff: 'coup d’envoi',
+        timeToBeConfirmed: 'Heure à confirmer',
+        teamToBeConfirmed: 'Équipe à confirmer',
+        afterFullTime: 'après le temps réglementaire',
+        atFullTime: 'à la fin du temps réglementaire',
+        onPenalties: 'aux tirs au but',
+        onAggregate: 'sur l’ensemble des matchs',
+        win: 'gagne',
         winOnPenalties: {
           prefix: 'gagne',
           suffix: 'aux tirs au but',
@@ -379,6 +411,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Phase de poules',
+          last32: '16èmes de finale',
+          last16: '8èmes de finale',
+          quarterFinals: 'Quarts de finale',
+          semiFinals: 'Demi-finales',
+          thirdPlaceFinal: 'Troisième place',
+          final: 'Finale',
         },
       },
     },

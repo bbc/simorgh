@@ -13,24 +13,23 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import dispatchTrackingRequests, {
+  shouldDispatchEventBeacon,
+} from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 const VIEWED_DURATION_MS = 1000;
 
-const TOPIC_VIEW_COMPONENT_NAMES = ['topic-discovery', 'topics'];
-const TOPIC_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
-const TOPIC_OPTIMIZELY_VIEW_EVENTS = ['topic-views'];
+type ViewTrackerEventTrackingData = EventTrackingData & {
+  viewTrackerKey?: unknown;
+};
 
-const shouldTrackTopicView = (
-  componentName: string,
-  experimentName: string | undefined,
-) =>
-  TOPIC_VIEW_COMPONENT_NAMES.includes(componentName) &&
-  !!experimentName &&
-  TOPIC_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
-
-const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
+const getComponentViewTracker = (
+  eventTrackingData?: ViewTrackerEventTrackingData,
+) => {
+  const { viewTrackerKey } = eventTrackingData || {};
   const {
     componentName,
     format,
@@ -52,11 +51,11 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     alwaysInView = false,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
-
   const { optimizely } = use(OptimizelyContext);
 
   const observer = useRef(null);
@@ -66,7 +65,12 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
+
+  useEffect(() => {
+    setComponentHasComeIntoView(alwaysInView);
+    setEventSent(false);
+  }, [viewTrackerKey, alwaysInView]);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -95,6 +99,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             detailedPlacement,
             isSignedIn,
             hashedId,
+            isPersonalisationOn,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
             ...(experimentVariant &&
@@ -110,22 +115,40 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
           },
         });
 
-        if (
-          optimizely &&
-          sendOptimizelyEvents &&
-          experimentVariant &&
-          trackingIsEnabled &&
-          (!eventSent || alwaysInView) &&
-          shouldTrackTopicView(componentName, experimentName)
-        ) {
-          const overrideAttributes = optimizely.user.attributes;
-          TOPIC_OPTIMIZELY_VIEW_EVENTS.forEach(eventName => {
-            optimizely.track(
-              eventName,
-              optimizely.user.id as string,
-              overrideAttributes,
-            );
+        // Temporary Resonance dual-run, independent of the Reverb dispatch above (see ticket).
+        if (resonanceEnabled) {
+          const shouldSendResonanceEvent = shouldDispatchEventBeacon({
+            campaignID,
+            componentName,
+            pageIdentifier,
+            platform,
+            producerId,
+            producerName,
+            service,
+            statsDestination,
+            trackingIsEnabled,
+            eventSent,
+            alwaysInView,
           });
+          if (shouldSendResonanceEvent) {
+            dispatchViewabilityEvent(
+              buildResonanceEventConfig({
+                pageIdentifier,
+                campaignID,
+                componentName,
+                producerName,
+                type: VIEW_EVENT,
+                url,
+                experimentName,
+                experimentVariant,
+                itemTracker,
+                groupTracker,
+                viewThreshold,
+                platform,
+                isSignedIn,
+              }),
+            );
+          }
         }
 
         if (!alwaysInView) {
@@ -157,6 +180,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     producerId,
     producerName,
     service,
+    resonanceEnabled,
     statsDestination,
     trackingIsEnabled,
     eventSent,
@@ -172,13 +196,20 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     alwaysInView,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
+    viewThreshold,
   ]);
-
   const viewTracker = useCallback(
-    async (element: HTMLElement) => {
+    async (element: HTMLElement | null) => {
+      if (!element) {
+        (observer.current as unknown as IntersectionObserver)?.disconnect();
+        observer.current = null;
+        return;
+      }
+
       const shouldSetupIntersectionObserver = alwaysInView
         ? false
-        : !(!element || !trackingIsEnabled || eventSent);
+        : trackingIsEnabled && !eventSent;
 
       if (shouldSetupIntersectionObserver) {
         if (!observer.current) {
@@ -191,13 +222,15 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
         (observer.current as unknown as IntersectionObserver)?.observe(element);
       }
     },
-    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView],
+    // The ref callback must change with the key so React reattaches tracked elements.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [trackingIsEnabled, eventSent, viewThreshold, alwaysInView, viewTrackerKey],
   );
 
   return viewTracker;
 };
 
-export default (eventTrackingData?: EventTrackingData): any => {
+export default (eventTrackingData?: ViewTrackerEventTrackingData): any => {
   const { isLite } = use(RequestContext);
 
   const viewTracker = getComponentViewTracker(eventTrackingData);

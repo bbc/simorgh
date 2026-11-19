@@ -24,7 +24,7 @@ export const crossPlatform = ({
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(serviceID);
+          cy.fetchToggles(serviceID);
         });
         it(`should render ${numberOfItems} items`, () => {
           cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
@@ -85,7 +85,7 @@ export const ampOnly = ({
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(serviceID);
+          cy.fetchToggles(serviceID);
         });
         it('should not render when data fetch fails', () => {
           const mostReadPath = getMostReadEndpoint({

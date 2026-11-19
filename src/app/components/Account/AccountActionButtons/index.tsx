@@ -1,21 +1,31 @@
-import { use } from 'react';
+import React, { use } from 'react';
+import clsx from 'clsx';
 import Paragraph from '#app/components/Paragraph';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountIcon } from '#app/components/icons';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface AccountActionButtonsProps {
   signInComponentName: string;
   registerComponentName: string;
   onLightBackground?: boolean;
+  signInRef?: React.Ref<HTMLAnchorElement>;
+  experimentName?: string;
+  experimentVariant?: string;
+  signInAccessibleLabel?: string;
 }
 
 const AccountActionButtons = ({
   signInComponentName,
   registerComponentName,
   onLightBackground = false,
+  signInRef,
+  experimentName,
+  experimentVariant,
+  signInAccessibleLabel,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -30,30 +40,50 @@ const AccountActionButtons = ({
     ? undefined
     : 'focusIndicatorInvert';
 
+  const signInButtonContent = (
+    <>
+      <CallToActionLink.ButtonLikeWrapper
+        aria-hidden={signInAccessibleLabel ? true : undefined}
+      >
+        <AccountIcon className={styles.accountIcon} isInverted />
+        <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+          {signInText}
+        </CallToActionLink.Text>
+      </CallToActionLink.ButtonLikeWrapper>
+      {signInAccessibleLabel && (
+        <VisuallyHiddenText>{signInAccessibleLabel}</VisuallyHiddenText>
+      )}
+    </>
+  );
+
   return (
     <>
       <CallToActionLink
+        ref={signInRef}
         url={signInUrl}
-        className={focusIndicatorClassName}
-        css={[styles.callToActionLink, styles.signInLink]}
-        eventTrackingData={{ componentName: signInComponentName }}
+        className={clsx(
+          focusIndicatorClassName,
+          styles.callToActionLink,
+          styles.signInLink,
+        )}
+        eventTrackingData={{
+          componentName: signInComponentName,
+          ...(experimentName && { experimentName }),
+          ...(experimentVariant && { experimentVariant }),
+          ...(experimentVariant && { sendOptimizelyEvents: true }),
+        }}
         data-testid={signInComponentName}
       >
-        <CallToActionLink.ButtonLikeWrapper>
-          <AccountIcon css={styles.accountIcon} />
-          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-            {signInText}
-          </CallToActionLink.Text>
-        </CallToActionLink.ButtonLikeWrapper>
+        {signInButtonContent}
       </CallToActionLink>
 
       {separatorText && (
         <Paragraph
           size="bodyCopy"
-          css={[
+          className={clsx(
             styles.separatorText,
             onLightBackground && styles.separatorTextOnLightBackground,
-          ]}
+          )}
         >
           {separatorText}
         </Paragraph>
@@ -61,13 +91,18 @@ const AccountActionButtons = ({
 
       <CallToActionLink
         url={registerUrl}
-        className={focusIndicatorClassName}
-        css={[
+        className={clsx(
+          focusIndicatorClassName,
           styles.callToActionLink,
           styles.registerLink,
           onLightBackground && styles.registerLinkOnLightBackground,
-        ]}
-        eventTrackingData={{ componentName: registerComponentName }}
+        )}
+        eventTrackingData={{
+          componentName: registerComponentName,
+          ...(experimentName && { experimentName }),
+          ...(experimentVariant && { experimentVariant }),
+          ...(experimentVariant && { sendOptimizelyEvents: true }),
+        }}
         data-testid={registerComponentName}
       >
         <CallToActionLink.ButtonLikeWrapper>

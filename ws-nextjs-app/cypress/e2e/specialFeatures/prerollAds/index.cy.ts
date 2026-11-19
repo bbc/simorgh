@@ -37,7 +37,7 @@ describe('Media Asset Pages - Preroll Ads', () => {
         if (paths.length > 0) {
           paths.forEach(url => {
             it(url, () => {
-              cy.getToggles(service).then(() => {
+              cy.fetchToggles(service).then(() => {
                 cy.fixture(`toggles/${service}.json`).then(toggles => {
                   const adsEnabled = path(['preroll', 'enabled'], toggles);
 

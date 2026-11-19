@@ -1,28 +1,35 @@
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
+import clsx from 'clsx';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import Paragraph from '../Paragraph';
-import Heading from '../Heading';
-import Image from '../Image';
-import styles from './index.styles';
+import {
+  createResponsiveSrcSet,
+  MULTILINE_SRCSET_SEPARATOR,
+} from '#app/utilities/imageSrcSets';
+import isLive from '#app/lib/utilities/isLive';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import CallToActionLink from '../CallToActionLink';
+import Paragraph from '../Paragraph';
+import Image from '../Image';
+import ctaStyles from './index.module.scss';
+import styles from './index.styles';
 
 interface MessageBannerProps {
-  heading: string;
   description?: string;
   link: string;
   linkText: string;
   image?: string;
-  id?: string;
   eventTrackingData?: EventTrackingData;
+  children?: React.ReactNode;
 }
 const MessageBanner = ({
-  heading,
   description,
   link,
   linkText,
   image,
-  id = 'message-banner-1',
+  children,
   eventTrackingData,
 }: MessageBannerProps) => {
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
@@ -37,70 +44,65 @@ const MessageBanner = ({
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
 
+  const { pageType } = use(RequestContext);
+
   const { mq } = useTheme();
 
-  const IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH = styles.IMAGE_WIDTH * 2;
-  const IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH =
-    styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH * 2;
+  const imgSrcLarge = image?.replace(
+    '{width}',
+    `${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}`,
+  );
 
-  const replaceWidth = (width: number) => image?.replace('{width}', `${width}`);
+  const responsiveImage = createResponsiveSrcSet({
+    imageUrlTemplate: image,
+    mq,
+    imageWidthSmall: styles.IMAGE_WIDTH,
+    imageWidthLarge: styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
+  });
 
-  const imgSrcSmall = replaceWidth(styles.IMAGE_WIDTH);
-  const imgSrcSmall2x = replaceWidth(IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH);
-  const imgSrcLarge = replaceWidth(styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH);
-  const imgSrcLarge2x = replaceWidth(IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH);
+  // EXPERIMENT: CTA Glow - remove this flag and place behind Optimizely check
+  const shouldEnableGlow = !isLive() && pageType === HOME_PAGE;
 
   return (
-    <section
-      css={styles.container}
-      role="region"
-      aria-labelledby={id}
-      data-testid={id}
-    >
-      <div {...viewTracker} css={styles.card}>
-        <div css={styles.textWrap}>
-          <Heading level={2} size="paragon" css={styles.heading} id={id}>
-            {heading}
-          </Heading>
-          <Paragraph size="longPrimer" css={styles.paragraph}>
-            {description}
-          </Paragraph>
-        </div>
-        <div css={styles.flex}>
-          <CallToActionLink
-            url={link}
-            className="focusIndicatorInvert"
-            eventTrackingData={eventTrackingDataWithoutItemCount}
-            css={styles.callToActionLink}
-          >
-            <CallToActionLink.ButtonLikeWrapper>
-              <CallToActionLink.Text
-                shouldUnderlineOnHoverFocus
-                css={styles.callToActionLinkText}
-              >
-                {linkText}
-                <CallToActionLink.Chevron />
-              </CallToActionLink.Text>
-            </CallToActionLink.ButtonLikeWrapper>
-          </CallToActionLink>
-          {image && (
-            <div css={styles.image}>
-              <Image
-                alt=""
-                src={imgSrcLarge as string}
-                srcSet={`${imgSrcSmall} ${styles.IMAGE_WIDTH}w, 
-                          ${imgSrcSmall2x} ${IMAGE_SRC_SMALL_2X_UPSCALE_WIDTH}w, 
-                          ${imgSrcLarge} ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}w, 
-                          ${imgSrcLarge2x} ${IMAGE_SRC_LARGE_2X_UPSCALE_WIDTH}w`}
-                sizes={`${mq.GROUP_2_MAX_WIDTH.replace('@media ', '')} ${styles.IMAGE_WIDTH}px, ${styles.IMAGE_WIDTH_GROUP_3_MIN_WIDTH}px`}
-                placeholder={false}
-                aspectRatio={[16, 9]}
-              />
-            </div>
-          )}
-        </div>
+    <div {...viewTracker} css={styles.card}>
+      <div css={styles.textWrap}>
+        {children}
+        <Paragraph size="longPrimer" css={styles.paragraph}>
+          {description}
+        </Paragraph>
       </div>
-    </section>
+      <div css={styles.flex}>
+        <CallToActionLink
+          url={link}
+          className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
+          enableGlow={shouldEnableGlow}
+          eventTrackingData={eventTrackingDataWithoutItemCount}
+        >
+          <CallToActionLink.ButtonLikeWrapper>
+            <CallToActionLink.Text
+              shouldUnderlineOnHoverFocus
+              className={ctaStyles.callToActionLinkText}
+            >
+              {linkText}
+              <CallToActionLink.Chevron />
+            </CallToActionLink.Text>
+          </CallToActionLink.ButtonLikeWrapper>
+        </CallToActionLink>
+        {image && (
+          <div css={styles.image}>
+            <Image
+              alt=""
+              src={imgSrcLarge as string}
+              srcSet={responsiveImage?.srcSet}
+              sizes={responsiveImage?.sizes}
+              placeholder={false}
+              aspectRatio={[16, 9]}
+            />
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

@@ -26,10 +26,20 @@ import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
-import ArticlePageComponent from './ArticlePage';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import ArticlePageComponent from './ArticlePage';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
+
+const withGoogleReferral = Story => {
+  Object.defineProperty(document, 'referrer', {
+    value: 'https://www.google.com/',
+    writable: true,
+  });
+
+  return <Story />;
+};
 
 const serviceContextMock = {
   ...newsConfig.default,
@@ -66,7 +76,8 @@ type Props = {
   podcastEnabled?: boolean;
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
-  showTopicDiscoveryComponent?: boolean;
+  googlePreferredSourceEnabled?: boolean;
+  pathname?: string;
 };
 
 const ComponentWithContext = ({
@@ -75,7 +86,8 @@ const ComponentWithContext = ({
   podcastEnabled = false,
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
-  showTopicDiscoveryComponent = false,
+  googlePreferredSourceEnabled = false,
+  pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -87,6 +99,7 @@ const ComponentWithContext = ({
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
         articleVideoCuration: { enabled: true },
+        googlePreferredSource: { enabled: googlePreferredSourceEnabled },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
@@ -96,7 +109,7 @@ const ComponentWithContext = ({
           isApp={false}
           pageType={ARTICLE_PAGE}
           service={service}
-          pathname="/news/articles/c000000000o"
+          pathname={pathname}
           id="c000000000o"
           isUK
         >
@@ -108,7 +121,6 @@ const ComponentWithContext = ({
                   secondaryColumn: data.secondaryData,
                   mostRead: data.secondaryData.mostRead,
                 }}
-                showTopicDiscoveryComponent={showTopicDiscoveryComponent}
               />
             </PageLayoutWrapper>
           </ThemeProvider>
@@ -178,6 +190,10 @@ export const Burmese = () => (
   <ComponentWithServiceContext data={articleDataBurmese} service="burmese" />
 );
 
+Burmese.globals = {
+  service: { service: 'burmese', variant: 'default' },
+};
+
 export const ArticlePageWithRelatedContent = (
   _: StoryArgs,
   { service }: StoryProps,
@@ -206,6 +222,10 @@ export const ArticlePageWithPodcastPromo = () => (
   />
 );
 
+ArticlePageWithPodcastPromo.globals = {
+  service: { service: 'russian', variant: 'default' },
+};
+
 export const ArticlePageWithTopStoriesPidgin = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -213,6 +233,10 @@ export const ArticlePageWithTopStoriesPidgin = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithTopStoriesPidgin.globals = {
+  service: { service: 'pidgin', variant: 'default' },
+};
 
 export const ArticlePageWithMostReadMundo = () => (
   <ComponentWithContext
@@ -222,6 +246,10 @@ export const ArticlePageWithMostReadMundo = () => (
   />
 );
 
+ArticlePageWithMostReadMundo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPodcastPromoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPodcastPromo}
@@ -229,6 +257,10 @@ export const ArticlePageWithPodcastPromoRightToLeft = () => (
     podcastEnabled
   />
 );
+
+ArticlePageWithPodcastPromoRightToLeft.globals = {
+  service: { service: 'arabic', variant: 'default' },
+};
 
 export const ArticlePageWithPodcastNews = () => (
   <ComponentWithServiceContext
@@ -242,12 +274,20 @@ export const ArticlePageWithPortraitVideo = () => (
   <ComponentWithContext data={articleDataWithPortraitVideo} service="mundo" />
 );
 
+ArticlePageWithPortraitVideo.globals = {
+  service: { service: 'mundo', variant: 'default' },
+};
+
 export const ArticlePageWithPortraitVideoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPortraitVideoRTL}
     service="persian"
   />
 );
+
+ArticlePageWithPortraitVideoRightToLeft.globals = {
+  service: { service: 'persian', variant: 'default' },
+};
 
 export const ArticlePageWithElectionBanner = {
   render: () => (
@@ -275,6 +315,20 @@ export const ArticlePageWithLiteSiteLink = {
   },
 };
 
+export const ArticlePageWithGooglePreferredSource = {
+  render: () => (
+    <ComponentWithContext
+      data={articleData}
+      service="hindi"
+      googlePreferredSourceEnabled
+    />
+  ),
+  decorators: [withGoogleReferral],
+  globals: {
+    service: { service: 'hindi', variant: 'default' },
+  },
+};
+
 export const ArticlePageWithMultipleContributors = {
   render: () => (
     <ComponentWithContext
@@ -289,9 +343,26 @@ export const ArticlePageWithTopicDiscovery = {
     <ComponentWithContext
       data={articleWithTopicDiscovery}
       service="portuguese"
-      showTopicDiscoveryComponent
     />
   ),
+  globals: {
+    service: { service: 'portuguese', variant: 'default' },
+  },
+};
+
+export const ArticlePageWithSaveArticleButton = () => (
+  <ComponentWithContext
+    data={articleWithTopicDiscovery}
+    service="portuguese"
+    pathname="/portuguese/articles/cgmpgpllnp7o"
+  />
+);
+ArticlePageWithSaveArticleButton.globals = {
+  service: { service: 'portuguese', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'portuguese' },
+  },
 };
 
 export const TestArticlePageWithLiteSiteLink = {
@@ -303,6 +374,9 @@ export const TestArticlePageWithLiteSiteLink = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'gahuza', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithLiteSiteLinkRTL = {
@@ -314,6 +388,9 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
     />
   ),
   tags: ['!dev'],
+  globals: {
+    service: { service: 'arabic', variant: 'default' },
+  },
 };
 
 export const TestArticlePageWithVideoCuration = {
@@ -323,4 +400,7 @@ export const TestArticlePageWithVideoCuration = {
       service="pidgin"
     />
   ),
+  globals: {
+    service: { service: 'pidgin', variant: 'default' },
+  },
 };

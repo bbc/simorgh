@@ -48,6 +48,15 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'انتخابات میان‌دوره‌ای آمریکا ۲۰۲۶',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:bfb7e45d-785b-4694-8e24-56279c635a12',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/35021.html',
+    },
     podcastPromo: {
       title: 'معرفی خبرنامه',
       brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
@@ -83,11 +92,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      topicDiscovery: {
+        heading: 'بیشتر بخوانید',
+        moreAboutTopic: 'بیشتر درباره {topic}',
+        fetchErrorMessage: 'بارگذاری ناموفق بود. لطفاً دوباره تلاش کنید',
+      },
+      googlePreferredSource: {
+        linkText: 'به عنوان منبع ترجیحی در Google اضافه کنید',
+      },
       continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
+      skipContent: {
+        text: 'رد کردن %title% و ادامه',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      showMore: 'نمایش بیشتر',
       moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {
@@ -390,6 +412,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
       sport: {
+        keyEventsTitle: 'رویدادهای کلیدی',
         matchSummary: 'خلاصه مسابقه',
         assists: 'پاس گل',
         penalties: 'پنالتی',
@@ -399,6 +422,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'پس از وقت اضافه',
         penaltyAbbreviation: 'پن',
         ownGoal: 'گل به خودی',
+        versus: 'مقابل',
+        kickOff: 'شروع',
+        timeToBeConfirmed: 'زمان باید تأیید شود',
+        teamToBeConfirmed: 'تیم باید تأیید شود',
+        afterFullTime: 'پس از وقت کامل',
+        atFullTime: 'در وقت کامل',
+        onPenalties: 'در پنالتی‌ها',
+        onAggregate: 'در مجموع',
+        win: 'برنده می‌شود',
         winOnPenalties: {
           prefix: 'با پنالتی',
           suffix: 'پیروز می‌شود',
@@ -460,6 +492,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'مرحله گروهی',
+          last32: 'یک شانزدهم نهایی',
+          last16: 'یک هشتم نهایی',
+          quarterFinals: 'یک چهارم نهایی',
+          semiFinals: 'نیمه نهایی',
+          final: 'فینال',
+          thirdPlaceFinal: 'دیدار رده بندی',
         },
       },
     },

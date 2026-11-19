@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/ro';
+import '#lib/locales/moment/ro';
 import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -68,10 +68,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Vezi integral',
       home: 'Știri',
+      topicDiscovery: {
+        heading: 'Descoperă mai mult',
+        moreAboutTopic: 'Mai mult despre {topic}',
+        fetchErrorMessage: 'Încărcarea a eșuat. Vă rugăm să încercați din nou',
+      },
+      googlePreferredSource: {
+        linkText: 'Adaugă ca sursă preferată pe Google',
+      },
       currentPage: 'Pagina curentă',
       skipLinkText: 'Acces direct la conținut',
+      skipContent: {
+        text: 'Sari peste %title% și continuă',
+        endTextVisuallyHidden: 'Sfârșitul %title%',
+      },
       relatedContent: 'Articole similare',
       relatedTopics: 'Subiecte similare',
+      showMore: 'Afișează mai multe',
       moreOnThis: '',
       navMenuText: 'Secțiuni',
       liteSite: {
@@ -80,7 +93,6 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'Înapoi la site-ul principal',
         informationPage:
           'Află mai multe despre această versiune care economisește date',
-        informationPageLink: '#',
         dataSaving: 'Versiune site cu minim trafic de date',
         articleDataSavingLinkText: 'Versiune site cu minim trafic de date',
       },
@@ -341,7 +353,17 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Campania s-a încheiat la data {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Evenimente cheie',
         matchSummary: 'Rezumatul meciului',
+        versus: 'contra',
+        kickOff: 'start',
+        timeToBeConfirmed: 'Ora urmează să fie confirmată',
+        teamToBeConfirmed: 'Echipa urmează să fie confirmată',
+        afterFullTime: 'după timpul regulamentar',
+        atFullTime: 'la finalul timpului regulamentar',
+        onPenalties: 'la penalty-uri',
+        onAggregate: 'la general',
+        win: 'câștigă',
         worldCupTeamNames: {
           algeria: 'Algeria',
           argentina: 'Argentina',

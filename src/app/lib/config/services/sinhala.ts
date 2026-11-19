@@ -1,6 +1,6 @@
 import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/si';
+import '#lib/locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -77,10 +77,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'ප්‍රධාන පුවත්',
+      topicDiscovery: {
+        heading: 'තවත් සොයා බලන්න',
+        moreAboutTopic: '{topic} ගැන තවත්',
+        fetchErrorMessage: 'පූරණය අසාර්ථකයි. කරුණාකර නැවත උත්සාහ කරන්න',
+      },
+      googlePreferredSource: {
+        linkText: 'Google හි ප්‍රියතම මූලාශ්‍රයක් ලෙස එක් කරන්න',
+      },
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
+      skipContent: {
+        text: '%title% මඟහරින්න සහ කරන්න',
+        endTextVisuallyHidden: '%title% අවසානය',
+      },
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
+      showMore: 'තවත් පෙන්වන්න',
       moreOnThis: '',
       navMenuText: 'අංශ',
       liteSite: {
@@ -302,6 +315,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'විශේෂාංග',
       latestMediaTitle: 'අලුත්ම',
       sport: {
+        keyEventsTitle: 'ප්‍රධාන සිදුවීම්',
         matchSummary: 'තරඟ සාරාංශය',
         assists: 'ඇසිස්ට්',
         penalties: 'පෙනල්ටි',
@@ -311,6 +325,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'අමතර කාලයෙන් පසු',
         penaltyAbbreviation: 'පෙන්',
         ownGoal: 'ස්වයං ගෝලය',
+        versus: 'එදිරිව',
+        kickOff: 'ආරම්භය',
+        timeToBeConfirmed: 'වේලාව තහවුරු කිරීමට ඇත',
+        teamToBeConfirmed: 'කණ්ඩායම තහවුරු කිරීමට ඇත',
+        afterFullTime: 'පූර්ණ කාලයෙන් පසු',
+        atFullTime: 'පූර්ණ කාලයේදී',
+        onPenalties: 'පෙන්ල්ටි මත',
+        onAggregate: 'එකතුවෙන්',
+        win: 'ජයගනී',
         winOnPenalties: {
           prefix: 'පෙනල්ටි',
           suffix: 'න් ජය ලබයි',
@@ -370,6 +393,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'කණ්ඩායම් අදියර',
+          last32: '32 දෙනාගේ වටය',
+          last16: '16 දෙනාගේ වටය',
+          quarterFinals: 'අර්ධ-අවසන් පූර්ව වටය',
+          semiFinals: 'අවසන් පූර්ව වටය',
+          final: 'අවසන් වටය',
+          thirdPlaceFinal: 'තෙවන ස්ථානය',
         },
       },
     },

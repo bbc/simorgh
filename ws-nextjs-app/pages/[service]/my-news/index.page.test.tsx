@@ -1,9 +1,13 @@
 import { GetServerSidePropsContext } from 'next';
-import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
+import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import { getServerSideProps } from './index.page';
 
-jest.mock('#app/lib/utilities/getToggles/withCache');
+jest.mock('#app/lib/utilities/fetchToggles');
+jest.mock('#app/lib/utilities/fetchConfig', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue(null),
+}));
 jest.mock('#utilities/logResponseTime', () => jest.fn());
 
 const mockGetToggles = getTogglesModule.default as jest.MockedFunction<
@@ -16,6 +20,7 @@ type MockContext = GetServerSidePropsContext & {
 
 const createMockContext = (): MockContext =>
   ({
+    req: { headers: {} },
     query: { service: 'hindi', variant: null },
     res: { statusCode: 200, setHeader: jest.fn() },
     resolvedUrl: '/hindi/my-news',
@@ -30,7 +35,7 @@ describe('My News - getServerSideProps', () => {
     const context = createMockContext();
     mockGetToggles.mockResolvedValueOnce({
       uasPersonalization: { enabled: false },
-    } as unknown as Record<string, unknown>);
+    });
 
     const result = await getServerSideProps(context);
 
@@ -40,13 +45,14 @@ describe('My News - getServerSideProps', () => {
       pathname: '/hindi/my-news',
     });
     expect(context.res.statusCode).toBe(404);
+    expect(mockGetToggles).toHaveBeenCalledTimes(1);
   });
 
   it('should return minimal props when toggle is enabled', async () => {
     const context = createMockContext();
     mockGetToggles.mockResolvedValueOnce({
       uasPersonalization: { enabled: true },
-    } as unknown as Record<string, unknown>);
+    });
 
     const result = await getServerSideProps(context);
     const props = (result as Record<string, unknown>).props as Record<
@@ -59,6 +65,8 @@ describe('My News - getServerSideProps', () => {
     expect(props.status).toBe(200);
     expect(props.pathname).toBe('/hindi/my-news');
     expect(props.pageData).toBeDefined();
+    expect(props.toggles).toEqual({ uasPersonalization: { enabled: true } });
+    expect(mockGetToggles).toHaveBeenCalledTimes(1);
     expect((props.pageData as Record<string, unknown>).metadata).toBeDefined();
   });
 });

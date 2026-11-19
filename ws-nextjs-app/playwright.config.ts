@@ -16,12 +16,13 @@ const reporter: ReporterDescription[] = process.env.CI
   ? [
       ['list'],
       ['html', { open: 'never' }],
-      ['junit', { outputFile: 'test-results/nextjs-playwright.xml' }],
+      ['junit', { outputFile: 'playwright/results/nextjs-playwright.xml' }],
     ]
   : [['list']];
 
 export default defineConfig({
   testDir: './playwright',
+  tsconfig: '../tsconfig.json',
   timeout: 15_000,
   retries: appEnv === 'live' ? 2 : 1,
   use: {

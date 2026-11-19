@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/pcm';
+import '#lib/locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -63,13 +63,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
+      topicDiscovery: {
+        heading: 'Discover more',
+        moreAboutTopic: 'More about {topic}',
+        fetchErrorMessage: 'E no load. Abeg try again',
+      },
+      googlePreferredSource: {
+        linkText: 'Add am as preferred source for Google',
+      },
       continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
+      showMore: 'Show more',
       moreOnThis: '',
       navMenuText: 'Plenti seshon',
+      liteSite: {
+        onboardingMessage:
+          'You dey view text-only version of dis website wey dey use small data. Check di main version of di website wey get all images and videos.',
+        toMainSite: 'Carry me go di main website',
+        informationPage: 'Find out more about dis data-saving version',
+        dataSaving: 'Data-saving version',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -270,6 +290,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Informate me',
       latestMediaTitle: 'New things',
       sport: {
+        keyEventsTitle: 'Key events',
         matchSummary: 'Match Summary',
         assists: 'Assist',
         penalties: 'Penalty',
@@ -279,6 +300,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'After extra time',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'own goal',
+        versus: 'vs',
+        kickOff: 'kick off',
+        timeToBeConfirmed: 'Time wey dem never confirm',
+        teamToBeConfirmed: 'Team wey dem never confirm',
+        afterFullTime: 'after full time',
+        atFullTime: 'for full time',
+        onPenalties: 'for penalty',
+        onAggregate: 'for aggregate',
+        win: 'win',
         winOnPenalties: {
           prefix: 'win',
           suffix: 'for penalty',

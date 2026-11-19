@@ -1,0 +1,6 @@
+@use '@scss/themeTokens' as theme;
+
+.divider {
+    border-top: 1px solid theme.$palette-grey-4;
+    padding-block-end: theme.$spacings-double;
+}

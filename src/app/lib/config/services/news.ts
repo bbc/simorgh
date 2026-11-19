@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
+import '#lib/locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -49,8 +49,13 @@ export const service: DefaultServiceConfig = {
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       relatedTopics: 'Related topics',
+      showMore: 'Show more',
       moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {

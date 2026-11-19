@@ -76,7 +76,7 @@ export default ({
       plugins: {
         toLoad: [
           {
-            html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_1/DazzlerEdgePlugin.min.js',
+            html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
             playerOnly: true,
             // @ts-expect-error - this is a custom property used to pass data to the plugin when it initializes
             data: {

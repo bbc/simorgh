@@ -29,10 +29,13 @@ export default ({ service, pageType }: ServiceParametersType) => {
   describe('Header Tests', () => {
     const serviceName = config[service]?.name || service;
 
+    // As of 13/07/2026, Magyarul and Romania do not have enough content for the new nav to be rendered
+    const excludedNavServices = ['magyarul', 'romania'];
+
     const twoTierNavServices = {
       local: null, // Don't test two tier nav locally as the local environment can't fetch config
       test: ['arabic', 'tamil'], // Test env isn't guaranteed to have the new nav config, so only run tests for services we know have it
-      live: SERVICES_WITH_NEW_NAV,
+      live: SERVICES_WITH_NEW_NAV.filter(s => !excludedNavServices.includes(s)),
     };
 
     const cypressAppEnv = getAppEnv();

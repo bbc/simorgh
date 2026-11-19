@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/es';
+import '#lib/locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -44,27 +44,34 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Noticias',
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
-      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      title: 'Elecciones EE.UU. 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960',
+      ],
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html',
     },
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Improbable',
+      title: 'Anuncio app',
+      brandTitle: 'Tenemos una nueva app',
       brandDescription:
-        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
+        'Todas las noticias que necesitas están en BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
-        alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0p2sp62.jpg',
+        alt: 'Imagen de un teléfono celular con la nueva app de BBC Mundo',
       },
       linkLabel: {
-        text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
+        text: 'Descárgala aquí',
+        href: 'https://bbcwsuniversal.onelink.me/s6ot/8sfpme8y',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
@@ -106,13 +113,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      topicDiscovery: {
+        heading: 'Descubre más',
+        moreAboutTopic: 'Más sobre {topic}',
+        fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
+      },
+      googlePreferredSource: {
+        linkText: 'Agregar como fuente preferida en Google',
+      },
       continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
+      skipContent: {
+        text: 'Omitir %title% y continuar',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      showMore: 'Mostrar más',
       moreOnThis: '',
       navMenuText: 'Secciones',
+      liteSite: {
+        onboardingMessage:
+          'Estás viendo una versión de solo texto de este sitio web que usa menos datos. Mira la versión principal del sitio con todas las imágenes y videos.',
+        toMainSite: 'Llévame al sitio web principal',
+        informationPage: 'Descubre más sobre esta versión que ahorra datos',
+        dataSaving: 'Versión que ahorra datos',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -133,6 +160,105 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Sumario',
+      account: {
+        signIn: 'Inicia sesión',
+        signInAccessibleLabel: 'Inicia sesión en Mis Noticias',
+        forYou: 'Tu cuenta',
+        register: 'Regístrate',
+      },
+      accountPromoBanner: {
+        title: 'Tu BBC',
+        description: 'Inicia sesión o crea una cuenta gratuita',
+        closeLabel: 'Cerrar',
+        buttonSeparatorText: 'o',
+      },
+      accountSignInModal: {
+        title: 'Inicia sesión para guardar en Mis Noticias',
+        description: 'Guarda artículos y léelos cuando quieras',
+        closeLabel: 'Cerrar',
+        followTopic: {
+          title: 'Inicia sesión para seguir temas',
+          description:
+            'Accede directamente a las noticias que te interesan y no te pierdas ninguna historia',
+        },
+      },
+      saveArticleButton: {
+        loading: 'Cargando',
+        save: 'Guarda para después',
+        saving: 'Guardando',
+        saved: 'Guardado en Mis noticias',
+        remove: 'Eliminar',
+        removeAccessible: 'Guardado. Eliminar de Mis Noticias',
+        removing: 'Eliminando',
+      },
+      followTopicButton: {
+        loading: 'Cargando',
+        follow: 'Seguir',
+        following: 'Siguiendo',
+        followed: 'Siguiendo',
+        unfollow: 'Dejar de seguir',
+        unfollowAccessible: 'Dejar de seguir',
+        unfollowing: 'Dejar de seguir',
+      },
+      myNews: {
+        title: 'Mis Noticias',
+        guestTitle: 'Bienvenido a Mis Noticias',
+        description: 'Mis artículos guardados',
+        guestDescription:
+          'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
+        noArticles: 'Aún no has guardado ningún artículo',
+        savedArticlesErrorText:
+          'Estamos teniendo problemas para cargar tus artículos guardados',
+        loading: 'Cargando',
+        noJsDescription:
+          'Habilita JavaScript o utiliza otro navegador para ver este contenido.',
+        followedTopicsTitle: 'Temas que sigues',
+        followedTopicsErrorText:
+          'Estamos teniendo problemas para cargar los temas que sigues',
+        noFollowedTopics: 'Aún no has seguido ningún tema',
+        seeMoreTopics: 'Ver más',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
+      },
+      actionTooltip: {
+        success: {
+          title: 'Este artículo ya está guardado',
+          bodyBefore: 'Lo puedes ver en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Este artículo ya no está guardado',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Sigues {Topic Name}',
+          bodyBefore: 'Encuentra este tema en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Has dejado de seguir {Topic Name}',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -396,6 +522,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Esto cierra el {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Eventos clave',
         matchSummary: 'Resumen del partido',
         assists: 'Asistencias',
         penalties: 'Penales',
@@ -407,6 +534,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'gol en contra',
         venue: 'Estadio',
         attendance: 'Asistencia',
+        versus: 'contra',
+        kickOff: 'inicio',
+        timeToBeConfirmed: 'Hora por confirmar',
+        teamToBeConfirmed: 'Equipo por confirmar',
+        afterFullTime: 'después del tiempo reglamentario',
+        atFullTime: 'al final del tiempo reglamentario',
+        onPenalties: 'en penales',
+        onAggregate: 'en el global',
+        win: 'gana',
         winOnPenalties: {
           prefix: 'gana',
           suffix: 'por penales',
@@ -466,6 +602,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Fase de grupos',
+          last32: 'Fase de 32',
+          last16: 'Octavos de final',
+          quarterFinals: 'Cuartos de final',
+          semiFinals: 'Semifinales',
+          final: 'Final',
+          thirdPlaceFinal: 'Tercer puesto',
         },
       },
     },

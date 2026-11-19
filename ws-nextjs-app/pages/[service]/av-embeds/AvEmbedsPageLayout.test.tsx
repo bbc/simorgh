@@ -3,6 +3,7 @@ import {
   act,
   render,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import AvEmbedsPage from './AvEmbedsPageLayout';
@@ -10,7 +11,17 @@ import AvEmbedsPage from './AvEmbedsPageLayout';
 // @ts-expect-error Mocking require to prevent race condition.
 window.require = jest.fn();
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 describe('AV Embeds Page', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   it('should render the AV Embeds page', async () => {
     const { getByTestId } = await act(async () => {
       return render(

@@ -4,24 +4,24 @@ import {
   createFavouritesPayload,
   buildCurrentMetadata,
 } from '#app/lib/uasApi/uasUtility';
-import type { Article } from '#app/models/types/optimo';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { Services } from '#app/models/types/global';
 
 interface SaveOrUpdateArticleMetadataParams {
-  articlePageData: Article;
+  saveArticlePageData: SaveArticlePageData;
   articleId: string;
   service: Services;
   isRefreshAvailable: boolean;
 }
 
 const upsertArticleData = async ({
-  articlePageData,
+  saveArticlePageData,
   articleId,
   service,
   isRefreshAvailable,
 }: SaveOrUpdateArticleMetadataParams): Promise<Record<string, unknown>> => {
   const body = createFavouritesPayload({
-    articlePageData,
+    saveArticlePageData,
     articleId,
     service,
   });
@@ -33,7 +33,7 @@ const upsertArticleData = async ({
     isRefreshAvailable,
   });
 
-  return buildCurrentMetadata(articlePageData, { articleId, service });
+  return buildCurrentMetadata(saveArticlePageData, { articleId, service });
 };
 
 export default upsertArticleData;

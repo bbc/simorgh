@@ -1,6 +1,6 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '#psammead/psammead-locales/moment/am';
+import '#lib/locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -76,10 +76,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ሁሉንም ይመልከቱ',
       home: 'ዜና',
+      topicDiscovery: {
+        heading: 'ተጨማሪ ያግኙ',
+        moreAboutTopic: 'ስለ {topic} ተጨማሪ',
+        fetchErrorMessage: 'መጫን አልተሳካም። እባክዎ እንደገና ይሞክሩ',
+      },
+      googlePreferredSource: {
+        linkText: 'በGoogle ላይ እንደ ተመራጭ ያክሉ',
+      },
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
+      skipContent: {
+        text: '%title% ይዝለሉ ቀጥሉ',
+        endTextVisuallyHidden: '%title% መጨረሻ',
+      },
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      showMore: 'ተጨማሪ አሳይ',
       moreOnThis: '',
       navMenuText: 'ክፍሎች',
       liteSite: {
@@ -352,6 +365,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'ይህ የተዘጋው {{date}} ነው።',
       },
       sport: {
+        keyEventsTitle: 'አስፈላጊ ክስተቶች',
         matchSummary: 'የጨዋታ ማጠቃለያ',
         assists: 'አስተላላፊ አግባብ',
         penalties: 'ፔናልቲ',
@@ -361,6 +375,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'ከተጨማሪ ጊዜ በኋላ',
         penaltyAbbreviation: 'ፔና',
         ownGoal: 'ራስ ግብ',
+        versus: 'ከ',
+        kickOff: 'መጀመሪያ',
+        timeToBeConfirmed: 'ሰዓት ይረጋገጣል',
+        teamToBeConfirmed: 'ቡድን ይረጋገጣል',
+        afterFullTime: 'ከሙሉ ጊዜ በኋላ',
+        atFullTime: 'በሙሉ ጊዜ',
+        onPenalties: 'በፍትህ ምቶች',
+        onAggregate: 'በድምር',
+        win: 'ያሸንፋል',
         winOnPenalties: {
           prefix: '',
           suffix: 'በፔናልቲ ያሸንፋል',
@@ -420,6 +443,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'የምድብ ጨዋታ',
+          last32: 'የ32ቱ ዙር',
+          last16: 'የምድብ አላፊዎች',
+          quarterFinals: 'ሩብ ፍፃሜ',
+          semiFinals: 'ግማሽ ፍፃሜ',
+          final: 'ፍፃሜ',
+          thirdPlaceFinal: 'ሦስተኛ ደረጃ',
         },
       },
     },

@@ -3,8 +3,15 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import userEvent from '@testing-library/user-event';
 import ShareButton from '.';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const share = jest.fn().mockImplementation(() => Promise.resolve());
 Object.assign(navigator, {
@@ -12,6 +19,10 @@ Object.assign(navigator, {
 });
 
 describe('ShareButton', () => {
+  beforeEach(() => {
+    mockMatchMedia();
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -23,6 +34,22 @@ describe('ShareButton', () => {
     contentId: 'urn:foo',
     headline: 'bar',
   };
+
+  it('renders a decorative share mask that follows the button foreground', async () => {
+    await act(async () => {
+      render(<ShareButton {...mockShareButtonProps} />);
+    });
+    const icon = screen
+      .getByRole('button')
+      .querySelector<HTMLElement>('.external-svg');
+
+    expect(icon?.tagName).toBe('SPAN');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/share.svg',
+    );
+  });
 
   it('should call the navigator share api when clicked', async () => {
     const user = userEvent.setup();

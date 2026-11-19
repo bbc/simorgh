@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
-import '#psammead/psammead-locales/moment/so';
+import '#lib/locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -81,13 +81,35 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Arag dhammaan',
       home: 'War',
+      topicDiscovery: {
+        heading: 'Baro wax badan',
+        moreAboutTopic: 'Wax dheeraad ah oo ku saabsan {topic}',
+        fetchErrorMessage:
+          'Ku shubiddu waa fashilantay. Fadlan isku day mar kale',
+      },
+      googlePreferredSource: {
+        linkText: 'Ku dar il la doorbidayo Google-ka',
+      },
       continueReading: 'Sii Akhri',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
+      skipContent: {
+        text: 'Ka bood %title% oo sii wad',
+        endTextVisuallyHidden: 'Dhammaadka %title%',
+      },
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
+      showMore: 'Muuji wax dheeraad ah',
       moreOnThis: '',
       navMenuText: 'Qaybaha',
+      liteSite: {
+        onboardingMessage:
+          'Waxaad eegaysaa nooca qoraalka kaliya ee boggan oo isticmaala xog yar. Eeg nooca ugu weyn ee boggan oo ay ku jiraan dhammaan sawirada iyo muuqaallada.',
+        toMainSite: 'Igu celi boggaga ugu weyn',
+        informationPage:
+          'Baro wax dheeraad ah oo ku saabsan nooca kaydinta xogta',
+        dataSaving: 'Nooca kaydinta xogta',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
         audioPlayer: 'Ciyaaridda Codka',
@@ -301,6 +323,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Xul',
       latestMediaTitle: 'Arrimhii u danbeeyey',
       sport: {
+        keyEventsTitle: 'Dhacdooyinka muhiimka ah',
         matchSummary: 'Soo koobidda ciyaarta',
         assists: 'Caawin',
         penalties: 'Rigoore',
@@ -310,6 +333,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Ka dib waqtiga dheeraadka',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'gool iskiis',
+        versus: 'vs',
+        kickOff: 'bilow',
+        timeToBeConfirmed: 'Waqtiga waa la xaqiijinayaa',
+        teamToBeConfirmed: 'Kooxda waa la xaqiijinayaa',
+        afterFullTime: 'kadib waqtiga buuxa',
+        atFullTime: 'waqtiga buuxa',
+        onPenalties: 'rigoore',
+        onAggregate: 'wadarta',
+        win: 'guuleysta',
         winOnPenalties: {
           prefix: 'ku badisay rigoore',
           suffix: '',
@@ -369,6 +401,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Heerka kooxaha isku guruubka ah',
+          last32: 'Wareegga 32ka kooxood',
+          last16: 'Wareegga 16-ka koox',
+          quarterFinals: 'Rubac dhammaadka',
+          semiFinals: 'Nus Dhamaadka',
+          final: 'Kama dambeysta',
+          thirdPlaceFinal: 'Kaalinta 3-aad',
         },
       },
     },

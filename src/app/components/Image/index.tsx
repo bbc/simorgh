@@ -25,6 +25,8 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
+  style?: React.CSSProperties;
+  imageRef?: React.Ref<HTMLImageElement>;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -54,11 +56,13 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
+  style,
+  imageRef,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  if (isLite) return null;
 
+  if (isLite) return null;
   const showPlaceholder = !src || (placeholder && !isLoaded);
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
@@ -88,6 +92,7 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+
   return (
     <>
       {preload && (
@@ -165,6 +170,7 @@ const Image = ({
                 </>
               )}
               <img
+                ref={imageRef}
                 onLoad={() => setIsLoaded(true)}
                 src={src}
                 {...(srcSet && { srcSet: imgSrcSet })}
@@ -184,6 +190,7 @@ const Image = ({
                   aspectRatio: hasFixedAspectRatio
                     ? `${aspectRatioX} / ${aspectRatioY}`
                     : 'auto',
+                  ...style,
                 }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
               />
             </ImageWrapper>

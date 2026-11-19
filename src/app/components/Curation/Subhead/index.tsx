@@ -1,7 +1,5 @@
 import { Fragment, PropsWithChildren, use } from 'react';
-
-import styles from './index.styles';
-
+import styles from './index.module.scss';
 import { LeftChevron, RightChevron } from '../../icons';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -27,12 +25,16 @@ const Subhead = ({
           {...curationSubheadingClickTracker}
         >
           <span>{innerChildren}</span>
-          {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
+          {dir === 'ltr' ? (
+            <RightChevron className={styles.chevron} />
+          ) : (
+            <LeftChevron className={styles.chevron} />
+          )}
         </a>
       )
     : Fragment;
   return (
-    <h2 css={styles.h2} id={id}>
+    <h2 className={styles.h2} id={id}>
       <Wrapper>{children}</Wrapper>
     </h2>
   );

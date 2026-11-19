@@ -1,6 +1,5 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
 
 export default ({ service, pageType, path, variant = 'default' }) => {
@@ -24,7 +23,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
     );
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
-        cy.getToggles(service);
+        cy.fetchToggles(service);
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
@@ -95,7 +94,5 @@ export default ({ service, pageType, path, variant = 'default' }) => {
         });
       });
     });
-
-    chartbeatTests();
   });
 };

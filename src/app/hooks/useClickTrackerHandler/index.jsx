@@ -9,6 +9,8 @@ import {
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -22,32 +24,25 @@ const OJ_COMPONENT_NAMES = [
   'related-content',
   'most-read',
   'topic-discovery-curation-grid-promo',
-  'topic-discovery-more-from-link',
   'topics',
-];
-
-const TOPIC_COMPONENT_NAMES = [
-  'topic-discovery-curation-grid-promo',
-  'topic-discovery-more-from-link',
-  'topics',
+  'topic-discovery-more-about-link',
+  'location-based-topic-oj',
+  'portrait-video-carousel-article',
+  'video-curation-grid',
 ];
 
 // handle the total oj clicks event to specific onward journey experiments
-const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_topic_discovery_module'];
+const OJ_OPTIMIZELY_EXPERIMENTS = ['test_page_views_aa_3'];
 
 const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
-const TOPIC_OPTIMIZELY_CLICK_EVENTS = ['topic_clicks'];
 
 // only fire the total oj clicks event when the component and experiment are in scope
 const shouldTrackOjClick = (componentName, experimentName) =>
   OJ_COMPONENT_NAMES.includes(componentName) &&
   OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
 
-const shouldTrackTopicClick = (componentName, experimentName) =>
-  TOPIC_COMPONENT_NAMES.includes(componentName) &&
-  OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
-
 const useClickTrackerHandler = (eventTrackingData = {}) => {
+  const { isDismissal } = eventTrackingData;
   const {
     pageIdentifier,
     producerId,
@@ -62,18 +57,20 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    optimizelyComponentName,
     experimentName,
     experimentVariant,
     groupTracker,
     itemTracker,
     isSignedIn,
     hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
@@ -84,8 +81,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
 
       const shouldRegisterClick = [
         trackingIsEnabled,
+        // count legitimate repeat clicks; optimizely calculates unique users
         !wasClicked,
-        isValidClick(event),
+        isDismissal || isValidClick(event),
       ].every(Boolean);
 
       if (shouldRegisterClick) {
@@ -103,15 +101,17 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          event.stopPropagation();
-          event.preventDefault();
+          if (!isDismissal) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
 
           if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
 
             if (experimentVariant !== 'off') {
               optimizely.track(
-                `${componentName}-clicks`,
+                `${optimizelyComponentName || componentName}-clicks`,
                 optimizely.user.id,
                 overrideAttributes,
               );
@@ -120,16 +120,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             // send the extra optimizely event for the total oj clicks metric
             if (shouldTrackOjClick(componentName, experimentName)) {
               OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
-                optimizely.track(
-                  eventName,
-                  optimizely.user.id,
-                  overrideAttributes,
-                );
-              });
-            }
-
-            if (shouldTrackTopicClick(componentName, experimentName)) {
-              TOPIC_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
                 optimizely.track(
                   eventName,
                   optimizely.user.id,
@@ -158,12 +148,41 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               ...(itemTracker && { itemTracker }),
               isSignedIn,
               hashedId,
+              isPersonalisationOn,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
                   experimentVariant,
                 }),
             });
+            if (resonanceEnabled) {
+              dispatchViewabilityEvent(
+                buildResonanceEventConfig({
+                  type: CLICK_EVENT,
+                  campaignID,
+                  componentName,
+                  format,
+                  pageIdentifier,
+                  platform,
+                  producerId,
+                  producerName,
+                  service,
+                  advertiserID,
+                  statsDestination,
+                  url: url || nextPageUrl,
+                  detailedPlacement,
+                  ...(groupTracker && { groupTracker }),
+                  ...(itemTracker && { itemTracker }),
+                  isSignedIn,
+                  hashedId,
+                  ...(experimentVariant &&
+                    experimentVariant !== 'off' && {
+                      experimentName,
+                      experimentVariant,
+                    }),
+                }),
+              );
+            }
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
@@ -189,16 +208,20 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       optimizely,
       experimentVariant,
       sendOptimizelyEvents,
+      optimizelyComponentName,
+      experimentName,
       format,
       advertiserID,
       url,
       detailedPlacement,
       groupTracker,
       itemTracker,
-      experimentName,
-      preventNavigation,
+      isDismissal,
       isSignedIn,
       hashedId,
+      isPersonalisationOn,
+      resonanceEnabled,
+      preventNavigation,
     ],
   );
 };

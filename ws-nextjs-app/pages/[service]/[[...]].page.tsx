@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { IncomingHttpHeaders } from 'node:http';
 
@@ -14,6 +13,7 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   LIVE_RADIO_PAGE,
+  OFFLINE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -29,6 +29,7 @@ import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaErro
 import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
 import logResponseTime from '#utilities/logResponseTime';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -43,6 +44,8 @@ import { OnDemandAudioProps } from './onDemandAudio/types';
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 // Live Radio
 import handleLiveRadioRoute from './liveRadio/handleLiveRadioRoute';
+// Offline
+import handleOfflineRoute from './offline/handleOfflineRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -64,6 +67,8 @@ const LiveRadioPage = dynamic(
   () => import('#app/pages/LiveRadioPage/LiveRadioPage'),
 );
 
+const OfflinePage = dynamic(() => import('./offline/OfflinePage'));
+
 const getPageType = ({
   resolvedUrl,
   reqHeaders,
@@ -71,9 +76,13 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
+  const resolvedPathname = resolvedUrl?.split('?')?.[0];
   const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
-
   const { SIMORGH_APP_ENV } = getEnvConfig();
+
+  if (SIMORGH_APP_ENV !== 'local' && resolvedPathname?.endsWith('/offline')) {
+    return OFFLINE_PAGE;
+  }
 
   switch (SIMORGH_APP_ENV) {
     // In local development, use the 'page-type' header if it exists,
@@ -96,41 +105,43 @@ const ROUTE_HANDLERS = {
   [AUDIO_PAGE]: handleOnDemandAudioRoute,
   [TV_PAGE]: handleOnDemandTvRoute,
   [LIVE_RADIO_PAGE]: handleLiveRadioRoute,
+  [OFFLINE_PAGE]: handleOfflineRoute,
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
+export const getServerSideProps = withRequestProps(
+  async (context, requestProps) => {
+    const {
+      resolvedUrl,
+      req: { headers: reqHeaders },
+    } = context;
 
-  const { service: serviceFromUrl, variant: variantFromUrl } =
-    context.query as PageDataParams;
+    const { service: serviceFromUrl, variant: variantFromUrl } =
+      context.query as PageDataParams;
 
-  const service = SERVICES.find(s => serviceFromUrl === s);
-  const variant = deriveVariant(variantFromUrl);
+    const service = SERVICES.find(s => serviceFromUrl === s);
+    const variant = deriveVariant(variantFromUrl);
 
-  const pageType = getPageType({ resolvedUrl, reqHeaders });
+    const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  // If a route handler exists for the derived page type, render that page
-  if (ROUTE_HANDLERS?.[pageType]) {
-    return ROUTE_HANDLERS[pageType](context);
-  }
+    // If a route handler exists for the derived page type, render that page
+    if (ROUTE_HANDLERS?.[pageType]) {
+      return ROUTE_HANDLERS[pageType](context, requestProps);
+    }
 
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+    logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
-  context.res.statusCode = NOT_FOUND;
+    context.res.statusCode = NOT_FOUND;
 
-  return {
-    props: {
-      pathname: resolvedUrl?.split('?')?.[0],
-      service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
-      status: NOT_FOUND,
-      timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
-      variant,
-    },
-  };
-};
+    return {
+      props: {
+        pathname: resolvedUrl?.split('?')?.[0],
+        service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
+        status: NOT_FOUND,
+        variant,
+      },
+    };
+  },
+);
 
 type PageProps = {
   pageType?: PageTypes;
@@ -164,6 +175,9 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });
+    // Offline Page
+    case OFFLINE_PAGE:
+      return <OfflinePage />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;

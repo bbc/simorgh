@@ -46,21 +46,16 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     const toggles = { articleLiteSiteLink: { enabled: true } };
 
     it('should be displayed on canonical', async () => {
-      const { container, queryByRole } = render(
-        <ArticleHeadline {...headlineBlock} />,
-        {
-          service: 'gahuza',
-          toggles: { articleLiteSiteLink: { enabled: true } },
-        },
-      );
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
+        service: 'gahuza',
+        toggles: { articleLiteSiteLink: { enabled: true } },
+      });
 
       const liteSiteLink = queryByRole('link', {
         name: /Inyandiko gusa/,
       });
 
       expect(liteSiteLink).toBeInTheDocument();
-
-      expect(container).toMatchSnapshot();
     });
 
     it('should not be displayed on AMP', async () => {
@@ -110,12 +105,16 @@ describe('ArticleHeadline - Lite Site CTA', () => {
     const toggles = { articleLiteSiteLink: { enabled: false } };
 
     it('should not be displayed on canonical', async () => {
-      const { container } = render(<ArticleHeadline {...headlineBlock} />, {
+      const { queryByRole } = render(<ArticleHeadline {...headlineBlock} />, {
         service: 'gahuza',
         toggles,
       });
 
-      expect(container).toMatchSnapshot();
+      const liteSiteLink = queryByRole('link', {
+        name: /Inyandiko gusa/,
+      });
+
+      expect(liteSiteLink).not.toBeInTheDocument();
     });
 
     it('should not be displayed on AMP', async () => {

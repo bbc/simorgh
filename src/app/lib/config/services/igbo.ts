@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/ig';
+import '#lib/locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -80,13 +80,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lee ha niile',
       home: 'Akụkọ',
-      continueReading: 'Gaa n’ihu gụọ',
+      topicDiscovery: {
+        heading: 'Chọpụta karịa',
+        moreAboutTopic: 'Ihe ndị ọzọzọ banyere {topic}',
+        fetchErrorMessage: 'Ọ dara ịgbakwunye. Biko nwalee ọzọ',
+      },
+      googlePreferredSource: {
+        linkText: 'Tinye dịka ebe isi mmalite a họọrọ na Google',
+      },
+      continueReading: "Gaa n'ihu gụọ",
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
+      skipContent: {
+        text: 'Gafee %title% ma gaa n’ihu',
+        endTextVisuallyHidden: 'Njebe %title%',
+      },
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      showMore: 'Gosi ọzọ',
       moreOnThis: '',
       navMenuText: 'Ngalaba',
+      liteSite: {
+        onboardingMessage:
+          'Ị na-ele ụdị ngosi nke weebụsaịtị a nke bụ naanị ederede nke na-eji obere data. Lee ụdị izizi nke weebụsaịtị, nke gụnyere foto na vidiyo niile.',
+        toMainSite: 'Kpọga m na weebụsaịtị izizi',
+        informationPage: 'Chọpụta ihe ọzọ gbasara ụdị a na-echekwa data',
+        dataSaving: 'Ụdị na-echekwa data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -297,6 +317,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
       latestMediaTitle: 'Kachasị ọhụrụ',
       sport: {
+        keyEventsTitle: 'Ihe omume dị mkpa',
         matchSummary: 'Nchịkọta Asọmpi',
         assists: 'Nye enyemaka',
         penalties: 'Penariti',
@@ -306,6 +327,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Mgbe oge mgbakwunye gachara',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'goolu megide onwe',
+        versus: 'megide',
+        kickOff: 'mmalite',
+        timeToBeConfirmed: 'A ga-ekwenye oge',
+        teamToBeConfirmed: 'A ga-ekwenye otu',
+        afterFullTime: 'mgbe oge zuru ezu gachara',
+        atFullTime: 'na njedebe oge zuru ezu',
+        onPenalties: 'na penariti',
+        onAggregate: 'na ngụkọta',
+        win: 'meriri',
         winOnPenalties: {
           prefix: 'meriri penariti',
           suffix: '',
@@ -365,6 +395,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Agba nke Mbụ',
+          last32: 'Agba nke 32',
+          last16: 'Agba mgbapụ',
+          quarterFinals: 'Agba anọ nke ikpeazụ',
+          semiFinals: 'Agba abụọ nke ikpeazụ',
+          final: 'Agba ikpeazụ',
+          thirdPlaceFinal: 'Ndị nke atọ',
         },
       },
     },

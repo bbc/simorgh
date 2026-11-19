@@ -36,29 +36,29 @@ describe('ArticleTimestamp', () => {
   });
 
   it("should render a 'created' Timestamp correctly", () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
         lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
       />,
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(regexDate)).toBeInTheDocument();
   });
 
   it("should render both a 'created' and an 'updated' Timestamp correctly", () => {
-    const { container } = render(
+    const { getAllByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
         lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
       />,
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getAllByText(regexDate).length).toEqual(2);
   });
 
   it('should render with a prefix', () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000}
         lastPublished={1552666749637}
@@ -67,7 +67,7 @@ describe('ArticleTimestamp', () => {
       { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(/Actualizado/)).toBeInTheDocument();
   });
 
   it('should render with a suffix', () => {
@@ -80,11 +80,11 @@ describe('ArticleTimestamp', () => {
       { service: 'nepali' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('time')).toBeInTheDocument();
   });
 
   it('should render with no suffix or prefix', () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000}
         lastPublished={1530947227000}
@@ -93,7 +93,7 @@ describe('ArticleTimestamp', () => {
       { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(regexDate)).toBeInTheDocument();
   });
 
   describe('daylight savings time', () => {

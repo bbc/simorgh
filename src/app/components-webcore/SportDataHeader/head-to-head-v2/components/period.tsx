@@ -1,7 +1,7 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { isLiveStatus } from '../helpers/event-status-groups';
-import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
+import getFallbackFootballPeriodLabel from '../helpers/getFallbackFootballPeriodLabel';
 import styles from '../index.styles';
 import type { EventStatusType, RunningScores } from '../types';
 

@@ -1,8 +1,0 @@
-{
-  "extends": "./babel.config.main",
-  "babelrcRoots": [
-    ".",
-    "./src/app/routes/utils/fetchDataFromBFF",
-    "./src/app/routes/utils/fetchPageData"
-  ]
-}

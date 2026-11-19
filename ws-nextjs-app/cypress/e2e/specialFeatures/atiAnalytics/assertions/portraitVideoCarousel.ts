@@ -8,6 +8,9 @@ export const assertPortraitVideoCarouselComponentView = ({
   path,
   applicationType,
   siteId,
+  expectedItemType,
+  expectedGroupType,
+  expectedItemText,
 }) => {
   const itOrSkip = applicationType === 'lite' ? it.skip : it;
 
@@ -17,15 +20,19 @@ export const assertPortraitVideoCarouselComponentView = ({
       interceptATIAnalyticsBeacons();
       cy.visit(path);
 
-      cy.get('[data-testid="portrait-video-carousel"]').scrollIntoView({
-        duration: 1000,
-      });
+      cy.get('[data-testid="portrait-video-carousel"]')
+        .should('have.length', 1)
+        .should('be.visible')
+        .scrollIntoView({ duration: 1000 });
 
       assertATIComponentViewEvent({
         component: PORTRAIT_VIDEO_CAROUSEL,
         pageIdentifier,
         applicationType,
         siteId,
+        expectedItemType,
+        expectedGroupType,
+        expectedItemText,
       });
     },
   );

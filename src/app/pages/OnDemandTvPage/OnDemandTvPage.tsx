@@ -108,7 +108,7 @@ const OnDemandTvPage = ({
         title={headline}
         contentType={atiAnalytics.contentType as ContentType}
       />
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <ComscoreAnalytics />
       <MetadataContainer
         title={metadataTitle}

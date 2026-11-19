@@ -27,7 +27,7 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: '오디오 설명, ',
     defaultCaptionOffscreenText: '설명, ',
     imageCopyrightOffscreenText: '사진 출처, ',
-    locale: `ko-KO`,
+    locale: `ko`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ko',
     datetimeLocale: `ko`,
@@ -62,12 +62,32 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: '모든 기사 보기',
       home: '홈',
+      topicDiscovery: {
+        heading: '더 알아보기',
+        moreAboutTopic: '{topic}에 대해 더 보기',
+        fetchErrorMessage: '로드하지 못했습니다. 다시 시도해 주세요',
+      },
+      googlePreferredSource: {
+        linkText: 'Google에서 선호 소스로 추가',
+      },
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
+      skipContent: {
+        text: '%title% 건너뛰고 계속하기',
+        endTextVisuallyHidden: '%title% 끝',
+      },
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      showMore: '더보기',
       moreOnThis: '',
       navMenuText: '섹션',
+      liteSite: {
+        onboardingMessage:
+          '데이터를 적게 사용하는 텍스트 전용 버전의 웹사이트를 보고 계십니다. 모든 이미지와 동영상이 포함된 웹사이트의 메인 버전을 보세요.',
+        toMainSite: '메인 웹사이트로 이동',
+        informationPage: '데이터 절약 버전에 대해 자세히 알아보기',
+        dataSaving: '데이터 절약 버전',
+      },
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
         audioPlayer: '오디오 플레이어',
@@ -272,6 +292,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: '이 시간 이슈',
       latestMediaTitle: '최신 뉴스',
       sport: {
+        keyEventsTitle: '주요 이벤트',
         matchSummary: '경기 요약',
         assists: '도움',
         penalties: '승부차기',
@@ -281,6 +302,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: '연장전 후',
         penaltyAbbreviation: 'PK',
         ownGoal: '자책골',
+        versus: '대',
+        kickOff: '킥오프',
+        timeToBeConfirmed: '시간 미정',
+        teamToBeConfirmed: '팀 미정',
+        afterFullTime: '경기 종료 후',
+        atFullTime: '경기 종료 시',
+        onPenalties: '승부차기에서',
+        onAggregate: '합산 점수로',
+        win: '승리',
         winOnPenalties: {
           prefix: '이 승부차기에서',
           suffix: '로 승리',
@@ -340,6 +370,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: '조별 리그',
+          last32: '32강',
+          last16: '16강',
+          quarterFinals: '8강',
+          semiFinals: '4강',
+          final: '결승전',
+          thirdPlaceFinal: '3-4위전',
         },
       },
     },
@@ -412,6 +448,7 @@ export const service: DefaultServiceConfig = {
       },
     ],
     timezone: 'Asia/Seoul',
+    resonanceEnabled: true,
   },
 };
 

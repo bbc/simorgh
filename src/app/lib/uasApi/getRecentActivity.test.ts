@@ -1,11 +1,13 @@
 import getRecentActivity, { UasActivityItem } from './getRecentActivity';
 import uasApiRequest from './index';
+import { UAS_API_ERROR } from '../logger.const';
 
+const mockLoggerError = jest.fn();
 jest.mock('./index');
 jest.mock('#lib/logger.node', () => ({
   __esModule: true,
   default: jest.fn(() => ({
-    error: jest.fn(),
+    error: (...args: unknown[]) => mockLoggerError(...args),
   })),
 }));
 
@@ -139,7 +141,7 @@ describe('getRecentActivity', () => {
     expect(result.total).toBe(0);
   });
 
-  it('should handle missing metaData gracefully', async () => {
+  it('should exclude items with no metaData field', async () => {
     const responseWithMissingMetaData = {
       total: 1,
       pagination: { startIndex: 0, itemsPerPage: 10 },
@@ -149,9 +151,8 @@ describe('getRecentActivity', () => {
           resourceId: 'article1',
           resourceType: 'article',
           resourceDomain: 'world-service-news',
-          created: '2026-02-15T18:30:05Z',
+          created: '2026-07-01T11:43:21Z',
           action: 'favourited',
-          metaData: {},
           '@id': 'urn:bbc:world-service-news:article:article1',
         } as UasActivityItem,
       ],
@@ -163,8 +164,49 @@ describe('getRecentActivity', () => {
 
     const result = await getRecentActivity({});
 
-    expect(result.savedArticles[0].title).toBe('Untitled');
-    expect(result.savedArticles[0].description).toBe('BBC');
+    expect(result.savedArticles).toHaveLength(0);
+  });
+
+  it('should exclude items with null metaData and keep items with valid metaData', async () => {
+    const mixedResponse = {
+      total: 2,
+      pagination: { startIndex: 0, itemsPerPage: 10 },
+      items: [
+        {
+          activityType: 'favourites',
+          resourceId: 'article-no-metadata',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          created: '2026-07-01T11:43:21Z',
+          action: 'favourited',
+          '@id': 'urn:bbc:world-service-news:article:article-no-metadata',
+        } as UasActivityItem,
+        {
+          activityType: 'favourites',
+          resourceId: 'article-with-metadata',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          created: '2026-06-30T12:18:08Z',
+          action: 'favourited',
+          metaData: {
+            service: 'hindi',
+            articleId: 'article-with-metadata',
+            title: 'Valid Article',
+            locatorUrl: '/hindi/articles/article-with-metadata',
+          },
+          '@id': 'urn:bbc:world-service-news:article:article-with-metadata',
+        } as UasActivityItem,
+      ],
+    };
+
+    mockUasApiRequest.mockResolvedValueOnce({
+      json: jest.fn().mockResolvedValueOnce(mixedResponse),
+    } as unknown as Response);
+
+    const result = await getRecentActivity({});
+
+    expect(result.savedArticles).toHaveLength(1);
+    expect(result.savedArticles[0].id).toBe('article-with-metadata');
   });
 
   it('should pass signal for abort control', async () => {
@@ -195,5 +237,183 @@ describe('getRecentActivity', () => {
     mockUasApiRequest.mockRejectedValueOnce(error);
 
     await expect(getRecentActivity({})).rejects.toThrow('API Error');
+    expect(mockLoggerError).toHaveBeenCalledWith(UAS_API_ERROR, {
+      error: 'API Error',
+    });
+  });
+
+  it('should rethrow request cancellation without logging an API error', async () => {
+    const controller = new AbortController();
+    controller.abort();
+    mockUasApiRequest.mockRejectedValueOnce(controller.signal.reason);
+
+    await expect(
+      getRecentActivity({
+        signal: controller.signal,
+        isRefreshAvailable: false,
+      }),
+    ).rejects.toBe(controller.signal.reason);
+
+    expect(mockLoggerError).not.toHaveBeenCalled();
+  });
+
+  describe('service filtering', () => {
+    const mixedServiceResponse = {
+      total: 2,
+      pagination: { startIndex: 0, itemsPerPage: 10 },
+      items: [
+        {
+          activityType: 'favourites',
+          resourceId: 'hindi-article',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          resourceTitle: 'hindi',
+          created: '2026-02-15T18:30:05Z',
+          action: 'favourited',
+          metaData: {
+            service: 'hindi',
+            title: 'Hindi Article',
+            locatorUrl: '/hindi/articles/hindi-article',
+          },
+          '@id': 'urn:bbc:world-service-news:article:hindi-article',
+        } as UasActivityItem,
+        {
+          activityType: 'favourites',
+          resourceId: 'arabic-article',
+          resourceType: 'article',
+          resourceDomain: 'world-service-news',
+          resourceTitle: 'arabic',
+          created: '2026-02-12T11:12:52Z',
+          action: 'favourited',
+          metaData: {
+            service: 'arabic',
+            title: 'Arabic Article',
+            locatorUrl: '/arabic/articles/arabic-article',
+          },
+          '@id': 'urn:bbc:world-service-news:article:arabic-article',
+        } as UasActivityItem,
+      ],
+    };
+
+    it('retains items matching the current service and excludes items from other services', async () => {
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(mixedServiceResponse),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(1);
+      expect(result.savedArticles[0].id).toBe('hindi-article');
+    });
+
+    it('does not filter by service when no service is provided', async () => {
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(mixedServiceResponse),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({});
+
+      expect(result.savedArticles).toHaveLength(2);
+    });
+
+    it('returns an empty list when no activities match the current service', async () => {
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(mixedServiceResponse),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'mundo' });
+
+      expect(result.savedArticles).toHaveLength(0);
+    });
+
+    it('still excludes items with no metaData once service filtering is applied', async () => {
+      const responseWithMissingMetaData = {
+        total: 1,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: [
+          {
+            activityType: 'favourites',
+            resourceId: 'no-metadata-article',
+            resourceType: 'article',
+            resourceDomain: 'world-service-news',
+            resourceTitle: 'hindi',
+            created: '2026-07-01T11:43:21Z',
+            action: 'favourited',
+            '@id': 'urn:bbc:world-service-news:article:no-metadata-article',
+          } as UasActivityItem,
+        ],
+      };
+
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(responseWithMissingMetaData),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(0);
+    });
+
+    it('retains items matched via metaData.service when resourceTitle is missing', async () => {
+      const responseWithoutResourceTitle = {
+        total: 1,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: [
+          {
+            activityType: 'favourites',
+            resourceId: 'legacy-hindi-article',
+            resourceType: 'article',
+            resourceDomain: 'world-service-news',
+            created: '2026-01-10T09:00:00Z',
+            action: 'favourited',
+            metaData: {
+              service: 'hindi',
+              title: 'Legacy Hindi Article',
+              locatorUrl: '/hindi/articles/legacy-hindi-article',
+            },
+            '@id': 'urn:bbc:world-service-news:article:legacy-hindi-article',
+          } as UasActivityItem,
+        ],
+      };
+
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(responseWithoutResourceTitle),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(1);
+      expect(result.savedArticles[0].id).toBe('legacy-hindi-article');
+    });
+
+    it('excludes items matched via metaData.service when it belongs to a different service', async () => {
+      const responseWithoutResourceTitle = {
+        total: 1,
+        pagination: { startIndex: 0, itemsPerPage: 10 },
+        items: [
+          {
+            activityType: 'favourites',
+            resourceId: 'legacy-arabic-article',
+            resourceType: 'article',
+            resourceDomain: 'world-service-news',
+            created: '2026-01-10T09:00:00Z',
+            action: 'favourited',
+            metaData: {
+              service: 'arabic',
+              title: 'Legacy Arabic Article',
+              locatorUrl: '/arabic/articles/legacy-arabic-article',
+            },
+            '@id': 'urn:bbc:world-service-news:article:legacy-arabic-article',
+          } as UasActivityItem,
+        ],
+      };
+
+      mockUasApiRequest.mockResolvedValueOnce({
+        json: jest.fn().mockResolvedValueOnce(responseWithoutResourceTitle),
+      } as unknown as Response);
+
+      const result = await getRecentActivity({ service: 'hindi' });
+
+      expect(result.savedArticles).toHaveLength(0);
+    });
   });
 });

@@ -6,4 +6,6 @@ export interface CurationGridProps {
   headingLevel?: number;
   isFirstCuration?: boolean;
   eventTrackingData: EventTrackingData;
+  isVideoCollection?: boolean;
+  showRelatedTopic?: boolean;
 }

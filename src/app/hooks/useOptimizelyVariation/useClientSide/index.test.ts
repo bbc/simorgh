@@ -1,6 +1,11 @@
 import optimizelyReactSdk, { OptimizelyDecision } from '@optimizely/react-sdk';
-import { renderHook } from '#app/components/react-testing-library-with-providers';
+import {
+  renderHook,
+  AllTheProviders,
+} from '#app/components/react-testing-library-with-providers';
 import useClientSide from '.';
+
+const wrapper = AllTheProviders;
 
 describe('useOptimizelyVariation - useClientSide', () => {
   const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');
@@ -16,8 +21,9 @@ describe('useOptimizelyVariation - useClientSide', () => {
       false,
     ]);
 
-    const { result } = renderHook(() =>
-      useClientSide({ experimentName: 'correct_experiment_id' }),
+    const { result } = renderHook(
+      () => useClientSide({ experimentName: 'correct_experiment_id' }),
+      { wrapper },
     );
 
     expect(result.current).toEqual('control');
@@ -30,8 +36,9 @@ describe('useOptimizelyVariation - useClientSide', () => {
       false,
     ]);
 
-    const { result } = renderHook(() =>
-      useClientSide({ experimentName: 'correct_experiment_id' }),
+    const { result } = renderHook(
+      () => useClientSide({ experimentName: 'correct_experiment_id' }),
+      { wrapper },
     );
 
     expect(result.current).toEqual(null);
@@ -44,8 +51,9 @@ describe('useOptimizelyVariation - useClientSide', () => {
       true,
     ]);
 
-    const { result } = renderHook(() =>
-      useClientSide({ experimentName: 'correct_experiment_id' }),
+    const { result } = renderHook(
+      () => useClientSide({ experimentName: 'correct_experiment_id' }),
+      { wrapper },
     );
 
     expect(result.current).toEqual(null);
@@ -57,8 +65,9 @@ describe('useOptimizelyVariation - useClientSide', () => {
       true,
       false,
     ]);
-    const { result } = renderHook(() =>
-      useClientSide({ experimentName: 'wrong_experiment_id' }),
+    const { result } = renderHook(
+      () => useClientSide({ experimentName: 'wrong_experiment_id' }),
+      { wrapper },
     );
 
     expect(result.current).toEqual(null);

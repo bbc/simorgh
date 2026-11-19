@@ -4,6 +4,8 @@
 import { Variants } from '#app/models/types/global';
 
 // NB These routes do not exist on live. They are for dev and testing purposes.
+// This mapping is mirrored in public/sw.js (as the service worker cannot import
+// app code) - keep both in sync when adding/changing a service's default variant.
 const defaultServiceVariants: { [index: string]: Variants } = {
   serbian: 'lat',
   ukchina: 'simp',

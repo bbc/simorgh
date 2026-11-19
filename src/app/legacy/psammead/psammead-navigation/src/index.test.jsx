@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ScrollableNavigation } from './ScrollableNavigation';
 import Navigation, { NavigationUl, NavigationLi } from './index';
@@ -29,19 +30,17 @@ const NavigationExample = <Navigation>{navigationUlComponent}</Navigation>;
 
 describe('Navigation', () => {
   it('should render correctly', () => {
-    const { container } = render(NavigationExample);
-    expect(container).toMatchSnapshot();
+    render(NavigationExample);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('should render correctly when isOpen is true', () => {
-    const { container } = render(
-      <Navigation isOpen>{navigationUlComponent}</Navigation>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<Navigation isOpen>{navigationUlComponent}</Navigation>);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
   it('should render correctly when ampOpenClass prop is provided', () => {
-    const { container } = render(
+    render(
       <Navigation
         skipLinkText="Wụga n’ọdịnaya"
         service="news"
@@ -50,16 +49,14 @@ describe('Navigation', () => {
         {navigationUlComponent}
       </Navigation>,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 });
 
 describe('Scrollable Navigation', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <ScrollableNavigation>{NavigationExample}</ScrollableNavigation>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<ScrollableNavigation>{NavigationExample}</ScrollableNavigation>);
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 });
 
@@ -80,5 +77,27 @@ describe('Assertions', () => {
     expect(
       container.querySelector('a').getAttribute('data-navigation'),
     ).toEqual('test_navigation');
+  });
+
+  it('should label a multi-word current page link with an id that resolves', () => {
+    const { container } = render(
+      <NavigationLi
+        url="http://test.url"
+        currentPageText="Current page"
+        service="news"
+        active
+      >
+        Ecoutez en direct
+      </NavigationLi>,
+    );
+
+    const labelledBy = container
+      .querySelector('a')
+      .getAttribute('aria-labelledby');
+
+    expect(labelledBy).toEqual('NavigationLinks-Ecoutez-en-direct');
+    expect(document.getElementById(labelledBy)).toHaveTextContent(
+      'Current page, Ecoutez en direct',
+    );
   });
 });

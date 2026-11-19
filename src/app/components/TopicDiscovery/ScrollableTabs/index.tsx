@@ -7,6 +7,8 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 
 import styles from './index.styles';
 
+const SCROLL_TOLERANCE_PX = 1;
+
 type ScrollableTabsProps = {
   tabs: { id: string; label: string }[];
   activeTabId: string;
@@ -14,6 +16,12 @@ type ScrollableTabsProps = {
   labelledBy: string;
   groupTracker?: EventTrackingData['groupTracker'];
   experimentProps?: ComponentExperimentProps;
+  setShouldFocusPromos?: (value: boolean) => void;
+  onTabKeyDown?: (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    tabId: string,
+    isActive: boolean,
+  ) => void;
 };
 
 const ScrollableTabs = ({
@@ -23,6 +31,7 @@ const ScrollableTabs = ({
   labelledBy,
   groupTracker,
   experimentProps,
+  onTabKeyDown,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -38,11 +47,14 @@ const ScrollableTabs = ({
 
     const { scrollLeft, scrollWidth, clientWidth } = el;
     const absScroll = Math.abs(scrollLeft);
-    const isOverflowing = scrollWidth > clientWidth + 1;
+    const isOverflowing = scrollWidth > clientWidth + SCROLL_TOLERANCE_PX;
 
     setHasOverflow(isOverflowing);
-    setCanScrollStart(isOverflowing && absScroll > 0);
-    setCanScrollEnd(isOverflowing && absScroll + clientWidth + 1 < scrollWidth);
+    setCanScrollStart(isOverflowing && absScroll > SCROLL_TOLERANCE_PX);
+    setCanScrollEnd(
+      isOverflowing &&
+        absScroll + clientWidth + SCROLL_TOLERANCE_PX < scrollWidth,
+    );
   }, []);
 
   useEffect(() => {
@@ -135,10 +147,18 @@ const ScrollableTabs = ({
               aria-selected={isActive}
               aria-controls={`tabpanel-${tab.id}`}
               css={[styles.tab, isActive && styles.tabActive]}
+              onFocus={event => {
+                event.currentTarget.scrollIntoView({
+                  block: 'nearest',
+                  inline: 'nearest',
+                  behavior: 'smooth',
+                });
+              }}
               onClick={event => {
                 onTabChange(tab.id);
                 clickTrackerHandler?.onClick?.(event);
               }}
+              onKeyDown={event => onTabKeyDown?.(event, tab.id, isActive)}
             >
               {tab.label}
             </button>

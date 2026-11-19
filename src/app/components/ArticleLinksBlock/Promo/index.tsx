@@ -5,7 +5,7 @@ import { OptimoBlock } from '#app/models/types/optimo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface PromoProps {
   block: OptimoBlock;
@@ -32,18 +32,18 @@ const Promo = ({ block, clickTracker }: PromoProps) => {
     textBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
 
   return (
-    <div css={styles.promoBox}>
-      <a css={styles.link} href={href} {...clickTracker}>
+    <div className={styles.promoBox}>
+      <a className={styles.link} href={href} {...clickTracker}>
         {title}
         <Chevron
           dir={dir}
-          css={styles.chevron}
+          className={styles.chevron}
           orientation={ChevronOrientation.FORWARD}
         />
       </a>
       {timestamp && (
         <PromoTimestamp
-          css={styles.timestamp}
+          className={styles.timestamp}
           serviceDatetimeLocale={serviceDatetimeLocale}
         >
           {timestamp}

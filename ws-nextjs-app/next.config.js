@@ -1,9 +1,18 @@
 /* eslint-disable no-param-reassign */
+const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+
+const DevCssExtractLoader =
+  require.resolve('./scripts/DevCssExtractLoader.cjs');
+const {
+  injectExtractLoader,
+  replaceIgnoreLoaderForScss,
+} = require('./scripts/webpackDevLoaderUtils.cjs');
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -50,12 +59,28 @@ module.exports = {
   async rewrites() {
     return [
       {
+        source: '/:service/og/:id',
+        destination: '/api/:service/og/:id',
+      },
+      {
         source: '/:service/sw.js',
         destination: '/sw.js',
       },
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
+        source: `/:service/watch/:id(${optimoIdPattern})(\\.app)?`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/watch/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
+        destination: '/:service/articles/:id/:variant',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})(\\.app)?`,
+        destination: '/:service/articles/:id',
+      },
+      {
+        source: `/:service/listen/:id(${optimoIdPattern})/:variant([^\\.]+)(\\.app)?`,
+        destination: '/:service/articles/:id/:variant',
       },
     ];
   },
@@ -70,6 +95,26 @@ module.exports = {
   generateEtags: false,
   output: 'standalone',
   /*
+    Build-time tooling (webpack, its optional minifiers and sass) gets traced into
+    the standalone output because the monorepo hoists these packages to the root
+    node_modules. None of them are used at runtime, so exclude them to keep the
+    Lambda bundle small.
+  */
+  outputFileTracingExcludes: {
+    '*': [
+      '**/node_modules/webpack/**',
+      '**/node_modules/minimizer-webpack-plugin/**',
+      '**/node_modules/@swc/core/**',
+      '**/node_modules/@swc/core-*/**',
+      '**/node_modules/esbuild/**',
+      '**/node_modules/@esbuild/**',
+      '**/node_modules/sass/**',
+      '**/node_modules/terser/**',
+      '**/node_modules/uglify-js/**',
+      '**/node_modules/clean-css/**',
+    ],
+  },
+  /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
@@ -78,20 +123,65 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   transpilePackages: ['simorgh'],
-  webpack: (config, { webpack, isServer }) => {
+  webpack: (config, { webpack, isServer, dev }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
     };
 
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@scss': path.join(
+        __dirname,
+        '../src/app/components/ThemeProviderSCSSModules',
+      ),
+    };
     config.plugins.push(
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
+      new MomentTimezoneInclude({
+        startYear: 2010,
+        endYear: new Date().getFullYear() + 1,
+      }),
     );
+
+    if (dev) {
+      // Inject our loader immediately before css-loader in every SCSS rule.
+      // webpack processes the use array right-to-left, so inserting before css-loader
+      // means our loader receives css-loader's JS output — which contains the CSS string
+      // with hashed CSS module class names (e.g. .Subhead_h2__K8gJ6) already applied.
+      injectExtractLoader(config.module.rules, DevCssExtractLoader);
+
+      if (isServer) {
+        // On the server, Next.js uses ignore-loader for global (non-module) SCSS
+        // files, so DevCssExtractLoader never runs for them and :root {} custom
+        // properties (CSS variables) and @font-face declarations from theme files
+        // are never written to dev-css-modules.css. Replace those ignore-loader
+        // rules with a sass-loader → css-loader → DevCssExtractLoader chain so
+        // the global CSS is captured for AMP/Lite inlining alongside CSS modules.
+        const sassLoaderPath = require.resolve('sass-loader');
+        const cssLoaderPath = require.resolve('css-loader');
+
+        replaceIgnoreLoaderForScss(config.module.rules, [
+          DevCssExtractLoader,
+          {
+            loader: cssLoaderPath,
+            options: { modules: false, url: false, import: false },
+          },
+          { loader: sassLoaderPath },
+        ]);
+      }
+    }
 
     /*
       Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
     */
     if (!isServer) {
+      // `crypto` is server-only (AMP CSP hash); exclude crypto-browserify from the client bundle.
+      // Alias, not fallback: Next's rule-level fallback would override ours.
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        crypto: false,
+      };
+
       config.plugins.push(
         new webpack.NormalModuleReplacementPlugin(
           /(.*)logger.node(\.*)/,

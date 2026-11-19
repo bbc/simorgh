@@ -35,6 +35,12 @@ export default {
       linkUrl: 'https://castbox.fm/vc/2092482',
       linkType: 'castbox',
     },
+    {
+      linkText: 'YouTube',
+      linkUrl: 
+        'https://www.youtube.com/show/VLPLQ6Q_rDSExbuILTYCZYxH7WdtAORClPvu?sbp=KgtyaUNrSE1IUHdpd0AB',
+      linkType: 'youtube',
+    },
   ],
   p08pxjzf: [
     {

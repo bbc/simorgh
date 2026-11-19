@@ -1,6 +1,6 @@
 import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/ta';
+import '#lib/locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -81,13 +81,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
+      topicDiscovery: {
+        heading: 'மேலும் அறிக',
+        moreAboutTopic: '{topic} பற்றி மேலும்',
+        fetchErrorMessage: 'ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்',
+      },
+      googlePreferredSource: {
+        linkText: 'Google இல் விருப்பமான ஆதாரமாகச் சேர்க்கவும்',
+      },
       continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
+      skipContent: {
+        text: '%title% தவிர்த்து தொடரவும்',
+        endTextVisuallyHidden: '%title% முடிவு',
+      },
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
+      showMore: 'மேலும் காட்டு',
       moreOnThis: '',
       navMenuText: 'பிரிவுகள்',
+      liteSite: {
+        onboardingMessage:
+          'நீங்கள் இந்த இணையதளத்தின் எழுத்து மட்டும் கொண்ட பதிப்பைப் பார்க்கிறீர்கள், இது குறைவான டேட்டாவைப் பயன்படுத்துகிறது. அனைத்து படங்கள் மற்றும் வீடியோக்களுடன் கூடிய இணையதளத்தின் முக்கிய பதிப்பைப் பார்க்கவும்.',
+        toMainSite: 'என்னை முக்கிய இணையதளத்திற்கு அழைத்துச் செல்லுங்கள்',
+        informationPage: 'இந்த டேட்டா சேமிப்பு பதிப்பைப் பற்றி மேலும் அறியவும்',
+        dataSaving: 'டேட்டா சேமிப்பு பதிப்பு',
+      },
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
@@ -379,6 +399,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'அன்று இது நிறைவடையும் {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'முக்கிய நிகழ்வுகள்',
         matchSummary: 'போட்டி சுருக்கம்',
         assists: 'உதவிகள்',
         penalties: 'பெனால்டி',
@@ -388,6 +409,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'கூடுதல் நேரத்திற்குப் பிறகு',
         penaltyAbbreviation: 'பென்',
         ownGoal: 'சுய கோல்',
+        versus: 'எதிராக',
+        kickOff: 'தொடக்கம்',
+        timeToBeConfirmed: 'நேரம் உறுதிப்படுத்தப்படவில்லை',
+        teamToBeConfirmed: 'அணி உறுதிப்படுத்தப்படவில்லை',
+        afterFullTime: 'முழு நேரத்திற்குப் பிறகு',
+        atFullTime: 'முழு நேரத்தில்',
+        onPenalties: 'பெனால்டியில்',
+        onAggregate: 'மொத்த கணக்கில்',
+        win: 'வெற்றி பெறும்',
         winOnPenalties: {
           prefix: 'பெனால்டியில்',
           suffix: 'வெற்றி பெறுகிறது',
@@ -447,6 +477,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'குரூப் சுற்று',
+          last32: 'ரவுண்ட ஆஃப் 32',
+          last16: 'காலிறுதிக்கு முந்தைய சுற்று',
+          quarterFinals: 'காலிறுதி',
+          semiFinals: 'அரையிறுதி',
+          final: 'இறுதிப் போட்டி',
+          thirdPlaceFinal: 'மூன்றாம் இடம்',
         },
       },
     },

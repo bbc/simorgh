@@ -18,11 +18,7 @@ describe('addInlineScript', () => {
     const inlineScript = addInlineScript({ script });
 
     expect(inlineScript).toStrictEqual(
-      <script type="text/javascript">
-        {`(function script() {
-      return console.log('hello world');
-    })()`}
-      </script>,
+      <script type="text/javascript">{`(${script.toString()})()`}</script>,
     );
   });
 
@@ -67,10 +63,107 @@ describe('addInlineScript', () => {
 
     expect(inlineScript).toStrictEqual(
       <script type="text/javascript">
-        {`(function script(printString) {
-      return console.log(printString);
-    })(${expectedParamOutput})`}
+        {`(${script.toString()})(${expectedParamOutput})`}
       </script>,
     );
+  });
+
+  it('should inject callable functions as script parameters', () => {
+    const script = (callback: () => void) => callback();
+    const callback = () => 'Foo bar';
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [callback],
+    });
+
+    expect(inlineScript).toStrictEqual(
+      <script type="text/javascript">
+        {`(${script.toString()})(${callback.toString()})`}
+      </script>,
+    );
+  });
+
+  it('should inject objects as JSON serialized script parameters', () => {
+    const script = (config: Record<string, unknown>) => config;
+    const config = { title: 'Page A', uid: 123, virtualReferrer: null };
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [config],
+    });
+
+    expect(inlineScript).toStrictEqual(
+      <script type="text/javascript">
+        {`(${script.toString()})(${JSON.stringify(config)})`}
+      </script>,
+    );
+  });
+
+  it('should escape a `</script>` breakout attempt in an object parameter', () => {
+    const script = (config: Record<string, unknown>) => config;
+    const config = { title: '</script><script>alert(1)</script>' };
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [config],
+    });
+
+    const scriptContents = (inlineScript as JSX.Element).props.children;
+
+    expect(scriptContents).not.toContain('</script>');
+    expect(scriptContents).toContain(
+      '{"title":"\\u003c/script>\\u003cscript>alert(1)\\u003c/script>"}',
+    );
+  });
+
+  it('should not throw when an object parameter has a toJSON() that returns undefined', () => {
+    const script = (config: Record<string, unknown>) => config;
+    const config = { toJSON: () => undefined };
+
+    expect(() =>
+      addInlineScript({
+        script,
+        parameters: [config],
+      }),
+    ).not.toThrow();
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [config],
+    });
+
+    expect(inlineScript).toStrictEqual(
+      <script type="text/javascript">{`(${script.toString()})()`}</script>,
+    );
+  });
+
+  it('should render an empty parameter slot for a toJSON()-returns-undefined object without disturbing later parameters', () => {
+    const script = (value: unknown, nextValue: string) => [value, nextValue];
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [{ toJSON: () => undefined }, 'next'],
+    });
+
+    const scriptContents = (inlineScript as JSX.Element).props.children;
+
+    expect(scriptContents).toBe(`(${script.toString()})(, "next")`);
+  });
+
+  it('runs a stringified script and callback without module-local bindings', () => {
+    const script = (callback: () => boolean, config: { title: string }) =>
+      `${callback()}: ${config.title}`;
+    const callback = () => true;
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [callback, { title: 'World' }],
+    });
+
+    // eslint-disable-next-line no-new-func
+    const execute = new Function(`return ${inlineScript.props.children}`);
+
+    expect(execute()).toBe('true: World');
   });
 });

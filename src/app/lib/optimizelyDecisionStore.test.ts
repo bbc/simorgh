@@ -19,6 +19,15 @@ describe('optimizelyDecisionStore', () => {
     expect(getSnapshot().has('experiment_1')).toBe(true);
   });
 
+  it('should return true when a flag key is newly recorded', () => {
+    expect(notifyDecision('experiment_1')).toBe(true);
+  });
+
+  it('should return false when a flag key has already been recorded', () => {
+    notifyDecision('experiment_1');
+    expect(notifyDecision('experiment_1')).toBe(false);
+  });
+
   it('should accumulate multiple flag keys', () => {
     notifyDecision('experiment_1');
     notifyDecision('experiment_2');

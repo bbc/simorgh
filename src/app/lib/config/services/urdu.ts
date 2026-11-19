@@ -1,6 +1,6 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
-import '#psammead/psammead-locales/moment/ur';
+import '#lib/locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -48,21 +48,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'واٹس ایپ',
-      brandTitle: 'بی بی سی اردو اب واٹس ایپ پر',
+      title: 'بی بی سی اُردو موبائل ایپ',
+      brandTitle: 'تمام اہم خبریں ایک ایپ میں',
       brandDescription:
-        'بی بی سی اردو کی خبروں اور فیچرز کو اپنے فون پر حاصل کریں اور سب سے پہلے جانیں پاکستان اور دنیا بھر سے ان کہانیوں کے بارے میں جو آپ کے لیے معنی رکھتی ہیں',
+        'وہ تمام خِبریں جو آپ جاننا چاہتے ہیں بی بی سی ورلڈ سروس ایپ پر موجود ہیں',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0m0rsyc.png',
-        alt: 'بی بی سی اردو اب واٹس ایپ پر',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pmg8qn.jpg',
+        alt: 'بی بی سی اردو کی نئی موبائل ایپ کی تصویر',
       },
       linkLabel: {
-        text: 'سبسکرائب کرنے کے لیے کلک کریں',
-        href: 'https://whatsapp.com/channel/0029Vateujy3wtbGKtkkMD44',
+        text: 'ایپ ڈاؤن لوڈ کریں',
+        href: 'https://www.bbc.com/urdu/articles/cmgrvzx905wro',
       },
       skipLink: {
-        text: 'مواد پر جائیں',
-        endTextVisuallyHidden: 'مواد پر جائیں',
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
       },
     },
     translations: {
@@ -82,11 +82,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
+      topicDiscovery: {
+        heading: 'مزید دریافت کریں',
+        moreAboutTopic: '{topic} کے بارے میں مزید',
+        fetchErrorMessage: 'لوڈ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں',
+      },
+      googlePreferredSource: {
+        linkText: 'Google پر پسندیدہ ماخذ کے طور پر شامل کریں',
+      },
       continueReading: 'پڑھتے رہیے',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
+      skipContent: {
+        text: '%title% چھوڑ دیں اور جاری رکھیں',
+        endTextVisuallyHidden: '%title% کا اختتام',
+      },
       relatedContent: 'اسی بارے میں',
       relatedTopics: 'متعلقہ عنوانات',
+      showMore: 'مزید دکھائیں',
       moreOnThis: '',
       navMenuText: 'سیکشن',
       liteSite: {
@@ -373,6 +386,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'یہ {{date}}  کو بند ہوا',
       },
       sport: {
+        keyEventsTitle: 'اہم واقعات',
         matchSummary: 'میچ کا خلاصہ',
         assists: 'اسسٹ',
         penalties: 'پنالٹی',
@@ -382,6 +396,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'اضافی وقت کے بعد',
         penaltyAbbreviation: 'پین',
         ownGoal: 'خود کا گول',
+        versus: 'بمقابلہ',
+        kickOff: 'آغاز',
+        timeToBeConfirmed: 'وقت کی تصدیق ہونا باقی',
+        teamToBeConfirmed: 'ٹیم کی تصدیق ہونا باقی',
+        afterFullTime: 'مکمل وقت کے بعد',
+        atFullTime: 'مکمل وقت پر',
+        onPenalties: 'پینلٹی پر',
+        onAggregate: 'مجموعی طور پر',
+        win: 'جیتتا ہے',
         winOnPenalties: {
           prefix: 'پنالٹی پر',
           suffix: 'سے جیتتی ہے',
@@ -441,6 +464,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'گروپ مرحلہ',
+          last32: 'راؤنڈ آف 32',
+          last16: 'راؤنڈ آف 16',
+          quarterFinals: 'کوارٹر فائنلز',
+          semiFinals: 'سیمی فائنلز',
+          final: 'فائنل',
+          thirdPlaceFinal: 'تیسری پوزیشن کا میچ',
         },
       },
     },

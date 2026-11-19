@@ -11,10 +11,13 @@ import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
+
+type CurationPromoProps = Summary & {
+  showRelatedTopic?: boolean;
+  isVideoCollection?: boolean;
+};
 
 const CurationPromo = ({
   id,
@@ -30,7 +33,10 @@ const CurationPromo = ({
   isLive,
   eventTrackingData,
   isPortraitImage,
-}: Summary) => {
+  relatedTopic,
+  isVideoCollection = false,
+  showRelatedTopic,
+}: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
 
@@ -56,6 +62,27 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  const relatedTopicToShow =
+    showRelatedTopic &&
+    type === 'article' &&
+    relatedTopic?.title?.trim() &&
+    relatedTopic.link?.url
+      ? relatedTopic
+      : null;
+
+  const relatedTopicEventTrackingData = {
+    ...eventTrackingData,
+    itemTracker: {
+      ...eventTrackingData?.itemTracker,
+      type: 'simple-curation-grid-related-topic',
+      text: relatedTopic?.title,
+    },
+  };
+
+  const relatedTopicClickTrackerHandler = useClickTrackerHandler(
+    relatedTopicEventTrackingData,
+  );
+
   return (
     <Promo css={styles.promo} className="">
       {(imageUrl || shouldShowFallbackPlaceholder) && (
@@ -66,6 +93,7 @@ const CurationPromo = ({
           isAmp={isAmp}
           isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
+          {...(isVideoCollection && { mobileSize: '100vw' })}
         >
           {isMedia && (
             <Promo.MediaIcon css={styles.icon} type={type}>
@@ -89,14 +117,35 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
-            {isLive ? <LiveLabel>{title}</LiveLabel> : title}
+            {isLive ? (
+              <span css={styles.liveLabel}>
+                <LiveLabel>{title}</LiveLabel>
+              </span>
+            ) : (
+              title
+            )}
           </Promo.A>
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp">
-          {lastPublished}
-        </Promo.Timestamp>
+        <div
+          css={styles.metadataAndTopicData}
+          className="metadata-and-topic-data"
+        >
+          {relatedTopicToShow && (
+            <a
+              href={relatedTopicToShow.link.url}
+              css={styles.relatedTopicLink}
+              className="related-topic-link"
+              {...relatedTopicClickTrackerHandler}
+            >
+              {relatedTopicToShow.title}
+            </a>
+          )}
+          <Promo.Timestamp className="promo-timestamp">
+            {lastPublished}
+          </Promo.Timestamp>
+        </div>
       ) : null}
     </Promo>
   );

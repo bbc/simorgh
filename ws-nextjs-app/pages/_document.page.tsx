@@ -25,12 +25,22 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import CanonicalToLiteRedirect from '#utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#utilities/handleServerLogging';
+import getAmpLiteCss from '#utilities/getAmpLiteCss';
+import optimiseCssPrefixes from '#utilities/optimiseCssPrefixes';
+import treeshakeCssCustomProperties from '#utilities/treeshakeCssCustomProperties';
+import treeshakeCssModuleRules from '#utilities/treeshakeCssModuleRules';
+import trimFontFaceSourcesToWoff2 from '#utilities/trimFontFaceSourcesToWoff2';
+import setSimorghEnvVars from '#app/lib/utilities/setSimorghEnvVars';
+import removeNoJsClass from '#app/lib/utilities/removeNoJsClass';
 import ComponentTracking from '../renderers/ComponentTracking';
 import ReverbTemplate from '../renderers/ReverbTemplate';
+import appPageTransforms from '../renderers/appPageTransforms';
 import litePageTransforms from '../renderers/litePageTransforms';
 import LiteRenderer from '../renderers/LiteRenderer';
 import AmpRenderer from '../renderers/AmpRenderer';
 import derivePageType from '../utilities/derivePageType';
+import { getRequestNonce } from '../utilities/addCspHeader/requestNonce';
+import addNonceToReactFizzScripts from '../utilities/addNonceToReactFizzScripts';
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
@@ -42,8 +52,14 @@ type DocProps = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
+  nonce?: string;
   title: ReactElement;
 };
+
+const optimiseInlineCss = (css: string, renderedHtml: string): string =>
+  optimiseCssPrefixes(
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
+  );
 
 export default class AppDocument extends Document<DocProps> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -67,8 +83,15 @@ export default class AppDocument extends Document<DocProps> {
 
     const initialProps = await Document.getInitialProps(ctx);
 
+    const nonce = getRequestNonce(ctx.req);
+    initialProps.html = addNonceToReactFizzScripts(initialProps.html, nonce);
+
     if (isLite) {
       initialProps.html = litePageTransforms(initialProps.html);
+    }
+
+    if (isApp) {
+      initialProps.html = appPageTransforms(initialProps.html);
     }
 
     const { css, ids } = extractCritical(initialProps.html);
@@ -88,6 +111,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      nonce,
     };
   }
 
@@ -101,6 +125,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      nonce,
     } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -109,8 +134,35 @@ export default class AppDocument extends Document<DocProps> {
     const helmetLinkTags = helmet.link.toComponent();
     const helmetScriptTags = helmet.script.toComponent();
 
+    type NextDataProps = { page: string; dynamicIds?: Array<string | number> };
+    type PropsWithNextData = typeof this.props & {
+      // eslint-disable-next-line no-underscore-dangle
+      __NEXT_DATA__?: NextDataProps;
+    };
+
+    const getNextData = () => {
+      /* eslint-disable no-underscore-dangle */
+      const nextData = (this.props as PropsWithNextData).__NEXT_DATA__;
+      /* eslint-enable no-underscore-dangle */
+      return {
+        page: nextData?.page ?? '',
+        dynamicIds: nextData?.dynamicIds ?? [],
+      };
+    };
+
+    // Only AMP and Lite inline CSS, so canonical renders must not pay for this work.
+    const getInlineCss = () =>
+      optimiseInlineCss(
+        css +
+          treeshakeCssModuleRules(
+            getAmpLiteCss(getNextData()),
+            this.props.html,
+          ),
+        this.props.html,
+      );
+
     switch (true) {
-      case isAmp && pageType === 'article':
+      case isAmp && pageType === 'article': {
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -119,11 +171,12 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={css}
+            styles={getInlineCss()}
             title={title}
           />
         );
-      case isLite:
+      }
+      case isLite: {
         return (
           <LiteRenderer
             bodyContent={<Main />}
@@ -131,28 +184,34 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={css}
+            styles={getInlineCss()}
             title={title}
           />
         );
+      }
       default:
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
-            <Head>
-              <CanonicalToLiteRedirect />
-              <ReverbTemplate />
+            <Head nonce={nonce}>
+              <CanonicalToLiteRedirect nonce={nonce} />
+              <ReverbTemplate nonce={nonce} />
               <script
                 type="text/javascript"
+                {...(nonce ? { nonce } : {})}
                 dangerouslySetInnerHTML={{
-                  __html: `document.documentElement.classList.remove("no-js");`,
+                  __html: `(${removeNoJsClass.toString()})()`,
                 }}
               />
-              {addOperaMiniClassScript()}
-              <Script strategy="beforeInteractive">
-                {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
+              {addOperaMiniClassScript(nonce)}
+              <Script strategy="beforeInteractive" nonce={nonce}>
+                {`(${setSimorghEnvVars.toString()})(${JSON.stringify(clientSideEnvVariables)})`}
               </Script>
               {pageType === 'live' && (
-                <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />
+                <script
+                  src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
+                  defer
+                  {...(nonce ? { nonce } : {})}
+                />
               )}
               {isApp && <meta name="robots" content="noindex" />}
               {title}
@@ -161,6 +220,7 @@ export default class AppDocument extends Document<DocProps> {
               <ComponentTracking
                 trackComponentViews={false}
                 enableStaticClickTrackingOnOperaMiniOnly
+                nonce={nonce}
               />
               {helmetScriptTags}
               <style
@@ -170,7 +230,7 @@ export default class AppDocument extends Document<DocProps> {
             </Head>
             <body>
               <Main />
-              <NextScript />
+              <NextScript nonce={nonce} />
             </body>
           </Html>
         );

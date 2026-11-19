@@ -1,14 +1,19 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
-import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -20,6 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -30,7 +36,6 @@ export interface HomePageProps {
     seoTitle?: string;
     seoDescription?: string;
     metadata: {
-      atiAnalytics: ATIData;
       type: string;
     };
   };
@@ -46,14 +51,20 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const {
-    title,
-    description,
-    seoTitle,
-    seoDescription,
-    metadata: { atiAnalytics },
-  } = pageData;
+  const { title, description, seoTitle, seoDescription } = pageData;
   const { curations } = pageData;
+
+  // Activate server-side experiment to enable visit/page-view tracking
+  useOptimizelyVariation({
+    experimentName: 'test_server_side_experiment_visits_aa',
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
+  const scrollDepthRef = useScrollDepthTracker(
+    'homepage-scroll-depth',
+    true,
+    getHomePageBounds,
+  );
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
@@ -62,10 +73,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      <PWAPromotionalBanner />
-      <AccountPromotionalBanner />
+      <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
+      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer
         title={metadataTitle}
         lang={lang}
@@ -80,8 +90,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+      <main role="main" css={styles.main} ref={scrollDepthRef}>
+        <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -89,6 +99,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             {curations.map(
               (

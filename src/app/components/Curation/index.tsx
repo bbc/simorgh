@@ -3,17 +3,19 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { use } from 'react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import CurationGrid from './CurationGrid';
 import HierarchicalGrid from './HierarchicalGrid';
 import Subheading from './Subhead';
 import getComponentName, { COMPONENT_NAMES } from './getComponentName';
-import MessageBanner from '../MessageBanner';
+import CurationMessageBanner from './CurationMessageBanner';
 import MostRead from '../MostRead';
 import { GHOST } from '../ThemeProvider/palette';
 import Embed from '../Embeds/OEmbed';
@@ -52,23 +54,7 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
-const enterFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '-1';
-  }
-};
-
-const exitFakeScreenCallback = () => {
-  const consentBanner = document.getElementById('consent-banner');
-  if (consentBanner) {
-    consentBanner.style.zIndex = '2147483647';
-  }
-};
-
 interface CurationProps extends Curation {
-  // keep this local so we do not change the shared bff curation data shape
-  experimentProps?: ComponentExperimentProps;
   curationContentType?: string;
   pageType?: string;
 }
@@ -90,9 +76,9 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
   mediaCollection,
-  experimentProps,
   curationContentType,
   pageType,
+  isVideoCollection = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -104,6 +90,18 @@ export default ({
   });
 
   const GridComponent = getGridComponent(componentName);
+
+  const { isLite } = use(RequestContext);
+
+  const isCurationGrid =
+    componentName === SIMPLE_CURATION_GRID ||
+    componentName === HIERARCHICAL_CURATION_GRID;
+
+  const shouldStyleAsVideoCollection =
+    !isLite && isCurationGrid && isVideoCollection;
+
+  const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
+  const showRelatedTopic = !isLiveEnvironment && isCurationGrid;
 
   const isFirstCuration = position === 0;
 
@@ -122,10 +120,10 @@ export default ({
     title: linkText,
   } = firstSummary || {};
 
-  const experimentTrackingProps = experimentProps || {};
-
   const eventTrackingData: EventTrackingData = {
-    componentName,
+    componentName: shouldStyleAsVideoCollection
+      ? `${componentName}-video`
+      : componentName,
     groupTracker: {
       name: curationSubheading,
       type: componentName,
@@ -134,14 +132,14 @@ export default ({
       ...(curationId && { resourceId: curationId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
-    ...experimentTrackingProps,
   };
 
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
     case BILLBOARD: {
-      const billboardId = `billboard-${nthCurationByStyleAndProminence}`;
+      const billboardId =
+        `billboard-${visualProminence}-${nthCurationByStyleAndProminence}`.toLowerCase();
       if (firstSummary) {
         return (
           <div css={styles.billboardContainer}>
@@ -151,6 +149,7 @@ export default ({
               link={summaryLink}
               image={imageUrl}
               id={billboardId}
+              prominence={visualProminence}
               eventTrackingData={eventTrackingData}
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
@@ -164,7 +163,7 @@ export default ({
     case MESSAGE_BANNER:
       if (firstSummary) {
         return (
-          <MessageBanner
+          <CurationMessageBanner
             heading={title}
             description={description}
             link={summaryLink}
@@ -236,13 +235,7 @@ export default ({
           aria-labelledby="bbcMediaPlayer0"
           data-testid={mediaCollectionId}
         >
-          <MediaLoader
-            blocks={mediaCollection}
-            eventMapping={{
-              enterFakeFullscreen: enterFakeScreenCallback,
-              exitFakeFullscreen: exitFakeScreenCallback,
-            }}
-          />
+          <MediaLoader blocks={mediaCollection} />
         </section>
       ) : null;
     }
@@ -285,7 +278,9 @@ export default ({
                 summaries={summaries}
                 headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
+                isVideoCollection={shouldStyleAsVideoCollection}
                 eventTrackingData={eventTrackingData}
+                showRelatedTopic={showRelatedTopic}
               />
             </div>
           </section>
@@ -295,7 +290,9 @@ export default ({
               summaries={summaries}
               headingLevel={2}
               isFirstCuration={isFirstCuration}
+              isVideoCollection={shouldStyleAsVideoCollection}
               eventTrackingData={eventTrackingData}
+              showRelatedTopic={showRelatedTopic}
             />
           </div>
         );

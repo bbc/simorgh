@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/yo';
+import '#lib/locales/moment/yo';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -76,12 +76,32 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
+      topicDiscovery: {
+        heading: 'Ṣawari síi',
+        moreAboutTopic: 'Díẹ̀ síì nípa {topic}',
+        fetchErrorMessage: 'Ó kuna láti ṣàkójọpọ̀. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan síi',
+      },
+      googlePreferredSource: {
+        linkText: 'Fi kun gẹ́gẹ́ bí orísun tí a fẹ́ràn lórí Google',
+      },
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
+      skipContent: {
+        text: 'Fo %title% kọjá kí o tẹ̀síwájú',
+        endTextVisuallyHidden: 'Ìparí %title%',
+      },
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
       relatedTopics: 'Àwọn Àkórí Tójọra',
+      showMore: 'Fi diẹ sii han',
       moreOnThis: '',
       navMenuText: 'Àwọn abala',
+      liteSite: {
+        onboardingMessage:
+          'Ìwọ ń wo ẹ̀dà ọ̀rọ̀-nìkan ti ìkànnì yìí tí ó máa ń lo dátà díẹ̀. Wo ẹ̀dà àkọ́kọ́ ti ìkànnì náà pẹ̀lú gbogbo àwòrán àti fídíò.',
+        toMainSite: 'Gbé mi lọ sí ìkànnì àkọ́kọ́',
+        informationPage: 'Wa ohun tí ó pọ̀ síi nípa ẹ̀dà fífi dátà pamọ́ yìí',
+        dataSaving: 'Ẹ̀dà fífi dátà pamọ́',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -277,6 +297,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
       latestMediaTitle: 'Èyí tí ó ṣẹ̀ṣẹ̀dé',
       sport: {
+        keyEventsTitle: 'Àwọn ìṣẹ̀lẹ̀ pàtàkì',
         matchSummary: 'Akopọ Ere',
         assists: 'Iranlọwọ',
         penalties: 'Penariti',
@@ -286,6 +307,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Lẹ́yìn àkókò àfikún',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'góòlù ara ẹni',
+        versus: 'sí',
+        kickOff: 'ibẹrẹ',
+        timeToBeConfirmed: 'Àkókò láti jẹrisi',
+        teamToBeConfirmed: 'Ẹgbẹ lati jẹrisi',
+        afterFullTime: 'lẹ́yìn àkókò pipe',
+        atFullTime: 'ní àkókò pipe',
+        onPenalties: 'lori pẹ́nàlítì',
+        onAggregate: 'lori apapọ',
+        win: 'ṣẹ́gun',
         winOnPenalties: {
           prefix: 'ṣẹ́gun',
           suffix: 'ní penariti',
@@ -345,6 +375,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Ìpele pipin si ìsọ̀rí',
+          last32: 'Ìpele méjìlélọ́gbọ̀n',
+          last16: 'Ìpele mẹ́rìdínlógún',
+          quarterFinals: 'Ìpele tó kángun sí èyí tó kángun sí àṣekágbá',
+          semiFinals: 'Ìpele tó kángun sí àṣekágbá',
+          final: 'Àṣekágbá',
+          thirdPlaceFinal: 'Ipò kẹta',
         },
       },
     },

@@ -1,8 +1,9 @@
 import { Global } from '@emotion/react';
-import { use, useCallback, useEffect, useRef } from 'react';
+import { use, useCallback, useEffect, useMemo, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
+  EventMapping,
   Player,
   Playlist,
   PlaylistItem,
@@ -266,7 +267,7 @@ export const playbackEndedCallback = async (
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
-  if (e?.ended === false) return;
+  if (e?.ended !== true) return;
 
   const player = getPlayerInstance();
   const autoplay = Boolean(player?.settings?.().autoplay);
@@ -340,6 +341,25 @@ const PortraitVideoModal = ({
     eventGroupingName: PLAYBACK_SUMMARY_EVENT_GROUPING_NAME,
     alwaysInView: true,
   });
+
+  const trackingRef = useRef({
+    eventTrackingData,
+    swipeTracker,
+    playbackSummaryTracker,
+    onClose,
+  });
+  trackingRef.current = {
+    eventTrackingData,
+    swipeTracker,
+    playbackSummaryTracker,
+    onClose,
+  };
+
+  // Unrelated page updates must not reload the playing video.
+  const selectedBlocks = useMemo(
+    () => [blocks[selectedVideoIndex]],
+    [blocks, selectedVideoIndex],
+  );
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
@@ -458,13 +478,15 @@ const PortraitVideoModal = ({
           totalDurationMs,
         });
 
-      await playbackSummaryTracker({
-        ...eventTrackingData,
+      const trackingData = trackingRef.current.eventTrackingData;
+
+      await trackingRef.current.playbackSummaryTracker({
+        ...trackingData,
         componentName: PLAYBACK_SUMMARY_COMPONENT_NAME,
         eventGroupingName: PLAYBACK_SUMMARY_EVENT_GROUPING_NAME,
         alwaysInView: true,
         groupTracker: {
-          ...eventTrackingData.groupTracker,
+          ...trackingData.groupTracker,
           type: 'portrait-video-modal',
         },
         itemTracker: {
@@ -482,7 +504,7 @@ const PortraitVideoModal = ({
         },
       });
     },
-    [blocks, eventTrackingData, playbackSummaryTracker],
+    [blocks],
   );
 
   // clears immediately so late smp events cannot spill into the next video session
@@ -510,16 +532,17 @@ const PortraitVideoModal = ({
       if (!modalHasClosedRef.current) {
         modalHasClosedRef.current = true;
         trackAndClearActiveVideoSession(playbackTrigger);
+        trackingRef.current.onClose();
       }
-
-      onClose();
     },
-    [onClose, trackAndClearActiveVideoSession],
+    [trackAndClearActiveVideoSession],
   );
 
   // playlist changes are the reliable point where the previous video session ends
   const handlePlaylistLoaded = useCallback(
     (e: SMPEvent) => {
+      if (modalHasClosedRef.current) return;
+
       const currentIndex = getCurrentIndex({ e, blocks });
       const activeVideoIndex = activeVideoSessionRef.current?.index;
 
@@ -540,12 +563,17 @@ const PortraitVideoModal = ({
   // existing navigation analytics stays separate from playback summary analytics
   const handleStatsNavigation = useCallback(
     async (e: SMPEvent) => {
-      await statsNavigationCallback(e, blocks, eventTrackingData, swipeTracker);
+      await statsNavigationCallback(
+        e,
+        blocks,
+        trackingRef.current.eventTrackingData,
+        trackingRef.current.swipeTracker,
+      );
     },
-    [blocks, eventTrackingData, swipeTracker],
+    [blocks],
   );
 
-  // smp ended means the watched duration equals the full video duration
+  // Completion records the end position; this metric does not subtract seeks.
   const handlePlaybackEnded = useCallback(
     async (e: SMPEvent) => {
       if (e?.ended === false) {
@@ -575,15 +603,53 @@ const PortraitVideoModal = ({
       }
 
       await trackAndClearActiveVideoSession('ended');
-
-      await playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker);
     },
     [
       blocks,
-      eventTrackingData,
-      swipeTracker,
       trackAndClearActiveVideoSession,
       updateActiveVideoPlaybackPosition,
+    ],
+  );
+
+  const handlePause = useCallback(
+    (e: SMPEvent) => {
+      updateActiveVideoPlaybackPosition(e);
+
+      if (e?.ended === true) {
+        handlePlaybackEnded(e);
+      }
+
+      // Keep autoplay navigation on SMP's existing pause signal only.
+      playbackEndedCallback(
+        e,
+        blocks,
+        trackingRef.current.eventTrackingData,
+        trackingRef.current.swipeTracker,
+      );
+    },
+    [blocks, handlePlaybackEnded, updateActiveVideoPlaybackPosition],
+  );
+
+  const eventMapping = useMemo<EventMapping>(
+    () => ({
+      playlistLoaded: handlePlaylistLoaded,
+      pluginLoaded: pluginLoadedCallback,
+      fullscreenExit: () => handleModalClose('fullscreen-exit'),
+      statsNavigation: handleStatsNavigation,
+      pause: handlePause,
+      ended: handlePlaybackEnded,
+      playing: handlePlaying,
+      timeupdate: handlePlaybackProgress,
+      significanttimeupdate: handlePlaybackProgress,
+    }),
+    [
+      handlePlaylistLoaded,
+      handleModalClose,
+      handleStatsNavigation,
+      handlePause,
+      handlePlaybackEnded,
+      handlePlaying,
+      handlePlaybackProgress,
     ],
   );
 
@@ -709,17 +775,9 @@ const PortraitVideoModal = ({
         </div>
         <MediaLoader
           css={styles.mediaWrapper}
-          blocks={[blocks?.[selectedVideoIndex]]}
-          eventMapping={{
-            playlistLoaded: handlePlaylistLoaded,
-            pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: () => handleModalClose('fullscreen-exit'),
-            statsNavigation: handleStatsNavigation,
-            ended: handlePlaybackEnded,
-            playing: handlePlaying,
-            timeupdate: handlePlaybackProgress,
-            significanttimeupdate: handlePlaybackProgress,
-          }}
+          blocks={selectedBlocks}
+          withinFullscreenContainer
+          eventMapping={eventMapping}
         />
         <button
           ref={endOfContentButtonRef}

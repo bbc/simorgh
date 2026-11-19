@@ -1,10 +1,10 @@
 # Simorgh
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/bbc/simorgh)
+[<img src="https://devin.ai/assets/askdeepwiki.png" alt="Ask DeepWiki about Simorgh" height="20"/>](https://deepwiki.com/bbc/simorgh)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service and Public Service News. 
+BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service and Public Service News.
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
 
@@ -56,7 +56,14 @@ yarn install
 
 ## Local Development
 
-To run this application locally, with hot-reloading:
+Export a relevant BFF_PATH so that simorgh can connect to the relevant fabl instance:
+
+```
+# For a local instance of fabl
+export BFF_PATH="http://localhost:3210/module/simorgh-bff"
+```
+
+Start the application:
 
 ```
 cd ws-nextjs-app
@@ -66,6 +73,14 @@ yarn dev
 The nextJS application will start on [http://localhost:7081](http://localhost:7081).
 
 Once the application is running, you can visit a valid route, e.g. http://localhost:7081/pidgin.
+
+### Secret Environment Variables
+
+Some local-development commands used by BBC staff require additional environment variables that are not stored in this repository. BBC staff can follow this [guide](https://github.com/bbc/simorgh-infrastructure/tree/latest/scripts/addShellProfileEnvVariables) (requires access) to set them on your machine.
+
+### Feature toggles
+
+Some features are hidden/shown based on feature toggles set remotely via BBC internal systems. By default when running the application locally however, these values are not fetched remotely and are set in [these config files](https://github.com/bbc/simorgh/tree/latest/src/app/lib/config/toggles). As such, these may differ between environments. Please read the [toggles documentation](https://github.com/bbc/simorgh/blob/latest/src/app/lib/config/toggles/README.md) for more information and for instructions on how to fetch remote toggle values locally.
 
 ### Article pages
 
@@ -110,7 +125,7 @@ Topic pages use internal BBC APIs that are not publicly accessible. This can cau
 No BFF_PATH set as environment variable, you will not have access to topics
 ```
 
-Internal developers who need to work on topic pages locally should contact the team for access.
+Internal developers who need to work on topic pages locally should contact the team for access. See [Secret Environment Variables](#secret-environment-variables) for how to set the required environment variables.
 
 ### Other page types
 
@@ -127,6 +142,10 @@ To run locally `yarn storybook`, it will then be available at [http://localhost:
 When viewing Video stories locally, make sure to use a BBC domain, as outlined in the [changing request location section](https://github.com/bbc/simorgh#changing-request-location). Video will not work in the hosted version of Storybook linked above for this reason.
 
 We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser testing on our stories.
+
+Storybook compiles JavaScript, TypeScript and JSX with SWC, configured in [`.storybook/main.ts`](./.storybook/main.ts). It uses Emotion's JSX runtime and SWC plugin.
+
+When updating Storybook's SWC compiler or `@swc/plugin-emotion`, check their [plugin compatibility](https://swc.rs/docs/plugin/selecting-swc-core) and validate Emotion-styled stories as well as SCSS Modules and MDX documentation.
 
 Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
 
@@ -187,9 +206,21 @@ Every run of `yarn build` will update the bundle analysis files in the repo. To 
 
 We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
-We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
+ESLint parses JavaScript and JSX with its built-in parser and TypeScript and TSX with `@typescript-eslint/parser`.
 
-`yarn test` runs both sets of these.
+Both `yarn test:lint` and `yarn test:lint:fix` use a content-based cache in `.eslintcache` to skip unchanged files on subsequent runs. The existing lint scope and rules are unchanged. Use `yarn test:lint --no-cache` for a full uncached run, for example after updating dependencies or Prettier configuration. ESLint's per-file cache does not track changes to imported files, so use an uncached run when checking cross-file changes.
+
+We have [Jest](https://facebook.github.io/jest) unit tests that can be ran with `yarn test:unit` for the root projects and `yarn test` from the `ws-nextjs-app` directory for the Next.js project.
+
+The repository has one root `jest.config.ts` containing seven named projects: `Unit Tests`, `Unit Tests (Client)`, `Puppeteer Tests`, `Unit Tests (Next)`, `Integration Tests - Canonical`, `Integration Tests - AMP` and `Integration Tests - Lite`. The root and Next project groups use the same SWC compiler with separate project-group options and test environments. Root projects use SWC without app-derived compiler options; Next projects retain the app-derived settings from the Next workspace.
+
+Root and Next unit and integration projects share [src/testHelpers/setupTests.js](./src/testHelpers/setupTests.js) for DOM matchers, Web APIs, crypto mocks, `setImmediate` and console handling. All these projects fail on unexpected console errors, with the existing warning suppressions retained. Browser-specific error filtering only runs when a window is available, so Node-only API tests use the same file. Location mocking is left to individual tests rather than replacing the environment's location globally. Root-only mocks and fixture environment values still run earlier through [src/testHelpers/jest-setup.js](./src/testHelpers/jest-setup.js); Next integration tests retain their real fetch. Puppeteer keeps its separate setup.
+
+`yarn test:unit` selects the two root unit projects. The Next workspace's `yarn test` selects only `Unit Tests (Next)`, and its integration scripts select their named platform projects. All workspace commands explicitly use the root configuration so running them from either repository directory resolves the same projects. The root integration command continues to manage the app lifecycle through `ws-nextjs-app/integration/utils/runTests.ts`.
+
+Resolving the combined configuration initializes the Next app configuration and its `.env` files even when only root projects are selected. This is an intentional trade-off of keeping one configuration, so root test commands may observe app environment values during configuration resolution. A single global `jest-junit` reporter writes results to the repository root's `reports/jest` directory, regardless of the invocation directory.
+
+SWC preserves read-only module exports. Tests that need to spy on or replace imported exports use explicit `jest.mock` factories to provide mockable exports. Existing implementations can be preserved with `jest.requireActual` and object spreading.
 
 ### End-to-end tests
 
@@ -281,7 +312,21 @@ CYPRESS_SMOKE can be true or false. It is true by default and runs a specific su
 
 ### Lighthouse Best Practice tests
 
-We use [Lighthouse](https://github.com/googlechrome/lighthouse) to test the performance of our page. However these have been moved out of Simorgh down to our own internal CD processes. This allows us to run these tests on a more accurate depiction of Simorgh. You are free to run lighthouse on your own from your Chrome browser or use the Node Lighthouse CLI.
+We use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) to test our pages. A single config, [`lighthouse/lighthouserc.js`](./lighthouse/lighthouserc.js), is shared by local runs, GitHub Actions and our CodeBuild pipelines. `LIGHTHOUSE_APP_ENV` selects which URLs are audited and which thresholds apply.
+
+To run it against a local Next.js server on port 7081:
+
+```
+yarn lighthouse
+```
+
+To run it against the test or live environments (as CodeBuild does):
+
+```
+LIGHTHOUSE_APP_ENV=test yarn lighthouse
+```
+
+Local reports are written to `.lighthouseci/`.
 
 ### Why is it called Simorgh?!
 

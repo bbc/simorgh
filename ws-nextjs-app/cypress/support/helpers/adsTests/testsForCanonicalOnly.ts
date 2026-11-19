@@ -11,7 +11,7 @@ export default ({ service }: ServiceParametersType) => {
         serviceName = config.name;
       }
 
-      cy.getToggles(serviceName).then(() => {
+      cy.fetchToggles(serviceName).then(() => {
         cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
           const adsEnabled = toggles.ads?.enabled;
 

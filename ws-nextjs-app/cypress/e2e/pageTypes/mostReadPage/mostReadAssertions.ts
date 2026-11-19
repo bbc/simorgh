@@ -13,7 +13,7 @@ export default ({ service, variant = 'default' }) => {
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(service);
+          cy.fetchToggles(service);
         });
 
         it('should not render section label', () => {

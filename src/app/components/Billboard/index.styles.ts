@@ -53,10 +53,32 @@ export default {
           'linear-gradient(to bottom, rgba(130, 0, 0, 1) 10%, rgba(40, 0, 0, 1) 70%)',
       },
     }),
-  contentContainer: ({ mq, gridWidths, spacings }: Theme) =>
+  backgroundPlainBlack: ({ palette }: Theme) =>
+    css({
+      background: palette.BLACK,
+    }),
+  imageContainer: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `${spacings.QUADRUPLE}rem 0`,
+        paddingInlineEnd: `${spacings.DOUBLE}rem`,
+        width: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+      },
+    }),
+  highProminenceRow: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+      },
+    }),
+  contentContainer: ({ mq, gridWidths }: Theme) =>
     css({
       zIndex: 3,
-      paddingBottom: `${spacings.QUADRUPLE}`,
       overflow: 'hidden',
 
       [mq.GROUP_4_MIN_WIDTH]: {
@@ -66,9 +88,10 @@ export default {
         width: '100%',
       },
     }),
-  contentContainerNoPromos: ({ mq }: Theme) =>
+  contentContainerWithPromos: ({ mq, spacings }: Theme) =>
     css({
-      [mq.GROUP_4_MIN_WIDTH]: {
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
         paddingBottom: 0,
       },
     }),
@@ -135,6 +158,13 @@ export default {
         flexDirection: 'column',
         justifyContent: 'center',
         maxWidth: '50%', // determines width of text overlay.
+      },
+    }),
+  textContainerHighProminence: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        minHeight: 0,
+        width: '50%',
       },
     }),
   description: ({ palette }: Theme) =>

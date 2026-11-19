@@ -46,14 +46,7 @@ const renderCuration = ({
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-  const {
-    curations,
-    description,
-    title,
-    seoTitle,
-    seoDescription,
-    metadata: { atiAnalytics },
-  } = pageData;
+  const { curations, description, title, seoTitle, seoDescription } = pageData;
 
   const metadataTitle = seoTitle || title;
   const metadataDescription = seoDescription || description;
@@ -71,7 +64,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiAnalytics} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}

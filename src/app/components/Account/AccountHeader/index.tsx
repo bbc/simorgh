@@ -1,15 +1,19 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
 import { AccountIconRounded } from '#app/components/icons';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
-const AccountHeader = () => {
-  const isHydrated = useHydrationDetection();
+export type AccountHeaderVariant = 'legacy' | 'default';
+
+type AccountHeaderProps = {
+  variant?: AccountHeaderVariant;
+};
+
+const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
   const { isSignedIn, signInUrl, settingsUrl, isIdctaAvailable } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
@@ -26,7 +30,7 @@ const AccountHeader = () => {
     componentName: clickComponentName,
   });
 
-  if (!isHydrated || !isIdctaAvailable) return null;
+  if (!isIdctaAvailable) return null;
 
   const href = isSignedIn ? settingsUrl : signInUrl;
   const label = isSignedIn
@@ -35,17 +39,27 @@ const AccountHeader = () => {
 
   if (!href || !label) return null;
 
+  const isDefaultVariant = variant === 'default';
+
   return (
-    <div css={styles.wrapper} {...viewTracker}>
+    <div
+      className={isDefaultVariant ? styles.wrapperDefault : styles.wrapper}
+      {...viewTracker}
+    >
       <Text
         as="a"
-        css={styles.link}
+        className={isDefaultVariant ? styles.linkDefault : styles.link}
         href={href}
         fontVariant="sansBold"
         onClick={onClickTrack}
+        {...(isDefaultVariant && { 'aria-label': label })}
       >
-        <AccountIconRounded css={styles.icon} />
-        {label}
+        <AccountIconRounded
+          className={isDefaultVariant ? styles.iconDefault : undefined}
+          isDefault={isDefaultVariant}
+          isInverted={!isDefaultVariant}
+        />
+        <span className={styles.label}>{label}</span>
       </Text>
     </div>
   );

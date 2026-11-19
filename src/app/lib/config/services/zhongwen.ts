@@ -1,7 +1,7 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
-import '#psammead/psammead-locales/moment/zh-tw';
+import '#lib/locales/moment/zh-tw';
 import withContext from '../../../contexts/utils/withContext';
 import { ZhongwenConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -50,6 +50,15 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
+  electionBanner: {
+    title: '2026年美國中期選舉',
+    electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+    electionCurationIds: [
+      'urn:bbc:vivo:curation:8ba8969d-1960-4456-a923-b8be920e687e',
+    ],
+    assocPressIframeSrc:
+      'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
+  },
 };
 
 export const service: ZhongwenConfig = {
@@ -58,7 +67,7 @@ export const service: ZhongwenConfig = {
     externalLinkText: ', 外部',
     homePageTitle: '主页',
     lang: `zh-hans`,
-    locale: `zh-hans`,
+    locale: `zh-Hans`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hans',
     datetimeLocale: 'zh-cn',
@@ -149,12 +158,32 @@ export const service: ZhongwenConfig = {
       },
       seeAll: '浏览全部',
       home: '主页',
+      topicDiscovery: {
+        heading: '发现更多',
+        moreAboutTopic: '更多关于{topic}',
+        fetchErrorMessage: '加载失败。请重试',
+      },
+      googlePreferredSource: {
+        linkText: '添加为 Google 首选来源',
+      },
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
+      skipContent: {
+        text: '跳过%title%并继续',
+        endTextVisuallyHidden: '%title%结束',
+      },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      showMore: '显示更多',
       moreOnThis: '',
       navMenuText: '分类',
+      liteSite: {
+        onboardingMessage:
+          '您正在浏览本网站数据用量较少的纯文字版本。查看包含所有图片和视频的网站主版本。',
+        toMainSite: '带我去主网站',
+        informationPage: '了解更多关于这个省流量版本的信息',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -348,6 +377,7 @@ export const service: ZhongwenConfig = {
       featuresAnalysisTitle: '特别推荐',
       latestMediaTitle: '最新',
       sport: {
+        keyEventsTitle: '关键事件',
         matchSummary: '比赛总结',
         assists: '助攻',
         penalties: '点球',
@@ -357,6 +387,15 @@ export const service: ZhongwenConfig = {
         afterExtraTime: '加时赛后',
         penaltyAbbreviation: '点',
         ownGoal: '乌龙球',
+        versus: '对阵',
+        kickOff: '开球',
+        timeToBeConfirmed: '时间待定',
+        teamToBeConfirmed: '球队待定',
+        afterFullTime: '全场结束后',
+        atFullTime: '全场结束时',
+        onPenalties: '点球大战',
+        onAggregate: '总比分',
+        win: '获胜',
         winOnPenalties: {
           prefix: '通过点球',
           suffix: '取胜',
@@ -416,6 +455,12 @@ export const service: ZhongwenConfig = {
         },
         stages: {
           groupStage: '小组赛',
+          last32: '32强淘汰赛',
+          last16: '16强淘汰赛',
+          quarterFinals: '四分之一决赛',
+          semiFinals: '半决赛',
+          final: '决赛',
+          thirdPlaceFinal: '三、四名决赛',
         },
       },
     },
@@ -423,7 +468,7 @@ export const service: ZhongwenConfig = {
   trad: {
     ...baseServiceConfig,
     lang: `zh-hant`,
-    locale: `zh-hant`,
+    locale: `zh-Hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
     datetimeLocale: 'zh-tw',
@@ -516,11 +561,31 @@ export const service: ZhongwenConfig = {
       },
       seeAll: '瀏覽全部',
       home: '主頁',
+      topicDiscovery: {
+        heading: '探索更多',
+        moreAboutTopic: '更多關於{topic}',
+        fetchErrorMessage: '載入失敗。請再試一次',
+      },
+      googlePreferredSource: {
+        linkText: '新增為 Google 首選來源',
+      },
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
+      skipContent: {
+        text: '跳過%title%並繼續',
+        endTextVisuallyHidden: '%title%結束',
+      },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
+      showMore: '顯示更多',
       navMenuText: '分類',
+      liteSite: {
+        onboardingMessage:
+          '您正在瀏覽本網站數據用量較少的純文字版本。查看包含所有圖片和影片的網站主版本。',
+        toMainSite: '帶我去主網站',
+        informationPage: '了解更多關於這個省流量版本的資訊',
+        dataSaving: '省流量版本',
+      },
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',
@@ -714,6 +779,7 @@ export const service: ZhongwenConfig = {
       featuresAnalysisTitle: '特別推薦',
       latestMediaTitle: '最新',
       sport: {
+        keyEventsTitle: '關鍵事件',
         matchSummary: '比賽總結',
         assists: '助攻',
         penalties: '點球',
@@ -723,6 +789,15 @@ export const service: ZhongwenConfig = {
         afterExtraTime: '加時賽後',
         penaltyAbbreviation: '點',
         ownGoal: '烏龍球',
+        versus: '對陣',
+        kickOff: '開球',
+        timeToBeConfirmed: '時間待定',
+        teamToBeConfirmed: '球隊待定',
+        afterFullTime: '全場結束後',
+        atFullTime: '全場結束時',
+        onPenalties: '點球大戰',
+        onAggregate: '總比分',
+        win: '獲勝',
         winOnPenalties: {
           prefix: '通過點球',
           suffix: '獲勝',
@@ -782,6 +857,12 @@ export const service: ZhongwenConfig = {
         },
         stages: {
           groupStage: '小組賽',
+          last32: '32強淘汰賽',
+          last16: '16強淘汰賽',
+          quarterFinals: '半準決賽',
+          semiFinals: '準決賽',
+          final: '決賽',
+          thirdPlaceFinal: '季軍賽',
         },
       },
     },

@@ -1,5 +1,4 @@
-import { createSrcsets } from '#lib/utilities/srcSet';
-import buildIChefURL from '#lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import Image from '#app/components/Image';
 import { Recommendation } from '#models/types/onwardJourney';
 
@@ -16,17 +15,13 @@ const RecommendationsImage = ({
     image;
 
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const { primarySrcset, fallbackSrcset } = createSrcsets({
+  const DEFAULT_IMAGE_RES = 660;
+  const { primarySrcset, fallbackSrcset, src } = createIchefSrcSet({
     originCode,
     locator,
     originalImageWidth: width,
     imageResolutions,
-  });
-  const DEFAULT_IMAGE_RES = 660;
-  const src = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
+    srcResolution: DEFAULT_IMAGE_RES,
   });
 
   return (

@@ -1,5 +1,7 @@
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import runTestsForPage from '../../../support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../../support/helpers/runTestsForPage';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
@@ -12,7 +14,10 @@ import {
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';
 import testsForAllPages from '../../testsForAllPages';
 import crossPlatformTests from './tests';
@@ -51,7 +56,7 @@ const testSuites = [
     runforEnv: ['test', 'live'],
     tests,
   },
-];
+] as unknown as TestDataType[];
 
 const liteTestSuites = testSuites.map(testSuite => {
   return {
@@ -80,7 +85,17 @@ const atiAnalyticsTestSuites = [
       assertMostReadComponentClick,
     ],
   },
-];
+  {
+    path: '/marathi/popular/read',
+    runforEnv: ['live'],
+    service: 'marathi',
+    pageIdentifier: 'marathi.popular.read.page',
+    siteId: 59,
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+    tests: [assertResonancePageView],
+  },
+] as unknown as TestDataType[];
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
@@ -105,7 +120,7 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 
 runTestsForPage({
   pageType: MOST_READ_PAGE,
-  testSuites: [...testSuites, ...liteTestSuites],
+  testSuites: [...testSuites, ...liteTestSuites] as unknown as TestDataType[],
 });
 
 runTestsForPage({

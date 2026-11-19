@@ -14,6 +14,8 @@ import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
+import EpisodeDescriptionFormatter from '#app/components/EpisodeDescriptionFormatter';
+import getOnDemandAudioLinkedData from '#nextjs/pages/[service]/onDemandAudio/getOnDemandAudioLinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
@@ -36,11 +38,16 @@ const OnDemandAudioPage = ({
     headline,
     summary,
     shortSynopsis,
+    longSynopsis,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
     imageAltText,
     promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
@@ -50,90 +57,45 @@ const OnDemandAudioPage = ({
     externalLinks,
   } = pageData;
 
+  const PLAYER_ID = 'on-demand-audio-player';
+
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
   const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
-  const isPodcastEpisodePage =
-    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
-
-  const shouldEmitPodcastEpisodeSchema = isPodcast && isPodcastEpisodePage;
-
-  const episodeCanonicalUrl = canonicalNonUkLink;
-  const seriesCanonicalUrl = episodeCanonicalUrl.replace(
-    /\/([^/]+)(?:\.lite)?$/,
-    '',
-  );
-
-  const seriesId = `${seriesCanonicalUrl}#series`;
-  const episodeId = `${episodeCanonicalUrl}#episode`;
-  const audioId = `${episodeCanonicalUrl}#audio`;
-
-  const versions = pageData.mediaBlocks?.[0]?.model?.versions ?? [];
-  const availableFrom = versions[0]?.availableFrom;
-
-  const uploadDate = availableFrom
-    ? new Date(availableFrom).toISOString()
-    : new Date(releaseDateTimeStamp).toISOString();
-
-  const downloadLink = externalLinks?.find(
-    link =>
-      link.linkType === 'download' && link.linkUrl?.startsWith('https://'),
-  );
-  const audioEntities = !mediaIsAvailable
-    ? []
-    : [
-        {
-          '@type': 'AudioObject',
-          name: promoBrandTitle,
-          description: summary,
-          thumbnailUrl: thumbnailImageUrl,
-          duration: durationISO8601,
-          uploadDate,
-        },
-      ];
-
-  const podcastEntities =
-    shouldEmitPodcastEpisodeSchema && mediaIsAvailable
-      ? [
-          {
-            '@type': 'PodcastSeries',
-            '@id': seriesId,
-            name: brandTitle,
-          },
-          {
-            '@type': 'PodcastEpisode',
-            '@id': episodeId,
-            name: episodeTitle || brandTitle,
-            description: summary,
-            datePublished: new Date(releaseDateTimeStamp).toISOString(),
-            partOfSeries: { '@id': seriesId },
-            associatedMedia: {
-              '@type': 'AudioObject',
-              '@id': audioId,
-              name: episodeTitle || promoBrandTitle,
-              description: summary,
-              ...(downloadLink?.linkUrl && {
-                contentUrl: downloadLink.linkUrl,
-                encodingFormat: 'audio/mpeg',
-              }),
-              duration: durationISO8601,
-              thumbnailUrl: thumbnailImageUrl,
-              uploadDate,
-            },
-          },
-        ]
-      : null;
-
-  const linkedDataEntities = podcastEntities ?? audioEntities;
+  const {
+    isPodcastEpisodePage,
+    isPodcastBrandPage,
+    linkedDataEntities,
+    mainEntityId,
+    metadataTitle,
+    metadataDescription,
+    brandDescription,
+  } = getOnDemandAudioLinkedData({
+    pathname,
+    canonicalNonUkLink,
+    serviceName,
+    isPodcast,
+    mediaIsAvailable,
+    mediaBlocks: pageData.mediaBlocks,
+    brandTitle,
+    headline,
+    episodeTitle,
+    summary,
+    promoBrandTitle,
+    promoSeriesTitle,
+    brandShortSynopsis,
+    brandMediumSynopsis,
+    brandLongSynopsis,
+    thumbnailImageUrl,
+    durationISO8601,
+    releaseDateTimeStamp,
+    externalLinks,
+    recentEpisodes,
+  });
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
-  const metadataTitle = episodeTitle
-    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
-    : headline;
-
-  const shouldSetMainEntity = Boolean(podcastEntities);
 
   const imageHeight = isPodcastEpisodePage ? 675 : 400;
   const imageWidth = isPodcastEpisodePage ? 1200 : 400;
@@ -148,7 +110,10 @@ const OnDemandAudioPage = ({
 
   const [showAllContent, setShowAllContent] = useState(false);
 
-  const summaryIsShort = Boolean(summary === shortSynopsis);
+  const displayText =
+    isPodcastEpisodePage && longSynopsis ? longSynopsis : summary;
+
+  const summaryIsShort = Boolean(displayText === shortSynopsis);
 
   const shouldShowContinueReadingButton =
     isPodcast && !isLite && !summaryIsShort;
@@ -160,7 +125,7 @@ const OnDemandAudioPage = ({
 
   return (
     <>
-      <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         mediaPageType={isPodcast ? 'Podcasts' : 'Radio'}
         title={headline}
@@ -173,7 +138,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={summary}
+        description={metadataDescription}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -196,7 +161,10 @@ const OnDemandAudioPage = ({
                   </div>
                 )}
                 {mediaIsAvailable ? (
-                  <MediaLoader blocks={pageData?.mediaBlocks} />
+                  <MediaLoader
+                    blocks={pageData?.mediaBlocks}
+                    uniqueId={PLAYER_ID}
+                  />
                 ) : (
                   //  @ts-expect-error allow rendering of MediaError component when media is not available
                   <MediaError skin="audio" />
@@ -211,7 +179,18 @@ const OnDemandAudioPage = ({
               />
             </div>
             <div css={summaryStyles}>
-              <OnDemandParagraphContainer testid="summary" text={summary} />
+              {isPodcastEpisodePage ? (
+                <EpisodeDescriptionFormatter
+                  text={displayText}
+                  data-testid="synopsis"
+                  playerId={mediaIsAvailable && !isLite ? PLAYER_ID : undefined}
+                  eventTrackingData={{
+                    componentName: 'podcast-chapter-timestamp',
+                  }}
+                />
+              ) : (
+                <OnDemandParagraphContainer testid="summary" text={summary} />
+              )}
             </div>
             {shouldShowContinueReadingButton && (
               <ContinueReadingButton
@@ -224,9 +203,11 @@ const OnDemandAudioPage = ({
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
+              description={isPodcastBrandPage ? brandDescription : undefined}
               entities={linkedDataEntities}
-              mainEntityId={shouldSetMainEntity ? episodeId : undefined}
-              {...(isPodcastEpisodePage &&
+              mainEntityId={mainEntityId}
+              {...(!isPodcastBrandPage &&
+                isPodcastEpisodePage &&
                 metadataImageProps && {
                   metadataImageProps,
                 })}

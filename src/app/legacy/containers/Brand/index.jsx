@@ -10,12 +10,6 @@ import { isGlobalLanguageHomepage } from '../Header/NewLogoBanner';
 const StyledBrand = styled(Brand)`
   position: relative;
   z-index: 1;
-  svg {
-    fill: currentColor;
-    @media screen and (forced-colors: active) {
-      fill: linkText;
-    }
-  }
 `;
 
 export const getBrandPath = (service, variant) => {
@@ -37,6 +31,7 @@ const BrandContainer = ({
   const { variant } = use(RequestContext);
 
   const { brandSVG } = useTheme();
+
   const svgMaxHeight = 24;
   const svgMinHeight = 16;
   const svgRatio = brandSVG && brandSVG.ratio;

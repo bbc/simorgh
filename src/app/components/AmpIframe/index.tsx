@@ -1,23 +1,26 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
 type Props = {
   className?: string;
-  width: number;
   height: number;
   src: string;
+  width?: number;
   title?: string;
+  layout?: 'responsive' | 'fixed-height';
 };
 
 type ampMetadata = {
   ampMetadata: {
-    imageWidth: number;
+    imageWidth?: number;
     imageHeight: number;
     image: string;
     src: string;
     title?: string;
+    layout?: 'responsive' | 'fixed-height';
   };
 };
 
@@ -38,12 +41,13 @@ const AmpIframeElement = ({
   height,
   src,
   title,
+  layout,
 }: PropsWithChildren<Props>) => (
   <amp-iframe
     class={className}
     width={width}
     height={height}
-    layout="responsive"
+    layout={layout}
     sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
     resizable=""
     src={src}
@@ -54,8 +58,17 @@ const AmpIframeElement = ({
 );
 
 const AmpIframe = ({
-  ampMetadata: { imageWidth, imageHeight, image, src, title },
+  ampMetadata: {
+    imageWidth,
+    imageHeight,
+    image,
+    src,
+    title,
+    layout = 'responsive',
+  },
 }: ampMetadata) => {
+  const { translations } = use(ServiceContext);
+
   return (
     <>
       <AmpHead />
@@ -65,11 +78,12 @@ const AmpIframe = ({
           height={imageHeight}
           src={src}
           title={title}
+          layout={layout}
         >
           {/* @ts-expect-error Property 'overflow' does not exist on type 'DivProps & { css?: Interpolation<Theme>; }'. */}
           <div overflow="" css={styles.overflow}>
             <button type="button" css={styles.button}>
-              Show more
+              {translations?.showMore ?? 'Show more'}
             </button>
           </div>
           <amp-img layout="fill" src={image} placeholder="true" />

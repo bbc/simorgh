@@ -45,6 +45,7 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
 
 const hasValidTokens = (): boolean => {
   const idToken = Cookie.get(TOKEN_COOKIE_NAME);
+
   if (!idToken) return false;
   return isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, idToken);
 };

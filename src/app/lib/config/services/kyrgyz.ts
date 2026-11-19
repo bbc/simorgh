@@ -1,6 +1,6 @@
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/ky';
+import '#lib/locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -81,12 +81,32 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
+      topicDiscovery: {
+        heading: 'Көбүрөөк табуу',
+        moreAboutTopic: '{topic} жөнүндө көбүрөөк',
+        fetchErrorMessage: 'Жүктөө ишке ашкан жок. Кайра аракет кылыңыз',
+      },
+      googlePreferredSource: {
+        linkText: "Google'да артыкчылыктуу булак катары кошуу",
+      },
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
+      skipContent: {
+        text: '%title% өткөрүп, улантуу',
+        endTextVisuallyHidden: '%title% аягы',
+      },
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
+      showMore: 'Көбүрөөк көрсөтүү',
       moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
+      liteSite: {
+        onboardingMessage:
+          'Сиз бул сайттын азыраак дата коротуучу, тексттен турган версиясын көрүп жатасыз. Сайттын бардык сүрөттөрдү жана видеолорду камтыган негизги версиясын көрүңүз.',
+        toMainSite: 'Мени негизги сайтка алып бар',
+        informationPage: 'Дата үнөмдөөчү бул версия жөнүндө көбүрөөк билиңиз',
+        dataSaving: 'Дата үнөмдөөчү версия',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -298,6 +318,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Редактордун тандоосу',
       latestMediaTitle: 'Соңку',
       sport: {
+        keyEventsTitle: 'Негизги окуялар',
         matchSummary: 'Оюндун жыйынтыгы',
         assists: 'Пас берүү',
         penalties: 'Пенальти',
@@ -307,6 +328,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Кошумча убакыттан кийин',
         penaltyAbbreviation: 'ПЕН',
         ownGoal: 'өз дарбазасына гол',
+        versus: 'каршы',
+        kickOff: 'башталышы',
+        timeToBeConfirmed: 'Убакыт такталат',
+        teamToBeConfirmed: 'Команда такталат',
+        afterFullTime: 'толук убакыттан кийин',
+        atFullTime: 'толук убакытта',
+        onPenalties: 'пенальти менен',
+        onAggregate: 'жалпы эсеп менен',
+        win: 'жеңет',
         winOnPenalties: {
           prefix: 'пенальтиде',
           suffix: 'менен жеңди',
@@ -366,6 +396,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Тайпалык беттештер',
+          last32: '1/16 финал',
+          last16: '1/8 финал',
+          quarterFinals: 'Чейрек финал',
+          semiFinals: 'Жарым финал',
+          final: 'Финал',
+          thirdPlaceFinal: 'Үчүнчү орун',
         },
       },
     },

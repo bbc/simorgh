@@ -1,52 +1,133 @@
-import { use } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { use, useEffect, useRef, useState } from 'react';
+import {
+  onlineManager,
+  useMutation,
+  useQueryClient,
+} from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import useUASMetadataSync from '#app/hooks/useUASMetadataSync';
+import useErrorTracking from '#app/hooks/useErrorTracking';
+import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
+import {
+  ERROR_TRACKING_FEATURES,
+  UAS_ERROR_ACTIONS,
+} from '#app/hooks/useErrorTracking/errorTracking.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
-import { Article } from '#app/models/types/optimo';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import upsertArticleData from '#app/lib/uasApi/upsertArticleData';
+import { UASAction } from '#app/models/types/action';
 
-enum UASAction {
-  SAVE = 'save',
-  REMOVE = 'remove',
-}
+export type UASActionResult = {
+  status: 'success' | 'error';
+  action: UASAction;
+} | null;
 
 interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
   isUpdating: boolean;
   error: Error | null;
+  actionResult: UASActionResult;
+  resetActionResult: () => void;
   handleSaveAction: (action: UASAction) => void;
 }
 export interface UseUASButtonProps {
   articleId: string;
-  articlePageData?: Article;
+  saveArticlePageData: SaveArticlePageData;
 }
 
-// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
-// All TanStack-related code must live exclusively inside the lazy boundary.
+/**
+ * Combines the current save-status fetch, user-initiated save/remove mutations
+ * and the background metadata sync behind a single button hook.
+ *
+ * actionResult is only populated for user-initiated actions so the UI can
+ * surface additional information (e.g. a tooltip);
+ *
+ * NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query
+ * into the bundle. All TanStack-related code must live exclusively inside the
+ * lazy boundary.
+ */
 const useUASButton = ({
   articleId,
-  articlePageData,
+  saveArticlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const queryClient = useQueryClient();
-  const { isSaved, isLoading, error, savedMetadata } =
-    useUASFetchSaveStatus(articleId);
+  const trackError = useErrorTracking();
+  const {
+    isSaved,
+    isLoading,
+    error,
+    metadata: savedMetadata,
+  } = useUASFetchSaveStatus(articleId);
+
+  useTrackErrorEffect({
+    error,
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+    action: UAS_ERROR_ACTIONS.FETCH_STATUS,
+  });
+
+  // Only set by handleSaveAction, never by the background metadata resync.
+  const [actionResult, setActionResult] = useState<UASActionResult>(null);
+
+  // Holds the result of an offline click so it can be dismissed on reconnect.
+  const offlineActionResultRef = useRef<UASActionResult>(null);
+
+  useEffect(() => {
+    const favouriteStatusKey = uasKeys.favouriteStatus(hashedUserId, articleId);
+
+    const recoverFromOffline = async () => {
+      const offlineActionResult = offlineActionResultRef.current;
+
+      if (!offlineActionResult) return;
+
+      try {
+        // Refresh first, so the tooltip is only removed once the button
+        // reflects the current saved status.
+        await queryClient.invalidateQueries(
+          { queryKey: favouriteStatusKey },
+          { throwOnError: true },
+        );
+      } catch {
+        // Status unverified, so keep the tooltip for a later reconnect to retry.
+        return;
+      }
+
+      // A newer offline click replaced this result mid-refresh; its own
+      // reconnect will dismiss it.
+      if (offlineActionResultRef.current !== offlineActionResult) return;
+
+      offlineActionResultRef.current = null;
+
+      setActionResult(current =>
+        current === offlineActionResult ? null : current,
+      );
+    };
+
+    return onlineManager.subscribe(isOnline => {
+      if (isOnline) {
+        recoverFromOffline();
+      }
+    });
+  }, [queryClient, hashedUserId, articleId]);
 
   const mutation = useMutation({
+    // An in-flight status refetch can resolve after the mutation has written
+    // the new status and overwrite it with a stale value.
+    onMutate: async () => {
+      await queryClient.cancelQueries({
+        queryKey: uasKeys.favouriteStatus(hashedUserId, articleId),
+      });
+    },
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
-        if (!articlePageData) {
-          throw new Error('Article data is required to save');
-        }
         return upsertArticleData({
-          articlePageData,
+          saveArticlePageData,
           articleId,
           service,
           isRefreshAvailable,
@@ -74,26 +155,65 @@ const useUASButton = ({
     },
   });
 
-  const handleMetadataOutOfDate = () => {
-    if (articlePageData) {
-      mutation.mutate(UASAction.SAVE);
-    }
-  };
+  const handleMetadataOutOfDate = () =>
+    mutation.mutate(UASAction.SAVE, {
+      onError: mutationError =>
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+          action: UAS_ERROR_ACTIONS.METADATA_SYNC,
+        }),
+    });
 
   useUASMetadataSync({
-    articlePageData,
+    saveArticlePageData,
     articleId,
     service,
     isSaved,
     savedArticleMetadata: savedMetadata,
     onMetadataOutOfDate: handleMetadataOutOfDate,
   });
+
+  const handleSaveAction = (action: UASAction) => {
+    if (!onlineManager.isOnline()) {
+      const offlineActionResult: UASActionResult = {
+        status: 'error',
+        action,
+      };
+      offlineActionResultRef.current = offlineActionResult;
+      setActionResult(offlineActionResult);
+      return undefined;
+    }
+
+    offlineActionResultRef.current = null;
+
+    return mutation.mutate(action, {
+      onSuccess: () => setActionResult({ status: 'success', action }),
+      onError: mutationError => {
+        setActionResult({ status: 'error', action });
+        trackError({
+          error: mutationError,
+          feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
+          action,
+        });
+      },
+    });
+  };
+
+  const resetActionResult = () => {
+    offlineActionResultRef.current = null;
+    setActionResult(null);
+    mutation.reset();
+  };
+
   return {
     isSaved,
     isLoading,
-    isUpdating: mutation.isPending,
+    isUpdating: mutation.isPending && !mutation.isPaused,
     error: mutation.error || error,
-    handleSaveAction: mutation.mutate,
+    actionResult,
+    resetActionResult,
+    handleSaveAction,
   };
 };
 

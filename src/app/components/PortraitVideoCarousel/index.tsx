@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -41,13 +41,13 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
-  const { translations, recommendations } = use(ServiceContext);
+  const { translations } = use(ServiceContext);
 
-  const { skipLink: skipLinkTranslations } = recommendations || {};
+  const { skipContent } = translations || {};
   const {
-    text: skipLinkText = 'Skip %title% and continue reading',
+    text: skipLinkText = 'Skip %title% and continue',
     endTextVisuallyHidden = 'End of %title%',
-  } = skipLinkTranslations || {};
+  } = skipContent || {};
 
   const fallbackTitle = translations?.media?.video || 'Video';
 
@@ -65,6 +65,11 @@ const PortraitVideoCarousel = ({
 
   const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
 
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
+    setSelectedVideoIndex(null);
+  }, []);
+
   if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
@@ -72,11 +77,6 @@ const PortraitVideoCarousel = ({
       setSelectedVideoIndex(index);
       setIsModalOpen(true);
     }
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedVideoIndex(null);
   };
 
   return (

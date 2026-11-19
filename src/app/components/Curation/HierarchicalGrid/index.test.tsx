@@ -1,10 +1,59 @@
-import { render } from '../../react-testing-library-with-providers';
+import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
+import { matchers } from '@emotion/jest';
+import MediaLoader from '../../MediaLoader';
+import { aresMediaBlocks } from '../../MediaLoader/fixture';
+import { MediaBlock } from '../../MediaLoader/types';
+import { fireEvent, render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';
 import liveFixtures from './liveFixtures';
 import HierarchicalGrid from '.';
 
+expect.extend(matchers);
+
+jest.mock('../../MediaLoader', () => ({
+  __esModule: true,
+  default: jest.fn(() => (
+    <div className="media-player" data-testid="in-situ-media-loader" />
+  )),
+}));
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const minimalEventTrackingData = { componentName: 'test-component' };
+
+const getSummariesWithInSituMedia = () => {
+  const [audioPromo, articlePromo, recentlyPublishedPromo, videoPromo] =
+    mediaFixture;
+  const inSituPromo = {
+    ...videoPromo,
+    inSituMedia: aresMediaBlocks,
+  };
+
+  return {
+    inSituPromo,
+    summaries: [inSituPromo, audioPromo, articlePromo, recentlyPublishedPromo],
+  };
+};
+
+const getSummariesWithLiveInSituMedia = () => {
+  const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+  const [videoBlock] =
+    arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+  const liveInSituPromo = {
+    ...inSituPromo,
+    inSituMedia: videoBlock.model.blocks as unknown as MediaBlock[],
+  };
+
+  return {
+    inSituPromo: liveInSituPromo,
+    summaries: [liveInSituPromo, ...summaries.slice(1)],
+  };
+};
 
 describe('Hierarchical Grid Curation', () => {
   const headingLevel = 2;
@@ -15,6 +64,10 @@ describe('Hierarchical Grid Curation', () => {
 
   afterAll(() => {
     jest.useRealTimers();
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
   });
 
   it('renders twelve promos when twelve items are provided', async () => {
@@ -190,5 +243,371 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     expect(container.queryByText('13 noviembre 2022')).not.toBeInTheDocument();
+  });
+
+  it('renders in-situ media for a promo with inSituMedia', () => {
+    const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo).toContainElement(
+      container.querySelector('[data-testid="in-situ-media-loader"]'),
+    );
+    expect(firstPromo?.querySelector('.promo-image')).not.toBeInTheDocument();
+    expect(MediaLoader).toHaveBeenCalledWith(
+      expect.objectContaining({
+        blocks: aresMediaBlocks,
+        uniqueId: `in-situ-${inSituPromo.id}`,
+        loadPlayerOnInitialRender: true,
+        holdingImageURL: inSituPromo.imageUrl,
+      }),
+      undefined,
+    );
+  });
+
+  it('displays the translated live label on a Silver in-situ promo', () => {
+    const { inSituPromo, summaries } = getSummariesWithLiveInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo).toHaveTextContent('مباشر');
+    expect(firstPromo?.querySelector('a')).toHaveAttribute(
+      'href',
+      inSituPromo.link,
+    );
+    expect(
+      firstPromo?.querySelector('.promo-timestamp'),
+    ).not.toBeInTheDocument();
+    expect(firstPromo).not.toHaveTextContent('المدة');
+  });
+
+  it('does not display a live label on an on-demand in-situ promo', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { service: 'arabic' },
+    );
+
+    expect(container.querySelector('li')).not.toHaveTextContent('مباشر');
+  });
+
+  it('tracks the MAP article headline link when in-situ media is rendered', () => {
+    const { inSituPromo, summaries } = getSummariesWithInSituMedia();
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation(() => ({ onClick: jest.fn() }));
+
+    render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'test-component',
+        itemTracker: expect.objectContaining({
+          type: 'hierarchical-curation-grid-promo',
+          text: inSituPromo.title,
+          position: 1,
+          resourceId: inSituPromo.id,
+          mediaType: 'video',
+          duration: 223000,
+        }),
+      }),
+    );
+  });
+
+  it('contains the in-situ player overflow on mobile rtl pages', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { getByTestId } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    expect(getByTestId('in-situ-media-loader').parentElement).toHaveStyleRule(
+      'overflow',
+      'hidden',
+      {
+        target: '.media-player',
+      },
+    );
+  });
+
+  it('falls back to the normal promo image on AMP', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summaries}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      { isAmp: true },
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
+    expect(
+      container.querySelector('[data-testid="in-situ-media-loader"]'),
+    ).not.toBeInTheDocument();
+    expect(MediaLoader).not.toHaveBeenCalled();
+  });
+
+  it('falls back to the normal promo image when inSituMedia is empty', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+    const summariesWithoutMediaBlocks = [
+      { ...summaries[0], inSituMedia: [] },
+      ...summaries.slice(1),
+    ];
+
+    const { container } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithoutMediaBlocks}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+    );
+
+    const firstPromo = container.querySelector('li');
+
+    expect(firstPromo?.querySelector('.promo-image')).toBeInTheDocument();
+    expect(MediaLoader).not.toHaveBeenCalled();
+  });
+
+  it('does not show related topics on in-situ media promos', () => {
+    const { summaries } = getSummariesWithInSituMedia();
+    const relatedTopic = {
+      link: {
+        url: 'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+      },
+      title: 'Nigeria',
+    };
+    const summariesWithRelatedTopic = [
+      { ...summaries[0], relatedTopic },
+      ...summaries.slice(1),
+    ];
+
+    const { queryByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithRelatedTopic}
+        eventTrackingData={minimalEventTrackingData}
+        showRelatedTopic
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
+  });
+
+  it('should render related topic link when relatedTopic exists on a Promo', () => {
+    const container = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+        showRelatedTopic
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+    expect(container.getByText('Nigeria')).toBeInTheDocument();
+    expect(container.getByText('Nigeria').closest('a')).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/pidgin/topics/c2dwqd1zr92t',
+    );
+  });
+
+  it('should truncate a related topic link with an ellipsis when it cannot fit on one line', () => {
+    const longRelatedTopicTitle =
+      'A related topic title that is too long to fit on one line';
+    const summariesWithLongRelatedTopic = fixture.map((summary, index) =>
+      index === 0
+        ? {
+            ...summary,
+            relatedTopic: {
+              title: longRelatedTopicTitle,
+              link: { url: 'https://www.bbc.com/pidgin/topics/long-topic' },
+            },
+          }
+        : summary,
+    );
+
+    const { getByRole } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={summariesWithLongRelatedTopic}
+        eventTrackingData={minimalEventTrackingData}
+        showRelatedTopic
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByRole('link', { name: longRelatedTopicTitle })).toHaveStyle({
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+    });
+  });
+
+  it('when there is no related topic, it should not apply the hasRelatedTopic class', () => {
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+        showRelatedTopic
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+    const promoWithoutRelatedTopicSummary = fixture.find(
+      summary => !summary.relatedTopic,
+    );
+
+    if (!promoWithoutRelatedTopicSummary) {
+      return;
+    }
+
+    const promoWithoutRelatedTopic = getByText(
+      promoWithoutRelatedTopicSummary.title,
+    ).closest('li');
+
+    if (!promoWithoutRelatedTopic) {
+      return;
+    }
+
+    const metadataWithoutRelatedTopic =
+      promoWithoutRelatedTopic.querySelector('.promo-timestamp')?.parentElement;
+
+    expect(metadataWithoutRelatedTopic).not.toHaveClass('hasRelatedTopic');
+  });
+
+  it('should handle a click event when related topic link is clicked', () => {
+    const onClickSpy = jest.fn();
+    const clickTrackerSpy = jest
+      .spyOn(clickTracking, 'default')
+      .mockImplementation(() => ({ onClick: onClickSpy }));
+
+    const { getByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+        showRelatedTopic
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'test-component',
+        itemTracker: expect.objectContaining({
+          type: 'hierarchical-curation-grid-topic',
+          text: 'Nigeria',
+        }),
+      }),
+    );
+
+    const topicLink = getByText('Nigeria').closest('a');
+
+    expect(topicLink).toBeInTheDocument();
+
+    if (!topicLink) {
+      return;
+    }
+
+    fireEvent.click(topicLink);
+
+    expect(onClickSpy).toHaveBeenCalled();
+
+    clickTrackerSpy.mockRestore();
+  });
+
+  it('should not render related topic links when the display flag is omitted', () => {
+    const { queryByText } = render(
+      <HierarchicalGrid
+        headingLevel={headingLevel}
+        summaries={fixture}
+        eventTrackingData={minimalEventTrackingData}
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(queryByText('Nigeria')).not.toBeInTheDocument();
+  });
+
+  describe('Video collection styling', () => {
+    const renderGrid = () =>
+      render(
+        <HierarchicalGrid
+          headingLevel={headingLevel}
+          summaries={fixture}
+          isVideoCollection
+          eventTrackingData={minimalEventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+
+    it('applies a two-column layout from 600px for video collections', () => {
+      const { getByTestId } = renderGrid();
+
+      expect(getByTestId('topic-promos')).toHaveStyleRule(
+        'grid-template-columns',
+        'repeat(2, minmax(0, 1fr))',
+        { media: '(min-width: 37.5rem)' },
+      );
+    });
+
+    it('makes the first promo span both columns between 600px and 1007px', () => {
+      const { getByTestId } = renderGrid();
+
+      const firstPromo = getByTestId('topic-promos').querySelector('li');
+
+      expect(firstPromo).toHaveStyleRule('grid-column', '1/-1', {
+        media: '(min-width: 37.5rem) and (max-width: 62.9375rem)',
+        target: ':first-of-type',
+      });
+    });
   });
 });

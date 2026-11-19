@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
-import '#psammead/psammead-locales/moment/ne';
+import '#lib/locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -63,10 +63,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'सबै हेर्नुहोस्',
       home: 'होमपेज',
+      topicDiscovery: {
+        heading: 'थप पत्ता लगाउनुहोस्',
+        moreAboutTopic: '{topic} बारे थप',
+        fetchErrorMessage: 'लोड गर्न असफल भयो। कृपया फेरि प्रयास गर्नुहोस्',
+      },
+      googlePreferredSource: {
+        linkText: 'Google मा रुचाइएको स्रोतको रूपमा थप्नुहोस्',
+      },
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
+      skipContent: {
+        text: '%title% छोड्नुहोस् र जारी राख्नुहोस्',
+        endTextVisuallyHidden: '%title% को अन्त्य',
+      },
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      showMore: 'थप देखाउनुहोस्',
       moreOnThis: '',
       navMenuText: 'सूची',
       liteSite: {
@@ -285,6 +298,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'मुख्य समाचार',
       featuresAnalysisTitle: 'अन‌ि यो पनि',
       sport: {
+        keyEventsTitle: 'प्रमुख घंटनाहरू',
         matchSummary: 'खेलको सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनाल्टी',
@@ -294,6 +308,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'अतिरिक्त समयपछि',
         penaltyAbbreviation: 'पेन',
         ownGoal: 'आत्मघाती गोल',
+        versus: 'विरुद्ध',
+        kickOff: 'किक-अफ',
+        timeToBeConfirmed: 'समय पुष्टि हुन बाँकी',
+        teamToBeConfirmed: 'टोली पुष्टि हुन बाँकी',
+        afterFullTime: 'पूरा समयपछि',
+        atFullTime: 'पूरा समयमा',
+        onPenalties: 'पेनाल्टीमा',
+        onAggregate: 'कुलमा',
+        win: 'जित्छ',
         winOnPenalties: {
           prefix: 'पेनाल्टीमा',
           suffix: 'ले जित्छ',
@@ -353,6 +376,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'समूह चरण',
+          last32: 'राउन्ड अफ ३२',
+          last16: 'राउन्ड अफ १६',
+          quarterFinals: 'क्वार्टर-फाइनल',
+          semiFinals: 'सेमिफाइनल',
+          final: 'फाइनल',
+          thirdPlaceFinal: 'तेस्रो स्थान',
         },
       },
     },

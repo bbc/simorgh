@@ -1,9 +1,5 @@
-import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
-import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
-import extractPromoImage from '#app/lib/utilities/extractPromoImage';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -26,60 +22,26 @@ const FAVOURITES_CONFIG = {
   action: 'favourited',
 } as const;
 
-export type ActivityType = (typeof FAVOURITES_CONFIG)['activityType'];
+const FOLLOWS_CONFIG = {
+  activityType: 'follows',
+  resourceDomain: 'world-service-news',
+  resourceType: 'topic',
+  action: 'followed',
+} as const;
+
+export type ActivityType =
+  | (typeof FAVOURITES_CONFIG)['activityType']
+  | (typeof FOLLOWS_CONFIG)['activityType'];
 
 const buildGlobalId = (
   resourceId: string,
-  resourceDomain = FAVOURITES_CONFIG.resourceDomain,
-  resourceType = FAVOURITES_CONFIG.resourceType,
+  resourceDomain: string = FAVOURITES_CONFIG.resourceDomain,
+  resourceType: string = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
-
-const extractPromoImageFromArticleData = (articlePageData?: Article) => {
-  const promoImageBlocks =
-    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
-
-  const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
-
-  return {
-    altText,
-    promoImageRawBlock: rawBlock,
-  };
-};
-
-const buildPromoImageUrl = (promoImageObj?: {
-  altText: string;
-  promoImageRawBlock?: OptimoRawImageBlock;
-}): string => {
-  if (
-    !promoImageObj?.promoImageRawBlock?.model?.locator ||
-    !promoImageObj?.promoImageRawBlock?.model?.originCode
-  ) {
-    return '';
-  }
-
-  return buildIChefURL({
-    originCode: promoImageObj.promoImageRawBlock.model.originCode,
-    locator: promoImageObj.promoImageRawBlock.model.locator,
-    resolution: 320,
-  });
-};
 
 interface MetadataComparisonResult {
   hasChanges: boolean;
 }
-
-/**
- * Extracts headline text from article content blocks.
- */
-const extractHeadlineFromBlocks = (
-  blocks?: Array<Record<string, unknown>>,
-): string | null => {
-  const headlineBlock = filterForBlockType(blocks, 'headline');
-  const headlineText =
-    headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  return headlineText ?? null;
-};
 
 /**
  * Extracts current live metadata from article page data.
@@ -87,33 +49,35 @@ const extractHeadlineFromBlocks = (
  * To add a new field: add it to the returned object below.
  * The compareMetadataWithSaved function will automatically include it.
  *
- * @param articlePageData - Current article being viewed
+ * @param saveArticlePageData - Current article metadata props
  * @param articleId - Article's unique identifier
  * @param service - BBC service name (e.g., 'arabic', 'portuguese')
  * @returns Object with tracked metadata fields
  */
+const sanitiseMetadataString = (value: string | null | undefined): string =>
+  value?.replace(/\s+/g, ' ').trim() ?? '';
+
 const buildCurrentMetadata = (
-  articlePageData: Article,
+  saveArticlePageData: SaveArticlePageData,
   { articleId, service }: { articleId: string; service: Services },
 ): Record<string, unknown> => {
-  const promoImage = extractPromoImageFromArticleData(articlePageData);
-  const contentBlocks = articlePageData?.content?.model?.blocks;
-  const headline = extractHeadlineFromBlocks(contentBlocks);
+  const { headline, promoImage, promoImageAltText, canonicalUrl } =
+    saveArticlePageData;
   return {
     articleId,
     service,
-    title: headline,
-    promoImage: buildPromoImageUrl(promoImage),
-    promoImageAltText: promoImage?.altText,
-    locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl ?? '',
+    title: sanitiseMetadataString(headline),
+    promoImage,
+    promoImageAltText: sanitiseMetadataString(promoImageAltText),
+    locatorUrl: canonicalUrl,
   };
 };
 
 /**
  * Compares current article metadata against saved metadata.
  *
- * Uses Ramda's whereEq for structural equality. New fields added to
- * buildCurrentMetadata() are automatically included in comparisons.
+ * New fields added to buildCurrentMetadata() are automatically included in
+ * comparisons.
  *
  * @param currentMetadata - Live metadata from article
  * @param savedMetadata - Metadata stored in UAS
@@ -123,39 +87,72 @@ const compareMetadataWithSaved = (
   currentMetadata: Record<string, unknown>,
   savedMetadata: Record<string, unknown>,
 ): MetadataComparisonResult => ({
-  hasChanges: !whereEq(currentMetadata, savedMetadata),
+  hasChanges: Object.entries(currentMetadata).some(
+    ([key, value]) => savedMetadata[key] !== value,
+  ),
 });
 
 const createFavouritesPayload = ({
   articleId,
   service,
-  articlePageData,
+  saveArticlePageData,
 }: {
   articleId: string;
   service: Services;
-  articlePageData: Article;
+  saveArticlePageData: SaveArticlePageData;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
-  metaData: buildCurrentMetadata(articlePageData, {
+  resourceTitle: service,
+  metaData: buildCurrentMetadata(saveArticlePageData, {
     articleId,
     service,
   }),
 });
 
+export interface FollowTopicData {
+  topicId: string;
+  title: string;
+  url: string;
+}
+
+const buildTopicMetadata = (
+  { topicId, title, url }: FollowTopicData,
+  service: Services,
+): Record<string, unknown> => ({
+  topicId,
+  title: sanitiseMetadataString(title),
+  locatorUrl: url,
+  service,
+});
+
+const createFollowsPayload = (
+  topicData: FollowTopicData,
+  service: Services,
+): UasApiRequestBody => ({
+  activityType: FOLLOWS_CONFIG.activityType,
+  resourceDomain: FOLLOWS_CONFIG.resourceDomain,
+  resourceType: FOLLOWS_CONFIG.resourceType,
+  resourceId: topicData.topicId,
+  action: FOLLOWS_CONFIG.action,
+  resourceTitle: service,
+  metaData: buildTopicMetadata(topicData, service),
+});
+
 export {
   USER_ID_COOKIE_KEY,
   FAVOURITES_CONFIG,
+  FOLLOWS_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  extractPromoImageFromArticleData,
-  buildPromoImageUrl,
+  createFollowsPayload,
+  buildTopicMetadata,
   buildCurrentMetadata,
   compareMetadataWithSaved,
-  extractHeadlineFromBlocks,
+  sanitiseMetadataString,
 };
 
 export type { MetadataComparisonResult };

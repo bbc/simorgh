@@ -54,6 +54,7 @@ export const service: DefaultServiceConfig = {
       relatedContent: 'Cynnwys perthnasol',
       topicsPath: 'pynciau',
       relatedTopics: 'Pynciau Cysylltiedig',
+      showMore: 'Dangos mwy',
       moreOnThis: '',
       navMenuText: 'Adrannau',
       mediaAssetPage: {

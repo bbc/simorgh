@@ -13,7 +13,7 @@ export default {
       width: '100%',
       maxWidth: `calc(${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
-      padding: `0 ${spacings.DOUBLE}rem`,
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -21,10 +21,13 @@ export default {
 
       [mq.GROUP_3_MIN_WIDTH]: {
         justifyContent: 'flex-start',
+        paddingInline: `${spacings.DOUBLE}rem`,
       },
 
-      a: {
-        marginTop: `${pixelsToRem(5)}rem`,
+      '& > a': {
+        display: 'flex',
+        alignItems: 'center',
+        height: `${pixelsToRem(132)}rem`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
@@ -47,11 +50,11 @@ export default {
       '.brand-link': {
         paddingTop: `${pixelsToRem(2)}rem`,
 
-        svg: {
-          height: '1.5rem',
+        '[data-brand-logo]': {
+          '--brand-height': '1.5rem',
 
           [mq.GROUP_3_MIN_WIDTH]: {
-            height: '1.875rem',
+            '--brand-height': '1.875rem',
           },
         },
         [mq.GROUP_1_MIN_WIDTH]: {

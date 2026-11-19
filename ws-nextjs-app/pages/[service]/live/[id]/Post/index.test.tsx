@@ -4,6 +4,7 @@ import {
   act,
   within,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
 import Post from '.';
@@ -15,6 +16,12 @@ import {
   bylineSamplePost,
 } from './fixture';
 
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
+
 const singlePostWithTitle = postFixture.data.results[0];
 
 const singlePostWithTitleAndSubtitle = postFixture.data.results[2];
@@ -23,6 +30,8 @@ describe('Post', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
+
+    mockMatchMedia();
   });
 
   afterEach(() => {
@@ -256,6 +265,35 @@ describe('Post', () => {
       expect(
         container.querySelector('[data-e2e="media-loader__container"]'),
       ).toBeInTheDocument();
+    });
+
+    it('should not reinitialise the media player when Post rerenders for an unrelated reason', async () => {
+      const mockRequire = jest.fn();
+      const originalRequirejs = window.requirejs;
+      window.requirejs = mockRequire;
+
+      const renderOptions = {
+        id: 'c7p765ynk9qt',
+        service: 'pidgin' as const,
+        pageType: LIVE_PAGE,
+        pathname: '/pidgin/live/c7p765ynk9qt',
+      };
+
+      try {
+        const { rerender } = await act(async () => {
+          return render(<Post post={videoSamplePost} />, renderOptions);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+
+        await act(async () => {
+          rerender(<Post post={videoSamplePost} hasShareApi />);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+      } finally {
+        window.requirejs = originalRequirejs;
+      }
     });
 
     it('should not render share button by default', async () => {

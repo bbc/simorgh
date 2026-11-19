@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
-import '#psammead/psammead-locales/moment/mr';
+import '#lib/locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -80,16 +80,30 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पुढे वाचा',
       topicDiscovery: {
         heading: 'अधिक शोधा',
-        moreFromTopic: '{topic} मधील अधिक',
-        fetchErrorMessage:
-          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
+        moreAboutTopic: '{topic} बद्दल अधिक',
+        fetchErrorMessage: 'लोड करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा',
+      },
+      googlePreferredSource: {
+        linkText: 'Google वर प्राधान्य स्रोत म्हणून जोडा',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
+      skipContent: {
+        text: '%title% वगळा आणि पुढे सुरू ठेवा',
+        endTextVisuallyHidden: '%title%चा शेवट',
+      },
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
+      showMore: 'अधिक दाखवा',
       moreOnThis: '',
       navMenuText: 'विभाग',
+      liteSite: {
+        onboardingMessage:
+          'तुम्ही या वेबसाइटची फक्त मजकूर असलेली आवृत्ती पाहत आहात, जी कमी डेटा वापरते. सर्व फोटो आणि व्हिडिओंसह वेबसाइटची मुख्य आवृत्ती पाहा.',
+        toMainSite: 'मला मुख्य वेबसाइटवर घेऊन चला',
+        informationPage: 'या डेटा-बचत आवृत्तीबद्दल अधिक जाणून घ्या',
+        dataSaving: 'डेटा-बचत आवृत्ती',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -298,6 +312,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'बीबीसी मराठी स्पेशल',
       latestMediaTitle: 'नवीनतम',
       sport: {
+        keyEventsTitle: 'प्रमुख घटना',
         matchSummary: 'सामन्याचा सारांश',
         assists: 'असिस्ट',
         penalties: 'पेनल्टी',
@@ -307,6 +322,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'अतिरिक्त वेळेनंतर',
         penaltyAbbreviation: 'पेन',
         ownGoal: 'आत्मघाती गोल',
+        versus: 'विरुद्ध',
+        kickOff: 'प्रारंभ',
+        timeToBeConfirmed: 'वेळ निश्चित करायची आहे',
+        teamToBeConfirmed: 'संघ निश्चित करायचा आहे',
+        afterFullTime: 'पूर्ण वेळेनंतर',
+        atFullTime: 'पूर्ण वेळेला',
+        onPenalties: 'पेनल्टीवर',
+        onAggregate: 'एकूण गुणांवर',
+        win: 'जिंकतो',
         winOnPenalties: {
           prefix: 'पेनल्टीवर',
           suffix: 'ने जिंकतो',
@@ -366,6 +390,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'साखळी फेरी',
+          last32: 'राऊंड ऑफ 32',
+          last16: 'राऊंड ऑफ 16',
+          quarterFinals: 'उपांत्यपूर्व फेरी',
+          semiFinals: 'उपांंत्य फेरी',
+          final: 'अंतिम सामना',
+          thirdPlaceFinal: 'तिसऱ्या स्थानाकरिता सामना',
         },
       },
     },
@@ -433,6 +463,7 @@ export const service: DefaultServiceConfig = {
         url: '/marathi',
       },
     ],
+    resonanceEnabled: true,
   },
 };
 

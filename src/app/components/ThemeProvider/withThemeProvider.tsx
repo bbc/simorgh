@@ -2,22 +2,12 @@ import type { ReactNode, FC } from 'react';
 import { use, useMemo } from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
+import isDarkUiPage from '#app/lib/utilities/isDarkUIPage';
 import { ServiceTheme } from '#app/models/types/theming';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
-import {
-  LIVE_TV_PAGE,
-  MEDIA_ARTICLE_PAGE,
-  TV_PAGE,
-} from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
 import mergeThemeWithPWATypography from './themes/mergeThemeWithPWATypography';
-
-const isDarkUiPage = (pageType: PageTypes) =>
-  ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
-    pageType,
-  );
 
 const useMergeTheme = (
   baseTheme: ServiceTheme,
@@ -42,7 +32,7 @@ const withThemeProvider = (
   pwaTheme?: Partial<ServiceTheme>,
 ) => {
   const ThemeProvider: FC<Props> = ({ children }) => {
-    const { isAmp, isLite, pageType } = use(RequestContext);
+    const { isAmp, isLite, pageType, primaryMediaType } = use(RequestContext);
 
     const brandTheme = useMergeTheme(baseTheme, pwaTheme);
 
@@ -50,7 +40,7 @@ const withThemeProvider = (
       <EmotionThemeProvider
         theme={getThemeConfig({
           ...brandTheme,
-          isDarkUi: isDarkUiPage(pageType),
+          isDarkUi: isDarkUiPage({ pageType, primaryMediaType }),
           isLite,
         })}
       >

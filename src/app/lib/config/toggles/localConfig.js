@@ -4,13 +4,14 @@ export default {
   _environment: 'local',
   account: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   ads: {
     enabled: true,
   },
   adsNonce: {
-    enabled: false,
+    enabled: true,
+    value: 'ng,ke,es',
   },
   articleLiteSiteLink: { enabled: true },
   articlePortraitVideo: {
@@ -25,6 +26,9 @@ export default {
   electionBanner: {
     enabled: true,
   },
+  livePageElectionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
     value: `(${SERVICES.join('|')})`,
@@ -32,13 +36,22 @@ export default {
   eventTracking: {
     enabled: true,
   },
+  googlePreferredSource: {
+    enabled: false,
+  },
   homePageRadioSchedule: {
     enabled: true,
   },
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
+    enabled: true,
+  },
+  locationTopicCuration: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -74,6 +87,13 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
+  },
+  renderMarkDown: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },
@@ -86,12 +106,16 @@ export default {
   topBarOJs: {
     enabled: true,
   },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   variantCookie: {
     enabled: true,
   },
   uasPersonalization: {
     enabled: true,
-    value: 'hindi',
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

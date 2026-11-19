@@ -1,0 +1,85 @@
+@use '@scss/themeTokens' as theme;
+
+.buttonGroupOverlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  height: 100%;
+  background-color: var(
+    --navigation-background,
+    #{rgba(theme.$palette-white, 0.75)}
+  );
+  z-index: 1;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: rgba(theme.$palette-grey-10, 0.75);
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    @media #{theme.$mediaQueries-pointer-fine} {
+      display: flex;
+      width: calc(100% / 3.5 * 0.5);
+    }
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    @container (min-width: #{theme.$gridWidths-grid-width-900}) {
+      display: flex;
+      width: calc(100% / 4.5 * 0.5);
+    }
+  }
+
+  @media #{theme.$mediaQueries-group-5-min-width} {
+    @container (min-width: #{theme.$gridWidths-grid-width-1008}) {
+      display: flex;
+      width: calc(100% / 5.5 * 0.5);
+    }
+  }
+}
+
+.buttonGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: theme.$spacings-half;
+  padding: 0 theme.$spacings-full;
+}
+
+.navButton {
+  background-color: theme.$palette-black;
+  color: theme.$palette-grey-2;
+  border: none;
+  width: 100%;
+  max-width: #{theme.pixelsToRem-px-to-rem(44)};
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+
+  .icon {
+    width: theme.$spacings-double;
+    height: theme.$spacings-double;
+
+    @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+      filter: invert(1) hue-rotate(180deg);
+
+      :global([data-is-dark-ui='true']) & {
+        filter: none;
+      }
+    }
+  }
+}

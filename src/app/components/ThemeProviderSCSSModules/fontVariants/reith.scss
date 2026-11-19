@@ -1,0 +1,6 @@
+@use './fontVariantAliases.scss';
+@use './reithVariants.scss' as reith;
+
+:root {
+  @include reith.reith-font-variants;
+}

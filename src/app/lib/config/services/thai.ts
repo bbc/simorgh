@@ -1,6 +1,6 @@
 import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
-import '#psammead/psammead-locales/moment/th';
+import '#lib/locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -62,12 +62,32 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
+      topicDiscovery: {
+        heading: 'ค้นพบเพิ่มเติม',
+        moreAboutTopic: 'เพิ่มเติมเกี่ยวกับ {topic}',
+        fetchErrorMessage: 'โหลดไม่สำเร็จ กรุณาลองอีกครั้ง',
+      },
+      googlePreferredSource: {
+        linkText: 'เพิ่มเป็นแหล่งข่าวที่ต้องการบน Google',
+      },
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
+      skipContent: {
+        text: 'ข้าม%title%และดำเนินการต่อ',
+        endTextVisuallyHidden: 'สิ้นสุด %title%',
+      },
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      showMore: 'แสดงเพิ่มเติม',
       moreOnThis: '',
       navMenuText: 'หมวดข่าว',
+      liteSite: {
+        onboardingMessage:
+          'คุณกำลังดูเวอร์ชันข้อความล้วนของเว็บไซต์นี้ซึ่งใช้ข้อมูลน้อยลง ดูเวอร์ชันหลักของเว็บไซต์ที่มีภาพและวิดีโอทั้งหมด',
+        toMainSite: 'พาฉันไปที่เว็บไซต์หลัก',
+        informationPage: 'ดูข้อมูลเพิ่มเติมเกี่ยวกับเวอร์ชันประหยัดข้อมูลนี้',
+        dataSaving: 'เวอร์ชันประหยัดข้อมูล',
+      },
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
@@ -263,6 +283,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
       sport: {
+        keyEventsTitle: 'เหตุการณ์สำคัญ',
         matchSummary: 'สรุปการแข่งขัน',
         assists: 'แอสซิสต์',
         penalties: 'จุดโทษ',
@@ -272,6 +293,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'หลังต่อเวลาพิเศษ',
         penaltyAbbreviation: 'จุดโทษ',
         ownGoal: 'ทำเข้าประตูตัวเอง',
+        versus: 'พบกับ',
+        kickOff: 'เริ่มการแข่งขัน',
+        timeToBeConfirmed: 'เวลารอยืนยัน',
+        teamToBeConfirmed: 'รอการยืนยันทีม',
+        afterFullTime: 'หลังจบเวลาปกติ',
+        atFullTime: 'เมื่อจบเวลาปกติ',
+        onPenalties: 'ในการดวลจุดโทษ',
+        onAggregate: 'จากสกอร์รวม',
+        win: 'ชนะ',
         winOnPenalties: {
           prefix: 'ชนะจุดโทษ',
           suffix: '',
@@ -331,6 +361,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'รอบแบ่งกลุ่ม',
+          last32: 'รอบ 32 ทีมสุดท้าย',
+          last16: 'รอบ 16 ทีมสุดท้าย',
+          quarterFinals: 'รอบ 8 ทีมสุดท้าย',
+          semiFinals: 'รอบรองชนะเลิศ',
+          final: 'รอบชิงชนะเลิศ',
+          thirdPlaceFinal: 'รอบชิงที่สาม',
         },
       },
     },

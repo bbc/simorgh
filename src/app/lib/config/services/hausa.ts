@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/ha';
+import '#lib/locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -83,15 +83,22 @@ export const service: DefaultServiceConfig = {
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
-        heading: 'Gano ƙarin abubuwa',
-        moreFromTopic: 'Ƙarin labarai daga {topic}',
-        fetchErrorMessage:
-          'An kasa lodawa. Da fatan za a sake gwadawa daga baya.',
+        heading: 'Karanta karin labarai',
+        moreAboutTopic: 'Ƙari game da {topic}',
+        fetchErrorMessage: 'An kasa lodawa. Da fatan a sake gwadawa',
+      },
+      googlePreferredSource: {
+        linkText: 'Ƙara a matsayin tushen da aka fi so a Google',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
+      skipContent: {
+        text: 'Tsallake %title% ka ci gaba',
+        endTextVisuallyHidden: 'Karshen %title%',
+      },
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      showMore: 'Nuna ƙari',
       moreOnThis: '',
       navMenuText: 'Sassa',
       liteSite: {
@@ -384,6 +391,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'This closed on {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Muhimman abubuwa',
         matchSummary: 'Takaitaccen Bayanin Wasa',
         assists: 'Ba da ƙwallo a ci',
         penalties: 'Fenariti',
@@ -395,6 +403,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'kwallo a ragar kai',
         venue: 'Filin wasa',
         attendance: 'Yawan ƴan kallo',
+        versus: 'da',
+        kickOff: 'fara wasa',
+        timeToBeConfirmed: 'Za a tabbatar da lokaci',
+        teamToBeConfirmed: 'Za a tabbatar da ƙungiya',
+        afterFullTime: 'bayan cikakken lokaci',
+        atFullTime: 'a cikakken lokaci',
+        onPenalties: 'ta bugun fanareti',
+        onAggregate: 'a haɗin jimla',
+        win: 'ya yi nasara',
         winOnPenalties: {
           prefix: 'ta yi nasara',
           suffix: 'a fenariti',
@@ -454,6 +471,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Matakin rukuni',
+          last32: 'Zagayen ƙasashe 32',
+          last16: 'Zagaye na biyu',
+          quarterFinals: 'Zagayen kwata-fainal',
+          semiFinals: 'Zagayen kusa da karshe',
+          final: 'Wasan ƙarshe',
+          thirdPlaceFinal: 'Karawar neman na uku',
         },
       },
     },

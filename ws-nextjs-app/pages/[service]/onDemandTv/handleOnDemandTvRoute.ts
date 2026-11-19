@@ -7,7 +7,7 @@ import getPageData from '#utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchToggles from '#app/lib/utilities/fetchToggles';
 import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
@@ -26,7 +26,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,
@@ -62,7 +61,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,
@@ -74,7 +72,7 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('On Demand TV data is malformed', 500);
   }
 
-  const toggles = await getToggles(service);
+  const toggles = await fetchToggles({ service });
 
   // this keeps the recent episodes toggle matching the express route
   const showRecentEpisodes = toggles?.recentVideoEpisodes?.enabled;

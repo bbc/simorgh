@@ -17,17 +17,6 @@ jest.mock('./PageCompleteTracking', () => () => (
 jest.mock('./ScrollDepthTracking', () => () => (
   <div data-testid="scroll-depth-tracking" />
 ));
-// capture the trackVisit prop so tests can assert pass-through behaviour
-jest.mock(
-  './PageViewTracking',
-  () =>
-    ({ trackVisit }: { trackVisit?: boolean }) => (
-      <div
-        data-testid="page-view-tracking"
-        data-track-visit={trackVisit ? 'true' : 'false'}
-      />
-    ),
-);
 
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
@@ -70,12 +59,7 @@ describe('OptimizelyPageMetrics', () => {
     notifyDecision('mockExperiment1');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageMetrics
-          trackPageView
-          trackPageDepth
-          trackPageComplete
-          trackVisit
-        />
+        <OptimizelyPageMetrics trackPageDepth trackPageComplete />
       </ContextWrap>,
     );
     expect(
@@ -84,7 +68,6 @@ describe('OptimizelyPageMetrics', () => {
     expect(
       screen.queryByTestId('scroll-depth-tracking'),
     ).not.toBeInTheDocument();
-    expect(screen.queryByTestId('page-view-tracking')).not.toBeInTheDocument();
   });
 
   it('should render no tracking components by default when all tracking flags are false', () => {
@@ -104,7 +87,6 @@ describe('OptimizelyPageMetrics', () => {
     expect(
       screen.queryByTestId('scroll-depth-tracking'),
     ).not.toBeInTheDocument();
-    expect(screen.queryByTestId('page-view-tracking')).not.toBeInTheDocument();
   });
 
   it('should render PageCompleteTracking when trackPageComplete is true', () => {
@@ -135,20 +117,6 @@ describe('OptimizelyPageMetrics', () => {
     expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
   });
 
-  it('should render PageViewTracking when trackPageView is true', () => {
-    experimentsForPageMetrics.push({
-      pageType: ARTICLE_PAGE,
-      activeExperiments: ['mockExperiment1', 'mockExperiment2'],
-    });
-    notifyDecision('mockExperiment1');
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageView />
-      </ContextWrap>,
-    );
-    expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-  });
-
   it('should render all tracking components when all flags are true', () => {
     experimentsForPageMetrics.push({
       pageType: ARTICLE_PAGE,
@@ -157,21 +125,11 @@ describe('OptimizelyPageMetrics', () => {
     notifyDecision('mockExperiment1');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics
-          trackPageComplete
-          trackPageDepth
-          trackPageView
-          trackVisit
-        />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       </ContextWrap>,
     );
     expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
     expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
-    expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-    expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
-      'data-track-visit',
-      'true',
-    );
   });
 
   it('should not include tracking when there are no experiments running', () => {
@@ -208,7 +166,7 @@ describe('OptimizelyPageMetrics', () => {
     notifyDecision('mockExperiment1');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       </ContextWrap>,
     );
     expect(
@@ -224,12 +182,7 @@ describe('OptimizelyPageMetrics', () => {
     notifyDecision('someOtherExperiment');
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics
-          trackPageComplete
-          trackPageDepth
-          trackPageView
-          trackVisit
-        />
+        <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       </ContextWrap>,
     );
     expect(
@@ -252,21 +205,11 @@ describe('OptimizelyPageMetrics', () => {
       notifyDecision('mockExperiment1');
       render(
         <ContextWrap pageType={ARTICLE_PAGE} service="news">
-          <OptimizelyPageMetrics
-            trackPageComplete
-            trackPageDepth
-            trackPageView
-            trackVisit
-          />
+          <OptimizelyPageMetrics trackPageComplete trackPageDepth />
         </ContextWrap>,
       );
       expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
-      expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-      expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
-        'data-track-visit',
-        'true',
-      );
     });
 
     it('should not include tracking when a user is not in an experiment on the current page type', () => {
@@ -283,12 +226,7 @@ describe('OptimizelyPageMetrics', () => {
       notifyDecision('mockExperiment2');
       render(
         <ContextWrap pageType={ARTICLE_PAGE} service="news">
-          <OptimizelyPageMetrics
-            trackPageComplete
-            trackPageDepth
-            trackPageView
-            trackVisit
-          />
+          <OptimizelyPageMetrics trackPageComplete trackPageDepth />
         </ContextWrap>,
       );
       expect(
@@ -296,9 +234,6 @@ describe('OptimizelyPageMetrics', () => {
       ).not.toBeInTheDocument();
       expect(
         screen.queryByTestId('scroll-depth-tracking'),
-      ).not.toBeInTheDocument();
-      expect(
-        screen.queryByTestId('page-view-tracking'),
       ).not.toBeInTheDocument();
     });
   });
@@ -311,11 +246,11 @@ describe('OptimizelyPageMetrics', () => {
       });
       render(
         <ContextWrap pageType={ARTICLE_PAGE} service="news">
-          <OptimizelyPageMetrics trackPageView />
+          <OptimizelyPageMetrics trackPageDepth />
         </ContextWrap>,
       );
       expect(
-        screen.queryByTestId('page-view-tracking'),
+        screen.queryByTestId('scroll-depth-tracking'),
       ).not.toBeInTheDocument();
 
       act(() => {
@@ -323,7 +258,7 @@ describe('OptimizelyPageMetrics', () => {
       });
 
       await waitFor(() => {
-        expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+        expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       });
     });
 
@@ -334,7 +269,7 @@ describe('OptimizelyPageMetrics', () => {
       });
       render(
         <ContextWrap pageType={ARTICLE_PAGE} service="news">
-          <OptimizelyPageMetrics trackPageView />
+          <OptimizelyPageMetrics trackPageDepth />
         </ContextWrap>,
       );
 
@@ -344,7 +279,7 @@ describe('OptimizelyPageMetrics', () => {
 
       await waitFor(() => {
         expect(
-          screen.queryByTestId('page-view-tracking'),
+          screen.queryByTestId('scroll-depth-tracking'),
         ).not.toBeInTheDocument();
       });
     });

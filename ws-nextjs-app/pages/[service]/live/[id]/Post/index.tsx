@@ -13,11 +13,11 @@ import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import dynamic from 'next/dynamic';
+import StreamVideoPost from './StreamVideoPost';
 import styles from './styles';
 import {
   Post as PostType,
@@ -121,53 +121,54 @@ const PostHeaderBanner = ({
   );
 };
 
+const postHeadingComponentsToRender = {
+  headline: (props: { blocks: PostHeadline['model'] }) => {
+    const { blocks } = props;
+
+    const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+    return (
+      <Text
+        fontVariant="sansBold"
+        size="greatPrimer"
+        className="headingStyling"
+        css={[styles.postHeadings, styles.postHeadline]}
+      >
+        {headingText}
+      </Text>
+    );
+  },
+  subheadline: (props: { blocks: PostHeadline['model'] }) => {
+    const { blocks } = props;
+
+    const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+    return (
+      <>
+        <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
+        <Text
+          fontVariant="sansRegular"
+          size="brevier"
+          className="headingStyling"
+          css={[styles.postHeadings, styles.postSubHeadline]}
+        >
+          {headingText}
+        </Text>
+      </>
+    );
+  },
+};
+
 const PostHeading = ({
   headerBlocks,
 }: {
   headerBlocks: PostHeadingBlock[];
-}) => {
-  const componentsToRender = {
-    headline: (props: { blocks: PostHeadline['model'] }) => {
-      const { blocks } = props;
-
-      const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-      return (
-        <Text
-          fontVariant={'sansBold'}
-          size={'greatPrimer'}
-          className="headingStyling"
-          css={[styles.postHeadings, styles.postHeadline]}
-        >
-          {headingText}
-        </Text>
-      );
-    },
-    subheadline: (props: { blocks: PostHeadline['model'] }) => {
-      const { blocks } = props;
-
-      const headingText = blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-      return (
-        <>
-          <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
-          <Text
-            fontVariant={'sansRegular'}
-            size={'brevier'}
-            className="headingStyling"
-            css={[styles.postHeadings, styles.postSubHeadline]}
-          >
-            {headingText}
-          </Text>
-        </>
-      );
-    },
-  };
-
-  return (
-    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
-  );
-};
+}) => (
+  <Blocks
+    blocks={headerBlocks}
+    componentsToRender={postHeadingComponentsToRender}
+  />
+);
 
 const PostByline = ({
   postContributorBlocks,
@@ -179,65 +180,57 @@ const PostByline = ({
   return <Byline blocks={[contributorData]} />;
 };
 
-const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
-  const componentsToRender = {
-    paragraph: (props: ComponentToRenderProps) => (
-      <Paragraph
-        blocks={props.blocks}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    unorderedList: (props: ComponentToRenderProps) => (
-      <UnorderedList
-        blocks={props.blocks}
-        blockGroupType={props.blockGroupType}
-        blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    orderedList: (props: ComponentToRenderProps) => (
-      <UnorderedList
-        blocks={props.blocks}
-        blockGroupType={props.blockGroupType}
-        blockGroupIndex={props.blockGroupIndex}
-        className="postStyles"
-        css={styles.bodyText}
-      />
-    ),
-    image: (props: { blocks: OptimoBlock[] }) => (
-      <ImageWithCaption
-        {...props}
-        sizes="(min-width: 1008px) 760px, 100vw"
-        className="mediaStyles"
-        css={styles.bodyMedia}
-        position={[9]}
-      />
-    ),
-    video: (props: { blocks: MediaBlock[] }) => {
-      const { blocks } = props;
-      const isPortrait = isPortraitVideo(blocks);
-
-      return (
-        <div css={isPortrait && styles.portraitVideoPlayer}>
-          <MediaLoader
-            blocks={props.blocks}
-            css={[styles.bodyMedia, styles.videoPost]}
-          />
-        </div>
-      );
-    },
-    audio: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.audioPost} />
-    ),
-    social: SocialEmbedContainer,
-    oEmbed: OEmbed,
-  };
-  return (
-    <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
-  );
+const postContentComponentsToRender = {
+  paragraph: (props: ComponentToRenderProps) => (
+    <Paragraph
+      blocks={props.blocks}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  unorderedList: (props: ComponentToRenderProps) => (
+    <UnorderedList
+      blocks={props.blocks}
+      blockGroupType={props.blockGroupType}
+      blockGroupIndex={props.blockGroupIndex}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  orderedList: (props: ComponentToRenderProps) => (
+    <UnorderedList
+      blocks={props.blocks}
+      blockGroupType={props.blockGroupType}
+      blockGroupIndex={props.blockGroupIndex}
+      className="postStyles"
+      css={styles.bodyText}
+    />
+  ),
+  image: (props: { blocks: OptimoBlock[] }) => (
+    <ImageWithCaption
+      {...props}
+      sizes="(min-width: 1008px) 760px, 100vw"
+      className="mediaStyles"
+      css={styles.bodyMedia}
+      position={[9]}
+    />
+  ),
+  video: (props: { blocks: MediaBlock[] }) => (
+    <StreamVideoPost blocks={props.blocks} />
+  ),
+  audio: (props: { blocks: MediaBlock[] }) => (
+    <MediaLoader blocks={props.blocks} css={styles.audioPost} />
+  ),
+  social: SocialEmbedContainer,
+  oEmbed: OEmbed,
 };
+
+const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => (
+  <Blocks
+    blocks={contentBlocks}
+    componentsToRender={postContentComponentsToRender}
+  />
+);
 
 const Post = ({
   post,

@@ -14,6 +14,7 @@ export type EventTrackingMetadata = {
   campaignID?: string;
   advertiserID?: string;
   sendOptimizelyEvents?: boolean;
+  optimizelyComponentName?: string;
   alwaysInView?: boolean;
   preventNavigation?: boolean;
 };
@@ -34,5 +35,6 @@ export type EventTrackingContextProps =
       producerName: string;
       isSignedIn?: boolean;
       hashedId?: string | null;
+      isPersonalisationOn?: boolean;
     }
   | Record<string, never>;

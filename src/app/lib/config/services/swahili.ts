@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
-import '#psammead/psammead-locales/moment/sw';
+import '#lib/locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -82,11 +82,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
+      topicDiscovery: {
+        heading: 'Gundua zaidi',
+        moreAboutTopic: 'Zaidi kuhusu {topic}',
+        fetchErrorMessage: 'Imeshindwa kupakia. Tafadhali jaribu tena',
+      },
+      googlePreferredSource: {
+        linkText: 'Ongeza kama chanzo unachopendelea kwenye Google',
+      },
       continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
+      skipContent: {
+        text: 'Ruka %title% uendelee',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      showMore: 'Onyesha zaidi',
       moreOnThis: '',
       navMenuText: 'Yaliyomo',
       liteSite: {
@@ -313,6 +326,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
       sport: {
+        keyEventsTitle: 'Matukio muhimu',
         matchSummary: 'Muhtasari wa mechi',
         assists: 'Pasi za mabao',
         penalties: 'Penalti',
@@ -324,6 +338,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'bao la kujifunga',
         venue: 'Uwanja',
         attendance: 'Idadi ya watazamaji',
+        versus: 'dhidi ya',
+        kickOff: 'kuanza',
+        timeToBeConfirmed: 'Muda utathibitishwa',
+        teamToBeConfirmed: 'Timu itathibitishwa',
+        afterFullTime: 'baada ya muda kamili',
+        atFullTime: 'muda kamili',
+        onPenalties: 'kwa penalti',
+        onAggregate: 'kwa jumla',
+        win: 'ashinda',
         winOnPenalties: {
           prefix: 'inashinda kwa penalti',
           suffix: '',
@@ -383,6 +406,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Hatua ya Makundi',
+          last32: 'Makundi 32',
+          last16: 'Makundi 16',
+          quarterFinals: 'Robo -Fainali',
+          semiFinals: 'Nusu-Fainali',
+          final: 'Fainali',
+          thirdPlaceFinal: 'Mshidi wa tatu',
         },
       },
     },

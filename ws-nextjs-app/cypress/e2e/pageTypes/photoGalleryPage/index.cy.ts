@@ -1,5 +1,8 @@
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -152,6 +155,16 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
     tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/korean/features-41397333',
+    runforEnv: ['live'],
+    service: 'korean',
+    pageIdentifier: 'korean.features.photo_gallery.41397333.page',
+    siteId: 57,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    tests: [assertResonancePageView],
   },
 ] as unknown as TestDataType[];
 

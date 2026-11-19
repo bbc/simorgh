@@ -14,16 +14,16 @@ const getManifestFile = async url => {
 };
 
 export default async () => {
-  const publicServiceUrls = [
-    '/news/articles/c0eg99qjynvo.amp',
-    '/sport/tennis/articles/cedlgl4lj23o.amp',
-    '/newsround/articles/cp8v6lm0ek6o.amp',
-    '/cymrufyw/erthyglau/c4ge78ry9dmo.amp',
-    '/naidheachdan/sgeulachdan/c3w14wqg1x8o.amp',
+  const worldServiceUrls = [
+    '/portuguese/articles/cqj1e51p7vko.amp',
+    '/afrique/articles/c3vynyl4n73o.amp',
+    '/japanese/articles/cn4d0275848o.amp',
+    '/magyarul/articles/cde4lnjr2e2o.amp',
+    '/burmese/articles/c4gyd17q651o.amp',
   ];
 
   const testResults = await Promise.all(
-    publicServiceUrls.map(async url => {
+    worldServiceUrls.map(async url => {
       const [, service] = url.split('/');
       const liveManifestFile = await getManifestFile(
         `https://www.bbc.co.uk${url}`,

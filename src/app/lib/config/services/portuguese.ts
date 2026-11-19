@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
-import '#psammead/psammead-locales/moment/pt-br';
+import '#lib/locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -48,21 +48,31 @@ export const service: DefaultServiceConfig = {
     passportHomes: ['brasil'],
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      title: 'Eleições nos EUA 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:abdb1274-d3c1-48fd-b6c7-d1a0576cc551',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33042.html',
+    },
     podcastPromo: {
-      title: 'Promoção Agregador de pesquisas',
-      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
-      brandDescription: ' ',
+      title: 'Promoção app',
+      brandTitle: 'Temos um novo app!',
+      brandDescription:
+        'Veja notícias do Brasil e do mundo no BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
-        alt: 'O agregador de pesquisas da BBC News Brasil',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0pkzzq8.jpg',
+        alt: 'Novo app da BBC Brasil',
       },
       linkLabel: {
-        text: 'Clique aqui',
-        href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
+        text: 'Baixe aqui',
+        href: 'https://www.bbc.com/portuguese/articles/cqe9l2z988g5o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
-        endTextVisuallyHidden: 'Fim do %title%',
+        endTextVisuallyHidden: 'Fim da %title%',
       },
     },
     translations: {
@@ -86,15 +96,30 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Continue lendo',
       topicDiscovery: {
         heading: 'Descubra mais',
-        moreFromTopic: 'Mais de {topic}',
-        fetchErrorMessage: 'Falha ao carregar. Tente novamente mais tarde.',
+        moreAboutTopic: 'Mais sobre {topic}',
+        fetchErrorMessage: 'Falha ao carregar. Tente novamente',
+      },
+      googlePreferredSource: {
+        linkText: 'Adicionar como fonte preferida no Google',
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
+      skipContent: {
+        text: 'Pular %title% e continuar',
+        endTextVisuallyHidden: 'Fim de %title%',
+      },
       relatedContent: 'Histórias relacionadas',
       relatedTopics: 'Tópicos relacionados',
+      showMore: 'Mostrar mais',
       moreOnThis: '',
       navMenuText: 'Seções',
+      liteSite: {
+        onboardingMessage:
+          'Você está vendo uma versão somente texto deste site que usa menos dados. Veja a versão principal do site com todas as imagens e vídeos.',
+        toMainSite: 'Me leve para o site principal',
+        informationPage: 'Saiba mais sobre esta versão que economiza dados',
+        dataSaving: 'Versão que economiza dados',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -115,6 +140,105 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'Pontos-chave',
+      account: {
+        signIn: 'Fazer login',
+        signInAccessibleLabel: 'Fazer login em Notícias para você',
+        forYou: 'Sua conta',
+        register: 'Criar conta',
+      },
+      accountPromoBanner: {
+        title: 'Sua BBC',
+        description: 'Faça login ou crie uma conta gratuitamente',
+        closeLabel: 'Fechar',
+        buttonSeparatorText: 'ou',
+      },
+      accountSignInModal: {
+        title: 'Faça login para salvar em Notícias para você',
+        description: 'Salve matérias e leia quando você quiser',
+        closeLabel: 'Fechar',
+        followTopic: {
+          title: 'Faça login para seguir tópicos',
+          description:
+            'Acesse diretamente as notícias do seu interesse e não perca nenhuma matéria.',
+        },
+      },
+      saveArticleButton: {
+        loading: 'Carregando',
+        save: 'Salvar para ler depois',
+        saving: 'Salvando',
+        saved: 'Salvo em Minhas Notícias',
+        remove: 'Remover',
+        removeAccessible: 'Salvo. Remover de Notícias para você',
+        removing: 'Removendo',
+      },
+      followTopicButton: {
+        loading: 'Carregando',
+        follow: 'Seguir',
+        following: 'Seguindo',
+        followed: 'Seguindo',
+        unfollow: 'Deixar de seguir',
+        unfollowAccessible: 'Deixar de seguir',
+        unfollowing: 'Deixar de seguir',
+      },
+      myNews: {
+        title: 'Notícias para você',
+        guestTitle: 'Bem-vindo à Notícias para você',
+        description: 'Matérias salvas',
+        guestDescription:
+          'Faça login para seguir temas do seu interesse e salvar artigos para ler mais tarde.',
+        noArticles: 'Você ainda não salvou nenhuma matéria',
+        savedArticlesErrorText:
+          'Estamos tendo problemas para carregar suas matérias salvas',
+        loading: 'Carregando',
+        noJsDescription:
+          'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        followedTopicsTitle: 'Temas que você segue',
+        followedTopicsErrorText:
+          'Estamos tendo problemas para carregar os temas que você segue',
+        noFollowedTopics: 'Você ainda não segue nenhum tema',
+        seeMoreTopics: 'Ver mais',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este conteúdo não está carregando. Tente novamente mais tarde.',
+      },
+      actionTooltip: {
+        success: {
+          title: 'Matéria salva',
+          bodyBefore: 'Ela estará disponível em',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize a página e tente novamente.',
+        },
+        removed: {
+          title: 'Matéria removida',
+          bodyBefore: 'Ela será removida de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Notícias para você',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Fechar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Você está seguindo {Topic Name}',
+          bodyBefore: 'Encontre este tópico em',
+          bodyAfter: '.',
+        },
+        error: {
+          title: 'Desculpe, algo deu errado',
+          body: 'Verifique sua conexão, atualize sua página e tente novamente.',
+        },
+        removed: {
+          title: 'Você deixou de seguir {Topic Name}',
+          bodyBefore: 'Ele será removido de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Notícias para você',
+        myNewsUrl: 'https://www.bbc.com/portuguese/my-news',
+        closeLabel: 'Fechar',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -375,6 +499,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Foi encerrado em {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Principais eventos',
         matchSummary: 'Resumo da partida',
         assists: 'Assistências',
         penalties: 'Pênaltis',
@@ -386,6 +511,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'Gol contra',
         venue: 'Local',
         attendance: 'Público',
+        versus: 'contra',
+        kickOff: 'início',
+        timeToBeConfirmed: 'Horário a confirmar',
+        teamToBeConfirmed: 'Equipe a ser confirmada',
+        afterFullTime: 'após o tempo regulamentar',
+        atFullTime: 'no fim do tempo regulamentar',
+        onPenalties: 'nos pênaltis',
+        onAggregate: 'no placar agregado',
+        win: 'vence',
         winOnPenalties: {
           prefix: 'vence por',
           suffix: 'nos pênaltis',
@@ -445,6 +579,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Fase de Grupos',
+          last32: 'Primeira fase do mata-mata',
+          last16: 'Oitavas de final',
+          quarterFinals: 'Quartas de final',
+          semiFinals: 'Semifinais',
+          final: 'Final',
+          thirdPlaceFinal: 'Disputa pelo terceiro lugar',
         },
       },
     },

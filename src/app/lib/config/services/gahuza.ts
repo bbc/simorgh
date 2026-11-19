@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/rw';
+import '#lib/locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -75,11 +75,24 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      topicDiscovery: {
+        heading: 'Menya byinshi',
+        moreAboutTopic: 'Ibindi bijyanye na {topic}',
+        fetchErrorMessage: 'Ntibyashoboye gufunguka. Ongera ugerageze',
+      },
+      googlePreferredSource: {
+        linkText: 'Ongeraho nk’isoko wifuza kuri Google',
+      },
       continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
+      skipContent: {
+        text: 'Simbuka %title% ukomeze',
+        endTextVisuallyHidden: 'Iherezo rya %title%',
+      },
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      showMore: 'Erekana ibindi',
       moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {
@@ -303,6 +316,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
       latestMediaTitle: 'Ibiheruka',
       sport: {
+        keyEventsTitle: "Ibyabaye by'ingenzi",
         matchSummary: 'Incamake y’umukino',
         assists: 'Imipira yatanze ibitego',
         penalties: 'Penaliti',
@@ -312,6 +326,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Nyuma y’igihe cy’inyongera',
         penaltyAbbreviation: 'PEN',
         ownGoal: 'igitego cyitsinze',
+        versus: 'vs',
+        kickOff: 'gutangira',
+        timeToBeConfirmed: 'Igihe kizemezwa',
+        teamToBeConfirmed: 'Ikipe izemezwa',
+        afterFullTime: 'nyuma y’igihe cyuzuye',
+        atFullTime: 'igihe cyuzuye',
+        onPenalties: 'kuri penaliti',
+        onAggregate: 'ku giteranyo',
+        win: 'itsinda',
         winOnPenalties: {
           prefix: 'itsinda ku penaliti',
           suffix: '',
@@ -371,6 +394,13 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: "Urwego rw'amatsinda",
+
+          last32: 'Igice ca 16 gishira ica nyuma',
+          last16: 'Igice ca 8 gishira ica nyuma',
+          quarterFinals: 'Igice ca kane gishira ica nyuma',
+          semiFinals: 'Igice ca kabiri gishira ica nyuma',
+          final: 'Urukino rwa nyuma',
+          thirdPlaceFinal: 'Ikibanza ca gatatu',
         },
       },
     },

@@ -6,6 +6,10 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import IMAGE from '#app/components/Image';
 import BlurredBackground from '#app/components/Image/BlurredBackground';
+import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
+
+const IMAGE_RESOLUTIONS = [85, 120, 170, 232, 325, 450, 660, 800];
+const PROGRAMME_IMAGE_RESOLUTIONS = [96, 128, 176, 240, 352, 464, 672, 800];
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
@@ -27,20 +31,12 @@ const ChildWrapper = styled.div`
 
 // promos with images via Programmes (which can be of type audio and possibly others) use a different iChef recipe requiring a second set of resolutions
 // https://github.com/bbc/programme-images/tree/master/webapp/ichef/recipes
-const createSrcSet = (imageUrl, isProgrammeImage, suffix = '') => {
-  const imageResolutions = [85, 120, 170, 232, 325, 450, 660, 800];
-  const imageResolutionsProgrammes = [96, 128, 176, 240, 352, 464, 672, 800];
-
-  const resolutions = isProgrammeImage
-    ? imageResolutionsProgrammes
-    : imageResolutions;
-
-  return resolutions
-    .map(res => `${imageUrl.replace(`{width}`, res)}${suffix} ${res}w`)
-    .join(', ');
-};
-
-const createSizes = (useLargeImages, isProgrammeImage) => {
+const buildSizes = (
+  useLargeImages,
+  isProgrammeImage,
+  tabletSize,
+  mobileSize = '33vw',
+) => {
   // 4 columns of fixed width
   const DESKTOP_SIZE = useLargeImages
     ? `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) 800px`
@@ -55,12 +51,17 @@ const createSizes = (useLargeImages, isProgrammeImage) => {
     ? `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 66vw`
     : `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) 50vw`;
 
+  // Allow full-width images for video collections.
+  const TABLET_SIZE_OVERRIDE = tabletSize
+    ? `(min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) ${tabletSize}`
+    : TABLET_SIZE;
+
   // 1 column of 100% screen width - images are 33% of the column
-  const MOBILE_SIZE = useLargeImages ? `100vw` : `33vw`;
+  const MOBILE_SIZE = useLargeImages ? `100vw` : mobileSize;
 
   return [
     isProgrammeImage ? DESKTOP_SIZE_PROGRAMMES : DESKTOP_SIZE,
-    TABLET_SIZE,
+    TABLET_SIZE_OVERRIDE,
     MOBILE_SIZE,
   ].join(', ');
 };
@@ -73,23 +74,42 @@ const Image = props => {
     className,
     isPortraitImage,
     isLite,
+    tabletSize,
+    mobileSize,
     ...rest
   } = props;
-  const isProgrammeImage = src.startsWith(
+  const isProgrammeImage = src?.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
-  const suffix = src.endsWith('.webp') ? '' : '.webp';
-  const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
-  const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
-    '.webp',
-    '',
+  const suffix = src?.endsWith('.webp') ? '' : '.webp';
+  const resolutions = isProgrammeImage
+    ? PROGRAMME_IMAGE_RESOLUTIONS
+    : IMAGE_RESOLUTIONS;
+  const sizes = buildSizes(
+    useLargeImages,
+    isProgrammeImage,
+    tabletSize,
+    mobileSize,
   );
-  const sizes = createSizes(useLargeImages, isProgrammeImage);
-  const srcWith240Width = src.replace('{width}', 240);
+  const primarySrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: src ? `${src}${suffix}` : undefined,
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  })?.srcSet;
+  const fallbackSrcSet = createResponsiveSrcSet({
+    imageUrlTemplate: src ? src.replaceAll('.webp', '') : undefined,
+    widths: resolutions,
+    mq: { GROUP_2_MAX_WIDTH: '' },
+    sizesBuilder: () => sizes,
+  })?.srcSet;
+  const srcWith240Width = src?.replace('{width}', 240);
 
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
+      {isPortraitImage && srcWith240Width && (
+        <BlurredBackground src={srcWith240Width} />
+      )}
       <IMAGE
         {...rest}
         src={srcWith240Width}

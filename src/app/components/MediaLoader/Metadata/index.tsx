@@ -48,7 +48,7 @@ type Props = {
 };
 
 const Metadata = ({ blocks, embedURL }: Props) => {
-  const { pageType } = use(RequestContext);
+  const { pageType, nonce } = use(RequestContext);
 
   if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
 
@@ -86,7 +86,9 @@ const Metadata = ({ blocks, embedURL }: Props) => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
+      <script type="application/ld+json" {...(nonce ? { nonce } : {})}>
+        {JSON.stringify(metadataJson)}
+      </script>
     </Helmet>
   );
 };

@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
-import '#psammead/psammead-locales/moment/gu';
+import '#lib/locales/moment/gu';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -80,13 +80,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
+      topicDiscovery: {
+        heading: 'વધુ શોધો',
+        moreAboutTopic: '{topic} વિશે વધુ',
+        fetchErrorMessage: 'લોડ કરવામાં નિષ્ફળ. કૃપા કરીને ફરી પ્રયાસ કરો',
+      },
+      googlePreferredSource: {
+        linkText: 'Google પર પસંદગીના સ્રોત તરીકે ઉમેરો',
+      },
       continueReading: 'આગળ વાંચો',
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
+      skipContent: {
+        text: '%title% છોડો અને આગળ વધો',
+        endTextVisuallyHidden: '%title%નો અંત',
+      },
       relatedContent: 'સંબંધિત સમાચાર',
       relatedTopics: 'સંબંધિત મુદ્દા',
+      showMore: 'વધુ બતાવો',
       moreOnThis: '',
       navMenuText: 'વિભાગો',
+      liteSite: {
+        onboardingMessage:
+          'તમે આ વેબસાઇટનું ટેક્સ્ટ-ઓન્લી વર્ઝન જોઈ રહ્યા છો જે ઓછો ડેટા વાપરે છે. તમામ ફોટા અને વીડિયો સાથેનું વેબસાઇટનું મુખ્ય વર્ઝન જુઓ.',
+        toMainSite: 'મને મુખ્ય વેબસાઇટ પર લઈ જાઓ',
+        informationPage: 'આ ડેટા-સેવિંગ વર્ઝન વિશે વધુ જાણો',
+        dataSaving: 'ડેટા સેવિંગ વર્ઝન',
+      },
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -300,6 +320,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'બીબીસી વિશેષ',
       latestMediaTitle: 'લેટેસ્ટ',
       sport: {
+        keyEventsTitle: 'મુખ્ય ઘટનાઓ',
         matchSummary: 'મેચનો સારાંશ',
         assists: 'આસિસ્ટ',
         penalties: 'પેનલ્ટી',
@@ -309,6 +330,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'વધારાના સમય પછી',
         penaltyAbbreviation: 'પેન',
         ownGoal: 'પોતાનો ગોલ',
+        versus: 'સામે',
+        kickOff: 'શરૂઆત',
+        timeToBeConfirmed: 'સમયની પુષ્ટિ થવાની છે',
+        teamToBeConfirmed: 'ટીમની પુષ્ટિ કરવી બાકી',
+        afterFullTime: 'સંપૂર્ણ સમય બાદ',
+        atFullTime: 'સંપૂર્ણ સમયમાં',
+        onPenalties: 'પેનલ્ટીમાં',
+        onAggregate: 'કુલ ગણતરીમાં',
+        win: 'જીતે છે',
         winOnPenalties: {
           prefix: 'પેનલ્ટીમાં',
           suffix: 'જીતે છે',
@@ -368,6 +398,11 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'ગ્રૂપ સ્ટેજ',
+          last16: 'રાઉન્ડ ઑફ 16',
+          quarterFinals: 'ક્વાર્ટર-ફાઇનલ',
+          semiFinals: 'સેમિ-ફાઇનલ',
+          final: 'ફાઇનલ',
+          thirdPlaceFinal: 'ત્રીજું સ્થાન',
         },
       },
     },

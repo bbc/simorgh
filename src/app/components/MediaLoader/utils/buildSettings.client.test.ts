@@ -1,5 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
 import { data as hindiTvProgramme } from '#data/hindi/bbc_hindi_tv/tv_programmes/w13xttlw.json';
+import arabicSilverLiveStreamFixture from '#data/arabic/articles/c5y35dxlpv2o.json';
 import {
   AUDIO_PAGE,
   LIVE_PAGE,
@@ -412,6 +413,24 @@ describe('buildSettings', () => {
   });
 
   describe('AresMedia', () => {
+    it('uses a supplied holding image instead of the Ares media image', () => {
+      const holdingImageURL =
+        'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/promo-image.jpg.webp';
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: aresMediaBlocks as MediaBlock[],
+        holdingImageURL,
+      });
+
+      expect(result?.playerConfig.playlistObject?.holdingImageURL).toBe(
+        holdingImageURL.replace('{width}', '512'),
+      );
+      expect(result?.placeholderConfig).toMatchObject({
+        placeholderSrc: holdingImageURL.replace('{width}', '512'),
+        placeholderSrcset: '',
+      });
+    });
+
     it('Should process an AresMedia block into a valid playlist item for an "article" page.', () => {
       const result = buildSettings({
         ...baseSettings,
@@ -587,6 +606,41 @@ describe('buildSettings', () => {
           fullscreen: { enabled: true },
         },
       });
+    });
+
+    it('should configure a Silver webcast without a live flag as live', () => {
+      const [videoBlock] =
+        arabicSilverLiveStreamFixture.data.article.promo.media.blocks;
+
+      const result = buildSettings({
+        ...baseSettings,
+        service: 'arabic',
+        lang: 'ar',
+        producer: 'ARABIC',
+        blocks: videoBlock.model.blocks as unknown as MediaBlock[],
+        adsEnabled: true,
+        showAdsBasedOnLocation: true,
+      });
+
+      expect(result?.playerConfig.playlistObject).toMatchObject({
+        items: [
+          {
+            kind: 'programme',
+            live: true,
+            versionID: 'l0058t2x',
+          },
+        ],
+        simulcast: true,
+      });
+      expect(result?.playerConfig.ui.cta).toEqual({ mode: null });
+      expect(result?.playerConfig.playlistObject?.items[0]).not.toHaveProperty(
+        'duration',
+      );
+      expect(result?.playerConfig.playlistObject?.items).not.toContainEqual({
+        kind: 'advert',
+      });
+      expect(result?.placeholderConfig?.mediaInfo.datetime).toBeUndefined();
+      expect(result?.showAds).toBe(false);
     });
 
     it('Should process a LegacyMediaBlock into a valid playlist item for a "MAP" page', () => {
@@ -1420,7 +1474,7 @@ describe('buildSettings', () => {
           plugins: {
             toLoad: [
               {
-                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_1/DazzlerEdgePlugin.min.js',
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
                 playerOnly: true,
                 data: {
                   env: 'test',
@@ -1536,7 +1590,7 @@ describe('buildSettings', () => {
           plugins: {
             toLoad: [
               {
-                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_1/DazzlerEdgePlugin.min.js',
+                html: 'https://static.files.bbci.co.uk/dazzler-edge-plugin/v1_0_2/DazzlerEdgePlugin.min.js',
                 playerOnly: true,
                 data: {
                   env: 'test',

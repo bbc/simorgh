@@ -65,10 +65,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Összes megtekintése',
       home: 'Főoldal',
+      topicDiscovery: {
+        heading: 'Továbbiak felfedezése',
+        moreAboutTopic: 'Több a {topic} témáról',
+        fetchErrorMessage: 'Nem sikerült betölteni. Kérjük, próbálja újra',
+      },
+      googlePreferredSource: {
+        linkText: 'Hozzáadás preferált forrásként a Google-on',
+      },
       currentPage: 'Jelenlegi oldal',
       skipLinkText: 'Ugrás a tartalomra',
+      skipContent: {
+        text: '%title% kihagyása és folytatás',
+        endTextVisuallyHidden: 'A(z) %title% vége',
+      },
       relatedContent: 'Kapcsolódó tartalom',
       relatedTopics: 'Kapcsolódó téma',
+      showMore: 'Továbbiak megjelenítése',
       navMenuText: 'Menü',
       liteSite: {
         onboardingMessage:
@@ -322,6 +335,7 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Bezárt {{date}}.',
       },
       sport: {
+        keyEventsTitle: 'Fő események',
         matchSummary: 'Mérkőzés összefoglaló',
         assists: 'Gólpasszok',
         penalties: 'Büntetők',
@@ -331,6 +345,15 @@ export const service: DefaultServiceConfig = {
         afterExtraTime: 'Hosszabbítás után',
         penaltyAbbreviation: '11m',
         ownGoal: 'öngól',
+        versus: 'ellen',
+        kickOff: 'kezdőrúgás',
+        timeToBeConfirmed: 'Időpont megerősítésre vár',
+        teamToBeConfirmed: 'Csapat megerősítésre vár',
+        afterFullTime: 'teljes idő után',
+        atFullTime: 'teljes időben',
+        onPenalties: 'büntetőkkel',
+        onAggregate: 'összesítésben',
+        win: 'nyer',
         winOnPenalties: {
           prefix: '',
           suffix: 're nyer büntetőkkel',

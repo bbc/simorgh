@@ -68,15 +68,31 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Okumaya devam edin',
       topicDiscovery: {
         heading: 'Daha fazlasını keşfet',
-        moreFromTopic: '{topic} hakkında daha fazla',
-        fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin.',
+        moreAboutTopic: '{topic} hakkında daha fazla',
+        fetchErrorMessage: 'Yüklenemedi. Lütfen daha sonra tekrar deneyin',
+      },
+      googlePreferredSource: {
+        linkText: 'Google’da tercih edilen kaynak olarak ekle',
       },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
+      skipContent: {
+        text: '%title% atla ve devam et',
+        endTextVisuallyHidden: '%title% sonu',
+      },
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      showMore: 'Daha fazla göster',
       moreOnThis: '',
       navMenuText: 'Kategoriler',
+      liteSite: {
+        onboardingMessage:
+          'Bu web sitesinin daha az veri kullanan yalnızca metin sürümünü görüntülüyorsunuz. Tüm görsel ve videoları içeren ana sürümü görüntüleyin.',
+        toMainSite: 'Beni ana web sitesine götür',
+        informationPage:
+          'Bu veri tasarrufu sağlayan sürüm hakkında daha fazla bilgi edinin',
+        dataSaving: 'Veri tasarrufu sürümü',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -281,6 +297,7 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Manşet haber',
       featuresAnalysisTitle: 'Seçtiklerimiz',
       sport: {
+        keyEventsTitle: 'Önemli anlar',
         matchSummary: 'Maç Özeti',
         assists: 'Asistler',
         penalties: 'Penaltılar',
@@ -292,6 +309,15 @@ export const service: DefaultServiceConfig = {
         ownGoal: 'kendi kalesine gol',
         venue: 'Stadyum',
         attendance: 'Seyirci sayısı',
+        versus: 'karşı',
+        kickOff: 'başlama',
+        timeToBeConfirmed: 'Saat belirlenecek',
+        teamToBeConfirmed: 'Takım belirlenecek',
+        afterFullTime: 'tam zaman sonrası',
+        atFullTime: 'tam zamanda',
+        onPenalties: 'penaltılarla',
+        onAggregate: 'toplamda',
+        win: 'kazanır',
         winOnPenalties: {
           prefix: 'penaltılarla',
           suffix: 'kazanır',
@@ -351,6 +377,12 @@ export const service: DefaultServiceConfig = {
         },
         stages: {
           groupStage: 'Grup Aşaması',
+          last32: 'Son 32 turu',
+          last16: 'Son 16 turu',
+          quarterFinals: 'Çeyrek Final',
+          semiFinals: 'Yarı Final',
+          final: 'Final',
+          thirdPlaceFinal: 'Üçüncülük Maçı',
         },
       },
     },

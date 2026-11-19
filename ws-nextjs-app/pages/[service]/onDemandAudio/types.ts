@@ -7,6 +7,7 @@ import {
 } from '#app/models/types/media';
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { Component } from 'react';
+import { OnDemandAudioRecentEpisode } from './getOnDemandAudioLinkedData';
 
 export interface OnDemandAudioProps {
   pageData: {
@@ -24,16 +25,20 @@ export interface OnDemandAudioProps {
     shortSynopsis: string;
     mediumSynopsis?: string;
     longSynopsis?: string;
+    brandShortSynopsis?: string;
+    brandMediumSynopsis?: string;
+    brandLongSynopsis?: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
     imageUrl: string;
     imageAltText: string;
-    promoBrandTitle: string;
+    promoBrandTitle?: string | null;
+    promoSeriesTitle?: string | null;
     durationISO8601: string;
     thumbnailImageUrl: string;
     radioScheduleData?: RadioScheduleData[];
-    recentEpisodes: [];
+    recentEpisodes: OnDemandAudioRecentEpisode[] | null;
     brandId: string;
     episodeTitle: string;
     externalLinks: Array<{

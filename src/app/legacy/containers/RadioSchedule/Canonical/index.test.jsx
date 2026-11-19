@@ -15,7 +15,6 @@ const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
     pageType={HOME_PAGE}
     service="arabic"
     pathname="/arabic"
-    timeOnServer={Date.now()}
   >
     <ServiceContextProvider service="arabic">
       <RadioSchedule radioSchedule={radioSchedule} lang={lang} />
@@ -42,7 +41,7 @@ describe('RadioSchedule', () => {
           { service: 'arabic' },
         ).container;
       });
-      expect(container).toMatchSnapshot();
+      expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
     it('contains four programs for a service with a radio schedule', async () => {

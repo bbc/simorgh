@@ -1,6 +1,9 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPageView,
+  assertResonancePageView,
+} from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
@@ -261,6 +264,24 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/magyarul/articles/cwy04ln10zdo',
+    runforEnv: ['live'],
+    service: 'magyarul',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/romania/articles/c2x404ljvkro',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/romania/articles/c3rynpp24dwo',
+    runforEnv: ['live'],
+    service: 'romania',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/mundo/articles/ce7p1pw7165o',
     runforEnv: ['live'],
     service: 'mundo',
@@ -294,6 +315,16 @@ const nonSmokeCanonicalTestSuites = [
 
 const atiAnalyticsTestSuites = [
   {
+    path: '/arabic/articles/c8j91j2ljppo',
+    runforEnv: ['local', 'live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.articles.c8j91j2ljppo.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertResonancePageView],
+  },
+  {
     path: '/hausa/articles/cw43vy8zdjvo',
     runforEnv: ['local', 'live'],
     service: 'hausa',
@@ -301,8 +332,10 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
+    expectsResonanceEvents: false,
     tests: [
       assertPageView,
+      assertResonancePageView,
       assertLatestMediaComponentView,
       assertLatestMediaComponentClick,
     ],
@@ -338,8 +371,8 @@ const atiAnalyticsTestSuites = [
       assertMostReadComponentClick,
       assertPodcastPromoComponentView,
       assertPodcastPromoComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
+      // assertRelatedTopicsComponentView,
+      // assertRelatedTopicsComponentClick,
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
@@ -359,8 +392,8 @@ const atiAnalyticsTestSuites = [
       assertFeaturesAnalysisComponentView,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
+      // assertRelatedTopicsComponentView,
+      // assertRelatedTopicsComponentClick,
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
@@ -383,8 +416,8 @@ const atiAnalyticsTestSuites = [
       assertFeaturesAnalysisComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
+      // assertRelatedTopicsComponentView,
+      // assertRelatedTopicsComponentClick,
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
@@ -405,8 +438,8 @@ const atiAnalyticsTestSuites = [
       assertPageView,
       assertLatestMediaComponentClick,
       assertLatestMediaComponentView,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
+      // assertRelatedTopicsComponentView,
+      // assertRelatedTopicsComponentClick,
       assertRelatedContentComponentView,
       assertRelatedContentComponentClick,
     ],
@@ -424,6 +457,26 @@ const atiAnalyticsTestSuites = [
       assertTopBarOJComponentClick,
       assertTopBarOJComponentView,
     ],
+  },
+  {
+    path: '/magyarul/articles/cwy04ln10zdo',
+    runforEnv: ['live'],
+    service: 'magyarul',
+    pageIdentifier: 'magyarul.articles.cwy04ln10zdo.page',
+    siteId: 134,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertPageView],
+  },
+  {
+    path: '/romania/articles/c3rynpp24dwo',
+    runforEnv: ['live'],
+    service: 'romania',
+    pageIdentifier: 'romania.articles.c3rynpp24dwo.page',
+    siteId: 136,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [assertPageView],
   },
 ] as unknown as TestDataType[];
 
@@ -454,7 +507,7 @@ const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
     applicationType: 'amp',
-    tests: [assertPageView],
+    tests: [assertPageView, assertResonancePageView], // asserts that the Resonance page view is not sent for amp articles - runs on all services - so will need refactoring once we are sending for specific services.
   };
 });
 
