@@ -9,6 +9,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertDropdownNavigationComponentClick,
@@ -429,6 +430,10 @@ test.describe('onDemandTV ATI Analytics', () => {
           service: testSuite.service,
           appEnv: appEnvFromProcess,
         };
+
+        test.beforeEach(async ({ page }) => {
+          await addConsentBannerHandlers(page);
+        });
 
         if (testSuite.tests.includes('assertPageView')) {
           test('should send a page view event', async ({ page }) => {
