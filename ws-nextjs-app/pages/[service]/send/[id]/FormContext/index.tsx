@@ -201,6 +201,7 @@ export const FormContextProvider = ({
       const req = new XMLHttpRequest();
       req.responseType = 'json';
       req.open('POST', url, true);
+      req.withCredentials = true; // required only for cross-origin requests with credentials (eg., from localhost)
 
       req.upload.onloadstart = () => {
         setScreen('uploading');
