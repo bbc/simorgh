@@ -22,26 +22,27 @@ const getRequestProps = async (
   const { service: routeService, variant } = parseRoute(asPath);
   const service = routeService || 'news';
 
-  const [togglesResult, navResult] = await Promise.allSettled([
-    fetchToggles({ service, isAmp }),
-    fetchConfig<{ data: { items: Navigation[] } }>({
-      service,
-      pagePath: asPath,
-      configType: 'navigation',
-      variant: variant || undefined,
-    }),
-  ]);
+  const togglesPromise: ReturnType<typeof fetchToggles> = fetchToggles({
+    service,
+    isAmp,
+  }).catch(() => ({}));
+  const navItemsPromise = fetchConfig<{ data: { items: Navigation[] } }>({
+    service,
+    pagePath: asPath,
+    configType: 'navigation',
+    variant: variant || undefined,
+  })
+    .then(result => result?.data?.items ?? null)
+    .catch(() => null);
 
-  const toggles =
-    togglesResult.status === 'fulfilled' ? togglesResult.value : {};
-  const navItems =
-    navResult.status === 'fulfilled' && navResult.value
-      ? (navResult.value.data?.items ?? null)
-      : null;
+  const toggles = await togglesPromise;
+  const [navItems, idctaConfig] = await Promise.all([
+    navItemsPromise,
+    getIdctaConfig(toggles, service, ctx.req?.headers),
+  ]);
 
   const requestHeaders = ctx.req?.headers;
   const extractedHeaders = extractHeaders(requestHeaders || {});
-  const idctaConfig = await getIdctaConfig(toggles, service, requestHeaders);
   const pageType =
     (requestHeaders?.['page-type'] as PageTypes) || derivePageType(asPath);
   const serverSideExperiments = getServerExperiments({

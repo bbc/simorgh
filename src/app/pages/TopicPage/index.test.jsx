@@ -225,7 +225,7 @@ describe('Topic Page', () => {
     const topicBadgeSrc = topicBadge.getAttribute('src');
     expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
     expect(topicBadgeSrc).toBe(
-      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+      `${mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/')}.webp`,
     );
   });
 

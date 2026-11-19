@@ -24,7 +24,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: HOME_PAGE,
         pathname: resolvedUrlWithoutQuery,
@@ -60,7 +59,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: HOME_PAGE,
         pathname: resolvedUrlWithoutQuery,

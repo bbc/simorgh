@@ -25,47 +25,47 @@ test('from', () => {
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'ከ 1 ደቂቃ',
-    '45 seconds = a minute'
+    '45 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
     'ከ 1 ደቂቃ',
-    '89 seconds = a minute'
+    '89 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
     'ከ 2 ደቂቃዎች',
-    '90 seconds = 2 minutes'
+    '90 seconds = 2 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
     'ከ 44 ደቂቃዎች',
-    '44 minutes = 44 minutes'
+    '44 minutes = 44 minutes',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
     'ከ 1 ሰአት',
-    '45 minutes = an hour'
+    '45 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
     'ከ 1 ሰአት',
-    '89 minutes = an hour'
+    '89 minutes = an hour',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
     'ከ 2 ሰአት',
-    '90 minutes = 2 hours'
+    '90 minutes = 2 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
     'ከ 5 ሰአት',
-    '5 hours = 5 hours'
+    '5 hours = 5 hours',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
     'ከ 21 ሰአት',
-    '21 hours = 21 hours'
+    '21 hours = 21 hours',
   );
 });
 

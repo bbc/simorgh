@@ -15,14 +15,14 @@ const assert = { equal: (val1, val2) => expect(val1).toEqual(val2) };
 test('parse', () => {
   const tests =
     'Sẹ́rẹ́ Sẹ́r_Èrèlè Èrl_Ẹrẹ̀nà Ẹrn_Ìgbé Ìgb_Èbibi Èbi_Òkùdu Òkù_Agẹmo Agẹ_Ògún Ògú_Owewe Owe_Ọ̀wàrà Ọ̀wà_Bélú Bél_Ọ̀pẹ̀̀ Ọ̀pẹ̀̀'.split(
-      '_'
+      '_',
     );
 
   function equalTest(input, mmm, i) {
     assert.equal(
       moment(input, mmm).month(),
       i,
-      `${input} should be month ${i + 1}`
+      `${input} should be month ${i + 1}`,
     );
   }
 
@@ -113,14 +113,14 @@ test('format ordinal', () => {
 test('format month', () => {
   const expected =
     'Sẹ́rẹ́ Sẹ́r_Èrèlè Èrl_Ẹrẹ̀nà Ẹrn_Ìgbé Ìgb_Èbibi Èbi_Òkùdu Òkù_Agẹmo Agẹ_Ògún Ògú_Owewe Owe_Ọ̀wàrà Ọ̀wà_Bélú Bél_Ọ̀pẹ̀̀ Ọ̀pẹ̀̀'.split(
-      '_'
+      '_',
     );
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, i, 1]).format('MMMM MMM'),
       expected[i],
-      expected[i]
+      expected[i],
     );
   }
 });
@@ -128,14 +128,14 @@ test('format month', () => {
 test('format week', () => {
   const expected =
     'Àìkú Àìk Àì_Ajé Ajé Aj_Ìsẹ́gun Ìsẹ́ Ìs_Ọjọ́rú Ọjr Ọr_Ọjọ́bọ Ọjb Ọb_Ẹtì Ẹtì Ẹt_Àbámẹ́ta Àbá Àb'.split(
-      '_'
+      '_',
     );
   let i;
   for (i = 0; i < expected.length; i += 1) {
     assert.equal(
       moment([2011, 0, 2 + i]).format('dddd ddd dd'),
       expected[i],
-      expected[i]
+      expected[i],
     );
   }
 });
@@ -145,142 +145,142 @@ test('from', () => {
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 44 }), true),
     'ìṣẹ́jú aayá die',
-    '44 seconds = ìṣẹ́jú aayá die'
+    '44 seconds = ìṣẹ́jú aayá die',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 45 }), true),
     'ìṣẹ́jú kan',
-    '45 seconds = ìṣẹ́jú kan'
+    '45 seconds = ìṣẹ́jú kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 89 }), true),
     'ìṣẹ́jú kan',
-    '89 seconds = a minute'
+    '89 seconds = a minute',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ s: 90 }), true),
     'ìṣẹ́jú 2',
-    '90 seconds = ìṣẹ́jú 2'
+    '90 seconds = ìṣẹ́jú 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 44 }), true),
     'ìṣẹ́jú 44',
-    'ìṣẹ́jú 44 = ìṣẹ́jú 44'
+    'ìṣẹ́jú 44 = ìṣẹ́jú 44',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 45 }), true),
     'wákàtí kan',
-    'ìṣẹ́jú 45 = wákàtí kan'
+    'ìṣẹ́jú 45 = wákàtí kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 89 }), true),
     'wákàtí kan',
-    'ìṣẹ́jú 89 = wákàtí kan'
+    'ìṣẹ́jú 89 = wákàtí kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ m: 90 }), true),
     'wákàtí 2',
-    'ìṣẹ́jú 90 = wákàtí 2'
+    'ìṣẹ́jú 90 = wákàtí 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 5 }), true),
     'wákàtí 5',
-    'wákàtí 5 = wákàtí 5'
+    'wákàtí 5 = wákàtí 5',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 21 }), true),
     'wákàtí 21',
-    'wákàtí 21 = wákàtí 21'
+    'wákàtí 21 = wákàtí 21',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 22 }), true),
     'ọjọ́ kan',
-    '22 wákàtí = ọjọ́ kan'
+    '22 wákàtí = ọjọ́ kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 35 }), true),
     'ọjọ́ kan',
-    '35 wákàtí = ọjọ́ kan'
+    '35 wákàtí = ọjọ́ kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ h: 36 }), true),
     'ọjọ́ 2',
-    'wákàtí 36 = ọjọ́ 2'
+    'wákàtí 36 = ọjọ́ 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 1 }), true),
     'ọjọ́ kan',
-    '1  = ọjọ́ kan'
+    '1  = ọjọ́ kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 5 }), true),
     'ọjọ́ 5',
-    'ọjọ́ 5 = ọjọ́  5'
+    'ọjọ́ 5 = ọjọ́  5',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 25 }), true),
     'ọjọ́ 25',
-    'ọjọ́ 25 = ọjọ́ 25'
+    'ọjọ́ 25 = ọjọ́ 25',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 26 }), true),
     'osù kan',
-    'ọjọ́ 26 = osù kan'
+    'ọjọ́ 26 = osù kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 30 }), true),
     'osù kan',
-    'ọjọ́ 30 = osù kan'
+    'ọjọ́ 30 = osù kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 43 }), true),
     'osù kan',
-    'ọjọ́ 43 = osù kan'
+    'ọjọ́ 43 = osù kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 46 }), true),
     'osù 2',
-    'ọjọ́ 46 = osù 2'
+    'ọjọ́ 46 = osù 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 74 }), true),
     'osù 2',
-    'ọjọ́ 75 = osù 2'
+    'ọjọ́ 75 = osù 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 76 }), true),
     'osù 3',
-    'ọjọ́ 76 = osù 3'
+    'ọjọ́ 76 = osù 3',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 1 }), true),
     'osù kan',
-    'osù 1 = osù kan'
+    'osù 1 = osù kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ M: 5 }), true),
     'osù 5',
-    'osù 5 = osù 5'
+    'osù 5 = osù 5',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 345 }), true),
     'ọdún kan',
-    'ọjọ 345 = ọdún kan'
+    'ọjọ 345 = ọdún kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ d: 548 }), true),
     'ọdún 2',
-    'ọjọ 548 = ọdún 2'
+    'ọjọ 548 = ọdún 2',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 1 }), true),
     'ọdún kan',
-    'ọdún 1 = ọdún kan'
+    'ọdún 1 = ọdún kan',
   );
   assert.equal(
     start.from(moment([2007, 1, 28]).add({ y: 5 }), true),
     'ọdún 5',
-    'ọdún 5 = ọdún 5'
+    'ọdún 5 = ọdún 5',
   );
 });
 
@@ -293,7 +293,7 @@ test('now from now', () => {
   assert.equal(
     moment().fromNow(),
     'ìṣẹ́jú aayá die sẹ́yìn',
-    'now from now should display as in the past'
+    'now from now should display as in the past',
   );
 });
 
@@ -301,7 +301,7 @@ test('fromNow', () => {
   assert.equal(
     moment().add({ s: 30 }).fromNow(),
     'ní ìṣẹ́jú aayá die',
-    'ní ìsẹjú aayá die'
+    'ní ìsẹjú aayá die',
   );
   assert.equal(moment().add({ d: 5 }).fromNow(), 'ní ọjọ́ 5', 'ní ọjọ́ 5');
 });
@@ -312,32 +312,32 @@ test('calendar day', () => {
   assert.equal(
     moment(a).calendar(),
     'Ònì ni 12:00 PM',
-    'today at the same time'
+    'today at the same time',
   );
   assert.equal(
     moment(a).add({ m: 25 }).calendar(),
     'Ònì ni 12:25 PM',
-    'Now plus 25 min'
+    'Now plus 25 min',
   );
   assert.equal(
     moment(a).add({ h: 1 }).calendar(),
     'Ònì ni 1:00 PM',
-    'Now plus 1 hour'
+    'Now plus 1 hour',
   );
   assert.equal(
     moment(a).add({ d: 1 }).calendar(),
     'Ọ̀la ni 12:00 PM',
-    'tomorrow at the same time'
+    'tomorrow at the same time',
   );
   assert.equal(
     moment(a).subtract({ h: 1 }).calendar(),
     'Ònì ni 11:00 AM',
-    'Now minus 1 hour'
+    'Now minus 1 hour',
   );
   assert.equal(
     moment(a).subtract({ d: 1 }).calendar(),
     'Àna ni 12:00 PM',
-    'yesterday at the same time'
+    'yesterday at the same time',
   );
 });
 
@@ -350,19 +350,19 @@ test('calendar next week', () => {
     assert.equal(
       m.calendar(),
       m.format("dddd [Ọsẹ̀ tón'bọ] [ni] LT"),
-      `Today + ${i} days current time`
+      `Today + ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format("dddd [Ọsẹ̀ tón'bọ] [ni] LT"),
-      `Today + ${i} days beginning of day`
+      `Today + ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format("dddd [Ọsẹ̀ tón'bọ] [ni] LT"),
-      `Today + ${i} days end of day`
+      `Today + ${i} days end of day`,
     );
   }
 });
@@ -376,19 +376,19 @@ test('calendar last week', () => {
     assert.equal(
       m.calendar(),
       m.format('dddd [Ọsẹ̀ tólọ́] [ni] LT'),
-      `Today - ${i} days current time`
+      `Today - ${i} days current time`,
     );
     m.hours(0).minutes(0).seconds(0).milliseconds(0);
     assert.equal(
       m.calendar(),
       m.format('dddd [Ọsẹ̀ tólọ́] [ni] LT'),
-      `Today - ${i} days beginning of day`
+      `Today - ${i} days beginning of day`,
     );
     m.hours(23).minutes(59).seconds(59).milliseconds(999);
     assert.equal(
       m.calendar(),
       m.format('dddd [Ọsẹ̀ tólọ́] [ni] LT'),
-      `Today - ${i} days end of day`
+      `Today - ${i} days end of day`,
     );
   }
 });
@@ -411,26 +411,26 @@ test('weeks year starting sunday format', () => {
   assert.equal(
     moment([2012, 0, 1]).format('w ww wo'),
     '52 52 ọjọ́ 52',
-    'Jan  1 2012 should be week 52'
+    'Jan  1 2012 should be week 52',
   );
   assert.equal(
     moment([2012, 0, 2]).format('w ww wo'),
     '1 01 ọjọ́ 1',
-    'Jan  2 2012 should be week 1'
+    'Jan  2 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 8]).format('w ww wo'),
     '1 01 ọjọ́ 1',
-    'Jan  8 2012 should be week 1'
+    'Jan  8 2012 should be week 1',
   );
   assert.equal(
     moment([2012, 0, 9]).format('w ww wo'),
     '2 02 ọjọ́ 2',
-    'Jan  9 2012 should be week 2'
+    'Jan  9 2012 should be week 2',
   );
   assert.equal(
     moment([2012, 0, 15]).format('w ww wo'),
     '2 02 ọjọ́ 2',
-    'Jan 15 2012 should be week 2'
+    'Jan 15 2012 should be week 2',
   );
 });

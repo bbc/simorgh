@@ -5,7 +5,7 @@ import Text from '#app/components/Text';
 import { AccountIconRounded } from '#app/components/icons';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 export type AccountHeaderVariant = 'legacy' | 'default';
 
@@ -43,21 +43,23 @@ const AccountHeader = ({ variant = 'legacy' }: AccountHeaderProps) => {
 
   return (
     <div
-      css={isDefaultVariant ? styles.wrapperDefault : styles.wrapper}
+      className={isDefaultVariant ? styles.wrapperDefault : styles.wrapper}
       {...viewTracker}
     >
       <Text
         as="a"
-        css={isDefaultVariant ? styles.linkDefault : styles.link}
+        className={isDefaultVariant ? styles.linkDefault : styles.link}
         href={href}
         fontVariant="sansBold"
         onClick={onClickTrack}
         {...(isDefaultVariant && { 'aria-label': label })}
       >
         <AccountIconRounded
-          css={isDefaultVariant ? styles.iconDefault : styles.icon}
+          className={isDefaultVariant ? styles.iconDefault : undefined}
+          isDefault={isDefaultVariant}
+          isInverted={!isDefaultVariant}
         />
-        <span>{label}</span>
+        <span className={styles.label}>{label}</span>
       </Text>
     </div>
   );

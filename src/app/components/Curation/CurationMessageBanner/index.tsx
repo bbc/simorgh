@@ -1,7 +1,7 @@
 import Heading from '#app/components/Heading';
 import MessageBanner from '#app/components/MessageBanner';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 type Props = {
   id: string;
@@ -24,7 +24,7 @@ const CurationMessageBanner = ({
 }: Props) => {
   return (
     <section
-      css={styles.container}
+      className={styles.container}
       role="region"
       aria-labelledby={id}
       data-testid={id}
@@ -36,7 +36,7 @@ const CurationMessageBanner = ({
         image={image}
         eventTrackingData={eventTrackingData}
       >
-        <Heading level={2} size="paragon" css={styles.heading} id={id}>
+        <Heading level={2} size="paragon" className={styles.heading} id={id}>
           {heading}
         </Heading>
       </MessageBanner>

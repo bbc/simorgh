@@ -8,7 +8,8 @@ const TopicImage = ({ image }) => {
       <div className={styles.imageWrapper}>
         <img
           className={styles.image}
-          src={imageUrl}
+          src={imageUrl.endsWith('.webp') ? imageUrl : `${imageUrl}.webp`}
+          loading="eager"
           alt=""
           data-testid="topic-badge"
         />

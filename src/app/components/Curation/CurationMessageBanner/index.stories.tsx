@@ -1,3 +1,4 @@
+import { RequestContextProvider } from '#contexts/RequestContext';
 import CurationMessageBanner from '.';
 import readme from './README.md';
 
@@ -22,7 +23,11 @@ export default {
   },
 };
 
-export const Example = Component;
+export const Example = () => (
+  <RequestContextProvider service="kyrgyz" pageType="home" pathname="/kyrgyz">
+    <Component />
+  </RequestContextProvider>
+);
 
 export const WithoutImage = () => (
   <CurationMessageBanner

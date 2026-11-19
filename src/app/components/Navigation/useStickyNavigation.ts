@@ -7,12 +7,11 @@ import {
   type TransitionEvent,
 } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useToggle from '#app/hooks/useToggle';
 import subscribeToMediaQuery from '#hooks/useMediaQuery/subscribeToMediaQuery';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
-  SERVICES_WITH_STICKY_NAV,
   STICKY_MIN_VIEWPORT_HEIGHT,
+  STICKY_NAV_ARTICLE_START_SELECTOR,
   STICKY_NAV_EXIT_BUFFER_PX,
   STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
   STICKY_NAV_TAB_STOP_SELECTOR,
@@ -28,7 +27,6 @@ const RESIZE_DEBOUNCE_MS = 150;
 // this long after a forward Tab so that the bar isn't dragged into view, or
 // swept away mid-use, by the browser's own correction.
 const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
-const ARTICLE_START_SELECTOR = 'main [data-sticky-nav-anchor]';
 
 // Every one of these has to hold before the bar is allowed to pin. Some
 // qualify the viewport by matching ("wide enough to fit the bar"), others by
@@ -89,6 +87,7 @@ const useLatestRef = <T>(value: T) => {
 type UseStickyNavigationProps = {
   isOpen: boolean;
   closeMenu: () => void;
+  isExperimentEnabled: boolean;
 };
 
 /**
@@ -102,18 +101,14 @@ type UseStickyNavigationProps = {
 const useStickyNavigation = ({
   isOpen,
   closeMenu,
+  isExperimentEnabled,
 }: UseStickyNavigationProps) => {
-  const { isLite, env, service, pageType } = use(RequestContext);
-  const { enabled: stickyNavigationEnabled } = useToggle('stickyNavigation');
+  const { isLite, pageType } = use(RequestContext);
 
   // None of these can change without a new page load, so the viewport
   // listeners below are only ever attached on pages that could use them.
   const isSupported =
-    stickyNavigationEnabled &&
-    env !== 'live' &&
-    pageType === ARTICLE_PAGE &&
-    SERVICES_WITH_STICKY_NAV.includes(service) &&
-    !isLite;
+    isExperimentEnabled && pageType === ARTICLE_PAGE && !isLite;
 
   const [isViewportEligible, setIsViewportEligible] = useState(false);
   const isEnabled = isSupported && isViewportEligible;
@@ -121,6 +116,7 @@ const useStickyNavigation = ({
   const [{ shouldBePinned, shouldBeVisible, height }, setScrollState] =
     useState(INITIAL_SCROLL_STATE);
   const [phase, setPhase] = useState<StickyPhase>('idle');
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   const navSlotRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
@@ -206,7 +202,7 @@ const useStickyNavigation = ({
     const resolveArticleStart = () => {
       if (!measurements.articleStart?.isConnected) {
         measurements.articleStart = document.querySelector(
-          ARTICLE_START_SELECTOR,
+          STICKY_NAV_ARTICLE_START_SELECTOR,
         );
       }
       return measurements.articleStart;
@@ -427,6 +423,11 @@ const useStickyNavigation = ({
   }, [isEnabled, shouldBePinned, shouldBeVisible]);
 
   const isVisible = phase === 'onScreen';
+  const isPinned = phase !== 'idle';
+
+  useEffect(() => {
+    if (isVisible) setHasBeenVisible(true);
+  }, [isVisible]);
 
   // Retires the bar from fixed positioning the moment it has finished
   // sliding away, instead of waiting out the fallback timeout above.
@@ -512,8 +513,9 @@ const useStickyNavigation = ({
 
   return {
     isEnabled,
+    hasBeenVisible,
     /** Whether the bar is out of the page flow and fixed to the viewport. */
-    isPinned: phase !== 'idle',
+    isPinned,
     /** Pinned but not yet painted, so it must not be shown to anyone. */
     isAwaitingFirstPaint: phase === 'painting',
     /** Pinned but sitting out of sight above the viewport. */

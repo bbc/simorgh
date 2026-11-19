@@ -58,17 +58,16 @@ export const service: DefaultServiceConfig = {
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'البودكاست',
-      brandTitle: 'يستحق الانتباه',
-      brandDescription:
-        'شرح معمق لأبرز الأحداث والموضوعات، لمساعدتك على فهم أهم المتغيرات حولك وأثرها على حياتك',
+      title: 'تطبيق بي بي سي عربي للهواتف المحمولة',
+      brandTitle: 'حمّل تطبيق خدمة بي بي سي العالمية الإخباري',
+      brandDescription: 'ابقَ على اطّلاع دائم بآخر شؤون الساعة',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
-        alt: 'يستحق الانتباه',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pmg97z.jpg',
+        alt: 'صورة تطبيق جوال',
       },
       linkLabel: {
-        text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
+        text: 'حمِّل التطبيق',
+        href: 'https://www.bbc.com/arabic/articles/c1d247rw7xlo',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',

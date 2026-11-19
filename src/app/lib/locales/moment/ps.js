@@ -48,7 +48,7 @@ moment.defineLocale('ps', {
   },
   postformat(string) {
     const EasternNumerals = numerals.makeNumeralTranslator(
-      numerals.EasternArabic
+      numerals.EasternArabic,
     );
     return EasternNumerals(string).replace(/,/g, '،');
   },

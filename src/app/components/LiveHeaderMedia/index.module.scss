@@ -1,0 +1,147 @@
+@use '@scss/themeTokens' as theme;
+
+.componentContainer {
+  width: 100%;
+
+  :global(.no-js) & {
+    display: none;
+  }
+}
+
+.nojs {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-regular');
+  color: theme.$palette-white;
+
+  div {
+    margin-top: theme.$spacings-double;
+  }
+
+  strong {
+    display: block;
+    margin-top: theme.$spacings-double;
+    font-weight: normal;
+  }
+}
+
+.mediaButton {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.openButton {
+  cursor: pointer;
+  background-color: unset;
+  border: unset;
+  text-align: start;
+}
+
+.componentContainer .watchLiveCtaText {
+  color: theme.$palette-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  :global(.external-svg) {
+    height: theme.$spacings-double;
+    width: theme.$spacings-double;
+    vertical-align: middle;
+    margin-inline-end: theme.$spacings-full;
+  }
+
+  button:hover &,
+  button:focus-visible & {
+    text-decoration: underline;
+  }
+}
+
+.componentContainer .guidanceMessage {
+  display: block;
+  margin-top: theme.$spacings-double;
+  color: theme.$palette-grey-2;
+  text-align: start;
+}
+
+.watchLiveCta {
+  width: 100%;
+  border: 0;
+  background-color: theme.$palette-live-medium;
+  padding: theme.pixelsToRem-px-to-rem(11);
+  margin-top: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: theme.pixelsToRem-px-to-rem(171);
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: #{theme.pixelsToRem-px-to-rem(2)} solid transparent;
+  }
+}
+
+.closeButton {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  border: 0;
+  line-height: 0;
+  align-items: center;
+}
+
+.closeContainer {
+  color: theme.$palette-white;
+  background-color: theme.$palette-black;
+  border: theme.$palette-white solid theme.pixelsToRem-px-to-rem(1);
+
+  :global(.external-svg) {
+    height: theme.$spacings-double;
+    width: theme.$spacings-double;
+    margin: theme.pixelsToRem-px-to-rem(13);
+  }
+
+  button:hover &,
+  button:focus-visible & {
+    background-color: theme.$palette-postbox;
+    outline: theme.$palette-white solid theme.pixelsToRem-px-to-rem(1);
+  }
+}
+
+.mediaLoader {
+  max-width: 100%;
+  margin-top: theme.$spacings-double;
+}
+
+.mediaDescription {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  min-height: theme.$spacings-quintuple;
+
+  span {
+    margin: 0;
+  }
+}
+
+.openMediaDescription span {
+  color: theme.$palette-grey-4;
+}
+
+.closeMediaDescription {
+  text-align: start;
+
+  span {
+    color: theme.$palette-white;
+  }
+
+  button:hover &,
+  button:focus-visible & {
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.hideComponent {
+  display: none;
+}

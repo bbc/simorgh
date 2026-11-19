@@ -3,7 +3,7 @@ const moment = require('moment');
 moment.defineLocale('om', {
   months:
     'Amajjii_Guraandhala_Bitooteessa_Ebla_Caamsaa_Waxabajjii_Adooleessa_Hagayya_Fuulbaana_Onkololeessa_Sadaasa_Muddee'.split(
-      '_'
+      '_',
     ),
   relativeTime: {
     past: '%s dura',
