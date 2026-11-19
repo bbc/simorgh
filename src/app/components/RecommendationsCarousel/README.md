@@ -24,8 +24,11 @@ JavaScript. Images are lazy-loaded, and long headlines are not truncated.
 
 Run `yarn storybook`, then open:
 
-- **Components / RecommendationsCarousel / Multiple Items** for the standalone
-  component, or **Single Item** for a single recommendation.
+- **Components / RecommendationsCarousel / Non-modal Mundo Carousel** for the
+  standalone component using the same Mundo recommendations as the article
+  story. Cards link directly to articles without opening a modal.
+- **Components / RecommendationsCarousel / Multiple Items** or **Single Item**
+  for smaller generic examples.
 - **Pages / Article Page / Article Page With Recommendations Carousel** for a
   Mundo article with the carousel immediately above Topic Discovery.
 
