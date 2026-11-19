@@ -73,6 +73,16 @@ export const COMPONENTS = {
   BILLBOARD: 'billboard',
   PORTRAIT_VIDEO_CAROUSEL: 'portrait-video-carousel',
   PORTRAIT_VIDEO_MODAL: 'portrait-video-modal',
+  ARTICLE_LITE_SITE_LINK: 'article-lite-site-link',
+  FEATURES: 'features',
+  LATEST_MEDIA: 'latest',
+  ARTICLE_LINKS_BLOCK: 'edoj',
+  SOCIAL_EMBED: 'social-consent-banner',
+  TOP_STORIES: 'top-stories',
+  TOP_BAR_OJ: 'top-bar-oj',
+  CONTINUE_READING_BUTTON: 'continue-reading-button',
+  RELATED_CONTENT: 'related-content',
+  RELATED_TOPICS: 'topics',
 };
 
 export const isPageViewRequest =

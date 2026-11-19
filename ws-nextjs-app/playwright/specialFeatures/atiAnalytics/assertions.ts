@@ -21,6 +21,7 @@ export type AtiAssertionFnProps = {
   contentType: string;
   service: string;
   appEnv: AppEnv;
+  expectsResonanceEvents?: boolean;
 };
 
 const assertATIPageViewParamsExist = (
@@ -293,6 +294,293 @@ const waitForComponentClickRequest = ({
     isViewabilityClickRequest(getViewabilityHosts(appEnv), component),
   );
 
+const assertArticleComponentEvent = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+  component,
+  selector,
+  action,
+  targetSelector,
+  reload,
+  forceClick,
+  viewport,
+}: AtiAssertionFnProps & {
+  component: string;
+  selector: string;
+  action: 'view' | 'select';
+  targetSelector?: string;
+  reload?: boolean;
+  forceClick?: boolean;
+  viewport?: { width: number; height: number };
+}) => {
+  const componentLocator = page.locator(selector);
+  const requestPromise =
+    action === 'view'
+      ? waitForComponentViewRequest({ page, appEnv, component })
+      : waitForComponentClickRequest({ page, appEnv, component });
+
+  if (viewport) await page.setViewportSize(viewport);
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  if (appEnv === 'local') {
+    await page.addStyleTag({
+      content: 'nextjs-portal { display: none !important; }',
+    });
+  }
+  if (reload) await page.reload({ waitUntil: 'load' });
+  await componentLocator.first().waitFor({ state: 'attached' });
+  if (!forceClick) await componentLocator.first().scrollIntoViewIfNeeded();
+
+  if (action === 'view' && component === COMPONENTS.CONTINUE_READING_BUTTON) {
+    await componentLocator
+      .first()
+      .evaluate(element => element.scrollIntoView({ block: 'center' }));
+    await expect(componentLocator.first()).toBeInViewport({ ratio: 0.5 });
+  } else if (action === 'view') {
+    await componentLocator.first().scrollIntoViewIfNeeded();
+  }
+
+  const target = targetSelector
+    ? page.locator(targetSelector)
+    : componentLocator.locator('a');
+  const firstTarget = target.first();
+  const interactWithComponent = async () => {
+    if (action !== 'select') return;
+    if (forceClick) {
+      await firstTarget.evaluate(element => (element as HTMLElement).click());
+      return;
+    }
+    await firstTarget.click();
+  };
+  const [request] = await Promise.all([
+    requestPromise,
+    interactWithComponent(),
+  ]);
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    action,
+  );
+};
+
+const articleComponentAssertions = {
+  assertContinueReadingButtonComponentView: {
+    component: COMPONENTS.CONTINUE_READING_BUTTON,
+    selector: '[data-testid="continue-reading-button"]',
+    action: 'view',
+    reload: true,
+    viewport: { width: 1000, height: 660 },
+  },
+  assertContinueReadingButtonComponentClick: {
+    component: COMPONENTS.CONTINUE_READING_BUTTON,
+    selector: '[data-testid="continue-reading-button"]',
+    targetSelector: '[data-testid="continue-reading-button"]',
+    action: 'select',
+    reload: true,
+    forceClick: true,
+    viewport: { width: 1000, height: 660 },
+  },
+  assertTopBarOJComponentView: {
+    component: COMPONENTS.TOP_BAR_OJ,
+    selector: '[data-testid="top-bar-onward-journeys"]',
+    action: 'view',
+    viewport: { width: 1000, height: 660 },
+  },
+  assertTopBarOJComponentClick: {
+    component: COMPONENTS.TOP_BAR_OJ,
+    selector: '[data-testid="top-bar-onward-journeys"]',
+    action: 'select',
+    viewport: { width: 1000, height: 660 },
+  },
+  assertArticleLiteSiteLinkComponentView: {
+    component: COMPONENTS.ARTICLE_LITE_SITE_LINK,
+    selector: '[data-e2e="article-lite-site-link"]',
+    action: 'view',
+  },
+  assertArticleLiteSiteLinkComponentClick: {
+    component: COMPONENTS.ARTICLE_LITE_SITE_LINK,
+    selector: '[data-e2e="article-lite-site-link"]',
+    action: 'select',
+  },
+  assertTopStoriesComponentView: {
+    component: COMPONENTS.TOP_STORIES,
+    selector: '[data-testid="top-stories"]',
+    action: 'view',
+  },
+  assertTopStoriesComponentClick: {
+    component: COMPONENTS.TOP_STORIES,
+    selector: '[data-testid="top-stories"]',
+    action: 'select',
+  },
+  assertFeaturesAnalysisComponentView: {
+    component: COMPONENTS.FEATURES,
+    selector: '[data-testid="features"]',
+    action: 'view',
+  },
+  assertFeaturesAnalysisComponentClick: {
+    component: COMPONENTS.FEATURES,
+    selector: '[data-testid="features"]',
+    action: 'select',
+  },
+  assertRelatedTopicsComponentView: {
+    component: COMPONENTS.RELATED_TOPICS,
+    selector: '[data-testid="related-topics"]',
+    action: 'view',
+  },
+  assertRelatedTopicsComponentClick: {
+    component: COMPONENTS.RELATED_TOPICS,
+    selector: '[data-testid="related-topics"]',
+    action: 'select',
+  },
+  assertRelatedContentComponentView: {
+    component: COMPONENTS.RELATED_CONTENT,
+    selector: '[data-e2e="related-content-heading"]',
+    action: 'view',
+  },
+  assertRelatedContentComponentClick: {
+    component: COMPONENTS.RELATED_CONTENT,
+    selector: '[data-e2e="related-content-heading"]',
+    action: 'select',
+  },
+  assertLatestMediaComponentView: {
+    component: COMPONENTS.LATEST_MEDIA,
+    selector: '[data-testid="latest-media"]',
+    action: 'view',
+  },
+  assertLatestMediaComponentClick: {
+    component: COMPONENTS.LATEST_MEDIA,
+    selector: '[data-testid="latest-media"]',
+    action: 'select',
+  },
+  assertSocialEmbedComponentView: {
+    component: COMPONENTS.SOCIAL_EMBED,
+    selector: '[data-testid="consentBanner"]',
+    action: 'view',
+  },
+  assertSocialEmbedComponentClick: {
+    component: COMPONENTS.SOCIAL_EMBED,
+    selector: '[data-testid="consentBanner"]',
+    targetSelector: '[data-testid="consentBanner"] button',
+    action: 'select',
+  },
+  assertArticleLinksBlockComponentView: {
+    component: COMPONENTS.ARTICLE_LINKS_BLOCK,
+    selector: '[data-e2e="article-links-block"]',
+    action: 'view',
+  },
+  assertArticleLinksBlockComponentClick: {
+    component: COMPONENTS.ARTICLE_LINKS_BLOCK,
+    selector: '[data-e2e="article-links-block"]',
+    targetSelector:
+      '[data-e2e="article-links-block"] a:not([href^="#end-of-article-links-block"])',
+    action: 'select',
+  },
+} as const;
+
+type ArticleComponentAssertionName = keyof typeof articleComponentAssertions;
+
+const runArticleComponentAssertion = (
+  name: ArticleComponentAssertionName,
+  props: AtiAssertionFnProps,
+) =>
+  assertArticleComponentEvent({
+    ...props,
+    ...articleComponentAssertions[name],
+  });
+
+export const assertContinueReadingButtonComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertContinueReadingButtonComponentView',
+    props,
+  );
+
+export const assertContinueReadingButtonComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertContinueReadingButtonComponentClick',
+    props,
+  );
+
+export const assertTopBarOJComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopBarOJComponentView', props);
+
+export const assertTopBarOJComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopBarOJComponentClick', props);
+
+export const assertArticleLiteSiteLinkComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLiteSiteLinkComponentView', props);
+
+export const assertArticleLiteSiteLinkComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertArticleLiteSiteLinkComponentClick',
+    props,
+  );
+
+export const assertTopStoriesComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopStoriesComponentView', props);
+
+export const assertTopStoriesComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopStoriesComponentClick', props);
+
+export const assertFeaturesAnalysisComponentView = (
+  props: AtiAssertionFnProps,
+) => runArticleComponentAssertion('assertFeaturesAnalysisComponentView', props);
+
+export const assertFeaturesAnalysisComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertFeaturesAnalysisComponentClick', props);
+
+export const assertRelatedTopicsComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedTopicsComponentView', props);
+
+export const assertRelatedTopicsComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedTopicsComponentClick', props);
+
+export const assertRelatedContentComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedContentComponentView', props);
+
+export const assertRelatedContentComponentClick = (
+  props: AtiAssertionFnProps,
+) => runArticleComponentAssertion('assertRelatedContentComponentClick', props);
+
+export const assertLatestMediaComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertLatestMediaComponentView', props);
+
+export const assertLatestMediaComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertLatestMediaComponentClick', props);
+
+export const assertSocialEmbedComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertSocialEmbedComponentView', props);
+
+export const assertSocialEmbedComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertSocialEmbedComponentClick', props);
+
+export const assertArticleLinksBlockComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLinksBlockComponentView', props);
+
+export const assertArticleLinksBlockComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLinksBlockComponentClick', props);
+
 export const assertPageView = async ({
   page,
   path,
@@ -334,8 +622,10 @@ export const assertResonancePageView = async ({
   contentType,
   service,
   appEnv,
+  expectsResonanceEvents = true,
 }: AtiAssertionFnProps) => {
-  const sendsResonanceEvents = usesResonance(applicationType);
+  const sendsResonanceEvents =
+    usesResonance(applicationType) && expectsResonanceEvents;
   const resonanceBagUrl = getResonanceBagUrl(appEnv);
   const escapedBagUrl = resonanceBagUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const resonanceBagEventUrlPattern = new RegExp(
@@ -349,6 +639,7 @@ export const assertResonancePageView = async ({
 
     try {
       return JSON.parse(rawPostData) as {
+        // eslint-disable-next-line camelcase
         bag_metadata?: Record<string, unknown>;
         events?: Array<Record<string, unknown>>;
       };
@@ -372,7 +663,7 @@ export const assertResonancePageView = async ({
     await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
     if (!sendsResonanceEvents) {
-      await page.waitForLoadState('networkidle');
+      await expect(page.locator('body')).toBeVisible();
       expect(matchedRequests).toHaveLength(0);
       return;
     }
@@ -395,20 +686,20 @@ export const assertResonancePageView = async ({
       )
       .not.toBeNull();
 
-    const body = matchedRequests
+    const resonanceBody = matchedRequests
       .map(parseResonanceBody)
       .find(body => body?.bag_metadata && body?.events);
 
-    if (!body) {
+    if (!resonanceBody) {
       expect(matchedRequests.length).toBeGreaterThan(0);
       return;
     }
 
-    expect(body).toHaveProperty('bag_metadata');
-    expect(body).toHaveProperty('events');
+    expect(resonanceBody).toHaveProperty('bag_metadata');
+    expect(resonanceBody).toHaveProperty('events');
 
-    const metadata = body?.bag_metadata ?? {};
-    const event = body?.events?.[0] ?? {};
+    const metadata = resonanceBody.bag_metadata ?? {};
+    const event = resonanceBody.events?.[0] ?? {};
 
     assertResonancePageViewParamsExist({
       metadata,
@@ -1033,7 +1324,9 @@ export const assertPodcastLinksComponentClick = async ({
   const rssLink = podcastLinks.getByRole('link', { name: /rss/i });
 
   const linkToClick =
-    (await rssLink.count()) > 0 ? rssLink.first() : podcastLinks.locator('a').first();
+    (await rssLink.count()) > 0
+      ? rssLink.first()
+      : podcastLinks.locator('a').first();
   await linkToClick.waitFor();
 
   const [request] = await Promise.all([
@@ -1104,10 +1397,7 @@ export const assertBillboardComponentClick = async ({
   await page
     .locator('[data-testid="billboard-maximum-1"]')
     .scrollIntoViewIfNeeded();
-  await page
-    .locator('[data-testid="billboard-maximum-1"] a')
-    .first()
-    .waitFor();
+  await page.locator('[data-testid="billboard-maximum-1"] a').first().waitFor();
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({
