@@ -11,7 +11,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import RecommendationsCarousel from '#app/components/RecommendationsCarousel';
+import NonModalRecommendationsCarousel from '#app/components/NonModalRecommendationsCarousel';
 import styles from './index.styles';
 import RecommendationsItem from './RecommendationsItem';
 
@@ -88,7 +88,7 @@ const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
     >
       <SkipLinkWrapper {...skipLinkProps}>
         {showCarousel ? (
-          <RecommendationsCarousel
+          <NonModalRecommendationsCarousel
             data={data}
             title={title}
             eventTrackingData={eventTrackingData}

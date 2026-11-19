@@ -187,8 +187,14 @@ const getWsojComponent = ({
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
 
-const isRecommendationsBlock = ({ type, model }: OptimoBlock) =>
-  type === 'wsoj' && 'type' in model && model.type === 'recommendations';
+const isRecommendationsBlock = (
+  block: OptimoBlock,
+): block is OptimoBlock & {
+  model: { type: 'recommendations'; data?: Recommendation[] };
+} =>
+  block.type === 'wsoj' &&
+  'type' in block.model &&
+  block.model.type === 'recommendations';
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -241,10 +247,10 @@ const getContinueReadingButton =
 
 const ArticlePage = ({
   pageData,
-  stackedRecommendations = false,
+  recommendationsVariant = 'non-modal',
 }: {
   pageData: Article;
-  stackedRecommendations?: boolean;
+  recommendationsVariant?: 'non-modal' | 'modal' | 'stacked';
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
@@ -308,11 +314,6 @@ const ArticlePage = ({
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
-  const recommendationsBlock = blocks.find(
-    (block): block is OptimoBlock & { model: { data?: Recommendation[] } } =>
-      block.type === 'wsoj',
-  );
-  const recommendationsData = recommendationsBlock?.model.data ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
@@ -478,6 +479,7 @@ const ArticlePage = ({
   const recommendationBlocks = moveRecommendationsBelowArticle
     ? blocks.filter(isRecommendationsBlock)
     : [];
+  const recommendationsData = recommendationBlocks[0]?.model.data ?? [];
   const inlineBlocks = moveRecommendationsBelowArticle
     ? blocks.filter(block => !isRecommendationsBlock(block))
     : blocks;
@@ -575,16 +577,18 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {(!showContinueReadingButton || showAllContent) && (
-            <RecommendationsCarousel
-              data={recommendationsData}
-              stacked={stackedRecommendations}
-            />
-          )}
-          <Blocks
-            blocks={recommendationBlocks}
-            componentsToRender={componentsToRender}
-          />
+          {(!showContinueReadingButton || showAllContent) &&
+            (recommendationsVariant === 'non-modal' ? (
+              <Blocks
+                blocks={recommendationBlocks}
+                componentsToRender={componentsToRender}
+              />
+            ) : (
+              <RecommendationsCarousel
+                data={recommendationsData}
+                stacked={recommendationsVariant === 'stacked'}
+              />
+            ))}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

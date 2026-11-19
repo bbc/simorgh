@@ -1,0 +1,98 @@
+@use '@scss/themeTokens' as theme;
+
+h2.heading {
+  margin-block-end: theme.$spacings-full;
+}
+
+.container {
+  position: relative;
+  container-type: inline-size;
+}
+
+.carousel {
+  display: flex;
+  gap: theme.$spacings-full;
+  overflow-x: auto;
+  list-style: none;
+  margin: 0;
+  padding: theme.$spacings-half;
+  scroll-snap-type: x proximity;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    gap: theme.$spacings-double;
+    padding-block: theme.$spacings-full;
+
+    @media #{theme.$mediaQueries-pointer-fine} {
+      &::after {
+        content: '';
+        flex: 0 0 calc(100% / 3.5 * 0.5);
+      }
+    }
+  }
+}
+
+.item {
+  flex: 0 0 theme.pixelsToRem-px-to-rem(147);
+  min-width: 0;
+  scroll-snap-align: start;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    flex-basis: calc(100% / 2.33 - #{theme.$spacings-full});
+    min-width: theme.pixelsToRem-px-to-rem(147);
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-basis: calc(100% / 3.33 - #{theme.$spacings-double});
+    min-width: 0;
+
+    @media #{theme.$mediaQueries-pointer-fine} {
+      flex-basis: calc(100% / 3.5 - #{theme.$spacings-double});
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 9 / 16;
+  min-height: 100%;
+  background-color: theme.$palette-black;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: theme.pixelsToRem-px-to-rem(2) solid theme.$palette-white;
+    outline-offset: theme.pixelsToRem-px-to-rem(-4);
+    box-shadow: inset 0 0 0 theme.pixelsToRem-px-to-rem(2) theme.$palette-black;
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.card .headline {
+  position: relative;
+  width: 100%;
+  color: theme.$palette-white;
+  padding: theme.$spacings-quadruple theme.$spacings-full theme.$spacings-full;
+  background: linear-gradient(
+    to bottom,
+    rgba(theme.$palette-black, 0) 0%,
+    rgba(theme.$palette-black, 0.65) 24%,
+    theme.$palette-black 100%
+  );
+  overflow-wrap: anywhere;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    color: CanvasText;
+    background: Canvas;
+  }
+}
+
+.card:hover .headline,
+.card:focus-visible .headline {
+  text-decoration: underline;
+}

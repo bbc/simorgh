@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useMemo } from 'react';
+import { ComponentProps, useMemo } from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
@@ -79,7 +79,9 @@ type Props = {
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
-  stackedRecommendations?: boolean;
+  recommendationsVariant?: ComponentProps<
+    typeof ArticlePageComponent
+  >['recommendationsVariant'];
   pathname?: string;
   toggles?: Toggles;
 };
@@ -91,7 +93,7 @@ const ComponentWithContext = ({
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
-  stackedRecommendations = false,
+  recommendationsVariant = 'non-modal',
   pathname = '/news/articles/c000000000o',
   toggles = {},
 }: Props) => {
@@ -124,7 +126,7 @@ const ComponentWithContext = ({
           <ThemeProvider service={service}>
             <PageLayoutWrapper pageData={data.article} status={200}>
               <Page
-                stackedRecommendations={stackedRecommendations}
+                recommendationsVariant={recommendationsVariant}
                 pageData={{
                   ...data.article,
                   secondaryColumn: data.secondaryData,
@@ -414,6 +416,7 @@ export const MundoArticleWithRecommendationsCarousel = {
       data={mundoRecommendationsData}
       service="mundo"
       pathname="/mundo/articles/c1xv2q1gewvo"
+      recommendationsVariant="modal"
     />
   ),
   globals: {
@@ -428,7 +431,7 @@ export const MundoArticleWithStackedRecommendationsCarousel = {
       data={mundoRecommendationsData}
       service="mundo"
       pathname="/mundo/articles/c1xv2q1gewvo"
-      stackedRecommendations
+      recommendationsVariant="stacked"
     />
   ),
   globals: MundoArticleWithRecommendationsCarousel.globals,

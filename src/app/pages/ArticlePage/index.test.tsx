@@ -187,18 +187,30 @@ describe('Article Page', () => {
   });
 
   it.each([
-    { topicDiscoveryEnabled: true, stackedRecommendations: false },
-    { topicDiscoveryEnabled: false, stackedRecommendations: false },
-    { topicDiscoveryEnabled: true, stackedRecommendations: true },
-    { topicDiscoveryEnabled: false, stackedRecommendations: true },
-  ])(
-    'places the carousel directly after the article and before topics with topic discovery=$topicDiscoveryEnabled and stacked promos=$stackedRecommendations',
-    ({ topicDiscoveryEnabled, stackedRecommendations }) => {
+    { topicDiscoveryEnabled: true, recommendationsVariant: 'non-modal' },
+    { topicDiscoveryEnabled: false, recommendationsVariant: 'non-modal' },
+    { topicDiscoveryEnabled: true, recommendationsVariant: 'modal' },
+    { topicDiscoveryEnabled: false, recommendationsVariant: 'modal' },
+    { topicDiscoveryEnabled: true, recommendationsVariant: 'stacked' },
+    { topicDiscoveryEnabled: false, recommendationsVariant: 'stacked' },
+  ] as const)(
+    'places one $recommendationsVariant carousel directly after the article and before topics with topic discovery=$topicDiscoveryEnabled',
+    ({ topicDiscoveryEnabled, recommendationsVariant }) => {
       const pageData = {
         ...articleDataPidgin,
         metadata: {
           ...articleDataPidgin.metadata,
-          topics: [{ topicId: 'test-topic', topicName: 'Test topic' }],
+          topics: [
+            {
+              topicId: 'test-topic',
+              topicName: 'Test topic',
+              subjectList: [],
+              curationList: [],
+              types: [],
+              home: 'http://www.bbc.co.uk/ontologies/passport/home/Mundo',
+              topicUrl: '/mundo/topics/test-topic',
+            },
+          ],
         },
         content: {
           model: {
@@ -221,15 +233,19 @@ describe('Article Page', () => {
       const { container } = render(
         <ArticlePage
           pageData={pageData}
-          stackedRecommendations={stackedRecommendations}
+          recommendationsVariant={recommendationsVariant}
         />,
         {
           service: 'mundo',
-          toggles: { topicDiscovery: { enabled: topicDiscoveryEnabled } },
+          toggles: {
+            topicDiscovery: { enabled: topicDiscoveryEnabled },
+            midArticleOnwardJourney: { enabled: true },
+          },
         },
       );
 
-      const carousel = screen.getByTestId('recommendations-carousel');
+      expect(screen.getAllByTestId('recommendations-carousel')).toHaveLength(1);
+      const carousel = screen.getByRole('region', { name: 'Más leídas' });
       const main = container.querySelector('main');
       const topics = screen.getByTestId(
         topicDiscoveryEnabled ? 'topic-discovery' : 'related-topics',
@@ -237,10 +253,15 @@ describe('Article Page', () => {
       expect(main?.nextElementSibling).toBe(carousel);
       expect(carousel.nextElementSibling).toBe(topics);
       expect(within(carousel).getAllByRole('list')).toHaveLength(
-        stackedRecommendations ? 2 : 1,
+        recommendationsVariant === 'stacked' ? 2 : 1,
       );
       recommendationsFixtures.forEach(({ title }) => {
-        expect(carousel).toHaveTextContent(title);
+        expect(
+          within(carousel).getByRole(
+            recommendationsVariant === 'non-modal' ? 'link' : 'button',
+            { name: new RegExp(title) },
+          ),
+        ).toBeInTheDocument();
       });
     },
   );
@@ -258,45 +279,57 @@ describe('Article Page', () => {
     expect(container.querySelector('h1 [data-sticky-nav-anchor]')).toBeNull();
   });
 
-  it('reveals the recommendations carousel only after a collapsed article is expanded', () => {
-    const pageData = {
-      ...articleDataPidgin,
-      content: {
-        model: {
-          blocks: [
-            ...articleDataPidgin.content.model.blocks.filter(
-              block => block.type !== 'wsoj',
-            ),
-            {
-              id: 'recommendations-continue-reading',
-              type: 'continueReading',
-              model: {},
-            },
-            {
-              id: 'recommendations-after-continue-reading',
-              type: 'wsoj',
-              model: {
-                type: 'recommendations',
-                data: recommendationsFixtures,
+  it.each(['non-modal', 'modal', 'stacked'] as const)(
+    'reveals the %s recommendations carousel only after a collapsed article is expanded',
+    recommendationsVariant => {
+      const pageData = {
+        ...articleDataPidgin,
+        content: {
+          model: {
+            blocks: [
+              ...articleDataPidgin.content.model.blocks.filter(
+                block => block.type !== 'wsoj',
+              ),
+              {
+                id: 'recommendations-continue-reading',
+                type: 'continueReading',
+                model: {},
               },
-            },
-          ],
+              {
+                id: 'recommendations-after-continue-reading',
+                type: 'wsoj',
+                model: {
+                  type: 'recommendations',
+                  data: recommendationsFixtures,
+                },
+              },
+            ],
+          },
         },
-      },
-    };
-    render(<ArticlePage pageData={pageData} />, {
-      service: 'mundo',
-      toggles: { continueReadingButton: { enabled: true } },
-    });
+      };
+      render(
+        <ArticlePage
+          pageData={pageData}
+          recommendationsVariant={recommendationsVariant}
+        />,
+        {
+          service: 'mundo',
+          toggles: {
+            continueReadingButton: { enabled: true },
+            midArticleOnwardJourney: { enabled: true },
+          },
+        },
+      );
 
-    expect(
-      screen.queryByTestId('recommendations-carousel'),
-    ).not.toBeInTheDocument();
+      expect(
+        screen.queryByTestId('recommendations-carousel'),
+      ).not.toBeInTheDocument();
 
-    act(() => screen.getByTestId('continue-reading-button').click());
+      act(() => screen.getByTestId('continue-reading-button').click());
 
-    expect(screen.getByTestId('recommendations-carousel')).toBeInTheDocument();
-  });
+      expect(screen.getAllByTestId('recommendations-carousel')).toHaveLength(1);
+    },
+  );
 
   it.each([
     {
@@ -1557,6 +1590,11 @@ describe('Article Page', () => {
       });
 
       const carousel = screen.getByTestId('recommendations-carousel');
+      expect(
+        within(carousel).getByRole('link', {
+          name: new RegExp(recommendationsFixtures[0].title),
+        }),
+      ).toHaveAttribute('href', recommendationsFixtures[0].href);
       const topicDiscovery = screen.getByTestId('topic-discovery');
       expect(carousel.closest('main')).not.toBeInTheDocument();
       expect(carousel.compareDocumentPosition(topicDiscovery)).toBe(
