@@ -4,6 +4,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
+import hindiSignInRequiredFixture from '#data/hindi/send/u50853345.json';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { matchers } from '@emotion/jest';
 import { AccountContext } from '#app/contexts/AccountContext';
@@ -40,13 +41,7 @@ describe('UGC Page Layout', () => {
   });
 
   describe('Sign-in gate', () => {
-    const pageData = {
-      ...(mundoFixture.data as PageProps['pageData']),
-      settings: {
-        ...(mundoFixture.data as PageProps['pageData']).settings,
-        signinRequired: true,
-      },
-    };
+    const pageData = hindiSignInRequiredFixture.data as PageProps['pageData'];
 
     const signInUrl = 'https://account.bbc.com/signin';
 
@@ -64,32 +59,61 @@ describe('UGC Page Layout', () => {
     };
 
     it('Does not render the form when the visitor is signed out', async () => {
-      await act(() =>
+      const { container: signInPageContainer } = await act(() =>
         render(
           <AccountContext.Provider value={accountContext}>
             <UGCPageLayout pageData={pageData} />
           </AccountContext.Provider>,
+          { service: 'hindi' },
         ),
       );
 
-      expect(document.querySelector('form')).not.toBeInTheDocument();
+      expect(signInPageContainer.querySelector('form')).not.toBeInTheDocument();
       expect(
-        document.querySelector(`a[href="${signInUrl}"]`),
+        signInPageContainer.querySelector(`a[href="${signInUrl}"]`),
       ).toBeInTheDocument();
+      expect(
+        signInPageContainer.querySelector(
+          'a[href="https://account.bbc.com/register"]',
+        ),
+      ).toBeInTheDocument();
+      expect(signInPageContainer).toHaveTextContent(
+        'प्रश्न भेजने के लिए साइन इन करें',
+      );
     });
 
     it('Renders the form when the visitor is signed in', async () => {
-      await act(() =>
+      const { container: formContainer } = await act(() =>
         render(
           <AccountContext.Provider
             value={{ ...accountContext, isSignedIn: true }}
           >
             <UGCPageLayout pageData={pageData} />
           </AccountContext.Provider>,
+          { service: 'hindi' },
         ),
       );
 
-      expect(document.querySelector('form')).toBeInTheDocument();
+      expect(formContainer.querySelector('form')).toBeInTheDocument();
+    });
+
+    it('Does not show the registration link when no registration URL is available', async () => {
+      const { container: signInPageContainer } = await act(() =>
+        render(
+          <AccountContext.Provider
+            value={{ ...accountContext, registerUrl: undefined }}
+          >
+            <UGCPageLayout pageData={pageData} />
+          </AccountContext.Provider>,
+          { service: 'hindi' },
+        ),
+      );
+
+      expect(
+        signInPageContainer.querySelector(
+          'a[href="https://account.bbc.com/register"]',
+        ),
+      ).not.toBeInTheDocument();
     });
   });
 
