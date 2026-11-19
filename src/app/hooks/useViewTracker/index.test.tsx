@@ -286,6 +286,41 @@ describe('useViewTracker', () => {
     });
 
     describe('View tracking - Reverb', () => {
+      it('sends a view event after rerendering while the view timer is pending', async () => {
+        const { result, rerender } = renderHook(
+          () =>
+            useViewTracker({
+              ...trackingData,
+              groupTracker: { itemCount: 5 },
+            }),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: getObserverInstance(element),
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(500);
+        });
+
+        rerender();
+
+        await act(async () => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      });
+
       it('should return a function that can be assigned to an element to observe for intersections', async () => {
         const { result } = renderHook(() => useViewTracker(trackingData), {
           wrapper,

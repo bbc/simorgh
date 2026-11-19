@@ -1,7 +1,7 @@
 export type Recommendation = {
   id: string;
   title: string;
-  image: {
+  image?: {
     width: number;
     height: number;
     altText: string;

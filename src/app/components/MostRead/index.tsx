@@ -17,13 +17,34 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
+import {
+  ComponentExperimentProps,
+  PageTypes,
+  Services,
+  Variants,
+} from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 ];
+
+const getAmpArticleOnwardJourneyEndpoint = ({
+  service,
+  variant,
+}: {
+  service: Services;
+  variant: Variants | null;
+}) => {
+  const searchParams = new URLSearchParams({
+    onwardJourney: 'mostRead',
+    service,
+    ...(variant && { variant }),
+  });
+
+  return `/fd/simorgh-bff?${searchParams.toString()}`;
+};
 
 interface MostReadProps {
   showSectionLabel?: boolean;
@@ -63,10 +84,7 @@ const AmpMostRead = ({
           backgroundColor={headingBackgroundColour}
         />
       )}
-      <Amp
-        endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
-        size={size}
-      />
+      <Amp endpoint={endpoint} size={size} />
     </MostReadSection>
   ) : null;
 
@@ -136,11 +154,18 @@ const MostRead = ({
   // If not in local environment, use the BFF, otherwise use fixture data
   const isBff = !isLocal();
 
-  const endpoint = getMostReadEndpoint({
-    service,
-    variant,
-    isBff,
-  });
+  const isAmpArticleOnwardJourney = isAmp && pageType === ARTICLE_PAGE && isBff;
+  const { SIMORGH_MOST_READ_CDN_URL, WEB_CDN_URL } = getEnvConfig();
+  const endpoint = isAmpArticleOnwardJourney
+    ? `${WEB_CDN_URL}${getAmpArticleOnwardJourneyEndpoint({
+        service,
+        variant,
+      })}`
+    : `${SIMORGH_MOST_READ_CDN_URL}${getMostReadEndpoint({
+        service,
+        variant,
+        isBff,
+      })}`;
 
   const trackingData = eventTrackingData || {
     componentName: 'most-read',

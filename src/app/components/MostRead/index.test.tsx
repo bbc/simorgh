@@ -239,14 +239,16 @@ describe('MostRead', () => {
 
     describe('endpoint', () => {
       it.each`
-        service      | variant  | isLocalEnv | endpoint
-        ${'pidgin'}  | ${null}  | ${true}    | ${'/pidgin/mostread.json'}
-        ${'pidgin'}  | ${null}  | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=pidgin'}
-        ${'serbian'} | ${'cyr'} | ${true}    | ${'/serbian/mostread/cyr.json'}
-        ${'serbian'} | ${'cyr'} | ${false}   | ${'/fd/simorgh-bff?pageType=mostRead&service=serbian&variant=cyr'}
+        service      | variant  | isLocalEnv | pageType        | endpoint
+        ${'pidgin'}  | ${null}  | ${true}    | ${STORY_PAGE}   | ${'/pidgin/mostread.json'}
+        ${'pidgin'}  | ${null}  | ${false}   | ${STORY_PAGE}   | ${'/fd/simorgh-bff?pageType=mostRead&service=pidgin'}
+        ${'pidgin'}  | ${null}  | ${false}   | ${ARTICLE_PAGE} | ${'/fd/simorgh-bff?onwardJourney=mostRead&service=pidgin'}
+        ${'serbian'} | ${'cyr'} | ${true}    | ${STORY_PAGE}   | ${'/serbian/mostread/cyr.json'}
+        ${'serbian'} | ${'cyr'} | ${false}   | ${STORY_PAGE}   | ${'/fd/simorgh-bff?pageType=mostRead&service=serbian&variant=cyr'}
+        ${'serbian'} | ${'cyr'} | ${false}   | ${ARTICLE_PAGE} | ${'/fd/simorgh-bff?onwardJourney=mostRead&service=serbian&variant=cyr'}
       `(
-        'should be $endpoint when service is $service, variant is $variant and isLocalEnv is $isLocalEnv',
-        async ({ service, variant, isLocalEnv, endpoint }) => {
+        'should be $endpoint when service is $service, variant is $variant, isLocalEnv is $isLocalEnv and page type is $pageType',
+        async ({ service, variant, isLocalEnv, pageType, endpoint }) => {
           (isLocal as jest.Mock).mockImplementationOnce(() => isLocalEnv);
 
           render(
@@ -255,7 +257,7 @@ describe('MostRead', () => {
               mostReadToggle
               isAmp
               variant={variant}
-              pageType={STORY_PAGE}
+              pageType={pageType}
               data={pidginMostReadData}
             />,
           );

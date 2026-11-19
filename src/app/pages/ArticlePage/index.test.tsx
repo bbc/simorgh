@@ -28,6 +28,8 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
+import { MostReadData } from '#app/components/MostRead/types';
+import { ArticleOnwardJourneysProvider } from '#app/contexts/ArticleOnwardJourneysContext';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
@@ -40,7 +42,7 @@ import {
   act,
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-import ArticlePage from './ArticlePage';
+import ArticlePage, { getRecommendationsFromMostRead } from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
 import * as ReverbParamsContext from '../../contexts/ReverbParamsContext';
 import * as buildReverbParams from '../../lib/analyticsUtils/params/buildParams';
@@ -182,6 +184,121 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  it('converts fetched Most Read data into mid-article recommendations', () => {
+    const mostRead = {
+      lastRecordTimeStamp: '2026-11-16T00:00:00.000Z',
+      items: [
+        {
+          id: 'urn:bbc:optimo:asset:c1234567890o',
+          rank: 1,
+          title: 'Current article',
+          href: '/pidgin/articles/c1234567890o',
+          timestamp: 0,
+        },
+        {
+          id: 'urn:bbc:optimo:asset:c2345678901o',
+          rank: 2,
+          title: 'Most Read story',
+          href: '/pidgin/articles/c2345678901o',
+          timestamp: 0,
+          images: {
+            defaultPromoImage: {
+              blocks: [
+                {
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        model: {
+                          blocks: [{ model: { text: 'Most Read image' } }],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  type: 'rawImage',
+                  model: {
+                    width: 640,
+                    height: 360,
+                    locator: 'test/live/image.jpg',
+                    originCode: 'cpsprodpb',
+                    copyrightHolder: 'BBC',
+                  },
+                },
+              ],
+            },
+          },
+        },
+      ],
+    } as MostReadData;
+
+    expect(
+      getRecommendationsFromMostRead({
+        mostRead,
+        articleId: 'urn:bbc:optimo:asset:c1234567890o',
+      }),
+    ).toEqual([
+      {
+        id: 'urn:bbc:optimo:asset:c2345678901o',
+        title: 'Most Read story',
+        href: '/pidgin/articles/c2345678901o',
+        image: {
+          width: 640,
+          height: 360,
+          locator: 'test/live/image.jpg',
+          originCode: 'cpsprodpb',
+          copyrightHolder: 'BBC',
+          altText: 'Most Read image',
+        },
+      },
+    ]);
+  });
+
+  it('does not populate an unmarked WSOJ from Most Read data', () => {
+    const pageData = {
+      ...articleDataPidgin,
+      content: {
+        ...articleDataPidgin.content,
+        model: {
+          ...articleDataPidgin.content.model,
+          blocks: [
+            ...articleDataPidgin.content.model.blocks,
+            {
+              id: 'empty-wsoj',
+              type: 'wsoj',
+              model: { type: 'recommendations' },
+              position: [3],
+            },
+          ],
+        },
+      },
+      mostRead: newsMostReadData,
+    } as Article;
+
+    const { container } = render(
+      <ArticleOnwardJourneysProvider
+        pageData={pageData}
+        pageType={ARTICLE_PAGE}
+      >
+        <ArticlePage pageData={pageData} />
+      </ArticleOnwardJourneysProvider>,
+      {
+        service: 'pidgin',
+        isLite: true,
+        toggles: {
+          midArticleOnwardJourney: { enabled: true },
+          mostRead: { enabled: true },
+        },
+      },
+    );
+
+    expect(container.querySelector('[data-e2e="most-read"]')).not.toBeNull();
+    expect(
+      container.querySelector('[data-e2e="recommendations-heading"]'),
+    ).toBeNull();
   });
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
