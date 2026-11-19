@@ -1,13 +1,20 @@
-import dynamic from 'next/dynamic';
+import dynamic, { type DynamicOptionsLoadingProps } from 'next/dynamic';
+import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import SaveButton, { SAVE_BUTTON_VARIANTS } from '#app/components/SaveButton';
+import FollowTopicButtonGuest from '../FollowTopicButtonGuest';
 
 const noop = () => undefined;
 
-export const FollowTopicButtonLoadingFallback = () => {
+export const FollowTopicButtonLoadingFallback = ({
+  error,
+  isLoading,
+}: DynamicOptionsLoadingProps) => {
   const { translations } = use(ServiceContext);
   const loadingLabel = translations?.followTopicButton?.loading ?? '';
+
+  if (error && !isLoading) return <FollowTopicButtonGuest />;
 
   return (
     <SaveButton
@@ -23,12 +30,14 @@ export const FollowTopicButtonLoadingFallback = () => {
 
 export default dynamic(
   () =>
-    import(
-      /* webpackChunkName: "follow_topic_button_authenticated" */
-      '.'
+    loadQueryConsumer(
+      import(
+        /* webpackChunkName: "follow_topic_button_authenticated" */
+        '.'
+      ),
     ),
   {
     ssr: false,
-    loading: () => <FollowTopicButtonLoadingFallback />,
+    loading: props => <FollowTopicButtonLoadingFallback {...props} />,
   },
 );
