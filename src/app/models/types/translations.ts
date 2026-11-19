@@ -10,6 +10,7 @@ export interface Translations {
     end: string;
     position: string;
     exploreHeading?: string;
+    exploreDescription?: string;
   };
   pagination?: {
     page?: string;

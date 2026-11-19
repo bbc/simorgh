@@ -104,6 +104,7 @@ export const service: DefaultServiceConfig = {
         end: 'No hay más recomendaciones',
         position: 'Artículo {current} de {total}',
         exploreHeading: '¿Quieres seguir explorando?',
+        exploreDescription: 'Descubre más historias sobre {topic}.',
       },
       readTime: {
         readTimePrefix: 'Tiempo de lectura',

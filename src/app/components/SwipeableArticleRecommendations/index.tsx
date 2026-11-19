@@ -15,7 +15,6 @@ import subscribeToMediaQuery from '#app/hooks/useMediaQuery/subscribeToMediaQuer
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import InlineLink from '#app/components/InlineLink';
-import { UpArrowIcon } from '#app/components/icons';
 import RecommendationsImage from '#app/components/Recommendations/RecommendationsPromoImage';
 import { getPrototypeHref } from './utilities';
 import styles from './index.module.scss';
@@ -96,6 +95,7 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
     frameRef.current = null;
     gestureRef.current = null;
     cardRef.current?.style.removeProperty('--drag-progress');
+    controlsRef.current?.removeAttribute('data-drag-direction');
   }, []);
 
   const finishExit = useCallback(() => {
@@ -214,6 +214,10 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
           '--drag-progress',
           String(currentGesture.deltaX / currentGesture.width),
         );
+        controlsRef.current?.setAttribute(
+          'data-drag-direction',
+          String(Math.sign(currentGesture.deltaX)),
+        );
       }
     });
   };
@@ -260,7 +264,12 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
       data-testid="swipeable-recommendations"
     >
       {!showTopicCta && (
-        <Heading level={2} size="greatPrimer" id={headingId}>
+        <Heading
+          level={2}
+          size="greatPrimer"
+          id={headingId}
+          className={styles.heading}
+        >
           {copy.heading}
         </Heading>
       )}
@@ -277,7 +286,7 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
           <div className={styles.viewport}>
             <div ref={stackRef} className={styles.stack}>
               {recommendations
-                .slice(activeIndex, activeIndex + 2)
+                .slice(activeIndex, activeIndex + 3)
                 .map((article, index) => {
                   const isActive = index === 0;
                   return (
@@ -289,7 +298,9 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                       className={clsx(styles.card, {
                         [styles.active]: isActive,
                         [styles.preview]: !isActive,
-                        [styles.promoting]: !isActive && phase === 'left',
+                        [styles.rear]: index === 2,
+                        [styles.promoting]: index === 1 && phase === 'left',
+                        [styles.rearPromoting]: index === 2 && phase === 'left',
                         [styles.dragging]: isActive && phase === 'dragging',
                         [styles.exitLeft]: isActive && phase === 'left',
                         [styles.exitRight]: isActive && phase === 'right',
@@ -326,7 +337,9 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                         }
                       }}
                     >
-                      <RecommendationsImage image={article.image} lazyLoad />
+                      <div className={styles.image}>
+                        <RecommendationsImage image={article.image} lazyLoad />
+                      </div>
                       {isActive && (
                         <div className={styles.dragFeedback} aria-hidden="true">
                           <span className={styles.dismissFeedback}>
@@ -346,12 +359,13 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                             )
                             .replace('{total}', String(recommendations.length))}
                         </Text>
-                        <Heading level={3} size="greatPrimer">
+                        <Heading level={3} size="doublePica">
                           <InlineLink
                             to={getPrototypeHref(article.href, location.search)}
                             text={article.title}
                             fontVariant="sansBold"
-                            size="greatPrimer"
+                            size="doublePica"
+                            className={styles.headline}
                             tabIndex={isActive ? undefined : -1}
                             onClick={event => {
                               if (suppressClickRef.current || exitRef.current) {
@@ -371,7 +385,12 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
                 })}
             </div>
           </div>
-          <div ref={controlsRef} className={styles.controls}>
+          <div
+            ref={controlsRef}
+            className={clsx(styles.controls, {
+              [styles.controlsDragging]: phase === 'dragging',
+            })}
+          >
             <button
               ref={dismissRef}
               type="button"
@@ -379,8 +398,8 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
               aria-disabled={phase === 'left' || phase === 'right'}
               onClick={() => exit('left')}
             >
-              <span className={styles.leftArrow} aria-hidden="true">
-                <UpArrowIcon />
+              <span className={styles.arrow} aria-hidden="true">
+                &larr;
               </span>
               {copy.dismiss}
             </button>
@@ -404,40 +423,47 @@ const SwipeableArticleRecommendations = ({ recommendations, topic }: Props) => {
               }}
             >
               {copy.read}
-              <span className={styles.rightArrow} aria-hidden="true">
-                <UpArrowIcon />
+              <span className={styles.arrow} aria-hidden="true">
+                &rarr;
               </span>
             </a>
           </div>
         </>
       ) : null}
-      <Text
-        as="p"
-        role="status"
-        id={endHeadingId}
-        ref={endRef}
-        tabIndex={activeArticle ? undefined : -1}
-        size={showTopicCta ? 'greatPrimer' : 'pica'}
-        fontVariant={showTopicCta ? 'sansBold' : 'sansRegular'}
-        className={clsx(activeArticle ? styles.visuallyHidden : styles.end, {
-          [styles.exploreHeading]: showTopicCta,
-        })}
-      >
-        {activeArticle
-          ? activeIndex > 0 && `${position}: ${activeArticle.title}`
-          : (showTopicCta && copy.exploreHeading) || copy.end}
-      </Text>
-      {showTopicCta && topic && topicLinkText && (
-        <div className={styles.controls}>
-          <a
-            ref={topicLinkRef}
-            href={getPrototypeHref(topic.href, location.search)}
-            className={styles.topicLink}
-          >
-            {topicLinkText.replace('{topic}', topic.name)}
-          </a>
-        </div>
-      )}
+      <div className={showTopicCta ? styles.topicCard : undefined}>
+        <Text
+          as="p"
+          role="status"
+          id={endHeadingId}
+          ref={endRef}
+          tabIndex={activeArticle ? undefined : -1}
+          size={showTopicCta ? 'greatPrimer' : 'pica'}
+          fontVariant={showTopicCta ? 'sansBold' : 'sansRegular'}
+          className={clsx(activeArticle ? styles.visuallyHidden : styles.end, {
+            [styles.exploreHeading]: showTopicCta,
+          })}
+        >
+          {activeArticle
+            ? activeIndex > 0 && `${position}: ${activeArticle.title}`
+            : (showTopicCta && copy.exploreHeading) || copy.end}
+        </Text>
+        {showTopicCta && topic && copy.exploreDescription && (
+          <Text as="p" size="pica" className={styles.exploreDescription}>
+            {copy.exploreDescription.replace('{topic}', topic.name)}
+          </Text>
+        )}
+        {showTopicCta && topic && topicLinkText && (
+          <div className={styles.controls}>
+            <a
+              ref={topicLinkRef}
+              href={getPrototypeHref(topic.href, location.search)}
+              className={styles.topicLink}
+            >
+              {topicLinkText.replace('{topic}', topic.name)}
+            </a>
+          </div>
+        )}
+      </div>
     </section>
   );
 };
