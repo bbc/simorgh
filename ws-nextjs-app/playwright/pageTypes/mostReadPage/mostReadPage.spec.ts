@@ -5,6 +5,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertPageView,
@@ -64,6 +65,10 @@ test.describe('mostReadPage ATI Analytics', () => {
           service: testSuite.service,
           appEnv: appEnvFromProcess,
         };
+
+        test.beforeEach(async ({ page }) => {
+          await addConsentBannerHandlers(page);
+        });
 
         test('should send a page view event', async ({ page }) => {
           test.skip(

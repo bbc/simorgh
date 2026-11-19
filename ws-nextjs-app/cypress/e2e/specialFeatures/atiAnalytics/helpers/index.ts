@@ -108,7 +108,13 @@ export const parseResonanceRequestBody = (
   return body && typeof body === 'object' ? (body as ResonanceRequestBody) : {};
 };
 
-export const interceptResonanceAnalyticsBeacons = () => {
+export const interceptResonanceAnalyticsBeacons = ({
+  component,
+  action: expectedAction,
+}: {
+  component: string;
+  action: ResonanceEventAction;
+}) => {
   const resonanceBagBaseUrl = new URL(
     (envs as EnvironmentConfigType).resonanceBagUrl,
   ).origin;
@@ -118,20 +124,13 @@ export const interceptResonanceAnalyticsBeacons = () => {
 
   cy.intercept('POST', resonanceBagEventUrlPattern, request => {
     const { events = [] } = parseResonanceRequestBody(request.body);
-    const matchingEvent = events.find(({ event }) => {
-      const component = event?.subcategory;
-      const action = event?.action;
+    const hasExpectedEvent = events.some(
+      ({ event }) =>
+        event?.subcategory === component && event?.action === expectedAction,
+    );
 
-      return (
-        typeof component === 'string' &&
-        Object.values(COMPONENTS).includes(component) &&
-        (action === 'view' || action === 'select')
-      );
-    });
-    const { action, subcategory } = matchingEvent?.event || {};
-
-    if (action && subcategory) {
-      request.alias = `${subcategory}-resonance-${action}`;
+    if (hasExpectedEvent) {
+      request.alias = `${component}-resonance-${expectedAction}`;
     }
 
     request.reply({ statusCode: 200 });
