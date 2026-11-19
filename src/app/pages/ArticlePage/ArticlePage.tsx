@@ -1,6 +1,6 @@
 import { useState, useCallback, use } from 'react';
 import clsx from 'clsx';
-import { useTheme } from '@emotion/react';
+import { ThemeProvider, useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
 import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
@@ -500,6 +500,78 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
+  const onwardJourneys = (
+    <>
+      {showTopicDiscovery && (
+        <TopicDiscovery
+          css={[
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideTopicDiscovery]
+              : []),
+          ]}
+          topics={topicDiscoveryTopics}
+        />
+      )}
+      {showRelatedTopicsComponent && (
+        <RelatedTopics
+          css={[
+            styles.relatedTopics,
+            ...(showContinueReadingButton
+              ? [!showAllContent && styles.hideRelatedTopics]
+              : []),
+          ]}
+          topics={topics}
+          mobileDivider={false}
+        />
+      )}
+      {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+      {showPortraitVideoCarousel && (
+        <PortraitVideoCarousel
+          {...portraitVideoCarouselProps}
+          css={styles.portraitVideoCarousel}
+        />
+      )}
+      <RelatedContentSection
+        content={blocks}
+        emphasiseFirstItem={showEndOfArticleTreatment}
+        leadPreview={pageData.relatedContentPreview}
+      />
+      {showMediaCuration && (
+        <div css={styles.mediaCurationRow}>
+          <div data-testid="media-curation">
+            <Curation
+              visualStyle={VISUAL_STYLE.FEED}
+              visualProminence={VISUAL_PROMINENCE.NORMAL}
+              summaries={mediaCurationContent?.summaries}
+              title={mediaCurationContent?.title}
+              position={mediaCurationContent?.position || 0}
+              curationId={mediaCurationContent?.curationId}
+              curationLength={1}
+              link={mediaCurationContent?.link}
+              curationContentType="video"
+              pageType={pageType}
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+
+  const secondaryColumn = !isApp && !isPGL && (
+    <SecondaryColumn pageData={pageData} />
+  );
+
+  const mostReadSection = !isApp && !isPGL && (
+    <MostRead
+      css={styles.mostReadSection}
+      data={mostReadInitialData}
+      columnLayout="twoColumn"
+      size="default"
+      headingBackgroundColour={GREY_2}
+      mobileDivider={showRelatedTopicsComponent}
+    />
+  );
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics />
@@ -549,6 +621,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div
+          className={clsx(
+            showEndOfArticleTreatment && scssStyles.groupedArticleColumn,
+          )}
           css={[
             !isPGL ? styles.primaryColumn : styles.pglColumn,
             shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
@@ -569,83 +644,36 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showEndOfArticleTreatment && (
-            <EndOfArticleTreatment
-              key={pageData.metadata.id}
-              items={pageData.articleEndItems || []}
-              isVisible={
-                !showContinueReadingButton ||
-                showAllContent ||
-                isDesktopViewport
-              }
-              className={clsx(
-                shouldApplyCollapsedArticleSpacing &&
-                  scssStyles.hideEndOfArticleTreatment,
-              )}
-            />
-          )}
-          {showTopicDiscovery && (
-            <TopicDiscovery
-              css={[
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideTopicDiscovery]
-                  : []),
-              ]}
-              topics={topicDiscoveryTopics}
-            />
-          )}
-          {showRelatedTopicsComponent && (
-            <RelatedTopics
-              css={[
-                styles.relatedTopics,
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideRelatedTopics]
-                  : []),
-              ]}
-              topics={topics}
-              mobileDivider={false}
-            />
-          )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          {showPortraitVideoCarousel && (
-            <PortraitVideoCarousel
-              {...portraitVideoCarouselProps}
-              css={styles.portraitVideoCarousel}
-            />
-          )}
-          <RelatedContentSection content={blocks} />
-          {showMediaCuration && (
-            <div css={styles.mediaCurationRow}>
-              <div data-testid="media-curation">
-                <Curation
-                  visualStyle={VISUAL_STYLE.FEED}
-                  visualProminence={VISUAL_PROMINENCE.NORMAL}
-                  summaries={mediaCurationContent?.summaries}
-                  title={mediaCurationContent?.title}
-                  position={mediaCurationContent?.position || 0}
-                  curationId={mediaCurationContent?.curationId}
-                  curationLength={1}
-                  link={mediaCurationContent?.link}
-                  curationContentType="video"
-                  pageType={pageType}
-                />
-              </div>
-            </div>
-          )}
+          {!showEndOfArticleTreatment && onwardJourneys}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!showEndOfArticleTreatment && secondaryColumn}
       </div>
 
-      {!isApp && !isPGL && (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="twoColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showRelatedTopicsComponent}
-        />
+      {showEndOfArticleTreatment ? (
+        <div className={scssStyles.groupedArticleEnd}>
+          <EndOfArticleTreatment
+            key={pageData.metadata.id}
+            items={pageData.articleEndItems || []}
+            isVisible={
+              !showContinueReadingButton || showAllContent || isDesktopViewport
+            }
+            className={clsx(
+              shouldApplyCollapsedArticleSpacing &&
+                scssStyles.hideEndOfArticleTreatment,
+            )}
+          >
+            <ThemeProvider theme={{ isDarkUi: true }}>
+              {onwardJourneys}
+              <div className={scssStyles.groupedSecondaryColumn}>
+                {secondaryColumn}
+              </div>
+              {mostReadSection}
+            </ThemeProvider>
+          </EndOfArticleTreatment>
+        </div>
+      ) : (
+        mostReadSection
       )}
     </div>
   );

@@ -16,6 +16,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import getArticleEndItems from './articleEnd';
+import getRelatedContentPreview from './relatedContentPreview';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
@@ -192,13 +193,16 @@ export default async (
     !isAmp &&
     !isLite &&
     !isApp;
-  const articleEndItems = articleEndEnabled
-    ? await getArticleEndItems(
-        article,
-        resolvedUrl,
-        portraitVideoItems?.portraitVideo?.blocks || [],
-      )
-    : undefined;
+  const [articleEndItems, relatedContentPreview] = articleEndEnabled
+    ? await Promise.all([
+        getArticleEndItems(
+          article,
+          resolvedUrl,
+          portraitVideoItems?.portraitVideo?.blocks || [],
+        ),
+        getRelatedContentPreview(article, resolvedUrl),
+      ])
+    : [undefined, undefined];
 
   return {
     props: {
@@ -206,7 +210,7 @@ export default async (
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...transformedArticleData,
-        ...(articleEndEnabled && { articleEndItems }),
+        ...(articleEndEnabled && { articleEndItems, relatedContentPreview }),
         secondaryColumn: {
           topStories,
           features,

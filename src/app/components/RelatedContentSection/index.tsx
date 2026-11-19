@@ -13,11 +13,13 @@ import useViewTracker from '#hooks/useViewTracker';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
+import scssStyles from './index.module.scss';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
 import { OptimoBlock } from '../../models/types/optimo';
+import { RelatedContentPreview } from './types';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
 
@@ -37,9 +39,16 @@ const isHeadlineFirst = (item: object) => {
 type Props = {
   content: OptimoBlock[];
   experimentProps?: ComponentExperimentProps;
+  emphasiseFirstItem?: boolean;
+  leadPreview?: RelatedContentPreview | null;
 };
 
-const RelatedContentSection = ({ content, experimentProps }: Props) => {
+const RelatedContentSection = ({
+  content,
+  experimentProps,
+  emphasiseFirstItem = false,
+  leadPreview,
+}: Props) => {
   const { translations } = use(ServiceContext);
   const {
     palette: { GREY_2 },
@@ -116,6 +125,9 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
       </SectionLabel>
       {hasSingleContent ? (
         <div
+          className={
+            emphasiseFirstItem ? scssStyles.featuredSingleItem : undefined
+          }
           css={
             headlineFirst
               ? styles.singleItemWrapperFullWidth
@@ -123,6 +135,8 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
           }
         >
           <RelatedContentItem
+            prominence={emphasiseFirstItem ? 'lead' : undefined}
+            preview={emphasiseFirstItem ? leadPreview : undefined}
             item={reducedStoryPromoItems[0]}
             ariaLabelledBy={ariaLabelledBy}
             viewTracker={viewTracker}
@@ -130,8 +144,12 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
           />
         </div>
       ) : (
-        <PromoList css={styles.relatedContentGrid}>
+        <PromoList
+          className={emphasiseFirstItem ? scssStyles.featuredList : undefined}
+          css={styles.relatedContentGrid}
+        >
           {reducedStoryPromoItems.map((item, index) => {
+            const prominence = index === 0 ? 'lead' : 'supporting';
             const itemAssetUri = pathOr(
               '',
               [
@@ -166,6 +184,10 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
                 key={ariaLabelledBy}
               >
                 <RelatedContentItem
+                  prominence={emphasiseFirstItem ? prominence : undefined}
+                  preview={
+                    emphasiseFirstItem && index === 0 ? leadPreview : undefined
+                  }
                   item={item}
                   ariaLabelledBy={ariaLabelledBy}
                   viewTracker={viewTracker}

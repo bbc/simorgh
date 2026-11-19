@@ -1,0 +1,260 @@
+@use '@scss/themeTokens' as theme;
+
+// The opt-in classes outrank the legacy Promo defaults without changing its
+// image ratio, tracking context or ordinary article presentation.
+div.promo {
+  display: flex;
+  align-items: flex-start;
+  gap: theme.$spacings-full + theme.$spacings-half;
+  min-width: 0;
+  padding: theme.$spacings-full + theme.$spacings-half;
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+  border: 1px solid theme.$palette-grey-4;
+
+  .content {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .title {
+    margin: 0;
+    color: theme.$palette-grey-10;
+  }
+
+  a {
+    color: theme.$palette-grey-10;
+
+    &:visited {
+      color: theme.$palette-grey-6;
+    }
+
+    &:focus-visible {
+      outline: theme.pixelsToRem-px-to-rem(3) solid theme.$palette-black;
+      outline-offset: theme.pixelsToRem-px-to-rem(3);
+      box-shadow: 0 0 0 theme.pixelsToRem-px-to-rem(3) theme.$palette-white;
+    }
+  }
+
+  time {
+    color: theme.$palette-grey-6;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    background: theme.$palette-grey-10;
+    color: theme.$palette-white;
+    border-color: theme.$palette-grey-7;
+
+    .title,
+    a {
+      color: theme.$palette-white;
+    }
+
+    a:visited,
+    time {
+      color: theme.$palette-grey-3;
+    }
+
+    a:focus-visible {
+      outline-color: theme.$palette-white;
+      box-shadow: 0 0 0 theme.pixelsToRem-px-to-rem(3) theme.$palette-black;
+    }
+  }
+}
+
+.image {
+  flex-shrink: 0;
+  min-width: 0;
+  align-self: flex-start;
+}
+
+div.promo.lead {
+  flex-direction: column;
+  gap: theme.$spacings-double;
+  padding: theme.$spacings-double;
+  background: theme.$palette-grey-10;
+  color: theme.$palette-white;
+  border-color: theme.$palette-grey-7;
+  border-block-start: theme.$spacings-half solid theme.$palette-postbox;
+
+  .image {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: theme.$spacings-full + theme.$spacings-half;
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  p.eyebrow {
+    @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+    margin: 0;
+    color: theme.$palette-grey-3;
+    overflow-wrap: anywhere;
+  }
+
+  .title {
+    @include theme.typography-from-scale-and-variant(
+      doublePica,
+      'serif-medium'
+    );
+    padding: 0;
+    color: theme.$palette-white;
+  }
+
+  a {
+    color: theme.$palette-white;
+
+    &:visited {
+      color: theme.$palette-grey-3;
+    }
+
+    &:focus-visible {
+      outline-color: theme.$palette-white;
+      box-shadow: 0 0 0 theme.pixelsToRem-px-to-rem(3) theme.$palette-black;
+    }
+  }
+
+  p.preview {
+    @include theme.typography-from-scale-and-variant(pica, 'sans-regular');
+    margin: 0;
+    color: theme.$palette-grey-3;
+    overflow-wrap: anywhere;
+  }
+
+  .metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: theme.$spacings-full theme.$spacings-double;
+    min-width: 0;
+
+    time {
+      margin: 0;
+      color: theme.$palette-grey-3;
+    }
+  }
+
+  span.readingTime {
+    @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+    display: inline-flex;
+    align-items: center;
+    gap: theme.$spacings-half;
+    min-width: 0;
+    max-width: 100%;
+    color: theme.$palette-grey-3;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    > span {
+      flex-shrink: 0;
+    }
+  }
+
+  // The headline's existing stretched link is the sole interactive element.
+  // This visible action is an aria-hidden label for the same card destination.
+  span.action {
+    @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: theme.$spacings-full;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+    min-height: theme.pixelsToRem-px-to-rem(44);
+    margin-block-start: theme.$spacings-half;
+    padding: (theme.$spacings-full + theme.$spacings-half)
+      theme.$spacings-double;
+    border: 1px solid theme.$palette-white;
+    background: theme.$palette-white;
+    color: theme.$palette-grey-10;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    > span {
+      flex-shrink: 0;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    .title a,
+    span.action {
+      text-decoration: underline;
+    }
+
+    span.action {
+      background: theme.$palette-grey-3;
+      border-color: theme.$palette-grey-3;
+    }
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    border-block-start-color: theme.$palette-postbox;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-direction: row;
+    padding: theme.$spacings-triple;
+    gap: theme.$spacings-triple;
+
+    .image {
+      flex-basis: 45%;
+      width: 45%;
+      max-width: none;
+    }
+
+    .content {
+      flex-basis: 0;
+      width: auto;
+    }
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    .title {
+      @include theme.typography-from-scale-and-variant(
+        trafalgar,
+        'serif-medium'
+      );
+    }
+  }
+}
+
+div.promo.supporting {
+  flex-wrap: wrap;
+  gap: theme.$spacings-full;
+
+  .image {
+    flex-basis: theme.pixelsToRem-px-to-rem(88);
+    width: theme.pixelsToRem-px-to-rem(88);
+    max-width: 100%;
+  }
+
+  .content {
+    flex: 1 1 theme.pixelsToRem-px-to-rem(160);
+    max-width: 100%;
+  }
+
+  .title {
+    @include theme.typography-from-scale-and-variant(pica, 'serif-medium');
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    gap: theme.$spacings-full + theme.$spacings-half;
+
+    .image {
+      flex-basis: theme.pixelsToRem-px-to-rem(104);
+      width: theme.pixelsToRem-px-to-rem(104);
+    }
+  }
+}

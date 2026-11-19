@@ -1,4 +1,11 @@
-import { use, useRef, useState, useEffect, KeyboardEvent } from 'react';
+import {
+  use,
+  useRef,
+  useState,
+  useEffect,
+  KeyboardEvent,
+  ReactNode,
+} from 'react';
 import clsx from 'clsx';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -15,12 +22,14 @@ type Props = {
   items: ArticleEndItem[];
   className?: string;
   isVisible?: boolean;
+  children?: ReactNode;
 };
 
 const EndOfArticleTreatment = ({
   items,
   className,
   isVisible = true,
+  children,
 }: Props) => {
   const { translations, dir } = use(ServiceContext);
   const { nonce } = use(RequestContext);
@@ -234,6 +243,11 @@ const EndOfArticleTreatment = ({
           </li>
         ))}
       </ul>
+      {children && (
+        <div className={styles.onwardJourneys} data-is-dark-ui="true">
+          {children}
+        </div>
+      )}
     </section>
   );
 };

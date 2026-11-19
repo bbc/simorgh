@@ -28,12 +28,57 @@
 }
 
 // Beat global button[type='button']:focus-visible, regardless of CSS order.
-section.section {
+section.section > .interactive,
+section.section > .noJs {
   button:focus-visible,
   a:focus-visible {
     outline: 3px solid theme.$palette-white;
     outline-offset: 4px;
     box-shadow: 0 0 0 4px theme.$palette-black;
+  }
+}
+
+.onwardJourneys {
+  display: flow-root;
+  min-width: 0;
+  margin-block-start: theme.$spacings-triple;
+  padding: theme.$spacings-full;
+  background: theme.$palette-grey-10;
+  color: theme.$palette-white;
+  border-block-start: 1px solid theme.$palette-grey-5;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding: theme.$spacings-double;
+  }
+
+  // These legacy elements do not yet consume the shared dark-UI theme.
+  [data-testid='portrait-video-carousel'] h2,
+  [data-testid='most-read'] [data-e2e='most-read-rank'] {
+    color: theme.$palette-white;
+  }
+
+  [data-testid='most-read'] a {
+    color: theme.$palette-white;
+
+    &:visited {
+      color: theme.$palette-grey-4;
+    }
+  }
+
+  [data-testid='top-stories'] time {
+    color: theme.$palette-grey-6;
+  }
+
+  [data-testid='topic-discovery'] [data-testid='scroll-start']:focus-visible,
+  [data-testid='topic-discovery'] [data-testid='scroll-end']:focus-visible {
+    outline-color: theme.$palette-white;
+  }
+
+  h2 a:hover,
+  h2 a:focus,
+  [data-testid='related-topics'] a:hover,
+  [data-testid='related-topics'] a:focus {
+    color: theme.$palette-white;
   }
 }
 
