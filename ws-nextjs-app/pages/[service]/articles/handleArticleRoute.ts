@@ -17,6 +17,7 @@ import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
+import getSinceLastVisitedData from './getSinceLastVisitedData';
 
 const logger = nodeLogger(__filename);
 
@@ -83,6 +84,18 @@ export default async (
     : null;
 
   const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
+
+  const shouldFetchSinceLastVisited = service === 'mundo' && !isAmp;
+
+  // Started alongside the article request so it adds no sequential latency
+  const sinceLastVisitedPromise = shouldFetchSinceLastVisited
+    ? getSinceLastVisitedData({
+        service,
+        variant,
+        rendererEnv,
+        resolvedUrl: resolvedUrlWithoutQuery,
+      })
+    : Promise.resolve(null);
 
   const { data } = await getPageData({
     id: articlePath,
@@ -198,6 +211,7 @@ export default async (
         portraitVideoItems,
         countryCuration,
         countryTopicIdToReorder,
+        sinceLastVisited: await sinceLastVisitedPromise,
       },
       pageType: derivedPageType,
       pathname: canonicalPathname,

@@ -226,6 +226,11 @@ const constructPageFetchUrl = ({
     fetchUrl.searchParams.set(key, String(value));
   });
 
+  // A locally run BFF is slow under parallel load and drops curations that time out
+  if (fetchUrl.hostname === 'localhost' && fetchUrl.port === '3210') {
+    fetchUrl.searchParams.set('useLocalTimeout', 'true');
+  }
+
   if (isLocal) {
     const port = process.env.PORT ? `:${process.env.PORT}` : '';
 
