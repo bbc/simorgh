@@ -36,9 +36,9 @@ The CTA migration also moved consumer-owned CTA styles to SCSS Modules in `Accou
 
 These file counts are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion usage can exist without an `index.styles.*` file. Remaining work includes removing Emotion from those components and addressing the legacy-coupled and AMP/Lite cases described below.
 
-## Lessons from the first migration batch
+## Lessons from migrations
 
-The component migrations happened in [PR #14371](https://github.com/bbc/simorgh/pull/14371), which was merged into [PR #14332](https://github.com/bbc/simorgh/pull/14332) before that work reached `latest`. [PR #14410](https://github.com/bbc/simorgh/pull/14410) then followed up on the typography API and documentation. The review process exposed several changes to the migration plan.
+The first component migrations happened in [PR #14371](https://github.com/bbc/simorgh/pull/14371), which was merged into [PR #14332](https://github.com/bbc/simorgh/pull/14332) before that work reached `latest`. [PR #14410](https://github.com/bbc/simorgh/pull/14410) then followed up on the typography API and documentation. Subsequent migrations reinforced the importance of consumer audits, visual checks, and AMP/Lite measurement.
 
 ### Audit consumers before deleting Emotion styles
 
@@ -73,6 +73,12 @@ Snapshots are useful for structural changes, but they are not a substitute for c
 
 Preserve existing behaviour and public APIs; justify API or typing changes separately using actual consumer needs. Test observable output with explicit expected values rather than importing production style objects, and distinguish migration regression checks from additional general coverage.
 
+Use a separate branch or worktree for each independently reviewable PR. Keep a shared component and the consumer changes needed to preserve its styling together, with small commits where useful for review. Avoid overlapping parallel migrations when they touch the same consumer or styling contract.
+
+For partially migrated consumers, put consumer-owned styles in the component's existing `index.module.scss`, or create one alongside `index.tsx`; add the remaining styles there when the consumer is fully migrated. The consumer may temporarily retain its Emotion styles for unrelated elements. Use an appropriately named module for components whose entry point is not `index`.
+
+Compare Emotion and SCSS declarations and rendered results carefully: unit conversions such as `px` to `rem` can change behaviour when the root font size differs, and equal-specificity rules can resolve differently across Emotion and SCSS. For `CurationMessageBanner`, a heading colour override needed sufficient specificity to win over the shared `Text` style. Check computed styles in representative stories and pages rather than assuming a visual diff is a Storybook issue.
+
 ### Order by contract risk, not only style size
 
 The first batch was small by style-line count, but `InlineLink` was a shared primitive with many consumers and therefore had a larger contract surface than its size suggested. Future batches should score shared components by consumer count, runtime props, legacy consumers, service/theme sensitivity, and AMP/Lite exposure before assigning them to an early batch.
@@ -81,7 +87,9 @@ The first batch was small by style-line count, but `InlineLink` was a shared pri
 
 The CSS payload investigation found that the SCSS theme adds a fixed cost to AMP/Lite, where CSS is inlined and subject to AMP's 75 KB limit. Measure representative production pages after each meaningful batch and do not introduce CSS reordering optimisations without browser-level computed-style comparisons. A media-query compaction experiment saved bytes but produced real cascade regressions when elements carried multiple generated classes.
 
-The existing `amp:validate` check now includes the large Russian article fixture (`c6wyzl2xdyz2o`). The production local fixture measures 68,169 bytes against 69,116 bytes on the live page, and `amphtml-validator` fails with `STYLESHEET_TOO_LONG` above the 75,000-byte limit. This is a large representative canary, not a claim that it is the the page with largest CSS below the limit: CSS varies by service, page composition, feature flags, and rendered components. Keep multiple service/page fixtures and preserve headroom rather than trying to discover one definitive maximum.
+The existing `amp:validate` check includes the large Russian article fixture (`c6wyzl2xdyz2o`). A previous measurement was 68,169 bytes locally against 69,116 bytes on the live page; measure again on the current build rather than treating those historical figures as the current baseline. `amphtml-validator` fails with `STYLESHEET_TOO_LONG` above the 75,000-byte limit. This is a representative canary, not necessarily the page with the largest CSS: CSS varies by service, page composition, feature flags, and rendered components. Keep multiple service/page fixtures and preserve headroom rather than trying to discover one definitive maximum.
+
+Static SCSS imports can add CSS even when a component renders nothing, unlike Emotion's render-dependent styles. The AMP/Lite CSS-module rule pruning added in [PR #14585](https://github.com/bbc/simorgh/pull/14585) removes selectors requiring module classes absent from rendered HTML and substantially reduced the CTA migration's CSS impact. Continue to measure actual production output: the optimisation is not a substitute for checking the budget, and classes added only after the initial render need particular care because their rules may be pruned.
 
 ## Batching principles
 
@@ -153,11 +161,30 @@ The original batches grouped components by approximate size and cohesion. The fi
 | 5 | `Curation/CurationMessageBanner` | [#14527](https://github.com/bbc/simorgh/pull/14527) | Required understanding its styling boundaries with `Heading`, `Text`, and `MessageBanner`. |
 | 6 | `CallToActionLink` and its sub-components | [#14611](https://github.com/bbc/simorgh/pull/14611) | A dedicated higher-risk PR covering the family and its consumer overrides. |
 
-## Next steps
+## Next migration candidates
 
-1. Select the next components using the risk axes above, checking their current consumers and styling dependencies before grouping them.
-2. Finish migrating partially converted consumers in focused PRs, preserving their existing SCSS overrides and remaining Emotion styling contracts.
-3. Reassess the blocked and deferred components as their legacy dependencies and layout contracts change.
+These are candidates from a review of the current tree, not commitments or an exhaustive dependency audit. Recheck the latest branch, consumers and open work before starting. Keep each PR focused; group components only when their contracts and review size make that appropriate.
+
+| Priority | Candidate | Why and what to verify |
+|---|---|---|
+| 1 | `Embeds/EmbedImages` | A small wrapper style with existing tests and a story. Used by article and media article pages; preserve responsive horizontal padding and bottom margin, canonical and AMP image selection, and the Lite null rendering. Check the existing embed-image integration coverage and production CSS across breakpoints. |
+| 2 | `ContinueReadingButton` | A contained component with tests, but a broader behaviour contract than its style size suggests. Preserve consumer `className`, translated text, tracking, keyboard focus, responsive visibility, no-JS/Opera Mini hiding, forced colours and hover/focus states. It is used by article and on-demand audio pages; verify representative pages and viewports. |
+| 3 | `TopicTags` | Has tests and stories, but needs responsive typography, light/dark colours, interaction states, 44px minimum link height and single/multiple-tag layouts preserved. Check related-topics and My News consumers, including service/variant URLs and tracking, before selecting it for its own PR. |
+| Later, coordinated | `LiveLabel` and `LivePulse` | Related to the already migrated `LiveText`, but not a simple independent pair: `LiveLabel` supplies Emotion sizing to `LivePulse`, and Billboard and the live-page header also supply their own pulse overrides. Audit these and other consumers together; preserve first-promo and responsive sizing, dark UI colours, reduced-motion animation, translations and screen-reader output. Include dependent consumer updates in the same reviewable PR or agree a safe compatibility approach. |
+| Later, dedicated | `BulletedList` | Shared with legacy containers and has runtime bullet shape/colour and dark UI behaviour in addition to typography. Audit all consumers and preserve custom class names, ref and list semantics before deciding its migration scope. |
+
+Partially converted CTA consumers are also candidates for focused follow-up PRs. Preserve the existing SCSS overrides while moving their remaining Emotion styles, and reassess the blocked and deferred components as their dependencies change.
+
+### Coordinating parallel migrations
+
+`EmbedImages`, `ContinueReadingButton`, and `TopicTags` are provisional candidates for parallel implementation: their component files are distinct, but their consumers and validation can overlap. Use a parent agent to coordinate, subject to the available agent and worktree tooling:
+
+1. Recheck `latest`, open work, and consumer dependencies. Create a separate branch and worktree from the same base for each candidate, and assign clear ownership. Keep changes and draft PRs isolated for review; do not combine work merely because it was done in parallel.
+2. Ask each agent to audit consumers, migrate its assigned component, run focused tests, and report changed files, validation results, risks, and any shared-file changes. Stop and coordinate if an unexpected dependency or overlapping edit makes independent work unsafe.
+3. Coordinate production builds, integration snapshots, and browser checks. `EmbedImages` and `ContinueReadingButton` both appear on article pages, so rendered output or snapshots can overlap. The root integration runner stops and starts an app on port 7081: run it sequentially unless ports, server processes, build outputs, and snapshot writes are genuinely isolated.
+4. Review each diff and its snapshots separately, then check representative combined CSS and cascade effects when changes come together. Verify AMP/Lite output against the guardrails below; passing unit tests alone does not establish visual parity.
+
+Keep `LiveLabel` and `LivePulse` together as a later coordinated workstream because they share styling contracts and have external overrides. Treat `BulletedList` as a separate, higher-risk candidate after its legacy consumers have been audited.
 
 ## Ongoing guardrails
 
@@ -172,10 +199,11 @@ Migrations are largely done by AI. Two files tell it how:
 - `.github/instructions/styling-standards.instructions.md` — the styling rules, applied automatically whenever a file in `src/app/components` is edited.
 - `.github/skills/migrate-component-to-scss-modules/SKILL.md` — the step-by-step conversion process, including the Emotion-to-SCSS value lookup and the checks listed above.
 
-This page isn't read by the AI. It's here for engineers planning the work.
+This page is planning guidance for engineers; include it in the request or ask the agent to read it when starting a migration. The styling instructions and migration skill provide the implementation guidance.
 
 ## Verifying a batch
 
 1. Run the component's tests. Regenerate snapshots only where the component has a `__snapshots__` folder, and review the diff — class-name churn is expected, structural DOM changes are not.
 2. Confirm no `@emotion` imports remain in the migrated component.
 3. Check an RTL service (for example `arabic`) and a dark UI context. Those two behaviours move out of JavaScript branching and into SCSS selectors, so they are the most likely regressions.
+4. Run relevant integration tests against a production build. From the repository root, `yarn test:integration` builds and starts the app before running the suite; the command with the same name in `ws-nextjs-app` runs Jest only and requires a running app. The root runner invokes `yarn stop`, so check for an existing server before running it. Review and update integration snapshots where the migration intentionally changes production class names; do not assume snapshots validate visual styles.
