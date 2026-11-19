@@ -1,5 +1,11 @@
 # EndOfArticleTreatment — WS-3523 prototype
 
+**Option D branch note:** this mixed-format component is retained for comparison
+but is not rendered by ArticlePage on
+`WS-3523-prototype-article-end-treatment-option-d`. See
+[EndOfArticlePreview](../EndOfArticlePreview/README.md) for the article-preview
+prototype and its current usage instructions.
+
 Research prototype under WS-3508. Makes the end of a standard Mundo article
 explicit and offers a small mixed-format onward journey before Topic Discovery.
 It is enabled on **local and Test deployments only**, for canonical Mundo text

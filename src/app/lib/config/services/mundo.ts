@@ -94,6 +94,21 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      endOfArticlePreview: {
+        endLabel: 'Has llegado al final del artículo',
+        heading: 'La historia continúa',
+        introduction: 'Otra lectura relacionada. Empieza a descubrirla aquí.',
+        fallbackIntroduction: 'Encuentra tu próxima historia en BBC Mundo.',
+        nextStory: 'Tu próxima lectura',
+        related: 'Contenido relacionado',
+        previewLabel: 'Así empieza el siguiente artículo',
+        summaryLabel: 'Un adelanto del siguiente artículo',
+        previewNote:
+          'Este es un adelanto. La historia completa está a un clic.',
+        readFullStory: 'Leer el artículo completo',
+        readTime: '{minutes} min de lectura · artículo completo',
+        homepage: 'Explorar BBC Mundo',
+      },
       endOfArticleTreatment: {
         endLabel: 'Has llegado al final del artículo',
         heading: 'Ahora, explora más',

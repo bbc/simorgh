@@ -15,7 +15,7 @@ import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
-import getArticleEndItems from './articleEnd';
+import getArticleEndPreview from './articleEndPreview';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
@@ -192,13 +192,9 @@ export default async (
     !isAmp &&
     !isLite &&
     !isApp;
-  const articleEndItems = articleEndEnabled
-    ? await getArticleEndItems(
-        article,
-        resolvedUrl,
-        portraitVideoItems?.portraitVideo?.blocks || [],
-      )
-    : undefined;
+  const articleEndPreview = articleEndEnabled
+    ? await getArticleEndPreview(article, resolvedUrl)
+    : null;
 
   return {
     props: {
@@ -206,7 +202,7 @@ export default async (
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...transformedArticleData,
-        ...(articleEndEnabled && { articleEndItems }),
+        ...(articleEndEnabled && { articleEndPreview }),
         secondaryColumn: {
           topStories,
           features,

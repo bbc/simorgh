@@ -22,7 +22,7 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-import EndOfArticleTreatment from '#app/components/EndOfArticleTreatment';
+import EndOfArticlePreview from '#app/components/EndOfArticlePreview';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getArticleId,
@@ -473,8 +473,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageType === 'article' &&
     !isAmp &&
     !isLite &&
-    !isApp &&
-    (pageData.articleEndItems?.length || 0) >= 2;
+    !isApp;
 
   // Include the existing discovery section in the prototype journey even when
   // the local fixture toggles do not enable it. Live behaviour is unchanged.
@@ -570,14 +569,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           </main>
           <OptimizelyPageMetrics trackPageDepth />
           {showEndOfArticleTreatment && (
-            <EndOfArticleTreatment
-              key={pageData.metadata.id}
-              items={pageData.articleEndItems || []}
-              isVisible={
-                !showContinueReadingButton ||
-                showAllContent ||
-                isDesktopViewport
-              }
+            <EndOfArticlePreview
+              preview={pageData.articleEndPreview}
               className={clsx(
                 shouldApplyCollapsedArticleSpacing &&
                   scssStyles.hideEndOfArticleTreatment,

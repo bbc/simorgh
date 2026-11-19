@@ -1,0 +1,202 @@
+@use '@scss/themeTokens' as theme;
+
+.section {
+  margin-block: theme.$spacings-triple theme.$spacings-quadruple;
+  margin-inline: theme.$spacings-full;
+  padding-block-end: theme.$spacings-double;
+  background: theme.$palette-grey-10;
+  color: theme.$palette-white;
+  border-block-start: theme.$spacings-half solid theme.$palette-postbox;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline: theme.$spacings-double;
+    padding-block-end: theme.$spacings-triple;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline: 0;
+  }
+}
+
+.header {
+  padding: theme.$spacings-triple theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: theme.$spacings-quadruple;
+  }
+}
+
+p.endLabel {
+  color: theme.$palette-grey-3;
+  padding-block-end: theme.$spacings-double;
+  border-block-end: 1px solid theme.$palette-grey-6;
+  margin-block-end: theme.$spacings-triple;
+}
+
+h2.heading {
+  color: theme.$palette-white;
+  text-wrap: balance;
+}
+
+p.introduction {
+  color: theme.$palette-grey-3;
+  margin-block-start: theme.$spacings-full;
+}
+
+.preview {
+  position: relative;
+  min-width: 0;
+}
+
+.imageContainer {
+  position: relative;
+  background: theme.$palette-black;
+}
+
+.image {
+  width: 100%;
+}
+
+.imageLabel {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+  position: absolute;
+  inset-block-start: theme.$spacings-double;
+  inset-inline-start: theme.$spacings-double;
+  padding: theme.$spacings-full theme.$spacings-double;
+  background: theme.$palette-grey-10;
+  color: theme.$palette-white;
+  border-inline-start: theme.$spacings-half solid theme.$palette-postbox;
+}
+
+.paper {
+  position: relative;
+  margin-inline: theme.$spacings-full;
+  padding: theme.$spacings-triple theme.$spacings-double;
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+  border-block-start: theme.$spacings-half solid theme.$palette-postbox;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-inline: theme.$spacings-triple;
+    padding: theme.$spacings-quadruple;
+  }
+}
+
+.paperWithImage {
+  margin-block-start: calc(-1 * #{theme.$spacings-double});
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-start: calc(-1 * #{theme.$spacings-quadruple});
+  }
+}
+
+.storyLabel {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-full theme.$spacings-double;
+  align-items: baseline;
+  color: theme.$palette-postbox;
+  margin-block-end: theme.$spacings-double;
+}
+
+.relationship {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  color: theme.$palette-grey-6;
+}
+
+h3.storyTitle {
+  color: theme.$palette-grey-10;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.metadata {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-full theme.$spacings-double;
+  color: theme.$palette-grey-6;
+  margin-block-start: theme.$spacings-double;
+}
+
+.excerpt {
+  margin-block-start: theme.$spacings-triple;
+  border-block-start: 1px solid theme.$palette-grey-3;
+  padding-block-start: theme.$spacings-triple;
+}
+
+p.excerptLabel {
+  color: theme.$palette-grey-6;
+  margin-block-end: theme.$spacings-double;
+}
+
+p.excerptParagraph {
+  color: theme.$palette-grey-10;
+  overflow-wrap: anywhere;
+
+  & + p {
+    margin-block-start: theme.$spacings-double;
+  }
+}
+
+.actionArea {
+  margin-block-start: theme.$spacings-triple;
+}
+
+.readLink {
+  @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-bold');
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: theme.$spacings-triple;
+  min-height: theme.pixelsToRem-px-to-rem(48);
+  padding: theme.$spacings-double theme.$spacings-triple;
+  color: theme.$palette-white;
+  background: theme.$palette-grey-10;
+  border-block-end: theme.$spacings-half solid theme.$palette-postbox;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$palette-white;
+  }
+
+  &:hover {
+    background: theme.$palette-postbox;
+    text-decoration: underline;
+  }
+
+  > :last-child {
+    flex-shrink: 0;
+  }
+}
+
+.section a:focus-visible {
+  outline: 3px solid theme.$palette-black;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px theme.$palette-white;
+  text-decoration: underline;
+}
+
+p.previewNote {
+  color: theme.$palette-grey-6;
+  margin-block-start: theme.$spacings-double;
+}
+
+a.homepageLink {
+  margin-inline: theme.$spacings-double;
+  border: 1px solid theme.$palette-white;
+  border-block-end: theme.$spacings-half solid theme.$palette-postbox;
+
+  &:focus-visible {
+    outline-color: theme.$palette-white;
+    box-shadow: 0 0 0 3px theme.$palette-black;
+  }
+}
+
+@media (forced-colors: active) {
+  .paper,
+  .section {
+    border: 1px solid CanvasText;
+  }
+}
