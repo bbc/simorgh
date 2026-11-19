@@ -90,7 +90,10 @@ export const assertMostReadResonanceComponentView = ({
     });
 
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: MOST_READ,
+      action: 'view',
+    });
     cy.visit(path);
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
@@ -117,7 +120,10 @@ export const assertMostReadResonanceComponentClick = ({
     });
 
     interceptATIAnalyticsBeacons();
-    interceptResonanceAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: MOST_READ,
+      action: 'select',
+    });
     cy.visit(path);
 
     cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
