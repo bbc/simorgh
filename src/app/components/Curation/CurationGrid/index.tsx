@@ -20,6 +20,7 @@ const CurationGrid = ({
   isVideoCollection = false,
   eventTrackingData,
   showRelatedTopic,
+  showReadTime,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -78,6 +79,7 @@ const CurationGrid = ({
           headingLevel={headingLevel}
           isVideoCollection={isVideoCollection}
           showRelatedTopic={showRelatedTopic}
+          showReadTime={showReadTime}
         />
       );
     }

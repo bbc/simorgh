@@ -1440,6 +1440,30 @@ describe('Article Page', () => {
       });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
+
+    it('should render ReadTimeTabs instead of TopicDiscovery when readTimeRecommendations is also enabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: {
+          topicDiscovery: { enabled: true },
+          readTimeRecommendations: { enabled: true },
+        },
+      });
+      expect(queryByTestId('read-time-tabs')).toBeInTheDocument();
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
+    });
+
+    it('should NOT render ReadTimeTabs when readTimeRecommendations is disabled', () => {
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+        toggles: {
+          topicDiscovery: { enabled: true },
+          readTimeRecommendations: { enabled: false },
+        },
+      });
+      expect(queryByTestId('read-time-tabs')).not.toBeInTheDocument();
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
   });
 
   describe('LocationBasedTopicOJ', () => {
