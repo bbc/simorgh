@@ -870,6 +870,10 @@ export const assertMostReadComponentClick = async ({
   await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
   await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
   await page.locator('[data-e2e="most-read"] a').first().waitFor();
+  await page
+    .locator('[data-e2e="most-read"] a')
+    .first()
+    .evaluate(element => element.scrollIntoView({ block: 'center' }));
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({
@@ -1133,6 +1137,10 @@ export const assertPodcastPromoComponentClick = async ({
   await pageViewPromise;
   await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
   await page.locator('[data-e2e="podcast-promo"] a').last().waitFor();
+  await page
+    .locator('[data-e2e="podcast-promo"] a')
+    .last()
+    .evaluate(element => element.scrollIntoView({ block: 'center' }));
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({

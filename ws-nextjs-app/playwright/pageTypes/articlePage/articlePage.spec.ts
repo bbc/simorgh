@@ -205,15 +205,22 @@ const addCanonicalHeadersToPageRequest = async (page: Page, path: string) => {
   );
 };
 
+const hideLocalDevOverlay = async (page: Page) => {
+  if (appEnvFromProcess !== 'local') return;
+  await page.addInitScript(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+      const style = document.createElement('style');
+      style.textContent = 'nextjs-portal { display: none !important; }';
+      document.head.appendChild(style);
+    });
+  });
+};
+
 const gotoArticlePage = async (page: Page, path: string) => {
   const pageUrl = new URL(path, baseURL).href;
   await addCanonicalHeadersToPageRequest(page, path);
+  await hideLocalDevOverlay(page);
   await page.goto(pageUrl, { waitUntil: 'domcontentloaded' });
-  if (appEnvFromProcess === 'local') {
-    await page.addStyleTag({
-      content: 'nextjs-portal { display: none !important; }',
-    });
-  }
 };
 
 const fetchServiceToggles = async (
@@ -770,16 +777,26 @@ const addPageTests = (
         test.skip(!getBlockData('continueReading', pageData));
         const button = page.locator('#continue-reading-button');
         await expect(button).toBeVisible();
+        const hiddenContent = await button.evaluateHandle(
+          element => element.nextElementSibling,
+        );
+        expect(
+          await hiddenContent.evaluate(element =>
+            element ? getComputedStyle(element).display : null,
+          ),
+        ).toBe('none');
+        await button.evaluate(element =>
+          element.scrollIntoView({ block: 'center' }),
+        );
         await button.click();
-        const hiddenDisplays = await page
-          .locator('main *')
-          .evaluateAll(
-            elements =>
-              elements.filter(
-                element => getComputedStyle(element).display === 'none',
-              ).length,
-          );
-        expect(hiddenDisplays).toBe(0);
+        await expect(button).toBeHidden();
+        await expect
+          .poll(() =>
+            hiddenContent.evaluate(element =>
+              element ? getComputedStyle(element).display : 'none',
+            ),
+          )
+          .not.toBe('none');
       });
 
       test('should show the requested number of Most Read items', async ({
@@ -1050,6 +1067,7 @@ test.describe('articlePage ATI Analytics', () => {
               expectsResonanceEvents: suite.expectsResonanceEvents,
             };
             await addCanonicalHeadersToPageRequest(page, suite.path);
+            await hideLocalDevOverlay(page);
             await atiAssertionByName[assertionName](props);
           });
         });
