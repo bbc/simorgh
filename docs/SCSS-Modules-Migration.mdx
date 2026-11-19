@@ -24,14 +24,17 @@ This programme is complete when `src/app/components` contains no imports from `@
 
 ## Current status
 
-The initial Batch 1 migration is complete. As of October 2026, the latest branch contains:
+The initial batch and the revised early sequence are complete. As of 19 November 2026, `latest` contains:
 
-- 15 `index.module.scss` files under `src/app/components`.
-- 82 remaining `index.styles.*` files under `src/app/components`.
-- Production components currently using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, `ArticleLinksBlock` and its `Promo`/`PromoList` children, `Curation/Subhead`, `EmbedError`, `SaveButton`, `FollowTopicButton`, `ActionTooltip`, `EpisodeDescriptionFormatter`, and the `GooglePreferredSource` link and divider components.
+- 38 `index.module.scss` files under `src/app/components`.
+- 68 remaining `index.styles.*` files under `src/app/components`.
+- Production components using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, `EmbedError`, `Spinner`, `VisuallyHiddenText`, `LiveText`, `Footer/Link`, `Curation/CurationMessageBanner`, and `CallToActionLink` and its `Text`, `Chevron`, and `ButtonLikeWrapper` subcomponents.
+- Other components using SCSS Modules include `ArticleLinksBlock` and its `Promo`/`PromoList` children, `Curation/Subhead`, `SaveButton`, `FollowTopicButton`, `ActionTooltip`, `EpisodeDescriptionFormatter`, and the `GooglePreferredSource` link and divider components.
 - `Example/index.module.scss` is a reference implementation rather than a production migration.
 
-The SCSS Modules foundation and service themes are now established. The remaining work is the incremental removal of the 82 Emotion style files, with legacy-coupled and AMP/Lite components still requiring the dedicated decisions described below.
+The CTA migration also moved consumer-owned CTA styles to SCSS Modules in `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary`, and `MessageBanner`. These consumers still have Emotion styles and are not fully migrated. The `ArticleHeadline` and downloads page consumers were updated outside this programme's component scope.
+
+These file counts are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion usage can exist without an `index.styles.*` file. Remaining work includes removing Emotion from those components and addressing the legacy-coupled and AMP/Lite cases described below.
 
 ## Lessons from the first migration batch
 
@@ -85,7 +88,7 @@ The existing `amp:validate` check now includes the large Russian article fixture
 Work is submitted in small PRs so review stays tractable.
 
 - **Size by style-line count, not component count.** Three 20-line components is a very different review from three 250-line ones. Roughly 150 lines of style per PR keeps review effort consistent.
-- **Delete the `index.styles.*` file in the same PR.** Never leave two sources of truth for one component.
+- **Delete the `index.styles.*` file when fully migrating a component.** A partially migrated consumer can temporarily retain Emotion styles alongside an SCSS Module, with each style owned in one place.
 - **Order by risk**, using the four axes below.
 
 ### Risk axes
@@ -133,30 +136,28 @@ imports its localised ISO-duration formatter from `#app/lib/utilities/timestamp`
 | Batch | Components                                      | Why                                                                                       | Status         |
 | ----- | ----------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------- |
 | 1     | `Copyright`, `ReadTime`, `InlineLink`           | Small, self-contained, have tests and stories, no snapshots — proves the pattern          | **Complete**   |
-| 2     | `VisuallyHiddenText`, `Spinner`, `LiveText`     | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk | Next candidate |
-| 3     | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports                                           | Pending        |
-| 4     | `CallToActionLink` and its sub-components       | A cohesive unit; migrating together avoids a split-brain component                        | Pending        |
+| 2     | `VisuallyHiddenText`, `Spinner`, `LiveText`     | `VisuallyHiddenText` is tiny but used in ~200 places, so it unlocks a lot for little risk | **Complete**   |
+| 3     | `Footer/Link`, `Curation/CurationMessageBanner` | Small, with few consumers and no legacy imports                                           | **Complete**   |
+| 4     | `CallToActionLink` and its sub-components       | A cohesive unit; migrating together avoids a split-brain component                        | **Complete**   |
 
 ## Revised sequence
 
-The original batches grouped components by approximate size and cohesion. The first migration showed that the more important measure is the contract surface: consumer count, runtime props, accessibility behaviour, theme/service inputs, pseudo-states, and dependencies on other Emotion components.
+The original batches grouped components by approximate size and cohesion. The first migration showed that the more important measure is the contract surface: consumer count, runtime props, accessibility behaviour, theme/service inputs, pseudo-states, and dependencies on other Emotion components. This revised early sequence has now been completed:
 
-| Order | Scope | Reason for the revised order |
-|---|---|---|
-| 1 | `Spinner` | Small visual contract with a focused class-composition check on the underlying icon. |
-| 2 | `VisuallyHiddenText` | Simple styles but roughly 200 consumers; give the high fan-out primitive its own PR and accessibility verification. |
-| 3 | `LiveText` | Follow `VisuallyHiddenText`; it combines service translations, direction, screen-reader behaviour, and live-label typography. |
-| 4 | `Footer/Link` | Handle separately because it combines runtime visibility, dynamic display, focus inversion, hover/focus states, and a consumer in `ActionTooltip`. |
-| 5 | `Curation/CurationMessageBanner` | Defer until its `Heading`, `Text`, and `MessageBanner` styling contracts are understood or migrated; it currently passes Emotion styles into shared children. |
-| 6 | `CallToActionLink` and its sub-components | Keep the family together, but treat it as a dedicated higher-risk PR because it has several consumers, inherited text styles, nested pseudo-state selectors, and consumer `css` overrides. |
+| Order | Scope | Merged PR | Reason for the revised order |
+|---|---|---|---|
+| 1 | `Spinner` | [#14496](https://github.com/bbc/simorgh/pull/14496) | Small visual contract with a focused class-composition check on the underlying icon. |
+| 2 | `VisuallyHiddenText` | [#14497](https://github.com/bbc/simorgh/pull/14497) | High fan-out primitive requiring its own PR and accessibility verification. |
+| 3 | `LiveText` | [#14505](https://github.com/bbc/simorgh/pull/14505) | Combines service translations, direction, screen-reader behaviour, and live-label typography. |
+| 4 | `Footer/Link` | [#14524](https://github.com/bbc/simorgh/pull/14524) | Combines runtime visibility, dynamic display, focus inversion, hover/focus states, and a consumer in `ActionTooltip`. |
+| 5 | `Curation/CurationMessageBanner` | [#14527](https://github.com/bbc/simorgh/pull/14527) | Required understanding its styling boundaries with `Heading`, `Text`, and `MessageBanner`. |
+| 6 | `CallToActionLink` and its sub-components | [#14611](https://github.com/bbc/simorgh/pull/14611) | A dedicated higher-risk PR covering the family and its consumer overrides. |
 
 ## Next steps
 
-1. **Start with `Spinner`**, then give `VisuallyHiddenText` its own high-fan-out migration PR.
-2. **Migrate `LiveText` after `VisuallyHiddenText`** and verify that the styling change preserves its functional output: translated live-label text, the `dir` value, `aria-hidden` states, visually hidden screen-reader text, typography, and AMP/Lite rendering.
-3. **Audit `Footer/Link` consumers before migrating it**, especially `ActionTooltip` and the `focusIndicatorInvert` contract.
-4. **Do not migrate `CurationMessageBanner` in isolation** until its shared `Heading`/`Text`/`MessageBanner` styling boundaries are resolved.
-5. **Plan `CallToActionLink` as a dedicated PR** with a complete consumer audit rather than treating its sub-components as a low-risk batch.
+1. Select the next components using the risk axes above, checking their current consumers and styling dependencies before grouping them.
+2. Finish migrating partially converted consumers in focused PRs, preserving their existing SCSS overrides and remaining Emotion styling contracts.
+3. Reassess the blocked and deferred components as their legacy dependencies and layout contracts change.
 
 ## Ongoing guardrails
 
