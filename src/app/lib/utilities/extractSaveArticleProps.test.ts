@@ -1,4 +1,5 @@
 import type { Article } from '#app/models/types/optimo';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import extractSaveArticleProps from './extractSaveArticleProps';
 
 const buildTextChain = (text: string) => ({
@@ -25,8 +26,12 @@ const buildImageBlock = (locator: string, altText: string) => ({
   },
 });
 
-const buildNestedMediaImageBlock = (locator: string, altText: string) => ({
-  type: 'video',
+const buildNestedMediaImageBlock = (
+  locator: string,
+  altText: string,
+  type = 'video',
+) => ({
+  type,
   model: {
     blocks: [
       {
@@ -64,18 +69,23 @@ describe('extractSaveArticleProps', () => {
     });
   });
 
-  it('falls back to the image nested in an audio/video block’s aresMedia block', () => {
-    const article = buildArticle([
-      buildHeadlineBlock('Media article headline'),
-      buildNestedMediaImageBlock(IMAGE_LOCATOR, 'Nested alt text'),
-    ]);
+  it.each(['audio', 'video'])(
+    'extracts the nested %s image for media articles',
+    type => {
+      const article = buildArticle([
+        buildHeadlineBlock('Media article headline'),
+        buildNestedMediaImageBlock(IMAGE_LOCATOR, 'Nested alt text', type),
+      ]);
 
-    expect(extractSaveArticleProps(article)).toMatchObject({
-      promoImage: EXPECTED_PROMO_IMAGE,
-      promoImageAltText: 'Nested alt text',
-      headline: 'Media article headline',
-    });
-  });
+      expect(
+        extractSaveArticleProps(article, MEDIA_ARTICLE_PAGE),
+      ).toMatchObject({
+        promoImage: EXPECTED_PROMO_IMAGE,
+        promoImageAltText: 'Nested alt text',
+        headline: 'Media article headline',
+      });
+    },
+  );
 
   it('prefers the nested media image over a later top-level image block', () => {
     const article = buildArticle([
@@ -87,10 +97,53 @@ describe('extractSaveArticleProps', () => {
       ),
     ]);
 
-    expect(extractSaveArticleProps(article)).toMatchObject({
+    expect(extractSaveArticleProps(article, MEDIA_ARTICLE_PAGE)).toMatchObject({
       promoImage: EXPECTED_PROMO_IMAGE,
       promoImageAltText: 'Nested alt text',
       headline: 'Media article headline',
+    });
+  });
+
+  it.each(['audio', 'video'])(
+    'uses the lead image for a normal article containing embedded %s',
+    type => {
+      const article = buildArticle([
+        buildHeadlineBlock('Normal article headline'),
+        buildImageBlock(IMAGE_LOCATOR, 'Lead image alt text'),
+        buildNestedMediaImageBlock(
+          'ichef.test.bbci.co.uk/images/ic/$widthxn/embedded-media.jpg',
+          'Embedded media alt text',
+          type,
+        ),
+      ]);
+
+      expect(extractSaveArticleProps(article)).toMatchObject({
+        promoImage: EXPECTED_PROMO_IMAGE,
+        promoImageAltText: 'Lead image alt text',
+      });
+    },
+  );
+
+  it('uses the top-level image when a media article has no nested image', () => {
+    const article = buildArticle([
+      { type: 'video', model: { blocks: [] } },
+      buildImageBlock(IMAGE_LOCATOR, 'Top-level alt text'),
+    ]);
+
+    expect(extractSaveArticleProps(article, MEDIA_ARTICLE_PAGE)).toMatchObject({
+      promoImage: EXPECTED_PROMO_IMAGE,
+      promoImageAltText: 'Top-level alt text',
+    });
+  });
+
+  it('does not use embedded media as the promo for a normal article without an image', () => {
+    const article = buildArticle([
+      buildNestedMediaImageBlock(IMAGE_LOCATOR, 'Embedded media alt text'),
+    ]);
+
+    expect(extractSaveArticleProps(article)).toMatchObject({
+      promoImage: '',
+      promoImageAltText: '',
     });
   });
 

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { PropsWithChildren } from 'react';
+import { forceVisible } from 'react-lazyload';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
@@ -8,7 +9,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { HOME_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import { render } from '../react-testing-library-with-providers';
+import { act, render } from '../react-testing-library-with-providers';
 import { Services, Variants } from '../../models/types/global';
 
 import {
@@ -100,6 +101,70 @@ describe('Frosted Glass Promo', () => {
       'https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w',
     );
     expect(container.querySelector('picture')).not.toBeInTheDocument();
+  });
+
+  it.each([
+    { mode: 'AMP', isAmp: true, isLite: false },
+    { mode: 'Lite', isAmp: false, isLite: true },
+  ])(
+    'keeps the static text panel in $mode when lazy loading is forced',
+    ({ isAmp, isLite }) => {
+      const { container, getByTestId, getByRole, getByText } = render(
+        <Promo {...cpsPromoFixture} />,
+        { service: 'mundo', isAmp, isLite },
+      );
+
+      act(() => forceVisible());
+
+      expect(
+        getByTestId('frosted-glass-lazyload-placeholder'),
+      ).toBeInTheDocument();
+      expect(
+        getByRole('link', { name: cpsPromoFixture.item.headlines.headline }),
+      ).toHaveAttribute('href', cpsPromoFixture.item.locators.assetUri);
+      expect(getByText('5 mayo 2016')).toBeInTheDocument();
+      expect(
+        container.querySelector('.lazyload-wrapper'),
+      ).not.toBeInTheDocument();
+      expect(
+        container.querySelector('[style*="background-image"]'),
+      ).not.toBeInTheDocument();
+    },
+  );
+
+  it('does not render images in Lite mode', () => {
+    const { container } = render(<Promo {...cpsPromoFixture} />, {
+      service: 'mundo',
+      isLite: true,
+    });
+
+    act(() => forceVisible());
+
+    expect(
+      container.querySelector('img, amp-img, picture'),
+    ).not.toBeInTheDocument();
+    expect(
+      container.querySelector('[style*="background-image"]'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('still loads the frosted panel on canonical pages', () => {
+    const { container, queryByTestId } = render(
+      <Promo {...cpsPromoFixture} />,
+      {
+        service: 'mundo',
+      },
+    );
+
+    act(() => forceVisible());
+
+    expect(
+      queryByTestId('frosted-glass-lazyload-placeholder'),
+    ).not.toBeInTheDocument();
+    expect(container.querySelector('[style*="background-image"]')).toHaveStyle({
+      backgroundImage:
+        "url('https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp')",
+    });
   });
 
   it('when given props directly', () => {
