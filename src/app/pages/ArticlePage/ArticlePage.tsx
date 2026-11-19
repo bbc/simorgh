@@ -236,7 +236,13 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({ pageData }: { pageData: Article }) => {
+const ArticlePage = ({
+  pageData,
+  stackedRecommendations = false,
+}: {
+  pageData: Article;
+  stackedRecommendations?: boolean;
+}) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
@@ -558,7 +564,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           </main>
           <OptimizelyPageMetrics trackPageDepth />
           {(!showContinueReadingButton || showAllContent) && (
-            <RecommendationsCarousel data={recommendationsData} />
+            <RecommendationsCarousel
+              data={recommendationsData}
+              stacked={stackedRecommendations}
+            />
           )}
           {showTopicDiscovery && (
             <TopicDiscovery

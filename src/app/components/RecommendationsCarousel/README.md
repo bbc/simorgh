@@ -23,4 +23,7 @@ Square-card headlines are limited to four visible lines; the modal shows the
 full headline.
 
 Preview it in Storybook under **Components / RecommendationsCarousel / Stacked
-Squares**. This additional component does not replace the article-page carousel.
+Squares**, or in a full Mundo article under **Pages / Article Page / Mundo
+Article With Stacked Recommendations Carousel**. The stacked article story shows
+the carousel after the article body and before topic discovery. Normal article
+pages continue to use the portrait layout.

@@ -39,6 +39,7 @@ import {
   screen,
   waitFor,
   act,
+  within,
 } from '../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
@@ -185,9 +186,14 @@ describe('Article Page', () => {
     jest.clearAllMocks();
   });
 
-  it.each([true, false])(
-    'places the carousel directly after the article and before topics when topic discovery is %s',
-    topicDiscoveryEnabled => {
+  it.each([
+    { topicDiscoveryEnabled: true, stackedRecommendations: false },
+    { topicDiscoveryEnabled: false, stackedRecommendations: false },
+    { topicDiscoveryEnabled: true, stackedRecommendations: true },
+    { topicDiscoveryEnabled: false, stackedRecommendations: true },
+  ])(
+    'places the carousel directly after the article and before topics with topic discovery=$topicDiscoveryEnabled and stacked promos=$stackedRecommendations',
+    ({ topicDiscoveryEnabled, stackedRecommendations }) => {
       const pageData = {
         ...articleDataPidgin,
         metadata: {
@@ -212,10 +218,16 @@ describe('Article Page', () => {
           },
         },
       };
-      const { container } = render(<ArticlePage pageData={pageData} />, {
-        service: 'mundo',
-        toggles: { topicDiscovery: { enabled: topicDiscoveryEnabled } },
-      });
+      const { container } = render(
+        <ArticlePage
+          pageData={pageData}
+          stackedRecommendations={stackedRecommendations}
+        />,
+        {
+          service: 'mundo',
+          toggles: { topicDiscovery: { enabled: topicDiscoveryEnabled } },
+        },
+      );
 
       const carousel = screen.getByTestId('recommendations-carousel');
       const main = container.querySelector('main');
@@ -224,6 +236,9 @@ describe('Article Page', () => {
       );
       expect(main?.nextElementSibling).toBe(carousel);
       expect(carousel.nextElementSibling).toBe(topics);
+      expect(within(carousel).getAllByRole('list')).toHaveLength(
+        stackedRecommendations ? 2 : 1,
+      );
       recommendationsFixtures.forEach(({ title }) => {
         expect(carousel).toHaveTextContent(title);
       });

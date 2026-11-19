@@ -77,6 +77,7 @@ type Props = {
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
+  stackedRecommendations?: boolean;
   pathname?: string;
 };
 
@@ -87,6 +88,7 @@ const ComponentWithContext = ({
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
+  stackedRecommendations = false,
   pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
@@ -117,6 +119,7 @@ const ComponentWithContext = ({
           <ThemeProvider service={service}>
             <PageLayoutWrapper pageData={data.article} status={200}>
               <Page
+                stackedRecommendations={stackedRecommendations}
                 pageData={{
                   ...data.article,
                   secondaryColumn: data.secondaryData,
@@ -351,21 +354,23 @@ export const ArticlePageWithTopicDiscovery = {
   },
 };
 
+const mundoRecommendationsData = {
+  data: {
+    ...articleDataWithPortraitVideo.data,
+    article: {
+      ...articleDataWithPortraitVideo.data.article,
+      metadata: {
+        ...articleDataWithPortraitVideo.data.article.metadata,
+        topics: articleDataWithElectionTag.data.article.metadata.topics,
+      },
+    },
+  },
+};
+
 export const MundoArticleWithRecommendationsCarousel = {
   render: () => (
     <ComponentWithContext
-      data={{
-        data: {
-          ...articleDataWithPortraitVideo.data,
-          article: {
-            ...articleDataWithPortraitVideo.data.article,
-            metadata: {
-              ...articleDataWithPortraitVideo.data.article.metadata,
-              topics: articleDataWithElectionTag.data.article.metadata.topics,
-            },
-          },
-        },
-      }}
+      data={mundoRecommendationsData}
       service="mundo"
       pathname="/mundo/articles/c1xv2q1gewvo"
     />
@@ -374,6 +379,18 @@ export const MundoArticleWithRecommendationsCarousel = {
     service: { service: 'mundo', variant: 'default' },
     toggles: { topicDiscovery: { enabled: true } },
   },
+};
+
+export const MundoArticleWithStackedRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={mundoRecommendationsData}
+      service="mundo"
+      pathname="/mundo/articles/c1xv2q1gewvo"
+      stackedRecommendations
+    />
+  ),
+  globals: MundoArticleWithRecommendationsCarousel.globals,
 };
 
 export const ArticlePageWithSaveArticleButton = () => (
