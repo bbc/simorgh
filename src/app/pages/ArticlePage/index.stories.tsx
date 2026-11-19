@@ -28,6 +28,7 @@ import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import recommendationsCarouselFixture from '#app/components/RecommendationsCarousel/fixtures';
 import ArticlePageComponent from './ArticlePage';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
@@ -359,6 +360,25 @@ const mundoRecommendationsData = {
     ...articleDataWithPortraitVideo.data,
     article: {
       ...articleDataWithPortraitVideo.data.article,
+      content: {
+        ...articleDataWithPortraitVideo.data.article.content,
+        model: {
+          ...articleDataWithPortraitVideo.data.article.content.model,
+          blocks:
+            articleDataWithPortraitVideo.data.article.content.model.blocks.map(
+              block =>
+                block.type === 'wsoj'
+                  ? {
+                      ...block,
+                      model: {
+                        ...block.model,
+                        data: recommendationsCarouselFixture,
+                      },
+                    }
+                  : block,
+            ),
+        },
+      },
       metadata: {
         ...articleDataWithPortraitVideo.data.article.metadata,
         topics: articleDataWithElectionTag.data.article.metadata.topics,

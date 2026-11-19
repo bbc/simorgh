@@ -11,6 +11,11 @@ including Storybook. It appears after the article body, immediately before topic
 discovery, and is hidden while the article is collapsed. Existing mid-article
 recommendations are unchanged. No additional data request is made.
 
+The standalone and full Mundo article Storybook examples use 12 sample promos
+from existing Mundo fixture data. This Storybook-only dataset does not change
+recommendations on real article pages; the carousel displays all supplied promos
+without a four-item limit.
+
 Images are cropped to 9:16. Recommendations without images use the service's
 default image. Headlines remain visible in full, including for longer titles.
 

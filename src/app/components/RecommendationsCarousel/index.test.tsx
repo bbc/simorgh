@@ -8,6 +8,7 @@ import {
 import { recommendationsFixtures } from '../Recommendations/fixtures';
 import RecommendationsCarousel from '.';
 import StackedRecommendationsCarousel from './StackedRecommendationsCarousel';
+import recommendationsCarouselFixture from './fixtures';
 
 describe('RecommendationsCarousel', () => {
   const originalShowModal = HTMLDialogElement.prototype.showModal;
@@ -76,6 +77,38 @@ describe('RecommendationsCarousel', () => {
       screen.queryByTestId('recommendations-carousel'),
     ).not.toBeInTheDocument();
   });
+
+  it.each([false, true])(
+    'renders all 12 Storybook promos and opens the last promo with stacked=%s',
+    stacked => {
+      render(
+        <RecommendationsCarousel
+          data={recommendationsCarouselFixture}
+          stacked={stacked}
+        />,
+        { service: 'mundo' },
+      );
+
+      const carousel = screen.getByTestId('recommendations-carousel');
+      const cards = within(carousel).getAllByRole('button');
+      const promos = cards.filter(
+        card => card.getAttribute('aria-haspopup') === 'dialog',
+      );
+
+      expect(promos).toHaveLength(12);
+      expect(promos.map(promo => promo.textContent)).toEqual(
+        recommendationsCarouselFixture.map(({ title }) => title),
+      );
+
+      fireEvent.click(promos[11]);
+
+      const recommendation = recommendationsCarouselFixture[11];
+      const modal = screen.getByRole('dialog', { name: recommendation.title });
+      expect(
+        within(modal).getByRole('link', { name: 'Continuar leyendo' }),
+      ).toHaveAttribute('href', recommendation.href);
+    },
+  );
 
   it('uses the service image when a recommendation has no image', () => {
     const [recommendation] = recommendationsFixtures;

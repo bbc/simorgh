@@ -1,17 +1,9 @@
-import articleData from '#data/mundo/articles/c1xv2q1gewvo.json';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import RecommendationsCarousel from '.';
 import StackedRecommendationsCarousel from './StackedRecommendationsCarousel';
+import recommendationsCarouselFixture from './fixtures';
 import readme from './README.md';
 import metadata from './metadata.json';
-
-const recommendationsBlock = articleData.data.article.content.model.blocks.find(
-  block => block.type === 'wsoj',
-);
-const recommendations =
-  recommendationsBlock && 'data' in recommendationsBlock.model
-    ? (recommendationsBlock.model.data ?? [])
-    : [];
 
 export default {
   title: 'Components/RecommendationsCarousel',
@@ -32,8 +24,10 @@ export default {
   ],
 };
 
-export const Default = () => <RecommendationsCarousel data={recommendations} />;
+export const Default = () => (
+  <RecommendationsCarousel data={recommendationsCarouselFixture} />
+);
 
 export const StackedSquares = () => (
-  <StackedRecommendationsCarousel data={recommendations} />
+  <StackedRecommendationsCarousel data={recommendationsCarouselFixture} />
 );
