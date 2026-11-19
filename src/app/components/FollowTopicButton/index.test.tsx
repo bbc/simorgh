@@ -14,8 +14,12 @@ import useTopicFollowButton, {
   type FollowActionResult,
 } from '#app/hooks/useTopicFollowButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import type { Services, Toggles } from '#app/models/types/global';
-import { FollowTopicButtonLoadingFallback } from './FollowTopicButtonAuthenticated/lazy';
+import {
+  FollowTopicButtonLoadingFallback,
+  FollowTopicButtonTopicIdContext,
+} from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButton from '.';
 
 jest.mock('./FollowTopicButtonAuthenticated/lazy', () => {
@@ -340,15 +344,19 @@ describe('FollowTopicButton', () => {
     },
   );
 
-  it('shows an interactive guest button only after chunk loading fails', async () => {
+  it('shows an interactive guest button with topic click tracking only after chunk loading fails', async () => {
     const error = new Error('Chunk failed');
     const { rerender } = render(
-      <FollowTopicButtonLoadingFallback isLoading />,
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback isLoading />
+      </FollowTopicButtonTopicIdContext>,
       { service: 'hindi', ...signedInOptions },
     );
 
     rerender(
-      <FollowTopicButtonLoadingFallback error={error} isLoading={false} />,
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback error={error} isLoading={false} />
+      </FollowTopicButtonTopicIdContext>,
     );
 
     expect(
@@ -358,8 +366,20 @@ describe('FollowTopicButton', () => {
     expect(
       screen.getByTestId('follow-topic-sign-in-modal'),
     ).toBeInTheDocument();
+    expect(useClickTracker).toHaveBeenCalledWith({
+      componentName: 'follow-topic-button-guest-click-follow',
+      itemTracker: { resourceId: topicData.topicId },
+    });
+    expect(mockTrackClick).toHaveBeenCalledWith(
+      'follow-topic-button-guest-click-follow',
+      expect.anything(),
+    );
 
-    rerender(<FollowTopicButtonLoadingFallback error={error} isLoading />);
+    rerender(
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback error={error} isLoading />
+      </FollowTopicButtonTopicIdContext>,
+    );
     expect(screen.getByTestId('follow-topic-btn-loading')).toBeInTheDocument();
     expect(
       screen.queryByTestId('follow-topic-sign-in-modal'),
