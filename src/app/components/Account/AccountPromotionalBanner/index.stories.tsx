@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import AccountPromotionalBanner from '.';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import AccountPromotionalBanner from '.';
 import readme from './README.md';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from './utilities';
 import AccountSignInModal from '../AccountSignInModal';
@@ -35,6 +35,17 @@ SignedIn.globals = {
 
 export const SignedOutModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const modalProps = {
+    title: 'Sign in to save stories',
+    description: 'Save stories and read them at your convenience',
+    closeLabel: 'Close',
+    signInText: 'Sign In',
+    registerText: 'Register',
+    signInAccessibleLabel: 'Sign in to My News',
+    separatorText: 'or',
+    signInUrl: 'https://example.com/signin',
+    registerUrl: 'https://example.com/register',
+  };
 
   return (
     <>
@@ -46,11 +57,7 @@ export const SignedOutModal = () => {
         Open Sign In Modal
       </button>
       {isOpen && (
-        <AccountSignInModal
-          onClose={() => setIsOpen(false)}
-          signInUrl="https://example.com/signin"
-          registerUrl="https://example.com/register"
-        />
+        <AccountSignInModal {...modalProps} onClose={() => setIsOpen(false)} />
       )}
     </>
   );

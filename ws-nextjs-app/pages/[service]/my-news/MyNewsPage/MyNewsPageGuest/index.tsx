@@ -2,11 +2,13 @@ import { use } from 'react';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
 import styles from './styles';
 
 const MyNewsPageGuest = () => {
   const { translations } = use(ServiceContext);
+  const { signInUrl, registerUrl } = use(AccountContext);
 
   return (
     <>
@@ -22,6 +24,11 @@ const MyNewsPageGuest = () => {
       <Text size="longPrimer">{translations?.myNews?.guestDescription}</Text>
       <div css={styles.actionButtonsContainer}>
         <AccountActionButtons
+          signInUrl={signInUrl}
+          registerUrl={registerUrl}
+          signInText={translations.account?.signIn ?? ''}
+          registerText={translations.account?.register ?? ''}
+          separatorText={translations.accountPromoBanner?.buttonSeparatorText}
           registerComponentName="my-news-register-link"
           signInComponentName="my-news-guest-sign-in-link"
           onLightBackground

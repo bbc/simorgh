@@ -1,7 +1,12 @@
 import { createRef } from 'react';
 import userEvent from '@testing-library/user-event';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
-import { act, render, screen } from '../react-testing-library-with-providers';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+} from '../react-testing-library-with-providers';
 import CallToActionLink, { GLOW_DELAY_MS } from '.';
 
 jest.mock('#app/hooks/useClickTrackerHandler', () => ({
@@ -149,6 +154,35 @@ describe('Call To Action Link', () => {
     const link = screen.getByRole('link');
     expect(link.getAttribute('data-ignore-lite')).toBeTruthy();
   });
+
+  it.each([false, true])(
+    'calls the consumer click handler and only tracks uncancelled clicks (cancelled=%s)',
+    cancelled => {
+      const trackClick = jest.fn(event => event.preventDefault());
+      const trackerSpy = jest
+        .spyOn(clickTracking, 'default')
+        .mockReturnValue({ onClick: trackClick });
+      const onClick = jest.fn(event => {
+        if (cancelled) event.preventDefault();
+      });
+      try {
+        render(
+          <CallToActionLink
+            url="https://www.bbc.com/ws/languages"
+            eventTrackingData={{ componentName: 'call-to-action-link' }}
+            onClick={onClick}
+          >
+            <CallToActionLink.Text>Sign in</CallToActionLink.Text>
+          </CallToActionLink>,
+        );
+        fireEvent.click(screen.getByRole('link', { name: 'Sign in' }));
+        expect(onClick).toHaveBeenCalledTimes(1);
+        expect(trackClick).toHaveBeenCalledTimes(cancelled ? 0 : 1);
+      } finally {
+        trackerSpy.mockRestore();
+      }
+    },
+  );
 
   it('should merge a passed className onto the link', () => {
     render(

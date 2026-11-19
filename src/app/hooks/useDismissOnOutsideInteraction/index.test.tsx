@@ -12,10 +12,12 @@ const DEFAULT_GRACE_PERIOD_MS = 1000;
 const TestComponent = ({
   onDismiss,
   enableOutsideClick,
+  enableEscape,
   outsideClickGracePeriodMs,
 }: {
   onDismiss: () => void;
   enableOutsideClick?: boolean;
+  enableEscape?: boolean;
   outsideClickGracePeriodMs?: number;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,6 +26,7 @@ const TestComponent = ({
     containerRef,
     onDismiss,
     enableOutsideClick,
+    enableEscape,
     outsideClickGracePeriodMs,
   });
 
@@ -53,6 +56,15 @@ describe('useDismissOnOutsideInteraction', () => {
     fireEvent.keyDown(document, { key: 'Escape' });
 
     expect(onDismiss).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not attach an Escape listener when enableEscape is false', () => {
+    const onDismiss = jest.fn();
+    render(<TestComponent onDismiss={onDismiss} enableEscape={false} />);
+
+    fireEvent.keyDown(document, { key: 'Escape' });
+
+    expect(onDismiss).not.toHaveBeenCalled();
   });
 
   it('does not call onDismiss for other keys', () => {
