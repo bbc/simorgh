@@ -13,12 +13,7 @@ import styles from './index.styles';
 
 type AccountSignInModalProps = {
   onClose: () => void;
-  context?:
-    | 'saveArticle'
-    | 'followTopic'
-    | 'inline'
-    | 'articleLink'
-    | 'articleBottom';
+  context?: 'saveArticle' | 'followTopic' | 'article';
   signInUrl?: string | undefined;
   registerUrl?: string | undefined;
 };

@@ -72,15 +72,7 @@ export interface Translations {
       title: string;
       description: string;
     };
-    inline?: {
-      title: string;
-      description: string;
-    };
-    articleLink?: {
-      title: string;
-      description: string;
-    };
-    articleBottom?: {
+    article?: {
       title: string;
       description: string;
     };
