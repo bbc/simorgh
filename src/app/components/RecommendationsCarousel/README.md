@@ -13,3 +13,14 @@ recommendations are unchanged. No additional data request is made.
 
 Images are cropped to 9:16. Recommendations without images use the service's
 default image. Headlines remain visible in full, including for longer titles.
+
+## Stacked square variant
+
+`StackedRecommendationsCarousel` shares the same recommendations, styling,
+navigation and modal behaviour, but shows square promos in columns of two.
+An odd number of recommendations leaves the final column with one promo.
+Square-card headlines are limited to four visible lines; the modal shows the
+full headline.
+
+Preview it in Storybook under **Components / RecommendationsCarousel / Stacked
+Squares**. This additional component does not replace the article-page carousel.

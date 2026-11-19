@@ -185,50 +185,50 @@ describe('Article Page', () => {
     jest.clearAllMocks();
   });
 
-  it('places the recommendations feed after the article and before topic discovery', () => {
-    const pageData = {
-      ...articleDataPidgin,
-      metadata: {
-        ...articleDataPidgin.metadata,
-        topics: [{ topicId: 'test-topic', topicName: 'Test topic' }],
-      },
-      content: {
-        model: {
-          blocks: [
-            ...articleDataPidgin.content.model.blocks.filter(
-              block => block.type !== 'wsoj',
-            ),
-            {
-              id: 'recommendations-carousel-test-feed',
-              type: 'wsoj',
-              model: {
-                type: 'recommendations',
-                data: recommendationsFixtures,
-              },
-            },
-          ],
+  it.each([true, false])(
+    'places the carousel directly after the article and before topics when topic discovery is %s',
+    topicDiscoveryEnabled => {
+      const pageData = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          topics: [{ topicId: 'test-topic', topicName: 'Test topic' }],
         },
-      },
-    };
-    const { container } = render(<ArticlePage pageData={pageData} />, {
-      service: 'mundo',
-      toggles: { topicDiscovery: { enabled: true } },
-    });
+        content: {
+          model: {
+            blocks: [
+              ...articleDataPidgin.content.model.blocks.filter(
+                block => block.type !== 'wsoj',
+              ),
+              {
+                id: 'recommendations-carousel-test-feed',
+                type: 'wsoj',
+                model: {
+                  type: 'recommendations',
+                  data: recommendationsFixtures,
+                },
+              },
+            ],
+          },
+        },
+      };
+      const { container } = render(<ArticlePage pageData={pageData} />, {
+        service: 'mundo',
+        toggles: { topicDiscovery: { enabled: topicDiscoveryEnabled } },
+      });
 
-    const carousel = screen.getByTestId('recommendations-carousel');
-    const main = container.querySelector('main');
-    const topicDiscovery = container.querySelector('#topic-discovery-heading');
-    expect(main?.compareDocumentPosition(carousel)).toBe(
-      Node.DOCUMENT_POSITION_FOLLOWING,
-    );
-    expect(topicDiscovery).toBeInTheDocument();
-    expect(topicDiscovery?.compareDocumentPosition(carousel)).toBe(
-      Node.DOCUMENT_POSITION_PRECEDING,
-    );
-    recommendationsFixtures.forEach(({ title }) => {
-      expect(carousel).toHaveTextContent(title);
-    });
-  });
+      const carousel = screen.getByTestId('recommendations-carousel');
+      const main = container.querySelector('main');
+      const topics = screen.getByTestId(
+        topicDiscoveryEnabled ? 'topic-discovery' : 'related-topics',
+      );
+      expect(main?.nextElementSibling).toBe(carousel);
+      expect(carousel.nextElementSibling).toBe(topics);
+      recommendationsFixtures.forEach(({ title }) => {
+        expect(carousel).toHaveTextContent(title);
+      });
+    },
+  );
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {
     const { container } = render(

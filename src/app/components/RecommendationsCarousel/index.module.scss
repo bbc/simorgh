@@ -1,7 +1,38 @@
 @use '@scss/themeTokens' as theme;
 
 .section {
-  margin-block: theme.$spacings-quadruple;
+  margin-block: theme.$spacings-double;
+  padding-inline: theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    margin-block-end: theme.$spacings-triple;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding-inline: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-end: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding-inline: 0;
+  }
+}
+
+.section .heading {
+  display: inline-block;
+  margin: 0;
+  color: theme.$palette-grey-10;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-start: theme.$spacings-double;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-2;
+  }
 }
 
 .container {
@@ -15,7 +46,7 @@
   display: flex;
   flex: 1;
   gap: theme.$spacings-full;
-  padding: theme.$spacings-full 0;
+  padding: 0;
   margin: 0;
   list-style: none;
   overflow-x: auto;
@@ -29,7 +60,7 @@
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     gap: theme.$spacings-double;
-    padding-block: theme.$spacings-double;
+    padding-block: theme.$spacings-full;
 
     @media #{theme.$mediaQueries-pointer-fine} {
       &::after {
@@ -44,28 +75,28 @@
   }
 }
 
-.item {
+.item,
+.column {
   position: relative;
-  overflow: hidden;
-  flex: 0 0 calc(100% / 2.33 - #{theme.$spacings-full});
-  min-width: #{theme.pixelsToRem-px-to-rem(147)};
+  flex: 0 0 calc((100% / 2.33 - #{theme.$spacings-full}) * 1.3);
+  min-width: #{theme.pixelsToRem-px-to-rem(192)};
   scroll-snap-align: start;
-  background-color: theme.$palette-black;
 
   @media #{theme.$mediaQueries-group-3-min-width} {
     min-width: 0;
-    flex-basis: calc(100% / 3.33 - #{theme.$spacings-double});
+    flex-basis: calc((100% / 3.33 - #{theme.$spacings-double}) * 1.3);
 
     @media #{theme.$mediaQueries-pointer-fine} {
-      flex-basis: calc(100% / 3.5 - #{theme.$spacings-double});
+      flex-basis: calc((100% / 3.5 - #{theme.$spacings-double}) * 1.3);
     }
   }
 }
 
 @media #{theme.$mediaQueries-group-4-min-width} {
   @container (min-width: #{theme.$gridWidths-grid-width-900}) {
-    .item {
-      flex-basis: calc(100% / 4.5 - #{theme.$spacings-double});
+    .item,
+    .column {
+      flex-basis: calc((100% / 4.5 - #{theme.$spacings-double}) * 1.3);
     }
 
     .carousel::after {
@@ -77,14 +108,51 @@
 
 @media #{theme.$mediaQueries-group-5-min-width} {
   @container (min-width: #{theme.$gridWidths-grid-width-1008}) {
-    .item {
-      flex-basis: calc(100% / 5.5 - #{theme.$spacings-double});
+    .item,
+    .column {
+      flex-basis: calc((100% / 5.5 - #{theme.$spacings-double}) * 1.3);
     }
 
     .carousel::after {
       content: '';
       flex: 0 0 calc(100% / 5.5 * 0.5);
     }
+  }
+}
+
+.item {
+  overflow: hidden;
+  background-color: theme.$palette-black;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-full;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    gap: theme.$spacings-double;
+  }
+
+  .item {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .promo {
+    aspect-ratio: 1;
+  }
+
+  .overlay .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
   }
 }
 
@@ -106,11 +174,6 @@
   &:focus-visible {
     text-decoration: underline;
   }
-
-  &:focus-visible {
-    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
-    outline-offset: #{theme.pixelsToRem-px-to-rem(-4)};
-  }
 }
 
 .promo .image {
@@ -122,17 +185,19 @@
 .overlay {
   position: relative;
   width: 100%;
-  padding: theme.$spacings-quadruple theme.$spacings-full theme.$spacings-full;
+  padding: calc(#{theme.$spacings-triple} + #{theme.$spacings-half})
+    theme.$spacings-full theme.$spacings-full;
   background: linear-gradient(
     to bottom,
     rgba(theme.$palette-black, 0),
-    rgba(theme.$palette-black, 0.85) 24%,
+    rgba(theme.$palette-black, 0.65) 24%,
     theme.$palette-black
   );
 }
 
 .overlay .title {
   display: block;
+  margin-block-start: theme.$spacings-full;
   color: theme.$palette-white;
   overflow-wrap: anywhere;
 }
@@ -172,6 +237,35 @@
   padding: theme.$spacings-double;
 }
 
+.modalContent a.continueReading {
+  display: block;
+  width: 100%;
+  min-height: #{theme.pixelsToRem-px-to-rem(44)};
+  padding: theme.$spacings-double;
+  border-block-end: #{theme.pixelsToRem-px-to-rem(1)} solid
+    theme.$palette-grey-4;
+  background-color: theme.$palette-grey-2;
+  color: theme.$palette-grey-10;
+
+  &:visited,
+  &:hover,
+  &:focus {
+    color: theme.$palette-grey-10;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    background-color: Canvas;
+    color: LinkText;
+    border-color: CanvasText;
+
+    &:visited,
+    &:hover,
+    &:focus {
+      color: LinkText;
+    }
+  }
+}
+
 .closeButton {
   position: absolute;
   top: theme.$spacings-full;
@@ -186,10 +280,21 @@
   background: theme.$palette-black;
   color: theme.$palette-white;
   cursor: pointer;
+}
 
-  &:focus-visible {
-    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
-    outline-offset: #{theme.pixelsToRem-px-to-rem(-4)};
+button[type='button'].promo:focus-visible,
+button[type='button'].closeButton:focus-visible {
+  outline: none;
+  box-shadow: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: #{theme.pixelsToRem-px-to-rem(2)};
+    border: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
+    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-black;
+    pointer-events: none;
+    z-index: 1;
   }
 }
 

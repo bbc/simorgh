@@ -7,6 +7,7 @@ import {
 } from '../react-testing-library-with-providers';
 import { recommendationsFixtures } from '../Recommendations/fixtures';
 import RecommendationsCarousel from '.';
+import StackedRecommendationsCarousel from './StackedRecommendationsCarousel';
 
 describe('RecommendationsCarousel', () => {
   const originalShowModal = HTMLDialogElement.prototype.showModal;
@@ -151,5 +152,56 @@ describe('RecommendationsCarousel', () => {
     );
 
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
+  describe('stacked square variant', () => {
+    const data = [
+      ...recommendationsFixtures,
+      {
+        ...recommendationsFixtures[0],
+        id: 'third-recommendation',
+        title: 'Recommendation Three',
+      },
+    ];
+
+    it('groups promos in pairs and keeps an odd final promo', () => {
+      render(<StackedRecommendationsCarousel data={data} />, {
+        service: 'mundo',
+      });
+
+      const carousel = screen.getByTestId('recommendations-carousel');
+      const [list] = within(carousel).getAllByRole('list');
+      const stacks = within(list).getAllByRole('list');
+
+      expect(
+        stacks.map(stack => within(stack).getAllByRole('button').length),
+      ).toEqual([2, 1]);
+      expect(
+        within(list)
+          .getAllByRole('button')
+          .map(button => button.textContent),
+      ).toEqual(data.map(recommendation => recommendation.title));
+    });
+
+    it.each([1, 2])(
+      'opens the correct recommendation modal for promo index %s',
+      index => {
+        render(<StackedRecommendationsCarousel data={data} />, {
+          service: 'mundo',
+        });
+        const recommendation = data[index];
+
+        fireEvent.click(
+          screen.getByRole('button', { name: recommendation.title }),
+        );
+
+        const modal = screen.getByRole('dialog', {
+          name: recommendation.title,
+        });
+        expect(
+          within(modal).getByRole('link', { name: 'Continuar leyendo' }),
+        ).toHaveAttribute('href', recommendation.href);
+      },
+    );
   });
 });

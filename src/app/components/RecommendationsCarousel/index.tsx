@@ -12,7 +12,7 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import Heading from '#app/components/Heading';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
-import InlineLink from '#app/components/InlineLink';
+import CallToActionLink from '#app/components/CallToActionLink';
 import { Close } from '#app/components/icons';
 import PortraitCarouselNavigation from '#app/components/PortraitVideoCarousel/PortraitVideoCarouselNavigation';
 import styles from './index.module.scss';
@@ -21,18 +21,20 @@ type CarouselRecommendation = Omit<Recommendation, 'image'> & {
   image?: Recommendation['image'];
 };
 
-type Props = {
+export type RecommendationsCarouselProps = {
   data: CarouselRecommendation[];
+  stacked?: boolean;
 };
 
 const RecommendationImage = ({
   image,
-  portrait = false,
+  aspectRatio,
 }: {
   image?: Recommendation['image'];
-  portrait?: boolean;
+  aspectRatio?: [number, number];
 }) => {
   const { defaultImage } = use(ServiceContext);
+  const isPromo = Boolean(aspectRatio);
   const imageSources = image
     ? createIchefSrcSet({
         originCode: image.originCode,
@@ -45,20 +47,18 @@ const RecommendationImage = ({
 
   return (
     <Image
-      className={portrait ? styles.image : undefined}
-      alt={portrait ? '' : (image?.altText ?? '')}
+      className={isPromo ? styles.image : undefined}
+      alt={isPromo ? '' : (image?.altText ?? '')}
       src={imageSources?.src ?? defaultImage}
       srcSet={imageSources?.primarySrcset}
       fallbackSrcSet={imageSources?.fallbackSrcset}
       sizes={
-        portrait
-          ? '(min-width: 600px) 240px, 45vw'
+        isPromo
+          ? '(min-width: 600px) 320px, (min-width: 360px) 56vw, 192px'
           : '(min-width: 600px) 600px, 100vw'
       }
-      aspectRatio={
-        portrait ? [9, 16] : [image?.width ?? 16, image?.height ?? 9]
-      }
-      lazyLoad={portrait}
+      aspectRatio={aspectRatio ?? [image?.width ?? 16, image?.height ?? 9]}
+      lazyLoad={isPromo}
     />
   );
 };
@@ -78,10 +78,6 @@ const RecommendationModal = ({
     ...eventTrackingData,
     componentName: 'article-recommendations-modal',
     alwaysInView: true,
-  });
-  const clickTracker = useClickTrackerHandler({
-    ...eventTrackingData,
-    componentName: 'article-recommendations-modal',
   });
 
   useEffect(() => {
@@ -117,12 +113,19 @@ const RecommendationModal = ({
         <Heading level={2} size="doublePica" id="recommendations-modal-heading">
           {title}
         </Heading>
-        <InlineLink
-          to={href}
-          text={translations.continueReading ?? title}
-          size="pica"
-          {...clickTracker}
-        />
+        <CallToActionLink
+          url={href}
+          className={styles.continueReading}
+          eventTrackingData={{
+            ...eventTrackingData,
+            componentName: 'article-recommendations-modal',
+          }}
+        >
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {translations.continueReading ?? title}
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink>
       </div>
     </dialog>
   );
@@ -132,10 +135,12 @@ const RecommendationPromo = ({
   recommendation: { title, image },
   eventTrackingData,
   onSelect,
+  square = false,
 }: {
   recommendation: CarouselRecommendation;
   eventTrackingData: EventTrackingData;
   onSelect: () => void;
+  square?: boolean;
 }) => {
   const clickTracker = useClickTrackerHandler(eventTrackingData);
   const viewTracker = useViewTracker(eventTrackingData);
@@ -157,7 +162,10 @@ const RecommendationPromo = ({
           onSelect();
         }}
       >
-        <RecommendationImage image={image} portrait />
+        <RecommendationImage
+          image={image}
+          aspectRatio={square ? [1, 1] : [9, 16]}
+        />
         <div className={styles.overlay}>
           <Text
             as="span"
@@ -173,7 +181,10 @@ const RecommendationPromo = ({
   );
 };
 
-const RecommendationsCarousel = ({ data }: Props) => {
+const RecommendationsCarousel = ({
+  data,
+  stacked = false,
+}: RecommendationsCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const closeModal = useCallback(() => setSelectedIndex(null), []);
@@ -206,6 +217,27 @@ const RecommendationsCarousel = ({ data }: Props) => {
     return null;
   }
 
+  const renderPromo = (
+    recommendation: CarouselRecommendation,
+    index: number,
+  ) => (
+    <RecommendationPromo
+      key={recommendation.id}
+      recommendation={recommendation}
+      square={stacked}
+      onSelect={() => setSelectedIndex(index)}
+      eventTrackingData={{
+        ...eventTrackingData,
+        itemTracker: {
+          type: 'article-recommendations-promo',
+          text: recommendation.title,
+          position: index + 1,
+          resourceId: recommendation.id,
+        },
+      }}
+    />
+  );
+
   return (
     <section
       className={styles.section}
@@ -222,28 +254,35 @@ const RecommendationsCarousel = ({ data }: Props) => {
           level={2}
           size="doublePica"
           id="recommendations-carousel-heading"
+          className={styles.heading}
         >
           {title}
         </Heading>
         <div className={styles.container}>
           <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
           <ul ref={scrollRef} className={styles.carousel} role="list">
-            {data.map((recommendation, index) => (
-              <RecommendationPromo
-                key={recommendation.id}
-                recommendation={recommendation}
-                onSelect={() => setSelectedIndex(index)}
-                eventTrackingData={{
-                  ...eventTrackingData,
-                  itemTracker: {
-                    type: 'article-recommendations-promo',
-                    text: recommendation.title,
-                    position: index + 1,
-                    resourceId: recommendation.id,
-                  },
-                }}
-              />
-            ))}
+            {stacked
+              ? Array.from(
+                  { length: Math.ceil(data.length / 2) },
+                  (_, columnIndex) => (
+                    <li
+                      className={styles.column}
+                      key={data[columnIndex * 2].id}
+                    >
+                      <ul className={styles.stack} role="list">
+                        {data
+                          .slice(columnIndex * 2, columnIndex * 2 + 2)
+                          .map((recommendation, rowIndex) =>
+                            renderPromo(
+                              recommendation,
+                              columnIndex * 2 + rowIndex,
+                            ),
+                          )}
+                      </ul>
+                    </li>
+                  ),
+                )
+              : data.map(renderPromo)}
           </ul>
         </div>
       </SkipLinkWrapper>
