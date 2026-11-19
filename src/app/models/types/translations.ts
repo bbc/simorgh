@@ -1,6 +1,17 @@
 /* eslint-disable camelcase */
 export interface Translations {
   and?: string;
+  articleEnd?: string;
+  swipeableRecommendations?: {
+    heading: string;
+    instructions: string;
+    dismiss: string;
+    read: string;
+    end: string;
+    position: string;
+    exploreHeading?: string;
+    exploreDescription?: string;
+  };
   pagination?: {
     page?: string;
     previousPage: string;
