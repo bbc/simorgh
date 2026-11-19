@@ -1,65 +1,78 @@
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable func-names */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable prefer-template */
 /* istanbul ignore next */
-export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = ({
-    reverbUrl,
-    forwardingUrl = '',
-  }) => {
-    const {
-      screen: { width, height, colorDepth, pixelDepth },
-      innerWidth,
-      innerHeight,
-    } = window;
+export const addProcessClientDeviceAndSendStaticBeaconToWindow = function () {
+  window.processClientDeviceAndSendStaticBeacon = function (options) {
+    var reverbUrl = options.reverbUrl;
+    var forwardingUrl = options.forwardingUrl || '';
 
-    const now = new Date();
-    const hours = now.getHours();
-    const mins = now.getMinutes();
-    const secs = now.getSeconds();
-    const epochTimestamp = now.getTime().toString();
+    var screen = window.screen;
+    var width = screen.width;
+    var height = screen.height;
+    var colorDepth = screen.colorDepth;
+    var pixelDepth = screen.pixelDepth;
+    var innerWidth = window.innerWidth;
+    var innerHeight = window.innerHeight;
+
+    var now = new Date();
+    var hours = now.getHours();
+    var mins = now.getMinutes();
+    var secs = now.getSeconds();
+    var epochTimestamp = now.getTime().toString();
 
     // COOKIE SETTINGS
-    const cookieName = 'atuserid';
-    const days = 397; // = 13 months
-    const expires = days * 24 * 60 * 60; // days in seconds
+    var cookieName = 'atuserid';
+    var days = 397; // = 13 months
+    var expires = days * 24 * 60 * 60; // days in seconds
 
-    const getAtUserIdFromCookie = () => {
-      const match = document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/);
+    var getAtUserIdFromCookie = function () {
+      var match = document.cookie.match(/(?:^|;\s*)atuserid=([^;]*)/);
 
-      const atUserIdCookie = match?.[1] as string;
+      var atUserIdCookie = match ? match[1] : null;
 
       if (atUserIdCookie) {
-        const { val } = JSON.parse(decodeURIComponent(atUserIdCookie));
+        var parsedCookie = JSON.parse(decodeURIComponent(atUserIdCookie));
 
-        return { val };
+        return { val: parsedCookie.val };
       }
       return { val: null };
     };
 
-    const user = getAtUserIdFromCookie();
+    var user = getAtUserIdFromCookie();
 
     if (!user.val && window.crypto && crypto.randomUUID) {
       user.val = crypto.randomUUID();
     }
 
-    const stringifiedCookieValue = JSON.stringify(user);
-    const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
+    var stringifiedCookieValue = JSON.stringify(user);
+    var encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
 
-    document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${expires}; Secure;`;
+    document.cookie =
+      cookieName +
+      '=' +
+      encodedCookieValue +
+      '; path=/; max-age=' +
+      expires +
+      '; Secure;';
 
-    const screenResolutionColourDepth = [
+    var screenResolutionColourDepth = [
       width || 0,
       height || 0,
       colorDepth || 0,
       pixelDepth || 0,
     ].join('x');
 
-    const browserViewportResolution = [innerWidth || 0, innerHeight || 0].join(
+    var browserViewportResolution = [innerWidth || 0, innerHeight || 0].join(
       'x',
     );
 
-    const timestamp = [hours, mins, secs].join('x');
-    const isLiteSite = window.location.pathname?.includes('.lite');
+    var timestamp = [hours, mins, secs].join('x');
+    var isLiteSite = window.location.pathname?.includes('.lite');
 
-    const params: Record<string, string> = {
+    var params: Record<string, string> = {
       r: screenResolutionColourDepth,
       re: browserViewportResolution,
       hl: timestamp,
@@ -72,7 +85,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     params.ref = document.referrer || '';
 
     if (reverbUrl) {
-      let processedReverbUrl = reverbUrl
+      var processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
@@ -84,7 +97,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replaceAll('ref=&', '')
         .replace(/&ref=$/, ''); // removes empty ref at end of URL
 
-      const searchParams = new URLSearchParams(window.location.search);
+      var searchParams = new URLSearchParams(window.location.search);
 
       searchParams.forEach((value, key) => {
         if (
@@ -103,8 +116,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   };
 };
 
-export default (reverbUrl: string) => {
-  window.addEventListener('load', () => {
+export default function (reverbUrl: string) {
+  window.addEventListener('load', function () {
     window.processClientDeviceAndSendStaticBeacon({ reverbUrl });
   });
-};
+}
