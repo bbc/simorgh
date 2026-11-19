@@ -19,7 +19,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
   getArticleId,
@@ -187,6 +187,9 @@ const getWsojComponent = ({
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
 
+const isRecommendationsBlock = ({ type, model }: OptimoBlock) =>
+  type === 'wsoj' && 'type' in model && model.type === 'recommendations';
+
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -248,6 +251,7 @@ const ArticlePage = ({
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
+    service,
     articleAuthor,
     electionBanner,
     isTrustProjectParticipant,
@@ -469,9 +473,17 @@ const ArticlePage = ({
     type: 'visuallyHiddenHeadline',
   };
 
+  const moveRecommendationsBelowArticle =
+    service === 'mundo' && pageType === ARTICLE_PAGE && !isAmp && !isLite;
+  const recommendationBlocks = moveRecommendationsBelowArticle
+    ? blocks.filter(isRecommendationsBlock)
+    : [];
+  const inlineBlocks = moveRecommendationsBelowArticle
+    ? blocks.filter(block => !isRecommendationsBlock(block))
+    : blocks;
   const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+    ? inlineBlocks
+    : [visuallyHiddenBlock, ...inlineBlocks];
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
@@ -569,6 +581,10 @@ const ArticlePage = ({
               stacked={stackedRecommendations}
             />
           )}
+          <Blocks
+            blocks={recommendationBlocks}
+            componentsToRender={componentsToRender}
+          />
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

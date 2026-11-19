@@ -5,9 +5,13 @@ import { Recommendation } from '#models/types/onwardJourney';
 const RecommendationsImage = ({
   image,
   lazyLoad = false,
+  aspectRatio,
+  sizes,
 }: {
   image?: Recommendation['image'] | null;
   lazyLoad?: boolean;
+  aspectRatio?: [number, number];
+  sizes?: string;
 }) => {
   if (!image) return null;
 
@@ -27,12 +31,13 @@ const RecommendationsImage = ({
   return (
     <Image
       alt={altText}
-      aspectRatio={[width, height]}
+      aspectRatio={aspectRatio ?? [width, height]}
       src={src}
       attribution={copyrightHolder}
       srcSet={primarySrcset}
       fallbackSrcSet={fallbackSrcset}
       lazyLoad={lazyLoad}
+      sizes={sizes}
     />
   );
 };
