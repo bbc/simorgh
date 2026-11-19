@@ -113,6 +113,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      sinceLastVisited: {
+        heading: 'Desde tu última visita',
+        previous: 'Anterior',
+        next: 'Siguiente',
+      },
       topicDiscovery: {
         heading: 'Descubre más',
         moreAboutTopic: 'Más sobre {topic}',

@@ -170,6 +170,12 @@ export type CountryCuration = {
   summaries: Summary[];
 };
 
+// Top Stories from the home page data, fetched on the server for the SinceLastVisited prototype
+export type SinceLastVisitedData = {
+  curationId: string;
+  summaries: Summary[];
+};
+
 export type Article = {
   content: ArticleContent;
   metadata: ArticleMetadata;
@@ -181,4 +187,5 @@ export type Article = {
   portraitVideoItems?: PortraitVideoItems;
   countryCuration?: CountryCuration;
   countryTopicIdToReorder?: string | null;
+  sinceLastVisited?: SinceLastVisitedData | null;
 };
