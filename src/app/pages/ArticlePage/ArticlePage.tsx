@@ -63,7 +63,6 @@ import SaveArticleButton from '#app/components/SaveArticleButton';
 import AccountSignInModal from '#app/components/Account/AccountSignInModal';
 import { AccountContext } from '#app/contexts/AccountContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
-import consentBannerStyles from '#app/components/EmbedConsentBanner/ConsentBanner.styles';
 import ElectionBanner from '#app/components/ElectionBanner';
 import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
@@ -570,13 +569,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               componentsToRender={componentsToRender}
             />
             {showArticleSignInPrompt && (
-              <button
-                type="button"
-                css={consentBannerStyles.button}
-                onClick={() => setIsSignInModalOpen(true)}
-              >
-                {translations.account?.signIn}
-              </button>
+              <div css={styles.articleSignInPrompt}>
+                <button
+                  type="button"
+                  css={styles.articleSignInButton}
+                  aria-haspopup="dialog"
+                  onClick={() => setIsSignInModalOpen(true)}
+                >
+                  {translations.account?.signIn}
+                </button>
+              </div>
             )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>

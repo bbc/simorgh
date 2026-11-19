@@ -205,6 +205,7 @@ describe('Article Page', () => {
       });
 
       const button = await screen.findByRole('button', { name: 'साइन इन' });
+      expect(button).toHaveAttribute('aria-haspopup', 'dialog');
       await userEvent.click(button);
 
       expect(screen.getByRole('dialog')).toHaveAccessibleName('आपका अपना BBC');
@@ -224,6 +225,11 @@ describe('Article Page', () => {
       });
 
       await userEvent.keyboard('{Escape}');
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      expect(button).toHaveFocus();
+
+      await userEvent.click(button);
+      await userEvent.click(screen.getByRole('button', { name: 'बंद करें' }));
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
       expect(button).toHaveFocus();
     });
