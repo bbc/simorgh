@@ -9,3 +9,12 @@
     min-width: #{theme.pixelsToRem-px-to-rem(136)};
   }
 }
+
+.compact {
+  margin-block: 0;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    width: auto;
+    min-width: 0;
+  }
+}

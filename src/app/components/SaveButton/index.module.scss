@@ -12,6 +12,12 @@
   color: theme.$palette-grey-8;
   border: #{theme.pixelsToRem-px-to-rem(1)} solid theme.$palette-grey-8;
 
+  &.iconOnly {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0;
+  }
+
   :global([data-is-dark-ui='true']) & {
     background-color: theme.$palette-grey-10;
     color: theme.$palette-white;
@@ -124,4 +130,9 @@ button[type='button'].buttonWrapper.followVariant:focus-visible {
   white-space: nowrap;
   @include theme.fontVariants-gel-font-variant('sans-bold');
   @include theme.fontSizes-gel-font-size(pica);
+
+  .iconOnly & {
+    justify-content: center;
+    gap: 0;
+  }
 }

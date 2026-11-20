@@ -25,6 +25,7 @@ export interface SaveButtonProps {
   isLoading?: boolean;
   isUpdating?: boolean;
   isSaved?: boolean;
+  iconOnly?: boolean;
   variant?: SaveButtonVariant;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
@@ -37,6 +38,7 @@ const SaveButton = ({
   isLoading = false,
   isUpdating = false,
   isSaved = false,
+  iconOnly = false,
   variant = SAVE_BUTTON_VARIANTS.SAVE,
   onClick,
   testId,
@@ -83,6 +85,7 @@ const SaveButton = ({
     variant === SAVE_BUTTON_VARIANTS.FOLLOW && isSaved && styles.savedState,
     variant === SAVE_BUTTON_VARIANTS.FOLLOW && isLoading && styles.loadingState,
     isUpdating && styles.updatingState,
+    iconOnly && styles.iconOnly,
   ]
     .filter(Boolean)
     .join(' ');
@@ -92,6 +95,7 @@ const SaveButton = ({
       className={className}
       type="button"
       aria-labelledby={labelId}
+      title={iconOnly ? accessibleLabel : undefined}
       onClick={handleClick}
       onMouseEnter={() => setIsFocusedOrHovered(true)}
       onMouseLeave={() => setIsFocusedOrHovered(false)}
@@ -102,9 +106,11 @@ const SaveButton = ({
     >
       <span aria-hidden="true" className={styles.iconText}>
         {getIcon()}
-        {/* Wrapper keeps the label in a stable element so browser translation
-            tools swapping text nodes don't crash React reconciliation. */}
-        <span>{displayedVisualLabel}</span>
+        {!iconOnly && (
+          // Wrapper keeps the label in a stable element so browser translation
+          // tools swapping text nodes don't crash React reconciliation.
+          <span>{displayedVisualLabel}</span>
+        )}
       </span>
 
       <VisuallyHiddenText id={labelId} aria-live="assertive">
