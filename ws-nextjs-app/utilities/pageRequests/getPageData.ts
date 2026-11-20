@@ -6,6 +6,8 @@ import getAgent from '#utilities/getAgent';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import nodeLogger from '#lib/logger.node';
 import { PageTypes, Services, Variants } from '#app/models/types/global';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import rewriteBbcUrls from '#utilities/rewriteBbcUrls';
 
 const logger = nodeLogger(__filename);
 
@@ -73,8 +75,22 @@ const getPageData = async ({
     });
   }
 
+  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = getEnvConfig();
+  const shouldRewriteUrls =
+    SIMORGH_APP_ENV === 'local' || SIMORGH_APP_ENV === 'test';
+
   const data = json
-    ? { pageData: json.data, status }
+    ? {
+        pageData:
+          shouldRewriteUrls && SIMORGH_BASE_URL
+            ? rewriteBbcUrls({
+                data: json.data,
+                baseUrl: SIMORGH_BASE_URL,
+                rendererEnv: rendererEnvironment,
+              })
+            : json.data,
+        status,
+      }
     : { error: message, status };
 
   return { data };
