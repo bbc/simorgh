@@ -1,0 +1,56 @@
+{
+  "data": {
+    "projectId": "ugc-ws-hindi-ama",
+    "title": "एएमए में अपना सवाल भेजें",
+    "description": "<p>अपने सवाल भेजने के लिए BBC खाते से साइन इन करें।</p>",
+    "campaignId": "u99999999",
+    "languageTag": "hi",
+    "campaignStatus": "open",
+    "openingTime": "",
+    "closingTime": "",
+    "submissionUrl": "https://www.bbc.com/hindi",
+    "privacyNotice": {
+      "default": "<p>आपकी जानकारी BBC की गोपनीयता नीति के अनुसार इस्तेमाल की जाएगी।</p>",
+      "url": "https://www.bbc.com/privacy/",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": true,
+      "brand": "BBC Hindi",
+      "brandId": "ws-hindi",
+      "replyEmailAddress": "",
+      "ageGroup": ["18+"],
+      "retentionPeriodDays": "30",
+      "pageBackgroundTemplateUrl": "",
+      "brandLogo": "",
+      "brandType": "contact-form",
+      "webcoreBrand": "default",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": true,
+      "allowEditing": false,
+      "signinRequired": true,
+      "accountPolicy": "18+"
+    },
+    "sections": [
+      {
+        "sectionText": {
+          "title": "आपका सवाल"
+        },
+        "fields": [
+          {
+            "id": "question",
+            "type": "text",
+            "validation": {
+              "mandatory": true,
+              "wordLimit": 100
+            },
+            "htmlType": "textarea",
+            "label": "सवाल",
+            "description": "अधिकतम 100 शब्द",
+            "textArea": true
+          }
+        ]
+      }
+    ]
+  }
+}
