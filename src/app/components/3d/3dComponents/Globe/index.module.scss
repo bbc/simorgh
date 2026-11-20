@@ -4,6 +4,11 @@
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  padding-block-start: theme.$spacings-quadruple;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding-block-start: theme.$spacings-quintuple;
+  }
 }
 
 .globeScene {

@@ -1,4 +1,5 @@
-import { use } from 'react';
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex -- The native scroll region needs a tab stop for keyboard scrolling. */
+import { use, useId } from 'react';
 import CallToActionLink from '#app/components/CallToActionLink';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
@@ -11,6 +12,7 @@ type Props = {
 
 const ServiceRegions = ({ selectedRegionId }: Props) => {
   const { translations, collapsibleNavigation } = use(ServiceContext);
+  const titleId = useId();
   const copy = translations.serviceDiscovery;
   const region = collapsibleNavigation?.find(
     section => section.id === selectedRegionId && section.links?.length,
@@ -20,51 +22,59 @@ const ServiceRegions = ({ selectedRegionId }: Props) => {
 
   return (
     <section className={styles.panel}>
-      <Heading className={styles.title} level={2}>
+      <Heading id={titleId} className={styles.title} level={2}>
         {region?.title ?? copy.title}
       </Heading>
 
-      {region ? (
-        <ul className={styles.list}>
-          {region.links?.map(link => (
-            <li
-              key={link.id}
-              lang={link.lang}
-              translate={link.disableTranslation ? 'no' : undefined}
-            >
-              <CallToActionLink
-                url={link.href}
-                size="pica"
-                fontVariant="sansRegular"
-                className={styles.link}
+      <div
+        key={region?.id ?? 'default'}
+        className={styles.content}
+        role="region"
+        aria-labelledby={titleId}
+        tabIndex={0}
+      >
+        {region ? (
+          <ul className={styles.list}>
+            {region.links?.map(link => (
+              <li
+                key={link.id}
+                lang={link.lang}
+                translate={link.disableTranslation ? 'no' : undefined}
               >
+                <CallToActionLink
+                  url={link.href}
+                  size="pica"
+                  fontVariant="sansRegular"
+                  className={styles.link}
+                >
+                  <CallToActionLink.Text
+                    className={styles.linkText}
+                    shouldUnderlineOnHoverFocus
+                  >
+                    {/* bdi isolates the label's text direction from surrounding content. */}
+                    <bdi>{link.label}</bdi>
+                  </CallToActionLink.Text>
+                </CallToActionLink>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <>
+            <Paragraph className={styles.intro}>{copy.intro}</Paragraph>
+            <CallToActionLink url={copy.learnMoreUrl} className={styles.cta}>
+              <CallToActionLink.ButtonLikeWrapper className={styles.ctaInner}>
                 <CallToActionLink.Text
-                  className={styles.linkText}
+                  className={styles.ctaText}
                   shouldUnderlineOnHoverFocus
                 >
-                  {/* bdi isolates the label's text direction from surrounding content. */}
-                  <bdi>{link.label}</bdi>
+                  {copy.learnMoreLabel}
+                  <CallToActionLink.Chevron />
                 </CallToActionLink.Text>
-              </CallToActionLink>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <>
-          <Paragraph className={styles.intro}>{copy.intro}</Paragraph>
-          <CallToActionLink url={copy.learnMoreUrl} className={styles.cta}>
-            <CallToActionLink.ButtonLikeWrapper className={styles.ctaInner}>
-              <CallToActionLink.Text
-                className={styles.ctaText}
-                shouldUnderlineOnHoverFocus
-              >
-                {copy.learnMoreLabel}
-                <CallToActionLink.Chevron />
-              </CallToActionLink.Text>
-            </CallToActionLink.ButtonLikeWrapper>
-          </CallToActionLink>
-        </>
-      )}
+              </CallToActionLink.ButtonLikeWrapper>
+            </CallToActionLink>
+          </>
+        )}
+      </div>
     </section>
   );
 };

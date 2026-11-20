@@ -9,6 +9,7 @@ import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin'
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
+  act,
   render,
   screen,
 } from '../../components/react-testing-library-with-providers';
@@ -41,6 +42,11 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#app/components/3d/3dComponents/Globe', () => {
+  const Globe = () => <div data-testid="world-service-globe" />;
+  return Globe;
+});
+
 const homePageData = {
   ...kyrgyzHomePageData,
   metadata: {
@@ -67,6 +73,38 @@ const pidginHomePageData = {
 
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
+
+  it('renders the globe on the World Service languages page', async () => {
+    render(<HomePage pageData={{ ...afriqueHomePageData, curations: [] }} />, {
+      service: 'ws',
+      pageType: 'home',
+      pathname: '/ws/languages',
+    });
+
+    expect(
+      await screen.findByTestId('world-service-globe'),
+    ).toBeInTheDocument();
+  });
+
+  it.each(['/ws', '/afrique'])(
+    'does not render the globe on %s',
+    async pathname => {
+      await act(async () => {
+        render(
+          <HomePage pageData={{ ...afriqueHomePageData, curations: [] }} />,
+          {
+            service: 'ws',
+            pageType: 'home',
+            pathname,
+          },
+        );
+      });
+
+      expect(
+        screen.queryByTestId('world-service-globe'),
+      ).not.toBeInTheDocument();
+    },
+  );
 
   it('renders the election banner before the first curation when enabled', () => {
     const { getByTestId, container } = render(

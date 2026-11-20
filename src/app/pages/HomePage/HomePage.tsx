@@ -9,6 +9,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import { RequestContext } from '#app/contexts/RequestContext';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -107,6 +108,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
+        {isLanguagesPage && <Globe />}
         <div css={styles.inner}>
           <HomePageElectionBanner />
           <div css={styles.margins}>

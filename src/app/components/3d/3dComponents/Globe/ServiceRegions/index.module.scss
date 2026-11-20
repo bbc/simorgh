@@ -1,15 +1,55 @@
 @use '@scss/themeTokens' as theme;
+@use '@scss/fontMediaQueries' as fontMediaQueries;
 
 .panel {
+  --region-heading-line-height: var(--line-height-trafalgar-group-a);
+  --region-link-line-height: var(--line-height-pica-group-a);
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  block-size: calc(
+    2 * var(--region-heading-line-height) + 4 *
+      (var(--region-link-line-height) + 2 * #{theme.$spacings-full}) + 2 *
+      #{theme.$spacings-double} + 2 * #{theme.$spacings-half}
+  );
   outline: 1px solid theme.$palette-grey-3;
   background-color: theme.$palette-black;
   color: theme.$palette-white;
   padding: theme.$spacings-double;
 
+  @media #{fontMediaQueries.$group-b-min-width} {
+    --region-heading-line-height: var(--line-height-trafalgar-group-b);
+    --region-link-line-height: var(--line-height-pica-group-b);
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    --region-heading-line-height: var(--line-height-trafalgar-group-d);
+    --region-link-line-height: var(--line-height-pica-group-d);
+  }
+
   .title,
   .intro {
     margin: 0;
     color: theme.$palette-white;
+  }
+}
+
+.title {
+  flex-shrink: 0;
+  min-block-size: calc(2 * var(--region-heading-line-height));
+}
+
+.content {
+  flex: 1;
+  min-block-size: 0;
+  overflow-y: auto;
+  padding: theme.$spacings-half;
+  scroll-padding-block: theme.$spacings-half;
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
   }
 }
 
@@ -28,6 +68,10 @@
 
 .panel .link {
   text-decoration: underline;
+}
+
+.panel .linkText {
+  display: block;
 }
 
 .panel .link:hover .linkText,
