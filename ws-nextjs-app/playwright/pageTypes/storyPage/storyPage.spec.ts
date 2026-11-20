@@ -11,6 +11,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertPageView,
@@ -371,20 +372,7 @@ const atiTestRunner = (testSuite: AtiStoryPageTestSuite) => {
           `Skipped for APP_ENV=${appEnvFromProcess}`,
         );
 
-        const cookieAcceptLabel = getServiceConfig(testSuite.service)
-          ?.translations?.consentBanner?.cookie?.canonical?.accept;
-
-        if (cookieAcceptLabel) {
-          await page.addLocatorHandler(
-            page.getByRole('button', {
-              name: cookieAcceptLabel,
-              exact: true,
-            }),
-            async button => {
-              await button.click();
-            },
-          );
-        }
+        await addConsentBannerHandlers(page);
       });
 
       if (testSuite.tests.includes('assertPageView')) {
@@ -613,19 +601,7 @@ test.describe('storyPage', () => {
               !shouldTestTwoTierNav(testSuite.service),
               'Two-tier navigation is not configured',
             );
-            const cookieAcceptLabel = getServiceConfig(testSuite.service)
-              ?.translations?.consentBanner?.cookie?.canonical?.accept;
-            if (cookieAcceptLabel) {
-              await page.addLocatorHandler(
-                page.getByRole('button', {
-                  name: cookieAcceptLabel,
-                  exact: true,
-                }),
-                async button => {
-                  await button.click();
-                },
-              );
-            }
+            await addConsentBannerHandlers(page);
             await page.setViewportSize({ width: 320, height: 480 });
             await gotoStoryPage(page, testSuite.path);
             const menuButton = page

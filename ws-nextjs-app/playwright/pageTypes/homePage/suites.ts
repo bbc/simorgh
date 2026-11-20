@@ -9,6 +9,10 @@ export type HomePageTestSuite = {
 export type HomePageAtiTest =
   | 'assertPageView'
   | 'assertResonancePageView'
+  | 'assertScrollableNavigationResonanceComponentView'
+  | 'assertScrollableNavigationResonanceComponentClick'
+  | 'assertDropdownNavigationResonanceComponentView'
+  | 'assertDropdownNavigationResonanceComponentClick'
   | 'assertBillboardComponentView'
   | 'assertBillboardComponentClick'
   | 'assertScrollableNavigationComponentView'
@@ -179,7 +183,13 @@ const atiTestSuites: AtiHomePageTestSuite[] = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-home',
-    tests: ['assertResonancePageView'],
+    tests: [
+      'assertResonancePageView',
+      'assertScrollableNavigationResonanceComponentView',
+      'assertScrollableNavigationResonanceComponentClick',
+      'assertDropdownNavigationResonanceComponentView',
+      'assertDropdownNavigationResonanceComponentClick',
+    ],
   },
   {
     path: '/pashto',
@@ -262,6 +272,11 @@ const excludedLiteTests: HomePageAtiTest[] = [
   // Dropdown navigation removed from all pages, as it requires JS
   'assertDropdownNavigationComponentView',
   'assertDropdownNavigationComponentClick',
+  'assertDropdownNavigationResonanceComponentView',
+  'assertDropdownNavigationResonanceComponentClick',
+  // Resonance events are not sent on Lite pages
+  'assertScrollableNavigationResonanceComponentView',
+  'assertScrollableNavigationResonanceComponentClick',
 ];
 
 const atiLiteTestSuites: AtiHomePageTestSuite[] = atiTestSuites.map(

@@ -9,6 +9,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertDropdownNavigationComponentClick,
@@ -29,6 +30,7 @@ type OnDemandTVPageData = {
   }>;
 };
 
+/* eslint-disable camelcase */
 type OnDemandTVWindow = Window & {
   __NEXT_DATA__?: {
     props?: {
@@ -39,6 +41,7 @@ type OnDemandTVWindow = Window & {
   };
   _sf_async_config?: unknown;
 };
+/* eslint-enable camelcase */
 
 type ServiceToggleConfig = {
   recentVideoEpisodes?: {
@@ -270,7 +273,6 @@ test.describe('onDemandTV', () => {
             '[data-e2e="recent-episodes-list"]',
           );
 
-        
           if (recentEpisodesEnabled) {
             // Assertions are limited to Canonical where __NEXT_DATA__ is available
             if (!isLite) {
@@ -428,6 +430,10 @@ test.describe('onDemandTV ATI Analytics', () => {
           service: testSuite.service,
           appEnv: appEnvFromProcess,
         };
+
+        test.beforeEach(async ({ page }) => {
+          await addConsentBannerHandlers(page);
+        });
 
         if (testSuite.tests.includes('assertPageView')) {
           test('should send a page view event', async ({ page }) => {

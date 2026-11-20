@@ -5,6 +5,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import {
   assertPageView,
   assertResonancePageView,
@@ -12,6 +13,10 @@ import {
   assertScrollableNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertDropdownNavigationComponentClick,
+  assertScrollableNavigationResonanceComponentView,
+  assertScrollableNavigationResonanceComponentClick,
+  assertDropdownNavigationResonanceComponentView,
+  assertDropdownNavigationResonanceComponentClick,
 } from '../../specialFeatures/atiAnalytics/assertions';
 import assert200HtmlResponse from '../../utilities/response';
 
@@ -183,6 +188,10 @@ test.describe('livePage ATI Analytics', () => {
           appEnv: appEnvFromProcess,
         };
 
+        test.beforeEach(async ({ page }) => {
+          await addConsentBannerHandlers(page);
+        });
+
         test('should send a page view event', async ({ page }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv),
@@ -246,6 +255,64 @@ test.describe('livePage ATI Analytics', () => {
 
           await assertDropdownNavigationComponentClick({ page, ...atiProps });
         });
+
+        if (testSuite.service === 'arabic') {
+          test('should send a Resonance view event for the Scrollable Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertScrollableNavigationResonanceComponentView({
+              page,
+              ...atiProps,
+            });
+          });
+
+          test('should send a Resonance click event for the Scrollable Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertScrollableNavigationResonanceComponentClick({
+              page,
+              ...atiProps,
+            });
+          });
+
+          test('should send a Resonance view event for the Dropdown Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertDropdownNavigationResonanceComponentView({
+              page,
+              ...atiProps,
+            });
+          });
+
+          test('should send a Resonance click event for the Dropdown Navigation component', async ({
+            page,
+          }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertDropdownNavigationResonanceComponentClick({
+              page,
+              ...atiProps,
+            });
+          });
+        }
       });
     });
   });

@@ -25,8 +25,12 @@ import {
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
+  assertDropdownNavigationResonanceComponentClick,
+  assertDropdownNavigationResonanceComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
+  assertScrollableNavigationResonanceComponentClick,
+  assertScrollableNavigationResonanceComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
 import { assertPortraitVideoCarouselComponentView } from '../../specialFeatures/atiAnalytics/assertions/portraitVideoCarousel';
 import { assertPortraitVideoModalComponentView } from '../../specialFeatures/atiAnalytics/assertions/portraitVideoModal';
@@ -186,7 +190,13 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-home',
-    tests: [assertResonancePageView],
+    tests: [
+      assertResonancePageView,
+      assertScrollableNavigationResonanceComponentView,
+      assertScrollableNavigationResonanceComponentClick,
+      assertDropdownNavigationResonanceComponentView,
+      assertDropdownNavigationResonanceComponentClick,
+    ],
   },
   {
     path: '/pashto',
@@ -273,6 +283,10 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+    assertScrollableNavigationResonanceComponentView, // Resonance events are not sent on Lite pages
+    assertScrollableNavigationResonanceComponentClick,
+    assertDropdownNavigationResonanceComponentView,
+    assertDropdownNavigationResonanceComponentClick,
   ];
 
   const liteSiteTests = testSuite.tests.filter(
