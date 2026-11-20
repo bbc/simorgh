@@ -1,0 +1,37 @@
+@use '@scss/themeTokens' as theme;
+
+.panel {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.canvas {
+  --waveform-shadow: #{rgba(theme.$palette-black, 0.8)};
+
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  color: theme.$palette-white;
+  visibility: hidden;
+
+  .panel[data-playing='true'] & {
+    visibility: visible;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    display: none;
+  }
+}
+
+.error {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
