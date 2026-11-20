@@ -28,6 +28,7 @@ const MostRead = ({
     dir,
     datetimeLocale,
     serviceDatetimeLocale,
+    datetimeMonthDayFormat,
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
   } = use(ServiceContext);
@@ -95,6 +96,7 @@ const MostRead = ({
                     timestamp={timestamp}
                     locale={locale}
                     timezone={timezone}
+                    datetimeMonthDayFormat={datetimeMonthDayFormat}
                   />
                 )}
               </MostReadLink>

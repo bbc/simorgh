@@ -31,6 +31,7 @@ export const service: DefaultServiceConfig = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ko',
     datetimeLocale: `ko`,
+    datetimeMonthDayFormat: 'M월 D일',
     service: 'korean',
     serviceName: 'Korean',
     languageName: 'Korean',

@@ -69,6 +69,7 @@ export type ServiceConfig = {
   isoLang?: string | null;
   datetimeLocale: string;
   serviceDatetimeLocale?: string;
+  datetimeMonthDayFormat?: string;
   service: Services;
   serviceName: string;
   serviceLang?: string;
