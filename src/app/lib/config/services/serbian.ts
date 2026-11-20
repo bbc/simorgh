@@ -1,8 +1,8 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/sr-cyrl';
-import '#psammead/psammead-locales/moment/sr';
+import '#lib/locales/moment/sr-cyrl';
+import '#lib/locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
 import { SerbianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -159,6 +159,7 @@ export const service: SerbianConfig = {
       },
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      showMore: 'Prikaži više',
       moreOnThis: '',
       navMenuText: 'Odeljci',
       liteSite: {
@@ -655,6 +656,7 @@ export const service: SerbianConfig = {
       },
       relatedContent: 'Повезано',
       relatedTopics: 'Повезане теме',
+      showMore: 'Прикажи више',
       navMenuText: 'Одељци',
       liteSite: {
         onboardingMessage:

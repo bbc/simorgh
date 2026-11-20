@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/rw';
+import '#lib/locales/moment/rw';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -92,6 +92,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      showMore: 'Erekana ibindi',
       moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {

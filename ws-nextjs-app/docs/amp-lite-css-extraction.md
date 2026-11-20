@@ -29,7 +29,7 @@ A custom webpack loader (`ws-nextjs-app/scripts/DevCssExtractLoader.cjs`) is inj
 1. `css-loader` processes each `.module.scss` file and outputs a JavaScript module. The CSS string inside this JS output already has **hashed class names** applied (e.g. `.Subhead_h2__K8gJ6`), which is the correct form needed for SSR injection.
 2. The loader is inserted immediately **before** `css-loader` in webpack's `use` array. Because webpack processes loaders right-to-left, this means the loader runs _after_ `css-loader` and receives its JS output.
 3. The loader extracts the CSS string from the JS output using a regex that matches `css-loader`'s `.push([module.id, "<css>", ""])` pattern.
-4. Each module's extracted CSS is stored in an in-memory `Map` keyed by file path. This map persists across HMR (Hot Module Rebuild) rebuilds within the same process, so unchanged files are retained without re-processing.
+4. Each module's extracted CSS is stored in an in-memory `Map` keyed by file path. The loader disables webpack caching so restarts replay CSS extraction instead of reusing JavaScript output without rebuilding the CSS file. The map retains previously extracted modules during HMR (Hot Module Rebuild) rebuilds.
 5. On every change, the full concatenated CSS is written to `build/dev-css-modules.css`.
 
 **Global (non-module) SCSS — theme variables and font faces:**
@@ -50,9 +50,13 @@ rule.use.splice(cssLoaderIndex, 0, DevCssExtractLoader);
 
 **At SSR time (`_document.page.tsx`):**
 
-`getAmpLiteCss` reads the entire `build/dev-css-modules.css` file and inlines it. This is intentionally a full dump — in development correctness is prioritised over payload size, and the file only exists locally.
+`getAmpLiteCss` reads the entire `build/dev-css-modules.css` file. The same
+per-page CSS-module pruning and inline CSS optimizations used in production are
+then applied before inlining. The extracted file itself remains a full dump so
+subsequent requests and HMR updates can use different components.
 
 ### Cautionary Note
+
 This solution is quite complex as [identified in review](https://github.com/bbc/simorgh/pull/13992#pullrequestreview-4389134898), we may wish to remove this solution if it becomes difficult to maintain. It is tightly coupled to Next implementation details so if changes are frequently made it may not be economical to maintain. In this case we could fallback to using a production build for amp and lite pages to test css changes.
 
 ---
@@ -71,7 +75,7 @@ At SSR time, the current page route is read from `__NEXT_DATA__.page`. CSS files
 
 CSS file contents are resolved from disk on first access and then cached in-process (`cssFileCache`), so each chunk file is only read from disk once per server lifetime regardless of request volume.
 
-> **Current state:** In this project, all CSS is emitted via `next/dynamic` (react-loadable) rather than as direct page-entry imports. As a result, `build-manifest.json` contains no CSS entries and `getBuildManifestCss` currently returns `''` for every request. It is retained as a safety net — if a static CSS import is ever added at the page or `_app` level it will be captured automatically without any code changes.
+Shared components imported by `_app.tsx` can contribute CSS to every page, even when those components are not rendered. These chunks must still be read; unused CSS-module selectors are removed before inlining.
 
 ### 2. Runtime dynamic import CSS from `react-loadable-manifest.json` (`getDynamicImportCss`)
 
@@ -81,23 +85,59 @@ Next.js tracks which dynamic components were rendered for each request via `__NE
 
 **CSS chunk file path resolution:** CSS chunk files are looked up in `public/_next/` first (the location used in production standalone mode, where the server chdir's into `build/standalone/ws-nextjs-app/`), then in `build/` as a fallback (used during development and at build time). This means the same code runs correctly in both environments. File contents are cached in-process after first read (`cssFileCache`), so repeated requests for the same chunk do not incur additional disk I/O.
 
-**This is currently the only source of CSS in production.** All CSS module chunks are associated with `next/dynamic` component entries.
-
 **Combined:**
 
 ```
 inlined CSS = emotion critical CSS
-            + build-manifest[/_app] CSS              (static app-level — currently empty)
-            + build-manifest[pageRoute] CSS          (static page deps — currently empty)
-            + loadable-manifest[dynamicIds] CSS      (runtime dynamic imports — all CSS today)
+            + build-manifest[/_app] CSS              (static app-level)
+            + build-manifest[pageRoute] CSS          (static page dependencies)
+            + loadable-manifest[dynamicIds] CSS      (runtime dynamic imports)
             (each source is deduplicated independently before concatenation)
 ```
+
+### Removing unused CSS-module rules
+
+Before combining extracted CSS-module chunks with Emotion's critical CSS,
+`treeshakeCssModuleRules` removes selectors whose required hashed module class
+is not referenced in the rendered HTML. This avoids shipping styles for
+unrendered components, such as live-page controls on AMP articles.
+
+The removal is deliberately conservative: global rules, Emotion rules, font
+faces, keyframes, and selectors without a required module class remain.
+Selectors in a comma-separated list are checked independently. Classes
+referenced by AMP actions or bindings are retained, even if they are absent from
+the initial `class` attributes. Canonical CSS is unchanged.
+
+Unused custom properties are removed after selector pruning, then font sources
+and vendor prefixes are optimised. AMP regression fixtures include the large
+Hindi and Russian articles and check the combined byte size of `amp-custom`
+and inline `style` attributes against the 75,000-byte limit. The AMP validator
+remains the authoritative check.
 
 ---
 
 ## Where this runs in `_document.page.tsx`
 
 CSS extraction is isolated to the `isAmp` (article only — AMP is only supported for articles) and `isLite` branches of the `render()` switch. Canonical renders never call `getAmpLiteCss` or access `__NEXT_DATA__`, so an error in the extraction logic cannot affect the default page experience.
+
+Before inlining, `treeshakeCssModuleRules` removes selectors that require a
+CSS-module class absent from the rendered HTML. This avoids shipping entire
+component variants and unrelated components bundled into shared CSS chunks.
+Selector lists are filtered individually using `postcss-selector-parser`;
+global rules, Emotion styles, font faces, keyframes and classes inside functional
+pseudo-classes are retained. Classes mentioned in AMP bindings or templates are
+also retained, along with hover, focus, attribute-dependent and responsive rules
+for rendered classes. No DOM matching is used, so transient interactive states
+are not mistaken for unused styles.
+
+This runs before custom-property pruning, font-source trimming and vendor-prefix
+optimization, allowing variables used only by removed rules to be removed too.
+Pruning is per request, never cached by route or service: different articles and
+service variants can render different components. Canonical CSS chunks are unchanged.
+If CSS or selector parsing fails, the original CSS is retained and an
+`amp_lite_css_tree_shake_error` is logged. The AMP integration suites assert the
+75,000-byte UTF-8 limit for the author stylesheet plus inline style attributes to
+catch future payload regressions.
 
 ```tsx
 switch (true) {
@@ -110,6 +150,6 @@ switch (true) {
     // ...
   }
   default:
-    // getAmpLiteCss and getNextData are never called here
+  // getAmpLiteCss and getNextData are never called here
 }
 ```

@@ -129,6 +129,11 @@ const StyledSpan = styled.span`
   }
 `;
 
+// aria-labelledby takes a space-separated list of ids, so the id must not
+// contain whitespace (e.g. a link with the text "Ecoutez en direct")
+const getCurrentLinkId = link =>
+  `NavigationLinks-${String(link).replace(/\s+/g, '-')}`;
+
 // Always wraps the active link's text in StyledSpan so its visual "active"
 // underline (`a[data-active="true"] span::after`) renders whenever the item
 // is active, independent of whether the "current page" screen reader
@@ -144,7 +149,7 @@ const CurrentLink = ({
     // eslint-disable-next-line jsx-a11y/aria-role
     role={announce ? 'text' : undefined}
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-    id={announce ? `NavigationLinks-${linkId}` : undefined}
+    id={announce ? getCurrentLinkId(linkId) : undefined}
   >
     {announce && (
       <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
@@ -232,7 +237,7 @@ export const NavigationLi = ({
           currentLink
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           {...(shouldAnnounceCurrentPage && {
-            'aria-labelledby': `NavigationLinks-${link}`,
+            'aria-labelledby': getCurrentLinkId(link),
           })}
           aria-current={shouldAnnounceCurrentPage ? 'page' : undefined}
           className="focusIndicatorRemove"

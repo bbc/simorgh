@@ -1,6 +1,6 @@
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/uk';
+import '#lib/locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -308,6 +308,7 @@ const baseServiceConfig = {
     },
     relatedContent: 'Статті на цю ж тему',
     relatedTopics: 'Також на цю тему',
+    showMore: 'Показати більше',
     sport: {
       matchSummary: 'Огляд матчу',
       assists: 'Асисти',
@@ -478,6 +479,7 @@ export const service: UkrainianConfig = {
       ...russianUkrainianSharedTranslations,
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
+      showMore: 'Показати більше',
       sport: {
         keyEventsTitle: 'Ключові події',
         worldCupTeamNames: {

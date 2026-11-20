@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kathmandu';
-import '#psammead/psammead-locales/moment/ne';
+import '#lib/locales/moment/ne';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      showMore: 'थप देखाउनुहोस्',
       moreOnThis: '',
       navMenuText: 'सूची',
       liteSite: {

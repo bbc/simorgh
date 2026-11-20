@@ -40,6 +40,23 @@ describe('liveMediaStream', () => {
     expect(mediaLoader).toBeInTheDocument();
   });
 
+  it('applies the watch control styles to the label and external play icon', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    const watchControl = button.querySelector('.watchLiveCta');
+    const label = watchControl?.querySelector('.watchLiveCtaText');
+    const icon = label?.querySelector<HTMLElement>('.external-svg');
+
+    expect(watchControl).toBeInTheDocument();
+    expect(label).toHaveTextContent('Watch');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/play.svg',
+    );
+  });
+
   it('Displays a warning message when needed.', () => {
     const mediaBlock = fixtureData[0];
     mediaBlock.model.version.warnings = {
@@ -62,6 +79,24 @@ describe('liveMediaStream', () => {
 
     expect(playCloseButton?.innerHTML).toContain(
       'Contains some upsetting scenes.',
+    );
+  });
+
+  it('renders the close icon as a foreground-coloured mask', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    fireEvent.click(button);
+    const icon = button.querySelector<HTMLElement>(
+      '.closeContainer .external-svg',
+    );
+
+    expect(icon?.tagName).toBe('SPAN');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/close.svg',
     );
   });
 

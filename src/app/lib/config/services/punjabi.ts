@@ -1,5 +1,5 @@
 import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
-import '#psammead/psammead-locales/moment/pa-in';
+import '#lib/locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -79,6 +79,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      showMore: 'ਹੋਰ ਦਿਖਾਓ',
       moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       liteSite: {
