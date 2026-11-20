@@ -210,7 +210,11 @@ describe('Temporal Helper functions', () => {
 
     it.each([
       ['ar', 'ar-u-nu-latn'],
+      ['gu', 'gu-u-nu-latn'],
+      ['hi', 'hi-u-nu-latn'],
       ['mr', 'mr-u-nu-latn'],
+      ['pa-IN', 'pa-IN-u-nu-latn'],
+      ['ta', 'ta-u-nu-latn'],
     ])(
       'forces Latin numerals for the `%s` locale',
       (locale, expectedLocale) => {

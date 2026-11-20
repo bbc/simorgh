@@ -309,7 +309,7 @@ describe('Timestamp utility functions', () => {
         ).toEqual(expected);
       },
     );
-    it.each(['ar', 'mr'])(
+    it.each(['ar', 'gu', 'hi', 'mr', 'pa-in', 'ta'])(
       'should return duration with Latin digits for locale %s',
       testLocale => {
         expect(

@@ -43,6 +43,8 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
     numberingSystem: 'beng',
     fallback: translateBengaliNumerals,
   },
+  gu: { locale: 'gu-u-nu-latn', numberingSystem: 'latn' },
+  hi: { locale: 'hi-u-nu-latn', numberingSystem: 'latn' },
   mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
   my: {
     locale: 'my-u-nu-mymr',
@@ -54,11 +56,13 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
     numberingSystem: 'deva',
     fallback: translateNepaliNumerals,
   },
+  'pa-IN': { locale: 'pa-IN-u-nu-latn', numberingSystem: 'latn' },
   ps: {
     locale: 'ps-u-nu-arabext',
     numberingSystem: 'arabext',
     fallback: translateEasternArabicNumerals,
   },
+  ta: { locale: 'ta-u-nu-latn', numberingSystem: 'latn' },
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
