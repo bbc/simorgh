@@ -31,7 +31,7 @@ const RelatedContentCarousel = ({ content }: RelatedContentCarouselProps) => {
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
 
-  const relatedContentBlock = removeCustomBlocks(content);
+  const relatedContentBlock = removeCustomBlocks(content) as OptimoBlock;
 
   const items = mapRelatedContentData(
     relatedContentBlock,
