@@ -1,5 +1,8 @@
 import {
+  Bengali,
+  Burmese,
   EasternArabic,
+  Nepali,
   makeNumeralTranslator,
 } from '#app/lib/locales/numerals/index';
 
@@ -25,12 +28,31 @@ export const withArabicComma = (string: string) => {
 };
 
 const translateEasternArabicNumerals = makeNumeralTranslator(EasternArabic);
+const translateBengaliNumerals = makeNumeralTranslator(Bengali);
+const translateBurmeseNumerals = makeNumeralTranslator(Burmese);
+const translateNepaliNumerals = makeNumeralTranslator(Nepali);
 
+// Mirrors the digit conversion done by each Moment locale's postformat
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
   LocaleNumberingSystemOverride
 > = {
+  bn: {
+    locale: 'bn-u-nu-beng',
+    numberingSystem: 'beng',
+    fallback: translateBengaliNumerals,
+  },
   mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
+  my: {
+    locale: 'my-u-nu-mymr',
+    numberingSystem: 'mymr',
+    fallback: translateBurmeseNumerals,
+  },
+  ne: {
+    locale: 'ne-u-nu-deva',
+    numberingSystem: 'deva',
+    fallback: translateNepaliNumerals,
+  },
   ps: {
     locale: 'ps-u-nu-arabext',
     numberingSystem: 'arabext',

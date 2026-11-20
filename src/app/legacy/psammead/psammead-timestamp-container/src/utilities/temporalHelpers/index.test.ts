@@ -167,6 +167,47 @@ describe('Temporal Helper functions', () => {
       expect(translateDigits(5, 2, 'ps')).toEqual('۰۵');
     });
 
+    it.each([
+      ['my', 'my-u-nu-mymr', '၀၅'],
+      ['ne', 'ne-u-nu-deva', '०५'],
+      ['bn', 'bn-u-nu-beng', '০৫'],
+    ])(
+      'forces native numerals for the `%s` locale',
+      (locale, expectedLocale, expected) => {
+        const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+        expect(translateDigits(5, 2, locale)).toEqual(expected);
+        expect(numberFormatSpy).toHaveBeenCalledWith(
+          expectedLocale,
+          expect.objectContaining({
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+        );
+      },
+    );
+
+    it.each([
+      ['my', '၀၅'],
+      ['ne', '०५'],
+      ['bn', '০৫'],
+    ])(
+      'falls back to native numerals for `%s` when the runtime ignores the numbering system',
+      (locale, expected) => {
+        const NativeNumberFormat = Intl.NumberFormat;
+
+        jest.spyOn(Intl, 'NumberFormat').mockImplementation(
+          () =>
+            new NativeNumberFormat('en-GB', {
+              minimumIntegerDigits: 2,
+              useGrouping: false,
+            }),
+        );
+
+        expect(translateDigits(5, 2, locale)).toEqual(expected);
+      },
+    );
+
     it('forces Latin numerals for the `mr` locale', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 
