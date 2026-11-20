@@ -17,6 +17,7 @@ const SignInRequiredScreen = () => {
         signInRequiredSignIn = fallbackTranslations.signInRequiredSignIn,
         signInRequiredRegister = fallbackTranslations.signInRequiredRegister,
       } = {},
+      accountPromoBanner,
     },
   } = use(ServiceContext);
 
@@ -27,14 +28,17 @@ const SignInRequiredScreen = () => {
       </Heading>
       <Paragraph>{signInRequiredDescription}</Paragraph>
       <Paragraph>
-        <CallToActionLink url={signInUrl || ''}>
-          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-            {signInRequiredSignIn}
-          </CallToActionLink.Text>
-        </CallToActionLink>
+        {signInUrl && (
+          <CallToActionLink url={signInUrl}>
+            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+              {signInRequiredSignIn}
+            </CallToActionLink.Text>
+          </CallToActionLink>
+        )}
         {registerUrl && (
           <>
-            {' or '}
+            {signInUrl &&
+              ` ${accountPromoBanner?.buttonSeparatorText ?? 'or'} `}
             <CallToActionLink url={registerUrl}>
               <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                 {signInRequiredRegister}
