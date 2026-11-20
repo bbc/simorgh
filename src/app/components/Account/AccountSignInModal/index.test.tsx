@@ -65,6 +65,23 @@ describe('AccountSignInModal', () => {
     },
   );
 
+  it.each(['saveArticle', 'article'] as const)(
+    'falls back to save-article copy when %s copy is not configured',
+    context => {
+      render(<AccountSignInModal onClose={onClose} context={context} />, {
+        service: 'ws',
+        idctaConfig: mockIdctaConfig,
+      });
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName(
+        'Sign in to save to My News',
+      );
+      expect(
+        screen.getByText('Save stories and read them at your convenience'),
+      ).toBeInTheDocument();
+    },
+  );
+
   it('renders as a dialog', () => {
     renderComponent();
 

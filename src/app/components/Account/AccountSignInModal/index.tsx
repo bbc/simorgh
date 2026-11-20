@@ -13,7 +13,7 @@ import styles from './index.styles';
 
 type AccountSignInModalProps = {
   onClose: () => void;
-  context?: 'saveArticle' | 'followTopic';
+  context?: 'saveArticle' | 'followTopic' | 'article';
   signInUrl?: string | undefined;
   registerUrl?: string | undefined;
 };
@@ -30,10 +30,7 @@ const AccountSignInModal = ({
 
   const { translations } = use(ServiceContext);
   const modalTranslations = translations.accountSignInModal;
-  const copy =
-    context === 'followTopic'
-      ? modalTranslations?.followTopic
-      : modalTranslations;
+  const copy = modalTranslations?.[context] ?? modalTranslations;
   const { title = '', description = '' } = copy ?? {};
   const { closeLabel = 'Close' } = modalTranslations ?? {};
 

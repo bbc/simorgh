@@ -147,6 +147,10 @@ export const service: DefaultServiceConfig = {
           description:
             'अपनी रुचि की खबरें सीधे पाएं और कोई भी स्टोरी मिस न करें',
         },
+        article: {
+          title: 'आपका अपना BBC',
+          description: 'लॉग इन करें या निःशुल्क नया अकाउंट बनाएं',
+        },
       },
       googlePreferredSource: {
         linkText: 'Google पर पसंदीदा स्रोत के रूप में जोड़ें',
