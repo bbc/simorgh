@@ -3,6 +3,7 @@ import { GROUP_2_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import {
   createIchefSrcSet,
   createResponsiveSrcSet,
+  getMimeType,
   getPlaceholderSrcSet,
   prepareIchefImage,
 } from '.';
@@ -48,6 +49,38 @@ describe('createResponsiveSrcSet', () => {
     ).toThrow(
       'createResponsiveSrcSet requires at least three widths when using the default sizes builder.',
     );
+  });
+
+  it('preserves SVG URLs without applying iChef format conversion', () => {
+    expect(
+      createResponsiveSrcSet({
+        imageUrlTemplate: 'https://example.com/{width}/logo.svg',
+        widths: [100, 200, 400],
+        mq,
+      }),
+    ).toEqual({
+      srcSet:
+        'https://example.com/100/logo.svg 100w, https://example.com/200/logo.svg 200w, https://example.com/400/logo.svg 400w',
+      sizes: '(max-width: 37.4375rem) 100px, 400px',
+    });
+  });
+
+  it('returns null for an absent template', () => {
+    expect(createResponsiveSrcSet({ mq })).toBeNull();
+  });
+});
+
+describe('getMimeType', () => {
+  it.each([
+    ['https://example.com/image.jpg 100w', 'image/jpeg'],
+    ['https://example.com/image.jpeg 100w', 'image/jpeg'],
+    ['https://example.com/image.png 100w', 'image/png'],
+    ['https://example.com/image.gif 100w', 'image/gif'],
+    ['https://example.com/image.jpg.webp 100w', 'image/webp'],
+    ['https://example.com/image.svg 100w', null],
+    [undefined, null],
+  ])('infers the existing MIME contract for %s', (srcSet, expected) => {
+    expect(getMimeType(srcSet)).toBe(expected);
   });
 });
 

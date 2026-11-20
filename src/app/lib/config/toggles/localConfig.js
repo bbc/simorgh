@@ -26,6 +26,9 @@ export default {
   electionBanner: {
     enabled: true,
   },
+  livePageElectionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
     value: `(${SERVICES.join('|')})`,
@@ -88,6 +91,9 @@ export default {
     enabled: true,
     value: 'in',
   },
+  renderMarkDown: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },
@@ -95,9 +101,6 @@ export default {
     enabled: true,
   },
   showSportDataHeader: {
-    enabled: true,
-  },
-  stickyNavigation: {
     enabled: true,
   },
   topBarOJs: {

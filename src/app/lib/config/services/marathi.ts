@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
-import '#psammead/psammead-locales/moment/mr';
+import '#lib/locales/moment/mr';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -94,6 +94,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
+      showMore: 'अधिक दाखवा',
       moreOnThis: '',
       navMenuText: 'विभाग',
       liteSite: {

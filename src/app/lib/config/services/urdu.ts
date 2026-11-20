@@ -1,6 +1,6 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/moment-timezone-include/tz/Asia/Karachi';
-import '#psammead/psammead-locales/moment/ur';
+import '#lib/locales/moment/ur';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -48,21 +48,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'واٹس ایپ',
-      brandTitle: 'بی بی سی اردو اب واٹس ایپ پر',
+      title: 'بی بی سی اُردو موبائل ایپ',
+      brandTitle: 'تمام اہم خبریں ایک ایپ میں',
       brandDescription:
-        'بی بی سی اردو کی خبروں اور فیچرز کو اپنے فون پر حاصل کریں اور سب سے پہلے جانیں پاکستان اور دنیا بھر سے ان کہانیوں کے بارے میں جو آپ کے لیے معنی رکھتی ہیں',
+        'وہ تمام خِبریں جو آپ جاننا چاہتے ہیں بی بی سی ورلڈ سروس ایپ پر موجود ہیں',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0m0rsyc.png',
-        alt: 'بی بی سی اردو اب واٹس ایپ پر',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pmg8qn.jpg',
+        alt: 'بی بی سی اردو کی نئی موبائل ایپ کی تصویر',
       },
       linkLabel: {
-        text: 'سبسکرائب کرنے کے لیے کلک کریں',
-        href: 'https://whatsapp.com/channel/0029Vateujy3wtbGKtkkMD44',
+        text: 'ایپ ڈاؤن لوڈ کریں',
+        href: 'https://www.bbc.com/urdu/articles/cmgrvzx905wro',
       },
       skipLink: {
-        text: 'مواد پر جائیں',
-        endTextVisuallyHidden: 'مواد پر جائیں',
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
       },
     },
     translations: {
@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'اسی بارے میں',
       relatedTopics: 'متعلقہ عنوانات',
+      showMore: 'مزید دکھائیں',
       moreOnThis: '',
       navMenuText: 'سیکشن',
       liteSite: {

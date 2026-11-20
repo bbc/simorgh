@@ -29,20 +29,5 @@ const styles = {
       display: 'flex',
       justifyContent: 'start',
     }),
-  callToActionLink: ({ spacings, palette }: Theme) =>
-    css({
-      padding: `${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
-      marginTop: `${spacings.DOUBLE}rem`,
-      backgroundColor: palette.GREY_10,
-      width: 'auto',
-      color: palette.WHITE,
-      '&:hover, &:focus': {
-        color: palette.WHITE,
-      },
-    }),
-  chevronSpacing: () =>
-    css({
-      marginInlineStart: `${pixelsToRem(12)}rem`,
-    }),
 };
 export default styles;

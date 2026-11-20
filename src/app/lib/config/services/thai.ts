@@ -1,6 +1,6 @@
 import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
-import '#psammead/psammead-locales/moment/th';
+import '#lib/locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      showMore: 'แสดงเพิ่มเติม',
       moreOnThis: '',
       navMenuText: 'หมวดข่าว',
       liteSite: {

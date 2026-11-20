@@ -1,5 +1,5 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/ps';
+import '#lib/locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
@@ -81,6 +81,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'ورته مطالب',
       relatedTopics: 'اړونده مطالب',
+      showMore: 'نور وښایاست',
       moreOnThis: '',
       navMenuText: 'برخې',
       liteSite: {

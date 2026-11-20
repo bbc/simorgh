@@ -1,5 +1,9 @@
 import { Services } from '#app/models/types/global';
 
+export const STICKY_NAVIGATION_EXPERIMENT = 'newswb_ws_sticky_navigation';
+export const STICKY_NAVIGATION_TREATMENT = 'sticky_navigation_variant';
+export const NAVIGATION_TRACKING_COMPONENT = 'navigation';
+
 // The two-tier bar is roughly 88px tall. Requiring at least this much
 // viewport height keeps it under about a fifth of the screen, and has the
 // side effect of switching the feature off beyond roughly 200% zoom, where a
@@ -11,6 +15,10 @@ export const STICKY_MIN_VIEWPORT_HEIGHT = 450;
 // gap, scrolling up just enough to reveal the bar and then moving the mouse
 // towards it can hide it out from under the cursor.
 export const STICKY_NAV_EXIT_BUFFER_PX = 500;
+
+// Require a deliberate downward scroll before hiding the bar so small,
+// accidental direction changes do not make it jump in and out of view.
+export const STICKY_NAV_HIDE_SCROLL_DISTANCE_PX = 24;
 
 // How long the bar takes to slide in and out. Shared between the JavaScript
 // animation lifecycle and the CSS transition declared on `stickyContainer`,
@@ -26,14 +34,10 @@ export const FOCUSABLE_ITEMS_SELECTOR = 'a[href], button:not([disabled])';
 // though they are neither a link nor a button.
 export const STICKY_NAV_TAB_STOP_SELECTOR = `${FOCUSABLE_ITEMS_SELECTOR}, [data-e2e^="scrollable-nav"]`;
 
-export const SERVICES_WITH_STICKY_NAV: Services[] = [
-  'mundo',
-  'portuguese',
-  'russian',
-  'indonesia',
-  'turkce',
-  'urdu',
-];
+export const STICKY_NAV_ARTICLE_START_SELECTOR =
+  'main [data-sticky-nav-anchor]';
+
+export const STICKY_NAV_ARTICLE_IMAGE_SELECTOR = 'main figure img';
 
 const SERVICES_WITH_NEW_NAV: Services[] = [
   'afaanoromoo',

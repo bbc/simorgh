@@ -1,6 +1,6 @@
 import sinhalese from '../../../components/ThemeProvider/fontScripts/sinhalese';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/si';
+import '#lib/locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -93,6 +93,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
+      showMore: 'තවත් පෙන්වන්න',
       moreOnThis: '',
       navMenuText: 'අංශ',
       liteSite: {

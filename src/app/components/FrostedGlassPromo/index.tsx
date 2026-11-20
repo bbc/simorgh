@@ -2,8 +2,8 @@
 import type { ReactNode } from 'react';
 
 import { PropsWithChildren, use } from 'react';
-import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
+import clsx from 'clsx';
 
 import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
@@ -13,7 +13,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
 
-import styles from './styles';
+import styles from './index.module.scss';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { PromoProps } from './types';
 
@@ -50,9 +50,20 @@ const FrostedGlassPromo = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
-  const { isAmp } = use(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
+  const {
+    src,
+    srcSet,
+    fallbackSrcset: fallbackSrcSet,
+    primaryMimeType: mediaType,
+    fallbackMimeType,
+    sizes,
+    alt,
+    width,
+    height,
+  } = image;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -61,18 +72,9 @@ const FrostedGlassPromo = ({
 
   const promoText = (
     <>
-      <h3 css={styles.header}>
+      <h3 className={styles.header}>
         <a
-          css={theme => [
-            styles.anchor,
-            {
-              color: isAmp ? theme.palette.BLACK : theme.palette.WHITE,
-
-              '&:visited': {
-                color: isAmp ? theme.palette.METAL : theme.palette.GREY_3,
-              },
-            },
-          ]}
+          className={clsx(styles.anchor, isAmp && styles.anchorAmp)}
           href={relativeUrl}
           {...(eventTrackingData && clickTracker)}
         >
@@ -83,13 +85,28 @@ const FrostedGlassPromo = ({
     </>
   );
 
+  const staticPanel = (
+    <div
+      className={clsx(
+        styles.lazyloadPlaceholder,
+        isAmp && styles.lazyloadPlaceholderAmp,
+      )}
+      data-testid="frosted-glass-lazyload-placeholder"
+    >
+      {promoText}
+    </div>
+  );
+
   // The ClickableArea component is an anchor ("a") element
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
+    <div
+      className={styles.componentWrapper}
+      data-testid={`frosted-promo-${index}`}
+    >
       <a
-        css={styles.clickableArea}
+        className={styles.clickableArea}
         href={relativeUrl}
         {...(eventTrackingData && clickTracker)}
         aria-hidden="true"
@@ -98,51 +115,36 @@ const FrostedGlassPromo = ({
       <IMAGE
         darkPlaceholder={isCanonical}
         lazyLoad
-        {...pick(
-          [
-            'src',
-            'srcSet',
-            'fallbackSrcset',
-            'primaryMimeType',
-            'fallbackMimeType',
-            'sizes',
-            'alt',
-            'ratio',
-            'width',
-            'height',
-          ],
-          image,
-        )}
+        {...{
+          src,
+          srcSet,
+          fallbackSrcSet,
+          mediaType,
+          fallbackMediaType: fallbackMimeType,
+          sizes,
+          alt,
+          width,
+          height,
+        }}
       />
-      <Lazyload
-        css={{ height: '100%' }}
-        offset={PANEL_OFFSET}
-        once
-        placeholder={
-          // Placeholder always gets rendered on AMP
-          <div
-            css={theme => [
-              styles.lazyloadPlaceholder,
-              {
-                backgroundColor: isAmp
-                  ? theme.palette.WHITE
-                  : theme.palette.GREY_8,
-              },
-            ]}
-            data-testid="frosted-glass-lazyload-placeholder"
+      {isAmp || isLite ? (
+        staticPanel
+      ) : (
+        <Lazyload
+          className={styles.lazyloadWrapper}
+          offset={PANEL_OFFSET}
+          once
+          placeholder={staticPanel}
+        >
+          <FrostedGlassPanel
+            image={image.src}
+            minimumContrast={minimumContrast}
+            paletteSize={paletteSize}
           >
             {promoText}
-          </div>
-        }
-      >
-        <FrostedGlassPanel
-          image={image.src}
-          minimumContrast={minimumContrast}
-          paletteSize={paletteSize}
-        >
-          {promoText}
-        </FrostedGlassPanel>
-      </Lazyload>
+          </FrostedGlassPanel>
+        </Lazyload>
+      )}
     </div>
   );
 };
