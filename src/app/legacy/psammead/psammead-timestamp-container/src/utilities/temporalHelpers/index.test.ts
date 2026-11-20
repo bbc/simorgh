@@ -167,19 +167,69 @@ describe('Temporal Helper functions', () => {
       expect(translateDigits(5, 2, 'ps')).toEqual('۰۵');
     });
 
-    it('forces Latin numerals for the `mr` locale', () => {
-      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+    it.each([
+      ['my', 'my-u-nu-mymr', '၀၅'],
+      ['ne', 'ne-u-nu-deva', '०५'],
+      ['bn', 'bn-u-nu-beng', '০৫'],
+    ])(
+      'forces native numerals for the `%s` locale',
+      (locale, expectedLocale, expected) => {
+        const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 
-      translateDigits(5, 2, 'mr');
+        expect(translateDigits(5, 2, locale)).toEqual(expected);
+        expect(numberFormatSpy).toHaveBeenCalledWith(
+          expectedLocale,
+          expect.objectContaining({
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+        );
+      },
+    );
 
-      expect(numberFormatSpy).toHaveBeenCalledWith(
-        'mr-u-nu-latn',
-        expect.objectContaining({
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-    });
+    it.each([
+      ['my', '၀၅'],
+      ['ne', '०५'],
+      ['bn', '০৫'],
+    ])(
+      'falls back to native numerals for `%s` when the runtime ignores the numbering system',
+      (locale, expected) => {
+        const NativeNumberFormat = Intl.NumberFormat;
+
+        jest.spyOn(Intl, 'NumberFormat').mockImplementation(
+          () =>
+            new NativeNumberFormat('en-GB', {
+              minimumIntegerDigits: 2,
+              useGrouping: false,
+            }),
+        );
+
+        expect(translateDigits(5, 2, locale)).toEqual(expected);
+      },
+    );
+
+    it.each([
+      ['ar', 'ar-u-nu-latn'],
+      ['gu', 'gu-u-nu-latn'],
+      ['hi', 'hi-u-nu-latn'],
+      ['mr', 'mr-u-nu-latn'],
+      ['pa-IN', 'pa-IN-u-nu-latn'],
+      ['ta', 'ta-u-nu-latn'],
+    ])(
+      'forces Latin numerals for the `%s` locale',
+      (locale, expectedLocale) => {
+        const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+
+        expect(translateDigits(5, 2, locale)).toEqual('05');
+        expect(numberFormatSpy).toHaveBeenCalledWith(
+          expectedLocale,
+          expect.objectContaining({
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+        );
+      },
+    );
 
     it('leaves locales without an explicit override unchanged', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
