@@ -119,6 +119,7 @@ const PortraitVideoCarousel = ({
             <PortraitCarouselNavigation
               scrollPaneRef={scrollRef}
               backgroundColor={backgroundColor}
+              eventTrackingData={eventTrackingDataExtended}
             />
             <ul
               ref={scrollRef}

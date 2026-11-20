@@ -5,9 +5,12 @@ import {
   useState,
   RefObject,
   CSSProperties,
+  MouseEvent,
 } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.module.scss';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
@@ -21,11 +24,13 @@ type ScrollDirection = 'left' | 'right';
 type PortraitVideoCarouselNavigationProps = {
   scrollPaneRef: RefObject<HTMLUListElement | null>;
   backgroundColor?: string;
+  eventTrackingData?: EventTrackingData;
 };
 
 export default ({
   scrollPaneRef,
   backgroundColor,
+  eventTrackingData,
 }: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
@@ -35,6 +40,26 @@ export default ({
   const [canScrollRight, setCanScrollRight] = useState(false);
 
   const { previous: isScrollableLeft, next: isScrollableRight } = carousel;
+
+  const previousClickTracker = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      type: 'portrait-video-carousel-navigation',
+      text: 'previous',
+      position: 1,
+    },
+    preventNavigation: true,
+  });
+
+  const nextClickTracker = useClickTrackerHandler({
+    ...eventTrackingData,
+    itemTracker: {
+      type: 'portrait-video-carousel-navigation',
+      text: 'next',
+      position: 2,
+    },
+    preventNavigation: true,
+  });
 
   const checkScrollButtons = useCallback(() => {
     if (!scrollPaneRef.current) return;
@@ -54,6 +79,15 @@ export default ({
       behavior: 'smooth',
     });
     setTimeout(checkScrollButtons, 100);
+  };
+
+  const handleClick = (
+    event: MouseEvent<HTMLButtonElement>,
+    buttonTriggered: ScrollDirection,
+    clickTracker: ReturnType<typeof useClickTrackerHandler>,
+  ) => {
+    scroll(buttonTriggered);
+    clickTracker?.onClick?.(event);
   };
 
   useEffect(() => {
@@ -82,7 +116,13 @@ export default ({
         <button
           type="button"
           aria-label={isScrollableLeft}
-          onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
+          onClick={event =>
+            handleClick(
+              event,
+              dir === 'ltr' ? 'left' : 'right',
+              previousClickTracker,
+            )
+          }
           disabled={!canScrollLeft}
           className={styles.navButton}
           tabIndex={-1}
@@ -97,7 +137,13 @@ export default ({
         <button
           type="button"
           aria-label={isScrollableRight}
-          onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
+          onClick={event =>
+            handleClick(
+              event,
+              dir === 'ltr' ? 'right' : 'left',
+              nextClickTracker,
+            )
+          }
           disabled={!canScrollRight}
           className={styles.navButton}
           tabIndex={-1}

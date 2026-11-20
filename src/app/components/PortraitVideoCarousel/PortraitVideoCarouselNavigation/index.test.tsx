@@ -5,8 +5,14 @@ import {
   render,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
 import PortraitCarouselNavigation from '.';
 import { PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
+
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
 
 jest.useFakeTimers();
 
@@ -150,5 +156,53 @@ describe('PortraitCarouselNavigation', () => {
 
     expect(leftButton).not.toBeDisabled();
     expect(rightButton).not.toBeDisabled();
+  });
+
+  it('Should call clickTrackerHandler onClick when the left button is clicked', async () => {
+    const mockClickHandler = jest.fn();
+    jest
+      .spyOn(clickTrackerHook, 'default')
+      .mockReturnValue({ onClick: mockClickHandler });
+
+    const mockRef = createMockScrollElementRef({
+      startScrollPosition: PROMO_ITEM_WIDTH_MIN,
+      itemCount: 4,
+      paneWidth: 1,
+    });
+
+    await act(async () => {
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
+    });
+
+    await act(async () => {
+      fireEvent.click(screen.getByTestId('pv-scroll-left'));
+      jest.runAllTimers();
+    });
+
+    expect(mockClickHandler).toHaveBeenCalledTimes(1);
+  });
+
+  it('Should call clickTrackerHandler onClick when the right button is clicked', async () => {
+    const mockClickHandler = jest.fn();
+    jest
+      .spyOn(clickTrackerHook, 'default')
+      .mockReturnValue({ onClick: mockClickHandler });
+
+    const mockRef = createMockScrollElementRef({
+      startScrollPosition: PROMO_ITEM_WIDTH_MIN,
+      itemCount: 4,
+      paneWidth: 1,
+    });
+
+    await act(async () => {
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
+    });
+
+    await act(async () => {
+      fireEvent.click(screen.getByTestId('pv-scroll-right'));
+      jest.runAllTimers();
+    });
+
+    expect(mockClickHandler).toHaveBeenCalledTimes(1);
   });
 });

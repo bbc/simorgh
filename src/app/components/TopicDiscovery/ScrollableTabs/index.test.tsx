@@ -102,6 +102,62 @@ describe('ScrollableTabs', () => {
     expect(mockClickHandler).toHaveBeenCalledTimes(1);
   });
 
+  it('should call clickTrackerHandler onClick when the scroll-start button is clicked', () => {
+    const mockClickHandler = jest.fn();
+    jest
+      .spyOn(clickTrackerHook, 'default')
+      .mockReturnValue({ onClick: mockClickHandler });
+
+    render(
+      <ScrollableTabs
+        tabs={mockTabs}
+        activeTabId="tab-1"
+        onTabChange={jest.fn()}
+        labelledBy="heading-id"
+      />,
+    );
+
+    const tabList = screen.getByRole('tablist');
+    Object.defineProperties(tabList, {
+      clientWidth: { value: 300 },
+      scrollWidth: { value: 900 },
+    });
+    tabList.scrollBy = jest.fn();
+    tabList.scrollLeft = 200;
+    fireEvent.scroll(tabList);
+
+    fireEvent.click(screen.getByTestId('scroll-start'));
+    expect(mockClickHandler).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call clickTrackerHandler onClick when the scroll-end button is clicked', () => {
+    const mockClickHandler = jest.fn();
+    jest
+      .spyOn(clickTrackerHook, 'default')
+      .mockReturnValue({ onClick: mockClickHandler });
+
+    render(
+      <ScrollableTabs
+        tabs={mockTabs}
+        activeTabId="tab-1"
+        onTabChange={jest.fn()}
+        labelledBy="heading-id"
+      />,
+    );
+
+    const tabList = screen.getByRole('tablist');
+    Object.defineProperties(tabList, {
+      clientWidth: { value: 300 },
+      scrollWidth: { value: 900 },
+    });
+    tabList.scrollBy = jest.fn();
+    tabList.scrollLeft = 200;
+    fireEvent.scroll(tabList);
+
+    fireEvent.click(screen.getByTestId('scroll-end'));
+    expect(mockClickHandler).toHaveBeenCalledTimes(1);
+  });
+
   it('should render a tablist with the correct aria-labelledby', () => {
     render(
       <ScrollableTabs
