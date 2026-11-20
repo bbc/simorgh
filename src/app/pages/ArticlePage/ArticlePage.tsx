@@ -1,4 +1,5 @@
 import { useState, useCallback, use } from 'react';
+import clsx from 'clsx';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -21,6 +22,8 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
+import EndOfArticlePreview from '#app/components/EndOfArticlePreview';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   getArticleId,
   getHeadline,
@@ -89,6 +92,7 @@ import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
+import scssStyles from './index.module.scss';
 import { ComponentToRenderProps, TimeStampProps } from './types';
 import ArticleHeadline from './ArticleHeadline';
 import {
@@ -238,7 +242,7 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
-  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType, service } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -463,8 +467,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  const showEndOfArticleTreatment =
+    service === 'mundo' &&
+    ['local', 'test'].includes(getEnvConfig().SIMORGH_APP_ENV) &&
+    pageType === 'article' &&
+    !isAmp &&
+    !isLite &&
+    !isApp;
+
+  // Include the existing discovery section in the prototype journey even when
+  // the local fixture toggles do not enable it. Live behaviour is unchanged.
   const showTopicDiscovery =
-    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
+    (topicDiscoveryEnabled || showEndOfArticleTreatment) &&
+    !isAmp &&
+    !isLite &&
+    !isApp;
 
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
@@ -551,6 +568,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
+          {showEndOfArticleTreatment && (
+            <EndOfArticlePreview
+              preview={pageData.articleEndPreview}
+              className={clsx(
+                shouldApplyCollapsedArticleSpacing &&
+                  scssStyles.hideEndOfArticleTreatment,
+              )}
+            />
+          )}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[

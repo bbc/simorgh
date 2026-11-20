@@ -1,0 +1,334 @@
+@use '@scss/themeTokens' as theme;
+
+.section {
+  @include theme.fontVariants-gel-font-variant('sans-regular');
+  --article-end-media-height: 300px;
+  position: relative;
+  min-width: 0;
+  margin-block: 0 theme.$spacings-triple;
+  margin-inline: theme.$spacings-full;
+  padding: theme.$spacings-double theme.$spacings-full;
+  color: theme.$palette-white;
+  background: theme.$palette-grey-10;
+  border: 1px solid theme.$palette-grey-7;
+  border-block-start: 4px solid theme.$palette-postbox;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline: theme.$spacings-double;
+    padding: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    --article-end-media-height: 360px;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline: 0;
+  }
+}
+
+// Beat global button[type='button']:focus-visible, regardless of CSS order.
+section.section {
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid theme.$palette-white;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px theme.$palette-black;
+  }
+}
+
+.endLabel {
+  @include theme.typography-from-scale-and-variant(greatPrimer, 'sans-regular');
+  color: theme.$palette-white;
+  margin: 0;
+  margin-block-end: theme.$spacings-full + theme.$spacings-half;
+}
+
+// Beat the shared Heading/Text colour without relying on stylesheet order.
+h2.heading {
+  color: theme.$palette-white;
+}
+
+.introduction {
+  @include theme.fontSizes-gel-font-size(pica);
+  color: theme.$palette-grey-3;
+  margin-block: (theme.$spacings-full + theme.$spacings-half)
+    theme.$spacings-triple;
+  margin-inline: 0;
+}
+
+.interactive {
+  :global(.no-js) & {
+    display: none;
+  }
+}
+
+.rail {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  // Fixed preview geometry keeps the adjacent card small with enlarged text.
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.slide {
+  flex: 0 0 calc(100% - 24px);
+  min-width: 0;
+  display: flex;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-basis: 100%;
+  }
+}
+
+.card {
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mediaFrame {
+  height: var(--article-end-media-height);
+  flex-shrink: 0;
+  background: theme.$palette-black;
+}
+
+.artwork {
+  position: relative;
+  height: 100%;
+  background: theme.$palette-black;
+  overflow: hidden;
+
+  // Image's className belongs to its wrapper; object-fit belongs to the image.
+  img {
+    object-fit: cover;
+  }
+
+  &[data-format='portrait'] img {
+    object-fit: contain;
+  }
+}
+
+.topicArtwork {
+  @include theme.typography-from-scale-and-variant(trafalgar, 'sans-bold');
+  position: absolute;
+  inset: 0;
+  padding-block: theme.$spacings-quadruple;
+  padding-inline: min(theme.$spacings-double + theme.$spacings-half, 20px);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  display: flex;
+  align-items: center;
+  color: theme.$palette-white;
+  background: linear-gradient(
+    125deg,
+    theme.$palette-postbox,
+    theme.$palette-grey-10
+  );
+
+  &[data-has-image='true'] {
+    background: linear-gradient(
+      90deg,
+      theme.$palette-postbox 0%,
+      rgba(theme.$palette-postbox, 0.8) 55%,
+      rgba(theme.$palette-black, 0.4) 100%
+    );
+  }
+}
+
+.cardBody {
+  // Enlarged text needs available width, not proportionally wider gutters.
+  padding: min(theme.$spacings-double + theme.$spacings-half, 20px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.format {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: theme.$spacings-full;
+  margin-block-end: theme.$spacings-full;
+}
+
+h3.title {
+  color: theme.$palette-grey-10;
+  overflow-wrap: anywhere;
+}
+
+.description {
+  @include theme.fontSizes-gel-font-size(longPrimer);
+  color: theme.$palette-grey-6;
+  margin-block: (theme.$spacings-full + theme.$spacings-half) 0;
+  margin-inline: 0;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: theme.$spacings-double;
+  margin-block-start: auto;
+  padding-block-start: theme.$spacings-double;
+}
+
+.action {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  gap: theme.$spacings-full;
+  min-height: theme.pixelsToRem-px-to-rem(44);
+  padding: theme.pixelsToRem-px-to-rem(10) theme.$spacings-double;
+  background: theme.$palette-grey-10;
+  color: theme.$palette-white;
+  border: 2px solid theme.$palette-grey-10;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    background: theme.$palette-grey-7;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: theme.$spacings-full + theme.$spacings-half;
+  padding-block: theme.$spacings-double + theme.$spacings-half;
+}
+
+.count {
+  @include theme.typography-from-scale-and-variant(longPrimer, 'sans-bold');
+}
+
+.arrows {
+  display: flex;
+  gap: theme.$spacings-full;
+}
+
+.arrow {
+  width: theme.pixelsToRem-px-to-rem(44);
+  height: theme.pixelsToRem-px-to-rem(44);
+  border: 0;
+  background: theme.$palette-black;
+  color: theme.$palette-grey-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background: theme.$palette-grey-7;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+
+  // Override the shared icon mask dimensions with greater specificity.
+  .chevron {
+    width: theme.$spacings-double;
+    height: theme.$spacings-double;
+  }
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-full;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  > li {
+    display: flex;
+    min-width: 0;
+    flex: 0 0 100%;
+
+    @media #{theme.$mediaQueries-group-2-min-width} {
+      flex-basis: calc((100% - #{theme.$spacings-full}) / 2);
+    }
+  }
+}
+
+.choice {
+  @include theme.typography-from-scale-and-variant(longPrimer, 'sans-bold');
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: theme.pixelsToRem-px-to-rem(44);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: theme.pixelsToRem-px-to-rem(14);
+  cursor: pointer;
+  color: theme.$palette-white;
+  background: theme.$palette-black;
+  border: 1px solid theme.$palette-white;
+  border-block-end: 4px solid theme.$palette-postbox;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    background: theme.$palette-grey-10;
+    text-decoration: underline;
+  }
+
+  &[aria-pressed='true'] {
+    color: theme.$palette-grey-10;
+    background: theme.$palette-white;
+    border-color: theme.$palette-white;
+    border-block-end-color: theme.$palette-postbox;
+  }
+}
+
+.choiceFormat {
+  @include theme.fontSizes-gel-font-size(brevier);
+  display: block;
+  margin-block-end: theme.$spacings-full;
+}
+
+.noJs {
+  display: none;
+
+  :global(.no-js) & {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  li {
+    margin-block: theme.$spacings-double;
+  }
+}
