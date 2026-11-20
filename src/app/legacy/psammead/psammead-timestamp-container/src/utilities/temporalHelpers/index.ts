@@ -1,7 +1,7 @@
 import {
   EasternArabic,
   makeNumeralTranslator,
-} from '#psammead/psammead-locales/src/numerals';
+} from '#app/lib/locales/numerals/index';
 
 type Locale = string;
 type ISODuration = string;
