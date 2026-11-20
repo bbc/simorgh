@@ -23,7 +23,7 @@ src/app/lib/config/services/*.test.js
 yarn-error.log
 .eslintcache
 .yarn/*
-!.yarn/cache
+.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases

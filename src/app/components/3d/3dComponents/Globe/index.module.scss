@@ -1,0 +1,23 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding-block-start: theme.$spacings-quadruple;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding-block-start: theme.$spacings-quintuple;
+  }
+}
+
+.globeScene {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.canvasContainer {
+  width: 100%;
+  height: 100%;
+  outline: 1px solid theme.$palette-grey-3;
+}
