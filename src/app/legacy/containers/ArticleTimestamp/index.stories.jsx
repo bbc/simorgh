@@ -211,7 +211,7 @@ const middleOfEachMonth2021 = Array.from({ length: 12 }, (_, month) =>
   Date.UTC(2021, month, 15, 12),
 );
 
-export const AllServicesEveryMonth = () => (
+const ServiceMonthsMatrix = ({ timestamps }) => (
   <div>
     {serviceVariants.map(
       ({ service, variant, pageLang, configVariant, label }) => (
@@ -222,7 +222,7 @@ export const AllServicesEveryMonth = () => (
             variant={variant}
             pageLang={pageLang}
           >
-            {middleOfEachMonth2021.map(timestamp => (
+            {timestamps.map(timestamp => (
               <ArticleTimestamp
                 key={timestamp}
                 firstPublished={timestamp}
@@ -235,8 +235,22 @@ export const AllServicesEveryMonth = () => (
     )}
   </div>
 );
-AllServicesEveryMonth.tags = ['!dev'];
-AllServicesEveryMonth.parameters = {
+
+export const AllServicesJanuaryToJune = () => (
+  <ServiceMonthsMatrix timestamps={middleOfEachMonth2021.slice(0, 6)} />
+);
+AllServicesJanuaryToJune.tags = ['!dev'];
+AllServicesJanuaryToJune.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
+
+export const AllServicesJulyToDecember = () => (
+  <ServiceMonthsMatrix timestamps={middleOfEachMonth2021.slice(6)} />
+);
+AllServicesJulyToDecember.tags = ['!dev'];
+AllServicesJulyToDecember.parameters = {
   chromatic: {
     disable: false,
   },
