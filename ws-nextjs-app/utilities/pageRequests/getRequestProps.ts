@@ -15,9 +15,14 @@ import addLinkHeader from '#utilities/addLinkHeader';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 
 const getRequestProps = async (
-  ctx: Pick<NextPageContext, 'req' | 'res' | 'asPath' | 'pathname'>,
+  ctx: Pick<NextPageContext, 'req' | 'res' | 'asPath' | 'pathname'> & {
+    rendererEnv?: 'live' | 'test';
+  },
 ) => {
   const { asPath = '' } = ctx;
+  const pagePath = ctx.rendererEnv
+    ? `${asPath}${asPath.includes('?') ? '&' : '?'}renderer_env=${ctx.rendererEnv}`
+    : asPath;
   const { isApp, isAmp, isLite } = getPathExtension(asPath);
   const { service: routeService, variant } = parseRoute(asPath);
   const service = routeService || 'news';
@@ -28,7 +33,7 @@ const getRequestProps = async (
   }).catch(() => ({}));
   const navItemsPromise = fetchConfig<{ data: { items: Navigation[] } }>({
     service,
-    pagePath: asPath,
+    pagePath,
     configType: 'navigation',
     variant: variant || undefined,
   })

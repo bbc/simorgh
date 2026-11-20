@@ -80,6 +80,27 @@ describe('Handle AV Route', () => {
     );
   });
 
+  it.each(['live', 'test'])(
+    'uses the effective %s query environment for embedded media without changing its URL',
+    async rendererEnv => {
+      const resolvedUrl = '/russian/av-embeds/features-49881797/pid/p07q3wwl';
+      const result = await handleAvRoute({
+        ...mockGetServerSidePropsContext,
+        resolvedUrl,
+        query: { renderer_env: rendererEnv },
+      });
+
+      expect(fetchPageData.default).toHaveBeenCalledWith(
+        expect.objectContaining({
+          path: expect.stringContaining(`serviceEnv=${rendererEnv}`),
+          optHeaders: { 'ctx-service-env': rendererEnv },
+        }),
+      );
+      expect(result.props.pathname).toBe(resolvedUrl);
+      expect(result.props.id).toBe(resolvedUrl);
+    },
+  );
+
   it('should remove the x-frame-options header', async () => {
     await handleAvRoute(mockGetServerSidePropsContext);
 

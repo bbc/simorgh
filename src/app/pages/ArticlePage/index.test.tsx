@@ -31,6 +31,8 @@ import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import { recommendationsFixtures } from '#app/components/Recommendations/fixtures';
 import useMediaQuery from '#hooks/useMediaQuery';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import {
@@ -182,6 +184,142 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  describe('onward journey experiment tracking', () => {
+    const mockVariation = jest.mocked(useOptimizelyVariation);
+    const pageData: Article = {
+      ...articleDataPidgin,
+      secondaryColumn: { topStories: [], features: [] },
+      mostRead: newsMostReadData,
+      content: {
+        model: {
+          blocks: [
+            ...articleDataPidgin.content.model.blocks,
+            {
+              id: 'onward-journey',
+              type: 'wsoj',
+              model: { data: recommendationsFixtures },
+              position: [99],
+            },
+          ],
+        },
+      },
+    };
+
+    afterEach(() => {
+      mockVariation.mockReset();
+      jest.mocked(clickTracking.default).mockRestore();
+      jest.mocked(viewTracking.default).mockRestore();
+    });
+
+    it('passes active experiment data to onward journey tracking', () => {
+      mockVariation.mockReturnValue('control');
+      const clickTracker = jest.spyOn(clickTracking, 'default');
+      const viewTracker = jest.spyOn(viewTracking, 'default');
+      const experimentProps = {
+        experimentName: 'test_page_views_aa_3',
+        experimentVariant: 'control',
+        sendOptimizelyEvents: true,
+      };
+
+      render(<ArticlePage pageData={pageData} />, {
+        service: 'pidgin',
+        pageMetadata: pageData.metadata,
+        toggles: {
+          mostRead: { enabled: true },
+          midArticleOnwardJourney: { enabled: true },
+        },
+      });
+
+      expect(viewTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'top-stories',
+          ...experimentProps,
+        }),
+      );
+      expect(viewTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'related-content',
+          ...experimentProps,
+        }),
+      );
+      expect(clickTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'most-read',
+          ...experimentProps,
+        }),
+      );
+      expect(clickTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'midarticle-mostread',
+          ...experimentProps,
+        }),
+      );
+    });
+
+    it.each([null, 'off'])(
+      'does not enable onward journey experiment tracking for variation %s',
+      variation => {
+        mockVariation.mockReturnValue(variation);
+        jest.spyOn(clickTracking, 'default');
+        const viewTracker = jest.spyOn(viewTracking, 'default');
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'pidgin',
+          pageMetadata: pageData.metadata,
+        });
+
+        expect(viewTracker).toHaveBeenCalledWith({
+          componentName: 'top-stories',
+        });
+        expect(viewTracker).not.toHaveBeenCalledWith(
+          expect.objectContaining({ sendOptimizelyEvents: true }),
+        );
+      },
+    );
+
+    it('preserves recommendations across article rerenders and experiment updates', () => {
+      mockVariation.mockReturnValue('control');
+      jest.spyOn(clickTracking, 'default');
+      const viewTracker = jest.spyOn(viewTracking, 'default');
+      const { container, rerender } = render(
+        <ArticlePage pageData={pageData} />,
+        {
+          service: 'pidgin',
+          pageMetadata: pageData.metadata,
+          toggles: {
+            midArticleOnwardJourney: { enabled: true },
+          },
+        },
+      );
+      const recommendations = container.querySelector(
+        '[data-e2e="recommendations-heading"]',
+      );
+
+      expect(recommendations).toBeInTheDocument();
+
+      rerender(<ArticlePage pageData={pageData} />);
+
+      expect(
+        container.querySelector('[data-e2e="recommendations-heading"]'),
+      ).toBe(recommendations);
+
+      mockVariation.mockReturnValue('variant');
+      viewTracker.mockClear();
+      rerender(<ArticlePage pageData={pageData} />);
+
+      expect(
+        container.querySelector('[data-e2e="recommendations-heading"]'),
+      ).toBe(recommendations);
+      expect(viewTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'midarticle-mostread',
+          experimentVariant: 'variant',
+          sendOptimizelyEvents: true,
+        }),
+      );
+    });
   });
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {

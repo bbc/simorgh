@@ -96,7 +96,19 @@ const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
           </SectionLabel>
         ) : null}
         {isSinglePromo ? (
-          <RecommendationsItem recommendation={data?.[0]} />
+          <div {...viewTracker}>
+            <RecommendationsItem
+              recommendation={data?.[0]}
+              eventTrackingData={{
+                ...eventTrackingData,
+                itemTracker: {
+                  type: 'midarticle-mostread-promo',
+                  text: data[0].title,
+                  position: 1,
+                },
+              }}
+            />
+          </div>
         ) : (
           <ul css={styles.recommendationsList} role="list" {...viewTracker}>
             {data?.map((recommendation, index) => (

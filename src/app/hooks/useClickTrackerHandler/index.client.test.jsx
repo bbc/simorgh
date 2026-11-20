@@ -840,6 +840,76 @@ describe('useClickTrackerHandler', () => {
 
       expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
     });
+
+    it.each([
+      ['control', true, true, ['top-stories-clicks', 'oj_clicks']],
+      ['variant', true, true, ['top-stories-clicks', 'oj_clicks']],
+      ['off', true, true, []],
+      [null, true, true, []],
+      ['control', false, true, []],
+      ['control', true, false, []],
+    ])(
+      'tracks only eligible onward clicks: variation=%s, opted-in=%s, tracking-enabled=%s',
+      (experimentVariant, sendOptimizelyEvents, enabled, expectedEvents) => {
+        const { getByTestId } = render(
+          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+            <TestComponent
+              hookProps={{
+                componentName: 'top-stories',
+                experimentName: 'test_page_views_aa_3',
+                experimentVariant,
+                sendOptimizelyEvents,
+              }}
+            />
+          </OptimizelyProvider>,
+          {
+            pageMetadata: pidginData.metadata,
+            pageType: STORY_PAGE,
+            service: 'pidgin',
+            toggles: { eventTracking: { enabled } },
+          },
+        );
+
+        fireEvent.click(getByTestId('test-component'));
+
+        expect(
+          defaultOptimizely.track.mock.calls.map(([name]) => name),
+        ).toEqual(expectedEvents);
+      },
+    );
+
+    it.each([
+      ['brand', 'test_page_views_aa_3'],
+      ['top-stories', 'another-experiment'],
+    ])(
+      'does not count %s in %s as a total onward click',
+      (componentName, experimentName) => {
+        const { getByTestId } = render(
+          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+            <TestComponent
+              hookProps={{
+                componentName,
+                experimentName,
+                experimentVariant: 'control',
+                sendOptimizelyEvents: true,
+              }}
+            />
+          </OptimizelyProvider>,
+          {
+            pageMetadata: pidginData.metadata,
+            pageType: STORY_PAGE,
+            service: 'pidgin',
+            toggles: defaultToggles,
+          },
+        );
+
+        fireEvent.click(getByTestId('test-component'));
+
+        expect(
+          defaultOptimizely.track.mock.calls.map(([name]) => name),
+        ).toEqual([`${componentName}-clicks`]);
+      },
+    );
   });
 
   describe('Resonance dual-run', () => {
