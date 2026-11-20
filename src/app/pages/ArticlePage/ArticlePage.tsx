@@ -84,6 +84,7 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import RelatedContentSection from '../../components/RelatedContentSection';
 import RelatedContentCarousel from '../../components/RelatedContentCarousel';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
@@ -584,6 +585,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
+          {!isCarouselEnabled && <RelatedContentSection content={blocks} />}
           <RelatedContentCarousel content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
