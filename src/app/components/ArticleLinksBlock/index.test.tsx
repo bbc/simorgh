@@ -11,6 +11,16 @@ import ArticleLinksBlock from '.';
 import { edOjA, edOjB } from './fixtures';
 import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
 describe('Article Links Block', () => {
   describe('Mid Page Article Links Block', () => {
     it('should return null if no data is passed', () => {

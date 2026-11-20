@@ -34,6 +34,7 @@ describe('EmbedImages', () => {
 
       const chartEmbedImage = screen.queryByRole('img');
       expect(chartEmbedImage).toHaveAttribute('width', '1632');
+      expect(chartEmbedImage).toHaveAttribute('loading', 'lazy');
     });
 
     it('should construct the correct URL', async () => {

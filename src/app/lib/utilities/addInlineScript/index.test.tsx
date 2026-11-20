@@ -18,11 +18,7 @@ describe('addInlineScript', () => {
     const inlineScript = addInlineScript({ script });
 
     expect(inlineScript).toStrictEqual(
-      <script type="text/javascript">
-        {`(function script() {
-      return console.log('hello world');
-    })()`}
-      </script>,
+      <script type="text/javascript">{`(${script.toString()})()`}</script>,
     );
   });
 
@@ -67,9 +63,7 @@ describe('addInlineScript', () => {
 
     expect(inlineScript).toStrictEqual(
       <script type="text/javascript">
-        {`(function script(printString) {
-      return console.log(printString);
-    })(${expectedParamOutput})`}
+        {`(${script.toString()})(${expectedParamOutput})`}
       </script>,
     );
   });
@@ -85,9 +79,7 @@ describe('addInlineScript', () => {
 
     expect(inlineScript).toStrictEqual(
       <script type="text/javascript">
-        {`(function script(callback) {
-      return callback();
-    })(${callback.toString()})`}
+        {`(${script.toString()})(${callback.toString()})`}
       </script>,
     );
   });
@@ -103,9 +95,7 @@ describe('addInlineScript', () => {
 
     expect(inlineScript).toStrictEqual(
       <script type="text/javascript">
-        {`(function script(config) {
-      return config;
-    })(${JSON.stringify(config)})`}
+        {`(${script.toString()})(${JSON.stringify(config)})`}
       </script>,
     );
   });
@@ -144,11 +134,7 @@ describe('addInlineScript', () => {
     });
 
     expect(inlineScript).toStrictEqual(
-      <script type="text/javascript">
-        {`(function script(config) {
-      return config;
-    })()`}
-      </script>,
+      <script type="text/javascript">{`(${script.toString()})()`}</script>,
     );
   });
 
@@ -162,6 +148,22 @@ describe('addInlineScript', () => {
 
     const scriptContents = (inlineScript as JSX.Element).props.children;
 
-    expect(scriptContents).toContain('})(, "next")');
+    expect(scriptContents).toBe(`(${script.toString()})(, "next")`);
+  });
+
+  it('runs a stringified script and callback without module-local bindings', () => {
+    const script = (callback: () => boolean, config: { title: string }) =>
+      `${callback()}: ${config.title}`;
+    const callback = () => true;
+
+    const inlineScript = addInlineScript({
+      script,
+      parameters: [callback, { title: 'World' }],
+    });
+
+    // eslint-disable-next-line no-new-func
+    const execute = new Function(`return ${inlineScript.props.children}`);
+
+    expect(execute()).toBe('true: World');
   });
 });

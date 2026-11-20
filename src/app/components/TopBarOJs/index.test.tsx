@@ -11,6 +11,16 @@ import TopBarOJs from '.';
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
 describe('TopBarOJs', () => {
   it('it should display Top Stories label', () => {
     const { getByText, queryByText } = render(

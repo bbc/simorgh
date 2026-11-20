@@ -27,6 +27,11 @@ const isNonceEnabledForCountry = (
   return allowedCountries.includes(country.toLowerCase());
 };
 
+/**
+ * @deprecated WS-3302 - superseded by `getCspTier` in `ws-nextjs-app/utilities/addCspHeader`,
+ * which resolves the CSP tier and nonce together. Unused - to be deleted with its tests in a
+ * follow-up PR.
+ */
 export default ({
   toggles,
   country,

@@ -68,6 +68,44 @@ const pidginHomePageData = {
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
+  it('renders the election banner before the first curation when enabled', () => {
+    const { getByTestId, container } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: true } },
+      },
+    );
+
+    expect(getByTestId('election-banner')).toHaveClass(
+      'home-page-election-banner',
+    );
+    expect(
+      getByTestId('election-banner').compareDocumentPosition(
+        container.querySelector('section') as HTMLElement,
+      ),
+    ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    expect(
+      getByTestId('election-banner').nextElementSibling?.contains(
+        container.querySelector('section'),
+      ),
+    ).toBe(true);
+  });
+
+  it('does not render the election banner when disabled', () => {
+    const { queryByTestId } = render(
+      <HomePage pageData={afriqueHomePageData} />,
+      {
+        service: 'afrique',
+        pageType: 'home',
+        toggles: { electionBanner: { enabled: false } },
+      },
+    );
+
+    expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+  });
+
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
       service: 'afrique',
@@ -246,7 +284,7 @@ describe('Home Page', () => {
       });
 
       const messageBannerImages = document.querySelectorAll(
-        '[data-testid^="message-banner"] img',
+        '[data-testid^="message-banner"] img:not([aria-hidden="true"])',
       );
 
       messageBannerImages.forEach(image => {
@@ -263,11 +301,15 @@ describe('Home Page', () => {
       const billboardSections = screen.queryAllByTestId(/billboard-\d+/);
 
       billboardSections.forEach(billboardSection => {
-        const allImages = Array.from(billboardSection.querySelectorAll('img'));
+        const allImages = Array.from(
+          billboardSection.querySelectorAll('img:not([aria-hidden="true"])'),
+        );
         const grid = billboardSection.querySelector(
           '[data-testid="billboard-curation-grid"]',
         );
-        const gridImages = grid ? Array.from(grid.querySelectorAll('img')) : [];
+        const gridImages = grid
+          ? Array.from(grid.querySelectorAll('img:not([aria-hidden="true"])'))
+          : [];
 
         // The main billboard image is the first image in the section that is not in the grid
         const mainBillboardImage = allImages.find(
@@ -291,12 +333,18 @@ describe('Home Page', () => {
         service: 'kyrgyz',
       });
 
-      const allImages = Array.from(document.querySelectorAll('img'));
+      const allImages = Array.from(
+        document.querySelectorAll('img:not([aria-hidden="true"])'),
+      );
       const billboardImages = Array.from(
-        document.querySelectorAll('[data-testid^="billboard"] img'),
+        document.querySelectorAll(
+          '[data-testid^="billboard"] img:not([aria-hidden="true"])',
+        ),
       );
       const messageBannerImages = Array.from(
-        document.querySelectorAll('[data-testid^="message-banner"] img'),
+        document.querySelectorAll(
+          '[data-testid^="message-banner"] img:not([aria-hidden="true"])',
+        ),
       );
       const billboardAndBannerImages = new Set([
         ...billboardImages,

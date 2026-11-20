@@ -3,6 +3,16 @@ import { renderRadioSchedule } from './testHelpers/helper';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
+jest.mock('../../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../../hooks/useClickTrackerHandler'),
+}));
+
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {
     const { container } = render(renderRadioSchedule({ service: 'news' }));

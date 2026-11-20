@@ -9,6 +9,16 @@ import { kyrgyzMessageBannerOnePromo } from './fixtures';
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 describe('MessageBanner', () => {
   const summary = kyrgyzMessageBannerOnePromo.summaries[0];
   const eventTrackingData = {
@@ -22,6 +32,18 @@ describe('MessageBanner', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
+
+  const getContentImage = () => {
+    const contentImage = screen
+      .getAllByAltText('')
+      .find(image => !image.closest('.external-svg'));
+
+    if (!contentImage) {
+      throw new Error('Expected a message banner content image');
+    }
+
+    return contentImage;
+  };
 
   describe('for a curation with 1 summary', () => {
     it('should render the heading correctly', () => {
@@ -106,7 +128,7 @@ describe('MessageBanner', () => {
           </Heading>
         </MessageBanner>,
       );
-      const image = screen.getByAltText('');
+      const image = getContentImage();
       expect(image.getAttribute('src')).toEqual(
         'https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png',
       );
@@ -125,7 +147,7 @@ describe('MessageBanner', () => {
           </Heading>
         </MessageBanner>,
       );
-      const image = screen.getByAltText('');
+      const image = getContentImage();
       const imagePath =
         'cpsdevpb/66b8/test/d1be6bc0-8114-11ed-bd83-8f15ba358e41.png';
       const separator = ', \n                          ';
@@ -156,7 +178,7 @@ describe('MessageBanner', () => {
           </Heading>
         </MessageBanner>,
       );
-      const image = screen.getByAltText('');
+      const image = getContentImage();
       expect(image).toBeInTheDocument();
     });
   });

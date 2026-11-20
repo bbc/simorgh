@@ -73,9 +73,22 @@ Durations containing weeks, months, or years, and negative durations, fall back 
 
 For Arabic-script locales (`ar`, `fa`, `ps`, `ur`), the `,` separator in `format` is rendered as the Arabic comma (`،`) instead.
 
-Pashto (`ps`) additionally forces the Eastern Arabic-Indic numbering system explicitly, matching the equivalent override in `psammead-locales/moment/ps.js`.
+Digits follow the numbering system each service showed under Moment. Where the runtime's default for a locale could differ, `formatDuration` forces the numbering system explicitly:
 
-Marathi (`mr`) additionally forces Latin numerals explicitly, matching the equivalent override in `psammead-locales/moment/mr.js`.
+<!-- prettier-ignore -->
+| Locale (services) | Digits | How |
+|-------------------|--------|-----|
+| `my` (Burmese) | Burmese | `-u-nu-mymr`, with a fallback translator if the runtime ignores it |
+| `ne` (Nepali) | Nepali (Devanagari) | `-u-nu-deva`, with a fallback translator |
+| `bn` (Bengali) | Bengali | `-u-nu-beng`, with a fallback translator |
+| `ps` (Pashto) | Eastern Arabic-Indic | `-u-nu-arabext`, with a fallback translator |
+| `ar` (Arabic) | Latin | `-u-nu-latn`; some older CLDR versions default to Arabic-Indic digits |
+| `mr` (Marathi) | Latin | `-u-nu-latn`; the locale default is Devanagari |
+| `gu` (Gujarati), `hi` (Hindi), `pa-IN` (Punjabi), `ta` (Tamil) | Latin | `-u-nu-latn`; current defaults are already Latin, this guards against older engines just in case |
+| `fa`, `fa-AF` (Persian, Dari) | Eastern Arabic-Indic | no override; relies on the locale default (`arabext`) |
+| all other locales | Latin | no override; relies on the locale default |
+
+These match the digit handling of the equivalent Moment locales in `src/app/lib/locales/moment`. Overrides are matched on the normalised locale (e.g. `pa-in` becomes `pa-IN`), and live in `LOCALE_NUMBERING_SYSTEM_OVERRIDES` in `src/utilities/temporalHelpers`.
 
 Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, separated by `:` or `,` (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`). Tokens may be repeated (e.g. `'h:h'`), and every occurrence is replaced. This is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
 

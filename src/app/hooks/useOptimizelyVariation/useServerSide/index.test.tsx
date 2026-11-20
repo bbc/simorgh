@@ -8,7 +8,7 @@ import {
 import { ServerSideExperiment } from '#app/models/types/global';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import useServerSide from '.';
-import * as activateExperiment from '../activateExperiment';
+import activateExperiment from '../activateExperiment';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -16,9 +16,12 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(() => null),
 }));
 
-const spyActivateExperiment = jest
-  .spyOn(activateExperiment, 'default')
-  .mockImplementation(jest.fn());
+jest.mock('../activateExperiment', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+
+const spyActivateExperiment = jest.mocked(activateExperiment);
 
 const optimizely = {
   setUser: jest.fn(() => Promise.resolve()),

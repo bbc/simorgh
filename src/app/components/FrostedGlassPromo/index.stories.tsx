@@ -1,3 +1,5 @@
+import { RequestContextProvider } from '#contexts/RequestContext';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 import Promo from '.';
 import {
   cpsPromoFixture,
@@ -56,3 +58,39 @@ export const Standalone = Component;
 export const CPSPromo = WithCPSPromoData;
 export const CPSNewsPromo = WithNewsCPSPromoData;
 export const LinkPromo = WithLinkPromoData;
+
+export const HomepageFallback = () => (
+  <RequestContextProvider service="mundo" pageType="home" pathname="/mundo">
+    <div style={{ maxWidth: 400 }}>
+      <Promo {...cpsPromoFixture} />
+    </div>
+  </RequestContextProvider>
+);
+
+export const AMP = () => (
+  <RequestContextProvider
+    service="mundo"
+    pageType="STY"
+    pathname="/mundo/internacional-23038380.amp"
+    isAmp
+  >
+    <div style={{ maxWidth: 400 }}>
+      <Promo {...cpsPromoFixture} />
+    </div>
+  </RequestContextProvider>
+);
+
+AMP.decorators = [AmpDecorator];
+
+export const Lite = () => (
+  <RequestContextProvider
+    service="mundo"
+    pageType="STY"
+    pathname="/mundo/internacional-23038380.lite"
+    isLite
+  >
+    <div style={{ maxWidth: 400 }}>
+      <Promo {...cpsPromoFixture} />
+    </div>
+  </RequestContextProvider>
+);

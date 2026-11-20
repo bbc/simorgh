@@ -69,7 +69,8 @@ exports[`mediaIcons SVG should render correctly 1`] = `
     width="32"
   >
     <path
-      d="M1,25.1h18.8v-8.4l-7.3-0.5v-5.7H1V25.1z M8.5,24.7h-4v4.7H6L8.5,24.7z M31,17.9V2.6H11.5v15.3H31z M28.6,15.5H14V5h14.6 V15.5z M23.5,17.5l2.5,4.7h1.5v-4.7H23.5z"
+      d="M1,25.1h18.8v-8.4l-7.3-0.5v-5.7H1V25.1z M8.5,24.7h-4v4.7H6L8.5,24.7z M31,17.9V2.6H11.5v15.3H31z M28.6,15.5H14V5h14.6
+		V15.5z M23.5,17.5l2.5,4.7h1.5v-4.7H23.5z"
     />
   </InArticlePromoIcon>,
   "elections": <InArticlePromoIcon

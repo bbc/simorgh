@@ -1,4 +1,5 @@
-import dynamic from 'next/dynamic';
+import dynamic, { type DynamicOptionsLoadingProps } from 'next/dynamic';
+import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -12,14 +13,27 @@ import MyNewsPageLoading from './MyNewsPageLoading';
 import GenericMessage from '../../send/[id]/GenericMessage';
 import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 
-const MyNewsPageContent = dynamic(() => import('./MyNewsPageContent'), {
-  ssr: false,
-  loading: () => <MyNewsPageLoading />,
-});
+export const MyNewsPageLoadingFallback = ({
+  error,
+  isLoading,
+}: DynamicOptionsLoadingProps) =>
+  error && !isLoading ? <MyNewsPageGuest /> : <MyNewsPageLoading />;
+
+const MyNewsPageContent = dynamic(
+  () => loadQueryConsumer(import('./MyNewsPageContent')),
+  {
+    ssr: false,
+    loading: props => <MyNewsPageLoadingFallback {...props} />,
+  },
+);
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
-  const { isArticlePersonalizationAvailable, isArticlePersonalizationEnabled } =
-    use(AccountContext);
+  const {
+    isArticlePersonalizationAvailable,
+    isArticlePersonalizationEnabled,
+    isTopicPersonalizationAvailable,
+    isTopicPersonalizationEnabled,
+  } = use(AccountContext);
   const { lang, translations } = use(ServiceContext);
   const noJsHeading =
     translations?.myNews?.title || fallbackTranslations.noJsHeading;
@@ -27,7 +41,12 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
     translations?.myNews?.noJsDescription ||
     fallbackTranslations.noJsDescription;
 
-  if (!isArticlePersonalizationAvailable || !translations?.myNews) return null;
+  const isPersonalizationAvailable =
+    isArticlePersonalizationAvailable || isTopicPersonalizationAvailable;
+  const isPersonalizationEnabled =
+    isArticlePersonalizationEnabled || isTopicPersonalizationEnabled;
+
+  if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
   return (
     <main css={styles.main}>
@@ -47,8 +66,12 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
           </div>
         </noscript>
         <div css={styles.innerContent}>
-          {isArticlePersonalizationEnabled ? (
-            <MyNewsPageContent page={page} />
+          {isPersonalizationEnabled ? (
+            <MyNewsPageContent
+              page={page}
+              showSavedArticles={isArticlePersonalizationEnabled}
+              showFollowedTopics={isTopicPersonalizationEnabled}
+            />
           ) : (
             <MyNewsPageGuest />
           )}

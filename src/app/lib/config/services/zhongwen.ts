@@ -1,7 +1,7 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/GMT';
 import 'moment/locale/zh-cn';
-import '#psammead/psammead-locales/moment/zh-tw';
+import '#lib/locales/moment/zh-tw';
 import withContext from '../../../contexts/utils/withContext';
 import { ZhongwenConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -50,6 +50,15 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
+  electionBanner: {
+    title: '2026年美國中期選舉',
+    electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+    electionCurationIds: [
+      'urn:bbc:vivo:curation:8ba8969d-1960-4456-a923-b8be920e687e',
+    ],
+    assocPressIframeSrc:
+      'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33245.html',
+  },
 };
 
 export const service: ZhongwenConfig = {
@@ -165,6 +174,7 @@ export const service: ZhongwenConfig = {
       },
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      showMore: '显示更多',
       moreOnThis: '',
       navMenuText: '分类',
       liteSite: {
@@ -535,11 +545,6 @@ export const service: ZhongwenConfig = {
       text: '简',
       variant: 'simp',
     },
-    electionBanner: {
-      title: '美國大選 2026',
-      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
-    },
     translations: {
       and: '和',
       readTime: {
@@ -572,6 +577,7 @@ export const service: ZhongwenConfig = {
       },
       relatedContent: '更多相關內容',
       relatedTopics: '相關主題內容',
+      showMore: '顯示更多',
       navMenuText: '分類',
       liteSite: {
         onboardingMessage:

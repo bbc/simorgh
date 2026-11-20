@@ -1,5 +1,5 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/ar';
+import '#lib/locales/moment/ar';
 import '#psammead/moment-timezone-include/tz/GMT';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -47,24 +47,27 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     electionBanner: {
-      title: 'الانتخابات الأمريكية 2026',
       electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
-      assocPressIframeSrc: '',
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:c7c9ac42-0101-4cb2-b8a6-f059e591f3a4',
+      ],
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33031.html',
+      title: 'انتخابات الولايات المتحدة لعام 2026',
     },
+    googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'البودكاست',
-      brandTitle: 'يستحق الانتباه',
-      brandDescription:
-        'شرح معمق لأبرز الأحداث والموضوعات، لمساعدتك على فهم أهم المتغيرات حولك وأثرها على حياتك',
+      title: 'تطبيق بي بي سي عربي للهواتف المحمولة',
+      brandTitle: 'حمّل تطبيق خدمة بي بي سي العالمية الإخباري',
+      brandDescription: 'ابقَ على اطّلاع دائم بآخر شؤون الساعة',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0h6dt4s.jpg',
-        alt: 'يستحق الانتباه',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pmg97z.jpg',
+        alt: 'صورة تطبيق جوال',
       },
       linkLabel: {
-        text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p0h6d6nm',
+        text: 'حمِّل التطبيق',
+        href: 'https://www.bbc.com/arabic/articles/c1d247rw7xlo',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
@@ -105,6 +108,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'المزيد حول هذه القصة',
       relatedTopics: 'كلمات مفتاحية',
+      showMore: 'عرض المزيد',
       moreOnThis: '',
       navMenuText: 'أقسام',
       liteSite: {

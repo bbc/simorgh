@@ -8,6 +8,11 @@ import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import PortraitVideoPromo from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };

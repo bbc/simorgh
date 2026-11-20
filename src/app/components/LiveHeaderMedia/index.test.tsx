@@ -9,6 +9,16 @@ import {
 import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 const fixtureData = mundoLiveFixture.data.mediaCollections;
 
 describe('liveMediaStream', () => {
@@ -28,6 +38,23 @@ describe('liveMediaStream', () => {
 
     expect(playCloseButton).toBeInTheDocument();
     expect(mediaLoader).toBeInTheDocument();
+  });
+
+  it('applies the watch control styles to the label and external play icon', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    const watchControl = button.querySelector('.watchLiveCta');
+    const label = watchControl?.querySelector('.watchLiveCtaText');
+    const icon = label?.querySelector<HTMLElement>('.external-svg');
+
+    expect(watchControl).toBeInTheDocument();
+    expect(label).toHaveTextContent('Watch');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/play.svg',
+    );
   });
 
   it('Displays a warning message when needed.', () => {
@@ -52,6 +79,24 @@ describe('liveMediaStream', () => {
 
     expect(playCloseButton?.innerHTML).toContain(
       'Contains some upsetting scenes.',
+    );
+  });
+
+  it('renders the close icon as a foreground-coloured mask', () => {
+    render(
+      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+    );
+    const button = screen.getByTestId('watch-now-close-button');
+    fireEvent.click(button);
+    const icon = button.querySelector<HTMLElement>(
+      '.closeContainer .external-svg',
+    );
+
+    expect(icon?.tagName).toBe('SPAN');
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(icon).toHaveClass('mask');
+    expect(icon?.style.getPropertyValue('--icon-source')).toContain(
+      'images/icons/close.svg',
     );
   });
 

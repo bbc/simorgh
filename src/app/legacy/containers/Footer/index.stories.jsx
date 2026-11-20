@@ -55,6 +55,10 @@ export const HindiCollectiveNewsroomPublication = (_, { variant }) => (
   <Component service="hindi" variant={variant} />
 );
 
+HindiCollectiveNewsroomPublication.globals = {
+  service: { service: 'hindi', variant: 'default' },
+};
+
 export const SportWithoutTrustProjectLink = (_, { variant }) => (
   <Component service="sport" variant={variant} />
 );

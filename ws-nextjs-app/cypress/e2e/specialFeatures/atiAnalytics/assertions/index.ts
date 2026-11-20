@@ -19,7 +19,7 @@ const usesReverbViewabilityModel = applicationType =>
 const usesResonance = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
-const getAppName = service => {
+const getAppName = (service, appType) => {
   const customServiceAppName = {
     ws: '[news]',
     romania: '[news-romanian]',
@@ -29,9 +29,17 @@ const getAppName = service => {
     return customServiceAppName;
   }
 
-  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
-    ? `[${service}]`
-    : `[news-${service}]`;
+  const appName = [
+    'archive',
+    'news',
+    'newsround',
+    'scotland',
+    'sport',
+  ].includes(service)
+    ? service
+    : `news-${service}`;
+
+  return appType === 'mobile-app' ? `[${appName}-app]` : `[${appName}]`;
 };
 
 const getResonanceAppName = service => {
@@ -306,7 +314,7 @@ export const assertPageView = ({
         'params.x2 (application type)',
       );
       expect(params.x3).to.equal(
-        getAppName(service),
+        getAppName(service, applicationType),
         'params.x3 (application name)',
       );
       expect(params.x7).to.equal(

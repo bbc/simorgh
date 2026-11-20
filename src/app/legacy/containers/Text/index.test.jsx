@@ -84,5 +84,21 @@ describe('TextContainer', () => {
         screen.getByText('This is a 1st paragraph block.'),
       ).toBeInTheDocument();
     });
+
+    it('marks article body paragraphs for the sticky navigation threshold', () => {
+      render(<TextContainer {...data} isArticleBody />);
+
+      expect(
+        screen.getByText('This is a 1st paragraph block.').closest('p'),
+      ).toHaveAttribute('data-sticky-nav-anchor', 'true');
+    });
+
+    it('does not mark non-article paragraphs as sticky navigation anchors', () => {
+      render(<TextContainer {...data} />);
+
+      expect(
+        screen.getByText('This is a 1st paragraph block.').closest('p'),
+      ).not.toHaveAttribute('data-sticky-nav-anchor');
+    });
   });
 });

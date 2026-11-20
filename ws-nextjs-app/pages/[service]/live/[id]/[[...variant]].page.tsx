@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import isLive from '#app/lib/utilities/isLive';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -12,12 +11,13 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
 import isValidPageNumber from '#utilities/pageQueryValidator';
 import getPageData from '#utilities/pageRequests/getPageData';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 
 const LivePageLayout = dynamic(() => import('./LivePageLayout'));
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
@@ -56,7 +56,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         service,
         status: 404,
-        timeOnServer: Date.now(),
         variant,
       },
     };
@@ -109,10 +108,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pathname: context.resolvedUrl,
       service,
       status: data.status,
-      timeOnServer: Date.now(), // TODO: check if needed?
       variant,
     },
   };
-};
+});
 
 export default LivePageLayout;

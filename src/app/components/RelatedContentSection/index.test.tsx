@@ -17,6 +17,16 @@ import { OptimoBlock } from '../../models/types/optimo';
 
 jest.mock('../ThemeProvider');
 
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
 jest.mock('#app/hooks/useIsPWA', () => ({
   __esModule: true,
   default: () => false,

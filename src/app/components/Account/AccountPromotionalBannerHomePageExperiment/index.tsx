@@ -6,37 +6,18 @@ import AccountPromotionalBanner from '#app/components/Account/AccountPromotional
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
-// EXPERIMENT: newswb_ws_homepage_account_promo_banner_copy
-const HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
-  'newswb_ws_homepage_account_promo_banner_copy';
-
+export const HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME =
+  'newswb_ws_homepage_account_promo_banner_copy_rerun';
 const EXPERIMENT_SERVICE = 'hindi';
 
-type VariantCopy = {
-  title: string;
-  description: string;
-};
-
-const experimentVariantCopy: Record<string, VariantCopy> = {
-  variant_1: {
-    title: 'इस आर्टिकल को बाद के लिए सेव कीजिए',
-    description:
-      '‘माई न्यूज़’ में इन्हें पाने के लिए अपना फ्री बीबीसी अकाउंट बनाइए या साइन इन करिए',
-  },
-  variant_2: {
-    title: 'उन स्टोरीज़ को सेव कीजिए, जिन्हें आप पढ़ना चाहते हैं',
-    description:
-      'बीबीसी का अपना फ्री अकाउंट इस्तेमाल करने के लिए उन्हें ‘माई न्यूज़’ में सेव कीजिए',
-  },
+const experimentVariantCopy = {
   variant_3: {
     title: 'बीबीसी न्यूज़ हिन्दी के आर्टिकल्स को एक जगह सेव कीजिए',
     description:
       '‘माई न्यूज़’ को इस्तेमाल करने के लिए फ्री में साइन इन या रजिस्टर करें',
   },
-};
+} as const;
 
-// Calling useOptimizelyVariation activates the experiment in Optimizely, so it is
-// only mounted once the banner's eligibility criteria are met.
 const EligibleAccountPromotionalBannerHomePageExperiment = () => {
   const experimentVariant = useOptimizelyVariation({
     experimentName: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
@@ -47,7 +28,10 @@ const EligibleAccountPromotionalBannerHomePageExperiment = () => {
     return <AccountPromotionalBanner />;
   }
 
-  const variantCopy = experimentVariantCopy[experimentVariant];
+  const variantCopy =
+    experimentVariantCopy[
+      experimentVariant as keyof typeof experimentVariantCopy
+    ];
 
   return (
     <AccountPromotionalBanner
@@ -61,10 +45,6 @@ const EligibleAccountPromotionalBannerHomePageExperiment = () => {
   );
 };
 
-// Only Hindi runs this copy experiment; every other service gets the standard
-// banner without mounting the child, so Optimizely is never activated for them.
-// Signed-in users stay eligible so their page views are activated and tracked,
-// even though AccountPromotionalBanner renders nothing for them.
 const AccountPromotionalBannerHomePageExperiment = () => {
   const { service } = use(ServiceContext);
   const isEligible = useAccountPromoBannerEligibility({

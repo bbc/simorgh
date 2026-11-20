@@ -14,6 +14,7 @@ import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import isLocal from '#app/lib/utilities/isLocal';
 import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
 import {
@@ -32,10 +33,6 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getClientCookie = (cookieName: string) => {
-  return onClient() ? Cookie.get(cookieName) : undefined;
-};
-
 export const AccountProvider = ({
   children,
   initialConfig,
@@ -43,6 +40,7 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const isHydrated = useHydrationDetection();
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
@@ -54,6 +52,9 @@ export const AccountProvider = ({
   useEffect(() => {
     setPageToReturnTo(window.location.href);
   }, []);
+
+  const getClientCookie = (cookieName: string) =>
+    onClient() && isHydrated ? Cookie.get(cookieName) : undefined;
 
   // IDCTA / UAS is not available on AMP, Lite or App platforms — ensure provider
   // centralises this logic so individual components don't need to check platform.

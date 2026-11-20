@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
 
-import { createContext, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
+  render,
   renderHook,
   act,
+  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -12,11 +14,37 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import * as serviceContextModule from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
 import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+  resonanceEnabled: false,
+};
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }: PropsWithChildren) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
@@ -95,16 +123,12 @@ beforeEach(() => {
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-    }),
-  );
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  };
 });
 
 afterEach(() => {
@@ -156,13 +180,13 @@ const wrapper = ({
       service="pidgin"
       pathname="/pidgin/tori-51745682"
     >
-      <serviceContextModule.ServiceContextProvider service="pidgin">
+      <ServiceContextProvider service="pidgin">
         <ToggleContextProvider toggles={toggles}>
           <EventTrackingContextProvider atiData={atiData}>
             {children}
           </EventTrackingContextProvider>
         </ToggleContextProvider>
-      </serviceContextModule.ServiceContextProvider>
+      </ServiceContextProvider>
     </RequestContextProvider>
   </OptimizelyProvider>
 );
@@ -273,6 +297,50 @@ describe('useViewTracker', () => {
         const { observe } = getObserverInstance(element);
 
         expect(observe).toHaveBeenCalledWith(element);
+      });
+
+      it('should keep the observer connected on mount and reconnect it when the tracking key changes', async () => {
+        const TrackedElement = ({
+          viewTrackerKey,
+        }: {
+          viewTrackerKey: string;
+        }) => {
+          const { ref } = useViewTracker({ ...trackingData, viewTrackerKey });
+
+          return <div data-testid="tracked-element" ref={ref} />;
+        };
+
+        const renderTrackedElement = (viewTrackerKey: string) => (
+          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+            {wrapper({
+              children: <TrackedElement viewTrackerKey={viewTrackerKey} />,
+            })}
+          </OptimizelyProvider>
+        );
+        const { getByTestId, rerender } = render(renderTrackedElement('first'));
+        const element = getByTestId('tracked-element');
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const firstObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).not.toHaveBeenCalled();
+
+        await act(async () => {
+          rerender(renderTrackedElement('second'));
+          await Promise.resolve();
+          await Promise.resolve();
+        });
+
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const nextObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).toHaveBeenCalled();
+        expect(nextObserver).not.toBe(firstObserver);
+        expect(nextObserver.observe).toHaveBeenCalledWith(element);
+        expect(nextObserver.disconnect).not.toHaveBeenCalled();
       });
 
       it('should not send event to ATI when element is not in view', async () => {
@@ -859,17 +927,12 @@ describe('useViewTracker', () => {
     };
 
     it('should dispatch a resonance event when resonanceEnabled is true', async () => {
-      jest.replaceProperty(
-        serviceContextModule,
-        'ServiceContext',
-        // @ts-expect-error override service context for tests
-        createContext({
-          atiAnalyticsProducerId: '70',
-          atiAnalyticsProducerName: 'PIDGIN',
-          service: 'pidgin',
-          resonanceEnabled: true,
-        }),
-      );
+      mockServiceContextValue = {
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+        resonanceEnabled: true,
+      };
 
       const { result } = renderHook(() => useViewTracker(trackingData), {
         wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),

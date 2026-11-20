@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Watch A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Watch Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "81",
+  },
+  {
+    "p": "serbian.watch.c8506jgj5gw6o.lat.page",
+  },
+  {
+    "x1": "[urn:bbc:optimo:asset:c8506jgj5gw6o]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-serbian]",
+  },
+  {
+    "x4": "[sr-latn]",
+  },
+  {
+    "x7": "[article-sfv]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[BBC%20świadkiem%20ataku%20izraelskich%20osadników%20na%20grupę%20Palestyńczyków%20na%20Zachodnim%20Brzegu.]",
+  },
+  {
+    "x11": "[2026-10-07T16:13:45.600Z]",
+  },
+  {
+    "x12": "[2026-10-07T16:13:45.600Z]",
+  },
+]
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, na srpskom",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 2`] = `
+{
+  "text": "Zašto BBC zaslužuje vaše poverenje",
+  "url": "https://www.bbc.com/serbian/lat/institutional-50173730",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 3`] = `
+{
+  "text": "Pravila korišćenja",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 4`] = `
+{
+  "text": "O BBC-ju",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 5`] = `
+{
+  "text": "Pravila privatnosti",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 6`] = `
+{
+  "text": "Kolačići",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 7`] = `
+{
+  "text": "Kontaktirajte BBC",
+  "url": "https://www.bbc.co.uk/serbian/send/u50853665",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News na drugim jezicima",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Watch Footer Anchors should match text and url 9`] = `
+{
+  "text": "Pročitajte naša pravila o linkovanju drugih sajtova.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Watch Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
+
+exports[`Canonical Watch Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+
+exports[`Canonical Watch Header Navigation link should match text and url 1`] = `
+{
+  "text": "Početna strana",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Watch Image Caption should match text 1`] = `"Potpis ispod videa, BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch Image should match snapshot 1`] = `
+<noscript>
+  <div>
+    <div
+      class="css-116dkb1"
+    >
+      <strong
+        class="css-pow7hy"
+      >
+        Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano
+      </strong>
+    </div>
+  </div>
+</noscript>
+`;
+
+exports[`Canonical Watch Main heading should match text 1`] = `"BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch Media Loader renders a valid container 1`] = `
+<figure
+  class="media-container css-1okmog4"
+  data-e2e="media-loader__container"
+>
+  <div
+    class="css-8432in"
+    data-simorgh-media-loader="inactive"
+  >
+    <div
+      class="media-player css-9p9hvp"
+      data-e2e="media-player"
+    >
+      <noscript>
+        <div>
+          <div
+            class="css-116dkb1"
+          >
+            <strong
+              class="css-pow7hy"
+            >
+              Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano
+            </strong>
+          </div>
+        </div>
+      </noscript>
+    </div>
+  </div>
+  <figcaption
+    class="css-1d8d7ls"
+    dir="ltr"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="VisuallyHiddenText_visuallyHiddenText__NazL3"
+      >
+        Potpis ispod videa, 
+      </span>
+      <span
+        data-testid="caption-paragraph"
+      >
+        BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu
+      </span>
+    </span>
+  </figcaption>
+</figure>
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/serbian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Watch SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Watch SEO Canonical link 1`] = `"http://localhost:7081/serbian/watch/c8506jgj5gw6o/lat"`;
+
+exports[`Canonical Watch SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Watch SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Watch SEO Heading level 1 1`] = `"BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu"`;
+
+exports[`Canonical Watch SEO Lang attribute 1`] = `"sr-latn"`;
+
+exports[`Canonical Watch SEO Linked data should match text 1`] = `
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "author": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News na srpskom",
+        "noBylinesPolicy": "https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise",
+      },
+      "dateModified": "2026-10-07T16:13:45.600Z",
+      "datePublished": "2026-10-07T16:13:45.600Z",
+      "headline": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_serbian/p01wppbn.jpg",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "sr-latn",
+        "name": "Serbian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/watch/c8506jgj5gw6o/lat",
+        "@type": "WebPage",
+        "name": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+      },
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_serbian/p01wppbn.jpg",
+      "url": "http://localhost:7081/serbian/watch/c8506jgj5gw6o/lat",
+    },
+  ],
+}
+`;
+
+exports[`Canonical Watch SEO Linked data should match text 2`] = `
+{
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu.",
+  "duration": "PT2M10S",
+  "embedURL": "https://www.test.bbc.com/ws/av-embeds/articles/c8506jgj5gw6o/p01wppb0/sr-latn",
+  "name": "BBC świadkiem ataku izraelskich osadników na palestyńską farmę na Zachodnim Brzegu",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01wppbn.jpg",
+  "uploadDate": "2025-08-19T09:53:12.000Z",
+}
+`;
+
+exports[`Canonical Watch SEO OG description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
+
+exports[`Canonical Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_serbian/p01wppbn.jpg"`;
+
+exports[`Canonical Watch SEO OG image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
+
+exports[`Canonical Watch SEO OG locale 1`] = `"sr-latn"`;
+
+exports[`Canonical Watch SEO OG site name 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Watch SEO OG title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News na srpskom"`;
+
+exports[`Canonical Watch SEO OG type 1`] = `"article"`;
+
+exports[`Canonical Watch SEO OG url 1`] = `"http://localhost:7081/serbian/watch/c8506jgj5gw6o/lat"`;
+
+exports[`Canonical Watch SEO Page title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News na srpskom"`;
+
+exports[`Canonical Watch SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Watch SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Watch SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Watch SEO Twitter description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
+
+exports[`Canonical Watch SEO Twitter image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
+
+exports[`Canonical Watch SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_serbian/p01wppbn.jpg"`;
+
+exports[`Canonical Watch SEO Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Watch SEO Twitter title 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu. - BBC News na srpskom"`;
+
+exports[`Canonical Watch Timestamp should match text and date 1`] = `
+{
+  "date": "2026-10-07",
+  "text": "7 oktobar 2026",
+}
+`;

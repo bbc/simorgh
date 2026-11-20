@@ -1,7 +1,11 @@
 import { NextPageContext } from 'next/types';
 import addPlatformToRequestChainHeader from '#utilities/addPlatformToRequestChainHeader';
 
-const addServiceChainHeader = ({ ctx }: { ctx: NextPageContext }) => {
+const addServiceChainHeader = ({
+  ctx,
+}: {
+  ctx: Pick<NextPageContext, 'req' | 'res'>;
+}) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({

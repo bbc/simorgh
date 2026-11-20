@@ -6,7 +6,15 @@ import useUASStatusHook, { UASStatusField } from '#app/hooks/useUASStatusHook';
  * Fetches whether the signed-in user follows a topic.
  * Wraps the generic useUASStatusHook with topic-specific config.
  */
-const useTopicFollowStatus = (topicId: string) =>
+
+interface UseTopicFollowStatusReturn {
+  isFollowed: boolean;
+  isLoading: boolean;
+  error: Error | null;
+  metadata?: Record<string, unknown>;
+}
+
+const useTopicFollowStatus = (topicId: string): UseTopicFollowStatusReturn =>
   useUASStatusHook({
     resourceId: topicId,
     config: FOLLOWS_CONFIG,

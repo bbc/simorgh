@@ -15,7 +15,8 @@ const options = {
     '@emotion/cache',
     '@emotion/server',
     'aws-embedded-metrics',
-    '@scss', // webpack alias for src/app/components, resolved via resolve.alias in webpack/next.js
+    '@scss', // webpack alias for src/app/components, resolved via resolve.alias in webpack/next.js,
+    'dotenv',
   ],
 };
 

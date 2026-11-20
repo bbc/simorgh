@@ -5,7 +5,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { grid } from '#psammead/psammead-styles/src/detection';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 import Grid from '#psammead/psammead-grid/src';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -27,7 +27,7 @@ const StyledGrid = styled(Grid)`
 
 // Using flex-box on browsers that do not support grid will break grid fallback defined in psammead-grid
 const StyledFlexGrid = styled(Grid)`
-  @supports (${grid}) {
+  @supports (${GRID_SUPPORT_QUERY}) {
     display: flex;
     flex-direction: column;
   }
@@ -102,10 +102,11 @@ const RadioSchedule = ({ schedule, ...props }) => {
           data-e2e={program.state}
           role="listitem"
         >
-          <StartTimeWrapper>
+          <StartTimeWrapper key="start-time">
             <StartTime timestamp={program.startTime} />
           </StartTimeWrapper>
           <ProgramCard
+            key="program-card"
             {...props}
             eventTrackingData={eventTrackingDataExtended}
             position={index}

@@ -12,7 +12,7 @@ This component derives `size` and `fontVariant` values from the Context Provider
 | ---------------------------- | ------- | -------- | ------------------------------------------------------------------------------------- |
 | as?                          | string  | No       | The HTML element to render the text in e.g. `h1`, `span`, `p`. The default is `span`. |
 | children?                    | node    | No       | The content included between the opening and closing tags of the Call to Action Text  |
-| className?                   | string  | No       | Permits `css` prop to be applied                                                      |
+| className?                   | string  | No       | Additional class names for consumer-owned styling                                     |
 | shouldUnderlineOnHoverFocus? | boolean | No       | Applies underline styling for interaction states instead of a thicker bottom border.  |
 
 ## Examples
@@ -40,45 +40,45 @@ The default text styles mirror the default interaction state (`hover`, `focus` a
 
 The `shouldUnderlineOnHoverFocus` prop can be used to override these default styles. This means that colour and bottom border styles are not applied. Instead `textDecoration: 'underline'` is applied to `hover` and `focus` states.
 
-The css prop can be used to apply further styles. This can be applied to the Text component directly. Or applied to a parent/ ancestor and targeted using nested selectors. For example:
-
-For example:
+Use a consumer-owned SCSS Module class to apply further styles. This can be
+applied to the Text component directly, or applied to a parent/ancestor and
+targeted using nested selectors. For example:
 
 ```javascript
 <CallToActionLink
-  to={link}
-  className="focusIndicatorInvert"
+  url={link}
+  className={`${styles.callToActionLink} focusIndicatorInvert`}
   eventTrackingData={eventTrackingData}
-  css={styles.callToActionLink}
 >
-  <CallToActionLink.FlexWrapper>
+  <CallToActionLink.ButtonLikeWrapper>
     <CallToActionLink.Text shouldUnderlineOnHoverFocus>
       {linkText}
       <CallToActionLink.Chevron />
     </CallToActionLink.Text>
-  </CallToActionLink.FlexWrapper>
+  </CallToActionLink.ButtonLikeWrapper>
 </CallToActionLink>
 ```
 
-In `index.styles.ts`:
+In the consumer's `index.module.scss`:
 
-```javascript
-  callToActionLink: ({ mq, palette }: Theme) =>
-    css({
-      padding: '1rem',
-      backgroundColor: palette.WHITE,
-      margin: '0 1rem 1rem 1rem',
-      width: '100%',
-      color: palette.BLACK,
-      '&:hover, &:focus':
-      {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      },
-      '& span':
-      {
-        paddingInlineStart: '0.5rem',
-      },
-    }),
+```scss
+@use '@scss/themeTokens' as theme;
 
+.callToActionLink {
+  padding: theme.$spacings-double;
+  background-color: theme.$palette-white;
+  margin: theme.$spacings-double;
+  width: 100%;
+  color: theme.$palette-black;
+
+  &:hover,
+  &:focus {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-black;
+  }
+
+  span {
+    padding-inline-start: theme.$spacings-half;
+  }
+}
 ```

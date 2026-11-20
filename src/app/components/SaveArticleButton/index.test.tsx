@@ -3,8 +3,15 @@ import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import extractArticleMetadata from '#app/lib/utilities/extractSaveArticleProps';
 import { Article } from '#app/models/types/optimo';
 import { service as hindiServiceConfig } from '#lib/config/services/hindi';
-import { render, screen, act } from '../react-testing-library-with-providers';
+import {
+  render,
+  screen,
+  act,
+  waitFor,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
+import { SaveArticleButtonLoadingFallback } from './SaveArticleButtonAuthenticated/lazy';
 
 const saveArticleButtonTranslations =
   hindiServiceConfig.default.translations.saveArticleButton;
@@ -140,6 +147,46 @@ describe('SaveArticleButton', () => {
     jest.clearAllMocks();
   });
 
+  it.each([
+    { userType: 'signed-in', initialIsSignedIn: true },
+    { userType: 'guest', initialIsSignedIn: false },
+  ])(
+    'does not render when the parsed ID contains slashes even without TC2 metadata for a $userType user',
+    async ({ initialIsSignedIn }) => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        isUpdating: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
+
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, {
+          service: 'hindi',
+          pathname: '/hindi/news/2015/03/150216_example_article',
+          toggles: personalizationToggle,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+        }),
+      );
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    },
+  );
+
+  it('does not render when there is no article ID', async () => {
+    await act(async () =>
+      render(<SaveArticleButton {...defaultProps} />, {
+        service: 'hindi',
+        pathname: '/hindi',
+        toggles: personalizationToggle,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      }),
+    );
+
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+  });
+
   describe('Authorized', () => {
     const signedInRenderOptions = {
       service: 'hindi' as const,
@@ -164,6 +211,74 @@ describe('SaveArticleButton', () => {
       expect(screen.getByRole('button')).toHaveTextContent(
         saveArticleButtonTranslations.save,
       );
+    });
+
+    it('does not show the guest button for signed-in users on initial render', async () => {
+      render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions);
+
+      expect(
+        screen.queryByTestId('save-article-btn-guest'),
+      ).not.toBeInTheDocument();
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('save-article-btn-loading') ??
+            screen.queryByTestId('save-article-btn-authorized'),
+        ).toBeInTheDocument();
+      });
+    });
+
+    it.each([
+      { error: undefined, isLoading: undefined },
+      { error: null, isLoading: true },
+      { error: new Error('Chunk failed'), isLoading: true },
+      { error: null, isLoading: false },
+    ])(
+      'keeps translated loading UI without opening sign-in ($isLoading, $error)',
+      async ({ error, isLoading }) => {
+        await act(async () =>
+          render(
+            <SaveArticleButtonLoadingFallback
+              error={error}
+              isLoading={isLoading}
+            />,
+            signedInRenderOptions,
+          ),
+        );
+
+        const loadingButton = screen.getByTestId('save-article-btn-loading');
+        expect(loadingButton).toHaveTextContent(
+          saveArticleButtonTranslations.loading,
+        );
+        expect(
+          screen.queryByTestId('save-article-btn-guest'),
+        ).not.toBeInTheDocument();
+        fireEvent.click(loadingButton);
+        expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      },
+    );
+
+    it('shows an interactive guest button only after chunk loading fails', () => {
+      const error = new Error('Chunk failed');
+      const { rerender } = render(
+        <SaveArticleButtonLoadingFallback isLoading />,
+        signedInRenderOptions,
+      );
+
+      rerender(
+        <SaveArticleButtonLoadingFallback error={error} isLoading={false} />,
+      );
+
+      expect(
+        screen.queryByTestId('save-article-btn-loading'),
+      ).not.toBeInTheDocument();
+      fireEvent.click(screen.getByTestId('save-article-btn-guest'));
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+
+      rerender(<SaveArticleButtonLoadingFallback error={error} isLoading />);
+      expect(
+        screen.getByTestId('save-article-btn-loading'),
+      ).toBeInTheDocument();
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
     });
 
     it('renders Saved to My News when saved', async () => {

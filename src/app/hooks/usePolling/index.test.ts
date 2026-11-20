@@ -1,6 +1,18 @@
 import { act, renderHook } from '@testing-library/react';
-import * as fetchPolledData from '#app/lib/utilities/fetchPolledData';
+import fetchPolledData from '#app/lib/utilities/fetchPolledData';
 import usePolling, { POLLING_INTERVAL, UsePollingProps } from '.';
+
+jest.mock('#app/lib/utilities/fetchPolledData', () => {
+  const actual = jest.requireActual('#app/lib/utilities/fetchPolledData');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+const mockFetchPolledData = jest.mocked(fetchPolledData);
 
 jest.useFakeTimers();
 
@@ -37,7 +49,7 @@ describe('usePolling', () => {
   });
 
   it('should return the initial data on initialisation', () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
+    mockFetchPolledData.mockResolvedValue(null);
 
     const { result } = renderUsePolling();
 
@@ -45,9 +57,7 @@ describe('usePolling', () => {
   });
 
   it('should call fetchPolledData with the given endpoint and params when enabled', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     renderUsePolling({
       endpoint: 'sport',
@@ -63,9 +73,7 @@ describe('usePolling', () => {
   });
 
   it('should not poll when disabled', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     renderUsePolling({ enabled: false });
 
@@ -75,7 +83,7 @@ describe('usePolling', () => {
   });
 
   it('should update the data when new data is returned after polling', async () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
+    mockFetchPolledData.mockResolvedValue({
       data: { event: updatedData },
       status: 200,
     });
@@ -88,7 +96,7 @@ describe('usePolling', () => {
   });
 
   it('should keep the current data when no response is returned after polling', async () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue(null);
+    mockFetchPolledData.mockResolvedValue(null);
 
     const { result } = renderUsePolling();
 
@@ -98,7 +106,7 @@ describe('usePolling', () => {
   });
 
   it('should keep the current data when payload data is empty', async () => {
-    jest.spyOn(fetchPolledData, 'default').mockResolvedValue({
+    mockFetchPolledData.mockResolvedValue({
       data: { event: undefined },
       status: 200,
     });
@@ -111,9 +119,7 @@ describe('usePolling', () => {
   });
 
   it('should clear the polling interval when unmounted', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     const { unmount } = renderUsePolling();
 
@@ -126,9 +132,7 @@ describe('usePolling', () => {
 
   it('should use a custom interval when provided', async () => {
     const customInterval = 5000;
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     renderUsePolling({ interval: customInterval });
 
@@ -141,9 +145,7 @@ describe('usePolling', () => {
   });
 
   it('should use the default interval when not provided', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     renderUsePolling();
 
@@ -153,9 +155,7 @@ describe('usePolling', () => {
   });
 
   it('should restart the interval when the interval prop changes', async () => {
-    const fetchSpy = jest
-      .spyOn(fetchPolledData, 'default')
-      .mockResolvedValue(null);
+    const fetchSpy = mockFetchPolledData.mockResolvedValue(null);
 
     const { rerender } = renderHook(
       ({ interval }: Partial<UsePollingProps<PollResponse, PollData>> = {}) =>

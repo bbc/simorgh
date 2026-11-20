@@ -1,3 +1,4 @@
+import { ERROR_TRACKING_FEATURES } from '#app/hooks/useErrorTracking/errorTracking.const';
 import sendBeacon from '../sendBeacon';
 import sendErrorEvent from '.';
 
@@ -5,7 +6,7 @@ jest.mock('../sendBeacon');
 
 describe('sendErrorEvent', () => {
   const validProps = {
-    feature: 'uas',
+    feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
     errorName: 'save',
     statusCode: 500,
     errorKey: 'unknownTokenKey',
@@ -41,7 +42,7 @@ describe('sendErrorEvent', () => {
           eventPublisher: 'viewability',
           event: { category: 'error' },
           error: {
-            engine: 'uas',
+            engine: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             name: 'save',
             message: 'An unknown error occurred.',
             code: '500',
@@ -66,7 +67,7 @@ describe('sendErrorEvent', () => {
 
   it('omits optional diagnostics when they are absent', async () => {
     await sendErrorEvent({
-      feature: 'uas',
+      feature: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
       errorName: 'fetch-status',
       trackingIsEnabled: true,
       pageIdentifier: 'page-identifier',
@@ -78,7 +79,7 @@ describe('sendErrorEvent', () => {
       expect.objectContaining({
         eventDetails: expect.objectContaining({
           error: {
-            engine: 'uas',
+            engine: ERROR_TRACKING_FEATURES.SAVE_ARTICLE_UAS,
             name: 'fetch-status',
           },
         }),

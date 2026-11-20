@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/ro';
+import '#lib/locales/moment/ro';
 import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -84,6 +84,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Articole similare',
       relatedTopics: 'Subiecte similare',
+      showMore: 'Afișează mai multe',
       moreOnThis: '',
       navMenuText: 'Secțiuni',
       liteSite: {
@@ -424,7 +425,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'Cele mai populare',
       lastUpdated: 'Ultima actualizare:',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {

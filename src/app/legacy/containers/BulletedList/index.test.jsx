@@ -6,6 +6,16 @@ import { render } from '../../../components/react-testing-library-with-providers
 import BulletedListContainer from './index';
 import { listItemD, listItemE, orderedList } from './fixtures';
 
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
+
 describe('BulletedListContainer', () => {
   suppressPropWarnings(['blocks', 'supplied']);
 

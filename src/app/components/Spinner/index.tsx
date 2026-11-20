@@ -1,12 +1,13 @@
+import clsx from 'clsx';
 import { Spinner as SpinnerIcon } from '#app/components/icons';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface SpinnerProps {
   className?: string;
 }
 
 const Spinner = ({ className }: SpinnerProps) => (
-  <SpinnerIcon css={styles.spinner} className={className} />
+  <SpinnerIcon className={clsx(styles.spinner, className)} />
 );
 
 export default Spinner;

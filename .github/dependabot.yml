@@ -17,10 +17,6 @@ updates:
     labels:
       - 'dependencies'
     groups:
-      babel:
-        patterns:
-          - '@babel/*'
-          - 'babel-*'
       happy-dom:
         patterns:
           - 'happy-dom'
@@ -50,3 +46,13 @@ updates:
         patterns:
           - 'webpack'
           - 'webpack-*'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
+    cooldown:
+      default-days: 7
+    labels:
+      - 'dependencies'

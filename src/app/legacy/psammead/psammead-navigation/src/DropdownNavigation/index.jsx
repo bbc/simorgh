@@ -200,6 +200,7 @@ export const CanonicalMenuButton = ({
   onClick,
   dir = 'ltr',
   className = '',
+  ...props
 }) => (
   <MenuButton
     onClick={onClick}
@@ -207,6 +208,7 @@ export const CanonicalMenuButton = ({
     aria-label={announcedText}
     dir={dir}
     className={`${className} focusIndicatorRemove`}
+    {...props}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>

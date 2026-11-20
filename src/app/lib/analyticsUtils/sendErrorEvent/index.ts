@@ -1,4 +1,4 @@
-import { buildErrorEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { buildErrorEventModel } from '../atiUrl';
 import sendBeacon from '../sendBeacon';
 
 type Props = {

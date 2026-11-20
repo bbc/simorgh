@@ -1,5 +1,5 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import '#psammead/psammead-locales/moment/fa-af';
+import '#lib/locales/moment/fa-af';
 import '#psammead/moment-timezone-include/tz/Asia/Kabul';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -78,6 +78,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      showMore: 'نمایش بیشتر',
       moreOnThis: '',
       navMenuText: 'صفحه ها',
       liteSite: {

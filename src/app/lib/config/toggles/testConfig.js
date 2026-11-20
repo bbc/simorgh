@@ -76,6 +76,9 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: false,
+  },
   scriptLink: {
     enabled: true,
   },

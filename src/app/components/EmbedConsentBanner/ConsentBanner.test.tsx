@@ -7,6 +7,11 @@ import ConsentBanner from './ConsentBanner';
 
 import * as viewTracking from '../../hooks/useViewTracker';
 
+jest.mock('../../hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useViewTracker'),
+}));
+
 const mockCanonicalClickHandler = {
   onClick: jest.fn(() => null),
 };

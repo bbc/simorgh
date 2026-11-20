@@ -2,7 +2,10 @@ import { use } from 'react';
 import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
@@ -129,7 +132,10 @@ const getBylineComponent =
         </Byline>
         {showSaveArticleButton && (
           <SaveArticleButton
-            saveArticlePageData={extractSaveArticleProps(pageData)}
+            saveArticlePageData={extractSaveArticleProps(
+              pageData,
+              MEDIA_ARTICLE_PAGE,
+            )}
           />
         )}
       </>
@@ -156,7 +162,10 @@ const getTimestampComponent =
         <Timestamp {...props} popOut={false} />
         {showSaveArticleButton && (
           <SaveArticleButton
-            saveArticlePageData={extractSaveArticleProps(pageData)}
+            saveArticlePageData={extractSaveArticleProps(
+              pageData,
+              MEDIA_ARTICLE_PAGE,
+            )}
           />
         )}
       </>
@@ -204,10 +213,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const isCpsMap = type === MEDIA_ASSET_PAGE;
-  const showSaveArticleButton = !isCpsMap;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
+  const showSaveArticleButton = !isCpsMap && !isTC2Asset;
 
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];

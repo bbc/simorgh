@@ -1,7 +1,12 @@
 import { renderHook } from '@testing-library/react';
 import useConnectionBackOnlineTracker from '.';
-import * as useCustomEventTrackerModule from '../useCustomEventTracker';
+import useCustomEventTracker from '../useCustomEventTracker';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
+
+jest.mock('../useCustomEventTracker', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
 jest.mock('../useNetworkStatusTracker', () => ({
   __esModule: true,
@@ -14,10 +19,7 @@ jest.mock('../useTrackingToggle', () => ({
 }));
 
 const mockTrackEvent = jest.fn();
-const mockUseCustomEventTracker = jest.spyOn(
-  useCustomEventTrackerModule,
-  'default',
-);
+const mockUseCustomEventTracker = jest.mocked(useCustomEventTracker);
 
 describe('useConnectionBackOnlineTracker', () => {
   let originalVisibility: PropertyDescriptor | undefined;

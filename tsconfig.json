@@ -41,7 +41,7 @@
       "#storybook/*": ["./.storybook/*"]
     }
   },
-  "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
+  "include": ["jest.config.ts", "src/**/*", "src/app/legacy/**/*.ts*"],
   "exclude": ["node_modules", "build"]
   ,
   "plugins": [

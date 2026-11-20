@@ -6,6 +6,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import CurationGrid from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const eventTrackingData = { componentName: 'simple-curation-grid' };
 
 const allSummaries = [

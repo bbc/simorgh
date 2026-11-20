@@ -1,4 +1,7 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { matchers } from '@emotion/jest';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Services } from '#app/models/types/global';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -23,11 +26,30 @@ import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
+}));
+
 jest.mock('../ThemeProvider');
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
+expect.extend(matchers);
 
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
+
+const relatedTopicSummary = afriqueHomePage.data.curations[0]
+  ?.summaries?.[0] as Summary;
+const relatedTopicSummaries = [
+  relatedTopicSummary,
+  { ...relatedTopicSummary, id: 'related-topic-summary-2' },
+  { ...relatedTopicSummary, id: 'related-topic-summary-3' },
+];
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -139,6 +161,14 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  beforeEach(() => {
+    (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'test' });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
@@ -181,6 +211,66 @@ describe('Curation', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
+
+  describe('related topics', () => {
+    it('renders related topics in a simple grid outside live', () => {
+      const { getByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(getByText('Santé')).toBeInTheDocument();
+    });
+
+    it('renders related topics in a hierarchical grid outside live', () => {
+      const { getAllByRole } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={HIGH}
+          summaries={relatedTopicSummaries}
+        />,
+      );
+
+      const relatedTopicLinks = getAllByRole('link', { name: 'Santé' });
+      expect(relatedTopicLinks).toHaveLength(3);
+      relatedTopicLinks.forEach(link => {
+        expect(link).toBeInTheDocument();
+      });
+    });
+
+    it('does not render related topics in live', () => {
+      (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'live' });
+
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+
+    it('does not render related topics for another curation type', () => {
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={MAXIMUM}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+  });
 
   it.each([
     { visualStyle: BANNER, visualProminence: LOW },
@@ -599,5 +689,81 @@ describe('Curation', () => {
       }),
     );
     spy.mockRestore();
+  });
+
+  describe('Video collection styling', () => {
+    // Grid columns are only applied to video collections
+    const gridColumnsStyleRule = [
+      'grid-template-columns',
+      'repeat(2, minmax(0, 1fr))',
+      { media: '(min-width: 37.5rem)' },
+    ] as const;
+
+    const renderCuration = ({
+      service,
+      isVideoCollection,
+      isLite,
+    }: {
+      service: Services;
+      isVideoCollection: boolean;
+      isLite?: boolean;
+    }) => {
+      const { getByTestId } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={fixture.data.curations[0].summaries}
+          isVideoCollection={isVideoCollection}
+        />,
+        { service, isLite },
+      );
+
+      return getByTestId('topic-promos');
+    };
+
+    it.each(['arabic', 'mundo', 'pidgin', 'tamil'] as const)(
+      'applies video collection styling for %s',
+      service => {
+        const list = renderCuration({
+          service,
+          isVideoCollection: true,
+          isLite: false,
+        });
+
+        expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
+
+    it.each([
+      {
+        description: 'Arabic Lite page',
+        service: 'arabic',
+        isVideoCollection: true,
+        isLite: true,
+      },
+      {
+        description: 'Mundo Lite page',
+        service: 'mundo',
+        isVideoCollection: true,
+        isLite: true,
+      },
+      {
+        description: 'Non-video collection on test',
+        service: 'arabic',
+        isVideoCollection: false,
+      },
+    ] as const)(
+      'does not apply video collection styling for $description',
+      ({ service, isVideoCollection, isLite }) => {
+        const list = renderCuration({
+          service,
+          isVideoCollection,
+          isLite,
+        });
+
+        expect(list).not.toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
   });
 });
