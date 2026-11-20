@@ -297,10 +297,18 @@ describe('Timestamp utility functions', () => {
         expect(output).not.toContain(',');
       },
     );
-    it('should return duration that is localised when locale is passed in', () => {
-      const duration = 'PT30M'; // 30:00
-      expect(formatDuration({ duration, locale: 'my' })).toEqual('၃၀:၀၀');
-    });
+    it.each([
+      ['my', '၃၀:၀၀'],
+      ['ne', '३०:००'],
+      ['bn', '৩০:০০'],
+    ])(
+      'should return duration with native digits for locale %s',
+      (testLocale, expected) => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual(expected);
+      },
+    );
     it.each(['P1W', 'P1M', 'P1Y'])(
       'should return zero instead of throwing for calendar duration %s',
       duration => {
