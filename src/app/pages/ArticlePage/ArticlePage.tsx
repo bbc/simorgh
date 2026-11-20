@@ -575,7 +575,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {!isCarouselEnabled && showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+          {!isCarouselEnabled && showCountryCuration && (
+            <LocationBasedTopicOJ pageData={pageData} />
+          )}
           {!isCarouselEnabled && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}

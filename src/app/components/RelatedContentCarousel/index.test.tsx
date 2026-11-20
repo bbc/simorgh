@@ -1,26 +1,14 @@
-import React from 'react';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import RelatedContentData from './fixture';
 import RelatedContentCarousel from './index';
-
-const mockItems = [
-  { id: '1', title: 'Card 1', url: '/1', image: 'img1.jpg' },
-  { id: '2', title: 'Card 2', url: '/2', image: 'img2.jpg' },
-];
-
-const mockTranslations = {
-  title: 'Contenido relacionado',
-};
 
 describe('RelatedContent Component', () => {
   it('renders as a standard grid when the carousel toggle is disabled', () => {
     const { container } = render(
-      <RelatedContentCarousel
-        translations={mockTranslations}
-        items={mockItems}
-      />,
+      <RelatedContentCarousel content={RelatedContentData} />,
       {
         toggles: {
           relatedContentCarousel: { enabled: false },
@@ -36,17 +24,11 @@ describe('RelatedContent Component', () => {
   });
 
   it('renders as a dark-themed portrait video carousel when the toggle is enabled', () => {
-    render(
-      <RelatedContentCarousel
-        translations={mockTranslations}
-        items={mockItems}
-      />,
-      {
-        toggles: {
-          relatedContentCarousel: { enabled: true },
-        },
-      }
-    );
+    render(<RelatedContentCarousel content={RelatedContentData} />, {
+      toggles: {
+        relatedContentCarousel: { enabled: true },
+      },
+    });
 
     const carouselList = screen.getByTestId('portrait-video-carousel');
     expect(carouselList).toBeInTheDocument();
