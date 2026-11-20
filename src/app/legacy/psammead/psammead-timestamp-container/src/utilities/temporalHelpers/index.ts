@@ -33,7 +33,7 @@ const translateBurmeseNumerals = makeNumeralTranslator(Burmese);
 const translateNepaliNumerals = makeNumeralTranslator(Nepali);
 
 // Mirrors the digit conversion done by each Moment locale's postformat
-const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
+export const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
   LocaleNumberingSystemOverride
 > = {
