@@ -15,18 +15,15 @@ import { Size } from '../types';
 import styles from './index.styles';
 import getRemoteDataScript from './getRemoteDataScript';
 
+const MAX_ITEMS = 10;
+
 interface AmpMostReadProps {
   endpoint: string;
   size?: Size;
 }
 
 const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
-  const {
-    service,
-    dir,
-    mostRead: { numberOfItems },
-    translations,
-  } = use(ServiceContext);
+  const { service, dir, translations } = use(ServiceContext);
 
   const onlyinnerscript = getRemoteDataScript({ endpoint, service });
 
@@ -68,7 +65,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
       <amp-list
         src="amp-script:dataFunctions.getRemoteData"
         items="items"
-        max-items={numberOfItems}
+        max-items={MAX_ITEMS}
         layout="responsive"
         width="300"
         height="50"
@@ -88,7 +85,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
           <MostReadItemWrapper dir={direction} columnLayout="oneColumn">
             <MostReadRank
               service={service}
-              numberOfItems={numberOfItems}
+              numberOfItems={MAX_ITEMS}
               listIndex="{{rankTranslation}}"
               dir={direction}
               columnLayout="oneColumn"

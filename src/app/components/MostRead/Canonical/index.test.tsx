@@ -108,10 +108,14 @@ describe('MostRead Canonical', () => {
       mostReadData: arabicMostReadData,
     },
     {
-      description: 'should render 5 list items for kyrgyz from fetched data',
+      description:
+        'should render 5 list items when the BFF provides only 5 items',
       service: 'kyrgyz',
       numberOfItems: 5,
-      mostReadData: kyrgyzMostReadData,
+      mostReadData: {
+        ...kyrgyzMostReadData,
+        items: kyrgyzMostReadData.items.slice(0, 5),
+      },
     },
   ].forEach(({ description, service, numberOfItems, mostReadData }) => {
     it(description, async () => {
@@ -251,5 +255,16 @@ describe('MostRead Canonical', () => {
         expect(match).toBe(true);
       });
     });
+  });
+
+  it('should render nothing when the BFF provides no items', () => {
+    const { container } = render(
+      <MostReadCanonicalWithContext
+        service="kyrgyz"
+        data={{ ...kyrgyzMostReadData, items: [] }}
+      />,
+    );
+
+    expect(container.querySelectorAll('li a').length).toEqual(0);
   });
 });

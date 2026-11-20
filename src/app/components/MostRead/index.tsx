@@ -90,7 +90,7 @@ const CanonicalMostRead = ({
   columnLayout?: ColumnLayout;
   eventTrackingData?: EventTrackingData;
 }) =>
-  data ? (
+  data?.items?.length ? (
     <MostReadSection className={className} showSectionLabel={showSectionLabel}>
       {showSectionLabel && (
         <MostReadSectionLabel
