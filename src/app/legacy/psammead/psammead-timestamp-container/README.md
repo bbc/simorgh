@@ -84,7 +84,7 @@ Digits follow the numbering system each service showed under Moment. Where the r
 | `ps` (Pashto) | Eastern Arabic-Indic | `-u-nu-arabext`, with a fallback translator |
 | `ar` (Arabic) | Latin | `-u-nu-latn`; some older CLDR versions default to Arabic-Indic digits |
 | `mr` (Marathi) | Latin | `-u-nu-latn`; the locale default is Devanagari |
-| `gu` (Gujarati), `hi` (Hindi), `pa-IN` (Punjabi), `ta` (Tamil) | Latin | `-u-nu-latn`; current defaults are already Latin, this guards against older engines |
+| `gu` (Gujarati), `hi` (Hindi), `pa-IN` (Punjabi), `ta` (Tamil) | Latin | `-u-nu-latn`; current defaults are already Latin, this guards against older engines just in case |
 | `fa`, `fa-AF` (Persian, Dari) | Eastern Arabic-Indic | no override; relies on the locale default (`arabext`) |
 | all other locales | Latin | no override; relies on the locale default |
 
