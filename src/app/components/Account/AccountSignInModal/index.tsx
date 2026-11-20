@@ -13,11 +13,15 @@ import styles from './index.styles';
 
 type AccountSignInModalProps = {
   onClose: () => void;
+  context?: 'saveArticle' | 'followTopic';
   signInUrl?: string | undefined;
   registerUrl?: string | undefined;
 };
 
-const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
+const AccountSignInModal = ({
+  onClose,
+  context = 'saveArticle',
+}: AccountSignInModalProps) => {
   const { containerRef, firstElementRef, lastElementRef } = useTrappedFocus<
     HTMLDivElement,
     HTMLAnchorElement,
@@ -25,11 +29,13 @@ const AccountSignInModal = ({ onClose }: AccountSignInModalProps) => {
   >();
 
   const { translations } = use(ServiceContext);
-  const {
-    closeLabel = 'Close',
-    title = '',
-    description = '',
-  } = translations.accountSignInModal ?? {};
+  const modalTranslations = translations.accountSignInModal;
+  const copy =
+    context === 'followTopic'
+      ? modalTranslations?.followTopic
+      : modalTranslations;
+  const { title = '', description = '' } = copy ?? {};
+  const { closeLabel = 'Close' } = modalTranslations ?? {};
 
   const viewTracker = useViewTracker({
     componentName: 'account-sign-in-modal',

@@ -56,6 +56,20 @@
     border-color: theme.$palette-black;
     color: theme.$palette-black;
 
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-grey-10;
+      border-color: theme.$palette-white;
+      color: theme.$palette-white;
+    }
+
+    &.loadingState {
+      :global([data-is-dark-ui='true']) & {
+        background-color: theme.$palette-postbox;
+        border-color: theme.$palette-white;
+        color: theme.$palette-white;
+      }
+    }
+
     &.savedState {
       background-color: theme.$palette-news-bright;
       border-color: theme.$palette-news-bright;

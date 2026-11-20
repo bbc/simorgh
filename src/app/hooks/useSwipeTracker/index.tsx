@@ -8,10 +8,14 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
-import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import dispatchTrackingRequests, {
+  shouldDispatchEventBeacon,
+} from '../../lib/analyticsUtils/dispatchTrackingRequests';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
-  const { service } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
 
   const eventTrackingContext = use(EventTrackingContext);
 
@@ -36,6 +40,10 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         groupTracker,
         itemTracker,
         alwaysInView = false,
+        experimentName,
+        experimentVariant,
+        viewThreshold,
+        isSignedIn,
       } = extractATITrackingProps({
         eventTrackingData: swipeEventTrackingData,
         eventType: VIEW_EVENT,
@@ -66,9 +74,44 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         },
       };
 
+      // Temporary Resonance dual-run, independent of the Reverb dispatch below (see ticket).
+      if (resonanceEnabled) {
+        const shouldSendResonanceEvent = shouldDispatchEventBeacon({
+          campaignID,
+          componentName,
+          pageIdentifier,
+          platform,
+          producerId,
+          producerName,
+          service,
+          statsDestination,
+          trackingIsEnabled,
+          alwaysInView,
+        });
+        if (shouldSendResonanceEvent) {
+          dispatchViewabilityEvent(
+            buildResonanceEventConfig({
+              pageIdentifier,
+              campaignID,
+              componentName,
+              producerName,
+              type: VIEW_EVENT,
+              url,
+              experimentName,
+              experimentVariant,
+              itemTracker,
+              groupTracker,
+              viewThreshold,
+              platform,
+              isSignedIn,
+            }),
+          );
+        }
+      }
+
       await dispatchTrackingRequests(swipeTrackingParameters);
     },
-    [eventTrackingContext, service, trackingIsEnabled],
+    [eventTrackingContext, service, resonanceEnabled, trackingIsEnabled],
   );
 
   return swipeTracker;

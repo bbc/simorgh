@@ -1,0 +1,48 @@
+@use '@scss/themeTokens' as theme;
+
+.button {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: inline-flex;
+  align-items: center;
+  color: theme.$palette-black;
+  padding: theme.pixelsToRem-px-to-rem(10);
+  margin-bottom: theme.$spacings-triple;
+  margin-inline-start: theme.$spacings-double;
+  border: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-black;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: theme.$palette-white;
+    border-color: var(--brand-background);
+    background-color: var(--brand-background);
+
+    @media #{theme.$mediaQueries-forced-colours} {
+      background-color: Canvas;
+      color: CanvasText;
+      border-color: CanvasText;
+      text-decoration: underline;
+    }
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    color: CanvasText;
+    border-color: CanvasText;
+  }
+
+  :global(.external-svg) {
+    width: theme.$spacings-double;
+    height: theme.$spacings-double;
+    margin-inline-end: theme.$spacings-full;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    &:hover,
+    &:focus-visible {
+      :global(.external-svg) {
+        filter: invert(1) hue-rotate(180deg);
+      }
+    }
+  }
+}

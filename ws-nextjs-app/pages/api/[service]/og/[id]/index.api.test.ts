@@ -5,7 +5,10 @@
 import { testApiHandler } from 'next-test-api-route-handler';
 
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
+import { REITH_FONTS_DIR } from '#app/components/ThemeProvider/fontFaces';
 import api from './index.api';
+
+const originalFetch = global.fetch;
 
 jest.mock('next/og', () => {
   return {
@@ -38,6 +41,17 @@ jest.mock('#app/routes/utils/fetchPageData');
 describe('GET /api/og', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
+    jest.spyOn(global, 'fetch').mockImplementation((input, init) => {
+      if (typeof input === 'string' && input.startsWith(REITH_FONTS_DIR)) {
+        return Promise.resolve(new Response(new ArrayBuffer(8)));
+      }
+
+      return originalFetch(input, init);
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
   it('should return a 200 response with valid article id and service', async () => {
@@ -56,6 +70,12 @@ describe('GET /api/og', () => {
         const res = await fetch();
 
         expect(res.status).toEqual(200);
+        expect(global.fetch).toHaveBeenCalledWith(
+          `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`,
+        );
+        expect(global.fetch).toHaveBeenCalledWith(
+          `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`,
+        );
       },
     });
   });

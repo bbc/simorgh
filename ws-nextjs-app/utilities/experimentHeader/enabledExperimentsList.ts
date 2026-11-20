@@ -1,8 +1,6 @@
 import { PageTypes, Services } from '#app/models/types/global';
-import {
-  HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
-  HOMEPAGE_RELATED_TOPIC_SERVICES,
-} from '#app/lib/experiments/homepageRelatedTopicPromos';
+import { HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME } from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import { LIVE_PAGE_PROMO_EXPERIMENT_NAME } from '#app/components/LivePagePromoExperiment/config';
 
 /* 
 This is a maintained list of serverside experiments that we are running.
@@ -21,11 +19,30 @@ type ServerSideExperimentConfig = {
 };
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
-  // experiment: newswb_ws_homepage_related_topic_promos
+  // experiment: test_server_side_experiment_visits_aa
   {
-    name: HOMEPAGE_RELATED_TOPIC_EXPERIMENT,
-    services: HOMEPAGE_RELATED_TOPIC_SERVICES,
+    name: 'test_server_side_experiment_visits_aa',
+    services: [
+      'afaanoromoo',
+      'afrique',
+      'amharic',
+      'igbo',
+      'somali',
+      'swahili',
+      'tigrinya',
+      'yoruba',
+    ],
     pageTypes: ['home'],
+  },
+  {
+    name: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
+    services: ['hindi'],
+    pageTypes: ['home'],
+  },
+  {
+    name: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
+    services: ['mundo'],
+    pageTypes: ['article'],
   },
 ];
 

@@ -34,11 +34,11 @@ const storybookConfig: StorybookConfig = {
       ${fontLinkTags}
     `;
   },
-  staticDirs: ['./static', { from: '../data', to: 'data' }],
+  staticDirs: ['../public', './static', { from: '../data', to: 'data' }],
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
-    '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
+    '../src/app/lib/locales/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/components-webcore/**/*.stories.@(t|j)sx',
@@ -120,6 +120,8 @@ const storybookConfig: StorybookConfig = {
   env: config => ({
     ...config,
     ...DOT_ENV_CONFIG.parsed,
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN: '',
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH: '/',
   }),
   webpackFinal: async config => {
     config.plugins!.push(

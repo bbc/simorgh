@@ -1,8 +1,8 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/uz';
-import '#psammead/psammead-locales/moment/uz-latn';
+import '#lib/locales/moment/uz';
+import '#lib/locales/moment/uz-latn';
 import withContext from '../../../contexts/utils/withContext';
 import { UzbekConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
@@ -104,6 +104,7 @@ const defaultCyrillicConfig = {
     },
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    showMore: 'Кўпроқ кўрсатиш',
     moreOnThis: '',
     navMenuText: 'Бўлимлар',
     liteSite: {
@@ -555,6 +556,7 @@ export const service: UzbekConfig = {
       },
       relatedContent: 'Mavzuga aloqador',
       relatedTopics: 'Aloqador mavzular',
+      showMore: 'Ko‘proq ko‘rsatish',
       navMenuText: 'Bo‘limlar',
       liteSite: {
         onboardingMessage:

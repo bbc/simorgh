@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 import {
   singleDigitDefault,
   singleDigitMedium,
@@ -18,7 +19,6 @@ import {
 } from '../../../ThemeProvider/mediaQueries';
 import { Services } from '../../../../models/types/global';
 import { Size } from '../../types';
-import { grid } from '../../../../legacy/psammead/psammead-styles/src/detection';
 
 /**
  * Interface Definitions
@@ -211,7 +211,7 @@ const getTwoColumnCss = ({
           size,
         }),
       },
-      [`@supports (${grid})`]: {
+      [`@supports (${GRID_SUPPORT_QUERY})`]: {
         [GROUP_3_MIN_WIDTH]: {
           minWidth: getGroup3WithTwoColumns({
             listIndex,

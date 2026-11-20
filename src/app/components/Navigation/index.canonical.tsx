@@ -16,10 +16,18 @@ import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
+import LivePagePromoExperiment from '#app/components/LivePagePromoExperiment';
+import useShowLivePagePromoExperiment from '#app/components/LivePagePromoExperiment/useShowLivePagePromoExperiment';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { Direction } from '#app/models/types/global';
-import { FOCUSABLE_ITEMS_SELECTOR } from './config';
+import useViewTracker from '#app/hooks/useViewTracker';
+import {
+  FOCUSABLE_ITEMS_SELECTOR,
+  NAVIGATION_TRACKING_COMPONENT,
+  STICKY_NAVIGATION_EXPERIMENT,
+  STICKY_NAVIGATION_TREATMENT,
+} from './config';
 import useStickyNavigation from './useStickyNavigation';
 import styles from './index.styles';
 
@@ -54,6 +62,10 @@ type CanonicalNavigationContainerProps = {
   topScrollableListItems: React.ReactNode;
   bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
+  stickyTopScrollableListItems: React.ReactNode;
+  stickyBottomScrollableListItems: React.ReactNode;
+  stickyDropdownListItems: React.ReactNode;
+  stickyNavExperimentVariant: string | null;
   blocks?: TopStoryItem[];
 };
 
@@ -63,18 +75,55 @@ const CanonicalNavigationContainer = ({
   topScrollableListItems,
   bottomScrollableListItems,
   dropdownListItems,
+  stickyTopScrollableListItems,
+  stickyBottomScrollableListItems,
+  stickyDropdownListItems,
+  stickyNavExperimentVariant,
   blocks,
 }: CanonicalNavigationContainerProps) => {
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
+  const showLivePagePromo = useShowLivePagePromoExperiment();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = useCallback(() => setIsOpen(false), []);
   const toggleMenu = useCallback(() => setIsOpen(previous => !previous), []);
 
-  const sticky = useStickyNavigation({ isOpen, closeMenu });
+  const sticky = useStickyNavigation({
+    isOpen,
+    closeMenu,
+    isExperimentEnabled:
+      stickyNavExperimentVariant === STICKY_NAVIGATION_TREATMENT,
+  });
+  const stickyNavViewTracker = useViewTracker({
+    componentName: NAVIGATION_TRACKING_COMPONENT,
+    sendOptimizelyEvents: true,
+    experimentName: STICKY_NAVIGATION_EXPERIMENT,
+    experimentVariant: stickyNavExperimentVariant,
+  });
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const dropdown = dropDownNavRef.current;
+    if (!sticky.isVisible || !isOpen || !dropdown) return undefined;
+
+    const preventPageScroll = (event: WheelEvent | TouchEvent) => {
+      event.preventDefault();
+    };
+
+    dropdown.addEventListener('wheel', preventPageScroll, {
+      passive: false,
+    });
+    dropdown.addEventListener('touchmove', preventPageScroll, {
+      passive: false,
+    });
+
+    return () => {
+      dropdown.removeEventListener('wheel', preventPageScroll);
+      dropdown.removeEventListener('touchmove', preventPageScroll);
+    };
+  }, [isOpen, sticky.isVisible, dropDownNavRef]);
 
   const handleDropdownBreakpointChange = useCallback(
     ({ matches }: MediaQueryList | MediaQueryListEvent) => {
@@ -171,6 +220,11 @@ const CanonicalNavigationContainer = ({
     () => topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />,
     [topBarOJsEnabled, blocks],
   );
+  const livePagePromo = useMemo(
+    () =>
+      showLivePagePromo && <LivePagePromoExperiment blocks={blocks ?? []} />,
+    [showLivePagePromo, blocks],
+  );
   // Scrolling updates the sticky state several times a second. Nothing in
   // this subtree depends on that state, so it is rebuilt only when something
   // it actually uses changes.
@@ -216,6 +270,7 @@ const CanonicalNavigationContainer = ({
           </div>
         </div>
         <div css={styles.bottomDivider} />
+        {!sticky.isEnabled && livePagePromo}
         {!sticky.isEnabled && topBarOJs}
       </Navigation>
     ),
@@ -228,7 +283,69 @@ const CanonicalNavigationContainer = ({
       bottomScrollableListItems,
       dropdownListItems,
       sticky.isEnabled,
+      livePagePromo,
       topBarOJs,
+      toggleMenu,
+      navRef,
+      dropDownNavRef,
+      secondaryScrollRef,
+      menuButtonRef,
+    ],
+  );
+
+  // Experiment Sticky Nav
+  const stickyNavigation = useMemo(
+    () => (
+      <Navigation dir={dir} isOpen={isOpen} ref={navRef}>
+        <div css={styles.navStack}>
+          <div css={styles.navRowWrapper}>
+            <div css={styles.topRow}>
+              <ScrollableNavigation
+                dir={dir}
+                css={styles.topRowItems}
+                navPosition="primary"
+              >
+                {stickyTopScrollableListItems}
+              </ScrollableNavigation>
+              {!isLite && (
+                <CanonicalMenuButton
+                  ref={menuButtonRef}
+                  css={styles.menuButton}
+                  announcedText={menuAnnouncedText}
+                  isOpen={isOpen}
+                  onClick={toggleMenu}
+                  dir={dir}
+                />
+              )}
+            </div>
+            <div role="presentation" ref={dropDownNavRef}>
+              <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+                {stickyDropdownListItems}
+              </CanonicalDropdown>
+            </div>
+          </div>
+          <div css={styles.lowerNavWrapper}>
+            <ScrollableNavigation
+              ref={secondaryScrollRef}
+              dir={dir}
+              css={styles.bottomRowItems}
+              navPosition="secondary"
+            >
+              {stickyBottomScrollableListItems}
+            </ScrollableNavigation>
+          </div>
+        </div>
+        <div css={styles.bottomDivider} />
+      </Navigation>
+    ),
+    [
+      dir,
+      isOpen,
+      isLite,
+      menuAnnouncedText,
+      stickyTopScrollableListItems,
+      stickyBottomScrollableListItems,
+      stickyDropdownListItems,
       toggleMenu,
       navRef,
       dropDownNavRef,
@@ -246,6 +363,7 @@ const CanonicalNavigationContainer = ({
         style={sticky.isPinned ? { height: sticky.height } : undefined}
       >
         <div
+          {...(sticky.isPinned && stickyNavViewTracker)}
           data-e2e="sticky-nav"
           data-sticky-visible={sticky.isVisible}
           hidden={sticky.isAwaitingFirstPaint}
@@ -257,11 +375,12 @@ const CanonicalNavigationContainer = ({
           aria-hidden={sticky.isOffScreen || undefined}
           inert={sticky.isOffScreen || undefined}
         >
-          {navigation}
+          {stickyNavigation}
         </div>
       </div>
-      {topBarOJs && (
+      {(livePagePromo || topBarOJs) && (
         <Navigation dir={dir} role="presentation">
+          {livePagePromo}
           {topBarOJs}
         </Navigation>
       )}

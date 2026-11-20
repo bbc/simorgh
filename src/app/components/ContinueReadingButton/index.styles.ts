@@ -19,8 +19,7 @@ export default {
       borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_4}`,
       paddingBottom: `calc(${spacings.DOUBLE}rem + ${spacings.FULL}rem)`,
 
-      svg: {
-        fill: 'currentColor',
+      '.external-svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         marginInlineStart: `${pixelsToRem(10)}rem`,

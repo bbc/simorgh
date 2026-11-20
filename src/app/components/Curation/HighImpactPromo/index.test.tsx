@@ -13,16 +13,19 @@ interface FixtureProps {
   promoData?: HighImpactPromoProps;
   headingLevel?: number;
   relatedTopic?: { title: string; link: { url: string } } | null | undefined;
+  showRelatedTopic?: boolean;
 }
 
 const Fixture = ({
   promoData = promoFixtureData,
   headingLevel,
   relatedTopic,
+  showRelatedTopic,
 }: FixtureProps) => (
   <HighImpactPromo
     {...promoData}
     headingLevel={headingLevel}
+    showRelatedTopic={showRelatedTopic}
     {...(relatedTopic !== undefined && { relatedTopic })}
   />
 );
@@ -96,7 +99,7 @@ describe('High Impact Promo', () => {
       title: 'Россия',
       link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
     };
-    render(<Fixture relatedTopic={relatedTopic} />);
+    render(<Fixture relatedTopic={relatedTopic} showRelatedTopic />);
 
     const relatedTopicLink = screen.getByRole('link', {
       name: 'Россия',
@@ -106,5 +109,20 @@ describe('High Impact Promo', () => {
       'href',
       'https://www.bbc.com/russian/topics/cw6eyw7m0m1t',
     );
+  });
+
+  it('should render the brand fallback when related topics are disabled', () => {
+    const relatedTopic = {
+      title: 'Россия',
+      link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
+    };
+    render(<Fixture relatedTopic={relatedTopic} />, { service: 'mundo' });
+
+    expect(
+      screen.queryByRole('link', { name: 'Россия' }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'BBC News Mundo' }),
+    ).toBeInTheDocument();
   });
 });

@@ -14,5 +14,4 @@ export interface LiveTVPageProps {
   pathname: string;
   service: string;
   status: number;
-  timeOnServer: number;
 }

@@ -1,14 +1,20 @@
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
+import clsx from 'clsx';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
+import isLive from '#app/lib/utilities/isLive';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
-import CallToActionLink from '../CallToActionLink';
 
 interface MessageBannerProps {
   description?: string;
@@ -38,6 +44,8 @@ const MessageBanner = ({
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
 
+  const { pageType } = use(RequestContext);
+
   const { mq } = useTheme();
 
   const imgSrcLarge = image?.replace(
@@ -53,6 +61,9 @@ const MessageBanner = ({
     srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
+  // EXPERIMENT: CTA Glow - remove this flag and place behind Optimizely check
+  const shouldEnableGlow = !isLive() && pageType === HOME_PAGE;
+
   return (
     <div {...viewTracker} css={styles.card}>
       <div css={styles.textWrap}>
@@ -64,14 +75,14 @@ const MessageBanner = ({
       <div css={styles.flex}>
         <CallToActionLink
           url={link}
-          className="focusIndicatorInvert"
+          className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
+          enableGlow={shouldEnableGlow}
           eventTrackingData={eventTrackingDataWithoutItemCount}
-          css={styles.callToActionLink}
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text
               shouldUnderlineOnHoverFocus
-              css={styles.callToActionLinkText}
+              className={ctaStyles.callToActionLinkText}
             >
               {linkText}
               <CallToActionLink.Chevron />

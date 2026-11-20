@@ -12,6 +12,7 @@ import getAgent from '#utilities/getAgent';
 import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import { getEnvConfig } from '../getEnvConfig';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
+import deduplicateRequests from '../deduplicateRequests';
 
 const logger = nodeLogger(__filename);
 
@@ -28,6 +29,7 @@ const cache = new LRUCache<string, Toggles>({
   max: cacheMaxItems,
   ttl: cacheTtlSeconds * 1000,
 });
+const deduplicateRequest = deduplicateRequests<Toggles>();
 
 type TogglesParams = {
   service: Services;
@@ -83,85 +85,93 @@ const getMergedToggles = async ({
     return { ...localToggles, ...cachedResponse };
   }
 
-  try {
-    const agent = isLocal ? null : await getAgent();
+  const fetchRemoteToggles = async (): Promise<Toggles> => {
+    try {
+      const agent = isLocal ? null : await getAgent();
 
-    const fetchOptions = {
-      ...(agent && { agent }),
-      headers: {
-        'ctx-service-env': serviceEnv,
-      },
-      ...(!isLocal && { signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT) }),
-    };
+      const fetchOptions = {
+        ...(agent && { agent }),
+        headers: {
+          'ctx-service-env': serviceEnv,
+        },
+        ...(!isLocal && { signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT) }),
+      };
 
-    const startHrTime = process.hrtime();
+      const startHrTime = process.hrtime();
 
-    const response = await fetch(togglesEndpoint, fetchOptions);
+      const response = await fetch(togglesEndpoint, fetchOptions);
 
-    const elapsedHrTime = process.hrtime(startHrTime);
-    logger.info(TOGGLE_API_RESPONSE_TIME, {
-      nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
-      togglesEndpoint,
-      service,
-    });
+      const elapsedHrTime = process.hrtime(startHrTime);
+      logger.info(TOGGLE_API_RESPONSE_TIME, {
+        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+        togglesEndpoint,
+        service,
+      });
 
-    if (!response.ok) {
-      const error = new Error() as FetchError;
-      error.status = response.status;
-      error.message = `Failed to fetch toggles for service: ${service}`;
-      throw error;
-    }
+      if (!response.ok) {
+        const error = new Error() as FetchError;
+        error.status = response.status;
+        error.message = `Failed to fetch toggles for service: ${service}`;
+        throw error;
+      }
 
-    const responseBody = await response.json();
-    const fetchedToggles = responseBody?.data?.toggles;
+      const responseBody = await response.json();
+      const fetchedToggles = responseBody?.data?.toggles;
 
-    if (!fetchedToggles) {
+      if (!fetchedToggles) {
+        return localToggles;
+      }
+
+      if (!isLocal) {
+        cache.set(cacheKey, fetchedToggles);
+      }
+
+      const mergedToggles = { ...localToggles, ...fetchedToggles };
+
+      if (isLocal) {
+        const notOverriddenToggles = Object.keys(localToggles).filter(
+          toggleName => !(toggleName in fetchedToggles),
+        );
+        const { _environment, ...finalToggles } = mergedToggles;
+
+        // eslint-disable-next-line no-console
+        console.info('[dev:toggles] Final toggles:', finalToggles);
+        // eslint-disable-next-line no-console
+        console.info(
+          `[dev:toggles] Local toggles NOT overridden by ${serviceEnv} iSite:\n${
+            notOverriddenToggles.length
+              ? notOverriddenToggles.join('\n')
+              : 'none'
+          }`,
+        );
+      }
+
+      return mergedToggles;
+    } catch (error) {
+      const { message } = error as FetchError;
+
+      logger.error(TOGGLE_API_FETCH_ERROR, {
+        error: message,
+        service,
+      });
+
+      if (isLocal) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          '[dev:toggles] Failed to fetch remote toggles for "%s" from %s iSite, falling back to local toggles:',
+          service,
+          serviceEnv,
+          message,
+        );
+      }
+
       return localToggles;
     }
+  };
 
-    if (!isLocal) {
-      cache.set(cacheKey, fetchedToggles);
-    }
-
-    const mergedToggles = { ...localToggles, ...fetchedToggles };
-
-    if (isLocal) {
-      const notOverriddenToggles = Object.keys(localToggles).filter(
-        toggleName => !(toggleName in fetchedToggles),
-      );
-      const { _environment, ...finalToggles } = mergedToggles;
-
-      // eslint-disable-next-line no-console
-      console.info('[dev:toggles] Final toggles:', finalToggles);
-      // eslint-disable-next-line no-console
-      console.info(
-        `[dev:toggles] Local toggles NOT overridden by ${serviceEnv} iSite:\n${
-          notOverriddenToggles.length ? notOverriddenToggles.join('\n') : 'none'
-        }`,
-      );
-    }
-
-    return mergedToggles;
-  } catch (error) {
-    const { message } = error as FetchError;
-
-    logger.error(TOGGLE_API_FETCH_ERROR, {
-      error: message,
-      service,
-    });
-
-    if (isLocal) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        '[dev:toggles] Failed to fetch remote toggles for "%s" from %s iSite, falling back to local toggles:',
-        service,
-        serviceEnv,
-        message,
-      );
-    }
-
-    return localToggles;
-  }
+  return isLocal
+    ? fetchRemoteToggles()
+    : deduplicateRequest(cacheKey, fetchRemoteToggles);
 };
 
 const fetchToggles = async (
