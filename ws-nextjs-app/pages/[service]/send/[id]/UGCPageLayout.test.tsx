@@ -1,15 +1,15 @@
 import {
+  AllTheProviders,
   act,
   render,
   within,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
 import hindiSignInRequiredFixture from '#data/hindi/send/u50853345.json';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { matchers } from '@emotion/jest';
-import { AccountContext } from '#app/contexts/AccountContext';
-import { IdctaConfig } from '#app/models/types/account';
 import UGCPageLayout from './UGCPageLayout';
 import { PageProps } from './types';
 
@@ -27,28 +27,9 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 expect.extend(matchers);
 
-const idctaConfig: IdctaConfig = {
-  'id-availability': 'GREEN',
-  signin_url: 'https://account.bbc.com/signin',
-  register_url: 'https://account.bbc.com/register',
-  settings_url: 'https://account.bbc.com/settings',
-  signout_url: 'https://account.bbc.com/signout',
-  foryou_url: 'https://account.bbc.com/foryou',
-  unavailable_url: 'https://account.bbc.com/unavailable',
-  identity: { idSignedInCookieName: 'ckns_id' },
-};
-
-const accountContext = {
-  isIdctaAvailable: true,
-  isRefreshAvailable: true,
-  isSignedIn: false,
-  signInUrl: idctaConfig.signin_url,
-  registerUrl: idctaConfig.register_url,
-  isArticlePersonalizationEnabled: false,
-  isArticlePersonalizationAvailable: false,
-  isTopicPersonalizationEnabled: false,
-  isTopicPersonalizationAvailable: false,
-  isPersonalisationOn: false,
+const renderOptions = {
+  service: 'hindi' as const,
+  idctaConfig: mockIdctaConfig,
 };
 
 describe('UGC Page Layout', () => {
@@ -66,23 +47,18 @@ describe('UGC Page Layout', () => {
 
     it('Does not render the form when the visitor is signed out', async () => {
       const { container: signInPageContainer } = await act(() =>
-        render(
-          <AccountContext.Provider value={accountContext}>
-            <UGCPageLayout pageData={pageData} />
-          </AccountContext.Provider>,
-          { service: 'hindi' },
-        ),
+        render(<UGCPageLayout pageData={pageData} />, renderOptions),
       );
 
       expect(signInPageContainer.querySelector('form')).not.toBeInTheDocument();
       expect(
         signInPageContainer.querySelector(
-          `a[href="${accountContext.signInUrl}"]`,
+          `a[href^="${mockIdctaConfig.signin_url}"]`,
         ),
       ).toBeInTheDocument();
       expect(
         signInPageContainer.querySelector(
-          `a[href="${accountContext.registerUrl}"]`,
+          `a[href^="${mockIdctaConfig.register_url}"]`,
         ),
       ).toBeInTheDocument();
       expect(signInPageContainer).toHaveTextContent(signInRequiredHeading);
@@ -90,14 +66,10 @@ describe('UGC Page Layout', () => {
 
     it('Renders the form when the visitor is signed in', async () => {
       const { container: formContainer } = await act(() =>
-        render(
-          <AccountContext.Provider
-            value={{ ...accountContext, isSignedIn: true }}
-          >
-            <UGCPageLayout pageData={pageData} />
-          </AccountContext.Provider>,
-          { service: 'hindi' },
-        ),
+        render(<UGCPageLayout pageData={pageData} />, {
+          ...renderOptions,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+        }),
       );
 
       expect(formContainer.querySelector('form')).toBeInTheDocument();
@@ -105,19 +77,18 @@ describe('UGC Page Layout', () => {
 
     it('Does not show the registration link when no registration URL is available', async () => {
       const { container: signInPageContainer } = await act(() =>
-        render(
-          <AccountContext.Provider
-            value={{ ...accountContext, registerUrl: undefined }}
-          >
-            <UGCPageLayout pageData={pageData} />
-          </AccountContext.Provider>,
-          { service: 'hindi' },
-        ),
+        render(<UGCPageLayout pageData={pageData} />, {
+          ...renderOptions,
+          idctaConfig: {
+            ...mockIdctaConfig,
+            register_url: undefined as unknown as string,
+          },
+        }),
       );
 
       expect(
         signInPageContainer.querySelector(
-          `a[href="${accountContext.registerUrl}"]`,
+          `a[href^="${mockIdctaConfig.register_url}"]`,
         ),
       ).not.toBeInTheDocument();
     });
@@ -127,7 +98,7 @@ describe('UGC Page Layout', () => {
       [
         'unavailable Account despite an initial signed-in state',
         {
-          ...idctaConfig,
+          ...mockIdctaConfig,
           'id-availability': 'RED',
           initialIsSignedIn: true,
         },
@@ -160,24 +131,27 @@ describe('UGC Page Layout', () => {
     });
 
     it('Updates the required form when authentication changes after render', async () => {
-      const renderPage = (isSignedIn: boolean) => (
-        <AccountContext.Provider value={{ ...accountContext, isSignedIn }}>
+      const renderPage = (initialIsSignedIn: boolean) => (
+        <AllTheProviders
+          {...renderOptions}
+          idctaConfig={{ ...mockIdctaConfig, initialIsSignedIn }}
+        >
           <UGCPageLayout pageData={pageData} />
-        </AccountContext.Provider>
+        </AllTheProviders>
       );
       const { container: formContainer, rerender } = await act(() =>
-        render(renderPage(false), { service: 'hindi' }),
+        render(renderPage(false)),
       );
 
       expect(formContainer.querySelector('form')).not.toBeInTheDocument();
 
-      await act(() => rerender(renderPage(true)));
+      act(() => rerender(renderPage(true)));
       expect(formContainer.querySelector('form')).toBeInTheDocument();
 
-      await act(() => rerender(renderPage(false)));
+      act(() => rerender(renderPage(false)));
       expect(formContainer.querySelector('form')).not.toBeInTheDocument();
       expect(
-        formContainer.querySelector(`a[href="${accountContext.signInUrl}"]`),
+        formContainer.querySelector(`a[href^="${mockIdctaConfig.signin_url}"]`),
       ).toBeInTheDocument();
     });
   });
@@ -186,9 +160,12 @@ describe('UGC Page Layout', () => {
     'Optional sign-in with signinRequired=%s',
     signinRequired => {
       it.each([
-        ['signed out', idctaConfig],
+        ['signed out', mockIdctaConfig],
         ['missing Account configuration', null],
-        ['Account unavailable', { ...idctaConfig, 'id-availability': 'RED' }],
+        [
+          'Account unavailable',
+          { ...mockIdctaConfig, 'id-availability': 'RED' },
+        ],
       ] as const)('Keeps the form accessible with %s', async (_, config) => {
         const pageData =
           hindiSignInRequiredFixture.data as PageProps['pageData'];
@@ -200,7 +177,7 @@ describe('UGC Page Layout', () => {
                 settings: { ...pageData.settings, signinRequired },
               }}
             />,
-            { service: 'hindi', idctaConfig: config },
+            { ...renderOptions, idctaConfig: config },
           ),
         );
 
