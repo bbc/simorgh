@@ -1,0 +1,182 @@
+@use '@scss/themeTokens' as theme;
+
+// ==========================================
+// 1. Base Container & Standard Grid Layout
+// ==========================================
+.container {
+  padding: theme.$spacings-double;
+  max-width: 100%;
+}
+
+.heading {
+  margin-bottom: theme.$spacings-double;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: theme.$spacings-double;
+}
+
+.gridCard {
+  background-color: var(--palette-neutral-100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gridLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid var(--palette-brand-focus);
+  }
+}
+
+.gridImageContainer {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gridCardTitle {
+  display: block;
+  padding: theme.$spacings-full;
+  font-weight: bold;
+}
+
+// ==========================================
+// 2. Portrait Video Carousel Layout (Dark Theme)
+// ==========================================
+.carouselTheme {
+  background-color: #141414; // Dark background matching portrait-video-carousel
+  color: #ffffff;
+  border-radius: 8px;
+
+  .heading {
+    color: #ffffff;
+  }
+}
+
+.carouselList {
+  display: flex;
+  flex-direction: row;
+  gap: theme.$spacings-double;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 theme.$spacings-double 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+
+  // Custom scrollbar styling
+  scrollbar-width: thin;
+  scrollbar-color: #444444 transparent;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #444444;
+    border-radius: 3px;
+  }
+}
+
+.carouselItem {
+  flex: 0 0 150px; // Portrait cards are narrower
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  list-style: none;
+
+  @media (min-width: theme.$mediaQueries-group-3-min-width) {
+    flex: 0 0 180px;
+  }
+}
+
+.card {
+  background-color: #222222;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:focus {
+    outline: 2px solid var(--palette-brand-focus);
+    outline-offset: 2px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16; // Vertical Portrait Ratio
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Play Icon Overlay
+.playOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playIcon {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid #ffffff;
+  margin-inline-start: 4px; // Logical property for RTL support
+}
+
+.cardTitle {
+  padding: theme.$spacings-full;
+  font-family: ReithSans, Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
