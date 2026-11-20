@@ -85,6 +85,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import RelatedContentCarousel from '../../components/RelatedContentCarousel';
 import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
@@ -267,6 +268,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'googlePreferredSource',
   );
   const { enabled: electionBannerEnabled } = useToggle('electionBanner');
+
+  const { enabled: isCarouselEnabled } = useToggle('relatedContentCarousel');
 
   const isGoogleReferralTraffic = isGoogleReferral();
 
@@ -551,7 +554,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
-          {showTopicDiscovery && (
+          {!isCarouselEnabled && showTopicDiscovery && (
             <TopicDiscovery
               css={[
                 ...(showContinueReadingButton
@@ -573,14 +576,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
-          {showPortraitVideoCarousel && (
+          {!isCarouselEnabled && showCountryCuration && (
+            <LocationBasedTopicOJ pageData={pageData} />
+          )}
+          {!isCarouselEnabled && showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          {!isCarouselEnabled && <RelatedContentSection content={blocks} />}
+          <RelatedContentCarousel content={blocks} />
           {showMediaCuration && (
             <div css={styles.mediaCurationRow}>
               <div data-testid="media-curation">
@@ -601,10 +607,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
         </div>
 
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isCarouselEnabled && !isApp && !isPGL && (
+          <SecondaryColumn pageData={pageData} />
+        )}
       </div>
 
-      {!isApp && !isPGL && (
+      {!isCarouselEnabled && !isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}

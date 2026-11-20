@@ -120,4 +120,7 @@ export default {
   webVitalsMonitoring: {
     enabled: true,
   },
+  relatedContentCarousel: {
+    enabled: true,
+  },
 };
