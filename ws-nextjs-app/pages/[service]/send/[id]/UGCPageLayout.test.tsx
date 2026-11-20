@@ -63,7 +63,6 @@ describe('UGC Page Layout', () => {
   describe('Sign-in gate', () => {
     const pageData = hindiSignInRequiredFixture.data as PageProps['pageData'];
     const signInRequiredHeading = 'प्रश्न भेजने के लिए साइन इन करें';
-    const hindiLocale = 'hi-IN';
 
     it('Does not render the form when the visitor is signed out', async () => {
       const { container: signInPageContainer } = await act(() =>
