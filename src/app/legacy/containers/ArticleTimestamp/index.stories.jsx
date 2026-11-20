@@ -173,3 +173,35 @@ TimezoneAndLocaleChecks.parameters = {
   },
 };
 TimezoneAndLocaleChecks.tags = ['!dev'];
+
+// 23:30 UTC rolls over to 1 January 2021 in timezones ahead of UTC
+const newYearsEveLateEvening = Date.UTC(2020, 11, 31, 23, 30);
+
+export const AllServicesAbsoluteDate = () => (
+  <ServiceTimestampMatrix
+    firstPublished={newYearsEveLateEvening}
+    lastPublished={newYearsEveLateEvening}
+  />
+);
+AllServicesAbsoluteDate.tags = ['!dev'];
+AllServicesAbsoluteDate.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
+
+// Same day as the fixed "now" but over 10 hours ago, so it is not relative
+const earlyMorningMockToday = Date.UTC(2025, 5, 15, 5, 5);
+
+export const AllServicesAbsoluteDateTime = () => (
+  <ServiceTimestampMatrix
+    firstPublished={earlyMorningMockToday}
+    lastPublished={earlyMorningMockToday}
+  />
+);
+AllServicesAbsoluteDateTime.tags = ['!dev'];
+AllServicesAbsoluteDateTime.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
