@@ -27,6 +27,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: [
       'test_server_side_experiment_visits_aa',
       HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
+      'newswb_ws_message_banner_cta_glow',
     ],
   },
 ];
