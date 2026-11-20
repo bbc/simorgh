@@ -97,7 +97,7 @@ const ScrollableTabs = ({
     itemTracker: {
       type: 'topic-discovery-tab-navigation',
       text: 'previous',
-      position: 0,
+      position: 1,
     },
     preventNavigation: true,
     ...(experimentProps && experimentProps),
@@ -109,7 +109,7 @@ const ScrollableTabs = ({
     itemTracker: {
       type: 'topic-discovery-tab-navigation',
       text: 'next',
-      position: 1,
+      position: 2,
     },
     preventNavigation: true,
     ...(experimentProps && experimentProps),

@@ -46,7 +46,7 @@ export default ({
     itemTracker: {
       type: 'portrait-video-carousel-navigation',
       text: 'previous',
-      position: 0,
+      position: 1,
     },
     preventNavigation: true,
   });
@@ -56,7 +56,7 @@ export default ({
     itemTracker: {
       type: 'portrait-video-carousel-navigation',
       text: 'next',
-      position: 1,
+      position: 2,
     },
     preventNavigation: true,
   });
