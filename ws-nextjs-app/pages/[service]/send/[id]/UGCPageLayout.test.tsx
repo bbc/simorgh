@@ -1,6 +1,7 @@
 import {
   act,
   render,
+  within,
 } from '#app/components/react-testing-library-with-providers';
 import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import mundoFixture from '#data/mundo/send/test2qq3x8vt.json';
@@ -8,6 +9,7 @@ import hindiSignInRequiredFixture from '#data/hindi/send/u50853345.json';
 import { GROUP_3_MIN_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 import { matchers } from '@emotion/jest';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { IdctaConfig } from '#app/models/types/account';
 import UGCPageLayout from './UGCPageLayout';
 import { PageProps } from './types';
 
@@ -25,6 +27,30 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 expect.extend(matchers);
 
+const idctaConfig: IdctaConfig = {
+  'id-availability': 'GREEN',
+  signin_url: 'https://account.bbc.com/signin',
+  register_url: 'https://account.bbc.com/register',
+  settings_url: 'https://account.bbc.com/settings',
+  signout_url: 'https://account.bbc.com/signout',
+  foryou_url: 'https://account.bbc.com/foryou',
+  unavailable_url: 'https://account.bbc.com/unavailable',
+  identity: { idSignedInCookieName: 'ckns_id' },
+};
+
+const accountContext = {
+  isIdctaAvailable: true,
+  isRefreshAvailable: true,
+  isSignedIn: false,
+  signInUrl: idctaConfig.signin_url,
+  registerUrl: idctaConfig.register_url,
+  isArticlePersonalizationEnabled: false,
+  isArticlePersonalizationAvailable: false,
+  isTopicPersonalizationEnabled: false,
+  isTopicPersonalizationAvailable: false,
+  isPersonalisationOn: false,
+};
+
 describe('UGC Page Layout', () => {
   let container: HTMLElement;
 
@@ -32,31 +58,12 @@ describe('UGC Page Layout', () => {
     jest.restoreAllMocks();
 
     mockMatchMedia();
-
-    ({ container } = await act(() => {
-      const pageData = mundoFixture.data as PageProps['pageData'];
-
-      return render(<UGCPageLayout pageData={pageData} />);
-    }));
   });
 
   describe('Sign-in gate', () => {
     const pageData = hindiSignInRequiredFixture.data as PageProps['pageData'];
-
-    const signInUrl = 'https://account.bbc.com/signin';
-
-    const accountContext = {
-      isIdctaAvailable: true,
-      isRefreshAvailable: true,
-      isSignedIn: false,
-      signInUrl,
-      registerUrl: 'https://account.bbc.com/register',
-      isArticlePersonalizationEnabled: false,
-      isArticlePersonalizationAvailable: false,
-      isTopicPersonalizationEnabled: false,
-      isTopicPersonalizationAvailable: false,
-      isPersonalisationOn: false,
-    };
+    const signInRequiredHeading = 'प्रश्न भेजने के लिए साइन इन करें';
+    const hindiLocale = 'hi-IN';
 
     it('Does not render the form when the visitor is signed out', async () => {
       const { container: signInPageContainer } = await act(() =>
@@ -70,16 +77,16 @@ describe('UGC Page Layout', () => {
 
       expect(signInPageContainer.querySelector('form')).not.toBeInTheDocument();
       expect(
-        signInPageContainer.querySelector(`a[href="${signInUrl}"]`),
+        signInPageContainer.querySelector(
+          `a[href="${accountContext.signInUrl}"]`,
+        ),
       ).toBeInTheDocument();
       expect(
         signInPageContainer.querySelector(
-          'a[href="https://account.bbc.com/register"]',
+          `a[href="${accountContext.registerUrl}"]`,
         ),
       ).toBeInTheDocument();
-      expect(signInPageContainer).toHaveTextContent(
-        'प्रश्न भेजने के लिए साइन इन करें',
-      );
+      expect(signInPageContainer).toHaveTextContent(signInRequiredHeading);
     });
 
     it('Renders the form when the visitor is signed in', async () => {
@@ -111,33 +118,134 @@ describe('UGC Page Layout', () => {
 
       expect(
         signInPageContainer.querySelector(
-          'a[href="https://account.bbc.com/register"]',
+          `a[href="${accountContext.registerUrl}"]`,
         ),
       ).not.toBeInTheDocument();
     });
+
+    it.each([
+      ['missing Account configuration', null],
+      [
+        'unavailable Account despite an initial signed-in state',
+        {
+          ...idctaConfig,
+          'id-availability': 'RED',
+          initialIsSignedIn: true,
+        },
+      ],
+    ] as const)('Keeps required forms hidden with %s', async (_, config) => {
+      const { container: signInPageContainer } = await act(() =>
+        render(<UGCPageLayout pageData={pageData} />, {
+          service: 'hindi',
+          idctaConfig: config,
+        }),
+      );
+
+      expect(signInPageContainer.querySelector('form')).not.toBeInTheDocument();
+      expect(
+        within(signInPageContainer).getByRole('heading', { level: 1 }),
+      ).toHaveTextContent(signInRequiredHeading);
+      expect(
+        signInPageContainer.querySelector('a[href=""]'),
+      ).not.toBeInTheDocument();
+      if (config) {
+        expect(within(signInPageContainer).getAllByRole('link')).toEqual([
+          expect.objectContaining({ href: config.unavailable_url }),
+          expect.objectContaining({ href: config.unavailable_url }),
+        ]);
+      } else {
+        expect(
+          within(signInPageContainer).queryByRole('link'),
+        ).not.toBeInTheDocument();
+      }
+    });
+
+    it('Updates the required form when authentication changes after render', async () => {
+      const renderPage = (isSignedIn: boolean) => (
+        <AccountContext.Provider value={{ ...accountContext, isSignedIn }}>
+          <UGCPageLayout pageData={pageData} />
+        </AccountContext.Provider>
+      );
+      const { container: formContainer, rerender } = await act(() =>
+        render(renderPage(false), { service: 'hindi' }),
+      );
+
+      expect(formContainer.querySelector('form')).not.toBeInTheDocument();
+
+      await act(() => rerender(renderPage(true)));
+      expect(formContainer.querySelector('form')).toBeInTheDocument();
+
+      await act(() => rerender(renderPage(false)));
+      expect(formContainer.querySelector('form')).not.toBeInTheDocument();
+      expect(
+        formContainer.querySelector(`a[href="${accountContext.signInUrl}"]`),
+      ).toBeInTheDocument();
+    });
   });
 
-  it('Renders a level 1 heading', () => {
-    const level1Heading = container.querySelector('h1');
-    expect(level1Heading).toBeInTheDocument();
-    expect(level1Heading?.innerHTML).toEqual('Escríbenos');
-  });
+  describe.each([false, undefined])(
+    'Optional sign-in with signinRequired=%s',
+    signinRequired => {
+      it.each([
+        ['signed out', idctaConfig],
+        ['missing Account configuration', null],
+        ['Account unavailable', { ...idctaConfig, 'id-availability': 'RED' }],
+      ] as const)('Keeps the form accessible with %s', async (_, config) => {
+        const pageData =
+          hindiSignInRequiredFixture.data as PageProps['pageData'];
+        const { container: formContainer } = await act(() =>
+          render(
+            <UGCPageLayout
+              pageData={{
+                ...pageData,
+                settings: { ...pageData.settings, signinRequired },
+              }}
+            />,
+            { service: 'hindi', idctaConfig: config },
+          ),
+        );
 
-  it('Renders a description', () => {
-    const description = container.innerHTML.includes(
-      'En BBC Mundo nos importa tu punto de vista.',
-    );
-    expect(description).toBeTruthy();
-  });
+        expect(formContainer.querySelector('form')).toBeInTheDocument();
+        expect(
+          formContainer.querySelector('#sign-in-required-heading'),
+        ).not.toBeInTheDocument();
+      });
+    },
+  );
 
-  it('Renders a form', () => {
-    const form = container.querySelector('form');
-    expect(form).toBeInTheDocument();
-  });
+  describe('Default campaign', () => {
+    beforeEach(async () => {
+      ({ container } = await act(() =>
+        render(
+          <UGCPageLayout
+            pageData={mundoFixture.data as PageProps['pageData']}
+          />,
+        ),
+      ));
+    });
 
-  it('Renders a submit button within the form', () => {
-    const submitButton = container.querySelector('button[type=submit]');
-    expect(submitButton).toBeInTheDocument();
+    it('Renders a level 1 heading', () => {
+      const level1Heading = container.querySelector('h1');
+      expect(level1Heading).toBeInTheDocument();
+      expect(level1Heading?.innerHTML).toEqual('Escríbenos');
+    });
+
+    it('Renders a description', () => {
+      const description = container.innerHTML.includes(
+        'En BBC Mundo nos importa tu punto de vista.',
+      );
+      expect(description).toBeTruthy();
+    });
+
+    it('Renders a form', () => {
+      const form = container.querySelector('form');
+      expect(form).toBeInTheDocument();
+    });
+
+    it('Renders a submit button within the form', () => {
+      const submitButton = container.querySelector('button[type=submit]');
+      expect(submitButton).toBeInTheDocument();
+    });
   });
 });
 

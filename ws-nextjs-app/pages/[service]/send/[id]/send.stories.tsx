@@ -8,7 +8,7 @@ import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';
 import swahiliFormFixture from '#data/swahili/send/u244742000.json';
 import hausaClosedFormFixture from '#data/hausa/send/u143732177.json';
-import hindiFormFixture from '#data/hindi/send/u50853345.json';
+import hindiSignInRequiredFixture from '#data/hindi/send/u50853345.json';
 import UGCPage from './UGCPageLayout';
 import { FormScreen, PageProps } from './types';
 
@@ -76,7 +76,7 @@ export const FormWithMultipleSections = () => (
   <Component initialScreen="form" fixtureData={swahiliFormFixture} />
 );
 export const FormSignInRequiredSignedOut = () => (
-  <Component initialScreen="form" fixtureData={hindiFormFixture} />
+  <Component initialScreen="form" fixtureData={hindiSignInRequiredFixture} />
 );
 export const FormSignInRequiredSignedIn = () => (
   <AccountContext.Provider
@@ -95,6 +95,6 @@ export const FormSignInRequiredSignedIn = () => (
       } satisfies AccountContextProps
     }
   >
-    <Component initialScreen="form" fixtureData={hindiFormFixture} />
+    <Component initialScreen="form" fixtureData={hindiSignInRequiredFixture} />
   </AccountContext.Provider>
 );
