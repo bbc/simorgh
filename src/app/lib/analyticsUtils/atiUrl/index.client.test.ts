@@ -389,6 +389,65 @@ describe('atiUrl', () => {
         });
       });
 
+      it('should include portrait video playback fields when provided on itemTracker', () => {
+        const componentSpecificTrack = buildReverbEventModel({
+          ...input,
+          itemTracker: {
+            type: 'portrait-video',
+            text: 'Example title',
+            watchedDuration: 9000,
+            totalDuration: 12000,
+            completionRate: 0.75,
+            skipRate: 0.25,
+            playbackTrigger: 'navigation',
+            versionId: 'p1234567',
+            resourceId: 'urn:bbc:pips:pid:p1234567',
+          },
+        });
+
+        expect(componentSpecificTrack.eventDetails.item).toEqual({
+          attribution: 'advertiserID',
+          link: 'http://localhost',
+          name: 'top-stories',
+          playback_trigger: 'navigation',
+          resource_id: 'urn:bbc:pips:pid:p1234567',
+          skip_rate: 0.25,
+          text: 'Example title',
+          total_duration: 12000,
+          type: 'portrait-video',
+          watched_duration: 9000,
+          completion_rate: 0.75,
+          version_id: 'p1234567',
+        });
+      });
+
+      it.each([
+        { watchedDuration: 0, completionRate: 0, skipRate: 1 },
+        { watchedDuration: 12000, completionRate: 1, skipRate: 0 },
+      ])(
+        'should preserve playback values at completion rate $completionRate',
+        ({ watchedDuration, completionRate, skipRate }) => {
+          const result = buildReverbEventModel({
+            ...input,
+            itemTracker: {
+              watchedDuration,
+              totalDuration: 12000,
+              completionRate,
+              skipRate,
+            },
+          });
+
+          expect(result.eventDetails.item).toEqual(
+            expect.objectContaining({
+              watched_duration: watchedDuration,
+              total_duration: 12000,
+              completion_rate: completionRate,
+              skip_rate: skipRate,
+            }),
+          );
+        },
+      );
+
       it('should return the correct Reverb group event model', () => {
         const blockSpecificTrack = buildReverbEventModel({
           ...input,
