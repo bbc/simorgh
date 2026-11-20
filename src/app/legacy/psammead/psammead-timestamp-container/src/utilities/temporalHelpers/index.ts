@@ -37,6 +37,7 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
   LocaleNumberingSystemOverride
 > = {
+  ar: { locale: 'ar-u-nu-latn', numberingSystem: 'latn' },
   bn: {
     locale: 'bn-u-nu-beng',
     numberingSystem: 'beng',

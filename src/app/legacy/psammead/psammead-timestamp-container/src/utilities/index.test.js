@@ -309,6 +309,14 @@ describe('Timestamp utility functions', () => {
         ).toEqual(expected);
       },
     );
+    it.each(['ar', 'mr'])(
+      'should return duration with Latin digits for locale %s',
+      testLocale => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual('30:00');
+      },
+    );
     it.each(['P1W', 'P1M', 'P1Y'])(
       'should return zero instead of throwing for calendar duration %s',
       duration => {

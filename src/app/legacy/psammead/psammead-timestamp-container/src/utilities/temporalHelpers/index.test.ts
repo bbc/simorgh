@@ -208,19 +208,24 @@ describe('Temporal Helper functions', () => {
       },
     );
 
-    it('forces Latin numerals for the `mr` locale', () => {
-      const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
+    it.each([
+      ['ar', 'ar-u-nu-latn'],
+      ['mr', 'mr-u-nu-latn'],
+    ])(
+      'forces Latin numerals for the `%s` locale',
+      (locale, expectedLocale) => {
+        const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
 
-      translateDigits(5, 2, 'mr');
-
-      expect(numberFormatSpy).toHaveBeenCalledWith(
-        'mr-u-nu-latn',
-        expect.objectContaining({
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-    });
+        expect(translateDigits(5, 2, locale)).toEqual('05');
+        expect(numberFormatSpy).toHaveBeenCalledWith(
+          expectedLocale,
+          expect.objectContaining({
+            minimumIntegerDigits: 2,
+            useGrouping: false,
+          }),
+        );
+      },
+    );
 
     it('leaves locales without an explicit override unchanged', () => {
       const numberFormatSpy = jest.spyOn(Intl, 'NumberFormat');
