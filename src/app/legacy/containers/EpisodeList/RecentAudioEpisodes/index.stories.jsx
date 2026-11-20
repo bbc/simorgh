@@ -1,15 +1,25 @@
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { indonesian, arabic } from './fixtures';
+import serviceVariants from '#testHelpers/serviceVariants';
+import { durationCoverage, indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 
-const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
+const Component = ({
+  masterBrand,
+  brandId,
+  pageType,
+  episodes,
+  service,
+  variant,
+  pageLang,
+}) => (
   <RequestContextProvider
     service={service}
     pageType="media"
     pathname={`/${service}`}
     isAmp={false}
+    variant={variant === 'default' ? null : variant}
   >
     <ToggleContextProvider
       toggles={{
@@ -18,7 +28,11 @@ const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
         },
       }}
     >
-      <ServiceContextProvider service={service}>
+      <ServiceContextProvider
+        service={service}
+        variant={variant}
+        pageLang={pageLang}
+      >
         <RecentAudioEpisodes
           masterBrand={masterBrand}
           episodes={episodes}
@@ -83,4 +97,30 @@ export const TestSingleItem = storyArgs =>
 TestSingleItem.tags = ['!dev'];
 TestSingleItem.globals = {
   service: { service: 'indonesia' },
+};
+
+export const AllServicesDuration = () => (
+  <div>
+    {serviceVariants.map(
+      ({ service, variant, pageLang, configVariant, label }) => (
+        <div key={`${service}-${configVariant}`}>
+          <strong>{label}</strong>
+          <Component
+            episodes={durationCoverage}
+            pageType="On Demand Radio"
+            masterBrand={`bbc_${service}_radio`}
+            service={service}
+            variant={variant}
+            pageLang={pageLang}
+          />
+        </div>
+      ),
+    )}
+  </div>
+);
+AllServicesDuration.tags = ['!dev'];
+AllServicesDuration.parameters = {
+  chromatic: {
+    disable: false,
+  },
 };
