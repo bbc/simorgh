@@ -1,4 +1,5 @@
 import '#psammead/moment-timezone-include/tz/Europe/London';
+import '#lib/locales/timestamp/cy';
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/cy';

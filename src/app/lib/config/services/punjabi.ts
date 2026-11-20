@@ -1,6 +1,7 @@
 import gurmukhi from '../../../components/ThemeProvider/fontScripts/gurmukhi';
 import '#lib/locales/moment/pa-in';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
+import '#lib/locales/timestamp/pa-in';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 

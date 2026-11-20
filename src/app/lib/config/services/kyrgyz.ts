@@ -1,5 +1,6 @@
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/ky';
 import '#lib/locales/moment/ky';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

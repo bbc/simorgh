@@ -47,6 +47,18 @@ The following locales have overrides to meet BBC World Service requirements wher
 
 - `/moment/fa-af` - locale for Dari, extends the `fa` locale for Persian
 
+### Timestamp locale rules
+
+The editorial rules for rendering timestamps live in `/timestamp`, one file per locale (e.g. `/timestamp/vi`). Each file registers a `TimestampLocaleRules` object with `registerTimestampLocale`, and can define:
+
+- `months` - 12 month names in chronological order, used instead of the `Intl` month names
+- `longDate` - the pattern behind `LL`, built from `D`, `MMMM`, `YYYY` and `[literal]` (default `D MMMM YYYY`, e.g. Vietnamese is `D MMMM [năm] YYYY`)
+- `ordinalDay` - formats the day of the month for `LL` (e.g. Pidgin `24th`)
+- `numbering` - the numbering system forced for digits
+- `timezoneLabels` - the label shown for a time zone, either a string (`EAT`) or `{ standard, daylight }` (`GMT`/`BST`)
+
+Locales without a rules file fall back to `Intl`. Rules are only bundled for a service if its service config imports the rules file, so add `import '#lib/locales/timestamp/<locale>';` to the service config next to its time zone import.
+
 ### Numerals
 
 #### Numeral systems
@@ -77,10 +89,7 @@ moment.locale('ig');
 ### Numerals
 
 ```jsx
-import {
-  Bengali,
-  makeNumeralTranslator,
-} from '#lib/locales/numerals';
+import { Bengali, makeNumeralTranslator } from '#lib/locales/numerals';
 
 const translateNumerals = makeNumeralTranslator(Bengali);
 const result = translateNumerals(someInput); // returns someInput with numbers translated to Bengali

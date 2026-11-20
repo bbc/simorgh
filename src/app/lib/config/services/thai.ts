@@ -1,5 +1,6 @@
 import thai from '../../../components/ThemeProvider/fontScripts/thai';
 import '#psammead/moment-timezone-include/tz/Asia/Bangkok';
+import '#lib/locales/timestamp/th';
 import '#lib/locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

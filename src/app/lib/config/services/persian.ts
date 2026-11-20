@@ -1,5 +1,6 @@
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/fa';
 import jalaali from '#psammead/psammead-calendars/src';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import withContext from '../../../contexts/utils/withContext';

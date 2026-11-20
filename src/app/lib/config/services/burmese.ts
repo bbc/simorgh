@@ -1,5 +1,6 @@
 import burmese from '../../../components/ThemeProvider/fontScripts/burmese';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/my';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/my';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

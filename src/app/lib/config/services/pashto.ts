@@ -1,6 +1,7 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#lib/locales/moment/ps';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/ps';
 import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

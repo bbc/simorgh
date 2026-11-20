@@ -88,7 +88,7 @@ Digits follow the numbering system each service showed under Moment. Where the r
 | `fa`, `fa-AF` (Persian, Dari) | Eastern Arabic-Indic | no override; relies on the locale default (`arabext`) |
 | all other locales | Latin | no override; relies on the locale default |
 
-These match the digit handling of the equivalent Moment locales in `src/app/lib/locales/moment`. Overrides are matched on the normalised locale (e.g. `pa-in` becomes `pa-IN`), and live in `LOCALE_NUMBERING_SYSTEM_OVERRIDES` in `src/utilities/temporalHelpers`.
+These match the digit handling of the equivalent Moment locales in `src/app/lib/locales/moment`. Overrides are matched on the normalised locale (e.g. `pa-in` becomes `pa-IN`), and are declared in each locale's rules file in `src/app/lib/locales/timestamp`. A rules file only applies once it has been imported, which each service config does for its own locale.
 
 Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, separated by `:` or `,` (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`). Tokens may be repeated (e.g. `'h:h'`), and every occurrence is replaced. This is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
 

@@ -1,6 +1,7 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#lib/locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
+import '#lib/locales/timestamp/ig';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
