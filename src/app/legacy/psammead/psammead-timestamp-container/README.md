@@ -58,19 +58,46 @@ const WrappingContainer = () => (
 ```jsx
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 
-const localisedDuration = formatDuration({ duration: 'PTM30', locale: 'my' });
+const localisedDuration = formatDuration({ duration: 'PT30M', locale: 'my' });
 const customFormatDuration = formatDuration({
-  duration: 'PTM30',
+  duration: 'PT30M',
   format: 'mm,ss',
 });
 ```
 
+`formatDuration` is powered by the [`Temporal`](https://tc39.es/proposal-temporal/docs/) API rather than moment. `duration` is parsed with `Temporal.Duration.from()`; if `Temporal` isn't available in the runtime (e.g. an older browser without the [`temporal-polyfill`](https://www.npmjs.com/package/temporal-polyfill) loaded) or `duration` isn't a valid ISO 8601 duration string, it falls back to `0` seconds rather than throwing.
+
+Durations containing weeks, months, or years, and negative durations, fall back to `0` seconds. Temporal requires a `relativeTo` date to convert calendar units to seconds, and this formatter does not define calendar semantics for them. Durations containing days or time units are supported.
+
+`locale` doesn't need to be a strict BCP 47 language tag (e.g. underscore-separated locales like `fa_af` are normalised) — it's used to localise digits via `Intl.NumberFormat`, e.g. `locale: 'my'` renders Burmese digits (`၀`-`၉`). If `locale` is not provided or it can't be parsed, it falls back to `en-GB`.
+
+For Arabic-script locales (`ar`, `fa`, `ps`, `ur`), the `,` separator in `format` is rendered as the Arabic comma (`،`) instead.
+
+Digits follow the numbering system each service showed under Moment. Where the runtime's default for a locale could differ, `formatDuration` forces the numbering system explicitly:
+
+<!-- prettier-ignore -->
+| Locale (services) | Digits | How |
+|-------------------|--------|-----|
+| `my` (Burmese) | Burmese | `-u-nu-mymr`, with a fallback translator if the runtime ignores it |
+| `ne` (Nepali) | Nepali (Devanagari) | `-u-nu-deva`, with a fallback translator |
+| `bn` (Bengali) | Bengali | `-u-nu-beng`, with a fallback translator |
+| `ps` (Pashto) | Eastern Arabic-Indic | `-u-nu-arabext`, with a fallback translator |
+| `ar` (Arabic) | Latin | `-u-nu-latn`; some older CLDR versions default to Arabic-Indic digits |
+| `mr` (Marathi) | Latin | `-u-nu-latn`; the locale default is Devanagari |
+| `gu` (Gujarati), `hi` (Hindi), `pa-IN` (Punjabi), `ta` (Tamil) | Latin | `-u-nu-latn`; current defaults are already Latin, this guards against older engines just in case |
+| `fa`, `fa-AF` (Persian, Dari) | Eastern Arabic-Indic | no override; relies on the locale default (`arabext`) |
+| all other locales | Latin | no override; relies on the locale default |
+
+These match the digit handling of the equivalent Moment locales in `src/app/lib/locales/moment`. Overrides are matched on the normalised locale (e.g. `pa-in` becomes `pa-IN`), and live in `LOCALE_NUMBERING_SYSTEM_OVERRIDES` in `src/utilities/temporalHelpers`.
+
+Only the `h`, `mm`, `m` and `ss` tokens are recognised in `format`, separated by `:` or `,` (e.g. `'h:mm:ss'`, `'mm,ss'`, `'m'`). Tokens may be repeated (e.g. `'h:h'`), and every occurrence is replaced. This is enforced by the `DurationFormat` type, so passing anything else (e.g. a moment-style string like `'YYYY-MM-DD'`) is a TypeScript error.
+
 <!-- prettier-ignore -->
 | Argument  | Type        | Required | Default | Example         |
 |-----------|-------------|----------|---------|-----------------|
-| duration  | string | Yes | N/A      | `PTH1M29S30` Duration string as specified by ISO 8601 standard. |
-| format    | string | No  | `mm:ss`, or `h:mm:ss` if in hours | `mm,ss` |
-| locale    | string | No  | `en-gb`  | `fr` |
+| duration  | string | Yes | N/A      | `PT1H29M30S` Duration string as specified by ISO 8601 standard. |
+| format    | `DurationFormat` | No  | `mm:ss`, or `h:mm:ss` if in hours | `mm,ss` |
+| locale    | string | No  | `en-GB`  | `ar` |
 
 **localisedMoment**
 
