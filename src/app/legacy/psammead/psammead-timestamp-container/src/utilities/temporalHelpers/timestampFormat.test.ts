@@ -1,3 +1,30 @@
+import '#app/lib/locales/timestamp/ar';
+import '#app/lib/locales/timestamp/cy';
+import '#app/lib/locales/timestamp/en-gb';
+import '#app/lib/locales/timestamp/fa-af';
+import '#app/lib/locales/timestamp/gd';
+import '#app/lib/locales/timestamp/hi';
+import '#app/lib/locales/timestamp/id';
+import '#app/lib/locales/timestamp/ja';
+import '#app/lib/locales/timestamp/ky';
+import '#app/lib/locales/timestamp/mr';
+import '#app/lib/locales/timestamp/my';
+import '#app/lib/locales/timestamp/ne';
+import '#app/lib/locales/timestamp/om';
+import '#app/lib/locales/timestamp/pcm';
+import '#app/lib/locales/timestamp/pl';
+import '#app/lib/locales/timestamp/ps';
+import '#app/lib/locales/timestamp/pt-br';
+import '#app/lib/locales/timestamp/ro';
+import '#app/lib/locales/timestamp/ru';
+import '#app/lib/locales/timestamp/si';
+import '#app/lib/locales/timestamp/so';
+import '#app/lib/locales/timestamp/sr';
+import '#app/lib/locales/timestamp/sr-cyrl';
+import '#app/lib/locales/timestamp/sw';
+import '#app/lib/locales/timestamp/ur';
+import '#app/lib/locales/timestamp/vi';
+import '#app/lib/locales/timestamp/yo';
 import {
   formatTimestampToken,
   resolveTimeZoneLabel,
@@ -33,31 +60,47 @@ describe('Timestamp formatting Temporal helpers', () => {
 
   describe('resolveTimeZoneLabel', () => {
     it.each([
-      ['Africa/Lagos', 'WAT'],
-      ['Asia/Kathmandu', '+0545'],
-      ['America/Sao_Paulo', '-03'],
-      ['GMT', 'GMT'],
-    ])('resolves %s to %s', (timezone, expected) => {
+      ['Asia/Kathmandu', 'en-GB', '+0545'],
+      ['America/Sao_Paulo', 'en-GB', '-03'],
+      ['GMT', 'en-GB', 'GMT'],
+      ['GMT', 'ar', 'GMT'],
+      ['Africa/Lagos', 'yo', 'WAT'],
+      ['Africa/Lagos', 'pcm', 'WAT'],
+      ['Africa/Addis_Ababa', 'om', 'EAT'],
+      ['Africa/Mogadishu', 'so', 'EAT'],
+      ['Africa/Nairobi', 'sw', 'EAT'],
+      ['Asia/Kolkata', 'hi', 'IST'],
+      ['Asia/Karachi', 'ur', 'PKT'],
+      ['Asia/Jakarta', 'id', 'WIB'],
+      ['Asia/Tokyo', 'ja', 'JST'],
+    ])('resolves %s for %s to %s', (timezone, locale, expected) => {
       expect(
         resolveTimeZoneLabel({
           timestamp: Date.UTC(2021, 5, 15, 12),
           timezone,
-          locale: 'en-GB',
+          locale,
         }),
       ).toEqual(expected);
     });
 
     it.each([
-      [Date.UTC(2021, 2, 28, 0, 30), 'GMT'],
-      [Date.UTC(2021, 2, 28, 1, 30), 'BST'],
+      ['en-GB', 'Europe/London', Date.UTC(2021, 2, 28, 0, 30), 'GMT'],
+      ['en-GB', 'Europe/London', Date.UTC(2021, 2, 28, 1, 30), 'BST'],
+      ['cy', 'Europe/London', Date.UTC(2021, 6, 1, 12), 'BST'],
+      ['gd', 'Europe/London', Date.UTC(2021, 6, 1, 12), 'BST'],
+      ['gd', 'Europe/London', Date.UTC(2021, 0, 1, 12), 'GMT'],
+      ['pl', 'Europe/Warsaw', Date.UTC(2021, 0, 1, 12), 'CET'],
+      ['pl', 'Europe/Warsaw', Date.UTC(2021, 6, 1, 12), 'CEST'],
+      ['ro', 'Europe/Bucharest', Date.UTC(2021, 0, 1, 12), 'EET'],
+      ['ro', 'Europe/Bucharest', Date.UTC(2021, 6, 1, 12), 'EEST'],
     ])(
-      'resolves Europe/London DST labels to %s',
-      (timestampValue, expected) => {
+      'resolves %s DST label for %s at %i to %s',
+      (locale, timezone, timestampValue, expected) => {
         expect(
           resolveTimeZoneLabel({
             timestamp: timestampValue,
-            timezone: 'Europe/London',
-            locale: 'en-GB',
+            timezone,
+            locale,
           }),
         ).toEqual(expected);
       },
@@ -155,6 +198,13 @@ describe('Timestamp formatting Temporal helpers', () => {
       ['ne', '२१ नोभेम्बर २०२४'],
       ['mr', '21 नोव्हेंबर 2024'],
       ['ru', '21 ноября 2024'],
+      ['vi', '21 tháng 11 năm 2024'],
+      ['si', '2024 නොවැම්බර් 21'],
+      ['my', '၂၁ နိုဝင်ဘာ ၂၀၂၄'],
+      ['id', '21 November 2024'],
+      ['yo', '21 Bélú 2024'],
+      ['gd', '21 An t-Samhain 2024'],
+      ['de', '21 November 2024'],
     ])('formats the editorial date style for %s', (locale, expected) => {
       expect(
         formatTimestampToken({

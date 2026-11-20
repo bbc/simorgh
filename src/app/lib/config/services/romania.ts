@@ -1,6 +1,7 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#lib/locales/moment/ro';
 import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
+import '#lib/locales/timestamp/ro';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 

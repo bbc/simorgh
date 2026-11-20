@@ -1,5 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/Warsaw';
+import '#lib/locales/timestamp/pl';
 import '#lib/locales/moment/pl-pl';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

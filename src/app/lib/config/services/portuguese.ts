@@ -1,5 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/America/Sao_Paulo';
+import '#lib/locales/timestamp/pt-br';
 import '#lib/locales/moment/pt-br';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

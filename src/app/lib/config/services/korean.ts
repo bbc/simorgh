@@ -1,5 +1,6 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Seoul';
+import '#lib/locales/timestamp/ko';
 import withContext from '../../../contexts/utils/withContext';
 import 'moment/locale/ko';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

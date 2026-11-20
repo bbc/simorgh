@@ -1,6 +1,7 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import 'moment/locale/hu';
 import '#psammead/moment-timezone-include/tz/Europe/Budapest';
+import '#lib/locales/timestamp/hu';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 

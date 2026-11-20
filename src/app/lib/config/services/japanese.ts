@@ -1,5 +1,6 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Asia/Tokyo';
+import '#lib/locales/timestamp/ja';
 import 'moment/locale/ja';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

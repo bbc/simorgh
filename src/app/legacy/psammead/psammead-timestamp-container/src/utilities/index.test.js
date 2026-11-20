@@ -1,4 +1,16 @@
 import moment from 'moment-timezone';
+import '#app/lib/locales/timestamp/ar';
+import '#app/lib/locales/timestamp/bn';
+import '#app/lib/locales/timestamp/gu';
+import '#app/lib/locales/timestamp/hi';
+import '#app/lib/locales/timestamp/mr';
+import '#app/lib/locales/timestamp/my';
+import '#app/lib/locales/timestamp/ne';
+import '#app/lib/locales/timestamp/pa-in';
+import '#app/lib/locales/timestamp/pcm';
+import '#app/lib/locales/timestamp/ps';
+import '#app/lib/locales/timestamp/ta';
+import '#app/lib/locales/timestamp/yo';
 import {
   formatDuration,
   formatUnixTimestamp,
@@ -187,7 +199,7 @@ describe('Timestamp utility functions', () => {
           timestamp: utcTimestamp,
           format: 'D MMMM YYYY, HH:mm z',
           timezone: 'Africa/Lagos',
-          locale,
+          locale: 'pcm',
         }),
       ).toEqual('15 June 2021, 13:00 WAT');
     });

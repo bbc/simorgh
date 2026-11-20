@@ -1,5 +1,6 @@
 import tamil from '../../../components/ThemeProvider/fontScripts/tamil';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/ta';
 import '#lib/locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

@@ -1,10 +1,4 @@
-import {
-  Bengali,
-  Burmese,
-  EasternArabic,
-  Nepali,
-  makeNumeralTranslator,
-} from '#app/lib/locales/numerals/index';
+import { getTimestampLocaleRules } from '#app/lib/locales/timestamp/registry';
 
 type Locale = string;
 type ISODuration = string;
@@ -17,52 +11,8 @@ export type DurationFormat =
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`
   | `${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}${DurationFormatSeparator}${DurationFormatToken}`;
 
-type LocaleNumberingSystemOverride = {
-  locale: string;
-  numberingSystem: string;
-  fallback?: (value: string) => string;
-};
-
 export const withArabicComma = (string: string) => {
   return string.replace(/,/g, '،');
-};
-
-const translateEasternArabicNumerals = makeNumeralTranslator(EasternArabic);
-const translateBengaliNumerals = makeNumeralTranslator(Bengali);
-const translateBurmeseNumerals = makeNumeralTranslator(Burmese);
-const translateNepaliNumerals = makeNumeralTranslator(Nepali);
-
-// Mirrors the digit conversion done by each Moment locale's postformat
-export const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
-  string,
-  LocaleNumberingSystemOverride
-> = {
-  ar: { locale: 'ar-u-nu-latn', numberingSystem: 'latn' },
-  bn: {
-    locale: 'bn-u-nu-beng',
-    numberingSystem: 'beng',
-    fallback: translateBengaliNumerals,
-  },
-  gu: { locale: 'gu-u-nu-latn', numberingSystem: 'latn' },
-  hi: { locale: 'hi-u-nu-latn', numberingSystem: 'latn' },
-  mr: { locale: 'mr-u-nu-latn', numberingSystem: 'latn' },
-  my: {
-    locale: 'my-u-nu-mymr',
-    numberingSystem: 'mymr',
-    fallback: translateBurmeseNumerals,
-  },
-  ne: {
-    locale: 'ne-u-nu-deva',
-    numberingSystem: 'deva',
-    fallback: translateNepaliNumerals,
-  },
-  'pa-IN': { locale: 'pa-IN-u-nu-latn', numberingSystem: 'latn' },
-  ps: {
-    locale: 'ps-u-nu-arabext',
-    numberingSystem: 'arabext',
-    fallback: translateEasternArabicNumerals,
-  },
-  ta: { locale: 'ta-u-nu-latn', numberingSystem: 'latn' },
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
@@ -104,11 +54,7 @@ export const translateDigits = (
   minDigits: number,
   sanitisedLocale: Locale,
 ) => {
-  const localeKey = sanitisedLocale.toLowerCase();
-  const languageCode = localeKey.split('-')[0];
-  const localeOverride =
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode];
+  const localeOverride = getTimestampLocaleRules(sanitisedLocale)?.numbering;
   const formatter = new Intl.NumberFormat(
     localeOverride?.locale ?? sanitisedLocale,
     {

@@ -1,5 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/ha';
 import '#lib/locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

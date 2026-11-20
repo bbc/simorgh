@@ -1,5 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Asia/Jakarta';
+import '#lib/locales/timestamp/id';
 import 'moment/locale/id';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';

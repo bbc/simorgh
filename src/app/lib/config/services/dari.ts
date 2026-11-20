@@ -1,6 +1,7 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#lib/locales/moment/fa-af';
 import '#psammead/moment-timezone-include/tz/Asia/Kabul';
+import '#lib/locales/timestamp/fa-af';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 

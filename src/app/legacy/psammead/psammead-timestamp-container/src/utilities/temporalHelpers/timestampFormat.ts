@@ -1,12 +1,5 @@
-import {
-  LOCALE_NUMBERING_SYSTEM_OVERRIDES,
-  sanitiseLocale,
-  withArabicComma,
-} from '.';
-import {
-  getEditorialMonthName,
-  getEditorialOrdinalDay,
-} from './editorialMonthNames';
+import { getTimestampLocaleRules } from '#app/lib/locales/timestamp/registry';
+import { sanitiseLocale, withArabicComma } from '.';
 
 type Locale = string;
 
@@ -24,9 +17,9 @@ export type TimestampFormat =
 
 const ARABIC_SCRIPT_LOCALES = new Set(['ar', 'fa', 'ps', 'ur']);
 
-const EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES = {
-  ar: { locale: 'ar-u-nu-latn', numberingSystem: 'latn' },
-};
+const DEFAULT_LONG_DATE_PATTERN = 'D MMMM YYYY';
+
+const LONG_DATE_PATTERN_TOKENS = /\[([^\]]*)\]|MMMM|YYYY|D/g;
 
 const DATE_LOCALE_OVERRIDES: Record<string, string> = {
   sr: 'sr-Latn',
@@ -34,8 +27,8 @@ const DATE_LOCALE_OVERRIDES: Record<string, string> = {
 
 const NATIVE_LONG_DATE_LOCALES = new Set(['hu', 'ja', 'ko', 'zh-cn', 'zh-tw']);
 
-const TIMEZONE_LABEL_OVERRIDES: Record<string, string> = {
-  'Africa/Lagos': 'WAT',
+// GMT is not a region, so Intl reports it as UTC for every locale
+const DEFAULT_TIMEZONE_LABELS: Record<string, string> = {
   GMT: 'GMT',
 };
 
@@ -43,17 +36,8 @@ const OFFSET_TIMEZONE_LABEL = /^(?:GMT|UTC)([+-])(\d{1,2})(?::?(\d{2}))?$/;
 
 const getTimeZone = (timezone?: string) => timezone || 'UTC';
 
-const getLocaleNumberingSystemOverride = (sanitisedLocale: Locale) => {
-  const localeKey = sanitisedLocale.toLowerCase();
-  const languageCode = localeKey.split('-')[0];
-
-  return (
-    EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
-    EDITORIAL_DATE_NUMBERING_SYSTEM_OVERRIDES[languageCode] ??
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[localeKey] ??
-    LOCALE_NUMBERING_SYSTEM_OVERRIDES[languageCode]
-  );
-};
+const getLocaleNumberingSystemOverride = (sanitisedLocale: Locale) =>
+  getTimestampLocaleRules(sanitisedLocale)?.numbering;
 
 const getDateLocale = (sanitisedLocale: Locale) => {
   const localeOverride = getLocaleNumberingSystemOverride(sanitisedLocale);
@@ -130,7 +114,8 @@ const formatMonth = ({
         timeZone: getTimeZone(timezone),
       }).format(new Date(timestamp)),
     ) - 1;
-  const editorialMonthName = getEditorialMonthName(sanitisedLocale, monthIndex);
+  const editorialMonthName =
+    getTimestampLocaleRules(sanitisedLocale)?.months?.[monthIndex];
 
   if (editorialMonthName) return editorialMonthName;
 
@@ -278,6 +263,84 @@ const formatTime = ({
     options: { hour: '2-digit', minute: '2-digit', hourCycle: 'h23' },
   });
 
+const applyLongDatePattern = (
+  pattern: string,
+  values: Record<'D' | 'MMMM' | 'YYYY', string>,
+) =>
+  pattern.replace(
+    LONG_DATE_PATTERN_TOKENS,
+    (token, literal?: string) =>
+      literal ?? values[token as keyof typeof values],
+  );
+
+const getOffsetMinutes = ({
+  timestamp,
+  timezone,
+}: {
+  timestamp: number;
+  timezone: string;
+}) => {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    calendar: 'gregory',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hourCycle: 'h23',
+    timeZone: timezone,
+  }).formatToParts(new Date(timestamp));
+  const getPart = (type: Intl.DateTimeFormatPartTypes) =>
+    Number(parts.find(part => part.type === type)?.value);
+  const zonedTimeAsUtc = Date.UTC(
+    getPart('year'),
+    getPart('month') - 1,
+    getPart('day'),
+    getPart('hour'),
+    getPart('minute'),
+  );
+
+  return (zonedTimeAsUtc - Math.floor(timestamp / 60000) * 60000) / 60000;
+};
+
+const isDaylightSavingTime = ({
+  timestamp,
+  timezone,
+}: {
+  timestamp: number;
+  timezone: string;
+}) => {
+  const year = new Date(timestamp).getUTCFullYear();
+  const standardOffset = Math.min(
+    getOffsetMinutes({ timestamp: Date.UTC(year, 0, 1), timezone }),
+    getOffsetMinutes({ timestamp: Date.UTC(year, 6, 1), timezone }),
+  );
+
+  return getOffsetMinutes({ timestamp, timezone }) > standardOffset;
+};
+
+const getTimeZoneLabelOverride = ({
+  timestamp,
+  timezone,
+  sanitisedLocale,
+}: {
+  timestamp: number;
+  timezone?: string;
+  sanitisedLocale: Locale;
+}) => {
+  if (!timezone) return undefined;
+
+  const label =
+    getTimestampLocaleRules(sanitisedLocale)?.timezoneLabels?.[timezone] ??
+    DEFAULT_TIMEZONE_LABELS[timezone];
+
+  if (typeof label !== 'object') return label;
+
+  return isDaylightSavingTime({ timestamp, timezone })
+    ? label.daylight
+    : label.standard;
+};
+
 const normaliseTimeZoneLabel = (label: string) => {
   const match = label.match(OFFSET_TIMEZONE_LABEL);
 
@@ -316,11 +379,15 @@ export const resolveTimeZoneLabel = ({
   timezone?: string;
   locale?: Locale;
 }) => {
-  const override = timezone ? TIMEZONE_LABEL_OVERRIDES[timezone] : undefined;
+  const sanitisedLocale = sanitiseLocale(locale);
+  const override = getTimeZoneLabelOverride({
+    timestamp,
+    timezone,
+    sanitisedLocale,
+  });
 
   if (override) return override;
 
-  const sanitisedLocale = sanitiseLocale(locale);
   const parts = new Intl.DateTimeFormat(sanitisedLocale, {
     timeZone: getTimeZone(timezone),
     timeZoneName: 'short',
@@ -344,16 +411,22 @@ export const formatTimestampToken = ({
   const sanitisedLocale = sanitiseLocale(locale);
   const dateParts = { timestamp, timezone, sanitisedLocale };
   const langCode = sanitisedLocale.split('-')[0];
-  const formatLongDate = () =>
-    NATIVE_LONG_DATE_LOCALES.has(sanitisedLocale.toLowerCase())
-      ? formatDatePart({
-          ...dateParts,
-          options: { day: 'numeric', month: 'long', year: 'numeric' },
-        })
-      : `${
-          getEditorialOrdinalDay(sanitisedLocale, getDayNumber(dateParts)) ??
-          formatDay(dateParts)
-        } ${formatMonth(dateParts)} ${formatYear(dateParts)}`;
+  const formatLongDate = () => {
+    if (NATIVE_LONG_DATE_LOCALES.has(sanitisedLocale.toLowerCase())) {
+      return formatDatePart({
+        ...dateParts,
+        options: { day: 'numeric', month: 'long', year: 'numeric' },
+      });
+    }
+
+    const rules = getTimestampLocaleRules(sanitisedLocale);
+
+    return applyLongDatePattern(rules?.longDate ?? DEFAULT_LONG_DATE_PATTERN, {
+      D: rules?.ordinalDay?.(getDayNumber(dateParts)) ?? formatDay(dateParts),
+      MMMM: formatMonth(dateParts),
+      YYYY: formatYear(dateParts),
+    });
+  };
   const formatLongDateTime = () => {
     const localeKey = sanitisedLocale.toLowerCase();
 

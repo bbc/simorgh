@@ -1,3 +1,13 @@
+import '#app/lib/locales/timestamp/ar';
+import '#app/lib/locales/timestamp/bn';
+import '#app/lib/locales/timestamp/gu';
+import '#app/lib/locales/timestamp/hi';
+import '#app/lib/locales/timestamp/mr';
+import '#app/lib/locales/timestamp/my';
+import '#app/lib/locales/timestamp/ne';
+import '#app/lib/locales/timestamp/pa-in';
+import '#app/lib/locales/timestamp/ps';
+import '#app/lib/locales/timestamp/ta';
 import {
   sanitiseDuration,
   sanitiseLocale,

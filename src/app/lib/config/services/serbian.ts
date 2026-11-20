@@ -1,6 +1,8 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
+import '#lib/locales/timestamp/sr';
+import '#lib/locales/timestamp/sr-cyrl';
 import '#lib/locales/moment/sr-cyrl';
 import '#lib/locales/moment/sr';
 import withContext from '../../../contexts/utils/withContext';
