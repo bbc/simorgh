@@ -1,5 +1,6 @@
 import { use } from 'react';
 import Metadata from '#app/components/Metadata';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles, { buildImageBackground, fallbackBackground } from './styles';
 import { PageProps } from './types';
@@ -11,6 +12,7 @@ import UploadingScreen from './UploadingScreen';
 import GenericMessage from './GenericMessage';
 import fallbackTranslations from './fallbackTranslations';
 import ClosedScreen from './ClosedScreen';
+import SignInRequiredScreen from './SignInRequiredScreen';
 
 const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
   const {
@@ -23,6 +25,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
       } = {},
     },
   } = use(ServiceContext);
+  const { isSignedIn } = use(AccountContext);
 
   const {
     title,
@@ -43,9 +46,10 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
     : fallbackBackground;
 
   const fields = sections?.flatMap(section => section.fields ?? []) ?? [];
+  const isOpenCampaign = campaignStatus === 'open';
+  const showSignIn = settings.signinRequired && !isSignedIn;
 
-  const metadataTitle =
-    campaignStatus === 'open' ? title : `${closedHeading}: ${title}`;
+  const metadataTitle = isOpenCampaign ? title : `${closedHeading}: ${title}`;
 
   return (
     <>
@@ -72,10 +76,12 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
               </GenericMessage>
             </noscript>
             <div css={styles.screenContainer}>
-              {campaignStatus === 'open' ? (
+              {isOpenCampaign && showSignIn && <SignInRequiredScreen />}
+              {isOpenCampaign && !showSignIn && (
                 <FormContextProvider
                   initialScreen={initialScreen}
                   fields={fields}
+                  signinRequired={settings.signinRequired}
                 >
                   <FormContext.Consumer>
                     {({ screen }) => {
@@ -106,7 +112,8 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
                     }}
                   </FormContext.Consumer>
                 </FormContextProvider>
-              ) : (
+              )}
+              {!isOpenCampaign && (
                 <ClosedScreen title={title} closingTime={closingTime} />
               )}
             </div>
