@@ -205,3 +205,39 @@ AllServicesAbsoluteDateTime.parameters = {
     disable: false,
   },
 };
+
+// Midday on the 15th keeps every month stable across timezones
+const middleOfEachMonth2021 = Array.from({ length: 12 }, (_, month) =>
+  Date.UTC(2021, month, 15, 12),
+);
+
+export const AllServicesEveryMonth = () => (
+  <div>
+    {serviceVariants.map(
+      ({ service, variant, pageLang, configVariant, label }) => (
+        <div key={`${service}-${configVariant}`}>
+          <strong>{label}</strong>
+          <ServiceContextProvider
+            service={service}
+            variant={variant}
+            pageLang={pageLang}
+          >
+            {middleOfEachMonth2021.map(timestamp => (
+              <ArticleTimestamp
+                key={timestamp}
+                firstPublished={timestamp}
+                lastPublished={timestamp}
+              />
+            ))}
+          </ServiceContextProvider>
+        </div>
+      ),
+    )}
+  </div>
+);
+AllServicesEveryMonth.tags = ['!dev'];
+AllServicesEveryMonth.parameters = {
+  chromatic: {
+    disable: false,
+  },
+};
