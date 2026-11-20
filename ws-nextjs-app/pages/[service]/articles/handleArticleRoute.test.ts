@@ -5,11 +5,25 @@ import { Socket } from 'node:net';
 import { ToggleDefinition } from '#app/models/types/global';
 import articleToMarkdown from '#app/utilities/articleToMarkdown';
 import localToggles from '#app/lib/config/toggles/localConfig';
+import * as envConfig from '#app/lib/utilities/getEnvConfig';
 import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
+import getArticleEndItems from './articleEnd';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
+jest.mock('#utilities/getAgent', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
+jest.mock('#app/lib/utilities/getEnvConfig', () => {
+  const actual = jest.requireActual('#app/lib/utilities/getEnvConfig');
+  return { ...actual, getEnvConfig: jest.fn(actual.getEnvConfig) };
+});
+jest.mock('./articleEnd', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue([]),
+}));
 jest.mock('../../../utilities/shouldRender', () => {
   const originalModule = jest.requireActual('../../../utilities/shouldRender');
   return {
@@ -34,11 +48,93 @@ describe('handleArticleRoute', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
     jest.clearAllMocks();
+    jest
+      .mocked(envConfig.getEnvConfig)
+      .mockImplementation(
+        jest.requireActual('#app/lib/utilities/getEnvConfig').getEnvConfig,
+      );
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
       data: {
         pageData: pidginMediaArticleFixtureData.data,
         status: 200,
       },
+    });
+  });
+
+  describe('article end research prototype', () => {
+    const prepareMundo = (type = 'article', consumableAsSFV = false) => {
+      jest
+        .spyOn(shouldRender, 'default')
+        .mockReturnValue({ hasRequestSucceeded: true, status: 200 });
+      jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+        data: {
+          pageData: {
+            ...pidginMediaArticleFixtureData.data,
+            article: {
+              ...pidginMediaArticleFixtureData.data.article,
+              metadata: {
+                ...pidginMediaArticleFixtureData.data.article.metadata,
+                type,
+                consumableAsSFV,
+              },
+            },
+          },
+          status: 200,
+        },
+      });
+    };
+
+    it.each(['local', 'test'] as const)(
+      'enables standard Mundo articles in the %s deployment',
+      async environment => {
+        prepareMundo();
+        jest.spyOn(envConfig, 'getEnvConfig').mockReturnValue({
+          ...envConfig.getEnvConfig(),
+          SIMORGH_APP_ENV: environment,
+        });
+        const result = await handleArticleRoute({
+          ...mockGetServerSidePropsContext,
+          query: { service: 'mundo' },
+          resolvedUrl: '/mundo/articles/cwe9k0d7x9z0o',
+        });
+        expect(getArticleEndItems).toHaveBeenCalledTimes(1);
+        expect(result.props.pageData).toHaveProperty('articleEndItems', []);
+      },
+    );
+
+    it('cannot enable the live deployment with renderer_env=test', async () => {
+      prepareMundo();
+      jest.spyOn(envConfig, 'getEnvConfig').mockReturnValue({
+        ...envConfig.getEnvConfig(),
+        SIMORGH_APP_ENV: 'live',
+      });
+      const result = await handleArticleRoute({
+        ...mockGetServerSidePropsContext,
+        query: { service: 'mundo', renderer_env: 'test' },
+        resolvedUrl: '/mundo/articles/cwe9k0d7x9z0o?renderer_env=test',
+      });
+      expect(getArticleEndItems).not.toHaveBeenCalled();
+      expect(result.props.pageData).not.toHaveProperty('articleEndItems');
+    });
+
+    it.each([
+      ['mediaArticle', false, ''],
+      ['article', true, ''],
+      ['article', false, '.amp'],
+      ['article', false, '.lite'],
+      ['article', false, '.app'],
+    ])('excludes %s SFV=%s platform=%s', async (type, sfv, extension) => {
+      prepareMundo(type as string, sfv as boolean);
+      jest.spyOn(envConfig, 'getEnvConfig').mockReturnValue({
+        ...envConfig.getEnvConfig(),
+        SIMORGH_APP_ENV: 'local',
+      });
+      await handleArticleRoute({
+        ...mockGetServerSidePropsContext,
+        query: { service: 'mundo' },
+        resolvedUrl: `/mundo/articles/cwe9k0d7x9z0o${extension}`,
+      });
+      expect(getArticleEndItems).not.toHaveBeenCalled();
     });
   });
 

@@ -20,6 +20,7 @@ import {
   EventMapping,
   MediaBlock,
   MediaPlayerEvents,
+  Player,
   PlayerConfig,
 } from './types';
 import Caption from '../Caption';
@@ -153,6 +154,7 @@ type MediaContainerProps = {
   eventMapping?: EventMapping;
   shouldHandleFakeFullscreen?: boolean;
   loadPlayerOnInitialRender?: boolean;
+  singleItemPlayback?: boolean;
   onFakeFullscreenChange?: (isActive: boolean) => void;
 };
 
@@ -167,6 +169,7 @@ const MediaContainer = ({
   eventMapping,
   shouldHandleFakeFullscreen = false,
   loadPlayerOnInitialRender = false,
+  singleItemPlayback = false,
   onFakeFullscreenChange,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
@@ -176,9 +179,12 @@ const MediaContainer = ({
   onFakeFullscreenChangeRef.current = onFakeFullscreenChange;
 
   useEffect(() => {
+    let cancelled = false;
+    let mediaPlayer: Player | undefined;
+
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
-        if (playerElementRef?.current && playerConfig) {
+        if (!cancelled && playerElementRef?.current && playerConfig) {
           const initPlayer = async () => {
             const autoplayOverride = loadPlayerOnInitialRender
               ? { autoplay: false }
@@ -191,19 +197,54 @@ const MediaContainer = ({
               ...playerConfig,
               ...autoplayOverride,
               ...fakeFullscreenOverride,
+              ...(singleItemPlayback && {
+                autoplay: false,
+                // Keep stream integrations (including Dazzler), removing only
+                // the portrait modal's event-driven fullscreen launcher.
+                plugins: playerConfig.plugins && {
+                  ...playerConfig.plugins,
+                  toLoad: playerConfig.plugins.toLoad.filter(
+                    plugin =>
+                      !plugin.html
+                        .split(/[?#]/)[0]
+                        .endsWith('/smpPlugins/fullscreen.js'),
+                  ),
+                },
+                ui: {
+                  ...playerConfig.ui,
+                  swipable: { enabled: false, direction: 'Y' as const },
+                  controls: {
+                    ...playerConfig.ui.controls,
+                    enabled: playerConfig.ui.controls?.enabled ?? true,
+                    includeNextButton: false,
+                    includePreviousButton: false,
+                  },
+                  // Portrait carousel players disable fullscreen on desktop
+                  // and use a modal close icon on mobile. Inline cards use the
+                  // native fullscreen toggle; other media keep their settings.
+                  ...(playerConfig.ui.swipable?.enabled && {
+                    fullscreen: {
+                      ...playerConfig.ui.fullscreen,
+                      enabled: true,
+                      useCloseIconForExitFullscreen: false,
+                    },
+                  }),
+                },
+              }),
             };
 
-            const mediaPlayer = Bump.player(
+            const player = Bump.player(
               playerElementRef.current,
               effectiveConfig,
             );
+            mediaPlayer = player;
 
             if (uniqueId != null) {
               const { mediaPlayers } = window;
               if (mediaPlayers == null) {
-                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+                window.mediaPlayers = { [uniqueId]: player };
               } else {
-                mediaPlayers[uniqueId] = mediaPlayer;
+                mediaPlayers[uniqueId] = player;
               }
             }
 
@@ -212,24 +253,26 @@ const MediaContainer = ({
                 const key = bindingKey as MediaPlayerEvents;
                 const handler = eventMapping[key];
 
-                if (handler) mediaPlayer.bind(key, handler);
+                if (handler) player.bind(key, handler);
               });
             }
 
             if (shouldHandleFakeFullscreen) {
-              mediaPlayer.bind('enterFakeFullscreen', () => {
-                onFakeFullscreenChangeRef.current?.(true);
+              player.bind('enterFakeFullscreen', () => {
+                if (!cancelled) onFakeFullscreenChangeRef.current?.(true);
               });
-              mediaPlayer.bind('exitFakeFullscreen', () => {
-                onFakeFullscreenChangeRef.current?.(false);
+              player.bind('exitFakeFullscreen', () => {
+                if (!cancelled) onFakeFullscreenChangeRef.current?.(false);
               });
             }
 
             if (showAds) {
               const adTag = await window.dotcom.ads.getAdTag();
 
+              if (cancelled) return;
+
               if (adTag) {
-                mediaPlayer.loadPlugin(
+                player.loadPlugin(
                   {
                     swf: 'name:dfpAds.swf',
                     html: 'name:dfpAds.js',
@@ -243,11 +286,12 @@ const MediaContainer = ({
                 );
               }
 
-              mediaPlayer.bind('playlistLoaded', async () => {
+              player.bind('playlistLoaded', async () => {
+                if (cancelled) return;
                 const updatedAdTag = await window.dotcom.ads.getAdTag();
 
-                if (updatedAdTag) {
-                  mediaPlayer.dispatchEvent(
+                if (!cancelled && updatedAdTag) {
+                  player.dispatchEvent(
                     'bbc.smp.plugins.ads.event.updateAdTag',
                     {
                       adTag: updatedAdTag,
@@ -257,15 +301,29 @@ const MediaContainer = ({
               });
             }
 
-            mediaPlayer.load();
+            player.load();
           };
 
-          initPlayer();
+          initPlayer().catch(error => logger.error(MEDIA_PLAYER_STATUS, error));
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
+
+    return () => {
+      // A late RequireJS/ad callback must not start a player after navigation,
+      // or during the discarded first effect in React Strict Mode.
+      cancelled = true;
+      mediaPlayer?.pause?.();
+      if (
+        mediaPlayer &&
+        uniqueId &&
+        window.mediaPlayers?.[uniqueId] === mediaPlayer
+      ) {
+        delete window.mediaPlayers[uniqueId];
+      }
+    };
   }, [
     playerConfig,
     showAds,
@@ -273,6 +331,7 @@ const MediaContainer = ({
     eventMapping,
     shouldHandleFakeFullscreen,
     loadPlayerOnInitialRender,
+    singleItemPlayback,
   ]);
 
   return (
@@ -296,6 +355,7 @@ type Props = {
   uniqueId?: string;
   eventMapping?: EventMapping;
   loadPlayerOnInitialRender?: boolean;
+  singleItemPlayback?: boolean;
   withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
 };
@@ -307,6 +367,7 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
   loadPlayerOnInitialRender = false,
+  singleItemPlayback = false,
   withinFullscreenContainer = false,
   holdingImageURL,
 }: Props) => {
@@ -491,6 +552,7 @@ const MediaLoader = ({
                   eventMapping={eventMapping}
                   shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
                   loadPlayerOnInitialRender={loadPlayerOnInitialRender}
+                  singleItemPlayback={singleItemPlayback}
                   onFakeFullscreenChange={setFakeFullscreenPageState}
                 />
               )}

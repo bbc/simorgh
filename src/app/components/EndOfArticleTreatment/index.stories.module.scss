@@ -1,0 +1,6 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  max-width: 42rem;
+  margin: theme.$spacings-quadruple auto;
+}

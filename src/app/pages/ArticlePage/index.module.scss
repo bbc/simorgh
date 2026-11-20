@@ -1,0 +1,13 @@
+@use '@scss/themeTokens' as theme;
+
+section.hideEndOfArticleTreatment {
+  display: none;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: block;
+  }
+
+  :global(.no-js) & {
+    display: block;
+  }
+}

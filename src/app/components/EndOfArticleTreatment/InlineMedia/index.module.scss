@@ -1,0 +1,30 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--article-end-media-height, 300px);
+  min-width: 0;
+  background-color: theme.$palette-black;
+  color: theme.$palette-white;
+
+  > p {
+    padding: theme.$spacings-double;
+  }
+}
+
+// This consumer's wrapper gives the override precedence over MediaLoader's
+// figure styles without affecting other players or their fullscreen controls.
+.container .player {
+  margin: 0;
+  margin-inline: 0;
+  width: min(100%, calc(var(--article-end-media-height, 300px) * 16 / 9));
+  max-width: none;
+  min-width: 0;
+}
+
+.container[data-orientation='portrait'] .player {
+  width: min(100%, calc(var(--article-end-media-height, 300px) * 9 / 16));
+}
