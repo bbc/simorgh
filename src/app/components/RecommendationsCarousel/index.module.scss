@@ -1,0 +1,314 @@
+@use '@scss/themeTokens' as theme;
+
+.section {
+  margin-block: theme.$spacings-double;
+  padding-inline: theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-1-min-width} {
+    margin-block-end: theme.$spacings-triple;
+  }
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding-inline: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-end: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding-inline: 0;
+  }
+}
+
+.section .heading {
+  display: inline-block;
+  margin: 0;
+  color: theme.$palette-grey-10;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin-block-start: theme.$spacings-double;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-2;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  container-type: inline-size;
+}
+
+.carousel {
+  display: flex;
+  flex: 1;
+  gap: theme.$spacings-full;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    gap: theme.$spacings-double;
+    padding-block: theme.$spacings-full;
+
+    @media #{theme.$mediaQueries-pointer-fine} {
+      &::after {
+        content: '';
+        flex: 0 0 calc(100% / 3.5 * 0.5);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+.item,
+.column {
+  position: relative;
+  flex: 0 0 calc((100% / 2.33 - #{theme.$spacings-full}) * 1.3);
+  min-width: #{theme.pixelsToRem-px-to-rem(192)};
+  scroll-snap-align: start;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    min-width: 0;
+    flex-basis: calc((100% / 3.33 - #{theme.$spacings-double}) * 1.3);
+
+    @media #{theme.$mediaQueries-pointer-fine} {
+      flex-basis: calc((100% / 3.5 - #{theme.$spacings-double}) * 1.3);
+    }
+  }
+}
+
+@media #{theme.$mediaQueries-group-4-min-width} {
+  @container (min-width: #{theme.$gridWidths-grid-width-900}) {
+    .item,
+    .column {
+      flex-basis: calc((100% / 4.5 - #{theme.$spacings-double}) * 1.3);
+    }
+
+    .carousel::after {
+      content: '';
+      flex: 0 0 calc(100% / 4.5 * 0.5);
+    }
+  }
+}
+
+@media #{theme.$mediaQueries-group-5-min-width} {
+  @container (min-width: #{theme.$gridWidths-grid-width-1008}) {
+    .item,
+    .column {
+      flex-basis: calc((100% / 5.5 - #{theme.$spacings-double}) * 1.3);
+    }
+
+    .carousel::after {
+      content: '';
+      flex: 0 0 calc(100% / 5.5 * 0.5);
+    }
+  }
+}
+
+.item {
+  overflow: hidden;
+  background-color: theme.$palette-black;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-full;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    gap: theme.$spacings-double;
+  }
+
+  .item {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .promo {
+    aspect-ratio: 1;
+  }
+
+  .overlay .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+  }
+}
+
+.promo {
+  padding: 0;
+  border: 0;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+  text-align: start;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 9 / 16;
+  color: theme.$palette-white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+.promo .image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  padding: calc(#{theme.$spacings-triple} + #{theme.$spacings-half})
+    theme.$spacings-full theme.$spacings-full;
+  background: linear-gradient(
+    to bottom,
+    rgba(theme.$palette-black, 0),
+    rgba(theme.$palette-black, 0.65) 24%,
+    theme.$palette-black
+  );
+}
+
+.overlay .title {
+  display: block;
+  margin-block-start: theme.$spacings-full;
+  color: theme.$palette-white;
+  overflow-wrap: anywhere;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  width: calc(100% - #{theme.$spacings-quadruple});
+  max-width: #{theme.pixelsToRem-px-to-rem(600)};
+  max-height: calc(100dvh - #{theme.$spacings-quadruple});
+  overflow-y: auto;
+  background: theme.$palette-white;
+  color: theme.$palette-black;
+
+  &::backdrop {
+    background: rgba(theme.$palette-black, 0.85);
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    background: theme.$palette-grey-10;
+    color: theme.$palette-white;
+  }
+}
+
+:global(body):has(.modal[open]) {
+  overflow: hidden;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: theme.$spacings-double;
+  padding: theme.$spacings-double;
+}
+
+.modalContent a.continueReading {
+  display: block;
+  width: 100%;
+  min-height: #{theme.pixelsToRem-px-to-rem(44)};
+  padding: theme.$spacings-double;
+  border-block-end: #{theme.pixelsToRem-px-to-rem(1)} solid
+    theme.$palette-grey-4;
+  background-color: theme.$palette-grey-2;
+  color: theme.$palette-grey-10;
+
+  &:visited,
+  &:hover,
+  &:focus {
+    color: theme.$palette-grey-10;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    background-color: Canvas;
+    color: LinkText;
+    border-color: CanvasText;
+
+    &:visited,
+    &:hover,
+    &:focus {
+      color: LinkText;
+    }
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: theme.$spacings-full;
+  inset-inline-end: theme.$spacings-full;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: #{theme.pixelsToRem-px-to-rem(44)};
+  height: #{theme.pixelsToRem-px-to-rem(44)};
+  border: 0;
+  background: theme.$palette-black;
+  color: theme.$palette-white;
+  cursor: pointer;
+}
+
+button[type='button'].promo:focus-visible,
+button[type='button'].closeButton:focus-visible {
+  outline: none;
+  box-shadow: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: #{theme.pixelsToRem-px-to-rem(2)};
+    border: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-white;
+    outline: #{theme.pixelsToRem-px-to-rem(2)} solid theme.$palette-black;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.closeIcon {
+  width: theme.$spacings-triple;
+  height: theme.$spacings-triple;
+  fill: currentColor;
+}
+
+@media (forced-colors: active) {
+  .overlay {
+    background: Canvas;
+  }
+
+  .overlay .title {
+    color: LinkText;
+  }
+}
