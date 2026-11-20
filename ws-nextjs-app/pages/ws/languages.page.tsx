@@ -46,7 +46,6 @@ export const getServerSideProps = withRequestProps(async context => {
       isAmp: false,
       isNextJs: true,
       error: data?.error || null,
-      timeOnServer: Date.now(),
       pageData: {
         ...data?.pageData,
         metadata: {

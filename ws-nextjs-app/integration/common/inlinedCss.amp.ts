@@ -1,8 +1,23 @@
+const getAmpCustomStyle = () =>
+  document.querySelector('head > style[amp-custom]');
+
+export const runAmpCssSizeTest = () => {
+  it('should stay below the AMP CSS limit including inline styles', () => {
+    const styleElement = getAmpCustomStyle();
+    expect(styleElement).toBeInTheDocument();
+    const css = styleElement?.textContent ?? '';
+    const inlineStyles = Array.from(document.querySelectorAll('[style]'))
+      .map(element => element.getAttribute('style') ?? '')
+      .join('');
+
+    expect(
+      new TextEncoder().encode(css + inlineStyles).byteLength,
+    ).toBeLessThanOrEqual(75_000);
+  });
+};
+
 export default () => {
   describe('SCSS module CSS — AMP inlined styles', () => {
-    const getAmpCustomStyle = () =>
-      document.querySelector('head > style[amp-custom]');
-
     it('should have a non-empty <style amp-custom> tag', () => {
       const styleEl = getAmpCustomStyle();
 
@@ -10,27 +25,22 @@ export default () => {
       expect(styleEl?.textContent?.trim()).not.toBe('');
     });
 
-    it('should keep the author stylesheet and inline styles within the AMP 75,000-byte limit', () => {
+    it('should tree-shake unused SCSS module palette custom properties (--brand-foreground)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
-      const inlineStyleBytes = Array.from(
-        document.querySelectorAll('[style]'),
-      ).reduce(
-        (bytes, element) =>
-          bytes +
-          Buffer.byteLength(element.getAttribute('style') ?? '', 'utf8'),
-        0,
-      );
+
+      expect(css).not.toContain('--brand-foreground');
+    });
+
+    it('should exclude CSS for components that are not rendered on AMP articles', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
 
       expect(
-        Buffer.byteLength(css, 'utf8') + inlineStyleBytes,
-      ).toBeLessThanOrEqual(75000);
+        document.querySelector('[data-testid="latest-post-button"]'),
+      ).toBeNull();
+      expect(css).not.toContain('.LatestPostButton_');
     });
 
-    it('should tree-shake unused SCSS module palette custom properties (--brand-background)', () => {
-      const css = getAmpCustomStyle()?.textContent ?? '';
-
-      expect(css).not.toContain('--brand-background');
-    });
+    runAmpCssSizeTest();
 
     it('should inline CSS custom properties from the SCSS module font variants (--sans-regular-font-family)', () => {
       const css = getAmpCustomStyle()?.textContent ?? '';
@@ -51,6 +61,22 @@ export default () => {
       // CSS module class names follow the pattern: ComponentName_localName__hash
       // This confirms CSS module extraction is working, not just global SCSS
       expect(css).toMatch(/\.[A-Za-z]+_[a-zA-Z]+__[A-Za-z0-9]+/);
+    });
+
+    it('should retain the visually hidden brand label and logo sizing rules', () => {
+      const css = getAmpCustomStyle()?.textContent ?? '';
+      const label = document.querySelector('[id^="BrandLink-"]');
+      const labelClass = label?.className;
+
+      expect(label).toBeInTheDocument();
+      expect(labelClass).toMatch(/VisuallyHiddenText_visuallyHiddenText__/);
+      expect(css).toContain(`.${labelClass}{`);
+      expect(css).toContain('clip:rect(1px,1px,1px,1px)');
+      expect(css).toContain(
+        'width:calc(var(--brand-height)*var(--brand-ratio))',
+      );
+      expect(css).toContain('aspect-ratio:var(--brand-ratio)');
+      expect(css).toContain('background:var(--brand-source)');
     });
 
     it('should strip unnecessary vendor prefixes left in by Emotion', () => {

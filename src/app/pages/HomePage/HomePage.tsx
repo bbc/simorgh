@@ -1,7 +1,7 @@
 import { Fragment, use } from 'react';
 import dynamic from 'next/dynamic';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 import useScrollDepthTracker, {
   getHomePageBounds,
 } from '#app/hooks/useScrollDepthTracker';
@@ -83,7 +83,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      <AccountPromotionalBanner />
+      <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
       <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer

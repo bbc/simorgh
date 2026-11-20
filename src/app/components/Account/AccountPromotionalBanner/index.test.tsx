@@ -65,6 +65,9 @@ describe('AccountPromotionalBanner', () => {
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+    expect(signInLink.querySelector('.external-svg')).toHaveStyle({
+      '--icon-source': `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/account.svg")`,
+    });
   });
 
   it('shows a register link when rendered', () => {

@@ -7,9 +7,7 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
-import isLive from '#app/lib/utilities/isLive';
-import { use, useContext } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
+import { use } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -99,14 +97,8 @@ export default ({
     componentName === SIMPLE_CURATION_GRID ||
     componentName === HIERARCHICAL_CURATION_GRID;
 
-  const { service } = useContext(ServiceContext);
-
   const shouldStyleAsVideoCollection =
-    !isLive() &&
-    !isLite &&
-    service === 'arabic' &&
-    isCurationGrid &&
-    isVideoCollection;
+    !isLite && isCurationGrid && isVideoCollection;
 
   const isLiveEnvironment = getEnvConfig().SIMORGH_APP_ENV === 'live';
   const showRelatedTopic = !isLiveEnvironment && isCurationGrid;

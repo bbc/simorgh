@@ -1,6 +1,6 @@
 import devanagari from '../../../components/ThemeProvider/fontScripts/devanagari';
 import '#psammead/moment-timezone-include/tz/Asia/Kolkata';
-import '#psammead/psammead-locales/moment/hi';
+import '#lib/locales/moment/hi';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -50,7 +50,7 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
-      title: 'पॉडकास्ट',
+      title: 'बीबीसी हिंदी मोबाइल ऐप',
       brandTitle: 'आपके लिए चुनी गईं खास कहानियाँ, नितिन श्रीवास्तव द्वारा',
       brandDescription:
         'आपके लिए नितिन श्रीवास्तव द्वारा चुनी गईं खास कहानियाँ',
