@@ -1,3 +1,4 @@
+import 'temporal-polyfill/global';
 import { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
