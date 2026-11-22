@@ -2,7 +2,7 @@ import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import { mediaIcons } from '#app/components/icons/inline';
+import { mediaIcons } from '#app/components/icons/shared';
 import formatDuration from '#lib/utilities/formatDuration';
 
 export const TYPES = {

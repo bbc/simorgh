@@ -1,6 +1,6 @@
 import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
-import { navigationIcons } from '#app/components/icons/inline';
+import { navigationIcons } from '#app/components/icons/shared';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

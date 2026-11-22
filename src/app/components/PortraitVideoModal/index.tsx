@@ -10,7 +10,7 @@ import {
   PortraitClipMediaBlock,
   SMPEvent,
 } from '#app/components/MediaLoader/types';
-import { navigationIcons } from '#app/components/icons/inline';
+import { navigationIcons } from '#app/components/icons/shared';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../hooks/useViewTracker';

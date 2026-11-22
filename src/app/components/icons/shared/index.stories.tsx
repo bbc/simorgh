@@ -22,7 +22,7 @@ const IconGallery = ({ family }: { family: keyof typeof families }) => (
 );
 
 const meta = {
-  title: 'Components/icons/Inline',
+  title: 'Components/icons/Shared',
   component: IconGallery,
   parameters: { docs: { readme }, metadata },
 } satisfies Meta<typeof IconGallery>;

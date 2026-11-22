@@ -12,7 +12,7 @@ The `serviceLocalisedName` is an optional prop referring to the local name of a 
 
 The `svg` prop contains an asset `path` and its `ratio`. Service logo metadata
 comes from `src/app/components/ThemeProviderSCSSModules/chameleonLogos`; inline
-UI icons are a separate API at `#app/components/icons/inline`.
+UI icons are a separate API at `#app/components/icons/shared`.
 
 The `minWidth` and `maxWidth` values are required to allow the ability for the `svg` element to dynamically scale as the viewport becomes a very small size EG: feature phones.
 

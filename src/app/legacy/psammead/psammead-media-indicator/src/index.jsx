@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { mediaIcons } from '#app/components/icons/inline';
+import { mediaIcons } from '#app/components/icons/shared';
 
 const StyledMediaIndicator = styled.div`
   color: ${props => props.theme.palette.EBON};

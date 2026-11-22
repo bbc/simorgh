@@ -1,4 +1,4 @@
-import { mediaIcons } from '#app/components/icons/inline';
+import { mediaIcons } from '#app/components/icons/shared';
 import styles from './index.styles';
 import VisuallyHiddenText from '../../../VisuallyHiddenText';
 

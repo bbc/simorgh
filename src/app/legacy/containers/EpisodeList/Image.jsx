@@ -1,7 +1,7 @@
 import { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#app/components/icons/inline';
+import { mediaIcons } from '#app/components/icons/shared';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -37,13 +37,22 @@ const LitePlayWrapper = withEpisodeContext(styled.div`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING};
   }
-  svg {
+  .external-svg {
     margin: 0 0 ${pixelsToRem(1)}px 0;
     height: 0.6rem;
     width: 0.7rem;
     color: ${props => props.theme.palette.WHITE};
+    @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+      filter: invert(1);
+    }
     @media screen and (forced-colors: active) {
-      fill: linkText;
+      color: linkText;
+      @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+        filter: none;
+        @media (prefers-color-scheme: dark) {
+          filter: invert(1);
+        }
+      }
     }
   }
 `);
@@ -55,13 +64,22 @@ const PlayWrapper = withEpisodeContext(styled.div`
     padding: ${GEL_SPACING};
   }
 
-  svg {
+  .external-svg {
     margin: 0 0 1px 0;
     height: 0.6rem;
     width: 0.7rem;
     color: ${props => props.theme.palette.WHITE};
+    @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+      filter: invert(1);
+    }
     @media screen and (forced-colors: active) {
-      fill: linkText;
+      color: linkText;
+      @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+        filter: none;
+        @media (prefers-color-scheme: dark) {
+          filter: invert(1);
+        }
+      }
     }
   }
 

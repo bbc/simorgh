@@ -31,12 +31,36 @@
     }
   }
 
-  // Change the state value, not color specificity, so consumer SVG overrides win.
+  // Change the state value, not color specificity, so consumer overrides win.
   &[data-is-lite='true'] {
     --inline-video-colour: var(
       --inline-video-lite-colour,
       #{theme.$palette-ebon}
     );
+  }
+}
+
+.media {
+  @media #{theme.$mediaQueries-forced-colours} {
+    color: CanvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    @media not all and (forced-colors: active) {
+      :global([data-is-dark-ui='true']) &.video {
+        @media #{theme.$mediaQueries-group-1-max-width} {
+          filter: invert(1);
+        }
+
+        &[data-is-lite='true'] {
+          filter: invert(1);
+        }
+      }
+    }
+
+    @media (forced-colors: active) and (prefers-color-scheme: dark) {
+      filter: invert(1);
+    }
   }
 }
 

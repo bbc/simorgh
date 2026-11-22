@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { mediaIcons } from '#app/components/icons/inline';
+import { mediaIcons } from '#app/components/icons/shared';
 import { MediaIndicatorWrapper, MediaIndicatorAlignment } from './index.styles';
 import PromoContext from '../PromoContext';
 
