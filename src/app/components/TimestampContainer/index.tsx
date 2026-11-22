@@ -1,9 +1,24 @@
-import Timestamp from '#psammead/psammead-timestamp/src';
+import type { Moment } from 'moment';
+import Timestamp from '#app/components/Timestamp';
 import {
   isValidDateTime,
   formatUnixTimestamp,
   localisedMoment,
-} from './utilities';
+} from '#app/lib/utilities/timestamp';
+
+interface TimestampContainerProps {
+  timestamp?: number | string;
+  dateTimeFormat?: string;
+  format?: string;
+  isRelative?: boolean;
+  padding?: boolean;
+  prefix?: string;
+  suffix?: string;
+  timezone?: string;
+  locale?: string;
+  altCalendar?: { formatDate: (date: Moment) => string | null } | null;
+  className?: string;
+}
 
 const TimestampContainer = ({
   timestamp,
@@ -17,8 +32,11 @@ const TimestampContainer = ({
   locale = 'en-gb',
   altCalendar,
   className = '',
-}) => {
-  let altDateTime;
+}: TimestampContainerProps) => {
+  if (timestamp === undefined) {
+    return null;
+  }
+
   if (!isValidDateTime(new Date(timestamp))) {
     return null;
   }
@@ -31,14 +49,13 @@ const TimestampContainer = ({
     isRelative,
   });
 
-  if (altCalendar && !isRelative) {
-    altDateTime = `${altCalendar.formatDate(
-      localisedMoment({ locale, timestamp }),
-    )} -`;
-  }
+  const altDateTime =
+    altCalendar && !isRelative
+      ? `${altCalendar.formatDate(localisedMoment({ locale, timestamp }))} -`
+      : undefined;
 
   const timestampText = [prefix, altDateTime, mainDateTime, suffix]
-    .filter(segment => segment) // Filter falsy segments.
+    .filter(Boolean)
     .join(' ');
 
   return (

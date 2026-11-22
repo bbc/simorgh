@@ -114,30 +114,6 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   height: auto;
 }
 
-.emotion-2 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div>
   <div
     class="componentWrapper"
@@ -183,7 +159,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-2 emotion-3"
+          class="timestamp timestamp timestampCanonical"
           datetime="2016-05-05"
         >
           5 mayo 2016
@@ -225,30 +201,6 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 <div>
@@ -296,7 +248,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-2 emotion-3"
+          class="timestamp timestamp timestampCanonical"
           datetime="2020-02-17"
         >
           17 febrero 2020
@@ -338,30 +290,6 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 <div>
@@ -409,7 +337,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-2 emotion-3"
+          class="timestamp timestamp timestampCanonical"
           datetime="2023-02-02"
         >
           2 febrero 2023
@@ -451,30 +379,6 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   width: 100%;
   object-fit: cover;
   height: 100%;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
 }
 
 <div>
@@ -521,7 +425,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
           </a>
         </h3>
         <time
-          class="timestamp timestampCanonical emotion-2 emotion-3"
+          class="timestamp timestamp timestampCanonical"
           datetime="2023-02-02"
         >
           2 febrero 2023

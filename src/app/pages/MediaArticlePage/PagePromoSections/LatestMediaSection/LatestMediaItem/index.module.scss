@@ -1,0 +1,5 @@
+@use '@scss/themeTokens' as theme;
+
+time.timeStamp {
+  padding-top: theme.$spacings-full;
+}

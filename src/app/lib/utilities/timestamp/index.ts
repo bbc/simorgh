@@ -81,7 +81,7 @@ export const localisedMoment = ({
   timestamp,
 }: {
   locale: Locale;
-  timestamp: number;
+  timestamp: number | string;
 }): moment.Moment => {
   return moment(timestamp).locale(locale);
 };
@@ -96,7 +96,7 @@ export const formatUnixTimestamp = ({
   format?: string | null;
   isRelative?: boolean;
   locale?: Locale;
-  timestamp?: number;
+  timestamp?: number | string;
   timezone?: string;
 }): string | undefined => {
   if (!timestamp) return undefined;

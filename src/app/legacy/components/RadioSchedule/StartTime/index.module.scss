@@ -1,0 +1,6 @@
+@use '@scss/themeTokens' as theme;
+
+.startTimestamp > time.timestamp {
+  @include theme.typography-from-scale-and-variant(minion, 'sans-regular');
+  color: theme.$palette-rhino;
+}

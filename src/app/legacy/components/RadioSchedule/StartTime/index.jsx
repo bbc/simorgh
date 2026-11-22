@@ -2,7 +2,8 @@ import { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';
-import TimestampContainer from '#psammead/psammead-timestamp-container/src';
+import TimestampContainer from '#app/components/TimestampContainer';
+import timestampStyles from './index.module.scss';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const Wrapper = styled.div`
@@ -37,12 +38,6 @@ const StyledTimestamp = styled.span`
   flex-direction: row;
   width: 100%;
 
-  > time {
-    color: ${props => props.theme.palette.RHINO};
-    ${({ theme: { fontSizes } }) => fontSizes.minion};
-    ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
-  }
-
   &::after {
     content: '';
     border-top: 0.0625rem solid ${props => props.theme.palette.PEBBLE};
@@ -59,8 +54,13 @@ export const StartTimestamp = ({
   dir = 'ltr',
 }) => {
   return (
-    <StyledTimestamp dir={dir} aria-hidden="true">
+    <StyledTimestamp
+      dir={dir}
+      aria-hidden="true"
+      className={timestampStyles.startTimestamp}
+    >
       <TimestampContainer
+        className={timestampStyles.timestamp}
         timestamp={timestamp}
         dateTimeFormat="YYYY-MM-DD"
         format="HH:mm"

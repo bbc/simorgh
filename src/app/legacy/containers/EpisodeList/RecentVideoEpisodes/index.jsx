@@ -3,11 +3,11 @@ import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
+import Timestamp from '#app/components/TimestampContainer';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '#psammead/psammead-timestamp-container/src/utilities';
+} from '#app/lib/utilities/timestamp';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,

@@ -1,9 +1,20 @@
-import { screen } from '@testing-library/react';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { render, screen } from '../react-testing-library-with-providers';
 import Timestamp from '.';
-import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
 
 describe('Timestamp', () => {
+  it('preserves the semantic datetime and a consumer class without leaking styling props', () => {
+    render(
+      <Timestamp datetime="2018-07-07" padding={false} className="consumer">
+        7 July 2018
+      </Timestamp>,
+    );
+    const time = screen.getByText('7 July 2018');
+    expect(time.tagName).toBe('TIME');
+    expect(time).toHaveAttribute('datetime', '2018-07-07');
+    expect(time).toHaveClass('consumer');
+    expect(time).not.toHaveAttribute('padding');
+  });
   it('should render Timestamp correctly', () => {
     render(<Timestamp datetime="1530947227000">7 July 2018</Timestamp>);
     expect(screen.getByText('7 July 2018')).toBeInTheDocument();

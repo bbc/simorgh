@@ -128,10 +128,10 @@ time.timestamp {
   }
 }
 
-time.timestampAmp {
+.componentWrapper time.timestampAmp {
   color: theme.$palette-black;
 }
 
-time.timestampCanonical {
+.componentWrapper time.timestampCanonical {
   color: theme.$palette-grey-3;
 }

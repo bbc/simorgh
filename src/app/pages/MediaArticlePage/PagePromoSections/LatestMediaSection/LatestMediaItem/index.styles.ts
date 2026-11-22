@@ -58,10 +58,6 @@ const styles = {
     css({
       backgroundColor: 'transparent',
     }),
-  timeStamp: ({ spacings }: Theme) =>
-    css({
-      paddingTop: `${spacings.FULL}rem`,
-    }),
 };
 
 export default styles;
