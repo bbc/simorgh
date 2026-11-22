@@ -30,9 +30,18 @@ export const assertMostReadComponentView = ({
       testContext: this,
     });
 
-    // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
-    cy.get('[data-e2e="most-read"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-e2e="most-read"] li').first().scrollIntoView();
+    cy.get('[data-e2e="most-read"] li')
+      .first()
+      .should($item => {
+        const { top, bottom, height } = $item[0].getBoundingClientRect();
+        const viewportHeight =
+          $item[0].ownerDocument.documentElement.clientHeight;
+        const visibleHeight =
+          Math.min(bottom, viewportHeight) - Math.max(top, 0);
+
+        expect(visibleHeight).to.be.greaterThan(height * 0.5);
+      });
 
     assertATIComponentViewEvent({
       component: MOST_READ,
