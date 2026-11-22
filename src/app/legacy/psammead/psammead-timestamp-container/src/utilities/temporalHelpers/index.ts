@@ -32,6 +32,11 @@ const translateBengaliNumerals = makeNumeralTranslator(Bengali);
 const translateBurmeseNumerals = makeNumeralTranslator(Burmese);
 const translateNepaliNumerals = makeNumeralTranslator(Nepali);
 
+const ISO_DURATION_PATTERN =
+  /^P(?:(\d+(?:[.,]\d+)?)D)?(?:T(?:(\d+(?:[.,]\d+)?)H)?(?:(\d+(?:[.,]\d+)?)M)?(?:(\d+(?:[.,]\d+)?)S)?)?$/;
+const parseDurationPart = (value?: string) =>
+  Number(value?.replace(',', '.') ?? 0);
+
 // Mirrors the digit conversion done by each Moment locale's postformat
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
@@ -66,28 +71,23 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
-  const durationApi = globalThis.Temporal?.Duration;
+  const match = ISO_DURATION_PATTERN.exec(duration);
+  const [, days, hours, minutes, seconds] = match ?? [];
+  const hasDuration = [days, hours, minutes, seconds].some(Boolean);
+  const hasInvalidFraction =
+    Boolean(days?.match(/[.,]/)) ||
+    (Boolean(hours?.match(/[.,]/)) && [minutes, seconds].some(Boolean)) ||
+    (Boolean(minutes?.match(/[.,]/)) && Boolean(seconds));
 
-  if (!durationApi) {
-    return { total: () => 0 };
-  }
+  const totalSeconds =
+    hasDuration && !hasInvalidFraction
+      ? parseDurationPart(days) * 86400 +
+        parseDurationPart(hours) * 3600 +
+        parseDurationPart(minutes) * 60 +
+        parseDurationPart(seconds)
+      : 0;
 
-  try {
-    const parsedDuration = durationApi.from(duration);
-
-    if (
-      parsedDuration.sign === -1 ||
-      parsedDuration.years ||
-      parsedDuration.months ||
-      parsedDuration.weeks
-    ) {
-      return durationApi.from('PT0S');
-    }
-
-    return parsedDuration;
-  } catch {
-    return durationApi.from('PT0S');
-  }
+  return { total: (_options?: { unit: 'seconds' }) => totalSeconds };
 };
 
 export const sanitiseLocale = (locale: Locale): string => {

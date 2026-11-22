@@ -15,6 +15,11 @@ describe('Temporal Helper functions', () => {
         ['PT45S', 45],
         ['PT30M', 1800],
         ['PT1H30M45S', 5445],
+        ['P1DT2H3M4S', 93784],
+        ['PT1.5H', 5400],
+        ['PT1,5H', 5400],
+        ['PT1H30.5M', 5430],
+        ['PT1M1.5S', 61.5],
       ])('parses %s to %i total seconds', (duration, expectedSeconds) => {
         expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
           expectedSeconds,
@@ -45,7 +50,7 @@ describe('Temporal Helper functions', () => {
     });
 
     describe('invalid duration input', () => {
-      it.each(['garbage', ''])(
+      it.each(['garbage', '', 'P', 'PT', 'P1.5D', 'PT1.5H30M'])(
         'falls back to 0 seconds for invalid duration %p',
         duration => {
           expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
@@ -55,13 +60,13 @@ describe('Temporal Helper functions', () => {
       );
     });
 
-    it('falls back to 0 seconds when Temporal is unavailable', () => {
+    it('does not depend on the global Temporal API', () => {
       const originalTemporal = globalThis.Temporal;
       try {
         // @ts-expect-error - simulating an environment without Temporal support
         delete globalThis.Temporal;
         expect(sanitiseDuration('PT1H30M').total({ unit: 'seconds' })).toEqual(
-          0,
+          5400,
         );
       } finally {
         globalThis.Temporal = originalTemporal;
