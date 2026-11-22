@@ -38,7 +38,7 @@ describe('SecondaryColumn', () => {
     ).toBeInTheDocument();
   });
 
-  it('does not render a secondary-column placeholder for the Top Stories treatment', () => {
+  it('keeps a desktop secondary-column trigger for the Top Stories treatment', () => {
     render(<SecondaryColumn pageData={pageData} />, {
       serverSideExperiments: [
         {
@@ -50,7 +50,22 @@ describe('SecondaryColumn', () => {
     });
 
     expect(
-      screen.queryByTestId('secondary-column-placeholder'),
-    ).not.toBeInTheDocument();
+      screen.getByTestId('secondary-column-placeholder').parentElement,
+    ).toHaveClass('desktopOnly');
+  });
+
+  it('keeps the trigger when another journey creates an empty secondary column', () => {
+    render(
+      <SecondaryColumn
+        pageData={{
+          ...pageData,
+          secondaryColumn: { topStories: [], features: [] },
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByTestId('secondary-column-placeholder'),
+    ).toBeInTheDocument();
   });
 });

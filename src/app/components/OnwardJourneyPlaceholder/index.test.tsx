@@ -90,4 +90,66 @@ describe('OnwardJourneyPlaceholder', () => {
       new URL(mockFetch.mock.calls[0][0]).searchParams.get('onwardJourney'),
     ).toBe('mostRead');
   });
+
+  it('observes duplicate Most Read placeholders separately and shares their pending request', async () => {
+    let resolveFetch!: (response: unknown) => void;
+    mockFetch.mockImplementationOnce(
+      () =>
+        new Promise(resolve => {
+          resolveFetch = resolve;
+        }),
+    );
+    const { getAllByTestId, queryAllByTestId } = render(
+      <RequestContextProvider
+        service="pidgin"
+        pageType={ARTICLE_PAGE}
+        pathname="/pidgin/articles/cvpde7nqj92o"
+      >
+        <ArticleOnwardJourneysProvider
+          pageData={article}
+          pageType={ARTICLE_PAGE}
+        >
+          <OnwardJourneyPlaceholder onwardJourney="mostRead" />
+          <OnwardJourneyPlaceholder onwardJourney="mostRead" />
+        </ArticleOnwardJourneysProvider>
+      </RequestContextProvider>,
+    );
+    const placeholders = getAllByTestId('onward-journey-skeleton-mostRead');
+    expect(placeholders[0].id).not.toBe(placeholders[1].id);
+
+    await waitFor(() =>
+      expect(global.IntersectionObserver).toHaveBeenCalledTimes(2),
+    );
+    const observerMock = jest.mocked(global.IntersectionObserver);
+    expect(observerMock.mock.results[0].value.observe).toHaveBeenCalledWith(
+      placeholders[0],
+    );
+    expect(observerMock.mock.results[1].value.observe).toHaveBeenCalledWith(
+      placeholders[1],
+    );
+
+    await act(async () => {
+      observerMock.mock.calls.forEach(([callback]) => {
+        callback(
+          [
+            {
+              isIntersecting: true,
+              boundingClientRect: { height: 1 },
+            } as IntersectionObserverEntry,
+          ],
+          {} as IntersectionObserver,
+        );
+      });
+    });
+
+    expect(mockFetch).toHaveBeenCalledTimes(1);
+    expect(getAllByTestId('onward-journey-skeleton-mostRead')).toHaveLength(2);
+
+    await act(async () => {
+      resolveFetch({ ok: true, json: async () => ({ data: { items: [] } }) });
+    });
+    expect(queryAllByTestId('onward-journey-skeleton-mostRead')).toHaveLength(
+      0,
+    );
+  });
 });

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
 import {
   OnwardJourney,
   useOnwardJourneyRequest,
@@ -11,9 +11,6 @@ type Props = {
   onSkeletonReady?: () => void;
 };
 
-const getPlaceholderId = (onwardJourney: OnwardJourney) =>
-  `onward-journey-placeholder-${onwardJourney}`;
-
 const OnwardJourneyPlaceholder = ({
   onwardJourney,
   onSkeletonReady,
@@ -21,7 +18,8 @@ const OnwardJourneyPlaceholder = ({
   const [isMounted, setIsMounted] = useState(false);
   const [isResolved, setIsResolved] = useState(false);
   const context = useOnwardJourneyRequest();
-  const placeholderId = getPlaceholderId(onwardJourney);
+  const instanceId = useId();
+  const placeholderId = `onward-journey-placeholder-${onwardJourney}-${instanceId}`;
   const isNearViewport = useNearViewport({
     elementId: placeholderId,
     rootMargin: isMounted ? '0px 0px 200px 0px' : undefined,

@@ -24,4 +24,16 @@ describe('isTopBarOnwardJourneyExperiment', () => {
   it('returns false when the experiment is absent', () => {
     expect(isTopBarOnwardJourneyExperiment()).toBe(false);
   });
+
+  it('does not apply a treatment from a disabled experiment', () => {
+    expect(
+      isTopBarOnwardJourneyExperiment([
+        {
+          experimentName,
+          variation: 'top-bar-top-stories',
+          enabled: false,
+        },
+      ]),
+    ).toBe(false);
+  });
 });

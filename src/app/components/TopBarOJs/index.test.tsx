@@ -106,6 +106,40 @@ describe('TopBarOJs', () => {
     ).toBeInTheDocument();
   });
 
+  it('attaches view tracking only after content replaces the skeleton', () => {
+    const ref = jest.fn();
+    const viewTrackerSpy = jest
+      .spyOn(viewTracking, 'default')
+      .mockReturnValue({ ref });
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+    const options = {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    };
+    const { rerender } = render(<TopBarOJs blocks={[]} />, options);
+
+    expect(ref).not.toHaveBeenCalled();
+
+    // @ts-expect-error require partial data for testing purposes
+    rerender(<TopBarOJs blocks={topStoriesBlocks} />);
+
+    expect(ref).toHaveBeenCalledWith(
+      screen.getByTestId('top-bar-onward-journeys'),
+    );
+    viewTrackerSpy.mockImplementation(
+      jest.requireActual('#hooks/useViewTracker').default,
+    );
+  });
+
   it('renders hydrated Top Stories for the Top Stories treatment', () => {
     jest.mocked(useOnwardJourneyRequest).mockReturnValue({
       article: {

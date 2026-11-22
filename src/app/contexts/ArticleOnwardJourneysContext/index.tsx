@@ -142,7 +142,7 @@ const getCountryTopicIdToReorder = ({
 }) => {
   if (countryCuration === undefined) return countryTopicIdToReorder;
 
-  return topics?.[0]?.topicId === countryCuration?.topicId
+  return countryCuration && topics?.[0]?.topicId === countryCuration.topicId
     ? countryCuration.topicId
     : null;
 };
@@ -171,6 +171,7 @@ const mergeOnwardJourneyData = ({
   );
   const secondaryColumn: SecondaryColumn | undefined = hasSecondaryColumnData
     ? {
+        ...article.secondaryColumn,
         topStories:
           topStoriesAndFeatures?.topStories ??
           article.secondaryColumn?.topStories ??
@@ -179,7 +180,6 @@ const mergeOnwardJourneyData = ({
           topStoriesAndFeatures?.features ??
           article.secondaryColumn?.features ??
           [],
-        ...article.secondaryColumn,
         ...(latestMedia && { latestMedia }),
         ...(videoCuration && { mediaCuration: videoCuration }),
       }
@@ -214,7 +214,10 @@ export const ArticleOnwardJourneysProvider = ({
   const { service, variant, country, pathname, isAmp, isApp, isLite } =
     use(RequestContext);
   const [articlePageData, setArticlePageData] = useState(pageData);
-  const requestedOnwardJourneys = useRef<Set<OnwardJourney>>(new Set());
+  const previousPageData = useRef(pageData);
+  const requestedOnwardJourneys = useRef<Map<OnwardJourney, Promise<void>>>(
+    new Map(),
+  );
   const abortControllers = useRef<Set<AbortController>>(new Set());
   const shouldFetchOnwardJourneys =
     Boolean(pageData) &&
@@ -225,6 +228,13 @@ export const ArticleOnwardJourneysProvider = ({
   const articleId = getArticleId(pathname);
 
   useEffect(() => {
+    if (previousPageData.current === pageData) return;
+
+    previousPageData.current = pageData;
+    abortControllers.current.forEach(abortController =>
+      abortController.abort(),
+    );
+    abortControllers.current.clear();
     setArticlePageData(pageData);
     requestedOnwardJourneys.current.clear();
   }, [pageData]);
@@ -239,21 +249,22 @@ export const ArticleOnwardJourneysProvider = ({
   );
 
   const requestOnwardJourney = useCallback(
-    async (onwardJourney: OnwardJourney) => {
+    (onwardJourney: OnwardJourney): Promise<void> => {
+      const existingRequest =
+        requestedOnwardJourneys.current.get(onwardJourney);
+      if (existingRequest) return existingRequest;
+
       const shouldRequestLatestMedia =
         pageData?.metadata.consumableAsSFV && articleId;
       const shouldRequestCountryCuration = Boolean(country);
 
       if (
         !shouldFetchOnwardJourneys ||
-        requestedOnwardJourneys.current.has(onwardJourney) ||
         (onwardJourney === 'latestMedia' && !shouldRequestLatestMedia) ||
         (onwardJourney === 'countryCuration' && !shouldRequestCountryCuration)
       ) {
-        return;
+        return Promise.resolve();
       }
-
-      requestedOnwardJourneys.current.add(onwardJourney);
 
       const abortController = new AbortController();
       abortControllers.current.add(abortController);
@@ -269,25 +280,30 @@ export const ArticleOnwardJourneysProvider = ({
         ...(onwardJourney === 'latestMedia' && { id: articleId }),
         ...commonParams,
       };
-      const onwardJourneyData = await safelyFetchOnwardJourney(
-        fetchOnwardJourney<OnwardJourneyData[typeof onwardJourney]>(
-          responseParams,
-        ),
-      );
+      const request = (async () => {
+        const onwardJourneyData = await safelyFetchOnwardJourney(
+          fetchOnwardJourney<OnwardJourneyData[typeof onwardJourney]>(
+            responseParams,
+          ),
+        );
 
-      abortControllers.current.delete(abortController);
-      if (abortController.signal.aborted) return;
+        abortControllers.current.delete(abortController);
+        if (abortController.signal.aborted) return;
 
-      setArticlePageData(currentArticle =>
-        currentArticle
-          ? mergeOnwardJourneyData({
-              article: currentArticle,
-              onwardJourneyData: {
-                [onwardJourney]: onwardJourneyData,
-              },
-            })
-          : currentArticle,
-      );
+        setArticlePageData(currentArticle =>
+          currentArticle
+            ? mergeOnwardJourneyData({
+                article: currentArticle,
+                onwardJourneyData: {
+                  [onwardJourney]: onwardJourneyData,
+                },
+              })
+            : currentArticle,
+        );
+      })();
+
+      requestedOnwardJourneys.current.set(onwardJourney, request);
+      return request;
     },
     [
       articleId,

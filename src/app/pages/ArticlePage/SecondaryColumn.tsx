@@ -9,6 +9,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import isTopBarOnwardJourneyExperiment from '#app/lib/utilities/isTopBarOnwardJourneyExperiment';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
+import secondaryColumnStyles from './SecondaryColumn.module.scss';
 
 const SecondaryColumn = ({
   pageData,
@@ -27,43 +28,50 @@ const SecondaryColumn = ({
   const shouldUseTopBarOJs =
     onwardJourneyContext?.isEnabled &&
     isTopBarOnwardJourneyExperiment(serverSideExperiments);
-  const shouldRenderTopStories = topStoriesContent && !shouldUseTopBarOJs;
+  const hasTopStories = Boolean(topStoriesContent?.length);
+  const hasFeatures = Boolean(featuresContent?.length);
 
-  if (
-    !shouldRenderTopStories &&
-    !featuresContent &&
-    (!onwardJourneyContext?.isEnabled || shouldUseTopBarOJs)
-  ) {
+  if (!hasTopStories && !hasFeatures && !onwardJourneyContext?.isEnabled) {
     return null;
   }
 
   return (
     <div css={styles.secondaryColumn}>
-      {shouldRenderTopStories && (
+      {hasTopStories && (
         <div
           css={styles.topStoriesSection}
+          className={
+            shouldUseTopBarOJs ? secondaryColumnStyles.desktopOnly : undefined
+          }
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
           <TopStoriesSection
-            content={topStoriesContent}
+            content={topStoriesContent ?? []}
             experimentProps={experimentProps}
           />
         </div>
       )}
-      {featuresContent && (
+      {hasFeatures && (
         <div css={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
-            content={featuresContent}
+            content={featuresContent ?? []}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
             experimentProps={experimentProps}
           />
         </div>
       )}
-      {!shouldRenderTopStories && !featuresContent && !shouldUseTopBarOJs && (
-        <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
-      )}
+      {!hasTopStories &&
+        !hasFeatures &&
+        onwardJourneyContext?.isEnabled &&
+        (shouldUseTopBarOJs ? (
+          <div className={secondaryColumnStyles.desktopOnly}>
+            <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
+          </div>
+        ) : (
+          <OnwardJourneyPlaceholder onwardJourney="topStoriesAndFeatures" />
+        ))}
     </div>
   );
 };

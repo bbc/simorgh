@@ -600,7 +600,7 @@ describe('Article Page', () => {
     expect(screen.getByText('Paragraph 1')).toBeInTheDocument();
   });
 
-  it('should render the top stories and features when passed', async () => {
+  it('does not render empty top stories and features sections', async () => {
     const pageDataWithSecondaryColumn = {
       ...articleDataNews,
       secondaryColumn: {
@@ -608,14 +608,14 @@ describe('Article Page', () => {
         features: [],
       },
     };
-    const { getByTestId } = render(
+    const { queryByTestId } = render(
       <Context service="news">
         <ArticlePage pageData={pageDataWithSecondaryColumn} />
       </Context>,
     );
 
-    expect(getByTestId('top-stories')).toBeInTheDocument();
-    expect(getByTestId('features')).toBeInTheDocument();
+    expect(queryByTestId('top-stories')).not.toBeInTheDocument();
+    expect(queryByTestId('features')).not.toBeInTheDocument();
   });
 
   it('should render image with the .webp image extension', () => {

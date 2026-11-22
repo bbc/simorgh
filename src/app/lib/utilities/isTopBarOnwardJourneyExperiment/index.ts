@@ -9,7 +9,8 @@ const TOP_BAR_ONWARD_JOURNEY_VARIATIONS = [
 
 export default (serverSideExperiments?: ServerSideExperiment[] | null) =>
   serverSideExperiments?.some(
-    ({ experimentName, variation }) =>
+    ({ experimentName, variation, enabled }) =>
+      enabled &&
       experimentName === TOP_BAR_ONWARD_JOURNEY_EXPERIMENT &&
       TOP_BAR_ONWARD_JOURNEY_VARIATIONS.includes(variation),
   ) ?? false;

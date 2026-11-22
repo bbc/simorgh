@@ -15,6 +15,13 @@ const clearOnwardJourneyCache = () =>
     .window()
     .then(window => window.caches?.delete('simorghOnwardJourneysCache_v1'));
 
+const renderedOnwardJourneySelectors: Record<string, string> = {
+  topStoriesAndFeatures:
+    '[data-testid="top-stories"], [data-testid="features"]',
+  mostRead: '[data-e2e="most-read"]',
+  latestMedia: '[data-testid="latest-media"]',
+};
+
 export const visitArticlePageAndWaitForOnwardJourney = ({
   path,
   applicationType,
@@ -44,12 +51,13 @@ export const visitArticlePageAndWaitForOnwardJourney = ({
   });
 
   if (onwardJourneyAlias) {
-    cy.get(
-      triggerSelector ??
-        `[data-testid="onward-journey-skeleton-${onwardJourney}"], [data-testid="onward-journey-reservation-${onwardJourney}"]`,
-    )
-      .first()
-      .scrollIntoView();
+    const selectors = [
+      triggerSelector,
+      `[data-testid="onward-journey-skeleton-${onwardJourney}"]`,
+      `[data-testid="onward-journey-reservation-${onwardJourney}"]`,
+      renderedOnwardJourneySelectors[onwardJourney],
+    ].filter(Boolean);
+    cy.get(selectors.join(', ')).filter(':visible').first().scrollIntoView();
     cy.wait(onwardJourneyAlias).then(({ response }) => {
       if (response?.statusCode !== 200) testContext.skip();
     });

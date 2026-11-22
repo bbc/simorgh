@@ -50,7 +50,7 @@ const TopBarOJs = ({
       aria-label={id}
       data-testid={id}
       css={styles.topBarOJWrapper}
-      {...viewTracker}
+      {...(hasBlocks && viewTracker)}
     >
       {hasBlocks ? (
         <>

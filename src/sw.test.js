@@ -440,6 +440,45 @@ describe('Service Worker', () => {
       );
     });
 
+    it.each(['open', 'match', 'put', 'delete'])(
+      'returns network data when cache %s fails',
+      async operation => {
+        const error = new Error('Cache storage unavailable');
+        const warning = jest
+          .spyOn(console, 'warn')
+          .mockImplementation(() => {});
+        if (operation === 'open') {
+          global.caches.open.mockRejectedValueOnce(error);
+        } else {
+          onwardJourneyCache[operation].mockRejectedValueOnce(error);
+        }
+        if (operation === 'delete') {
+          onwardJourneyCache.match.mockResolvedValueOnce(
+            new Response('expired', {
+              headers: { 'X-Simorgh-Onward-Journey-Cache-Time': '1' },
+            }),
+          );
+        }
+        global.fetch.mockResolvedValueOnce(new Response('network data'));
+
+        const response = await getResponse(onwardJourneyRequest);
+
+        expect(await response.text()).toBe('network data');
+        expect(warning).toHaveBeenCalledWith(expect.any(String), error);
+      },
+    );
+
+    it('preserves a network failure when cache storage also fails', async () => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {});
+      global.caches.open.mockRejectedValueOnce(new Error('Cache unavailable'));
+      const networkError = new Error('Network unavailable');
+      global.fetch.mockRejectedValueOnce(networkError);
+
+      await expect(getResponse(onwardJourneyRequest)).rejects.toBe(
+        networkError,
+      );
+    });
+
     it('does not cache BFF requests without an onward journey parameter', async () => {
       const request = new Request(
         'https://web.test.bbc.com/fd/simorgh-bff?service=pidgin',
@@ -786,8 +825,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.11',
-      fileContentHash: '65152fc339664704bf63d99aeaf7d0ce',
+      number: 'v0.3.12',
+      fileContentHash: 'a8e28c1cb654a69c878196d59afc5e37',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

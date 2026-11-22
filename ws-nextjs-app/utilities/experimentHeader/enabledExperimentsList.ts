@@ -19,6 +19,11 @@ type ServerSideExperimentConfig = {
 };
 
 const enabledExperimentList: ServerSideExperimentConfig[] = [
+  {
+    name: 'newswb_ws_topbarojs_read_more',
+    services: ['polska'],
+    pageTypes: ['article'],
+  },
   // experiment: test_server_side_experiment_visits_aa
   {
     name: 'test_server_side_experiment_visits_aa',

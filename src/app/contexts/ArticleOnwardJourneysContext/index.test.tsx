@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
+  act,
   render,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
@@ -71,9 +72,13 @@ const RequestOnwardJourneys = ({
 const TestApp = ({
   country,
   onwardJourneys = [],
+  pageData = article,
+  children,
 }: {
   country?: string;
   onwardJourneys?: OnwardJourney[];
+  pageData?: Article;
+  children?: React.ReactNode;
 }) => (
   <RequestContextProvider
     service="pidgin"
@@ -81,14 +86,30 @@ const TestApp = ({
     pathname="/pidgin/articles/cvpde7nqj92o"
     country={country}
   >
-    <ArticleOnwardJourneysProvider pageData={article} pageType={ARTICLE_PAGE}>
+    <ArticleOnwardJourneysProvider pageData={pageData} pageType={ARTICLE_PAGE}>
       <RequestOnwardJourneys onwardJourneys={onwardJourneys} />
-      <ArticleData pageData={article} />
+      <ArticleData pageData={pageData} />
+      {children}
     </ArticleOnwardJourneysProvider>
   </RequestContextProvider>
 );
 
 const mockFetch = jest.fn();
+
+const PendingMostRead = () => {
+  const context = useOnwardJourneyRequest();
+  const [isResolved, setIsResolved] = useState(false);
+
+  useEffect(() => {
+    context?.requestOnwardJourney('mostRead').then(() => setIsResolved(true));
+  }, [context]);
+
+  return (
+    <output data-testid="request-status">
+      {isResolved ? 'resolved' : 'pending'}
+    </output>
+  );
+};
 
 describe('ArticleOnwardJourneysProvider', () => {
   beforeEach(() => {
@@ -169,5 +190,101 @@ describe('ArticleOnwardJourneysProvider', () => {
     render(<TestApp country="ng" />);
 
     expect(mockFetch).not.toHaveBeenCalled();
+  });
+
+  it.each(['null', 'non-OK'])(
+    'handles %s country curation when the article has no topics',
+    async responseType => {
+      mockFetch.mockResolvedValue({
+        ok: responseType !== 'non-OK',
+        json: async () => ({ data: null }),
+      });
+      const { getByTestId } = render(
+        <TestApp
+          country="ng"
+          onwardJourneys={['countryCuration']}
+          pageData={{
+            ...article,
+            metadata: { ...article.metadata, topics: [] },
+          }}
+        />,
+      );
+
+      await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
+      expect(getByTestId('country-topic')).toBeEmptyDOMElement();
+    },
+  );
+
+  it('preserves fetched Top Stories when video curation resolves first', async () => {
+    let resolveTopStories!: (response: unknown) => void;
+    mockFetch.mockImplementation((input: string) => {
+      if (
+        new URL(input).searchParams.get('onwardJourney') ===
+        'topStoriesAndFeatures'
+      ) {
+        return new Promise(resolve => {
+          resolveTopStories = resolve;
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => ({ data: { summaries: [] } }),
+      });
+    });
+    const { getByTestId } = render(
+      <TestApp onwardJourneys={['videoCuration', 'topStoriesAndFeatures']} />,
+    );
+
+    await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(2));
+    await act(async () => {
+      resolveTopStories({
+        ok: true,
+        json: async () => ({
+          data: {
+            topStories: [{ id: 'top-story' }],
+            features: [{ id: 'feature' }],
+          },
+        }),
+      });
+    });
+
+    expect(getByTestId('top-stories')).toHaveTextContent('1');
+  });
+
+  it('keeps duplicate Most Read requests pending across another journey update', async () => {
+    let resolveMostRead!: (response: unknown) => void;
+    mockFetch.mockImplementation((input: string) => {
+      if (new URL(input).searchParams.get('onwardJourney') === 'mostRead') {
+        return new Promise(resolve => {
+          resolveMostRead = resolve;
+        });
+      }
+      return Promise.resolve({
+        ok: true,
+        json: async () => ({ data: { topStories: [{ id: 'top-story' }] } }),
+      });
+    });
+    const { getByTestId } = render(
+      <TestApp onwardJourneys={['mostRead', 'topStoriesAndFeatures']}>
+        <PendingMostRead />
+      </TestApp>,
+    );
+
+    await waitFor(() =>
+      expect(getByTestId('top-stories')).toHaveTextContent('1'),
+    );
+    expect(getByTestId('request-status')).toHaveTextContent('pending');
+    expect(mockFetch).toHaveBeenCalledTimes(2);
+
+    await act(async () => {
+      resolveMostRead({
+        ok: true,
+        json: async () => ({ data: { items: [{ id: 'most-read' }] } }),
+      });
+    });
+
+    expect(getByTestId('request-status')).toHaveTextContent('resolved');
+    expect(getByTestId('most-read')).toHaveTextContent('1');
+    expect(mockFetch).toHaveBeenCalledTimes(2);
   });
 });

@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.11';
+const version = 'v0.3.12';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
 const onwardJourneyCacheName = 'simorghOnwardJourneysCache_v1';
@@ -138,18 +138,29 @@ const getCachedOnwardJourneyResponse = async ({ cache, request }) => {
 };
 
 const getOnwardJourneyResponse = async request => {
-  const cache = await caches.open(onwardJourneyCacheName);
-  const cachedResponse = await getCachedOnwardJourneyResponse({
-    cache,
-    request,
-  });
+  let cache;
+  try {
+    cache = await caches.open(onwardJourneyCacheName);
+    const cachedResponse = await getCachedOnwardJourneyResponse({
+      cache,
+      request,
+    });
 
-  if (cachedResponse) return cachedResponse;
+    if (cachedResponse) return cachedResponse;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn('Onward journey cache lookup failed', error);
+  }
 
   const response = await fetch(request);
 
-  if (response.ok) {
-    await cacheOnwardJourneyResponse({ cache, request, response });
+  if (response.ok && cache) {
+    try {
+      await cacheOnwardJourneyResponse({ cache, request, response });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn('Onward journey cache write failed', error);
+    }
   }
 
   return response;
