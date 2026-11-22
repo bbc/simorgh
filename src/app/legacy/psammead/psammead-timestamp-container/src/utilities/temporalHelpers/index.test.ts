@@ -20,6 +20,10 @@ describe('Temporal Helper functions', () => {
         ['PT1,5H', 5400],
         ['PT1H30.5M', 5430],
         ['PT1M1.5S', 61.5],
+        ['PT2.05M', 123],
+        ['+PT30M', 1800],
+        ['pt30m', 1800],
+        ['P1DT', 86400],
       ])('parses %s to %i total seconds', (duration, expectedSeconds) => {
         expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
           expectedSeconds,
