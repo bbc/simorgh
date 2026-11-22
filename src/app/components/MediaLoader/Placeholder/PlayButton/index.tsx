@@ -1,4 +1,4 @@
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/inline';
 import styles from './index.styles';
 import VisuallyHiddenText from '../../../VisuallyHiddenText';
 

@@ -1,6 +1,6 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/inline';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

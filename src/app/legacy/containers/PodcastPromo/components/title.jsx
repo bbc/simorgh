@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/inline';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const Heading = styled.h2`

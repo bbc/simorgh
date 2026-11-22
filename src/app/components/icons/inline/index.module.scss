@@ -1,0 +1,87 @@
+@use '@scss/themeTokens' as theme;
+
+.icon {
+  vertical-align: middle;
+  margin-block: 0;
+  margin-inline: theme.$spacings-half;
+  color: theme.$palette-ebon;
+  fill: currentColor;
+}
+
+.clock {
+  width: 0.725rem;
+  height: 0.725rem;
+}
+
+.audio,
+.video {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.video {
+  color: var(--inline-video-colour, theme.$palette-ebon);
+
+  :global([data-is-dark-ui='true']) & {
+    --inline-video-colour: #{theme.$palette-ebon};
+    --inline-video-lite-colour: #{theme.$palette-white};
+
+    @media #{theme.$mediaQueries-group-1-max-width} {
+      --inline-video-colour: #{theme.$palette-white};
+    }
+  }
+
+  // Change the state value, not color specificity, so consumer SVG overrides win.
+  &[data-is-lite='true'] {
+    --inline-video-colour: var(
+      --inline-video-lite-colour,
+      #{theme.$palette-ebon}
+    );
+  }
+}
+
+.photogallery {
+  width: theme.$spacings-double;
+  height: 0.8125rem;
+}
+
+.square,
+.promo {
+  width: theme.$spacings-double;
+  height: theme.$spacings-double;
+}
+
+.promo {
+  :global(.podcastIconWrapper) & {
+    width: theme.$spacings-quadruple;
+    height: theme.$spacings-quadruple;
+    margin: auto;
+
+    @media (max-width: 16.25rem) {
+      width: theme.$spacings-triple;
+      height: theme.$spacings-triple;
+    }
+  }
+}
+
+.navigation {
+  color: theme.$palette-black;
+  fill: currentColor;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    fill: LinkText;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-double;
+}
+
+.sample {
+  margin: 0;
+  padding: theme.$spacings-double;
+  background-color: theme.$palette-white;
+  color: theme.$palette-ebon;
+}

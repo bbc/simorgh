@@ -1,6 +1,6 @@
 import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
-import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import { navigationIcons } from '#app/components/icons/inline';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,

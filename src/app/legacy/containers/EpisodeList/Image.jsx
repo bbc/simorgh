@@ -1,7 +1,7 @@
 import { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/inline';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
