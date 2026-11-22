@@ -283,6 +283,11 @@ describe('Timestamp utility functions', () => {
     it('should preserve exact whole seconds from fractional minutes', () => {
       expect(formatDuration({ duration: 'PT2.05M' })).toEqual('02:03');
     });
+    it('should return zero for a duration that exceeds numeric limits', () => {
+      expect(formatDuration({ duration: `PT${'9'.repeat(400)}S` })).toEqual(
+        '00:00',
+      );
+    });
     it('should return duration in relevant format when a format is passed in', () => {
       const duration = 'PT30M'; // 30:00
       expect(formatDuration({ duration, format: 'mm,ss' })).toEqual('30,00');

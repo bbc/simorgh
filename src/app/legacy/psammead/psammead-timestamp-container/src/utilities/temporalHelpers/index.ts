@@ -96,7 +96,10 @@ export const sanitiseDuration = (duration: ISODuration) => {
         durationPartToSeconds(seconds, 1)
       : 0;
 
-  return { total: (_options?: { unit: 'seconds' }) => totalSeconds };
+  return {
+    total: (_options?: { unit: 'seconds' }) =>
+      Number.isFinite(totalSeconds) ? totalSeconds : 0,
+  };
 };
 
 export const sanitiseLocale = (locale: Locale): string => {

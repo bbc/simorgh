@@ -54,14 +54,19 @@ describe('Temporal Helper functions', () => {
     });
 
     describe('invalid duration input', () => {
-      it.each(['garbage', '', 'P', 'PT', 'P1.5D', 'PT1.5H30M'])(
-        'falls back to 0 seconds for invalid duration %p',
-        duration => {
-          expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
-            0,
-          );
-        },
-      );
+      it.each([
+        'garbage',
+        '',
+        'P',
+        'PT',
+        'P1.5D',
+        'PT1.5H30M',
+        `PT${'9'.repeat(400)}S`,
+      ])('falls back to 0 seconds for invalid duration %p', duration => {
+        expect(sanitiseDuration(duration).total({ unit: 'seconds' })).toEqual(
+          0,
+        );
+      });
     });
 
     it('does not depend on the global Temporal API', () => {
