@@ -11,7 +11,7 @@ The `product` is passed to a [VisuallyHiddenText](https://github.com/bbc/psammea
 The `serviceLocalisedName` is an optional prop referring to the local name of a service eg `Yoruba`. It is also passed to [VisuallyHiddenText](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-visually-hidden-text) inside the Brand component.
 
 The `svg` prop contains an asset `path` and its `ratio`. Service logo metadata
-comes from `src/app/components/ThemeProviderSCSSModules/chameleonLogos`; inline
+comes from `src/app/components/ThemeProviderSCSSModules/chameleonLogos`; shared
 UI icons are a separate API at `#app/components/icons/shared`.
 
 The `minWidth` and `maxWidth` values are required to allow the ability for the `svg` element to dynamically scale as the viewport becomes a very small size EG: feature phones.
@@ -41,7 +41,7 @@ The `scriptLink` can be used to render [ScriptLink](https://github.com/bbc/psamm
 | svgHeight | Number | yes | N/A | `24` |
 | minWidth | Number | yes | N/A | `240` |
 | maxWidth | Number | yes | N/A | `380` |
-| svg | Object | yes | N/A | { path: '/images/brand/igbo.svg', ratio: 6.9979 } |
+| svg | Object | yes | N/A | { path: '/igbo/images/brand.svg', ratio: 5.592592592592593 } |
 | backgroundColour | String | yes | N/A | `${POSTBOX}` or relevant string hex code |
 | logoColour | String | yes | N/A | `${WHITE}` or relevant string hex code |
 | url | String | no | N/A | `https://www.bbc.co.uk/news` |
