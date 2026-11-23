@@ -158,7 +158,7 @@ describe('FormContext submission with token refresh', () => {
       new Error('Token expired'),
     );
 
-    const { container } = await act(() =>
+    await act(() =>
       render(
         <FormContextProvider fields={[]} signinRequired>
           <SubmitProbe />
