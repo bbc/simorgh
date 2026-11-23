@@ -1,0 +1,70 @@
+@use '@scss/themeTokens' as theme;
+@use '@scss/fontSizes';
+@use '@scss/fontVariants';
+
+.section {
+  border-block-end: 1px solid theme.$palette-grey-2;
+  padding-block-end: theme.$spacings-double;
+}
+
+.heading {
+  @include fontSizes.gel-font-size(pica);
+  @include fontVariants.gel-font-variant('sans-bold');
+  background-color: theme.$palette-grey-2;
+  border-block-end: 1px solid theme.$palette-grey-5;
+  margin-block: 0 theme.$spacings-double;
+  padding: theme.$spacings-half theme.$spacings-full;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-half;
+  padding-block: theme.$spacings-full;
+
+  &:not(:last-child) {
+    border-block-end: 1px solid theme.$palette-grey-2;
+  }
+}
+
+.link {
+  @include fontSizes.gel-font-size(pica);
+  @include fontVariants.gel-font-variant('serif-medium');
+  color: theme.$palette-black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.timeAgo {
+  @include fontSizes.gel-font-size(minion);
+  @include fontVariants.gel-font-variant('sans-regular');
+  color: theme.$palette-grey-6;
+}
+
+@media #{theme.$mediaQueries-group-2-min-width} {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: theme.$spacings-double;
+  }
+
+  .item:nth-child(odd):not(:nth-last-child(2)) {
+    border-block-end: 1px solid theme.$palette-grey-2;
+  }
+
+  .item:nth-child(even):not(:last-child) {
+    border-block-end: 1px solid theme.$palette-grey-2;
+  }
+}

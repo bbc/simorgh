@@ -26,6 +26,8 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 import HomePageElectionBanner from './HomePageElectionBanner';
+import MostRecent from '../../components/MostRecent';
+import { MostRecentData } from '../../components/MostRecent/types';
 
 export interface HomePageProps {
   pageData: {
@@ -38,6 +40,7 @@ export interface HomePageProps {
     metadata: {
       type: string;
     };
+    mostRecent?: MostRecentData | null;
   };
 }
 
@@ -148,6 +151,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 );
               },
             )}
+            <MostRecent data={pageData.mostRecent} showSectionLabel />
           </div>
         </div>
       </main>
