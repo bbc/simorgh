@@ -11,6 +11,7 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import { OK } from '#app/lib/statusCodes.const';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import getUUID from '#app/lib/utilities/getUUID';
+import { refreshTokensIfExpired } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import {
   Field,
   FieldData,
@@ -98,7 +99,7 @@ export const FormContextProvider = ({
     query: { id },
     asPath,
   } = useRouter();
-  const { isSignedIn } = use(AccountContext);
+  const { isRefreshAvailable } = use(AccountContext);
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
@@ -153,7 +154,6 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    if (signinRequired && !isSignedIn) return;
     setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
@@ -194,6 +194,12 @@ export const FormContextProvider = ({
       formData.append(key, fieldValue as string);
     });
     try {
+      if (signinRequired) {
+        // Validate the session is active before submission ,if signinRequired campaign is active;
+        // Cross-tab sign-outs clear the cookie immediately;
+        // refresh call will detect and throw error if needed.
+        await refreshTokensIfExpired(isRefreshAvailable);
+      }
       const environment = getEnvironment(asPath);
       const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
       const url = `${domain}/ugc/send/${id}?said=${getUUID()}`;
@@ -240,6 +246,7 @@ export const FormContextProvider = ({
     } catch (error) {
       const { message, status } = error as UGCSendError;
 
+      setSubmitted(false);
       setSubmissionError({ message, status });
       setTimeout(() => {
         setScreen('error');
