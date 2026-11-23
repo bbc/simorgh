@@ -14,7 +14,7 @@ interface RelatedContentCarouselItem {
   image?: string;
 }
 
-interface RelatedContentCarouselProps {
+export interface RelatedContentCarouselProps {
   content: OptimoBlock[];
 }
 
