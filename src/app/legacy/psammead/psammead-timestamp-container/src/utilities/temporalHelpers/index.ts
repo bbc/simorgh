@@ -32,6 +32,20 @@ const translateBengaliNumerals = makeNumeralTranslator(Bengali);
 const translateBurmeseNumerals = makeNumeralTranslator(Burmese);
 const translateNepaliNumerals = makeNumeralTranslator(Nepali);
 
+const ISO_DURATION_PATTERN =
+  /^\+?P(?:(\d+(?:[.,]\d{1,9})?)D)?(?:T(?:(\d+(?:[.,]\d{1,9})?)H)?(?:(\d+(?:[.,]\d{1,9})?)M)?(?:(\d+(?:[.,]\d{1,9})?)S)?)?$/i;
+const NANOSECONDS_PER_SECOND = 1_000_000_000;
+
+const durationPartToSeconds = (
+  value: string | undefined,
+  secondsPerUnit: number,
+) => {
+  if (!value) return 0;
+
+  const seconds = Number(value.replace(',', '.')) * secondsPerUnit;
+  return Math.round(seconds * NANOSECONDS_PER_SECOND) / NANOSECONDS_PER_SECOND;
+};
+
 // Mirrors the digit conversion done by each Moment locale's postformat
 const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
   string,
@@ -66,28 +80,26 @@ const LOCALE_NUMBERING_SYSTEM_OVERRIDES: Record<
 };
 
 export const sanitiseDuration = (duration: ISODuration) => {
-  const durationApi = globalThis.Temporal?.Duration;
+  const match = ISO_DURATION_PATTERN.exec(duration);
+  const [, days, hours, minutes, seconds] = match ?? [];
+  const hasDuration = [days, hours, minutes, seconds].some(Boolean);
+  const hasInvalidFraction =
+    Boolean(days?.match(/[.,]/)) ||
+    (Boolean(hours?.match(/[.,]/)) && [minutes, seconds].some(Boolean)) ||
+    (Boolean(minutes?.match(/[.,]/)) && Boolean(seconds));
 
-  if (!durationApi) {
-    return { total: () => 0 };
-  }
+  const totalSeconds =
+    hasDuration && !hasInvalidFraction
+      ? durationPartToSeconds(days, 86400) +
+        durationPartToSeconds(hours, 3600) +
+        durationPartToSeconds(minutes, 60) +
+        durationPartToSeconds(seconds, 1)
+      : 0;
 
-  try {
-    const parsedDuration = durationApi.from(duration);
-
-    if (
-      parsedDuration.sign === -1 ||
-      parsedDuration.years ||
-      parsedDuration.months ||
-      parsedDuration.weeks
-    ) {
-      return durationApi.from('PT0S');
-    }
-
-    return parsedDuration;
-  } catch {
-    return durationApi.from('PT0S');
-  }
+  return {
+    total: (_options?: { unit: 'seconds' }) =>
+      Number.isFinite(totalSeconds) ? totalSeconds : 0,
+  };
 };
 
 export const sanitiseLocale = (locale: Locale): string => {
