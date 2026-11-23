@@ -195,9 +195,8 @@ export const FormContextProvider = ({
     });
     try {
       if (signinRequired) {
-        // Validate the session is active before submission ,if signinRequired campaign is active;
-        // Cross-tab sign-outs clear the cookie immediately;
-        // refresh call will detect and throw error if needed.
+        // Validate the session is active before submission ,
+        // if signinRequired campaign is active;
         await refreshTokensIfExpired(isRefreshAvailable);
       }
       const environment = getEnvironment(asPath);
