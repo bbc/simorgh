@@ -47,6 +47,8 @@ const VariantBanner = () => {
 
   return (
     <AccountPromotionalBanner
+      experimentName={EXPERIMENT_NAME}
+      experimentVariant={EXPERIMENT_NAME}
       title="बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें"
       description="अपने मुफ़्त BBC अकाउंट से जब चाहें, वापस आकर पढ़ें।"
     />
