@@ -55,7 +55,7 @@ const styles = {
             [mq.GROUP_4_MIN_WIDTH]: {
               padding: '0.75rem',
             },
-            svg: {
+            '.external-svg': {
               margin: 0,
               [mq.GROUP_4_MIN_WIDTH]: {
                 width: `${spacings.TRIPLE}rem`,

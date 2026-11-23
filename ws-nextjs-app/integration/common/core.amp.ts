@@ -2,7 +2,20 @@
  * @isInUK yes
  */
 
+import { AMP_SCRIPT, AMP_NO_SCRIPT } from '#app/lib/amp/boilerplate';
+
 export default () => {
+  it('preserves the required AMP boilerplate and no-JavaScript CSS', () => {
+    const boilerplate = document.querySelector('head > style[amp-boilerplate]');
+    const fallback = document.querySelector(
+      'head > noscript > style[amp-boilerplate]',
+    );
+
+    expect(boilerplate?.textContent).toBe(AMP_SCRIPT);
+    expect(fallback?.textContent).toBe(AMP_NO_SCRIPT);
+    expect(document.querySelectorAll('style[amp-boilerplate]')).toHaveLength(2);
+  });
+
   it('Core scripts', () => {
     const ampScripts = [
       'https://cdn.ampproject.org/v0.js',
