@@ -1,0 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
+.postHeaderBanner time.timeStamp {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  color: theme.$palette-white;
+  padding: theme.$spacings-half theme.pixelsToRem-px-to-rem(12);
+  background-color: var(--brand-background);
+  display: inline-block;
+}

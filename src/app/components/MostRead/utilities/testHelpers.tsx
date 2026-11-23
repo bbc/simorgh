@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
-import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
+import Timestamp from '#app/components/Timestamp';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';

@@ -1,6 +1,5 @@
-import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
-import { render } from '../../../../components/react-testing-library-with-providers';
+import { render, screen } from '../react-testing-library-with-providers';
 import '#lib/locales/moment/ha';
 import Timestamp from '.';
 
@@ -10,7 +9,7 @@ const elevenMonthsFromNow = moment(Date.now()).subtract(11, 'months').valueOf();
 const noLeadingZeroTimestamp = 1530947227000; // 07 July 2018
 const invalidData = '8640000000000001'; // A day holds 86,400,000 milliseconds - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Description
 const mockCalendar = {
-  formatDate: momentLocale => {
+  formatDate: (momentLocale: moment.Moment) => {
     if (momentLocale) {
       return '27 مهر 1397';
     }
@@ -19,13 +18,55 @@ const mockCalendar = {
 };
 
 describe('Timestamp', () => {
-  describe('with no data', () => {
-    console.error = jest.fn(); // eslint-disable-line no-console
-    isNull('should return null', <Timestamp />);
+  it.each([
+    { isAmp: false, isLite: false },
+    { isAmp: true, isLite: false },
+    { isAmp: false, isLite: true },
+  ])('preserves Persian text and machine-readable dates in %j', options => {
+    render(
+      <Timestamp
+        timestamp="2018-10-19T17:10:06.000Z"
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY"
+        timezone="GMT"
+        locale="fa"
+        altCalendar={mockCalendar}
+        prefix="به روز شده در"
+        suffix="."
+        className="consumer"
+        padding={false}
+      />,
+      { service: 'persian', ...options },
+    );
+    const time = screen.getByRole('time');
+    expect(time).toHaveTextContent(
+      'به روز شده در 27 مهر 1397 - ۱۹ اکتبر ۲۰۱۸ .',
+    );
+    expect(time).toHaveAttribute('datetime', '2018-10-19');
+    expect(time).toHaveClass('consumer');
+  });
+
+  it('keeps timezone rollover consistent between visible and semantic dates', () => {
+    render(
+      <Timestamp
+        timestamp="2021-06-15T23:30:00.000Z"
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY, HH:mm"
+        timezone="Asia/Kathmandu"
+        locale="en-gb"
+      />,
+    );
+    const time = screen.getByRole('time');
+    expect(time).toHaveTextContent('16 June 2021, 05:15');
+    expect(time).toHaveAttribute('datetime', '2021-06-16');
+  });
+  it('returns null with no data', () => {
+    const { container } = render(<Timestamp />);
+    expect(container).toBeEmptyDOMElement();
   });
 
   it('should render without a leading zero on the day', () => {
-    const { container } = render(
+    render(
       <Timestamp
         timestamp={noLeadingZeroTimestamp}
         dateTimeFormat="YYYY-MM-DD"
@@ -35,13 +76,13 @@ describe('Timestamp', () => {
       />,
       { service: 'persian' },
     );
-    const time = container.querySelector('time');
+    const time = screen.getByRole('time');
     expect(time).toBeInTheDocument();
     expect(time.textContent).not.toMatch(/^۰/);
   });
 
   it('should render correctly', () => {
-    const { container } = render(
+    render(
       <Timestamp
         timestamp={defaultTimestamp}
         dateTimeFormat="YYYY-MM-DD"
@@ -49,22 +90,24 @@ describe('Timestamp', () => {
         isRelative={false}
       />,
     );
-    const time = container.querySelector('time');
+    const time = screen.getByRole('time');
     expect(time.textContent).toEqual('19 October 2018');
   });
 
-  isNull(
-    'should handle invalid date',
-    <Timestamp
-      timestamp={invalidData}
-      dateTimeFormat="YYYY-MM-DD"
-      format="D MMMM YYYY"
-      isRelative={false}
-    />,
-  );
+  it('returns null for an invalid date', () => {
+    const { container } = render(
+      <Timestamp
+        timestamp={invalidData}
+        dateTimeFormat="YYYY-MM-DD"
+        format="D MMMM YYYY"
+        isRelative={false}
+      />,
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
 
   it('should add prefix and suffix', () => {
-    const { container } = render(
+    render(
       <Timestamp
         timestamp={defaultTimestamp}
         dateTimeFormat="YYYY-MM-DD"
@@ -74,7 +117,7 @@ describe('Timestamp', () => {
         suffix="suffix here"
       />,
     );
-    const time = container.querySelector('time');
+    const time = screen.getByRole('time');
     expect(time.textContent).toContain('Prefix here');
     expect(time.textContent).toContain('suffix here');
   });
@@ -82,7 +125,7 @@ describe('Timestamp', () => {
   describe('assertions', () => {
     describe('with alternative calendar props', () => {
       it('should add alternative calendar if timestamp is not relative', () => {
-        const { container } = render(
+        render(
           <Timestamp
             timestamp={defaultTimestamp}
             dateTimeFormat="YYYY-MM-DD"
@@ -94,12 +137,12 @@ describe('Timestamp', () => {
           { service: 'persian' },
         );
 
-        const time = container.querySelector('time');
+        const time = screen.getByRole('time');
         expect(time.textContent).toEqual('27 مهر 1397 - ۱۹ اکتبر ۲۰۱۸');
       });
 
       it('should not add alternative calendar if timestamp is relative', () => {
-        const { container } = render(
+        render(
           <Timestamp
             timestamp={elevenMonthsFromNow}
             dateTimeFormat="YYYY-MM-DD"
@@ -111,13 +154,13 @@ describe('Timestamp', () => {
           { service: 'persian' },
         );
 
-        const time = container.querySelector('time');
+        const time = screen.getByRole('time');
         expect(time.textContent).toEqual('۱۱ ماه پیش');
       });
     });
 
     it('should render a hausa timestamp', () => {
-      const { container } = render(
+      render(
         <Timestamp
           timestamp={defaultTimestamp}
           dateTimeFormat="YYYY-MM-DD"
@@ -128,12 +171,12 @@ describe('Timestamp', () => {
         { service: 'hausa' },
       );
 
-      const time = container.querySelector('time');
+      const time = screen.getByRole('time');
       expect(time.textContent).toEqual('19 Oktoba 2018');
     });
 
     it('should render a hausa ISO timestamp', () => {
-      const { container } = render(
+      render(
         <Timestamp
           timestamp={new Date(defaultTimestamp).toISOString()}
           dateTimeFormat="YYYY-MM-DD"
@@ -144,12 +187,12 @@ describe('Timestamp', () => {
         { service: 'hausa' },
       );
 
-      const time = container.querySelector('time');
+      const time = screen.getByRole('time');
       expect(time.textContent).toEqual('19 Oktoba 2018');
     });
 
     it('should render a hausa relative timestamp', () => {
-      const { container } = render(
+      render(
         <Timestamp
           timestamp={elevenMonthsFromNow}
           dateTimeFormat="YYYY-MM-DD"
@@ -160,7 +203,7 @@ describe('Timestamp', () => {
         { service: 'hausa' },
       );
 
-      const time = container.querySelector('time');
+      const time = screen.getByRole('time');
       expect(time.textContent).toEqual('11 months wuce');
     });
   });

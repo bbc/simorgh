@@ -34,7 +34,8 @@ Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlo
 
 `getAmpLiteCss` inlines `.module.scss` chunks automatically, so AMP and Lite components need no special wiring. Minimize the compiled CSS for every edition; if the component renders in AMP, manually verify that the final inlined `style[amp-custom]` payload remains below AMP's hard 75 KB limit.
 
-Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
+Legacy imports that are **pure utilities** do not block migration. Timestamp and
+localised ISO-duration formatters now live in `#app/lib/utilities/timestamp`.
 
 Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked. When migrating the consumer's override, follow [Overrides across component boundaries](#overrides-across-component-boundaries).
 

@@ -5,7 +5,7 @@ import {
   isValidDateTime,
   localisedMoment,
 } from '.';
-import timestampGenerator from '../helpers/testHelpers';
+import timestampGenerator from './testHelpers';
 
 const timezone = 'Europe/London';
 const timestamp = 1539969006000; // 19 October 2018
@@ -34,6 +34,51 @@ describe('Timestamp utility functions', () => {
   });
 
   describe('formatUnixTimestamp', () => {
+    it.each([
+      [59, 'a minute ago'],
+      [60, 'a minute ago'],
+      [119, 'a minute ago'],
+      [120, '2 minutes ago'],
+      [3599, '59 minutes ago'],
+      [3600, 'an hour ago'],
+      [86399, '23 hours ago'],
+      [86400, 'a day ago'],
+      [29 * 86400, '29 days ago'],
+      [30 * 86400, 'a month ago'],
+    ])('preserves the relative boundary at %s seconds', (seconds, expected) => {
+      const now = 1704110400000;
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(now);
+      try {
+        expect(
+          formatUnixTimestamp({
+            timestamp: now - seconds * 1000,
+            locale: 'en-gb',
+            timezone: 'Europe/London',
+            isRelative: true,
+          }),
+        ).toBe(expected);
+      } finally {
+        nowSpy.mockRestore();
+      }
+    });
+
+    it('continues to treat numeric timestamps as milliseconds and ISO strings as dates', () => {
+      const options = {
+        format: 'YYYY-MM-DD HH:mm:ss',
+        locale: 'en-gb',
+        timezone: 'GMT',
+      };
+      expect(
+        formatUnixTimestamp({ ...options, timestamp: 1539969006000 }),
+      ).toBe('2018-10-19 17:10:06');
+      expect(
+        formatUnixTimestamp({
+          ...options,
+          timestamp: '2018-10-19T17:10:06.000Z',
+        }),
+      ).toBe('2018-10-19 17:10:06');
+      expect(formatUnixTimestamp({ ...options, timestamp: 0 })).toBeUndefined();
+    });
     const GMTTimestamp = 1483275600000; // 1 January 2017 GMT
     const BSTTimestamp = 1496235600000; // 31 May 2017 BST
     const isRelative = false;

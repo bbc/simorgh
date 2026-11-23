@@ -170,6 +170,10 @@ export const PersianBillboard = () => {
   );
 };
 
+PersianBillboard.globals = {
+  service: { service: 'persian', variant: 'default' },
+};
+
 export const PersianBillboardWithPVPromos = () => {
   const summary = persianData.data.curations[2].summaries[0];
   return (
@@ -188,6 +192,10 @@ export const PersianBillboardWithPVPromos = () => {
       </ThemeProvider>
     </div>
   );
+};
+
+PersianBillboardWithPVPromos.globals = {
+  service: { service: 'persian', variant: 'default' },
 };
 
 export const HighProminence = (_: StoryArgs, globalArgs: Props) => {

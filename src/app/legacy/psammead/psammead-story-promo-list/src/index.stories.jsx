@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react-webpack5';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
-import Timestamp from '#psammead/psammead-timestamp/src';
+import Timestamp from '#app/components/Timestamp';
 import Image from '#app/components/Image';
 import StoryPromo, {
   Headline,

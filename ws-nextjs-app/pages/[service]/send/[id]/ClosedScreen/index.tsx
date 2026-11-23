@@ -1,8 +1,8 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import TimeStampContainer from '#app/components/TimestampContainer';
 import GenericMessage from '../GenericMessage';
-import styles from './styles';
+import styles from './index.module.scss';
 import fallbackTranslations from '../fallbackTranslations';
 
 type Props = {
@@ -28,7 +28,7 @@ export default function ClosedScreen({ title, closingTime }: Props) {
         <>
           {`${dateDescription?.[0]}`}
           <TimeStampContainer
-            css={styles.timestamp}
+            className={styles.timestamp}
             timestamp={closingTime}
             dateTimeFormat="DD MMMM YYYY"
             format="D MMMM YYYY"

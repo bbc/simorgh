@@ -1,4 +1,4 @@
-import Timestamp from '../../../../legacy/psammead/psammead-timestamp-container/src';
+import Timestamp from '#app/components/TimestampContainer';
 
 interface LastUpdatedProps {
   locale: string;
