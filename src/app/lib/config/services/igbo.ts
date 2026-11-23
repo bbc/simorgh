@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/ig';
+import '#lib/locales/moment/ig';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -105,6 +105,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      showMore: 'Gosi ọzọ',
       moreOnThis: '',
       navMenuText: 'Ngalaba',
       liteSite: {

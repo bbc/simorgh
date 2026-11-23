@@ -12,6 +12,7 @@ export default {
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
+  showMore: 'Показать больше',
   moreOnThis: '',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',

@@ -2,15 +2,18 @@ import { GetServerSidePropsContext } from 'next';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
-import { OK } from '#app/lib/statusCodes.const';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes } from '#app/models/types/global';
+import { PageTypes, ToggleDefinition } from '#app/models/types/global';
+import { MARKDOWN_REGEX } from '#app/lib/regex.const';
+import articleToMarkdown from '#app/utilities/articleToMarkdown';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -30,21 +33,46 @@ const getDerivedArticleType = (metadata: ArticleMetadata) => {
   return pageType;
 };
 
-export default async (context: GetServerSidePropsContext) => {
+export default async (
+  context: GetServerSidePropsContext,
+  { toggles = {} }: { toggles?: Record<string, ToggleDefinition> } = {},
+) => {
   const {
     resolvedUrl,
-    req: { headers: reqHeaders, url: requestUrl },
+    req: { headers: reqHeaders },
   } = context;
 
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
-  const canonicalPathname =
-    requestUrl?.split('?')?.[0] || resolvedUrlWithoutQuery;
+  const canonicalPathname = getRequestUrl(context).split('?')[0];
 
-  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
+  const canRenderMarkdown = toggles.renderMarkDown?.enabled === true;
+
+  if (isMarkdown && !canRenderMarkdown) {
+    context.res.statusCode = NOT_FOUND;
+    logger.error(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: NOT_FOUND,
+      pageType: ARTICLE_PAGE,
+    });
+
+    return {
+      props: {
+        service,
+        status: NOT_FOUND,
+        timeOnServer: Date.now(),
+        variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: canonicalPathname,
+      },
+    };
+  }
+
+  const articlePath = resolvedUrlWithoutQuery.replace(MARKDOWN_REGEX, '');
 
   const countryHeader =
     reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'];
@@ -57,7 +85,7 @@ export default async (context: GetServerSidePropsContext) => {
   const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
 
   const { data } = await getPageData({
-    id: resolvedUrlWithoutQuery,
+    id: articlePath,
     service,
     variant: variant || undefined,
     rendererEnv,
@@ -93,7 +121,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: renderStatus,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: canonicalPathname,
@@ -114,6 +141,23 @@ export default async (context: GetServerSidePropsContext) => {
     'Cache-Control',
     `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
   );
+
+  if (isMarkdown) {
+    const canonicalUrl =
+      article.metadata.locators?.canonicalUrl ||
+      `https://www.bbc.com${canonicalPathname.replace(MARKDOWN_REGEX, '')}`;
+    const markdown = articleToMarkdown({ article, canonicalUrl });
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status,
+      pageType: ARTICLE_PAGE,
+    });
+    context.res.appendHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+    context.res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    context.res.setHeader('x-markdown-tokens', Math.floor(markdown.length / 3));
+    context.res.end(markdown);
+    return { props: {} };
+  }
 
   const {
     topStories = null,

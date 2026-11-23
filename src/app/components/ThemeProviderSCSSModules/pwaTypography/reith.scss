@@ -1,0 +1,14 @@
+@use '../fontFaces/reithPwaFontFaces.scss' as reithFontFaces;
+@use '../fontVariants/reithVariants.scss' as reithVariants;
+
+// The --gel-font-variant-* aliases these properties feed are declared by the base
+// fontVariants file that every service theme already imports.
+$pwa-display-modes: '(display-mode: standalone), (display-mode: minimal-ui), (display-mode: fullscreen), (display-mode: window-controls-overlay)';
+
+@media #{$pwa-display-modes} {
+  @include reithFontFaces.reith-pwa-font-faces;
+
+  :root {
+    @include reithVariants.reith-font-variants;
+  }
+}

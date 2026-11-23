@@ -1,0 +1,10 @@
+@use '@scss/themeTokens' as theme;
+
+.container {
+  padding: theme.$spacings-full;
+}
+
+.value {
+  display: inline-block;
+  margin: theme.$spacings-full;
+}

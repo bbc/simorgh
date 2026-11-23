@@ -4,9 +4,10 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const styles = {
   main: ({ spacings, mq }) =>
     css({
-      margin: `0 ${spacings.FULL}rem`,
+      marginBlock: `0 ${spacings.DOUBLE}rem`,
+      marginInline: `${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.DOUBLE}rem`,
       },
     }),
   inner: css({

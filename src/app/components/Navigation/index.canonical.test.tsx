@@ -1,11 +1,13 @@
 import { Services } from '#app/models/types/global';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import toggleConfigs from '#app/lib/config/toggles';
 import { ComponentProps } from 'react';
+import MockIntersectionObserver from '../intersection-observer-testing-library';
 import CanonicalNavigation from './index.canonical';
 import {
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_EXIT_BUFFER_PX,
+  STICKY_NAV_HIDE_SCROLL_DISTANCE_PX,
+  STICKY_NAVIGATION_TREATMENT,
 } from './config';
 import {
   dropdownTestId,
@@ -19,6 +21,16 @@ import {
   act,
   screen,
 } from '../react-testing-library-with-providers';
+import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
+
+jest.mock('../../lib/analyticsUtils/dispatchTrackingRequests', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../lib/analyticsUtils/dispatchTrackingRequests'),
+  default: jest.fn(),
+}));
+
+const dispatchTrackingRequestsMock = jest.mocked(dispatchTrackingRequests);
+const mockIntersectionObserver = new MockIntersectionObserver();
 
 const blocks = [{ id: '1', title: 'Story' }];
 
@@ -26,6 +38,10 @@ const navigationProps: ComponentProps<typeof CanonicalNavigation> = {
   topScrollableListItems: scrollableListItems,
   bottomScrollableListItems: scrollableListItems,
   dropdownListItems,
+  stickyTopScrollableListItems: scrollableListItems,
+  stickyBottomScrollableListItems: scrollableListItems,
+  stickyDropdownListItems: dropdownListItems,
+  stickyNavExperimentVariant: STICKY_NAVIGATION_TREATMENT,
   menuAnnouncedText: 'menu',
   dir: 'ltr',
 };
@@ -35,6 +51,10 @@ const navigation = (
     topScrollableListItems={scrollableListItems}
     bottomScrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
+    stickyTopScrollableListItems={scrollableListItems}
+    stickyBottomScrollableListItems={scrollableListItems}
+    stickyDropdownListItems={dropdownListItems}
+    stickyNavExperimentVariant={STICKY_NAVIGATION_TREATMENT}
     menuAnnouncedText="menu"
     dir="ltr"
   />
@@ -198,9 +218,13 @@ describe('Navigation - Canonical', () => {
       }));
     };
     const stickyOptions = {
+      bbcOrigin: 'https://www.bbc.com',
       service: 'mundo' as Services,
       pageType: ARTICLE_PAGE,
-      toggles: toggleConfigs.test,
+      toggles: {
+        eventTracking: { enabled: true },
+        topBarOJs: { enabled: true },
+      },
     };
     // Settles the full, non-reduced-motion slide-in animation (scroll
     // handler rAF + two nested position rAFs). Each animation frame is only
@@ -231,8 +255,13 @@ describe('Navigation - Canonical', () => {
         </main>
       </>
     );
-
     beforeEach(() => {
+      dispatchTrackingRequestsMock.mockClear();
+      mockIntersectionObserver.clearObservers();
+      // @ts-expect-error mocking required for tests
+      global.IntersectionObserver = jest.fn(
+        mockIntersectionObserver.getMockIntersectionObserver(),
+      );
       jest.useFakeTimers();
       jest
         .mocked(window.matchMedia)
@@ -402,7 +431,7 @@ describe('Navigation - Canonical', () => {
         'turkce',
         'urdu',
       ])(
-        'shows the sticky navigation bar on the %s edition on the test environment',
+        'shows the sticky navigation bar on the %s edition in the live environment',
         service => {
           const { container } = render(articleNavigation, {
             ...stickyOptions,
@@ -417,56 +446,7 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it.each<Services>([
-        'mundo',
-        'portuguese',
-        'russian',
-        'indonesia',
-        'turkce',
-        'urdu',
-      ])(
-        'shows the sticky navigation bar on the %s edition when developing locally',
-        service => {
-          const { container } = render(articleNavigation, {
-            ...stickyOptions,
-            service,
-            bbcOrigin: 'http://localhost:7081',
-            toggles: toggleConfigs.local,
-          });
-          scrollTo(500);
-          scrollTo(450);
-
-          expect(
-            container.querySelector('[data-e2e="sticky-nav"]'),
-          ).toHaveAttribute('data-sticky-visible', 'true');
-        },
-      );
-
-      it.each([
-        ['live', { bbcOrigin: 'https://www.bbc.com' }],
-        ['another service', { service: 'arabic' as Services }],
-        ['Lite', { isLite: true }],
-      ])(
-        'does not show the sticky navigation bar when developing locally and the page is %s',
-        (_, options) => {
-          const { container } = render(navigation, {
-            ...stickyOptions,
-            bbcOrigin: 'http://localhost:7081',
-            toggles: toggleConfigs.local,
-            ...options,
-          });
-
-          expect(container.querySelector('[data-e2e="sticky-nav"]')).toBeNull();
-        },
-      );
-
-      it.each([
-        ['another service', { service: 'arabic' as Services }],
-        ['Lite', { isLite: true }],
-        ['live', { bbcOrigin: 'https://www.bbc.com' }],
-        ['a disabled toggle', { toggles: toggleConfigs.live }],
-        ['a missing toggle', { toggles: {} }],
-      ])(
+      it.each([['Lite', { isLite: true }]])(
         'does not show the sticky navigation bar when the page is %s',
         (_, options) => {
           const { container } = render(navigation, {
@@ -484,6 +464,90 @@ describe('Navigation - Canonical', () => {
     });
 
     describe('showing and hiding the bar as the reader scrolls past the start of the article', () => {
+      it('does not track the navigation while it is in ordinary page flow', async () => {
+        render(articleNavigation, stickyOptions);
+        await act(() => Promise.resolve());
+
+        expect(mockIntersectionObserver.observers.size).toBe(0);
+      });
+
+      it('sends a Piano view event when the sticky navigation first becomes visible', async () => {
+        render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        await act(() => Promise.resolve());
+        expect(mockIntersectionObserver.observers.size).toBeGreaterThan(0);
+        await act(async () => {
+          mockIntersectionObserver.triggerAllObservers();
+        });
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(dispatchTrackingRequestsMock).toHaveBeenCalledWith(
+          expect.objectContaining({
+            reverbParameters: expect.objectContaining({
+              componentName: 'navigation',
+              type: 'view',
+            }),
+          }),
+        );
+      });
+
+      it('does not send a view event if the bar is pinned but its appearance is interrupted', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450, 1);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'false');
+
+        scrollTo(500);
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(dispatchTrackingRequestsMock).not.toHaveBeenCalledWith(
+          expect.objectContaining({
+            reverbParameters: expect.objectContaining({
+              componentName: 'navigation',
+            }),
+          }),
+        );
+      });
+
+      it('only tracks one view when the sticky navigation hides and becomes visible again', async () => {
+        const stickyViewEvents = () =>
+          dispatchTrackingRequestsMock.mock.calls.filter(
+            ([{ reverbParameters, trackingFlags }]) =>
+              reverbParameters.componentName === 'navigation' &&
+              !trackingFlags.eventSent,
+          );
+
+        render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        await act(() => Promise.resolve());
+        expect(mockIntersectionObserver.observers.size).toBeGreaterThan(0);
+        await act(async () => {
+          mockIntersectionObserver.triggerAllObservers();
+        });
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(stickyViewEvents()).toHaveLength(1);
+
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
+        scrollTo(450);
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(stickyViewEvents()).toHaveLength(1);
+      });
+
       it.each([1, 0, -1])(
         'only shows the sticky navigation bar once the reader has scrolled back up to the start of the article (testing %spx from the top of the screen)',
         top => {
@@ -732,7 +796,7 @@ describe('Navigation - Canonical', () => {
         act(() => {
           jest.advanceTimersByTime(400);
         });
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         act(() => {
           jest.advanceTimersByTime(400);
         });
@@ -751,7 +815,7 @@ describe('Navigation - Canonical', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         act(() => {
           jest.advanceTimersByTime(400);
         });
@@ -761,7 +825,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('keeps the sticky navigation bar and its open dropdown menu on screen while scrolling down, as long as the bar is still pinned', () => {
+      it('keeps the sticky navigation visible and its dropdown open while scrolling down with the dropdown open', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
@@ -769,22 +833,50 @@ describe('Navigation - Canonical', () => {
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX - 1);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('hides the sticky navigation bar on scroll down as normal, once its dropdown menu has been closed', () => {
+      it('blocks gestures over the dropdown without blocking navigation row scrolling', () => {
+        const { container, getByTestId } = render(
+          articleNavigation,
+          stickyOptions,
+        );
+        scrollTo(500);
+        scrollTo(450);
+        fireEvent.click(screen.getByRole('button', { name: 'menu' }));
+
+        const dropdown = getByTestId(dropdownTestId);
+        const navigationRow = container.querySelector(
+          '[data-e2e="scrollable-nav-secondary"]',
+        );
+        const dropdownWheelEvent = new Event('wheel', {
+          bubbles: true,
+          cancelable: true,
+        });
+        const navigationRowWheelEvent = new Event('wheel', {
+          bubbles: true,
+          cancelable: true,
+        });
+
+        dropdown.dispatchEvent(dropdownWheelEvent);
+        navigationRow?.dispatchEvent(navigationRowWheelEvent);
+
+        expect(dropdownWheelEvent.defaultPrevented).toBe(true);
+        expect(navigationRowWheelEvent.defaultPrevented).toBe(false);
+      });
+
+      it('hides on scroll down as normal once the dropdown has been closed', () => {
         const { container } = render(articleNavigation, stickyOptions);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
         scrollTo(450);
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
-        fireEvent.click(menuButton);
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -821,7 +913,7 @@ describe('Navigation - Canonical', () => {
         ) as HTMLElement;
         secondaryScroll.scrollLeft = 120;
 
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
@@ -837,13 +929,13 @@ describe('Navigation - Canonical', () => {
         scrollTo(500);
         scrollTo(450);
         secondaryScroll.scrollLeft = 120;
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         expect(secondaryScroll.scrollLeft).toBe(0);
 
         scrollTo(500);
         scrollTo(450);
         secondaryScroll.scrollLeft = 80;
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         expect(secondaryScroll.scrollLeft).toBe(0);
       });
     });
@@ -863,6 +955,27 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).not.toHaveAttribute('inert');
         expect(stickyNav).toHaveStyle({ position: 'fixed' });
         expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+      });
+
+      it('closes a dropdown opened in the original navigation before the sticky navigation appears', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const menuButtons = screen.getAllByRole('button', { name: 'menu' });
+        const originalMenuButton = menuButtons[0];
+        fireEvent.click(originalMenuButton);
+        expect(originalMenuButton).toHaveAttribute('aria-expanded', 'true');
+
+        scrollTo(500);
+        scrollTo(450);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+        expect(originalMenuButton).toHaveAttribute('aria-expanded', 'false');
+        expect(
+          container.querySelector(
+            '[data-e2e="sticky-nav"] button[aria-label="menu"]',
+          ),
+        ).toHaveAttribute('aria-expanded', 'false');
       });
 
       it('hides the sticky navigation bar a short while after Tab moves focus back up the page, even if the reader does not scroll again themselves', () => {
@@ -979,7 +1092,7 @@ describe('Navigation - Canonical', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
-        scrollTo(460);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
         fireEvent.keyDown(window, { key: 'Tab' });
 
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');

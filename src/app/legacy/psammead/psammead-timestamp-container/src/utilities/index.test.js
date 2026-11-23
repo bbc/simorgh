@@ -270,6 +270,66 @@ describe('Timestamp utility functions', () => {
       }
     });
   });
+
+  describe('formatDuration', () => {
+    it('should return duration in default format', () => {
+      const duration = 'PT30M'; // 30:00
+      expect(formatDuration({ duration })).toEqual('30:00');
+    });
+    it('should return duration with hours in default format', () => {
+      const duration = 'PT1H30M'; // 1:30:00
+      expect(formatDuration({ duration })).toEqual('1:30:00');
+    });
+    it('should return duration in relevant format when a format is passed in', () => {
+      const duration = 'PT30M'; // 30:00
+      expect(formatDuration({ duration, format: 'mm,ss' })).toEqual('30,00');
+    });
+    it.each(['AR', 'fa_AF', 'fa-af'])(
+      'should use the Arabic comma for normalized locale %s',
+      testLocale => {
+        const output = formatDuration({
+          duration: 'PT30M',
+          format: 'mm,ss',
+          locale: testLocale,
+        });
+
+        expect(output).toContain('،');
+        expect(output).not.toContain(',');
+      },
+    );
+    it.each([
+      ['my', '၃၀:၀၀'],
+      ['ne', '३०:००'],
+      ['bn', '৩০:০০'],
+    ])(
+      'should return duration with native digits for locale %s',
+      (testLocale, expected) => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual(expected);
+      },
+    );
+    it.each(['ar', 'gu', 'hi', 'mr', 'pa-in', 'ta'])(
+      'should return duration with Latin digits for locale %s',
+      testLocale => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual('30:00');
+      },
+    );
+    it.each(['P1W', 'P1M', 'P1Y'])(
+      'should return zero instead of throwing for calendar duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
+    it.each(['-PT1S', '-PT1H30M45S'])(
+      'should return zero instead of formatting negative duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
+  });
 });
 
 describe('Moment configuration', () => {
@@ -374,24 +434,5 @@ describe('Moment configuration', () => {
       .add(5, 'days');
     // default moment configuration would return 'a month ago'
     expect(allButAYear.fromNow()).toEqual('11 months ago');
-  });
-
-  describe('formatDuration', () => {
-    it('should return duration in default format', () => {
-      const duration = 'PT30M'; // 30:00
-      expect(formatDuration({ duration })).toEqual('30:00');
-    });
-    it('should return duration with hours in default format', () => {
-      const duration = 'PT1H30M'; // 1:30:00
-      expect(formatDuration({ duration })).toEqual('1:30:00');
-    });
-    it('should return duration in relevant format when a format is passed in', () => {
-      const duration = 'PT30M'; // 30:00
-      expect(formatDuration({ duration, format: 'mm,ss' })).toEqual('30,00');
-    });
-    it('should return duration that is localised when locale is passed in', () => {
-      const duration = 'PT30M'; // 30:00
-      expect(formatDuration({ duration, locale: 'my' })).toEqual('၃၀:၀၀');
-    });
   });
 });

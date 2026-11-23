@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic';
-import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
 import { Topic } from '#app/lib/config/fixtures/types';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 
 const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
   const pageFromQuery = Array.isArray(context.query.page)
     ? context.query.page[0]
@@ -24,7 +24,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         service,
         status: 404,
-        timeOnServer: Date.now(),
         variant,
         page,
       },
@@ -61,7 +60,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         variant,
         pageType: TOPIC_PAGE,
         status: 200,
-        timeOnServer: Date.now(),
         pathname: context.resolvedUrl,
         page,
         activePage,
@@ -85,11 +83,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         service,
         status: 404,
-        timeOnServer: Date.now(),
         variant,
       },
     };
   }
-};
+});
 
 export default TopicsPageComponent;

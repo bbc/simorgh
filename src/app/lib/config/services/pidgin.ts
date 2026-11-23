@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/pcm';
+import '#lib/locales/moment/pcm';
 import '#psammead/moment-timezone-include/tz/Africa/Lagos';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -88,6 +88,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Another thing we de for inside dis tori',
       relatedTopics: 'Topics Wey Dem Resemble',
+      showMore: 'Show more',
       moreOnThis: '',
       navMenuText: 'Plenti seshon',
       liteSite: {

@@ -1,6 +1,6 @@
 import noAscendersOrDescenders from '../../../components/ThemeProvider/fontScripts/noAscOrDesc';
 import '#psammead/moment-timezone-include/tz/Africa/Addis_Ababa';
-import '#psammead/psammead-locales/moment/am';
+import '#lib/locales/moment/am';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -100,6 +100,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      showMore: 'ተጨማሪ አሳይ',
       moreOnThis: '',
       navMenuText: 'ክፍሎች',
       liteSite: {

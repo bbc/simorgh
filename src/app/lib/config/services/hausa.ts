@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/ha';
+import '#lib/locales/moment/ha';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -106,6 +106,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      showMore: 'Nuna ƙari',
       moreOnThis: '',
       navMenuText: 'Sassa',
       liteSite: {

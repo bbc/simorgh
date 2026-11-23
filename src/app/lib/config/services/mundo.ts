@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/es';
+import '#lib/locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -130,6 +130,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      showMore: 'Mostrar más',
       moreOnThis: '',
       navMenuText: 'Secciones',
       liteSite: {
@@ -232,6 +233,25 @@ export const service: DefaultServiceConfig = {
         },
         removed: {
           title: 'Este artículo ya no está guardado',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Sigues {Topic Name}',
+          bodyBefore: 'Encuentra este tema en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Has dejado de seguir {Topic Name}',
           bodyBefore: 'Se eliminará de',
           bodyAfter: '',
         },

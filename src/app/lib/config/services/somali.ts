@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Mogadishu';
-import '#psammead/psammead-locales/moment/so';
+import '#lib/locales/moment/so';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -107,6 +107,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       relatedTopics: 'Mowduucyada la xiriira',
+      showMore: 'Muuji wax dheeraad ah',
       moreOnThis: '',
       navMenuText: 'Qaybaha',
       liteSite: {

@@ -1,13 +1,13 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import deriveVariant from '#utilities/deriveVariant';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
@@ -51,9 +51,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: status ?? 500,
       variant,
-      timeOnServer: Date.now(), // TODO: check if needed?
     },
   };
-};
+});
 
 export default UGCPageLayout;

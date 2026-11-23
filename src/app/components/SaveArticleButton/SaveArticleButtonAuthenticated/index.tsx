@@ -1,12 +1,8 @@
-import { use, useEffect, useState } from 'react';
-import { useTheme } from '@emotion/react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
-import useUASButton, {
-  UASAction,
-  UASActionResult,
-} from '#app/hooks/useUASButton';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import useTrackErrorEffect from '#app/hooks/useTrackErrorEffect';
 import {
   ERROR_TRACKING_FEATURES,
@@ -15,20 +11,13 @@ import {
 import ErrorBoundary from '#app/components/ErrorBoundary';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useActionTooltip from '#app/hooks/useActionTooltip';
 import SaveButton from '#app/components/SaveButton';
-import ActionTooltip, {
-  ActionTooltipStatus,
-} from '#app/components/ActionTooltip';
-import getArticleTooltipContent from '#app/components/ActionTooltip/ArticleTooltipContent';
+import ActionTooltip from '#app/components/ActionTooltip';
+import getActionTooltipContent from '#app/components/ActionTooltip/ActionTooltipContent';
+import getActionTooltipStatus from '#app/components/ActionTooltip/getActionTooltipStatus';
 
 import type { SaveArticleButtonProps } from '../index';
-
-const getTooltipStatus = (
-  actionResult: NonNullable<UASActionResult>,
-): ActionTooltipStatus => {
-  if (actionResult.status === 'error') return 'error';
-  return actionResult.action === UASAction.SAVE ? 'success' : 'removed';
-};
 
 const SaveArticleButtonAuthenticatedInner = ({
   saveArticlePageData,
@@ -37,9 +26,6 @@ const SaveArticleButtonAuthenticatedInner = ({
   const { translations } = use(ServiceContext);
   const { saveArticleButton, actionTooltip } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
-  // TODO: remove once the dark-UI tooltip design is ready; suppresses all tooltips on dark-UI pages
-  const { isDarkUi } = useTheme();
-
   const {
     isSaved,
     isLoading,
@@ -52,24 +38,12 @@ const SaveArticleButtonAuthenticatedInner = ({
     saveArticlePageData,
   });
 
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
-  useEffect(() => {
-    if (actionResult) setIsTooltipVisible(true);
-  }, [actionResult]);
-
   const clickComponentName = `save-article-button-click-${
     isSaved ? UASAction.REMOVE : UASAction.SAVE
   }`;
 
   const viewTracker = useViewTracker({
     componentName: 'save-article-button-view',
-  });
-
-  const tooltipViewTracker = useViewTracker({
-    componentName: `save-article-tooltip-view-${
-      actionResult ? getTooltipStatus(actionResult) : 'none'
-    }`,
   });
 
   const { onClick: onClickTrack } = useClickTracker({
@@ -79,18 +53,16 @@ const SaveArticleButtonAuthenticatedInner = ({
     },
   });
 
-  const { onClick: onTooltipCloseClickTrack } = useClickTracker({
-    componentName: 'save-article-tooltip-close',
-    itemTracker: {
-      resourceId: articleId,
-    },
-  });
-
-  const { onClick: onMyNewsLinkClickTrack } = useClickTracker({
-    componentName: 'save-article-tooltip-my-news-link',
-    itemTracker: {
-      resourceId: articleId,
-    },
+  const {
+    isTooltipVisible,
+    handleTooltipClose,
+    onMyNewsLinkClickTrack,
+    tooltipViewTracker,
+  } = useActionTooltip({
+    actionResult,
+    resetActionResult,
+    trackingNamePrefix: 'save-article',
+    resourceId: articleId,
   });
 
   if (!saveArticleButton) return null;
@@ -122,12 +94,6 @@ const SaveArticleButtonAuthenticatedInner = ({
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
-  const handleTooltipClose = (event?: React.MouseEvent) => {
-    setIsTooltipVisible(false);
-    resetActionResult();
-    onTooltipCloseClickTrack?.(event);
-  };
-
   return (
     <>
       <SaveButton
@@ -141,13 +107,12 @@ const SaveArticleButtonAuthenticatedInner = ({
         testId="save-article-btn-authorized"
         {...viewTracker}
       />
-      {isTooltipVisible && actionResult && actionTooltip && !isDarkUi && (
+      {isTooltipVisible && actionResult && actionTooltip && (
         <ActionTooltip
-          status={getTooltipStatus(actionResult)}
-          content={getArticleTooltipContent(
-            actionTooltip,
-            onMyNewsLinkClickTrack,
-          )}
+          status={getActionTooltipStatus(actionResult)}
+          content={getActionTooltipContent(actionTooltip, {
+            onMyNewsLinkClick: onMyNewsLinkClickTrack,
+          })}
           closeLabel={actionTooltip.closeLabel}
           onClose={handleTooltipClose}
           {...tooltipViewTracker}

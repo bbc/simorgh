@@ -12,6 +12,12 @@ const canonicalTests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
+    path: '/portuguese/listen/cqx36ey0kld4o.app',
+    runforEnv: ['local'],
+    service: 'portuguese',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/dari/listen/c4z1p12mn62po',
     runforEnv: ['local'],
     service: 'dari',
@@ -30,6 +36,13 @@ const testSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/portuguese/listen/cj62yn475xrwo.app',
+    // Re-enable on live once this .app route is available in Belfrage.
+    runforEnv: [],
+    service: 'portuguese',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/zhongwen/listen/cgn50l2wz6kqo/trad',
     runforEnv: ['local'],
     service: 'zhongwen',
@@ -44,6 +57,16 @@ const testSuites = [
 ];
 
 const atiAnalyticsTestSuites = [
+  {
+    path: '/portuguese/listen/cqx36ey0kld4o.app',
+    runforEnv: ['local'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.listen.cqx36ey0kld4o.page',
+    siteId: 33,
+    applicationType: 'mobile-app',
+    contentType: 'article-sfv',
+    tests: [assertPageView],
+  },
   {
     path: '/dari/listen/c4z1p12mn62po',
     runforEnv: ['local'],
@@ -73,6 +96,17 @@ const atiAnalyticsTestSuites = [
     siteId: 87,
     applicationType: 'responsive',
     contentType: 'article',
+    tests: [assertPageView],
+  },
+  {
+    path: '/portuguese/listen/cj62yn475xrwo.app',
+    // Re-enable on live once this .app route is available in Belfrage
+    runforEnv: [],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.articles.cj62yn475xrwo.page',
+    siteId: 33,
+    applicationType: 'mobile-app',
+    contentType: 'article-sfv',
     tests: [assertPageView],
   },
   {

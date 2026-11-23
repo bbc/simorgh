@@ -1,4 +1,3 @@
-import { whereEq } from 'ramda';
 import type { Services } from '#app/models/types/global';
 import type { SaveArticlePageData } from '#app/lib/utilities/extractSaveArticleProps';
 import type { UasApiRequestBody } from './index';
@@ -77,8 +76,8 @@ const buildCurrentMetadata = (
 /**
  * Compares current article metadata against saved metadata.
  *
- * Uses Ramda's whereEq for structural equality. New fields added to
- * buildCurrentMetadata() are automatically included in comparisons.
+ * New fields added to buildCurrentMetadata() are automatically included in
+ * comparisons.
  *
  * @param currentMetadata - Live metadata from article
  * @param savedMetadata - Metadata stored in UAS
@@ -88,7 +87,9 @@ const compareMetadataWithSaved = (
   currentMetadata: Record<string, unknown>,
   savedMetadata: Record<string, unknown>,
 ): MetadataComparisonResult => ({
-  hasChanges: !whereEq(currentMetadata, savedMetadata),
+  hasChanges: Object.entries(currentMetadata).some(
+    ([key, value]) => savedMetadata[key] !== value,
+  ),
 });
 
 const createFavouritesPayload = ({
