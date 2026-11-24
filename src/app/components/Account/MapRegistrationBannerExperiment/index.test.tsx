@@ -8,7 +8,9 @@ import type { Article } from '#app/models/types/optimo';
 import MediaArticlePage from '#app/pages/MediaArticlePage/MediaArticlePage';
 import { pidginPageData } from '#app/pages/MediaArticlePage/fixtureData';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
-import MapRegistrationBannerExperiment, { EXPERIMENT_NAME } from '.';
+import MapRegistrationBannerExperiment, {
+  MAP_REGISTRATION_EXPERIMENT,
+} from '.';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -35,7 +37,9 @@ describe('MapRegistrationBannerExperiment', () => {
     document.documentElement.classList.remove(
       DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
     );
-    (useOptimizelyVariation as jest.Mock).mockReturnValue(EXPERIMENT_NAME);
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(
+      MAP_REGISTRATION_EXPERIMENT,
+    );
   });
 
   it('renders the treatment with the supplied copy and account links', () => {
@@ -121,7 +125,7 @@ describe('MapRegistrationBannerExperiment', () => {
     );
     expect(useOptimizelyVariation).not.toHaveBeenCalledWith(
       expect.objectContaining({
-        experimentName: EXPERIMENT_NAME,
+        experimentName: MAP_REGISTRATION_EXPERIMENT,
       }),
     );
   });

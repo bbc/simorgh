@@ -16,7 +16,8 @@ import useOptimizelyVariation, {
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
-export const EXPERIMENT_NAME = 'newswb_ws_hindi_map_save_later_promo';
+export const MAP_REGISTRATION_EXPERIMENT =
+  'newswb_ws_hindi_map_save_later_promo';
 const EDITORIAL_PICKS_BRAND =
   'http://www.bbc.co.uk/things/71cb5f8b-3151-4871-bb15-417304ae9293#id';
 
@@ -47,8 +48,8 @@ const VariantBanner = () => {
 
   return (
     <AccountPromotionalBanner
-      experimentName={EXPERIMENT_NAME}
-      experimentVariant={EXPERIMENT_NAME}
+      experimentName={MAP_REGISTRATION_EXPERIMENT}
+      experimentVariant={MAP_REGISTRATION_EXPERIMENT}
       title="बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें"
       description="अपने मुफ़्त BBC अकाउंट से जब चाहें, वापस आकर पढ़ें।"
     />
@@ -57,11 +58,11 @@ const VariantBanner = () => {
 
 const EligibleExperiment = () => {
   const variation = useOptimizelyVariation({
-    experimentName: EXPERIMENT_NAME,
+    experimentName: MAP_REGISTRATION_EXPERIMENT,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  return variation === EXPERIMENT_NAME ? <VariantBanner /> : null;
+  return variation === MAP_REGISTRATION_EXPERIMENT ? <VariantBanner /> : null;
 };
 
 const MapRegistrationBannerExperiment = ({
