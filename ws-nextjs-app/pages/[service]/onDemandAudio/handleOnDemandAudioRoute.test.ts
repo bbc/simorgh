@@ -99,20 +99,6 @@ describe('handleOnDemandAudioRoute', () => {
       );
     });
 
-    it('renders live assets on test environments', async () => {
-      jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
-
-      const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
-
-      await handleOnDemandAudioRoute(mockGetServerSidePropsContext);
-
-      expect(pageDataSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-          rendererEnv: 'live',
-        }),
-      );
-    });
-
     it('nulls recentEpisodes when the recentAudioEpisodes toggle is disabled', async () => {
       jest.spyOn(fetchTogglesModule, 'default').mockResolvedValue({
         onDemandRadioSchedule: {

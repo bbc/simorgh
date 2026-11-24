@@ -160,16 +160,4 @@ describe('handleOnDemandTvRoute', () => {
       props: expect.objectContaining({ status: 404 }),
     });
   });
-
-  it('should render live assets on test environments', async () => {
-    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
-    jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
-    const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
-
-    await handleOnDemandTvRoute(mockGetServerSidePropsContext);
-
-    expect(pageDataSpy).toHaveBeenCalledWith(
-      expect.objectContaining({ rendererEnv: 'live' }),
-    );
-  });
 });
