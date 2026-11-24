@@ -1,0 +1,216 @@
+import { GetServerSidePropsContext } from 'next';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import parseRoute from '#app/routes/utils/parseRoute';
+import nodeLogger from '#lib/logger.node';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import getPathExtension from '#app/utilities/getPathExtension';
+import PageDataParams from '#app/models/types/pageDataParams';
+import handleError from '#app/routes/utils/handleError';
+import { PageTypes, ToggleDefinition } from '#app/models/types/global';
+import { MARKDOWN_REGEX } from '#app/lib/regex.const';
+import articleToMarkdown from '#app/utilities/articleToMarkdown';
+
+import { ArticleMetadata } from '#app/models/types/optimo';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
+import shouldRender from '../../../utilities/shouldRender';
+import getPageData from '../../../utilities/pageRequests/getPageData';
+
+const logger = nodeLogger(__filename);
+
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
+
+const getDerivedArticleType = (metadata: ArticleMetadata) => {
+  let pageType: PageTypes = metadata?.type;
+
+  if (metadata?.type === 'article' && metadata?.consumableAsSFV) {
+    pageType = MEDIA_ARTICLE_PAGE;
+  }
+
+  return pageType;
+};
+
+export default async (
+  context: GetServerSidePropsContext,
+  { toggles = {} }: { toggles?: Record<string, ToggleDefinition> } = {},
+) => {
+  const {
+    resolvedUrl,
+    req: { headers: reqHeaders },
+  } = context;
+
+  const { service, renderer_env: rendererEnv } =
+    context.query as PageDataParams;
+
+  const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const canonicalPathname = getRequestUrl(context).split('?')[0];
+
+  const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
+  const { variant } = parseRoute(resolvedUrl);
+  const canRenderMarkdown = toggles.renderMarkDown?.enabled === true;
+
+  if (isMarkdown && !canRenderMarkdown) {
+    context.res.statusCode = NOT_FOUND;
+    logger.error(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: NOT_FOUND,
+      pageType: ARTICLE_PAGE,
+    });
+
+    return {
+      props: {
+        service,
+        status: NOT_FOUND,
+        timeOnServer: Date.now(),
+        variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: canonicalPathname,
+      },
+    };
+  }
+
+  const articlePath = resolvedUrlWithoutQuery.replace(MARKDOWN_REGEX, '');
+
+  const countryHeader =
+    reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'];
+  const country = countryHeader
+    ? (Array.isArray(countryHeader) ? countryHeader[0] : countryHeader)
+        .toString()
+        .toLowerCase()
+    : null;
+
+  const shouldFetchCountryCuration = getEnvConfig().SIMORGH_APP_ENV !== 'live';
+
+  const { data } = await getPageData({
+    id: articlePath,
+    service,
+    variant: variant || undefined,
+    rendererEnv,
+    resolvedUrl: resolvedUrlWithoutQuery,
+    pageType: ARTICLE_PAGE,
+    isAmp,
+    ...(shouldFetchCountryCuration && country && { country }),
+  });
+
+  const { pageData, status } = data;
+
+  context.res.statusCode = status;
+
+  let routingInfoLogger = logger.debug;
+
+  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
+    { pageData: pageData?.article, status },
+    service,
+    ['brasil', 'BBCScotland'], // Passport homes to ignore for service validation
+  );
+
+  // If request has fails or should not be rendered, return non-200 status
+  if (!hasRequestSucceeded && renderStatus !== OK) {
+    routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: ARTICLE_PAGE,
+    });
+
+    return {
+      props: {
+        service,
+        status: renderStatus,
+        variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: canonicalPathname,
+      },
+    };
+  }
+
+  if (!data?.pageData?.article) {
+    throw handleError('Article data is malformed', 500);
+  }
+
+  const { article, secondaryData } = data?.pageData || {};
+  const isArticleOlderThanSixHours =
+    Date.now() - article.metadata.lastPublished > 21600000;
+  const maxAge = isArticleOlderThanSixHours ? 90 : 45;
+
+  context.res.setHeader(
+    'Cache-Control',
+    `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
+  );
+
+  if (isMarkdown) {
+    const canonicalUrl =
+      article.metadata.locators?.canonicalUrl ||
+      `https://www.bbc.com${canonicalPathname.replace(MARKDOWN_REGEX, '')}`;
+    const markdown = articleToMarkdown({ article, canonicalUrl });
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status,
+      pageType: ARTICLE_PAGE,
+    });
+    const existingLinks = context.res.getHeader('Link');
+    context.res.setHeader(
+      'Link',
+      [existingLinks, `<${canonicalUrl}>; rel="canonical"`]
+        .flat()
+        .filter(link => link !== undefined)
+        .join(', '),
+    );
+    context.res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+    context.res.setHeader('x-markdown-tokens', Math.floor(markdown.length / 3));
+    context.res.end(markdown);
+    return { props: {} };
+  }
+
+  const {
+    topStories = null,
+    features = null,
+    latestMedia = null,
+    mostRead = null,
+    billboardCuration = null,
+    videoCuration: mediaCuration = null,
+    portraitVideoItems = null,
+    countryCuration = null,
+    countryTopicIdToReorder = null,
+  } = secondaryData || {};
+
+  const transformedArticleData = transformPageData()(article);
+
+  routingInfoLogger(ROUTING_INFORMATION, {
+    url: resolvedUrlWithoutQuery,
+    status,
+    pageType: ARTICLE_PAGE,
+  });
+
+  const derivedPageType = getDerivedArticleType(article.metadata);
+
+  return {
+    props: {
+      country,
+      id: resolvedUrlWithoutQuery,
+      pageData: {
+        ...transformedArticleData,
+        secondaryColumn: {
+          topStories,
+          features,
+          latestMedia,
+          mediaCuration,
+          billboardCuration,
+        },
+        mostRead,
+        portraitVideoItems,
+        countryCuration,
+        countryTopicIdToReorder,
+      },
+      pageType: derivedPageType,
+      pathname: canonicalPathname,
+      service,
+      status,
+      variant: variant || null,
+    },
+  };
+};

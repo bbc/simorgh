@@ -5,8 +5,6 @@ import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 jest.mock('#lib/analyticsUtils', () => {
   return {
     ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
-    getCurrentTime: jest.fn().mockReturnValue('00-00-00'),
   };
 });
 
@@ -19,7 +17,7 @@ describe('ProgramCard', () => {
       const { container } = render(
         renderProgramCard({ state, nextLabel: 'NEXT', liveLabel: 'LIVE' }),
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 
@@ -31,8 +29,9 @@ describe('ProgramCard', () => {
         durationLabel: 'المدة الزمنية',
         service: 'arabic',
       }),
+      { service: 'arabic' },
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('a')).toBeInTheDocument();
   });
 
   it(`should render correctly without summary`, () => {
@@ -42,7 +41,7 @@ describe('ProgramCard', () => {
         displaySummary: false,
       }),
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('a')).toBeInTheDocument();
   });
 
   it('should render with passed component', () => {

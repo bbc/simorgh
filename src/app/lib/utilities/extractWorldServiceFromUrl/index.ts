@@ -1,7 +1,6 @@
 import type { Services } from '#app/models/types/global';
 import { getUrlPath } from '#lib/utilities/urlParser';
-import { allServices } from '#app/routes/utils/regex';
-
+import SERVICES from '#app/lib/config/services';
 /**
  * Extracts the service from a URL
  * @param url - A valid URL string to extract the service from
@@ -14,7 +13,7 @@ export default (url: string): Services | null => {
     .filter(Boolean)[0]
     ?.replace(/\..*$/, '') as Services;
 
-  if (allServices.includes(service)) {
+  if (SERVICES.includes(service)) {
     return service;
   }
 

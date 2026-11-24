@@ -1,34 +1,45 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
+import FollowTopicButton from '#app/components/FollowTopicButton';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import parseRoute from '#app/routes/utils/parseRoute';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
 import AdContainer from '../../components/Ad';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import LinkedData from '../../components/LinkedData';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import MetadataContainer from '../../components/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import TopicImage from './TopicImage';
 import TopicTitle from './TopicTitle';
 import TopicDescription from './TopicDescription';
 import Pagination from '../../components/Pagination';
 import getItemList from '../../lib/seoUtils/getItemList';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
+import TopicPageElectionBanner from './TopicPageElectionBanner';
+import EditorialPicksPromoExperiment, {
+  EDITORIAL_PICKS_TOPIC_ID,
+} from './EditorialPicksPromoExperiment';
 
 const TopicPage = ({ pageData }) => {
-  const { lang, translations, brandName } = use(ServiceContext);
+  const { lang, translations, brandName, service } = use(ServiceContext);
+  const { pathname, variant } = use(RequestContext);
   const {
     title,
     description,
+    seoTitle,
+    seoDescription,
     imageData,
     curations,
     pageCount,
     activePage,
-    metadata: { atiAnalytics } = {},
   } = pageData;
 
+  const { assetId: topicId } = parseRoute(pathname);
   const topStoriesTitle = path(['topStoriesTitle'], translations);
-
   const { pageXOfY, previousPage, nextPage, page } = {
     pageXOfY: 'Page {x} of {y}',
     previousPage: 'Previous Page',
@@ -41,38 +52,65 @@ const TopicPage = ({ pageData }) => {
     .replace('{x}', activePage)
     .replace('{y}', pageCount);
 
-  const pageTitle = `${title}, ${translatedPage}`;
+  const metadataBaseTitle = seoTitle || title;
+  const seoPaginatedTitle = `${metadataBaseTitle}, ${translatedPage}`;
+  const metadataTitle = activePage >= 2 ? seoPaginatedTitle : metadataBaseTitle;
+  const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
 
+  const buildTopicURL = getTopicPageUrl({
+    service,
+    topicId,
+    variant,
+    topicsPath: translations?.topicsPath,
+    absolute: true,
+  });
+
   return (
-    <>
+    <div className={styles.pageWrapper}>
+      <EditorialPicksPromoExperiment topicId={topicId} />
       <AdContainer slotType="leaderboard" />
-      <main css={styles.main} role="main">
-        <div css={styles.inner}>
-          <ATIAnalytics atiData={atiAnalytics} />
+      <main className={styles.main} role="main">
+        <div className={styles.inner}>
+          <ATIAnalytics />
           <ChartbeatAnalytics title={title} />
+          {service === 'hindi' && topicId === EDITORIAL_PICKS_TOPIC_ID && (
+            <OptimizelyPageMetrics trackPageComplete trackPageDepth />
+          )}
           <MetadataContainer
-            title={activePage >= 2 ? pageTitle : title}
-            socialHeadline={title}
+            title={metadataTitle}
+            socialHeadline={metadataBaseTitle}
             lang={lang}
-            description={description}
+            description={metadataDescription}
             openGraphType="website"
             hasAmpPage={false}
           />
           <LinkedData
             type="CollectionPage"
-            seoTitle={title}
+            seoTitle={metadataBaseTitle}
             headline={title}
             entities={[itemList]}
           />
-          <div css={styles.title}>
-            <div css={styles.inline}>
+          <div className={styles.title}>
+            <div className={styles.inline}>
               {imageData && <TopicImage image={imageData.url} />}
               <TopicTitle>{title}</TopicTitle>
             </div>
             {description && <TopicDescription>{description}</TopicDescription>}
+            {topicId && (
+              <FollowTopicButton
+                topicData={{
+                  topicId,
+                  title,
+                  url: buildTopicURL,
+                }}
+              />
+            )}
           </div>
+          <TopicPageElectionBanner
+            curationIds={curations.map(({ curationId }) => curationId)}
+          />
           {curations.map(
             ({
               visualProminence,
@@ -93,7 +131,7 @@ const TopicPage = ({ pageData }) => {
                 });
 
               return (
-                <React.Fragment key={`${curationId}-${position}`}>
+                <Fragment key={`${curationId}-${position}`}>
                   <Curation
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
@@ -108,7 +146,7 @@ const TopicPage = ({ pageData }) => {
                     }
                     {...curationProps}
                   />
-                </React.Fragment>
+                </Fragment>
               );
             },
           )}
@@ -122,7 +160,7 @@ const TopicPage = ({ pageData }) => {
           />
         </div>
       </main>
-    </>
+    </div>
   );
 };
 

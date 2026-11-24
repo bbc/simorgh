@@ -1,4 +1,4 @@
-import React, { useState, use, useEffect, useRef } from 'react';
+import { useState, use, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const PageCompleteTracking = () => {
@@ -11,10 +11,6 @@ const PageCompleteTracking = () => {
   const sendPageCompleteEvent = !pageCompleteSent && isVisible;
 
   const initObserver = async () => {
-    if (typeof window.IntersectionObserver === 'undefined') {
-      // Polyfill IntersectionObserver, e.g. for IE11
-      await import('intersection-observer');
-    }
     // @ts-expect-error current element won't be null
     observer.current = new IntersectionObserver(([entry]) =>
       setIsVisible(entry.isIntersecting),

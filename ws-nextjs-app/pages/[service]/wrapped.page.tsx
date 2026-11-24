@@ -1,9 +1,7 @@
-/** @jsx jsx */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import { GetServerSideProps } from 'next';
 import { useEffect, use } from 'react';
-import { jsx } from '@emotion/react';
 import { ParsedUrlQuery } from 'querystring';
 import omit from 'ramda/src/omit';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -18,8 +16,9 @@ import {
   Words,
 } from '#app/components/icons';
 import nodeLogger from '#lib/logger.node';
-import logResponseTime from '#server/utilities/logResponseTime';
+import logResponseTime from '#utilities/logResponseTime';
 import isLocal from '#lib/utilities/isLocal';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 
 import {
   ROUTING_INFORMATION,
@@ -27,8 +26,6 @@ import {
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
 import styles from './wrappedStyles';
-
-import extractHeaders from '../../../src/server/utilities/extractHeaders';
 
 interface PageDataParams extends ParsedUrlQuery {
   id: string;
@@ -41,7 +38,7 @@ interface PageDataParams extends ParsedUrlQuery {
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   logResponseTime(
     {
       path: context.resolvedUrl,
@@ -82,8 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       error: null,
-      isAmp: false,
-      isNextJs: true,
       page: null,
       pageData: {
         metadata: {
@@ -94,11 +89,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pathname: context.resolvedUrl,
       service,
       status: 200,
-      timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
-};
+});
 
 const pageLayout = () => {
   const { datetimeLocale, locale } = use(ServiceContext);
@@ -238,46 +231,44 @@ const pageLayout = () => {
     }
   }, []);
   return (
-    <>
-      <main>
-        <div css={styles.outerGrid}>
-          <div css={styles.wideSection}>
-            <h1 css={styles.h1}>
-              <Calculator /> 2024
-            </h1>
-            <div>
-              <h2 css={styles.h2}>
-                <Clock /> <span id="timespent" />
-              </h2>
-              <h2 css={styles.h2}>
-                <Book />
-              </h2>
-              <ul css={styles.ul}>
-                <li>
-                  <Words /> <span id="words" />{' '}
-                </li>
-                <li>
-                  <Articles /> <span id="article" />{' '}
-                </li>
-              </ul>
-              <h2 css={styles.h2}>
-                <Favourites />
-              </h2>
-              <ol id="topiclist" />
-              <h2 css={styles.h2}>
-                <Calendar />
-              </h2>
-              <canvas
-                id="my_canvas"
-                width="100%"
-                height="290"
-                style={{ border: '2px solid #000000' }}
-              />
-            </div>
+    <main>
+      <div css={styles.outerGrid}>
+        <div css={styles.wideSection}>
+          <h1 css={styles.h1}>
+            <Calculator /> 2024
+          </h1>
+          <div>
+            <h2 css={styles.h2}>
+              <Clock /> <span id="timespent" />
+            </h2>
+            <h2 css={styles.h2}>
+              <Book />
+            </h2>
+            <ul css={styles.ul}>
+              <li>
+                <Words /> <span id="words" />{' '}
+              </li>
+              <li>
+                <Articles /> <span id="article" />{' '}
+              </li>
+            </ul>
+            <h2 css={styles.h2}>
+              <Favourites />
+            </h2>
+            <ol id="topiclist" />
+            <h2 css={styles.h2}>
+              <Calendar />
+            </h2>
+            <canvas
+              id="my_canvas"
+              width="100%"
+              height="290"
+              style={{ border: '2px solid #000000' }}
+            />
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 

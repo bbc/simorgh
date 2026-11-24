@@ -1,0 +1,205 @@
+import { MediaBlock } from '../../types';
+
+export const mediaBlockWithPV: MediaBlock[] = [
+  {
+    id: '326c14fc',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'b6ceabfb',
+          blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+          type: 'aresMediaMetadata',
+          model: {
+            id: 'p0l0sm0w',
+            subType: 'clip',
+            format: 'video',
+            title: 'test',
+            synopses: {
+              short: 'test',
+              long: 'test',
+              medium: 'test',
+            },
+            imageUrl: 'test',
+            embedding: true,
+            advertising: true,
+            versions: [
+              {
+                versionId: 'p0l0sm10',
+                types: ['Portrait'],
+                duration: 88,
+                durationISO8601: 'PT1M28S',
+                warnings: {},
+                availableTerritories: {
+                  uk: true,
+                  nonUk: true,
+                },
+                availableFrom: 1743098855000,
+              },
+            ],
+            syndication: {
+              destinations: ['default'],
+            },
+            smpKind: 'programme',
+            webcastVersions: [],
+          },
+          position: [2, 2, 1],
+        },
+      ],
+    },
+    position: [2, 2],
+  },
+];
+
+export const mediaBlockWithMultipleVersionsTypes: MediaBlock[] = [
+  {
+    id: '326c14fc',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'b6ceabfb',
+          blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+          type: 'aresMediaMetadata',
+          model: {
+            id: 'p0l0sm0w',
+            subType: 'clip',
+            format: 'video',
+            title: 'test',
+            synopses: {
+              short: 'test',
+              long: 'test',
+              medium: 'test',
+            },
+            imageUrl: 'test',
+            embedding: true,
+            advertising: true,
+            versions: [
+              {
+                versionId: 'p0l0sm10',
+                types: ['Editorial', 'Portrait'],
+                duration: 88,
+                durationISO8601: 'PT1M28S',
+                warnings: {},
+                availableTerritories: {
+                  uk: true,
+                  nonUk: true,
+                },
+                availableFrom: 1743098855000,
+              },
+            ],
+            syndication: {
+              destinations: ['default'],
+            },
+            smpKind: 'programme',
+            webcastVersions: [],
+          },
+          position: [2, 2, 1],
+        },
+      ],
+    },
+    position: [2, 2],
+  },
+];
+
+export const mediaBlockWithoutPV: MediaBlock[] = [
+  {
+    id: '326c14fc',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'b6ceabfb',
+          blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+          type: 'aresMediaMetadata',
+          model: {
+            id: 'p0l0sm0w',
+            subType: 'clip',
+            format: 'video',
+            title: 'test',
+            synopses: {
+              short: 'test',
+              long: 'test',
+              medium: 'test',
+            },
+            imageUrl: 'test',
+            embedding: true,
+            advertising: true,
+            versions: [
+              {
+                versionId: 'p0l0sm10',
+                types: ['Original'],
+                duration: 88,
+                durationISO8601: 'PT1M28S',
+                warnings: {},
+                availableTerritories: {
+                  uk: true,
+                  nonUk: true,
+                },
+                availableFrom: 1743098855000,
+              },
+            ],
+            syndication: {
+              destinations: ['default'],
+            },
+            smpKind: 'programme',
+            webcastVersions: [],
+          },
+          position: [2, 2, 1],
+        },
+      ],
+    },
+    position: [2, 2],
+  },
+];
+
+export const mediaBlockWithInvalidOrientation: MediaBlock[] = [
+  {
+    id: '326c14fc',
+    type: 'aresMedia',
+    model: {
+      blocks: [
+        {
+          id: 'b6ceabfb',
+          blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+          type: 'aresMediaMetadata',
+          model: {
+            id: 'p0l0sm0w',
+            subType: 'clip',
+            format: 'video',
+            title: 'test',
+            synopses: {
+              short: 'test',
+              long: 'test',
+              medium: 'test',
+            },
+            imageUrl: 'test',
+            embedding: true,
+            advertising: true,
+            versions: [
+              {
+                versionId: 'p0l0sm10',
+                types: ['Weird Orientation'],
+                duration: 88,
+                durationISO8601: 'PT1M28S',
+                warnings: {},
+                availableTerritories: {
+                  uk: true,
+                  nonUk: true,
+                },
+                availableFrom: 1743098855000,
+              },
+            ],
+            syndication: {
+              destinations: ['default'],
+            },
+            smpKind: 'programme',
+            webcastVersions: [],
+          },
+          position: [2, 2, 1],
+        },
+      ],
+    },
+    position: [2, 2],
+  },
+];

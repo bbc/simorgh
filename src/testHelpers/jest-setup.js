@@ -1,27 +1,10 @@
-import fetch from 'jest-fetch-mock';
+/* eslint-disable max-classes-per-file */
+import { jest } from '@jest/globals';
 import path from 'path';
-import { TextEncoder, TextDecoder } from 'util';
-import { ReadableStream } from 'node:stream/web';
-import { MessageChannel, MessagePort } from 'node:worker_threads';
 
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-global.fetch = fetch;
-global.AbortSignal = {
-  timeout: jest.fn(),
-};
-global.ReadableStream = ReadableStream;
-global.MessageChannel = MessageChannel;
-global.MessagePort = MessagePort;
+global.jest = jest;
 
-Object.defineProperty(global, 'crypto', {
-  value: {
-    randomUUID: jest.fn(),
-    getRandomValues: jest.fn(),
-  },
-});
-
-global.crypto.randomUUID = jest.fn();
+global.fetch = jest.fn();
 
 /*
  * Mock to avoid async behaviour in tests
@@ -58,6 +41,22 @@ global.IntersectionObserver = class IntersectionObserver {
   }
 };
 
+global.ResizeObserver = class ResizeObserver {
+  constructor(callback) {
+    this.callback = callback;
+    this.entries = [];
+    this.observe = jest
+      .fn()
+      .mockImplementation(entry => this.entries.push(entry));
+    this.unobserve = jest.fn();
+    this.disconnect = jest.fn();
+
+    document.addEventListener('triggerMockResizeObserver', () => {
+      this.callback(this.entries);
+    });
+  }
+};
+
 // Mock RequireJS globally and let individual tests mock it as needed
 window.require = jest.fn();
 
@@ -70,3 +69,4 @@ process.env.SIMORGH_ASSETS_MANIFEST_PATH = path.resolve(
 process.env.SIMORGH_OPTIMIZELY_SDK_KEY = 'LptPKDnHyAFu9V12s5xCz';
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 process.env.SIMORGH_CONFIG_URL = 'https://config.test.api.bbci.co.uk/';
+process.env.SIMORGH_BASE_URL = 'http://localhost:7080';

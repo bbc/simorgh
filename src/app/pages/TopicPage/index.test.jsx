@@ -1,5 +1,3 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';
 import {
@@ -8,7 +6,6 @@ import {
 } from '#app/models/types/curationData';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { data as persianAfghanistan } from '#data/persian/topics/crezq2dg9zwt.json';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -23,6 +20,12 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
+jest.mock('#app/components/OptimizelyPageMetrics', () => {
+  const OptimizelyPageMetrics = () => (
+    <div data-testid="optimizely-page-metrics" />
+  );
+  return OptimizelyPageMetrics;
+});
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
@@ -53,6 +56,91 @@ describe('Topic Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
+  it.each([
+    ['hindi', 'crvgyj0g9d5lt', true],
+    ['hindi', 'c0000000000t', false],
+    ['mundo', 'crvgyj0g9d5lt', false],
+  ])(
+    'scopes page metrics for service %s and topic %s (enabled: %s)',
+    (service, topicId, enabled) => {
+      const { queryByTestId } = render(
+        <TopicPage pageData={mundoWithBadgeAndDescr} />,
+        {
+          ...getOptionParams({ service }),
+          pathname: `/${service}/topics/${topicId}`,
+        },
+      );
+
+      if (enabled) {
+        expect(queryByTestId('optimizely-page-metrics')).toBeInTheDocument();
+      } else {
+        expect(
+          queryByTestId('optimizely-page-metrics'),
+        ).not.toBeInTheDocument();
+      }
+    },
+  );
+
+  it('applies the page layout classes', () => {
+    const { container, getByRole } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+    const main = getByRole('main');
+
+    expect(container.querySelector('.pageWrapper')).toContainElement(main);
+    expect(main).toHaveClass('main');
+    expect(main.querySelector('.inner .title .inline')).toBeInTheDocument();
+  });
+
+  it.each([
+    ['mundo', '874d2084-631c-4ee8-b582-f88920fcd960', '33021'],
+    ['portuguese', 'abdb1274-d3c1-48fd-b6c7-d1a0576cc551', '33042'],
+    ['arabic', 'c7c9ac42-0101-4cb2-b8a6-f059e591f3a4', '33031'],
+    ['russian', '9bcbbe46-d21c-4e95-8c61-53fa233fcc8a', '33043'],
+  ])(
+    'renders the matching AP banner on %s topics',
+    (service, curationId, layoutId) => {
+      const pageData = {
+        ...mundoMultipleCurations,
+        curations: [
+          mundoMultipleCurations.curations[0],
+          {
+            ...mundoMultipleCurations.curations[1],
+            curationId: `urn:bbc:vivo:curation:${curationId}`,
+          },
+        ],
+      };
+      const { getByTestId } = render(<TopicPage pageData={pageData} />, {
+        service,
+        pageType: TOPIC_PAGE,
+        toggles: { electionBanner: { enabled: true } },
+      });
+
+      const banner = getByTestId('election-banner');
+      expect(banner.querySelector('iframe')).toHaveAttribute(
+        'src',
+        `https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/${layoutId}.html`,
+      );
+    },
+  );
+
+  it.each([true, false])(
+    'hides banners on unrelated topics when enabled is %s',
+    enabled => {
+      const { queryByTestId } = render(
+        <TopicPage pageData={mundoMultipleCurations} />,
+        {
+          service: 'mundo',
+          pageType: TOPIC_PAGE,
+          toggles: { electionBanner: { enabled } },
+        },
+      );
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    },
+  );
 
   it('should not render an unordered list when there is only one promo', () => {
     const { queryByRole } = render(
@@ -180,7 +268,7 @@ describe('Topic Page', () => {
     const topicBadgeSrc = topicBadge.getAttribute('src');
     expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
     expect(topicBadgeSrc).toBe(
-      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+      `${mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/')}.webp`,
     );
   });
 
@@ -212,9 +300,7 @@ describe('Topic Page', () => {
       [false, false],
     ].forEach(([adsToggledOn, showAdsBasedOnLocation]) => {
       const { container } = render(
-        <BrowserRouter>
-          <TopicPage pageData={pidginMultipleItems} />
-        </BrowserRouter>,
+        <TopicPage pageData={pidginMultipleItems} />,
         getOptionParams({ adsToggledOn, showAdsBasedOnLocation }),
       );
 
@@ -328,6 +414,108 @@ describe('Topic Page', () => {
   });
 
   describe('SEO', () => {
+    it('should prioritise seoTitle and seoDescription for metadata when available', () => {
+      const seoTitle = 'Topic page SEO Title';
+      const seoDescription = 'Topic page SEO Description';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            seoDescription,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(`${seoTitle} - BBC News Pidgin`);
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(seoDescription);
+
+      const ogDescriptionMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:description',
+      );
+      expect(ogDescriptionMeta?.content).toEqual(seoDescription);
+
+      const twitterDescriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:description',
+      );
+      expect(twitterDescriptionMeta?.content).toEqual(seoDescription);
+    });
+
+    it('should include pagination details in metadata title on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${seoTitle}, Page 2 of 6 - BBC News Pidgin`,
+      );
+    });
+
+    it('should keep social metadata titles unpaginated on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      const ogTitleMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:title',
+      );
+      const twitterTitleMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:title',
+      );
+
+      expect(ogTitleMeta?.content).toEqual(`${seoTitle} - BBC News Pidgin`);
+      expect(twitterTitleMeta?.content).toEqual(
+        `${seoTitle} - BBC News Pidgin`,
+      );
+    });
+
+    it('should fall back to title and description when seo metadata is missing', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${pidginMultipleItems.title} - BBC News Pidgin`,
+      );
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(pidginMultipleItems.description);
+    });
+
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
@@ -338,30 +526,77 @@ describe('Topic Page', () => {
           ).innerHTML,
         );
       };
-
-      expect(getLinkedDataOutput()).toMatchSnapshot();
-    });
-  });
-
-  describe('Radio Schedule', () => {
-    it('should render if there is a curation with radio schedule data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('radio-schedule')).toBeInTheDocument();
-    });
-  });
-
-  describe('Embed', () => {
-    it('should render if there is a curation with embed data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('embed')).toBeInTheDocument();
+      expect(getLinkedDataOutput()).toMatchInlineSnapshot(`
+       {
+         "@context": "https://schema.org",
+         "@graph": [
+           {
+             "@type": "CollectionPage",
+             "headline": "Donald Trump",
+             "image": {
+               "@type": "ImageObject",
+               "height": 576,
+               "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+               "width": 1024,
+             },
+             "inLanguage": {
+               "@type": "Language",
+               "alternateName": "pcm",
+               "name": "Nigerian Pidgin",
+             },
+             "mainEntityOfPage": {
+               "@id": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+               "@type": "WebPage",
+               "name": "Donald Trump",
+             },
+             "publisher": {
+               "@type": "NewsMediaOrganization",
+               "logo": {
+                 "@type": "ImageObject",
+                 "height": 576,
+                 "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+                 "width": 1024,
+               },
+               "name": "BBC News Pidgin",
+               "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+             },
+             "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
+             "url": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+           },
+           {
+             "@type": "ItemList",
+             "itemListElement": [
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 1,
+                 "url": "https://www.bbc.com/pidgin/world-60465144",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 2,
+                 "url": "https://www.bbc.com/pidgin/tori-59901959",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 3,
+                 "url": "https://www.bbc.com/pidgin/tori-57396574",
+               },
+               {
+                 "@context": "http://schema.org",
+                 "@type": "ListItem",
+                 "position": 4,
+                 "url": "https://www.bbc.com/pidgin/tori-56991816",
+               },
+             ],
+             "name": "BBC News Pidgin",
+             "numberOfItems": 4,
+           },
+         ],
+       }
+      `);
     });
   });
 });

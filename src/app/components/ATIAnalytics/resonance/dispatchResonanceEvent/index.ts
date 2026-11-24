@@ -1,0 +1,43 @@
+import onClient from '#app/lib/utilities/onClient';
+import nodeLogger from '../../../../lib/logger.node';
+import { ATI_LOGGING_ERROR } from '../../../../lib/logger.const';
+import { ResonanceEventModel } from '../types';
+
+const logger = nodeLogger(__filename);
+
+// Must match the event name Resonance's ViewabilityEventListener subscribes to via
+// `document.addEventListener('viewability', ...)` once `Resonance.initialise()` has run.
+const RESONANCE_VIEWABILITY_EVENT_NAME = 'viewability';
+
+// Caps the queue on pages where Resonance never finishes initialising.
+const MAX_QUEUED_EVENTS = 50;
+
+let isResonanceReady = false;
+let queuedEvents: ResonanceEventModel[] = [];
+
+const dispatch = (detail: ResonanceEventModel) => {
+  try {
+    document.dispatchEvent(
+      new CustomEvent(RESONANCE_VIEWABILITY_EVENT_NAME, { detail }),
+    );
+  } catch (error) {
+    logger.error(ATI_LOGGING_ERROR, { error });
+  }
+};
+
+// Call once `Resonance.initialise()` has run, as events dispatched before then have no listener.
+export const markResonanceReady = () => {
+  isResonanceReady = true;
+  queuedEvents.forEach(dispatch);
+  queuedEvents = [];
+};
+
+export default (detail: ResonanceEventModel) => {
+  if (!onClient()) return;
+
+  if (isResonanceReady) {
+    dispatch(detail);
+  } else if (queuedEvents.length < MAX_QUEUED_EVENTS) {
+    queuedEvents.push(detail);
+  }
+};

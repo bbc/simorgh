@@ -1,4 +1,4 @@
-import React, { ComponentProps, useId } from 'react';
+import { ComponentProps, useId } from 'react';
 import { Helmet } from 'react-helmet';
 
 type Script = string | (() => void);

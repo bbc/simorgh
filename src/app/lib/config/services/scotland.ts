@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
+import '#lib/locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -13,12 +13,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
     atiAnalyticsProducerName: 'SCOTLAND',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
@@ -43,12 +42,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      showMore: 'Show more',
       ads: {
         advertisementLabel: 'Advertisement',
       },
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       moreOnThis: '',
       navMenuText: 'Sections',

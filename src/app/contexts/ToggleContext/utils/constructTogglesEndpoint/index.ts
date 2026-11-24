@@ -1,11 +1,19 @@
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { Services } from '#app/models/types/global';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
-export default (service: Services, origin: string | null) => {
-  const requestOrigin = origin || 'https://www.test.bbc.com';
-  const baseTogglesUrl = `${
-    getEnvConfig().SIMORGH_CONFIG_URL
-  }?application=simorgh&service=${service}&__amp_source_origin=${requestOrigin}`; // __amp_source_origin is relevant to both canonical and amp
+type ConstructTogglesEndpointParams = {
+  service: Services;
+  isAmp?: boolean;
+};
 
-  return baseTogglesUrl;
+export default ({ service, isAmp = false }: ConstructTogglesEndpointParams) => {
+  const togglesUrl = isAmp
+    ? `${getEnvConfig().WEB_CDN_URL}/fd/ws-toggles`
+    : (process.env.TOGGLES_BFF_PATH as string);
+
+  const togglesEndpoint = new URL(togglesUrl);
+  togglesEndpoint.searchParams.set('service', service);
+  togglesEndpoint.searchParams.set('application', 'simorgh');
+
+  return togglesEndpoint.toString();
 };

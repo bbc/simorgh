@@ -1,7 +1,7 @@
 // 2019-03-22
 export const formatDateNumeric = 'YYYY-MM-DD';
 
-const longDatetimeLocales = ['hu', 'ja', 'ko', 'zh-cn', 'zh-tw'];
+const longDatetimeLocales = ['fa-af', 'hu', 'ja', 'ko', 'zh-cn', 'zh-tw'];
 
 // 22 March 2019
 export const formatDate = datetimeLocale => {

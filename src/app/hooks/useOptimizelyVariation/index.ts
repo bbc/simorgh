@@ -20,7 +20,7 @@ export default ({
 }: Props) => {
   if (!experimentName) return null;
 
-  let variation = null;
+  let variation: string | null;
   if (experimentType === ExperimentType.SERVER_SIDE) {
     variation = useServerSide(experimentName);
   } else {

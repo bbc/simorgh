@@ -2,7 +2,9 @@
   "data": {
     "title": "Noticias - BBC News Mundo",
     "description": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "Noticias - BBC News Mundo",
+  "seoDescription": "BBC Mundo le presenta una selección de contenidos y acontecimientos más importantes de la actualidad. Las últimas noticias e información en materia internacional, sobre América Latina, tecnología, ciencia, salud, economía. Fotos y videos.",
     "curations": [
       {
         "summaries": [

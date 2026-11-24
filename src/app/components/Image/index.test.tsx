@@ -1,6 +1,4 @@
-import React from 'react';
-import { JSDOM } from 'jsdom';
-
+import { createRef } from 'react';
 import {
   render,
   screen,
@@ -12,9 +10,13 @@ import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 import { SHADOW } from '../ThemeProvider/palette';
 
 const removeStyles = (el: HTMLElement) => {
-  const dom = new JSDOM(el.innerHTML.replace(/class=".+?"/gm, ''));
+  const clone = el.cloneNode(true) as HTMLElement;
 
-  return dom.window.document.body.firstChild;
+  clone
+    .querySelectorAll('[class]')
+    .forEach(node => node.removeAttribute('class'));
+
+  return clone.firstChild;
 };
 
 const Fixture = ({ ...props }) => (
@@ -33,6 +35,42 @@ const Fixture = ({ ...props }) => (
 );
 
 describe('Image - Canonical', () => {
+  it('uses typed primary and fallback sources on homepages', () => {
+    const { container } = render(<Fixture />, { pageType: 'home' });
+    const primary = container.querySelector('source[type="image/webp"]');
+    const fallback = container.querySelector('source[type="image/jpeg"]');
+    const image = screen.getByAltText('Test image alt text');
+
+    expect(primary).toHaveAttribute(
+      'srcset',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
+    );
+    expect(fallback).toHaveAttribute(
+      'srcset',
+      '/test-image-200.jpg 200w, /test-image-500.jpg 500w',
+    );
+    expect(primary).toHaveAttribute('sizes', '(max-width: 600px) 480px, 800px');
+    expect(fallback).toHaveAttribute(
+      'sizes',
+      '(max-width: 600px) 480px, 800px',
+    );
+    expect(image.parentNode?.nodeName).toBe('PICTURE');
+    expect(image).not.toHaveAttribute('srcset');
+    expect(image).not.toHaveAttribute('sizes');
+  });
+
+  it('preserves primary-only source selection on article pages', () => {
+    const { container } = render(<Fixture />, { pageType: 'article' });
+    const image = screen.getByAltText('Test image alt text');
+
+    expect(container.querySelector('picture')).not.toBeInTheDocument();
+    expect(image).toHaveAttribute(
+      'srcset',
+      '/test-image-200.webp 200w, /test-image-500.webp 500w',
+    );
+    expect(image).toHaveAttribute('sizes', '(max-width: 600px) 480px, 800px');
+  });
+
   it('should preload when preload is true', async () => {
     render(<Fixture preload />);
 
@@ -154,6 +192,14 @@ describe('Image - Canonical', () => {
     });
   });
 
+  it('should attach imageRef to the native image element', () => {
+    const imageRef = createRef<HTMLImageElement>();
+
+    render(<Fixture imageRef={imageRef} />);
+
+    expect(imageRef.current).toBe(screen.getByAltText('Test image alt text'));
+  });
+
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture />);
 
@@ -212,6 +258,7 @@ describe('Image - Canonical', () => {
          alt="Test image alt text"
          loading="eager"
          src="/test-image-500.jpg"
+         style="aspect-ratio: 16 / 9;"
        />
      </div>
     `);
@@ -236,6 +283,7 @@ describe('Image - Canonical', () => {
          loading="eager"
          src="/test-image-500.jpg.webp"
          srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
+         style="aspect-ratio: 16 / 9;"
        />
      </div>
     `);

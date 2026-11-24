@@ -1,9 +1,7 @@
-/** @jsx jsx */
 import { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import styles from './index.styles';
+import styles from './index.module.scss';
 import { TextProps } from '../LiveLabel/types';
 
 const Text = ({
@@ -51,11 +49,14 @@ const Text = ({
       className={className}
     >
       <span
-        css={styles.liveLabelText}
+        className={styles.liveLabelText}
         dir={dir}
         {...(ariaHidden && { 'aria-hidden': 'true' })}
       >
-        {`${liveLabel}`}
+        {/* The trailing space isn't rendered (the label is inline-block) but
+        stops the label running into the following text in the accessible
+        name (WCAG 2.5.3) */}
+        {`${liveLabel} `}
       </span>
       {screenReaderText && (
         <VisuallyHiddenText lang={lang}>{screenReaderText}</VisuallyHiddenText>

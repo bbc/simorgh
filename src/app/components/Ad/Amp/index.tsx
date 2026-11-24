@@ -1,15 +1,9 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { use } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import {
-  AMP_ACCESS_JS,
-  AMP_ADS_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { AMP_ACCESS_JS, AMP_ADS_JS } from '#app/lib/amp/boilerplate';
+import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
@@ -29,9 +23,7 @@ const AMP_ACCESS_DATA = (endpoint: string) => ({
 const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
 
 export const AMP_ACCESS_FETCH = (service: Services) => {
-  const togglesEndpoint = `${
-    getEnvConfig().SIMORGH_CONFIG_URL
-  }?application=simorgh&service=${service}`;
+  const togglesEndpoint = constructTogglesEndpoint({ service, isAmp: true });
 
   return (
     <script id="amp-access" type="application/json">
@@ -82,7 +74,7 @@ const AdWithoutPlaceholder = ({
   return (
     <div
       css={styles.display}
-      amp-access="toggles.ads.enabled"
+      amp-access="data.toggles.ads.enabled"
       amp-access-hide="true"
     >
       <section
@@ -140,7 +132,7 @@ const AdWithPlaceholder = ({
         <div css={styles.wrapper}>
           <div
             css={styles.display}
-            amp-access="toggles.ads.enabled"
+            amp-access="data.toggles.ads.enabled"
             amp-access-hide="true"
           >
             <AdContent

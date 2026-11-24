@@ -1,12 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`LiteButton should render a script tag with the passed in script function 1`] = `
 "
     window.addEventListener("load", function(event) {
       var button = document.getElementById('lite-button-:r0:');
-      button.addEventListener('click', function script() {
-        return console.log("Hello, world! I'm an arrow function transpiled to a traditional function");
-      });
+      button.addEventListener('click', ()=>console.log(\`Hello, world! I'm an arrow function transpiled to a traditional function\`));
     });
   "
 `;

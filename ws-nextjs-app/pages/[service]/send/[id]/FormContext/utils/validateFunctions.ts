@@ -7,10 +7,10 @@ const wasPreviouslyInvalidCheck = (wasInvalid: boolean, isValid: boolean) => {
 const isStringEmpty = (str: string) =>
   str == null || str.replaceAll(/\s/g, '').length <= 0;
 
-const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
+const isValidString: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value, wasInvalid } = data;
 
-  let messageCode = null;
+  let messageCode: InvalidMessageCodes | null = null;
   let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
 
@@ -32,7 +32,7 @@ const isValidText: (data: FieldData) => FieldData = (data: FieldData) => {
 const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value, wasInvalid } = data;
 
-  let messageCode = null;
+  let messageCode: InvalidMessageCodes | null = null;
   let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
   const isValidEmailFormat =
@@ -61,10 +61,11 @@ const isValidEmail: (data: FieldData) => FieldData = (data: FieldData) => {
 
 const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = false, wasInvalid } = data;
-  let messageCode = null;
+  let messageCode: InvalidMessageCodes | null = null;
 
+  const hasValue = Array.isArray(value) ? value.length > 0 : Boolean(value);
   let isValid = true;
-  if (required && !(value as boolean)) {
+  if (required && !hasValue) {
     messageCode = InvalidMessageCodes.FieldRequired;
     isValid = false;
   }
@@ -82,7 +83,7 @@ const isValidCheck: (data: FieldData) => FieldData = (data: FieldData) => {
 const isValidTel: (data: FieldData) => FieldData = (data: FieldData) => {
   const { required, value = '', wasInvalid } = data;
 
-  let messageCode = null;
+  let messageCode: InvalidMessageCodes | null = null;
   let isValid = true;
   const isInputEmpty = isStringEmpty(value as string);
   const isValidTelFormat =
@@ -117,13 +118,13 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   const TOTAL_FILES_MAX_SIZE = MAX_PAYLOAD_SIZE - RESERVED_FORM_DATA_SIZE;
 
   let isValid = true;
-  let messageCode = null;
+  let messageCode: InvalidMessageCodes | null = null;
   let hasNestedErrorLabel = false;
 
   // CHECK INDIVIDUAL FILES
   const validatedFiles = (files as FileData[]).map((fileData: FileData) => {
     const { file } = fileData;
-    let fileMessageCode = null;
+    let fileMessageCode: InvalidMessageCodes | null = null;
 
     // Chrome interprets a wma file as video so the following checks whether this has happened and switches the video back to audio
     const fileType =
@@ -177,12 +178,13 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   };
 };
 
-const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
-  text: isValidText,
+const validateFunctions: Record<string, (_data: FieldData) => FieldData> = {
+  text: isValidString,
   email: isValidEmail,
   checkbox: isValidCheck,
+  radiobutton: isValidString,
   phone: isValidTel,
-  textarea: isValidText,
+  textarea: isValidString,
   file: isValidFiles,
 };
 

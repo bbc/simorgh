@@ -1,9 +1,10 @@
-import React from 'react';
 import {
   render,
   screen,
   act,
+  within,
 } from '#app/components/react-testing-library-with-providers';
+import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
 import Post from '.';
@@ -12,7 +13,14 @@ import {
   samplePost,
   twitterSamplePost,
   videoSamplePost,
+  bylineSamplePost,
 } from './fixture';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
+  default: jest.fn(),
+}));
 
 const singlePostWithTitle = postFixture.data.results[0];
 
@@ -22,6 +30,8 @@ describe('Post', () => {
   beforeEach(() => {
     // @ts-expect-error Mocking require to prevent race condition.
     window.require = jest.fn();
+
+    mockMatchMedia();
   });
 
   afterEach(() => {
@@ -112,12 +122,79 @@ describe('Post', () => {
       expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(1);
     });
 
+    it('should not crash when the first headline text block is missing', async () => {
+      const postWithMissingFirstHeadlineBlock = {
+        ...samplePost,
+        header: {
+          ...samplePost.header,
+          model: {
+            ...samplePost.header.model,
+            blocks: [
+              {
+                ...samplePost.header.model.blocks[0],
+                model: {
+                  ...samplePost.header.model.blocks[0].model,
+                  blocks: [undefined],
+                },
+              },
+              ...samplePost.header.model.blocks.slice(1),
+            ],
+          },
+        },
+      };
+
+      await act(async () => {
+        render(<Post post={postWithMissingFirstHeadlineBlock as never} />);
+      });
+
+      expect(screen.getByRole('heading', { level: 3 })).toBeInTheDocument();
+    });
+
     it('should render a span with role=text to avoid text splitting in screenreaders', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);
       });
 
       expect(screen.getAllByRole('text')[0].closest('h3')).toBeInTheDocument();
+    });
+
+    it('should render a byline when contributor data is provided', async () => {
+      await act(async () => {
+        render(<Post post={bylineSamplePost} />, { pageType: 'live' });
+      });
+
+      const byline = screen.getByTestId('byline');
+
+      const authorName = within(byline).getByText('Gahuza contributor');
+      const authorRole = within(byline).getByText('gahuza contributor');
+      const authorImage = within(byline).getByRole('presentation');
+
+      expect(byline).toBeInTheDocument();
+
+      expect(authorName).toBeInTheDocument();
+      expect(authorRole).toBeInTheDocument();
+      expect(authorImage).toBeInTheDocument();
+
+      expect(authorImage).toHaveAttribute(
+        'src',
+        'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
+      );
+    });
+
+    it('should render a byline with the requisite off screen text for screen readers', async () => {
+      await act(async () => {
+        render(<Post post={bylineSamplePost} />, { pageType: 'live' });
+      });
+
+      const byline = screen.getByTestId('byline');
+
+      const author = within(byline).getByText('Author,');
+      const role = within(byline).getByText('Role,');
+
+      expect(byline).toBeInTheDocument();
+
+      expect(author).toBeInTheDocument();
+      expect(role).toBeInTheDocument();
     });
   });
   describe('Content', () => {
@@ -171,7 +248,7 @@ describe('Post', () => {
       });
 
       expect(
-        container.querySelector('[data-e2e="media-loader__placeholder"]'),
+        container.querySelector('[data-e2e="media-player"]'),
       ).toBeInTheDocument();
     });
 
@@ -190,9 +267,68 @@ describe('Post', () => {
       ).toBeInTheDocument();
     });
 
+    it('should not reinitialise the media player when Post rerenders for an unrelated reason', async () => {
+      const mockRequire = jest.fn();
+      const originalRequirejs = window.requirejs;
+      window.requirejs = mockRequire;
+
+      const renderOptions = {
+        id: 'c7p765ynk9qt',
+        service: 'pidgin' as const,
+        pageType: LIVE_PAGE,
+        pathname: '/pidgin/live/c7p765ynk9qt',
+      };
+
+      try {
+        const { rerender } = await act(async () => {
+          return render(<Post post={videoSamplePost} />, renderOptions);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+
+        await act(async () => {
+          rerender(<Post post={videoSamplePost} hasShareApi />);
+        });
+
+        expect(mockRequire).toHaveBeenCalledTimes(1);
+      } finally {
+        window.requirejs = originalRequirejs;
+      }
+    });
+
     it('should not render share button by default', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    });
+
+    it('should not render share button when first heading text is missing', async () => {
+      const postWithMissingFirstHeadingText = {
+        ...samplePost,
+        header: {
+          ...samplePost.header,
+          model: {
+            ...samplePost.header.model,
+            blocks: [
+              {
+                ...samplePost.header.model.blocks[0],
+                model: {
+                  ...samplePost.header.model.blocks[0].model,
+                  blocks: [undefined],
+                },
+              },
+              ...samplePost.header.model.blocks.slice(1),
+            ],
+          },
+        },
+      };
+
+      await act(async () => {
+        render(
+          <Post post={postWithMissingFirstHeadingText as never} hasShareApi />,
+        );
       });
 
       expect(screen.queryByRole('button')).not.toBeInTheDocument();

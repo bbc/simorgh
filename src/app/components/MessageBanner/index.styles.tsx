@@ -6,11 +6,6 @@ const IMAGE_WIDTH_GROUP_3_MIN_WIDTH = 224;
 const styles = {
   IMAGE_WIDTH,
   IMAGE_WIDTH_GROUP_3_MIN_WIDTH,
-  container: () =>
-    css({
-      paddingTop: '2rem',
-      paddingBottom: '2rem',
-    }),
   card: ({ mq }: Theme) =>
     css({
       height: 'auto',
@@ -35,12 +30,6 @@ const styles = {
         width: '75%',
       },
     }),
-  heading: ({ palette }: Theme) =>
-    css({
-      paddingTop: '1.5rem',
-      paddingBottom: '0.5rem',
-      color: palette.WHITE,
-    }),
   paragraph: ({ palette }: Theme) =>
     css({
       paddingBottom: '1rem',
@@ -56,27 +45,6 @@ const styles = {
       },
 
       img: { objectPosition: 'top' },
-    }),
-  callToActionLink: ({ mq, palette }: Theme) =>
-    css({
-      padding: '1rem',
-      backgroundColor: palette.WHITE,
-      margin: '0 1rem 1rem 1rem',
-      width: '100%',
-      color: palette.BLACK,
-      '&:hover, &:focus': {
-        backgroundColor: '#F6F6F6',
-        color: palette.BLACK,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: 'auto',
-        maxWidth: 'calc(100% - 240px)',
-        margin: '0 0 1.5rem 0',
-        paddingBottom: '1rem',
-      },
-      '& span': {
-        paddingInlineStart: '0.5rem',
-      },
     }),
   flex: ({ mq }: Theme) =>
     css({

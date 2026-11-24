@@ -3,6 +3,8 @@
     "title": "BBC News Amharic",
     "description": "this is testing the description!",
     "pageType": "home",
+    "seoTitle": "BBC News Amharic",
+    "seoDescription": "BBC News Amharic: Latest news and updates in Amharic.",
     "curations": [
       {
         "summaries": [

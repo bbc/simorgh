@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
@@ -8,9 +9,9 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/turkish';
+import brandSVG from '../chameleonLogos/turkce';
 
-const turkceTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -31,4 +32,4 @@ const turkceTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(turkceTheme);
+export default withThemeProvider(theme);

@@ -1,40 +1,24 @@
-import React, { use } from 'react';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => getGreatPrimer(script)}
-  color: ${props => props.theme.palette.GREY_10};
-  padding-top: ${GEL_SPACING_DBL};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  color: ${props =>
+    props.theme.isDarkUi
+      ? props.theme.palette.WHITE
+      : props.theme.palette.GREY_10};
+  padding-top: ${({ theme: { spacings } }) => `${spacings.DOUBLE}rem`};
   margin: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_TRPL};
+  ${({ theme: { mq } }) => mq.GROUP_3_MIN_WIDTH} {
+    padding-top: ${({ theme: { spacings } }) => `${spacings.TRIPLE}rem`};
   }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: calc(50% - ${GEL_SPACING});
+  ${({ theme: { mq } }) => mq.GROUP_4_MIN_WIDTH} {
+    width: ${({ theme: { spacings } }) => `calc(50% - ${spacings.FULL}rem)`};
   }
 `;
 
 const TopicDescription = ({ children }) => {
-  const { service, script } = use(ServiceContext);
-
-  return (
-    <Paragraph service={service} script={script}>
-      {children}
-    </Paragraph>
-  );
+  return <Paragraph>{children}</Paragraph>;
 };
 
 export default TopicDescription;

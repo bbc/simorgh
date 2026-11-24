@@ -1,8 +1,9 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import AccountPromotionalBannerHomePageExperiment from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import useScrollDepthTracker, {
+  getHomePageBounds,
+} from '#app/hooks/useScrollDepthTracker';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -13,7 +14,6 @@ import {
   VisualProminence,
   VisualStyle,
 } from '../../models/types/curationData';
-import { ATIData } from '../../components/ATIAnalytics/types';
 import HomeCuration from '../../components/Curation';
 import Ad from '../../components/Ad';
 import MPU from '../../components/Ad/MPU';
@@ -25,7 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
-import reorderCurations from './utils/reorderCurations';
+import HomePageElectionBanner from './HomePageElectionBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -33,8 +33,9 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
-      atiAnalytics: ATIData;
       type: string;
     };
   };
@@ -48,52 +49,49 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
-  const {
-    title,
-    description,
-    metadata: { atiAnalytics },
-  } = pageData;
-  let { curations } = pageData;
+  const { title, description, seoTitle, seoDescription } = pageData;
+  const { curations } = pageData;
 
-  // EXPERIMENT: Homepage Time of Day Adaptive Curations
-  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
-  const timeOfDayVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
+  // Activate server-side experiment to enable visit/page-view tracking
+  useOptimizelyVariation({
+    experimentName: 'test_server_side_experiment_visits_aa',
+    experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
-  if (timeOfDayVariant === 'homepage_time_of_day_a') {
-    curations = reorderCurations({
-      curations,
-      service,
-    });
-  }
+  const scrollDepthRef = useScrollDepthTracker(
+    'homepage-scroll-depth',
+    true,
+    getHomePageBounds,
+  );
+
+  const metadataTitle = seoTitle || homePageTitle;
+  const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
+      <AccountPromotionalBannerHomePageExperiment />
       <ChartbeatAnalytics title={title} />
+      <OptimizelyPageMetrics trackPageComplete trackPageDepth />
       <MetadataContainer
-        title={homePageTitle}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={title}
-        headline={title}
+        seoTitle={metadataTitle}
+        headline={metadataTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
-      <main role="main" css={styles.main}>
-        <ATIAnalytics atiData={atiAnalytics} />
+      <main role="main" css={styles.main} ref={scrollDepthRef}>
+        <ATIAnalytics />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
           <span role="text">
@@ -101,6 +99,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <HomePageElectionBanner />
           <div css={styles.margins}>
             {curations.map(
               (
@@ -112,6 +111,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
+                  associatedContent: { uri } = {},
                   ...curationProps
                 }: Curation,
                 index: number,
@@ -126,7 +126,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <React.Fragment key={`${curationId}-${position}`}>
+                  <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -134,25 +134,23 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       title={curationTitle}
                       topStoriesTitle={topStoriesTitle}
                       position={position}
-                      link={link}
+                      link={link || uri}
                       curationLength={curations?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
+                  </Fragment>
                 );
               },
             )}
           </div>
         </div>
       </main>
-      {timeOfDayVariant && <OptimizelyPageMetrics trackPageView />}
     </>
   );
 };

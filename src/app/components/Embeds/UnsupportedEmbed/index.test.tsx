@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
 import {

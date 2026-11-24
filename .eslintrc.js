@@ -12,14 +12,12 @@ module.exports = {
     jest: true,
     node: true,
   },
-  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
-    requireConfigFile: false,
   },
   ignorePatterns: [
     '**/tz/**',
@@ -38,6 +36,7 @@ module.exports = {
     'no-only-tests',
   ],
   globals: {
+    globalThis: false,
     cy: false,
     Cypress: false,
     expect: false,
@@ -59,6 +58,8 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/no-unknown-property': [
       'error',
       {
@@ -91,7 +92,30 @@ module.exports = {
       },
     ],
     'import/extensions': [1, { json: 'ignorePackages' }],
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^#psammead/moment-timezone-include/tz/'],
+      },
+    ],
     'jsx-a11y/no-redundant-roles': 'off',
+    // Ratchet on new coupling to src/app/legacy. This matches on the *resolved*
+    // path, so it catches both the #components/#containers/#psammead aliases and
+    // relative imports such as '../../legacy/components/Grid'.
+    // Raise to error once the remaining legacy modules are migrated.
+    'import/no-restricted-paths': [
+      'warn',
+      {
+        zones: [
+          {
+            target: ['./src', './ws-nextjs-app'],
+            from: './src/app/legacy',
+            message:
+              'This imports from src/app/legacy. Import a migrated component from #app/components instead, or migrate it — see docs/Coding-Standards/Migrating-Legacy-Components.mdx',
+          },
+        ],
+      },
+    ],
     'no-only-tests/no-only-tests': 'error',
     'no-unsafe-optional-chaining': 'error',
     'cypress/no-assigning-return-values': 'error',
@@ -108,6 +132,13 @@ module.exports = {
     },
   },
   overrides: [
+    {
+      // Legacy modules necessarily import each other until they are migrated.
+      files: ['src/app/legacy/**'],
+      rules: {
+        'import/no-restricted-paths': 'off',
+      },
+    },
     {
       files: ['**/*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',

@@ -17,8 +17,6 @@ import {
   EBON,
   ERROR_CORE,
   GHOST,
-  GREY_10,
-  GREY_11,
   GREY_1,
   GREY_2,
   GREY_3,
@@ -27,6 +25,10 @@ import {
   GREY_6,
   GREY_7,
   GREY_8,
+  GREY_10,
+  GREY_11,
+  GREY_15,
+  GREY_16,
   KINGFISHER,
   LE_TEAL,
   LIVE_LIGHT,
@@ -46,6 +48,7 @@ import {
   POSTBOX,
   POSTBOX_30,
   RHINO,
+  NEUTRAL_LIGHT,
   SERVICE_NEUTRAL_CORE,
   SERVICE_NEUTRAL_DARK,
   SHADOW,
@@ -140,8 +143,9 @@ export default ({
   brandSVG: BrandSVG;
   isLite: boolean;
   isDarkUi: boolean;
+  usePWATypography?: boolean;
 }): Theme => {
-  const { fontVariants, script } = typography;
+  const { fontVariants, script, fontFaces } = typography;
   const {
     BRAND_BACKGROUND,
     BRAND_LOGO,
@@ -223,8 +227,6 @@ export default ({
       EBON,
       ERROR_CORE,
       GHOST,
-      GREY_10,
-      GREY_11,
       GREY_1,
       GREY_2,
       GREY_3,
@@ -233,6 +235,10 @@ export default ({
       GREY_6,
       GREY_7,
       GREY_8,
+      GREY_10,
+      GREY_11,
+      GREY_15,
+      GREY_16,
       KINGFISHER,
       LE_TEAL,
       LIVE_LIGHT,
@@ -252,6 +258,7 @@ export default ({
       POSTBOX,
       POSTBOX_30,
       RHINO,
+      NEUTRAL_LIGHT,
       SERVICE_NEUTRAL_CORE,
       SERVICE_NEUTRAL_DARK,
       SHADOW,
@@ -283,6 +290,7 @@ export default ({
     gridWidths,
     isLite,
     isDarkUi,
+    fontFaces,
   };
 
   return themeConfig;

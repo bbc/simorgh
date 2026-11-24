@@ -1,12 +1,16 @@
-import services from '#lib/config/services/loadableConfig';
+import SERVICES from '#lib/config/services';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
 type Platform = 'cps' | 'articles' | 'tipo';
 
+const MAX_ID_LENGTH = 1000;
+
 // Asset ID regexes
+const TC2_ID_REGEX = /^[a-z0-9-_]{1,}$/;
+const TC2_MONTH_REGEX = /^(0[1-9]|1[0-2])$/;
 const CPS_ID_REGEX = /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/;
-const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10}o$/;
+const OPTIMO_ID_REGEX = /^c[a-zA-Z0-9]{10,}o$/;
 const TIPO_ID_REGEX =
   /^(c[a-zA-Z0-9]{10,11}t)|([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})$/;
 
@@ -72,11 +76,15 @@ const LANGS = [
 
 const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 
-const SERVICES = Object.keys(services) as Services[];
+const SERVICES_WITHOUT_WS = SERVICES.filter(s => s !== 'ws');
+
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query: Query): Services | null => {
-  const service = SERVICES.find(s => s !== 'ws' && query?.includes(s));
+  // Check if a valid service appears first, then check for the presence of 'ws' if no other service is found
+  const service =
+    SERVICES_WITHOUT_WS.find(s => query?.includes(s)) ||
+    (query?.includes('ws') ? 'ws' : undefined);
 
   return service ?? null;
 };
@@ -92,6 +100,8 @@ const extractPlatform = (query: Query): Platform | null => {
 
   // eslint-disable-next-line no-restricted-syntax
   for (const id of query ?? []) {
+    if (id.length >= MAX_ID_LENGTH) break;
+
     if (CPS_ID_REGEX.test(id)) {
       platform = 'cps';
       break;
@@ -110,13 +120,34 @@ const extractPlatform = (query: Query): Platform | null => {
 };
 
 const extractAssetId = (query: Query) => {
-  const assetId = query?.find((id: string) => {
+  let assetId;
+
+  assetId = query?.find((id: string) => {
+    if (id.length >= MAX_ID_LENGTH) return null;
+
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||
       TIPO_ID_REGEX.test(id)
     );
   });
+
+  if (!assetId) {
+    const tc2PartsCheck = query.slice(-4);
+    if (tc2PartsCheck.length !== 4) return null;
+
+    const [categoryPart, yearPart, monthPart, tc2AssetId] = tc2PartsCheck;
+
+    const isValidTC2Year = Number(yearPart) >= 1999 && Number(yearPart) <= 2018;
+
+    if (
+      isValidTC2Year &&
+      TC2_MONTH_REGEX.test(monthPart) &&
+      TC2_ID_REGEX.test(tc2AssetId)
+    ) {
+      assetId = `${categoryPart}/${yearPart}/${monthPart}/${tc2AssetId}`;
+    }
+  }
 
   return assetId ?? null;
 };

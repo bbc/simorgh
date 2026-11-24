@@ -29,7 +29,7 @@ const mockReverbParams = {
         x18: null,
       },
     },
-    user: { isSignedIn: false },
+    user: { isSignedIn: false, hashedId: null },
   },
   eventDetails: { eventName: 'pageView' },
 } as unknown as ReverbBeaconConfig;
@@ -37,7 +37,7 @@ const mockReverbParams = {
 describe('trackingPixelUrl', () => {
   it('should return the correct tracking pixel URL', () => {
     const { origin, pathname, searchParams } = new URL(
-      getNoScriptTrackingPixelUrl(mockReverbParams),
+      getNoScriptTrackingPixelUrl({ reverbParams: mockReverbParams }),
     );
 
     expect(origin).toEqual('https://a1.api.bbc.co.uk');

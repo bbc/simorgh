@@ -36,13 +36,19 @@ const {
   MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
+interface GetComponentNameProps extends Partial<Curation> {
+  curationContentType?: string;
+}
+
 export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
   embed,
   mediaCollection,
-}: Partial<Curation>) => {
+  curationContentType,
+}: GetComponentNameProps) => {
+  if (curationContentType) return `${curationContentType}-curation-grid`;
   if (radioSchedule) return RADIO_SCHEDULE;
   if (embed) return EMBED;
   if (mediaCollection) return MEDIA_COLLECTION;
@@ -52,7 +58,7 @@ export default ({
     [`${BANNER}_${LOW}`]: NOT_SUPPORTED,
     [`${BANNER}_${NORMAL}`]: MESSAGE_BANNER,
     [`${BANNER}_${MAXIMUM}`]: BILLBOARD,
-    [`${BANNER}_${HIGH}`]: NOT_SUPPORTED,
+    [`${BANNER}_${HIGH}`]: BILLBOARD,
     [`${NONE}_${NORMAL}`]: SIMPLE_CURATION_GRID,
     [`${NONE}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,
     [`${COLLECTION}_${HIGH}`]: HIERARCHICAL_CURATION_GRID,

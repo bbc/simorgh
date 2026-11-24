@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
+import '#lib/locales/moment/en-gb';
 import '#psammead/moment-timezone-include/tz/Europe/London';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'sport',
     atiAnalyticsProducerId: '85',
     atiAnalyticsProducerName: 'SPORT',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Sport',
     product: 'BBC Sport',
@@ -42,12 +41,17 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: false,
     translations: {
+      showMore: 'Show more',
       ads: {
         advertisementLabel: 'Advertisement',
       },
       home: 'Home',
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
+      skipContent: {
+        text: 'Skip %title% and continue',
+        endTextVisuallyHidden: 'End of %title%',
+      },
       relatedContent: 'Related content',
       moreOnThis: '',
       navMenuText: 'Sections',

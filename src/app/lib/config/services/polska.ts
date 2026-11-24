@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/Warsaw';
-import '#psammead/psammead-locales/moment/pl-pl';
+import '#lib/locales/moment/pl-pl';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
     atiAnalyticsProducerName: 'POLISH',
-    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -45,6 +44,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'i',
       pagination: {
         page: 'Strona',
         previousPage: 'Poprzednia',
@@ -53,6 +53,11 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'Reklama',
+      },
+      readTime: {
+        readTimePrefix: 'Czas czytania',
+        long: 'Długi format',
+        minute: 'min',
       },
       byline: {
         articleInformation: 'Informacje o artykule',
@@ -64,10 +69,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Zobacz wszystkie',
       home: 'Strona główna',
+      topicDiscovery: {
+        heading: 'Odkryj więcej',
+        moreAboutTopic: 'Więcej o {topic}',
+        fetchErrorMessage: 'Nie udało się załadować. Spróbuj ponownie',
+      },
+      googlePreferredSource: {
+        linkText: 'Dodaj jako preferowane źródło w Google',
+      },
       currentPage: 'Strona bieżąca',
       skipLinkText: 'Przejdź do treści',
+      skipContent: {
+        text: 'Pomiń %title% i kontynuuj',
+        endTextVisuallyHidden: 'Koniec %title%',
+      },
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      showMore: 'Pokaż więcej',
       moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
@@ -90,6 +108,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Opublikowano o',
         summary: 'Podsumowanie',
         shareButtonText: 'Udostępnij',
+        refreshButtonText: 'Najnowszy wpis',
+        visuallyHiddenButtonText: 'Nowy wpis dostępny',
       },
       downloads: {
         instructions: 'Możesz pobrać i obejrzeć dzisiejsze wiadomości.',
@@ -324,6 +344,87 @@ export const service: DefaultServiceConfig = {
         closedHeading: 'Zakończone',
         closedDescription: 'Zamknięto dnia {{date}}.',
       },
+      sport: {
+        keyEventsTitle: 'Kluczowe wydarzenia',
+        matchSummary: 'Podsumowanie meczu',
+        assists: 'Asysty',
+        penalties: 'Rzuty karne',
+        ht: 'Koniec pierwszej połowy',
+        ft: 'Koniec meczu',
+        et: 'Dogrywka',
+        afterExtraTime: 'Po dogrywce',
+        penaltyAbbreviation: 'k.',
+        ownGoal: 'gol samobójczy',
+        versus: 'kontra',
+        kickOff: 'rozpoczęcie',
+        timeToBeConfirmed: 'Godzina do potwierdzenia',
+        teamToBeConfirmed: 'Drużyna do potwierdzenia',
+        afterFullTime: 'po pełnym czasie',
+        atFullTime: 'w pełnym czasie',
+        onPenalties: 'po rzutach karnych',
+        onAggregate: 'w dwumeczu',
+        win: 'wygrywa',
+        winOnPenalties: {
+          prefix: 'wygrywa',
+          suffix: 'w rzutach karnych',
+        },
+        worldCupTeamNames: {
+          algeria: 'Algieria',
+          argentina: 'Argentyna',
+          australia: 'Australia',
+          austria: 'Austria',
+          belgium: 'Belgia',
+          'bosnia-herzegovina': 'Bośnia i Hercegowina',
+          brazil: 'Brazylia',
+          canada: 'Kanada',
+          'cape-verde': 'Republika Zielonego Przylądka',
+          colombia: 'Kolumbia',
+          croatia: 'Chorwacja',
+          curacao: 'Curaçao',
+          'czech-republic': 'Czechy',
+          'dr-congo': 'Demokratyczna Republika Konga',
+          ecuador: 'Ekwador',
+          egypt: 'Egipt',
+          england: 'Anglia',
+          france: 'Francja',
+          germany: 'Niemcy',
+          ghana: 'Ghana',
+          haiti: 'Haiti',
+          iran: 'Iran',
+          iraq: 'Irak',
+          'ivory-coast': 'Wybrzeże Kości Słoniowej',
+          japan: 'Japonia',
+          jordan: 'Jordania',
+          mexico: 'Meksyk',
+          morocco: 'Maroko',
+          netherlands: 'Holandia',
+          'new-zealand': 'Nowa Zelandia',
+          norway: 'Norwegia',
+          panama: 'Panama',
+          paraguay: 'Paragwaj',
+          portugal: 'Portugalia',
+          qatar: 'Katar',
+          'saudi-arabia': 'Arabia Saudyjska',
+          scotland: 'Szkocja',
+          senegal: 'Senegal',
+          'south-africa': 'Republika Południowej Afryki',
+          'south-korea': 'Republika Korei',
+          spain: 'Hiszpania',
+          sweden: 'Szwecja',
+          switzerland: 'Szwajcaria',
+          tunisia: 'Tunezja',
+          turkey: 'Turcja',
+          uruguay: 'Urugwaj',
+          usa: 'Stany Zjednoczone',
+          uzbekistan: 'Uzbekistan',
+        },
+        tournaments: {
+          fifaWorldCup: 'Mistrzostwa świata w piłce nożnej',
+        },
+        stages: {
+          groupStage: 'Faza grupowa',
+        },
+      },
     },
     mostRead: {
       header: 'Najczęściej czytane',
@@ -394,22 +495,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Strona główna',
         url: '/polska',
-      },
-      {
-        title: 'Polska',
-        url: '/polska/topics/cly1xdxypzet',
-      },
-      {
-        title: 'Świat',
-        url: '/polska/topics/cvg9w8yplg1t',
-      },
-      {
-        title: 'Zdrowie',
-        url: '/polska/topics/c15nxyq4pqnt',
-      },
-      {
-        title: 'Wideo',
-        url: '/polska/topics/c4gk270dy10t',
       },
     ],
   },

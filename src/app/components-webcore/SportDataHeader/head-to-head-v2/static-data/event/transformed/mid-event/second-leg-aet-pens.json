@@ -1,0 +1,125 @@
+{
+  "id": "3n1x4716kyvjqbh4hdw42atjv",
+  "eventGroupingLabel": "Europe - UEFA Europa Conference League - 1st Qualifying Round",
+  "startDateTime": "2022-07-14T14:00:00Z",
+  "tournamentId": "c7b8o53flg36wbuevfzy3lb10",
+  "status": "MidEvent",
+  "period": "pens",
+  "periodLabel": {
+    "value": "PENS",
+    "accessible": "Penalty shootout"
+  },
+  "venue": {
+    "name": "Stadions Daugava",
+    "shortName": "Stadions Daugava"
+  },
+  "tournament": {
+    "id": "c7b8o53flg36wbuevfzy3lb10",
+    "name": "UEFA Europa Conference League",
+    "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+  },
+  "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+  "home": {
+    "fullName": "Liepāja",
+    "shortName": "Liepāja",
+    "urn": "urn:bbc:sportsdata:football:team:liepja",
+    "score": "2",
+    "runningScores": {
+      "halftime": "2",
+      "fulltime": "2",
+      "extratime": "2",
+      "aggregate": "4",
+      "penaltyShootout": "2"
+    },
+    "actions": [
+      {
+        "actionType": "goal",
+        "playerId": "1dmfp2ow658dsv0re73r62ndh",
+        "playerName": "B. Krasniqi",
+        "actions": [
+          {
+            "type": "Penalty",
+            "typeLabel": {
+              "value": "Penalty",
+              "accessible": "Penalty"
+            },
+            "timeLabel": {
+              "value": "23'",
+              "accessible": "23 minutes"
+            }
+          }
+        ]
+      },
+      {
+        "playerId": "6r4adhp9hu4ux7egwgd8j2thx",
+        "playerName": "N. Redmond",
+        "actionType": "goal",
+        "actions": [
+          {
+            "type": "Penalty",
+            "typeLabel": {
+              "value": "Penalty",
+              "accessible": "Penalty"
+            },
+            "timeLabel": {
+              "value": "30'",
+              "accessible": "30 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "away": {
+    "fullName": "Gjilani",
+    "shortName": "Gjilani",
+    "urn": "urn:bbc:sportsdata:football:team:gjilani",
+    "score": "2",
+    "runningScores": {
+      "halftime": "2",
+      "fulltime": "2",
+      "extratime": "2",
+      "aggregate": "3",
+      "penaltyShootout": "2"
+    },
+    "actions": [
+      {
+        "actionType": "goal",
+        "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+        "playerId": "7uufcg0dvus42emi9yev9i9cl",
+        "playerName": "N. Belaković",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "23'",
+              "accessible": "23 minutes"
+            }
+          },
+          {
+            "type": "Penalty",
+            "typeLabel": {
+              "value": "Penalty",
+              "accessible": "Penalty"
+            },
+            "timeLabel": {
+              "value": "27'",
+              "accessible": "27 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "time": {
+    "accessibleTime": "15:00",
+    "displayTimeUK": "15:00",
+    "timeCertainty": true
+  },
+  "date": "Thu 14 Jul 2022",
+  "accessibleEventSummary": "Liepāja 2 , Gjilani 2 after extra time penalties in progress"
+}

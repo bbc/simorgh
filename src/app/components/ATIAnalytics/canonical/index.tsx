@@ -1,6 +1,6 @@
-import React, { useEffect, useState, use } from 'react';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { useEffect, useRef, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
@@ -11,15 +11,14 @@ import addInlineScript, {
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
+import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
-
-const renderNoScriptTrackingPixel = (
-  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
-) => {
+const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
       <img
@@ -30,7 +29,7 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoScriptTrackingPixelUrl(reverbParams)}
+        src={getNoScriptTrackingPixelUrl({ reverbParams })}
       />
     </noscript>
   );
@@ -41,41 +40,51 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
 };
 
 const CanonicalATIAnalytics = ({
-  pageviewParams,
   reverbParams,
+  resonanceParams,
 }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
+  const isHydrated = useHydrationDetection();
 
   usePWAInstallTracker();
 
-  const atiPageViewUrlString =
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
+  useConnectionTypeTracker();
+  useConnectionBackOnlineTracker();
+  usePWAOfflineTracking();
 
-  const [reverbBeaconConfig] = useState(reverbParams);
-
-  const [atiPageViewUrl] = useState(atiPageViewUrlString);
+  // Cookie-derived values (e.g. hashedUserId) on AccountContext are only populated
+  // once isHydrated is true, to keep this component's first client render matching
+  // the server-rendered markup. Wait for that render before snapshotting the beacon
+  // payload, and use a ref (rather than state) to guarantee it's only ever sent once.
+  const hasSentBeacon = useRef(false);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
-  }, [atiPageViewUrl, reverbBeaconConfig]);
+    if (hasSentBeacon.current || !isHydrated || isOperaProxy()) return;
+
+    hasSentBeacon.current = true;
+    sendBeacon(reverbParams, resonanceParams);
+  }, [isHydrated, reverbParams, resonanceParams]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+  const operaMiniPageViewReverbURL =
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams);
 
   return (
     <>
-      {addScript({ script: addSendStaticBeaconToWindow(), nonce })}
+      {addScript({ script: addSendStaticBeaconToWindow, nonce })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: [atiPageViewUrlString, liteSiteReverbURL],
+          parameters: [liteSiteReverbURL],
           nonce,
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+          script: sendPageViewBeaconOperaMini,
+          parameters: [operaMiniPageViewReverbURL, isOperaProxy],
           nonce,
         })}
-      {renderNoScriptTrackingPixel(reverbParams)}
+      {renderNoScriptTrackingPixel({ reverbParams })}
     </>
   );
 };

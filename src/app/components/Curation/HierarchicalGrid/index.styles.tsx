@@ -1,25 +1,27 @@
 import { css, Theme } from '@emotion/react';
 import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  body: ({ spacings, palette, fontSizes }: Theme) =>
+  body: ({ spacings, palette, fontSizes, isDarkUi }: Theme) =>
     css({
       marginTop: 0,
       marginBottom: `${spacings.DOUBLE}rem`,
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       ...fontSizes.longPrimer,
     }),
   item: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       display: 'inline',
+      minWidth: 0,
       '.promo-image': {
         'div div:nth-child(2) div': {
           padding: `${spacings.FULL}rem`,
           [mq.GROUP_4_MIN_WIDTH]: {
             padding: '0.75rem',
           },
-          svg: {
+          '.external-svg': {
             margin: 0,
             [mq.GROUP_4_MIN_WIDTH]: {
               width: `${spacings.TRIPLE}rem`,
@@ -31,6 +33,23 @@ const styles = {
             padding: '0',
           },
         },
+      },
+    }),
+  inSituMedia: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.FULL}rem`,
+      '.media-container': {
+        margin: 0,
+      },
+      // keep hidden player controls from widening rtl pages on mobile
+      '.media-player': {
+        overflow: 'hidden',
+      },
+    }),
+  headlineLink: () =>
+    css({
+      '&::before': {
+        display: 'none',
       },
     }),
   list: ({ mq, spacings, isLite }: Theme) =>
@@ -74,6 +93,183 @@ const styles = {
           },
         },
       }),
+    }),
+  inlineIcon: ({ spacings }: Theme) =>
+    css({
+      display: 'none',
+      padding: 0,
+      paddingInlineEnd: `${spacings.HALF}rem`,
+      marginInlineStart: `-${spacings.HALF}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
+      verticalAlign: 'text-top',
+    }),
+
+  metadataAndTopicData: ({ fontSizes, spacings }: Theme) =>
+    css({
+      ...fontSizes.longPrimer,
+
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      alignItems: 'baseline',
+      columnGap: `${spacings.FULL + spacings.HALF}rem`,
+      rowGap: `${spacings.FULL}rem`,
+      overflow: 'hidden',
+      minWidth: 0,
+      '&:focus-within': {
+        overflow: 'visible',
+        '.promo-timestamp::before': {
+          display: 'none',
+        },
+      },
+      '.promo-timestamp': {
+        position: 'relative',
+        flexShrink: 1,
+        minWidth: 0,
+        maxWidth: '100%',
+        whiteSpace: 'normal',
+        overflowWrap: 'anywhere',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          insetInlineStart: `-${spacings.FULL}rem`,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: `${pixelsToRem(2)}rem`,
+          height: `${pixelsToRem(2)}rem`,
+          borderRadius: '50%',
+          backgroundColor: 'currentColor',
+          border: `${pixelsToRem(1)}rem solid transparent`,
+        },
+      },
+    }),
+
+  relatedTopicLink: ({ fontSizes, fontVariants, isDarkUi, palette }: Theme) =>
+    css({
+      ...fontSizes.brevier,
+      ...fontVariants.sansRegular,
+      color: isDarkUi ? palette.GREY_3 : palette.GREY_6,
+      display: 'block',
+      flexShrink: 1,
+      minWidth: 0,
+      maxWidth: '100%',
+      margin: 0,
+      textDecoration: 'none',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      zIndex: 1,
+      '&:hover, &:focus': {
+        textDecoration: 'underline',
+      },
+    }),
+
+  videoCollection: ({ mq, palette, spacings }: Theme) =>
+    css({
+      '&:first-of-type': {
+        [mq.GROUP_3_ONLY]: {
+          gridColumn: '1 / -1',
+        },
+      },
+      '&:first-of-type .promo-text': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(22)}rem`,
+          },
+        },
+      },
+      '.promo-image': {
+        position: 'relative',
+        'div div:last-child': {
+          position: 'absolute',
+          bottom: 0,
+          insetInlineStart: 0,
+          zIndex: 1,
+          div: {
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: palette.WHITE,
+            '.external-svg': {
+              position: 'static',
+              color: palette.GREY_10,
+              filter: 'none',
+              [mq.FORCED_COLOURS]: {
+                color: 'CanvasText',
+                "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+                  {
+                    '@media (prefers-color-scheme: dark)': {
+                      filter: 'invert(1)',
+                    },
+                  },
+              },
+            },
+            time: {
+              margin: 0,
+              color: palette.GREY_10,
+            },
+          },
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          width: '100%',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          paddingBottom: `${spacings.FULL}rem`,
+        },
+      },
+      '.promo-text': {
+        'h2, h3': {
+          paddingBottom: `${spacings.FULL}rem`,
+          marginBottom: 0,
+          fontWeight: 'bold',
+        },
+        time: {
+          fontSize: `${pixelsToRem(13)}rem`,
+          paddingBottom: `${spacings.DOUBLE}rem`,
+        },
+        [mq.GROUP_2_MIN_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(18)}rem`,
+          },
+        },
+        [mq.GROUP_1_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(16)}rem`,
+          },
+        },
+        [mq.GROUP_0_MAX_WIDTH]: {
+          'h2, h3': {
+            fontSize: `${pixelsToRem(15)}rem`,
+          },
+        },
+      },
+      '.promo-paragraph': {
+        display: 'none',
+      },
+      '&:first-of-type .promo-paragraph': {
+        [mq.GROUP_3_MIN_WIDTH]: {
+          display: 'block',
+          fontSize: `${pixelsToRem(14)}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+          fontSize: `${pixelsToRem(16)}rem`,
+        },
+      },
+    }),
+  videoCollectionList: ({ mq }: Theme) =>
+    css({
+      display: 'grid',
+      listStyleType: 'none',
+      padding: 0,
+      margin: 0,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        gap: `${pixelsToRem(16)}rem`,
+      },
     }),
 };
 
@@ -127,6 +323,9 @@ const CompactPromo = css({
   },
   '.promo-paragraph': {
     display: 'none',
+  },
+  '.inline-icon': {
+    display: 'inline',
   },
   '::before': {
     top: 0,

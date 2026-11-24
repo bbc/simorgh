@@ -1,27 +1,26 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useState, useCallback, use } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useMediaQuery from '#hooks/useMediaQuery';
+import useScrollDepthTracker from '#hooks/useScrollDepthTracker';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
-import text from '#containers/Text';
+import TextContainer from '#containers/Text';
 import Blocks from '#containers/Blocks';
 import Timestamp from '#containers/ArticleTimestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
   getArticleId,
   getHeadline,
@@ -33,8 +32,9 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
-import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import extractPromoImage from '#lib/utilities/extractPromoImage';
+import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -43,13 +43,29 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
-import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
-import ElectionBanner from './ElectionBanner';
+import ReadTimeArticle from '#app/components/ReadTime';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from '#app/components/ContinueReadingButton';
+import SaveArticleButton from '#app/components/SaveArticleButton';
+import ElectionBanner from '#app/components/ElectionBanner';
+import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
+import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
+import GooglePreferredSource from '#app/components/GooglePreferredSource/GooglePreferredSourceLink';
+import GooglePreferredSourceDivider from '#app/components/GooglePreferredSource/GooglePreferredSourceDivider';
+import isGoogleReferral from '#app/lib/utilities/isGoogleReferral';
+import ArticleMessageBanner from './ArticleMessageBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -68,24 +84,17 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton, {
-  Props as ContinueReadingProps,
-} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
-} from '../utils/portraitVideo';
-
-// EXPERIMENT: Article Read Time
-interface ReadTimeData {
-  readTimeValue: number | undefined;
-  readTimeVariant: string;
-}
+} from '../../components/MediaLoader/utils/isPortraitVideo';
+import LocationBasedTopicOJ from '../../components/LocationBasedTopicOJ';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -96,66 +105,67 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time
-const Placeholder = ({ className }: { className?: string }) => {
-  const { service } = use(ServiceContext);
-  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
-  return servicesInExperiment.includes(service) ? (
-    <div className={className} />
-  ) : null;
-};
-
-// EXPERIMENT: Article Read Time
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
-    readTimeData: ReadTimeData,
+    readTimeValue: number | undefined,
+    readTimeTranslations: Translations['readTime'],
+    articlePageData: Article,
+    isAmp: boolean,
+    isApp: boolean,
+    isLite: boolean,
+    isGoogleReferralTraffic: boolean,
+    googlePreferredSourceEnabled: boolean,
+    showSaveArticleButton: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time
-    const { readTimeValue, readTimeVariant } = readTimeData;
-    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
-    const showReadTimeBelowTimestamp =
-      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
+    const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
-    return hasByline ? (
+    return (
       <>
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-          />
-          {showReadTimeBelowTimestamp && (
-            <ReadTime
-              readTimeValue={readTimeValue}
-              readTimeVariant={readTimeVariant}
+        {hasByline ? (
+          <Byline blocks={bylineContribBlocks}>
+            <Timestamp
+              firstPublished={new Date(firstPublished).getTime()}
+              lastPublished={new Date(lastPublished).getTime()}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
             />
-          )}
-        </Byline>
-        {!showReadTimeBelowTimestamp && (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
-        )}
-      </>
-    ) : (
-      <>
-        <Timestamp
-          {...props}
-          popOut={false}
-          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-        />
-        {/* EXPERIMENT: Article Read Time */}
-        {showReadTimeBelowTimestamp ? (
-          <ReadTime
-            readTimeValue={readTimeValue}
-            readTimeVariant={readTimeVariant}
-          />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </Byline>
         ) : (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+          <>
+            <Timestamp
+              {...props}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
+            />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </>
+        )}
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSource
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
+        )}
+        {showSaveArticleButton && (
+          <SaveArticleButton
+            saveArticlePageData={extractSaveArticleProps(articlePageData)}
+          />
+        )}
+        {!isAmp && !isLite && !isApp && (
+          <GooglePreferredSourceDivider
+            isGoogleReferralTraffic={isGoogleReferralTraffic}
+            googlePreferredSourceEnabled={googlePreferredSourceEnabled}
+          />
         )}
       </>
     );
@@ -165,9 +175,15 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
+const getWsojComponent = ({
+  data,
+  experimentProps,
+}: {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps;
+}) => (
+  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
+);
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -180,6 +196,10 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
   <ArticleHeadline {...props} />
 );
 
+const ArticleBodyText = (props: ComponentToRenderProps) => (
+  <TextContainer {...props} isArticleBody />
+);
+
 const getVideoComponent =
   (translations: Translations, pageBlocks: OptimoBlock[]) =>
   (props: ComponentToRenderProps) => {
@@ -188,9 +208,9 @@ const getVideoComponent =
     const title = translations.media.watchMoments;
 
     const showTitle =
-      isPortraitVideo(blocks) &&
+      isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
-      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
@@ -200,53 +220,74 @@ const getVideoComponent =
     );
   };
 
+const getContinueReadingButton =
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
+    />
+  );
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const [isDesktopViewport, setIsDesktopViewport] = useState(false);
+  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
     articleAuthor,
+    electionBanner,
     isTrustProjectParticipant,
     showRelatedTopics,
-    brandName,
     translations,
   } = use(ServiceContext);
 
+  // Track when viewport enters GROUP_4_MIN_WIDTH (1008px+) where button is hidden
+  const handleDesktopMediaQueryChange = useCallback(mediaQueryList => {
+    setIsDesktopViewport(mediaQueryList.matches);
+  }, []);
+
+  useMediaQuery(
+    `(min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`,
+    handleDesktopMediaQueryChange,
+  );
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
+  const { enabled: topicDiscoveryEnabled } = useToggle('topicDiscovery');
+  const { enabled: googlePreferredSourceEnabled } = useToggle(
+    'googlePreferredSource',
+  );
+  const { enabled: electionBannerEnabled } = useToggle('electionBanner');
+
+  const isGoogleReferralTraffic = isGoogleReferral();
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
-
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
-
-  // EXPERIMENT: Article Read Time
-  const readTimeExperimentName = 'newswb_ws_article_read_time';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
-  const {
-    metadata: { atiAnalytics },
-    mostRead: mostReadInitialData,
-  } = pageData;
+  const { mostRead: mostReadInitialData } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
-
-  // EXPERIMENT: Article Read Time
-  const readTimeValue = pageData?.metadata?.stats?.readTime;
+  const { enabled: articlePortraitVideoEnabled } = useToggle(
+    'articlePortraitVideo',
+  );
+  const { enabled: articleVideoCurationEnabled } = useToggle(
+    'articleVideoCuration',
+  );
+  const { enabled: countryCurationEnabled } = useToggle(
+    'locationTopicCuration',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -255,14 +296,27 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
+  const countryTopicToReorder = pageData?.countryTopicIdToReorder ?? null;
+
+  const topicDiscoveryTopics = repositionCountryTopic(
+    topics,
+    countryTopicToReorder,
+  );
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 
@@ -270,30 +324,88 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
+
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
+  const shouldShowElectionBanner = isElectionBannerVisible({
+    aboutTags,
+    electionBannerEnabled,
+    electionThingIds: electionBanner?.electionThingIds,
+    taggings,
+  });
+
   const isPGL = pageData?.metadata?.type === PHOTO_GALLERY_PAGE;
-  const isSTY = pageData?.metadata?.type === STORY_PAGE;
-  const isCPS = isPGL || isSTY;
   const isTC2Asset = pageData?.metadata?.analyticsLabels?.contentId
     ?.split(':')
     ?.includes('topcat');
 
-  const atiData = {
-    ...atiAnalytics,
-    ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && {
-      experimentName,
-      experimentVariant,
-    }),
+  const showCountryCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    countryCurationEnabled &&
+    pageData?.countryCuration?.summaries?.length,
+  );
+
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
+    articlePortraitVideoEnabled,
+  );
+
+  const portraitVideoCarouselTitle =
+    pageData?.portraitVideoItems?.title ?? translations.media.watch;
+
+  const portraitVideoCarouselProps = {
+    title: portraitVideoCarouselTitle,
+    blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
+    eventTrackingData: {
+      componentName: 'portrait-video-carousel-article',
+      groupTracker: { name: portraitVideoCarouselTitle },
+    },
+    backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
 
-  // EXPERIMENT: Article Read Time
-  const readTimeData = {
-    readTimeValue,
-    readTimeVariant: readTimeExperimentVariant || 'off',
-  };
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    hasContinueReadingBlock &&
+    continueReadingButtonToggle,
+  );
+
+  // Extract block types
+  // Check if block types include embeds
+  const articleEmbedTypes = ['embedHtml', 'oEmbed'];
+
+  const hasEmbeds = blocks.some(block =>
+    articleEmbedTypes.includes(block.type),
+  );
+
+  // On desktop (GROUP_4+), all content is visible, so enable scroll tracking immediately
+  // On mobile/tablet, only enable tracking when button is clicked and content is expanded
+  const scrollDepthEnabled =
+    !hasEmbeds &&
+    (isDesktopViewport || !showContinueReadingButton || showAllContent);
+  const scrollDepthRef = useScrollDepthTracker(
+    'article-scroll-depth',
+    scrollDepthEnabled,
+  );
+
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const { altText: promoImageAltText, rawBlock: promoImageRawBlock } =
+    extractPromoImage(promoImageBlocks);
+
+  const promoImage = (
+    promoImageRawBlock?.model as { locator?: string } | undefined
+  )?.locator;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -301,15 +413,22 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     subheadline: Headings,
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
-    text,
+    text: ArticleBodyText,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
       firstPublished,
       lastPublished,
-      readTimeData,
+      readTimeValue,
+      translations.readTime,
+      pageData,
+      isAmp,
+      isApp,
+      isLite,
+      isGoogleReferralTraffic,
+      googlePreferredSourceEnabled,
+      !isTC2Asset,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -318,11 +437,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+      }),
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -335,36 +460,30 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const promoImageBlocks =
-    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
-
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
-
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const promoImage = promoImageRawBlock?.model?.locator;
-
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+  const showTopicDiscovery =
+    topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
+
+  const showRelatedTopicsComponent = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
+
+  const showMediaCuration = Boolean(
+    !isAmp &&
+    !isLite &&
+    !isApp &&
+    !isPGL &&
+    mediaCurationContent?.summaries?.length &&
+    articleVideoCurationEnabled,
+  );
+
+  const shouldApplyCollapsedArticleSpacing =
+    showContinueReadingButton && !showAllContent;
 
   return (
     <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
@@ -407,36 +526,41 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       {allowAdvertising && (
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      {shouldShowElectionBanner && <ElectionBanner aboutTags={aboutTags} />}
+      <ArticleMessageBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+        <div
+          css={[
+            !isPGL ? styles.primaryColumn : styles.pglColumn,
+            shouldApplyCollapsedArticleSpacing && styles.collapsedArticleColumn,
+          ]}
+        >
           <main
             css={[
               styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
+              shouldApplyCollapsedArticleSpacing && styles.collapsedMainContent,
             ]}
             role="main"
+            ref={scrollDepthRef}
           >
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-                variation={
-                  experimentVariant as ContinueReadingProps['variation']
-                }
-                liteCTAShows={liteCTAShows}
-              />
-            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
-          {showTopics && (
+          <OptimizelyPageMetrics trackPageDepth />
+          {showTopicDiscovery && (
+            <TopicDiscovery
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topics={topicDiscoveryTopics}
+            />
+          )}
+          {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -446,28 +570,47 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            sendOptimizelyEvents={false}
-          />
+          {showCountryCuration && <LocationBasedTopicOJ pageData={pageData} />}
+          {showPortraitVideoCarousel && (
+            <PortraitVideoCarousel
+              {...portraitVideoCarouselProps}
+              css={styles.portraitVideoCarousel}
+            />
+          )}
+          <RelatedContentSection content={blocks} />
+          {showMediaCuration && (
+            <div css={styles.mediaCurationRow}>
+              <div data-testid="media-curation">
+                <Curation
+                  visualStyle={VISUAL_STYLE.FEED}
+                  visualProminence={VISUAL_PROMINENCE.NORMAL}
+                  summaries={mediaCurationContent?.summaries}
+                  title={mediaCurationContent?.title}
+                  position={mediaCurationContent?.position || 0}
+                  curationId={mediaCurationContent?.curationId}
+                  curationLength={1}
+                  link={mediaCurationContent?.link}
+                  curationContentType="video"
+                  pageType={pageType}
+                />
+              </div>
+            </div>
+          )}
         </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
-        )}
+
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
-          columnLayout="multiColumn"
+          columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          mobileDivider={showRelatedTopicsComponent}
         />
       )}
     </div>

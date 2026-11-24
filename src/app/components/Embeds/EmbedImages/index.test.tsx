@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '../../react-testing-library-with-providers';
 import { chartEmbedImages, createEmbedImagesFixture } from './fixtures';
 import EmbedImages from '.';
@@ -35,6 +34,7 @@ describe('EmbedImages', () => {
 
       const chartEmbedImage = screen.queryByRole('img');
       expect(chartEmbedImage).toHaveAttribute('width', '1632');
+      expect(chartEmbedImage).toHaveAttribute('loading', 'lazy');
     });
 
     it('should construct the correct URL', async () => {

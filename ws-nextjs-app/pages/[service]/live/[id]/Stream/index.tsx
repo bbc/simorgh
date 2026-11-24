@@ -1,6 +1,12 @@
-/** @jsx jsx */
-import { use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
+import {
+  Dispatch,
+  ForwardedRef,
+  SetStateAction,
+  use,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -8,19 +14,28 @@ import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
 
-const Stream = ({
-  streamContent,
-  contributors,
-}: {
-  streamContent: StreamResponse | null;
+type Props = {
+  streamData: StreamResponse['data'] | null;
   contributors: string | null;
-}) => {
+  setIsFirstPostVisible: Dispatch<SetStateAction<boolean>>;
+  streamRef: ForwardedRef<HTMLDivElement>;
+  applyPendingUpdate: () => void;
+};
+
+const Stream = ({
+  streamData,
+  contributors,
+  setIsFirstPostVisible,
+  streamRef,
+  applyPendingUpdate,
+}: Props) => {
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = use(ServiceContext);
 
+  const firstPostRef = useRef<HTMLLIElement>(null);
   const [hasShareApi, setHasShareApi] = useState(false);
   const [hashValue, setHashValue] = useState('');
 
@@ -37,9 +52,36 @@ const Stream = ({
     }
   }, [hashValue]);
 
-  if (!streamContent) return null;
+  useEffect(() => {
+    if (!firstPostRef.current) return undefined;
 
-  const { results: streamResults } = streamContent?.data;
+    const firstPostObserver = new IntersectionObserver(
+      ([entry]) => {
+        const { boundingClientRect } = entry;
+
+        const isPostInView = boundingClientRect.bottom > 0;
+
+        setIsFirstPostVisible(isPostInView);
+        if (isPostInView) {
+          applyPendingUpdate();
+        }
+      },
+      {
+        threshold: 0,
+        rootMargin: '0px',
+      },
+    );
+
+    firstPostObserver.observe(firstPostRef.current);
+
+    return () => {
+      firstPostObserver.disconnect();
+    };
+  }, [setIsFirstPostVisible, applyPendingUpdate, streamData]);
+
+  if (!streamData) return null;
+
+  const { results: streamResults } = streamData;
 
   const hasNoPost = streamResults.length === 0;
   const hasSinglePost = streamResults.length === 1;
@@ -47,7 +89,7 @@ const Stream = ({
   if (hasNoPost) return null;
 
   return (
-    <div>
+    <div id="stream-container" ref={streamRef}>
       <Heading
         css={[
           styles.heading,
@@ -62,13 +104,16 @@ const Stream = ({
           {contributors}
         </Paragraph>
       )}
-
       {hasSinglePost ? (
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
         <ol role="list" css={styles.orderedList}>
-          {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
+          {streamResults.map((post, index) => (
+            <li
+              key={post.urn}
+              css={styles.listItem}
+              {...(index === 0 && { ref: firstPostRef })}
+            >
               <Post post={post} hasShareApi={hasShareApi} />
             </li>
           ))}

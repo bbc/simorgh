@@ -1,8 +1,8 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import * as onClient from '#app/lib/utilities/onClient';
-import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import onClient from '#app/lib/utilities/onClient';
+import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
@@ -19,6 +19,26 @@ jest.mock('./cookies', () => ({
   getCookiePolicy: jest.fn(),
   personalisationEnabled: jest.fn(),
 }));
+
+jest.mock('#app/lib/utilities/onClient', () => {
+  const actual = jest.requireActual('#app/lib/utilities/onClient');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
+
+jest.mock('#app/lib/utilities/isOperaProxy', () => {
+  const actual = jest.requireActual('#app/lib/utilities/isOperaProxy');
+
+  return {
+    __esModule: true,
+    ...actual,
+    default: jest.fn(actual.default),
+  };
+});
 
 const DummyComponent = () => {
   use(UserContext);
@@ -47,8 +67,8 @@ describe('UserContext', () => {
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.use).toHaveBeenCalledTimes(1);
-    expect(React.use).toHaveReturnedWith({
+    expect(use).toHaveBeenCalledTimes(1);
+    expect(use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
@@ -58,8 +78,8 @@ describe('UserContext', () => {
   describe('ckns_mvt cookie', () => {
     const cookieSetterSpy = jest.spyOn(Cookie, 'set');
     const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-    const isOperaProxySpy = jest.spyOn(isOperaProxy, 'default');
-    const onClientSpy = jest.spyOn(onClient, 'default');
+    const isOperaProxySpy = jest.mocked(isOperaProxy);
+    const onClientSpy = jest.mocked(onClient);
 
     beforeEach(() => {
       jest.clearAllMocks();
@@ -67,7 +87,7 @@ describe('UserContext', () => {
     });
 
     it('should call cookie logic when not opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
 
       render(<DummyComponentWithContext />);
@@ -76,7 +96,7 @@ describe('UserContext', () => {
     });
 
     it('should not call cookie logic when on opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => true);
 
       render(<DummyComponentWithContext />);
@@ -94,7 +114,7 @@ describe('UserContext', () => {
     });
 
     it('should not set cookie when ckns_mvt cookie already exists', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       setCookie({ name: 'ckns_mvt', value: 'foo' });
       cookieSetterSpy.mockClear();
@@ -108,7 +128,7 @@ describe('UserContext', () => {
     it('should set cookie when no ckns_mvt cookie exists', () => {
       const uuidRegex =
         /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       // @ts-expect-error This should be able to be mocked as a string or undefined
       cookieGetterSpy.mockImplementationOnce(() => undefined);

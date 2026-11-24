@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import Subhead from '.';
@@ -21,6 +21,21 @@ const SubheadWithContext = ({
 );
 
 describe('Curation Subhead Component', () => {
+  it.each([
+    ['mundo', 'chevron-forward.svg'],
+    ['arabic', 'chevron-backward.svg'],
+  ] as const)('applies the chevron spacing class for %s', (service, asset) => {
+    const { container } = render(
+      <SubheadWithContext service={service} link="https://bbc.com">
+        My Text
+      </SubheadWithContext>,
+    );
+    const chevron = container.querySelector<HTMLElement>('a .external-svg');
+
+    expect(chevron).toHaveClass('chevron');
+    expect(chevron?.style.getPropertyValue('--icon-source')).toContain(asset);
+  });
+
   it('should render a link correctly with the url contained in the href', () => {
     const { container } = render(
       <SubheadWithContext>My Text</SubheadWithContext>,

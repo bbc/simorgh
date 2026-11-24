@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
+import { forceVisible } from 'react-lazyload';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
-import { STORY_PAGE } from '../../routes/utils/pageTypes';
+import { HOME_PAGE, STORY_PAGE } from '../../routes/utils/pageTypes';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
-import { render } from '../react-testing-library-with-providers';
+import { act, render } from '../react-testing-library-with-providers';
 import { Services, Variants } from '../../models/types/global';
 
 import {
@@ -24,6 +25,8 @@ import { PromoProps } from './types';
 interface Props extends PromoProps {
   service?: Services;
   variant?: Variants;
+  pageType?: typeof HOME_PAGE | typeof STORY_PAGE;
+  isAmp?: boolean;
 }
 
 jest.mock('#app/hooks/useHydrationDetection', () => ({
@@ -31,19 +34,26 @@ jest.mock('#app/hooks/useHydrationDetection', () => ({
   default: () => true,
 }));
 
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
 const Component = ({
   service = 'mundo',
   variant,
+  pageType = STORY_PAGE,
+  isAmp = false,
   ...rest
 }: PropsWithChildren<Props>) => {
   return (
     <ServiceContextProvider service={service} variant={variant}>
       <RequestContextProvider
-        isAmp={false}
+        isAmp={isAmp}
         isApp={false}
         service={service}
         pathname="/"
-        pageType={STORY_PAGE}
+        pageType={pageType}
       >
         <ToggleContextProvider
           toggles={{
@@ -58,6 +68,105 @@ const Component = ({
 };
 
 describe('Frosted Glass Promo', () => {
+  it('maps prepared primary and fallback sources to typed homepage picture sources', () => {
+    const { container } = render(
+      <Component {...cpsPromoFixture} pageType={HOME_PAGE} />,
+    );
+    const primary = container.querySelector('source[type="image/webp"]');
+    const fallback = container.querySelector('source[type="image/jpeg"]');
+    const image = container.querySelector('picture img');
+    const base =
+      'https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg';
+
+    expect(primary).toHaveAttribute('srcset', `${base}.webp 400w`);
+    expect(fallback).toHaveAttribute('srcset', `${base} 400w`);
+    expect(primary).toHaveAttribute('sizes', '(min-width: 1008px) 400px');
+    expect(fallback).toHaveAttribute('sizes', '(min-width: 1008px) 400px');
+    expect(image).toHaveAttribute('src', `${base}.webp`);
+    expect(image).toHaveAttribute('width', '976');
+    expect(image).toHaveAttribute('height', '549');
+    expect(image).toHaveAttribute('loading', 'lazy');
+    expect(image).toHaveStyle({ aspectRatio: '976 / 549' });
+  });
+
+  it('preserves AMP dimensions and source selection', () => {
+    const { container } = render(<Component {...cpsPromoFixture} isAmp />);
+    const image = container.querySelector('amp-img');
+
+    expect(image).toHaveAttribute('layout', 'responsive');
+    expect(image).toHaveAttribute('width', '976');
+    expect(image).toHaveAttribute('height', '549');
+    expect(image).toHaveAttribute(
+      'srcset',
+      'https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w',
+    );
+    expect(container.querySelector('picture')).not.toBeInTheDocument();
+  });
+
+  it.each([
+    { mode: 'AMP', isAmp: true, isLite: false },
+    { mode: 'Lite', isAmp: false, isLite: true },
+  ])(
+    'keeps the static text panel in $mode when lazy loading is forced',
+    ({ isAmp, isLite }) => {
+      const { container, getByTestId, getByRole, getByText } = render(
+        <Promo {...cpsPromoFixture} />,
+        { service: 'mundo', isAmp, isLite },
+      );
+
+      act(() => forceVisible());
+
+      expect(
+        getByTestId('frosted-glass-lazyload-placeholder'),
+      ).toBeInTheDocument();
+      expect(
+        getByRole('link', { name: cpsPromoFixture.item.headlines.headline }),
+      ).toHaveAttribute('href', cpsPromoFixture.item.locators.assetUri);
+      expect(getByText('5 mayo 2016')).toBeInTheDocument();
+      expect(
+        container.querySelector('.lazyload-wrapper'),
+      ).not.toBeInTheDocument();
+      expect(
+        container.querySelector('[style*="background-image"]'),
+      ).not.toBeInTheDocument();
+    },
+  );
+
+  it('does not render images in Lite mode', () => {
+    const { container } = render(<Promo {...cpsPromoFixture} />, {
+      service: 'mundo',
+      isLite: true,
+    });
+
+    act(() => forceVisible());
+
+    expect(
+      container.querySelector('img, amp-img, picture'),
+    ).not.toBeInTheDocument();
+    expect(
+      container.querySelector('[style*="background-image"]'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('still loads the frosted panel on canonical pages', () => {
+    const { container, queryByTestId } = render(
+      <Promo {...cpsPromoFixture} />,
+      {
+        service: 'mundo',
+      },
+    );
+
+    act(() => forceVisible());
+
+    expect(
+      queryByTestId('frosted-glass-lazyload-placeholder'),
+    ).not.toBeInTheDocument();
+    expect(container.querySelector('[style*="background-image"]')).toHaveStyle({
+      backgroundImage:
+        "url('https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp')",
+    });
+  });
+
   it('when given props directly', () => {
     const { container } = render(
       <Component {...(promoProps as unknown as PromoProps)} />,

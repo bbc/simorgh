@@ -1,5 +1,7 @@
 {
   "data": {
+    "seoTitle": "BBC World Service - global front page",
+    "seoDescription": "",
     "curations": [
       {
         "summaries": [
@@ -117,7 +119,7 @@
             "id": "c93v2kkze2rt",
             "visualProminence": "MAXIMUM"
           },
-          
+
           {
             "type": "topic",
             "isLive": false,
@@ -193,7 +195,6 @@
         "pageCount": 1,
         "position": 1,
         "summaries": [
-          
           {
             "description": "bbc news pidgin",
             "firstPublished": "",

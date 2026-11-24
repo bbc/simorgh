@@ -1,7 +1,6 @@
-import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import Recommendations from '.';
-import recommendationsFixtures from './fixtures';
+import { recommendationsFixtures } from './fixtures';
 
 describe('Recommendations', () => {
   it('should render a single recommendation', () => {

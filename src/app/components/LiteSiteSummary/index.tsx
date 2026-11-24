@@ -1,11 +1,10 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
@@ -42,13 +41,14 @@ const LiteSiteSummary = () => {
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
+            id="go-back-to-canonical-link"
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}
-            css={
+            className={
               informationPageLink
-                ? styles.topLinkSpacing
-                : styles.singleLinkSpacing
+                ? ctaStyles.topLinkSpacing
+                : ctaStyles.singleLinkSpacing
             }
             alignWithMargin
             size="brevier"
@@ -61,7 +61,7 @@ const LiteSiteSummary = () => {
           <Paragraph data-e2e="information-page">
             <CallToActionLink
               url={informationPageLink}
-              css={styles.bottomLinkSpacing}
+              className={ctaStyles.bottomLinkSpacing}
               alignWithMargin
               size="brevier"
               fontVariant="sansRegular"

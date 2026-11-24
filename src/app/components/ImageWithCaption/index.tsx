@@ -1,9 +1,6 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
-import buildIChefURL from '../../lib/utilities/ichefURL';
+import { createIchefSrcSet } from '#app/utilities/imageSrcSets';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
-import { createSrcsets } from '../../lib/utilities/srcSet';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 import Copyright from '../Copyright';
 import Caption from '../Caption';
@@ -14,7 +11,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
 
-// @ts-expect-error - TODO: fix types for blocks
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCopyright = (copyrightHolder: string) => {
@@ -72,18 +68,18 @@ const ImageWithCaption = ({
 
   const copyright = getCopyright(copyrightHolder);
 
-  const src = buildIChefURL({
+  const {
+    src,
+    primarySrcset,
+    primaryMimeType,
+    fallbackSrcset,
+    fallbackMimeType,
+  } = createIchefSrcSet({
     originCode,
     locator,
-    resolution: DEFAULT_IMAGE_RES,
+    originalImageWidth: width,
+    srcResolution: DEFAULT_IMAGE_RES,
   });
-
-  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
-    createSrcsets({
-      originCode,
-      locator,
-      originalImageWidth: width,
-    });
 
   const lazyLoad = shouldLazyLoad(position);
 
@@ -101,6 +97,7 @@ const ImageWithCaption = ({
         width={width}
         lazyLoad={lazyLoad}
         preload={shouldPreloadLeadImage}
+        fetchPriority={shouldPreloadLeadImage ? 'high' : undefined}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

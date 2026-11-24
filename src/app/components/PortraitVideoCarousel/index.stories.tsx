@@ -1,4 +1,3 @@
-import React from 'react';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import PortraitVideoCarousel from '.';
 import readme from './README.md';
@@ -27,6 +26,13 @@ export default {
   parameters: {
     docs: { readme },
     metadata,
+    chromatic: {
+      viewports: [
+        600, // Group 3
+        1008, // Group 4
+        1280, // Group 5
+      ],
+    },
   },
 };
 

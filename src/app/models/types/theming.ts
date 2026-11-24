@@ -1,4 +1,11 @@
-import type { JSX } from 'react';
+import type { ComponentType } from 'react';
+import {
+  SerbianService,
+  ServicesWithNoVariants,
+  ServicesWithVariants,
+  UkrainianService,
+  UzbekService,
+} from './global';
 
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
@@ -25,8 +32,6 @@ interface Palette extends BrandPalette {
   EBON: string;
   ERROR_CORE: string;
   GHOST: string;
-  GREY_10: string;
-  GREY_11: string;
   GREY_1: string;
   GREY_2: string;
   GREY_3: string;
@@ -35,6 +40,10 @@ interface Palette extends BrandPalette {
   GREY_6: string;
   GREY_7: string;
   GREY_8: string;
+  GREY_10: string;
+  GREY_11: string;
+  GREY_15: string;
+  GREY_16: string;
   KINGFISHER: string;
   LE_TEAL: string;
   LIVE_LIGHT: string;
@@ -45,6 +54,7 @@ interface Palette extends BrandPalette {
   LUNAR_LIGHT: string;
   METAL: string;
   MIDNIGHT_BLACK: string;
+  NEUTRAL_LIGHT: string;
   NEWSROUND_PURPLE: string;
   NEWSROUND_PURPLE_30: string;
   OAT_LHT: string;
@@ -335,72 +345,65 @@ export type TypographyScript = {
   };
 };
 
+export type FontStyles = {
+  fontFamily: string;
+  fontStyle: string;
+  fontWeight: number;
+};
+
 export type FontVariants = {
   sans: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    regularItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    boldItalic?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light?: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    regularItalic?: FontStyles;
+    bold: FontStyles;
+    boldItalic?: FontStyles;
+    light?: FontStyles;
   };
   serif?: {
-    regular: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    medium: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    mediumItalic: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    bold: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
-    light: {
-      fontFamily: string;
-      fontStyle: string;
-      fontWeight: number;
-    };
+    regular: FontStyles;
+    medium: FontStyles;
+    mediumItalic: FontStyles;
+    bold: FontStyles;
+    light: FontStyles;
   };
+};
+
+export type FontName =
+  | 'BBCReithSans_W_Bd'
+  | 'BBCReithSans_W_Rg'
+  | 'BBCReithSerif_WNumbers_Lt'
+  | 'BBCReithSerif_W_Md'
+  | 'BBCReithQalam_W_Bd'
+  | 'BBCReithQalam_W_Rg'
+  | 'Noto_Sans_Ethiopic_Bold'
+  | 'Noto_Sans_Ethiopic'
+  | 'Noto_Sans_Gujarati_Bold'
+  | 'Noto_Sans_Gujarati'
+  | 'Noto_Sans_Tamil_Bold'
+  | 'Noto_Sans_Tamil'
+  | 'Noto_Sans_Telugu_Bold'
+  | 'Noto_Sans_Telugu'
+  | 'Noto_Serif_Bengali_Bold'
+  | 'Noto_Serif_Bengali'
+  | 'Noto_Serif_Sinhala_Bold'
+  | 'Noto_Serif_Sinhala'
+  | 'Padauk'
+  | 'Padauk_Bold';
+
+export type FontFace = Partial<FontStyles> & {
+  fontFamily: string;
+  src: string;
+  fontDisplay: string;
+  name: FontName;
+};
+
+export type Font = {
+  '@font-face': FontFace;
 };
 
 export interface Typography {
   fontFaces: {
-    '@font-face'?: {
-      fontFamily: string;
-      fontWeight?: number;
-      fontStyle?: string;
-      src: string;
-      fontDisplay: string;
-    };
+    '@font-face'?: FontFace;
   }[];
   fontVariants: FontVariants;
   script: TypographyScript;
@@ -446,23 +449,9 @@ export type FontVariant =
   | 'serifBold'
   | 'serifLight';
 
-export type FontStyles = {
-  fontFamily: string;
-  fontStyle: string;
-  fontWeight: number;
-};
-
 export type BrandSVG = {
-  width?: number;
-  height?: number;
-  group: JSX.Element;
-  ratio?: number;
-  viewbox?: {
-    height?: number;
-    width?: number;
-    minY?: number;
-    minX?: number;
-  };
+  path: string;
+  ratio: number;
 };
 
 export type GridWidths = {
@@ -474,6 +463,34 @@ export type GridWidths = {
   1008: number;
   1280: number;
 };
+
+export type ServiceTheme = {
+  palette: BrandPalette;
+  typography: Typography;
+  brandSVG: BrandSVG;
+};
+
+export type ServicesWithNoVariantsWithPWATypography = {
+  service:
+    | 'afaanoromoo'
+    | 'afrique'
+    | 'azeri'
+    | 'gahuza'
+    | 'hausa'
+    | 'igbo'
+    | 'indonesia'
+    | 'kyrgyz'
+    | 'pidgin'
+    | 'somali'
+    | 'swahili'
+    | 'yoruba';
+  variant: 'default';
+};
+
+export type ServicesWithVariantsWithPWATypography =
+  | SerbianService
+  | UzbekService
+  | UkrainianService;
 
 declare module '@emotion/react' {
   export interface Theme {
@@ -509,21 +526,23 @@ declare module '@emotion/react' {
       /** 600px and above */
       GROUP_D_MIN_WIDTH: string;
     };
-    fontVariants: {
-      sansRegular: FontStyles;
-      sansRegularItalic: FontStyles;
-      sansBold: FontStyles;
-      sansBoldItalic: FontStyles;
-      sansLight: FontStyles;
-      serifRegular: FontStyles;
-      serifMedium: FontStyles;
-      serifMediumItalic: FontStyles;
-      serifBold: FontStyles;
-      serifLight: FontStyles;
-    };
+    fontVariants: Record<FontVariant, FontStyles>;
     brandSVG: BrandSVG;
     gridWidths: GridWidths;
     isDarkUi: boolean;
     isLite: boolean;
+    fontFaces: Typography['fontFaces'];
   }
 }
+
+export type LoadableTheme = ComponentType<{ children: React.ReactNode }>;
+
+export type ThemeWithNoVariant = {
+  [_service in ServicesWithNoVariants['service']]: LoadableTheme;
+};
+
+export type ThemeWithVariant = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in ServicesWithVariants['variant']]?: LoadableTheme;
+  };
+};

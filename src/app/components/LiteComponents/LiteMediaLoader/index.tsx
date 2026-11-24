@@ -1,13 +1,10 @@
-/** @jsx jsx */
-
 import { Helmet } from 'react-helmet';
 import { useId, PropsWithChildren, useContext } from 'react';
-import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Translations } from '#app/models/types/translations';
-import { setImgSize } from '#server/Document/Renderers/litePageTransforms/transformImgTags';
+import { setImgSize } from '#nextjs/renderers/litePageTransforms/transformImgTags';
 import { MediaType } from '#app/models/types/media';
 import LiteButton from '../LiteButton';
 import styles from './index.styles';

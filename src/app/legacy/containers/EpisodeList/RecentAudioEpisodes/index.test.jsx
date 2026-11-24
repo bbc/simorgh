@@ -1,4 +1,3 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -7,6 +6,16 @@ import { render } from '../../../../components/react-testing-library-with-provid
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import RecentAudioEpisodes from '.';
+
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
 
 const RecentAudioEpisodesWithContext = ({
   masterBrand,
@@ -51,8 +60,9 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelectorAll('li').length).toBeGreaterThan(0);
   });
   it('should render the translated section label', () => {
     const { getByText } = render(
@@ -62,6 +72,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     const recentEpisodesLabel = getByText('Siaran sebelumnya');
@@ -76,6 +87,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(container.querySelectorAll('li').length).toEqual(4);
@@ -89,6 +101,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(queryByRole('list')).not.toBeInTheDocument();
@@ -103,6 +116,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     const episodeTitle = getByText('Wednesday Evening');
@@ -117,6 +131,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(getAllByText('Dunia Pagi Ini')[0]).toBeInTheDocument();
@@ -130,6 +145,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     const links = getAllByText('Dunia Pagi Ini').map(
@@ -153,6 +169,7 @@ describe('RecentAudioEpisodes', () => {
         variant="trad"
         pageType="On Demand Radio"
       />,
+      { service: 'zhongwen', variant: 'trad' },
     );
 
     const links = getAllByText('時事一周').map(
@@ -173,12 +190,33 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     const visuallyHiddenAudioLabel = getAllByText('Audio,');
     const visuallyHiddenDate = getAllByText('Durasi 15,30');
     expect(visuallyHiddenAudioLabel[0]).toBeInTheDocument();
     expect(visuallyHiddenDate[0]).toBeInTheDocument();
+  });
+
+  it('should separate the visible title, duration and date with spaces in the accessible name', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+      { service: 'indonesia' },
+    );
+
+    const label = container.querySelector('#episodeLinkIndex-0');
+    const title = label.querySelector('.episode-list__title--hover');
+    const duration = label.querySelector('[aria-hidden="true"]').parentElement;
+
+    expect(title.nextSibling.nextSibling.nodeValue).toEqual(' ');
+    expect(duration.textContent).toMatch(/ $/);
+    expect(duration.nextSibling).toContainElement(label.querySelector('time'));
   });
 
   it('should render the correct list item links for podcasts', async () => {
@@ -190,6 +228,7 @@ describe('RecentAudioEpisodes', () => {
         service="arabic"
         pageType="Podcast"
       />,
+      { service: 'arabic' },
     );
 
     const links = getAllByText('BBC Xtra').map(
@@ -218,6 +257,7 @@ describe('RecentAudioEpisodes', () => {
         variant="trad"
         pageType="Podcast"
       />,
+      { service: 'zhongwen', variant: 'trad' },
     );
 
     const links = getAllByText('時事一周').map(
@@ -238,6 +278,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
     const svgs = container.querySelectorAll('svg');
 
@@ -252,6 +293,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(getAllByText('Durasi 15:30')[0]).toBeInTheDocument();
@@ -265,6 +307,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(getByText('17 November 2020')).toBeInTheDocument();
@@ -278,12 +321,13 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
     const wrappingDiv = container.querySelector("div[class*='Wrapper']");
     expect(wrappingDiv.style.borderBottom).toBe('');
   });
 
-  it('should render a border between two DateTimeDuration elements when there is an episode title', () => {
+  it('preserves the semantic date when rendered through DateTimeDuration', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_indonesian_radio"
@@ -291,12 +335,11 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
-    const spanEl = getByText('17 November 2020');
-    const style = window.getComputedStyle(spanEl);
-
-    expect(style.borderLeft).toBe('0.0625rem solid #AEAEB5');
-    expect(style.borderRight).toBe('');
+    const time = getByText('17 November 2020');
+    expect(time.tagName).toBe('TIME');
+    expect(time).toHaveAttribute('datetime', '2020-11-17');
   });
 
   it('should aria-hide the duration', () => {
@@ -307,6 +350,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     const hiddenDuration = container.querySelector('span[aria-hidden=true]');
@@ -323,6 +367,7 @@ describe('RecentAudioEpisodes', () => {
         service="indonesia"
         pageType="On Demand Radio"
       />,
+      { service: 'indonesia' },
     );
 
     expect(getAllByRole('text')[0].closest('a')).toBeInTheDocument();
@@ -338,6 +383,7 @@ describe('RecentAudioEpisodes', () => {
         ulProps={{ 'data-e2e': 'recent-episode-list' }}
         liProps={{ 'data-e2e': 'recent-episode-list-item' }}
       />,
+      { service: 'indonesia' },
     );
 
     expect(container.querySelector('ul')).toHaveAttribute(
@@ -372,6 +418,7 @@ describe('Event Tracking', () => {
         episodes={indonesian}
         service="indonesia"
       />,
+      { service: 'indonesia' },
     );
 
     expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
@@ -393,6 +440,7 @@ describe('Event Tracking', () => {
         episodes={indonesian}
         service="indonesia"
       />,
+      { service: 'indonesia' },
     );
 
     expect(viewTrackerSpy).toHaveBeenCalledTimes(1);

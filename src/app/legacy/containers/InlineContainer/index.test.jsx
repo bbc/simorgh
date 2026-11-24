@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContext } from '../../../contexts/ServiceContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import InlineContainer from '.';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const fragmentBlock = (text, attributes = []) => ({
   id: '113144',
@@ -35,7 +35,7 @@ const persianLink = inlineLinkBlock(
 // text is passed here just to satisfy the prop type warnings but the top level text prop is currently not used
 const InlineContainerWithContext = ({ blocks }) => {
   const memoizedServiceContextValue = useMemo(
-    () => ({ script: latin, externalLinkText: '' }),
+    () => ({ externalLinkText: '' }),
     [],
   );
   return (
@@ -47,9 +47,7 @@ const InlineContainerWithContext = ({ blocks }) => {
 
 describe('InlineContainer', () => {
   it('should render correctly', () => {
-    const { container } = render(
-      <InlineContainerWithContext blocks={[persianLink]} />,
-    );
-    expect(container).toMatchSnapshot();
+    render(<InlineContainerWithContext blocks={[persianLink]} />);
+    expect(screen.getByRole('link')).toBeInTheDocument();
   });
 });

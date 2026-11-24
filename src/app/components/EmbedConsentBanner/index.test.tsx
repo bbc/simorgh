@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   render,
   screen,
@@ -8,6 +7,11 @@ import {
 import { EmbedConsentBannerCanonical, EmbedConsentBannerAmp } from '.';
 
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
 
 describe('Embed Consent Banner', () => {
   it('should render correct elements for the banner', () => {

@@ -1,4 +1,5 @@
 import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -9,6 +10,7 @@ import {
   UzbekService,
   Direction,
   Variants,
+  Navigation,
 } from './global';
 import { Translations } from './translations';
 
@@ -32,7 +34,13 @@ export type UkrainianConfig = {
   [_key in UkrainianService['variant']]: ServiceConfig;
 };
 
+// Uzbek originally only supported Cyrillic script, so its config had a single 'default' entry.
+// When Latin transliteration was introduced, 'cyr' and 'lat' variants were added and 'default'
+// was kept as a legacy alias for the Cyrillic config. It is not a routable URL variant —
+// UzbekService['variant'] covers only the two routable variants: 'cyr' and 'lat'.
 export type UzbekConfig = {
+  default: ServiceConfig;
+} & {
   [_key in UzbekService['variant']]: ServiceConfig;
 };
 
@@ -44,7 +52,6 @@ export type ServiceConfig = {
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
   atiAnalyticsProducerName?: string;
-  useReverb?: boolean;
   chartbeatDomain: string;
   brandName: string;
   product: string;
@@ -96,13 +103,8 @@ export type ServiceConfig = {
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
-  fonts?: ((baseUrlOverride: string) => string)[];
   collapsibleNavigation?: CollapsibleNavigationSection[];
-  navigation?: {
-    title: string;
-    url: string;
-    hideOnLiteSite?: boolean;
-  }[];
+  navigation?: Navigation[];
   scriptLink?: {
     text: string;
     variant: Variants;
@@ -114,16 +116,31 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  promotionalBanner?: PromotionalBannerConfig;
   electionBanner?: {
+    title?: string;
     heights?: {
       desktop: number;
       tablet: number;
       mobile: number;
     };
-    electionThingIds: string[];
-    iframeSrc: string;
-    iframeDevSrc: string;
+    electionThingIds?: string[];
+    electionCurationIds?: string[];
+    iframeSrc?: string;
+    iframeDevSrc?: string;
+    assocPressIframeSrc?: string;
   };
+  articleMessageBanners?: ArticleMessageBannerConfig[];
+  resonanceEnabled?: boolean;
+};
+
+export type ArticleMessageBannerConfig = {
+  thingIds: string[];
+  linkHref: string;
+  heading: string;
+  linkText: string;
+  description?: string;
+  image?: string;
 };
 
 export type PodcastPromo = {

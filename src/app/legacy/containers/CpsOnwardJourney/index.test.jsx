@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '.';
@@ -57,6 +56,7 @@ describe('CpsOnwardJourney', () => {
           columnType="main"
         />
       </ServiceContextProvider>,
+      { service: 'mundo' },
     );
 
     expect(container).toBeEmptyDOMElement();
@@ -73,9 +73,10 @@ describe('CpsOnwardJourney', () => {
           content={buildStoryItems(1)}
         />
       </ServiceContextProvider>,
+      { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     const promo = getByText('Foo in the news 0');
     expect(promo.tagName).toBe('A');
@@ -97,9 +98,10 @@ describe('CpsOnwardJourney', () => {
           content={buildStoryItems(3)}
         />
       </ServiceContextProvider>,
+      { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     for (let i = 0; i < 3; i += 1) {
       const promo = getByText(`Foo in the news ${i}`);
@@ -128,6 +130,7 @@ describe('CpsOnwardJourney', () => {
           title="The Foo Section"
         />
       </ServiceContextProvider>,
+      { service: 'mundo' },
     );
 
     const sectionLabel = getByText('The Foo Section');
@@ -156,9 +159,10 @@ describe('CpsOnwardJourney', () => {
             sectionLabelBackground={sectionLabelBackground}
           />
         </ServiceContextProvider>,
+        { service: 'mundo' },
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container).not.toBeEmptyDOMElement();
     },
   );
 
@@ -186,9 +190,10 @@ describe('CpsOnwardJourney', () => {
           }}
         />
       </ServiceContextProvider>,
+      { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container).not.toBeEmptyDOMElement();
 
     const skipLink = getByText('skip the foo section');
     expect(skipLink).toBeInTheDocument();

@@ -1,17 +1,20 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { Global, jsx } from '@emotion/react';
-import React, { use, useEffect, useRef } from 'react';
+import { Global } from '@emotion/react';
+import { use, useEffect, useMemo, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
+  EventMapping,
+  Player,
+  Playlist,
+  PlaylistItem,
   PortraitClipMediaBlock,
   SMPEvent,
 } from '#app/components/MediaLoader/types';
-import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import { navigationIcons } from '#app/components/icons/shared';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../hooks/useViewTracker';
+import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
@@ -51,8 +54,47 @@ const getEventTrackingData = ({
   };
 };
 
-const getPlayerInstance = () =>
-  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+const findPlayerKey = (): string => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  const keys = playerInstances ? Object.keys(playerInstances) : [];
+  // Return the last player key if multiple instances are found, else return a fallback
+  return keys[keys.length - 1] || 'bbcMediaPlayer0';
+};
+
+export const getPlayerInstance = () => {
+  const playerKey = findPlayerKey();
+
+  return window?.embeddedMedia?.api?.players()?.[playerKey] as Player;
+};
+
+const getAllPlayerInstances = () => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  if (!playerInstances) return [];
+
+  return Object.values(playerInstances);
+};
+
+const getCurrentIndex = ({
+  e,
+  blocks,
+  player,
+}: {
+  e?: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  player?: Player;
+}): number => {
+  const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
+  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  const currentIndex = blocks?.findIndex(
+    item =>
+      item.model.video.id === currentId ||
+      item.model.video.version.id === currentId,
+  );
+
+  return currentIndex;
+};
 
 export const playlistLoadedCallback = (
   e: SMPEvent,
@@ -62,15 +104,16 @@ export const playlistLoadedCallback = (
 
   if (!player) return;
 
-  const { playlist } = e || {};
-  const [currentItem] = playlist?.items || [];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
+  const allPlayerInstances = getAllPlayerInstances();
 
-  const currentIndex = blocks?.findIndex(
-    item =>
-      item.model.video.id === currentId ||
-      item.model.video.version.id === currentId,
-  );
+  // Pause embedded players when PV Carousel is loaded
+  if (allPlayerInstances) {
+    allPlayerInstances.forEach(playerInstance => {
+      playerInstance.pause();
+    });
+  }
+
+  const currentIndex = getCurrentIndex({ e, blocks });
 
   const prevVideoButton = document.getElementById('previous-video-button');
   const nextVideoButton = document.getElementById('next-video-button');
@@ -110,6 +153,56 @@ export const playlistLoadedCallback = (
       },
       { statsObject: { clipPID: next?.video?.id } },
     );
+  }
+};
+
+export const statsNavigationCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const { direction, method } = e || {};
+
+  const isSupportedNavigation = method && ['swipe', 'wheel'].includes(method);
+
+  if (isSupportedNavigation) {
+    const currentIndex = getCurrentIndex({ e, blocks });
+
+    const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
+export const playbackEndedCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const player = getPlayerInstance();
+  const { ended } = e;
+  const { autoplay } = player.settings();
+
+  if (ended && autoplay) {
+    const currentIndex = getCurrentIndex({ blocks, player });
+
+    const newIndex = currentIndex + 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
   }
 };
 
@@ -154,6 +247,45 @@ const PortraitVideoModal = ({
       selectedVideo: blocks?.[selectedVideoIndex],
       selectedVideoIndex,
     }),
+  );
+
+  const swipeTracker = useSwipeTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
+  const trackingRef = useRef({ eventTrackingData, swipeTracker });
+  trackingRef.current = { eventTrackingData, swipeTracker };
+
+  // Unrelated page updates must not reload the playing video.
+  const selectedBlocks = useMemo(
+    () => [blocks[selectedVideoIndex]],
+    [blocks, selectedVideoIndex],
+  );
+  const eventMapping = useMemo<EventMapping>(
+    () => ({
+      playlistLoaded: event => playlistLoadedCallback(event, blocks),
+      pluginLoaded: pluginLoadedCallback,
+      fullscreenExit: onClose,
+      statsNavigation: event =>
+        statsNavigationCallback(
+          event,
+          blocks,
+          trackingRef.current.eventTrackingData,
+          trackingRef.current.swipeTracker,
+        ),
+      pause: event =>
+        playbackEndedCallback(
+          event,
+          blocks,
+          trackingRef.current.eventTrackingData,
+          trackingRef.current.swipeTracker,
+        ),
+    }),
+    [blocks, onClose],
   );
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -206,9 +338,12 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      const player = getPlayerInstance();
+      const allPlayerInstances = getAllPlayerInstances();
+
       // Pause any player if the modal is closed instantly
-      if (player) player.pause();
+      allPlayerInstances.forEach(player => {
+        player.pause();
+      });
     };
   }, [onClose]);
 
@@ -261,12 +396,9 @@ const PortraitVideoModal = ({
         </div>
         <MediaLoader
           css={styles.mediaWrapper}
-          blocks={[blocks?.[selectedVideoIndex]]}
-          eventMapping={{
-            playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: onClose,
-          }}
+          blocks={selectedBlocks}
+          withinFullscreenContainer
+          eventMapping={eventMapping}
         />
         <button
           ref={endOfContentButtonRef}

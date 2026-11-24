@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import styles from './index.styles';
 import VisuallyHiddenText from '../../../VisuallyHiddenText';
 

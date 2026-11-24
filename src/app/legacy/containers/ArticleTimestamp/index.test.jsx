@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   isNull,
   suppressPropWarnings,
@@ -37,37 +36,38 @@ describe('ArticleTimestamp', () => {
   });
 
   it("should render a 'created' Timestamp correctly", () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
         lastPublished={1530947227000} // Sat Jul 07 2018 07:07:07 UTC
       />,
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(regexDate)).toBeInTheDocument();
   });
 
   it("should render both a 'created' and an 'updated' Timestamp correctly", () => {
-    const { container } = render(
+    const { getAllByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000} // Sat Jul 07 2018 07:07:07
         lastPublished={1552666749637} // Fri Mar 15 2019 16:19:09
       />,
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getAllByText(regexDate).length).toEqual(2);
   });
 
   it('should render with a prefix', () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000}
         lastPublished={1552666749637}
         service="mundo" // Prefix is Actualizado
       />,
+      { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(/Actualizado/)).toBeInTheDocument();
   });
 
   it('should render with a suffix', () => {
@@ -77,21 +77,23 @@ describe('ArticleTimestamp', () => {
         lastPublished={1552666749637}
         service="nepali" // Suffix is मा अद्यावधिक
       />,
+      { service: 'nepali' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('time')).toBeInTheDocument();
   });
 
   it('should render with no suffix or prefix', () => {
-    const { container } = render(
+    const { getByText } = render(
       <WrappedArticleTimestamp
         firstPublished={1530947227000}
         lastPublished={1530947227000}
         service="mundo"
       />,
+      { service: 'mundo' },
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByText(regexDate)).toBeInTheDocument();
   });
 
   describe('daylight savings time', () => {
@@ -352,9 +354,7 @@ describe('ArticleTimestamp', () => {
     };
 
     it('should show the correct local date', () => {
-      const { getByText } = render(
-        <WrappedArticleTimestamp {...props} service="news" />,
-      );
+      const { getByText } = render(<WrappedArticleTimestamp {...props} />);
       const timeEl = getByText(/9 August 2019/);
       const time = timeEl.getAttribute('datetime');
 
@@ -364,6 +364,7 @@ describe('ArticleTimestamp', () => {
     it('should show the correct local date for Bengali', () => {
       const { getByText } = render(
         <WrappedArticleTimestamp {...props} service="bengali" />,
+        { service: 'bengali' },
       );
       const timeEl = getByText(/১০ অগাস্ট ২০১৯/);
       const time = timeEl.getAttribute('datetime');

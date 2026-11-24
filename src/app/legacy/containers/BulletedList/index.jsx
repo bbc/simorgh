@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import { GEL_SPACING_TRPL } from '#psammead/gel-foundations/src/spacings';

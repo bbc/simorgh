@@ -2,7 +2,9 @@
   "data": {
     "title": "Berita - BBC News Indonesia",
     "description": "Berbagai laporan mendalam yang membahas teknologi dan ilmu pengetahuan dalam tahap riset, penerapan, maupun konsep.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "Berita - BBC News Indonesia",
+  "seoDescription": "Berbagai laporan mendalam yang membahas teknologi dan ilmu pengetahuan dalam tahap riset, penerapan, maupun konsep.",
     "curations": [
       {
         "summaries": [

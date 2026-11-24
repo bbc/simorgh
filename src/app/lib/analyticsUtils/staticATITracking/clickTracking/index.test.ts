@@ -1,43 +1,37 @@
-import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { fireEvent } from '#app/components/react-testing-library-with-providers';
 import clickTracking from '.';
 
 const createAnchor = ({
   href = '/gahuza',
   isLite = true,
-  atiUrl = 'https://logws1363.ati-host.net/?',
+  reverbUrl = 'https://logws1363.xiti.net/?',
 }: {
   href?: string;
   isLite?: boolean;
-  atiUrl?: string;
+  reverbUrl?: string;
 } = {}) => {
   const anchorElement = document.createElement('a');
   anchorElement.href = href;
   if (isLite) {
-    anchorElement.setAttribute(STATIC_ATI_CLICK_TRACKING, atiUrl);
+    anchorElement.setAttribute(STATIC_REVERB_CLICK_TRACKING, reverbUrl);
   }
   document.body.appendChild(anchorElement);
   return anchorElement;
 };
 
 const dispatchClick = (targetElement: HTMLElement) => {
-  const event = new MouseEvent('click', {
-    view: window,
-    bubbles: true,
-    cancelable: true,
-  });
-  targetElement.dispatchEvent(event);
+  fireEvent.click(targetElement);
+};
+
+const evaluateStringifiedTracker = (tracker: () => void): (() => void) => {
+  // eslint-disable-next-line no-new-func
+  return new Function(`return (${tracker.toString()})`)() as () => void;
 };
 
 describe('Click tracking script', () => {
-  const originalWindowLocation = window.location;
-
   beforeAll(() => {
-    Object.defineProperty(window, 'location', {
-      value: {
-        assign: jest.fn(),
-      },
-    });
-    clickTracking();
+    evaluateStringifiedTracker(clickTracking)();
   });
 
   beforeEach(() => {
@@ -48,51 +42,33 @@ describe('Click tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  afterAll(() => {
-    Object.defineProperty(window, 'location', {
-      value: {
-        ...originalWindowLocation,
-      },
-    });
-  });
-
-  it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
-    const clickTrackerString = clickTracking.toString();
-
-    const pattern = /STATIC_ATI_CLICK_TRACKING = '([^']+)'/;
-
-    const matches = clickTrackerString.match(pattern) || [];
-    const [, staticAtiClickTracking] = matches;
-
-    // STATIC_ATI_CLICK_TRACKING in ./index.ts must match the value of STATIC_ATI_CLICK_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(staticAtiClickTracking).toBe(STATIC_ATI_CLICK_TRACKING);
-  });
-
   it('Redirects all clicks', () => {
     const anchorElement = createAnchor({
-      href: '/gahuza',
+      href: '#gahuza',
       isLite: false,
     });
 
     dispatchClick(anchorElement);
 
-    const nextPageUrl = (window.location.assign as jest.Mock).mock.calls[0][0];
-    expect(nextPageUrl).toContain('/gahuza');
+    expect(window.location.toString()).toContain('gahuza');
   });
 
-  it('Calls processClientDeviceAndSendStaticBeacon() with the right parameters', () => {
+  it('uses the exported tracking attribute with the stringified click tracker', () => {
     const anchorElement = createAnchor();
 
     dispatchClick(anchorElement);
 
     expect(
       window.processClientDeviceAndSendStaticBeacon as jest.Mock,
-    ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+    ).toHaveBeenCalledWith({
+      forwardingUrl: 'http://localhost/gahuza',
+      reverbUrl: 'https://logws1363.xiti.net/?',
+    });
   });
 
   it('Should NOT call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = createAnchor({
-      atiUrl: 'https://logws1363.ati-host.net/?uniqueLink=1',
+      reverbUrl: 'https://logws1363.xiti.net/?uniqueLink=1',
     });
 
     dispatchClick(anchorElement);

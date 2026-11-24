@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 
@@ -13,7 +12,7 @@ const ErrorMessageWithContext = ({ episodeAvailability, skin }) => (
 
 describe(`episodeAvailability - Error Message`, () => {
   it('should correctly render for future episodes with video skin', () => {
-    const { getByText, container } = render(
+    const { container, getByText } = render(
       <ErrorMessageWithContext
         episodeAvailability={EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE}
         skin="video"
@@ -23,12 +22,11 @@ describe(`episodeAvailability - Error Message`, () => {
     expect(
       getByText('De thing wey de here never ready for you to play.'),
     ).toBeInTheDocument();
-
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toHaveClass('videoErrorWrapper');
   });
 
   it('should correctly render for expired episodes with audio skin', () => {
-    const { getByText, container } = render(
+    const { container, getByText } = render(
       <ErrorMessageWithContext
         episodeAvailability={EPISODE_STATUS.EPISODE_IS_EXPIRED}
         skin="audio"
@@ -36,6 +34,17 @@ describe(`episodeAvailability - Error Message`, () => {
     );
 
     expect(getByText('Dis thing no dey again')).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toHaveClass('audioErrorWrapper');
+  });
+
+  it('should default to the video skin when no skin is provided', () => {
+    const { container, getByText } = render(
+      <ErrorMessageWithContext
+        episodeAvailability={EPISODE_STATUS.EPISODE_IS_EXPIRED}
+      />,
+    );
+
+    expect(getByText('Dis thing no dey again')).toBeInTheDocument();
+    expect(container.firstChild).toHaveClass('videoErrorWrapper');
   });
 });

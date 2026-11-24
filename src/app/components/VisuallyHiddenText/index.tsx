@@ -1,31 +1,35 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import type { ElementType, ReactNode } from 'react';
 import { ComponentPropsWithoutRef } from 'react';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
-interface VisuallyHiddenTextProps<T extends React.ElementType> {
+interface VisuallyHiddenTextProps<T extends ElementType> {
   id?: string;
   tabIndex?: number;
   as?: T;
   lang?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
-const VisuallyHiddenText = <T extends React.ElementType>({
+// `const T` preserves the chosen element type, e.g. `as="h1"` for the home page heading.
+// Without `as`, the type defaults to span, matching the rendered element.
+const VisuallyHiddenText = <const T extends ElementType = 'span'>({
   children,
   id,
   tabIndex,
   as,
   ...htmlAttributes
 }: VisuallyHiddenTextProps<T> &
-  Omit<ComponentPropsWithoutRef<T>, keyof VisuallyHiddenTextProps<T>>) => {
-  const Component: React.ElementType = as || 'span';
+  Omit<
+    ComponentPropsWithoutRef<T>,
+    keyof VisuallyHiddenTextProps<T> | 'className'
+  >) => {
+  const Component: ElementType = as || 'span';
   return (
     <Component
-      css={styles.visuallyHiddenText}
       id={id}
       tabIndex={tabIndex}
       {...htmlAttributes}
+      className={styles.visuallyHiddenText}
     >
       {children}
     </Component>

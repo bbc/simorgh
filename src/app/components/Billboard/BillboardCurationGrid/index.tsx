@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';
@@ -36,12 +34,14 @@ const BillboardCurationGrid = ({
         <ul css={styles.list} role="list" data-testid="billboard-promos">
           {top4SummariesForGrid.map((promo, i) => (
             <li css={styles.item} key={promo.id || promo.link}>
-              <CurationPromo
-                {...promo}
-                lazy
-                headingLevel={3}
-                eventTrackingData={withItemTracking(promo, i)}
-              />
+              <div css={styles.billboardCurationGridStylingOverrides}>
+                <CurationPromo
+                  {...promo}
+                  lazy
+                  headingLevel={3}
+                  eventTrackingData={withItemTracking(promo, i)}
+                />
+              </div>
             </li>
           ))}
         </ul>

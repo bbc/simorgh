@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react';
+import { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
@@ -10,7 +10,7 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/brea
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
-import isLive from '#app/lib/utilities/isLive';
+import useToggle from '#app/hooks/useToggle';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -36,15 +36,15 @@ const Divider = styled.div`
   }
 `;
 const CanonicalNavigationContainer = ({
-  script,
-  service,
   dir,
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
   blocks,
+  children,
 }) => {
   const { isLite } = use(RequestContext);
+  const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
@@ -52,27 +52,31 @@ const CanonicalNavigationContainer = ({
     }
   });
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <ScrollableWrapper>
-        {!isLite && (
-          <CanonicalMenuButton
-            announcedText={menuAnnouncedText}
-            isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-            dir={dir}
-            script={script}
-          />
-        )}
-        {!isOpen && (
-          <ScrollableNavigation dir={dir}>
-            {scrollableListItems}
-          </ScrollableNavigation>
-        )}
-      </ScrollableWrapper>
-      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
-      <Divider />
-      {!isLive() && <TopBarOJs blocks={blocks} />}
-    </Navigation>
+    <>
+      <Navigation dir={dir} isOpen={isOpen}>
+        <ScrollableWrapper>
+          {!isLite && (
+            <CanonicalMenuButton
+              announcedText={menuAnnouncedText}
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+              dir={dir}
+            />
+          )}
+          {!isOpen && (
+            <ScrollableNavigation dir={dir}>
+              {scrollableListItems}
+            </ScrollableNavigation>
+          )}
+        </ScrollableWrapper>
+        <CanonicalDropdown isOpen={isOpen}>
+          {dropdownListItems}
+        </CanonicalDropdown>
+        <Divider />
+      </Navigation>
+      {enabled && <TopBarOJs blocks={blocks} />}
+      {children}
+    </>
   );
 };
 

@@ -1,10 +1,9 @@
-/** @jsx jsx */
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { jsx } from '@emotion/react';
 import CallToActionLink from '#app/components/CallToActionLink';
 import Paragraph from '../../Paragraph';
 import Text from '../../Text';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 import idSanitiser from '../../../lib/utilities/idSanitiser';
 
@@ -93,11 +92,16 @@ const Uploader = ({ blocks }: UploaderProps) => {
         </Text>
         <Paragraph css={styles.text}>{text}</Paragraph>
         <div css={styles.linkContainer}>
-          <CallToActionLink url={linkAddress} css={styles.callToActionLink}>
+          <CallToActionLink
+            url={linkAddress}
+            className={ctaStyles.callToActionLink}
+          >
             <CallToActionLink.ButtonLikeWrapper>
               <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                 {linkText}
-                <CallToActionLink.Chevron css={styles.chevronSpacing} />
+                <CallToActionLink.Chevron
+                  className={ctaStyles.chevronSpacing}
+                />
               </CallToActionLink.Text>
             </CallToActionLink.ButtonLikeWrapper>
           </CallToActionLink>

@@ -1,8 +1,9 @@
-import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import ThemeProvider from '#app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { PageTypes, Services } from '#app/models/types/global';
+import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { UserContextProvider } from '../../contexts/UserContext';
@@ -16,13 +17,11 @@ import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import portraitVideoArticle from '../../../../data/portuguese/articles/cn7v03e37eko.json';
 import portraitVideoArticleWithCaption from '../../../../data/portuguese/articles/cp319w676r0o.json';
 import arabicLiveTv from '../../../../data/arabic/cpsAssets/media-49522519.json';
-import withPageWrapper from '../../legacy/containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '../../legacy/containers/PageHandlers/withOptimizelyProvider';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MediaArticlePageComponent from './MediaArticlePage';
 
-const PageWithOptimizely = withOptimizelyProvider(MediaArticlePageComponent);
-const Page = withPageWrapper(PageWithOptimizely);
+const Page = withOptimizelyProvider(MediaArticlePageComponent);
 
 type Props = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,6 +29,7 @@ type Props = {
   service?: Services;
   isLite?: boolean;
   pageType?: PageTypes;
+  pathname?: string;
 };
 
 const ComponentWithContext = ({
@@ -37,6 +37,7 @@ const ComponentWithContext = ({
   service = 'news',
   isLite,
   pageType = MEDIA_ARTICLE_PAGE,
+  pathname = '/news/articles/c000000000o',
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -52,21 +53,23 @@ const ComponentWithContext = ({
           isLite={isLite}
           pageType={pageType}
           service={service}
-          pathname="/news/articles/c000000000o"
+          pathname={pathname}
           isUK
           id="c000000000o"
         >
           <UserContextProvider>
-            <ThemeProvider service={service}>
-              <MemoryRouter>
-                <Page
-                  pageData={{
-                    ...data.article,
-                    secondaryColumn: data.secondaryData,
-                  }}
-                />
-              </MemoryRouter>
-            </ThemeProvider>
+            <ThemeProviderSCSSModules service={service}>
+              <ThemeProvider service={service}>
+                <PageLayoutWrapper pageData={data.article} status={200}>
+                  <Page
+                    pageData={{
+                      ...data.article,
+                      secondaryColumn: data.secondaryData,
+                    }}
+                  />
+                </PageLayoutWrapper>
+              </ThemeProvider>
+            </ThemeProviderSCSSModules>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
@@ -106,6 +109,10 @@ export const MediaArticlePageWithLiveTv = (
   />
 );
 
+MediaArticlePageWithLiveTv.globals = {
+  service: { service: 'arabic', variant: 'default' },
+};
+
 export const MediaArticlePageWithPortraitVideo = (
   _: StoryArgs,
   { isLite }: StoryProps,
@@ -120,3 +127,18 @@ export const MediaArticlePageWithPortraitVideoWithCaption = (
     isLite={isLite}
   />
 );
+
+export const MediaArticlePageWithSaveArticleButton = () => (
+  <ComponentWithContext
+    data={portraitVideoArticle}
+    service="portuguese"
+    pathname="/portuguese/articles/cn7v03e37eko"
+  />
+);
+MediaArticlePageWithSaveArticleButton.globals = {
+  service: { service: 'portuguese', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
+  toggles: {
+    uasPersonalization: { enabled: true, value: 'portuguese' },
+  },
+};

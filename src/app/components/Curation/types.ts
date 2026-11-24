@@ -6,5 +6,6 @@ export interface CurationGridProps {
   headingLevel?: number;
   isFirstCuration?: boolean;
   eventTrackingData: EventTrackingData;
-  timeOfDayVariant?: string;
+  isVideoCollection?: boolean;
+  showRelatedTopic?: boolean;
 }

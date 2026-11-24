@@ -1,4 +1,3 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import Image, { ImageProps } from '.';

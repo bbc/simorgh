@@ -2,8 +2,8 @@
 /* eslint-disable import/no-unresolved */
 import fs from 'fs';
 import { join, resolve } from 'path';
-import fetchMock from 'jest-fetch-mock';
 import { createHash } from 'crypto';
+import { Request, Response } from 'undici';
 
 const serviceWorker = fs.readFileSync(join(__dirname, '..', 'public/sw.js'));
 
@@ -16,24 +16,37 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
-
 describe('Service Worker', () => {
   let fetchEventHandler;
 
-  beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
+  beforeAll(() => {
+    if (!global.Request) {
+      global.Request = Request;
+    }
+
+    if (!global.Response) {
+      global.Response = Response;
+    }
+
+    Object.defineProperty(navigator, 'serviceWorker', {
+      value: {
+        ready: Promise.resolve({}),
+        addEventListener: jest.fn(),
+        controller: null,
+        register: jest.fn().mockResolvedValue({}),
+        location: { origin: 'https://bbc.com' },
+      },
+      configurable: true,
+    });
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-    fetchMock.resetMocks();
+    jest.restoreAllMocks();
+  });
+
+  beforeEach(() => {
+    jest.spyOn(global, 'fetch').mockResolvedValue(new Response('ok'));
   });
 
   describe('webp', () => {
@@ -81,7 +94,7 @@ describe('Service Worker', () => {
           await fetchEventHandler(event);
 
           expect(event.respondWith).toHaveBeenCalled();
-          expect(fetchMock).toHaveBeenCalledWith(expectedUrl, {
+          expect(global.fetch).toHaveBeenCalledWith(expectedUrl, {
             mode: 'no-cors',
           });
         },
@@ -139,7 +152,7 @@ describe('Service Worker', () => {
         await fetchEventHandler(event);
 
         expect(event.respondWith).not.toHaveBeenCalled();
-        expect(fetchMock).not.toHaveBeenCalled();
+        expect(global.fetch).not.toHaveBeenCalled();
       });
     });
   });
@@ -162,62 +175,73 @@ describe('Service Worker', () => {
     beforeEach(() => {
       // set up global cache
       global.caches = {
-        open: () => Promise.resolve(serviceWorkerCache),
-      };
-      global.self.location = {
-        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-        hostname: 'www.bbc.com',
+        open: jest.fn(() => Promise.resolve(serviceWorkerCache)),
       };
     });
 
     describe('when url is not cacheable', () => {
       it.each`
-        assetUrl                  | reason
-        ${'woff2'}                | ${'url is missing leading .'}
-        ${'modern.frosted_promo'} | ${'full static files path is missing'}
-        ${'not-cached'}           | ${'url is not in the allow list of cacheable urls'}
+        assetUrl                                                                                             | reason
+        ${'woff2'}                                                                                           | ${'url is missing leading .'}
+        ${'modern.frosted_promo'}                                                                            | ${'full static files path is missing'}
+        ${'not-cached'}                                                                                      | ${'url is not in the allow list of cacheable urls'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg.png'}             | ${'file is not an SVG'}
+        ${'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.png?asset=close.svg'} | ${'SVG occurs only in a query parameter'}
       `(
         `should not fetch or return a cached response for $assetUrl because $reason`,
         async ({ assetUrl }) => {
           ({ fetchEventHandler } = await import('./service-worker-test'));
 
           const event = {
-            request: new Request(assetUrl, {
+            request: {
+              url: assetUrl,
               mode: 'same-origin',
-            }),
+              method: 'GET',
+            },
             respondWith: jest.fn(),
           };
 
           await fetchEventHandler(event);
 
-          expect(fetchMock).not.toHaveBeenCalled();
+          expect(global.fetch).not.toHaveBeenCalled();
           expect(event.respondWith).not.toHaveBeenCalled();
         },
       );
     });
 
     const cacheableAssets = [
+      // SVGs from any origin or path
+      'https://example.com/images/icons/close.svg',
+      'https://example.com/any/path/image.SVG?v=2&size=32',
+      'https://static.files.bbci.co.uk/other/images/icons/close.svg',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/api/og/article.svg',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/ws-header-logo.svg?v=2',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/brand.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/brand.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/images/icons/share.svg',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/zhongwen/images/brand.svg',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/fonts/NotoSansEthiopic/v1.901/normal.svg',
+      'http://localhost/images/icons/close.svg',
+      'http://localhost:7080/images/icons/play.svg',
+      'http://localhost:7080/hindi/images/brand.svg',
+      'http://127.0.0.1:7181/images/icons/close.svg',
+      'https://www.bbc.com/mundo/images/brand.svg',
+      'https://www.bbc.co.uk/images/icons/close.svg',
       // Fonts
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
       'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
-      // Moment-lib - local, test & live
-      'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
       // Frosted_promo - test & live
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
       // PWA Icons - test & live
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       // Reverb - preview1, preview2, test & live
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.14.0.js',
       // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
@@ -241,11 +265,48 @@ describe('Service Worker', () => {
 
           const response = await Promise.resolve(eventResponse);
 
-          const responseBody = response.body?.toString();
+          const responseBody = await response.text();
 
           expect(responseBody).toBe(`${assetUrl}-cached`);
+          expect(global.fetch).not.toHaveBeenCalled();
+          expect(caches.open).toHaveBeenCalledWith('simorghCache_v4');
         },
       );
+    });
+
+    it('serves an SVG from cache when the network is unavailable', async () => {
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+      global.fetch.mockRejectedValue(new Error('Offline'));
+      const event = {
+        request: new Request(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+        ),
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+      const response = await event.respondWith.mock.calls[0][0];
+
+      expect(await response.text()).toBe(
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg-cached',
+      );
+      expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it('does not intercept SVG POST requests', async () => {
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+      const event = {
+        request: new Request(
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg',
+          { method: 'POST' },
+        ),
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).not.toHaveBeenCalled();
+      expect(global.fetch).not.toHaveBeenCalled();
     });
 
     describe('when cache does not contain asset', () => {
@@ -256,6 +317,25 @@ describe('Service Worker', () => {
         };
 
         fetchedCache = {};
+      });
+
+      it('does not cache failed SVG responses', async () => {
+        ({ fetchEventHandler } = await import('./service-worker-test'));
+        const url =
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/images/icons/close.svg';
+        global.fetch.mockResolvedValueOnce(
+          new Response('Not found', { status: 404 }),
+        );
+        const event = {
+          request: new Request(url),
+          respondWith: jest.fn(),
+        };
+
+        await fetchEventHandler(event);
+        const response = await event.respondWith.mock.calls[0][0];
+
+        expect(response.status).toBe(404);
+        expect(fetchedCache[url]).toBeUndefined();
       });
 
       it.each(cacheableAssets)(
@@ -271,7 +351,7 @@ describe('Service Worker', () => {
           };
 
           const mockResponse = new Response(assetUrl);
-          fetchMock.mockImplementationOnce(() => mockResponse);
+          global.fetch.mockResolvedValueOnce(mockResponse);
 
           await fetchEventHandler(event);
 
@@ -280,19 +360,345 @@ describe('Service Worker', () => {
           const [eventResponse] = event.respondWith.mock.calls[0];
           await Promise.resolve(eventResponse);
 
-          expect(fetchMock).toHaveBeenCalledWith(assetUrl);
-          expect(fetchedCache[event.request]).toStrictEqual(
-            mockResponse.clone(),
-          );
+          expect(global.fetch).toHaveBeenCalledWith(assetUrl);
+          expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
         },
       );
     });
   });
 
+  describe('PWA offline page caching (message event)', () => {
+    let messageHandler;
+    let cachePut;
+
+    beforeEach(async () => {
+      jest.resetModules();
+      cachePut = jest.fn();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+      };
+
+      global.caches = {
+        open: jest.fn(() =>
+          Promise.resolve({
+            match: jest.fn().mockResolvedValue(null),
+            put: cachePut,
+            delete: jest.fn(),
+          }),
+        ),
+      };
+
+      await import('./service-worker-test');
+
+      // extract the message handler registered by sw.js
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
+
+    it('caches offline page  when PWA is installed', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(cachePut).toHaveBeenCalledWith(
+        expect.stringContaining('/offline'),
+        expect.any(Response),
+      );
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/mundo/offline',
+      );
+    });
+
+    it('does not cache offline page when PWA is not installed', async () => {
+      await import('./service-worker-test');
+
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: false },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      });
+
+      expect(cachePut).not.toHaveBeenCalledWith(
+        expect.stringContaining('/offline'),
+        expect.any(Response),
+      );
+    });
+
+    it('caches the variant offline page when the URL includes a variant', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen/trad',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
+    it('caches the default variant offline page when the URL has no variant for a variant service', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
+    it('caches the default variant offline page when the URL is an article page with no variant', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/zhongwen/article/cxxxxxxxxxxxo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/zhongwen/trad/offline',
+      );
+    });
+
+    it('caches the plain offline page for a non-variant service, unaffected', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://bbc.com/mundo/offline',
+      );
+    });
+  });
+
+  describe('Offline navigation handling in PWA mode', () => {
+    let messageHandler;
+
+    beforeEach(async () => {
+      jest.resetModules();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+        clients: {
+          get: jest.fn(() =>
+            Promise.resolve({
+              id: 'client-1',
+              url: 'https://bbc.com/mundo',
+            }),
+          ),
+        },
+      };
+
+      // Mock cache with offline page
+      const offlineResponse = new Response('offline page');
+      const mockCache = {
+        match: jest.fn(url => {
+          const urlString = typeof url === 'string' ? url : url.url;
+          return urlString.includes('/mundo/offline')
+            ? Promise.resolve(offlineResponse)
+            : Promise.resolve(null);
+        }),
+        put: jest.fn(),
+        delete: jest.fn(),
+      };
+      global.caches = {
+        open: jest.fn(() => Promise.resolve(mockCache)),
+      };
+
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
+
+    it('returns cached offline page when navigation fails and PWA is installed', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      });
+
+      // Network failure
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      const response = await respondWithPromise;
+      expect(await response.text()).toBe('offline page');
+    });
+
+    it('should return an error response in navigation mode if resolved request status code is 5xx', async () => {
+      global.fetch.mockResolvedValueOnce(
+        new Response('Server Error', { status: 500 }),
+      );
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      const response = await respondWithPromise;
+      expect(response.type).toBe('error');
+      expect(response.status).toBe(0);
+    });
+
+    it('should return an error response when navigation mode fails for a non-PWA user', async () => {
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      const response = await respondWithPromise;
+      expect(response.type).toBe('error');
+      expect(response.status).toBe(0);
+    });
+
+    it('should gracefully handle failed request if PWA offline mode', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: { id: 'client-1', url: 'https://bbc.com/mundo' },
+      });
+
+      // Fail a navigation request to set isPWADeviceOffline = true
+      global.fetch.mockRejectedValueOnce(new Error('Network error'));
+
+      const navRequest = new Request('https://bbc.com/mundo');
+      Object.defineProperty(navRequest, 'mode', { value: 'navigate' });
+
+      let navRespondWithPromise;
+      const navEvent = {
+        request: navRequest,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          navRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(navEvent);
+      await navRespondWithPromise;
+
+      // Test non-navigation request
+      global.fetch.mockRejectedValueOnce(new Error('Asset fetch failed'));
+
+      const assetRequest = new Request('https://bbc.com/asset.js');
+      let assetRespondWithPromise;
+
+      const assetEvent = {
+        request: assetRequest,
+        respondWith: jest.fn(p => {
+          assetRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(assetEvent);
+
+      const response = await assetRespondWithPromise;
+      expect(response.status).toBe(503);
+      expect(await response.text()).toBe('PWA offline fetch failed');
+    });
+  });
+
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.0',
-      fileContentHash: '6150d6daf3d64a226a47e17b39dfc084',
+      number: 'v0.3.10',
+      fileContentHash: '0b5800684962f8cf7f85011f670f05c7',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

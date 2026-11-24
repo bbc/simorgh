@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import {
   ARTICLE_PAGE,
@@ -25,8 +24,8 @@ import { getSummary } from '#lib/utilities/parseAssetData/index';
 import { Services, PageTypes } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import services from '#utilities/serviceConfigs';
 import { render, waitFor } from '../react-testing-library-with-providers';
-import services from '../../../server/utilities/serviceConfigs';
 import { getAuthorTwitterHandle } from '../Byline/utilities';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import MetadataContainer, { OG_EXPERIMENT_SERVICES } from './index';
@@ -84,7 +83,6 @@ const MetadataWithContext = ({
   imageHeight,
   aboutTags,
   mentionsTags,
-  hasAppleItunesAppBanner,
   hasAmpPage,
   isUK = false,
   isLite = false,
@@ -114,7 +112,6 @@ const MetadataWithContext = ({
         imageAltText={imageAltText}
         imageHeight={imageHeight}
         imageWidth={imageWidth}
-        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
         hasAmpPage={hasAmpPage}
       />
     </RequestContextProvider>
@@ -381,32 +378,12 @@ describe('Metadata', () => {
         sizes: null,
       },
       {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
-        sizes: '72x72',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
-        sizes: '96x96',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
-        sizes: '128x128',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
-        sizes: '144x144',
-      },
-      {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
         sizes: '152x152',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
         sizes: '180x180',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
-        sizes: '192x192',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
@@ -475,18 +452,6 @@ describe('Metadata', () => {
       expect(favicon?.getAttribute('href')).toEqual('/favicon.ico');
       expect(favicon?.getAttribute('rel')).toEqual('shortcut icon');
       expect(favicon?.getAttribute('type')).toEqual('image/x-icon');
-    });
-  });
-
-  it('should render the IE X-UA-Compatible meta tag', async () => {
-    render(<CanonicalNewsInternationalOrigin />);
-
-    await waitFor(() => {
-      const actual = document
-        .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
-        ?.getAttribute('content');
-
-      expect(actual).toEqual('IE=edge');
     });
   });
 
@@ -854,13 +819,16 @@ describe('Metadata', () => {
     const expected = [
       {
         property: 'og:image',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
-      { property: 'og:image:alt', content: serviceConfig.defaultImageAltText },
-      { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+      { property: 'og:image:alt', content: serviceConfig?.defaultImageAltText },
+      {
+        name: 'twitter:image:alt',
+        content: serviceConfig?.defaultImageAltText,
+      },
       {
         name: 'twitter:image:src',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
     ];
 
@@ -1163,13 +1131,11 @@ describe('Metadata', () => {
     interface CanonicalCPSAssetInternationalOriginProps {
       service: Services;
       platform: Platform;
-      hasAppleItunesAppBanner: boolean;
     }
 
     const CanonicalCPSAssetInternationalOrigin = ({
       service,
       platform,
-      hasAppleItunesAppBanner,
     }: CanonicalCPSAssetInternationalOriginProps) => (
       <MetadataWithContext
         service={service}
@@ -1179,23 +1145,22 @@ describe('Metadata', () => {
         pageType={STORY_PAGE}
         pathname={`/${service}/asset-12345678`}
         {...newsArticleMetadataProps}
-        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     );
 
     it.each`
       service      | iTunesAppId
-      ${'arabic'}  | ${558497376}
-      ${'mundo'}   | ${515255747}
-      ${'russian'} | ${504278066}
+      ${'arabic'}  | ${6761256736}
+      ${'mundo'}   | ${6761256736}
+      ${'russian'} | ${6761256736}
+      ${'hindi'}   | ${6761256736}
     `(
-      'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and hasAppleItunesAppBanner is true',
+      'should be rendered for $service because iTunesAppId is configured ($iTunesAppId)',
       async ({ service, iTunesAppId }) => {
         render(
           <CanonicalCPSAssetInternationalOrigin
             service={service}
             platform="canonical"
-            hasAppleItunesAppBanner
           />,
         );
 
@@ -1214,18 +1179,16 @@ describe('Metadata', () => {
     );
 
     it.each`
-      service     | reason                                            | platform       | hasAppleItunesAppBanner
-      ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
-      ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}
-      ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'} | ${true}
+      service     | reason                                            | platform
+      ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}
+      ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'}
     `(
       `should not be rendered for $service because $reason`,
-      ({ service, platform, hasAppleItunesAppBanner }) => {
+      ({ service, platform }) => {
         render(
           <CanonicalCPSAssetInternationalOrigin
             service={service}
             platform={platform}
-            hasAppleItunesAppBanner={hasAppleItunesAppBanner}
           />,
         );
 
@@ -1294,7 +1257,7 @@ describe('Metadata', () => {
           const ogImageTag = getOgImageTag();
 
           expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
           );
         });
 
@@ -1314,7 +1277,7 @@ describe('Metadata', () => {
           const ogImageTag = getOgImageTag();
 
           expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
           );
         });
       });
@@ -1336,7 +1299,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
       );
     });
 
@@ -1356,7 +1319,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
       );
     });
   });

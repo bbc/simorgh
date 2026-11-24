@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '#psammead/psammead-timestamp-container/src/utilities';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
+} from '#app/lib/utilities/timestamp';
+import Timestamp from '#app/components/TimestampContainer';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,
@@ -21,6 +21,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import timestampStyles from './index.module.scss';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -37,12 +38,15 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-const StyledTimestamp = styled(Timestamp)`
+const InlineDiv = styled.div`
   display: inline;
 `;
 
-const InlineDiv = styled.div`
-  display: inline;
+// inline-block so its trailing space separates the duration and date in the
+// accessible name without being rendered. The duration always starts its own
+// line, so this doesn't change how it wraps.
+const VisibleDuration = styled.span`
+  display: inline-block;
 `;
 
 const RecentAudioEpisodes = ({
@@ -51,7 +55,7 @@ const RecentAudioEpisodes = ({
   brandId = '',
   pageType,
 }) => {
-  const { translations, service, script, dir, timezone, datetimeLocale } =
+  const { translations, service, dir, timezone, datetimeLocale } =
     use(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
@@ -101,22 +105,10 @@ const RecentAudioEpisodes = ({
 
   return (
     <Spacer role="complementary" aria-labelledby="recent-episodes">
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        bar={false}
-        labelId="recent-episodes"
-      >
+      <StyledSectionLabel dir={dir} bar={false} labelId="recent-episodes">
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList
-        script={script}
-        service={service}
-        dir={dir}
-        ulProps={ulProps}
-        liProps={liProps}
-      >
+      <EpisodeList dir={dir} ulProps={ulProps} liProps={liProps}>
         {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
@@ -126,10 +118,11 @@ const RecentAudioEpisodes = ({
             >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
+              {/* Plain spaces ({' '}) stop visible words running together in the accessible name (WCAG 2.5.3) */}
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
-              <VisuallyHiddenText>, </VisuallyHiddenText>
+              <VisuallyHiddenText>,</VisuallyHiddenText>{' '}
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
@@ -141,31 +134,32 @@ const RecentAudioEpisodes = ({
               <VisuallyHiddenText>
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
-                  format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
+                  format: episode?.duration?.includes('H')
+                    ? 'h,mm,ss'
+                    : 'mm,ss',
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
               <EpisodeList.DateTimeDuration>
-                <span aria-hidden="true">
+                <VisibleDuration aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: datetimeLocale,
-                  })}`}
-                </span>
+                  })} `}
+                </VisibleDuration>
               </EpisodeList.DateTimeDuration>
               {episode.episodeTitle && (
                 <InlineDiv>
                   <EpisodeList.DateTimeDuration
                     hasBorder
                     dir={dir}
-                    as={StyledTimestamp}
+                    as={Timestamp}
+                    className={timestampStyles.timestamp}
                     timestamp={episode.timestamp}
                     format="LL"
                     dateTimeFormat="YYYY-MM-DD"
                     padding={false}
-                    script={script}
                     locale={datetimeLocale}
-                    service={service}
                     timezone={timezone}
                   />
                 </InlineDiv>

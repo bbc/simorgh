@@ -1,4 +1,3 @@
-import React from 'react';
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import Header from '.';
@@ -12,6 +11,7 @@ interface ComponentProps {
   imageUrlTemplate?: string;
   imageWidth?: number;
   mediaCollections?: MediaCollection[] | null;
+  taggings?: any;
 }
 
 const Component = ({
@@ -22,6 +22,7 @@ const Component = ({
   imageUrlTemplate,
   imageWidth,
   mediaCollections,
+  taggings,
 }: ComponentProps) => {
   return (
     <Header
@@ -32,6 +33,7 @@ const Component = ({
       imageUrlTemplate={imageUrlTemplate}
       imageWidth={imageWidth}
       mediaCollections={mediaCollections}
+      taggings={taggings}
     />
   );
 };

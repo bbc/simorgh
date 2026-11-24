@@ -1,10 +1,11 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import gurmukhiScript from '../fontScripts/gurmukhi';
 import punjabiFontVariants from '../fontVariants/punjabi';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/punjabi';
 
-const punjabiTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,4 +21,4 @@ const punjabiTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(punjabiTheme);
+export default withThemeProvider(theme);

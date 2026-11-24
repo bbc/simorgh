@@ -1,5 +1,7 @@
-import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { matchers } from '@emotion/jest';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Services } from '#app/models/types/global';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -8,6 +10,7 @@ import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.j
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
 import dariHomePage from '../../../../data/dari/homePage/index.json';
+import pidginArticlePage from '../../../../data/pidgin/articles/cnd6yxmxvp2o.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -21,12 +24,32 @@ import {
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+
+jest.mock('#app/lib/utilities/getEnvConfig', () => ({
+  getEnvConfig: jest.fn(() => ({ SIMORGH_APP_ENV: 'test' })),
+}));
 
 jest.mock('../ThemeProvider');
+
+jest.mock('../../hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../hooks/useClickTrackerHandler'),
+}));
+
+expect.extend(matchers);
 
 const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
+
+const relatedTopicSummary = afriqueHomePage.data.curations[0]
+  ?.summaries?.[0] as Summary;
+const relatedTopicSummaries = [
+  relatedTopicSummary,
+  { ...relatedTopicSummary, id: 'related-topic-summary-2' },
+  { ...relatedTopicSummary, id: 'related-topic-summary-3' },
+];
 
 const messageBannerCuration = kyrgyzHomePage.data.curations.find(
   ({ visualStyle, visualProminence, summaries }) =>
@@ -95,9 +118,14 @@ const components = {
     visualProminence: NORMAL,
     radioSchedule: afriqueHomePage.data.curations[4].radioSchedule,
   },
-  'billboard-1': {
+  'billboard-maximum-1': {
     visualStyle: BANNER,
     visualProminence: MAXIMUM,
+    summaries: billboardCuration?.summaries,
+  },
+  'billboard-high-1': {
+    visualStyle: BANNER,
+    visualProminence: HIGH,
     summaries: billboardCuration?.summaries,
   },
   'useful-links-1': {
@@ -133,6 +161,14 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  beforeEach(() => {
+    (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'test' });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
@@ -175,6 +211,66 @@ describe('Curation', () => {
       expect(getByTestId(testId)).toBeInTheDocument();
     },
   );
+
+  describe('related topics', () => {
+    it('renders related topics in a simple grid outside live', () => {
+      const { getByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(getByText('Santé')).toBeInTheDocument();
+    });
+
+    it('renders related topics in a hierarchical grid outside live', () => {
+      const { getAllByRole } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={HIGH}
+          summaries={relatedTopicSummaries}
+        />,
+      );
+
+      const relatedTopicLinks = getAllByRole('link', { name: 'Santé' });
+      expect(relatedTopicLinks).toHaveLength(3);
+      relatedTopicLinks.forEach(link => {
+        expect(link).toBeInTheDocument();
+      });
+    });
+
+    it('does not render related topics in live', () => {
+      (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'live' });
+
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+
+    it('does not render related topics for another curation type', () => {
+      const { queryByText } = render(
+        <Curation
+          position={0}
+          visualStyle={BANNER}
+          visualProminence={MAXIMUM}
+          summaries={[relatedTopicSummary]}
+        />,
+      );
+
+      expect(queryByText('Santé')).not.toBeInTheDocument();
+    });
+  });
 
   it.each([
     { visualStyle: BANNER, visualProminence: LOW },
@@ -248,7 +344,7 @@ describe('Curation', () => {
       );
 
       expect(
-        document.querySelector('[data-testid="billboard-"]'),
+        document.querySelector('[data-testid="billboard-maximum-1"]'),
       ).not.toBeInTheDocument();
     });
   });
@@ -333,7 +429,7 @@ describe('Curation', () => {
           curationLength={1}
         />,
       );
-      expect(document.querySelectorAll('h2').length).toBe(24);
+      expect(document.querySelectorAll('h2').length).toBe(25);
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
 
@@ -528,5 +624,146 @@ describe('Curation', () => {
       expect(titleLink).toBeInTheDocument();
       expect(titleLink?.textContent).toBe(title);
     });
+  });
+  it('should render the video curation grid for mediaCuration', () => {
+    const { mediaCuration } = pidginArticlePage.data.secondaryData;
+
+    const { getByTestId, getByText } = render(
+      <Curation
+        visualStyle={VISUAL_STYLE.FEED}
+        visualProminence={VISUAL_PROMINENCE.NORMAL}
+        summaries={mediaCuration?.summaries}
+        title={mediaCuration?.title}
+        position={0}
+        curationId={mediaCuration?.curationId}
+        curationLength={1}
+        link={mediaCuration?.link}
+        curationContentType="video"
+        pageType="article"
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
+    expect(getByText(mediaCuration.summaries[0].title)).toBeInTheDocument();
+    expect(getByText(mediaCuration.title)).toBeInTheDocument();
+
+    const grid = getByTestId('curation-grid-normal');
+    const mediaIcons = grid.querySelectorAll('[data-e2e="media-icon"]');
+    expect(mediaIcons.length).toBe(mediaCuration.summaries.length);
+  });
+
+  it('should call click tracker with correct eventTrackingData for video curation', () => {
+    const { mediaCuration } = pidginArticlePage.data.secondaryData;
+    const spy = jest.spyOn(clickTracking, 'default');
+
+    render(
+      <Curation
+        visualStyle={VISUAL_STYLE.FEED}
+        visualProminence={VISUAL_PROMINENCE.NORMAL}
+        summaries={mediaCuration?.summaries}
+        title={mediaCuration?.title}
+        position={0}
+        curationId={mediaCuration?.curationId}
+        curationLength={1}
+        link={mediaCuration?.link}
+        curationContentType="video"
+        pageType="article"
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(spy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'video-curation-grid',
+        itemTracker: expect.objectContaining({
+          type: 'video-curation-grid-promo',
+          text: mediaCuration.summaries[0].title,
+          position: 1,
+          resourceId: mediaCuration.summaries[0].id,
+        }),
+      }),
+    );
+    spy.mockRestore();
+  });
+
+  describe('Video collection styling', () => {
+    // Grid columns are only applied to video collections
+    const gridColumnsStyleRule = [
+      'grid-template-columns',
+      'repeat(2, minmax(0, 1fr))',
+      { media: '(min-width: 37.5rem)' },
+    ] as const;
+
+    const renderCuration = ({
+      service,
+      isVideoCollection,
+      isLite,
+    }: {
+      service: Services;
+      isVideoCollection: boolean;
+      isLite?: boolean;
+    }) => {
+      const { getByTestId } = render(
+        <Curation
+          position={0}
+          visualStyle={NONE}
+          visualProminence={NORMAL}
+          summaries={fixture.data.curations[0].summaries}
+          isVideoCollection={isVideoCollection}
+        />,
+        { service, isLite },
+      );
+
+      return getByTestId('topic-promos');
+    };
+
+    it.each(['arabic', 'mundo', 'pidgin', 'tamil'] as const)(
+      'applies video collection styling for %s',
+      service => {
+        const list = renderCuration({
+          service,
+          isVideoCollection: true,
+          isLite: false,
+        });
+
+        expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
+
+    it.each([
+      {
+        description: 'Arabic Lite page',
+        service: 'arabic',
+        isVideoCollection: true,
+        isLite: true,
+      },
+      {
+        description: 'Mundo Lite page',
+        service: 'mundo',
+        isVideoCollection: true,
+        isLite: true,
+      },
+      {
+        description: 'Non-video collection on test',
+        service: 'arabic',
+        isVideoCollection: false,
+      },
+    ] as const)(
+      'does not apply video collection styling for $description',
+      ({ service, isVideoCollection, isLite }) => {
+        const list = renderCuration({
+          service,
+          isVideoCollection,
+          isLite,
+        });
+
+        expect(list).not.toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
   });
 });

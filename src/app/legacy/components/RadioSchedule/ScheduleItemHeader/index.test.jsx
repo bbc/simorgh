@@ -1,10 +1,7 @@
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
-import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import ScheduleItemHeader from '.';
 
-const service = 'arabic';
 const dir = 'rtl';
 const state = 'live';
 const link = 'www.bbc.co.uk';
@@ -13,12 +10,7 @@ const startTime = 1566914061212;
 const duration = 'PT30M';
 
 const renderHeaderWithContext = () => (
-  <ServiceContextProvider
-    dir={dir}
-    service={service}
-    script={arabic}
-    locale="ar"
-  >
+  <ServiceContextProvider service="arabic" dir={dir} locale="ar">
     <ScheduleItemHeader
       durationLabel="المدة %duration%"
       state={state}
@@ -36,11 +28,15 @@ it('should render the title', () => {
   expect(getByText('BBC Xtra')).toBeInTheDocument();
 });
 
-it('should aria-hide the Live label', () => {
+it('should include the visible Live label in the accessible name of a live item', () => {
   const { container } = render(renderHeaderWithContext());
 
-  const hiddenDuration = container.querySelector('span[aria-hidden=true]');
-  expect(hiddenDuration).toContainHTML('مباشر');
+  const label = container.querySelector('span[role=text]');
+
+  expect(label.querySelector('[class*="liveLabelText"]')).not.toHaveAttribute(
+    'aria-hidden',
+  );
+  expect(label.textContent).toMatch(/^استمع للبث المباشر, مباشر BBC Xtra /);
 });
 
 it('should render a span with role=text so content is read out in single swipe', () => {

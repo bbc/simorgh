@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   AsianGamesFootballProps,
   FlourishStoryFixture,
@@ -14,6 +13,10 @@ export default {
 export const FlourishResponsiveHeight = () => (
   <FlourishEmbed {...AsianGamesFootballProps} />
 );
+
+FlourishResponsiveHeight.parameters = {
+  chromatic: { disable: true },
+};
 
 export const FlourishStory = () => <FlourishEmbed {...FlourishStoryFixture} />;
 

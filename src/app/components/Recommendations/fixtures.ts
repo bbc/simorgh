@@ -1,4 +1,4 @@
-export default [
+export const recommendationsFixtures = [
   {
     id: '123',
     title: 'Recommendation One',
@@ -26,3 +26,5 @@ export default [
     href: 'https://www.bbc.co.uk',
   },
 ];
+
+export default recommendationsFixtures;

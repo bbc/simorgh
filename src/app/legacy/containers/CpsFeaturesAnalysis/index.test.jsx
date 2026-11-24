@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
@@ -14,6 +12,16 @@ import {
 } from '../../../components/react-testing-library-with-providers';
 import features from './fixtures.json';
 import FeaturesAnalysis from '.';
+
+jest.mock('#hooks/useViewTracker', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useViewTracker'),
+}));
+
+jest.mock('#hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#hooks/useClickTrackerHandler'),
+}));
 
 const renderFeaturesAnalysis = ({
   content = features,

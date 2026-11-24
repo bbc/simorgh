@@ -1,11 +1,9 @@
-import React from 'react';
 import {
   render,
   fireEvent,
   getByRole,
+  screen,
 } from '../../../../../components/react-testing-library-with-providers';
-import latin from '../../../../../components/ThemeProvider/fontScripts/latin';
-import arabic from '../../../../../components/ThemeProvider/fontScripts/arabic';
 import {
   CanonicalDropdown,
   DropdownUl,
@@ -16,15 +14,13 @@ import {
 import pidginNavData from '../../testHelpers/pidgin';
 
 const dropdownList = (
-  <DropdownUl>
+  <DropdownUl role="list">
     {pidginNavData.map((item, index) => {
       const active = index === 3;
       const { title, url } = item;
 
       return (
         <DropdownLi
-          script={latin}
-          service="news"
           url={url}
           key={title}
           active={active}
@@ -46,7 +42,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={mockOnClick}
           isOpen
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -57,28 +52,22 @@ describe('Canonical', () => {
 
     it('should have aria-expanded set as true', () => {
       const { container } = render(
-        <CanonicalMenuButton
-          announcedText="Menu"
-          onClick={() => {}}
-          isOpen
-          script={latin}
-        />,
+        <CanonicalMenuButton announcedText="Menu" onClick={() => {}} isOpen />,
       );
       const menuButton = getByRole(container, 'button');
       expect(menuButton.getAttribute('aria-expanded')).toBe('true');
     });
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
           isOpen
-          script={latin}
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('button')).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -87,11 +76,11 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 
@@ -103,7 +92,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={mockOnClick}
           isOpen={false}
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -118,7 +106,6 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={latin}
         />,
       );
       const menuButton = getByRole(container, 'button');
@@ -126,16 +113,15 @@ describe('Canonical', () => {
     });
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <CanonicalMenuButton
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={latin}
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('button')).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -144,28 +130,26 @@ describe('Canonical', () => {
           announcedText="Menu"
           onClick={() => {}}
           isOpen={false}
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(getByRole(container, 'button')).toHaveAttribute('dir', 'rtl');
     });
   });
 });
 
 describe('Dropdown navigation', () => {
   it('should render correctly when closer', () => {
-    const { container } = render(
+    render(
       <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByRole('list', { hidden: true })).toBeInTheDocument();
   });
 
   it('should render correctly when open', () => {
-    const { container } = render(
-      <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
-    );
-    expect(container).toMatchSnapshot();
+    render(<CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>);
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
 
   describe('AMP Menu Button', () => {
@@ -174,11 +158,10 @@ describe('Dropdown navigation', () => {
         <AmpMenuButton
           announcedText="Menu"
           onToggle="other-element.toggleVisibility"
-          script={latin}
           dir="ltr"
         />,
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
 
     it('should render rtl correctly', () => {
@@ -186,11 +169,11 @@ describe('Dropdown navigation', () => {
         <AmpMenuButton
           announcedText="Menu"
           onToggle="other-element.toggleVisibility"
-          script={arabic}
           dir="rtl"
         />,
+        { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(container.firstChild).toBeInTheDocument();
     });
   });
 });

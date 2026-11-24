@@ -11,6 +11,7 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import getMediaOrientation from '../utils/getMediaOrientation';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 
@@ -36,7 +37,8 @@ export default ({
 
   const originCode = source?.replace('Image', '');
 
-  const versionID = video?.version?.id;
+  // Referred to as 'vPID' or 'version PID'
+  const versionPID = video?.version?.id;
 
   const clipISO8601Duration = video?.version?.duration;
 
@@ -54,6 +56,10 @@ export default ({
   const kind = video?.version?.kind || 'programme';
 
   const guidanceMessage = video?.version?.guidance;
+
+  const clipOrientation = [video?.version?.orientation || ''];
+
+  const orientation = getMediaOrientation(clipOrientation);
 
   const showAds = shouldDisplayAds({
     adsEnabled,
@@ -81,11 +87,13 @@ export default ({
     guidanceMessage,
   });
 
-  const items: PlaylistItem[] = [{ versionID, kind, duration: rawDuration }];
+  const items: PlaylistItem[] = [
+    { versionID: versionPID, kind, duration: rawDuration },
+  ];
 
   if (showAds) items.unshift({ kind: 'advert' });
 
-  const externalEmbedUrl = getExternalEmbedUrl({ id, versionID, lang });
+  const externalEmbedUrl = getExternalEmbedUrl({ id, versionPID, lang });
 
   const isAudio = type === 'audio';
 
@@ -114,7 +122,7 @@ export default ({
       },
     },
     ...(!isAudio && { placeholderConfig }),
-
+    ...(!isAudio && { orientation }),
     showAds,
   };
 };

@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -38,7 +38,7 @@ const IntersectionObserver = jest.fn(cb => {
 
 const getObserverInstance = (element: HTMLElement) => {
   try {
-    // @ts-expect-error for testing purposes
+    // @ts-expect-error retrieve mock IntersectionObserver instances for testing purposes
     const [instance] = Array.from(observers).find(([, item]) =>
       item.elements.has(element),
     );

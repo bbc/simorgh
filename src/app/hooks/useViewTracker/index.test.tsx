@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
 
-import React, { createContext, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import {
+  render,
   renderHook,
   act,
+  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -12,9 +14,37 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
-import * as serviceContextModule from '../../contexts/ServiceContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+
+let mockServiceContextValue = {
+  atiAnalyticsProducerId: '70',
+  atiAnalyticsProducerName: 'PIDGIN',
+  service: 'pidgin',
+  resonanceEnabled: false,
+};
+
+jest.mock('../../contexts/ServiceContext', () => {
+  const serviceContext = createContext({
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  });
+
+  return {
+    __esModule: true,
+    ServiceContext: serviceContext,
+    ServiceContextProvider: ({ children }: PropsWithChildren) => (
+      <serviceContext.Provider value={mockServiceContextValue}>
+        {children}
+      </serviceContext.Provider>
+    ),
+  };
+});
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
@@ -72,6 +102,15 @@ jest.mock('#app/lib/utilities/getUUID', () =>
   jest.fn().mockImplementation(() => '12345678-abcd-1fed-0123-a1b2c3d4e5f6'),
 );
 
+jest.mock(
+  '../../components/ATIAnalytics/resonance/dispatchResonanceEvent',
+  () => jest.fn(),
+);
+jest.mock(
+  '../../components/ATIAnalytics/resonance/buildResonanceEventConfig',
+  () => jest.fn(config => ({ mockedResonanceConfig: config })),
+);
+
 const {
   metadata: { atiAnalytics },
 } = fixtureData;
@@ -84,17 +123,12 @@ beforeEach(() => {
   // @ts-expect-error mocking required for tests
   global.IntersectionObserver = IntersectionObserver;
 
-  jest.replaceProperty(
-    serviceContextModule,
-    'ServiceContext',
-    // @ts-expect-error override service context for tests
-    createContext({
-      atiAnalyticsProducerId: '70',
-      atiAnalyticsProducerName: 'PIDGIN',
-      service: 'pidgin',
-      useReverb: false,
-    }),
-  );
+  mockServiceContextValue = {
+    atiAnalyticsProducerId: '70',
+    atiAnalyticsProducerName: 'PIDGIN',
+    service: 'pidgin',
+    resonanceEnabled: false,
+  };
 });
 
 afterEach(() => {
@@ -103,16 +137,6 @@ afterEach(() => {
   console.error = error;
   observers.clear();
 });
-
-const urlToObject = (url: string) => {
-  const { origin, pathname, searchParams } = new URL(url);
-
-  return {
-    origin,
-    pathname,
-    searchParams: Object.fromEntries(searchParams),
-  };
-};
 
 const defaultToggles = {
   eventTracking: {
@@ -156,13 +180,13 @@ const wrapper = ({
       service="pidgin"
       pathname="/pidgin/tori-51745682"
     >
-      <serviceContextModule.ServiceContextProvider service="pidgin">
+      <ServiceContextProvider service="pidgin">
         <ToggleContextProvider toggles={toggles}>
           <EventTrackingContextProvider atiData={atiData}>
             {children}
           </EventTrackingContextProvider>
         </ToggleContextProvider>
-      </serviceContextModule.ServiceContextProvider>
+      </ServiceContextProvider>
     </RequestContextProvider>
   </OptimizelyProvider>
 );
@@ -174,458 +198,6 @@ describe('useViewTracker', () => {
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
-
-    it('should return a function that can be assigned to an element to observe for intersections', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const { observe } = getObserverInstance(element);
-
-      expect(observe).toHaveBeenCalledWith(element);
-    });
-
-    it('should not send event to ATI when element is not in view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: false }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props =>
-          wrapper({
-            ...props,
-            toggles: { eventTracking: { enabled: false } },
-          }),
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      try {
-        getObserverInstance(element);
-
-        throw new Error('IntersectionObserver was initialised.');
-      } catch (err) {
-        const { message } = err as Error;
-        expect(message).toEqual(
-          'Failed to find IntersectionObserver for element.',
-        );
-      }
-
-      expect(global.IntersectionObserver).not.toHaveBeenCalled();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should skip initialising IntersectionObserver when ref is not assigned to element', async () => {
-      renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-        initialProps: {
-          toggles: {
-            eventTracking: {
-              enabled: true,
-            },
-          },
-        },
-      });
-
-      expect(global.IntersectionObserver).not.toHaveBeenCalled();
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should use componentName property if provided in eventTrackingData object', async () => {
-      const { result } = renderHook(
-        () =>
-          useViewTracker({
-            ...trackingData,
-            experimentName: 'dummy_experiment',
-            experimentVariant: 'variation_a',
-            sendOptimizelyEvents: true,
-          }),
-        {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-        },
-      );
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-        .calls;
-
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-      expect(options).toEqual({ threshold: [0.5] });
-      expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
-      expect(defaultOptimizely.track).toHaveBeenCalledWith(
-        'most-read-views',
-        defaultOptimizely.user.id,
-        { foo: 'bar' },
-      );
-    });
-
-    it.each([
-      {
-        title: 'For no user defined threshold',
-        threshold: undefined,
-        expected: 0.5,
-      },
-      {
-        title: 'For a user defined threshold of 0.8',
-        threshold: 0.8,
-        expected: 0.8,
-      },
-    ])(
-      'should send event to ATI and return correct tracking url when element is $expected or more in view for more than 1 second - $title',
-      async ({ threshold, expected }) => {
-        const { result } = renderHook(
-          () => useViewTracker({ ...trackingData, viewThreshold: threshold }),
-          {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-          },
-        );
-        const element = document.createElement('div');
-
-        await result.current.ref(element);
-
-        const observerInstance = getObserverInstance(element);
-
-        act(() => {
-          triggerIntersection({
-            changes: [{ isIntersecting: true }],
-            observer: observerInstance,
-          });
-        });
-
-        act(() => {
-          jest.advanceTimersByTime(1100);
-        });
-
-        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
-          .calls;
-        const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
-
-        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
-        expect(options).toEqual({ threshold: [expected] });
-        expect(global.fetch).toHaveBeenCalledTimes(1);
-        expect(urlToObject(viewEventUrl)).toEqual({
-          origin: 'https://logws1363.ati-host.net',
-          pathname: '/',
-          searchParams: {
-            ati: 'PUB-[article-sty]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
-            hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
-            idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-            lng: 'en-US',
-            p: 'news::pidgin.news.story.51745682.page',
-            r: '0x0x24x24',
-            re: '1024x768',
-            s: '598343',
-            s2: '70',
-            type: 'AT',
-          },
-        });
-      },
-    );
-
-    it('should only send one view event when mutiple elements are viewed', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-      });
-      const elementA = document.createElement('div');
-      const elementB = document.createElement('div');
-
-      await result.current.ref(elementA);
-      await result.current.ref(elementB);
-
-      const observerInstanceA = getObserverInstance(elementA);
-      const observerInstanceB = getObserverInstance(elementB);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstanceA,
-        });
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstanceB,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(global.fetch).toHaveBeenCalledTimes(1);
-    });
-
-    it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }, { isIntersecting: false }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(global.fetch).toHaveBeenCalledTimes(1);
-    });
-
-    it('should send multiple view events for multiple hook instances', async () => {
-      const { result: resultA } = renderHook(
-        () => useViewTracker(trackingData),
-        {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-        },
-      );
-      const { result: resultB } = renderHook(
-        () => useViewTracker(trackingData),
-        {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-        },
-      );
-      const elementA = document.createElement('div');
-      const elementB = document.createElement('div');
-
-      await resultA.current.ref(elementA);
-      await resultB.current.ref(elementB);
-
-      const observerInstanceA = getObserverInstance(elementA);
-      const observerInstanceB = getObserverInstance(elementB);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstanceA,
-        });
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstanceB,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(global.fetch).toHaveBeenCalledTimes(2);
-    });
-
-    it('should disconnect IntersectionObserver after event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-      });
-
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-      const { disconnect } = observerInstance;
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(disconnect).toHaveBeenCalledTimes(1);
-    });
-
-    it('should not disconnect IntersectionObserver before event is sent', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-        initialProps: {},
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-      const { disconnect } = observerInstance;
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(900);
-      });
-
-      expect(disconnect).toHaveBeenCalledTimes(0);
-    });
-
-    it('should not send event to ATI when element is in view for less than 1 second', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-        initialProps: {},
-      });
-
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        // scroll element into view
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(900);
-      });
-
-      act(() => {
-        // scroll element out of view
-        triggerIntersection({
-          changes: [{ isIntersecting: false }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      expect(global.fetch).not.toHaveBeenCalled();
-    });
-
-    it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
-      const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-      });
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        // scroll element into view
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      act(() => {
-        // scroll element out of view
-        triggerIntersection({
-          changes: [{ isIntersecting: false }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        // scroll element into view again
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
-
-      expect(viewEventUrl).toMatch('https://logws1363.ati-host.net');
-      expect(global.fetch).toHaveBeenCalledTimes(1);
-    });
-
-    it('should be able to override the campaignID that is sent to ATI', async () => {
-      const { result } = renderHook(
-        () =>
-          useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
-        {
-          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
-        },
-      );
-      const element = document.createElement('div');
-
-      await result.current.ref(element);
-
-      const observerInstance = getObserverInstance(element);
-
-      act(() => {
-        triggerIntersection({
-          changes: [{ isIntersecting: true }],
-          observer: observerInstance,
-        });
-      });
-
-      act(() => {
-        jest.advanceTimersByTime(1100);
-      });
-
-      const [[viewEventUrl]] = (global.fetch as jest.Mock).mock.calls;
-
-      expect(urlToObject(viewEventUrl).searchParams.ati).toEqual(
-        'PUB-[custom-campaign]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
-      );
-    });
 
     describe('Optimizely', () => {
       it('should send event to Optimizely when element is 50% or more in view for more than 1 second and optimizely object exists', async () => {
@@ -714,17 +286,533 @@ describe('useViewTracker', () => {
     });
 
     describe('View tracking - Reverb', () => {
-      beforeEach(() => {
-        jest.replaceProperty(
-          serviceContextModule,
-          'ServiceContext',
-          // @ts-expect-error override service context for tests
-          createContext({
-            atiAnalyticsProducerId: '70',
-            atiAnalyticsProducerName: 'PIDGIN',
-            service: 'pidgin',
-            useReverb: true,
-          }),
+      it('should return a function that can be assigned to an element to observe for intersections', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper,
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const { observe } = getObserverInstance(element);
+
+        expect(observe).toHaveBeenCalledWith(element);
+      });
+
+      it('should keep the observer connected on mount and reconnect it when the tracking key changes', async () => {
+        const TrackedElement = ({
+          viewTrackerKey,
+        }: {
+          viewTrackerKey: string;
+        }) => {
+          const { ref } = useViewTracker({ ...trackingData, viewTrackerKey });
+
+          return <div data-testid="tracked-element" ref={ref} />;
+        };
+
+        const renderTrackedElement = (viewTrackerKey: string) => (
+          <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
+            {wrapper({
+              children: <TrackedElement viewTrackerKey={viewTrackerKey} />,
+            })}
+          </OptimizelyProvider>
+        );
+        const { getByTestId, rerender } = render(renderTrackedElement('first'));
+        const element = getByTestId('tracked-element');
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const firstObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).not.toHaveBeenCalled();
+
+        await act(async () => {
+          rerender(renderTrackedElement('second'));
+          await Promise.resolve();
+          await Promise.resolve();
+        });
+
+        await waitFor(() =>
+          expect(() => getObserverInstance(element)).not.toThrow(),
+        );
+        const nextObserver = getObserverInstance(element);
+
+        expect(firstObserver.disconnect).toHaveBeenCalled();
+        expect(nextObserver).not.toBe(firstObserver);
+        expect(nextObserver.observe).toHaveBeenCalledWith(element);
+        expect(nextObserver.disconnect).not.toHaveBeenCalled();
+      });
+
+      it('should not send event to ATI when element is not in view', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper,
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: false }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+      });
+
+      it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props =>
+            wrapper({
+              ...props,
+              toggles: { eventTracking: { enabled: false } },
+            }),
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        try {
+          getObserverInstance(element);
+
+          throw new Error('IntersectionObserver was initialised.');
+        } catch (err) {
+          const { message } = err as Error;
+          expect(message).toEqual(
+            'Failed to find IntersectionObserver for element.',
+          );
+        }
+
+        expect(global.IntersectionObserver).not.toHaveBeenCalled();
+        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+      });
+
+      it('should skip initialising IntersectionObserver when ref is not assigned to element', async () => {
+        renderHook(() => useViewTracker(trackingData), {
+          wrapper,
+          initialProps: {
+            toggles: {
+              eventTracking: {
+                enabled: true,
+              },
+            },
+          },
+        });
+
+        expect(global.IntersectionObserver).not.toHaveBeenCalled();
+        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+      });
+
+      it('should use componentName property if provided in eventTrackingData object', async () => {
+        const { result } = renderHook(
+          () =>
+            useViewTracker({
+              ...trackingData,
+              experimentName: 'dummy_experiment',
+              experimentVariant: 'variation_a',
+              sendOptimizelyEvents: true,
+            }),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+          .calls;
+
+        expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+        expect(options).toEqual({ threshold: [0.5] });
+        expect(defaultOptimizely.track).toHaveBeenCalledTimes(1);
+        expect(defaultOptimizely.track).toHaveBeenCalledWith(
+          'most-read-views',
+          defaultOptimizely.user.id,
+          { foo: 'bar' },
+        );
+      });
+
+      it.each([
+        {
+          title: 'For no user defined threshold',
+          threshold: undefined,
+          expected: 0.5,
+        },
+        {
+          title: 'For a user defined threshold of 0.8',
+          threshold: 0.8,
+          expected: 0.8,
+        },
+      ])(
+        'should send event to ATI and return correct tracking url when element is $expected or more in view for more than 1 second - $title',
+        async ({ threshold, expected }) => {
+          const { result } = renderHook(
+            () =>
+              useViewTracker({
+                ...trackingData,
+                viewThreshold: threshold,
+              }),
+            {
+              wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+            },
+          );
+          const element = document.createElement('div');
+
+          await result.current.ref(element);
+
+          const observerInstance = getObserverInstance(element);
+
+          act(() => {
+            triggerIntersection({
+              changes: [{ isIntersecting: true }],
+              observer: observerInstance,
+            });
+          });
+
+          await act(() => {
+            jest.advanceTimersByTime(1100);
+          });
+
+          const [[, options]] = (global.IntersectionObserver as jest.Mock).mock
+            .calls;
+
+          expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
+          expect(options).toEqual({ threshold: [expected] });
+          expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+          expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+            'viewability',
+            '',
+            {
+              event: { action: 'view', category: 'viewability' },
+              group: {
+                name: 'article-sty',
+                type: 'most-read',
+              },
+              item: {
+                link: 'http://www.bbc.com/pidgin/tori-51745682',
+                name: 'most-read',
+              },
+            },
+            undefined,
+            undefined,
+            false,
+          );
+        },
+      );
+
+      it('should only send one view event when mutiple elements are viewed', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        });
+        const elementA = document.createElement('div');
+        const elementB = document.createElement('div');
+
+        await result.current.ref(elementA);
+        await result.current.ref(elementB);
+
+        const observerInstanceA = getObserverInstance(elementA);
+        const observerInstanceB = getObserverInstance(elementB);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstanceA,
+          });
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstanceB,
+          });
+        });
+
+        await act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      });
+
+      it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }, { isIntersecting: false }],
+            observer: observerInstance,
+          });
+        });
+
+        await act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      });
+
+      it('should send multiple view events for multiple hook instances', async () => {
+        const { result: resultA } = renderHook(
+          () => useViewTracker(trackingData),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const { result: resultB } = renderHook(
+          () => useViewTracker(trackingData),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const elementA = document.createElement('div');
+        const elementB = document.createElement('div');
+
+        await resultA.current.ref(elementA);
+        await resultB.current.ref(elementB);
+
+        const observerInstanceA = getObserverInstance(elementA);
+        const observerInstanceB = getObserverInstance(elementB);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstanceA,
+          });
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstanceB,
+          });
+        });
+
+        await act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(2);
+      });
+
+      it('should disconnect IntersectionObserver after event is sent', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        });
+
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+        const { disconnect } = observerInstance;
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(disconnect).toHaveBeenCalledTimes(1);
+      });
+
+      it('should not disconnect IntersectionObserver before event is sent', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper,
+          initialProps: {},
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+        const { disconnect } = observerInstance;
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(900);
+        });
+
+        expect(disconnect).toHaveBeenCalledTimes(0);
+      });
+
+      it('should not send event to ATI when element is in view for less than 1 second', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper,
+          initialProps: {},
+        });
+
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          // scroll element into view
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(900);
+        });
+
+        act(() => {
+          // scroll element out of view
+          triggerIntersection({
+            changes: [{ isIntersecting: false }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
+      });
+
+      it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
+        const { result } = renderHook(() => useViewTracker(trackingData), {
+          wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+        });
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          // scroll element into view
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        act(() => {
+          // scroll element out of view
+          triggerIntersection({
+            changes: [{ isIntersecting: false }],
+            observer: observerInstance,
+          });
+        });
+
+        act(() => {
+          // scroll element into view again
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        await act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'viewability',
+          '',
+          {
+            event: { action: 'view', category: 'viewability' },
+            group: {
+              name: 'article-sty',
+              type: 'most-read',
+            },
+            item: {
+              link: 'http://www.bbc.com/pidgin/tori-51745682',
+              name: 'most-read',
+            },
+          },
+          undefined,
+          undefined,
+          false,
+        );
+      });
+
+      it('should be able to override the campaignID that is sent to ATI', async () => {
+        const { result } = renderHook(
+          () =>
+            useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
+          {
+            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+          },
+        );
+        const element = document.createElement('div');
+
+        await result.current.ref(element);
+
+        const observerInstance = getObserverInstance(element);
+
+        act(() => {
+          triggerIntersection({
+            changes: [{ isIntersecting: true }],
+            observer: observerInstance,
+          });
+        });
+
+        await act(() => {
+          jest.advanceTimersByTime(1100);
+        });
+
+        expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+        expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+          'viewability',
+          '',
+          {
+            event: { action: 'view', category: 'viewability' },
+            group: {
+              name: 'custom-campaign',
+              type: 'most-read',
+            },
+            item: {
+              link: 'http://www.bbc.com/pidgin/tori-51745682',
+              name: 'most-read',
+            },
+          },
+          undefined,
+          undefined,
+          false,
         );
       });
 
@@ -831,28 +919,73 @@ describe('useViewTracker', () => {
     });
   });
 
-  describe('Error handling', () => {
-    it('should load polyfill and not throw error if IntersectionObserver is not supported', async () => {
-      // @ts-expect-error required for testing purposes
-      delete global.IntersectionObserver;
+  describe('Resonance dual-run', () => {
+    const trackingData = {
+      componentName: 'most-read',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
+    };
 
-      const trackingData = {
-        componentName: 'most-read',
-        format: 'CHD=promo::2',
-        url: 'http://www.bbc.com/pidgin/tori-51745682',
+    it('should dispatch a resonance event when resonanceEnabled is true', async () => {
+      mockServiceContextValue = {
+        atiAnalyticsProducerId: '70',
+        atiAnalyticsProducerName: 'PIDGIN',
+        service: 'pidgin',
+        resonanceEnabled: true,
       };
+
       const { result } = renderHook(() => useViewTracker(trackingData), {
-        wrapper,
-        initialProps: {},
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
       });
       const element = document.createElement('div');
 
       await result.current.ref(element);
 
-      expect(result).not.toHaveProperty('error');
-      expect(typeof global.IntersectionObserver).toEqual('function');
+      const observerInstance = getObserverInstance(element);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
+        });
+      });
+
+      await act(() => {
+        jest.advanceTimersByTime(1100);
+      });
+
+      expect(buildResonanceEventConfig).toHaveBeenCalledTimes(1);
+      expect(dispatchViewabilityEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
     });
 
+    it('should not dispatch a resonance event when resonanceEnabled is false', async () => {
+      const { result } = renderHook(() => useViewTracker(trackingData), {
+        wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+      });
+      const element = document.createElement('div');
+
+      await result.current.ref(element);
+
+      const observerInstance = getObserverInstance(element);
+
+      act(() => {
+        triggerIntersection({
+          changes: [{ isIntersecting: true }],
+          observer: observerInstance,
+        });
+      });
+
+      await act(() => {
+        jest.advanceTimersByTime(1100);
+      });
+
+      expect(dispatchViewabilityEvent).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('Error handling', () => {
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
       const trackingData = undefined;
 

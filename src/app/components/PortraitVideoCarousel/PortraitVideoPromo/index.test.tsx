@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   screen,
   render,
@@ -9,9 +8,17 @@ import * as useViewTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import PortraitVideoPromo from '.';
 
+jest.mock('#app/hooks/useClickTrackerHandler', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/hooks/useClickTrackerHandler'),
+}));
+
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };
+
+const stripLeadingSrcSetSpaces = (srcSet: string) =>
+  srcSet.replace(/\s+(?=https)/g, '');
 
 describe('PortraitVideoPromo', () => {
   beforeAll(() => {
@@ -116,6 +123,74 @@ describe('PortraitVideoPromo', () => {
     expect(image).toBeInTheDocument();
   });
 
+  it('Should contain an image element with a .webp primary srcset and .jpg secondary srcset', () => {
+    const sampleVideoData = {
+      model: {
+        images: [
+          {
+            source:
+              'https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/beb0/live/98c7a0b0-af66-11f0-aa13-0b0479f6f42a.jpg.webp',
+            urlTemplate:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/beb0/live/98c7a0b0-af66-11f0-aa13-0b0479f6f42a.jpg.webp',
+          },
+        ],
+        video: {
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
+    const imagePath = sampleVideoData.model.images?.[0]?.urlTemplate
+      ?.split('{width}')[1]
+      .slice(0, -5);
+
+    const imageURL = `https://ichef.bbci.co.uk/ace/ws/1024${imagePath}.webp`;
+
+    const expectedWebpSrcSetURLs = [
+      `https://ichef.bbci.co.uk/ace/ws/64${imagePath}.webp 64w`,
+      `https://ichef.bbci.co.uk/ace/ws/128${imagePath}.webp 128w`,
+      `https://ichef.bbci.co.uk/ace/ws/256${imagePath}.webp 256w`,
+      `https://ichef.bbci.co.uk/ace/ws/512${imagePath}.webp 512w`,
+    ].join(',');
+
+    const expectedJPGSrcSetURLs = [
+      `https://ichef.bbci.co.uk/ace/ws/64${imagePath} 64w`,
+      `https://ichef.bbci.co.uk/ace/ws/128${imagePath} 128w`,
+      `https://ichef.bbci.co.uk/ace/ws/256${imagePath} 256w`,
+      `https://ichef.bbci.co.uk/ace/ws/512${imagePath} 512w`,
+    ].join(',');
+
+    const { container } = render(
+      <PortraitVideoPromo
+        block={sampleVideoData}
+        eventTrackingData={eventTrackingData}
+      />,
+      { pageType: 'home' },
+    );
+
+    const portraitVideoPromoImage =
+      container.querySelectorAll('div picture')[0];
+
+    const [webpSource, jpgSource, img] =
+      portraitVideoPromoImage.childNodes as unknown as [
+        HTMLSourceElement,
+        HTMLSourceElement,
+        HTMLImageElement,
+      ];
+
+    expect(stripLeadingSrcSetSpaces(webpSource.srcset)).toEqual(
+      expectedWebpSrcSetURLs,
+    );
+    expect(stripLeadingSrcSetSpaces(jpgSource.srcset)).toEqual(
+      expectedJPGSrcSetURLs,
+    );
+    expect(img.src).toEqual(imageURL);
+  });
+
   it('Should contain a default image if not image src is provided in the BFF response', () => {
     const sampleVideoData = {
       model: {
@@ -189,6 +264,48 @@ describe('PortraitVideoPromo', () => {
       },
       viewThreshold: 1,
     });
+  });
+
+  it('Should use portrait-video as itemTracker type on Live pages', async () => {
+    const sampleVideoData = {
+      model: {
+        video: {
+          id: 'testId',
+          title: 'Sample Heading',
+          version: {
+            duration: 'PT13S',
+            kind: 'programme',
+            territories: ['uk', 'nonuk'],
+          },
+        },
+      },
+    } as PortraitClipMediaBlock;
+
+    const clickTrackerSpy = jest.spyOn(useViewTrackerHandler, 'default');
+
+    await act(async () => {
+      render(
+        <PortraitVideoPromo
+          block={sampleVideoData}
+          blockPosition={0}
+          eventTrackingData={{
+            ...eventTrackingData,
+            groupTracker: {
+              itemCount: 5,
+            },
+          }}
+        />,
+        { pageType: 'live' },
+      );
+    });
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        itemTracker: expect.objectContaining({
+          type: 'portrait-video',
+        }),
+      }),
+    );
   });
 
   it('Should scroll to the center when tabbed', async () => {

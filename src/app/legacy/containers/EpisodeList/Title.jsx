@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 import { withEpisodeContext } from './helpers';
 
 const Title = styled.span`
-  ${({ script }) => getPica(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+
   color: ${({ theme }) =>
     theme.isDarkUi ? theme.palette.WHITE : theme.palette.EBON};
   display: inline-block;

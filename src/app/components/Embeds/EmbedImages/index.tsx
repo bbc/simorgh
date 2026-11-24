@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { PropsWithChildren, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -40,6 +38,7 @@ const EmbedImages = ({ blocks: embedImages }: PropsWithChildren<Props>) => {
         alt={alt}
         width={width}
         height={height}
+        lazyLoad
         showLiteLoadButton={isLite}
       />
     </div>

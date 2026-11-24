@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import AmpAd from './Amp';

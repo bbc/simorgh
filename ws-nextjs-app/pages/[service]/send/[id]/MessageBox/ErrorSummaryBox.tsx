@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { ForwardedRef, forwardRef } from 'react';
 import { WHITE } from '#app/components/ThemeProvider/palette';
 import { BulletedList, BulletedListItem } from '#app/components/BulletedList';
@@ -51,7 +49,8 @@ const ErrorSummaryBox = forwardRef(
     const errorListItems = validationErrors.map(({ id }) => {
       const labelText = labelMap[id];
 
-      if (isSingleError) return <Component id={id} labelText={labelText} />;
+      if (isSingleError)
+        return <Component key={id} id={id} labelText={labelText} />;
 
       return (
         <BulletedListItem css={styles.listItem} key={`listItemFor-${id}`}>

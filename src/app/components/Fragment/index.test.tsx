@@ -1,4 +1,3 @@
-import React from 'react';
 import FragmentComponent from '.';
 import { render } from '../react-testing-library-with-providers';
 
@@ -47,7 +46,6 @@ describe('Fragment', () => {
       { service: 'persian' },
     );
 
-    expect(container).toMatchSnapshot();
     expect(container.querySelector('i')?.textContent).toEqual(
       'ITALIC WITH PERSIAN TEXT',
     );

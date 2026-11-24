@@ -1,4 +1,3 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import styled from '@emotion/styled';
 import {
@@ -9,9 +8,12 @@ import {
   withKnobs,
   boolean,
 } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import * as svgs from '#psammead/psammead-assets/src/svgs';
+import news from '#app/components/ThemeProvider/chameleonLogos/news';
+import igbo from '#app/components/ThemeProvider/chameleonLogos/igbo';
+import yoruba from '#app/components/ThemeProvider/chameleonLogos/yoruba';
+import arabic from '#app/components/ThemeProvider/chameleonLogos/arabic';
 import Brand from '#psammead/psammead-brand/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ampDecorator } from '../../../../../../.storybook/preview';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import {
@@ -66,11 +68,12 @@ const ToggledContainer = styled.div`
   margin-top: 10px;
 `;
 
+const svgs = { news, igbo, yoruba, arabic };
 const inputs = () => {
   // capitalization is only for presentation purpose on the knob
-  const options = Object.keys(svgs)
-    .filter(key => key !== 'BBC_BLOCKS')
-    .map(key => key.charAt(0).toUpperCase() + key.slice(1));
+  const options = Object.keys(svgs).map(
+    key => key.charAt(0).toUpperCase() + key.slice(1),
+  );
 
   const svgChoice = select('Service SVG', options, 'News').toLowerCase();
   const productInput = text('Product', 'BBC News');
@@ -81,8 +84,6 @@ const inputs = () => {
   const minWidthInput = number('minimum svg width', svgRatio * svgMinHeight);
   const maxWidthInput = number('maximum svg width', svgRatio * svgMaxHeight);
   const svgHeightInput = number('desired height svg', svgMaxHeight);
-  const borderBottom = boolean('Border Bottom', false);
-  const borderTop = boolean('Border Top', false);
 
   return {
     productInput,
@@ -91,8 +92,6 @@ const inputs = () => {
     svgHeightInput,
     minWidthInput,
     maxWidthInput,
-    borderTop,
-    borderBottom,
     backgroundColour,
     logoColour,
   };
@@ -106,8 +105,6 @@ const getBrand = () => {
     minWidthInput,
     maxWidthInput,
     svgChoice,
-    borderBottom,
-    borderTop,
   } = inputs();
 
   return (
@@ -119,22 +116,13 @@ const getBrand = () => {
       maxWidth={maxWidthInput}
       svg={svgs[svgChoice]}
       url="https://www.bbc.com/news"
-      borderBottom={borderBottom}
-      borderTop={borderTop}
     />
   );
 };
 
-const dropdownNavigationStory = (
-  currentPageText,
-  navData,
-  dir,
-  isAmp,
-  script,
-  service,
-) => (
+const dropdownNavigationStory = (currentPageText, navData, dir) => (
   <>
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <ScrollableNavigation dir={dir}>
         <DropdownUl>
           {navData.map((item, index) => {
@@ -145,8 +133,6 @@ const dropdownNavigationStory = (
               <DropdownLi
                 key={title}
                 url={url}
-                script={script}
-                active={active}
                 currentPageText={currentPageText}
                 service={service}
                 dir={dir}
@@ -161,19 +147,11 @@ const dropdownNavigationStory = (
   </>
 );
 
-const navigationStory = (
-  currentPageText,
-  navData,
-  dir,
-  brand,
-  isAmp,
-  script,
-  service,
-) => (
+const navigationStory = (currentPageText, navData, dir, brand) => (
   <>
     {brand && getBrand()}
 
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <ScrollableNavigation dir={dir}>
         <NavigationUl>
           {navData.map((item, index) => {
@@ -184,7 +162,6 @@ const navigationStory = (
               <NavigationLi
                 key={title}
                 url={url}
-                script={script}
                 active={active}
                 currentPageText={currentPageText}
                 service={service}
@@ -200,10 +177,10 @@ const navigationStory = (
   </>
 );
 
-const animationStory = (dir, script, service) => {
+const animationStory = dir => {
   const isOpen = boolean('Open', false);
   return (
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <CanonicalDropdown isOpen={isOpen}>
         <DropdownUl>
           {pidginNavData.map((item, index) => {
@@ -211,8 +188,6 @@ const animationStory = (dir, script, service) => {
             const { title, url } = item;
             return (
               <DropdownLi
-                script={script}
-                service={service}
                 key={title}
                 dir={dir}
                 url={url}
@@ -258,7 +233,7 @@ navStoriesData.map(item => {
 
 canonicalStories.add(
   'Canonical Menu Button',
-  ({ dir, script }) => {
+  ({ dir }) => {
     const isOpen = boolean('Open', true);
     return (
       <BackgroundContainer>
@@ -267,7 +242,6 @@ canonicalStories.add(
           onClick={() => {}}
           isOpen={isOpen}
           dir={dir}
-          script={script}
         />
       </BackgroundContainer>
     );
@@ -352,13 +326,12 @@ navStoriesData.map(item => {
 
 ampStories.add(
   'AMP Menu Button',
-  ({ dir, script }) => (
+  ({ dir }) => (
     <BackgroundContainer>
       <AmpMenuButton
         announcedText="Menu"
         onToggle="other-element.toggleVisibility"
         dir={dir}
-        script={script}
       />
       <ToggledContainer id="other-element">
         Toggled with AMP action

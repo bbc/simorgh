@@ -31,6 +31,8 @@ There are issue templates available for bug fix and feature requests, so you kno
 
 If you never created a pull request before, [here is a great tutorial on how to send a PR](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github).
 
+If committing with Copilot-authored changes, append `[copilot]` to commit messages.
+
 ### Project setup
 
 Fork the project, clone your fork, configure the remotes and install the dependencies:
@@ -117,7 +119,7 @@ Pick a JSON file under `data/news/articles/[id].json`, and:
 1. add an example of your block somewhere in the `content.model.blocks` array.
 2. add your new component to the `blockTypes` array.
 
-Run `yarn dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
+Run `yarn dev` and you should see your component at your article of choice, eg http://localhost:7081/news/articles/c0000000001o
 
 ### Merging a Pull Request
 

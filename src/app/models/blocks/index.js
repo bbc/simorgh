@@ -77,7 +77,7 @@ export const rawVideoModel = (
   duration: videoDuration,
 });
 
-export const bylineBlock = (text, id = null) => {
+export const bylineBlock = (bylineType, text, id = null) => {
   const fragment = singleFragmentBlock(`@${text}`, id);
   const urlLink = optionalIdBlock(
     blockBase('urlLink', {
@@ -118,12 +118,21 @@ export const bylineBlock = (text, id = null) => {
     id,
   );
   const byline = optionalIdBlock(
-    blockBase('byline', { blocks: [contributor] }),
+    blockBase(bylineType, { blocks: [contributor] }),
     id,
   );
 
   return byline;
 };
+
+export const timestampBlock = (id = null) =>
+  optionalIdBlock(
+    blockBase('timestamp', {
+      firstPublished: 1574854374815,
+      lastPublished: 1574854374815,
+    }),
+    id,
+  );
 
 export const rawImageModel = imageLocator => ({
   locator: imageLocator,

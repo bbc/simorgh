@@ -1,10 +1,8 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { render } from '../../react-testing-library-with-providers';
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import latinDiacritics from '../../ThemeProvider/fontScripts/latinWithDiacritics';
 import { SlotType } from '../types';
 
 const adJsonAttributes = (slotType: SlotType) => ({
@@ -34,7 +32,6 @@ const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
       value={{
         service: 'afrique',
         dir: 'ltr',
-        script: latinDiacritics,
         // @ts-expect-error partial data required for testing
         translations: adTranslations,
         showAdPlaceholder,
@@ -47,13 +44,16 @@ const adWithContext = (slotType: SlotType, showAdPlaceholder = false) => (
 
 describe('AMP Ads', () => {
   const originalConfigUrl = process.env.SIMORGH_CONFIG_URL;
+  const originalWebCdnUrl = process.env.WEB_CDN_URL;
 
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.WEB_CDN_URL = 'https://web-cdn.test';
   });
 
   afterAll(() => {
     process.env.SIMORGH_CONFIG_URL = originalConfigUrl;
+    process.env.WEB_CDN_URL = originalWebCdnUrl;
   });
 
   describe('Snapshots', () => {
@@ -179,7 +179,7 @@ describe('AMP Ads', () => {
       const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
       const ampAccessData = ampAccessFetch('afrique');
       const expectedReturn =
-        'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=afrique';
+        'https://web-cdn.test/fd/ws-toggles?service=afrique&application=simorgh';
 
       expect(ampAccessFetch).toHaveReturned();
       expect(ampAccessFetch).toHaveBeenCalledWith('afrique');

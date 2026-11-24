@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useMemo } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
 import { render } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
 import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
@@ -9,6 +9,16 @@ import ChartbeatAnalytics from '.';
 import * as testUtils from './utils';
 import * as amp from './amp';
 import { PageTypes, Platforms } from '../../models/types/global';
+
+jest.mock('./amp', () => ({
+  __esModule: true,
+  ...jest.requireActual('./amp'),
+}));
+
+jest.mock('./utils', () => ({
+  __esModule: true,
+  ...jest.requireActual('./utils'),
+}));
 
 const sendCanonicalChartbeatBeacon = jest.fn();
 

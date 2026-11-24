@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -34,7 +34,7 @@ const getThumbnailUri = (url?: string) => {
   return `https://${imageUrl.replace('$recipe', '1024x576')}`;
 };
 
-const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
+const getUploadDate = (availableFrom?: number, firstPublished?: string) => {
   const uploadDate = availableFrom || firstPublished;
 
   if (!uploadDate) return null;
@@ -48,7 +48,7 @@ type Props = {
 };
 
 const Metadata = ({ blocks, embedURL }: Props) => {
-  const { pageType } = use(RequestContext);
+  const { pageType, nonce } = use(RequestContext);
 
   if (!SUPPORTED_PAGE_TYPES.includes(pageType)) return null;
 
@@ -86,7 +86,9 @@ const Metadata = ({ blocks, embedURL }: Props) => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(metadataJson)}</script>
+      <script type="application/ld+json" {...(nonce ? { nonce } : {})}>
+        {JSON.stringify(metadataJson)}
+      </script>
     </Helmet>
   );
 };

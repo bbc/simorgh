@@ -1,5 +1,4 @@
-import React from 'react';
-import { render } from '../../react-testing-library-with-providers';
+import { render, screen } from '../../react-testing-library-with-providers';
 import ScriptLink from '.';
 
 const enabledToggleState = {
@@ -17,13 +16,33 @@ describe(`Script Link`, () => {
   });
 
   it('should render correctly', () => {
-    const { container } = render(<ScriptLink />, {
+    render(<ScriptLink />, {
       toggles: enabledToggleState,
       service: 'serbian',
       variant: 'lat',
       pathname: '/serbian/lat',
     });
-    expect(container).toMatchSnapshot();
+
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('href', '/serbian/cyr');
+    expect(link).toHaveAttribute('data-variant', 'cyr');
+    expect(link).toHaveTextContent('Ћир');
+  });
+
+  it('should render correctly for new navigation', () => {
+    render(<ScriptLink />, {
+      toggles: enabledToggleState,
+      service: 'ukchina',
+      variant: 'trad',
+      pathname: '/ukchina/trad/articles/c0e8weny66ko',
+    });
+
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveAttribute('href', '/ukchina/simp/articles/c0e8weny66ko');
+    expect(link).toHaveAttribute('data-variant', 'simp');
+    expect(link).toHaveTextContent('简');
   });
 
   describe('assertions', () => {
@@ -67,6 +86,21 @@ describe(`Script Link`, () => {
         },
       );
     });
+  });
+
+  it('should set the correct alternate variant when URL has query parameters', () => {
+    const { container } = render(<ScriptLink />, {
+      toggles: enabledToggleState,
+      service: 'serbian',
+      variant: 'lat',
+      pathname: '/serbian/articles/c805k05kr73o/lat?foo=bar&baz=qux',
+    });
+
+    const scriptLink = container.querySelector(`a[data-variant]`);
+
+    expect(scriptLink?.getAttribute('href')).toBe(
+      '/serbian/articles/c805k05kr73o/cyr',
+    );
   });
 
   it('should not render when scriptLink toggle is off', () => {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { StaticRouter } from 'react-router-dom';
+import { screen } from '@testing-library/react';
 import {
   render,
   fireEvent,
@@ -16,20 +15,18 @@ const fragmentBlock = (text, attributes = []) => ({
 });
 
 const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
-  <StaticRouter>
-    <InlineLinkContainer
-      locator={locator}
-      blocks={blocks}
-      isExternal={isExternal}
-      onClick={onClick}
-    />
-  </StaticRouter>
+  <InlineLinkContainer
+    locator={locator}
+    blocks={blocks}
+    isExternal={isExternal}
+    onClick={onClick}
+  />
 );
 
 describe('InlineLinkContainer', () => {
   describe('internal link route', () => {
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <InlineLinkContainer
           locator="https://www.bbc.com/news"
           blocks={[fragmentBlock('This is bold text for a link', ['bold'])]}
@@ -37,13 +34,13 @@ describe('InlineLinkContainer', () => {
         />,
         { service: 'news' },
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('link')).toHaveAttribute('href', '/news');
     });
   });
 
   describe('external link accessibility', () => {
     it('should be explicitly marked "external" for screen reader users', () => {
-      const { container } = render(
+      render(
         <InlineLinkContainer
           locator="https://www.example.com/"
           blocks={[fragmentBlock('This is a link')]}
@@ -51,11 +48,14 @@ describe('InlineLinkContainer', () => {
         />,
         { service: 'news' },
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('link')).toHaveAttribute(
+        'aria-label',
+        'This is a link, external',
+      );
     });
 
     it('should be explicitly marked "external" for screen reader users & localised', () => {
-      const { container } = render(
+      render(
         <InlineLinkContainer
           locator="https://www.example.com/"
           blocks={[fragmentBlock('این لینک هست')]}
@@ -63,7 +63,10 @@ describe('InlineLinkContainer', () => {
         />,
         { service: 'persian' },
       );
-      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('link')).toHaveAttribute(
+        'aria-label',
+        'این لینک هست، خارجی',
+      );
     });
 
     describe('onClick', () => {

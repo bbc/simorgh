@@ -18,22 +18,22 @@ Typically used when editors set a curation item's prominence to "Maximum" in Tip
 - Renders promotional content with enhanced visual styling.
 - Integrates with the existing Standard Grid flow.
 - Provides clear visual distinction from standard curation items.
-- Attribution is automatically derived from the service context (e.g., brand name and service URL) but can be overridden with the `attribution` prop.
+- Subject link is derived from `relatedTopic` when present, otherwise it falls back to service context (brand name and service URL).
 
 ---
 
 ## Props
 
-| Prop                | Type    | Required | Description                                                           |
-| ------------------- | ------- | -------- | --------------------------------------------------------------------- |
-| `title`             | string  | Yes      | The promotional headline.                                             |
-| `link`              | string  | Yes      | URL destination for the promo.                                        |
-| `imageUrl`          | string  | Yes      | Image URL for the promotional content.                                |
-| `imageAlt`          | string  | Yes      | Alt text for the promotional image.                                   |
-| `lazy`              | boolean | No       | Enables lazy loading for the image.                                   |
-| `headingLevel`      | number  | No       | The heading level for the title (defaults to 3).                      |
-| `eventTrackingData` | object  | No       | Tracking metadata for analytics.                                      |
-| `attribution`       | object  | No       | An object with `text` and `link` to override the default attribution. |
+| Prop                | Type    | Required | Description                                                      |
+| ------------------- | ------- | -------- | ---------------------------------------------------------------- |
+| `title`             | string  | Yes      | The promotional headline.                                        |
+| `link`              | string  | Yes      | URL destination for the promo.                                   |
+| `imageUrl`          | string  | Yes      | Image URL for the promotional content.                           |
+| `imageAlt`          | string  | Yes      | Alt text for the promotional image.                              |
+| `lazy`              | boolean | No       | Enables lazy loading for the image.                              |
+| `headingLevel`      | number  | No       | The heading level for the title (defaults to 3).                 |
+| `eventTrackingData` | object  | No       | Tracking metadata for analytics.                                 |
+| `relatedTopic`      | object  | No       | An object with `title` and `link.url` used for the subject link. |
 
 ---
 

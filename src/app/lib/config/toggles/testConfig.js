@@ -1,26 +1,38 @@
+import SERVICES from '../services';
+
 export default {
   _environment: 'test',
+  account: {
+    enabled: false,
+  },
   ads: {
     enabled: false,
   },
   adsNonce: {
-    enabled: true,
-    value: 'es,mx',
+    enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
+  },
+  continueReadingButton: {
+    enabled: false,
   },
   electionBanner: {
     enabled: true,
   },
   enableFetchingToggles: {
     enabled: true,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
+  },
+  googlePreferredSource: {
+    enabled: false,
   },
   homePageRadioSchedule: {
     enabled: true,
@@ -46,7 +58,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {
@@ -64,11 +76,29 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: false,
+  },
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: false,
+  },
+  showSportDataHeader: {
+    enabled: false,
+  },
+  topBarOJs: {
+    enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: false,
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: false,
   },
   webVitalsMonitoring: {
     enabled: true,

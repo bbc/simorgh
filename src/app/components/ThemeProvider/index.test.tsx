@@ -1,7 +1,11 @@
-/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { jsx, css, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
+import SERVICES from '#app/lib/config/services';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { Services } from '#app/models/types/global';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
 
 describe('ThemeProvider', () => {
@@ -216,5 +220,33 @@ describe('ThemeProvider', () => {
         </div>
       </body>
     `);
+  });
+
+  describe.each(SERVICES)(`brandSVG for %s`, service => {
+    const children = <span data-testid="brand-child">child</span>;
+    it(`should use the CDN asset from chameleonLogos/${service}.tsx`, async () => {
+      await act(async () => {
+        render(
+          <ThemeProvider
+            service={service as Services}
+            variant={defaultServiceVariants[service] || 'default'}
+          >
+            <ServiceContextProvider service={service as Services}>
+              <Brand>{children}</Brand>
+            </ServiceContextProvider>
+          </ThemeProvider>,
+        );
+      });
+
+      const { default: svg } = await import(`./chameleonLogos/${service}`);
+
+      expect(
+        document.body.querySelector('img.external-svg')?.getAttribute('src'),
+      ).toBe(
+        `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${svg.path.slice(
+          1,
+        )}`,
+      );
+    });
   });
 });

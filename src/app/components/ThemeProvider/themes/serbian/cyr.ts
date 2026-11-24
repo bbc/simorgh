@@ -1,19 +1,18 @@
 import { mergeDeepLeft } from 'ramda';
 import cyrillicScript from '../../fontScripts/cyrillic';
 import withThemeProvider from '../../withThemeProvider';
-import baseSerbianTheme from './base';
+import serbianTheme from './base';
 import getPWATypographyTheme from '../getPWATypographyTheme';
 
-const serbianCyrillicTheme = mergeDeepLeft(
+export const theme = mergeDeepLeft(
   {
     typography: {
       script: cyrillicScript,
     },
   },
-  baseSerbianTheme,
+  serbianTheme,
 );
 
-export default withThemeProvider(
-  serbianCyrillicTheme,
-  getPWATypographyTheme(cyrillicScript),
-);
+export const pwaTheme = getPWATypographyTheme(cyrillicScript);
+
+export default withThemeProvider(theme, pwaTheme);

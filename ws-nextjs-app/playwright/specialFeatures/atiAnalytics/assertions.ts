@@ -1,0 +1,1473 @@
+import { expect, type Page, type Request } from '@playwright/test';
+import {
+  getATIParamsFromURL,
+  getATIUrls,
+  getAppName,
+  getResonanceAppName,
+  getResonanceBagUrl,
+  isViewabilityViewRequest,
+  isViewabilityClickRequest,
+  captureResonanceRequests,
+  getCapturedResonancePayloads,
+  trackResonanceEventRequests,
+  COMPONENTS,
+  type AppEnv,
+} from './helpers';
+
+export type AtiAssertionFnProps = {
+  page: Page;
+  path: string;
+  baseURL: string;
+  pageIdentifier: string;
+  siteId: number;
+  applicationType: string;
+  contentType: string;
+  service: string;
+  appEnv: AppEnv;
+  expectsResonanceEvents?: boolean;
+};
+
+const assertATIPageViewParamsExist = (
+  params: Record<string, string>,
+  contentType: string,
+  applicationType: string,
+) => {
+  expect(params).toHaveProperty('s');
+  expect(params).toHaveProperty('s2');
+  expect(params).toHaveProperty('p');
+  expect(params).toHaveProperty('x2');
+  expect(params).toHaveProperty('x3');
+  expect(params).toHaveProperty('x4');
+  expect(params).toHaveProperty('x7');
+  expect(params).toHaveProperty('x8');
+  expect(params).toHaveProperty('x9');
+
+  if (['responsive', 'amp'].includes(applicationType)) {
+    expect(params).toHaveProperty('r');
+    expect(params).toHaveProperty('re');
+    expect(params).toHaveProperty('hl');
+    expect(params).toHaveProperty('lng');
+    expect(params).toHaveProperty('x5');
+  }
+
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).toHaveProperty('idclient');
+  }
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(params).toHaveProperty('x1');
+  }
+};
+
+const fieldIsValidString = (field: unknown): boolean =>
+  typeof field === 'string' && field.trim().length > 0;
+
+/* eslint-disable camelcase */
+type ViewabilityGroup = {
+  name?: unknown;
+  type?: unknown;
+  link?: unknown;
+  item_count?: unknown;
+  resource_id?: unknown;
+  position?: unknown;
+};
+
+type ViewabilityItem = {
+  name?: unknown;
+  link?: unknown;
+  advertiser_id?: unknown;
+  type?: unknown;
+  text?: unknown;
+  position?: unknown;
+  duration?: unknown;
+  media_type?: unknown;
+  label?: unknown;
+  resource_id?: unknown;
+};
+/* eslint-enable camelcase */
+
+type ViewabilityEventPayload = {
+  name?: unknown;
+  data?: {
+    group?: ViewabilityGroup;
+    event?: { category?: unknown; action?: unknown };
+    item?: ViewabilityItem;
+  };
+};
+
+const validateViewabilityEventDetails = (
+  payload: string,
+  actionType: string,
+): boolean => {
+  const arr = JSON.parse(payload) as ViewabilityEventPayload[];
+
+  return arr.some(event => {
+    if (event.name !== `viewability.${actionType}`) return false;
+
+    const group: ViewabilityGroup = event.data?.group ?? {};
+    const ev = event.data?.event ?? {};
+    const item: ViewabilityItem = event.data?.item ?? {};
+
+    if (ev.category !== 'viewability' || ev.action !== actionType) return false;
+
+    return (
+      fieldIsValidString(group.name) &&
+      fieldIsValidString(group.type) &&
+      (!group.link || fieldIsValidString(group.link)) &&
+      (!group.item_count || Number.isInteger(group.item_count)) &&
+      (!group.resource_id || fieldIsValidString(group.resource_id)) &&
+      (!group.position || Number.isInteger(group.position)) &&
+      fieldIsValidString(item.name) &&
+      (!item.link || fieldIsValidString(item.link)) &&
+      (!item.advertiser_id || fieldIsValidString(item.advertiser_id)) &&
+      (!item.type || fieldIsValidString(item.type)) &&
+      (!item.text || fieldIsValidString(item.text)) &&
+      (!item.position || Number.isInteger(item.position)) &&
+      (!item.duration || Number.isInteger(item.duration)) &&
+      (!item.media_type || fieldIsValidString(item.media_type)) &&
+      (!item.label || fieldIsValidString(item.label)) &&
+      (!item.resource_id || fieldIsValidString(item.resource_id))
+    );
+  });
+};
+
+const assertViewabilityEventParams = (
+  params: Record<string, string>,
+  pageIdentifier: string,
+  siteId: number,
+  applicationType: string,
+  actionType: 'view' | 'select',
+) => {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).toHaveProperty('idclient');
+  }
+
+  expect(params).toHaveProperty('s');
+  expect(params).toHaveProperty('events');
+  expect(params).toHaveProperty('context');
+
+  expect(
+    validateViewabilityEventDetails(params.events, actionType),
+    `events param should contain valid viewability ${actionType} event details`,
+  ).toBe(true);
+
+  const eventContext = JSON.parse(params.context) as Array<{
+    // eslint-disable-next-line camelcase
+    data: { page: { $: string }; site: { level2_id: string } };
+  }>;
+  expect(eventContext[0].data.page.$).toBe(pageIdentifier);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).toBe(siteId);
+};
+
+const usesReverbViewabilityModel = (applicationType: string): boolean =>
+  !['lite', 'amp'].includes(applicationType);
+
+const usesResonance = (applicationType: string): boolean =>
+  !['lite', 'amp'].includes(applicationType);
+
+const assertResonancePageViewParamsExist = ({
+  metadata,
+  event,
+  contentType,
+}: {
+  metadata: Record<string, unknown>;
+  event: Record<string, unknown>;
+  contentType: string;
+}) => {
+  expect(metadata).toHaveProperty('client_name');
+  expect(metadata).toHaveProperty('collection_library_name');
+  expect(metadata).toHaveProperty('collection_library_version');
+  expect(metadata).toHaveProperty('event_category');
+  expect(metadata).toHaveProperty('id');
+  expect(metadata).toHaveProperty('request_time');
+
+  expect(event).toHaveProperty('app_name');
+  expect(event).toHaveProperty('browser_language');
+  expect(event).toHaveProperty('content_type');
+  expect(event).toHaveProperty('destination');
+  expect(event).toHaveProperty('event_id');
+  expect(event).toHaveProperty('event_time');
+  expect(event).toHaveProperty('event_name');
+  expect(event).toHaveProperty('event_ts');
+  expect(event).toHaveProperty('language');
+  expect(event).toHaveProperty('page_name');
+  expect(event).toHaveProperty('page_title');
+  expect(event).toHaveProperty('producer');
+  expect(event).toHaveProperty('site_id');
+  expect(event).toHaveProperty('url');
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
+    expect(event).toHaveProperty('content_id');
+  }
+};
+
+const buildPageViewRequestMatcher = ({
+  applicationType,
+  atiUrl,
+  reverbAtiUrl,
+}: {
+  applicationType: string;
+  atiUrl: string;
+  reverbAtiUrl: string;
+}) => {
+  const shouldUseReverb = usesReverbViewabilityModel(applicationType);
+  const expectedHost = new URL(shouldUseReverb ? reverbAtiUrl : atiUrl)
+    .hostname;
+  const expectedX8 = shouldUseReverb ? 'simorgh' : '[simorgh]';
+
+  return (request: Request): boolean => {
+    const { hostname, search } = new URL(request.url());
+    if (hostname !== expectedHost) return false;
+    const params = new URLSearchParams(search);
+    return params.get('x8') === expectedX8;
+  };
+};
+
+const getScrollableNavClickTarget = async (page: Page) => {
+  const navLinks = page.locator('[data-e2e="scrollable-nav"]').locator('a');
+  const linkCount = await navLinks.count();
+  expect(
+    linkCount,
+    'expected scrollable navigation to contain at least one link',
+  ).toBeGreaterThan(0);
+  const currentPath = new URL(page.url()).pathname;
+
+  const navHrefs = await navLinks.evaluateAll(links =>
+    links.map(link => link.getAttribute('href')),
+  );
+
+  const targetIndex = navHrefs.findIndex(href => {
+    if (!href) return false;
+
+    const targetPath = new URL(href, page.url()).pathname;
+    return targetPath !== currentPath;
+  });
+
+  return targetIndex >= 0 ? navLinks.nth(targetIndex) : navLinks.last();
+};
+
+const waitForPageViewRequest = ({
+  page,
+  appEnv,
+  applicationType,
+}: {
+  page: Page;
+  appEnv: AppEnv;
+  applicationType: string;
+}) => {
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+
+  return page.waitForRequest(
+    buildPageViewRequestMatcher({
+      applicationType,
+      atiUrl,
+      reverbAtiUrl,
+    }),
+  );
+};
+
+const getViewabilityHosts = (appEnv: AppEnv) => {
+  const { atiUrl, reverbAtiUrl } = getATIUrls(appEnv);
+  return [reverbAtiUrl, atiUrl];
+};
+
+const waitForComponentViewRequest = ({
+  page,
+  appEnv,
+  component,
+}: {
+  page: Page;
+  appEnv: AppEnv;
+  component: string;
+}) =>
+  page.waitForRequest(
+    isViewabilityViewRequest(getViewabilityHosts(appEnv), component),
+  );
+
+const waitForComponentClickRequest = ({
+  page,
+  appEnv,
+  component,
+}: {
+  page: Page;
+  appEnv: AppEnv;
+  component: string;
+}) =>
+  page.waitForRequest(
+    isViewabilityClickRequest(getViewabilityHosts(appEnv), component),
+  );
+
+const assertArticleComponentEvent = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+  component,
+  selector,
+  action,
+  targetSelector,
+  reload,
+  forceClick,
+  viewport,
+}: AtiAssertionFnProps & {
+  component: string;
+  selector: string;
+  action: 'view' | 'select';
+  targetSelector?: string;
+  reload?: boolean;
+  forceClick?: boolean;
+  viewport?: { width: number; height: number };
+}) => {
+  const componentLocator = page.locator(selector);
+  const requestPromise =
+    action === 'view'
+      ? waitForComponentViewRequest({ page, appEnv, component })
+      : waitForComponentClickRequest({ page, appEnv, component });
+
+  if (viewport) await page.setViewportSize(viewport);
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  if (appEnv === 'local') {
+    await page.addStyleTag({
+      content: 'nextjs-portal { display: none !important; }',
+    });
+  }
+  if (reload) await page.reload({ waitUntil: 'load' });
+  await componentLocator.first().waitFor({ state: 'attached' });
+  if (!forceClick) await componentLocator.first().scrollIntoViewIfNeeded();
+
+  if (action === 'view' && component === COMPONENTS.CONTINUE_READING_BUTTON) {
+    await componentLocator
+      .first()
+      .evaluate(element => element.scrollIntoView({ block: 'center' }));
+    await expect(componentLocator.first()).toBeInViewport({ ratio: 0.5 });
+  } else if (action === 'view') {
+    await componentLocator.first().scrollIntoViewIfNeeded();
+  }
+
+  const target = targetSelector
+    ? page.locator(targetSelector)
+    : componentLocator.locator('a');
+  const firstTarget = target.first();
+  const interactWithComponent = async () => {
+    if (action !== 'select') return;
+    if (forceClick) {
+      await firstTarget.evaluate(element => (element as HTMLElement).click());
+      return;
+    }
+    await firstTarget.click();
+  };
+  const [request] = await Promise.all([
+    requestPromise,
+    interactWithComponent(),
+  ]);
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    action,
+  );
+};
+
+const articleComponentAssertions = {
+  assertContinueReadingButtonComponentView: {
+    component: COMPONENTS.CONTINUE_READING_BUTTON,
+    selector: '[data-testid="continue-reading-button"]',
+    action: 'view',
+    reload: true,
+    viewport: { width: 1000, height: 660 },
+  },
+  assertContinueReadingButtonComponentClick: {
+    component: COMPONENTS.CONTINUE_READING_BUTTON,
+    selector: '[data-testid="continue-reading-button"]',
+    targetSelector: '[data-testid="continue-reading-button"]',
+    action: 'select',
+    reload: true,
+    forceClick: true,
+    viewport: { width: 1000, height: 660 },
+  },
+  assertTopBarOJComponentView: {
+    component: COMPONENTS.TOP_BAR_OJ,
+    selector: '[data-testid="top-bar-onward-journeys"]',
+    action: 'view',
+    viewport: { width: 1000, height: 660 },
+  },
+  assertTopBarOJComponentClick: {
+    component: COMPONENTS.TOP_BAR_OJ,
+    selector: '[data-testid="top-bar-onward-journeys"]',
+    action: 'select',
+    viewport: { width: 1000, height: 660 },
+  },
+  assertArticleLiteSiteLinkComponentView: {
+    component: COMPONENTS.ARTICLE_LITE_SITE_LINK,
+    selector: '[data-e2e="article-lite-site-link"]',
+    action: 'view',
+  },
+  assertArticleLiteSiteLinkComponentClick: {
+    component: COMPONENTS.ARTICLE_LITE_SITE_LINK,
+    selector: '[data-e2e="article-lite-site-link"]',
+    action: 'select',
+  },
+  assertTopStoriesComponentView: {
+    component: COMPONENTS.TOP_STORIES,
+    selector: '[data-testid="top-stories"]',
+    action: 'view',
+  },
+  assertTopStoriesComponentClick: {
+    component: COMPONENTS.TOP_STORIES,
+    selector: '[data-testid="top-stories"]',
+    action: 'select',
+  },
+  assertFeaturesAnalysisComponentView: {
+    component: COMPONENTS.FEATURES,
+    selector: '[data-testid="features"]',
+    action: 'view',
+  },
+  assertFeaturesAnalysisComponentClick: {
+    component: COMPONENTS.FEATURES,
+    selector: '[data-testid="features"]',
+    action: 'select',
+  },
+  assertRelatedTopicsComponentView: {
+    component: COMPONENTS.RELATED_TOPICS,
+    selector: '[data-testid="related-topics"]',
+    action: 'view',
+  },
+  assertRelatedTopicsComponentClick: {
+    component: COMPONENTS.RELATED_TOPICS,
+    selector: '[data-testid="related-topics"]',
+    action: 'select',
+  },
+  assertRelatedContentComponentView: {
+    component: COMPONENTS.RELATED_CONTENT,
+    selector: '[data-e2e="related-content-heading"]',
+    action: 'view',
+  },
+  assertRelatedContentComponentClick: {
+    component: COMPONENTS.RELATED_CONTENT,
+    selector: '[data-e2e="related-content-heading"]',
+    action: 'select',
+  },
+  assertLatestMediaComponentView: {
+    component: COMPONENTS.LATEST_MEDIA,
+    selector: '[data-testid="latest-media"]',
+    action: 'view',
+  },
+  assertLatestMediaComponentClick: {
+    component: COMPONENTS.LATEST_MEDIA,
+    selector: '[data-testid="latest-media"]',
+    action: 'select',
+  },
+  assertSocialEmbedComponentView: {
+    component: COMPONENTS.SOCIAL_EMBED,
+    selector: '[data-testid="consentBanner"]',
+    action: 'view',
+  },
+  assertSocialEmbedComponentClick: {
+    component: COMPONENTS.SOCIAL_EMBED,
+    selector: '[data-testid="consentBanner"]',
+    targetSelector: '[data-testid="consentBanner"] button',
+    action: 'select',
+  },
+  assertArticleLinksBlockComponentView: {
+    component: COMPONENTS.ARTICLE_LINKS_BLOCK,
+    selector: '[data-e2e="article-links-block"]',
+    action: 'view',
+  },
+  assertArticleLinksBlockComponentClick: {
+    component: COMPONENTS.ARTICLE_LINKS_BLOCK,
+    selector: '[data-e2e="article-links-block"]',
+    targetSelector:
+      '[data-e2e="article-links-block"] a:not([href^="#end-of-article-links-block"])',
+    action: 'select',
+  },
+} as const;
+
+type ArticleComponentAssertionName = keyof typeof articleComponentAssertions;
+
+const runArticleComponentAssertion = (
+  name: ArticleComponentAssertionName,
+  props: AtiAssertionFnProps,
+) =>
+  assertArticleComponentEvent({
+    ...props,
+    ...articleComponentAssertions[name],
+  });
+
+export const assertContinueReadingButtonComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertContinueReadingButtonComponentView',
+    props,
+  );
+
+export const assertContinueReadingButtonComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertContinueReadingButtonComponentClick',
+    props,
+  );
+
+export const assertTopBarOJComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopBarOJComponentView', props);
+
+export const assertTopBarOJComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopBarOJComponentClick', props);
+
+export const assertArticleLiteSiteLinkComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLiteSiteLinkComponentView', props);
+
+export const assertArticleLiteSiteLinkComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion(
+    'assertArticleLiteSiteLinkComponentClick',
+    props,
+  );
+
+export const assertTopStoriesComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopStoriesComponentView', props);
+
+export const assertTopStoriesComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertTopStoriesComponentClick', props);
+
+export const assertFeaturesAnalysisComponentView = (
+  props: AtiAssertionFnProps,
+) => runArticleComponentAssertion('assertFeaturesAnalysisComponentView', props);
+
+export const assertFeaturesAnalysisComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertFeaturesAnalysisComponentClick', props);
+
+export const assertRelatedTopicsComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedTopicsComponentView', props);
+
+export const assertRelatedTopicsComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedTopicsComponentClick', props);
+
+export const assertRelatedContentComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertRelatedContentComponentView', props);
+
+export const assertRelatedContentComponentClick = (
+  props: AtiAssertionFnProps,
+) => runArticleComponentAssertion('assertRelatedContentComponentClick', props);
+
+export const assertLatestMediaComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertLatestMediaComponentView', props);
+
+export const assertLatestMediaComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertLatestMediaComponentClick', props);
+
+export const assertSocialEmbedComponentView = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertSocialEmbedComponentView', props);
+
+export const assertSocialEmbedComponentClick = (props: AtiAssertionFnProps) =>
+  runArticleComponentAssertion('assertSocialEmbedComponentClick', props);
+
+export const assertArticleLinksBlockComponentView = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLinksBlockComponentView', props);
+
+export const assertArticleLinksBlockComponentClick = (
+  props: AtiAssertionFnProps,
+) =>
+  runArticleComponentAssertion('assertArticleLinksBlockComponentClick', props);
+
+export const assertPageView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  contentType,
+  service,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  const request = await pageViewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertATIPageViewParamsExist(params, contentType, applicationType);
+
+  expect(params.p).toBe(pageIdentifier);
+  expect(parseInt(params.s2, 10)).toBe(siteId);
+  expect(params.x2).toBe(`[${applicationType}]`);
+  expect(params.x3).toBe(getAppName(service));
+  expect(params.x7).toBe(`[${contentType}]`);
+};
+
+export const assertResonancePageView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  applicationType,
+  contentType,
+  service,
+  appEnv,
+  expectsResonanceEvents = true,
+}: AtiAssertionFnProps) => {
+  const sendsResonanceEvents =
+    usesResonance(applicationType) && expectsResonanceEvents;
+  const resonanceBagUrl = getResonanceBagUrl(appEnv);
+  const resonanceEventRequests = trackResonanceEventRequests(
+    page,
+    resonanceBagUrl,
+  );
+  const capturedRequests = await captureResonanceRequests(page);
+  const getPageViewPayload = () =>
+    getCapturedResonancePayloads(capturedRequests, resonanceBagUrl).find(
+      payload =>
+        payload.events?.some(event => event.event_name === 'page.display'),
+    );
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  if (!sendsResonanceEvents) {
+    await page.waitForLoadState('networkidle');
+    expect(resonanceEventRequests).toHaveLength(0);
+    return;
+  }
+
+  await expect
+    .poll(() => resonanceEventRequests.length, { timeout: 15000 })
+    .toBeGreaterThan(0);
+  await expect.poll(getPageViewPayload, { timeout: 15000 }).toBeDefined();
+
+  const payload = getPageViewPayload();
+
+  expect(payload).toHaveProperty('bag_metadata');
+  expect(payload).toHaveProperty('events');
+
+  const metadata = payload?.bag_metadata ?? {};
+  const event =
+    payload?.events?.find(({ event_name: name }) => name === 'page.display') ??
+    {};
+
+  assertResonancePageViewParamsExist({
+    metadata,
+    event,
+    contentType,
+  });
+
+  expect(event.app_name).toBe(getResonanceAppName(service));
+  expect(event.content_type).toBe(contentType);
+  expect(event.event_name).toBe('page.display');
+  expect(event.page_name).toBe(pageIdentifier);
+  expect(metadata.event_category).toBe('page-view');
+  expect(fieldIsValidString(event.producer)).toBe(true);
+  expect(typeof event.site_id).toBe('number');
+};
+
+export const assertScrollableNavigationComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.SCROLLABLE_NAVIGATION,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertScrollableNavigationComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="scrollable-nav"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="scrollable-nav"] a').first().waitFor();
+
+  const navLinkToClick = await getScrollableNavClickTarget(page);
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.SCROLLABLE_NAVIGATION,
+    }),
+    navLinkToClick.click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertDropdownNavigationComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.DROPDOWN_NAVIGATION,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page.locator('nav button').click();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertDropdownNavigationComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page.locator('nav button').click();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.DROPDOWN_NAVIGATION,
+    }),
+    page.locator('[data-e2e="dropdown-nav"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertMostReadComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.MOST_READ,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertMostReadComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"] a').first().waitFor();
+  await page
+    .locator('[data-e2e="most-read"] a')
+    .first()
+    .evaluate(element => element.scrollIntoView({ block: 'center' }));
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.MOST_READ,
+    }),
+    page.locator('[data-e2e="most-read"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertLiteSiteSummaryComponentToMainSiteClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="to-main-site"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="to-main-site"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.LITE_SITE_SUMMARY,
+    }),
+    page.locator('[data-e2e="to-main-site"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertRadioScheduleComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.RADIO_SCHEDULE,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertMessageBannerComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.MESSAGE_BANNER,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertMessageBannerComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page
+    .locator('[data-testid="message-banner-1"]')
+    .scrollIntoViewIfNeeded();
+  await page.locator('[data-testid="message-banner-1"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.MESSAGE_BANNER,
+    }),
+    page
+      .locator('[data-testid="message-banner-1"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertRadioScheduleComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the click handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+  await page.locator('[data-testid="radio-schedule"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="onDemand"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.RADIO_SCHEDULE,
+    }),
+    page.locator('[data-e2e="onDemand"]').locator('a').first().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPodcastPromoComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PODCAST_PROMO,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPodcastPromoComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="podcast-promo"] a').last().waitFor();
+  await page
+    .locator('[data-e2e="podcast-promo"] a')
+    .last()
+    .evaluate(element => element.scrollIntoView({ block: 'center' }));
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.PODCAST_PROMO,
+    }),
+    page.locator('[data-e2e="podcast-promo"]').locator('a').last().click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertRecentAudioEpisodesComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.RECENT_AUDIO_EPISODES,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page
+    .locator('[data-e2e="recent-episodes-list"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertRecentAudioEpisodesComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page
+    .locator('[data-e2e="recent-episodes-list"]')
+    .scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="recent-episodes-list"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.RECENT_AUDIO_EPISODES,
+    }),
+    page
+      .locator('[data-e2e="recent-episodes-list"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPodcastLinksComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PODCAST_LINKS,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await page.locator('[data-e2e="podcast-links"]').scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPodcastLinksComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const pageViewPromise = waitForPageViewRequest({
+    page,
+    appEnv,
+    applicationType,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="podcast-links"]').scrollIntoViewIfNeeded();
+
+  const podcastLinks = page.locator('[data-e2e="podcast-links"]');
+  const rssLink = podcastLinks.getByRole('link', { name: /rss/i });
+
+  const linkToClick =
+    (await rssLink.count()) > 0
+      ? rssLink.first()
+      : podcastLinks.locator('a').first();
+  await linkToClick.waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.PODCAST_LINKS,
+    }),
+    linkToClick.click({ noWaitAfter: true }),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertBillboardComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.BILLBOARD,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  await page
+    .locator('[data-testid="billboard-maximum-1"]')
+    .scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertBillboardComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the click handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  await page
+    .locator('[data-testid="billboard-maximum-1"]')
+    .scrollIntoViewIfNeeded();
+  await page.locator('[data-testid="billboard-maximum-1"] a').first().waitFor();
+
+  const [request] = await Promise.all([
+    waitForComponentClickRequest({
+      page,
+      appEnv,
+      component: COMPONENTS.BILLBOARD,
+    }),
+    page
+      .locator('[data-testid="billboard-maximum-1"]')
+      .locator('a')
+      .first()
+      .click(),
+  ]);
+
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'select',
+  );
+};
+
+export const assertPortraitVideoCarouselComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  if (applicationType === 'lite') return;
+
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PORTRAIT_VIDEO_CAROUSEL,
+  });
+
+  // 'load' (rather than 'domcontentloaded') ensures hydration has mounted the carousel
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  const portraitVideoCarousel = page.locator(
+    '[data-testid="portrait-video-carousel"]',
+  );
+  await expect(portraitVideoCarousel).toHaveCount(1);
+  await expect(portraitVideoCarousel).toBeVisible();
+  await portraitVideoCarousel.scrollIntoViewIfNeeded();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};
+
+export const assertPortraitVideoModalComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  siteId,
+  applicationType,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  if (applicationType === 'lite') return;
+
+  const viewPromise = waitForComponentViewRequest({
+    page,
+    appEnv,
+    component: COMPONENTS.PORTRAIT_VIDEO_MODAL,
+  });
+
+  // 'load' (rather than 'domcontentloaded') ensures hydration has attached the promo-button handler
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'load' });
+
+  const portraitVideoCarousel = page.locator(
+    '[data-testid="portrait-video-carousel"]',
+  );
+  await expect(portraitVideoCarousel).toHaveCount(1);
+  await expect(portraitVideoCarousel).toBeVisible();
+  await portraitVideoCarousel.scrollIntoViewIfNeeded();
+
+  await page.locator('[data-testid="promo-button"]').first().click();
+
+  const request = await viewPromise;
+  const params = getATIParamsFromURL(request.url());
+
+  assertViewabilityEventParams(
+    params,
+    pageIdentifier,
+    siteId,
+    applicationType,
+    'view',
+  );
+};

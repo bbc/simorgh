@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
-/** @jsx jsx */
-import { jsx, Theme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import LiteMediaLoader from '#app/components/LiteComponents/LiteMediaLoader';
@@ -11,6 +10,7 @@ import EmbedError from '../EmbedError';
 import FlourishEmbed from '../FlourishEmbed';
 import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
+import ClientSideRiddleEmbed from '../ClientSideRiddleEmbed';
 
 const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
   const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);
@@ -44,6 +44,10 @@ const OEmbedLoader = ({ oembed, embeddableContent }: OEmbedProps) => {
         }}
       />
     );
+  }
+
+  if (oEmbedType === 'clientSideRiddle') {
+    return <ClientSideRiddleEmbed oembed={oembed} />;
   }
 
   if (html == null && embeddableContent == null) {

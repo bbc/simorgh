@@ -1,3 +1,5 @@
+import { Platforms } from './global';
+
 // Types consolidated into ATIAnalytics/types.ts. Use EventTrackingData everywhere.
 export type ReverbClient = {
   isReady: () => boolean;
@@ -12,7 +14,9 @@ export type EventTrackingMetadata = {
   campaignID?: string;
   advertiserID?: string;
   sendOptimizelyEvents?: boolean;
+  optimizelyComponentName?: string;
   alwaysInView?: boolean;
+  preventNavigation?: boolean;
 };
 
 export type EventTrackingBlock = {
@@ -20,3 +24,17 @@ export type EventTrackingBlock = {
     componentName: EventTrackingMetadata['componentName'];
   };
 };
+
+export type EventTrackingContextProps =
+  | {
+      campaignID: string;
+      pageIdentifier: string;
+      platform: Platforms;
+      producerId: string;
+      statsDestination: string;
+      producerName: string;
+      isSignedIn?: boolean;
+      hashedId?: string | null;
+      isPersonalisationOn?: boolean;
+    }
+  | Record<string, never>;

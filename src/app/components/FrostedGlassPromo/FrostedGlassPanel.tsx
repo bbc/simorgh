@@ -1,12 +1,10 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import { PropsWithChildren } from 'react';
+import type { CSSProperties } from 'react';
 
 import useImageColour from '../../hooks/useImageColour';
 
-import styles from './styles';
-
-const BLUR_RADIUS = 15;
+import styles from './index.module.scss';
 
 type FrostedGlassPanelProps = {
   image: string;
@@ -31,26 +29,23 @@ const FrostedGlassPanel = ({
     paletteSize,
   });
 
-  const backgroundImageStyle = {
-    backgroundImage: `url('${image}')`,
-  };
+  const panelStyle = {
+    '--panel-colour-rgb': colour?.rgb?.join(', '),
+  } as CSSProperties;
 
   return (
-    <div css={styles.panelWrapper}>
+    <div className={styles.panelWrapper}>
       <div
-        css={[
-          styles.panelChildren,
-          { background: `rgb(${colour?.rgb?.join(',')})` },
-          !isLoading && {
-            [`@supports (filter: blur(${BLUR_RADIUS}px))`]: {
-              background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
-            },
-          },
-        ]}
+        className={styles.panelChildren}
+        data-is-loading={isLoading}
+        style={panelStyle}
       >
         {children}
       </div>
-      <div css={styles.panelBackground} style={backgroundImageStyle} />
+      <div
+        className={styles.panelBackground}
+        style={{ backgroundImage: `url('${image}')` }}
+      />
     </div>
   );
 };

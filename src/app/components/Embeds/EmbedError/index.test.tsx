@@ -1,6 +1,6 @@
-import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import EmbedError from '.';
+import styles from './index.module.scss';
 
 describe('EmbedError', () => {
   it('Should show an error message in a Strong element', () => {
@@ -41,5 +41,6 @@ describe('EmbedError', () => {
 
     expect(actualElement).toBeInTheDocument();
     expect(actualText).toBeInTheDocument();
+    expect(actualElement).toHaveClass(styles.inlineLink);
   });
 });

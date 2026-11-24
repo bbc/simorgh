@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta isTemplate />
+
+## Props
+
+| Argument               |      Type       | Required | Default | Description                                                                          |
+| :--------------------- | :-------------: | :------: | :-----: | :----------------------------------------------------------------------------------- |
+| id                     |     string      |   Yes    |         | URN or Opta ID listed in mappings                                                    |
+| alt                    |     string      |    No    |   ''    | Alternative text for the image                                                       |
+| size                   | number / object |    No    |   27    | Image size in px; you can also specify small, medium and/or large sizes in an object |
+| usePlaceholderFallback |     boolean     |    No    |  true   | Render a placeholder badge where mapping does not exist                              |
+
+## Usage
+
+### Basic Example
+
+```
+  <SportBadge id="urn:bbc:sportsdata:football:team:liverpool" alt="Liverpool FC" />
+```
+
+## Accessibility Notes
+
+A major screen reader navigation bug is present in some browsers (e.g., Safari) for certain SVGs when `alt` is an empty string.
+This has been mitigated by manually setting `aria-hidden` to `true`.
+
+This bug would result in multiple elements with the text "image" being announced for specific SVG nodes.

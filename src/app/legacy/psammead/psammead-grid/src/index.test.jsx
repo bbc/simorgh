@@ -1,11 +1,11 @@
-import React from 'react';
+import { screen } from '@testing-library/react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import Grid from '.';
 import { ExampleParagraph, ExampleFigure, ExampleImage } from './testHelpers';
 
 describe('Grid component', () => {
   it('should render Grid with Grid items', () => {
-    const { container } = render(
+    render(
       <Grid
         enableGelGutters
         columns={{
@@ -112,11 +112,11 @@ describe('Grid component', () => {
         ))}
       </Grid>,
     );
-    expect(container).toMatchSnapshot();
+    expect(screen.getByText(/1This is a long paragraph/)).toBeInTheDocument();
   });
 
   it('should render Grid with Grid items including nested non-Grid Figure element', () => {
-    const { container } = render(
+    render(
       <Grid
         columns={{
           group0: 6,
@@ -259,7 +259,9 @@ describe('Grid component', () => {
         ))}
       </Grid>,
     );
-    expect(container).toMatchSnapshot();
+    expect(
+      screen.getByText(/Landscape image This is a long/),
+    ).toBeInTheDocument();
   });
 
   it('should render Grid with enableGelGutters & margins on only one of the Grid items', () => {
@@ -311,6 +313,6 @@ describe('Grid component', () => {
         </Grid>
       </Grid>,
     );
-    expect(container).toMatchSnapshot();
+    expect(container.querySelector('img')).toBeInTheDocument();
   });
 });

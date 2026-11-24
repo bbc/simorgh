@@ -1,25 +1,43 @@
+import SERVICES from '../services';
+
 export default {
   _environment: 'local',
+  account: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   ads: {
     enabled: true,
   },
   adsNonce: {
     enabled: true,
+    value: 'ng,ke,es',
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
+    enabled: true,
+  },
+  continueReadingButton: {
     enabled: true,
   },
   electionBanner: {
     enabled: true,
   },
+  livePageElectionBanner: {
+    enabled: true,
+  },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
+  },
+  googlePreferredSource: {
+    enabled: false,
   },
   homePageRadioSchedule: {
     enabled: true,
@@ -27,7 +45,13 @@ export default {
   include: {
     enabled: true,
   },
+  livePagePolling: {
+    enabled: true,
+  },
   liveRadioSchedule: {
+    enabled: true,
+  },
+  locationTopicCuration: {
     enabled: true,
   },
   midArticleOnwardJourney: {
@@ -45,7 +69,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {
@@ -63,11 +87,35 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: true,
+    value: 'in',
+  },
+  renderMarkDown: {
+    enabled: true,
+  },
   scriptLink: {
     enabled: true,
   },
+  sportDataPolling: {
+    enabled: true,
+  },
+  showSportDataHeader: {
+    enabled: true,
+  },
+  topBarOJs: {
+    enabled: true,
+  },
+  topicUasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi|mundo|portuguese',
   },
   webVitalsMonitoring: {
     enabled: true,

@@ -4,10 +4,16 @@ import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingP
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import buildResonanceEventConfig from '../../components/ATIAnalytics/resonance/buildResonanceEventConfig';
+import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
 
 interface CustomEventData {
   eventName: string;
+  experimentName?: string;
+  experimentVariant?: string;
 }
+
+type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
 
 /**
  * A specialized React hook for tracking custom (non-click, non-view) events.
@@ -15,10 +21,14 @@ interface CustomEventData {
  * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
- * @returns {Object} An object containing the `trackEvent` function, which can be called to trigger the event.
+ * @returns {TrackEventFunction} A function that triggers the custom event. Accepts an optional stringified data parameter.
  */
 
-const useCustomEventTracker = ({ eventName }: CustomEventData) => {
+const useCustomEventTracker = ({
+  eventName,
+  experimentName,
+  experimentVariant,
+}: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
     producerId,
@@ -26,15 +36,18 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
     statsDestination,
     campaignID,
     producerName,
+    isSignedIn,
+    hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
-  const { service, useReverb } = use(ServiceContext);
+  const { service, resonanceEnabled } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (stringifiedData: string) => {
+    async (stringifiedData = '') => {
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
@@ -49,6 +62,26 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
       ].every(Boolean);
 
       if (shouldSendEvent) {
+        // Temporary Resonance dual-run, independent of the Reverb beacon below (see ticket).
+        if (resonanceEnabled) {
+          dispatchViewabilityEvent(
+            buildResonanceEventConfig({
+              type: VIEW_EVENT,
+              componentName: eventName,
+              ...(stringifiedData && {
+                itemTracker: { label: stringifiedData },
+              }),
+              campaignID,
+              pageIdentifier,
+              platform,
+              producerName,
+              experimentName,
+              experimentVariant,
+              isSignedIn,
+            }),
+          );
+        }
+
         try {
           await sendEventBeacon({
             type: VIEW_EVENT,
@@ -61,7 +94,11 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
             producerName,
             service,
             statsDestination,
-            useReverb,
+            experimentName,
+            experimentVariant,
+            isSignedIn,
+            hashedId,
+            isPersonalisationOn,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
@@ -78,14 +115,17 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
       producerId,
       producerName,
       service,
+      resonanceEnabled,
       statsDestination,
-      useReverb,
+      experimentName,
+      experimentVariant,
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
     ],
   );
 
-  return {
-    trackEvent,
-  };
+  return trackEvent;
 };
 
 export default useCustomEventTracker;

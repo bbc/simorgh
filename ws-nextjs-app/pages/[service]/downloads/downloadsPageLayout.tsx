@@ -1,14 +1,13 @@
-/** @jsx jsx */
-
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
+import { ExternalSvg } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import TimeStampContainer from '#app/components/TimestampContainer';
+import ctaStyles from './downloadsPageLayout.module.scss';
 import styles from './styles';
 import { PageProps } from './types';
 
@@ -18,7 +17,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
     timezone,
     locale,
     altCalendar,
-    script,
     translations: {
       downloads: {
         instructions = 'You can download and view today’s news.',
@@ -29,11 +27,10 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
 
   const capitalisedService = service[0].toUpperCase() + service.slice(1);
   const description = `${capitalisedService} Downloads`;
-  const atiData = pageData?.metadata?.atiAnalytics || {};
   const pageTitle = pageData?.metadata?.pageTitle || '';
   return (
     <>
-      <ATIAnalytics atiData={atiData} />
+      <ATIAnalytics />
       <ChartbeatAnalytics title={pageTitle} />
       <Metadata
         title={title}
@@ -56,14 +53,12 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     format="D MMMM YYYY"
                     locale={locale}
                     timezone={timezone}
-                    service={service}
-                    script={script}
                     altCalendar={altCalendar}
                     padding={false}
                     isRelative={false}
                   />
                   <CallToActionLink
-                    css={styles.cta}
+                    className={ctaStyles.cta}
                     url={item.files[0].fileLink}
                     download
                     eventTrackingData={{
@@ -72,15 +67,13 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                       advertiserID: service,
                     }}
                   >
-                    <svg
+                    <ExternalSvg
+                      path="images/icons/download.svg"
                       className="ws-o-download-icon"
-                      viewBox="0 0 32 32"
-                      id="gel-icon-download"
                       width="16"
                       height="16"
-                    >
-                      <path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2" />
-                    </svg>
+                      useCurrentColor
+                    />
                     <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                       {item.files[0].fileName}
                       <span>

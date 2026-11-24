@@ -1,0 +1,64 @@
+import transformAnchorTags from '.';
+
+describe('transformAnchorTags', () => {
+  it('should append the given extension to eligible hrefs by default', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="/news">News</a>';
+
+    expect(transform(html)).toEqual('<a href="/news.lite">News</a>');
+  });
+
+  it('should only append the extension when isEligiblePath returns true', () => {
+    const transform = transformAnchorTags({
+      extension: 'app',
+      isEligiblePath: pathname => pathname.includes('/articles/'),
+    });
+
+    const html = `
+      <a href="/pidgin/articles/c0000000000o">Article</a>
+      <a href="/pidgin/live/c0000000000o">Live</a>
+    `;
+
+    expect(transform(html)).toEqual(`
+      <a href="/pidgin/articles/c0000000000o.app">Article</a>
+      <a href="/pidgin/live/c0000000000o">Live</a>
+    `);
+  });
+
+  it('should not append the extension when the derived ignore attribute is present', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="/news" data-ignore-lite="true">News</a>';
+
+    expect(transform(html)).toEqual(html);
+  });
+
+  it('should append the extension to every occurrence of a repeated anchor', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="/news">One</a><a href="/news">Two</a>';
+
+    expect(transform(html)).toEqual(
+      '<a href="/news.lite">One</a><a href="/news.lite">Two</a>',
+    );
+  });
+
+  it('should leave an anchor with an unparseable href untouched and still transform the anchors after it', () => {
+    const transform = transformAnchorTags({
+      extension: 'lite',
+    });
+
+    const html = '<a href="http://[invalid">Bad</a><a href="/news">News</a>';
+
+    expect(transform(html)).toEqual(
+      '<a href="http://[invalid">Bad</a><a href="/news.lite">News</a>',
+    );
+  });
+});

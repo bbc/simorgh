@@ -4,8 +4,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '#psammead/gel-foundations/src/breakpoints';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 
 const SKIP_LINK_COLOR = '#333';
 const SKIP_LINK_BORDER = '0.1875rem'; // 3px
@@ -23,8 +21,8 @@ const SkipLink = styled.a`
   border: ${SKIP_LINK_BORDER} solid #000;
   color: ${SKIP_LINK_COLOR};
   text-decoration: none;
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
 
   &:focus {
     clip-path: none;
@@ -45,7 +43,5 @@ const SkipLink = styled.a`
     padding: ${GEL_SPACING};
   }
 `;
-
-SkipLink.defaultProps = { dir: 'ltr', className: 'focusIndicatorRemove' };
 
 export default SkipLink;

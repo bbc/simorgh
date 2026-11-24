@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use, PropsWithChildren } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import { GridItemLarge } from '../../legacy/components/Grid';
@@ -59,13 +57,7 @@ const DisclaimerComponent = ({
               const linkText: string = (para as Disclaimer).text;
               const linkUrl: string = (para as Disclaimer).url;
               return linkUrl ? (
-                <InlineLink
-                  className="focusIndicatorReducedWidth"
-                  css={styles.inlineLink}
-                  key={linkText}
-                  text={linkText}
-                  to={linkUrl}
-                />
+                <InlineLink key={linkText} text={linkText} to={linkUrl} />
               ) : (
                 (para as string)
               );

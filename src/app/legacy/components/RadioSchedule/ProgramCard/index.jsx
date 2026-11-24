@@ -1,20 +1,11 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
-  getBrevier,
-  getMinion,
-  getPica,
-} from '#psammead/gel-foundations/src/typography';
-import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#app/lib/utilities/timestamp';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';
@@ -34,15 +25,15 @@ const TextWrapper = styled.div`
 `;
 
 const StyledH3 = styled.h3`
-  ${({ service }) => service && getSerifMedium(service)}
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   color: ${({ headerTextColor }) => headerTextColor};
   margin: 0; /* Reset */
 `;
 
 const SummaryWrapper = styled.p`
-  ${({ service }) => service && getSansRegular(service)}
-  ${({ script }) => script && getBrevier(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   color: ${props => props.theme.palette.METAL};
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
@@ -50,8 +41,8 @@ const SummaryWrapper = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  ${({ service }) => service && getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
   padding: ${GEL_SPACING};
   background-color: ${({ backgroundColor }) => backgroundColor};
   outline: 0.0625rem solid transparent;
@@ -63,14 +54,23 @@ const ButtonWrapper = styled.div`
 `;
 
 const IconWrapper = styled.span`
-  > svg {
+  > .external-svg {
     color: ${({ durationColor }) => durationColor};
-    fill: currentColor;
     width: 1.0625rem;
     height: 0.75rem;
     margin: 0;
+    @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+      filter: ${({ durationColor, theme }) =>
+        durationColor === theme.palette.WHITE ? 'invert(1)' : 'none'};
+    }
     @media screen and (forced-colors: active) {
-      fill: canvasText;
+      color: canvasText;
+      @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+        filter: none;
+        @media (prefers-color-scheme: dark) {
+          filter: invert(1);
+        }
+      }
     }
   }
 `;
@@ -83,16 +83,12 @@ const DurationWrapper = styled.time`
 `;
 
 const ProgramCard = ({ program, id, ...props }) => {
-  const { service, script, locale, dir } = use(ServiceContext);
+  const { locale, dir } = use(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
     <CardWrapper>
       <TextWrapper>
-        <StyledH3
-          service={service}
-          script={script}
-          {...programStateConfig[state]}
-        >
+        <StyledH3 {...programStateConfig[state]}>
           <ScheduleItemHeader
             {...props}
             state={state}
@@ -104,17 +100,9 @@ const ProgramCard = ({ program, id, ...props }) => {
             id={id}
           />
         </StyledH3>
-        {summary && (
-          <SummaryWrapper service={service} script={script}>
-            {summary}
-          </SummaryWrapper>
-        )}
+        {summary && <SummaryWrapper>{summary}</SummaryWrapper>}
       </TextWrapper>
-      <ButtonWrapper
-        service={service}
-        script={script}
-        {...programStateConfig[state]}
-      >
+      <ButtonWrapper {...programStateConfig[state]}>
         <IconWrapper {...programStateConfig[state]}>
           {mediaIcons.audio}
         </IconWrapper>

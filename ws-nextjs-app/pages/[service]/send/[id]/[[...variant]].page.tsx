@@ -1,22 +1,17 @@
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
-import getPathExtension from '#app/utilities/getPathExtension';
-import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
+import deriveVariant from '#utilities/deriveVariant';
+import withRequestProps from '#utilities/pageRequests/withRequestProps';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = withRequestProps(async context => {
   context.res.setHeader(
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
-
-  const { headers: reqHeaders } = context.req;
-  const { isLite, isApp } = getPathExtension(context.resolvedUrl);
 
   const {
     id,
@@ -27,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     service,
     variant,
@@ -42,10 +37,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       error: data?.error || null,
       id,
-      isApp,
-      isLite,
-      isAmp: false,
-      isNextJs: true,
       pageData: pageData
         ? {
             ...pageData,
@@ -59,12 +50,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pathname: context.resolvedUrl,
       service,
       status: status ?? 500,
-      toggles,
       variant,
-      timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
-};
+});
 
 export default UGCPageLayout;

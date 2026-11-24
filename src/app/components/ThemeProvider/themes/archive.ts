@@ -1,15 +1,17 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { ARCHIVE_BLUE, WHITE } from '../palette';
 import latinScript from '../fontScripts/latin';
 import {
   REITH_SANS_BOLD,
   REITH_SANS_REGULAR,
+  REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../../../legacy/psammead/psammead-assets/src/svgs/archive';
+import brandSVG from '../chameleonLogos/archive';
 
-const archiveTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: ARCHIVE_BLUE,
     BRAND_LOGO: WHITE,
@@ -20,9 +22,14 @@ const archiveTheme = {
   typography: {
     script: latinScript,
     fontVariants: reithFontVariants,
-    fontFaces: [REITH_SANS_BOLD, REITH_SANS_REGULAR, REITH_SERIF_MEDIUM],
+    fontFaces: [
+      REITH_SANS_BOLD,
+      REITH_SANS_REGULAR,
+      REITH_SERIF_LIGHT,
+      REITH_SERIF_MEDIUM,
+    ],
   },
   brandSVG,
 };
 
-export default withThemeProvider(archiveTheme);
+export default withThemeProvider(theme);

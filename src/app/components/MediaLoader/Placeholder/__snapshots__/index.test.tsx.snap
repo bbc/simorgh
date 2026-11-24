@@ -176,58 +176,58 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 .emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-5 {
   margin-top: 0.5rem;
 }
 
-.emotion-5>svg {
+.emotion-4>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-4>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-4>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-4>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-8 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-8 {
+  .emotion-6 {
     color: canvasText;
   }
 }
 
-.emotion-9 {
+.emotion-7 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -237,20 +237,20 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -274,54 +274,51 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-6 emotion-7"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+          class="icon media video external-svg mask emotion-5"
+          data-is-lite="false"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-video.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-video.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
+          />
+        </span>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-8"
+        class="emotion-6"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-9"
+      class="emotion-7"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-8"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -530,58 +527,58 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 .emotion-5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-6 {
   margin-top: 0.5rem;
 }
 
-.emotion-6>svg {
+.emotion-5>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-5>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-6>svg {
+  .emotion-5>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-5>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-5>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-9 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-9 {
+  .emotion-7 {
     color: canvasText;
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -591,20 +588,20 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-11 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -634,54 +631,51 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       type="button"
     >
       <span
-        class="emotion-5"
+        class="visuallyHiddenText"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-6"
+        class="emotion-5"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-7 emotion-8"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+          class="icon media video external-svg mask emotion-6"
+          data-is-lite="false"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-video.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-video.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
+          />
+        </span>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-9"
+        class="emotion-7"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-10"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -863,43 +857,43 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   border: 0.1875rem solid #000000;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-5>svg {
+.emotion-4>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-4>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-4>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-4>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-8 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -909,20 +903,20 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-6 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-6 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-9 {
+.emotion-7 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -946,47 +940,44 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play video, "Dog chases cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-6 emotion-7"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+          class="icon media video external-svg mask emotion-5"
+          data-is-lite="false"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-video.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-video.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
+          />
+        </span>
       </div>
     </button>
     <div
-      class="emotion-8"
+      class="emotion-6"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-7"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1169,58 +1160,58 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 .emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-5 {
   margin-top: 0.5rem;
 }
 
-.emotion-5>svg {
+.emotion-4>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-4>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-4>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-4>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-8 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-8 {
+  .emotion-6 {
     color: canvasText;
   }
 }
 
-.emotion-9 {
+.emotion-7 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1230,20 +1221,20 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1267,47 +1258,50 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play audio, "Dog barks at cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-6 emotion-7"
-          focusable="false"
-          height="12px"
-          viewBox="0 0 13 12"
-          width="13px"
+          class="icon media audio external-svg mask emotion-5"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-audio.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <path
-            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-audio.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
           />
-          <path
-            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-          />
-        </svg>
+        </span>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-8"
+        class="emotion-6"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-9"
+      class="emotion-7"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-8"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1489,43 +1483,43 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   border: 0.1875rem solid #000000;
 }
 
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-5>svg {
+.emotion-4>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-4>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-5>svg {
+  .emotion-4>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-4>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-4>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-8 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1535,20 +1529,20 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-6 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-6 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-9 {
+.emotion-7 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1572,40 +1566,43 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       type="button"
     >
       <span
-        class="emotion-4"
+        class="visuallyHiddenText"
       >
         Play audio, "Dog barks at cat."
       </span>
       <div
         aria-hidden="true"
-        class="emotion-5"
+        class="emotion-4"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-6 emotion-7"
-          focusable="false"
-          height="12px"
-          viewBox="0 0 13 12"
-          width="13px"
+          class="icon media audio external-svg mask emotion-5"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-audio.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <path
-            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-audio.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
           />
-          <path
-            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-          />
-        </svg>
+        </span>
       </div>
     </button>
     <div
-      class="emotion-8"
+      class="emotion-6"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-7"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1814,58 +1811,58 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 .emotion-5 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-6 {
   margin-top: 0.5rem;
 }
 
-.emotion-6>svg {
+.emotion-5>.external-svg {
   color: #FFFFFF;
-  fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+@supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .emotion-5>.external-svg {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
+
 @media screen and (forced-colors: active) {
-  .emotion-6>svg {
+  .emotion-5>.external-svg {
     color: canvasText;
+  }
+
+  @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+    .emotion-5>.external-svg {
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .emotion-5>.external-svg {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    }
   }
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-9 {
   display: block;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-9 {
+  .emotion-7 {
     color: canvasText;
   }
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
   height: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2Ij48ZyBmaWxsPSIjZDVkMGNkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Im00NTAgOTItMyAxcS0xNyAxMC0zNCAxMGMtMjQgMC0zOS0xNC0zOS0zNHMxNi0zNSAzOC0zNXExNyAwIDM0IDEwbDMgMVYyN2gtMXEtMjAtOC0zNi04LTI0IDAtNDAgMTR0LTE2IDM3cTAgMTcgMTMgMzIgMTMgMTYgNDMgMTcgMjMtMSAzNy05aDF6bS0xMTYgNDRoMTQ0VjBIMzM0ek0yNzcgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDEtMTAtOC0xOC03LTgtMjQtOGgtMzF2OThoMzZxMTktMSAyOC05IDgtOCA4LTE4bS0xMTAgNDZoMTQ0VjBIMTY3ek0xMTAgOTBxLTEtMTktMjEtMjVsOC03cTQtNiA0LTEzIDAtMTAtOC0xOHQtMjQtOEgzOHY5OGgzNnExOS0xIDI4LTkgOC04IDgtMThNMCAxMzZoMTQ0VjBIMHoiLz48cGF0aCBkPSJNMjU5IDg4cTAgNS00IDktNCA1LTE2IDVoLTE3Vjc1aDE2cTExIDEgMTYgNHQ1IDlNOTIgODhxMCA1LTQgOS00IDUtMTYgNUg1NVY3NWgxNnExMSAxIDE2IDR0NSA5TTI0NSA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00aC0xMnYyNWg4cTEwIDAgMTUtM003OCA1NnE1LTMgNS0xMCAwLTUtMy04LTQtNC0xMy00SDU1djI1aDhxMTAgMCAxNS0zIi8+PC9nPjwvc3ZnPg==);
   -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1875,20 +1872,20 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-8 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-8 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-11 {
+.emotion-9 {
   width: 100%;
   object-fit: cover;
   height: 100%;
@@ -1918,54 +1915,51 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       type="button"
     >
       <span
-        class="emotion-5"
+        class="visuallyHiddenText"
       >
         Guidance: May contain strong language, sexual or violent content that may offend. Play video, "Dog chases cat.", 2 minutes 30 seconds
       </span>
       <div
         aria-hidden="true"
-        class="emotion-6"
+        class="emotion-5"
       >
-        <svg
+        <span
           aria-hidden="true"
-          class="emotion-7 emotion-8"
-          focusable="false"
-          height="12"
-          viewBox="0 0 12 12"
-          width="12"
-          xmlns="http://www.w3.org/2000/svg"
+          class="icon media video external-svg mask emotion-6"
+          data-is-lite="false"
+          style="--icon-source: url("http://localhost:7080/images/icons/media-video.svg"); --icon-width: 12px; --icon-height: 12px;"
         >
-          <g
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <path
-              d="M.5.6h12v12H.5z"
-            />
-            <path
-              d="M2.144.96v11.28l8.712-5.64z"
-              fill="currentColor"
-            />
-          </g>
-        </svg>
+          <img
+            alt=""
+            aria-hidden="true"
+            class="fallback"
+            crossorigin="anonymous"
+            height="12"
+            loading="eager"
+            src="http://localhost:7080/images/icons/media-video.svg"
+            style="width: inherit; height: inherit;"
+            width="12"
+          />
+        </span>
       </div>
       <time
         aria-hidden="true"
-        class="emotion-9"
+        class="emotion-7"
         datetime="PT2M30S"
       >
         2:30
       </time>
     </button>
     <div
-      class="emotion-10"
+      class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>

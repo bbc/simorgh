@@ -5,6 +5,7 @@
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
+  "description": "Inclua o web app da BBC News Brasil à sua tela e tenha uma experiência segura com a de um app",
   "icons": [
     {
       "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-72x72.png?v=1",
@@ -50,6 +51,20 @@
       "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/icons/icon-512x512.png?v=1",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/screenshots/screenshot-512x512.png?v=1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/screenshots/screenshot-540x720.png?v=1",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ],
   "splash_pages": null,

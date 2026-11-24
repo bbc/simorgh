@@ -1,4 +1,4 @@
-import React from 'react';
+import { screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   isNull,
@@ -73,14 +73,32 @@ describe('TextContainer', () => {
     };
 
     it('should render correctly', () => {
-      const { container } = render(
+      render(
         <ToggleContextProvider toggles={defaultToggles}>
           <ServiceContextProvider service="news">
             <TextContainer {...data} />
           </ServiceContextProvider>
         </ToggleContextProvider>,
       );
-      expect(container).toMatchSnapshot();
+      expect(
+        screen.getByText('This is a 1st paragraph block.'),
+      ).toBeInTheDocument();
+    });
+
+    it('marks article body paragraphs for the sticky navigation threshold', () => {
+      render(<TextContainer {...data} isArticleBody />);
+
+      expect(
+        screen.getByText('This is a 1st paragraph block.').closest('p'),
+      ).toHaveAttribute('data-sticky-nav-anchor', 'true');
+    });
+
+    it('does not mark non-article paragraphs as sticky navigation anchors', () => {
+      render(<TextContainer {...data} />);
+
+      expect(
+        screen.getByText('This is a 1st paragraph block.').closest('p'),
+      ).not.toHaveAttribute('data-sticky-nav-anchor');
     });
   });
 });

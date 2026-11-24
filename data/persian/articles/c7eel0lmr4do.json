@@ -717,6 +717,14 @@
       },
       "metadata": {
         "id": "urn:bbc:ares::article:c7eel0lmr4do",
+        "tags": {
+          "about": [
+            {
+              "thingId": "19994837-27b8-463f-965d-fbb0ac1622a3",
+              "thingLabel": "انتخابات میان‌دوره ای آمریکا"
+            }
+          ]
+        },
         "locators": {
           "optimoUrn": "urn:bbc:optimo:asset:c7eel0lmr4do",
           "canonicalUrl": "https://www.bbc.com/persian/articles/c7eel0lmr4do"

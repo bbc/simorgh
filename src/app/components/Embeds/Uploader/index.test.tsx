@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '../../react-testing-library-with-providers';
 import Uploader from '.';
 import {
@@ -39,6 +38,14 @@ describe('Uploader', () => {
     render(<Uploader blocks={uploader} />);
     const ctaLink = screen.getByRole('link');
     expect(ctaLink.textContent).toEqual('Send form');
+  });
+
+  it('applies the uploader spacing class to the external chevron', () => {
+    render(<Uploader blocks={uploader} />);
+    const link = screen.getByRole('link');
+
+    expect(link).toHaveClass('callToActionLink');
+    expect(link.querySelector('.external-svg')).toHaveClass('chevronSpacing');
   });
 
   it('should render a link with the correct href', () => {

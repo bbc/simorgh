@@ -1,0 +1,83 @@
+export default () => {
+  describe('Footer', () => {
+    const isAmpPage =
+      document.documentElement.hasAttribute('amp') ||
+      window.location.pathname.endsWith('.amp');
+
+    it('I can see the BBC branding', () => {
+      const brandingEl = document.getElementById('brandSvgFooter');
+
+      expect(brandingEl).toBeInTheDocument();
+      expect(brandingEl?.tagName).toBe(isAmpPage ? 'SPAN' : 'IMG');
+      if (isAmpPage) {
+        expect(
+          brandingEl?.parentElement?.style.getPropertyValue('--brand-source'),
+        ).toContain('/images/brand.svg');
+      }
+      expect(brandingEl).toHaveClass('external-svg');
+    });
+
+    it('I can click on the BBC branding and it would take me to the homepage', () => {
+      const brandingEl = document.getElementById('brandSvgFooter');
+      expect(brandingEl).toBeInTheDocument();
+      if (!brandingEl) return;
+
+      const brandingLinkEl = brandingEl.closest('a');
+      expect(brandingLinkEl).toBeInTheDocument();
+      if (!brandingLinkEl) {
+        throw new Error('Expected the footer brand asset to have a link');
+      }
+      const brandingImageEl = brandingLinkEl.querySelector(
+        isAmpPage ? 'span.external-svg' : 'img.external-svg',
+      );
+
+      expect(brandingLinkEl.tagName).toEqual('A');
+      expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
+      expect(brandingImageEl).toBeInTheDocument();
+    });
+
+    describe('Anchors', () => {
+      const footerAnchors = Array.from(document.querySelectorAll('footer a'));
+
+      footerAnchors.forEach(footerAnchor => {
+        const anchorText = footerAnchor.textContent;
+        const anchorUrl = footerAnchor.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(footerAnchor).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(anchorText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect({
+            text: anchorText,
+            url: anchorUrl,
+          }).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe('Paragraphs', () => {
+      const footerParagraphs = Array.from(
+        document.querySelectorAll('footer div p'),
+      );
+
+      footerParagraphs.forEach(footerParagraph => {
+        it('should be in the document', () => {
+          expect(footerParagraph).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(footerParagraph.textContent).toBeTruthy();
+        });
+
+        it('should match text', () => {
+          expect(footerParagraph.textContent).toMatchSnapshot();
+        });
+      });
+    });
+  });
+};

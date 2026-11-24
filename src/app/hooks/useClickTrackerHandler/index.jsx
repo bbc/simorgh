@@ -2,19 +2,47 @@
 import { use, useCallback, useState } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
-import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import {
   CLICK_EVENT,
-  STATIC_ATI_CLICK_TRACKING,
+  STATIC_REVERB_CLICK_TRACKING,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
+import dispatchViewabilityEvent from '#app/components/ATIAnalytics/resonance/dispatchResonanceEvent';
+import buildResonanceEventConfig from '#app/components/ATIAnalytics/resonance/buildResonanceEventConfig';
 import useTrackingToggle from '../useTrackingToggle';
 import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
+// allowlist of onward journey components that should feed the total oj clicks event
+const OJ_COMPONENT_NAMES = [
+  'midarticle-mostread',
+  'top-stories',
+  'features',
+  'related-content',
+  'most-read',
+  'topic-discovery-curation-grid-promo',
+  'topics',
+  'topic-discovery-more-about-link',
+  'location-based-topic-oj',
+  'portrait-video-carousel-article',
+  'video-curation-grid',
+];
+
+// handle the total oj clicks event to specific onward journey experiments
+const OJ_OPTIMIZELY_EXPERIMENTS = ['test_page_views_aa_3'];
+
+const OJ_OPTIMIZELY_CLICK_EVENTS = ['oj_clicks'];
+
+// only fire the total oj clicks event when the component and experiment are in scope
+const shouldTrackOjClick = (componentName, experimentName) =>
+  OJ_COMPONENT_NAMES.includes(componentName) &&
+  OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
+
 const useClickTrackerHandler = (eventTrackingData = {}) => {
+  const { isDismissal } = eventTrackingData;
   const {
     pageIdentifier,
     producerId,
@@ -29,28 +57,37 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    optimizelyComponentName,
     experimentName,
     experimentVariant,
     groupTracker,
     itemTracker,
+    isSignedIn,
+    hashedId,
+    isPersonalisationOn,
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
-  const [clicked, setClicked] = useState(false);
+  const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service, useReverb } = use(ServiceContext);
-
+  const { service, resonanceEnabled } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
     async event => {
+      const nextPageUrl = event?.currentTarget?.href;
+      const trackingIdentifier = nextPageUrl || componentName;
+      const wasClicked = clickedIdentifier === trackingIdentifier;
+
       const shouldRegisterClick = [
         trackingIsEnabled,
-        !clicked,
-        isValidClick(event),
+        // count legitimate repeat clicks; optimizely calculates unique users
+        !wasClicked,
+        isDismissal || isValidClick(event),
       ].every(Boolean);
+
       if (shouldRegisterClick) {
-        setClicked(true);
+        setClickedIdentifier(trackingIdentifier);
 
         const shouldSendEvent = [
           campaignID,
@@ -62,25 +99,34 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           service,
           statsDestination,
         ].every(Boolean);
+
         if (shouldSendEvent) {
-          const nextPageUrl = event?.currentTarget?.href;
+          if (!isDismissal) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
 
-          event.stopPropagation();
-          event.preventDefault();
-
-          if (
-            optimizely &&
-            experimentVariant &&
-            experimentVariant !== 'off' &&
-            sendOptimizelyEvents
-          ) {
+          if (optimizely && experimentVariant && sendOptimizelyEvents) {
             const overrideAttributes = optimizely?.user.attributes;
 
-            optimizely.track(
-              `${componentName}-clicks`,
-              optimizely.user.id,
-              overrideAttributes,
-            );
+            if (experimentVariant !== 'off') {
+              optimizely.track(
+                `${optimizelyComponentName || componentName}-clicks`,
+                optimizely.user.id,
+                overrideAttributes,
+              );
+            }
+
+            // send the extra optimizely event for the total oj clicks metric
+            if (shouldTrackOjClick(componentName, experimentName)) {
+              OJ_OPTIMIZELY_CLICK_EVENTS.forEach(eventName => {
+                optimizely.track(
+                  eventName,
+                  optimizely.user.id,
+                  overrideAttributes,
+                );
+              });
+            }
           }
 
           try {
@@ -98,15 +144,45 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               statsDestination,
               url: url || nextPageUrl,
               detailedPlacement,
-              useReverb,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
+              isSignedIn,
+              hashedId,
+              isPersonalisationOn,
               ...(experimentVariant &&
                 experimentVariant !== 'off' && {
                   experimentName,
                   experimentVariant,
                 }),
             });
+            if (resonanceEnabled) {
+              dispatchViewabilityEvent(
+                buildResonanceEventConfig({
+                  type: CLICK_EVENT,
+                  campaignID,
+                  componentName,
+                  format,
+                  pageIdentifier,
+                  platform,
+                  producerId,
+                  producerName,
+                  service,
+                  advertiserID,
+                  statsDestination,
+                  url: url || nextPageUrl,
+                  detailedPlacement,
+                  ...(groupTracker && { groupTracker }),
+                  ...(itemTracker && { itemTracker }),
+                  isSignedIn,
+                  hashedId,
+                  ...(experimentVariant &&
+                    experimentVariant !== 'off' && {
+                      experimentName,
+                      experimentVariant,
+                    }),
+                }),
+              );
+            }
           } finally {
             if (nextPageUrl && !preventNavigation) {
               if (optimizely) {
@@ -119,28 +195,33 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       }
     },
     [
-      trackingIsEnabled,
-      clicked,
-      campaignID,
       componentName,
+      clickedIdentifier,
+      trackingIsEnabled,
+      isDismissal,
+      campaignID,
       pageIdentifier,
       platform,
-      preventNavigation,
       producerId,
       producerName,
       service,
       statsDestination,
-      url,
-      advertiserID,
-      format,
-      sendOptimizelyEvents,
       optimizely,
-      experimentName,
       experimentVariant,
+      sendOptimizelyEvents,
+      experimentName,
+      optimizelyComponentName,
+      format,
+      advertiserID,
+      url,
       detailedPlacement,
-      useReverb,
-      itemTracker,
       groupTracker,
+      itemTracker,
+      isSignedIn,
+      hashedId,
+      isPersonalisationOn,
+      resonanceEnabled,
+      preventNavigation,
     ],
   );
 };
@@ -150,19 +231,17 @@ export default (eventTrackingData = {}) => {
   const isHydrated = useHydrationDetection();
 
   const clickTracker = useClickTrackerHandler(eventTrackingData);
-  const staticAtiUrl = constructStaticATIUrl({
-    eventTrackingData,
-    eventType: CLICK_EVENT,
-    isStatic: !isHydrated,
-  });
 
   const enableStaticTracking = !isHydrated && !isAmp;
+  const reverbStaticUrl = constructReverbUrl({
+    eventTrackingData,
+    eventType: CLICK_EVENT,
+  });
 
   return {
     ...(enableStaticTracking && {
-      [STATIC_ATI_CLICK_TRACKING]: staticAtiUrl,
+      [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
     }),
-
     ...(isHydrated && { onClick: clickTracker }),
   };
 };

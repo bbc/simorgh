@@ -2,7 +2,9 @@
   "data": {
     "title": "Yoruba",
     "description": "",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "Yoruba",
+  "seoDescription": "",
     "curations": [
       {
         "summaries": [

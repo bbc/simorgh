@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
@@ -21,16 +21,15 @@ const StyledParagraph = styled(Paragraph)`
   }
 `;
 
-const ParagraphContainer = ({ blocks, className }) => {
-  const { script, service, dir } = use(ServiceContext);
+const ParagraphContainer = ({ blocks, className, isArticleBody = false }) => {
+  const { dir } = use(ServiceContext);
 
   return (
     <GridItemMedium>
       <StyledParagraph
-        script={script}
-        service={service}
         dir={dir}
         className={className}
+        data-sticky-nav-anchor={isArticleBody || undefined}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledParagraph>

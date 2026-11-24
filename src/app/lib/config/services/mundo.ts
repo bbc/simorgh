@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/GMT';
-import '#psammead/psammead-locales/moment/es';
+import '#lib/locales/moment/es';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     atiAnalyticsProducerName: 'MUNDO',
-    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -44,39 +44,57 @@ export const service: DefaultServiceConfig = {
     manifestPath: '/mundo/manifest.json',
     swPath: '/sw.js',
     homePageTitle: 'Noticias',
-    iTunesAppId: 515255747,
+    iTunesAppId: 6761256736,
     showAdPlaceholder: true,
     showRelatedTopics: true,
     electionBanner: {
-      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      title: 'Elecciones EE.UU. 2026',
+      electionThingIds: ['19994837-27b8-463f-965d-fbb0ac1622a3'],
+      electionCurationIds: [
+        'urn:bbc:vivo:curation:874d2084-631c-4ee8-b582-f88920fcd960',
+      ],
       iframeSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
       iframeDevSrc:
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+      assocPressIframeSrc:
+        'https://interactives.apelections.org/election-results/customers/layouts/organization-layouts/published/108620/33021.html',
     },
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Únete a nuestro WhatsApp',
+      title: 'Anuncio app',
+      brandTitle: 'Tenemos una nueva app',
       brandDescription:
-        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+        'Todas las noticias que necesitas están en BBC World Service',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
-        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0p2sp62.jpg',
+        alt: 'Imagen de un teléfono celular con la nueva app de BBC Mundo',
       },
       linkLabel: {
-        text: 'Suscríbete aquí',
-        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+        text: 'Descárgala aquí',
+        href: 'https://bbcwsuniversal.onelink.me/s6ot/8sfpme8y',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Fin de %title%',
       },
     },
-    translations: {
-      // EXPERIMENT: Homepage Read Time
-      timstampPrefix: {
-        publishedAgo: 'Publicado hace',
+    promotionalBanner: {
+      title: 'Accede a BBC Noticias con un solo toque',
+      description:
+        'Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo.',
+      buttonSeparatorText: 'o',
+      primaryButton: {
+        text: 'Agregar',
+        longText: 'Agregar a la pantalla de inicio',
       },
+      secondaryButton: {
+        text: 'No ahora',
+      },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
+    },
+    translations: {
+      and: 'y',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
@@ -95,12 +113,33 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      topicDiscovery: {
+        heading: 'Descubre más',
+        moreAboutTopic: 'Más sobre {topic}',
+        fetchErrorMessage: 'Error al cargar. Inténtalo de nuevo',
+      },
+      googlePreferredSource: {
+        linkText: 'Agregar como fuente preferida en Google',
+      },
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
+      skipContent: {
+        text: 'Omitir %title% y continuar',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      showMore: 'Mostrar más',
       moreOnThis: '',
       navMenuText: 'Secciones',
+      liteSite: {
+        onboardingMessage:
+          'Estás viendo una versión de solo texto de este sitio web que usa menos datos. Mira la versión principal del sitio con todas las imágenes y videos.',
+        toMainSite: 'Llévame al sitio web principal',
+        informationPage: 'Descubre más sobre esta versión que ahorra datos',
+        dataSaving: 'Versión que ahorra datos',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -113,12 +152,113 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Publicado',
         summary: 'Puntos clave',
         shareButtonText: 'Compartir',
+        refreshButtonText: 'Última publicación',
+        visuallyHiddenButtonText: 'Nueva publicación disponible',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
       },
       gist: 'Sumario',
+      account: {
+        signIn: 'Inicia sesión',
+        signInAccessibleLabel: 'Inicia sesión en Mis Noticias',
+        forYou: 'Tu cuenta',
+        register: 'Regístrate',
+      },
+      accountPromoBanner: {
+        title: 'Tu BBC',
+        description: 'Inicia sesión o crea una cuenta gratuita',
+        closeLabel: 'Cerrar',
+        buttonSeparatorText: 'o',
+      },
+      accountSignInModal: {
+        title: 'Inicia sesión para guardar en Mis Noticias',
+        description: 'Guarda artículos y léelos cuando quieras',
+        closeLabel: 'Cerrar',
+        followTopic: {
+          title: 'Inicia sesión para seguir temas',
+          description:
+            'Accede directamente a las noticias que te interesan y no te pierdas ninguna historia',
+        },
+      },
+      saveArticleButton: {
+        loading: 'Cargando',
+        save: 'Guarda para después',
+        saving: 'Guardando',
+        saved: 'Guardado en Mis noticias',
+        remove: 'Eliminar',
+        removeAccessible: 'Guardado. Eliminar de Mis Noticias',
+        removing: 'Eliminando',
+      },
+      followTopicButton: {
+        loading: 'Cargando',
+        follow: 'Seguir',
+        following: 'Siguiendo',
+        followed: 'Siguiendo',
+        unfollow: 'Dejar de seguir',
+        unfollowAccessible: 'Dejar de seguir',
+        unfollowing: 'Dejar de seguir',
+      },
+      myNews: {
+        title: 'Mis Noticias',
+        guestTitle: 'Bienvenido a Mis Noticias',
+        description: 'Mis artículos guardados',
+        guestDescription:
+          'Inicia sesión para seguir los temas que te interesan y guardar artículos para más tarde.',
+        noArticles: 'Aún no has guardado ningún artículo',
+        savedArticlesErrorText:
+          'Estamos teniendo problemas para cargar tus artículos guardados',
+        loading: 'Cargando',
+        noJsDescription:
+          'Habilita JavaScript o utiliza otro navegador para ver este contenido.',
+        followedTopicsTitle: 'Temas que sigues',
+        followedTopicsErrorText:
+          'Estamos teniendo problemas para cargar los temas que sigues',
+        noFollowedTopics: 'Aún no has seguido ningún tema',
+        seeMoreTopics: 'Ver más',
+        seeLessTopics: 'Ver menos',
+        contentErrorText:
+          'Parece que este contenido no se está cargando. Por favor, inténtalo de nuevo más tarde.',
+      },
+      actionTooltip: {
+        success: {
+          title: 'Este artículo ya está guardado',
+          bodyBefore: 'Lo puedes ver en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Este artículo ya no está guardado',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
+      followTopicTooltip: {
+        success: {
+          title: 'Sigues {Topic Name}',
+          bodyBefore: 'Encuentra este tema en',
+          bodyAfter: '',
+        },
+        error: {
+          title: 'Disculpa, algo salió mal',
+          body: 'Verifica tu conexión, actualiza la página e inténtalo de nuevo',
+        },
+        removed: {
+          title: 'Has dejado de seguir {Topic Name}',
+          bodyBefore: 'Se eliminará de',
+          bodyAfter: '',
+        },
+        myNewsLinkText: 'Mis Noticias',
+        myNewsUrl: 'https://www.bbc.com/mundo/my-news',
+        closeLabel: 'Cerrar',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -271,6 +411,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        podcastExternalLinks: 'Este podcast también está disponible en:',
+        download: 'Descargar episodio',
         closeVideo: 'Salir',
         endOfContentClose: 'Fin de este contenido. Salir',
       },
@@ -347,26 +489,26 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
-          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+          'Si te has suscrito a nuestro newsletter, por favor, revisa tu correo. Si nos has enviado información, toma nota de este número para futura referencia.',
         privacyInfoHtml:
-          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+          'Y recuerda que tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
-          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+          'Si tienes alguna duda o cambias de opinión, escríbenos a {{emailLink}} incluyendo el número de referencia.',
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
-        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingHeading: 'Enviando…',
         uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
-        successHeading: 'Mensaje enviado',
-        successDescription: 'Gracias por contactarnos.',
+        successHeading: 'Enviado',
+        successDescription: 'Muchas gracias.',
         privacyPolicyLinkHref:
           'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',
@@ -378,6 +520,95 @@ export const service: DefaultServiceConfig = {
         // Closed Screen
         closedHeading: 'Esta convocatoria ya está cerrada.',
         closedDescription: 'Esto cierra el {{date}}.',
+      },
+      sport: {
+        keyEventsTitle: 'Eventos clave',
+        matchSummary: 'Resumen del partido',
+        assists: 'Asistencias',
+        penalties: 'Penales',
+        ht: 'Final del primer tiempo',
+        ft: 'Final del partido',
+        et: 'Tiempo adicional',
+        afterExtraTime: 'Después del tiempo adicional',
+        penaltyAbbreviation: 'PEN',
+        ownGoal: 'gol en contra',
+        venue: 'Estadio',
+        attendance: 'Asistencia',
+        versus: 'contra',
+        kickOff: 'inicio',
+        timeToBeConfirmed: 'Hora por confirmar',
+        teamToBeConfirmed: 'Equipo por confirmar',
+        afterFullTime: 'después del tiempo reglamentario',
+        atFullTime: 'al final del tiempo reglamentario',
+        onPenalties: 'en penales',
+        onAggregate: 'en el global',
+        win: 'gana',
+        winOnPenalties: {
+          prefix: 'gana',
+          suffix: 'por penales',
+        },
+        worldCupTeamNames: {
+          algeria: 'Argelia',
+          argentina: 'Argentina',
+          australia: 'Australia',
+          austria: 'Austria',
+          belgium: 'Bélgica',
+          'bosnia-herzegovina': 'Bosnia y Herzegovina',
+          brazil: 'Brasil',
+          canada: 'Canadá',
+          'cape-verde': 'Cabo Verde',
+          colombia: 'Colombia',
+          croatia: 'Croacia',
+          curacao: 'Curazao',
+          'czech-republic': 'República Checa',
+          'dr-congo': 'R. D. del Congo',
+          ecuador: 'Ecuador',
+          egypt: 'Egipto',
+          england: 'Inglaterra',
+          france: 'Francia',
+          germany: 'Alemania',
+          ghana: 'Ghana',
+          haiti: 'Haití',
+          iran: 'Rep. Islámica Irán',
+          iraq: 'Iraq',
+          'ivory-coast': 'Costa de Marfil',
+          japan: 'Japón',
+          jordan: 'Jordania',
+          mexico: 'México',
+          morocco: 'Marruecos',
+          netherlands: 'Países Bajos',
+          'new-zealand': 'Nueva Zelanda',
+          norway: 'Noruega',
+          panama: 'Panamá',
+          paraguay: 'Paraguay',
+          portugal: 'Portugal',
+          qatar: 'Qatar',
+          'saudi-arabia': 'Arabia Saudí',
+          scotland: 'Escocia',
+          senegal: 'Senegal',
+          'south-africa': 'Sudáfrica',
+          'south-korea': 'República de Corea',
+          spain: 'España',
+          sweden: 'Suecia',
+          switzerland: 'Suiza',
+          tunisia: 'Túnez',
+          turkey: 'Turquía',
+          uruguay: 'Uruguay',
+          usa: 'Estados Unidos',
+          uzbekistan: 'Uzbekistán',
+        },
+        tournaments: {
+          fifaWorldCup: 'Copa Mundial FIFA',
+        },
+        stages: {
+          groupStage: 'Fase de grupos',
+          last32: 'Fase de 32',
+          last16: 'Octavos de final',
+          quarterFinals: 'Cuartos de final',
+          semiFinals: 'Semifinales',
+          final: 'Final',
+          thirdPlaceFinal: 'Tercer puesto',
+        },
       },
     },
     mostRead: {
@@ -445,46 +676,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Noticias',
         url: '/mundo',
-      },
-      {
-        title: 'América Latina',
-        url: '/mundo/topics/c7zp57yyz25t',
-      },
-      {
-        title: 'Internacional',
-        url: '/mundo/topics/c2lej05epw5t',
-      },
-      {
-        title: 'EE.UU.',
-        url: '/mundo/topics/cdr5613yzwqt',
-      },
-      {
-        title: 'Economía',
-        url: '/mundo/topics/c06gq9v4xp3t',
-      },
-      {
-        title: 'Ciencia',
-        url: '/mundo/topics/ckdxnw959n7t',
-      },
-      {
-        title: 'Salud',
-        url: '/mundo/topics/cpzd498zkxgt',
-      },
-      {
-        title: 'Cultura',
-        url: '/mundo/topics/c2dwq9zyv4yt',
-      },
-      {
-        title: 'Tecnología',
-        url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
-      },
-      {
-        title: 'Centroamérica cuenta',
-        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

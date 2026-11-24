@@ -1,10 +1,9 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   topStoriesBlocks,
   mostReadBlocks,
-} from '../../components/ScrollablePromo/helpers/fixtureData';
+} from '../../../components/ArticleLinksBlock/helpers/fixtureData';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
 
@@ -20,7 +19,7 @@ const Component = ({ isAmp = false, service, propsForOJExperiment = null }) => (
 );
 
 export default {
-  title: 'Containers/Navigation',
+  title: 'Containers/Navigation/Legacy',
   Component,
   parameters: { chromatic: { disable: true } },
 };

@@ -1,10 +1,9 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { coreIcons } from '#psammead/psammead-assets/src/svgs';
-import TimestampContainer from '#psammead/psammead-timestamp-container/src';
+import { coreIcons } from '#app/components/icons/shared';
+import TimestampContainer from '#app/components/TimestampContainer';
+import timestampStyles from './index.module.scss';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const Wrapper = styled.div`
@@ -39,16 +38,9 @@ const StyledTimestamp = styled.span`
   flex-direction: row;
   width: 100%;
 
-  > time {
-    color: ${props => props.theme.palette.RHINO};
-    ${({ script }) => script && getMinion(script)}
-    ${({ service }) => service && getSansRegular(service)}
-  }
-
   &::after {
     content: '';
     border-top: 0.0625rem solid ${props => props.theme.palette.PEBBLE};
-    top: ${({ script }) => 0.5 + script.minion.groupA.lineHeight / 2 / 16}rem;
     ${({ dir }) =>
       dir === 'ltr' ? `margin-left: 0.625rem;` : `margin-right: 0.625rem;`}
     width: 100%;
@@ -59,34 +51,30 @@ export const StartTimestamp = ({
   timestamp,
   timezone = 'Europe/London',
   locale = 'en-gb',
-  script,
-  service,
   dir = 'ltr',
 }) => {
   return (
     <StyledTimestamp
-      script={script}
-      service={service}
       dir={dir}
       aria-hidden="true"
+      className={timestampStyles.startTimestamp}
     >
       <TimestampContainer
+        className={timestampStyles.timestamp}
         timestamp={timestamp}
         dateTimeFormat="YYYY-MM-DD"
         format="HH:mm"
         isRelative={false}
         padding={false}
         timezone={timezone}
-        script={script}
         locale={locale}
-        service={service}
       />
     </StyledTimestamp>
   );
 };
 
 const StartTime = ({ timestamp }) => {
-  const { script, locale, service, timezone, dir } = use(ServiceContext);
+  const { locale, timezone, dir } = use(ServiceContext);
   return (
     <Wrapper>
       <ClockIcon dir={dir} />
@@ -94,8 +82,6 @@ const StartTime = ({ timestamp }) => {
         timestamp={timestamp}
         timezone={timezone}
         locale={locale}
-        script={script}
-        service={service}
         dir={dir}
       />
     </Wrapper>

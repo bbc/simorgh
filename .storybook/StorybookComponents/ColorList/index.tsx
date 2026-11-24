@@ -1,4 +1,3 @@
-import React from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import styles from './index.styles';
 import ColorCard from './ColorCard';

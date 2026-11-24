@@ -1,5 +1,4 @@
-import React from 'react';
-import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteSummary from '.';
 
@@ -16,31 +15,31 @@ describe('LiteSiteSummary', () => {
     expect(strongText).toHaveAttribute('hidden');
   });
   it('Should have a CTA link to the main site.', () => {
-    const { container } = render(<LiteSiteSummary />);
-    const [ctaText] = container.querySelectorAll('a span');
-    const [ctaLink] = container.querySelectorAll(
-      'a[href="https://www.test.bbc.com/news/articles/c0g992jmmkko"]',
+    const { getByRole } = render(<LiteSiteSummary />);
+    expect(
+      getByRole('link', { name: 'Take me to the main website' }),
+    ).toHaveAttribute(
+      'href',
+      'https://www.test.bbc.com/news/articles/c0g992jmmkko',
     );
-    expect(ctaText?.innerHTML).toBe('Take me to the main website');
-    expect(ctaLink).toBeTruthy();
   });
   it('Should have a CTA link for more information with a service that has a translation.', () => {
-    const { container } = render(<LiteSiteSummary />, { service: 'gahuza' });
-    const [, ctaText] = container.querySelectorAll('a span');
-    const [ctaLink] = container.querySelectorAll(
-      'a[href="https://www.test.bbc.com/news/articles/c0g992jmmkko"]',
+    const { getByRole } = render(<LiteSiteSummary />, { service: 'gahuza' });
+    expect(
+      getByRole('link', {
+        name: 'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
+      }),
+    ).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
     );
-    expect(ctaText?.innerHTML).toBe(
-      'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
-    );
-    expect(ctaLink).toBeTruthy();
   });
 
   it(`Should have click tracking on the 'Back to canonical' link.`, () => {
     const { container } = render(<LiteSiteSummary />, { isLite: true });
 
     const [ctaLink] = container.querySelectorAll('a');
-    const atiUrl = ctaLink.getAttribute(STATIC_ATI_CLICK_TRACKING);
+    const atiUrl = ctaLink.getAttribute(STATIC_REVERB_CLICK_TRACKING);
 
     expect(atiUrl).toContain('lite-site-summary');
   });

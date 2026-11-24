@@ -1,20 +1,9 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] = `
-.emotion-0 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 <div>
   <h1
-    class="emotion-0"
+    class="visuallyHiddenText"
     id="content"
     tabindex="-1"
   >
@@ -24,20 +13,9 @@ exports[`VisuallyHiddenHeadline with headline data should render correctly 1`] =
 `;
 
 exports[`VisuallyHiddenHeadline with plain text headline should render h1 containing correct text 1`] = `
-.emotion-0 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 <div>
   <h1
-    class="emotion-0"
+    class="visuallyHiddenText"
     id="content"
     tabindex="-1"
   >

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { use } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
@@ -9,6 +6,7 @@ import CallToActionLink from '#app/components/CallToActionLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Headings from '#containers/Headings';
 import { ComponentToRenderProps } from '../types';
+import ctaStyles from './index.module.scss';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
@@ -47,7 +45,7 @@ const ArticleHeadline = (props: ComponentToRenderProps) => {
           <CallToActionLink
             url={`${pathname}.lite`}
             eventTrackingData={eventTrackingData}
-            css={styles.liteSiteLink}
+            className={ctaStyles.liteSiteLink}
             alignWithMargin
             size="brevier"
           >

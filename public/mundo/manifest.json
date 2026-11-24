@@ -5,6 +5,7 @@
   "background_color": "#b80000",
   "display": "standalone",
   "theme_color": "#b80000",
+  "description": "Agrega la aplicación web de BBC Mundo a tu pantalla y disfruta de una experiencia segura, similar a la de una aplicación.",
   "icons": [
     {
       "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/icons/icon-72x72.png?v=1",
@@ -52,14 +53,21 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null,
-  "prefer_related_applications": true,
-  "related_applications": [
+  "screenshots": [
     {
-      "platform": "play",
-      "id": "uk.co.bbc.mundo"
+      "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/screenshots/screenshot-512x512.png?v=1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/screenshots/screenshot-540x720.png?v=1",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ],
+  "splash_pages": null,
   "start_url": "/mundo?at_medium=PWA&at_campaign=PWA",
   "shortcuts": [
     {
@@ -75,5 +83,13 @@
       ]
     }
   ],
-  "id": "/mundo"
+  "id": "/mundo",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "uk.co.bbc.wsuniversal",
+      "url": "https://play.google.com/store/apps/details?id=uk.co.bbc.wsuniversal"
+    }
+  ]
 }

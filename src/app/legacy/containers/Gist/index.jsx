@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
@@ -9,14 +9,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getSansRegular,
-  getSansBold,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
-  getDoublePica,
-  getGreatPrimer,
-} from '#psammead/gel-foundations/src/typography';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import Blocks from '#containers/Blocks';
 import Text from '#containers/Text';
@@ -40,8 +32,8 @@ const GistWrapper = styled.div`
 `;
 
 const GistIntroduction = styled.strong`
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getDoublePica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
@@ -66,8 +58,8 @@ const GistList = styled(UnorderedList)`
   }
 
   li {
-    ${({ service }) => getSansRegular(service)}
-    ${({ script }) => getGreatPrimer(script)}
+    ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+    ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};
 
@@ -92,7 +84,7 @@ const GistList = styled(UnorderedList)`
   }
 `;
 
-const componentsToRender = (service, script, dir, bulletPointColour) => ({
+const componentsToRender = (dir, bulletPointColour) => ({
   text: props => (
     <Text
       {...props}
@@ -100,8 +92,6 @@ const componentsToRender = (service, script, dir, bulletPointColour) => ({
         unorderedList: innerProps => (
           <GistList
             {...innerProps}
-            service={service}
-            script={script}
             direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
             bulletPointColour={bulletPointColour}
@@ -113,25 +103,18 @@ const componentsToRender = (service, script, dir, bulletPointColour) => ({
 });
 
 const Gist = ({ blocks }) => {
-  const { service, script, dir, translations } = use(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
   const {
     palette: { GREY_6: bulletPointColour },
   } = useTheme();
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
     <GridItemLarge role="region" aria-labelledby="gist-title">
-      <GistWrapper service={service} script={script} dir={dir}>
-        <GistIntroduction service={service} script={script} id="gist-title">
-          {gistTitle}
-        </GistIntroduction>
+      <GistWrapper dir={dir}>
+        <GistIntroduction id="gist-title">{gistTitle}</GistIntroduction>
         <Blocks
           blocks={blocks}
-          componentsToRender={componentsToRender(
-            service,
-            script,
-            dir,
-            bulletPointColour,
-          )}
+          componentsToRender={componentsToRender(dir, bulletPointColour)}
         />
       </GistWrapper>
     </GridItemLarge>

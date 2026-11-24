@@ -1,4 +1,3 @@
-import React from 'react';
 import Footer from '.';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import metadata from './metadata.json';
@@ -55,6 +54,10 @@ export const WithAdsEnabled = (_, { service, variant }) => (
 export const HindiCollectiveNewsroomPublication = (_, { variant }) => (
   <Component service="hindi" variant={variant} />
 );
+
+HindiCollectiveNewsroomPublication.globals = {
+  service: { service: 'hindi', variant: 'default' },
+};
 
 export const SportWithoutTrustProjectLink = (_, { variant }) => (
   <Component service="sport" variant={variant} />

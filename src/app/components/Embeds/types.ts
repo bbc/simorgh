@@ -10,7 +10,7 @@ export type OEmbedData = Partial<{
   version: string;
   provider_name: string;
   provider_url: string;
-  html: string;
+  html: string | null;
   url: string;
   source: string;
   width: number | string;
@@ -22,6 +22,7 @@ export type OEmbedData = Partial<{
   sizeAdjustScript: string;
   parameters: ampParams;
   oEmbedType: string;
+  riddleId: string;
 }>;
 
 export type OEmbedProps = {

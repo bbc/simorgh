@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';
@@ -8,9 +7,14 @@ import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import getSrcSets from '#app/utilities/getSrcSets';
+import {
+  createResponsiveSrcSet,
+  MULTILINE_SRCSET_SEPARATOR,
+} from '#app/utilities/imageSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
@@ -24,8 +28,8 @@ const DEFAULT_TRANSLATION = {
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
+  isHydrated?: boolean;
   blockPosition?: number;
-  timeOfDayVariant?: string;
   onClick?: () => void;
 };
 
@@ -34,7 +38,7 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
-  timeOfDayVariant,
+  isHydrated,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -42,6 +46,7 @@ export default ({
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
   } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
 
   const { images, video } = block.model;
 
@@ -57,7 +62,7 @@ export default ({
     duration: durationTranslation,
   } = media;
 
-  let momentDuration = null;
+  let momentDuration: moment.Duration | null = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
@@ -81,23 +86,27 @@ export default ({
     });
   };
 
-  const srcSets = getSrcSets({
+  const srcSets = createResponsiveSrcSet({
     imageUrlTemplate,
     mq,
     imageWidthSmall: 64,
     imageWidthLarge: 256,
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
+  });
+
+  const fallbackSrcSets = createResponsiveSrcSet({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+    srcSetSeparator: MULTILINE_SRCSET_SEPARATOR,
   });
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_tod_homepage',
-      experimentVariant: timeOfDayVariant,
-    }),
     viewThreshold: 1,
     itemTracker: {
-      type: 'portrait-video-promo',
+      type: pageType === LIVE_PAGE ? 'portrait-video' : 'portrait-video-promo',
       text: headline,
       position: blockPosition + 1,
       resourceId: video?.id,
@@ -116,12 +125,13 @@ export default ({
   };
 
   return (
-    <li css={styles.container}>
+    <li css={[styles.container, isHydrated && { scrollSnapAlign: 'start' }]}>
       <Image
         alt={alt}
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />
@@ -137,7 +147,7 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+                <Play css={styles.playIcon} isInverted />
                 <time dateTime={mediaISO8601Duration}>
                   <Text size="brevier" css={styles.duration}>
                     {durationString}

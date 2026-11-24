@@ -11,10 +11,6 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import { LUNAR } from '../../../../components/ThemeProvider/palette';
 
-const promoListDefaultProps = {
-  border: true,
-};
-
 export const StoryPromoLiBase = styled.li`
   ${({ border }) =>
     border &&
@@ -28,11 +24,6 @@ export const StoryPromoLiBase = styled.li`
     border: none;
   }
 `;
-
-StoryPromoLiBase.defaultProps = {
-  role: 'listitem',
-  ...promoListDefaultProps,
-};
 
 export const StoryPromoLi = styled(StoryPromoLiBase)`
   padding: ${GEL_SPACING} 0 ${GEL_SPACING_DBL};
@@ -57,14 +48,8 @@ export const StoryPromoLi = styled(StoryPromoLiBase)`
   }
 `;
 
-StoryPromoLi.defaultProps = promoListDefaultProps;
-
 export const StoryPromoUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
 `;
-
-StoryPromoUl.defaultProps = {
-  role: 'list',
-};

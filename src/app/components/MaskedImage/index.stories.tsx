@@ -1,4 +1,3 @@
-import React from 'react';
 import MaskedImage from '.';
 import metadata from './metadata.json';
 

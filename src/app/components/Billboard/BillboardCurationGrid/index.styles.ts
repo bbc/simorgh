@@ -46,7 +46,7 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
-        'div div:nth-child(2)': {
+        'div div:last-child': {
           [mq.GROUP_1_MAX_WIDTH]: {
             position: 'relative',
           },
@@ -55,7 +55,7 @@ const styles = {
             [mq.GROUP_4_MIN_WIDTH]: {
               padding: '0.75rem',
             },
-            svg: {
+            '.external-svg': {
               margin: 0,
               [mq.GROUP_4_MIN_WIDTH]: {
                 width: `${spacings.TRIPLE}rem`,
@@ -143,6 +143,18 @@ const styles = {
             gridColumn: '1 / span 1',
           },
         },
+      },
+    }),
+  billboardCurationGridStylingOverrides: ({ palette }: Theme) =>
+    css({
+      '.related-topic-link': {
+        color: palette.WHITE,
+        '&::after': {
+          backgroundColor: palette.WHITE,
+        },
+      },
+      '.metadata-and-topic-data .promo-timestamp': {
+        color: palette.WHITE,
       },
     }),
 };

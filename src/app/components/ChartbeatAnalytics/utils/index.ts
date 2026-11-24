@@ -16,6 +16,7 @@ import {
   LIVE_RADIO_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_TV_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   Environments,
@@ -29,7 +30,7 @@ const ID_COOKIE = 'ckns_sylphid';
 
 export const chartbeatUID = 50924;
 export const useCanonical = true;
-export const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
+export const chartbeatSource = 'https://static.chartbeat.com/js/chartbeat.js';
 
 const capitalize = (s = '') => `${s?.charAt(0).toUpperCase()}${s?.slice(1)}`;
 
@@ -68,6 +69,8 @@ export const getType = (pageType: PageTypes, shorthand = false) => {
       return 'Topics';
     case LIVE_PAGE:
       return shorthand ? 'LIV' : 'Live';
+    case LIVE_TV_PAGE:
+      return 'Live TV';
     default:
       return pageType;
   }
@@ -178,6 +181,7 @@ export const getTitle = ({ pageType, title, brandName }: GetTitleProps) => {
     case TOPIC_PAGE:
     case LIVE_PAGE:
     case LIVE_RADIO_PAGE:
+    case LIVE_TV_PAGE:
     case AUDIO_PAGE:
     case TV_PAGE:
     case 'index':

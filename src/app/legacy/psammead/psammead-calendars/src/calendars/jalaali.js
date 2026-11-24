@@ -1,10 +1,6 @@
 import jalaaliJs from 'jalaali-js';
-import {
-  EasternArabic,
-  makeNumeralTranslator,
-} from '#psammead/psammead-locales/src/numerals';
-import { months as dariMonths } from '#app/legacy/psammead/psammead-locales/moment/fa-af';
-import { months as pashtoMonths } from '#app/legacy/psammead/psammead-locales/moment/ps';
+import { EasternArabic, makeNumeralTranslator } from '#lib/locales/numerals';
+import { months as pashtoMonths } from '#lib/locales/moment/ps';
 
 const jalaaliMonths = {
   fa: [
@@ -21,7 +17,6 @@ const jalaaliMonths = {
     'بهمن',
     'اسفند',
   ],
-  'fa-af': dariMonths,
   ps: pashtoMonths,
 };
 
