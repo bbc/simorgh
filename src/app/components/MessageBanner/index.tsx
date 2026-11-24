@@ -34,29 +34,23 @@ const MessageBanner = ({
   children,
   eventTrackingData,
 }: MessageBannerProps) => {
-  const { pageType } = use(RequestContext);
-
   const { mq } = useTheme();
 
-  let shouldEnableGlow = false;
   let optimizelyAttributes = {};
-  if (pageType === HOME_PAGE) {
-    const experimentName = 'newswb_ws_message_banner_cta_glow';
-    // pageType is a constant throughout this component's lifecycle, so this condition is guaranteed to be a constant.
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const variant = useOptimizelyVariation({
-      experimentName,
-      experimentType: ExperimentType.CLIENT_SIDE,
-    });
 
-    shouldEnableGlow = variant === 'variant';
-    optimizelyAttributes = {
-      experimentName,
-      sendOptimizelyEvents: true,
-      experimentVariant: variant,
-      optimizelyComponentName: 'cta',
-    };
-  }
+  const experimentName = 'newswb_ws_message_banner_cta_glow';
+  const variant = useOptimizelyVariation({
+    experimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  const shouldEnableGlow = variant === 'variant';
+  optimizelyAttributes = {
+    experimentName,
+    sendOptimizelyEvents: true,
+    experimentVariant: variant,
+    optimizelyComponentName: 'cta',
+  };
 
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
