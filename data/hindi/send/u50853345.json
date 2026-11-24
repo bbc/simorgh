@@ -1,0 +1,185 @@
+{
+  "data": {
+    "projectId": "ugc-ws-hindi",
+    "title": "अपनी सामग्री अपलोड करें",
+    "description": "\u003Cp\u003E&nbsp;\u003C/p\u003E\n\u003Cp\u003Eयदि आपने समाचारों से जुड़ी कोई तस्वीर या वीडियो लिया है जिसे आप बीबीसी हिंदी के साथ साझा करना चाहते हैं, तो आप इसे इस फ़ॉर्म का उपयोग करके हमें भेज सकते हैं. याद रखें: तस्वीर या वीडियो लेते वक़्त, अपने-आप को या दूसरों को खतरे में न डालें, अनावश्यक जोखिम न लें या किसी भी कानून का उल्लंघन न करें. कृपया हमारे उपयोग की शर्तें &lt;लिंक&gt; पढ़े\u003C/p\u003E",
+    "campaignId": "u50853345",
+    "languageTag": "hi-IN",
+    "campaignStatus": "open",
+    "openingTime": "",
+    "closingTime": "",
+    "submissionUrl": "https://www.bbc.com/hindi",
+    "privacyNotice": {
+      "default": "\u003Cp\u003Eआपके सारे व्यक्तिगत डेटा को बीबीसी और हमारे सेवा प्रदाता आपको बेहतर सुविधाएँ देने और आपके सुझावों को समझने के लिए इस्तेमाल करेंगे. बीबीसी और हमारे सेवा प्रदाता हमारी डेटा सुरक्षा की नीति और डेटा सुरक्षा कानून के अनुसार आपके डेटा को सुरक्षित रखेंगे\u003C/p\u003E\n\u003Cp\u003Eजिस कानूनी आधार पर बीबीसी आपके व्यक्तिगत डेटा को संसाधित करता है, वह अपने पत्रकारिता आउटपुट के उत्पादन से संबंधित, व्यक्तिगत डेटा को संसाधित करने के लिए, एक मीडिया संगठन के रूप में अपने वैध हितों के आधार पर है.\u003C/p\u003E\n\u003Cp\u003Eबीबीसी आपकी जानकारी को कैसे प्रोसेस करता है, इस बारे में अधिक जानकारी के लिए हमारी \u003Cstrong\u003Eगोपनीयता नीति\u003C/strong\u003E पर जाएँ. आप बीबीसी से अपनी व्यक्तिगत जानकारी को सँभालने के तरीक़े की शिकायत कर सकते हैं. &nbsp;आप यूके में सूचना आयुक्त कार्यालय में भी अपनी शिकायत दर्ज करवा सकते हैं.\u003C/p\u003E\n\u003Cp\u003Eयदि आप कंटेट जमा करते हैं, तो आप बीबीसी के नियम और शर्तों के अनुसार ऐसा करते हैं.\u003C/p\u003E\n\u003Cp\u003E&nbsp;\u003Ca href=\"https://www.bbc.co.uk/privacy\"\u003EPrivacy Policy\u003C/a\u003E&nbsp;\u003C/p\u003E\n\u003Cp\u003E\u003Ca href=\"https://www.bbc.co.uk/usingthebbc/terms/\"\u003ETerms and Conditions\u003C/a\u003E.\u003C/p\u003E",
+      "url": "http://www.bbc.co.uk/usingthebbc/privacy/",
+      "additional": ""
+    },
+    "settings": {
+      "moderationRequired": false,
+      "brand": "BBC News हिंदी",
+      "brandId": "ws-hindi",
+      "replyEmailAddress": "hindi.letters@bbc.co.uk",
+      "ageGroup": ["o18"],
+      "exifMetadataEnabled": true,
+      "ppGroupId": "c0c6c590-a415-4569-a042-b92c9101c64f",
+      "pageBackgroundTemplateUrl": "",
+      "brandLogo": "",
+      "brandType": "contact-form",
+      "webcoreBrand": "default",
+      "entryCap": "",
+      "readableRetentionPeriod": "270 days",
+      "retentionPeriodDays": "270",
+      "retentionExpiryDate": "",
+      "retentionType": "window",
+      "viewType": "submission",
+      "allowSubmissionWithoutEmail": false,
+      "allowSubmissionMove": false,
+      "winnerPickerEnabled": false,
+      "transcriptRequired": true,
+      "steppedFormEnabled": false,
+      "cta": {
+        "title": "Get in touch",
+        "buttonText": "Contact form"
+      },
+      "allowEditing": false,
+      "signinRequired": true,
+      "accountPolicy": "email-contact"
+    },
+    "sections": [
+      {
+        "sectionText": {
+          "title": " "
+        },
+        "fields": [
+          {
+            "id": "upl50313775",
+            "type": "file",
+            "validation": {
+              "fileTypes": [
+                "image/jpeg",
+                "image/png",
+                "image/gif",
+                "video/avi",
+                "video/quicktime",
+                "video/x-ms-wmv",
+                "video/mp4",
+                "video/mpeg",
+                "video/x-flv",
+                "video/3gpp",
+                "video/x-m4v",
+                "audio/x-ms-wma",
+                "audio/x-wav",
+                "audio/mpeg",
+                "audio/mp3",
+                "audio/wav",
+                "audio/wma",
+                "audio/mp4",
+                "audio/x-m4a"
+              ],
+              "min": 1,
+              "max": 3
+            },
+            "label": "फ़ाइल अपलोड करें",
+            "description": "",
+            "htmlType": "file"
+          },
+          {
+            "id": "txt49018765",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "text",
+            "label": "नाम (अनिवार्य)",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49018835",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "email",
+            "label": "आपका ई-मेल पता (अनिवार्य)",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt50314186",
+            "type": "text",
+            "validation": {
+              "mandatory": true
+            },
+            "htmlType": "textarea",
+            "label": "हमें इस तस्वीर / वीडियो के बारे में और जानकारी दें",
+            "description": "",
+            "textArea": true
+          },
+          {
+            "id": "txt49018894",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "text",
+            "label": "शहर और देश",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "txt49018963",
+            "type": "text",
+            "validation": {
+              "mandatory": false
+            },
+            "htmlType": "phone",
+            "label": "आपका फोन नंबर",
+            "description": "",
+            "textArea": false
+          },
+          {
+            "id": "lst50314709",
+            "type": "constrained-list",
+            "validation": {
+              "options": [
+                {
+                  "label": " हमारे उपयोग की शर्तें स्वीकार करें",
+                  "value": "हम-र--उपय-ग-क--शर-त---स-व-क-र-कर"
+                }
+              ],
+              "multiSelect": true,
+              "mandatory": true
+            },
+            "htmlType": "checkbox",
+            "label": " हमारे उपयोग की शर्तें स्वीकार करें",
+            "description": ""
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "label": "Yes"
+      },
+      {
+        "label": "No"
+      },
+      {
+        "label": "Maybe"
+      }
+    ],
+    "secondaryLabels": [],
+    "retentionPolicyMessage": "We’ll keep it for up to 270 days – and if we don’t use it we’ll then delete it and any other information you sent us.",
+    "includeDataRetentionText": true,
+    "includeRightToRevokeText": true,
+    "includeRemovalGuidelineText": true,
+    "emailAddressFields": ["txt49018835"],
+    "promo": {
+      "title": "",
+      "promos": []
+    },
+    "campaignArchived": false
+  },
+  "contentType": "application/json; charset=utf-8"
+}
