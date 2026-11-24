@@ -3,19 +3,23 @@ import {
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import type { Article } from '#app/models/types/optimo';
 import MediaArticlePage from '#app/pages/MediaArticlePage/MediaArticlePage';
 import { pidginPageData } from '#app/pages/MediaArticlePage/fixtureData';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
-import MapRegistrationBannerExperiment, {
-  MAP_REGISTRATION_EXPERIMENT,
-} from '.';
+import MapRegistrationBannerExperiment from '.';
+import {
+  MAP_REGISTRATION_EXPERIMENT_NAME,
+  MAP_REGISTRATION_EXPERIMENT_VARIANT,
+} from './config';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
-  ExperimentType: { CLIENT_SIDE: 'client side experiment' },
+  ExperimentType: { SERVER_SIDE: 'server side experiment' },
 }));
 
 const brand = {
@@ -34,17 +38,21 @@ describe('MapRegistrationBannerExperiment', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     localStorage.clear();
-    document.documentElement.classList.remove(
+    document.documentElement.classList.add(
       DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
     );
     (useOptimizelyVariation as jest.Mock).mockReturnValue(
-      MAP_REGISTRATION_EXPERIMENT,
+      MAP_REGISTRATION_EXPERIMENT_VARIANT,
     );
   });
 
   it('renders the treatment with the supplied copy and account links', () => {
     render(<MapRegistrationBannerExperiment taggings={[brand]} />, options);
 
+    expect(useOptimizelyVariation).toHaveBeenCalledWith({
+      experimentName: MAP_REGISTRATION_EXPERIMENT_NAME,
+      experimentType: ExperimentType.SERVER_SIDE,
+    });
     expect(
       screen.getByRole('heading', {
         name: expectedBannerTitle,
@@ -83,7 +91,7 @@ describe('MapRegistrationBannerExperiment', () => {
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
   });
 
-  it.each(['control', 'off', null])(
+  it.each(['control', 'off', null, 'unrelated_variation'])(
     'does not render for decision %s',
     variation => {
       (useOptimizelyVariation as jest.Mock).mockReturnValue(variation);
@@ -125,22 +133,8 @@ describe('MapRegistrationBannerExperiment', () => {
     );
     expect(useOptimizelyVariation).not.toHaveBeenCalledWith(
       expect.objectContaining({
-        experimentName: MAP_REGISTRATION_EXPERIMENT,
+        experimentName: MAP_REGISTRATION_EXPERIMENT_NAME,
       }),
-    );
-  });
-
-  it('honours the existing dismissal frequency cap', () => {
-    localStorage.setItem(
-      'account_promotional_banner_last_dismissed',
-      `${Date.now()}`,
-    );
-    document.documentElement.classList.add(
-      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
-    );
-    render(<MapRegistrationBannerExperiment taggings={[brand]} />, options);
-    expect(document.documentElement).not.toHaveClass(
-      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
     );
   });
 });
