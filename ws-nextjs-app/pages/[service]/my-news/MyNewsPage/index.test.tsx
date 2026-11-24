@@ -153,6 +153,15 @@ describe('MyNewsPage', () => {
     expect(
       screen.queryByTestId('my-news-guest-sign-in-link'),
     ).not.toBeInTheDocument();
+
+    const heading = screen.getByRole('heading', {
+      level: 1,
+      name: myNewsTranslations.title,
+    });
+    expect(heading).toHaveAttribute('id', 'content');
+    expect(heading).toHaveAttribute('tabindex', '-1');
+    heading.focus();
+    expect(heading).toHaveFocus();
   });
 
   it('shows signed-in content after hydration when the sign-in cookie exists', async () => {
