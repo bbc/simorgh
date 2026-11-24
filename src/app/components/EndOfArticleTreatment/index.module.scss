@@ -2,7 +2,6 @@
 
 .section {
   @include theme.fontVariants-gel-font-variant('sans-regular');
-  --article-end-media-height: 300px;
   position: relative;
   min-width: 0;
   margin-block: 0 theme.$spacings-triple;
@@ -16,10 +15,6 @@
   @media #{theme.$mediaQueries-group-2-min-width} {
     margin-inline: theme.$spacings-double;
     padding: theme.$spacings-double;
-  }
-
-  @media #{theme.$mediaQueries-group-3-min-width} {
-    --article-end-media-height: 360px;
   }
 
   @media #{theme.$mediaQueries-group-4-min-width} {
@@ -138,6 +133,97 @@ h2.heading {
   @media #{theme.$mediaQueries-group-3-min-width} {
     flex-basis: 100%;
   }
+}
+
+.rail[data-single='true'] .slide {
+  flex-basis: 100%;
+}
+
+.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: theme.$spacings-quadruple theme.$spacings-double;
+  background: theme.$palette-grey-10;
+  // BBC palette colours keep the whole surface dark enough for white text.
+  background-image: linear-gradient(
+    120deg,
+    theme.$palette-grey-10 15%,
+    theme.$palette-grey-8 55%,
+    theme.$palette-postbox 100%
+  );
+  border-block-start: theme.$spacings-half solid theme.$palette-postbox;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: theme.$spacings-sextuple theme.$spacings-quadruple;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    background-image: none;
+    border: 1px solid CanvasText;
+  }
+}
+
+.fallbackContent {
+  width: 100%;
+  max-width: theme.pixelsToRem-px-to-rem(600);
+  min-width: 0;
+}
+
+.fallback h3.fallbackHeading {
+  color: theme.$palette-white;
+  overflow-wrap: anywhere;
+}
+
+.fallback p.fallbackIntroduction {
+  color: theme.$palette-grey-3;
+  margin-block: theme.$spacings-double theme.$spacings-triple;
+}
+
+.homepageLink {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: inline-flex;
+  align-items: center;
+  gap: theme.$spacings-triple;
+  padding: theme.$spacings-full + theme.$spacings-half theme.$spacings-double;
+  max-width: 100%;
+  min-width: 0;
+  min-height: theme.pixelsToRem-px-to-rem(48);
+  box-sizing: border-box;
+  color: theme.$palette-white;
+  background: theme.$palette-grey-10;
+  border: 1px solid theme.$palette-white;
+  border-block-end: theme.$spacings-half solid theme.$palette-postbox;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$palette-white;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    background: theme.$palette-grey-7;
+  }
+
+  > span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  > span:last-child {
+    flex-shrink: 0;
+  }
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: 1px solid LinkText;
+  }
+}
+
+.selection h3.choicesHeading {
+  color: theme.$palette-white;
+  margin-block: 0 theme.$spacings-double;
 }
 
 .card {
@@ -264,6 +350,7 @@ h3.title {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: theme.$spacings-full + theme.$spacings-half;
@@ -323,6 +410,13 @@ h3.title {
       flex-basis: calc((100% - #{theme.$spacings-full}) / 2);
     }
   }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    > li:first-child:nth-last-child(3),
+    > li:first-child:nth-last-child(3) ~ li {
+      flex-basis: calc((100% - #{theme.$spacings-double}) / 3);
+    }
+  }
 }
 
 .choice {
@@ -369,7 +463,7 @@ h3.title {
     display: block;
   }
 
-  a {
+  > ul a {
     color: inherit;
   }
 

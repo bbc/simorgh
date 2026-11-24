@@ -15,8 +15,7 @@ import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
-import getArticleEndItems from './articleEnd';
-import getRelatedContentPreview from './relatedContentPreview';
+import getArticleEndPreviews from './articleEndPreviews';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
@@ -193,16 +192,9 @@ export default async (
     !isAmp &&
     !isLite &&
     !isApp;
-  const [articleEndItems, relatedContentPreview] = articleEndEnabled
-    ? await Promise.all([
-        getArticleEndItems(
-          article,
-          resolvedUrl,
-          portraitVideoItems?.portraitVideo?.blocks || [],
-        ),
-        getRelatedContentPreview(article, resolvedUrl),
-      ])
-    : [undefined, undefined];
+  const articleEndPreviews = articleEndEnabled
+    ? await getArticleEndPreviews(article, resolvedUrl)
+    : undefined;
 
   return {
     props: {
@@ -210,7 +202,7 @@ export default async (
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...transformedArticleData,
-        ...(articleEndEnabled && { articleEndItems, relatedContentPreview }),
+        ...(articleEndEnabled && { articleEndPreviews }),
         secondaryColumn: {
           topStories,
           features,

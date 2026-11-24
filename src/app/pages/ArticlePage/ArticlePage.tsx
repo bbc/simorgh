@@ -474,7 +474,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
     !isLite &&
     !isApp &&
-    (pageData.articleEndItems?.length || 0) >= 2;
+    Array.isArray(pageData.articleEndPreviews);
 
   // Include the existing discovery section in the prototype journey even when
   // the local fixture toggles do not enable it. Live behaviour is unchanged.
@@ -531,11 +531,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           css={styles.portraitVideoCarousel}
         />
       )}
-      <RelatedContentSection
-        content={blocks}
-        emphasiseFirstItem={showEndOfArticleTreatment}
-        leadPreview={pageData.relatedContentPreview}
-      />
+      {!showEndOfArticleTreatment && <RelatedContentSection content={blocks} />}
       {showMediaCuration && (
         <div css={styles.mediaCurationRow}>
           <div data-testid="media-curation">
@@ -654,10 +650,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <div className={scssStyles.groupedArticleEnd}>
           <EndOfArticleTreatment
             key={pageData.metadata.id}
-            items={pageData.articleEndItems || []}
-            isVisible={
-              !showContinueReadingButton || showAllContent || isDesktopViewport
-            }
+            previews={pageData.articleEndPreviews || []}
             className={clsx(
               shouldApplyCollapsedArticleSpacing &&
                 scssStyles.hideEndOfArticleTreatment,
