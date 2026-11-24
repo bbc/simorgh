@@ -5,6 +5,10 @@ import fetchConfig from '#app/lib/utilities/fetchConfig';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { Toggles } from '#app/models/types/global';
 import { getRequestNonce } from '#utilities/addCspHeader/requestNonce';
+import {
+  MAP_REGISTRATION_EXPERIMENT_NAME,
+  MAP_REGISTRATION_EXPERIMENT_VARIANT,
+} from '#app/components/Account/MapRegistrationBannerExperiment/config';
 import getRequestProps from './getRequestProps';
 
 jest.mock('#app/lib/utilities/fetchToggles');
@@ -115,6 +119,43 @@ describe('getRequestProps', () => {
     expect(ctx.res.getHeader('onion-location')).toContain(ctx.asPath);
     expect(ctx.res.getHeader('Vary')).toContain('X-Country');
     expect(ctx.res.getHeader('Link')).toContain('rel="preconnect"');
+  });
+
+  it('enables the Hindi MAP experiment for article URLs before media type is derived', async () => {
+    const ctx = createContext('/hindi/articles/cy91dwjljvlo');
+    ctx.req.headers[`mvt-${MAP_REGISTRATION_EXPERIMENT_NAME}`] =
+      `experiment;${MAP_REGISTRATION_EXPERIMENT_VARIANT}`;
+
+    const props = await getRequestProps(ctx);
+
+    expect(props.pageType).toBe('article');
+    expect(props.serverSideExperiments).toContainEqual({
+      experimentName: MAP_REGISTRATION_EXPERIMENT_NAME,
+      variation: MAP_REGISTRATION_EXPERIMENT_VARIANT,
+      type: 'experiment',
+      enabled: true,
+    });
+    expect(ctx.res.getHeader('Vary')).toContain(
+      `mvt-${MAP_REGISTRATION_EXPERIMENT_NAME}`,
+    );
+  });
+
+  it('does not enable the Hindi MAP experiment for another service', async () => {
+    const ctx = createContext('/pidgin/articles/cy91dwjljvlo');
+    ctx.req.headers[`mvt-${MAP_REGISTRATION_EXPERIMENT_NAME}`] =
+      `experiment;${MAP_REGISTRATION_EXPERIMENT_VARIANT}`;
+
+    const props = await getRequestProps(ctx);
+
+    expect(props.serverSideExperiments).toContainEqual({
+      experimentName: MAP_REGISTRATION_EXPERIMENT_NAME,
+      variation: MAP_REGISTRATION_EXPERIMENT_VARIANT,
+      type: 'experiment',
+      enabled: false,
+    });
+    expect(ctx.res.getHeader('Vary')).not.toContain(
+      `mvt-${MAP_REGISTRATION_EXPERIMENT_NAME}`,
+    );
   });
 
   it.each([
