@@ -2,13 +2,13 @@ import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
-import type { IdctaConfig } from '#app/models/types/account';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import type { Article } from '#app/models/types/optimo';
 import MediaArticlePage from '#app/pages/MediaArticlePage/MediaArticlePage';
 import { pidginPageData } from '#app/pages/MediaArticlePage/fixtureData';
 import { DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS } from '../AccountPromotionalBanner/utilities';
-import MapRegistrationBannerExperiment from '.';
+import MapRegistrationBannerExperiment, { EXPERIMENT_NAME } from '.';
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
@@ -20,18 +20,12 @@ const brand = {
   predicate: 'http://www.bbc.co.uk/ontologies/bbc/brand',
   value: 'http://www.bbc.co.uk/things/71cb5f8b-3151-4871-bb15-417304ae9293#id',
 };
-const idctaConfig = {
-  'id-availability': 'GREEN',
-  signin_url: 'https://example.com/signin',
-  register_url: 'https://example.com/register',
-  initialIsSignedIn: false,
-  identity: { idSignedInCookieName: 'ckns_id' },
-} as IdctaConfig;
+const expectedBannerTitle = 'बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें';
 const options = {
   service: 'hindi' as const,
   pageType: 'mediaArticle' as const,
   toggles: { account: { enabled: true } },
-  idctaConfig,
+  idctaConfig: mockIdctaConfig,
 };
 
 describe('MapRegistrationBannerExperiment', () => {
@@ -41,9 +35,7 @@ describe('MapRegistrationBannerExperiment', () => {
     document.documentElement.classList.remove(
       DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
     );
-    (useOptimizelyVariation as jest.Mock).mockReturnValue(
-      'newswb_ws_hindi_map_save_later_promo',
-    );
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(EXPERIMENT_NAME);
   });
 
   it('renders the treatment with the supplied copy and account links', () => {
@@ -51,7 +43,7 @@ describe('MapRegistrationBannerExperiment', () => {
 
     expect(
       screen.getByRole('heading', {
-        name: 'बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें',
+        name: expectedBannerTitle,
       }),
     ).toBeVisible();
     expect(
@@ -81,7 +73,7 @@ describe('MapRegistrationBannerExperiment', () => {
     render(<MediaArticlePage pageData={pageData} />, options);
     expect(
       screen.getByRole('heading', {
-        name: 'बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें',
+        name: expectedBannerTitle,
       }),
     ).toBeVisible();
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
@@ -94,7 +86,7 @@ describe('MapRegistrationBannerExperiment', () => {
       render(<MapRegistrationBannerExperiment taggings={[brand]} />, options);
       expect(
         screen.queryByRole('heading', {
-          name: 'बाद में पढ़ने के लिए सेव करने हेतु साइन इन करें',
+          name: expectedBannerTitle,
         }),
       ).not.toBeInTheDocument();
     },
@@ -108,7 +100,10 @@ describe('MapRegistrationBannerExperiment', () => {
     ['app', { ...options, isApp: true }, [brand]],
     [
       'signed in',
-      { ...options, idctaConfig: { ...idctaConfig, initialIsSignedIn: true } },
+      {
+        ...options,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+      },
       [brand],
     ],
     [
@@ -126,7 +121,7 @@ describe('MapRegistrationBannerExperiment', () => {
     );
     expect(useOptimizelyVariation).not.toHaveBeenCalledWith(
       expect.objectContaining({
-        experimentName: 'newswb_ws_hindi_map_save_later_promo',
+        experimentName: EXPERIMENT_NAME,
       }),
     );
   });

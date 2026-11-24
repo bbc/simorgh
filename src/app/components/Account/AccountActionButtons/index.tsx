@@ -16,9 +16,6 @@ interface AccountActionButtonsProps {
   experimentName?: string;
   experimentVariant?: string;
   signInAccessibleLabel?: string;
-  signInText?: string;
-  registerText?: string;
-  separatorText?: string;
 }
 
 const AccountActionButtons = ({
@@ -29,17 +26,13 @@ const AccountActionButtons = ({
   experimentName,
   experimentVariant,
   signInAccessibleLabel,
-  signInText: signInOverride,
-  registerText: registerOverride,
-  separatorText: separatorOverride,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
   const { translations } = use(ServiceContext);
 
-  const signInText = signInOverride ?? translations?.account?.signIn;
-  const registerText = registerOverride ?? translations?.account?.register;
-  const separatorText =
-    separatorOverride ?? translations?.accountPromoBanner?.buttonSeparatorText;
+  const signInText = translations?.account?.signIn;
+  const registerText = translations?.account?.register;
+  const separatorText = translations?.accountPromoBanner?.buttonSeparatorText;
 
   if (!signInUrl || !registerUrl) return null;
 

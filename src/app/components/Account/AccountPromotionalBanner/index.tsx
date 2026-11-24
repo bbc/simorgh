@@ -21,11 +21,6 @@ type AccountPromotionalBannerProps = {
   experimentVariant?: string;
   title?: string;
   description?: string;
-  signInText?: string;
-  registerText?: string;
-  buttonSeparatorText?: string;
-  closeLabel?: string;
-  language?: string;
 };
 
 const AccountPromotionalBanner = ({
@@ -33,11 +28,6 @@ const AccountPromotionalBanner = ({
   experimentVariant,
   title: titleOverride,
   description: descriptionOverride,
-  signInText,
-  registerText,
-  buttonSeparatorText: separatorOverride,
-  closeLabel: closeLabelOverride,
-  language,
 }: AccountPromotionalBannerProps = {}) => {
   const isEligible = useAccountPromoBannerEligibility();
   const { translations } = use(ServiceContext);
@@ -97,23 +87,20 @@ const AccountPromotionalBanner = ({
           })}
         </Helmet>
       )}
-      <div css={styles.bannerWrapper} lang={language} {...viewTracker}>
+      <div css={styles.bannerWrapper} {...viewTracker}>
         <PromotionalBanner
           id="account-promotional-banner"
           title={title}
           description={description}
           bannerLabel={title}
-          closeLabel={closeLabelOverride ?? closeLabel}
-          buttonSeparatorText={separatorOverride ?? buttonSeparatorText}
+          closeLabel={closeLabel}
+          buttonSeparatorText={buttonSeparatorText}
           isDismissible
           onClose={handleCloseClick}
         >
           <AccountActionButtons
             signInComponentName="account-promotional-banner-sign-in"
             registerComponentName="account-promotional-banner-register"
-            signInText={signInText}
-            registerText={registerText}
-            separatorText={separatorOverride}
             experimentName={experimentName}
             experimentVariant={experimentVariant}
           />

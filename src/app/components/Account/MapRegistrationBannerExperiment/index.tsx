@@ -16,7 +16,7 @@ import useOptimizelyVariation, {
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
-const EXPERIMENT_NAME = 'newswb_ws_hindi_map_save_later_promo';
+export const EXPERIMENT_NAME = 'newswb_ws_hindi_map_save_later_promo';
 const EDITORIAL_PICKS_BRAND =
   'http://www.bbc.co.uk/things/71cb5f8b-3151-4871-bb15-417304ae9293#id';
 
