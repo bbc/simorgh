@@ -8,43 +8,35 @@ import {
 } from 'react';
 import clsx from 'clsx';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { RequestContext } from '#app/contexts/RequestContext';
-import { BumpLoader } from '#app/components/MediaLoader';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import Heading from '#app/components/Heading';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import useNearViewport from '#app/hooks/useNearViewport';
-import { ArticleEndItem } from './types';
-import PromoCard from './PromoCard';
+import ArticlePreviewCard from '#app/components/ArticlePreviewCard';
+import { ArticleEndPreview } from '#app/components/ArticlePreviewCard/types';
+import HomepageFallback from './HomepageFallback';
 import styles from './index.module.scss';
 
 type Props = {
-  items: ArticleEndItem[];
+  previews: ArticleEndPreview[];
   className?: string;
-  isVisible?: boolean;
   children?: ReactNode;
 };
 
-const EndOfArticleTreatment = ({
-  items,
-  className,
-  isVisible = true,
-  children,
-}: Props) => {
+const EndOfArticleTreatment = ({ previews, className, children }: Props) => {
   const { translations, dir } = use(ServiceContext);
-  const { nonce } = use(RequestContext);
   const copy = translations.endOfArticleTreatment;
+  const previewCopy = translations.endOfArticlePreview;
   const [activeIndex, setActiveIndex] = useState(0);
-  const isNearViewport = useNearViewport({
-    elementId: 'end-of-article-treatment',
-    rootMargin: '200px 0px',
-  });
   const activeIndexRef = useRef(0);
   const scrollPane = useRef<HTMLUListElement>(null);
   const cards = useRef<(HTMLLIElement | null)[]>([]);
   const choices = useRef<(HTMLButtonElement | null)[]>([]);
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const activeItem = items[activeIndex] || items[0];
+  const activePreview = previews[activeIndex];
+  const slideCount = previews.length + 1;
+  const showNavigation = previews.length > 0;
+  const includeHomepageChoice = previews.length < 4;
+  const choiceCount = previews.length + Number(includeHomepageChoice);
 
   const alignCard = (index: number, smooth = true) => {
     const pane = scrollPane.current;
@@ -66,7 +58,7 @@ const EndOfArticleTreatment = ({
   };
 
   const select = (index: number, smooth = true) => {
-    if (index < 0 || index >= items.length) return;
+    if (index < 0 || index >= slideCount) return;
     if (index !== activeIndexRef.current) {
       activeIndexRef.current = index;
       setActiveIndex(index);
@@ -121,10 +113,10 @@ const EndOfArticleTreatment = ({
     const forward = dir === 'rtl' ? 'ArrowLeft' : 'ArrowRight';
     const backward = dir === 'rtl' ? 'ArrowRight' : 'ArrowLeft';
     const next = {
-      [forward]: Math.min(index + 1, items.length - 1),
+      [forward]: Math.min(index + 1, choiceCount - 1),
       [backward]: Math.max(index - 1, 0),
       Home: 0,
-      End: items.length - 1,
+      End: choiceCount - 1,
     }[event.key];
     if (next === undefined) return;
     event.preventDefault();
@@ -132,10 +124,12 @@ const EndOfArticleTreatment = ({
     choices.current[next]?.focus();
   };
 
-  if (!copy || items.length < 2) return null;
-  const count = copy.position
-    .replace('{current}', String(activeIndex + 1))
-    .replace('{total}', String(items.length));
+  if (!copy || !previewCopy) return null;
+  const count = activePreview
+    ? copy.position
+        .replace('{current}', String(activeIndex + 1))
+        .replace('{total}', String(choiceCount))
+    : previewCopy.homepage;
 
   return (
     <section
@@ -144,22 +138,26 @@ const EndOfArticleTreatment = ({
       aria-labelledby="end-of-article-heading"
       className={clsx(styles.section, className)}
     >
-      {items.some(item => item.media) && <BumpLoader nonce={nonce} />}
       <p className={styles.endLabel}>{copy.endLabel}</p>
       <Heading level={2} id="end-of-article-heading" className={styles.heading}>
         {copy.heading}
       </Heading>
-      <p className={styles.introduction}>{copy.introduction}</p>
+      {previews.length > 0 && (
+        <p className={styles.introduction}>{copy.introduction}</p>
+      )}
       <div className={styles.interactive}>
         <ul
+          id="article-end-previews"
           ref={scrollPane}
           className={styles.rail}
+          data-single={slideCount === 1}
           aria-label={copy.chooseContent}
           onScroll={onScroll}
         >
-          {items.map((item, index) => (
+          {previews.map((preview, index) => (
             <li
-              key={item.id}
+              key={preview.id}
+              id={`article-end-slide-${preview.id}`}
               className={styles.slide}
               ref={element => {
                 cards.current[index] = element;
@@ -168,81 +166,138 @@ const EndOfArticleTreatment = ({
                 if (index !== activeIndexRef.current) select(index, false);
               }}
             >
-              <PromoCard
-                item={item}
-                showPlayer={
-                  isVisible && isNearViewport && index === activeIndex
-                }
+              <ArticlePreviewCard
+                preview={preview}
+                id={`article-end-${preview.id}`}
               />
             </li>
           ))}
+          <li
+            id="article-end-homepage-slide"
+            className={styles.slide}
+            ref={element => {
+              cards.current[previews.length] = element;
+            }}
+            onFocusCapture={() => {
+              if (activeIndexRef.current !== previews.length) {
+                select(previews.length, false);
+              }
+            }}
+          >
+            <HomepageFallback id="article-end-homepage" />
+          </li>
         </ul>
-        <div className={styles.navigation}>
-          <span className={styles.count}>{count}</span>
-          <div className={styles.arrows}>
-            <button
-              type="button"
-              className={styles.arrow}
-              disabled={activeIndex === 0}
-              onClick={() => select(activeIndex - 1)}
-              aria-label={copy.previous}
-            >
-              <Chevron
-                orientation={ChevronOrientation.BACKWARD}
-                dir={dir}
-                className={styles.chevron}
-              />
-            </button>
-            <button
-              type="button"
-              className={styles.arrow}
-              disabled={activeIndex === items.length - 1}
-              onClick={() => select(activeIndex + 1)}
-              aria-label={copy.next}
-            >
-              <Chevron
-                orientation={ChevronOrientation.FORWARD}
-                dir={dir}
-                className={styles.chevron}
-              />
-            </button>
-          </div>
-        </div>
-        <ul className={styles.choices} aria-label={copy.chooseContent}>
-          {items.map((item, index) => (
-            <li key={item.id}>
+        {showNavigation && (
+          <div className={styles.navigation}>
+            <span className={styles.count}>{count}</span>
+            <div className={styles.arrows}>
               <button
                 type="button"
-                className={styles.choice}
-                aria-pressed={activeIndex === index}
-                onClick={() => select(index)}
-                onKeyDown={event => navigateChoices(event, index)}
-                ref={element => {
-                  choices.current[index] = element;
-                }}
+                className={styles.arrow}
+                disabled={activeIndex === 0}
+                onClick={() => select(activeIndex - 1)}
+                aria-label={copy.previous}
+                aria-controls="article-end-previews"
               >
-                <span className={styles.choiceFormat}>
-                  {String(index + 1).padStart(2, '0')} /{' '}
-                  {copy.formats[item.format]}
-                </span>
-                {item.title}
+                <Chevron
+                  orientation={ChevronOrientation.BACKWARD}
+                  dir={dir}
+                  className={styles.chevron}
+                />
               </button>
-            </li>
-          ))}
-        </ul>
+              <button
+                type="button"
+                className={styles.arrow}
+                disabled={activeIndex === slideCount - 1}
+                onClick={() => select(activeIndex + 1)}
+                aria-label={
+                  activeIndex === previews.length - 1
+                    ? previewCopy.homepage
+                    : copy.next
+                }
+                aria-controls="article-end-previews"
+              >
+                <Chevron
+                  orientation={ChevronOrientation.FORWARD}
+                  dir={dir}
+                  className={styles.chevron}
+                />
+              </button>
+            </div>
+          </div>
+        )}
+        {choiceCount > 1 && (
+          <div className={styles.selection}>
+            <Heading
+              level={3}
+              size="pica"
+              id="article-end-choices-heading"
+              className={styles.choicesHeading}
+            >
+              {previewCopy.related}
+            </Heading>
+            <ul
+              className={styles.choices}
+              aria-labelledby="article-end-choices-heading"
+            >
+              {previews.map((preview, index) => (
+                <li key={preview.id}>
+                  <button
+                    type="button"
+                    className={styles.choice}
+                    aria-pressed={activeIndex === index}
+                    aria-controls={`article-end-slide-${preview.id}`}
+                    onClick={() => select(index)}
+                    onKeyDown={event => navigateChoices(event, index)}
+                    ref={element => {
+                      choices.current[index] = element;
+                    }}
+                  >
+                    {preview.title}
+                  </button>
+                </li>
+              ))}
+              {includeHomepageChoice && (
+                <li>
+                  <button
+                    type="button"
+                    className={styles.choice}
+                    aria-pressed={!activePreview}
+                    aria-controls="article-end-homepage-slide"
+                    onClick={() => select(previews.length)}
+                    onKeyDown={event => navigateChoices(event, previews.length)}
+                    ref={element => {
+                      choices.current[previews.length] = element;
+                    }}
+                  >
+                    {previewCopy.homepage}
+                  </button>
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
         <VisuallyHiddenText aria-live="polite" aria-atomic="true">
-          {count}: {activeItem.title}
+          {activePreview
+            ? `${count}: ${activePreview.title}`
+            : previewCopy.homepage}
         </VisuallyHiddenText>
       </div>
-      <ul className={styles.noJs}>
-        {items.map(item => (
-          <li key={item.id}>
-            <a href={item.href}>
-              {copy.formats[item.format]}: {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.noJs}>
+        {previews[0] && (
+          <ArticlePreviewCard preview={previews[0]} id="article-end-no-js" />
+        )}
+        {previews.length > 1 && (
+          <ul>
+            {previews.slice(1).map(preview => (
+              <li key={preview.id}>
+                <a href={preview.href}>{preview.title}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+        <HomepageFallback id="article-end-no-js-homepage" />
+      </div>
       {children && (
         <div className={styles.onwardJourneys} data-is-dark-ui="true">
           {children}

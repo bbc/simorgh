@@ -1,0 +1,183 @@
+@use '@scss/themeTokens' as theme;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  background: theme.$palette-white;
+  color: theme.$palette-grey-10;
+  border-block-start: theme.$spacings-half solid theme.$palette-postbox;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-direction: row;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  background: theme.$palette-grey-2;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-basis: 40%;
+    aspect-ratio: auto;
+    min-block-size: theme.pixelsToRem-px-to-rem(216);
+  }
+}
+
+.imageContainer .image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.headingArea {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    flex-basis: 0;
+    padding: theme.$spacings-triple;
+  }
+}
+
+.paper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0 theme.$spacings-double theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    padding: 0 theme.$spacings-triple theme.$spacings-triple;
+  }
+}
+
+.storyLabel {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-bold');
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: theme.$spacings-half theme.$spacings-double;
+  color: theme.$palette-postbox;
+  margin-block-end: theme.$spacings-full;
+  overflow-wrap: anywhere;
+}
+
+.relationship {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  color: theme.$palette-grey-6;
+}
+
+.card h3.title {
+  color: theme.$palette-grey-10;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.metadata {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  display: flex;
+  flex-wrap: wrap;
+  gap: theme.$spacings-full theme.$spacings-double;
+  color: theme.$palette-grey-6;
+  margin-block-start: theme.$spacings-full + theme.$spacings-half;
+  overflow-wrap: anywhere;
+}
+
+.excerpt {
+  border-block-start: 1px solid theme.$palette-grey-3;
+  padding-block-start: theme.$spacings-double;
+}
+
+.card p.excerptLabel {
+  color: theme.$palette-grey-6;
+  margin-block-end: theme.$spacings-full;
+}
+
+.card p.excerptParagraph {
+  color: theme.$palette-grey-10;
+  overflow-wrap: anywhere;
+
+  & + p {
+    margin-block-start: theme.$spacings-double;
+  }
+}
+
+.actionArea {
+  margin-block-start: auto;
+  padding-block-start: theme.$spacings-triple;
+}
+
+.readLink {
+  @include theme.typography-from-scale-and-variant(pica, 'sans-bold');
+  display: inline-flex;
+  align-items: center;
+  gap: theme.$spacings-double;
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 100%;
+  min-height: theme.pixelsToRem-px-to-rem(48);
+  padding: theme.$spacings-full + theme.$spacings-half theme.$spacings-double;
+  color: theme.$palette-white;
+  background: theme.$palette-grey-10;
+  border-block-end: theme.$spacings-half solid theme.$palette-postbox;
+  text-decoration: none;
+
+  &:visited {
+    color: theme.$palette-white;
+  }
+
+  &:hover {
+    background: theme.$palette-postbox;
+    text-decoration: underline;
+  }
+
+  > span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .chevron {
+    flex-shrink: 0;
+  }
+}
+
+// The white card needs a black outer focus ring, including within a dark
+// carousel whose wrapper supplies a white ring for its own controls.
+.card .actionArea a.readLink:focus-visible {
+  outline: theme.pixelsToRem-px-to-rem(3) solid theme.$palette-black;
+  outline-offset: theme.pixelsToRem-px-to-rem(3);
+  box-shadow: 0 0 0 theme.pixelsToRem-px-to-rem(3) theme.$palette-white;
+  text-decoration: underline;
+}
+
+.card p.previewNote {
+  color: theme.$palette-grey-6;
+  margin-block-start: theme.$spacings-full + theme.$spacings-half;
+}
+
+@media #{theme.$mediaQueries-forced-colours} {
+  .card,
+  .readLink {
+    border: 1px solid CanvasText;
+  }
+}
