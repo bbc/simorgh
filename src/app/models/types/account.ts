@@ -22,7 +22,6 @@ export type AccountContextProps = {
   isIdctaAvailable: boolean;
   isRefreshAvailable: boolean;
   isSignedIn: boolean;
-  isAccountStateResolved: boolean;
   signInUrl?: string;
   registerUrl?: string;
   settingsUrl?: string;

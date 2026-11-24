@@ -142,21 +142,18 @@ describe('MyNewsPage', () => {
     expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
   });
 
-  it.each([true, false])(
-    'shows loading instead of guest content before hydration (server signed-in: %s)',
-    initialIsSignedIn => {
-      mockUseHydrationDetection.mockReturnValue(false);
-      render(<MyNewsPage />, {
-        ...renderOptions,
-        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
-      });
+  it('shows loading instead of guest content before hydration', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    render(<MyNewsPage />, {
+      ...renderOptions,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+    });
 
-      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
-      expect(
-        screen.queryByTestId('my-news-guest-sign-in-link'),
-      ).not.toBeInTheDocument();
-    },
-  );
+    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+    expect(
+      screen.queryByTestId('my-news-guest-sign-in-link'),
+    ).not.toBeInTheDocument();
+  });
 
   it('shows signed-in content after hydration when the sign-in cookie exists', async () => {
     mockUseHydrationDetection.mockReturnValue(false);

@@ -16,7 +16,6 @@ jest.mock('./PersistentQueryProvider', () => ({
 }));
 
 const accountContext: AccountContextProps = {
-  isAccountStateResolved: true,
   isIdctaAvailable: true,
   isRefreshAvailable: false,
   isSignedIn: false,

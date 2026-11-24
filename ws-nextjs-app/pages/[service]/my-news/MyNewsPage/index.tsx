@@ -40,7 +40,6 @@ const MyNewsPageContent = dynamic(
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
   const {
-    isAccountStateResolved,
     isArticlePersonalizationAvailable,
     isArticlePersonalizationEnabled,
     isTopicPersonalizationAvailable,
@@ -60,19 +59,6 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
 
   if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
-  let content = <MyNewsPageLoading />;
-  if (isAccountStateResolved) {
-    content = isPersonalizationEnabled ? (
-      <MyNewsPageContent
-        page={page}
-        showSavedArticles={isArticlePersonalizationEnabled}
-        showFollowedTopics={isTopicPersonalizationEnabled}
-      />
-    ) : (
-      <MyNewsPageGuest />
-    );
-  }
-
   return (
     <main css={styles.main}>
       <MetadataContainer
@@ -90,7 +76,17 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
             </GenericMessage>
           </div>
         </noscript>
-        <div css={styles.innerContent}>{content}</div>
+        <div css={styles.innerContent}>
+          {isPersonalizationEnabled ? (
+            <MyNewsPageContent
+              page={page}
+              showSavedArticles={isArticlePersonalizationEnabled}
+              showFollowedTopics={isTopicPersonalizationEnabled}
+            />
+          ) : (
+            <MyNewsPageGuest />
+          )}
+        </div>
       </div>
     </main>
   );
