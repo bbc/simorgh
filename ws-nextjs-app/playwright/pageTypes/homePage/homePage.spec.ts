@@ -9,12 +9,15 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertBillboardComponentClick,
   assertBillboardComponentView,
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
+  assertDropdownNavigationResonanceComponentClick,
+  assertDropdownNavigationResonanceComponentView,
   assertLiteSiteSummaryComponentToMainSiteClick,
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
@@ -28,6 +31,8 @@ import {
   assertResonancePageView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
+  assertScrollableNavigationResonanceComponentClick,
+  assertScrollableNavigationResonanceComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions';
 import { getATIUrls } from '../../specialFeatures/atiAnalytics/helpers';
 import type { AtiHomePageTestSuite } from './suites';
@@ -100,8 +105,7 @@ const shouldTestTwoTierNav = (service: string) => {
 const getHomePageData = async (page: Page) =>
   page.evaluate(() => {
     // eslint-disable-next-line no-underscore-dangle
-    return (window as HomePageWindow).__NEXT_DATA__?.props?.pageProps
-      ?.pageData;
+    return (window as HomePageWindow).__NEXT_DATA__?.props?.pageProps?.pageData;
   });
 
 const assertUrlValidation = async (page: Page) => {
@@ -144,9 +148,7 @@ const assertTwoTierNavigation = async ({
 };
 
 const getSecondaryNavItemTexts = async (page: Page) =>
-  page
-    .locator('[data-e2e="scrollable-nav-secondary"] li a')
-    .allTextContents();
+  page.locator('[data-e2e="scrollable-nav-secondary"] li a').allTextContents();
 
 const gotoHomePage = async (page: Page, path: string) => {
   await page.setExtraHTTPHeaders(canonicalHeaders);
@@ -207,6 +209,10 @@ const atiTestRunner = (testSuite: AtiHomePageTestSuite) => {
         appEnv: appEnvFromProcess,
       };
 
+      test.beforeEach(async ({ page }) => {
+        await addConsentBannerHandlers(page);
+      });
+
       if (testSuite.tests.includes('assertPageView')) {
         test('should send a page view event', async ({ page }) => {
           test.skip(
@@ -226,6 +232,86 @@ const atiTestRunner = (testSuite: AtiHomePageTestSuite) => {
           );
 
           await assertResonancePageView({ page, ...atiProps });
+        });
+      }
+
+      if (
+        testSuite.tests.includes(
+          'assertScrollableNavigationResonanceComponentView',
+        )
+      ) {
+        test('should send a Resonance view event for the Scrollable Navigation component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertScrollableNavigationResonanceComponentView({
+            page,
+            ...atiProps,
+          });
+        });
+      }
+
+      if (
+        testSuite.tests.includes(
+          'assertScrollableNavigationResonanceComponentClick',
+        )
+      ) {
+        test('should send a Resonance click event for the Scrollable Navigation component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertScrollableNavigationResonanceComponentClick({
+            page,
+            ...atiProps,
+          });
+        });
+      }
+
+      if (
+        testSuite.tests.includes(
+          'assertDropdownNavigationResonanceComponentView',
+        )
+      ) {
+        test('should send a Resonance view event for the Dropdown Navigation component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertDropdownNavigationResonanceComponentView({
+            page,
+            ...atiProps,
+          });
+        });
+      }
+
+      if (
+        testSuite.tests.includes(
+          'assertDropdownNavigationResonanceComponentClick',
+        )
+      ) {
+        test('should send a Resonance click event for the Dropdown Navigation component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertDropdownNavigationResonanceComponentClick({
+            page,
+            ...atiProps,
+          });
         });
       }
 
@@ -646,12 +732,12 @@ test.describe('homePage', () => {
 
           const initialPathname = new URL(page.url()).pathname;
           const primaryNavItems = page.locator(
-             '[data-e2e="scrollable-nav"] li',
+            '[data-e2e="scrollable-nav"] li',
           );
           test.skip(
-             (await primaryNavItems.count()) < 2,
-             'The primary navigation has fewer than two items',
-           );
+            (await primaryNavItems.count()) < 2,
+            'The primary navigation has fewer than two items',
+          );
           await primaryNavItems.nth(1).locator('a').click();
           await page.waitForURL(url => url.pathname !== initialPathname);
           await primaryNavItems.first().locator('a').click();
@@ -663,9 +749,7 @@ test.describe('homePage', () => {
         });
 
         test.describe('Images', () => {
-          test('should have a picture tag around images', async ({
-            page,
-          }) => {
+          test('should have a picture tag around images', async ({ page }) => {
             test.skip(
               !shouldRunForEnv(testSuite.runForEnv),
               `Skipped for APP_ENV=${appEnvFromProcess}`,
@@ -681,21 +765,22 @@ test.describe('homePage', () => {
             // eslint-disable-next-line no-plusplus
             for (let i = 0; i < imageCount; i++) {
               const image = images.nth(i);
-              const section = image.locator(
-                'xpath=ancestor::section[1]',
-              );
+              const section = image.locator('xpath=ancestor::section[1]');
 
               if ((await section.count()) > 0) {
                 const testId = await section.getAttribute('data-testid');
-                const exceptions = ['message-banner', 'portrait-video-carousel'];
+                const exceptions = [
+                  'message-banner',
+                  'portrait-video-carousel',
+                ];
 
                 if (testId && exceptions.some(id => testId.includes(id))) {
                   // eslint-disable-next-line no-continue
                   continue;
                 }
 
-                const parentTagName = await image.evaluate(
-                  el => el.parentElement?.tagName.toLowerCase(),
+                const parentTagName = await image.evaluate(el =>
+                  el.parentElement?.tagName.toLowerCase(),
                 );
                 expect(parentTagName).toBe('picture');
               }
@@ -756,16 +841,24 @@ test.describe('homePage', () => {
 
             if ((await carousel.count()) === 0) return;
 
-            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+            await carousel
+              .first()
+              .locator('[data-testid="promo-button"]')
+              .first()
+              .click();
 
             const dialog = page.locator('div[role="dialog"]');
             await expect(dialog).toBeVisible();
             await expect(
               dialog.locator('[data-e2e="media-loader__container"]'),
             ).toBeVisible();
-            await expect(dialog.locator('[data-e2e="media-player"]')).toBeVisible();
+            await expect(
+              dialog.locator('[data-e2e="media-player"]'),
+            ).toBeVisible();
 
-            await dialog.locator('button[data-testid="close-modal-button"]').click();
+            await dialog
+              .locator('button[data-testid="close-modal-button"]')
+              .click();
             await expect(dialog).toHaveCount(0);
           });
 
@@ -780,7 +873,11 @@ test.describe('homePage', () => {
 
             if ((await carousel.count()) === 0) return;
 
-            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+            await carousel
+              .first()
+              .locator('[data-testid="promo-button"]')
+              .first()
+              .click();
 
             const dialog = page.locator('div[role="dialog"]');
             await expect(dialog).toBeVisible();
@@ -799,7 +896,11 @@ test.describe('homePage', () => {
 
             if ((await carousel.count()) === 0) return;
 
-            await carousel.first().locator('[data-testid="promo-button"]').first().click();
+            await carousel
+              .first()
+              .locator('[data-testid="promo-button"]')
+              .first()
+              .click();
 
             const dialog = page.locator('div[role="dialog"]');
             await expect(dialog).toBeVisible();
@@ -848,7 +949,6 @@ test.describe('homePage', () => {
                     expectedNumberOfAdditionalItems,
                   );
                 } else {
- 
                   await expect(grid.locator('div.promo-image')).toHaveCount(1);
                   await expect(grid.locator('div.promo-image')).toBeVisible();
 
@@ -907,8 +1007,7 @@ test.describe('homePage', () => {
             );
 
             const serviceName =
-              getServiceConfig(testSuite.service)?.service ??
-              testSuite.service;
+              getServiceConfig(testSuite.service)?.service ?? testSuite.service;
             const toggles = await getHomePageServiceToggles(serviceName);
 
             await gotoHomePage(page, testSuite.path);
@@ -928,9 +1027,9 @@ test.describe('homePage', () => {
               .locator('head script[type="text/javascript"]')
               .allTextContents();
 
-            expect(scriptContents.some(script => script.includes('pageAds: true'))).toBe(
-              true,
-            );
+            expect(
+              scriptContents.some(script => script.includes('pageAds: true')),
+            ).toBe(true);
 
             if (adCampaignKeyword) {
               expect(

@@ -68,6 +68,75 @@ export const COMPONENTS = {
   STREAM,
 };
 
+export type ResonanceEventAction = 'view' | 'select';
+
+/* eslint-disable camelcase */
+type ResonanceEvent = {
+  event?: {
+    action?: ResonanceEventAction;
+    grouping?: string;
+    subcategory?: string;
+  };
+  event_name?: string;
+  page_name?: string;
+  site_id?: number;
+};
+
+type ResonanceRequestBody = {
+  bag_metadata?: {
+    event_category?: string;
+  };
+  events?: ResonanceEvent[];
+};
+/* eslint-enable camelcase */
+
+export const parseResonanceRequestBody = (
+  body: unknown,
+): ResonanceRequestBody => {
+  if (typeof body === 'string') {
+    try {
+      const parsedBody: unknown = JSON.parse(body);
+
+      return parsedBody && typeof parsedBody === 'object'
+        ? (parsedBody as ResonanceRequestBody)
+        : {};
+    } catch {
+      return {};
+    }
+  }
+
+  return body && typeof body === 'object' ? (body as ResonanceRequestBody) : {};
+};
+
+export const interceptResonanceAnalyticsBeacons = ({
+  component,
+  action: expectedAction,
+}: {
+  component: string;
+  action: ResonanceEventAction;
+}) => {
+  const resonanceBagBaseUrl = new URL(
+    (envs as EnvironmentConfigType).resonanceBagUrl,
+  ).origin;
+  const resonanceBagEventUrlPattern = new RegExp(
+    `${resonanceBagBaseUrl}/v[0-9]+/event`,
+  );
+
+  cy.intercept('POST', resonanceBagEventUrlPattern, request => {
+    const { events = [] } = parseResonanceRequestBody(request.body);
+    const hasExpectedEvent = events.some(
+      ({ event }) =>
+        event?.subcategory === component && event?.action === expectedAction,
+    );
+
+    if (hasExpectedEvent) {
+      request.alias = `${component}-resonance-${expectedAction}`;
+    }
+
+    request.reply({ statusCode: 200 });
+  });
+};
+
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL((envs as EnvironmentConfigType).atiUrl).origin;
   const reverbAtiUrl = new URL((envs as EnvironmentConfigType).reverbAtiUrl)

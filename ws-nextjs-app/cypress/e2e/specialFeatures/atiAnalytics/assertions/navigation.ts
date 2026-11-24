@@ -1,9 +1,23 @@
 /* eslint-disable import/no-relative-packages */
-import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
-import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import {
+  interceptATIAnalyticsBeacons,
+  interceptResonanceAnalyticsBeacons,
+  COMPONENTS,
+} from '../helpers';
+import {
+  assertATIComponentClickEvent,
+  assertATIComponentViewEvent,
+  assertResonanceComponentClickEvent,
+  assertResonanceComponentViewEvent,
+} from '.';
 import { AtiAssertionFnProps } from './type';
 
 const { SCROLLABLE_NAVIGATION, DROPDOWN_NAVIGATION } = COMPONENTS;
+
+const preventConsentBannerFromAppearing = () => {
+  cy.setCookie('ckns_explicit', '1');
+  cy.setCookie('ckns_privacy', 'july2019');
+};
 
 export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
@@ -102,6 +116,103 @@ export const assertDropdownNavigationComponentClick = ({
       pageIdentifier,
       applicationType,
       siteId,
+    });
+  });
+};
+
+export const assertScrollableNavigationResonanceComponentView = ({
+  pageIdentifier,
+  path,
+}: AtiAssertionFnProps) => {
+  it('should send a Resonance view event for the Scrollable Navigation component', () => {
+    interceptATIAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: SCROLLABLE_NAVIGATION,
+      action: 'view',
+    });
+    cy.visit(path);
+
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
+      duration: 1000,
+    });
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
+      duration: 1000,
+    });
+
+    assertResonanceComponentViewEvent({
+      component: SCROLLABLE_NAVIGATION,
+      pageIdentifier,
+    });
+  });
+};
+
+export const assertScrollableNavigationResonanceComponentClick = ({
+  pageIdentifier,
+  path,
+}: AtiAssertionFnProps) => {
+  it('should send a Resonance click event for the Scrollable Navigation component', () => {
+    interceptATIAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: SCROLLABLE_NAVIGATION,
+      action: 'select',
+    });
+    cy.visit(path);
+
+    cy.get('[data-e2e="scrollable-nav"]').scrollIntoView({
+      duration: 1000,
+    });
+    cy.get('[data-e2e="scrollable-nav"]').find('a').last().click();
+
+    assertResonanceComponentClickEvent({
+      component: SCROLLABLE_NAVIGATION,
+      pageIdentifier,
+    });
+  });
+};
+
+export const assertDropdownNavigationResonanceComponentView = ({
+  pageIdentifier,
+  path,
+}: AtiAssertionFnProps) => {
+  it('should send a Resonance view event for the Dropdown Navigation component', () => {
+    interceptATIAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: DROPDOWN_NAVIGATION,
+      action: 'view',
+    });
+    preventConsentBannerFromAppearing();
+    cy.visit(path);
+
+    cy.viewport(320, 480);
+    cy.get('nav button').click();
+
+    assertResonanceComponentViewEvent({
+      component: DROPDOWN_NAVIGATION,
+      pageIdentifier,
+    });
+  });
+};
+
+export const assertDropdownNavigationResonanceComponentClick = ({
+  pageIdentifier,
+  path,
+}: AtiAssertionFnProps) => {
+  it('should send a Resonance click event for the Dropdown Navigation component', () => {
+    interceptATIAnalyticsBeacons();
+    interceptResonanceAnalyticsBeacons({
+      component: DROPDOWN_NAVIGATION,
+      action: 'select',
+    });
+    preventConsentBannerFromAppearing();
+    cy.visit(path);
+
+    cy.viewport(320, 480);
+    cy.get('nav button').click();
+    cy.get('[data-e2e="dropdown-nav"]').find('a').first().click();
+
+    assertResonanceComponentClickEvent({
+      component: DROPDOWN_NAVIGATION,
+      pageIdentifier,
     });
   });
 };

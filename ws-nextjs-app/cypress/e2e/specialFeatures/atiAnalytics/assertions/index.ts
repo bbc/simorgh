@@ -9,6 +9,8 @@ import {
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
+  parseResonanceRequestBody,
+  ResonanceEventAction,
 } from '../helpers';
 import environment from '../../../../support/helpers/getAppEnv';
 import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
@@ -381,6 +383,80 @@ export const assertResonancePageView = ({
       expect(event).to.have.property('event_name', 'page.display');
       expect(event).to.have.property('page_name', pageIdentifier);
     });
+  });
+};
+
+const findResonanceComponentEvent = ({ body, actionType, component }) => {
+  const { events = [] } = parseResonanceRequestBody(body);
+
+  return events.find(
+    event =>
+      event.event?.action === actionType &&
+      event.event?.grouping &&
+      event.event?.subcategory === component,
+  );
+};
+
+const assertResonanceComponentEvent = ({
+  actionType,
+  component,
+  pageIdentifier,
+}: {
+  actionType: ResonanceEventAction;
+  component: string;
+  pageIdentifier: string;
+}) => {
+  cy.wait(`@${component}-resonance-${actionType}`).then(({ request }) => {
+    const { bag_metadata: bagMetadata = {} } = parseResonanceRequestBody(
+      request.body,
+    );
+    const event = findResonanceComponentEvent({
+      body: request.body,
+      actionType,
+      component,
+    });
+
+    expect(bagMetadata).to.have.property('event_category', 'viewability');
+    expect(
+      event,
+      `Resonance ${actionType} event for ${component}`,
+    ).to.not.equal(undefined);
+    expect(event).to.have.property('event_name', `${component}.${actionType}`);
+    expect(event).to.have.property('page_name', pageIdentifier);
+    expect(event).to.have.property('site_id');
+    expect(event?.event).to.deep.include({
+      action: actionType,
+      grouping: pageIdentifier,
+      subcategory: component,
+    });
+  });
+};
+
+export const assertResonanceComponentViewEvent = ({
+  component,
+  pageIdentifier,
+}: {
+  component: string;
+  pageIdentifier: string;
+}) => {
+  assertResonanceComponentEvent({
+    actionType: 'view',
+    component,
+    pageIdentifier,
+  });
+};
+
+export const assertResonanceComponentClickEvent = ({
+  component,
+  pageIdentifier,
+}: {
+  component: string;
+  pageIdentifier: string;
+}) => {
+  assertResonanceComponentEvent({
+    actionType: 'select',
+    component,
+    pageIdentifier,
   });
 };
 

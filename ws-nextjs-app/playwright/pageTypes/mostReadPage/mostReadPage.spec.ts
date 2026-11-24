@@ -5,6 +5,7 @@ import {
   baseURL,
   shouldRunForEnv,
 } from '../../utilities/env';
+import addConsentBannerHandlers from '../../utilities/consent';
 import assert200HtmlResponse from '../../utilities/response';
 import {
   assertPageView,
@@ -15,6 +16,8 @@ import {
   assertDropdownNavigationComponentClick,
   assertMostReadComponentView,
   assertMostReadComponentClick,
+  assertMostReadResonanceComponentView,
+  assertMostReadResonanceComponentClick,
   assertLiteSiteSummaryComponentToMainSiteClick,
 } from '../../specialFeatures/atiAnalytics/assertions';
 
@@ -62,6 +65,10 @@ test.describe('mostReadPage ATI Analytics', () => {
           service: testSuite.service,
           appEnv: appEnvFromProcess,
         };
+
+        test.beforeEach(async ({ page }) => {
+          await addConsentBannerHandlers(page);
+        });
 
         test('should send a page view event', async ({ page }) => {
           test.skip(
@@ -151,23 +158,46 @@ test.describe('mostReadPage ATI Analytics Resonance', () => {
 
     test.describe(testLabel, () => {
       test.describe(`ATI Analytics Resonance for ${testSuite.service} mostReadPage`, () => {
+        const atiProps = {
+          path: testSuite.path,
+          baseURL,
+          pageIdentifier: testSuite.pageIdentifier,
+          siteId: testSuite.siteId,
+          applicationType: testSuite.applicationType,
+          contentType: testSuite.contentType,
+          service: testSuite.service,
+          appEnv: appEnvFromProcess,
+        };
+
         test('should send a resonance page view event', async ({ page }) => {
           test.skip(
             !shouldRunForEnv(testSuite.runForEnv),
             `Skipped for APP_ENV=${appEnvFromProcess}`,
           );
 
-          await assertResonancePageView({
-            page,
-            path: testSuite.path,
-            baseURL,
-            pageIdentifier: testSuite.pageIdentifier,
-            siteId: testSuite.siteId,
-            applicationType: testSuite.applicationType,
-            contentType: testSuite.contentType,
-            service: testSuite.service,
-            appEnv: appEnvFromProcess,
-          });
+          await assertResonancePageView({ page, ...atiProps });
+        });
+
+        test('should send a resonance view event for the Most Read component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertMostReadResonanceComponentView({ page, ...atiProps });
+        });
+
+        test('should send a resonance click event for the Most Read component', async ({
+          page,
+        }) => {
+          test.skip(
+            !shouldRunForEnv(testSuite.runForEnv),
+            `Skipped for APP_ENV=${appEnvFromProcess}`,
+          );
+
+          await assertMostReadResonanceComponentClick({ page, ...atiProps });
         });
       });
     });

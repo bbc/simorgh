@@ -13,8 +13,12 @@ import runTestsForPage, {
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
+  assertDropdownNavigationResonanceComponentClick,
+  assertDropdownNavigationResonanceComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
+  assertScrollableNavigationResonanceComponentClick,
+  assertScrollableNavigationResonanceComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
 import assertStreamEmbeddedVideoComponentView from '../../specialFeatures/atiAnalytics/assertions/liveStreamVideo';
 import assertPortraitVideoCarouselComponentView from '../../specialFeatures/atiAnalytics/assertions/portraitVideoCarousel';
@@ -58,6 +62,10 @@ const atiAnalyticsTestSuites = [
       assertScrollableNavigationComponentClick,
       assertDropdownNavigationComponentView,
       assertDropdownNavigationComponentClick,
+      assertScrollableNavigationResonanceComponentView,
+      assertScrollableNavigationResonanceComponentClick,
+      assertDropdownNavigationResonanceComponentView,
+      assertDropdownNavigationResonanceComponentClick,
     ],
   },
   {

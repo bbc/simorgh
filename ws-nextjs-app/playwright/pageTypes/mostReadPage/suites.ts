@@ -68,6 +68,15 @@ const atiLiteTestSuites: AtiMostReadPageTestSuite[] = atiTestSuites.map(
 
 const atiResonanceTestSuites: AtiMostReadPageTestSuite[] = [
   {
+    path: '/arabic/popular/read',
+    service: 'arabic',
+    runForEnv: ['test', 'live'],
+    pageIdentifier: 'arabic.popular.read.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+  },
+  {
     path: '/marathi/popular/read',
     service: 'marathi',
     runForEnv: ['live'],
