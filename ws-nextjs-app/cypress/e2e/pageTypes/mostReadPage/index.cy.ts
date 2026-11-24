@@ -5,6 +5,8 @@ import runTestsForPage, {
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
+  assertMostReadResonanceComponentClick,
+  assertMostReadResonanceComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/mostRead';
 import {
   assertDropdownNavigationComponentClick,
@@ -93,7 +95,11 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'list-datadriven',
-    tests: [assertResonancePageView],
+    tests: [
+      assertResonancePageView,
+      assertMostReadResonanceComponentView,
+      assertMostReadResonanceComponentClick,
+    ],
   },
 ] as unknown as TestDataType[];
 
@@ -101,6 +107,8 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+    assertMostReadResonanceComponentView, // Resonance events are not sent on Lite pages
+    assertMostReadResonanceComponentClick,
   ];
 
   const liteSiteTests = testSuite.tests.filter(

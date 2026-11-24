@@ -814,6 +814,72 @@ export const assertMostReadComponentClick = async ({
   );
 };
 
+export const assertMostReadResonanceComponentView = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const capturedRequests = await captureResonanceRequests(page);
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+
+  // Double scroll intentional to reliably trigger viewability
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+
+  const payload = await waitForResonanceComponentPayload({
+    capturedRequests,
+    appEnv,
+    component: COMPONENTS.MOST_READ,
+    action: 'view',
+  });
+
+  assertResonanceViewabilityEvent({
+    payload,
+    action: 'view',
+    component: COMPONENTS.MOST_READ,
+    pageIdentifier,
+  });
+};
+
+export const assertMostReadResonanceComponentClick = async ({
+  page,
+  path,
+  baseURL,
+  pageIdentifier,
+  appEnv,
+}: AtiAssertionFnProps) => {
+  const capturedRequests = await captureResonanceRequests(page);
+
+  const pageViewPromise = waitForPageViewRequestResonance({
+    capturedRequests,
+    appEnv,
+  });
+
+  await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
+  await pageViewPromise;
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await page.locator('[data-e2e="most-read"] a').first().waitFor();
+  await page.locator('[data-e2e="most-read"]').locator('a').first().click();
+
+  const payload = await waitForResonanceComponentPayload({
+    capturedRequests,
+    appEnv,
+    component: COMPONENTS.MOST_READ,
+    action: 'select',
+  });
+
+  assertResonanceViewabilityEvent({
+    payload,
+    action: 'select',
+    component: COMPONENTS.MOST_READ,
+    pageIdentifier,
+  });
+};
+
 export const assertLiteSiteSummaryComponentToMainSiteClick = async ({
   page,
   path,
