@@ -1,0 +1,93 @@
+@use '@scss/themeTokens' as theme;
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  // Keep the end screen above SMP's player wrapper, which currently uses z-index: 999.
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: theme.$spacings-double;
+  overflow-y: auto;
+  padding: theme.$spacings-double;
+  background-color: rgb(0 0 0 / 92%);
+  color: theme.$palette-white;
+}
+
+.contentWrapper {
+  min-height: 0;
+}
+
+.heading {
+  margin: 0 0 theme.$spacings-double;
+  color: theme.$palette-white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: theme.$spacings-full;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  min-width: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: theme.$spacings-full;
+  color: theme.$palette-white;
+  text-decoration: none;
+}
+
+.link:hover .title,
+.link:focus-visible .title {
+  text-decoration: underline;
+}
+
+.image {
+  flex: 0 0 35%;
+  max-width: 35%;
+}
+
+.content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: theme.$spacings-half;
+}
+
+.title {
+  display: block;
+  overflow: hidden;
+  color: theme.$palette-white;
+  text-overflow: ellipsis;
+}
+
+.duration {
+  color: theme.$palette-grey-3;
+}
+
+.replayButton {
+  align-self: flex-start;
+  padding: theme.$spacings-full theme.$spacings-double;
+  border: 0;
+  background-color: theme.$palette-white;
+  color: theme.$palette-black;
+  cursor: pointer;
+}
+
+.replayText {
+  color: theme.$palette-black;
+}
+
+@media #{theme.$mediaQueries-group-3-min-width} {
+  .overlay {
+    padding: theme.$spacings-triple;
+  }
+}
