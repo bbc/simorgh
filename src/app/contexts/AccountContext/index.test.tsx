@@ -99,6 +99,30 @@ describe('AccountContext', () => {
     expect(context).toHaveProperty('forYouUrl');
   });
 
+  it('resolves account state when the cookie can be read after hydration', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    mockCookieGet.mockReturnValue('signed-in-cookie');
+    const { rerender } = render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    let context = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(context.isAccountStateResolved).toBe(false);
+    expect(context.isSignedIn).toBe(false);
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<TestComponent />);
+
+    context = JSON.parse(
+      screen.getByTestId('test-component').textContent as string,
+    );
+    expect(context.isAccountStateResolved).toBe(true);
+    expect(context.isSignedIn).toBe(true);
+  });
+
   it('should set isIdctaAvailable to true when id-availability is GREEN', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
