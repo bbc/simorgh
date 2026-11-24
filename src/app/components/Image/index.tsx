@@ -103,7 +103,7 @@ const Image = ({
   const imgSizes = getImgSizes();
 
   return (
-    <ComponentWrapper {...(isLite && { type: 'image', width, height, src })}>
+    <ComponentWrapper {...(isLite && { type: 'image', width, height })}>
       {preload && !isLite && (
         <Helmet>
           <link

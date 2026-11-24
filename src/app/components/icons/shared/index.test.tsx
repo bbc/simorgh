@@ -41,7 +41,6 @@ const mediaCases = [
   ['video', '0 0 12 12', 2],
   ['audio', '0 0 13 12', 2],
   ['photogallery', '0 0 32 26', 1],
-  ['embed', '0 0 32 32', 1],
   ['guidance', '0 0 32 32', 1],
   ['podcast', '0 0 32 32', 1],
   ['communication', '0 0 32 32', 1],

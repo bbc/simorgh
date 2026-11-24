@@ -8,7 +8,6 @@ type MediaIconName =
   | 'video'
   | 'audio'
   | 'photogallery'
-  | 'embed'
   | 'guidance'
   | 'podcast'
   | 'communication'
@@ -41,15 +40,6 @@ const MediaIcon = ({ name, className, width, height }: Props) => {
   );
 };
 
-const photoIcon = (
-  <MediaIcon
-    name="photogallery"
-    className={styles.photogallery}
-    width="16"
-    height="13"
-  />
-);
-
 const mediaIcons = {
   video: (
     <MediaIcon name="video" className={styles.video} width="12" height="12" />
@@ -57,10 +47,13 @@ const mediaIcons = {
   audio: (
     <MediaIcon name="audio" className={styles.audio} width="12" height="12" />
   ),
-  image: photoIcon,
-  photogallery: photoIcon,
-  embed: (
-    <MediaIcon name="embed" className={styles.embed} width="12" height="12" />
+  photogallery: (
+    <MediaIcon
+      name="photogallery"
+      className={styles.photogallery}
+      width="16"
+      height="13"
+    />
   ),
   guidance: (
     <MediaIcon
