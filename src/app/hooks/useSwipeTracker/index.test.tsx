@@ -8,6 +8,8 @@ import {
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { PageTypes, Services, Toggles } from '#app/models/types/global';
+import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
+import { ExperimentProvider } from '#app/contexts/ExperimentContext';
 import useSwipeTracker from '.';
 import fixtureData from './fixtureData.json';
 import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
@@ -15,6 +17,17 @@ import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/di
 jest.mock(
   '../../components/ATIAnalytics/resonance/dispatchResonanceEvent',
   () => jest.fn(),
+);
+
+jest.mock('../../components/ATIAnalytics/beacon', () => ({
+  __esModule: true,
+  ...jest.requireActual('../../components/ATIAnalytics/beacon'),
+}));
+
+const sendEventBeaconSpy = jest.spyOn(
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  require('../../components/ATIAnalytics/beacon'),
+  'sendEventBeacon',
 );
 
 const {
@@ -145,6 +158,60 @@ describe('useSwipeTracker', () => {
           );
         });
       });
+    });
+
+    describe('Experiments', () => {
+      const optimizely = {
+        track: jest.fn(),
+        user: { id: 'test-user', attributes: { foo: 'bar' } },
+      } as unknown as ReactSDKClient;
+
+      const renderSwipeTracker = (experimentVariant: string | null) =>
+        renderHook(() => useSwipeTracker(eventTrackingData), {
+          wrapper: ({ children }) =>
+            wrapper({
+              pageMetadata: { atiAnalytics, type: type as PageTypes },
+              children: (
+                <OptimizelyProvider optimizely={optimizely} isServerSide>
+                  <ExperimentProvider
+                    experimentName="my_experiment"
+                    experimentVariant={experimentVariant}
+                  >
+                    {children}
+                  </ExperimentProvider>
+                </OptimizelyProvider>
+              ),
+            }),
+        }).result.current;
+
+      it('tags the Reverb event and sends a view event to Optimizely inside an experiment', async () => {
+        await renderSwipeTracker('variant_1')(eventTrackingData);
+
+        expect(sendEventBeaconSpy).toHaveBeenCalledWith(
+          expect.objectContaining({
+            componentName: 'portrait-video-modal',
+            experimentName: 'my_experiment',
+            experimentVariant: 'variant_1',
+          }),
+        );
+        expect(optimizely.track).toHaveBeenCalledWith(
+          'portrait-video-modal-views',
+          'test-user',
+          { foo: 'bar' },
+        );
+      });
+
+      it.each([null, 'off'])(
+        'neither tags Reverb nor sends to Optimizely when the variation is %p',
+        async variation => {
+          await renderSwipeTracker(variation)(eventTrackingData);
+
+          expect(sendEventBeaconSpy).toHaveBeenCalledWith(
+            expect.not.objectContaining({ experimentName: expect.anything() }),
+          );
+          expect(optimizely.track).not.toHaveBeenCalled();
+        },
+      );
     });
 
     describe('Resonance dual-run', () => {

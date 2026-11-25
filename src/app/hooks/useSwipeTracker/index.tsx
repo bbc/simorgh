@@ -2,6 +2,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
 import { use, useCallback } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import { VIEW_EVENT } from '#app/lib/analyticsUtils/analytics.const';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
@@ -20,6 +21,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
 
   const eventTrackingContext = use(EventTrackingContext);
   const experimentContext = use(ExperimentContext);
+  const { optimizely } = use(OptimizelyContext);
 
   const { trackingIsEnabled } = useTrackingToggle(
     eventTrackingData?.componentName,
@@ -44,6 +46,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         alwaysInView = false,
         experimentName,
         experimentVariant,
+        optimizelyComponentName,
         viewThreshold,
         isSignedIn,
       } = extractATITrackingProps({
@@ -54,6 +57,12 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
       });
 
       const swipeTrackingParameters = {
+        optimizelyParameters: {
+          optimizely,
+          experimentVariant,
+          componentName,
+          optimizelyComponentName,
+        },
         reverbParameters: {
           campaignID,
           componentName,
@@ -70,6 +79,11 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
           detailedPlacement,
           ...(groupTracker && { groupTracker }),
           ...(itemTracker && { itemTracker }),
+          ...(experimentVariant &&
+            experimentVariant !== 'off' && {
+              experimentName,
+              experimentVariant,
+            }),
         },
         trackingFlags: {
           trackingIsEnabled,
@@ -117,6 +131,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
     [
       eventTrackingContext,
       experimentContext,
+      optimizely,
       service,
       resonanceEnabled,
       trackingIsEnabled,
