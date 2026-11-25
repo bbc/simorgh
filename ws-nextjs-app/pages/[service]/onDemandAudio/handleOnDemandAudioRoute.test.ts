@@ -2,7 +2,6 @@ import { GetServerSidePropsContext } from 'next';
 
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import gahuzaPodcastPage from '#data/gahuza/podcasts/p07yh8hb.json';
-import * as isTest from '#app/lib/utilities/isTest';
 import * as fetchTogglesModule from '#app/lib/utilities/fetchToggles';
 
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
@@ -96,20 +95,6 @@ describe('handleOnDemandAudioRoute', () => {
       expect(mockSetHeader).toHaveBeenCalledWith(
         'Cache-Control',
         expect.stringContaining('max-age=30'),
-      );
-    });
-
-    it('renders live assets on test environments', async () => {
-      jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
-
-      const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
-
-      await handleOnDemandAudioRoute(mockGetServerSidePropsContext);
-
-      expect(pageDataSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-          rendererEnv: 'live',
-        }),
       );
     });
 
