@@ -6,7 +6,7 @@ import Metadata from '#app/components/Metadata';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { ExternalSvg } from '#app/components/icons';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import TimeStampContainer from '#app/components/TimestampContainer';
 import ctaStyles from './downloadsPageLayout.module.scss';
 import styles from './styles';
 import { PageProps } from './types';

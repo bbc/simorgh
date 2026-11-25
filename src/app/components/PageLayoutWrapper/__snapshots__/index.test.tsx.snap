@@ -474,7 +474,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-.emotion-26 .emotion-41::after {
+.emotion-26 .emotion-39::after {
   left: 0;
 }
 
@@ -547,19 +547,8 @@ body.simorgh-player-fullscreen .emotion-1 {
   vertical-align: middle;
 }
 
-.emotion-34 {
-  color: #000000;
-  fill: currentColor;
-}
-
-@media screen and (forced-colors:active) {
-  .emotion-34 {
-    fill: linkText;
-  }
-}
-
 @media (max-width:37.4375rem) {
-  .emotion-36 {
+  .emotion-34 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -570,20 +559,20 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 
   @media (min-width:25rem) {
-    .emotion-36 {
+    .emotion-34 {
       scroll-padding-inline-end: 6rem;
     }
   }
 
-  .emotion-36::-webkit-scrollbar {
+  .emotion-34::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-36:focus-visible {
+  .emotion-34:focus-visible {
     outline: none;
   }
 
-  .emotion-36:focus-visible::after {
+  .emotion-34:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -591,7 +580,7 @@ body.simorgh-player-fullscreen .emotion-1 {
     height: 100%;
   }
 
-  .emotion-36:after {
+  .emotion-34:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -607,13 +596,13 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 
   @media (min-width:25rem) {
-    .emotion-36:after {
+    .emotion-34:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-38 {
+.emotion-36 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -621,12 +610,12 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width:37.5rem) {
-  .emotion-38 {
+  .emotion-36 {
     overflow: hidden;
   }
 }
 
-.emotion-40 {
+.emotion-38 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -635,13 +624,13 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-40:last-child {
+  .emotion-38:last-child {
     margin-right: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-40::after {
+  .emotion-38::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -651,7 +640,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-.emotion-42 {
+.emotion-40 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -667,26 +656,26 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-42 {
+  .emotion-40 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-42 {
+  .emotion-40 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-42 {
+  .emotion-40 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-42:hover::after {
+.emotion-40:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -695,18 +684,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-42:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #B80000;
-  top: 0;
-  border: 0.1875rem solid #000000;
-}
-
-.emotion-42:focus-visible::after {
+.emotion-40:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -717,7 +695,18 @@ body.simorgh-player-fullscreen .emotion-1 {
   border: 0.1875rem solid #000000;
 }
 
-.emotion-84 {
+.emotion-40:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-82 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -729,37 +718,37 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width:37.5rem) {
-  .emotion-84 {
+  .emotion-82 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .emotion-84 {
+  .emotion-82 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-86 {
+.emotion-84 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-88 {
+.emotion-86 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-88:last-child {
+.emotion-86:last-child {
   padding-bottom: 0.25rem;
   border: 0;
 }
 
-.emotion-90 {
+.emotion-88 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -773,40 +762,40 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-90 {
+  .emotion-88 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-90 {
+  .emotion-88 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-90:hover,
-.emotion-90:focus {
+.emotion-88:hover,
+.emotion-88:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #B80000;
 }
 
-.emotion-132 {
+.emotion-130 {
   position: absolute;
   width: calc(100vw - 0.8rem);
   inset-inline-start: 0;
 }
 
 @media (min-width:1041px) {
-  .emotion-132 {
+  .emotion-130 {
     width: calc(100vw + 0.8rem);
     inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
   }
 }
 
-.emotion-132::after {
+.emotion-130::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -816,12 +805,12 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width:1008px) {
-  .emotion-132 {
+  .emotion-130 {
     display: none;
   }
 }
 
-.emotion-134 {
+.emotion-132 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -829,36 +818,36 @@ body.simorgh-player-fullscreen .emotion-1 {
   position: relative;
 }
 
-.emotion-135 {
+.emotion-133 {
   content-visibility: auto;
   contain-intrinsic-size: 33.125rem;
 }
 
 @media (min-width:15rem) {
-  .emotion-135 {
+  .emotion-133 {
     contain-intrinsic-size: 26.563rem;
   }
 }
 
 @media (min-width:20) {
-  .emotion-135 {
+  .emotion-133 {
     contain-intrinsic-size: 23.438rem;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-135 {
+  .emotion-133 {
     contain-intrinsic-size: 21.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-135 {
+  .emotion-133 {
     contain-intrinsic-size: 17.188rem;
   }
 }
 
-.emotion-138 {
+.emotion-136 {
   background-color: #B80000;
   min-height: 2.75rem;
   width: 100%;
@@ -876,26 +865,26 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width:15rem) {
-  .emotion-138 {
+  .emotion-136 {
     min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .emotion-138 {
+  .emotion-136 {
     min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .emotion-138 {
+  .emotion-136 {
     min-height: 4rem;
   }
 }
 
-.emotion-144 {
+.emotion-142 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -906,32 +895,32 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-144 {
+  .emotion-142 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-144 {
+  .emotion-142 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-144 {
+  .emotion-142 {
     padding: 0 0.5rem;
   }
 }
 
-.emotion-145 {
+.emotion-143 {
   max-width: 63rem;
   margin: 0 auto;
   padding-top: 0.5rem;
 }
 
-.emotion-146 {
+.emotion-144 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -941,14 +930,14 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-146 {
+  .emotion-144 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -956,7 +945,7 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-count: 2;
@@ -965,7 +954,7 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     -webkit-column-count: 3;
@@ -974,7 +963,7 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     -webkit-column-count: 4;
@@ -983,7 +972,7 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 80rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     -webkit-column-count: 5;
@@ -991,7 +980,7 @@ body.simorgh-player-fullscreen .emotion-1 {
   }
 }
 
-.emotion-146>li:first-of-type {
+.emotion-144>li:first-of-type {
   border-bottom: 0.0625rem solid #3F3F42;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -1002,43 +991,43 @@ body.simorgh-player-fullscreen .emotion-1 {
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-template-rows: repeat(4, auto);
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-146 {
+  .emotion-144 {
     grid-template-rows: repeat(3, auto);
   }
 }
 
-.emotion-147 {
+.emotion-145 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-148 {
+.emotion-146 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-148 a {
+.emotion-146 a {
   padding: 0;
 }
 
@@ -1185,7 +1174,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             >
               <svg
                 aria-hidden="true"
-                class="emotion-34 emotion-35"
+                class="navigation"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -1202,141 +1191,141 @@ body.simorgh-player-fullscreen .emotion-1 {
               </span>
             </button>
             <div
-              class="emotion-36 emotion-37"
+              class="emotion-34 emotion-35"
               data-e2e="scrollable-nav"
               dir="ltr"
             >
               <ul
-                class="emotion-38 emotion-39"
+                class="emotion-36 emotion-37"
                 role="list"
               >
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news"
                   >
                     Home
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/uk"
                   >
                     UK
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/world"
                   >
                     World
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/business"
                   >
                     Business
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/politics"
                   >
                     Politics
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/technology"
                   >
                     Tech
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/science_and_environment"
                   >
                     Science
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/health"
                   >
                     Health
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/education"
                   >
                     Family & Education
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/entertainment_and_arts"
                   >
                     Entertainment & Arts
                   </a>
                 </li>
                 <li
-                  class="emotion-40 emotion-41"
+                  class="emotion-38 emotion-39"
                   dir="ltr"
                   role="listitem"
                 >
                   <a
-                    class="focusIndicatorRemove emotion-42 emotion-43"
+                    class="focusIndicatorRemove emotion-40 emotion-41"
                     href="/news/stories"
                   >
                     Stories
@@ -1346,21 +1335,21 @@ body.simorgh-player-fullscreen .emotion-1 {
             </div>
           </div>
           <div
-            class="emotion-84 emotion-85"
+            class="emotion-82 emotion-83"
             data-e2e="dropdown-nav"
             height="0"
           >
             <ul
-              class="emotion-86 emotion-87"
+              class="emotion-84 emotion-85"
               role="list"
             >
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news"
                 >
                   <span
@@ -1371,12 +1360,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-uk"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/uk"
                 >
                   <span
@@ -1387,12 +1376,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-world"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/world"
                 >
                   <span
@@ -1403,12 +1392,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-business"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/business"
                 >
                   <span
@@ -1419,12 +1408,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-politics"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/politics"
                 >
                   <span
@@ -1435,12 +1424,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-tech"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/technology"
                 >
                   <span
@@ -1451,12 +1440,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-science"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/science_and_environment"
                 >
                   <span
@@ -1467,12 +1456,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-health"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/health"
                 >
                   <span
@@ -1483,12 +1472,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-family-&-education"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/education"
                 >
                   <span
@@ -1499,12 +1488,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-entertainment-&-arts"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/entertainment_and_arts"
                 >
                   <span
@@ -1515,12 +1504,12 @@ body.simorgh-player-fullscreen .emotion-1 {
                 </a>
               </li>
               <li
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-stories"
-                  class="emotion-90 emotion-91"
+                  class="emotion-88 emotion-89"
                   href="/news/stories"
                 >
                   <span
@@ -1533,24 +1522,24 @@ body.simorgh-player-fullscreen .emotion-1 {
             </ul>
           </div>
           <div
-            class="emotion-132 emotion-133"
+            class="emotion-130 emotion-131"
           />
         </div>
       </nav>
     </header>
     <div
-      class="emotion-134"
+      class="emotion-132"
     >
       <h2>
         Child element
       </h2>
     </div>
     <footer
-      class="emotion-135 emotion-136"
+      class="emotion-133 emotion-134"
       role="contentinfo"
     >
       <div
-        class="emotion-17 emotion-138 emotion-19"
+        class="emotion-17 emotion-136 emotion-19"
       >
         <div
           class="brand-svg-wrapper emotion-20 emotion-21"
@@ -1589,17 +1578,17 @@ body.simorgh-player-fullscreen .emotion-1 {
         </div>
       </div>
       <div
-        class="emotion-144"
+        class="emotion-142"
       >
         <div
-          class="emotion-145"
+          class="emotion-143"
         >
           <ul
-            class="emotion-146"
+            class="emotion-144"
             role="list"
           >
             <li
-              class="emotion-147"
+              class="emotion-145"
             >
               <a
                 class="link focusIndicatorInvert"
@@ -1658,7 +1647,7 @@ body.simorgh-player-fullscreen .emotion-1 {
             </li>
           </ul>
           <p
-            class="emotion-148"
+            class="emotion-146"
           >
             <span
               lang="en-GB"

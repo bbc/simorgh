@@ -8,7 +8,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 12 12"]'),
+      container.querySelector('img[src$="/media-video.svg"]'),
     ).toBeInTheDocument();
   });
 
@@ -18,7 +18,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 12 12"]'),
+      container.querySelector('img[src$="/media-video.svg"]'),
     ).toBeInTheDocument();
   });
 
@@ -28,7 +28,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 12 12"]'),
+      container.querySelector('img[src$="/media-video.svg"]'),
     ).toBeInTheDocument();
   });
 
@@ -41,7 +41,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"][dir="rtl"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 12 12"]'),
+      container.querySelector('img[src$="/media-video.svg"]'),
     ).toBeInTheDocument();
   });
 
@@ -51,7 +51,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 13 12"]'),
+      container.querySelector('img[src$="/media-audio.svg"]'),
     ).toBeInTheDocument();
   });
 
@@ -61,7 +61,7 @@ describe('MediaIndicator', () => {
       container.querySelector('[data-e2e="media-indicator"]'),
     ).toBeInTheDocument();
     expect(
-      container.querySelector('svg[viewBox="0 0 32 26"]'),
+      container.querySelector('img[src$="/media-photogallery.svg"]'),
     ).toBeInTheDocument();
   });
 });

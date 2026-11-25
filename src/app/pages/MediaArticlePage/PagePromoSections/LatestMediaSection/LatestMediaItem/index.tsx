@@ -5,6 +5,7 @@ import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';
 import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';
+import timestampStyles from './index.module.scss';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
   ({ item, ariaLabelledBy, eventTrackingData }, viewTracker) => {
@@ -54,7 +55,7 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
                 />
               </Promo.Link>
             </Promo.Title>
-            <Promo.Timestamp css={styles.timeStamp}>
+            <Promo.Timestamp className={timestampStyles.timeStamp}>
               {timestamp}
             </Promo.Timestamp>
           </div>

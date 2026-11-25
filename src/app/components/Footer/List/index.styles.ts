@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { grid } from '#psammead/psammead-styles/src/detection';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import {
   GROUP_1_AND_GROUP_2,
@@ -30,7 +30,7 @@ export default {
       columnCount: 4,
       margin: 0,
       listStyleType: 'none',
-      [`@supports (${grid})`]: {
+      [`@supports (${GRID_SUPPORT_QUERY})`]: {
         display: 'grid',
         gridAutoFlow: 'column',
       },

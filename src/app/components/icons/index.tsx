@@ -7,9 +7,11 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import styles from './index.module.scss';
 
 type IconProps = {
+  'data-is-lite'?: boolean;
   className?: string;
   css?: Interpolation<Theme>;
   height?: string;
+  inheritFallbackDimensions?: boolean;
   isColoured?: boolean;
   isInverted?: boolean;
   loading?: 'eager' | 'lazy';
@@ -25,9 +27,11 @@ const toCssLength = (dimension?: string) => {
 };
 
 export const ExternalSvg = ({
+  'data-is-lite': isLite,
   className,
   css,
   height,
+  inheritFallbackDimensions = false,
   isColoured = false,
   isInverted = false,
   loading = 'lazy',
@@ -51,6 +55,9 @@ export const ExternalSvg = ({
       width: toCssLength(width),
       height: toCssLength(height),
     };
+    const fallbackStyle = inheritFallbackDimensions
+      ? { width: 'inherit', height: 'inherit' }
+      : fallbackDimensions;
     const maskStyle: CSSProperties & {
       '--icon-source': string;
       '--icon-width': string;
@@ -64,6 +71,7 @@ export const ExternalSvg = ({
     return (
       <span
         aria-hidden="true"
+        data-is-lite={isLite}
         className={[
           ...classes,
           styles.mask,
@@ -78,7 +86,7 @@ export const ExternalSvg = ({
           <span
             className={styles.fallback}
             style={{
-              ...fallbackDimensions,
+              ...fallbackStyle,
               backgroundImage: `url("${src}")`,
             }}
           />
@@ -92,7 +100,7 @@ export const ExternalSvg = ({
             src={src}
             width={Number.isNaN(Number(width)) ? undefined : width}
             height={Number.isNaN(Number(height)) ? undefined : height}
-            style={fallbackDimensions}
+            style={fallbackStyle}
           />
         )}
       </span>
@@ -115,6 +123,7 @@ export const ExternalSvg = ({
     <img
       alt=""
       aria-hidden="true"
+      data-is-lite={isLite}
       className={classes.filter(Boolean).join(' ')}
       css={css}
       height={height}

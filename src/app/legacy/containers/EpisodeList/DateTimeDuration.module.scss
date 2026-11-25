@@ -1,0 +1,18 @@
+@use '@scss/themeTokens' as theme;
+
+span.dateTimeDuration,
+time.dateTimeDuration {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  color: theme.$palette-metal;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-pebble;
+  }
+}
+
+.hasBorder {
+  padding-inline-start: theme.$spacings-full;
+  margin-inline-start: theme.$spacings-full;
+  border-inline-start: theme.pixelsToRem-px-to-rem(1) solid
+    theme.$palette-pebble;
+}

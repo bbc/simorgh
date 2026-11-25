@@ -44,6 +44,12 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
     services: ['mundo'],
     pageTypes: ['article'],
   },
+  // EXPERIMENT: Hindi Editorial Picks follow promo
+  {
+    name: 'newswb_ws_hindi_editorial_picks_follow_promo',
+    services: ['hindi'],
+    pageTypes: ['topic'],
+  },
 ];
 
 export default enabledExperimentList;

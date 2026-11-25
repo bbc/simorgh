@@ -181,7 +181,7 @@ export default ({
                   cy.get('button')
                     .should('be.visible')
                     .within(() => {
-                      cy.get('svg').should('be.visible');
+                      cy.get('.external-svg').should('be.visible');
                       cy.get('time')
                         .should('be.visible')
                         .should('have.attr', 'datetime')

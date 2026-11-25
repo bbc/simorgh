@@ -1,3 +1,4 @@
+import 'temporal-polyfill/global';
 import { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
@@ -19,7 +20,6 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
-import QueryProvider from '#app/contexts/QueryContext';
 import { IdctaConfig } from '#app/models/types/account';
 
 interface Props {
@@ -140,24 +140,22 @@ export default function CustomApp({
                     {RenderChildrenOrError}
                   </ThemeProvider>
                 ) : (
-                  <QueryProvider>
-                    <UserContextProvider>
-                      <ThemeProviderSCSSModules
-                        service={service}
-                        variant={variant}
-                      >
-                        <ThemeProvider service={service} variant={variant}>
-                          <PageWrapper
-                            navItems={navItems}
-                            pageData={pageData}
-                            status={status}
-                          >
-                            {RenderChildrenOrError}
-                          </PageWrapper>
-                        </ThemeProvider>
-                      </ThemeProviderSCSSModules>
-                    </UserContextProvider>
-                  </QueryProvider>
+                  <UserContextProvider>
+                    <ThemeProviderSCSSModules
+                      service={service}
+                      variant={variant}
+                    >
+                      <ThemeProvider service={service} variant={variant}>
+                        <PageWrapper
+                          navItems={navItems}
+                          pageData={pageData}
+                          status={status}
+                        >
+                          {RenderChildrenOrError}
+                        </PageWrapper>
+                      </ThemeProvider>
+                    </ThemeProviderSCSSModules>
+                  </UserContextProvider>
                 )}
               </EventTrackingContextProvider>
             </ReverbParamsContextProvider>

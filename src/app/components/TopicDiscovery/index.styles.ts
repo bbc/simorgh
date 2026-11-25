@@ -51,8 +51,20 @@ const styles = {
               backgroundColor: palette.BLACK,
               color: palette.WHITE,
 
-              svg: {
+              '.external-svg': {
                 color: palette.WHITE,
+                "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+                  { filter: 'invert(1)' },
+                [mq.FORCED_COLOURS]: {
+                  color: 'CanvasText',
+                  filter: 'none',
+                  "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+                    {
+                      '@media (prefers-color-scheme: dark)': {
+                        filter: 'invert(1)',
+                      },
+                    },
+                },
               },
             },
           }),
@@ -63,7 +75,7 @@ const styles = {
               position: 'absolute',
               bottom: 0,
 
-              svg: {
+              '.external-svg': {
                 width: `${spacings.DOUBLE}rem`,
                 height: `${spacings.DOUBLE}rem`,
               },

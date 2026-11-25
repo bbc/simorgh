@@ -152,7 +152,14 @@ export default async (
       status,
       pageType: ARTICLE_PAGE,
     });
-    context.res.appendHeader('Link', `<${canonicalUrl}>; rel="canonical"`);
+    const existingLinks = context.res.getHeader('Link');
+    context.res.setHeader(
+      'Link',
+      [existingLinks, `<${canonicalUrl}>; rel="canonical"`]
+        .flat()
+        .filter(link => link !== undefined)
+        .join(', '),
+    );
     context.res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     context.res.setHeader('x-markdown-tokens', Math.floor(markdown.length / 3));
     context.res.end(markdown);

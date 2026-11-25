@@ -3,6 +3,7 @@ import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   HOME_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME } from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
 // Any running serverside and client side experiments which collect Optimizely Page Metrics; page view, page complete, scroll depth
@@ -27,7 +28,12 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: [
       'test_server_side_experiment_visits_aa',
       HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
+      'newswb_ws_message_banner_cta_glow',
     ],
+  },
+  {
+    pageType: TOPIC_PAGE,
+    activeExperiments: ['newswb_ws_hindi_editorial_picks_follow_promo'],
   },
 ];
 
