@@ -5,23 +5,38 @@ import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/inde
 import PromoList from '../../../../legacy/components/OptimoPromos/PromoList';
 import useViewTracker from '../../../../hooks/useViewTracker';
 import generatePromoId from '../../../../lib/utilities/generatePromoId';
+import { EventTrackingBlock } from '../../../../models/types/eventTracking';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
 
-const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
+type LatestMediaSectionProps = {
+  content: LatestMedia[] | null;
+  eventTrackingData?: EventTrackingBlock;
+  headingId?: string;
+  showTimestamp?: boolean;
+};
+
+const LatestMediaSection = ({
+  content,
+  eventTrackingData: eventTrackingDataProp,
+  headingId = 'latest-media-heading',
+  showTimestamp = true,
+}: LatestMediaSectionProps) => {
   const { dir, translations } = use(ServiceContext);
 
-  const eventTrackingData = {
-    block: {
-      componentName: 'latest',
-    },
-  };
+  const eventTrackingData =
+    eventTrackingDataProp ??
+    ({
+      block: {
+        componentName: 'latest',
+      },
+    } as EventTrackingBlock);
 
   const eventTrackingDataSend = eventTrackingData?.block;
 
   const viewTracker = useViewTracker(eventTrackingDataSend);
-  const LABEL_ID = 'latest-media-heading';
+  const LABEL_ID = headingId;
 
   if (!content || content?.length === 0) return null;
 
@@ -63,6 +78,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            showTimestamp={showTimestamp}
             isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
@@ -88,6 +104,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
                   ariaLabelledBy={ariaLabelledBy}
                   ref={viewTracker}
                   eventTrackingData={eventTrackingData}
+                  showTimestamp={showTimestamp}
                 />
               </PromoItem>
             );
