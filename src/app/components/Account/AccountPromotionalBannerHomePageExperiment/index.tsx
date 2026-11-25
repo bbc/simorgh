@@ -1,7 +1,5 @@
 import { use } from 'react';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+import Experiment, { ExperimentType } from '#app/components/Experiment';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import useAccountPromoBannerEligibility from '#app/components/Account/AccountPromotionalBanner/useAccountPromoBannerEligibility';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -18,32 +16,10 @@ const experimentVariantCopy = {
   },
 } as const;
 
-const EligibleAccountPromotionalBannerHomePageExperiment = () => {
-  const experimentVariant = useOptimizelyVariation({
-    experimentName: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
-  if (typeof experimentVariant !== 'string') {
-    return <AccountPromotionalBanner />;
-  }
-
-  const variantCopy =
-    experimentVariantCopy[
-      experimentVariant as keyof typeof experimentVariantCopy
-    ];
-
-  return (
-    <AccountPromotionalBanner
-      experimentName={HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME}
-      experimentVariant={experimentVariant}
-      {...(variantCopy && {
-        title: variantCopy.title,
-        description: variantCopy.description,
-      })}
-    />
-  );
-};
+const getVariantCopy = (variation: string | null) =>
+  variation
+    ? experimentVariantCopy[variation as keyof typeof experimentVariantCopy]
+    : undefined;
 
 const AccountPromotionalBannerHomePageExperiment = () => {
   const { service } = use(ServiceContext);
@@ -55,7 +31,14 @@ const AccountPromotionalBannerHomePageExperiment = () => {
     return <AccountPromotionalBanner />;
   }
 
-  return <EligibleAccountPromotionalBannerHomePageExperiment />;
+  return (
+    <Experiment
+      name={HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME}
+      type={ExperimentType.SERVER_SIDE}
+    >
+      {variation => <AccountPromotionalBanner {...getVariantCopy(variation)} />}
+    </Experiment>
+  );
 };
 
 export default AccountPromotionalBannerHomePageExperiment;

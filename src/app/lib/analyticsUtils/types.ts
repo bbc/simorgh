@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ATIEventTrackingProps } from '#app/components/ATIAnalytics/types';
+import { ExperimentContextProps } from '#app/contexts/ExperimentContext';
 import {
   EventTrackingContextProps,
   EventTrackingMetadata,
@@ -18,6 +19,7 @@ export type EventTrackingProps = {
   eventTrackingData?: EventTrackingData;
   eventType: ATIEventType;
   eventTrackingContextFromHook?: EventTrackingContextProps;
+  experimentContextFromHook?: ExperimentContextProps;
 };
 
 export type ViewTracker = {

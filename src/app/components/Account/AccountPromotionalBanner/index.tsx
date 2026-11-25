@@ -20,15 +20,11 @@ import {
 import styles from './index.styles';
 
 type AccountPromotionalBannerProps = {
-  experimentName?: string;
-  experimentVariant?: string;
   title?: string;
   description?: string;
 };
 
 const AccountPromotionalBanner = ({
-  experimentName,
-  experimentVariant,
   title: titleOverride,
   description: descriptionOverride,
 }: AccountPromotionalBannerProps = {}) => {
@@ -64,18 +60,13 @@ const AccountPromotionalBanner = ({
     };
   }, [isEligible, accountPromoBannerTranslations, isDismissed]);
 
+  // Experiment attribution comes from the surrounding <Experiment>, if any.
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
-    ...(experimentName && { experimentName }),
-    ...(experimentVariant && { experimentVariant }),
-    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const { onClick: onCloseClickTrack } = useClickTrackerHandler({
     componentName: 'account-promotional-banner-close',
-    ...(experimentName && { experimentName }),
-    ...(experimentVariant && { experimentVariant }),
-    ...(experimentVariant && { sendOptimizelyEvents: true }),
   });
 
   const handleCloseClick = useCallback(
@@ -130,8 +121,6 @@ const AccountPromotionalBanner = ({
           <AccountActionButtons
             signInComponentName="account-promotional-banner-sign-in"
             registerComponentName="account-promotional-banner-register"
-            experimentName={experimentName}
-            experimentVariant={experimentVariant}
           />
         </PromotionalBanner>
       </div>

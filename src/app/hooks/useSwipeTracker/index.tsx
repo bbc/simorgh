@@ -8,6 +8,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { EventTrackingContext } from '../../contexts/EventTrackingContext';
+import { ExperimentContext } from '../../contexts/ExperimentContext';
 import dispatchTrackingRequests, {
   shouldDispatchEventBeacon,
 } from '../../lib/analyticsUtils/dispatchTrackingRequests';
@@ -18,6 +19,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
   const { service, resonanceEnabled } = use(ServiceContext);
 
   const eventTrackingContext = use(EventTrackingContext);
+  const experimentContext = use(ExperimentContext);
 
   const { trackingIsEnabled } = useTrackingToggle(
     eventTrackingData?.componentName,
@@ -48,6 +50,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         eventTrackingData: swipeEventTrackingData,
         eventType: VIEW_EVENT,
         eventTrackingContextFromHook: eventTrackingContext,
+        experimentContextFromHook: experimentContext,
       });
 
       const swipeTrackingParameters = {
@@ -111,7 +114,13 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
 
       await dispatchTrackingRequests(swipeTrackingParameters);
     },
-    [eventTrackingContext, service, resonanceEnabled, trackingIsEnabled],
+    [
+      eventTrackingContext,
+      experimentContext,
+      service,
+      resonanceEnabled,
+      trackingIsEnabled,
+    ],
   );
 
   return swipeTracker;
