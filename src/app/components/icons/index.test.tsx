@@ -141,6 +141,7 @@ describe('icons', () => {
       '--icon-width': '2rem',
       '--icon-height': '1.5rem',
     });
+
     expect(container.querySelector('img')).toHaveStyle({
       width: '2rem',
       height: '1.5rem',
@@ -160,6 +161,27 @@ describe('icons', () => {
       backgroundImage: `url("${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/icons/close.svg")`,
     });
   });
+
+  it.each([false, true])(
+    'allows consumer-sized mask fallbacks to inherit their icon box (AMP=%s)',
+    isAmp => {
+      const { container } = render(
+        <ExternalSvg
+          name="media-podcast"
+          width="16"
+          height="16"
+          useCurrentColor
+          inheritFallbackDimensions
+        />,
+        { isAmp },
+      );
+
+      expect(container.querySelector('.fallback')).toHaveStyle({
+        width: 'inherit',
+        height: 'inherit',
+      });
+    },
+  );
 
   it('keeps fixed-colour artwork as an external image', () => {
     const { container } = render(<RedCardSVG />);

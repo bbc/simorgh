@@ -15,8 +15,4 @@ export default {
     css({
       paddingBottom: `${spacings.FULL}rem`,
     }),
-  promoTimestamp: ({ palette }: Theme) =>
-    css({
-      color: palette.GREY_6,
-    }),
 };

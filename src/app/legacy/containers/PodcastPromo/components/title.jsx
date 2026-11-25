@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const Heading = styled.h2`
@@ -8,16 +8,15 @@ const Heading = styled.h2`
   display: inline;
   color: ${props => props.theme.palette.EBON};
 
-  > svg {
+  > .external-svg {
     margin-left: 0;
     width: 1.375rem;
     height: 1.375rem;
-    fill: currentColor;
     position: relative;
     bottom: 0.3125rem;
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
     @media screen and (forced-colors: active) {
-      fill: canvasText;
+      color: canvasText;
     }
   }
 `;

@@ -2,15 +2,6 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
-  timeStamp: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
-    css({
-      color: palette.WHITE,
-      ...fontSizes.brevier,
-      ...fontVariants.sansRegular,
-      padding: `${spacings.HALF}rem ${pixelsToRem(12)}rem`,
-      backgroundColor: palette.BRAND_BACKGROUND,
-      display: 'inline-block',
-    }),
   postHeaderBanner: ({ palette, mq }: Theme) =>
     css({
       borderTop: `solid ${pixelsToRem(2)}rem ${palette.BRAND_BACKGROUND}`,

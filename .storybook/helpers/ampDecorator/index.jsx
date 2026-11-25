@@ -4,7 +4,7 @@ import {
   AMP_NO_SCRIPT,
   AMP_JS,
   AMP_ANALYTICS_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
+} from '#app/lib/amp/boilerplate';
 import { AMP_GEO_SCRIPT } from '#app/legacy/components/AmpGeo';
 
 /*

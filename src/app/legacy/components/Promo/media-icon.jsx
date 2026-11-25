@@ -2,14 +2,8 @@ import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import formatDuration from '#lib/utilities/formatDuration';
-
-export const TYPES = {
-  VIDEO: 'video',
-  AUDIO: 'audio',
-  PHOTO_GALLERY: 'photogallery',
-};
 
 const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};

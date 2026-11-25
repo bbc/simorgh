@@ -1,11 +1,11 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#app/lib/utilities/timestamp';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';
@@ -54,14 +54,23 @@ const ButtonWrapper = styled.div`
 `;
 
 const IconWrapper = styled.span`
-  > svg {
+  > .external-svg {
     color: ${({ durationColor }) => durationColor};
-    fill: currentColor;
     width: 1.0625rem;
     height: 0.75rem;
     margin: 0;
+    @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+      filter: ${({ durationColor, theme }) =>
+        durationColor === theme.palette.WHITE ? 'invert(1)' : 'none'};
+    }
     @media screen and (forced-colors: active) {
-      fill: canvasText;
+      color: canvasText;
+      @supports not ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+        filter: none;
+        @media (prefers-color-scheme: dark) {
+          filter: invert(1);
+        }
+      }
     }
   }
 `;

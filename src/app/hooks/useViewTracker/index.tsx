@@ -43,6 +43,7 @@ const getComponentViewTracker = (
     campaignID,
     detailedPlacement,
     sendOptimizelyEvents,
+    optimizelyComponentName,
     experimentName,
     experimentVariant,
     groupTracker,
@@ -82,6 +83,7 @@ const getComponentViewTracker = (
             sendOptimizelyEvents,
             experimentVariant,
             componentName,
+            optimizelyComponentName,
           },
           reverbParameters: {
             campaignID,
@@ -199,6 +201,7 @@ const getComponentViewTracker = (
     hashedId,
     isPersonalisationOn,
     viewThreshold,
+    optimizelyComponentName,
   ]);
   const viewTracker = useCallback(
     async (element: HTMLElement | null) => {

@@ -36,10 +36,11 @@ describe('Latest Media Indicator', () => {
       <Fixture duration="PT3M41S" mediaType="video" />,
     );
 
-    const playIcon = container.querySelector('svg[viewBox="0 0 12 12"]');
+    const playIcon = container.querySelector('img[src$="/media-video.svg"]');
 
     expect(playIcon).toBeInTheDocument();
     expect(playIcon).toHaveAttribute('aria-hidden', 'true');
+    expect(playIcon).toHaveAttribute('alt', '');
   });
 
   it('should render speaker icon when item is audio', () => {
@@ -47,16 +48,18 @@ describe('Latest Media Indicator', () => {
       <Fixture duration="PT3M41S" mediaType="audio" />,
     );
 
-    const speakerIcon = container.querySelector('svg[viewBox="0 0 13 12"]');
+    const speakerIcon = container.querySelector('img[src$="/media-audio.svg"]');
 
     expect(speakerIcon).toBeInTheDocument();
     expect(speakerIcon).toHaveAttribute('aria-hidden', 'true');
+    expect(speakerIcon).toHaveAttribute('alt', '');
   });
 
   it('should only render icon when no duration provided', () => {
     const { container } = render(<Fixture duration="" mediaType="audio" />);
 
-    expect(container.querySelector('svg')).toBeTruthy();
+    expect(container.querySelector('.external-svg')).toBeInTheDocument();
+    expect(container.querySelector('svg')).not.toBeInTheDocument();
     expect(container.querySelector('time')).toBeFalsy();
   });
 

@@ -121,10 +121,9 @@ describe('handleArticleRoute', () => {
       expect(context.res.getHeader('Content-Type')).toBe(
         'text/markdown; charset=utf-8',
       );
-      expect(context.res.getHeader('Link')).toEqual([
-        '<https://ichef.bbci.co.uk>; rel="preconnect"',
-        '<https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
-      ]);
+      expect(context.res.getHeader('Link')).toBe(
+        '<https://ichef.bbci.co.uk>; rel="preconnect", <https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
+      );
       expect(context.res.getHeader('Cache-Control')).toContain('public');
       expect(context.res.getHeader('x-markdown-tokens')).toBe(
         Math.floor(markdown.length / 3),
@@ -166,12 +165,40 @@ describe('handleArticleRoute', () => {
         toggles: { renderMarkDown: { enabled: true } },
       });
 
-      expect(context.res.getHeader('Link')).toEqual([
-        '<https://ichef.bbci.co.uk>; rel="preconnect"',
-        `<${canonicalUrl}>; rel="canonical"`,
-      ]);
+      expect(context.res.getHeader('Link')).toBe(
+        `<https://ichef.bbci.co.uk>; rel="preconnect", <${canonicalUrl}>; rel="canonical"`,
+      );
       expect(context.res.end).toHaveBeenCalledWith(
         expect.stringContaining(`canonical: "${canonicalUrl}"`),
+      );
+    });
+
+    it('preserves multiple existing Link values in a single header', async () => {
+      const context = createContext();
+      context.res.setHeader('Link', [
+        '<https://ichef.bbci.co.uk>; rel="preconnect"',
+        '<https://example.com>; rel="dns-prefetch"',
+      ]);
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(context.res.getHeader('Link')).toBe(
+        '<https://ichef.bbci.co.uk>; rel="preconnect", <https://example.com>; rel="dns-prefetch", <https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
+      );
+    });
+
+    it('sets the canonical Link when no resource hints are present', async () => {
+      const context = createContext();
+      context.res.removeHeader('Link');
+
+      await handleArticleRoute(context, {
+        toggles: { renderMarkDown: { enabled: true } },
+      });
+
+      expect(context.res.getHeader('Link')).toBe(
+        '<https://www.bbc.com/pidgin/articles/cvpde7nqj92o>; rel="canonical"',
       );
     });
 

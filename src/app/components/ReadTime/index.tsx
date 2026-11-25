@@ -6,7 +6,7 @@ import { Services } from '#app/models/types/global';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
-import { formatDuration } from '#app/legacy/psammead/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#app/lib/utilities/timestamp';
 import styles from './index.module.scss';
 
 type ReadTimeProps = {

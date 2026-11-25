@@ -327,7 +327,7 @@ describe('RecentAudioEpisodes', () => {
     expect(wrappingDiv.style.borderBottom).toBe('');
   });
 
-  it('should render a border between two DateTimeDuration elements when there is an episode title', () => {
+  it('preserves the semantic date when rendered through DateTimeDuration', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_indonesian_radio"
@@ -337,10 +337,9 @@ describe('RecentAudioEpisodes', () => {
       />,
       { service: 'indonesia' },
     );
-    const spanEl = getByText('17 November 2020');
-    const style = window.getComputedStyle(spanEl);
-
-    expect(style.borderLeft).toBe('0.0625rem solid rgb(174, 174, 181)');
+    const time = getByText('17 November 2020');
+    expect(time.tagName).toBe('TIME');
+    expect(time).toHaveAttribute('datetime', '2020-11-17');
   });
 
   it('should aria-hide the duration', () => {

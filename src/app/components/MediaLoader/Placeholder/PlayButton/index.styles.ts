@@ -35,13 +35,19 @@ const styles = {
     }),
   iconWrapper: ({ palette, spacings, mq }: Theme) =>
     css({
-      '> svg': {
+      '> .external-svg': {
         color: palette.WHITE,
-        fill: 'currentColor',
         height: `${spacings.TRIPLE}rem`,
         width: `${spacings.TRIPLE}rem`,
+        "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+          { filter: 'invert(1)' },
         [mq.FORCED_COLOURS]: {
           color: 'canvasText',
+          "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+            {
+              filter: 'none',
+              '@media (prefers-color-scheme: dark)': { filter: 'invert(1)' },
+            },
         },
       },
     }),

@@ -2,7 +2,7 @@ import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import moment from 'moment';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#app/lib/utilities/timestamp';
 import detokenise from '#app/lib/utilities/detokenise';
 import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
