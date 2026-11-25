@@ -77,12 +77,13 @@ const PortraitVideoEndScreenPromo = ({
         className={`${styles.link} focusIndicatorInvert`}
         onClick={clickTrackerHandler}
       >
-        <Image
-          className={styles.image}
-          alt={item.imageAlt ?? ''}
-          src={imageSource}
-          aspectRatio={[16, 9]}
-        />
+        <div className={styles.imageWrapper}>
+          <Image
+            className={styles.image}
+            alt={item.imageAlt ?? ''}
+            src={imageSource}
+          />
+        </div>
         <span className={styles.content}>
           <Text
             as="span"
