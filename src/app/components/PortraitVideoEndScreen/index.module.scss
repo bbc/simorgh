@@ -2,7 +2,10 @@
 
 .overlay {
   position: absolute;
-  inset: 0;
+  // Leave the top quarter of the portrait player visible behind the end screen.
+  inset-block-start: 25%;
+  inset-inline: 0;
+  inset-block-end: 0;
   // Keep the end screen above SMP's player wrapper, which currently uses z-index: 999.
   z-index: 1000;
   display: flex;
