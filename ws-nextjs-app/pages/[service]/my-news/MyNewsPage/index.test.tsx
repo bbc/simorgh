@@ -207,19 +207,6 @@ describe('MyNewsPage', () => {
     }
   });
 
-  it('shows the guest screen after hydration when no sign-in cookie exists', () => {
-    mockUseHydrationDetection.mockReturnValue(false);
-    const { rerender } = render(<MyNewsPage />, {
-      ...renderOptions,
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
-    });
-
-    mockUseHydrationDetection.mockReturnValue(true);
-    rerender(<MyNewsPage />);
-
-    expect(screen.getByTestId(GUEST_SIGN_IN_TEST_ID)).toBeInTheDocument();
-  });
-
   it.each([
     {
       service: 'mundo' as const,
@@ -420,13 +407,18 @@ describe('MyNewsPage', () => {
     );
   });
 
-  it('should render guest page with action buttons when user is not logged in', async () => {
-    await act(async () => {
-      render(<MyNewsPage />, {
-        ...renderOptions,
-        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
-      });
+  it('renders guest action buttons after hydration when user is not logged in', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    const { rerender } = render(<MyNewsPage />, {
+      ...renderOptions,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
     });
+
+    expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
+    expect(screen.queryByTestId(GUEST_SIGN_IN_TEST_ID)).not.toBeInTheDocument();
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<MyNewsPage />);
 
     expect(screen.getByTestId(GUEST_SIGN_IN_TEST_ID)).toBeInTheDocument();
     expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
