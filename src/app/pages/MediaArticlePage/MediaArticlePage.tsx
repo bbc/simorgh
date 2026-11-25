@@ -2,7 +2,10 @@ import { use } from 'react';
 import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
@@ -129,7 +132,10 @@ const getBylineComponent =
         </Byline>
         {showSaveArticleButton && (
           <SaveArticleButton
-            saveArticlePageData={extractSaveArticleProps(pageData)}
+            saveArticlePageData={extractSaveArticleProps(
+              pageData,
+              MEDIA_ARTICLE_PAGE,
+            )}
           />
         )}
       </>
@@ -156,7 +162,10 @@ const getTimestampComponent =
         <Timestamp {...props} popOut={false} />
         {showSaveArticleButton && (
           <SaveArticleButton
-            saveArticlePageData={extractSaveArticleProps(pageData)}
+            saveArticlePageData={extractSaveArticleProps(
+              pageData,
+              MEDIA_ARTICLE_PAGE,
+            )}
           />
         )}
       </>

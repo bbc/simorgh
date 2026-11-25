@@ -25,7 +25,8 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 'be.visible',
               );
               cy.get('[data-e2e="media-loader__placeholder"]').within(() => {
-                cy.get('div img')
+                cy.get('div img:not(.external-svg):not(.external-svg img)')
+                  .should('have.length', 1)
                   .should('be.visible')
                   .should('have.attr', 'src')
                   .should('not.be.empty')

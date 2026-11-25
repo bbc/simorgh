@@ -5,8 +5,8 @@ import pathOr from 'ramda/src/pathOr';
 import {
   formatDuration,
   formatUnixTimestamp,
-} from '#psammead/psammead-timestamp-container/src/utilities';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
+} from '#app/lib/utilities/timestamp';
+import Timestamp from '#app/components/TimestampContainer';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import {
   GEL_SPACING_DBL,
@@ -21,6 +21,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import timestampStyles from './index.module.scss';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -37,10 +38,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
-const StyledTimestamp = styled(Timestamp)`
-  display: inline;
-`;
-
 const InlineDiv = styled.div`
   display: inline;
 `;
@@ -156,7 +153,8 @@ const RecentAudioEpisodes = ({
                   <EpisodeList.DateTimeDuration
                     hasBorder
                     dir={dir}
-                    as={StyledTimestamp}
+                    as={Timestamp}
+                    className={timestampStyles.timestamp}
                     timestamp={episode.timestamp}
                     format="LL"
                     dateTimeFormat="YYYY-MM-DD"

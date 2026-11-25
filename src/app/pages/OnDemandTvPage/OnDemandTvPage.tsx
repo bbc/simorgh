@@ -1,6 +1,6 @@
 import type { Component } from 'react';
 import { use } from 'react';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#app/lib/utilities/timestamp';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';

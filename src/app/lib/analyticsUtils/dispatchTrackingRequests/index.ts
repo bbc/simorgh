@@ -7,7 +7,10 @@ type OptimizelyParameters =
   | (Pick<OptimizelyContextInterface, 'optimizely'> &
       Pick<
         EventTrackingData,
-        'sendOptimizelyEvents' | 'experimentVariant' | 'componentName'
+        | 'sendOptimizelyEvents'
+        | 'experimentVariant'
+        | 'componentName'
+        | 'optimizelyComponentName'
       >)
   | undefined;
 
@@ -69,8 +72,13 @@ const trackComponentInOptimizely = (
 ) => {
   if (!optimizelyParameters) return;
 
-  const { optimizely, sendOptimizelyEvents, experimentVariant, componentName } =
-    optimizelyParameters;
+  const {
+    optimizely,
+    sendOptimizelyEvents,
+    experimentVariant,
+    componentName,
+    optimizelyComponentName,
+  } = optimizelyParameters;
 
   if (
     optimizely &&
@@ -81,7 +89,7 @@ const trackComponentInOptimizely = (
     const overrideAttributes = optimizely.user.attributes;
 
     optimizely.track(
-      `${componentName}-views`,
+      `${optimizelyComponentName || componentName}-views`,
       optimizely.user.id as string,
       overrideAttributes,
     );

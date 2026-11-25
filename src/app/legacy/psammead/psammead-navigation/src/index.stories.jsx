@@ -8,9 +8,12 @@ import {
   withKnobs,
   boolean,
 } from '@storybook/addon-knobs';
-import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import * as svgs from '#psammead/psammead-assets/src/svgs';
+import news from '#app/components/ThemeProvider/chameleonLogos/news';
+import igbo from '#app/components/ThemeProvider/chameleonLogos/igbo';
+import yoruba from '#app/components/ThemeProvider/chameleonLogos/yoruba';
+import arabic from '#app/components/ThemeProvider/chameleonLogos/arabic';
 import Brand from '#psammead/psammead-brand/src';
+import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import { ampDecorator } from '../../../../../../.storybook/preview';
 import Navigation, { NavigationUl, NavigationLi } from './index';
 import {
@@ -65,11 +68,12 @@ const ToggledContainer = styled.div`
   margin-top: 10px;
 `;
 
+const svgs = { news, igbo, yoruba, arabic };
 const inputs = () => {
   // capitalization is only for presentation purpose on the knob
-  const options = Object.keys(svgs)
-    .filter(key => key !== 'BBC_BLOCKS')
-    .map(key => key.charAt(0).toUpperCase() + key.slice(1));
+  const options = Object.keys(svgs).map(
+    key => key.charAt(0).toUpperCase() + key.slice(1),
+  );
 
   const svgChoice = select('Service SVG', options, 'News').toLowerCase();
   const productInput = text('Product', 'BBC News');

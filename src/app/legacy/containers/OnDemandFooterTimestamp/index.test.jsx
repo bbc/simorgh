@@ -1,4 +1,4 @@
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#app/lib/utilities/timestamp';
 
 import { render } from '../../../components/react-testing-library-with-providers';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';

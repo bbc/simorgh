@@ -14,8 +14,12 @@ import useTopicFollowButton, {
   type FollowActionResult,
 } from '#app/hooks/useTopicFollowButton';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import type { Services, Toggles } from '#app/models/types/global';
-import { FollowTopicButtonLoadingFallback } from './FollowTopicButtonAuthenticated/lazy';
+import {
+  FollowTopicButtonLoadingFallback,
+  FollowTopicButtonTopicIdContext,
+} from './FollowTopicButtonAuthenticated/lazy';
 import FollowTopicButton from '.';
 
 jest.mock('./FollowTopicButtonAuthenticated/lazy', () => {
@@ -236,11 +240,11 @@ describe('FollowTopicButton', () => {
     expect(screen.getByTestId('follow-topic-btn-guest')).toBeInTheDocument();
   });
 
-  it('renders authenticated button when topicUasPersonalization is enabled and user is signed in', () => {
+  it('renders authenticated button when topicUasPersonalization is enabled and user is signed in', async () => {
     renderFollowTopicButton(signedInOptions);
 
     expect(
-      screen.getByTestId('follow-topic-btn-authorized'),
+      await screen.findByTestId('follow-topic-btn-authorized'),
     ).toBeInTheDocument();
   });
 
@@ -312,15 +316,71 @@ describe('FollowTopicButton', () => {
     },
   );
 
-  it('renders translated loading fallback that cannot open sign-in modal', async () => {
-    render(<FollowTopicButtonLoadingFallback />, { service: 'hindi' });
+  it.each([
+    { error: undefined, isLoading: undefined },
+    { error: null, isLoading: true },
+    { error: new Error('Chunk failed'), isLoading: true },
+    { error: null, isLoading: false },
+  ])(
+    'keeps translated loading UI without opening sign-in ($isLoading, $error)',
+    async ({ error, isLoading }) => {
+      render(
+        <FollowTopicButtonLoadingFallback
+          error={error}
+          isLoading={isLoading}
+        />,
+        { service: 'hindi', ...signedInOptions },
+      );
 
-    expect(screen.getByTestId('follow-topic-btn-loading')).toHaveTextContent(
-      LOADING_LABEL,
+      const loadingButton = screen.getByTestId('follow-topic-btn-loading');
+      expect(loadingButton).toHaveTextContent(LOADING_LABEL);
+      expect(
+        screen.queryByTestId('follow-topic-btn-guest'),
+      ).not.toBeInTheDocument();
+      await userEvent.click(loadingButton);
+      expect(
+        screen.queryByTestId('follow-topic-sign-in-modal'),
+      ).not.toBeInTheDocument();
+    },
+  );
+
+  it('shows an interactive guest button with topic click tracking only after chunk loading fails', async () => {
+    const error = new Error('Chunk failed');
+    const { rerender } = render(
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback isLoading />
+      </FollowTopicButtonTopicIdContext>,
+      { service: 'hindi', ...signedInOptions },
     );
 
-    await userEvent.click(screen.getByTestId('follow-topic-btn-loading'));
+    rerender(
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback error={error} isLoading={false} />
+      </FollowTopicButtonTopicIdContext>,
+    );
 
+    expect(
+      screen.queryByTestId('follow-topic-btn-loading'),
+    ).not.toBeInTheDocument();
+    await userEvent.click(screen.getByTestId('follow-topic-btn-guest'));
+    expect(
+      screen.getByTestId('follow-topic-sign-in-modal'),
+    ).toBeInTheDocument();
+    expect(useClickTracker).toHaveBeenCalledWith({
+      componentName: 'follow-topic-button-guest-click-follow',
+      itemTracker: { resourceId: topicData.topicId },
+    });
+    expect(mockTrackClick).toHaveBeenCalledWith(
+      'follow-topic-button-guest-click-follow',
+      expect.anything(),
+    );
+
+    rerender(
+      <FollowTopicButtonTopicIdContext value={topicData.topicId}>
+        <FollowTopicButtonLoadingFallback error={error} isLoading />
+      </FollowTopicButtonTopicIdContext>,
+    );
+    expect(screen.getByTestId('follow-topic-btn-loading')).toBeInTheDocument();
     expect(
       screen.queryByTestId('follow-topic-sign-in-modal'),
     ).not.toBeInTheDocument();

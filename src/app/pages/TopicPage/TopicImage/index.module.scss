@@ -1,0 +1,29 @@
+@use '@scss/themeTokens' as theme;
+
+.badgeWrapper {
+  padding-bottom: theme.$spacings-full;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding-bottom: 0;
+  }
+}
+
+.imageWrapper {
+  width: theme.$spacings-sextuple;
+  height: theme.$spacings-sextuple;
+  display: flex;
+  justify-content: center;
+  margin-inline-end: theme.$spacings-double;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    width: #{theme.pixelsToRem-px-to-rem(64)};
+    height: #{theme.pixelsToRem-px-to-rem(64)};
+  }
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

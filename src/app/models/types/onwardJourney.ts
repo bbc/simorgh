@@ -12,37 +12,6 @@ export type Recommendation = {
   href: string;
 };
 
-export type TopStoriesOnwardJourney = {
-  headlines: Headlines;
-  locators: Locators;
-  summary: string;
-  timestamp: number;
-  language: string;
-  byline: Byline;
-  passport: Passport;
-  cpsType: string;
-  indexImage: IndexImage;
-  options: {
-    isBreakingNews: boolean;
-    isFactCheck: boolean;
-  };
-  prominence: string;
-  id: string;
-  type: string;
-};
-
-export type FeaturesAnalysisOnwardJourney = {
-  name: string;
-  summary: string;
-  indexImage: IndexImage;
-  uri: string;
-  aresUrl: string;
-  contentType: string;
-  assetTypeCode: string;
-  timestamp: number;
-  type: string;
-};
-
 export type Headlines = {
   headline: string;
 };

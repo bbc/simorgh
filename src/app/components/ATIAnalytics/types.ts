@@ -93,18 +93,6 @@ export interface ATIDataWithContexts {
   atiData: ATIData;
 }
 
-export interface ATIConfigurationDetailsProviders {
-  requestContext: RequestContextProps;
-  serviceContext: ServiceConfig;
-  atiData: ATIData;
-}
-
-export interface ReverbDetailsProviders {
-  requestContext: RequestContextProps;
-  serviceContext: ServiceConfig;
-  atiData: ATIData;
-}
-
 export type ReverbPageVars = {
   name?: string | null;
   additionalProperties?: {
@@ -253,8 +241,4 @@ export interface ATIPageTrackingProps {
   isSignedIn?: boolean;
   hashedId?: string | null;
   isPersonalisationOn?: boolean;
-}
-
-export interface ATIProps {
-  atiData?: ATIData;
 }

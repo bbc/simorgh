@@ -353,7 +353,7 @@ describe('TopicDiscovery', () => {
       target: 'li .promo-image [data-e2e="media-icon"]',
     });
     expect(tabPanel).toHaveStyleRule('color', WHITE, {
-      target: 'li .promo-image [data-e2e="media-icon"] svg',
+      target: 'li .promo-image [data-e2e="media-icon"] .external-svg',
     });
   });
 

@@ -1,4 +1,4 @@
-import { use, useState, useCallback } from 'react';
+import { use, useState, useCallback, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
@@ -13,6 +13,9 @@ import {
   setAccountPromoBannerDismissed,
   buildAccountBannerClientScript,
   DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+  ACCOUNT_BANNER_DISMISS_KEY,
+  ACCOUNT_BANNER_LAST_DISMISS_KEY,
+  isAccountPromoBannerVisible,
 } from './utilities';
 import styles from './index.styles';
 
@@ -34,6 +37,32 @@ const AccountPromotionalBanner = ({
   const { nonce } = use(RequestContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    let visible = false;
+
+    if (isEligible && accountPromoBannerTranslations && !isDismissed) {
+      try {
+        visible = isAccountPromoBannerVisible({
+          cookies: document.cookie,
+          dismissalCount: localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY),
+          lastDismissed: localStorage.getItem(ACCOUNT_BANNER_LAST_DISMISS_KEY),
+        });
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Unable to check account banner dismissal state', error);
+      }
+    }
+
+    root.classList.toggle(
+      DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS,
+      visible,
+    );
+    return () => {
+      root.classList.remove(DISPLAY_ACCOUNT_PROMOTIONAL_BANNER_CSS_CLASS);
+    };
+  }, [isEligible, accountPromoBannerTranslations, isDismissed]);
 
   const viewTracker = useViewTracker({
     componentName: 'account-promotional-banner',
