@@ -1,4 +1,5 @@
 import userEvent from '@testing-library/user-event';
+import { Profiler } from 'react';
 import { matchers } from '@emotion/jest';
 import {
   render,
@@ -119,7 +120,7 @@ describe('MyNewsPage', () => {
     },
   );
 
-  it('shows an error after a chunk failure and restores the spinner on retry', () => {
+  it('shows an error after a chunk failure and restores the spinner when loading resumes', () => {
     const error = new Error('Chunk failed');
     const { rerender } = render(
       <MyNewsPageLoadingFallback isLoading />,
@@ -190,6 +191,46 @@ describe('MyNewsPage', () => {
       expect(
         screen.queryByTestId('my-news-guest-sign-in-link'),
       ).not.toBeInTheDocument();
+    } finally {
+      document.cookie = 'ckns_id=; Max-Age=0; path=/';
+    }
+  });
+
+  it('never commits guest content while resolving cookie-derived sign-in state with the real hydration hook', async () => {
+    const { default: useRealHydrationDetection } = jest.requireActual<
+      typeof import('#app/hooks/useHydrationDetection')
+    >('#app/hooks/useHydrationDetection');
+    mockUseHydrationDetection.mockImplementation(useRealHydrationDetection);
+    document.cookie = 'ckns_id=local-test; path=/';
+
+    const committedStates: { isLoading: boolean; isGuest: boolean }[] = [];
+
+    try {
+      render(
+        <Profiler
+          id="my-news-hydration"
+          onRender={() => {
+            committedStates.push({
+              isLoading: !!screen.queryByTestId('my-news-page-spinner'),
+              isGuest: !!screen.queryByTestId('my-news-guest-sign-in-link'),
+            });
+          }}
+        >
+          <MyNewsPage />
+        </Profiler>,
+        {
+          ...renderOptions,
+          idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+        },
+      );
+
+      expect(
+        await screen.findByRole('heading', {
+          name: myNewsTranslations.followedTopicsTitle,
+        }),
+      ).toBeInTheDocument();
+      expect(committedStates[0].isLoading).toBe(true);
+      expect(committedStates.some(({ isGuest }) => isGuest)).toBe(false);
     } finally {
       document.cookie = 'ckns_id=; Max-Age=0; path=/';
     }
