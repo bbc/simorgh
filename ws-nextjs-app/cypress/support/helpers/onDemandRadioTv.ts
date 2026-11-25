@@ -41,6 +41,13 @@ export const isBrand = jsonData => {
   return pageID.includes('programmes');
 };
 
+export const overrideRendererOnTest = () => {
+  if (Cypress.env('APP_ENV') === 'test') {
+    return '?renderer_env=live';
+  }
+  return '';
+};
+
 export const videoPlaceholderImageUrl = ({ mediaBlocks }) => {
   const imageUrl = mediaBlocks[0]?.model?.imageUrl;
 

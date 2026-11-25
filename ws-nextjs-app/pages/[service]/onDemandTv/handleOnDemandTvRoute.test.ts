@@ -1,6 +1,7 @@
 import { GetServerSidePropsContext } from 'next';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import { ToggleDefinition } from '#app/models/types/global';
+import * as isTest from '#app/lib/utilities/isTest';
 import * as getTogglesModule from '#app/lib/utilities/fetchToggles';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandTvRoute from './handleOnDemandTvRoute';
@@ -158,5 +159,17 @@ describe('handleOnDemandTvRoute', () => {
     expect(result).toEqual({
       props: expect.objectContaining({ status: 404 }),
     });
+  });
+
+  it('should render live assets on test environments', async () => {
+    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
+    jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
+    const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
+
+    await handleOnDemandTvRoute(mockGetServerSidePropsContext);
+
+    expect(pageDataSpy).toHaveBeenCalledWith(
+      expect.objectContaining({ rendererEnv: 'live' }),
+    );
   });
 });
