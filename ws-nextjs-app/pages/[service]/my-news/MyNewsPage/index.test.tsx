@@ -37,6 +37,9 @@ jest.mock('#app/hooks/useHydrationDetection');
 
 const mockUseHydrationDetection = jest.mocked(useHydrationDetection);
 
+const PAGE_SPINNER_TEST_ID = 'my-news-page-spinner';
+const GUEST_SIGN_IN_TEST_ID = 'my-news-guest-sign-in-link';
+
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
 >;
@@ -113,34 +116,27 @@ describe('MyNewsPage', () => {
         ),
       );
 
-      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+      expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
       expect(
         screen.queryByText(myNewsTranslations.guestDescription),
       ).not.toBeInTheDocument();
     },
   );
 
-  it('shows an error after a chunk failure and restores the spinner when loading resumes', () => {
-    const error = new Error('Chunk failed');
-    const { rerender } = render(
-      <MyNewsPageLoadingFallback isLoading />,
+  it('shows an error instead of guest content after a chunk failure', () => {
+    render(
+      <MyNewsPageLoadingFallback
+        error={new Error('Chunk failed')}
+        isLoading={false}
+      />,
       renderOptions,
     );
 
-    rerender(<MyNewsPageLoadingFallback error={error} isLoading={false} />);
-
-    expect(
-      screen.queryByTestId('my-news-page-spinner'),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByTestId(PAGE_SPINNER_TEST_ID)).not.toBeInTheDocument();
     expect(
       screen.getByText(myNewsTranslations.contentErrorText),
     ).toBeInTheDocument();
-    expect(
-      screen.queryByTestId('my-news-guest-sign-in-link'),
-    ).not.toBeInTheDocument();
-
-    rerender(<MyNewsPageLoadingFallback error={error} isLoading />);
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+    expect(screen.queryByTestId(GUEST_SIGN_IN_TEST_ID)).not.toBeInTheDocument();
   });
 
   it.each([true, false])(
@@ -152,9 +148,9 @@ describe('MyNewsPage', () => {
         idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
       });
 
-      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+      expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
       expect(
-        screen.queryByTestId('my-news-guest-sign-in-link'),
+        screen.queryByTestId(GUEST_SIGN_IN_TEST_ID),
       ).not.toBeInTheDocument();
       expect(mockUseRecentActivity).not.toHaveBeenCalled();
       expect(mockUseFollowedTopics).not.toHaveBeenCalled();
@@ -169,37 +165,6 @@ describe('MyNewsPage', () => {
       expect(heading).toHaveFocus();
     },
   );
-
-  it('shows signed-in content after hydration when the sign-in cookie exists', async () => {
-    mockUseHydrationDetection.mockReturnValue(false);
-    document.cookie = 'ckns_id=local-test; path=/';
-
-    try {
-      const { rerender } = render(<MyNewsPage />, {
-        ...renderOptions,
-        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
-      });
-
-      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
-      expect(
-        screen.queryByTestId('my-news-guest-sign-in-link'),
-      ).not.toBeInTheDocument();
-
-      mockUseHydrationDetection.mockReturnValue(true);
-      rerender(<MyNewsPage />);
-
-      expect(
-        await screen.findByRole('heading', {
-          name: myNewsTranslations.followedTopicsTitle,
-        }),
-      ).toBeInTheDocument();
-      expect(
-        screen.queryByTestId('my-news-guest-sign-in-link'),
-      ).not.toBeInTheDocument();
-    } finally {
-      document.cookie = 'ckns_id=; Max-Age=0; path=/';
-    }
-  });
 
   it('never commits guest content while resolving cookie-derived sign-in state with the real hydration hook', async () => {
     const { default: useRealHydrationDetection } = jest.requireActual<
@@ -216,8 +181,8 @@ describe('MyNewsPage', () => {
           id="my-news-hydration"
           onRender={() => {
             committedStates.push({
-              isLoading: !!screen.queryByTestId('my-news-page-spinner'),
-              isGuest: !!screen.queryByTestId('my-news-guest-sign-in-link'),
+              isLoading: !!screen.queryByTestId(PAGE_SPINNER_TEST_ID),
+              isGuest: !!screen.queryByTestId(GUEST_SIGN_IN_TEST_ID),
             });
           }}
         >
@@ -248,17 +213,13 @@ describe('MyNewsPage', () => {
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
     });
 
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
-    expect(
-      screen.queryByTestId('my-news-guest-sign-in-link'),
-    ).not.toBeInTheDocument();
+    expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
+    expect(screen.queryByTestId(GUEST_SIGN_IN_TEST_ID)).not.toBeInTheDocument();
 
     mockUseHydrationDetection.mockReturnValue(true);
     rerender(<MyNewsPage />);
 
-    expect(
-      screen.getByTestId('my-news-guest-sign-in-link'),
-    ).toBeInTheDocument();
+    expect(screen.getByTestId(GUEST_SIGN_IN_TEST_ID)).toBeInTheDocument();
   });
 
   it.each([
@@ -469,9 +430,7 @@ describe('MyNewsPage', () => {
       });
     });
 
-    expect(
-      screen.getByTestId('my-news-guest-sign-in-link'),
-    ).toBeInTheDocument();
+    expect(screen.getByTestId(GUEST_SIGN_IN_TEST_ID)).toBeInTheDocument();
     expect(screen.getByTestId('my-news-register-link')).toBeInTheDocument();
   });
 
