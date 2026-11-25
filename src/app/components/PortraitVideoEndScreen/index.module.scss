@@ -13,6 +13,43 @@
   padding: theme.$spacings-double;
   background-color: rgb(0 0 0 / 92%);
   color: theme.$palette-white;
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+    color: theme.$palette-white;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: theme.$spacings-full;
+  inset-inline-end: theme.$spacings-full;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background-color: rgb(0 0 0 / 60%);
+  color: theme.$palette-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: theme.$palette-white;
+    color: theme.$palette-black;
+  }
+
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-2;
+    color: theme.$palette-grey-10;
+  }
+
+  svg {
+    width: theme.$spacings-quadruple;
+    height: theme.$spacings-quadruple;
+    color: inherit;
+  }
 }
 
 .contentWrapper {
@@ -21,7 +58,7 @@
 
 .heading {
   margin: 0 0 theme.$spacings-double;
-  color: theme.$palette-white;
+  color: inherit;
 }
 
 .list {
@@ -41,8 +78,16 @@
   display: flex;
   align-items: center;
   gap: theme.$spacings-full;
+  border-bottom: 1px solid theme.$palette-white;
   color: theme.$palette-white;
   text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:focus {
+    border-bottom-color: theme.$palette-white;
+    color: theme.$palette-white;
+  }
 }
 
 .link:hover .title,
@@ -65,29 +110,17 @@
 .title {
   display: block;
   overflow: hidden;
-  color: theme.$palette-white;
+  color: inherit;
   text-overflow: ellipsis;
 }
 
 .duration {
-  color: theme.$palette-grey-3;
-}
-
-.replayButton {
-  align-self: flex-start;
-  padding: theme.$spacings-full theme.$spacings-double;
-  border: 0;
-  background-color: theme.$palette-white;
-  color: theme.$palette-black;
-  cursor: pointer;
-}
-
-.replayText {
-  color: theme.$palette-black;
+  color: theme.$palette-white;
 }
 
 @media #{theme.$mediaQueries-group-3-min-width} {
   .overlay {
+    display: none;
     padding: theme.$spacings-triple;
   }
 }

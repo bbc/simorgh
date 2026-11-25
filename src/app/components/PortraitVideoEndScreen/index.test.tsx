@@ -66,7 +66,7 @@ describe('PortraitVideoEndScreen', () => {
       <PortraitVideoEndScreen
         content={content}
         currentArticleId="urn:bbc:ares::article:video-1"
-        onReplay={jest.fn()}
+        onClose={jest.fn()}
       />,
     );
 
@@ -90,20 +90,22 @@ describe('PortraitVideoEndScreen', () => {
     const { container } = render(
       <PortraitVideoEndScreen
         content={content.filter(item => item.type !== 'video')}
-        onReplay={jest.fn()}
+        onClose={jest.fn()}
       />,
     );
 
     expect(container.firstChild).toBeNull();
   });
 
-  it('calls onReplay when the replay control is activated', () => {
-    const onReplay = jest.fn();
+  it('calls onClose when the close control is activated', () => {
+    const onClose = jest.fn();
 
-    render(<PortraitVideoEndScreen content={content} onReplay={onReplay} />);
+    render(<PortraitVideoEndScreen content={content} onClose={onClose} />);
 
-    fireEvent.click(screen.getByTestId('portrait-video-end-screen-replay'));
+    fireEvent.click(
+      screen.getByRole('button', { name: 'End of content. Close' }),
+    );
 
-    expect(onReplay).toHaveBeenCalledTimes(1);
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 });

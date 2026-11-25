@@ -15,7 +15,7 @@ const Component = () => (
       content={
         portraitVideoArticle.data.secondaryData.latestMedia as LatestMedia[]
       }
-      onReplay={() => undefined}
+      onClose={() => undefined}
     />
   </div>
 );

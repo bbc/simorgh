@@ -7,5 +7,5 @@ The component:
 - renders up to three video links;
 - excludes the current article when an ID is supplied;
 - does not autoplay a recommendation;
-- provides a replay control that dismisses the overlay; and
-- uses the active service's latest-media translation.
+- provides a mobile-only close control;
+- uses the active service's latest-media translation and dark UI theme tokens.

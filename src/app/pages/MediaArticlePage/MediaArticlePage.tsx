@@ -101,12 +101,13 @@ const AudioVideoComponent = ({
   );
 
   const className = isPortrait ? 'portrait-media-loader' : '';
+  const dismissEndScreen = () => setIsPlaybackEnded(false);
   const endScreen =
     isPortrait && isPlaybackEnded ? (
       <PortraitVideoEndScreen
         content={latestMedia}
         currentArticleId={currentArticleId}
-        onReplay={() => setIsPlaybackEnded(false)}
+        onClose={dismissEndScreen}
       />
     ) : null;
 

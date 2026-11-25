@@ -5,6 +5,7 @@ import Image from '#app/components/Image';
 import InlineLink from '#app/components/InlineLink';
 import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import { navigationIcons } from '#app/components/icons/shared';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -23,7 +24,7 @@ type PortraitVideoEndScreenPromoProps = {
 type PortraitVideoEndScreenProps = {
   content: LatestMedia[];
   currentArticleId?: string;
-  onReplay: () => void;
+  onClose: () => void;
 };
 
 const getDuration = (duration?: string) => {
@@ -105,7 +106,7 @@ const PortraitVideoEndScreenPromo = ({
 const PortraitVideoEndScreen = ({
   content,
   currentArticleId,
-  onReplay,
+  onClose,
 }: PortraitVideoEndScreenProps) => {
   const { translations } = use(ServiceContext);
   const headingId = useId();
@@ -118,7 +119,8 @@ const PortraitVideoEndScreen = ({
   if (promos.length === 0) return null;
 
   const heading = translations?.latestMediaTitle ?? 'Latest';
-  const replayLabel = translations?.media?.play ?? 'Play';
+  const closeLabel =
+    translations?.media?.endOfContentClose ?? 'End of content. Close';
 
   return (
     <section
@@ -127,6 +129,16 @@ const PortraitVideoEndScreen = ({
       aria-labelledby={headingId}
       role="region"
     >
+      <button
+        type="button"
+        className={`${styles.closeButton} focusIndicatorInvert`}
+        onClick={onClose}
+        data-testid="portrait-video-end-screen-close"
+        aria-label={closeLabel}
+      >
+        {navigationIcons.cross}
+        <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
+      </button>
       <div className={styles.contentWrapper}>
         <Heading level={2} id={headingId} className={styles.heading}>
           {heading}
@@ -142,22 +154,6 @@ const PortraitVideoEndScreen = ({
           ))}
         </ul>
       </div>
-      <button
-        type="button"
-        className={`${styles.replayButton} focusIndicatorInvert`}
-        onClick={onReplay}
-        data-testid="portrait-video-end-screen-replay"
-      >
-        <Text
-          as="span"
-          size="brevier"
-          fontVariant="sansBold"
-          className={styles.replayText}
-        >
-          {replayLabel}
-          <VisuallyHiddenText> video</VisuallyHiddenText>
-        </Text>
-      </button>
     </section>
   );
 };

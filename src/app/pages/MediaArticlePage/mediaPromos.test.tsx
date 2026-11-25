@@ -95,7 +95,7 @@ const pageData = {
 };
 
 describe('MediaArticlePage portrait video promos', () => {
-  it('only shows the end screen for an ended portrait video and clears it on replay or reload', () => {
+  it('only shows the end screen for an ended portrait video and clears it on close or reload', () => {
     render(
       <Context>
         <MediaArticlePage pageData={pageData as unknown as Article} />
@@ -120,7 +120,7 @@ describe('MediaArticlePage portrait video promos', () => {
     ).toHaveAttribute('href', '/video-1');
 
     fireEvent.click(
-      within(endScreen).getByTestId('portrait-video-end-screen-replay'),
+      within(endScreen).getByTestId('portrait-video-end-screen-close'),
     );
     expect(
       screen.queryByTestId('portrait-video-end-screen'),
@@ -131,7 +131,7 @@ describe('MediaArticlePage portrait video promos', () => {
 
     fireEvent.click(
       within(screen.getByTestId('portrait-video-end-screen')).getByTestId(
-        'portrait-video-end-screen-replay',
+        'portrait-video-end-screen-close',
       ),
     );
     fireEvent.click(screen.getByTestId('pause-with-end'));
