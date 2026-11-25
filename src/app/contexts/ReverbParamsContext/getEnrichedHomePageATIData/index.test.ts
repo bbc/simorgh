@@ -78,11 +78,6 @@ describe('getEnrichedHomePageATIData', () => {
       producerName: 'HAUSA',
       experimentName: 'test_homepage_client_side_aa',
       experimentVariant: 'variant_a',
-      experimentProps: {
-        experimentName: 'test_homepage_client_side_aa',
-        experimentVariant: 'variant_a',
-        sendOptimizelyEvents: true,
-      },
     });
   });
 });

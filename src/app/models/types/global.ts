@@ -32,12 +32,6 @@ export type Navigation = {
   subItems?: Navigation[];
 };
 
-export type ComponentExperimentProps = {
-  sendOptimizelyEvents?: boolean;
-  experimentName?: string;
-  experimentVariant?: string;
-};
-
 export type ServerSideExperiment = {
   experimentName: string;
   variation: string;

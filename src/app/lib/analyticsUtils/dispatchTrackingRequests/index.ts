@@ -1,21 +1,18 @@
 /* eslint-disable import/no-unresolved */
 import { OptimizelyContextInterface } from '@optimizely/react-sdk/dist/Context';
-import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { ExtractedTrackingProps } from '#app/lib/analyticsUtils/types';
 import { sendEventBeacon } from '../../../components/ATIAnalytics/beacon';
 
 type OptimizelyParameters =
   | (Pick<OptimizelyContextInterface, 'optimizely'> &
       Pick<
-        EventTrackingData,
-        | 'sendOptimizelyEvents'
-        | 'experimentVariant'
-        | 'componentName'
-        | 'optimizelyComponentName'
+        ExtractedTrackingProps,
+        'experimentVariant' | 'componentName' | 'optimizelyComponentName'
       >)
   | undefined;
 
 type RequiredEventProps = Pick<
-  EventTrackingData,
+  ExtractedTrackingProps,
   | 'campaignID'
   | 'componentName'
   | 'pageIdentifier'
@@ -28,7 +25,7 @@ type RequiredEventProps = Pick<
 
 type ViewTrackerRequestsParameters = {
   optimizelyParameters?: OptimizelyParameters;
-  reverbParameters: EventTrackingData;
+  reverbParameters: ExtractedTrackingProps;
   trackingFlags: {
     trackingIsEnabled: boolean;
     eventSent?: boolean;
@@ -74,18 +71,12 @@ const trackComponentInOptimizely = (
 
   const {
     optimizely,
-    sendOptimizelyEvents,
     experimentVariant,
     componentName,
     optimizelyComponentName,
   } = optimizelyParameters;
 
-  if (
-    optimizely &&
-    sendOptimizelyEvents &&
-    experimentVariant &&
-    experimentVariant !== 'off'
-  ) {
+  if (optimizely && experimentVariant && experimentVariant !== 'off') {
     const overrideAttributes = optimizely.user.attributes;
 
     optimizely.track(

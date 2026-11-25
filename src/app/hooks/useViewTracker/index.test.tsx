@@ -15,6 +15,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import { Toggles } from '#app/models/types/global';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ExperimentProvider } from '../../contexts/ExperimentContext';
 import useViewTracker from '.';
 import fixtureData from './fixtureData.json';
 import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/dispatchResonanceEvent';
@@ -166,11 +167,13 @@ const wrapper = ({
   children,
   toggles = defaultToggles,
   mockOptimizely = defaultOptimizely,
+  experiment,
 }: {
   atiData?: ATIData;
   children?: ReactNode | null;
   toggles?: Toggles;
   mockOptimizely?: ReactSDKClient;
+  experiment?: { experimentName: string; experimentVariant: string };
 }) => (
   <OptimizelyProvider optimizely={mockOptimizely} isServerSide>
     <RequestContextProvider
@@ -183,7 +186,13 @@ const wrapper = ({
       <ServiceContextProvider service="pidgin">
         <ToggleContextProvider toggles={toggles}>
           <EventTrackingContextProvider atiData={atiData}>
-            {children}
+            {experiment ? (
+              <ExperimentProvider {...experiment}>
+                {children}
+              </ExperimentProvider>
+            ) : (
+              children
+            )}
           </EventTrackingContextProvider>
         </ToggleContextProvider>
       </ServiceContextProvider>
@@ -205,12 +214,17 @@ describe('useViewTracker', () => {
           () =>
             useViewTracker({
               ...trackingData,
-              sendOptimizelyEvents: true,
-              experimentName: 'dummy_experiment',
-              experimentVariant: 'variation_a',
             }),
           {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+            wrapper: props =>
+              wrapper({
+                ...props,
+                atiData: atiAnalytics,
+                experiment: {
+                  experimentName: 'dummy_experiment',
+                  experimentVariant: 'variation_a',
+                },
+              }),
           },
         );
         const element = document.createElement('div');
@@ -415,12 +429,17 @@ describe('useViewTracker', () => {
           () =>
             useViewTracker({
               ...trackingData,
-              experimentName: 'dummy_experiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
             }),
           {
-            wrapper: props => wrapper({ ...props, atiData: atiAnalytics }),
+            wrapper: props =>
+              wrapper({
+                ...props,
+                atiData: atiAnalytics,
+                experiment: {
+                  experimentName: 'dummy_experiment',
+                  experimentVariant: 'variation_a',
+                },
+              }),
           },
         );
         const element = document.createElement('div');

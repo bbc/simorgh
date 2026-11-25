@@ -1,14 +1,14 @@
 import { use } from 'react';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ExperimentContext } from '#app/contexts/ExperimentContext';
-import { EventTrackingData, EventTrackingProps } from '../types';
+import { EventTrackingProps, ExtractedTrackingProps } from '../types';
 
 export default ({
   eventTrackingData,
   eventType,
   eventTrackingContextFromHook,
   experimentContextFromHook,
-}: EventTrackingProps): EventTrackingData => {
+}: EventTrackingProps): ExtractedTrackingProps => {
   const eventTrackingContext =
     eventTrackingContextFromHook || use(EventTrackingContext);
 
@@ -36,20 +36,8 @@ export default ({
     alwaysInView,
   } = eventTrackingData || {};
 
-  // Experiment details passed explicitly win; otherwise inherit from the
-  // nearest ExperimentProvider, which also opts in to Optimizely events.
-  const hasExplicitExperiment = Boolean(eventTrackingData?.experimentVariant);
-  const inheritedExperiment =
-    !hasExplicitExperiment && experimentContext ? experimentContext : null;
-
-  const experimentName =
-    inheritedExperiment?.experimentName ?? eventTrackingData?.experimentName;
-  const experimentVariant =
-    inheritedExperiment?.experimentVariant ??
-    eventTrackingData?.experimentVariant;
-  const sendOptimizelyEvents = inheritedExperiment
-    ? true
-    : eventTrackingData?.sendOptimizelyEvents;
+  // Experiment attribution only ever comes from the nearest <Experiment>.
+  const { experimentName, experimentVariant } = experimentContext ?? {};
 
   const {
     pageIdentifier,
@@ -79,7 +67,6 @@ export default ({
     detailedPlacement,
     producerName,
     preventNavigation,
-    sendOptimizelyEvents,
     optimizelyComponentName,
     experimentName,
     experimentVariant,

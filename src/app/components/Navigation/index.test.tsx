@@ -531,10 +531,7 @@ describe('Navigation', () => {
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'navigation',
-        experimentName: 'newswb_ws_sticky_navigation',
-        experimentVariant: null,
         optimizelyComponentName: 'navigation',
-        sendOptimizelyEvents: true,
       });
     });
 
@@ -546,10 +543,7 @@ describe('Navigation', () => {
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
         componentName: 'scrollable-navigation',
-        experimentName: 'newswb_ws_sticky_navigation',
-        experimentVariant: null,
         optimizelyComponentName: 'navigation',
-        sendOptimizelyEvents: true,
       });
     });
   });

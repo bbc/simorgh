@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState, use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 
 import styles from './index.styles';
@@ -15,7 +14,6 @@ type ScrollableTabsProps = {
   onTabChange: (tabId: string) => void;
   labelledBy: string;
   groupTracker?: EventTrackingData['groupTracker'];
-  experimentProps?: ComponentExperimentProps;
   setShouldFocusPromos?: (value: boolean) => void;
   onTabKeyDown?: (
     event: React.KeyboardEvent<HTMLButtonElement>,
@@ -30,7 +28,6 @@ const ScrollableTabs = ({
   onTabChange,
   labelledBy,
   groupTracker,
-  experimentProps,
   onTabKeyDown,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
@@ -133,7 +130,6 @@ const ScrollableTabs = ({
               resourceId: tab.id,
             },
             preventNavigation: true,
-            ...(experimentProps && experimentProps),
           });
 
           return (

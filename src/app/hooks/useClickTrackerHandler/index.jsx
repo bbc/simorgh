@@ -56,7 +56,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
     detailedPlacement,
     producerName,
     preventNavigation,
-    sendOptimizelyEvents,
     optimizelyComponentName,
     experimentName,
     experimentVariant,
@@ -106,7 +105,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
             event.preventDefault();
           }
 
-          if (optimizely && experimentVariant && sendOptimizelyEvents) {
+          if (optimizely && experimentVariant) {
             const overrideAttributes = optimizely?.user.attributes;
 
             if (experimentVariant !== 'off') {
@@ -208,7 +207,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       statsDestination,
       optimizely,
       experimentVariant,
-      sendOptimizelyEvents,
       experimentName,
       optimizelyComponentName,
       format,

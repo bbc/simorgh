@@ -15,69 +15,58 @@ const withExperiment =
     </ExperimentProvider>
   );
 
-const extract = (
-  eventTrackingData: Parameters<
-    typeof extractATITrackingProps
-  >[0]['eventTrackingData'],
-  wrapper?: ReturnType<typeof withExperiment>,
-) =>
+const extract = (wrapper?: ReturnType<typeof withExperiment>) =>
   renderHook(
-    () => extractATITrackingProps({ eventTrackingData, eventType: VIEW_EVENT }),
+    () =>
+      extractATITrackingProps({
+        eventTrackingData: { componentName: 'banner' },
+        eventType: VIEW_EVENT,
+      }),
     { wrapper },
   ).result.current;
 
 describe('extractATITrackingProps - experiment context', () => {
   it('has no experiment details outside an ExperimentProvider', () => {
-    const result = extract({ componentName: 'banner' });
+    const result = extract();
 
     expect(result.experimentName).toBeUndefined();
     expect(result.experimentVariant).toBeUndefined();
-    expect(result.sendOptimizelyEvents).toBeUndefined();
   });
 
-  it('inherits the experiment and opts in to Optimizely events inside an ExperimentProvider', () => {
-    const result = extract(
-      { componentName: 'banner' },
-      withExperiment('variant_1'),
-    );
+  it('takes the experiment from the nearest ExperimentProvider', () => {
+    const result = extract(withExperiment('variant_1'));
 
     expect(result).toMatchObject({
       experimentName: 'my_experiment',
       experimentVariant: 'variant_1',
-      sendOptimizelyEvents: true,
     });
   });
 
   it.each([null, 'off'])(
-    'does not inherit the experiment when the variation is %p',
+    'has no experiment details when the variation is %p',
     variation => {
-      const result = extract(
-        { componentName: 'banner' },
-        withExperiment(variation),
-      );
+      const result = extract(withExperiment(variation));
 
       expect(result.experimentName).toBeUndefined();
       expect(result.experimentVariant).toBeUndefined();
-      expect(result.sendOptimizelyEvents).toBeUndefined();
     },
   );
 
-  it('prefers experiment details passed explicitly in eventTrackingData', () => {
-    const result = extract(
-      {
-        componentName: 'banner',
-        experimentName: 'explicit_experiment',
-        experimentVariant: 'explicit_variant',
-        sendOptimizelyEvents: false,
-      },
-      withExperiment('variant_1'),
+  it('ignores experiment details smuggled into eventTrackingData', () => {
+    const { result } = renderHook(() =>
+      extractATITrackingProps({
+        eventTrackingData: {
+          componentName: 'banner',
+          // @ts-expect-error experiment details can only come from <Experiment>
+          experimentName: 'explicit_experiment',
+          experimentVariant: 'explicit_variant',
+        },
+        eventType: VIEW_EVENT,
+      }),
     );
 
-    expect(result).toMatchObject({
-      experimentName: 'explicit_experiment',
-      experimentVariant: 'explicit_variant',
-      sendOptimizelyEvents: false,
-    });
+    expect(result.current.experimentName).toBeUndefined();
+    expect(result.current.experimentVariant).toBeUndefined();
   });
 
   it('uses experimentContextFromHook instead of reading context', () => {
@@ -96,7 +85,6 @@ describe('extractATITrackingProps - experiment context', () => {
     expect(result.current).toMatchObject({
       experimentName: 'from_hook',
       experimentVariant: 'variant_2',
-      sendOptimizelyEvents: true,
     });
   });
 });

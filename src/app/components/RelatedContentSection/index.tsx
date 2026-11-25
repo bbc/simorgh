@@ -10,7 +10,6 @@ import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 import useViewTracker from '#hooks/useViewTracker';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
@@ -36,10 +35,9 @@ const isHeadlineFirst = (item: object) => {
 
 type Props = {
   content: OptimoBlock[];
-  experimentProps?: ComponentExperimentProps;
 };
 
-const RelatedContentSection = ({ content, experimentProps }: Props) => {
+const RelatedContentSection = ({ content }: Props) => {
   const { translations } = use(ServiceContext);
   const {
     palette: { GREY_2 },
@@ -49,7 +47,6 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      ...(experimentProps && experimentProps),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);

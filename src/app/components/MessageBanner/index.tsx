@@ -9,9 +9,7 @@ import {
 } from '#app/utilities/imageSrcSets';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+import Experiment, { ExperimentType } from '#app/components/Experiment';
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -26,37 +24,19 @@ interface MessageBannerProps {
   eventTrackingData?: EventTrackingData;
   children?: React.ReactNode;
 }
-const MessageBanner = ({
+
+const CTA_GLOW_EXPERIMENT = 'newswb_ws_message_banner_cta_glow';
+
+const MessageBannerContent = ({
   description,
   link,
   linkText,
   image,
   children,
   eventTrackingData,
-}: MessageBannerProps) => {
-  const { pageType } = use(RequestContext);
-
+  shouldEnableGlow,
+}: MessageBannerProps & { shouldEnableGlow: boolean }) => {
   const { mq } = useTheme();
-
-  let shouldEnableGlow = false;
-  let optimizelyAttributes = {};
-  if (pageType === HOME_PAGE) {
-    const experimentName = 'newswb_ws_message_banner_cta_glow';
-    // pageType is a constant throughout this component's lifecycle, so this condition is guaranteed to be a constant.
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const variant = useOptimizelyVariation({
-      experimentName,
-      experimentType: ExperimentType.CLIENT_SIDE,
-    });
-
-    shouldEnableGlow = variant === 'variant';
-    optimizelyAttributes = {
-      experimentName,
-      sendOptimizelyEvents: true,
-      experimentVariant: variant,
-      optimizelyComponentName: 'cta',
-    };
-  }
 
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -66,7 +46,7 @@ const MessageBanner = ({
   const eventTrackingDataWithoutItemCount = eventTrackingData && {
     ...eventTrackingData,
     groupTracker: groupTrackerRest,
-    ...optimizelyAttributes,
+    optimizelyComponentName: 'cta',
   };
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
@@ -123,6 +103,25 @@ const MessageBanner = ({
         )}
       </div>
     </div>
+  );
+};
+
+const MessageBanner = (props: MessageBannerProps) => {
+  const { pageType } = use(RequestContext);
+
+  if (pageType !== HOME_PAGE) {
+    return <MessageBannerContent {...props} shouldEnableGlow={false} />;
+  }
+
+  return (
+    <Experiment name={CTA_GLOW_EXPERIMENT} type={ExperimentType.CLIENT_SIDE}>
+      {variation => (
+        <MessageBannerContent
+          {...props}
+          shouldEnableGlow={variation === 'variant'}
+        />
+      )}
+    </Experiment>
   );
 };
 
