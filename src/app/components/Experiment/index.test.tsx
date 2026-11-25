@@ -1,4 +1,4 @@
-import { use, useEffect } from 'react';
+import { ReactNode, use, useEffect } from 'react';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import {
   OptimizelyContextProvider,
@@ -84,11 +84,8 @@ describe('Experiment', () => {
 
   describe('with activate', () => {
     const mountSpy = jest.fn();
-    const decide = jest.fn(() => ({ variationKey: 'variant_1' }));
-    const optimizely = {
-      onReady: jest.fn(() => Promise.resolve({ success: true })),
-      decide,
-    } as unknown as ReactSDKClient;
+    let decide: jest.Mock;
+    let optimizely: ReactSDKClient;
 
     const Child = ({ variation }: { variation: string | null }) => {
       useEffect(() => {
@@ -102,22 +99,35 @@ describe('Experiment', () => {
       );
     };
 
-    const renderDeferred = (activate: boolean) => (
+    const DeferredExperiment = ({ activate }: { activate: boolean }) => (
+      <Experiment
+        name="my_experiment"
+        type={ExperimentType.CLIENT_SIDE}
+        activate={activate}
+      >
+        {variation => <Child variation={variation} />}
+      </Experiment>
+    );
+
+    const withClient = (children: ReactNode) => (
       <OptimizelyContextProvider
         value={{ optimizely, isServerSide: false, timeout: undefined }}
       >
-        <Experiment
-          name="my_experiment"
-          type={ExperimentType.CLIENT_SIDE}
-          activate={activate}
-        >
-          {variation => <Child variation={variation} />}
-        </Experiment>
+        {children}
       </OptimizelyContextProvider>
     );
 
+    const renderDeferred = (activate: boolean) =>
+      withClient(<DeferredExperiment activate={activate} />);
+
     beforeEach(() => {
       mountSpy.mockClear();
+      // A fresh client per test, so decisions aren't shared between tests.
+      decide = jest.fn(() => ({ variationKey: 'variant_1' }));
+      optimizely = {
+        onReady: jest.fn(() => Promise.resolve({ success: true })),
+        decide,
+      } as unknown as ReactSDKClient;
     });
 
     it('does not decide the experiment until activated', async () => {
@@ -148,6 +158,62 @@ describe('Experiment', () => {
         experimentVariant: 'variant_1',
       });
       expect(mountSpy).toHaveBeenCalledTimes(1);
+    });
+
+    it('decides once for several deferred experiments with the same name', async () => {
+      render(
+        withClient(
+          <>
+            <DeferredExperiment activate />
+            <DeferredExperiment activate />
+          </>,
+        ),
+      );
+
+      await waitFor(() =>
+        expect(screen.getAllByTestId('variation')).toHaveLength(2),
+      );
+      await waitFor(() =>
+        screen
+          .getAllByTestId('variation')
+          .forEach(element => expect(element).toHaveTextContent('variant_1')),
+      );
+      expect(decide).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not decide again when activate is toggled off and on', async () => {
+      const { rerender } = render(renderDeferred(true));
+      await waitFor(() =>
+        expect(screen.getByTestId('variation')).toHaveTextContent('variant_1'),
+      );
+
+      rerender(renderDeferred(false));
+      expect(screen.getByTestId('variation')).toHaveTextContent('null');
+
+      rerender(renderDeferred(true));
+      await waitFor(() =>
+        expect(screen.getByTestId('variation')).toHaveTextContent('variant_1'),
+      );
+
+      expect(decide).toHaveBeenCalledTimes(1);
+    });
+
+    it('tries again on a later activation if the client was not ready', async () => {
+      (optimizely.onReady as jest.Mock).mockResolvedValueOnce({
+        success: false,
+      });
+
+      const { rerender } = render(renderDeferred(true));
+      await act(() => Promise.resolve());
+      expect(decide).not.toHaveBeenCalled();
+
+      rerender(renderDeferred(false));
+      rerender(renderDeferred(true));
+
+      await waitFor(() =>
+        expect(screen.getByTestId('variation')).toHaveTextContent('variant_1'),
+      );
+      expect(decide).toHaveBeenCalledTimes(1);
     });
 
     it('does not decide when the Optimizely client fails to become ready', async () => {

@@ -1,5 +1,5 @@
 import { ReactNode, use, useEffect, useState } from 'react';
-import { OptimizelyContext } from '@optimizely/react-sdk';
+import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
@@ -49,6 +49,39 @@ const ImmediateExperiment = ({
   );
 };
 
+// One decision per experiment name for each Optimizely client, shared by
+// every deferred <Experiment> on the page. decide() records an impression
+// each time it's called, so re-deciding (a second wrapper with the same name,
+// or activate toggling off and on) would record duplicates.
+const deferredDecisions = new WeakMap<
+  ReactSDKClient,
+  Map<string, Promise<string | null>>
+>();
+
+const decideOnce = (optimizely: ReactSDKClient, name: string) => {
+  let decisions = deferredDecisions.get(optimizely);
+  if (!decisions) {
+    decisions = new Map();
+    deferredDecisions.set(optimizely, decisions);
+  }
+
+  let decision = decisions.get(name);
+  if (!decision) {
+    const clientDecisions = decisions;
+    decision = optimizely.onReady().then(({ success }) => {
+      if (!success) {
+        // Not cached, so a later activation can try again.
+        clientDecisions.delete(name);
+        return null;
+      }
+      return optimizely.decide(name).variationKey;
+    });
+    decisions.set(name, decision);
+  }
+
+  return decision;
+};
+
 const DeferredExperiment = ({
   name,
   activate,
@@ -68,10 +101,8 @@ const DeferredExperiment = ({
 
     let cancelled = false;
 
-    optimizely.onReady().then(({ success }) => {
-      if (success && !cancelled) {
-        setVariation(optimizely.decide(name).variationKey);
-      }
+    decideOnce(optimizely, name).then(decidedVariation => {
+      if (!cancelled) setVariation(decidedVariation);
     });
 
     return () => {
@@ -94,10 +125,15 @@ const DeferredExperiment = ({
 /**
  * Decides an Optimizely experiment and renders `children` with the variation.
  *
- * This is the only way to attribute tracking to an experiment: every view,
- * click, swipe and custom event tracker rendered inside it is tagged with the
- * experiment in Reverb/Resonance and sends `<componentName>-views` /
- * `<componentName>-clicks` to Optimizely. Trackers outside it never are.
+ * This is the only way to attribute tracking to an experiment. Trackers
+ * rendered inside it are attributed automatically:
+ * - view, click, swipe and custom event trackers are tagged with the
+ *   experiment in Reverb/Resonance
+ * - view, click and swipe trackers also send `<componentName>-views` /
+ *   `<componentName>-clicks` to Optimizely. Custom event trackers don't, so
+ *   they can't be used as Optimizely metrics.
+ *
+ * Trackers outside it are never attributed.
  *
  * Mounting it activates the experiment for the user, so only render it once
  * the user is eligible (or, for client-side experiments, use `activate`).

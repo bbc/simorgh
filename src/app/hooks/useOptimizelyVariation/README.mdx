@@ -5,7 +5,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 # useOptimizelyVariation hook
 
 > **Running an experiment? Use the [`<Experiment>`](https://github.com/bbc/simorgh/tree/latest/src/app/components/Experiment) component instead.**
-> It calls this hook for you and is the only way to attribute tracking to an experiment: view, click, swipe and custom event trackers rendered inside it are tagged with the experiment in Reverb/Resonance and send `<componentName>-views` / `<componentName>-clicks` events to Optimizely. Experiment details can't be passed to tracking hooks directly.
+> It calls this hook for you and is the only way to attribute tracking to an experiment. View, click, swipe and custom event trackers rendered inside it are tagged with the experiment in Reverb/Resonance. View, click and swipe trackers also send `<componentName>-views` / `<componentName>-clicks` events to Optimizely; custom event trackers don't, so they can't be used as Optimizely metrics. Experiment details can't be passed to tracking hooks directly.
 >
 > ```tsx
 > <Experiment name="my_flag" type={ExperimentType.SERVER_SIDE}>
