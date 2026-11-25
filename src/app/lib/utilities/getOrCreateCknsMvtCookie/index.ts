@@ -4,7 +4,6 @@ import getUUID from '#app/lib/utilities/getUUID';
 
 export const CKNS_MVT_COOKIE_NAME = 'ckns_mvt';
 
-// Returns the ckns_mvt (Optimizely user ID) cookie value, creating it first if it doesn't exist.
 // The value is read back after writing so null is returned when the browser blocks cookies,
 // rather than an ID that won't persist.
 const getOrCreateCknsMvtCookie = (): string | null => {
