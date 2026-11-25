@@ -10,6 +10,7 @@ import mockMatchMedia from '#testHelpers/mockMatchMedia';
 import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import useUASFollowedTopics from '#app/hooks/useUASFollowedTopics';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { service as hindiServiceConfig } from '#app/lib/config/services/hindi';
 import MyNewsPage, { MyNewsPageLoadingFallback } from '.';
 
@@ -31,6 +32,9 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 jest.mock('#app/hooks/useUASRecentActivity');
 jest.mock('#app/hooks/useUASFollowedTopics');
+jest.mock('#app/hooks/useHydrationDetection');
+
+const mockUseHydrationDetection = jest.mocked(useHydrationDetection);
 
 const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
   typeof useUASRecentActivity
@@ -77,6 +81,7 @@ const mockFollowedTopics = [
 describe('MyNewsPage', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockUseHydrationDetection.mockReturnValue(true);
     window.scrollTo = jest.fn();
     mockUseRecentActivity.mockReturnValue({
       savedArticles: [],
@@ -114,7 +119,7 @@ describe('MyNewsPage', () => {
     },
   );
 
-  it('replaces the spinner with guest content after a chunk failure and restores it on retry', () => {
+  it('shows an error after a chunk failure and restores the spinner on retry', () => {
     const error = new Error('Chunk failed');
     const { rerender } = render(
       <MyNewsPageLoadingFallback isLoading />,
@@ -127,11 +132,81 @@ describe('MyNewsPage', () => {
       screen.queryByTestId('my-news-page-spinner'),
     ).not.toBeInTheDocument();
     expect(
-      screen.getByText(myNewsTranslations.guestDescription),
+      screen.getByText(myNewsTranslations.contentErrorText),
     ).toBeInTheDocument();
+    expect(
+      screen.queryByTestId('my-news-guest-sign-in-link'),
+    ).not.toBeInTheDocument();
 
     rerender(<MyNewsPageLoadingFallback error={error} isLoading />);
     expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+  });
+
+  it.each([true, false])(
+    'shows loading instead of guest content before hydration (server signed-in: %s)',
+    initialIsSignedIn => {
+      mockUseHydrationDetection.mockReturnValue(false);
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+      });
+
+      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('my-news-guest-sign-in-link'),
+      ).not.toBeInTheDocument();
+    },
+  );
+
+  it('shows signed-in content after hydration when the sign-in cookie exists', async () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    document.cookie = 'ckns_id=local-test; path=/';
+
+    try {
+      const { rerender } = render(<MyNewsPage />, {
+        ...renderOptions,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      });
+
+      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('my-news-guest-sign-in-link'),
+      ).not.toBeInTheDocument();
+
+      mockUseHydrationDetection.mockReturnValue(true);
+      rerender(<MyNewsPage />);
+
+      expect(
+        await screen.findByRole('heading', {
+          name: myNewsTranslations.followedTopicsTitle,
+        }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('my-news-guest-sign-in-link'),
+      ).not.toBeInTheDocument();
+    } finally {
+      document.cookie = 'ckns_id=; Max-Age=0; path=/';
+    }
+  });
+
+  it('shows the guest screen after hydration when no sign-in cookie exists', () => {
+    mockUseHydrationDetection.mockReturnValue(false);
+    const { rerender } = render(<MyNewsPage />, {
+      ...renderOptions,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+    });
+
+    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+    expect(
+      screen.queryByTestId('my-news-guest-sign-in-link'),
+    ).not.toBeInTheDocument();
+
+    mockUseHydrationDetection.mockReturnValue(true);
+    rerender(<MyNewsPage />);
+
+    expect(
+      screen.getByTestId('my-news-guest-sign-in-link'),
+    ).toBeInTheDocument();
   });
 
   it.each([
