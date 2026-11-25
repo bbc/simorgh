@@ -86,7 +86,7 @@ const PortraitVideoEndScreenPromo = ({
         <span className={styles.content}>
           <Text
             as="span"
-            size="brevier"
+            size="pica"
             fontVariant="sansBold"
             className={styles.title}
           >

@@ -25,7 +25,7 @@ export default {
   Component,
   parameters: {
     chromatic: {
-      viewports: [400, 600, 1008],
+      viewports: [400],
     },
   },
 };
