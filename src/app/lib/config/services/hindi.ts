@@ -51,9 +51,9 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     podcastPromo: {
       title: 'बीबीसी हिंदी मोबाइल ऐप',
-      brandTitle: 'आपके लिए चुनी गईं खास कहानियाँ, नितिन श्रीवास्तव द्वारा',
+      brandTitle: 'आपके लिए नितिन श्रीवास्तव ने चुनी हैं ये ख़ास कहानियाँ',
       brandDescription:
-        'आपके लिए नितिन श्रीवास्तव द्वारा चुनी गईं खास कहानियाँ',
+        'बीबीसी हिन्दी के संपादक आपके लिए लेकर आए हैं स्पेशल स्टोरीज़',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0pj9ylt.jpg',
         alt: 'नितिन श्रीवास्तव',
