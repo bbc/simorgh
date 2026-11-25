@@ -3,17 +3,10 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import AccountActionButtons from '#app/components/Account/AccountActionButtons';
-import useHydrationDetection from '#app/hooks/useHydrationDetection';
-import MyNewsPageLoading from '../MyNewsPageLoading';
 import styles from './styles';
 
 const MyNewsPageGuest = () => {
   const { translations } = use(ServiceContext);
-  const isHydrated = useHydrationDetection();
-
-  if (!isHydrated) {
-    return <MyNewsPageLoading />;
-  }
 
   return (
     <>

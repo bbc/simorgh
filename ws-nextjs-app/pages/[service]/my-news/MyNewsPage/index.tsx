@@ -3,6 +3,7 @@ import loadQueryConsumer from '#app/contexts/QueryContext/loadQueryConsumer';
 import { use } from 'react';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import MetadataContainer from '#app/components/Metadata';
@@ -39,6 +40,7 @@ const MyNewsPageContent = dynamic(
 );
 
 const MyNewsPage = ({ page }: MyNewsPageProps) => {
+  const isHydrated = useHydrationDetection();
   const {
     isArticlePersonalizationAvailable,
     isArticlePersonalizationEnabled,
@@ -59,6 +61,19 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
 
   if (!isPersonalizationAvailable || !translations?.myNews) return null;
 
+  const renderContent = () => {
+    if (!isHydrated) return <MyNewsPageLoading />;
+    if (!isPersonalizationEnabled) return <MyNewsPageGuest />;
+
+    return (
+      <MyNewsPageContent
+        page={page}
+        showSavedArticles={isArticlePersonalizationEnabled}
+        showFollowedTopics={isTopicPersonalizationEnabled}
+      />
+    );
+  };
+
   return (
     <main css={styles.main}>
       <MetadataContainer
@@ -76,17 +91,7 @@ const MyNewsPage = ({ page }: MyNewsPageProps) => {
             </GenericMessage>
           </div>
         </noscript>
-        <div css={styles.innerContent}>
-          {isPersonalizationEnabled ? (
-            <MyNewsPageContent
-              page={page}
-              showSavedArticles={isArticlePersonalizationEnabled}
-              showFollowedTopics={isTopicPersonalizationEnabled}
-            />
-          ) : (
-            <MyNewsPageGuest />
-          )}
-        </div>
+        <div css={styles.innerContent}>{renderContent()}</div>
       </div>
     </main>
   );

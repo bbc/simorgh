@@ -143,27 +143,32 @@ describe('MyNewsPage', () => {
     expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
   });
 
-  it('shows loading instead of guest content before hydration', () => {
-    mockUseHydrationDetection.mockReturnValue(false);
-    render(<MyNewsPage />, {
-      ...renderOptions,
-      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
-    });
+  it.each([true, false])(
+    'shows only loading before hydration (server signed-in: %s)',
+    initialIsSignedIn => {
+      mockUseHydrationDetection.mockReturnValue(false);
+      render(<MyNewsPage />, {
+        ...renderOptions,
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn },
+      });
 
-    expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
-    expect(
-      screen.queryByTestId('my-news-guest-sign-in-link'),
-    ).not.toBeInTheDocument();
+      expect(screen.getByTestId('my-news-page-spinner')).toBeInTheDocument();
+      expect(
+        screen.queryByTestId('my-news-guest-sign-in-link'),
+      ).not.toBeInTheDocument();
+      expect(mockUseRecentActivity).not.toHaveBeenCalled();
+      expect(mockUseFollowedTopics).not.toHaveBeenCalled();
 
-    const heading = screen.getByRole('heading', {
-      level: 1,
-      name: myNewsTranslations.title,
-    });
-    expect(heading).toHaveAttribute('id', 'content');
-    expect(heading).toHaveAttribute('tabindex', '-1');
-    heading.focus();
-    expect(heading).toHaveFocus();
-  });
+      const heading = screen.getByRole('heading', {
+        level: 1,
+        name: myNewsTranslations.title,
+      });
+      expect(heading).toHaveAttribute('id', 'content');
+      expect(heading).toHaveAttribute('tabindex', '-1');
+      heading.focus();
+      expect(heading).toHaveFocus();
+    },
+  );
 
   it('shows signed-in content after hydration when the sign-in cookie exists', async () => {
     mockUseHydrationDetection.mockReturnValue(false);
