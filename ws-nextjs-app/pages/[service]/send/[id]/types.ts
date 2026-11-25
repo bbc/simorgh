@@ -1,5 +1,4 @@
 import { ChangeEvent } from 'react';
-import { Services, Variants } from '#app/models/types/global';
 
 // Disabled due to known bug in ts-lint: https://github.com/typescript-eslint/tslint-to-eslint-config/issues/856
 // eslint-disable-next-line no-shadow
@@ -56,12 +55,6 @@ export type InvalidMessageBoxProps = {
 export type FieldOption = {
   label: string;
   value: string;
-};
-
-export type FetchParameters = {
-  id: string;
-  service: Services;
-  variant?: Variants;
 };
 
 export type Section = {

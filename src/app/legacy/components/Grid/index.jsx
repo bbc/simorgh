@@ -183,33 +183,6 @@ export const GridItemMedium = ({
   />
 );
 
-export const GridItemMediumNoMargin = ({
-  gridColumnStart = 5,
-  gridSpan = 10,
-  ...props
-}) => (
-  <Grid
-    {...props}
-    item
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: gridColumnStart,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 5,
-      group4: 5,
-      group5: gridSpan,
-    }}
-  />
-);
-
 export const GridItemLarge = props => (
   <Grid
     {...props}
@@ -222,29 +195,6 @@ export const GridItemLarge = props => (
       group4: false,
       group5: false,
     }}
-    startOffset={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 2,
-      group5: 5,
-    }}
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 6,
-      group5: 12,
-    }}
-  />
-);
-
-export const GridItemLargeNoMargin = props => (
-  <Grid
-    {...props}
-    item
     startOffset={{
       group0: 1,
       group1: 1,

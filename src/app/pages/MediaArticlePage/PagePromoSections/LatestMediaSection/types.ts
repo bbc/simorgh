@@ -23,11 +23,6 @@ export type LatestMediaItemProp = {
   isPortraitImage?: boolean;
 };
 
-export type ImageProp = {
-  src: string;
-  useLargeImages: boolean;
-};
-
 export type LatestMediaIndicatorProp = {
   duration: string;
 };

@@ -5,12 +5,6 @@ import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/brea
 import { mediaIcons } from '#app/components/icons/shared';
 import formatDuration from '#lib/utilities/formatDuration';
 
-export const TYPES = {
-  VIDEO: 'video',
-  AUDIO: 'audio',
-  PHOTO_GALLERY: 'photogallery',
-};
-
 const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
   color: ${props =>

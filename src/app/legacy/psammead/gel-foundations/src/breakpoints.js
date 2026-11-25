@@ -3,7 +3,6 @@
     Link to relevant GEL docs: https://www.bbc.co.uk/gel/guidelines/grid#grid-sizes
     The only exception is that we have split out group 1 into 0 and 1
 */
-export const GEL_GROUP_0_SCREEN_WIDTH_MIN = `0rem`; // 0px
 export const GEL_GROUP_0_SCREEN_WIDTH_MAX = `14.9375rem`; // 239px
 
 export const GEL_GROUP_1_SCREEN_WIDTH_MIN = `15rem`; // 240px

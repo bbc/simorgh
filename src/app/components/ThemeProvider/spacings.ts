@@ -16,6 +16,4 @@ export const QUINTUPLE = FULL * 5;
 export const SEXTUPLE = FULL * 6;
 
 export const MARGIN_BELOW_400PX = `${FULL}rem`;
-export const GUTTER_BELOW_600PX = `${FULL}rem`;
 export const MARGIN_ABOVE_400PX = `${DOUBLE}rem`;
-export const GUTTER_ABOVE_600PX = `${DOUBLE}rem`;
