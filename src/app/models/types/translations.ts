@@ -99,6 +99,7 @@ export interface Translations {
     savedArticlesErrorText: string;
     loading: string;
     noJsDescription: string;
+    recommendedTopicsTitle?: string;
     followedTopicsTitle: string;
     followedTopicsErrorText: string;
     noFollowedTopics: string;

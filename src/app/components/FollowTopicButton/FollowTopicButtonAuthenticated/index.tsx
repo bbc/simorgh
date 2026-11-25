@@ -21,6 +21,7 @@ import type { FollowTopicButtonProps } from '../index';
 
 const FollowTopicButtonAuthenticatedInner = ({
   topicData,
+  compact = false,
 }: FollowTopicButtonProps) => {
   const { translations } = use(ServiceContext);
   const { followTopicButton, followTopicTooltip } = translations || {};
@@ -105,6 +106,7 @@ const FollowTopicButtonAuthenticatedInner = ({
         isLoading={isLoading}
         isUpdating={isUpdating}
         isSaved={isFollowed}
+        iconOnly={compact}
         visualLabel={getVisualLabel()}
         hoverVisualLabel={hoverVisualLabel}
         accessibleLabel={getAccessibleLabel()}

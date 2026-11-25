@@ -192,6 +192,7 @@ export const service: DefaultServiceConfig = {
         loading: 'Carregando',
         noJsDescription:
           'Ative o JavaScript ou use outro navegador para ver este conteúdo.',
+        recommendedTopicsTitle: 'Temas que podem interessar a você',
         followedTopicsTitle: 'Temas que você segue',
         followedTopicsErrorText:
           'Estamos tendo problemas para carregar os temas que você segue',
