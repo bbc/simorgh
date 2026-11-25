@@ -17,19 +17,8 @@ import fallbackTranslations from '../../send/[id]/fallbackTranslations';
 export const MyNewsPageLoadingFallback = ({
   error,
   isLoading,
-}: DynamicOptionsLoadingProps) => {
-  const { translations } = use(ServiceContext);
-
-  if (error && !isLoading && translations?.myNews) {
-    return (
-      <GenericMessage heading={translations.myNews.title}>
-        {translations.myNews.contentErrorText}
-      </GenericMessage>
-    );
-  }
-
-  return <MyNewsPageLoading />;
-};
+}: DynamicOptionsLoadingProps) =>
+  error && !isLoading ? <MyNewsPageGuest /> : <MyNewsPageLoading />;
 
 const MyNewsPageContent = dynamic(
   () => loadQueryConsumer(import('./MyNewsPageContent')),

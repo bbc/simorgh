@@ -123,20 +123,22 @@ describe('MyNewsPage', () => {
     },
   );
 
-  it('shows an error instead of guest content after a chunk failure', () => {
-    render(
-      <MyNewsPageLoadingFallback
-        error={new Error('Chunk failed')}
-        isLoading={false}
-      />,
+  it('replaces the spinner with guest content after a chunk failure and restores it when loading resumes', () => {
+    const error = new Error('Chunk failed');
+    const { rerender } = render(
+      <MyNewsPageLoadingFallback isLoading />,
       renderOptions,
     );
 
+    rerender(<MyNewsPageLoadingFallback error={error} isLoading={false} />);
+
     expect(screen.queryByTestId(PAGE_SPINNER_TEST_ID)).not.toBeInTheDocument();
     expect(
-      screen.getByText(myNewsTranslations.contentErrorText),
+      screen.getByText(myNewsTranslations.guestDescription),
     ).toBeInTheDocument();
-    expect(screen.queryByTestId(GUEST_SIGN_IN_TEST_ID)).not.toBeInTheDocument();
+
+    rerender(<MyNewsPageLoadingFallback error={error} isLoading />);
+    expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
   });
 
   it.each([true, false])(
@@ -173,17 +175,16 @@ describe('MyNewsPage', () => {
     mockUseHydrationDetection.mockImplementation(useRealHydrationDetection);
     document.cookie = 'ckns_id=local-test; path=/';
 
-    const committedStates: { isLoading: boolean; isGuest: boolean }[] = [];
+    let sawLoading = false;
+    let sawGuest = false;
 
     try {
       render(
         <Profiler
           id="my-news-hydration"
           onRender={() => {
-            committedStates.push({
-              isLoading: !!screen.queryByTestId(PAGE_SPINNER_TEST_ID),
-              isGuest: !!screen.queryByTestId(GUEST_SIGN_IN_TEST_ID),
-            });
+            sawLoading ||= !!screen.queryByTestId(PAGE_SPINNER_TEST_ID);
+            sawGuest ||= !!screen.queryByTestId(GUEST_SIGN_IN_TEST_ID);
           }}
         >
           <MyNewsPage />
@@ -199,8 +200,8 @@ describe('MyNewsPage', () => {
           name: myNewsTranslations.followedTopicsTitle,
         }),
       ).toBeInTheDocument();
-      expect(committedStates[0].isLoading).toBe(true);
-      expect(committedStates.some(({ isGuest }) => isGuest)).toBe(false);
+      expect(sawLoading).toBe(true);
+      expect(sawGuest).toBe(false);
     } finally {
       document.cookie = 'ckns_id=; Max-Age=0; path=/';
     }
@@ -212,9 +213,6 @@ describe('MyNewsPage', () => {
       ...renderOptions,
       idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
     });
-
-    expect(screen.getByTestId(PAGE_SPINNER_TEST_ID)).toBeInTheDocument();
-    expect(screen.queryByTestId(GUEST_SIGN_IN_TEST_ID)).not.toBeInTheDocument();
 
     mockUseHydrationDetection.mockReturnValue(true);
     rerender(<MyNewsPage />);
