@@ -1,5 +1,9 @@
 import { use, useEffect } from 'react';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
+import {
+  OptimizelyContextProvider,
+  ReactSDKClient,
+} from '@optimizely/react-sdk';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import { ExperimentContext } from '#app/contexts/ExperimentContext';
 import Experiment, { ExperimentType } from '.';
@@ -63,8 +67,28 @@ describe('Experiment', () => {
     expect(screen.getByTestId('context')).toHaveTextContent('null');
   });
 
+  it('only allows activate on client-side experiments', () => {
+    (useOptimizelyVariation as jest.Mock).mockReturnValue(null);
+
+    render(
+      // @ts-expect-error server-side variations are chosen at the edge
+      <Experiment
+        name="my_experiment"
+        type={ExperimentType.SERVER_SIDE}
+        activate
+      >
+        {() => null}
+      </Experiment>,
+    );
+  });
+
   describe('with activate', () => {
     const mountSpy = jest.fn();
+    const decide = jest.fn(() => ({ variationKey: 'variant_1' }));
+    const optimizely = {
+      onReady: jest.fn(() => Promise.resolve({ success: true })),
+      decide,
+    } as unknown as ReactSDKClient;
 
     const Child = ({ variation }: { variation: string | null }) => {
       useEffect(() => {
@@ -79,38 +103,44 @@ describe('Experiment', () => {
     };
 
     const renderDeferred = (activate: boolean) => (
-      <Experiment
-        name="my_experiment"
-        type={ExperimentType.CLIENT_SIDE}
-        activate={activate}
+      <OptimizelyContextProvider
+        value={{ optimizely, isServerSide: false, timeout: undefined }}
       >
-        {variation => <Child variation={variation} />}
-      </Experiment>
+        <Experiment
+          name="my_experiment"
+          type={ExperimentType.CLIENT_SIDE}
+          activate={activate}
+        >
+          {variation => <Child variation={variation} />}
+        </Experiment>
+      </OptimizelyContextProvider>
     );
 
     beforeEach(() => {
       mountSpy.mockClear();
-      (useOptimizelyVariation as jest.Mock).mockReturnValue('variant_1');
     });
 
-    it('does not decide the experiment until activated', () => {
+    it('does not decide the experiment until activated', async () => {
       render(renderDeferred(false));
 
+      await act(() => Promise.resolve());
+
+      expect(decide).not.toHaveBeenCalled();
       expect(useOptimizelyVariation).not.toHaveBeenCalled();
       expect(screen.getByTestId('variation')).toHaveTextContent('null');
       expect(screen.getByTestId('context')).toHaveTextContent('null');
     });
 
-    it('decides and provides the experiment once activated, without remounting children', () => {
+    it('decides and provides the experiment once activated, without remounting children', async () => {
       const { rerender } = render(renderDeferred(false));
 
       rerender(renderDeferred(true));
 
-      expect(useOptimizelyVariation).toHaveBeenCalledWith({
-        experimentName: 'my_experiment',
-        experimentType: ExperimentType.CLIENT_SIDE,
-      });
-      expect(screen.getByTestId('variation')).toHaveTextContent('variant_1');
+      await waitFor(() =>
+        expect(screen.getByTestId('variation')).toHaveTextContent('variant_1'),
+      );
+      expect(decide).toHaveBeenCalledTimes(1);
+      expect(decide).toHaveBeenCalledWith('my_experiment');
       expect(
         JSON.parse(screen.getByTestId('context').textContent as string),
       ).toEqual({
@@ -118,6 +148,19 @@ describe('Experiment', () => {
         experimentVariant: 'variant_1',
       });
       expect(mountSpy).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not decide when the Optimizely client fails to become ready', async () => {
+      (optimizely.onReady as jest.Mock).mockResolvedValueOnce({
+        success: false,
+      });
+
+      render(renderDeferred(true));
+
+      await act(() => Promise.resolve());
+
+      expect(decide).not.toHaveBeenCalled();
+      expect(screen.getByTestId('variation')).toHaveTextContent('null');
     });
   });
 });

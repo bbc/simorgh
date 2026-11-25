@@ -1,32 +1,42 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, use, useEffect, useState } from 'react';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { ExperimentProvider } from '#app/contexts/ExperimentContext';
 
-type DecisionProps = {
-  name: string;
-  type: ExperimentType;
-};
+type Children = (variation: string | null) => ReactNode;
 
-type Props = DecisionProps & {
-  /**
-   * Defer activation until this becomes true, e.g. on scroll. When passed,
-   * the variation is resolved after mount, so children render unbucketed on
-   * the server. Omit it to decide immediately, which allows server-side
-   * experiments to render their variation in the server response.
-   *
-   * Pass it from first render (even as `false`) rather than adding it later.
-   */
-  activate?: boolean;
-  children: (variation: string | null) => ReactNode;
-};
+type Props = {
+  name: string;
+  children: Children;
+} & (
+  | {
+      type: ExperimentType.SERVER_SIDE;
+      activate?: never;
+    }
+  | {
+      type: ExperimentType.CLIENT_SIDE;
+      /**
+       * Defer the decision until this becomes true, e.g. on scroll. Children
+       * render unbucketed until then. Omit it to decide immediately.
+       *
+       * Client-side experiments only: server-side variations are chosen at
+       * the edge before the page is rendered.
+       */
+      activate?: boolean;
+    }
+);
 
 const ImmediateExperiment = ({
   name,
   type,
   children,
-}: DecisionProps & Pick<Props, 'children'>) => {
+}: {
+  name: string;
+  type: ExperimentType;
+  children: Children;
+}) => {
   const variation = useOptimizelyVariation({
     experimentName: name,
     experimentType: type,
@@ -39,48 +49,45 @@ const ImmediateExperiment = ({
   );
 };
 
-// Rendered only once activated, so the decision (and the impression it
-// records) happens no earlier than the caller asks for it.
-const Decision = ({
-  name,
-  type,
-  onDecide,
-}: DecisionProps & { onDecide: (variation: string | null) => void }) => {
-  const variation = useOptimizelyVariation({
-    experimentName: name,
-    experimentType: type,
-  });
-
-  useEffect(() => {
-    onDecide(variation);
-  }, [variation, onDecide]);
-
-  return null;
-};
-
 const DeferredExperiment = ({
   name,
-  type,
   activate,
   children,
-}: Required<Pick<Props, 'activate'>> &
-  DecisionProps &
-  Pick<Props, 'children'>) => {
+}: {
+  name: string;
+  activate: boolean;
+  children: Children;
+}) => {
+  const { optimizely } = use(OptimizelyContext);
   const [variation, setVariation] = useState<string | null>(null);
+
+  // Decided with the SDK client directly, so the decision (and the
+  // impression Optimizely records for it) happens only once activated.
+  useEffect(() => {
+    if (!activate || !optimizely) return undefined;
+
+    let cancelled = false;
+
+    optimizely.onReady().then(({ success }) => {
+      if (success && !cancelled) {
+        setVariation(optimizely.decide(name).variationKey);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [activate, optimizely, name]);
+
   const activeVariation = activate ? variation : null;
 
-  // The Decision sits beside, not around, the children so activating doesn't
-  // remount them.
   return (
-    <>
-      {activate && <Decision name={name} type={type} onDecide={setVariation} />}
-      <ExperimentProvider
-        experimentName={name}
-        experimentVariant={activeVariation}
-      >
-        {children(activeVariation)}
-      </ExperimentProvider>
-    </>
+    <ExperimentProvider
+      experimentName={name}
+      experimentVariant={activeVariation}
+    >
+      {children(activeVariation)}
+    </ExperimentProvider>
   );
 };
 
@@ -93,18 +100,22 @@ const DeferredExperiment = ({
  * `<componentName>-clicks` to Optimizely. Trackers outside it never are.
  *
  * Mounting it activates the experiment for the user, so only render it once
- * the user is eligible (or use `activate`).
+ * the user is eligible (or, for client-side experiments, use `activate`).
  *
  * @example
  * <Experiment name="my_flag" type={ExperimentType.SERVER_SIDE}>
  *   {variation => (variation === 'variant' ? <NewThing /> : <OldThing />)}
  * </Experiment>
  */
-const Experiment = ({ activate, ...props }: Props) =>
+const Experiment = ({ name, type, activate, children }: Props) =>
   activate === undefined ? (
-    <ImmediateExperiment {...props} />
+    <ImmediateExperiment name={name} type={type}>
+      {children}
+    </ImmediateExperiment>
   ) : (
-    <DeferredExperiment activate={activate} {...props} />
+    <DeferredExperiment name={name} activate={activate}>
+      {children}
+    </DeferredExperiment>
   );
 
 export { ExperimentType };

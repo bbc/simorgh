@@ -17,6 +17,7 @@ import {
   render,
   act,
   fireEvent,
+  waitFor,
   within,
 } from '../react-testing-library-with-providers';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -55,25 +56,33 @@ describe('Navigation', () => {
     useOptimizelyVariationMock.mockReturnValue(null);
   });
 
-  const stickyExperimentDecisions = () =>
-    useOptimizelyVariationMock.mock.calls.filter(
-      ([{ experimentName }]) =>
-        experimentName === 'newswb_ws_sticky_navigation',
-    );
+  const createOptimizely = (variationKey: string | null = null) =>
+    ({
+      track: jest.fn(),
+      close: jest.fn(),
+      user: { attributes: {}, id: 'test-user' },
+      onReady: jest.fn(() => Promise.resolve({ success: true })),
+      decide: jest.fn(() => ({ variationKey })),
+    }) as unknown as ReactSDKClient;
 
   describe('sticky navigation experiment', () => {
-    it('does not request a decision on non-article pages', () => {
-      render(<Navigation navItems={navItems} />, {
-        pageType: HOME_PAGE,
-        service: 'news',
-      });
+    it('does not request a decision on non-article pages', async () => {
+      const optimizely = createOptimizely('control');
+
+      render(
+        <OptimizelyProvider optimizely={optimizely} isServerSide>
+          <Navigation navItems={navItems} />
+        </OptimizelyProvider>,
+        { pageType: HOME_PAGE, service: 'news' },
+      );
 
       fireEvent.scroll(window);
+      await act(() => Promise.resolve());
 
-      expect(stickyExperimentDecisions()).toHaveLength(0);
+      expect(optimizely.decide).not.toHaveBeenCalled();
     });
 
-    it('sends a navigation click event for the control variant', () => {
+    it('sends a navigation click event for the control variant', async () => {
       jest
         .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
         .mockReturnValue({
@@ -87,12 +96,7 @@ describe('Navigation', () => {
           height: 0,
           toJSON: () => ({}),
         });
-      useOptimizelyVariationMock.mockReturnValue('control');
-      const optimizely = {
-        track: jest.fn(),
-        close: jest.fn(),
-        user: { attributes: {}, id: 'test-user' },
-      } as unknown as ReactSDKClient;
+      const optimizely = createOptimizely('control');
       const {
         metadata: { atiAnalytics, type },
       } = articleDataNews;
@@ -112,6 +116,12 @@ describe('Navigation', () => {
           service: 'news',
           toggles: { eventTracking: { enabled: true } },
         },
+      );
+
+      await waitFor(() =>
+        expect(optimizely.decide).toHaveBeenCalledWith(
+          'newswb_ws_sticky_navigation',
+        ),
       );
 
       fireEvent.click(getByRole('link', { name: 'Home' }));
