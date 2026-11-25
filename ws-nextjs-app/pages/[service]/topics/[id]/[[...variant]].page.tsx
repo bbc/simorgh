@@ -9,7 +9,6 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
 import handleError from '#app/routes/utils/handleError';
-import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
@@ -108,4 +107,4 @@ export const getServerSideProps = withRequestProps(async context => {
   };
 });
 
-export default withOptimizelyProvider(TopicPage);
+export default TopicPage;
