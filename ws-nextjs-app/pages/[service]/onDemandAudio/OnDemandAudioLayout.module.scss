@@ -1,10 +1,14 @@
 @use '@scss/themeTokens' as theme;
 
 // Element-qualified to beat ContinueReadingButton's single-class rules,
-// including its group 1 margin/width and forced-colours border.
+// including its group 1 margin/width.
 button.podcastContinueReadingButton {
   border-bottom: none;
   background-color: theme.$palette-grey-1;
   width: 100%;
   margin: 0;
+
+  @media #{theme.$mediaQueries-forced-colours} {
+    border-bottom: theme.pixelsToRem-px-to-rem(1) solid CanvasText;
+  }
 }
