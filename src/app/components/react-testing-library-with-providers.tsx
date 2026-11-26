@@ -20,6 +20,7 @@ import {
   Toggles,
   Variants,
 } from '../models/types/global';
+import LocalStorageProvider from './Riddle/LocalStorageProvider';
 
 jest.mock('./ThemeProvider');
 
@@ -101,17 +102,19 @@ const AllTheProviders: FC<Props> = ({
           serverSideExperiments={serverSideExperiments}
         >
           <AccountProvider initialConfig={idctaConfig}>
-            <ReverbParamsContextProvider metadata={pageMetadata}>
-              <EventTrackingContextProvider
-                atiData={pageMetadata?.atiAnalytics}
-              >
-                <UserContextProvider>
-                  <ThemeProvider service={service} variant={variant}>
-                    {children}
-                  </ThemeProvider>
-                </UserContextProvider>
-              </EventTrackingContextProvider>
-            </ReverbParamsContextProvider>
+            <LocalStorageProvider>
+              <ReverbParamsContextProvider metadata={pageMetadata}>
+                <EventTrackingContextProvider
+                  atiData={pageMetadata?.atiAnalytics}
+                >
+                  <UserContextProvider>
+                    <ThemeProvider service={service} variant={variant}>
+                      {children}
+                    </ThemeProvider>
+                  </UserContextProvider>
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
+            </LocalStorageProvider>
           </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>

@@ -1,0 +1,11 @@
+@use '@scss/themeTokens' as theme;
+
+.placeholder {
+  background: theme.$palette-grey-2;
+  width: 100%;
+  height: #{theme.pixelsToRem-px-to-rem(572)};
+
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    height: #{theme.pixelsToRem-px-to-rem(504)};
+  }
+}

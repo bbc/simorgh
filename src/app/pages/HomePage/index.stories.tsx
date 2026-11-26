@@ -9,6 +9,7 @@ import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import ThemeProvider from '#app/components/ThemeProvider';
+import LocalStorageProvider from '#app/components/Riddle/LocalStorageProvider';
 
 const ONE_DAY_IN_MILLISECONDS = 24 * 60 * 60 * 1000;
 
@@ -63,26 +64,28 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
 
   return (
     <ServiceContextProvider service={service} variant={variant}>
-      <RequestContextProvider
-        isLite={isLite}
-        service={service}
-        variant={variant}
-        pageType={HOME_PAGE}
-        pathname={`/${service}`}
-      >
-        <ThemeProvider service={service} variant={variant}>
-          <PageLayoutWrapper
-            // @ts-expect-error - Fixture data
-            pageData={pageData}
-            status={200}
-          >
-            <HomePage
+      <LocalStorageProvider>
+        <RequestContextProvider
+          isLite={isLite}
+          service={service}
+          variant={variant}
+          pageType={HOME_PAGE}
+          pathname={`/${service}`}
+        >
+          <ThemeProvider service={service} variant={variant}>
+            <PageLayoutWrapper
               // @ts-expect-error - Fixture data
               pageData={pageData}
-            />
-          </PageLayoutWrapper>
-        </ThemeProvider>
-      </RequestContextProvider>
+              status={200}
+            >
+              <HomePage
+                // @ts-expect-error - Fixture data
+                pageData={pageData}
+              />
+            </PageLayoutWrapper>
+          </ThemeProvider>
+        </RequestContextProvider>
+      </LocalStorageProvider>
     </ServiceContextProvider>
   );
 };

@@ -135,7 +135,7 @@ describe('Home Page', () => {
       service: 'pidgin',
     });
     // for some reason, most read headings are not showing as headings in the count or if I log them
-    expect(container.querySelectorAll('h2').length).toBe(15);
+    expect(container.querySelectorAll('h2').length).toBe(16);
     expect(container.querySelectorAll('h3').length).toBe(45);
 
     // Restore the original value - remove when pidgin moreOnThis translation is available
