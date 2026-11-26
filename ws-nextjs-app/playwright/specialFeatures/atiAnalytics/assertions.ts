@@ -1125,16 +1125,27 @@ export const assertPodcastPromoComponentView = async ({
   applicationType,
   appEnv,
 }: AtiAssertionFnProps) => {
+  const viewRequests: Request[] = [];
   const viewPromise = waitForComponentViewRequest({
     page,
     appEnv,
     component: COMPONENTS.PODCAST_PROMO,
+  }).then(request => {
+    viewRequests.push(request);
+    return request;
   });
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
   const promo = page.locator('[data-e2e="podcast-promo"]');
-  await promo.evaluate(element => element.scrollIntoView({ block: 'center' }));
+  await expect
+    .poll(async () => {
+      await promo.evaluate(element =>
+        element.scrollIntoView({ block: 'center' }),
+      );
+      return viewRequests.length;
+    })
+    .toBe(1);
   await expect(promo).toBeInViewport({ ratio: 0.5 });
 
   const request = await viewPromise;

@@ -1,12 +1,45 @@
 import { expect, test } from '@playwright/test';
 import polskaArticle from '#data/polska/articles/c639526lxlro.json';
-import { baseURL, shouldRunForEnv } from '../../utilities/env';
+import {
+  appEnvFromProcess,
+  baseURL,
+  shouldRunForEnv,
+} from '../../utilities/env';
+import { assertPodcastPromoComponentView } from '../../specialFeatures/atiAnalytics/assertions';
 
 const ARTICLE_PATH = '/pidgin/articles/ce9wk6glg4lo';
 const ONWARD_JOURNEYS = ['topStoriesAndFeatures', 'portraitVideo', 'mostRead'];
 
 test.describe('articlePage', () => {
   test.use({ serviceWorkers: 'block' });
+
+  test('tracks the podcast promo after the scroll position changes', async ({
+    page,
+  }) => {
+    test.skip(!shouldRunForEnv(['local']));
+    await page.addInitScript(() => {
+      const { scrollIntoView } = Element.prototype;
+      let hasResetScroll = false;
+      Element.prototype.scrollIntoView = function scroll(options) {
+        scrollIntoView.call(this, options);
+        if (this.matches('[data-e2e="podcast-promo"]') && !hasResetScroll) {
+          hasResetScroll = true;
+          requestAnimationFrame(() => window.scrollTo(0, 0));
+        }
+      };
+    });
+    await assertPodcastPromoComponentView({
+      page,
+      path: '/gahuza/articles/c5y51yxeg53o',
+      baseURL,
+      pageIdentifier: 'gahuza.articles.c5y51yxeg53o.page',
+      siteId: 40,
+      applicationType: 'responsive',
+      contentType: 'article',
+      service: 'gahuza',
+      appEnv: appEnvFromProcess,
+    });
+  });
 
   [
     { width: 390, height: 844, topBarVisible: true },
