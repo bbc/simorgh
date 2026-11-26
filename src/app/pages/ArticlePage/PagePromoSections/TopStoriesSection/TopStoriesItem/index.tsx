@@ -4,6 +4,7 @@ import Promo from '#components/OptimoPromos';
 import { EventTrackingBlock } from '#app/models/types/eventTracking';
 
 import styles from './index.styles';
+import timestampStyles from './index.module.scss';
 import { TopStoryItem } from '../types';
 
 const getArticleTopStoryItem = (item: TopStoryItem) => {
@@ -131,7 +132,7 @@ const TopStoriesItem = forwardRef(
               </Promo.Link>
             </Promo.Title>
             {timestamp && (
-              <Promo.Timestamp css={styles.timestamp}>
+              <Promo.Timestamp className={timestampStyles.timestamp}>
                 {timestamp}
               </Promo.Timestamp>
             )}

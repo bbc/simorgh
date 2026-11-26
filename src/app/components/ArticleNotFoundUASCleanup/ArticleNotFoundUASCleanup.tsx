@@ -1,5 +1,5 @@
 import { use, useEffect, useRef } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
+import { useIsRestoring, useQueryClient } from '@tanstack/react-query';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -17,19 +17,25 @@ const logger = nodeLogger(__filename);
 
 /**
  * Client-side only component that removes a 404'd article from UAS favourites.
- * Rendered only after hydration (ssr: false in index.tsx) to avoid SSR errors
- * from useQueryClient. Mount conditions (personalization, pageType, errorCode)
- * are checked in ErrorPage before rendering this component.
+ * Loaded with its query provider after hydration. ErrorPage checks the
+ * personalization, pageType and errorCode conditions before mounting.
  */
 const ArticleNotFoundUASCleanup = () => {
   const { hashedUserId = '', isRefreshAvailable } = use(AccountContext);
   const { pathname } = use(RequestContext);
   const queryClient = useQueryClient();
+  const isRestoring = useIsRestoring();
   const { assetId: articleId } = parseRoute(pathname);
   const hasAttemptedDeletion = useRef(false);
 
   useEffect(() => {
-    if (!hashedUserId || !articleId || hasAttemptedDeletion.current) return;
+    if (
+      isRestoring ||
+      !hashedUserId ||
+      !articleId ||
+      hasAttemptedDeletion.current
+    )
+      return;
 
     const removeDeletedArticleFromUAS = async () => {
       try {
@@ -62,7 +68,7 @@ const ArticleNotFoundUASCleanup = () => {
     };
 
     removeDeletedArticleFromUAS();
-  }, [queryClient, hashedUserId, articleId, isRefreshAvailable]);
+  }, [queryClient, isRestoring, hashedUserId, articleId, isRefreshAvailable]);
   return null;
 };
 

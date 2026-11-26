@@ -186,9 +186,10 @@ describe('Recent Video Episodes', () => {
         { service: 'afrique' },
       ));
     });
-    const svgs = container.querySelectorAll('svg');
+    const icons = container.querySelectorAll('.external-svg');
 
-    expect(svgs).toHaveLength(3);
+    expect(icons).toHaveLength(3);
+    expect(container.querySelector('svg')).not.toBeInTheDocument();
   });
 
   it('should include the data-e2e attribute if passed', () => {

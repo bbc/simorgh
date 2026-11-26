@@ -1,0 +1,41 @@
+@use '@scss/themeTokens' as theme;
+
+.pageWrapper {
+  :global([data-is-dark-ui='true']) & {
+    background-color: theme.$palette-grey-10;
+    display: grid;
+  }
+}
+
+.main {
+  margin: 0 #{theme.$spacings-full};
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin: 0 #{theme.$spacings-double};
+  }
+}
+
+.inner {
+  max-width: 63rem;
+  margin: 0 auto;
+}
+
+.inline {
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.title {
+  margin: #{theme.$spacings-triple} 0;
+
+  // The previous group-2 margin had no unit and was ignored by browsers.
+  @media #{theme.$mediaQueries-group-3-min-width} {
+    margin: #{theme.$spacings-sextuple} 0;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin: #{theme.$spacings-quintuple} 0 #{theme.$spacings-sextuple} 0;
+  }
+}

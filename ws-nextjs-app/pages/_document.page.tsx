@@ -58,12 +58,7 @@ type DocProps = {
 
 const optimiseInlineCss = (css: string, renderedHtml: string): string =>
   optimiseCssPrefixes(
-    trimFontFaceSourcesToWoff2(
-      treeshakeCssCustomProperties(
-        treeshakeCssModuleRules(css, renderedHtml),
-        renderedHtml,
-      ),
-    ),
+    trimFontFaceSourcesToWoff2(treeshakeCssCustomProperties(css, renderedHtml)),
   );
 
 export default class AppDocument extends Document<DocProps> {
@@ -157,7 +152,14 @@ export default class AppDocument extends Document<DocProps> {
 
     // Only AMP and Lite inline CSS, so canonical renders must not pay for this work.
     const getInlineCss = () =>
-      optimiseInlineCss(css + getAmpLiteCss(getNextData()), this.props.html);
+      optimiseInlineCss(
+        css +
+          treeshakeCssModuleRules(
+            getAmpLiteCss(getNextData()),
+            this.props.html,
+          ),
+        this.props.html,
+      );
 
     switch (true) {
       case isAmp && pageType === 'article': {

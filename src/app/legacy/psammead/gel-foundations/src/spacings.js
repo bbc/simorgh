@@ -19,8 +19,6 @@ export const GEL_SPACING_QUAD = `2rem`;
 export const GEL_SPACING_QUIN = `2.5rem`;
 /** 48px */
 export const GEL_SPACING_SEXT = `3rem`;
-/** 56px */
-export const GEL_SPACING_SEPT = `3.5rem`;
 
 /*
     GEL Grid

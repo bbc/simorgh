@@ -201,7 +201,7 @@ describe('Hierarchical Grid Curation', () => {
       />,
     );
 
-    expect(document.querySelector('span')?.getAttribute('role')).toBe('text');
+    expect(document.querySelector('span[role="text"]')).toBeInTheDocument();
   });
 
   it('should use visually hidden text only when type is media i.e video, audio and photogallery', async () => {

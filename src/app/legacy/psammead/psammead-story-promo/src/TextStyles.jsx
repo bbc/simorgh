@@ -9,7 +9,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { grid } from '#psammead/psammead-styles/src/detection';
+import { GRID_SUPPORT_QUERY } from '#app/lib/cssFeatureQueries.const';
 
 const twoOfSixColumnsMaxWidthScaleable = `33.33%`;
 // (2 / 6) * 100 = 0.3333333333 = 33.33%
@@ -138,7 +138,7 @@ const TextGridItem = styled.div`
   ${({ promoType, displayImage, dir }) =>
     textGridFallbackStyles[promoType]({ displayImage, dir })}
 
-  @supports (${grid}) {
+  @supports (${GRID_SUPPORT_QUERY}) {
     display: block;
     width: initial;
     padding: initial;

@@ -10,7 +10,7 @@ const MyNewsPageLoading = () => {
 
   return (
     <>
-      <Heading level={1} css={styles.heading}>
+      <Heading id="content" tabIndex={-1} level={1} css={styles.heading}>
         {translations?.myNews?.title}
       </Heading>
       <MyNewsSpinner label={loadingText} testId="my-news-page-spinner" />

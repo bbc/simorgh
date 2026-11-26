@@ -59,18 +59,29 @@ const styles = {
     }),
   promoMediaIndicator: ({ palette, mq, isLite }: Theme) =>
     css({
-      svg: {
+      '.external-svg': {
         color: palette.GREY_2,
-        fill: 'currentColor',
+        "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+          { filter: 'invert(1)' },
 
         ...(!isLite && {
           [mq.GROUP_2_ONLY]: {
             color: palette.EBON,
+            filter: 'none',
           },
           [mq.GROUP_3_ONLY]: {
             color: palette.EBON,
+            filter: 'none',
           },
         }),
+        [mq.FORCED_COLOURS]: {
+          color: 'CanvasText',
+          filter: 'none',
+          "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+            {
+              '@media (prefers-color-scheme: dark)': { filter: 'invert(1)' },
+            },
+        },
       },
     }),
 };

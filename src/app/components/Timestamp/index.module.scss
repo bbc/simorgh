@@ -1,0 +1,19 @@
+@use '@scss/themeTokens' as theme;
+
+.timestamp {
+  @include theme.typography-from-scale-and-variant(brevier, 'sans-regular');
+  color: theme.$palette-grey-6;
+  display: block;
+
+  :global([data-is-dark-ui='true']) & {
+    color: theme.$palette-grey-3;
+  }
+}
+
+.padding {
+  padding-bottom: theme.$spacings-half;
+
+  &:last-child {
+    padding-bottom: theme.$spacings-double;
+  }
+}

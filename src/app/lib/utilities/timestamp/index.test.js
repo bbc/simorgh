@@ -1,0 +1,483 @@
+import moment from 'moment-timezone';
+import {
+  formatDuration,
+  formatUnixTimestamp,
+  isValidDateTime,
+  localisedMoment,
+} from '.';
+import timestampGenerator from './testHelpers';
+
+const timezone = 'Europe/London';
+const timestamp = 1539969006000; // 19 October 2018
+const locale = 'en-gb';
+
+describe('Timestamp utility functions', () => {
+  describe('isValidDateTime', () => {
+    it('should return true if timestamp is valid', () => {
+      expect(isValidDateTime(timestamp)).toEqual(true);
+      expect(isValidDateTime(0)).toEqual(true);
+      expect(isValidDateTime(-30000000)).toEqual(true);
+    });
+
+    it('should return false if timestamp is invalid or missing', () => {
+      expect(isValidDateTime('foo')).toEqual(false);
+      expect(isValidDateTime(null)).toEqual(false);
+      expect(isValidDateTime(undefined)).toEqual(false);
+      expect(isValidDateTime()).toEqual(false);
+    });
+  });
+
+  describe('localisedMoment', () => {
+    it('should be a valid moment when timestamp and locale are passed in', () => {
+      expect(localisedMoment({ timestamp, locale })).toHaveProperty('isValid');
+    });
+  });
+
+  describe('formatUnixTimestamp', () => {
+    it.each([
+      [59, 'a minute ago'],
+      [60, 'a minute ago'],
+      [119, 'a minute ago'],
+      [120, '2 minutes ago'],
+      [3599, '59 minutes ago'],
+      [3600, 'an hour ago'],
+      [86399, '23 hours ago'],
+      [86400, 'a day ago'],
+      [29 * 86400, '29 days ago'],
+      [30 * 86400, 'a month ago'],
+    ])('preserves the relative boundary at %s seconds', (seconds, expected) => {
+      const now = 1704110400000;
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(now);
+      try {
+        expect(
+          formatUnixTimestamp({
+            timestamp: now - seconds * 1000,
+            locale: 'en-gb',
+            timezone: 'Europe/London',
+            isRelative: true,
+          }),
+        ).toBe(expected);
+      } finally {
+        nowSpy.mockRestore();
+      }
+    });
+
+    it('continues to treat numeric timestamps as milliseconds and ISO strings as dates', () => {
+      const options = {
+        format: 'YYYY-MM-DD HH:mm:ss',
+        locale: 'en-gb',
+        timezone: 'GMT',
+      };
+      expect(
+        formatUnixTimestamp({ ...options, timestamp: 1539969006000 }),
+      ).toBe('2018-10-19 17:10:06');
+      expect(
+        formatUnixTimestamp({
+          ...options,
+          timestamp: '2018-10-19T17:10:06.000Z',
+        }),
+      ).toBe('2018-10-19 17:10:06');
+      expect(formatUnixTimestamp({ ...options, timestamp: 0 })).toBeUndefined();
+    });
+    const GMTTimestamp = 1483275600000; // 1 January 2017 GMT
+    const BSTTimestamp = 1496235600000; // 31 May 2017 BST
+    const isRelative = false;
+
+    it('should return BST for a BST timestamp', () => {
+      const result = formatUnixTimestamp({
+        timestamp: BSTTimestamp,
+        format: 'D MMMM YYYY, HH:mm z',
+        timezone,
+        locale,
+      });
+      expect(result).toContain('BST');
+    });
+
+    it('should return GMT for a GMT timestamp', () => {
+      const result = formatUnixTimestamp({
+        timestamp: GMTTimestamp,
+        format: 'D MMMM YYYY, HH:mm z',
+        timezone,
+        locale,
+      });
+      expect(result).toContain('GMT');
+    });
+
+    it('should return date and time in expected format', () => {
+      const result = formatUnixTimestamp({
+        timestamp: GMTTimestamp,
+        format: 'D MMMM YYYY, HH:mm z',
+        timezone,
+        locale,
+      });
+      expect(result).toEqual('1 January 2017, 13:00 GMT');
+    });
+
+    it('should return short date in expected format', () => {
+      const result = formatUnixTimestamp({
+        timestamp: GMTTimestamp,
+        format: 'YYYY-MM-DD',
+        timezone,
+        locale,
+      });
+      expect(result).toEqual('2017-01-01');
+    });
+
+    it('should return long date in expected format', () => {
+      const result = formatUnixTimestamp({
+        timestamp: GMTTimestamp,
+        format: 'D MMMM YYYY',
+        timezone,
+        locale,
+      });
+      expect(result).toEqual('1 January 2017');
+    });
+    it('should return relative timestamp if isRelative is true', () => {
+      const nineHoursAgo = timestampGenerator({ hours: 9 });
+      const output = formatUnixTimestamp({
+        timestamp: nineHoursAgo,
+        format: 'D MMMM YYYY',
+        timezone,
+        locale,
+        isRelative: true,
+      });
+      const expectedOutput = '9 hours ago';
+      expect(output).toEqual(expectedOutput);
+    });
+
+    it('should return timestamp with format if format is provided', () => {
+      const output = formatUnixTimestamp({
+        timestamp,
+        format: 'D MMMM YYYY',
+        timezone,
+        locale,
+        isRelative,
+      });
+      const expectedOutput = '19 October 2018';
+      expect(output).toEqual(expectedOutput);
+    });
+
+    it('should return timestamp with default format if format is not provided', () => {
+      const output = formatUnixTimestamp({
+        timestamp,
+        format: null,
+        timezone,
+        locale,
+        isRelative,
+      });
+      const expectedOutput = '19 October 2018, 18:10 BST';
+      expect(output).toEqual(expectedOutput);
+    });
+
+    it('should not return a timestamp when you do not pass in a timestamp to be formatted', () => {
+      const result = formatUnixTimestamp({
+        format: 'D MMMM YYYY, HH:mm z',
+        timezone,
+        locale,
+      });
+      expect(result).toBeUndefined();
+    });
+
+    it('should correctly format timezone labels around DST start in Europe/London', () => {
+      const beforeDSTStart = Date.UTC(2021, 2, 28, 0, 30, 0); // 00:30 GMT
+      const afterDSTStart = Date.UTC(2021, 2, 28, 1, 30, 0); // 02:30 BST
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: beforeDSTStart,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('28 March 2021, 00:30 GMT');
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: afterDSTStart,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('28 March 2021, 02:30 BST');
+    });
+
+    it('should correctly format timezone labels around DST end in Europe/London', () => {
+      const beforeDSTEnd = Date.UTC(2021, 9, 31, 0, 30, 0); // 01:30 BST
+      const afterDSTEnd = Date.UTC(2021, 9, 31, 1, 30, 0); // 01:30 GMT
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: beforeDSTEnd,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('31 October 2021, 01:30 BST');
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: afterDSTEnd,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone,
+          locale,
+        }),
+      ).toEqual('31 October 2021, 01:30 GMT');
+    });
+
+    it('should apply a fixed UTC+1 offset for Africa/Lagos (no DST)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Africa/Lagos',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 13:00 WAT');
+    });
+
+    it('should apply a +05:45 offset for Asia/Kathmandu (no DST, non-whole-hour offset)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'Asia/Kathmandu',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 17:45 +0545');
+    });
+
+    it('should apply a negative UTC-3 offset for America/Sao_Paulo', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'America/Sao_Paulo',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 09:00 -03');
+    });
+
+    it('should format correctly for GMT (non-region-style IANA identifier)', () => {
+      const utcTimestamp = Date.UTC(2021, 5, 15, 12, 0, 0); // 15 June 2021 12:00 UTC
+
+      expect(
+        formatUnixTimestamp({
+          timestamp: utcTimestamp,
+          format: 'D MMMM YYYY, HH:mm z',
+          timezone: 'GMT',
+          locale,
+        }),
+      ).toEqual('15 June 2021, 12:00 GMT');
+    });
+
+    it('should translate month names for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: 'D MMMM YYYY',
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨');
+    });
+
+    it('should apply locale-sensitive format tokens (LL, LT) for a non-Latin locale', () => {
+      expect(
+        formatUnixTimestamp({
+          timestamp,
+          format: null,
+          timezone: 'GMT',
+          locale: 'ar',
+        }),
+      ).toEqual('١٩ أكتوبر ٢٠١٨، ١٧:١٠ GMT');
+    });
+
+    it('should return relative timestamp in the provided locale', () => {
+      const nowSpy = jest.spyOn(Date, 'now').mockReturnValue(1704110400000); // 1 January 2024 12:00:00 UTC
+      try {
+        const nineHoursAgo = timestampGenerator({ hours: 9 });
+        const output = formatUnixTimestamp({
+          timestamp: nineHoursAgo,
+          format: 'D MMMM YYYY',
+          timezone: 'GMT',
+          locale: 'ar',
+          isRelative: true,
+        });
+        expect(output).toEqual('منذ ٩ ساعات');
+      } finally {
+        nowSpy.mockRestore();
+      }
+    });
+  });
+
+  describe('formatDuration', () => {
+    it('should return duration in default format', () => {
+      const duration = 'PT30M'; // 30:00
+      expect(formatDuration({ duration })).toEqual('30:00');
+    });
+    it('should return duration with hours in default format', () => {
+      const duration = 'PT1H30M'; // 1:30:00
+      expect(formatDuration({ duration })).toEqual('1:30:00');
+    });
+    it('should return duration in relevant format when a format is passed in', () => {
+      const duration = 'PT30M'; // 30:00
+      expect(formatDuration({ duration, format: 'mm,ss' })).toEqual('30,00');
+    });
+    it.each(['AR', 'fa_AF', 'fa-af'])(
+      'should use the Arabic comma for normalized locale %s',
+      testLocale => {
+        const output = formatDuration({
+          duration: 'PT30M',
+          format: 'mm,ss',
+          locale: testLocale,
+        });
+
+        expect(output).toContain('،');
+        expect(output).not.toContain(',');
+      },
+    );
+    it.each([
+      ['my', '၃၀:၀၀'],
+      ['ne', '३०:००'],
+      ['bn', '৩০:০০'],
+    ])(
+      'should return duration with native digits for locale %s',
+      (testLocale, expected) => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual(expected);
+      },
+    );
+    it.each(['ar', 'gu', 'hi', 'mr', 'pa-in', 'ta'])(
+      'should return duration with Latin digits for locale %s',
+      testLocale => {
+        expect(
+          formatDuration({ duration: 'PT30M', locale: testLocale }),
+        ).toEqual('30:00');
+      },
+    );
+    it.each(['P1W', 'P1M', 'P1Y'])(
+      'should return zero instead of throwing for calendar duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
+    it.each(['-PT1S', '-PT1H30M45S'])(
+      'should return zero instead of formatting negative duration %s',
+      duration => {
+        expect(formatDuration({ duration })).toEqual('00:00');
+      },
+    );
+  });
+});
+
+describe('Moment configuration', () => {
+  it('rounds down', () => {
+    const wouldOtherwiseRoundUp = moment()
+      .subtract(59, 'minutes')
+      .subtract(59, 'seconds');
+
+    // default moment configuration would return 'an hour ago'
+    expect(wouldOtherwiseRoundUp.fromNow()).toEqual('59 minutes ago');
+  });
+
+  it('never reports relative timestamps in seconds', () => {
+    const now = moment();
+    // default moment configuration would return 'a few seconds ago'
+    expect(now.fromNow()).toEqual('a minute ago');
+
+    const ten = moment().subtract(10, 'seconds');
+    // default moment configuration would return '10 seconds ago'
+    expect(ten.fromNow()).toEqual('a minute ago');
+  });
+
+  it('reports all relative timestamps < 1 hour rounded down to nearest minute', () => {
+    const ten = moment().subtract(10, 'minutes');
+    // default moment configuration would return '10 minutes ago' (no change)
+    expect(ten.fromNow()).toEqual('10 minutes ago');
+
+    const fifty = moment().subtract(50, 'minutes');
+    // default moment configuration would return 'an hour ago'
+    expect(fifty.fromNow()).toEqual('50 minutes ago');
+  });
+
+  it('reports all relative timestamps >= 1 hour and < 24 hours rounded down to nearest hour', () => {
+    const one = moment().subtract(1, 'hour');
+    // default moment configuration would return 'an hour ago' (no change)
+    expect(one.fromNow()).toEqual('an hour ago');
+
+    const two = moment().subtract(2, 'hours');
+    // default moment configuration would return '2 hours ago' (no change)
+    expect(two.fromNow()).toEqual('2 hours ago');
+
+    const twentyThree = moment().subtract(23, 'hours');
+    // default moment configuration would return 'a day ago'
+    expect(twentyThree.fromNow()).toEqual('23 hours ago');
+
+    const allButADay = moment().subtract(23, 'hours').subtract(59, 'seconds');
+    // default moment configuration would return 'a day ago'
+    expect(allButADay.fromNow()).toEqual('23 hours ago');
+  });
+
+  // the expect functionality fails, is done to fix the bug.
+  it('reports all relative timestamps >= 1 day and < 1 month rounded down to nearest day in DST', () => {
+    moment.now = jest.fn().mockImplementation(() => {
+      // July
+      return 1657637911000;
+    });
+    const one = moment().subtract(1, 'day');
+    // default moment configuration would return 'a day ago' (no change)
+    expect(one.fromNow()).toEqual('a day ago');
+
+    const two = moment().subtract(2, 'days');
+    // default moment configuration would return '2 days ago' (no change)
+    expect(two.fromNow()).toEqual('2 days ago');
+
+    const allButAMonth = moment().subtract(30, 'days').add(1, 'second');
+    // default moment configuration would return 'a month ago'
+    expect(allButAMonth.fromNow()).toEqual('29 days ago');
+  });
+
+  it('reports all relative timestamps >= 1 day and < 1 month rounded down to nearest day out of DST', () => {
+    moment.now = jest.fn().mockImplementation(() => {
+      // Nov
+      return 1668265111000;
+    });
+    const one = moment().subtract(1, 'day');
+    // default moment configuration would return 'a day ago' (no change)
+    expect(one.fromNow()).toEqual('a day ago');
+
+    const two = moment().subtract(2, 'days');
+    // default moment configuration would return '2 days ago' (no change)
+    expect(two.fromNow()).toEqual('2 days ago');
+
+    const allButAMonth = moment().subtract(30, 'days').add(1, 'day');
+    // default moment configuration would return 'a month ago'
+    expect(allButAMonth.fromNow()).toEqual('29 days ago');
+  });
+
+  it('reports all relative timestamps >= 1 month and < 1 year rounded down to nearest month', () => {
+    const one = moment().subtract(1, 'month');
+    // default moment configuration would return 'a month ago' (no change)
+    expect(one.fromNow()).toEqual('a month ago');
+
+    const two = moment().subtract(2, 'months');
+    // default moment configuration would return '2 months ago' (no change)
+    expect(two.fromNow()).toEqual('2 months ago');
+
+    const allButAYear = moment()
+      .subtract(12, 'months')
+      // this was originally `.add(1, 'second') but that caused the tests to fail on the 31st of the month
+      // (because the threshold for a month has been configured to 30 days) so instead
+      // be safely away from this edge case by going 5 days away
+      .add(5, 'days');
+    // default moment configuration would return 'a month ago'
+    expect(allButAYear.fromNow()).toEqual('11 months ago');
+  });
+});
