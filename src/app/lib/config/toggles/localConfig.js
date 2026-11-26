@@ -33,6 +33,9 @@ export default {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
     value: `(${SERVICES.join('|')})`,
   },
+  topicDiscovery: {
+    enabled: true,
+  },
   eventTracking: {
     enabled: true,
   },
