@@ -1,0 +1,147 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Experiment" />
+
+# Experiment
+
+`<Experiment>` decides an Optimizely experiment and renders its children with the user's variation. Every tracker rendered inside it is attributed to the experiment automatically, so you don't need to pass experiment details to each one.
+
+- View, click, swipe and custom event trackers are tagged with `experimentName` and `experimentVariant` in Reverb/Resonance.
+- View, click and swipe trackers also send `<componentName>-views` / `<componentName>-clicks` events to Optimizely. Custom event trackers don't, so they can't be used as Optimizely metrics.
+- Trackers outside an `<Experiment>` are never attributed. Tracking hooks don't accept experiment details directly.
+
+Mounting it activates the experiment for the user, so only render it once the user is eligible (or, for client-side experiments, use [`activate`](#activate-later)). It needs the Optimizely client from the [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler.
+
+## Usage
+
+### Render a different component for a single variation
+
+```tsx
+import Experiment, { ExperimentType } from '#app/components/Experiment';
+
+<Experiment name="newswb_ws_promo_test" type={ExperimentType.SERVER_SIDE}>
+  {variation => (variation === 'variant' ? <NewPromo /> : <CurrentPromo />)}
+</Experiment>;
+```
+
+### Render a different component for multiple variations
+
+```tsx
+<Experiment name="newswb_ws_promo_test" type={ExperimentType.SERVER_SIDE}>
+  {variation => {
+    if (variation === 'variant_1') return <PromoWithImage />;
+    if (variation === 'variant_2') return <PromoWithVideo />;
+    return <CurrentPromo />;
+  }}
+</Experiment>
+```
+
+`variation` is `null` until the user is bucketed (and always for users not in the experiment), so always fall back to your default UI, as `<CurrentPromo />` does above.
+
+### Tag components in different parts of the page
+
+If the components aren't next to each other, wrap each one in its own `<Experiment>` with the same name. Use a shared constant so the names can't drift apart.
+
+```tsx
+// topStoriesExperiment.ts
+export const TOP_STORIES_EXPERIMENT = 'newswb_ws_top_stories_test';
+
+// SecondaryColumn.tsx: the component being tested
+<Experiment name={TOP_STORIES_EXPERIMENT} type={ExperimentType.SERVER_SIDE}>
+  {variation => {
+    if (variation === 'variant_1') {
+      return <TopStoriesWithImages content={topStoriesContent} />;
+    }
+
+    return <TopStoriesSection content={topStoriesContent} />;
+  }}
+</Experiment>
+
+// ArticlePage.tsx: further down the page, not varied, but its events are tagged
+<Experiment name={TOP_STORIES_EXPERIMENT} type={ExperimentType.SERVER_SIDE}>
+  {() => <MostRead data={mostReadInitialData} />}
+</Experiment>
+```
+
+Both get the same variation for the user, and the experiment is only activated (and the Reverb activation beacon only sent) once per page. Keep any eligibility checks, and `activate` if you use it, the same around both, so `MostRead` isn't tagged for users who could never see the Top Stories change.
+
+### Activate later
+
+For client-side experiments, pass `activate` to defer the decision until it becomes `true`, for example once the user scrolls. Children render unbucketed (`variation` is `null`) until then, and aren't remounted on activation.
+
+```tsx
+<Experiment
+  name="newswb_ws_scroll_test"
+  type={ExperimentType.CLIENT_SIDE}
+  activate={hasScrolled}
+>
+  {variation => (variation === 'variant' ? <StickyNav /> : <Nav />)}
+</Experiment>
+```
+
+`activate` isn't available for server-side experiments: their variations are chosen at the edge before the page is rendered.
+
+## Tracking is automatic
+
+Components inside an `<Experiment>` need no experiment code at all. Use the same trackers you would outside an experiment:
+
+```tsx
+const NewPromo = () => {
+  const viewTracker = useViewTracker({ componentName: 'new-promo' });
+  const clickTracker = useClickTrackerHandler({ componentName: 'new-promo' });
+
+  return (
+    <a href="/somewhere" {...viewTracker} {...clickTracker}>
+      …
+    </a>
+  );
+};
+```
+
+This means you don't need to:
+
+- pass `experimentName`, `experimentVariant` or `sendOptimizelyEvents` into every `useViewTracker` / `useClickTrackerHandler`
+- thread experiment props down through child components (e.g. banner → buttons)
+- call `useOptimizelyVariation` conditionally, or add helper components just to activate an experiment later
+
+### Before
+
+```tsx
+const Promo = () => {
+  const variation = useOptimizelyVariation({
+    experimentName: EXPERIMENT_NAME,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
+  const viewTracker = useViewTracker({
+    componentName: 'promo',
+    experimentName: EXPERIMENT_NAME,
+    experimentVariant: variation,
+    sendOptimizelyEvents: true,
+  });
+
+  const clickTracker = useClickTrackerHandler({
+    componentName: 'promo',
+    experimentName: EXPERIMENT_NAME,
+    experimentVariant: variation,
+    sendOptimizelyEvents: true,
+  });
+
+  // ...
+};
+```
+
+### After
+
+```tsx
+<Experiment name={EXPERIMENT_NAME} type={ExperimentType.SERVER_SIDE}>
+  {() => <Promo />}
+</Experiment>;
+
+const Promo = () => {
+  const viewTracker = useViewTracker({ componentName: 'promo' });
+  const clickTracker = useClickTrackerHandler({ componentName: 'promo' });
+
+  // ...
+};
+```
