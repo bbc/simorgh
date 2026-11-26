@@ -209,7 +209,7 @@ exports[`App Watch SEO Linked data should match text 2`] = `
 
 exports[`App Watch SEO OG description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
 
-exports[`App Watch SEO OG image 1`] = `"http://localhost:7081/arabic/og/c7vxryk46w0qo"`;
+exports[`App Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_arabic/p01wppbn.jpg"`;
 
 exports[`App Watch SEO OG image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
 
