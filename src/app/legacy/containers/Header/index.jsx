@@ -13,22 +13,13 @@ import {
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import NewNavigationContainer from '#src/app/components/Navigation';
 import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
-import AccountHeader from '#app/components/Account/AccountHeader';
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
 import NewLogoBanner, { isGlobalLanguageHomepage } from './NewLogoBanner';
 import styles from './index.styles';
 
-const Header = ({
-  brandRef,
-  skipLink,
-  scriptLink,
-  linkId,
-  children,
-  className,
-}) => {
+const Header = ({ brandRef, skipLink, scriptLink, linkId, className }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -55,9 +46,7 @@ const Header = ({
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
         className={className}
-      >
-        {children}
-      </BrandContainer>
+      />
     </div>
   );
 };
@@ -90,13 +79,9 @@ const HeaderContainer = ({
     </SkipLink>
   );
 
-  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
-
   const { pathname } = use(RequestContext);
 
   const isLanguagesPage = isGlobalLanguageHomepage(pathname);
-
-  const shouldShowNewLogoBanner = shouldUseNewNav || isLanguagesPage;
 
   let shouldRenderScriptSwitch = false;
 
@@ -114,38 +99,23 @@ const HeaderContainer = ({
   }
 
   if (isApp) return null;
-  const headerBrandCss = shouldUseNewNav ? styles.headerBrand : null;
+  const headerBrandCss = isLanguagesPage ? null : styles.headerBrand;
 
-  const NavigationComponent = shouldUseNewNav
-    ? NewNavigationContainer
-    : LegacyNavigationContainer;
+  const NavigationComponent = isLanguagesPage
+    ? LegacyNavigationContainer
+    : NewNavigationContainer;
 
-  const brandBarAccountHeader = shouldShowNewLogoBanner ? null : (
-    <AccountHeader />
-  );
+  const headerbrandIdentifier = isAmp ? { linkId: 'brandLink' } : { brandRef };
 
   return (
     <header role="banner" lang={serviceLang}>
-      {shouldShowNewLogoBanner && <NewLogoBanner />}
-      {isAmp ? (
-        <Header
-          linkId="brandLink"
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={headerBrandCss}
-        >
-          {brandBarAccountHeader}
-        </Header>
-      ) : (
-        <Header
-          brandRef={brandRef}
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={headerBrandCss}
-        >
-          {brandBarAccountHeader}
-        </Header>
-      )}
+      <NewLogoBanner />
+      <Header
+        {...headerbrandIdentifier}
+        skipLink={skipLink}
+        scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+        css={headerBrandCss}
+      />
       {isLite && <LiteSiteSummary />}
       <NavigationComponent
         navItems={navItems}
