@@ -152,6 +152,12 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  // Prototype: heading needs localisation review before production use
+  sinceLastVisited?: {
+    heading: string;
+    previous?: string;
+    next?: string;
+  };
   topicDiscovery?: {
     heading: string;
     moreAboutTopic: string;

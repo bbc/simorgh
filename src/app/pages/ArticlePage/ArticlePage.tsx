@@ -86,6 +86,7 @@ import {
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import TopicDiscovery from '../../components/TopicDiscovery';
+import SinceLastVisited from '../../components/SinceLastVisited';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -238,7 +239,7 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
-  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType, service } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -466,6 +467,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopicDiscovery =
     topicDiscoveryEnabled && !isAmp && !isLite && !isApp;
 
+  const showSinceLastVisited =
+    service === 'mundo' && !isAmp && !isLite && !isApp;
+
   const showRelatedTopicsComponent = Boolean(
     showRelatedTopics && topics.length > 0 && !showTopicDiscovery,
   );
@@ -559,6 +563,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   : []),
               ]}
               topics={topicDiscoveryTopics}
+            />
+          )}
+          {showSinceLastVisited && (
+            <SinceLastVisited
+              topStories={pageData?.sinceLastVisited?.summaries}
             />
           )}
           {showRelatedTopicsComponent && (
