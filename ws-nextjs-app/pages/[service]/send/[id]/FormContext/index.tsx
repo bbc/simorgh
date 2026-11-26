@@ -7,6 +7,7 @@ import {
 } from 'react';
 
 import { useRouter } from 'next/router';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { OK } from '#app/lib/statusCodes.const';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import getUUID from '#app/lib/utilities/getUUID';
@@ -86,12 +87,18 @@ const validateFormStateOnSubmit = (
 export const FormContextProvider = ({
   initialScreen = 'form',
   fields,
+  signinRequired = false,
   children,
-}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
+}: PropsWithChildren<{
+  initialScreen?: FormScreen;
+  fields: Field[];
+  signinRequired?: boolean;
+}>) => {
   const {
     query: { id },
     asPath,
   } = useRouter();
+  const { isSignedIn } = use(AccountContext);
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
@@ -146,6 +153,7 @@ export const FormContextProvider = ({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    if (signinRequired && !isSignedIn) return;
     setAttemptedSubmitCount(prevCount => prevCount + 1);
     // Reset error state
     setSubmissionError(null);
@@ -240,6 +248,7 @@ export const FormContextProvider = ({
 
   return (
     <FormContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         formState,
         handleChange,
