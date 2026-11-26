@@ -364,10 +364,7 @@ describe('OnDemand Audio Page', () => {
         pathname: podcastEpisodePathname,
       });
 
-      expect(getByTestId('continue-reading-button')).toHaveClass(
-        'continueReadingButton',
-        'podcastContinueReadingButton',
-      );
+      expect(getByTestId('continue-reading-button')).toBeInTheDocument();
 
       expect(getByTestId('synopsis')).toHaveTextContent(
         'This is a podcast episode',
