@@ -91,6 +91,30 @@ const ScrollableTabs = ({
     });
   };
 
+  const scrollPreviousClickTracker = getClickTrackerHandler({
+    componentName: 'topic-discovery-tab',
+    groupTracker,
+    itemTracker: {
+      type: 'topic-discovery-tab-navigation',
+      text: 'previous',
+      position: 1,
+    },
+    preventNavigation: true,
+    ...(experimentProps && experimentProps),
+  });
+
+  const scrollNextClickTracker = getClickTrackerHandler({
+    componentName: 'topic-discovery-tab',
+    groupTracker,
+    itemTracker: {
+      type: 'topic-discovery-tab-navigation',
+      text: 'next',
+      position: 2,
+    },
+    preventNavigation: true,
+    ...(experimentProps && experimentProps),
+  });
+
   return (
     <div css={styles.wrapper}>
       <div
@@ -102,7 +126,10 @@ const ScrollableTabs = ({
         <button
           type="button"
           css={styles.scrollButton}
-          onClick={() => scroll('start')}
+          onClick={event => {
+            scroll('start');
+            scrollPreviousClickTracker?.onClick?.(event);
+          }}
           disabled={!canScrollStart}
           aria-label="Scroll tabs left"
           data-testid="scroll-start"
@@ -178,7 +205,10 @@ const ScrollableTabs = ({
         <button
           type="button"
           css={styles.scrollButton}
-          onClick={() => scroll('end')}
+          onClick={event => {
+            scroll('end');
+            scrollNextClickTracker?.onClick?.(event);
+          }}
           disabled={!canScrollEnd}
           aria-label="Scroll tabs right"
           data-testid="scroll-end"
