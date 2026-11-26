@@ -68,6 +68,59 @@ const pidginHomePageData = {
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
 
+  it('renders most recent items when supplied by the BFF', () => {
+    const pageData = {
+      ...homePageData,
+      mostRecent: {
+        items: [
+          {
+            id: 'most-recent-1',
+            headline: 'A recent homepage story',
+            href: '/kyrgyz/articles/most-recent-1',
+            timeAgo: '5 minutes ago',
+          },
+        ],
+      },
+    };
+
+    render(<HomePage pageData={pageData} />, {
+      service: 'kyrgyz',
+    });
+
+    expect(
+      screen.getByRole('link', { name: 'A recent homepage story' }),
+    ).toHaveAttribute('href', '/kyrgyz/articles/most-recent-1');
+    expect(screen.getByText('5 minutes ago')).toBeVisible();
+  });
+
+  it('renders most recent underneath the homepage curations', () => {
+    const pageData = {
+      ...afriqueHomePageData,
+      mostRecent: {
+        items: [
+          {
+            id: 'most-recent-1',
+            headline: 'The latest homepage story',
+            href: '/afrique/articles/most-recent-1',
+            timeAgo: '5 minutes ago',
+          },
+        ],
+      },
+    };
+
+    const { getByTestId } = render(<HomePage pageData={pageData} />, {
+      service: 'afrique',
+      toggles: { mostRead: { enabled: true } },
+    });
+
+    const mostRead = getByTestId('most-read');
+    const mostRecent = getByTestId('most-recent');
+
+    expect(mostRead.compareDocumentPosition(mostRecent)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    );
+  });
+
   it('renders the election banner before the first curation when enabled', () => {
     const { getByTestId, container } = render(
       <HomePage pageData={afriqueHomePageData} />,

@@ -89,6 +89,7 @@ export default async (context: GetServerSidePropsContext) => {
         seoTitle: pageData.seoTitle ?? null,
         metadata: { ...pageData.metadata, type: HOME_PAGE },
         curations: pageData.curations ?? null,
+        mostRecent: pageData.mostRecent ?? null,
         description: pageData.description ?? null,
         seoDescription: pageData.seoDescription ?? null,
       },
