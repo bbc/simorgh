@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useMemo } from 'react';
+import { ComponentProps, useMemo } from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
@@ -18,16 +18,18 @@ import articleDataWithPodcastPromo from '#data/russian/articles/c61q94n3rm3o.jso
 import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
+import articleDataWithRecommendations from '#data/mundo/articles/cddylv9g8z0o.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
 import articleDataPidginWithMediaCuration from '#data/pidgin/articles/cnd6yxmxvp2o.json';
 import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
-import { Services } from '#app/models/types/global';
+import { Services, Toggles } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
+import recommendationsCarouselFixture from '#app/components/RecommendationsCarousel/fixtures';
 import ArticlePageComponent from './ArticlePage';
 
 const Page = withOptimizelyProvider(ArticlePageComponent);
@@ -77,7 +79,11 @@ type Props = {
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
   googlePreferredSourceEnabled?: boolean;
+  recommendationsVariant?: ComponentProps<
+    typeof ArticlePageComponent
+  >['recommendationsVariant'];
   pathname?: string;
+  toggles?: Toggles;
 };
 
 const ComponentWithContext = ({
@@ -87,7 +93,9 @@ const ComponentWithContext = ({
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
   googlePreferredSourceEnabled = false,
+  recommendationsVariant = 'non-modal',
   pathname = '/news/articles/c000000000o',
+  toggles = {},
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -100,11 +108,13 @@ const ComponentWithContext = ({
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
         articleVideoCuration: { enabled: true },
         googlePreferredSource: { enabled: googlePreferredSourceEnabled },
+        ...toggles,
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
       <ServiceContextProvider service={service}>
         <RequestContextProvider
+          bbcOrigin="http://localhost:9001"
           isAmp={false}
           isApp={false}
           pageType={ARTICLE_PAGE}
@@ -116,6 +126,7 @@ const ComponentWithContext = ({
           <ThemeProvider service={service}>
             <PageLayoutWrapper pageData={data.article} status={200}>
               <Page
+                recommendationsVariant={recommendationsVariant}
                 pageData={{
                   ...data.article,
                   secondaryColumn: data.secondaryData,
@@ -278,6 +289,23 @@ ArticlePageWithPortraitVideo.globals = {
   service: { service: 'mundo', variant: 'default' },
 };
 
+export const ArticlePageWithRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={articleDataWithRecommendations}
+      service="mundo"
+      pathname="/mundo/articles/cddylv9g8z0o"
+      toggles={{
+        midArticleOnwardJourney: { enabled: true },
+        topicDiscovery: { enabled: true },
+      }}
+    />
+  ),
+  globals: {
+    service: { service: 'mundo', variant: 'default' },
+  },
+};
+
 export const ArticlePageWithPortraitVideoRightToLeft = () => (
   <ComponentWithContext
     data={articleDataWithPortraitVideoRTL}
@@ -348,6 +376,65 @@ export const ArticlePageWithTopicDiscovery = {
   globals: {
     service: { service: 'portuguese', variant: 'default' },
   },
+};
+
+const mundoRecommendationsData = {
+  data: {
+    ...articleDataWithPortraitVideo.data,
+    article: {
+      ...articleDataWithPortraitVideo.data.article,
+      content: {
+        ...articleDataWithPortraitVideo.data.article.content,
+        model: {
+          ...articleDataWithPortraitVideo.data.article.content.model,
+          blocks:
+            articleDataWithPortraitVideo.data.article.content.model.blocks.map(
+              block =>
+                block.type === 'wsoj'
+                  ? {
+                      ...block,
+                      model: {
+                        ...block.model,
+                        data: recommendationsCarouselFixture,
+                      },
+                    }
+                  : block,
+            ),
+        },
+      },
+      metadata: {
+        ...articleDataWithPortraitVideo.data.article.metadata,
+        topics: articleDataWithElectionTag.data.article.metadata.topics,
+      },
+    },
+  },
+};
+
+export const MundoArticleWithRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={mundoRecommendationsData}
+      service="mundo"
+      pathname="/mundo/articles/c1xv2q1gewvo"
+      recommendationsVariant="modal"
+    />
+  ),
+  globals: {
+    service: { service: 'mundo', variant: 'default' },
+    toggles: { topicDiscovery: { enabled: true } },
+  },
+};
+
+export const MundoArticleWithStackedRecommendationsCarousel = {
+  render: () => (
+    <ComponentWithContext
+      data={mundoRecommendationsData}
+      service="mundo"
+      pathname="/mundo/articles/c1xv2q1gewvo"
+      recommendationsVariant="stacked"
+    />
+  ),
+  globals: MundoArticleWithRecommendationsCarousel.globals,
 };
 
 export const ArticlePageWithSaveArticleButton = () => (

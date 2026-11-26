@@ -19,7 +19,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
-import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import {
   getArticleId,
@@ -54,6 +54,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
+import RecommendationsCarousel from '#app/components/RecommendationsCarousel';
 import ReadTimeArticle from '#app/components/ReadTime';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
@@ -186,6 +187,15 @@ const getWsojComponent = ({
   <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
 
+const isRecommendationsBlock = (
+  block: OptimoBlock,
+): block is OptimoBlock & {
+  model: { type: 'recommendations'; data?: Recommendation[] };
+} =>
+  block.type === 'wsoj' &&
+  'type' in block.model &&
+  block.model.type === 'recommendations';
+
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -235,12 +245,19 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({ pageData }: { pageData: Article }) => {
+const ArticlePage = ({
+  pageData,
+  recommendationsVariant = 'non-modal',
+}: {
+  pageData: Article;
+  recommendationsVariant?: 'non-modal' | 'modal' | 'stacked';
+}) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
+    service,
     articleAuthor,
     electionBanner,
     isTrustProjectParticipant,
@@ -457,9 +474,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     type: 'visuallyHiddenHeadline',
   };
 
+  const moveRecommendationsBelowArticle =
+    service === 'mundo' && pageType === ARTICLE_PAGE && !isAmp && !isLite;
+  const recommendationBlocks = moveRecommendationsBelowArticle
+    ? blocks.filter(isRecommendationsBlock)
+    : [];
+  const recommendationsData = recommendationBlocks[0]?.model.data ?? [];
+  const inlineBlocks = moveRecommendationsBelowArticle
+    ? blocks.filter(block => !isRecommendationsBlock(block))
+    : blocks;
   const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+    ? inlineBlocks
+    : [visuallyHiddenBlock, ...inlineBlocks];
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
@@ -551,6 +577,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageDepth />
+          {(!showContinueReadingButton || showAllContent) &&
+            (recommendationsVariant === 'non-modal' ? (
+              <Blocks
+                blocks={recommendationBlocks}
+                componentsToRender={componentsToRender}
+              />
+            ) : (
+              <RecommendationsCarousel
+                data={recommendationsData}
+                stacked={recommendationsVariant === 'stacked'}
+              />
+            ))}
           {showTopicDiscovery && (
             <TopicDiscovery
               css={[
