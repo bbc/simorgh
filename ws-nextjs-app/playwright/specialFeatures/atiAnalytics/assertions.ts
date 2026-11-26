@@ -1,4 +1,6 @@
 import { expect, type Page, type Request } from '@playwright/test';
+import type { OnwardJourney } from '#app/contexts/ArticleOnwardJourneysContext';
+import scrollToOnwardJourney from '../../utilities/onwardJourneys';
 import {
   getATIParamsFromURL,
   getATIUrls,
@@ -312,6 +314,7 @@ const assertArticleComponentEvent = async ({
   reload,
   forceClick,
   viewport,
+  onwardJourney,
 }: AtiAssertionFnProps & {
   component: string;
   selector: string;
@@ -320,6 +323,7 @@ const assertArticleComponentEvent = async ({
   reload?: boolean;
   forceClick?: boolean;
   viewport?: { width: number; height: number };
+  onwardJourney?: OnwardJourney;
 }) => {
   const componentLocator = page.locator(selector);
   const requestPromise =
@@ -335,6 +339,9 @@ const assertArticleComponentEvent = async ({
     });
   }
   if (reload) await page.reload({ waitUntil: 'load' });
+  if (onwardJourney) {
+    await scrollToOnwardJourney({ page, onwardJourney, selector });
+  }
   await componentLocator.first().waitFor({ state: 'attached' });
   if (!forceClick) await componentLocator.first().scrollIntoViewIfNeeded();
 
@@ -393,13 +400,15 @@ const articleComponentAssertions = {
   },
   assertTopBarOJComponentView: {
     component: COMPONENTS.TOP_BAR_OJ,
-    selector: '[data-testid="top-bar-onward-journeys"]',
+    selector: '[data-testid="top-bar-onward-journeys"]:has(a)',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'view',
     viewport: { width: 1000, height: 660 },
   },
   assertTopBarOJComponentClick: {
     component: COMPONENTS.TOP_BAR_OJ,
-    selector: '[data-testid="top-bar-onward-journeys"]',
+    selector: '[data-testid="top-bar-onward-journeys"]:has(a)',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'select',
     viewport: { width: 1000, height: 660 },
   },
@@ -416,21 +425,25 @@ const articleComponentAssertions = {
   assertTopStoriesComponentView: {
     component: COMPONENTS.TOP_STORIES,
     selector: '[data-testid="top-stories"]',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'view',
   },
   assertTopStoriesComponentClick: {
     component: COMPONENTS.TOP_STORIES,
     selector: '[data-testid="top-stories"]',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'select',
   },
   assertFeaturesAnalysisComponentView: {
     component: COMPONENTS.FEATURES,
     selector: '[data-testid="features"]',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'view',
   },
   assertFeaturesAnalysisComponentClick: {
     component: COMPONENTS.FEATURES,
     selector: '[data-testid="features"]',
+    onwardJourney: 'topStoriesAndFeatures',
     action: 'select',
   },
   assertRelatedTopicsComponentView: {
@@ -456,11 +469,13 @@ const articleComponentAssertions = {
   assertLatestMediaComponentView: {
     component: COMPONENTS.LATEST_MEDIA,
     selector: '[data-testid="latest-media"]',
+    onwardJourney: 'latestMedia',
     action: 'view',
   },
   assertLatestMediaComponentClick: {
     component: COMPONENTS.LATEST_MEDIA,
     selector: '[data-testid="latest-media"]',
+    onwardJourney: 'latestMedia',
     action: 'select',
   },
   assertSocialEmbedComponentView: {
@@ -834,9 +849,22 @@ export const assertMostReadComponentView = async ({
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-  // Double scroll intentional to reliably trigger viewability
-  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
-  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await scrollToOnwardJourney({
+    page,
+    onwardJourney: 'mostRead',
+    selector: '[data-e2e="most-read"]',
+  });
+  const viewTarget = page
+    .locator(
+      path.includes('/articles/')
+        ? '[data-e2e="most-read"] li'
+        : '[data-e2e="most-read"]',
+    )
+    .first();
+  await viewTarget.evaluate(element =>
+    element.scrollIntoView({ block: 'center' }),
+  );
+  await expect(viewTarget).toBeInViewport({ ratio: 0.5 });
 
   const request = await viewPromise;
   const params = getATIParamsFromURL(request.url());
@@ -867,8 +895,11 @@ export const assertMostReadComponentClick = async ({
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
   await pageViewPromise;
-  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
-  await page.locator('[data-e2e="most-read"]').scrollIntoViewIfNeeded();
+  await scrollToOnwardJourney({
+    page,
+    onwardJourney: 'mostRead',
+    selector: '[data-e2e="most-read"]',
+  });
   await page.locator('[data-e2e="most-read"] a').first().waitFor();
   await page
     .locator('[data-e2e="most-read"] a')
