@@ -52,6 +52,11 @@ import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import ArticleEnd from '#app/components/ArticleEnd';
+import SwipeableArticleRecommendations from '#app/components/SwipeableArticleRecommendations';
+import { getRecommendations } from '#app/components/SwipeableArticleRecommendations/utilities';
+import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
@@ -241,6 +246,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
+    service,
     articleAuthor,
     electionBanner,
     isTrustProjectParticipant,
@@ -297,6 +303,52 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const { SIMORGH_APP_ENV } = getEnvConfig();
+  const showArticleEnd =
+    service === 'mundo' &&
+    (SIMORGH_APP_ENV === 'local' || SIMORGH_APP_ENV === 'test') &&
+    Boolean(translations.articleEnd);
+  const lastTextBlockIndex = blocks
+    .map(block => block.type)
+    .lastIndexOf('text');
+  const [primaryTopic] = topics;
+  const blocksWithArticleEnd = showArticleEnd
+    ? blocks.flatMap((block, index) =>
+        index === lastTextBlockIndex
+          ? [
+              block,
+              {
+                type: 'articleEnd',
+                model: { label: translations.articleEnd },
+                id: 'article-end',
+              },
+              ...(!isAmp && !isLite && !isApp
+                ? [
+                    {
+                      type: 'swipeableRecommendations',
+                      model: {
+                        recommendations: getRecommendations({
+                          blocks,
+                          currentArticleId: getArticleId(pageData),
+                          environment: SIMORGH_APP_ENV,
+                        }).slice(0, 4),
+                        topic: primaryTopic && {
+                          name: primaryTopic.topicName,
+                          href: getTopicPageUrl({
+                            service,
+                            topicId: primaryTopic.topicId,
+                            topicsPath: translations.topicsPath,
+                          }),
+                        },
+                      },
+                      id: `swipeable-recommendations-${getArticleId(pageData)}`,
+                    },
+                  ]
+                : []),
+            ]
+          : [block],
+      )
+    : blocks;
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
@@ -415,6 +467,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     audio: MediaLoader,
     video: getVideoComponent(translations, blocks),
     text: ArticleBodyText,
+    articleEnd: ArticleEnd,
+    swipeableRecommendations: SwipeableArticleRecommendations,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
       hasByline,
@@ -458,8 +512,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const articleBlocks = startsWithHeading
-    ? blocks
-    : [visuallyHiddenBlock, ...blocks];
+    ? blocksWithArticleEnd
+    : [visuallyHiddenBlock, ...blocksWithArticleEnd];
 
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 

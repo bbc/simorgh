@@ -1,0 +1,59 @@
+@use '@scss/themeTokens' as theme;
+
+.wrapper {
+  margin-block: theme.$spacings-quadruple;
+  margin-inline: theme.$spacings-full;
+  clear: both;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    margin-inline: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    margin-inline: 0;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: theme.$spacings-double;
+  color: theme.$palette-grey-6;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-block-start: 1px solid theme.$palette-grey-4;
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: theme.$spacings-full;
+  min-inline-size: 0;
+}
+
+.label .text {
+  color: inherit;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  inline-size: theme.$spacings-triple;
+  block-size: theme.$spacings-triple;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.circle .tick {
+  inline-size: theme.$spacings-double;
+  block-size: theme.$spacings-double;
+}
