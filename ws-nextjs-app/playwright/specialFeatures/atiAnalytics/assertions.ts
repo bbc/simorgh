@@ -1166,12 +1166,6 @@ export const assertPodcastPromoComponentClick = async ({
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
   await pageViewPromise;
-  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
-  await page.locator('[data-e2e="podcast-promo"] a').last().waitFor();
-  await page
-    .locator('[data-e2e="podcast-promo"] a')
-    .last()
-    .evaluate(element => element.scrollIntoView({ block: 'center' }));
 
   const [request] = await Promise.all([
     waitForComponentClickRequest({
