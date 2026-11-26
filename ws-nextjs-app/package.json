@@ -64,7 +64,7 @@
     "@playwright/test": "1.64.1",
     "@swc/core": "1.15.24",
     "@testing-library/jest-dom": "6.9.1",
-    "@testing-library/react": "16.3.1",
+    "@testing-library/react": "16.3.3",
     "axe-core": "4.14.0",
     "cypress": "15.21.2",
     "cypress-axe": "1.7.0",

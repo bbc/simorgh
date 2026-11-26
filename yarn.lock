@@ -3775,9 +3775,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:16.3.1":
-  version: 16.3.1
-  resolution: "@testing-library/react@npm:16.3.1"
+"@testing-library/react@npm:16.3.3":
+  version: 16.3.3
+  resolution: "@testing-library/react@npm:16.3.3"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
   peerDependencies:
@@ -3791,7 +3791,7 @@ __metadata:
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 10/2d1221861c41711f2767c57c5b5158593baf6f7ca4bf15fad9e79bc9aeaadb56c2e327943b8733d2788f1826499fe01daef7289a7a0149b48dd7f51b33b12e58
+  checksum: 10/c330e2d8158fd0f4b059cb1cd30f74265c6e80b204cf7245c9b2c4117582d6deb985d51edb62bd1b94e79ef48a2eaba4d002278d06caf725830a8b0f475e0118
   languageName: node
   linkType: hard
 
@@ -14574,7 +14574,7 @@ __metadata:
     "@playwright/test": "npm:1.64.1"
     "@swc/core": "npm:1.15.24"
     "@testing-library/jest-dom": "npm:6.9.1"
-    "@testing-library/react": "npm:16.3.1"
+    "@testing-library/react": "npm:16.3.3"
     autoprefixer: "npm:10.6.2"
     axe-core: "npm:4.14.0"
     cypress: "npm:15.21.2"
@@ -14627,7 +14627,7 @@ __metadata:
     "@tanstack/react-query-persist-client": "npm:5.99.2"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/jest-dom": "npm:6.9.1"
-    "@testing-library/react": "npm:16.3.1"
+    "@testing-library/react": "npm:16.3.3"
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.6.1"
     "@types/jest": "npm:30.0.0"
