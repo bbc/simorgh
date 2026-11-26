@@ -9,6 +9,7 @@ import {
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c0g992jmmkko.json';
+import articleDataHindi from '#data/hindi/articles/c0469479x9xo.json';
 import articleDataBurmese from '#data/burmese/articles/cn0exdy1jzvo.json';
 import articleDataGahuza from '#data/gahuza/articles/c5y51yxeg53o.json';
 import articleDataArabic from '#data/arabic/articles/cn0m90verwvo.json';
@@ -363,6 +364,18 @@ ArticlePageWithSaveArticleButton.globals = {
   toggles: {
     uasPersonalization: { enabled: true, value: 'portuguese' },
   },
+};
+
+export const HindiArticleSignInPOC = () => (
+  <ComponentWithContext
+    data={articleDataHindi}
+    service="hindi"
+    pathname="/hindi/articles/c365nejek65o"
+  />
+);
+HindiArticleSignInPOC.globals = {
+  service: { service: 'hindi', variant: 'default' },
+  idctaConfig: mockIdctaConfig,
 };
 
 export const TestArticlePageWithLiteSiteLink = {

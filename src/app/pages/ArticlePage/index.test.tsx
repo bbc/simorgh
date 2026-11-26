@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react';
+import userEvent from '@testing-library/user-event';
 import { Helmet } from 'react-helmet';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -182,6 +183,81 @@ afterEach(() => {
 describe('Article Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  describe('Hindi article sign-in POC', () => {
+    const pathname = '/hindi/articles/c365nejek65o';
+    const originalUrl = window.location.href;
+
+    beforeEach(() => {
+      window.history.replaceState({}, '', `${pathname}?renderer_env=live`);
+    });
+
+    afterEach(() => {
+      window.history.replaceState({}, '', originalUrl);
+    });
+
+    it('opens the Hindi article context and returns to the current page', async () => {
+      render(<ArticlePage pageData={articleDataHindi} />, {
+        service: 'hindi',
+        pathname,
+        idctaConfig: mockIdctaConfig,
+      });
+
+      const button = await screen.findByRole('button', { name: 'साइन इन' });
+      expect(button).toHaveAttribute('aria-haspopup', 'dialog');
+      await userEvent.click(button);
+
+      expect(screen.getByRole('dialog')).toHaveAccessibleName('आपका अपना BBC');
+      expect(
+        screen.getByText('लॉग इन करें या निःशुल्क नया अकाउंट बनाएं'),
+      ).toBeInTheDocument();
+
+      [
+        'account-sign-in-modal-sign-in',
+        'account-sign-in-modal-register',
+      ].forEach(testId => {
+        const link = screen.getByTestId(testId);
+        expect(link).toHaveAttribute('href');
+        expect(
+          new URL(link.getAttribute('href') || '').searchParams.get('ptrt'),
+        ).toBe(window.location.href);
+      });
+
+      await userEvent.keyboard('{Escape}');
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      expect(button).toHaveFocus();
+
+      await userEvent.click(button);
+      await userEvent.click(screen.getByRole('button', { name: 'बंद करें' }));
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      expect(button).toHaveFocus();
+    });
+
+    it.each([
+      {
+        description: 'another article',
+        pathname: '/hindi/articles/c0000000000o',
+      },
+      { description: 'another service', service: 'ws' as const },
+      { description: 'an AMP page', isAmp: true },
+      { description: 'a Lite page', isLite: true },
+      { description: 'an app page', isApp: true },
+      {
+        description: 'a signed-in reader',
+        idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+      },
+      { description: 'account unavailable', idctaConfig: null },
+    ])('does not show the prompt for $description', options => {
+      render(<ArticlePage pageData={articleDataHindi} />, {
+        service: 'hindi',
+        pathname,
+        idctaConfig: mockIdctaConfig,
+        ...options,
+      });
+
+      expect(screen.queryByRole('button', { name: 'साइन इन' })).toBeNull();
+    });
   });
 
   it('marks body paragraphs, rather than the headline, as sticky navigation anchors', () => {

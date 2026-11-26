@@ -1,4 +1,5 @@
 import { useState, useCallback, use } from 'react';
+import { createPortal } from 'react-dom';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import useMediaQuery from '#hooks/useMediaQuery';
@@ -59,6 +60,9 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import AccountSignInModal from '#app/components/Account/AccountSignInModal';
+import { AccountContext } from '#app/contexts/AccountContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import ElectionBanner from '#app/components/ElectionBanner';
 import isElectionBannerVisible from '#app/components/ElectionBanner/utilities';
 import repositionCountryTopic from '#app/components/TopicDiscovery/RepositionCountryTopic';
@@ -238,12 +242,17 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const [isDesktopViewport, setIsDesktopViewport] = useState(false);
-  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
+  const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
+  const { isApp, isAmp, isLite, pageType, pathname } = use(RequestContext);
+  const { isIdctaAvailable, isSignedIn, signInUrl, registerUrl } =
+    use(AccountContext);
+  const isHydrated = useHydrationDetection();
 
   const {
     articleAuthor,
     electionBanner,
     isTrustProjectParticipant,
+    service,
     showRelatedTopics,
     translations,
   } = use(ServiceContext);
@@ -482,6 +491,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const shouldApplyCollapsedArticleSpacing =
     showContinueReadingButton && !showAllContent;
 
+  const showArticleSignInPrompt =
+    service === 'hindi' &&
+    pathname === '/hindi/articles/c365nejek65o' &&
+    !isAmp &&
+    !isApp &&
+    !isLite &&
+    isHydrated &&
+    isIdctaAvailable &&
+    !isSignedIn &&
+    Boolean(signInUrl && registerUrl && translations.account?.signIn);
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics />
@@ -548,8 +568,29 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
+            {showArticleSignInPrompt && (
+              <div css={styles.articleSignInPrompt}>
+                <button
+                  type="button"
+                  css={styles.articleSignInButton}
+                  aria-haspopup="dialog"
+                  onClick={() => setIsSignInModalOpen(true)}
+                >
+                  {translations.account?.signIn}
+                </button>
+              </div>
+            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
+          {showArticleSignInPrompt &&
+            isSignInModalOpen &&
+            createPortal(
+              <AccountSignInModal
+                context="article"
+                onClose={() => setIsSignInModalOpen(false)}
+              />,
+              document.body,
+            )}
           <OptimizelyPageMetrics trackPageDepth />
           {showTopicDiscovery && (
             <TopicDiscovery

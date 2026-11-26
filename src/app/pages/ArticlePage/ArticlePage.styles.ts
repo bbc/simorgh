@@ -21,6 +21,55 @@ export default {
     css({
       backgroundColor: palette.GREY_2,
     }),
+  articleSignInPrompt: [
+    commonMarginSpacing,
+    ({ spacings }: Theme) =>
+      css({
+        paddingBlock: `${spacings.DOUBLE}rem`,
+      }),
+  ],
+  articleSignInButton: ({
+    palette,
+    spacings,
+    fontSizes,
+    fontVariants,
+    mq,
+  }: Theme) =>
+    css({
+      ...fontSizes.pica,
+      ...fontVariants.sansBold,
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: `${pixelsToRem(44)}rem`,
+      maxWidth: '100%',
+      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      border: 0,
+      borderRadius: 0,
+      backgroundColor: palette.SERVICE_NEUTRAL_CORE,
+      color: palette.WHITE,
+      cursor: 'pointer',
+      '&:hover, &:focus': {
+        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
+        textDecoration: 'underline',
+      },
+      '&:focus-visible': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
+      },
+      [mq.FORCED_COLOURS]: {
+        border: `${pixelsToRem(1)}rem solid ButtonText`,
+        backgroundColor: 'ButtonFace',
+        color: 'ButtonText',
+        '&:hover, &:focus': {
+          backgroundColor: 'Highlight',
+          color: 'HighlightText',
+        },
+        '&:focus-visible': {
+          outlineColor: 'ButtonText',
+        },
+      },
+    }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
