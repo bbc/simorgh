@@ -75,7 +75,7 @@ For client-side experiments, pass `activate` to defer the decision until it beco
   type={ExperimentType.CLIENT_SIDE}
   activate={hasScrolled}
 >
-  {variation => (variation === 'variant' ? <StickyNav /> : <Nav />)}
+  {variation => <Nav sticky={variation === 'variant'} />}
 </Experiment>
 ```
 
