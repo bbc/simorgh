@@ -10,7 +10,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 - View, click and swipe trackers also send `<componentName>-views` / `<componentName>-clicks` events to Optimizely. Custom event trackers don't, so they can't be used as Optimizely metrics.
 - Trackers outside an `<Experiment>` are never attributed. Tracking hooks don't accept experiment details directly.
 
-Mounting it activates the experiment for the user, so only render it once the user is eligible (or, for client-side experiments, use [`activate`](#activate-later)). It needs the Optimizely client from the [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler.
+Mounting it activates the experiment for the user, so only render it once the user is eligible (or, for client-side experiments, use [`activate`](#activate-later)).
 
 ## Usage
 
