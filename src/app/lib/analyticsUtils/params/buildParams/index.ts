@@ -129,8 +129,12 @@ export const buildAnalyticsParams = ({
   const { resonanceEnabled } = serviceContext;
   const { platform } = requestContext;
 
+  const isLiteResonanceSpike =
+    platform === 'lite' && process.env.SIMORGH_SPIKE_LITE_RESONANCE === 'true';
+
   const sendResonanceEvents =
-    resonanceEnabled && (platform === 'canonical' || platform === 'app');
+    resonanceEnabled &&
+    (platform === 'canonical' || platform === 'app' || isLiteResonanceSpike);
 
   return {
     reverbParams: buildPageReverbParams({
