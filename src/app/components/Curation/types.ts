@@ -8,4 +8,5 @@ export interface CurationGridProps {
   eventTrackingData: EventTrackingData;
   isVideoCollection?: boolean;
   showRelatedTopic?: boolean;
+  showReadTime?: boolean;
 }

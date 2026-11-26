@@ -15,6 +15,7 @@ type ScrollableTabsProps = {
   onTabChange: (tabId: string) => void;
   labelledBy: string;
   groupTracker?: EventTrackingData['groupTracker'];
+  trackerName?: string;
   experimentProps?: ComponentExperimentProps;
   setShouldFocusPromos?: (value: boolean) => void;
   onTabKeyDown?: (
@@ -30,6 +31,7 @@ const ScrollableTabs = ({
   onTabChange,
   labelledBy,
   groupTracker,
+  trackerName = 'topic-discovery-tab',
   experimentProps,
   onTabKeyDown,
 }: ScrollableTabsProps) => {
@@ -124,10 +126,10 @@ const ScrollableTabs = ({
           const isActive = tab.id === activeTabId;
 
           const clickTrackerHandler = getClickTrackerHandler({
-            componentName: 'topic-discovery-tab',
+            componentName: trackerName,
             groupTracker,
             itemTracker: {
-              type: 'topic-discovery-tab',
+              type: trackerName,
               text: tab.label,
               position: index + 1,
               resourceId: tab.id,

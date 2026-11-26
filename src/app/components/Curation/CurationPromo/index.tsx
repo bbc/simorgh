@@ -12,10 +12,12 @@ import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
 import LiveLabel from '../../LiveLabel';
+import ReadTime from '../../ReadTime';
 import styles from './index.styles';
 
 type CurationPromoProps = Summary & {
   showRelatedTopic?: boolean;
+  showReadTime?: boolean;
   isVideoCollection?: boolean;
 };
 
@@ -36,6 +38,8 @@ const CurationPromo = ({
   relatedTopic,
   isVideoCollection = false,
   showRelatedTopic,
+  showReadTime = false,
+  readTime,
 }: CurationPromoProps) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -147,6 +151,9 @@ const CurationPromo = ({
           </Promo.Timestamp>
         </div>
       ) : null}
+      {showReadTime && Number.isFinite(readTime) && Number(readTime) > 0 && (
+        <ReadTime readTimeValue={Number(readTime)} />
+      )}
     </Promo>
   );
 };
