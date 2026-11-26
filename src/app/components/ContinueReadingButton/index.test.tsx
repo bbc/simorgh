@@ -31,6 +31,21 @@ describe('ContinueReadingButton', () => {
     expect(getByTestId('continue-reading-button')).toBeInTheDocument();
   });
 
+  it('composes a consumer className with its own class', () => {
+    const { getByTestId } = render(
+      <ContinueReadingButton
+        showAllContent={false}
+        setShowAllContent={mockSetShowAllContent}
+        className="consumerClass"
+      />,
+    );
+
+    const button = getByTestId('continue-reading-button');
+
+    expect(button).toHaveClass('continueReadingButton');
+    expect(button).toHaveClass('consumerClass');
+  });
+
   it('does not render the button when showAllContent is true', () => {
     const { queryByTestId } = render(
       <ContinueReadingButton
