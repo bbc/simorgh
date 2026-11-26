@@ -136,7 +136,10 @@ const DeferredExperiment = ({
  * Trackers outside it are never attributed.
  *
  * Mounting it activates the experiment for the user, so only render it once
- * the user is eligible (or, for client-side experiments, use `activate`).
+ * the user is eligible. If eligibility only becomes known after the component
+ * is on screen (for example, once the user scrolls), use `activate` instead:
+ * it defers activation without remounting the children. This is only
+ * available for client-side experiments.
  *
  * @example
  * <Experiment name="my_flag" type={ExperimentType.SERVER_SIDE}>
