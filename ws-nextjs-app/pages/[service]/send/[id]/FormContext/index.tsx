@@ -7,9 +7,11 @@ import {
 } from 'react';
 
 import { useRouter } from 'next/router';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { OK } from '#app/lib/statusCodes.const';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import getUUID from '#app/lib/utilities/getUUID';
+import { refreshTokensIfExpired } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 import {
   Field,
   FieldData,
@@ -86,12 +88,18 @@ const validateFormStateOnSubmit = (
 export const FormContextProvider = ({
   initialScreen = 'form',
   fields,
+  signinRequired = false,
   children,
-}: PropsWithChildren<{ initialScreen?: FormScreen; fields: Field[] }>) => {
+}: PropsWithChildren<{
+  initialScreen?: FormScreen;
+  fields: Field[];
+  signinRequired?: boolean;
+}>) => {
   const {
     query: { id },
     asPath,
   } = useRouter();
+  const { isRefreshAvailable } = use(AccountContext);
 
   const [formState, setFormState] = useState(getInitialFormState(fields));
   const [submitted, setSubmitted] = useState(false);
@@ -186,6 +194,11 @@ export const FormContextProvider = ({
       formData.append(key, fieldValue as string);
     });
     try {
+      if (signinRequired) {
+        // Validate the session is active before submission ,
+        // if signinRequired campaign is active;
+        await refreshTokensIfExpired(isRefreshAvailable);
+      }
       const environment = getEnvironment(asPath);
       const domain = `https://www.${environment === 'test' ? 'test.' : ''}bbc.com`;
       const url = `${domain}/ugc/send/${id}?said=${getUUID()}`;
@@ -193,6 +206,7 @@ export const FormContextProvider = ({
       const req = new XMLHttpRequest();
       req.responseType = 'json';
       req.open('POST', url, true);
+      req.withCredentials = true; // required only for cross-origin requests with credentials (eg., from localhost)
 
       req.upload.onloadstart = () => {
         setScreen('uploading');
@@ -231,6 +245,7 @@ export const FormContextProvider = ({
     } catch (error) {
       const { message, status } = error as UGCSendError;
 
+      setSubmitted(false);
       setSubmissionError({ message, status });
       setTimeout(() => {
         setScreen('error');
@@ -240,6 +255,7 @@ export const FormContextProvider = ({
 
   return (
     <FormContext.Provider
+      // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         formState,
         handleChange,
