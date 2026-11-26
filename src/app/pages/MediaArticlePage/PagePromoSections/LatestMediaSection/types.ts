@@ -21,6 +21,7 @@ export type LatestMediaItemProp = {
   ref: () => Promise<void>;
   eventTrackingData: EventTrackingBlock;
   isPortraitImage?: boolean;
+  showTimestamp?: boolean;
 };
 
 export type LatestMediaIndicatorProp = {

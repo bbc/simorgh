@@ -8,7 +8,10 @@ import styles from './index.styles';
 import timestampStyles from './index.module.scss';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewTracker) => {
+  (
+    { item, ariaLabelledBy, eventTrackingData, showTimestamp = true },
+    viewTracker,
+  ) => {
     if (!item || Object.keys(item).length === 0) return null;
 
     const timestamp = item.firstPublished;
@@ -55,9 +58,11 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
                 />
               </Promo.Link>
             </Promo.Title>
-            <Promo.Timestamp className={timestampStyles.timeStamp}>
-              {timestamp}
-            </Promo.Timestamp>
+            {showTimestamp && (
+              <Promo.Timestamp className={timestampStyles.timeStamp}>
+                {timestamp}
+              </Promo.Timestamp>
+            )}
           </div>
         </Promo>
       </div>

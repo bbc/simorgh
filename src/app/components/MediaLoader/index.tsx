@@ -1,4 +1,11 @@
-import { use, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  use,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react';
 import { createPortal } from 'react-dom';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
@@ -151,6 +158,7 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
+  endScreen?: ReactNode;
   shouldHandleFakeFullscreen?: boolean;
   loadPlayerOnInitialRender?: boolean;
   onFakeFullscreenChange?: (isActive: boolean) => void;
@@ -165,6 +173,7 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   eventMapping,
+  endScreen,
   shouldHandleFakeFullscreen = false,
   loadPlayerOnInitialRender = false,
   onFakeFullscreenChange,
@@ -285,6 +294,7 @@ const MediaContainer = ({
       <noscript>
         <Message message={noJsMessage} />
       </noscript>
+      {endScreen}
     </div>
   );
 };
@@ -295,6 +305,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  endScreen?: ReactNode;
   loadPlayerOnInitialRender?: boolean;
   withinFullscreenContainer?: boolean;
   holdingImageURL?: string;
@@ -306,6 +317,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  endScreen,
   loadPlayerOnInitialRender = false,
   withinFullscreenContainer = false,
   holdingImageURL,
@@ -489,6 +501,7 @@ const MediaLoader = ({
                   uniqueId={uniqueId}
                   noJsMessage={noJsMessage}
                   eventMapping={eventMapping}
+                  endScreen={endScreen}
                   shouldHandleFakeFullscreen={shouldHandleFakeFullscreen}
                   loadPlayerOnInitialRender={loadPlayerOnInitialRender}
                   onFakeFullscreenChange={setFakeFullscreenPageState}

@@ -184,6 +184,23 @@ describe('MediaLoader', () => {
       expect(mockPlayer.load).toHaveBeenCalledTimes(1);
     });
 
+    it('renders a supplied end screen inside the player', async () => {
+      await act(async () => {
+        render(
+          <MediaPlayer
+            blocks={aresMediaBlocks as MediaBlock[]}
+            loadPlayerOnInitialRender
+            endScreen={<div data-testid="media-end-screen" />}
+          />,
+          {
+            id: 'testId',
+          },
+        );
+      });
+
+      expect(screen.getByTestId('media-end-screen')).toBeInTheDocument();
+    });
+
     it('Adds a media player object to the window with a specified uniqueId', async () => {
       const mockRequire = jest.fn();
       const mockBump = {

@@ -1,7 +1,8 @@
-import { use } from 'react';
+import { use, useMemo, useState } from 'react';
 import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
-import { MediaBlock } from '#app/components/MediaLoader/types';
+import PortraitVideoEndScreen from '#app/components/PortraitVideoEndScreen';
+import { EventMapping, MediaBlock } from '#app/components/MediaLoader/types';
 import {
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
@@ -9,6 +10,7 @@ import {
 import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
+  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
@@ -16,6 +18,7 @@ import { MediaOverrides } from '#app/models/types/media';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
+import { LatestMedia } from './PagePromoSections/LatestMediaSection/types';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -73,24 +76,69 @@ import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
 import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';
 
-const getAudioVideoComponent =
-  (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
-    const { blocks } = props;
-    const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
-    const className = isPortrait ? 'portrait-media-loader' : '';
+type AudioVideoComponentProps = {
+  blocks: OptimoBlock[];
+  isCpsMap: boolean;
+  latestMedia: LatestMedia[];
+  currentArticleId?: string;
+};
 
-    return (
-      <div
-        css={({ spacings }: Theme) => [
-          `padding-top: ${spacings.TRIPLE}rem`,
-          isCpsMap && styles.cafMediaPlayer,
-          isPortrait && styles.portraitVideoPlayer,
-        ]}
-      >
-        <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
-      </div>
-    );
-  };
+const AudioVideoComponent = ({
+  blocks,
+  isCpsMap,
+  latestMedia,
+  currentArticleId,
+}: AudioVideoComponentProps) => {
+  const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
+  const [isPlaybackEnded, setIsPlaybackEnded] = useState(false);
+
+  const eventMapping = useMemo<EventMapping>(
+    () => ({
+      playlistLoaded: () => setIsPlaybackEnded(false),
+      pause: event => setIsPlaybackEnded(event.ended === true),
+    }),
+    [],
+  );
+
+  const className = isPortrait ? 'portrait-media-loader' : '';
+  const dismissEndScreen = () => setIsPlaybackEnded(false);
+  const endScreen =
+    isPortrait && isPlaybackEnded ? (
+      <PortraitVideoEndScreen
+        content={latestMedia}
+        currentArticleId={currentArticleId}
+        onClose={dismissEndScreen}
+      />
+    ) : null;
+
+  return (
+    <div
+      css={({ spacings }: Theme) => [
+        `padding-top: ${spacings.TRIPLE}rem`,
+        isCpsMap && styles.cafMediaPlayer,
+        isPortrait && styles.portraitVideoPlayer,
+      ]}
+    >
+      <MediaLoader
+        blocks={blocks as MediaBlock[]}
+        className={className}
+        eventMapping={isPortrait ? eventMapping : undefined}
+        endScreen={endScreen}
+      />
+    </div>
+  );
+};
+
+const getAudioVideoComponent =
+  (isCpsMap: boolean, latestMedia: LatestMedia[], currentArticleId?: string) =>
+  (props: ComponentToRenderProps) => (
+    <AudioVideoComponent
+      {...props}
+      isCpsMap={isCpsMap}
+      latestMedia={latestMedia}
+      currentArticleId={currentArticleId}
+    />
+  );
 
 const getLegacyMediaComponent =
   (isCpsMap: boolean, headline: string) => (props: ComponentToRenderProps) => {
@@ -186,6 +234,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData) as Tag[];
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const latestMedia = pageData?.secondaryColumn?.latestMedia ?? [];
 
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -248,8 +297,16 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     visuallyHiddenHeadline,
     headline: headings,
     subheadline: headings,
-    audio: getAudioVideoComponent(isCpsMap),
-    video: getAudioVideoComponent(isCpsMap),
+    audio: getAudioVideoComponent(
+      isCpsMap,
+      latestMedia,
+      getArticleId(pageData),
+    ),
+    video: getAudioVideoComponent(
+      isCpsMap,
+      latestMedia,
+      getArticleId(pageData),
+    ),
     legacyMedia: getLegacyMediaComponent(isCpsMap, headline),
     text,
     byline: getBylineComponent(
