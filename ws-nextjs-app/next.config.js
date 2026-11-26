@@ -59,10 +59,6 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/:service/og/:id',
-        destination: '/api/:service/og/:id',
-      },
-      {
         source: '/:service/sw.js',
         destination: '/sw.js',
       },
