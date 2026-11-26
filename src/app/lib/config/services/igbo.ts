@@ -64,6 +64,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: "Agụọla steeti {returned} n'ime {total}",
+        spread: 'Mgbasa',
+        live: 'Na Eme Ozugbo',
+        liveUpdates: 'mmelite',
+        howItWorks: 'Otú ntuli aka a si arụ ọrụ',
+        lastUpdated: 'Emelitere ikpeazụ:',
+      },
       and: 'na',
       readTime: {
         readTimePrefix: 'Oge e ji agụ akụkọ',

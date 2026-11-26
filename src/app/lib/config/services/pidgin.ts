@@ -47,6 +47,14 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      electionResultsBanner: {
+        statesCounted: '{returned} out of {total} states don count',
+        spread: 'Spread',
+        live: 'Live',
+        liveUpdates: 'updates',
+        howItWorks: 'How dis election dey work',
+        lastUpdated: 'Last update:',
+      },
       and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',

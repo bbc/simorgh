@@ -60,6 +60,14 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle: 'Àbáwọlé',
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'Ìpínlẹ̀ {returned} nínú {total} ni wọ́n ti kà',
+        spread: 'Ìtànkálẹ̀',
+        live: 'Lọ́wọ́lọ́wọ́',
+        liveUpdates: 'ìròyìn tuntun',
+        howItWorks: 'Bí ìdìbò yìí ṣe ń ṣiṣẹ́',
+        lastUpdated: 'Ìgbà tí a ṣe àtúnṣe kẹ́yìn:',
+      },
       and: 'ati',
       pagination: {
         previousPage: 'Ìṣájú',

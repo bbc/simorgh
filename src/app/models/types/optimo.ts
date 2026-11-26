@@ -4,6 +4,7 @@ import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { ElectionResults } from './elections';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation, Summary } from './curationData';
@@ -181,4 +182,5 @@ export type Article = {
   portraitVideoItems?: PortraitVideoItems;
   countryCuration?: CountryCuration;
   countryTopicIdToReorder?: string | null;
+  electionBanner?: ElectionResults | null;
 };

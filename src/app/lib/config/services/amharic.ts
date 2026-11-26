@@ -60,6 +60,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'ከ{total} ግዛቶች {returned} ተቆጥረዋል',
+        spread: 'ስርጭት',
+        live: 'ቀጥታ',
+        liveUpdates: 'ወቅታዊ መረጃዎች',
+        howItWorks: 'ይህ ምርጫ እንዴት ይሰራል',
+        lastUpdated: 'ለመጨረሻ ጊዜ የተሻሻለው፦',
+      },
       and: 'እና',
       readTime: {
         readTimePrefix: 'የንባብ ጊዜ',

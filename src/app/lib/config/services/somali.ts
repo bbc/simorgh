@@ -65,6 +65,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: '{returned} ka mid ah {total} gobol ayaa la tiriyay',
+        spread: 'Baahsanaan',
+        live: 'Toos',
+        liveUpdates: 'warar cusub',
+        howItWorks: 'Sida doorashadani u shaqeyso',
+        lastUpdated: 'Markii ugu dambeysay la cusbooneysiiyay:',
+      },
       and: 'iyo',
       readTime: {
         readTimePrefix: 'Waqtiga akhriska',

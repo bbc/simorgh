@@ -66,6 +66,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: "Naannolee {total} keessaa {returned} lakkaa'amaniiru",
+        spread: "Babal'ina",
+        live: 'Tamsaasa Kallattii',
+        liveUpdates: 'odeeffannoo haaraa',
+        howItWorks: 'Filannoon kun akkamitti hojjeta',
+        lastUpdated: 'Yeroo dhumaaf haaromfame:',
+      },
       and: 'fi',
       readTime: {
         readTimePrefix: 'Yeroo dubbisuu',

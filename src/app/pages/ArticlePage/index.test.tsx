@@ -32,6 +32,7 @@ import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import useMediaQuery from '#hooks/useMediaQuery';
+import electionResultsFixture from './ArticleElectionResults/fixtures';
 import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
 import {
   render,
@@ -1407,6 +1408,51 @@ describe('Article Page', () => {
       });
     });
   });
+  describe('Election results', () => {
+    const MUNDO_ELECTION_THING_ID = '647d5613-e0e2-4ef5-b0ce-b491de38bdbd';
+    const electionTaggedData = {
+      ...articleDataPidgin,
+      metadata: {
+        ...articleDataPidgin.metadata,
+        tags: {
+          ...articleDataPidgin.metadata.tags,
+          about: [
+            { thingId: MUNDO_ELECTION_THING_ID, thingLabel: 'Elecciones' },
+          ],
+        },
+      },
+    } as Article;
+
+    it('should render the iframe ElectionBanner when the BFF sends no election results', () => {
+      const { queryByTestId } = render(
+        <ArticlePage pageData={electionTaggedData} />,
+        {
+          service: 'mundo',
+          toggles: { electionBanner: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('election-banner')).toBeInTheDocument();
+    });
+
+    it('should not render the iframe ElectionBanner when the BFF sends election results', () => {
+      const { queryByTestId } = render(
+        <ArticlePage
+          pageData={{
+            ...electionTaggedData,
+            electionBanner: electionResultsFixture,
+          }}
+        />,
+        {
+          service: 'mundo',
+          toggles: { electionBanner: { enabled: true } },
+        },
+      );
+
+      expect(queryByTestId('election-banner')).not.toBeInTheDocument();
+    });
+  });
+
   describe('TopicDiscovery', () => {
     const data = {
       ...articleDataPidgin,

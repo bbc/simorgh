@@ -64,6 +64,14 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      electionResultsBanner: {
+        statesCounted: 'ካብ {total} ግዝኣታት {returned} ተቖጺሮም',
+        spread: 'ዝርጋሐ',
+        live: 'ቀጥታ',
+        liveUpdates: 'ሓድሽ ሓበሬታ',
+        howItWorks: 'እዚ ምርጫ ከመይ ይሰርሕ',
+        lastUpdated: 'ናይ መወዳእታ እዋን ዝተሓደሰ፦',
+      },
       and: 'እና',
       readTime: {
         readTimePrefix: 'ንባብ',

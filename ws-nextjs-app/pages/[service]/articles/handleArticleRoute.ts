@@ -176,6 +176,7 @@ export default async (
     portraitVideoItems = null,
     countryCuration = null,
     countryTopicIdToReorder = null,
+    electionBanner = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -205,6 +206,7 @@ export default async (
         portraitVideoItems,
         countryCuration,
         countryTopicIdToReorder,
+        electionBanner,
       },
       pageType: derivedPageType,
       pathname: canonicalPathname,
