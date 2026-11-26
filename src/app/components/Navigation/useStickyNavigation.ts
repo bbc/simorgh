@@ -453,20 +453,48 @@ const useStickyNavigation = ({
       clearScrollSuppression();
     };
     const handleFocusIn = () => {
-      if (!isBackwardTab) suppressFocusScroll();
+      if (!isBackwardTab || navRef.current?.contains(document.activeElement)) {
+        suppressFocusScroll();
+      }
       isBackwardTab = false;
       scheduleUpdate();
+    };
+    let touchStart: { x: number; y: number } | undefined;
+    const handleTouchStart = ({ touches }: TouchEvent) => {
+      const [touch] = touches;
+      touchStart = touch ? { x: touch.clientX, y: touch.clientY } : undefined;
     };
     // a deliberate gesture must still scroll normally immediately after
     // focusing a control, such as clicking the menu button
     const handlePointerScroll = (event: Event) => {
+      const isInsideNavigation =
+        event.target instanceof Node && navRef.current?.contains(event.target);
       if (
         event.defaultPrevented ||
-        (event.type === 'pointerdown' &&
-          event.target instanceof Node &&
-          navRef.current?.contains(event.target))
+        (event.type === 'pointerdown' && isInsideNavigation)
       ) {
         return;
+      }
+      // horizontal gestures in the navigation rows must not unpin the bar
+      if (event.type === 'wheel') {
+        const { deltaX, deltaY } = event as WheelEvent;
+        if (
+          deltaY === 0 ||
+          (isInsideNavigation && Math.abs(deltaX) > Math.abs(deltaY))
+        ) {
+          return;
+        }
+      }
+      if (event.type === 'touchmove' && isInsideNavigation && touchStart) {
+        const [touch] = (event as TouchEvent).touches;
+        if (
+          touch &&
+          (touch.clientY === touchStart.y ||
+            Math.abs(touch.clientX - touchStart.x) >
+              Math.abs(touch.clientY - touchStart.y))
+        ) {
+          return;
+        }
       }
       isBackwardTab = false;
       clearScrollSuppression();
@@ -487,6 +515,7 @@ const useStickyNavigation = ({
     window.addEventListener('pointerdown', handlePointerScroll, {
       passive: true,
     });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
     window.addEventListener('touchmove', handlePointerScroll, {
       passive: true,
     });
@@ -502,6 +531,7 @@ const useStickyNavigation = ({
       document.removeEventListener('focusin', handleFocusIn);
       window.removeEventListener('wheel', handlePointerScroll);
       window.removeEventListener('pointerdown', handlePointerScroll);
+      window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchmove', handlePointerScroll);
       if (pending.animationFrame !== null) {
         window.cancelAnimationFrame(pending.animationFrame);

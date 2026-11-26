@@ -618,7 +618,7 @@ describe('Navigation - Canonical', () => {
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
 
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -649,7 +649,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: 400,
         });
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(0);
         act(() => {
           jest.advanceTimersByTime(400);
@@ -701,7 +701,7 @@ describe('Navigation - Canonical', () => {
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
 
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -803,7 +803,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -885,11 +885,14 @@ describe('Navigation - Canonical', () => {
         const navigationRow = container.querySelector(
           '[data-e2e="scrollable-nav-secondary"]',
         );
-        const dropdownWheelEvent = new Event('wheel', {
+        const dropdownWheelEvent = new WheelEvent('wheel', {
+          deltaY: 80,
           bubbles: true,
           cancelable: true,
         });
-        const navigationRowWheelEvent = new Event('wheel', {
+        const navigationRowWheelEvent = new WheelEvent('wheel', {
+          deltaX: 80,
+          deltaY: 0,
           bubbles: true,
           cancelable: true,
         });
@@ -909,7 +912,7 @@ describe('Navigation - Canonical', () => {
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
 
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: 100 });
         scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -932,7 +935,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(secondaryScroll.scrollLeft).toBe(0);
@@ -999,7 +1002,7 @@ describe('Navigation - Canonical', () => {
         fireEvent.click(originalMenuButton);
         expect(originalMenuButton).toHaveAttribute('aria-expanded', 'true');
 
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: 100 });
         scrollTo(500);
         scrollTo(450);
 
@@ -1112,9 +1115,14 @@ describe('Navigation - Canonical', () => {
           if (releaseAction === 'focus leaves navigation') articleLink.focus();
           else if (releaseAction === 'the reader presses outside navigation')
             fireEvent.pointerDown(articleLink);
-          else if (releaseAction === 'the reader scrolls by touch')
-            fireEvent.touchMove(articleLink);
-          else fireEvent.wheel(articleLink);
+          else if (releaseAction === 'the reader scrolls by touch') {
+            fireEvent.touchStart(articleLink, {
+              touches: [{ clientX: 0, clientY: 0 }],
+            });
+            fireEvent.touchMove(articleLink, {
+              touches: [{ clientX: 0, clientY: 100 }],
+            });
+          } else fireEvent.wheel(articleLink, { deltaY: -100 });
           act(() => {
             jest.advanceTimersByTime(
               releaseAction === 'focus leaves navigation' ? 500 : 20,
@@ -1245,7 +1253,9 @@ describe('Navigation - Canonical', () => {
           );
           scrollTo(500);
           scrollTo(450);
-          const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+          const stickyNav = container.querySelector(
+            '[data-e2e="sticky-nav"]',
+          ) as HTMLElement;
           const menuButton = screen.getByRole('button', { name: 'menu' });
           menuButton.focus();
           const firstParagraph = screen.getByText(
@@ -1323,6 +1333,82 @@ describe('Navigation - Canonical', () => {
           expect(stickyNav).not.toHaveAttribute('inert');
         });
 
+        it('keeps the dropdown available while Shift+Tab moves backward through its links and back to the menu button', () => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+          fireEvent.click(menuButton);
+          const [firstLink, secondLink] = Array.from(
+            stickyNav.querySelectorAll<HTMLAnchorElement>(
+              `[data-testid="${dropdownTestId}"] a`,
+            ),
+          );
+          fireEvent.keyDown(menuButton, { key: 'Tab' });
+          fireEvent.keyDown(firstLink, { key: 'Tab' });
+          expect(secondLink).toHaveFocus();
+
+          [
+            [secondLink, firstLink],
+            [firstLink, menuButton],
+          ].forEach(([current, previous]) => {
+            fireEvent.keyDown(current, { key: 'Tab', shiftKey: true });
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(previous).toHaveFocus();
+            expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+            expect(stickyNav).not.toHaveAttribute('inert');
+            expect(stickyNav).not.toHaveAttribute('aria-hidden');
+          });
+        });
+
+        it.each(['wheel', 'touch'])(
+          'preserves focused navigation for horizontal %s gestures on its row but releases it for vertical scrolling',
+          gesture => {
+            const { stickyNav, menuButton } = renderFocusedNavigation();
+            fireEvent.click(menuButton);
+            const navigationRow = stickyNav.querySelector(
+              '[data-e2e="scrollable-nav-secondary"]',
+            ) as HTMLElement;
+
+            if (gesture === 'wheel')
+              fireEvent.wheel(navigationRow, { deltaX: 80, deltaY: 0 });
+            else {
+              fireEvent.touchStart(navigationRow, {
+                touches: [{ clientX: 100, clientY: 100 }],
+              });
+              fireEvent.touchMove(navigationRow, {
+                touches: [{ clientX: 20, clientY: 100 }],
+              });
+            }
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(menuButton).toHaveFocus();
+            expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+            expect(stickyNav).not.toHaveAttribute('inert');
+
+            if (gesture === 'wheel')
+              fireEvent.wheel(navigationRow, { deltaX: 0, deltaY: 80 });
+            else {
+              fireEvent.touchStart(navigationRow, {
+                touches: [{ clientX: 20, clientY: 100 }],
+              });
+              fireEvent.touchMove(navigationRow, {
+                touches: [{ clientX: 20, clientY: 20 }],
+              });
+            }
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+          },
+        );
+
         it('keeps navigation focused when a control prevents a scrolling key before it bubbles to the window', () => {
           const { stickyNav, menuButton } = renderFocusedNavigation();
           menuButton.addEventListener('keydown', event =>
@@ -1380,7 +1466,7 @@ describe('Navigation - Canonical', () => {
         scrollTo(500);
         scrollTo(450);
         const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
 
         [350, 250].forEach(scrollY => {
           act(() => {
@@ -1432,7 +1518,7 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).not.toHaveAttribute('inert');
         expect(stickyNav).not.toHaveAttribute('aria-hidden');
 
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(360);
 
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -1543,7 +1629,15 @@ describe('Navigation - Canonical', () => {
           act(() => {
             jest.advanceTimersByTime(3000);
           });
-          fireEvent(window, new Event(eventType));
+          if (eventType === 'wheel') fireEvent.wheel(window, { deltaY: -80 });
+          else if (eventType === 'touchmove') {
+            fireEvent.touchStart(window, {
+              touches: [{ clientX: 0, clientY: 0 }],
+            });
+            fireEvent.touchMove(window, {
+              touches: [{ clientX: 0, clientY: 80 }],
+            });
+          } else fireEvent.pointerDown(window);
           scrollTo(450);
 
           expect(
@@ -1560,7 +1654,15 @@ describe('Navigation - Canonical', () => {
           scrollTo(450);
           screen.getByRole('button', { name: 'menu' }).focus();
 
-          fireEvent(window, new Event(eventType));
+          if (eventType === 'wheel') fireEvent.wheel(window, { deltaY: 80 });
+          else if (eventType === 'touchmove') {
+            fireEvent.touchStart(window, {
+              touches: [{ clientX: 0, clientY: 100 }],
+            });
+            fireEvent.touchMove(window, {
+              touches: [{ clientX: 0, clientY: 20 }],
+            });
+          } else fireEvent.pointerDown(window);
           scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
           expect(
@@ -1656,7 +1758,7 @@ describe('Navigation - Canonical', () => {
         act(() => {
           jest.advanceTimersByTime(500);
         });
-        fireEvent.wheel(window);
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(
