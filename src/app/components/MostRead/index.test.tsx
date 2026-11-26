@@ -97,7 +97,7 @@ describe('MostRead', () => {
         isAmp: false,
         variant: 'lat',
         renderExpectation: shouldRenderMostRead,
-        dataResponse: serbianLatMostReadData,
+        dataResponse: serbianLatMostReadData.data,
       },
       {
         description: 'should not render most read for pidgin with toggles off',

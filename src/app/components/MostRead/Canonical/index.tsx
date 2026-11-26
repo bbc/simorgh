@@ -10,6 +10,8 @@ import LastUpdated from './LastUpdated';
 import { ColumnLayout, MostReadData, Size } from '../types';
 import { Direction } from '../../../models/types/global';
 
+const MAX_ITEMS = 10;
+
 interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
@@ -29,10 +31,11 @@ const MostRead = ({
     datetimeLocale,
     serviceDatetimeLocale,
     timezone,
-    mostRead: { lastUpdated, numberOfItems = 5 },
+    mostRead: { lastUpdated },
   } = use(ServiceContext);
 
-  const items = data.items?.slice(0, numberOfItems) || [];
+  // The BFF decides how many items (5 or 10) are shown based on view counts
+  const items = data.items?.slice(0, MAX_ITEMS) || [];
 
   const {
     eventTrackingData = {
