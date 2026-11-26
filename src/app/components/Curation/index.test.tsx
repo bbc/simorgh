@@ -43,6 +43,12 @@ const { NONE, BANNER, RANKED, COLLECTION, LINKS, INSITU } = VISUAL_STYLE;
 const { NORMAL, HIGH, LOW, MAXIMUM, MINIMUM } = VISUAL_PROMINENCE;
 const { MEDIA_PLAYER } = INTENT;
 
+const experimentProps = {
+  experimentName: 'test_page_views_aa_3',
+  experimentVariant: 'control',
+  sendOptimizelyEvents: true,
+};
+
 const relatedTopicSummary = afriqueHomePage.data.curations[0]
   ?.summaries?.[0] as Summary;
 const relatedTopicSummaries = [
@@ -161,6 +167,29 @@ interface TestProps {
 }
 
 describe('Curation', () => {
+  it('passes article video experiment data to promo click tracking', () => {
+    const clickTracker = jest.spyOn(clickTracking, 'default');
+
+    render(
+      <Curation
+        visualStyle={NONE}
+        visualProminence={NORMAL}
+        summaries={relatedTopicSummaries}
+        curationContentType="video"
+        experimentProps={experimentProps}
+      />,
+      { service: 'afrique' },
+    );
+
+    expect(clickTracker).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'video-curation-grid',
+        ...experimentProps,
+        itemTracker: expect.objectContaining({ position: 1 }),
+      }),
+    );
+  });
+
   beforeEach(() => {
     (getEnvConfig as jest.Mock).mockReturnValue({ SIMORGH_APP_ENV: 'test' });
   });

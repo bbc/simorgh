@@ -7,6 +7,7 @@ import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { use } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -57,6 +58,7 @@ const getGridComponent = (componentName: string | null) => {
 interface CurationProps extends Curation {
   curationContentType?: string;
   pageType?: string;
+  experimentProps?: ComponentExperimentProps;
 }
 
 export default ({
@@ -79,6 +81,7 @@ export default ({
   curationContentType,
   pageType,
   isVideoCollection = false,
+  experimentProps,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -121,6 +124,7 @@ export default ({
   } = firstSummary || {};
 
   const eventTrackingData: EventTrackingData = {
+    ...experimentProps,
     componentName: shouldStyleAsVideoCollection
       ? `${componentName}-video`
       : componentName,

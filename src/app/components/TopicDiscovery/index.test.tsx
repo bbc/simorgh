@@ -383,6 +383,42 @@ describe('TopicDiscovery', () => {
       type: 'topic-discovery',
     };
 
+    it('passes active experiment data to tabs, promos and the more-about link', () => {
+      const clickTracker = jest.spyOn(clickTracking, 'default');
+      const experimentProps = {
+        experimentName: 'test_page_views_aa_3',
+        experimentVariant: 'control',
+        sendOptimizelyEvents: true,
+      };
+
+      render(
+        <TopicDiscovery
+          topics={topicTagsFixture}
+          experimentProps={experimentProps}
+        />,
+        { service: 'portuguese' },
+      );
+
+      expect(clickTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'topic-discovery-more-about-link',
+          ...experimentProps,
+        }),
+      );
+      expect(clickTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'topic-discovery-curation-grid-promo',
+          ...experimentProps,
+        }),
+      );
+      expect(clickTracker).toHaveBeenCalledWith(
+        expect.objectContaining({
+          componentName: 'topic-discovery-tab',
+          ...experimentProps,
+        }),
+      );
+    });
+
     it('should call useViewTracker with topic-discovery component name', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
