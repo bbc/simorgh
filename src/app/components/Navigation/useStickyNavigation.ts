@@ -195,6 +195,7 @@ const useStickyNavigation = ({
       isVisible: false,
       downwardScrollStartY: null as number | null,
       isNavigatingByFocus: false,
+      deliberateScrollUntil: 0,
     };
     // Outstanding scheduled work, cancelled on teardown.
     const pending = {
@@ -228,11 +229,17 @@ const useStickyNavigation = ({
 
       const { scrollY } = window;
       const previousScrollY = tracking.lastScrollY;
+      const now = Date.now();
+      const hasScrolled = scrollY !== previousScrollY;
+      const isDeliberateScroll = now < tracking.deliberateScrollUntil;
+      // keep a continuous scroll gesture deliberate through its momentum
+      if (hasScrolled && isDeliberateScroll) {
+        tracking.deliberateScrollUntil = now + FOCUS_SCROLL_SUPPRESSION_MS;
+      }
       // voiceover can move the viewport at the end of a region without
       // another focus event, so ignore direction changes until the reader
       // deliberately scrolls again
-      const isWithinFocusSuppression =
-        Date.now() < suppressScrollUntilRef.current;
+      const isWithinFocusSuppression = now < suppressScrollUntilRef.current;
       const isScrollingUp =
         scrollY < previousScrollY && !tracking.isNavigatingByFocus;
       const isScrollingDown =
@@ -269,14 +276,35 @@ const useStickyNavigation = ({
       // the short suppression window also lets focus settle before returning
       // to the normal navigation at the page top
       const shouldKeepFocusedNavigationVisible =
-        tracking.isNavigatingByFocus &&
         isVisibleRef.current &&
-        navRef.current.contains(document.activeElement);
+        (isWithinFocusSuppression ||
+          (tracking.isNavigatingByFocus &&
+            navRef.current.contains(document.activeElement)));
       const isPinned =
         shouldKeepFocusedNavigationVisible ||
         (tracking.isPinned
           ? (!isAtPageTop && isPastExitPoint) || isWithinFocusSuppression
           : isPastEntryPoint && isScrollingUp);
+
+      // safari can commit a scroll before it reports focus on the bar
+      // allow the existing focus window before making its controls inert
+      // only a new scroll starts this wait so it expires if focus never arrives
+      if (
+        tracking.isVisible &&
+        isVisibleRef.current &&
+        !isPinned &&
+        hasScrolled &&
+        !isDeliberateScroll
+      ) {
+        suppressScrollUntilRef.current = now + FOCUS_SCROLL_SUPPRESSION_MS;
+        window.clearTimeout(pending.suppressionRecheckTimeout);
+        pending.suppressionRecheckTimeout = window.setTimeout(() => {
+          if (pending.animationFrame === null) {
+            pending.animationFrame = window.requestAnimationFrame(update);
+          }
+        }, FOCUS_SCROLL_SUPPRESSION_MS);
+        return;
+      }
 
       if (tracking.isPinned && !isPinned) closeMenuRef.current();
       tracking.isPinned = isPinned;
@@ -370,6 +398,7 @@ const useStickyNavigation = ({
 
     const clearScrollSuppression = () => {
       tracking.isNavigatingByFocus = false;
+      tracking.deliberateScrollUntil = Date.now() + FOCUS_SCROLL_SUPPRESSION_MS;
       suppressScrollUntilRef.current = 0;
       window.clearTimeout(pending.suppressionRecheckTimeout);
       scheduleUpdate();
@@ -379,9 +408,49 @@ const useStickyNavigation = ({
     // backwards, while also protecting focus changes that have no tab event
     let isBackwardTab = false;
     const handleKeyDown = (event: KeyboardEvent) => {
-      isBackwardTab = event.key === 'Tab' && event.shiftKey;
-      if (event.key === 'Tab' && !event.shiftKey) suppressFocusScroll();
-      else clearScrollSuppression();
+      isBackwardTab = false;
+      if (
+        event.key !== 'Tab' ||
+        event.defaultPrevented ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey
+      ) {
+        return;
+      }
+      isBackwardTab = event.shiftKey;
+      if (isBackwardTab) clearScrollSuppression();
+      else suppressFocusScroll();
+    };
+    const handleScrollKeyDown = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.altKey ||
+        (event.ctrlKey && !['Home', 'End'].includes(event.key)) ||
+        (event.metaKey && !['ArrowUp', 'ArrowDown'].includes(event.key)) ||
+        (event.shiftKey && event.key !== ' ') ||
+        ![
+          'ArrowUp',
+          'ArrowDown',
+          'PageUp',
+          'PageDown',
+          'Home',
+          'End',
+          ' ',
+        ].includes(event.key)
+      ) {
+        return;
+      }
+      const { target } = event;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest('input, textarea, select') ||
+          (event.key === ' ' && target.closest('button, [role="button"]')))
+      ) {
+        return;
+      }
+      clearScrollSuppression();
     };
     const handleFocusIn = () => {
       if (!isBackwardTab) suppressFocusScroll();
@@ -391,7 +460,14 @@ const useStickyNavigation = ({
     // a deliberate gesture must still scroll normally immediately after
     // focusing a control, such as clicking the menu button
     const handlePointerScroll = (event: Event) => {
-      if (event.defaultPrevented) return;
+      if (
+        event.defaultPrevented ||
+        (event.type === 'pointerdown' &&
+          event.target instanceof Node &&
+          navRef.current?.contains(event.target))
+      ) {
+        return;
+      }
       isBackwardTab = false;
       clearScrollSuppression();
     };
@@ -404,6 +480,8 @@ const useStickyNavigation = ({
     window.addEventListener('resize', handleResize, { passive: true });
     // run before the dropdown's key handler, which can move focus itself
     window.addEventListener('keydown', handleKeyDown, true);
+    // let controls prevent scrolling keys before releasing focus protection
+    window.addEventListener('keydown', handleScrollKeyDown);
     document.addEventListener('focusin', handleFocusIn);
     window.addEventListener('wheel', handlePointerScroll, { passive: true });
     window.addEventListener('pointerdown', handlePointerScroll, {
@@ -420,6 +498,7 @@ const useStickyNavigation = ({
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('keydown', handleKeyDown, true);
+      window.removeEventListener('keydown', handleScrollKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
       window.removeEventListener('wheel', handlePointerScroll);
       window.removeEventListener('pointerdown', handlePointerScroll);
