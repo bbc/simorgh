@@ -368,14 +368,14 @@ const checkAccessibility = async (page: Page) => {
 
 const checkWebpImages = async (page: Page) => {
   const images = page.locator('amp-img[src*="ichef."], img[src*="ichef."]');
-  await Promise.all(
-    (await images.all()).map(async image => {
-      if (await image.isVisible()) {
-        await image.scrollIntoViewIfNeeded();
-        await expect(image).toHaveAttribute('src', /\.webp(?:$|\?)/);
-      }
-    }),
-  );
+  const sources = await images
+    .filter({ visible: true })
+    .evaluateAll(elements =>
+      elements.map(element => element.getAttribute('src')),
+    );
+  sources.forEach(src => {
+    expect(src).toMatch(/\.webp(?:$|\?)/);
+  });
 };
 
 const checkTopicTags = async (page: Page) => {

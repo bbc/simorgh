@@ -1133,9 +1133,9 @@ export const assertPodcastPromoComponentView = async ({
 
   await page.goto(`${baseURL}${path}`, { waitUntil: 'domcontentloaded' });
 
-  // Double scroll intentional to reliably trigger viewability
-  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
-  await page.locator('[data-e2e="podcast-promo"]').scrollIntoViewIfNeeded();
+  const promo = page.locator('[data-e2e="podcast-promo"]');
+  await promo.evaluate(element => element.scrollIntoView({ block: 'center' }));
+  await expect(promo).toBeInViewport({ ratio: 0.5 });
 
   const request = await viewPromise;
   const params = getATIParamsFromURL(request.url());
