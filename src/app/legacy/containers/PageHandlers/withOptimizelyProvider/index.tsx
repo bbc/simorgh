@@ -19,6 +19,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 import registerVisitActivity from './visitTracking';
 import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
+import getEngagementEvents from './engagementTracking';
 
 const PAGE_VIEW_EVENT_NAME = 'page-views';
 const SIGNED_IN_PAGE_VIEW_EVENT_NAME = 'signed-in-page-views';
@@ -27,6 +28,7 @@ let lastTrackedUrl: string | null = null;
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
+let currentPageType: string | undefined;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -105,13 +107,23 @@ optimizely?.notificationCenter?.addNotificationListener(
         if (currentUrl !== lastTrackedUrl) {
           lastTrackedUrl = currentUrl;
 
+          const now = Date.now();
+          const newVisit = registerVisitActivity(now);
+
           // the visit (denominator) must be sent before the page view (numerator)
           // so the page view falls inside Optimizely's ratio metric attribution window
-          if (registerVisitActivity(Date.now())) {
+          if (newVisit) {
             optimizely.track(VISIT_EVENT_NAME);
           }
 
           optimizely.track(PAGE_VIEW_EVENT_NAME);
+
+          getEngagementEvents({
+            newVisit,
+            pageType: currentPageType,
+            url: currentUrl,
+            now,
+          }).forEach(eventName => optimizely.track(eventName));
 
           // proxy metric for sign-in experiments: additional to page-views,
           // fired only when the user is in a signed-in state
@@ -129,7 +141,8 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
     if (disableOptimizely) return <Component {...props} />;
 
     const { service } = use(ServiceContext);
-    const { country } = use(RequestContext);
+    const { country, pageType } = use(RequestContext);
+    currentPageType = pageType;
 
     return (
       <OptimizelyProvider

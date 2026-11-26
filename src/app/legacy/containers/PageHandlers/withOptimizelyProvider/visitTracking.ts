@@ -3,7 +3,7 @@ const VISIT_STORAGE_KEY = 'last_visit_ts';
 // a new visit is counted after 30 minutes of inactivity, where activity is a tracked page view
 const VISIT_TIMEOUT_MS = 30 * 60 * 1000;
 
-const getStorage = (): Storage | null => {
+export const getStorage = (): Storage | null => {
   if (typeof window === 'undefined') {
     return null;
   }
