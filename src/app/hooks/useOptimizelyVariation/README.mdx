@@ -11,7 +11,7 @@ The `useOptimizelyVariation` hook handles:
 * Has functionality to override the Optimizely user's attributes
 * Uses the `useEffect` hook to prevent issues occuring via server side rendering
 
-`useOptimizelyVariation` must be used in conjunction with the HOC [`withOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/containers/PageHandlers/withOptimizelyProvider) page handler. This is because `useOptimizelyVariation` makes use of features found in the `optimizely` object client that needs to be provided by `withOptimizelyProvider`.
+`useOptimizelyVariation` must be used inside an Optimizely provider, because it makes use of features found in the `optimizely` object client. In the Next.js app this is provided app-wide by [`AppOptimizelyProvider`](https://github.com/bbc/simorgh/tree/latest/src/app/contexts/AppOptimizelyProvider) in `ws-nextjs-app/pages/_app.page.tsx`, so pages and layout components (e.g. Navigation) don't need to add their own.
 `ExperimentState.CLIENT_SIDE` or  `ExperimentState.SERVER_SIDE` must be specified for the hook to call the respective client side or server side optimizely hooks.
 
 ### Usage
@@ -19,7 +19,6 @@ The `useOptimizelyVariation` hook handles:
 Here's an example of its usage:
 
 ```jsx
-import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const ExamplePage = () => {
@@ -34,5 +33,5 @@ const ExamplePage = () => {
   return <p>I am not a variation</p>;
 };
 
-export default withOptimizelyProvider(ExamplePage);
+export default ExamplePage;
 ```
