@@ -9,10 +9,11 @@ type Props = {
   nonce?: string;
 };
 
-const trackingScripts = ({
+// eslint-disable-next-line func-names
+const trackingScripts = function ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
-}: Props) => {
+}: Props) {
   return `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
