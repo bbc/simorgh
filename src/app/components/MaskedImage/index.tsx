@@ -8,6 +8,7 @@ type Props = {
   imageUrl?: string;
   imageUrlTemplate: string;
   imageWidth: number;
+  imageResolutions?: number[];
   altText?: string;
   showPlaceholder?: boolean;
   showVignette?: boolean;
@@ -40,6 +41,7 @@ const MaskedImage = ({
   imageUrl,
   imageUrlTemplate,
   imageWidth,
+  imageResolutions,
   altText = '',
   showPlaceholder = true,
   showVignette = false,
@@ -52,6 +54,7 @@ const MaskedImage = ({
     prepareIchefImage({
       imageUrlTemplate,
       originalImageWidth: imageWidth,
+      imageResolutions,
     });
 
   const shouldFillHeight = singleImageLayout;
