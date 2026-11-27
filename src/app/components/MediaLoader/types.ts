@@ -14,8 +14,11 @@ export type SMPEvent = {
     items: PlaylistItem[];
   };
   direction?: string;
-  method?: 'swipe' | 'wheel';
+  method?: 'swipe' | 'wheel' | 'button';
   ended?: boolean;
+  paused?: boolean;
+  currentTime?: number;
+  duration?: number;
 };
 
 export type MediaPlayerEvents =
@@ -24,6 +27,13 @@ export type MediaPlayerEvents =
   | 'fullscreenExit'
   | 'statsNavigation'
   | 'pause'
+  | 'ended'
+  | 'playing'
+  | 'timeupdate'
+  | 'significanttimeupdate'
+  | 'seeking'
+  | 'seeked'
+  | 'waiting'
   | 'enterFakeFullscreen'
   | 'exitFakeFullscreen';
 
@@ -159,6 +169,10 @@ export type MediaInfo = {
 
 export type Player = {
   currentTime: (time?: number) => number;
+  duration: () => number;
+  paused: () => boolean;
+  seeking: () => boolean;
+  ended: () => boolean;
   dispatchEvent(
     dispatchEvent: string,
     parameters?: { adTag: string | null },

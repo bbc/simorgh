@@ -21,6 +21,8 @@ export default ({
     optimizelyComponentName,
     experimentName,
     experimentVariant,
+    // allows custom events to set a grouping label in reverb/piano
+    eventGroupingName,
     itemTracker,
     groupTracker,
     viewThreshold,
@@ -59,6 +61,7 @@ export default ({
     optimizelyComponentName,
     experimentName,
     experimentVariant,
+    eventGroupingName,
     itemTracker,
     groupTracker,
     viewThreshold,

@@ -37,6 +37,8 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
         statsDestination,
         campaignID,
         detailedPlacement,
+        // carries a custom event grouping through to reverb/piano
+        eventGroupingName,
         groupTracker,
         itemTracker,
         alwaysInView = false,
@@ -65,6 +67,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
           advertiserID,
           url,
           detailedPlacement,
+          eventGroupingName,
           ...(groupTracker && { groupTracker }),
           ...(itemTracker && { itemTracker }),
         },

@@ -21,6 +21,8 @@ const {
   metadata: { atiAnalytics, type },
 } = fixtureData;
 
+const fixturePageMetadata = { atiAnalytics, type: type as PageTypes };
+
 const eventTrackingData = {
   componentName: 'portrait-video-modal',
   alwaysInView: true,
@@ -87,12 +89,71 @@ describe('useSwipeTracker', () => {
 
     describe('View tracking - Reverb', () => {
       describe('Viewability Model', () => {
+        it.each<Services>(['hindi', 'arabic'])(
+          'should send playback summaries with their grouping and metrics for %s',
+          async service => {
+            const {
+              result: { current: swipeTracker },
+            } = renderHook(() => useSwipeTracker(eventTrackingData), {
+              wrapper: props =>
+                wrapper({
+                  ...props,
+                  service,
+                  pageMetadata: fixturePageMetadata,
+                }),
+            });
+
+            await swipeTracker({
+              ...eventTrackingData,
+              componentName: 'portrait-video-playback',
+              eventGroupingName: 'portrait-video-playback',
+              itemTracker: {
+                type: 'portrait-video',
+                watchedDuration: 0,
+                totalDuration: 22000,
+                completionRate: 0,
+                skipRate: 1,
+                playbackTrigger: 'close',
+                versionId: 'p1234567',
+                resourceId: 'urn:bbc:pips:pid:p0m6zysd',
+              },
+            });
+
+            expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+            expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+              'viewability',
+              '',
+              expect.objectContaining({
+                event: {
+                  action: 'view',
+                  category: 'viewability',
+                  grouping: 'portrait-video-playback',
+                },
+                item: {
+                  name: 'portrait-video-playback',
+                  type: 'portrait-video',
+                  watched_duration: 0,
+                  total_duration: 22000,
+                  completion_rate: 0,
+                  skip_rate: 1,
+                  playback_trigger: 'close',
+                  version_id: 'p1234567',
+                  resource_id: 'urn:bbc:pips:pid:p0m6zysd',
+                },
+              }),
+              undefined,
+              undefined,
+              false,
+            );
+          },
+        );
+
         it('should trigger a beacon for a view event', async () => {
           const {
             result: { current: swipeTracker },
           } = renderHook(() => useSwipeTracker(eventTrackingData), {
             wrapper: props =>
-              wrapper({ ...props, pageMetadata: { atiAnalytics, type } }),
+              wrapper({ ...props, pageMetadata: fixturePageMetadata }),
           });
 
           await swipeTracker({
@@ -148,8 +209,6 @@ describe('useSwipeTracker', () => {
     });
 
     describe('Resonance dual-run', () => {
-      const pageMetadata = { atiAnalytics, type: type as PageTypes };
-
       const swipeData = {
         ...eventTrackingData,
         groupTracker: {
@@ -170,7 +229,7 @@ describe('useSwipeTracker', () => {
             wrapper({
               ...props,
               service: 'arabic',
-              pageMetadata,
+              pageMetadata: fixturePageMetadata,
             }),
         });
 
@@ -200,7 +259,8 @@ describe('useSwipeTracker', () => {
         const {
           result: { current: swipeTracker },
         } = renderHook(() => useSwipeTracker(eventTrackingData), {
-          wrapper: props => wrapper({ ...props, pageMetadata }),
+          wrapper: props =>
+            wrapper({ ...props, pageMetadata: fixturePageMetadata }),
         });
 
         await swipeTracker(swipeData);
@@ -217,7 +277,7 @@ describe('useSwipeTracker', () => {
             wrapper({
               ...props,
               service: 'arabic',
-              pageMetadata,
+              pageMetadata: fixturePageMetadata,
               toggles: { eventTracking: { enabled: false } },
             }),
         });
