@@ -123,6 +123,7 @@ export default {
 
   standardMediaContainer: ({ palette }: Theme) =>
     css({
+      position: 'relative',
       backgroundColor: palette.BLACK,
       height: '100%',
     }),
