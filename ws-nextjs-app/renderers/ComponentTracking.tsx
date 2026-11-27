@@ -19,9 +19,9 @@ const trackingScripts = ({
       var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
       var isComponentViewTrackingEnabled = ${trackComponentViews};
 
-      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
-        isComponentTrackingEnabled = ${isOperaProxy.toString()}();
-      }      
+      // if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
+      //   isComponentTrackingEnabled = ${isOperaProxy.toString()}();
+      // }      
 
       if (isComponentTrackingEnabled) {
         (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
