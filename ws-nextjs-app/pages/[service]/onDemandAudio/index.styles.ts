@@ -38,20 +38,6 @@ export default {
         },
       },
     }),
-  continueReadingButton: ({ mq, palette }: Theme) =>
-    css({
-      borderBottom: 'none',
-      backgroundColor: `${palette.GREY_1}`,
-      display: 'block',
-      width: '100%',
-      '&&': {
-        margin: '0',
-      },
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'none',
-      },
-    }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,

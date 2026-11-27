@@ -21,6 +21,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
+import layoutStyles from './OnDemandAudioLayout.module.scss';
 import { OnDemandAudioProps } from './types';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -194,7 +195,7 @@ const OnDemandAudioPage = ({
             </div>
             {shouldShowContinueReadingButton && (
               <ContinueReadingButton
-                css={styles.continueReadingButton}
+                className={layoutStyles.podcastContinueReadingButton}
                 showAllContent={showAllContent}
                 setShowAllContent={setShowAllContent}
               />
