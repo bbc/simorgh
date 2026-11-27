@@ -24,7 +24,7 @@ This programme is complete when `src/app/components` contains no imports from `@
 
 ## Current status
 
-The initial batch and revised early sequence are complete on `latest`. This includes `Spinner`, `VisuallyHiddenText`, `LiveText`, `Footer/Link`, `Curation/CurationMessageBanner`, and `CallToActionLink` and its sub-components, as well as the earlier components listed below.
+The initial batch, the revised early sequence and a parallel batch of three components are complete on `latest`. This includes `Spinner`, `VisuallyHiddenText`, `LiveText`, `Footer/Link`, `Curation/CurationMessageBanner`, `CallToActionLink` and its sub-components, `Embeds/EmbedImages`, `ContinueReadingButton` and `TopicTags`, as well as the earlier components listed below.
 
 - Other production components using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, and `EmbedError`.
 - Other components using SCSS Modules include `ArticleLinksBlock` and its `Promo`/`PromoList` children, `Curation/Subhead`, `SaveButton`, `FollowTopicButton`, `ActionTooltip`, `EpisodeDescriptionFormatter`, and the `GooglePreferredSource` link and divider components.
@@ -36,15 +36,17 @@ The `CallToActionLink` migration also moved the CTA styles owned by `AccountActi
 
 Counts of style files are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion can also be used without an `index.styles.*` file.
 
-As of 27 November 2026, three independently reviewable migrations are open against `latest` and are **not yet merged**:
+The parallel batch was merged on 27 November 2026:
 
-| Component | PR | Review and validation focus |
+| Component | Merged PR | What changed or needed checking |
 |---|---|---|
-| `ContinueReadingButton` | [#14722](https://github.com/bbc/simorgh/pull/14722) | Consumer class composition, podcast override and forced-colours outline. The PR proposes a full-width podcast button at small widths as a separate visible bug fix; review it explicitly. |
-| `Embeds/EmbedImages` | [#14723](https://github.com/bbc/simorgh/pull/14723) | Responsive padding, canonical and AMP images, Lite null rendering, and the updated pidgin integration snapshots. |
+| `ContinueReadingButton` | [#14722](https://github.com/bbc/simorgh/pull/14722) | Combines its class with the consumer's `className`. The on-demand audio page's override moved to SCSS; the podcast button is now full width on small screens (an agreed bug fix) and keeps its forced-colours border. |
+| `Embeds/EmbedImages` | [#14723](https://github.com/bbc/simorgh/pull/14723) | Responsive padding, canonical and AMP images, Lite null rendering, and updated pidgin integration snapshots (class name only). |
 | `TopicTags` | [#14724](https://github.com/bbc/simorgh/pull/14724) | Responsive typography, interaction and dark UI states, RTL, and single/multiple-tag layouts. |
 
-All reported PR checks passed when checked on 27 November, but passing checks do not replace browser-level computed-style and AMP/Lite payload verification. Recheck PR state and checks before treating any migration as complete.
+All PR checks passed, and testers checked #14722 and #14724 on article and topic pages for several services. Passing checks don't replace the batch-level checks in [Next steps](#next-steps).
+
+During testing, icons were missing on `localhost.bbc.com:7081`. This was a local setup problem, not a migration bug: icons were loaded from `localhost:7081` without the CORS header CSS masks need. [PR #14727](https://github.com/bbc/simorgh/pull/14727) fixes it; until it merges, test on `localhost:7081`.
 
 ## Lessons from migrations
 
@@ -93,11 +95,11 @@ Compare the Emotion and SCSS declarations, and the rendered result, rather than 
 - When two rules have the same specificity, Emotion and SCSS can load them in a different order, so a different rule may win. For example, the `CurationMessageBanner` heading colour needed a more specific selector to override the shared `Text` colour.
 - If Storybook looks different, check the computed styles in stories and on real pages before putting it down to a Storybook problem.
 
-In `ContinueReadingButton`, the podcast override's increased specificity affects the small-screen width and forced-colours border. The proposed width fix needs explicit review, and the full high-contrast outline needs browser verification.
+In `ContinueReadingButton`, the podcast override's higher specificity changed the button's small-screen width and removed its forced-colours border. The full-width button was kept as an agreed bug fix, and the border was restored in the override.
 
 ### Check browser support and emitted CSS
 
-The Next.js PostCSS configuration used in this batch left `padding-inline` and `margin-inline` unchanged. The `EmbedImages` and `TopicTags` PRs use equal physical left/right values as a compatibility exception for the original symmetric spacing on older browsers, including Opera Mini. Review the exception and verify the affected browsers; it is not a blanket replacement for direction-aware logical properties.
+The Next.js PostCSS configuration used in this batch left `padding-inline` and `margin-inline` unchanged. The `EmbedImages` and `TopicTags` migrations use equal physical left/right values as a compatibility exception for the original symmetric spacing on older browsers, including Opera Mini. Review the exception and verify the affected browsers; it is not a blanket replacement for direction-aware logical properties.
 
 Enabling `postcss-preset-env`'s logical-properties plugin (stage 2) would convert these shorthands repository-wide, but it also rewrites start/end properties into `[dir]`-scoped or `:dir()` rules. The `[dir]` form raises specificity, and Opera Mini doesn't support `:dir()`. Don't enable it without testing RTL, specificity and cascade order in canonical, AMP and Lite output.
 
@@ -198,7 +200,7 @@ The original batches grouped components by approximate size and cohesion. The fi
 
 ## Next steps
 
-1. **Review the three open PRs** listed above. Before merging, check they're still up to date with `latest` and other open work, check them in a browser, and measure AMP/Lite CSS on representative pages.
+1. **Run the batch-level checks for the merged parallel batch.** Measure AMP/Lite CSS on representative pages, and check article pages where `EmbedImages` and `ContinueReadingButton` appear together in a browser.
 2. **Finish partly migrated consumers.** `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have.
 3. **Plan `LiveLabel` and `LivePulse` together.** `LiveLabel` sets the pulse's size, and Billboard and the live-page header override it too, so they need checking as one piece of work. Keep reduced-motion behaviour, dark UI, translations and screen-reader text working.
 4. **Give `BulletedList` its own PR.** Check its legacy consumers first. It sets bullet shape and colour from props and has dark UI styles, and its class names, `ref` and list semantics must keep working.
