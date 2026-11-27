@@ -9,8 +9,12 @@ and relative-time configuration; service configuration owns locale registration.
 `en-gb` for the HTML `dateTime` attribute. Defaults are `Europe/London`, `en-gb`,
 absolute dates and enabled padding. Prefix, alternative-calendar date, main date
 and suffix are separated by spaces. Alternative calendars are omitted for
-relative dates. Their existing `formatDate(localisedMoment(...))` contract is
-unchanged.
+relative dates.
+
+`altCalendar.formatDate` is called as `formatDate(localisedMoment(...), { omitYear })`.
+`omitYear` mirrors `isPublishedThisYear`, so an `altCalendar` implementation can
+choose to omit its own year segment to stay consistent with a `format` that
+also omits the year during the current year.
 
 `className` is forwarded to the `time` element. Semantic markup, accessible text
 and hydration-warning suppression are shared across canonical, AMP and Lite.
