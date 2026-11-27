@@ -1,3 +1,5 @@
+import moment from 'moment-timezone';
+import getDayAndMonthFormat from '#lib/utilities/getDayAndMonthFormat';
 import Timestamp from '#app/components/TimestampContainer';
 
 interface LastUpdatedProps {
@@ -5,6 +7,7 @@ interface LastUpdatedProps {
   prefix: string;
   timestamp: number | string;
   timezone: string;
+  datetimeMonthDayFormat?: string;
 }
 
 const LastUpdated = ({
@@ -12,17 +15,31 @@ const LastUpdated = ({
   prefix,
   timestamp,
   timezone,
-}: LastUpdatedProps) => (
-  <Timestamp
-    timestamp={timestamp}
-    dateTimeFormat="YYYY-MM-DD"
-    prefix={prefix}
-    format="LL"
-    locale={locale}
-    timezone={timezone}
-    padding={false}
-    altCalendar={null}
-  />
-);
+  datetimeMonthDayFormat,
+}: LastUpdatedProps) => {
+  const publicationDate = moment(timestamp).locale(locale).tz(timezone);
+  const isPublishedThisYear = publicationDate.isSame(
+    moment().tz(timezone),
+    'year',
+  );
+
+  return (
+    <Timestamp
+      timestamp={timestamp}
+      dateTimeFormat="YYYY-MM-DD"
+      prefix={prefix}
+      format={
+        isPublishedThisYear
+          ? datetimeMonthDayFormat || getDayAndMonthFormat(locale)
+          : 'LL'
+      }
+      locale={locale}
+      timezone={timezone}
+      isPublishedThisYear={isPublishedThisYear}
+      padding={false}
+      altCalendar={null}
+    />
+  );
+};
 
 export default LastUpdated;

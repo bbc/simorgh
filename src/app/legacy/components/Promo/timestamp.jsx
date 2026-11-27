@@ -1,6 +1,8 @@
 import { use } from 'react';
+import moment from 'moment-timezone';
 import Timestamp from '#app/components/TimestampContainer';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import getDayAndMonthFormat from '#lib/utilities/getDayAndMonthFormat';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const PromoTimestamp = ({
@@ -8,9 +10,16 @@ const PromoTimestamp = ({
   serviceDatetimeLocale = '',
   className = '',
 }) => {
-  const { altCalendar, datetimeLocale, timezone } = use(ServiceContext);
+  const { altCalendar, datetimeLocale, datetimeMonthDayFormat, timezone } =
+    use(ServiceContext);
 
   const locale = serviceDatetimeLocale || datetimeLocale;
+
+  const publicationDate = moment(children).locale(locale).tz(timezone);
+  const isPublishedThisYear = publicationDate.isSame(
+    moment().tz(timezone),
+    'year',
+  );
 
   const isRelative = isTenHoursAgo(new Date(children).getTime());
 
@@ -20,7 +29,12 @@ const PromoTimestamp = ({
       altCalendar={altCalendar}
       locale={locale}
       dateTimeFormat="YYYY-MM-DD"
-      format="LL"
+      format={
+        isPublishedThisYear
+          ? datetimeMonthDayFormat || getDayAndMonthFormat(locale)
+          : 'LL'
+      }
+      isPublishedThisYear={isPublishedThisYear}
       padding={false}
       timezone={timezone}
       isRelative={isRelative}

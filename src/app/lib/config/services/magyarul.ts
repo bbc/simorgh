@@ -29,6 +29,7 @@ export const service: DefaultServiceConfig = {
     locale: 'hu-HU',
     isoLang: 'hu',
     datetimeLocale: 'hu',
+    datetimeMonthDayFormat: 'MMMM D.',
     service: 'magyarul',
     serviceName: 'Magyarul',
     serviceLocalizedName: 'Magyarul',

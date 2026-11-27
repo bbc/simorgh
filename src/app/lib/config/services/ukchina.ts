@@ -20,6 +20,7 @@ const baseServiceConfig = {
   defaultImageAltText: 'BBC 英伦网',
   dir: 'ltr' as Direction,
   datetimeLocale: `zh-cn`,
+  datetimeMonthDayFormat: 'M月D日',
   service: 'ukchina' as Services,
   serviceName: 'UK China',
   languageName: 'Chinese',

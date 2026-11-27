@@ -31,6 +31,7 @@ export const service: DefaultServiceConfig = {
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'si',
     datetimeLocale: `si`,
+    datetimeMonthDayFormat: 'MMMM D',
     service: 'sinhala',
     serviceName: 'Sinhala',
     languageName: 'Sinhala',

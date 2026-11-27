@@ -35,7 +35,9 @@ const nowMoment = moment().locale('fa');
 const formattedDate = jalaali.formatDate(nowMoment);
 ```
 
-The Jalaali formatter contains a function called `formatDate()`. This function takes a `moment` object as its argument, which needs to have `ps` or `fa` set as its locale. The function then uses the `moment` with its logic to return a string in a day, year, month format using Eastern Arabic numerals e.g. `۱۱ دی ۱۳۹۷`.
+The Jalaali formatter contains a function called `formatDate()`. This function takes a `moment` object as its first argument, which needs to have `ps` or `fa` set as its locale, and an optional options object as its second argument. The function then uses the `moment` with its logic to return a string in a day, year, month format using Eastern Arabic numerals e.g. `۱۱ دی ۱۳۹۷`.
+
+Pass `{ omitYear: true }` as the second argument to omit the year segment in the current year, e.g. `jalaali.formatDate(nowMoment, { omitYear: true })` returns `۱۱ دی`.
 
 If an unsupported `moment` or locale set on the `moment` is passed in, then the output will `return null`.
 

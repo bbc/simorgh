@@ -10,13 +10,19 @@ interface TimestampContainerProps {
   timestamp?: number | string;
   dateTimeFormat?: string;
   format?: string;
+  isPublishedThisYear?: boolean;
   isRelative?: boolean;
   padding?: boolean;
   prefix?: string;
   suffix?: string;
   timezone?: string;
   locale?: string;
-  altCalendar?: { formatDate: (date: Moment) => string | null } | null;
+  altCalendar?: {
+    formatDate: (
+      date: Moment,
+      options?: { omitYear?: boolean },
+    ) => string | null;
+  } | null;
   className?: string;
 }
 
@@ -24,6 +30,7 @@ const TimestampContainer = ({
   timestamp,
   dateTimeFormat,
   format = '',
+  isPublishedThisYear = false,
   isRelative = false,
   padding = true,
   prefix = '',
@@ -51,7 +58,9 @@ const TimestampContainer = ({
 
   const altDateTime =
     altCalendar && !isRelative
-      ? `${altCalendar.formatDate(localisedMoment({ locale, timestamp }))} -`
+      ? `${altCalendar.formatDate(localisedMoment({ locale, timestamp }), {
+          omitYear: isPublishedThisYear,
+        })} -`
       : undefined;
 
   const timestampText = [prefix, altDateTime, mainDateTime, suffix]

@@ -36,7 +36,7 @@ const isSupportedMoment = moment => {
 };
 
 const jalaali = {
-  formatDate: gregorianMoment => {
+  formatDate: (gregorianMoment, { omitYear = false } = {}) => {
     if (isSupportedMoment(gregorianMoment)) {
       const jalaaliDate = jalaaliJs.toJalaali(
         gregorianMoment.year(),
@@ -47,6 +47,11 @@ const jalaali = {
 
       const jalaaliDay = translateEasternNumerals(jalaaliDate.jd.toString());
       const jalaaliMonth = localeJalaaliMonths[jalaaliDate.jm - 1];
+
+      if (omitYear) {
+        return `${jalaaliDay} ${jalaaliMonth}`;
+      }
+
       const jalaaliYear = translateEasternNumerals(jalaaliDate.jy.toString());
 
       return `${jalaaliDay} ${jalaaliMonth} ${jalaaliYear}`;

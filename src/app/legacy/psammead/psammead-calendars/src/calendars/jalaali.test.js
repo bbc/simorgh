@@ -82,4 +82,30 @@ describe('Jalaali Conversion Tests', () => {
       expect(jalaaliCalendar).toEqual(expected);
     });
   });
+
+  describe('omitYear option', () => {
+    it('should omit the year for persian', () => {
+      const jalaaliCalendar = jalaali.formatDate(
+        moment('2019-01-01').locale('fa'),
+        { omitYear: true },
+      );
+      expect(jalaaliCalendar).toEqual('۱۱ دی');
+    });
+
+    it('should omit the year for pashto', () => {
+      const jalaaliCalendar = jalaali.formatDate(
+        moment('2019-01-01').locale('ps'),
+        { omitYear: true },
+      );
+      expect(jalaaliCalendar).toEqual('۱۱ مرغومی');
+    });
+
+    it('should return null as date does not exist, even with omitYear', () => {
+      const jalaaliCalendar = jalaali.formatDate(
+        moment('2025-11-31').locale('fa'),
+        { omitYear: true },
+      );
+      expect(jalaaliCalendar).toEqual(null);
+    });
+  });
 });
