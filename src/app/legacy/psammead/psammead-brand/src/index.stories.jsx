@@ -7,7 +7,10 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react-webpack5';
-import * as svgs from '#psammead/psammead-assets/src/svgs';
+import news from '#app/components/ThemeProvider/chameleonLogos/news';
+import igbo from '#app/components/ThemeProvider/chameleonLogos/igbo';
+import yoruba from '#app/components/ThemeProvider/chameleonLogos/yoruba';
+import arabic from '#app/components/ThemeProvider/chameleonLogos/arabic';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import {
   withServicesKnob,
@@ -19,8 +22,9 @@ import SkipLink from './SkipLink';
 import notes from '../README.md';
 
 const STORY_KIND = 'Components/Brand';
+const svgs = { news, igbo, yoruba, arabic };
 const inputs = (service = 'news') => {
-  const options = Object.keys(svgs).filter(key => key !== 'BBC_BLOCKS');
+  const options = Object.keys(svgs);
   const svgChoice = select('Service SVG', options, service).toLowerCase();
   const productInput = text('Product', 'BBC News');
   const serviceLocalisedNameInput = text('Localised service name', 'Yoruba');

@@ -196,7 +196,7 @@ test.describe('onDemandTV', () => {
             ).toBeVisible();
 
             const placeholderImage = page.locator(
-              '[data-e2e="media-loader__placeholder"] div img',
+              '[data-e2e="media-loader__placeholder"] div img:not(.external-svg):not(.external-svg img)',
             );
 
             await expect(placeholderImage).toBeVisible();

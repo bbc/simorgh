@@ -20,6 +20,12 @@ import {
 } from './fixtures';
 
 jest.mock('../../components/ThemeProvider');
+jest.mock('#app/components/OptimizelyPageMetrics', () => {
+  const OptimizelyPageMetrics = () => (
+    <div data-testid="optimizely-page-metrics" />
+  );
+  return OptimizelyPageMetrics;
+});
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
@@ -50,6 +56,43 @@ describe('Topic Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
   suppressPropWarnings(['timestamp', 'TimestampContainer', 'undefined']);
   suppressPropWarnings(['children', 'PromoTimestamp', 'undefined']);
+
+  it.each([
+    ['hindi', 'crvgyj0g9d5lt', true],
+    ['hindi', 'c0000000000t', false],
+    ['mundo', 'crvgyj0g9d5lt', false],
+  ])(
+    'scopes page metrics for service %s and topic %s (enabled: %s)',
+    (service, topicId, enabled) => {
+      const { queryByTestId } = render(
+        <TopicPage pageData={mundoWithBadgeAndDescr} />,
+        {
+          ...getOptionParams({ service }),
+          pathname: `/${service}/topics/${topicId}`,
+        },
+      );
+
+      if (enabled) {
+        expect(queryByTestId('optimizely-page-metrics')).toBeInTheDocument();
+      } else {
+        expect(
+          queryByTestId('optimizely-page-metrics'),
+        ).not.toBeInTheDocument();
+      }
+    },
+  );
+
+  it('applies the page layout classes', () => {
+    const { container, getByRole } = render(
+      <TopicPage pageData={mundoWithBadgeAndDescr} />,
+      getOptionParams({ service: 'mundo', lang: 'es' }),
+    );
+    const main = getByRole('main');
+
+    expect(container.querySelector('.pageWrapper')).toContainElement(main);
+    expect(main).toHaveClass('main');
+    expect(main.querySelector('.inner .title .inline')).toBeInTheDocument();
+  });
 
   it.each([
     ['mundo', '874d2084-631c-4ee8-b582-f88920fcd960', '33021'],
@@ -225,7 +268,7 @@ describe('Topic Page', () => {
     const topicBadgeSrc = topicBadge.getAttribute('src');
     expect(topicBadgeSrc).not.toBe(mundoWithBadgeAndDescr.imageData.url);
     expect(topicBadgeSrc).toBe(
-      mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/'),
+      `${mundoWithBadgeAndDescr.imageData.url.replace('/480/', '/128/')}.webp`,
     );
   });
 

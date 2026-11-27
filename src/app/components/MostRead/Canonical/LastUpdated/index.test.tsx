@@ -1,4 +1,4 @@
-import '#psammead/psammead-locales/moment/pcm';
+import '#lib/locales/moment/pcm';
 import { render, screen } from '../../../react-testing-library-with-providers';
 import LastUpdated from '.';
 

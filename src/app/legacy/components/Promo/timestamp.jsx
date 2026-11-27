@@ -1,6 +1,6 @@
 import { use } from 'react';
 import moment from 'moment-timezone';
-import Timestamp from '#psammead/psammead-timestamp-container/src';
+import Timestamp from '#app/components/TimestampContainer';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import getDayAndMonthFormat from '#lib/utilities/getDayAndMonthFormat';
 import { ServiceContext } from '../../../contexts/ServiceContext';

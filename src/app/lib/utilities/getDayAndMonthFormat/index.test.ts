@@ -1,5 +1,5 @@
 import moment from 'moment-timezone';
-import '#psammead/psammead-locales/moment/pcm';
+import '#lib/locales/moment/pcm';
 import getDayAndMonthFormat from '.';
 
 describe('getDayAndMonthFormat', () => {

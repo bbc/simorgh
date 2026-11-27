@@ -1,4 +1,4 @@
-import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatDuration } from '#app/lib/utilities/timestamp';
 import {
   EBON,
   SHADOW,

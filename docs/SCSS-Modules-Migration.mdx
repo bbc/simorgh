@@ -117,7 +117,8 @@ For the grid cases, our styling standards direct us away from `psammead-grid`, s
 
 Rendering a legacy component is not itself a blocker. `ArticleLinksBlock` renders `SkipLinkWrapper` and migrated fine, because the legacy child is self-contained and keeps its own styles. The problem arises when the legacy child **controls the layout of your content**, or when styles are **passed into** it.
 
-Legacy imports that are **pure utilities** never block migration. For example `ReadTime` imports `formatDuration` from `psammead-timestamp-container`, which has no styling implications.
+Legacy imports that are **pure utilities** never block migration. `ReadTime` now
+imports its localised ISO-duration formatter from `#app/lib/utilities/timestamp`.
 
 ## Deferred to the end
 

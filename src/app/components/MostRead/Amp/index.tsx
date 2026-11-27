@@ -4,7 +4,7 @@ import {
   AMP_LIST_JS,
   AMP_MUSTACHE_JS,
   AMP_SCRIPT_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
+} from '#app/lib/amp/boilerplate';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';

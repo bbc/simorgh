@@ -3,6 +3,7 @@ jest.mock('fs');
 type LoaderContext = {
   resourcePath: string;
   rootContext: string;
+  cacheable: jest.Mock;
 };
 
 type DevCssExtractLoader = (this: LoaderContext, jsSource: string) => string;
@@ -10,7 +11,7 @@ type DevCssExtractLoader = (this: LoaderContext, jsSource: string) => string;
 const makeContext = (
   resourcePath: string,
   rootContext = '/app',
-): LoaderContext => ({ resourcePath, rootContext });
+): LoaderContext => ({ resourcePath, rootContext, cacheable: jest.fn() });
 
 // Reproduces the css-loader JS output that the loader receives:
 // ___CSS_LOADER_EXPORT___.push([module.id, "<css>", ""]);
@@ -27,16 +28,24 @@ describe('DevCssExtractLoader', () => {
     // Re-require fs afterwards so writeFileSyncMock and mkdirSyncMock reference the
     // same mock instances that the freshly loaded loader module will use.
     jest.resetModules();
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires, global-require
     const fs = require('fs');
     writeFileSyncMock = fs.writeFileSync;
     mkdirSyncMock = fs.mkdirSync;
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires, global-require
     loader = require('./DevCssExtractLoader.cjs');
     jest.clearAllMocks();
   });
 
   describe('pass-through behaviour', () => {
+    it('disables webpack caching so CSS extraction is replayed after restarts', () => {
+      const context = makeContext('/src/a.module.css');
+
+      loader.call(context, cssLoaderOutput('.foo{color:red}'));
+
+      expect(context.cacheable).toHaveBeenCalledWith(false);
+    });
+
     it('returns the jsSource unchanged when a CSS push is matched', () => {
       const jsSource = cssLoaderOutput('.foo{color:red}');
 
