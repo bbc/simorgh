@@ -103,7 +103,7 @@ The Next.js PostCSS configuration used in this batch left `padding-inline` and `
 
 Enabling `postcss-preset-env`'s logical-properties plugin (stage 2) would convert these shorthands repository-wide, but it also rewrites start/end properties into `[dir]`-scoped or `:dir()` rules. The `[dir]` form raises specificity, and Opera Mini doesn't support `:dir()`. Don't enable it without testing RTL, specificity and cascade order in canonical, AMP and Lite output.
 
-See the migration skill's [logical properties and browser support](../.github/skills/migrate-component-to-scss-modules/SKILL.md#logical-properties-and-browser-support) section for the conversion checks.
+See the migration skill's [logical properties and browser support](https://github.com/bbc/simorgh/blob/latest/.github/skills/migrate-component-to-scss-modules/SKILL.md#logical-properties-and-browser-support) section for the conversion checks.
 
 ### Validate the actual contract
 
@@ -114,7 +114,7 @@ A component's own `__snapshots__` folder isn't the only place its markup is reco
 - `EmbedImages` has no snapshots of its own, but the pidgin article integration snapshots (`integration/pages/articles/pidginEmbedImages/`) recorded its wrapper's Emotion class. The canonical and AMP snapshots needed regenerating; only the class name changed.
 - `TopicTags` appears in integration tests through the shared helper `integration/common/topicTags.ts`, which only snapshots each link's text and `href`. The migration didn't change those, so no update was needed.
 
-The migration skill's [verification steps](../.github/skills/migrate-component-to-scss-modules/SKILL.md#step-5-verify) cover each component PR. Measuring representative AMP/Lite CSS payloads and checking combined visual and cascade effects are batch-level checks. Run them once a batch's PRs come together (see [Ongoing guardrails](#ongoing-guardrails)), because no single component PR covers them.
+The migration skill's [verification steps](https://github.com/bbc/simorgh/blob/latest/.github/skills/migrate-component-to-scss-modules/SKILL.md#step-5-verify) cover each component PR. Measuring representative AMP/Lite CSS payloads and checking combined visual and cascade effects are batch-level checks. Run them once a batch's PRs come together (see [Ongoing guardrails](#ongoing-guardrails)), because no single component PR covers them.
 
 ### Order by contract risk, not only style size
 
