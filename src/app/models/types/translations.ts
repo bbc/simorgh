@@ -1,5 +1,37 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  endOfArticlePreview?: {
+    endLabel: string;
+    heading: string;
+    introduction: string;
+    fallbackIntroduction: string;
+    nextStory: string;
+    related: string;
+    previewLabel: string;
+    summaryLabel: string;
+    previewNote: string;
+    readFullStory: string;
+    readTime: string;
+    homepage: string;
+  };
+  endOfArticleTreatment?: {
+    endLabel: string;
+    heading: string;
+    introduction: string;
+    previous: string;
+    next: string;
+    position: string;
+    chooseContent: string;
+    readArticle: string;
+    exploreTopic: string;
+    openContent: string;
+    loadingMedia: string;
+    unavailableMedia: string;
+    formats: Record<
+      'article' | 'video' | 'portrait' | 'audio' | 'live' | 'topic',
+      string
+    >;
+  };
   and?: string;
   pagination?: {
     page?: string;

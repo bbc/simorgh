@@ -15,6 +15,7 @@ import { ArticleMetadata } from '#app/models/types/optimo';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getRequestUrl from '#utilities/pageRequests/getRequestUrl';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
+import getArticleEndPreview from './articleEndPreview';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
@@ -48,7 +49,9 @@ export default async (
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
   const canonicalPathname = getRequestUrl(context).split('?')[0];
 
-  const { isAmp, isMarkdown } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp, isMarkdown, isLite, isApp } = getPathExtension(
+    resolvedUrlWithoutQuery,
+  );
   const { variant } = parseRoute(resolvedUrl);
   const canRenderMarkdown = toggles.renderMarkDown?.enabled === true;
 
@@ -187,6 +190,18 @@ export default async (
   });
 
   const derivedPageType = getDerivedArticleType(article.metadata);
+  // Research prototype: gate on deployment, never on renderer_env. The latter
+  // only selects content and must not enable this on the live audience site.
+  const articleEndEnabled =
+    service === 'mundo' &&
+    ['local', 'test'].includes(getEnvConfig().SIMORGH_APP_ENV) &&
+    derivedPageType === ARTICLE_PAGE &&
+    !isAmp &&
+    !isLite &&
+    !isApp;
+  const articleEndPreview = articleEndEnabled
+    ? await getArticleEndPreview(article, resolvedUrl)
+    : null;
 
   return {
     props: {
@@ -194,6 +209,7 @@ export default async (
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...transformedArticleData,
+        ...(articleEndEnabled && { articleEndPreview }),
         secondaryColumn: {
           topStories,
           features,
