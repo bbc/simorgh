@@ -44,7 +44,33 @@ The parallel batch was merged on 27 November 2026:
 | `Embeds/EmbedImages` | [#14723](https://github.com/bbc/simorgh/pull/14723) | Responsive padding, canonical and AMP images, Lite null rendering, and updated pidgin integration snapshots (class name only). |
 | `TopicTags` | [#14724](https://github.com/bbc/simorgh/pull/14724) | Responsive typography, interaction and dark UI states, RTL, and single/multiple-tag layouts. |
 
-All PR checks passed, and testers checked #14722 and #14724 on article and topic pages for several services. Passing checks don't replace the batch-level checks in [Next steps](#next-steps).
+All PR checks passed, and testers checked #14722 and #14724 on article and topic pages for several services. The batch-level checks have also been run; see [Parallel batch checks](#parallel-batch-checks).
+
+### Parallel batch checks
+
+These checks ran on 27 November 2026 against production builds of `latest` after the batch (`b78deb8417`) and of the commit before it (`f0ab267fe2`), using local fixtures on `localhost:7081`.
+
+**AMP/Lite CSS.** All 11 measured article pages stay well below the 75,000-byte AMP limit, and `yarn amp:validate` passed on all 7 of its pages.
+
+| AMP page | Before (bytes) | After (bytes) | Change | Headroom after (bytes) |
+|---|---|---|---|---|
+| `/hindi/articles/c9w59wnx27ro` | 61,720 | 62,149 | +429 | 12,851 |
+| `/russian/articles/c6wyzl2xdyz2o` | 59,524 | 60,182 | +658 | 14,818 |
+| `/arabic/articles/c8j91j2ljppo` | 53,200 | 53,817 | +617 | 21,183 |
+| `/tamil/articles/cqxdxv159rlo` | 53,046 | 53,686 | +640 | 21,314 |
+| `/gujarati/articles/cx2zevlw204o` | 43,361 | 43,959 | +598 | 31,041 |
+| `/pidgin/articles/c7rk5dgy3j4o` | 42,515 | 42,554 | +39 | 32,446 |
+| `mundo`, `news`, `persian`, `serbian` (cyr and lat) | | | 0 | 26,461 or more |
+
+Lite pages changed by the same amounts. Almost all of the increase comes from `TopicTags`. On the Russian page its rules grew from 887 to 1,313 bytes, because the SCSS version always includes the dark UI rule and sets typography with custom properties. Another 232 bytes comes from declaring those custom properties on `:root`. The resolved font sizes didn't change. `ContinueReadingButton` CSS doesn't appear on AMP or Lite, and `EmbedImages` and `TopicTags` CSS only appears on pages that render them.
+
+**`EmbedImages` with `ContinueReadingButton`.** No local fixture contains both, so embed-image blocks were added temporarily before and after the `continueReading` block on the Russian and Arabic (RTL) articles. At 289px wide:
+
+- Embeds have 8px padding on both sides and a 24px bottom margin, and are symmetric in RTL.
+- The button renders below the first embed with correct styles, and the Arabic button text aligns to the right.
+- Pressing the button reveals the hidden embed, removes the button and moves focus into the revealed content.
+
+Wider breakpoints were checked from the emitted CSS, not in a resized browser: embed padding increases at 25rem and is removed at 63rem, and the button is hidden at 63rem.
 
 During testing, icons were missing on `localhost.bbc.com:7081`. This was a local setup problem, not a migration bug: icons were loaded from `localhost:7081` without the CORS header CSS masks need. [PR #14727](https://github.com/bbc/simorgh/pull/14727) fixes it; until it merges, test on `localhost:7081`.
 
@@ -124,7 +150,7 @@ The first batch was small by style-line count, but `InlineLink` was a shared pri
 
 The CSS payload investigation found that the SCSS theme adds a fixed cost to AMP/Lite, where CSS is inlined and subject to AMP's 75 KB limit. Measure representative production pages after each meaningful batch and do not introduce CSS reordering optimisations without browser-level computed-style comparisons. A media-query compaction experiment saved bytes but produced real cascade regressions when elements carried multiple generated classes.
 
-The `amp:validate` check includes a large Russian article (`c6wyzl2xdyz2o`) as an early warning. Its AMP CSS was previously measured at 68,169 bytes locally and 69,116 bytes on the live page; those figures are out of date, so measure again on the current build. `amphtml-validator` fails with `STYLESHEET_TOO_LONG` if a page's CSS goes over 75,000 bytes. This article isn't necessarily the page with the most CSS, because CSS varies by service, page layout, feature toggles and which components render. Keep checking several services and page types, and leave room below the limit, rather than relying on one page.
+The `amp:validate` check includes a large Russian article (`c6wyzl2xdyz2o`) as an early warning. Its AMP CSS measured 60,182 bytes on a local production build on 27 November 2026, down from an earlier 68,169 bytes; the Hindi article in the same check was larger, at 62,149 bytes. `amphtml-validator` fails with `STYLESHEET_TOO_LONG` if a page's CSS goes over 75,000 bytes. This article isn't necessarily the page with the most CSS, because CSS varies by service, page layout, feature toggles and which components render. Keep checking several services and page types, and leave room below the limit, rather than relying on one page.
 
 SCSS imports are static, so a component's CSS can be included even when it renders nothing; Emotion only added styles for components that rendered. [PR #14585](https://github.com/bbc/simorgh/pull/14585) removes AMP/Lite rules for module classes that don't appear in the rendered HTML, which greatly reduced the CSS added by the CTA migration. Keep measuring the real output, because this doesn't replace checking the budget. Take particular care with classes added after the first render, because their rules may have been removed.
 
@@ -200,11 +226,10 @@ The original batches grouped components by approximate size and cohesion. The fi
 
 ## Next steps
 
-1. **Run the batch-level checks for the merged parallel batch.** Measure AMP/Lite CSS on representative pages, and check article pages where `EmbedImages` and `ContinueReadingButton` appear together in a browser.
-2. **Finish partly migrated consumers.** `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have.
-3. **Plan `LiveLabel` and `LivePulse` together.** `LiveLabel` sets the pulse's size, and Billboard and the live-page header override it too, so they need checking as one piece of work. Keep reduced-motion behaviour, dark UI, translations and screen-reader text working.
-4. **Give `BulletedList` its own PR.** Check its legacy consumers first. It sets bullet shape and colour from props and has dark UI styles, and its class names, `ref` and list semantics must keep working.
-5. **Check `latest` and open PRs before picking the next components.** This list is a starting point, not a commitment, and doesn't cover every dependency.
+1. **Finish partly migrated consumers.** `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have.
+2. **Plan `LiveLabel` and `LivePulse` together.** `LiveLabel` sets the pulse's size, and Billboard and the live-page header override it too, so they need checking as one piece of work. Keep reduced-motion behaviour, dark UI, translations and screen-reader text working.
+3. **Give `BulletedList` its own PR.** Check its legacy consumers first. It sets bullet shape and colour from props and has dark UI styles, and its class names, `ref` and list semantics must keep working.
+4. **Check `latest` and open PRs before picking the next components.** This list is a starting point, not a commitment, and doesn't cover every dependency.
 
 ### Coordinating parallel migrations
 
