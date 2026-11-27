@@ -307,7 +307,7 @@ exports[`Canonical Watch SEO Linked data should match text 2`] = `
 
 exports[`Canonical Watch SEO OG description 1`] = `"BBC świadkiem ataku izraelskich osadników na grupę Palestyńczyków na Zachodnim Brzegu."`;
 
-exports[`Canonical Watch SEO OG image 1`] = `"http://localhost:7081/hindi/og/cw1ldl595v1yo"`;
+exports[`Canonical Watch SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hindi/p01wppbn.jpg"`;
 
 exports[`Canonical Watch SEO OG image alt 1`] = `"Korespondentka BBC Lucy Williamson na palestyńskiej farmie na Zachodnim Brzegu, gdzie doszło do ataku."`;
 

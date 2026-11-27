@@ -2,18 +2,6 @@ import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
-import { Environments, PageTypes, Services } from '#app/models/types/global';
-import {
-  getArticleId,
-  getTipoId,
-} from '#app/routes/utils/constructPageFetchUrl';
-import isLive from '#app/lib/utilities/isLive';
-import {
-  ARTICLE_PAGE,
-  LIVE_PAGE,
-  MEDIA_ARTICLE_PAGE,
-} from '#app/routes/utils/pageTypes';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import {
   getIconAssetUrl,
@@ -36,54 +24,6 @@ const renderTags = (tags?: Tag[]) =>
   tags?.map(({ thingLabel: content }) => (
     <meta name="article:tag" content={content} key={content} />
   ));
-
-export const OG_EXPERIMENT_SERVICES: Services[] = [
-  'arabic',
-  'hausa',
-  'hindi',
-  'indonesia',
-  'mundo',
-  'ukrainian',
-];
-
-const OG_EXPERIMENT_PAGETYPES: PageTypes[] = [
-  MEDIA_ARTICLE_PAGE,
-  ARTICLE_PAGE,
-  LIVE_PAGE,
-];
-
-const CDN_URLS: Record<Environments, string> = {
-  local: 'http://localhost:7081',
-  test: 'https://web-cdn.test.api.bbci.co.uk',
-  live: 'https://web-cdn.api.bbci.co.uk',
-};
-
-const getSocialShareImage = ({
-  metaImage,
-  pageType,
-  pathname,
-  service,
-}: {
-  metaImage: string;
-  pageType: PageTypes;
-  pathname: string;
-  service: Services;
-}) => {
-  // Remove to release to Production
-  if (isLive()) return metaImage;
-
-  if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
-  if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
-
-  const id = getArticleId(pathname) || getTipoId(pathname);
-
-  // Fallback to 'metaImage' if no id can be determined
-  if (!id) return metaImage;
-
-  const CDN_URL = CDN_URLS[getEnvConfig().SIMORGH_APP_ENV];
-
-  return `${CDN_URL}/${service}/og/${id}`;
-};
 
 const MetadataContainer = ({
   title,
@@ -112,7 +52,6 @@ const MetadataContainer = ({
     pathname,
     isUK,
     isLite,
-    pageType,
   } = use(RequestContext);
 
   const {
@@ -187,13 +126,6 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
   const linkToAmpPage = hasAmpPage && !isAmp;
-
-  const socialShareImage = getSocialShareImage({
-    pageType,
-    pathname,
-    service,
-    metaImage,
-  });
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta charSet="utf-8" />
@@ -237,7 +169,7 @@ const MetadataContainer = ({
         content={getIconAssetUrl(service, '144x144')}
       />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={socialShareImage} />
+      <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
       {imageWidth && (
         <meta property="og:image:width" content={String(imageWidth)} />

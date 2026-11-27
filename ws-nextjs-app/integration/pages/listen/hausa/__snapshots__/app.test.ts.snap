@@ -209,7 +209,7 @@ exports[`App Listen SEO Linked data should match text 2`] = `
 
 exports[`App Listen SEO OG description 1`] = `"Test"`;
 
-exports[`App Listen SEO OG image 1`] = `"http://localhost:7081/hausa/og/cpj5ny39g35mo"`;
+exports[`App Listen SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1200/branded_hausa/p01xcmls.png"`;
 
 exports[`App Listen SEO OG image alt 1`] = `"the boop from slack"`;
 

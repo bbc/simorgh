@@ -237,7 +237,7 @@ exports[`Canonical Articles SEO Linked data should match text 2`] = `
 
 exports[`Canonical Articles SEO OG description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
 
-exports[`Canonical Articles SEO OG image 1`] = `"http://localhost:7081/hausa/og/c2nr6xqmnewo"`;
+exports[`Canonical Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Articles SEO OG image alt 1`] = `"BBC News Hausa"`;
 

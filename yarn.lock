@@ -14367,7 +14367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.35.5, sharp@npm:^0.35.5":
+"sharp@npm:^0.35.5":
   version: 0.35.5
   resolution: "sharp@npm:0.35.5"
   dependencies:
@@ -14589,7 +14589,6 @@ __metadata:
     npm-run-all2: "npm:8.0.4"
     postcss: "npm:8.5.24"
     postcss-selector-parser: "npm:7.1.6"
-    sharp: "npm:0.35.5"
     swc-loader: "npm:0.2.7"
     temporal-polyfill: "npm:0.3.0"
     ts-node: "npm:10.9.2"
