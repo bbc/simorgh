@@ -21,6 +21,8 @@ import { UserContextProvider } from '#app/contexts/UserContext';
 import { AccountProvider } from '#app/contexts/AccountContext';
 import { ReverbParamsContextProvider } from '#app/contexts/ReverbParamsContext';
 import { IdctaConfig } from '#app/models/types/account';
+import { Article } from '#app/models/types/optimo';
+import { ArticleOnwardJourneysProvider } from '#app/contexts/ArticleOnwardJourneysContext';
 
 interface Props {
   pageProps: {
@@ -132,34 +134,39 @@ export default function CustomApp({
           isUK={isUK ?? false}
           primaryMediaType={primaryMediaType}
         >
-          <AccountProvider initialConfig={idctaConfig}>
-            <ReverbParamsContextProvider metadata={pageData?.metadata}>
-              <EventTrackingContextProvider atiData={atiAnalytics}>
-                {isAvEmbeds ? (
-                  <ThemeProvider service={service} variant={variant}>
-                    {RenderChildrenOrError}
-                  </ThemeProvider>
-                ) : (
-                  <UserContextProvider>
-                    <ThemeProviderSCSSModules
-                      service={service}
-                      variant={variant}
-                    >
-                      <ThemeProvider service={service} variant={variant}>
-                        <PageWrapper
-                          navItems={navItems}
-                          pageData={pageData}
-                          status={status}
-                        >
-                          {RenderChildrenOrError}
-                        </PageWrapper>
-                      </ThemeProvider>
-                    </ThemeProviderSCSSModules>
-                  </UserContextProvider>
-                )}
-              </EventTrackingContextProvider>
-            </ReverbParamsContextProvider>
-          </AccountProvider>
+          <ArticleOnwardJourneysProvider
+            pageData={pageData as Article}
+            pageType={pageType}
+          >
+            <AccountProvider initialConfig={idctaConfig}>
+              <ReverbParamsContextProvider metadata={pageData?.metadata}>
+                <EventTrackingContextProvider atiData={atiAnalytics}>
+                  {isAvEmbeds ? (
+                    <ThemeProvider service={service} variant={variant}>
+                      {RenderChildrenOrError}
+                    </ThemeProvider>
+                  ) : (
+                    <UserContextProvider>
+                      <ThemeProviderSCSSModules
+                        service={service}
+                        variant={variant}
+                      >
+                        <ThemeProvider service={service} variant={variant}>
+                          <PageWrapper
+                            navItems={navItems}
+                            pageData={pageData}
+                            status={status}
+                          >
+                            {RenderChildrenOrError}
+                          </PageWrapper>
+                        </ThemeProvider>
+                      </ThemeProviderSCSSModules>
+                    </UserContextProvider>
+                  )}
+                </EventTrackingContextProvider>
+              </ReverbParamsContextProvider>
+            </AccountProvider>
+          </ArticleOnwardJourneysProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>

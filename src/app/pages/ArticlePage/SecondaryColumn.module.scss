@@ -1,0 +1,9 @@
+@use '@scss/themeTokens' as theme;
+
+.desktopOnly {
+  display: none;
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: block;
+  }
+}

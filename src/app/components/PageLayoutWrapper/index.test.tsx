@@ -21,6 +21,16 @@ describe('PageLayoutWrapper', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render an error page without page data', () => {
+    const { container } = render(
+      <PageLayoutWrapper pageData={undefined as never} status={404}>
+        <h2>Child element</h2>
+      </PageLayoutWrapper>,
+    );
+
+    expect(container.querySelector('#main-wrapper')).toBeInTheDocument();
+  });
+
   it.each(SERVICES)('should render fonts for %s', async (service: Services) => {
     await act(() =>
       render(

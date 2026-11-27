@@ -37,6 +37,7 @@ export type ArticlePageAtiTest =
   | 'assertLiteSiteSummaryComponentToMainSiteClick';
 
 export type ArticlePageAtiTestSuite = ArticlePageTestSuite & {
+  headers?: Record<string, string>;
   pageIdentifier: string;
   siteId: number;
   applicationType: string;
@@ -219,6 +220,9 @@ const atiAnalyticsTestSuites: ArticlePageAtiTestSuite[] = [
   },
   {
     ...makeSuite('/polska/articles/c639526lxlro', 'polska', ['local']),
+    headers: {
+      'mvt-newswb_ws_topbarojs_read_more': 'experiment;top-bar-top-stories',
+    },
     pageIdentifier: 'polska.articles.c639526lxlro.page',
     siteId: 135,
     applicationType: 'responsive',
@@ -252,6 +256,7 @@ const canonicalTestSuites = process.env.SMOKE
   : nonSmokeCanonicalTestSuites;
 
 const atiLiteExcludedTests: ArticlePageAtiTest[] = [
+  'assertTopBarOJComponentView',
   'assertPodcastPromoComponentView',
   'assertPodcastPromoComponentClick',
   'assertSocialEmbedComponentView',

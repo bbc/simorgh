@@ -4,9 +4,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.10';
+const version = 'v0.3.12';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v4';
+const onwardJourneyCacheName = 'simorghOnwardJourneysCache_v1';
+const onwardJourneyCacheMaxAge = 10 * 60 * 1000;
+const onwardJourneyCacheTimestampHeader = 'X-Simorgh-Onward-Journey-Cache-Time';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -89,6 +92,80 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
+const isOnwardJourneyRequest = request => {
+  if (request.method !== 'GET' || !request.url.includes('/fd/simorgh-bff')) {
+    return false;
+  }
+
+  const url = new URL(request.url);
+
+  return (
+    url.pathname === '/fd/simorgh-bff' && url.searchParams.has('onwardJourney')
+  );
+};
+
+const cacheOnwardJourneyResponse = async ({ cache, request, response }) => {
+  const headers = new Headers(response.headers);
+  headers.set(onwardJourneyCacheTimestampHeader, Date.now().toString());
+
+  await cache.put(
+    request,
+    new Response(response.clone().body, {
+      headers,
+      status: response.status,
+      statusText: response.statusText,
+    }),
+  );
+};
+
+const getCachedOnwardJourneyResponse = async ({ cache, request }) => {
+  const response = await cache.match(request);
+  const cachedAt = Number(
+    response?.headers.get(onwardJourneyCacheTimestampHeader),
+  );
+
+  if (
+    response &&
+    cachedAt &&
+    Date.now() - cachedAt < onwardJourneyCacheMaxAge
+  ) {
+    return response;
+  }
+
+  if (response) await cache.delete(request);
+
+  return null;
+};
+
+const getOnwardJourneyResponse = async request => {
+  let cache;
+  try {
+    cache = await caches.open(onwardJourneyCacheName);
+    const cachedResponse = await getCachedOnwardJourneyResponse({
+      cache,
+      request,
+    });
+
+    if (cachedResponse) return cachedResponse;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn('Onward journey cache lookup failed', error);
+  }
+
+  const response = await fetch(request);
+
+  if (response.ok && cache) {
+    try {
+      await cacheOnwardJourneyResponse({ cache, request, response });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn('Onward journey cache write failed', error);
+    }
+  }
+
+  return response;
+};
+
 // -------------Install event -------
 self.addEventListener('install', () => {
   self.skipWaiting();
@@ -100,7 +177,12 @@ self.addEventListener('activate', event => {
     (async () => {
       const keys = await caches.keys();
       await Promise.all(
-        keys.map(key => key !== cacheName && caches.delete(key)),
+        keys.map(
+          key =>
+            key !== cacheName &&
+            key !== onwardJourneyCacheName &&
+            caches.delete(key),
+        ),
       );
       await self.clients.claim();
     })(),
@@ -132,7 +214,9 @@ const fetchEventHandler = async event => {
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
 
-  if (isRequestForWebpImage) {
+  if (isOnwardJourneyRequest(event.request)) {
+    event.respondWith(getOnwardJourneyResponse(event.request));
+  } else if (isRequestForWebpImage) {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support

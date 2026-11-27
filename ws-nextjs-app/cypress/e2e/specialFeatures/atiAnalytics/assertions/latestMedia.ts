@@ -2,6 +2,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 import { AtiAssertionFnProps } from './type';
+import { visitArticlePageAndWaitForOnwardJourney } from '../../../../support/helpers/interceptArticleOnwardJourney';
 
 const { LATEST_MEDIA } = COMPONENTS;
 
@@ -11,9 +12,14 @@ export const assertLatestMediaComponentView = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Latest Media component', () => {
+  it('should send a view event for the Latest Media component', function test() {
     interceptATIAnalyticsBeacons();
-    cy.visit(path);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'latestMedia',
+      testContext: this,
+    });
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-testid="latest-media"]').scrollIntoView({ duration: 1000 });
@@ -34,9 +40,14 @@ export const assertLatestMediaComponentClick = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Latest Media component', () => {
+  it('should send a click event for the Latest Media component', function test() {
     interceptATIAnalyticsBeacons();
-    cy.visit(path);
+    visitArticlePageAndWaitForOnwardJourney({
+      path,
+      applicationType,
+      onwardJourney: 'latestMedia',
+      testContext: this,
+    });
 
     cy.get('[data-testid="latest-media"]').scrollIntoView({
       duration: 1000,

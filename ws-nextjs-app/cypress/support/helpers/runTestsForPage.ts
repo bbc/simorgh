@@ -15,6 +15,7 @@ export type TestDataType = {
   applicationType?: string;
   siteId?: string;
   pageIdentifier?: string;
+  headers?: Record<string, string>;
 };
 
 type FunctionProps = {
@@ -50,7 +51,13 @@ export default ({
   }
 
   testSuitesToRun.forEach(testData => {
-    const { path, tests, runforEnv, ...params } = testData;
+    const {
+      path,
+      tests,
+      runforEnv,
+      headers: testHeaders,
+      ...params
+    } = testData;
 
     const cypressEnv = Cypress.env('APP_ENV');
 
@@ -83,7 +90,9 @@ export default ({
             cy.visit(path, {
               failOnStatusCode,
               ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),
-              ...(headers && { headers }),
+              ...((headers || testHeaders) && {
+                headers: { ...headers, ...testHeaders },
+              }),
             });
           });
 
@@ -106,6 +115,7 @@ export default ({
           const testParams = {
             path,
             pageType,
+            headers: testHeaders,
             ...params,
           } as unknown as ServiceParametersType;
           tests.forEach(test => {

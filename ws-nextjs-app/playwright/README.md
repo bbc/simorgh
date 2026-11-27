@@ -109,6 +109,12 @@ yarn start
 
 Then run Playwright in a second terminal.
 
+Local article tests serve client-side Most Read and Latest Media responses from
+the matching `data/<service>/` fixtures, with service workers blocked so routing
+can intercept those requests. Shared onward-journey assertions scroll a visible
+reservation or skeleton into view before waiting for the loaded component.
+Test and live runs continue to use their real endpoints.
+
 ## Debugging failures
 
 Current config keeps traces on failure (`trace: retain-on-failure`).

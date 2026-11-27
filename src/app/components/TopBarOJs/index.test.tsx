@@ -1,6 +1,7 @@
 import isLive from '#lib/utilities/isLive';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { useOnwardJourneyRequest } from '#app/contexts/ArticleOnwardJourneysContext';
 import {
   render,
   screen,
@@ -10,6 +11,17 @@ import { topStoriesBlocks } from './helpers/fixtureData';
 import TopBarOJs from '.';
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
+jest.mock('#app/components/OnwardJourneyPlaceholder/lazy', () => ({
+  __esModule: true,
+  default: () => (
+    <div data-testid="onward-journey-skeleton-topStoriesAndFeatures" />
+  ),
+}));
+jest.mock('#app/contexts/ArticleOnwardJourneysContext', () => ({
+  __esModule: true,
+  ...jest.requireActual('#app/contexts/ArticleOnwardJourneysContext'),
+  useOnwardJourneyRequest: jest.fn(),
+}));
 
 jest.mock('#hooks/useViewTracker', () => ({
   __esModule: true,
@@ -22,6 +34,10 @@ jest.mock('#hooks/useClickTrackerHandler', () => ({
 }));
 
 describe('TopBarOJs', () => {
+  beforeEach(() => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue(null);
+  });
+
   it('it should display Top Stories label', () => {
     const { getByText, queryByText } = render(
       // @ts-expect-error require partial data for testing purposes
@@ -51,6 +67,99 @@ describe('TopBarOJs', () => {
   it('should return null if no data is passed', () => {
     const { container } = render(<TopBarOJs blocks={[]} />);
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('does not render a loading placeholder outside the experiment', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />);
+
+    expect(
+      screen.queryByTestId('top-bar-onward-journeys'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders a loading placeholder for the Top Stories treatment', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />, {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    });
+
+    expect(screen.getByTestId('top-bar-onward-journeys')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('onward-journey-skeleton-topStoriesAndFeatures'),
+    ).toBeInTheDocument();
+  });
+
+  it('attaches view tracking only after content replaces the skeleton', () => {
+    const ref = jest.fn();
+    const viewTrackerSpy = jest
+      .spyOn(viewTracking, 'default')
+      .mockReturnValue({ ref });
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: null,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+    const options = {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    };
+    const { rerender } = render(<TopBarOJs blocks={[]} />, options);
+
+    expect(ref).not.toHaveBeenCalled();
+
+    // @ts-expect-error require partial data for testing purposes
+    rerender(<TopBarOJs blocks={topStoriesBlocks} />);
+
+    expect(ref).toHaveBeenCalledWith(
+      screen.getByTestId('top-bar-onward-journeys'),
+    );
+    viewTrackerSpy.mockImplementation(
+      jest.requireActual('#hooks/useViewTracker').default,
+    );
+  });
+
+  it('renders hydrated Top Stories for the Top Stories treatment', () => {
+    jest.mocked(useOnwardJourneyRequest).mockReturnValue({
+      article: {
+        secondaryColumn: { topStories: topStoriesBlocks },
+      } as never,
+      isEnabled: true,
+      requestOnwardJourney: jest.fn(),
+    });
+
+    render(<TopBarOJs blocks={[]} />, {
+      serverSideExperiments: [
+        {
+          experimentName: 'newswb_ws_topbarojs_read_more',
+          variation: 'top-bar-top-stories',
+          enabled: true,
+        },
+      ],
+    });
+
+    expect(screen.getAllByRole('listitem')).toHaveLength(3);
   });
 
   it('should not render TopBarOJs component when isLive is true', () => {

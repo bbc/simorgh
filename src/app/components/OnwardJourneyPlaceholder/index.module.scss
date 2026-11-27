@@ -1,0 +1,56 @@
+@use '@scss/themeTokens' as theme;
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.placeholder {
+  display: flex;
+  min-block-size: theme.pixelsToRem-px-to-rem(160);
+  flex-direction: column;
+  gap: theme.$spacings-double;
+  overflow: hidden;
+  padding: theme.$spacings-double;
+  background-color: theme.$palette-grey-1;
+}
+
+.title,
+.line {
+  display: block;
+  position: relative;
+  block-size: theme.pixelsToRem-px-to-rem(16);
+  overflow: hidden;
+  background-color: theme.$palette-grey-3;
+}
+
+.title {
+  inline-size: 55%;
+}
+
+.line:last-child {
+  inline-size: 70%;
+}
+
+.title::after,
+.line::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    theme.$palette-grey-1,
+    transparent
+  );
+  content: '';
+  transform: translateX(-100%);
+  animation: loading 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title::after,
+  .line::after {
+    animation: none;
+  }
+}

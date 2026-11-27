@@ -14,6 +14,7 @@ import type {
   Article,
   ArticleContent,
   OptimoBlock,
+  SecondaryColumn,
 } from '#app/models/types/optimo';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import defaultToggles from '#app/lib/config/toggles';
@@ -33,6 +34,7 @@ import {
   shouldRunForEnv,
 } from '../../utilities/env';
 import assert200HtmlResponse from '../../utilities/response';
+import scrollToOnwardJourney from '../../utilities/onwardJourneys';
 import {
   assertArticleLinksBlockComponentClick,
   assertArticleLinksBlockComponentView,
@@ -89,6 +91,7 @@ type LocalArticleFixture = {
   data?: {
     secondaryData?: {
       mostRead?: { items?: unknown[] } | null;
+      latestMedia?: SecondaryColumn['latestMedia'] | null;
     };
   };
 };
@@ -98,6 +101,9 @@ type ArticlePageDataWithMostRead = Article & {
 };
 
 const canonicalHeaders = { 'page-type': 'article', 'BBC-Adverts': 'true' };
+test.use({
+  serviceWorkers: appEnvFromProcess === 'local' ? 'block' : 'allow',
+});
 const servicesWithFigure = ['arabic', 'news', 'pashto', 'persian', 'urdu'];
 const servicesWithTimestamp = ['news', 'urdu'];
 const knownMediaArticleIds = [
@@ -193,16 +199,73 @@ const getVideoEmbedUrl = (
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-const addCanonicalHeadersToPageRequest = async (page: Page, path: string) => {
+const addCanonicalHeadersToPageRequest = async (
+  page: Page,
+  path: string,
+  headers?: Record<string, string>,
+) => {
   const pageUrl = new URL(path, baseURL).href;
   await page.route(
     url => url.href === pageUrl,
     route =>
       route.continue({
-        headers: { ...route.request().headers(), ...canonicalHeaders },
+        headers: {
+          ...route.request().headers(),
+          ...canonicalHeaders,
+          ...headers,
+        },
       }),
     { times: 1 },
   );
+};
+
+const mockLocalArticleOnwardJourneys = async (page: Page, path: string) => {
+  if (appEnvFromProcess !== 'local' || /\.(amp|lite)$/.test(path)) return;
+  const [, service, , articleId] = path.split('/');
+  const articleFixturePath = resolve(
+    process.cwd(),
+    '../data',
+    service,
+    'articles',
+    `${articleId}.json`,
+  );
+  if (!existsSync(articleFixturePath)) return;
+  const articleFixture = JSON.parse(
+    readFileSync(articleFixturePath, 'utf8'),
+  ) as LocalArticleFixture;
+  const mostReadFixturePath = resolve(
+    process.cwd(),
+    '../data',
+    service,
+    'mostRead/index.json',
+  );
+  const mostReadFixture = existsSync(mostReadFixturePath)
+    ? (JSON.parse(
+        readFileSync(mostReadFixturePath, 'utf8'),
+      ) as LocalMostReadFixture)
+    : undefined;
+
+  await page.route('**/fd/simorgh-bff?*', async route => {
+    const url = new URL(route.request().url());
+    if (url.searchParams.get('service') !== service) {
+      await route.fallback();
+      return;
+    }
+    const onwardJourney = url.searchParams.get('onwardJourney');
+    if (onwardJourney === 'mostRead' && mostReadFixture?.data) {
+      await route.fulfill({ json: mostReadFixture });
+    } else if (
+      onwardJourney === 'latestMedia' &&
+      url.searchParams.get('id') === articleId &&
+      articleFixture.data?.secondaryData?.latestMedia !== undefined
+    ) {
+      await route.fulfill({
+        json: { data: articleFixture.data.secondaryData.latestMedia },
+      });
+    } else {
+      await route.fallback();
+    }
+  });
 };
 
 const hideLocalDevOverlay = async (page: Page) => {
@@ -218,6 +281,7 @@ const hideLocalDevOverlay = async (page: Page) => {
 
 const gotoArticlePage = async (page: Page, path: string) => {
   const pageUrl = new URL(path, baseURL).href;
+  await mockLocalArticleOnwardJourneys(page, path);
   await addCanonicalHeadersToPageRequest(page, path);
   await hideLocalDevOverlay(page);
   await page.goto(pageUrl, { waitUntil: 'domcontentloaded' });
@@ -304,14 +368,14 @@ const checkAccessibility = async (page: Page) => {
 
 const checkWebpImages = async (page: Page) => {
   const images = page.locator('amp-img[src*="ichef."], img[src*="ichef."]');
-  await Promise.all(
-    (await images.all()).map(async image => {
-      if (await image.isVisible()) {
-        await image.scrollIntoViewIfNeeded();
-        await expect(image).toHaveAttribute('src', /\.webp(?:$|\?)/);
-      }
-    }),
-  );
+  const sources = await images
+    .filter({ visible: true })
+    .evaluateAll(elements =>
+      elements.map(element => element.getAttribute('src')),
+    );
+  sources.forEach(src => {
+    expect(src).toMatch(/\.webp(?:$|\?)/);
+  });
 };
 
 const checkTopicTags = async (page: Page) => {
@@ -860,7 +924,12 @@ const addPageTests = (
         );
         if (expectedItemCounts.length === 0) return;
         const mostRead = page.locator('[data-e2e="most-read"]');
-        await mostRead.scrollIntoViewIfNeeded();
+        await scrollToOnwardJourney({
+          page,
+          onwardJourney: 'mostRead',
+          selector: '[data-e2e="most-read"]',
+        });
+        await expect(mostRead.locator('li').first()).toBeVisible();
         const actualItemCount = await mostRead.locator('li').count();
         expect(expectedItemCounts).toContain(actualItemCount);
         const ranks = mostRead.locator('li span[data-e2e="most-read-rank"]');
@@ -1066,7 +1135,12 @@ test.describe('articlePage ATI Analytics', () => {
               appEnv: appEnvFromProcess,
               expectsResonanceEvents: suite.expectsResonanceEvents,
             };
-            await addCanonicalHeadersToPageRequest(page, suite.path);
+            await addCanonicalHeadersToPageRequest(
+              page,
+              suite.path,
+              suite.headers,
+            );
+            await mockLocalArticleOnwardJourneys(page, suite.path);
             await hideLocalDevOverlay(page);
             await atiAssertionByName[assertionName](props);
           });
