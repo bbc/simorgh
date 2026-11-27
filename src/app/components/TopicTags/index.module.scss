@@ -1,0 +1,46 @@
+@use '@scss/themeTokens' as theme;
+
+// Physical left/right rather than the logical shorthand
+// (e.g. `margin-inline: theme.$spacings-half`): the values are symmetric,
+// so RTL is unaffected, and Opera Mini doesn't support the shorthand.
+.topicsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * #{theme.$spacings-full});
+  margin-left: calc(-1 * #{theme.$spacings-half});
+  margin-right: calc(-1 * #{theme.$spacings-half});
+  padding: 0;
+  list-style-type: none;
+}
+
+.topicTagItem {
+  @include theme.typography-from-scale-and-variant(bodyCopy, 'sans-bold');
+
+  word-break: break-word;
+  min-width: 0;
+  margin-top: theme.$spacings-full;
+  margin-left: theme.$spacings-half;
+  margin-right: theme.$spacings-half;
+
+  a {
+    display: inline-flex;
+    min-height: theme.pixelsToRem-px-to-rem(44);
+    padding: theme.$spacings-half theme.$spacings-double;
+    align-items: center;
+    background-color: theme.$palette-grey-2;
+    border: none;
+    text-decoration: none;
+    color: theme.$palette-ebon;
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: theme.$palette-grey-7;
+      color: theme.$palette-grey-2;
+    }
+
+    &:hover,
+    &:focus {
+      color: theme.$palette-postbox;
+      text-decoration: underline;
+    }
+  }
+}
