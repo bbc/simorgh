@@ -9,19 +9,20 @@ type Props = {
   nonce?: string;
 };
 
-const trackingScripts = ({
+// eslint-disable-next-line func-names
+const trackingScripts = function ({
   enableStaticClickTrackingOnOperaMiniOnly,
   trackComponentViews,
-}: Props) => {
+}: Props) {
   return `
     window.addEventListener('load', function () {
       var isComponentTrackingEnabled = true;
       var isStaticClickTrackingOnOperaMiniOnlyEnabled = ${enableStaticClickTrackingOnOperaMiniOnly};
       var isComponentViewTrackingEnabled = ${trackComponentViews};
 
-      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
-        isComponentTrackingEnabled = ${isOperaProxy.toString()}();
-      }      
+      // if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
+      //   isComponentTrackingEnabled = ${isOperaProxy.toString()}();
+      // }      
 
       if (isComponentTrackingEnabled) {
         (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
