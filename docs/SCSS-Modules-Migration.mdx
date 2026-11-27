@@ -32,7 +32,7 @@ The initial batch, the revised early sequence and a parallel batch of three comp
 
 The shared SCSS setup is done: `ThemeProviderSCSSModules`, the shared tokens and mixins, and a theme for every service. The remaining work is converting components.
 
-The `CallToActionLink` migration also moved the CTA styles owned by `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary`, and `MessageBanner` into SCSS Modules, but those consumers still use Emotion for other elements. The `ArticleHeadline` and downloads page consumers were updated outside this programme's component scope.
+The `CallToActionLink` migration also moved the CTA styles owned by `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary`, and `MessageBanner` into SCSS Modules. `AccountActionButtons` no longer uses Emotion directly, because its unused `index.styles.tsx` was removed as dead code; it still renders the Emotion-styled `Paragraph`. The other three still use Emotion for other elements. The `ArticleHeadline` and downloads page consumers were updated outside this programme's component scope.
 
 Counts of style files are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion can also be used without an `index.styles.*` file.
 
@@ -226,10 +226,21 @@ The original batches grouped components by approximate size and cohesion. The fi
 
 ## Next steps
 
-1. **Finish partly migrated consumers.** `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have.
+1. **Finish partly migrated consumers.** `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have. `LiteSiteSummary` and `Embeds/Uploader` are the smallest. [PR #14352](https://github.com/bbc/simorgh/pull/14352) also changes `MessageBanner`, so coordinate with it or wait for it to merge.
 2. **Plan `LiveLabel` and `LivePulse` together.** `LiveLabel` sets the pulse's size, and Billboard and the live-page header override it too, so they need checking as one piece of work. Keep reduced-motion behaviour, dark UI, translations and screen-reader text working.
 3. **Give `BulletedList` its own PR.** Check its legacy consumers first. It sets bullet shape and colour from props and has dark UI styles, and its class names, `ref` and list semantics must keep working.
 4. **Check `latest` and open PRs before picking the next components.** This list is a starting point, not a commitment, and doesn't cover every dependency.
+
+### Components for Louise
+
+Louise is picking these up in parallel with the next steps above. As of 27 November 2026, none of them share component files with those steps or with any open PR. Follow [Coordinating parallel migrations](#coordinating-parallel-migrations), and check open PRs again before starting each one.
+
+1. **`Embeds/FlourishEmbed` and `Embeds/ClientSideRiddleEmbed`, in one PR.** Together they have 39 lines of styles, mostly for a single iframe each, with no snapshots or legacy imports. They only render on canonical pages: `OEmbed` renders nothing on Lite, and shows `AmpIframeEmbed` or `EmbedError` on AMP instead.
+2. **`UsefulLinks`.** 61 lines of styles, and its only consumer is the topics index page. It passes `css` overrides into the Emotion-styled `Heading`, so follow [Overrides across component boundaries](https://github.com/bbc/simorgh/blob/latest/.github/skills/migrate-component-to-scss-modules/SKILL.md#overrides-across-component-boundaries). Its list styles also depend on a runtime `layout` value.
+3. **`Pagination`, in its own PR.** 110 lines of styles, used on topic, topics index, live and My News pages. Check the dark UI focus indicator, chevron direction in RTL, which page numbers show at each breakpoint, and the extra margin on live pages. `LiveLabel` and `LivePulse` (step 2 above) also render on live pages, so check a live page with both changes once they've merged.
+4. **`Byline` with `ArticleContributor` and `PostContributor`, later and as dedicated work.** They have 234 lines of styles between them, so they will probably need more than one PR. `Byline` renders on article pages in canonical, AMP and Lite, and on live page posts. It also passes `css` overrides into the Emotion-styled `Text`.
+
+Leave these for now, because open PRs already change their files: the `Account` components, `Curation` and its children, `TopicDiscovery`, `Billboard`, `Image`, `ImageWithCaption`, `TopBarOJs` and `Embeds/EmbedHtml`.
 
 ### Coordinating parallel migrations
 
