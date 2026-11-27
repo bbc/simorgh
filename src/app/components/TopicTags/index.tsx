@@ -1,7 +1,6 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import { TopicTag } from '#app/models/types/metadata';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -11,7 +10,6 @@ import styles from './index.styles';
 
 interface TopicTagsProps {
   tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
-  experimentProps?: ComponentExperimentProps;
   trackingSource?: string;
 }
 
@@ -45,11 +43,7 @@ const TopicTagLink = ({
   );
 };
 
-export const TopicTags = ({
-  tags,
-  experimentProps,
-  trackingSource,
-}: TopicTagsProps) => {
+export const TopicTags = ({ tags, trackingSource }: TopicTagsProps) => {
   const componentName = trackingSource ? `${trackingSource}-topics` : 'topics';
   const { service, translations } = use(ServiceContext);
   const { variant } = use(RequestContext);
@@ -61,7 +55,6 @@ export const TopicTags = ({
       type: componentName,
       itemCount: tags.length,
     },
-    ...(experimentProps && experimentProps),
   };
 
   const viewTracker = useViewTracker(eventTrackingData);

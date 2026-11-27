@@ -10,6 +10,8 @@ import addInlineScript, {
   InlineScriptProps,
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
+import Experiment, { ExperimentType } from '#app/components/Experiment';
+import { PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME } from '#app/components/PWAPromotionalBanner/experiment';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
@@ -39,14 +41,17 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
+const PWAInstallTracker = () => {
+  usePWAInstallTracker();
+  return null;
+};
+
 const CanonicalATIAnalytics = ({
   reverbParams,
   resonanceParams,
 }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
   const isHydrated = useHydrationDetection();
-
-  usePWAInstallTracker();
 
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
@@ -85,6 +90,12 @@ const CanonicalATIAnalytics = ({
           nonce,
         })}
       {renderNoScriptTrackingPixel({ reverbParams })}
+      <Experiment
+        name={PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME}
+        type={ExperimentType.SERVER_SIDE}
+      >
+        {() => <PWAInstallTracker />}
+      </Experiment>
     </>
   );
 };

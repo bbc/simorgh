@@ -17,7 +17,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
+import { PageTypes } from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
@@ -34,7 +34,6 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
-  experimentProps?: ComponentExperimentProps;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -115,7 +114,6 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  experimentProps,
   eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
@@ -144,7 +142,6 @@ const MostRead = ({
 
   const trackingData = eventTrackingData || {
     componentName: 'most-read',
-    ...(experimentProps && experimentProps),
   };
 
   return isAmp ? (

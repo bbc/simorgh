@@ -43,7 +43,6 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
@@ -176,14 +175,8 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({
-  data,
-  experimentProps,
-}: {
-  data: Recommendation[];
-  experimentProps?: ComponentExperimentProps;
-}) => (
-  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
+const getWsojComponent = ({ data }: { data: Recommendation[] }) => (
+  <Recommendations data={data} />
 );
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
@@ -222,16 +215,11 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({
-    showAllContent,
-    setShowAllContent,
-    experimentProps,
-  }: ContinueReadingButtonProps) =>
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
-      experimentProps={experimentProps}
     />
   );
 

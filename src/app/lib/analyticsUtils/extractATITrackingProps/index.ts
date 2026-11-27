@@ -1,14 +1,26 @@
 import { use } from 'react';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { EventTrackingData, EventTrackingProps } from '../types';
+import { ExperimentContext } from '#app/contexts/ExperimentContext';
+import { EventTrackingProps, ExtractedTrackingProps } from '../types';
 
 export default ({
   eventTrackingData,
   eventType,
   eventTrackingContextFromHook,
-}: EventTrackingProps): EventTrackingData => {
+  experimentContextFromHook,
+}: EventTrackingProps): ExtractedTrackingProps => {
   const eventTrackingContext =
     eventTrackingContextFromHook || use(EventTrackingContext);
+
+  // Callers outside render (e.g. inside a callback) can't call use(), so they
+  // pass the contexts in. Those callers must pass the experiment context too.
+  let experimentContext = experimentContextFromHook ?? null;
+  if (
+    experimentContextFromHook === undefined &&
+    !eventTrackingContextFromHook
+  ) {
+    experimentContext = use(ExperimentContext);
+  }
 
   const {
     componentName = '',
@@ -17,15 +29,15 @@ export default ({
     format,
     detailedPlacement,
     preventNavigation,
-    sendOptimizelyEvents,
     optimizelyComponentName,
-    experimentName,
-    experimentVariant,
     itemTracker,
     groupTracker,
     viewThreshold,
     alwaysInView,
   } = eventTrackingData || {};
+
+  // Experiment attribution only ever comes from the nearest <Experiment>.
+  const { experimentName, experimentVariant } = experimentContext ?? {};
 
   const {
     pageIdentifier,
@@ -55,7 +67,6 @@ export default ({
     detailedPlacement,
     producerName,
     preventNavigation,
-    sendOptimizelyEvents,
     optimizelyComponentName,
     experimentName,
     experimentVariant,

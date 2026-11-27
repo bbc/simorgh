@@ -13,7 +13,6 @@ export type EventTrackingMetadata = {
   detailedPlacement?: string;
   campaignID?: string;
   advertiserID?: string;
-  sendOptimizelyEvents?: boolean;
   optimizelyComponentName?: string;
   alwaysInView?: boolean;
   preventNavigation?: boolean;

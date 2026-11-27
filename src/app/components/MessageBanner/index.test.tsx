@@ -226,7 +226,10 @@ describe('MessageBanner', () => {
         </MessageBanner>,
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        ...eventTrackingDataModel,
+        optimizelyComponentName: 'cta',
+      });
     });
   });
 
@@ -279,7 +282,10 @@ describe('MessageBanner', () => {
         </MessageBanner>,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingDataModel);
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        ...eventTrackingDataModel,
+        optimizelyComponentName: 'cta',
+      });
     });
 
     it('should handle a click event when call to action link clicked', () => {

@@ -25,7 +25,6 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import {
   FOCUSABLE_ITEMS_SELECTOR,
   NAVIGATION_TRACKING_COMPONENT,
-  STICKY_NAVIGATION_EXPERIMENT,
   STICKY_NAVIGATION_TREATMENT,
 } from './config';
 import useStickyNavigation from './useStickyNavigation';
@@ -97,9 +96,6 @@ const CanonicalNavigationContainer = ({
   });
   const stickyNavViewTracker = useViewTracker({
     componentName: NAVIGATION_TRACKING_COMPONENT,
-    sendOptimizelyEvents: true,
-    experimentName: STICKY_NAVIGATION_EXPERIMENT,
-    experimentVariant: stickyNavExperimentVariant,
   });
   const { navRef, navSlotRef, secondaryScrollRef, dropDownNavRef } = sticky;
   const menuButtonRef = useRef<HTMLButtonElement>(null);

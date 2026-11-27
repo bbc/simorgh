@@ -1,24 +1,11 @@
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   CORRESPONDENT_STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-
-const getActiveExperimentProps = (
-  experimentName: string,
-  experimentVariant: string | null,
-): ComponentExperimentProps | null =>
-  experimentVariant
-    ? {
-        sendOptimizelyEvents: true,
-        experimentName,
-        experimentVariant,
-      }
-    : null;
 
 export default ({ pageMetadata, serviceContext }) => {
   const { brandName } = serviceContext;
@@ -40,20 +27,15 @@ export default ({ pageMetadata, serviceContext }) => {
   const isTestPageViewsVariant =
     testPageViewsVariant && testPageViewsVariant !== 'off';
 
-  const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
-  );
-
   const enrichedData = {
     ...atiData,
     ...(isCPS && { pageTitle: `${atiData.pageTitle} - ${brandName}` }),
-    ...(isTestPageViewsVariant &&
-      testPageViewsExperimentProps && {
-        experimentName: testPageViewsExperimentProps.experimentName,
-        experimentVariant: testPageViewsExperimentProps.experimentVariant,
-        experimentProps: testPageViewsExperimentProps,
-      }),
+    // Tags the page view only. Component trackers are attributed to an
+    // experiment by rendering them inside <Experiment>.
+    ...(isTestPageViewsVariant && {
+      experimentName: testPageViewsExperimentName,
+      experimentVariant: testPageViewsVariant,
+    }),
   };
 
   return enrichedData;

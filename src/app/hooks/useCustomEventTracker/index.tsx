@@ -9,8 +9,6 @@ import dispatchViewabilityEvent from '../../components/ATIAnalytics/resonance/di
 
 interface CustomEventData {
   eventName: string;
-  experimentName?: string;
-  experimentVariant?: string;
 }
 
 type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
@@ -20,14 +18,14 @@ type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
  * Reverb is used to send the beacon. The event will appear in Piano under the "Event - Group" field.
  * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
+ * Events fired inside an <Experiment> are attributed to that experiment.
+ *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
  * @returns {TrackEventFunction} A function that triggers the custom event. Accepts an optional stringified data parameter.
  */
 
 const useCustomEventTracker = ({
   eventName,
-  experimentName,
-  experimentVariant,
 }: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
@@ -39,6 +37,8 @@ const useCustomEventTracker = ({
     isSignedIn,
     hashedId,
     isPersonalisationOn,
+    experimentName,
+    experimentVariant,
   } = extractATITrackingProps({
     eventType: VIEW_EVENT,
   });

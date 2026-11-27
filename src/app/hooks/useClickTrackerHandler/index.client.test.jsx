@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { createContext } from 'react';
+import { ExperimentProvider } from '#app/contexts/ExperimentContext';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -677,14 +678,16 @@ describe('useClickTrackerHandler', () => {
 
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
+          <ExperimentProvider
+            experimentName="mockExperiment"
+            experimentVariant="variation_a"
+          >
+            <TestComponent
+              hookProps={{
+                ...eventTrackingData,
+              }}
+            />
+          </ExperimentProvider>
         </OptimizelyProvider>,
         {
           pageMetadata: { atiAnalytics, type },
@@ -713,15 +716,17 @@ describe('useClickTrackerHandler', () => {
 
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              optimizelyComponentName: 'sticky-navigation',
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
+          <ExperimentProvider
+            experimentName="mockExperiment"
+            experimentVariant="variation_a"
+          >
+            <TestComponent
+              hookProps={{
+                ...eventTrackingData,
+                optimizelyComponentName: 'sticky-navigation',
+              }}
+            />
+          </ExperimentProvider>
         </OptimizelyProvider>,
         {
           pageMetadata: { atiAnalytics, type },
@@ -754,14 +759,16 @@ describe('useClickTrackerHandler', () => {
 
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'off',
-              sendOptimizelyEvents: true,
-            }}
-          />
+          <ExperimentProvider
+            experimentName="mockExperiment"
+            experimentVariant="off"
+          >
+            <TestComponent
+              hookProps={{
+                ...eventTrackingData,
+              }}
+            />
+          </ExperimentProvider>
         </OptimizelyProvider>,
         {
           pageMetadata: { atiAnalytics, type },
@@ -785,14 +792,16 @@ describe('useClickTrackerHandler', () => {
 
       const { getByTestId } = render(
         <OptimizelyProvider optimizely={defaultOptimizely} isServerSide>
-          <TestComponent
-            hookProps={{
-              ...eventTrackingData,
-              experimentName: 'mockExperiment',
-              experimentVariant: 'variation_a',
-              sendOptimizelyEvents: true,
-            }}
-          />
+          <ExperimentProvider
+            experimentName="mockExperiment"
+            experimentVariant="variation_a"
+          >
+            <TestComponent
+              hookProps={{
+                ...eventTrackingData,
+              }}
+            />
+          </ExperimentProvider>
         </OptimizelyProvider>,
         {
           pageMetadata: { atiAnalytics, type },

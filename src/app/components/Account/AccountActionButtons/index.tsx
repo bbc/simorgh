@@ -13,8 +13,6 @@ interface AccountActionButtonsProps {
   registerComponentName: string;
   onLightBackground?: boolean;
   signInRef?: React.Ref<HTMLAnchorElement>;
-  experimentName?: string;
-  experimentVariant?: string;
   signInAccessibleLabel?: string;
 }
 
@@ -23,8 +21,6 @@ const AccountActionButtons = ({
   registerComponentName,
   onLightBackground = false,
   signInRef,
-  experimentName,
-  experimentVariant,
   signInAccessibleLabel,
 }: AccountActionButtonsProps) => {
   const { signInUrl, registerUrl } = use(AccountContext);
@@ -66,12 +62,7 @@ const AccountActionButtons = ({
           styles.callToActionLink,
           styles.signInLink,
         )}
-        eventTrackingData={{
-          componentName: signInComponentName,
-          ...(experimentName && { experimentName }),
-          ...(experimentVariant && { experimentVariant }),
-          ...(experimentVariant && { sendOptimizelyEvents: true }),
-        }}
+        eventTrackingData={{ componentName: signInComponentName }}
         data-testid={signInComponentName}
       >
         {signInButtonContent}
@@ -97,12 +88,7 @@ const AccountActionButtons = ({
           styles.registerLink,
           onLightBackground && styles.registerLinkOnLightBackground,
         )}
-        eventTrackingData={{
-          componentName: registerComponentName,
-          ...(experimentName && { experimentName }),
-          ...(experimentVariant && { experimentVariant }),
-          ...(experimentVariant && { sendOptimizelyEvents: true }),
-        }}
+        eventTrackingData={{ componentName: registerComponentName }}
         data-testid={registerComponentName}
       >
         <CallToActionLink.ButtonLikeWrapper>

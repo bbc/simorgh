@@ -83,7 +83,6 @@ describe('dispatchTrackingRequests', () => {
         ...viewTrackerRequestsParameters,
         optimizelyParameters: {
           ...viewTrackerRequestsParameters.optimizelyParameters,
-          sendOptimizelyEvents: true,
           experimentVariant: 'variantA',
         },
       });
@@ -100,13 +99,12 @@ describe('dispatchTrackingRequests', () => {
 
     it.each([
       {
-        title: 'sendOptimizelyEvents is set to false in optimizelyParameters',
+        title: 'there is no experimentVariant in optimizelyParameters',
         eventTrackingData: {
           ...viewTrackerRequestsParameters,
           optimizelyParameters: {
             ...viewTrackerRequestsParameters.optimizelyParameters,
-            sendOptimizelyEvents: false,
-            experimentVariant: 'variantA',
+            experimentVariant: undefined,
           },
         },
       },
@@ -116,7 +114,6 @@ describe('dispatchTrackingRequests', () => {
           ...viewTrackerRequestsParameters,
           optimizelyParameters: {
             ...viewTrackerRequestsParameters.optimizelyParameters,
-            sendOptimizelyEvents: true,
             experimentVariant: 'off',
           },
         },

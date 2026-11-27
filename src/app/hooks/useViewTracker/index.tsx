@@ -42,7 +42,6 @@ const getComponentViewTracker = (
     statsDestination,
     campaignID,
     detailedPlacement,
-    sendOptimizelyEvents,
     optimizelyComponentName,
     experimentName,
     experimentVariant,
@@ -80,7 +79,6 @@ const getComponentViewTracker = (
         dispatchTrackingRequests({
           optimizelyParameters: {
             optimizely,
-            sendOptimizelyEvents,
             experimentVariant,
             componentName,
             optimizelyComponentName,
@@ -189,7 +187,6 @@ const getComponentViewTracker = (
     eventSent,
     advertiserID,
     url,
-    sendOptimizelyEvents,
     optimizely,
     experimentName,
     experimentVariant,

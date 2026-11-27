@@ -6,9 +6,7 @@ import {
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
+import Experiment, { ExperimentType } from '#app/components/Experiment';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
@@ -229,28 +227,16 @@ type NavigationContainerProps = {
 const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
 const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 
-const StickyNavigationExperiment = ({
-  setExperimentVariant,
-}: {
-  setExperimentVariant: React.Dispatch<React.SetStateAction<string | null>>;
-}) => {
-  const experimentVariant = useOptimizelyVariation({
-    experimentName: STICKY_NAVIGATION_EXPERIMENT,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  useEffect(() => {
-    setExperimentVariant(experimentVariant);
-  }, [experimentVariant, setExperimentVariant]);
-
-  return null;
+type NavigationContentProps = NavigationContainerProps & {
+  stickyNavExperimentVariant: string | null;
 };
 
-const NavigationContainer: React.FC<NavigationContainerProps> = ({
+const NavigationContent = ({
   navItems,
   propsForTopBarOJComponent,
   primaryMediaType,
-}) => {
+  stickyNavExperimentVariant,
+}: NavigationContentProps) => {
   const { isAmp, isLite, pageType, canonicalLink, origin } =
     use(RequestContext);
 
@@ -261,55 +247,12 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   } = use(ServiceContext);
 
   const { currentPage, navMenuText } = translations;
-  const [shouldActivateStickyNavExperiment, setShouldActivate] =
-    useState(false);
-  const [stickyNavExperimentVariant, setStickyNavExperimentVariant] = useState<
-    string | null
-  >(null);
-
-  useEffect(() => {
-    if (
-      isAmp ||
-      isLite ||
-      pageType !== ARTICLE_PAGE ||
-      shouldActivateStickyNavExperiment
-    ) {
-      return undefined;
-    }
-
-    const activateWhenPastArticleImage = () => {
-      const articleImage = document.querySelector(
-        STICKY_NAV_ARTICLE_IMAGE_SELECTOR,
-      );
-      const articleImageBoundary = articleImage?.closest('figure');
-      const articleStart = articleImageBoundary
-        ? null
-        : document.querySelector(STICKY_NAV_ARTICLE_START_SELECTOR);
-      const activationPoint = articleImageBoundary
-        ? articleImageBoundary.getBoundingClientRect().bottom
-        : articleStart?.getBoundingClientRect().top;
-
-      if (activationPoint !== undefined && activationPoint <= 0) {
-        setShouldActivate(true);
-      }
-    };
-
-    window.addEventListener('scroll', activateWhenPastArticleImage, {
-      passive: true,
-    });
-    activateWhenPastArticleImage();
-
-    return () =>
-      window.removeEventListener('scroll', activateWhenPastArticleImage);
-  }, [isAmp, isLite, pageType, shouldActivateStickyNavExperiment]);
-
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
+  // Clicks on any navigation count towards the sticky navigation experiment's
+  // single Optimizely click metric.
   const stickyNavExperimentTrackingMetadata = {
-    sendOptimizelyEvents: true,
     optimizelyComponentName: NAVIGATION_TRACKING_COMPONENT,
-    experimentName: STICKY_NAVIGATION_EXPERIMENT,
-    experimentVariant: stickyNavExperimentVariant,
   };
 
   const topNavClickTrackerHandler = useClickTrackerHandler({
@@ -475,11 +418,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   return (
     <>
-      {shouldActivateStickyNavExperiment && (
-        <StickyNavigationExperiment
-          setExperimentVariant={setStickyNavExperimentVariant}
-        />
-      )}
       <div css={styles.brandDivider} />
       <NavigationRenderer
         topScrollableListItems={topScrollableListItems}
@@ -494,6 +432,60 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         blocks={blocks}
       />
     </>
+  );
+};
+
+const NavigationContainer = (props: NavigationContainerProps) => {
+  const { isAmp, isLite, pageType } = use(RequestContext);
+  const [shouldActivateStickyNavExperiment, setShouldActivate] =
+    useState(false);
+
+  useEffect(() => {
+    if (
+      isAmp ||
+      isLite ||
+      pageType !== ARTICLE_PAGE ||
+      shouldActivateStickyNavExperiment
+    ) {
+      return undefined;
+    }
+
+    const activateWhenPastArticleImage = () => {
+      const articleImage = document.querySelector(
+        STICKY_NAV_ARTICLE_IMAGE_SELECTOR,
+      );
+      const articleImageBoundary = articleImage?.closest('figure');
+      const articleStart = articleImageBoundary
+        ? null
+        : document.querySelector(STICKY_NAV_ARTICLE_START_SELECTOR);
+      const activationPoint = articleImageBoundary
+        ? articleImageBoundary.getBoundingClientRect().bottom
+        : articleStart?.getBoundingClientRect().top;
+
+      if (activationPoint !== undefined && activationPoint <= 0) {
+        setShouldActivate(true);
+      }
+    };
+
+    window.addEventListener('scroll', activateWhenPastArticleImage, {
+      passive: true,
+    });
+    activateWhenPastArticleImage();
+
+    return () =>
+      window.removeEventListener('scroll', activateWhenPastArticleImage);
+  }, [isAmp, isLite, pageType, shouldActivateStickyNavExperiment]);
+
+  return (
+    <Experiment
+      name={STICKY_NAVIGATION_EXPERIMENT}
+      type={ExperimentType.CLIENT_SIDE}
+      activate={shouldActivateStickyNavExperiment}
+    >
+      {variation => (
+        <NavigationContent {...props} stickyNavExperimentVariant={variation} />
+      )}
+    </Experiment>
   );
 };
 

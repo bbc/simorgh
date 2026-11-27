@@ -25,7 +25,7 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { ComponentExperimentProps, PageTypes } from '#app/models/types/global';
+import { PageTypes } from '#app/models/types/global';
 import setBbcPage from '#app/lib/analyticsUtils/setBbcPage';
 import getEnrichedArticleATIData from './getEnrichedArticleATIData';
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
@@ -35,7 +35,6 @@ import getEnrichedHomePageATIData from './getEnrichedHomePageATIData';
 type ReverbParamsContextProps = {
   reverbParams: ReverbBeaconConfig;
   resonanceParams: ResonanceBeaconConfig | null;
-  experimentProps?: ComponentExperimentProps;
 };
 
 export const ReverbParamsContext = createContext<ReverbParamsContextProps>(
@@ -117,11 +116,8 @@ const ReverbParamsContextProviderComponent = ({
     () => ({
       reverbParams,
       resonanceParams,
-      ...(enrichedAtiData?.experimentProps && {
-        experimentProps: enrichedAtiData.experimentProps,
-      }),
     }),
-    [reverbParams, resonanceParams, enrichedAtiData?.experimentProps],
+    [reverbParams, resonanceParams],
   );
 
   return (
