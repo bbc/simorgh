@@ -14,10 +14,24 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 const optimoIdPattern = 'c[a-zA-Z0-9]{10,}o';
 
+// Locally, pages can be opened on localhost.bbc.com while static assets are
+// served from localhost. Icons drawn with CSS masks need CORS to load across
+// those origins.
+const localStaticImageHeaders =
+  process.env.SIMORGH_APP_ENV === 'local'
+    ? [
+        {
+          source: '/images/:path*',
+          headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
+        },
+      ]
+    : [];
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   async headers() {
     return [
+      ...localStaticImageHeaders,
       {
         source: '/(.*)',
         headers: [
