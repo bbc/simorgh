@@ -22,6 +22,7 @@ import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
   assertPageView,
+  assertResonancePageView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions';
@@ -891,6 +892,17 @@ test.describe('topicPage ATI Analytics', () => {
 
           await assertPageView({ page, ...atiProps });
         });
+
+        if (testSuite.service === 'marathi') {
+          test('should send a resonance page view event', async ({ page }) => {
+            test.skip(
+              !shouldRunForEnv(testSuite.runForEnv),
+              `Skipped for APP_ENV=${appEnvFromProcess}`,
+            );
+
+            await assertResonancePageView({ page, ...atiProps });
+          });
+        }
 
         if (testSuite.service === 'portuguese') {
           test('should send a view event for the Scrollable Navigation component', async ({

@@ -10,9 +10,9 @@ export const MediaIndicatorAlignment = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  > svg {
+  > .external-svg {
     @media screen and (forced-colors: active) {
-      fill: canvasText;
+      color: canvasText;
     }
   }
 `;

@@ -65,18 +65,6 @@ export const blockArrayModel = arrayOfBlocks => ({
   blocks: arrayOfBlocks,
 });
 
-export const rawVideoModel = (
-  videoLocator,
-  videoVersionId,
-  videoKind,
-  videoDuration,
-) => ({
-  locator: videoLocator,
-  versionID: videoVersionId,
-  kind: videoKind,
-  duration: videoDuration,
-});
-
 export const bylineBlock = (bylineType, text, id = null) => {
   const fragment = singleFragmentBlock(`@${text}`, id);
   const urlLink = optionalIdBlock(
@@ -146,9 +134,6 @@ export const rawVideoBlock = model => blockBase(rawVideoType, model);
 export const rawImageBlock = model => blockBase(rawImageType, model);
 
 export const imageBlock = rawBlock => stdArrayModelBlock(imageType, [rawBlock]);
-
-export const imageBlocks = rawBlocks =>
-  stdArrayModelBlock(imageType, rawBlocks);
 
 export const videoBlock = (rawVBlock, imgBlock) =>
   stdArrayModelBlock(videoType, [rawVBlock, imgBlock]);

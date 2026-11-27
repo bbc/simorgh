@@ -2,6 +2,8 @@ import type { Article, OptimoBlock } from '#app/models/types/optimo';
 import extractPromoImage from '#app/lib/utilities/extractPromoImage';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import type { PageTypes } from '#app/models/types/global';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 /**
  * Extracts metadata needed for SaveArticleButton from full article page data.
@@ -11,6 +13,7 @@ import filterForBlockType from '#app/lib/utilities/blockHandlers';
  * metadata needs, only this function needs to be updated.
  *
  * @param articlePageData - Full article page data
+ * @param pageType - Rendered page type, used to identify media articles
  * @returns Minimal SaveArticlePageData object containing only required fields
  */
 
@@ -32,7 +35,14 @@ type OptimoContainerBlock = OptimoBlock & {
 const isMediaBlock = (block: OptimoBlock): block is OptimoContainerBlock =>
   MEDIA_BLOCK_TYPES.includes(block.type);
 
-const findPromoImageBlocks = (contentBlocks?: OptimoBlock[]) => {
+const findPromoImageBlocks = (
+  contentBlocks: OptimoBlock[] | undefined,
+  pageType: PageTypes,
+) => {
+  if (pageType !== MEDIA_ARTICLE_PAGE) {
+    return filterForBlockType(contentBlocks, 'image');
+  }
+
   const mediaBlock = contentBlocks?.find(isMediaBlock);
   const aresMediaBlock = filterForBlockType(
     mediaBlock?.model?.blocks,
@@ -50,9 +60,10 @@ const findPromoImageBlocks = (contentBlocks?: OptimoBlock[]) => {
 
 const extractSaveArticleProps = (
   articlePageData: Article,
+  pageType: PageTypes = ARTICLE_PAGE,
 ): SaveArticlePageData => {
   const contentBlocks = articlePageData?.content?.model?.blocks;
-  const promoImageBlocks = findPromoImageBlocks(contentBlocks);
+  const promoImageBlocks = findPromoImageBlocks(contentBlocks, pageType);
   const { altText, rawBlock } = extractPromoImage(
     promoImageBlocks?.model?.blocks ?? [],
   );

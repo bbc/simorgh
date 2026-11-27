@@ -1,3 +1,4 @@
+import { use } from 'react';
 import { useTheme } from '@emotion/react';
 import clsx from 'clsx';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -6,6 +7,11 @@ import {
   createResponsiveSrcSet,
   MULTILINE_SRCSET_SEPARATOR,
 } from '#app/utilities/imageSrcSets';
+import { RequestContext } from '#app/contexts/RequestContext';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import CallToActionLink from '../CallToActionLink';
 import Paragraph from '../Paragraph';
 import Image from '../Image';
@@ -28,6 +34,30 @@ const MessageBanner = ({
   children,
   eventTrackingData,
 }: MessageBannerProps) => {
+  const { pageType } = use(RequestContext);
+
+  const { mq } = useTheme();
+
+  let shouldEnableGlow = false;
+  let optimizelyAttributes = {};
+  if (pageType === HOME_PAGE) {
+    const experimentName = 'newswb_ws_message_banner_cta_glow';
+    // pageType is a constant throughout this component's lifecycle, so this condition is guaranteed to be a constant.
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const variant = useOptimizelyVariation({
+      experimentName,
+      experimentType: ExperimentType.CLIENT_SIDE,
+    });
+
+    shouldEnableGlow = variant === 'variant';
+    optimizelyAttributes = {
+      experimentName,
+      sendOptimizelyEvents: true,
+      experimentVariant: variant,
+      optimizelyComponentName: 'cta',
+    };
+  }
+
   // Remove itemCount from groupTracker as it's not needed for MessageBanner
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { itemCount, ...groupTrackerRest } =
@@ -36,11 +66,10 @@ const MessageBanner = ({
   const eventTrackingDataWithoutItemCount = eventTrackingData && {
     ...eventTrackingData,
     groupTracker: groupTrackerRest,
+    ...optimizelyAttributes,
   };
 
   const viewTracker = useViewTracker(eventTrackingDataWithoutItemCount);
-
-  const { mq } = useTheme();
 
   const imgSrcLarge = image?.replace(
     '{width}',
@@ -67,6 +96,7 @@ const MessageBanner = ({
         <CallToActionLink
           url={link}
           className={clsx('focusIndicatorInvert', ctaStyles.callToActionLink)}
+          enableGlow={shouldEnableGlow}
           eventTrackingData={eventTrackingDataWithoutItemCount}
         >
           <CallToActionLink.ButtonLikeWrapper>

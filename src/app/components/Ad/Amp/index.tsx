@@ -2,10 +2,7 @@ import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
-import {
-  AMP_ACCESS_JS,
-  AMP_ADS_JS,
-} from '#psammead/psammead-assets/src/amp-boilerplate';
+import { AMP_ACCESS_JS, AMP_ADS_JS } from '#app/lib/amp/boilerplate';
 import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';

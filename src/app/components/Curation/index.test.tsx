@@ -1,6 +1,7 @@
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { matchers } from '@emotion/jest';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { Services } from '#app/models/types/global';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
 import kyrgyzFixture from '../../../../data/kyrgyz/topics/cvpv9djp9qqt.json';
@@ -703,7 +704,7 @@ describe('Curation', () => {
       isVideoCollection,
       isLite,
     }: {
-      service: 'arabic' | 'mundo';
+      service: Services;
       isVideoCollection: boolean;
       isLite?: boolean;
     }) => {
@@ -721,15 +722,18 @@ describe('Curation', () => {
       return getByTestId('topic-promos');
     };
 
-    it('applies video collection styling for Arabic', () => {
-      const list = renderCuration({
-        service: 'arabic',
-        isVideoCollection: true,
-        isLite: false,
-      });
+    it.each(['arabic', 'mundo', 'pidgin', 'tamil'] as const)(
+      'applies video collection styling for %s',
+      service => {
+        const list = renderCuration({
+          service,
+          isVideoCollection: true,
+          isLite: false,
+        });
 
-      expect(list).toHaveStyleRule(...gridColumnsStyleRule);
-    });
+        expect(list).toHaveStyleRule(...gridColumnsStyleRule);
+      },
+    );
 
     it.each([
       {
@@ -739,9 +743,10 @@ describe('Curation', () => {
         isLite: true,
       },
       {
-        description: 'Mundo',
+        description: 'Mundo Lite page',
         service: 'mundo',
         isVideoCollection: true,
+        isLite: true,
       },
       {
         description: 'Non-video collection on test',

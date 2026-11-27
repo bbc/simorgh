@@ -11,6 +11,11 @@ Only use this when the user explicitly asks for a migration or agrees to one. Fo
 
 Styling *rules* live in `.github/instructions/styling-standards.instructions.md` and auto-apply to `src/app/components/**`. This skill covers the *mechanical conversion*: token mapping, workflow and verification.
 
+When the work also involves moving code out of `src/app/legacy`, use the
+[`modernise-legacy-component` skill](../modernise-legacy-component/SKILL.md)
+for dependency-cluster planning, relocation and broader modernisation. It reuses
+this skill for styling; apply the triage below before starting the conversion.
+
 ## Step 1: Triage before starting
 
 Check the component against these exclusions and **stop and report** if any apply, rather than working around them:
@@ -21,7 +26,7 @@ Check the component against these exclusions and **stop and report** if any appl
 | Passes a `css` prop into a legacy component | The legacy child consumes Emotion styles directly; `className` is not a drop-in replacement |
 | Imports a legacy `index.styles` file | Depends on a legacy Emotion style object that isn't yours to convert |
 | Uses a palette/spacing value as a runtime prop (not a style) | SCSS variables can't be passed as props; needs a design decision |
-| Component is outside `src/app/components` | Legacy/container/psammead components need modernisation first |
+| The component you're migrating is outside `src/app/components` | Legacy, container and psammead components need modernising first, and page styling isn't covered by this skill |
 
 Known blocked components: `Disclaimer`, `MostRead/Canonical/Item`, `MostRead/Canonical/List`, `MostRead/Label`, `RelatedTopics`, `Recommendations`, `RelatedContentSection`.
 
@@ -29,15 +34,23 @@ Rendering a legacy component is **not** by itself a blocker — `ArticleLinksBlo
 
 `getAmpLiteCss` inlines `.module.scss` chunks automatically, so AMP and Lite components need no special wiring. Minimize the compiled CSS for every edition; if the component renders in AMP, manually verify that the final inlined `style[amp-custom]` payload remains below AMP's hard 75 KB limit.
 
-Legacy imports that are **pure utilities** (e.g. `formatDuration` from `psammead-timestamp-container`) do not block migration.
+Legacy imports that are **pure utilities** do not block migration. Timestamp and
+localised ISO-duration formatters now live in `#app/lib/utilities/timestamp`.
 
-Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked.
+Before converting a shared component, search its consumers for Emotion `css` props such as `css={styles.inlineLink}`. An un-migrated consumer may intentionally replace the shared component's default styles; migrate that consumer in the same change or stop and report it as blocked. When migrating the consumer's override, follow [Overrides across component boundaries](#overrides-across-component-boundaries).
 
-When a consumer owns a real DOM context for an override, express that relationship in SCSS rather than adding a wrapper solely to increase specificity. Use an ancestor selector (for example `.errorLinkWrapper .inlineLink`) or an element-qualified selector when the component fixes the element type (for example `p.copyright`). Exclude pseudo-states that remain owned by the shared component, such as `:visited`, `:hover`, and `:focus`. CSS Modules scopes class names but does not give a parent component automatic precedence. Use duplicated selectors only as a documented last resort when no meaningful context exists.
+If a consumer overrides the component's styles, you can move just that override
+to SCSS in the same PR, even when the consumer is a page outside
+`src/app/components`. For example, the on-demand audio page's override for
+`ContinueReadingButton` moved into `OnDemandAudioLayout.module.scss`. Leave the
+consumer's other Emotion styles as they are; they'll be migrated with that
+consumer.
 
 Keep migrations focused on preserving existing behaviour and public APIs.
 Justify any API or typing changes separately using actual consumer needs;
-do not add speculative capabilities as part of a styling conversion.
+do not add speculative capabilities as part of a styling conversion. If the
+migration reveals a visual bug, don't fix it silently: describe what happens now
+and what the fix would change, and ask before including it.
 
 ## Step 2: Map Emotion theme values to SCSS tokens
 
@@ -178,6 +191,39 @@ component tests; test changes to those chains at the theme/Sass layer.
 | Small set of named style variants | `data-*` attribute + `&[data-x='value']` selector |
 | Large set of possible values (e.g. a GEL scale) | Typed helper + inline CSS custom properties consumed by one SCSS rule set |
 
+### Logical properties and browser support
+
+The styling standards ask for logical properties such as `padding-inline-start`,
+so spacing flips correctly in right-to-left languages. But some aren't supported
+by every browser Simorgh targets, and the build doesn't add fallbacks for them.
+For example, Next.js's PostCSS setup leaves `padding-inline` and `margin-inline`
+unchanged, and Opera Mini, Chrome before 87 and Safari before 14.1 don't support
+them. Check the built CSS and browser support for each logical property you use.
+
+When the left and right values are the same, you can keep
+`padding-left`/`padding-right` (or the margin equivalents) instead. Equal values
+look the same in either direction, and they work in Opera Mini. Add a short
+comment explaining why, and point it out in the PR. Don't do this when left and
+right differ: those values must flip with direction, so use logical start/end
+properties as the standards require.
+
+Do not enable `postcss-preset-env`'s logical-properties plugin (stage 2) as a
+repository-wide fix. It rewrites start/end properties into `[dir]`-scoped or
+`:dir()` rules: the `[dir]` form raises specificity, and Opera Mini doesn't
+support `:dir()`. Any such change needs RTL, specificity and cascade-order
+testing in canonical, AMP and Lite output.
+
+CSS Modules rename every class in a `.module.scss` file so it's unique to that
+file. For example, `.embedDiv` in `EmbedImages/index.module.scss` becomes
+`EmbedImages_embedDiv__pOMCP` in the built page. Class names added elsewhere,
+such as `no-js` and `is-opera-mini` on the page or `external-svg` on icons, keep
+their plain names, so a plain `.no-js` selector in your module would be renamed
+and stop matching. To target them, wrap them in `:global(...)` and nest the rule
+under your own class so it only affects your component, for example
+`.button :global(.external-svg)`. If the child
+component accepts a `className` prop, you can pass it your own class instead;
+check that your rule is more specific than the child's own styles.
+
 ### Conditional style arrays
 
 The most common pattern in this codebase. Emotion's array syntax becomes composed class names.
@@ -271,11 +317,53 @@ the final inlined `style[amp-custom]` payload and keep the total below AMP's
 hard 75 KB limit. This is an additional AMP requirement; the CSS-minimization
 guidance applies to all editions.
 
-### Consumer-owned style overrides
+### Overrides across component boundaries
 
-When a migrated component needs a consumer-specific default style, keep the shared component's state rules and scope the override to the consumer's DOM context:
+With Emotion, a `className` passed by a parent took precedence over the child's `css` prop. CSS Modules have no equivalent: they scope class names but do not give a React parent automatic precedence, and the order of classes in the HTML does not control the cascade.
+
+Put each override in the stylesheet of the component that renders the child, and give it a selector that wins on specificity. Where that stylesheet sits determines where the override applies:
+
+- **Inside a compound component's part:** the rule applies wherever that part is used, however consumers arrange the parts.
+- **Inside one consumer:** the rule applies only within that consumer.
+
+#### Overrides inside a compound component's part
+
+When a part of a compound component needs to change a shared primitive it renders, pass a locally scoped class through the primitive's `className` prop and express the DOM relationship in the selector. `CallToActionLink.Text` passes `styles.text` to the shared `Text` component, which still sets a default colour with a single Emotion class:
 
 ```scss
+a .text {
+  color: inherit;
+}
+```
+
+`a .text` has specificity `(0,1,1)`, which beats `Text`'s single-class default `(0,1,0)`, so the text inherits the link's colour. This relies on `.Text` being rendered inside `CallToActionLink`, which renders the `<a>`. Consumers can add their own elements in between, because a descendant selector matches at any depth.
+
+#### Overrides inside one consumer
+
+When one consumer needs a different default style for a child, keep the child's state rules and scope the override to a real DOM context: an element the consumer already renders around the child for its own reasons. Exclude pseudo-states the child still owns.
+
+For example, the shared `InlineLink` styles every link state with its own `.self` class:
+
+```scss
+// InlineLink/index.module.scss
+.self {
+  color: theme.$palette-ebon;
+
+  &:visited {
+    color: theme.$palette-metal;
+  }
+
+  &:focus,
+  &:hover {
+    color: theme.$palette-postbox;
+  }
+}
+```
+
+`EmbedError` renders `InlineLink` inside its own layout wrapper, `<div className={styles.errorLinkWrapper}>`, and passes `className={styles.inlineLink}`. To make only the default state black, it names the wrapper and excludes the states `InlineLink` still owns:
+
+```scss
+// EmbedError/index.module.scss
 .errorLinkWrapper {
   .inlineLink:not(:visited):not(:hover):not(:focus) {
     color: theme.$palette-black;
@@ -285,14 +373,45 @@ When a migrated component needs a consumer-specific default style, keep the shar
 }
 ```
 
-Do not assume the order of classes in the HTML or the React parent-child relationship controls the CSS cascade. Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+The override's `(0,5,0)` beats `.self` `(0,1,0)` in the default state. It does not match visited, hover or focus, so `InlineLink`'s `(0,2,0)` state rules still apply there. Without the exclusions, `.errorLinkWrapper .inlineLink` would be `(0,2,0)`, tying with `InlineLink`'s `:visited`, `:hover` and `:focus` rules. Whichever stylesheet loads later would win, so the link could stay black when visited, hovered or focused.
+
+The context can also be an element rendered by the child component, if it carries one of the consumer's own classes. `MessageBanner` passes `ctaStyles.callToActionLink` to `CallToActionLink`, which applies it to the `<a>` around `CallToActionLink.Text`. `MessageBanner` uses that class to make the text black:
+
+```scss
+// MessageBanner/index.module.scss
+.callToActionLink .callToActionLinkText {
+  color: theme.$palette-black;
+}
+```
+
+`(0,2,0)` beats both `Text`'s Emotion default `(0,1,0)` and `CallToActionLink.Text`'s `a .text` `(0,1,1)`.
+
+If there is no real DOM context, use an element-qualified selector when the component always renders the same element (for example `p.copyright`, a `<p>` with class `copyright`). Do not add a wrapper only to manufacture a selector context. Custom properties are appropriate for genuinely configurable component values, but adding a new override variable for every consumer couples the shared component to its consumers.
+
+As a documented last resort, when no meaningful context exists, repeat the class to raise its specificity:
+
+```scss
+// Last resort: no wrapper or fixed element type to qualify the selector.
+.inlineLink.inlineLink {
+  color: theme.$palette-black;
+}
+```
+
+`.inlineLink.inlineLink` matches the same element as `.inlineLink` but has specificity `(0,2,0)`.
+
+#### Rules for both patterns
+
+- **Make the override strictly more specific.** Equal specificity falls back to source order, which differs between canonical, AMP and Lite because stylesheet order and inlining differ by edition.
+- **Compare against every rule that sets the property on that element.** That includes the shared primitive's default and any rules from a compound component's part, not just the style you're replacing. Count classes and elements rather than judging by shape: `span.callToActionLinkText` and `a .text` are both `(0,1,1)`, because the space between parts adds no specificity. An earlier `MessageBanner` override used `span.callToActionLinkText`, which beat `Text`'s default but only tied with `a .text`.
+- **Check every screen width and state the rules cover.** Raising an override's specificity can make it win in places the old one didn't. The on-demand audio page's `button.podcastContinueReadingButton` override beat the button's small-screen width and its forced-colours border, which the Emotion version hadn't. Compare which rule wins before and after at each media query and state, and check in a browser.
+- **Use the smallest specificity that wins.** Every increase sets the bar for any later override of the same element.
 
 ## Step 4: Apply the change
 
 1. Create `index.module.scss` alongside the component, converting each exported style key to a class.
 2. Replace `css={styles.x}` with `className={styles.x}`.
 3. Where an element already has a `className`, combine rather than overwrite.
-4. **Delete the `index.styles.*` file** — never leave both in place.
+4. **Delete the `index.styles.*` file** once the component is fully migrated. A consumer whose override you moved can keep its other Emotion styles for now, but don't define the same style in both its Emotion and SCSS files.
 5. Remove now-unused `@emotion/react` imports and `Theme` type imports.
 
 Class names are camelCase to match the existing style-object keys, so `styles.promoContainer` continues to work unchanged.
@@ -303,15 +422,17 @@ Class names are camelCase to match the existing style-object keys, so `styles.pr
 yarn jest src/app/components/<ComponentName>
 ```
 
-- Only 19 component directories have snapshots. If the component has a `__snapshots__` folder, regenerate with `-u` and review the diff: class-name churn is expected, **structural DOM changes are not**.
+- Find every snapshot that records the component's markup, not just its own `__snapshots__` folder. Integration snapshots under `ws-nextjs-app/integration/pages/` record whole pages. Check what each one captures: some record class names and will change, others only record text and links and won't. Update only the affected snapshots, from a fresh production build, and check the diff only changes class names, **not the markup structure**.
 - Confirm no `@emotion` imports remain in the component: `grep -rn "@emotion" src/app/components/<ComponentName>`
 - Check an RTL service (e.g. `arabic`) and a dark-UI context, since those behaviours move from JS branching into SCSS selectors.
 - `.module.scss` files are mocked with `identity-obj-proxy` in Jest, so `yarn jest` never compiles or validates the SCSS itself — a typo or invalid selector won't fail a test. Catching that relies on the Next.js build (fails on invalid SCSS) and Storybook/Chromatic (catches visually broken output), not on Jest.
+- For overrides across component boundaries, check the result in a browser in the default, hover, focus and visited states. Inheritance can hide a lost override in some states: in `MessageBanner`, the `<a>` is already black by default and on hover and focus, so a tied text override only showed up when the link was visited.
 - For a `data-*` enum, assert the attribute value rather than a generated class. For a compact inline CSS custom-property bridge, assert `element.style.getPropertyValue(...)` against explicit expected values in the `it.each` table; do not repeat the production value-conversion logic in the assertion.
 - Do not use `toHaveStyle` to validate declarations that only come from the mocked `.module.scss` stylesheet. Inline custom properties deliberately emitted by React are different: their values are present in jsdom and can be asserted directly.
 - Run `yarn build` from `ws-nextjs-app` once per PR (not per component). Jest only exercises files that import the component under test, so it won't catch a legacy page elsewhere still importing the deleted `index.styles.*` directly — the build's TypeScript check will.
-- Keep tests focused on observable output with explicit expected values rather than importing production style objects. Distinguish migration regression checks from additional general coverage.
+- Keep tests focused on observable output with explicit expected values rather than importing production style objects. If the component now combines its own class with a consumer's `className`, add a small test for that. Don't change existing behaviour tests to check classes instead. Distinguish migration regression checks from additional general coverage.
 - Run relevant canonical, AMP and Lite integration suites against a fresh production build. Review snapshot updates for expected class/style changes, preserving markup, text and attributes. These checks inspect production-rendered HTML, not computed CSS; browser checks remain necessary for visual behaviour.
+- In the PR description, list the checks you ran, with the exact commands and results, separately from steps for reviewers and checks you didn't run. Call out any agreed visual changes. Passing Jest or compiling the SCSS doesn't show the page looks the same; say so if you haven't checked in a browser.
 
 ## Reference implementations
 

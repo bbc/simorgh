@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation, Lighthouse, & Puppeteer Tests
+name: Simorgh CI - AMP Validation & Lighthouse
 on:
   pull_request:
     branches:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -51,11 +51,3 @@ jobs:
 
       - name: Run Lighthouse
         run: yarn lighthouse
-
-      - name: Run Puppeteer Tests
-        run: |
-          npx puppeteer browsers install chrome
-          sudo apt-get install -y xvfb
-          Xvfb -ac :99 -screen 0 1280x1024x16 2>/dev/null 1>&2 & 
-          export DISPLAY=:99
-          yarn test:puppeteer:local

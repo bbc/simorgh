@@ -21,7 +21,7 @@ const styles = {
           [mq.GROUP_4_MIN_WIDTH]: {
             padding: '0.75rem',
           },
-          svg: {
+          '.external-svg': {
             margin: 0,
             [mq.GROUP_4_MIN_WIDTH]: {
               width: `${spacings.TRIPLE}rem`,
@@ -100,6 +100,7 @@ const styles = {
       padding: 0,
       paddingInlineEnd: `${spacings.HALF}rem`,
       marginInlineStart: `-${spacings.HALF}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
 
@@ -188,9 +189,19 @@ const styles = {
             display: 'flex',
             alignItems: 'center',
             backgroundColor: palette.WHITE,
-            svg: {
+            '.external-svg': {
               position: 'static',
               color: palette.GREY_10,
+              filter: 'none',
+              [mq.FORCED_COLOURS]: {
+                color: 'CanvasText',
+                "@supports not ((mask-image: url('')) or (-webkit-mask-image: url('')))":
+                  {
+                    '@media (prefers-color-scheme: dark)': {
+                      filter: 'invert(1)',
+                    },
+                  },
+              },
             },
             time: {
               margin: 0,

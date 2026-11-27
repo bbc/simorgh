@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Use Node.js (from .nvmrc)
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
 
@@ -142,7 +142,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix['node-version'] }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix['node-version'] }}
 

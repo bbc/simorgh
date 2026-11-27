@@ -13,10 +13,11 @@ import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import TimeStampContainer from '#app/components/TimestampContainer';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import dynamic from 'next/dynamic';
+import timestampStyles from './index.module.scss';
 import StreamVideoPost from './StreamVideoPost';
 import styles from './styles';
 import {
@@ -101,9 +102,12 @@ const PostHeaderBanner = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
-    <span css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}>
+    <span
+      className={timestampStyles.postHeaderBanner}
+      css={[styles.postHeaderBanner, isBreakingNews && styles.fullWidth]}
+    >
       <TimeStampContainer
-        css={styles.timeStamp}
+        className={timestampStyles.timeStamp}
         timestamp={curated}
         dateTimeFormat={postDateTimeFormat || 'DD MMMM YYYY'}
         format={postDateFormat || 'D MMMM YYYY'}

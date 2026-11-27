@@ -6,7 +6,8 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ComponentExperimentProps } from '#app/models/types/global';
-import styles from './index.styles';
+import clsx from 'clsx';
+import styles from './index.module.scss';
 
 export type ContinueReadingButtonProps = {
   showAllContent: boolean;
@@ -71,10 +72,9 @@ const ContinueReadingButton = ({
   return (
     <button
       id="continue-reading-button"
-      css={styles.continueReadingButton}
+      className={clsx(styles.continueReadingButton, className)}
       type="button"
       onClick={handleEvent}
-      className={className}
       data-testid="continue-reading-button"
       {...viewRef}
     >
