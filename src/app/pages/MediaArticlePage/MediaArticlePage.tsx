@@ -15,6 +15,7 @@ import {
 import { MediaOverrides } from '#app/models/types/media';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import SaveArticleButton from '#app/components/SaveArticleButton';
+import MapRegistrationBannerExperiment from '#app/components/Account/MapRegistrationBannerExperiment';
 import extractSaveArticleProps from '#app/lib/utilities/extractSaveArticleProps';
 import useToggle from '../../hooks/useToggle';
 import {
@@ -278,6 +279,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
+      <MapRegistrationBannerExperiment taggings={taggings} />
       <ATIAnalytics />
       <ChartbeatAnalytics
         categoryName={pageData?.metadata?.passport?.category?.categoryName}

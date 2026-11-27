@@ -1,5 +1,7 @@
 import { PageTypes, Services } from '#app/models/types/global';
+import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME } from '#app/components/Account/AccountPromotionalBannerHomePageExperiment';
+import { MAP_REGISTRATION_EXPERIMENT_NAME } from '#app/components/Account/MapRegistrationBannerExperiment/config';
 import { LIVE_PAGE_PROMO_EXPERIMENT_NAME } from '#app/components/LivePagePromoExperiment/config';
 
 /* 
@@ -38,6 +40,13 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
     name: HOMEPAGE_ACCOUNT_PROMO_BANNER_EXPERIMENT_NAME,
     services: ['hindi'],
     pageTypes: ['home'],
+  },
+  {
+    name: MAP_REGISTRATION_EXPERIMENT_NAME,
+    services: ['hindi'],
+    // Before page data identifies a media article, its URL defaults to
+    // ARTICLE_PAGE; an upstream page-type header can specify MEDIA_ARTICLE_PAGE.
+    pageTypes: [ARTICLE_PAGE, MEDIA_ARTICLE_PAGE],
   },
   {
     name: LIVE_PAGE_PROMO_EXPERIMENT_NAME,
