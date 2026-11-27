@@ -10,7 +10,7 @@ This page covers **how the migration is being sequenced**. For the styling rules
 
 ## Scope
 
-This programme covers `src/app/components/**` only. Components under `src/app/legacy/**` — including `containers/` and `psammead/` — are explicitly out of scope for now, as is page-level styling in `ws-nextjs-app/pages` (for example `live/[id]`, `av-embeds`, `my-news`).
+This programme covers `src/app/components/**` only. Components under `src/app/legacy/**` — including `containers/` and `psammead/` — are explicitly out of scope for now, as is page-level styling in `ws-nextjs-app/pages` (for example `live/[id]`, `av-embeds`, `my-news`). Consumer-owned overrides may still need to move with a component migration to preserve its styling contract.
 
 Legacy components need modernisation *and* a styling change. Converting them to SCSS Modules now would invest effort in code that may later be removed or rewritten. They are handled after the modern set, and each one gets one of three decisions:
 
@@ -24,21 +24,31 @@ This programme is complete when `src/app/components` contains no imports from `@
 
 ## Current status
 
-The initial batch and the revised early sequence are complete. As of 19 November 2026, `latest` contains:
+The initial batch and revised early sequence are complete on `latest`. This includes `Spinner`, `VisuallyHiddenText`, `LiveText`, `Footer/Link`, `Curation/CurationMessageBanner`, and `CallToActionLink` and its sub-components, as well as the earlier components listed below.
 
-- 38 `index.module.scss` files under `src/app/components`.
-- 68 remaining `index.styles.*` files under `src/app/components`.
-- Production components using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, `EmbedError`, `Spinner`, `VisuallyHiddenText`, `LiveText`, `Footer/Link`, `Curation/CurationMessageBanner`, and `CallToActionLink` and its `Text`, `Chevron`, and `ButtonLikeWrapper` subcomponents.
+- Other production components using SCSS Modules include `Copyright`, `ReadTime`, `InlineLink`, and `EmbedError`.
 - Other components using SCSS Modules include `ArticleLinksBlock` and its `Promo`/`PromoList` children, `Curation/Subhead`, `SaveButton`, `FollowTopicButton`, `ActionTooltip`, `EpisodeDescriptionFormatter`, and the `GooglePreferredSource` link and divider components.
 - `Example/index.module.scss` is a reference implementation rather than a production migration.
 
-The CTA migration also moved consumer-owned CTA styles to SCSS Modules in `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary`, and `MessageBanner`. These consumers still have Emotion styles and are not fully migrated. The `ArticleHeadline` and downloads page consumers were updated outside this programme's component scope.
+The shared SCSS setup is done: `ThemeProviderSCSSModules`, the shared tokens and mixins, and a theme for every service. The remaining work is converting components.
 
-These file counts are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion usage can exist without an `index.styles.*` file. Remaining work includes removing Emotion from those components and addressing the legacy-coupled and AMP/Lite cases described below.
+The `CallToActionLink` migration also moved the CTA styles owned by `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary`, and `MessageBanner` into SCSS Modules, but those consumers still use Emotion for other elements. The `ArticleHeadline` and downloads page consumers were updated outside this programme's component scope.
+
+Counts of style files are an inventory rather than a count of fully migrated components: some components use both styling approaches, and Emotion can also be used without an `index.styles.*` file.
+
+As of 27 November 2026, three independently reviewable migrations are open against `latest` and are **not yet merged**:
+
+| Component | PR | Review and validation focus |
+|---|---|---|
+| `ContinueReadingButton` | [#14722](https://github.com/bbc/simorgh/pull/14722) | Consumer class composition, podcast override and forced-colours outline. The PR proposes a full-width podcast button at small widths as a separate visible bug fix; review it explicitly. |
+| `Embeds/EmbedImages` | [#14723](https://github.com/bbc/simorgh/pull/14723) | Responsive padding, canonical and AMP images, Lite null rendering, and the updated pidgin integration snapshots. |
+| `TopicTags` | [#14724](https://github.com/bbc/simorgh/pull/14724) | Responsive typography, interaction and dark UI states, RTL, and single/multiple-tag layouts. |
+
+All reported PR checks passed when checked on 27 November, but passing checks do not replace browser-level computed-style and AMP/Lite payload verification. Recheck PR state and checks before treating any migration as complete.
 
 ## Lessons from migrations
 
-The first component migrations happened in [PR #14371](https://github.com/bbc/simorgh/pull/14371), which was merged into [PR #14332](https://github.com/bbc/simorgh/pull/14332) before that work reached `latest`. [PR #14410](https://github.com/bbc/simorgh/pull/14410) then followed up on the typography API and documentation. Subsequent migrations reinforced the importance of consumer audits, visual checks, and AMP/Lite measurement.
+The first component migrations happened in [PR #14371](https://github.com/bbc/simorgh/pull/14371), which was merged into [PR #14332](https://github.com/bbc/simorgh/pull/14332) before that work reached `latest`. [PR #14410](https://github.com/bbc/simorgh/pull/14410) then followed up on the typography API and documentation. Later migrations showed again how important consumer audits, visual checks and AMP/Lite measurement are.
 
 ### Audit consumers before deleting Emotion styles
 
@@ -73,11 +83,36 @@ Snapshots are useful for structural changes, but they are not a substitute for c
 
 Preserve existing behaviour and public APIs; justify API or typing changes separately using actual consumer needs. Test observable output with explicit expected values rather than importing production style objects, and distinguish migration regression checks from additional general coverage.
 
-Use a separate branch or worktree for each independently reviewable PR. Keep a shared component and the consumer changes needed to preserve its styling together, with small commits where useful for review. Avoid overlapping parallel migrations when they touch the same consumer or styling contract.
+Keep shared components and the consumer overrides needed to preserve them in the same reviewable PR, even if a consumer is outside the programme's normal scope. Small commits can make the component and consumer changes easier to review. Preserve useful comments explaining non-obvious accessibility or compatibility decisions.
 
-For partially migrated consumers, put consumer-owned styles in the component's existing `index.module.scss`, or create one alongside `index.tsx`; add the remaining styles there when the consumer is fully migrated. The consumer may temporarily retain its Emotion styles for unrelated elements. Use an appropriately named module for components whose entry point is not `index`.
+When a consumer is only partly migrated, put the styles it owns in its existing `index.module.scss`, or create one next to its `index.tsx`. Add its remaining styles there when it is fully migrated; until then it can keep Emotion styles for other elements. If the component's entry file isn't `index`, name the module after that file instead.
 
-Compare Emotion and SCSS declarations and rendered results carefully: unit conversions such as `px` to `rem` can change behaviour when the root font size differs, and equal-specificity rules can resolve differently across Emotion and SCSS. For `CurationMessageBanner`, a heading colour override needed sufficient specificity to win over the shared `Text` style. Check computed styles in representative stories and pages rather than assuming a visual diff is a Storybook issue.
+Compare the Emotion and SCSS declarations, and the rendered result, rather than assuming they match:
+
+- Converting `px` to `rem` changes the size when the root font size isn't 16px.
+- When two rules have the same specificity, Emotion and SCSS can load them in a different order, so a different rule may win. For example, the `CurationMessageBanner` heading colour needed a more specific selector to override the shared `Text` colour.
+- If Storybook looks different, check the computed styles in stories and on real pages before putting it down to a Storybook problem.
+
+In `ContinueReadingButton`, the podcast override's increased specificity affects the small-screen width and forced-colours border. The proposed width fix needs explicit review, and the full high-contrast outline needs browser verification.
+
+### Check browser support and emitted CSS
+
+The Next.js PostCSS configuration used in this batch left `padding-inline` and `margin-inline` unchanged. The `EmbedImages` and `TopicTags` PRs use equal physical left/right values as a compatibility exception for the original symmetric spacing on older browsers, including Opera Mini. Review the exception and verify the affected browsers; it is not a blanket replacement for direction-aware logical properties.
+
+Enabling `postcss-preset-env`'s logical-properties plugin (stage 2) would convert these shorthands repository-wide, but it also rewrites start/end properties into `[dir]`-scoped or `:dir()` rules. The `[dir]` form raises specificity, and Opera Mini doesn't support `:dir()`. Don't enable it without testing RTL, specificity and cascade order in canonical, AMP and Lite output.
+
+See the migration skill's [logical properties and browser support](../.github/skills/migrate-component-to-scss-modules/SKILL.md#logical-properties-and-browser-support) section for the conversion checks.
+
+### Validate the actual contract
+
+Jest's SCSS mock confirms class wiring, not that an override wins or that forced colours and responsive layout render correctly.
+
+A component's own `__snapshots__` folder isn't the only place its markup is recorded. Integration snapshots under `ws-nextjs-app/integration/pages/` capture production-rendered pages, which can include the component. Search the integration suites for where the component's markup is captured, and check what each snapshot records, before deciding whether to update it:
+
+- `EmbedImages` has no snapshots of its own, but the pidgin article integration snapshots (`integration/pages/articles/pidginEmbedImages/`) recorded its wrapper's Emotion class. The canonical and AMP snapshots needed regenerating; only the class name changed.
+- `TopicTags` appears in integration tests through the shared helper `integration/common/topicTags.ts`, which only snapshots each link's text and `href`. The migration didn't change those, so no update was needed.
+
+The migration skill's [verification steps](../.github/skills/migrate-component-to-scss-modules/SKILL.md#step-5-verify) cover each component PR. Measuring representative AMP/Lite CSS payloads and checking combined visual and cascade effects are batch-level checks. Run them once a batch's PRs come together (see [Ongoing guardrails](#ongoing-guardrails)), because no single component PR covers them.
 
 ### Order by contract risk, not only style size
 
@@ -87,16 +122,16 @@ The first batch was small by style-line count, but `InlineLink` was a shared pri
 
 The CSS payload investigation found that the SCSS theme adds a fixed cost to AMP/Lite, where CSS is inlined and subject to AMP's 75 KB limit. Measure representative production pages after each meaningful batch and do not introduce CSS reordering optimisations without browser-level computed-style comparisons. A media-query compaction experiment saved bytes but produced real cascade regressions when elements carried multiple generated classes.
 
-The existing `amp:validate` check includes the large Russian article fixture (`c6wyzl2xdyz2o`). A previous measurement was 68,169 bytes locally against 69,116 bytes on the live page; measure again on the current build rather than treating those historical figures as the current baseline. `amphtml-validator` fails with `STYLESHEET_TOO_LONG` above the 75,000-byte limit. This is a representative canary, not necessarily the page with the largest CSS: CSS varies by service, page composition, feature flags, and rendered components. Keep multiple service/page fixtures and preserve headroom rather than trying to discover one definitive maximum.
+The `amp:validate` check includes a large Russian article (`c6wyzl2xdyz2o`) as an early warning. Its AMP CSS was previously measured at 68,169 bytes locally and 69,116 bytes on the live page; those figures are out of date, so measure again on the current build. `amphtml-validator` fails with `STYLESHEET_TOO_LONG` if a page's CSS goes over 75,000 bytes. This article isn't necessarily the page with the most CSS, because CSS varies by service, page layout, feature toggles and which components render. Keep checking several services and page types, and leave room below the limit, rather than relying on one page.
 
-Static SCSS imports can add CSS even when a component renders nothing, unlike Emotion's render-dependent styles. The AMP/Lite CSS-module rule pruning added in [PR #14585](https://github.com/bbc/simorgh/pull/14585) removes selectors requiring module classes absent from rendered HTML and substantially reduced the CTA migration's CSS impact. Continue to measure actual production output: the optimisation is not a substitute for checking the budget, and classes added only after the initial render need particular care because their rules may be pruned.
+SCSS imports are static, so a component's CSS can be included even when it renders nothing; Emotion only added styles for components that rendered. [PR #14585](https://github.com/bbc/simorgh/pull/14585) removes AMP/Lite rules for module classes that don't appear in the rendered HTML, which greatly reduced the CSS added by the CTA migration. Keep measuring the real output, because this doesn't replace checking the budget. Take particular care with classes added after the first render, because their rules may have been removed.
 
 ## Batching principles
 
 Work is submitted in small PRs so review stays tractable.
 
 - **Size by style-line count, not component count.** Three 20-line components is a very different review from three 250-line ones. Roughly 150 lines of style per PR keeps review effort consistent.
-- **Delete the `index.styles.*` file when fully migrating a component.** A partially migrated consumer can temporarily retain Emotion styles alongside an SCSS Module, with each style owned in one place.
+- **Delete the `index.styles.*` file once a component is fully migrated.** If you only move a consumer's override for the component you're migrating, the consumer can keep its other Emotion styles for now. Don't define the same style in both places.
 - **Order by risk**, using the four axes below.
 
 ### Risk axes
@@ -150,41 +185,30 @@ imports its localised ISO-duration formatter from `#app/lib/utilities/timestamp`
 
 ## Revised sequence
 
-The original batches grouped components by approximate size and cohesion. The first migration showed that the more important measure is the contract surface: consumer count, runtime props, accessibility behaviour, theme/service inputs, pseudo-states, and dependencies on other Emotion components. This revised early sequence has now been completed:
+The original batches grouped components by approximate size and cohesion. The first migration showed that the more important measure is the contract surface: consumer count, runtime props, accessibility behaviour, theme/service inputs, pseudo-states, and dependencies on other Emotion components. This revised sequence is now complete:
 
 | Order | Scope | Merged PR | Reason for the revised order |
 |---|---|---|---|
-| 1 | `Spinner` | [#14496](https://github.com/bbc/simorgh/pull/14496) | Small visual contract with a focused class-composition check on the underlying icon. |
-| 2 | `VisuallyHiddenText` | [#14497](https://github.com/bbc/simorgh/pull/14497) | High fan-out primitive requiring its own PR and accessibility verification. |
-| 3 | `LiveText` | [#14505](https://github.com/bbc/simorgh/pull/14505) | Combines service translations, direction, screen-reader behaviour, and live-label typography. |
-| 4 | `Footer/Link` | [#14524](https://github.com/bbc/simorgh/pull/14524) | Combines runtime visibility, dynamic display, focus inversion, hover/focus states, and a consumer in `ActionTooltip`. |
-| 5 | `Curation/CurationMessageBanner` | [#14527](https://github.com/bbc/simorgh/pull/14527) | Required understanding its styling boundaries with `Heading`, `Text`, and `MessageBanner`. |
-| 6 | `CallToActionLink` and its sub-components | [#14611](https://github.com/bbc/simorgh/pull/14611) | A dedicated higher-risk PR covering the family and its consumer overrides. |
+| 1 | `Spinner` | [#14496](https://github.com/bbc/simorgh/pull/14496) | Few styles; the main check was that its class combines with the icon's own class. |
+| 2 | `VisuallyHiddenText` | [#14497](https://github.com/bbc/simorgh/pull/14497) | Simple styles but used in about 200 places, so it got its own PR and accessibility checks. |
+| 3 | `LiveText` | [#14505](https://github.com/bbc/simorgh/pull/14505) | Depends on translations, text direction, screen-reader text and live-label typography. |
+| 4 | `Footer/Link` | [#14524](https://github.com/bbc/simorgh/pull/14524) | Shown or hidden at runtime, has inverted focus styles, and `ActionTooltip` overrides it. |
+| 5 | `Curation/CurationMessageBanner` | [#14527](https://github.com/bbc/simorgh/pull/14527) | Needed agreement on which styles it owns and which belong to `Heading`, `Text` and `MessageBanner`. |
+| 6 | `CallToActionLink` and its sub-components | [#14611](https://github.com/bbc/simorgh/pull/14611) | Higher risk, so it got its own PR covering the link, its sub-components and the consumers that override them. |
 
-## Next migration candidates
+## Next steps
 
-These are candidates from a review of the current tree, not commitments or an exhaustive dependency audit. Recheck the latest branch, consumers and open work before starting. Keep each PR focused; group components only when their contracts and review size make that appropriate.
-
-| Priority | Candidate | Why and what to verify |
-|---|---|---|
-| 1 | `Embeds/EmbedImages` | A small wrapper style with existing tests and a story. Used by article and media article pages; preserve responsive horizontal padding and bottom margin, canonical and AMP image selection, and the Lite null rendering. Check the existing embed-image integration coverage and production CSS across breakpoints. |
-| 2 | `ContinueReadingButton` | A contained component with tests, but a broader behaviour contract than its style size suggests. Preserve consumer `className`, translated text, tracking, keyboard focus, responsive visibility, no-JS/Opera Mini hiding, forced colours and hover/focus states. It is used by article and on-demand audio pages; verify representative pages and viewports. |
-| 3 | `TopicTags` | Has tests and stories, but needs responsive typography, light/dark colours, interaction states, 44px minimum link height and single/multiple-tag layouts preserved. Check related-topics and My News consumers, including service/variant URLs and tracking, before selecting it for its own PR. |
-| Later, coordinated | `LiveLabel` and `LivePulse` | Related to the already migrated `LiveText`, but not a simple independent pair: `LiveLabel` supplies Emotion sizing to `LivePulse`, and Billboard and the live-page header also supply their own pulse overrides. Audit these and other consumers together; preserve first-promo and responsive sizing, dark UI colours, reduced-motion animation, translations and screen-reader output. Include dependent consumer updates in the same reviewable PR or agree a safe compatibility approach. |
-| Later, dedicated | `BulletedList` | Shared with legacy containers and has runtime bullet shape/colour and dark UI behaviour in addition to typography. Audit all consumers and preserve custom class names, ref and list semantics before deciding its migration scope. |
-
-Partially converted CTA consumers are also candidates for focused follow-up PRs. Preserve the existing SCSS overrides while moving their remaining Emotion styles, and reassess the blocked and deferred components as their dependencies change.
+1. **Review the three open PRs** listed above. Before merging, check they're still up to date with `latest` and other open work, check them in a browser, and measure AMP/Lite CSS on representative pages.
+2. **Finish partly migrated consumers.** `AccountActionButtons`, `Embeds/Uploader`, `LiteSiteSummary` and `MessageBanner` use SCSS for some elements but still use Emotion for others. Each can be a small follow-up PR; keep the SCSS they already have.
+3. **Plan `LiveLabel` and `LivePulse` together.** `LiveLabel` sets the pulse's size, and Billboard and the live-page header override it too, so they need checking as one piece of work. Keep reduced-motion behaviour, dark UI, translations and screen-reader text working.
+4. **Give `BulletedList` its own PR.** Check its legacy consumers first. It sets bullet shape and colour from props and has dark UI styles, and its class names, `ref` and list semantics must keep working.
+5. **Check `latest` and open PRs before picking the next components.** This list is a starting point, not a commitment, and doesn't cover every dependency.
 
 ### Coordinating parallel migrations
 
-`EmbedImages`, `ContinueReadingButton`, and `TopicTags` are provisional candidates for parallel implementation: their component files are distinct, but their consumers and validation can overlap. Use a parent agent to coordinate, subject to the available agent and worktree tooling:
+When migrating several components at once, give each its own branch (or worktree) from the same starting commit, so each becomes its own PR. Check which consumers the components share before starting. If two migrations need to change the same file, stop and agree who makes the change. Review each PR on its own, then check the pages where they appear together once they're combined.
 
-1. Recheck `latest`, open work, and consumer dependencies. Create a separate branch and worktree from the same base for each candidate, and assign clear ownership. Keep changes and draft PRs isolated for review; do not combine work merely because it was done in parallel.
-2. Ask each agent to audit consumers, migrate its assigned component, run focused tests, and report changed files, validation results, risks, and any shared-file changes. Stop and coordinate if an unexpected dependency or overlapping edit makes independent work unsafe.
-3. Coordinate production builds, integration snapshots, and browser checks. `EmbedImages` and `ContinueReadingButton` both appear on article pages, so rendered output or snapshots can overlap. The root integration runner stops and starts an app on port 7081: run it sequentially unless ports, server processes, build outputs, and snapshot writes are genuinely isolated.
-4. Review each diff and its snapshots separately, then check representative combined CSS and cascade effects when changes come together. Verify AMP/Lite output against the guardrails below; passing unit tests alone does not establish visual parity.
-
-Keep `LiveLabel` and `LivePulse` together as a later coordinated workstream because they share styling contracts and have external overrides. Treat `BulletedList` as a separate, higher-risk candidate after its legacy consumers have been audited.
+For example, `EmbedImages` and `ContinueReadingButton` are in separate files but both render on article pages, so their integration snapshots can overlap. The integration test runner (`yarn test:integration` from the repository root) stops whatever is running on port 7081, builds the app and starts it there. The command with the same name in `ws-nextjs-app` only runs Jest, and needs an app already running. Run it for one migration at a time, and check nothing else you need is using port 7081 first, because the runner will stop it.
 
 ## Ongoing guardrails
 
@@ -199,11 +223,11 @@ Migrations are largely done by AI. Two files tell it how:
 - `.github/instructions/styling-standards.instructions.md` — the styling rules, applied automatically whenever a file in `src/app/components` is edited.
 - `.github/skills/migrate-component-to-scss-modules/SKILL.md` — the step-by-step conversion process, including the Emotion-to-SCSS value lookup and the checks listed above.
 
-This page is planning guidance for engineers; include it in the request or ask the agent to read it when starting a migration. The styling instructions and migration skill provide the implementation guidance.
+Those two files guide how each component is migrated. Use this page to plan which components to migrate, and in what order. The AI doesn't read this page automatically, so include it in your request or ask the agent to read it when starting a migration.
 
 ## Verifying a batch
 
-1. Run the component's tests. Regenerate snapshots only where the component has a `__snapshots__` folder, and review the diff — class-name churn is expected, structural DOM changes are not.
-2. Confirm no `@emotion` imports remain in the migrated component.
-3. Check an RTL service (for example `arabic`) and a dark UI context. Those two behaviours move out of JavaScript branching and into SCSS selectors, so they are the most likely regressions.
-4. Run relevant integration tests against a production build. From the repository root, `yarn test:integration` builds and starts the app before running the suite; the command with the same name in `ws-nextjs-app` runs Jest only and requires a running app. The root runner invokes `yarn stop`, so check for an existing server before running it. Review and update integration snapshots where the migration intentionally changes production class names; do not assume snapshots validate visual styles.
+1. Run the tests for each migrated component and for the components and pages that use it. Find any integration snapshots that record their markup, update only those, and check the diff only changes class names.
+2. Check that fully migrated components have no Emotion imports or `css` props left, and that no consumer still passes them a `css` override or imports their deleted `index.styles.*` file.
+3. Build the app and check the result in a browser: a few services including a right-to-left one (for example `arabic`), dark UI, a range of screen widths, hover, focus and forced colours, and AMP/Lite pages where the component appears there.
+4. Measure AMP/Lite CSS size on a few representative pages. In each PR, list which checks were run, which weren't, and any intended visual changes.
