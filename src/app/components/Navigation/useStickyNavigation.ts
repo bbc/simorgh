@@ -10,6 +10,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import subscribeToMediaQuery from '#hooks/useMediaQuery/subscribeToMediaQuery';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
+  FOCUSABLE_ITEMS_SELECTOR,
   STICKY_MIN_VIEWPORT_HEIGHT,
   STICKY_NAV_ARTICLE_START_SELECTOR,
   STICKY_NAV_EXIT_BUFFER_PX,
@@ -21,12 +22,13 @@ import {
 // Resizing fires in bursts, and only the bar's measured height can change as
 // a result, so the work is deferred until the burst has settled.
 const RESIZE_DEBOUNCE_MS = 150;
-// Tabbing forward can make the browser nudge the viewport by a pixel or two,
-// in either direction, to reveal the newly focused element, which looks
-// identical to a deliberate scroll. Scroll position changes are ignored for
-// this long after a forward Tab so that the bar isn't dragged into view, or
-// swept away mid-use, by the browser's own correction.
-const FORWARD_TAB_SCROLL_SUPPRESSION_MS = 400;
+// tabbing forward can make the browser nudge the viewport by a pixel or two
+// in either direction to reveal the focused element, which looks identical
+// to a deliberate scroll
+// assistive technology can cause the same corrections without a tab event
+// keep the pinned position briefly while focus settles so the bar is not
+// swept away mid-use by the browser's own scrolling
+const FOCUS_SCROLL_SUPPRESSION_MS = 400;
 
 // Every one of these has to hold before the bar is allowed to pin. Some
 // qualify the viewport by matching ("wide enough to fit the bar"), others by
@@ -116,6 +118,7 @@ const useStickyNavigation = ({
   const [{ shouldBePinned, shouldBeVisible, height }, setScrollState] =
     useState(INITIAL_SCROLL_STATE);
   const [phase, setPhase] = useState<StickyPhase>('idle');
+  const isVisibleRef = useLatestRef(phase === 'onScreen');
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
   const navSlotRef = useRef<HTMLDivElement>(null);
@@ -124,8 +127,8 @@ const useStickyNavigation = ({
   const secondaryScrollRef = useRef<HTMLDivElement>(null);
   const isOpenRef = useLatestRef(isOpen);
   const closeMenuRef = useLatestRef(closeMenu);
-  // Timestamp until which a scroll position change should not count as the
-  // reader deliberately scrolling. See FORWARD_TAB_SCROLL_SUPPRESSION_MS.
+  // timestamp until which leaving the pinned position is delayed while
+  // focus settles after the browser scrolls its target into view
   const suppressScrollUntilRef = useRef(0);
 
   // ---------------------------------------------------------------------
@@ -175,6 +178,7 @@ const useStickyNavigation = ({
 
   useEffect(() => {
     setScrollState(INITIAL_SCROLL_STATE);
+    suppressScrollUntilRef.current = 0;
     if (!isEnabled) return undefined;
 
     // Cached DOM reads. Measuring these on every frame would force the
@@ -190,6 +194,8 @@ const useStickyNavigation = ({
       isPinned: false,
       isVisible: false,
       downwardScrollStartY: null as number | null,
+      isNavigatingByFocus: false,
+      deliberateScrollUntil: 0,
     };
     // Outstanding scheduled work, cancelled on teardown.
     const pending = {
@@ -223,18 +229,21 @@ const useStickyNavigation = ({
 
       const { scrollY } = window;
       const previousScrollY = tracking.lastScrollY;
-      // See FORWARD_TAB_SCROLL_SUPPRESSION_MS: a forward Tab can make the
-      // browser nudge the viewport by a pixel or two, in either direction,
-      // to reveal the newly focused element. That nudge looks identical to
-      // a deliberate scroll, so both the entry check below and the exit
-      // check further down ignore scroll position changes for this long
-      // after a forward Tab.
-      const isWithinForwardTabSuppression =
-        Date.now() < suppressScrollUntilRef.current;
+      const now = Date.now();
+      const hasScrolled = scrollY !== previousScrollY;
+      const isDeliberateScroll = now < tracking.deliberateScrollUntil;
+      // keep a continuous scroll gesture deliberate through its momentum
+      if (hasScrolled && isDeliberateScroll) {
+        tracking.deliberateScrollUntil = now + FOCUS_SCROLL_SUPPRESSION_MS;
+      }
+      // voiceover can move the viewport at the end of a region without
+      // another focus event, so ignore direction changes until the reader
+      // deliberately scrolls again
+      const isWithinFocusSuppression = now < suppressScrollUntilRef.current;
       const isScrollingUp =
-        scrollY < previousScrollY && !isWithinForwardTabSuppression;
+        scrollY < previousScrollY && !tracking.isNavigatingByFocus;
       const isScrollingDown =
-        scrollY > previousScrollY && !isWithinForwardTabSuppression;
+        scrollY > previousScrollY && !tracking.isNavigatingByFocus;
       tracking.lastScrollY = scrollY;
 
       if (isScrollingUp) {
@@ -256,17 +265,46 @@ const useStickyNavigation = ({
       // goes away. See STICKY_NAV_EXIT_BUFFER_PX.
       const isPastExitPoint =
         anchorTop !== null && anchorTop <= STICKY_NAV_EXIT_BUFFER_PX;
-      // The normal navigation must be restored at the top of the page even
-      // when the article starts less than the exit buffer below the header.
-      // Otherwise the bar can remain pinned over the header indefinitely.
+      // restore normal navigation at the page top even when the article
+      // starts less than the exit buffer below the header
+      // keep the focused bar available until focus leaves or the reader
+      // deliberately scrolls, rather than hiding its controls mid-use
       const isAtPageTop = scrollY <= 0;
-      // Tabbing through an open dropdown's items is the main place an
-      // incidental nudge (see above) could cross the exit threshold and
-      // sweep the dropdown away mid-use, so a pinned bar also stays pinned
-      // for the suppression window regardless of what the exit check says.
-      const isPinned = tracking.isPinned
-        ? (!isAtPageTop && isPastExitPoint) || isWithinForwardTabSuppression
-        : isPastEntryPoint && isScrollingUp;
+      // reading an open dropdown can nudge the viewport across the exit
+      // threshold, so keep focused navigation pinned until deliberate
+      // scrolling resumes or focus leaves it
+      // the short suppression window also lets focus settle before returning
+      // to the normal navigation at the page top
+      const shouldKeepFocusedNavigationVisible =
+        isVisibleRef.current &&
+        (isWithinFocusSuppression ||
+          (tracking.isNavigatingByFocus &&
+            navRef.current.contains(document.activeElement)));
+      const isPinned =
+        shouldKeepFocusedNavigationVisible ||
+        (tracking.isPinned
+          ? (!isAtPageTop && isPastExitPoint) || isWithinFocusSuppression
+          : isPastEntryPoint && isScrollingUp);
+
+      // safari can commit a scroll before it reports focus on the bar
+      // allow the existing focus window before making its controls inert
+      // only a new scroll starts this wait so it expires if focus never arrives
+      if (
+        tracking.isVisible &&
+        isVisibleRef.current &&
+        !isPinned &&
+        hasScrolled &&
+        !isDeliberateScroll
+      ) {
+        suppressScrollUntilRef.current = now + FOCUS_SCROLL_SUPPRESSION_MS;
+        window.clearTimeout(pending.suppressionRecheckTimeout);
+        pending.suppressionRecheckTimeout = window.setTimeout(() => {
+          if (pending.animationFrame === null) {
+            pending.animationFrame = window.requestAnimationFrame(update);
+          }
+        }, FOCUS_SCROLL_SUPPRESSION_MS);
+        return;
+      }
 
       if (tracking.isPinned && !isPinned) closeMenuRef.current();
       tracking.isPinned = isPinned;
@@ -277,13 +315,20 @@ const useStickyNavigation = ({
           STICKY_NAV_HIDE_SCROLL_DISTANCE_PX;
       const isVisible =
         isPinned &&
-        (isScrollingUp || (tracking.isVisible && !hasPassedHideDistance));
+        (shouldKeepFocusedNavigationVisible ||
+          isScrollingUp ||
+          (tracking.isVisible && !hasPassedHideDistance));
 
       // The original and sticky navigation share the same menu state. If the
       // original navigation was left open, close it before the sticky copy
       // appears. This keeps the sticky dropdown closed until its own button
       // is clicked, while still allowing that button to open it afterwards.
-      if (!tracking.isVisible && isVisible && isOpenRef.current) {
+      if (
+        !tracking.isVisible &&
+        isVisible &&
+        !shouldKeepFocusedNavigationVisible &&
+        isOpenRef.current
+      ) {
         closeMenuRef.current();
       }
 
@@ -333,24 +378,126 @@ const useStickyNavigation = ({
       );
     };
 
-    // A forward Tab can carry focus somewhere the suppression window's
-    // incidental-nudge allowance was never meant to cover — such as out of
-    // the dropdown and onto an element back at the top of the page, which
-    // the browser then deliberately scrolls fully into view. That's a
-    // genuine scroll, not a pixel-or-two correction, so once the window
-    // that was ignoring it elapses, the bar is re-checked against wherever
-    // the scroll actually ended up. Without this, a Tab press that is the
-    // last scroll event to fire leaves the bar stuck in whatever state the
-    // suppression forced it into, since nothing else would ever ask again.
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab' || event.shiftKey) return;
-      suppressScrollUntilRef.current =
-        Date.now() + FORWARD_TAB_SCROLL_SUPPRESSION_MS;
+    // a forward tab or assistive technology focus change can move out of
+    // the dropdown and back to the page top, where the browser scrolls the
+    // target fully into view rather than making a small correction
+    // once the suppression window expires, recheck the actual scroll position
+    // so the navigation can return to the normal document flow
+    // this recheck must run even if no further scroll event arrives, otherwise
+    // the bar can stay stuck in the state forced by the suppression window
+    const suppressFocusScroll = () => {
+      tracking.isNavigatingByFocus = true;
+      tracking.downwardScrollStartY = null;
+      suppressScrollUntilRef.current = Date.now() + FOCUS_SCROLL_SUPPRESSION_MS;
       window.clearTimeout(pending.suppressionRecheckTimeout);
       pending.suppressionRecheckTimeout = window.setTimeout(
         scheduleUpdate,
-        FORWARD_TAB_SCROLL_SUPPRESSION_MS,
+        FOCUS_SCROLL_SUPPRESSION_MS,
       );
+    };
+
+    const clearScrollSuppression = () => {
+      tracking.isNavigatingByFocus = false;
+      tracking.deliberateScrollUntil = Date.now() + FOCUS_SCROLL_SUPPRESSION_MS;
+      suppressScrollUntilRef.current = 0;
+      window.clearTimeout(pending.suppressionRecheckTimeout);
+      scheduleUpdate();
+    };
+
+    // preserve the existing behaviour of revealing the bar when tabbing
+    // backwards, while also protecting focus changes that have no tab event
+    let isBackwardTab = false;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      isBackwardTab = false;
+      if (
+        event.key !== 'Tab' ||
+        event.defaultPrevented ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey
+      ) {
+        return;
+      }
+      isBackwardTab = event.shiftKey;
+      if (isBackwardTab) clearScrollSuppression();
+      else suppressFocusScroll();
+    };
+    const handleScrollKeyDown = (event: KeyboardEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.altKey ||
+        (event.ctrlKey && !['Home', 'End'].includes(event.key)) ||
+        (event.metaKey && !['ArrowUp', 'ArrowDown'].includes(event.key)) ||
+        (event.shiftKey && event.key !== ' ') ||
+        ![
+          'ArrowUp',
+          'ArrowDown',
+          'PageUp',
+          'PageDown',
+          'Home',
+          'End',
+          ' ',
+        ].includes(event.key)
+      ) {
+        return;
+      }
+      const { target } = event;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest('input, textarea, select') ||
+          (event.key === ' ' && target.closest('button, [role="button"]')))
+      ) {
+        return;
+      }
+      clearScrollSuppression();
+    };
+    const handleFocusIn = () => {
+      if (!isBackwardTab || navRef.current?.contains(document.activeElement)) {
+        suppressFocusScroll();
+      }
+      isBackwardTab = false;
+      scheduleUpdate();
+    };
+    let touchStart: { x: number; y: number } | undefined;
+    const handleTouchStart = ({ touches }: TouchEvent) => {
+      const [touch] = touches;
+      touchStart = touch ? { x: touch.clientX, y: touch.clientY } : undefined;
+    };
+    // a deliberate gesture must still scroll normally immediately after
+    // focusing a control, such as clicking the menu button
+    const handlePointerScroll = (event: Event) => {
+      const isInsideNavigation =
+        event.target instanceof Node && navRef.current?.contains(event.target);
+      if (
+        event.defaultPrevented ||
+        (event.type === 'pointerdown' && isInsideNavigation)
+      ) {
+        return;
+      }
+      // horizontal gestures in the navigation rows must not unpin the bar
+      if (event.type === 'wheel') {
+        const { deltaX, deltaY } = event as WheelEvent;
+        if (
+          deltaY === 0 ||
+          (isInsideNavigation && Math.abs(deltaX) > Math.abs(deltaY))
+        ) {
+          return;
+        }
+      }
+      if (event.type === 'touchmove' && isInsideNavigation && touchStart) {
+        const [touch] = (event as TouchEvent).touches;
+        if (
+          touch &&
+          (touch.clientY === touchStart.y ||
+            Math.abs(touch.clientX - touchStart.x) >
+              Math.abs(touch.clientY - touchStart.y))
+        ) {
+          return;
+        }
+      }
+      isBackwardTab = false;
+      clearScrollSuppression();
     };
 
     measureHeight();
@@ -359,7 +506,19 @@ const useStickyNavigation = ({
     if (navRef.current) navObserver.observe(navRef.current);
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', handleResize, { passive: true });
-    window.addEventListener('keydown', handleKeyDown);
+    // run before the dropdown's key handler, which can move focus itself
+    window.addEventListener('keydown', handleKeyDown, true);
+    // let controls prevent scrolling keys before releasing focus protection
+    window.addEventListener('keydown', handleScrollKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+    window.addEventListener('wheel', handlePointerScroll, { passive: true });
+    window.addEventListener('pointerdown', handlePointerScroll, {
+      passive: true,
+    });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handlePointerScroll, {
+      passive: true,
+    });
 
     return () => {
       navObserver.disconnect();
@@ -367,12 +526,18 @@ const useStickyNavigation = ({
       window.clearTimeout(pending.suppressionRecheckTimeout);
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown, true);
+      window.removeEventListener('keydown', handleScrollKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      window.removeEventListener('wheel', handlePointerScroll);
+      window.removeEventListener('pointerdown', handlePointerScroll);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handlePointerScroll);
       if (pending.animationFrame !== null) {
         window.cancelAnimationFrame(pending.animationFrame);
       }
     };
-  }, [isEnabled, isOpenRef, closeMenuRef]);
+  }, [isEnabled, isOpenRef, closeMenuRef, isVisibleRef]);
 
   // ---------------------------------------------------------------------
   // Animation: moving the bar between the page flow and the pinned position.
@@ -385,6 +550,22 @@ const useStickyNavigation = ({
     }
 
     if (!shouldBePinned) {
+      // safari can scroll before reporting the newly focused control
+      // keep the visible bar in place until the focus update is processed
+      if (navRef.current?.contains(document.activeElement)) {
+        if (
+          isVisibleRef.current &&
+          Date.now() < suppressScrollUntilRef.current
+        ) {
+          const timeout = window.setTimeout(
+            () => setPhase('idle'),
+            FOCUS_SCROLL_SUPPRESSION_MS,
+          );
+          return () => window.clearTimeout(timeout);
+        }
+        setPhase('idle');
+        return undefined;
+      }
       // Start sliding away. Dropping back out of fixed positioning has to
       // wait for that slide to finish, which is signalled by whichever of
       // these two arrives first:
@@ -420,7 +601,7 @@ const useStickyNavigation = ({
       window.cancelAnimationFrame(frames.paint);
       window.cancelAnimationFrame(frames.slideIn);
     };
-  }, [isEnabled, shouldBePinned, shouldBeVisible]);
+  }, [isEnabled, shouldBePinned, shouldBeVisible, isVisibleRef]);
 
   const isVisible = phase === 'onScreen';
   const isPinned = phase !== 'idle';
@@ -443,8 +624,7 @@ const useStickyNavigation = ({
   );
 
   // ---------------------------------------------------------------------
-  // Accessibility: keeping the pinned bar out of the way of everyone who
-  // isn't using a pointer.
+  // accessibility: keeping focused content visible and the bar reachable
   // ---------------------------------------------------------------------
 
   useEffect(() => {
@@ -477,22 +657,16 @@ const useStickyNavigation = ({
     return () => document.removeEventListener('focusin', revealFocusedElement);
   }, [isVisible, height]);
 
-  // The bar is a convenience overlay for pointer and touch readers scrolling
-  // back up an article; keyboard users already reach these same links in
-  // their normal document-order position. While it is pinned over the
-  // content, take it out of the tab order so focus can never land on it.
-  // The one exception is the dropdown menu: once the reader has opened it
-  // (the hamburger button stays clickable throughout, just not reachable by
-  // Tab), its items become the only tab stops in the bar, and are removed
-  // again the moment the dropdown closes.
-  //
-  // Those items are given an explicit `tabindex="0"` rather than simply
-  // having the attribute left off. macOS ships with keyboard navigation
-  // limited to form controls by default — Safari's "Press Tab to highlight
-  // each item on a webpage" — under which a plain `<a href>` is not a tab
-  // stop at all, but one carrying an explicit tabindex still is. Setting it
-  // outright means the open dropdown can be tabbed through on every
-  // platform, rather than only where links happen to be tabbable.
+  // visible links and the menu button must remain reachable while the bar
+  // is pinned over the article
+  // dropdown links become tab stops when the menu opens and are excluded
+  // again when it closes, while scrollable row wrappers stay out of tab order
+  // use an explicit tabindex="0" rather than leaving the attribute off
+  // safari can limit keyboard navigation to form controls depending on the
+  // "press tab to highlight each item on a webpage" setting, so plain links
+  // may otherwise be skipped
+  // setting tabindex explicitly keeps the visible controls reachable without
+  // relying on those settings
   useEffect(() => {
     const nav = navRef.current;
     if (!nav || !isVisible) return undefined;
@@ -503,8 +677,12 @@ const useStickyNavigation = ({
     );
 
     tabStops.forEach(tabStop => {
-      const isInOpenDropdown = isOpen && dropDownNav?.contains(tabStop);
-      tabStop.setAttribute('tabindex', isInOpenDropdown ? '0' : '-1');
+      const isControl = tabStop.matches(FOCUSABLE_ITEMS_SELECTOR);
+      const isInClosedDropdown = !isOpen && dropDownNav?.contains(tabStop);
+      tabStop.setAttribute(
+        'tabindex',
+        isControl && !isInClosedDropdown ? '0' : '-1',
+      );
     });
 
     return () =>

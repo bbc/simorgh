@@ -618,6 +618,7 @@ describe('Navigation - Canonical', () => {
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
 
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -648,6 +649,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: 400,
         });
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(0);
         act(() => {
           jest.advanceTimersByTime(400);
@@ -681,7 +683,7 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'true');
       });
 
-      it('still closes the dropdown menu on a genuine scroll back up the page, once enough time has passed since the last Tab press', () => {
+      it('still closes the dropdown menu when the reader scrolls back up the page with the mouse wheel after pressing Tab', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         scrollTo(450);
@@ -699,6 +701,7 @@ describe('Navigation - Canonical', () => {
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
 
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -738,6 +741,35 @@ describe('Navigation - Canonical', () => {
     });
 
     describe('how the sticky navigation bar animates in and out', () => {
+      it('does not reveal navigation when an automatic scroll returns to the page top before its first paint', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const stickyNav = container.querySelector(
+          '[data-e2e="sticky-nav"]',
+        ) as HTMLElement;
+        const setAttribute = jest.spyOn(stickyNav, 'setAttribute');
+        scrollTo(500);
+        scrollTo(450, 1);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        expect(stickyNav).toHaveAttribute('hidden');
+
+        scrollTo(0);
+        act(() => {
+          jest.advanceTimersByTime(20);
+        });
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+
+        act(() => {
+          jest.advanceTimersByTime(1000);
+        });
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        expect(setAttribute).not.toHaveBeenCalledWith(
+          'data-sticky-visible',
+          'true',
+        );
+      });
+
       it('slides the navigation bar fully into view before showing it, and finishes sliding it away before putting it back in the normal page layout', () => {
         enableMotion();
         const { container } = render(articleNavigation, stickyOptions);
@@ -771,6 +803,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
@@ -852,11 +885,14 @@ describe('Navigation - Canonical', () => {
         const navigationRow = container.querySelector(
           '[data-e2e="scrollable-nav-secondary"]',
         );
-        const dropdownWheelEvent = new Event('wheel', {
+        const dropdownWheelEvent = new WheelEvent('wheel', {
+          deltaY: 80,
           bubbles: true,
           cancelable: true,
         });
-        const navigationRowWheelEvent = new Event('wheel', {
+        const navigationRowWheelEvent = new WheelEvent('wheel', {
+          deltaX: 80,
+          deltaY: 0,
           bubbles: true,
           cancelable: true,
         });
@@ -876,6 +912,7 @@ describe('Navigation - Canonical', () => {
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
 
+        fireEvent.wheel(window, { deltaY: 100 });
         scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
 
         expect(menuButton).toHaveAttribute('aria-expanded', 'false');
@@ -898,6 +935,7 @@ describe('Navigation - Canonical', () => {
           ...firstParagraph.getBoundingClientRect(),
           top: STICKY_NAV_EXIT_BUFFER_PX + 1,
         });
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(secondaryScroll.scrollLeft).toBe(0);
@@ -964,6 +1002,7 @@ describe('Navigation - Canonical', () => {
         fireEvent.click(originalMenuButton);
         expect(originalMenuButton).toHaveAttribute('aria-expanded', 'true');
 
+        fireEvent.wheel(window, { deltaY: 100 });
         scrollTo(500);
         scrollTo(450);
 
@@ -979,6 +1018,7 @@ describe('Navigation - Canonical', () => {
       });
 
       it('hides the sticky navigation bar a short while after Tab moves focus back up the page, even if the reader does not scroll again themselves', () => {
+        jest.spyOn(window, 'scrollBy').mockImplementation(() => undefined);
         const { container } = render(
           <>
             {articleNavigation}
@@ -992,6 +1032,7 @@ describe('Navigation - Canonical', () => {
         const menuButton = screen.getByRole('button', { name: 'menu' });
         fireEvent.click(menuButton);
         fireEvent.keyDown(window, { key: 'Tab' });
+        screen.getByRole('link', { name: 'Top of page link' }).focus();
 
         // Tab carrying focus onto an element back at the top of the page is
         // a real, deliberate scroll, not an incidental nudge — but it still
@@ -1018,13 +1059,483 @@ describe('Navigation - Canonical', () => {
         expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
       });
 
+      it.each([
+        'focus leaves navigation',
+        'the reader uses the mouse wheel',
+        'the reader presses outside navigation',
+        'the reader scrolls by touch',
+      ])(
+        'keeps focused navigation accessible at the page top until %s',
+        releaseAction => {
+          const { container } = render(
+            <>
+              {articleNavigation}
+              <a href="/article-link">Article link</a>
+            </>,
+            stickyOptions,
+          );
+          scrollTo(500);
+          scrollTo(450);
+          const stickyNav = container.querySelector(
+            '[data-e2e="sticky-nav"]',
+          ) as HTMLElement;
+          const menuButton = screen.getByRole('button', { name: 'menu' });
+          const articleLink = screen.getByRole('link', {
+            name: 'Article link',
+          });
+          menuButton.focus();
+          const setAttribute = jest.spyOn(stickyNav, 'setAttribute');
+          const firstParagraph = screen.getByText(
+            'First line of article body text',
+          );
+          jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+            ...firstParagraph.getBoundingClientRect(),
+            top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+          });
+
+          scrollTo(0);
+          act(() => {
+            jest.advanceTimersByTime(3000);
+          });
+
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+          expect(stickyNav).toHaveStyle({ position: 'fixed' });
+          expect(menuButton).toHaveFocus();
+          expect(stickyNav).not.toHaveAttribute('inert');
+          expect(stickyNav).not.toHaveAttribute('aria-hidden');
+          expect(setAttribute).not.toHaveBeenCalledWith(
+            'inert',
+            expect.anything(),
+          );
+          expect(setAttribute).not.toHaveBeenCalledWith('aria-hidden', 'true');
+
+          fireEvent.click(menuButton);
+          expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+
+          if (releaseAction === 'focus leaves navigation') articleLink.focus();
+          else if (releaseAction === 'the reader presses outside navigation')
+            fireEvent.pointerDown(articleLink);
+          else if (releaseAction === 'the reader scrolls by touch') {
+            fireEvent.touchStart(articleLink, {
+              touches: [{ clientX: 0, clientY: 0 }],
+            });
+            fireEvent.touchMove(articleLink, {
+              touches: [{ clientX: 0, clientY: 100 }],
+            });
+          } else fireEvent.wheel(articleLink, { deltaY: -100 });
+          act(() => {
+            jest.advanceTimersByTime(
+              releaseAction === 'focus leaves navigation' ? 500 : 20,
+            );
+          });
+
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+          expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+
+          act(() => {
+            jest.advanceTimersByTime(400);
+          });
+
+          expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+          expect(stickyNav.parentElement).not.toHaveStyle({ height: '88px' });
+          expect(stickyNav).not.toHaveAttribute('inert');
+          expect(stickyNav).not.toHaveAttribute('aria-hidden');
+          if (releaseAction === 'focus leaves navigation')
+            expect(articleLink).toHaveFocus();
+          else expect(menuButton).toHaveFocus();
+        },
+      );
+
+      it('keeps the menu accessible when Safari reports a scroll to the page top before focusing its button', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const stickyNav = container.querySelector(
+          '[data-e2e="sticky-nav"]',
+        ) as HTMLElement;
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        const setAttribute = jest.spyOn(stickyNav, 'setAttribute');
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+
+        act(() => {
+          Object.defineProperty(window, 'scrollY', {
+            configurable: true,
+            value: 0,
+          });
+          fireEvent.scroll(window);
+          jest.advanceTimersByTime(20);
+        });
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+
+        act(() => {
+          jest.advanceTimersByTime(100);
+        });
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+
+        act(() => menuButton.focus());
+        fireEvent.click(menuButton);
+        act(() => {
+          jest.advanceTimersByTime(20);
+        });
+        act(() => {
+          jest.advanceTimersByTime(3000);
+        });
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).toHaveStyle({ position: 'fixed' });
+        expect(menuButton).toHaveFocus();
+        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+        expect(setAttribute).not.toHaveBeenCalledWith(
+          'inert',
+          expect.anything(),
+        );
+        expect(setAttribute).not.toHaveBeenCalledWith('aria-hidden', 'true');
+      });
+
+      it('returns to normal navigation after waiting briefly for focus that never arrives following an automatic scroll to the page top', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        fireEvent.click(menuButton);
+        menuButton.blur();
+        act(() => {
+          jest.advanceTimersByTime(500);
+        });
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+
+        scrollTo(0);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+
+        act(() => {
+          jest.advanceTimersByTime(500);
+        });
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        act(() => {
+          jest.advanceTimersByTime(400);
+        });
+
+        expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+        expect(stickyNav?.parentElement).not.toHaveStyle({ height: '88px' });
+        expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+      });
+
+      describe('interacting with focused navigation at the page top', () => {
+        const renderFocusedNavigation = () => {
+          const { container } = render(
+            <>
+              {articleNavigation}
+              <a href="/article-link">Article link</a>
+            </>,
+            stickyOptions,
+          );
+          scrollTo(500);
+          scrollTo(450);
+          const stickyNav = container.querySelector(
+            '[data-e2e="sticky-nav"]',
+          ) as HTMLElement;
+          const menuButton = screen.getByRole('button', { name: 'menu' });
+          menuButton.focus();
+          const firstParagraph = screen.getByText(
+            'First line of article body text',
+          );
+          jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+            ...firstParagraph.getBoundingClientRect(),
+            top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+          });
+          scrollTo(0);
+          act(() => {
+            jest.advanceTimersByTime(3000);
+          });
+          return { stickyNav, menuButton };
+        };
+
+        it.each([
+          { key: 'Enter', name: 'Enter' },
+          { key: ' ', name: 'Space' },
+        ])(
+          'keeps the focused menu available when $name activates its button',
+          ({ key }) => {
+            const { stickyNav, menuButton } = renderFocusedNavigation();
+
+            fireEvent.keyDown(menuButton, { key });
+            if (key === 'Enter') fireEvent.click(menuButton);
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+            fireEvent.keyUp(menuButton, { key });
+            if (key === ' ') fireEvent.click(menuButton);
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+            expect(stickyNav).not.toHaveAttribute('inert');
+            expect(stickyNav).not.toHaveAttribute('aria-hidden');
+            expect(menuButton).toHaveFocus();
+            expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+          },
+        );
+
+        it.each([
+          { key: 'Control', ctrlKey: true },
+          { key: 'Alt', altKey: true },
+          { key: 'Meta', metaKey: true },
+          { key: 'ArrowDown', ctrlKey: true, altKey: true },
+          { key: 'f', metaKey: true },
+        ])('keeps navigation focused while handling $key shortcuts', event => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+
+          fireEvent.keyDown(menuButton, event);
+          act(() => {
+            jest.advanceTimersByTime(20);
+          });
+
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+          expect(stickyNav).not.toHaveAttribute('inert');
+          expect(menuButton).toHaveFocus();
+        });
+
+        it('closes the dropdown with Escape while retaining the focused sticky menu button', () => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+          fireEvent.click(menuButton);
+
+          fireEvent.keyDown(menuButton, { key: 'Escape' });
+          act(() => {
+            jest.advanceTimersByTime(20);
+          });
+
+          expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+          expect(menuButton).toHaveFocus();
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+          expect(stickyNav).not.toHaveAttribute('inert');
+        });
+
+        it('keeps the dropdown available while Shift+Tab moves backward through its links and back to the menu button', () => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+          fireEvent.click(menuButton);
+          const [firstLink, secondLink] = Array.from(
+            stickyNav.querySelectorAll<HTMLAnchorElement>(
+              `[data-testid="${dropdownTestId}"] a`,
+            ),
+          );
+          fireEvent.keyDown(menuButton, { key: 'Tab' });
+          fireEvent.keyDown(firstLink, { key: 'Tab' });
+          expect(secondLink).toHaveFocus();
+
+          [
+            [secondLink, firstLink],
+            [firstLink, menuButton],
+          ].forEach(([current, previous]) => {
+            fireEvent.keyDown(current, { key: 'Tab', shiftKey: true });
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(previous).toHaveFocus();
+            expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+            expect(stickyNav).not.toHaveAttribute('inert');
+            expect(stickyNav).not.toHaveAttribute('aria-hidden');
+          });
+        });
+
+        it.each(['wheel', 'touch'])(
+          'preserves focused navigation for horizontal %s gestures on its row but releases it for vertical scrolling',
+          gesture => {
+            const { stickyNav, menuButton } = renderFocusedNavigation();
+            fireEvent.click(menuButton);
+            const navigationRow = stickyNav.querySelector(
+              '[data-e2e="scrollable-nav-secondary"]',
+            ) as HTMLElement;
+
+            if (gesture === 'wheel')
+              fireEvent.wheel(navigationRow, { deltaX: 80, deltaY: 0 });
+            else {
+              fireEvent.touchStart(navigationRow, {
+                touches: [{ clientX: 100, clientY: 100 }],
+              });
+              fireEvent.touchMove(navigationRow, {
+                touches: [{ clientX: 20, clientY: 100 }],
+              });
+            }
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(menuButton).toHaveFocus();
+            expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+            expect(stickyNav).not.toHaveAttribute('inert');
+
+            if (gesture === 'wheel')
+              fireEvent.wheel(navigationRow, { deltaX: 0, deltaY: 80 });
+            else {
+              fireEvent.touchStart(navigationRow, {
+                touches: [{ clientX: 20, clientY: 100 }],
+              });
+              fireEvent.touchMove(navigationRow, {
+                touches: [{ clientX: 20, clientY: 20 }],
+              });
+            }
+            act(() => {
+              jest.advanceTimersByTime(20);
+            });
+
+            expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+            expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+          },
+        );
+
+        it('keeps navigation focused when a control prevents a scrolling key before it bubbles to the window', () => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+          menuButton.addEventListener('keydown', event =>
+            event.preventDefault(),
+          );
+          const event = new KeyboardEvent('keydown', {
+            key: 'ArrowDown',
+            bubbles: true,
+            cancelable: true,
+          });
+
+          fireEvent(menuButton, event);
+          act(() => {
+            jest.advanceTimersByTime(20);
+          });
+
+          expect(event.defaultPrevented).toBe(true);
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+          expect(stickyNav).not.toHaveAttribute('inert');
+          expect(menuButton).toHaveFocus();
+        });
+
+        it('opens the menu when pointer events activate its already focused button', () => {
+          const { stickyNav, menuButton } = renderFocusedNavigation();
+
+          fireEvent.pointerDown(menuButton);
+          fireEvent.pointerUp(menuButton);
+          fireEvent.click(menuButton);
+          act(() => {
+            jest.advanceTimersByTime(20);
+          });
+
+          expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+          expect(menuButton).toHaveFocus();
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+          expect(stickyNav).not.toHaveAttribute('inert');
+        });
+
+        it('still treats Space on an article link as deliberate page scrolling', () => {
+          const { stickyNav } = renderFocusedNavigation();
+          const articleLink = screen.getByRole('link', {
+            name: 'Article link',
+          });
+          articleLink.focus();
+
+          fireEvent.keyDown(articleLink, { key: ' ' });
+          scrollTo(100);
+
+          expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        });
+      });
+
+      it('continues to treat wheel momentum as deliberate scrolling after more than 400ms', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        fireEvent.wheel(window, { deltaY: -100 });
+
+        [350, 250].forEach(scrollY => {
+          act(() => {
+            jest.advanceTimersByTime(200);
+          });
+          scrollTo(scrollY);
+        });
+
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+        act(() => {
+          jest.advanceTimersByTime(200);
+        });
+        scrollTo(100);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+      });
+
+      it('keeps the focused menu open when automatic scrolling crosses the article exit point until the reader deliberately scrolls', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        scrollTo(500);
+        scrollTo(450);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        const menuButton = screen.getByRole('button', { name: 'menu' });
+        menuButton.focus();
+        fireEvent.click(menuButton);
+        const firstParagraph = screen.getByText(
+          'First line of article body text',
+        );
+        jest.spyOn(firstParagraph, 'getBoundingClientRect').mockReturnValue({
+          ...firstParagraph.getBoundingClientRect(),
+          top: STICKY_NAV_EXIT_BUFFER_PX + 1,
+        });
+
+        scrollTo(362);
+        act(() => {
+          jest.advanceTimersByTime(3000);
+        });
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).toHaveStyle({ position: 'fixed' });
+        expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+        expect(menuButton).toHaveFocus();
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+
+        fireEvent.wheel(window, { deltaY: -100 });
+        scrollTo(360);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        expect(stickyNav).not.toHaveStyle({ position: 'fixed' });
+        expect(stickyNav?.parentElement).not.toHaveStyle({ height: '88px' });
+        expect(menuButton).toHaveAttribute('aria-expanded', 'false');
+      });
+
       it('lets the sticky navigation bar appear on scroll-up for a reader who has only ever used the keyboard, never the mouse', () => {
         const { container } = render(articleNavigation, stickyOptions);
         fireEvent.keyDown(window, { key: 'Tab' });
         act(() => {
           jest.advanceTimersByTime(500);
         });
+        fireEvent.keyDown(window, { key: 'PageDown' });
         scrollTo(500);
+        fireEvent.keyDown(window, { key: 'PageUp' });
         scrollTo(450);
 
         expect(
@@ -1043,23 +1554,90 @@ describe('Navigation - Canonical', () => {
         ).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it('still shows the sticky navigation bar on scroll-up after pressing Shift+Tab to move backward', () => {
-        const { container } = render(articleNavigation, stickyOptions);
+      it('does not reveal hidden navigation when focus moves without Tab or when VoiceOver later scrolls between regions without another focus event', () => {
+        const { container } = render(
+          <>
+            {articleNavigation}
+            <a href="/article-link">Article link</a>
+          </>,
+          stickyOptions,
+        );
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
         scrollTo(500);
-        fireEvent.keyDown(window, { key: 'Tab', shiftKey: true });
-        scrollTo(450);
+        screen.getByRole('link', { name: 'Article link' }).focus();
+        scrollTo(498);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        scrollTo(500);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        scrollTo(498);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
 
-        expect(
-          container.querySelector('[data-e2e="sticky-nav"]'),
-        ).toHaveAttribute('data-sticky-visible', 'true');
+        act(() => {
+          jest.advanceTimersByTime(3000);
+        });
+        scrollTo(300);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+        scrollTo(700);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
+
+        act(() => {
+          jest.advanceTimersByTime(3000);
+        });
+        scrollTo(650);
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'false');
       });
 
-      it.each(['ArrowUp', 'PageUp', 'Home'])(
-        'shows the sticky navigation bar on scroll-up after pressing %s to move around the page',
-        key => {
-          const { container } = render(articleNavigation, stickyOptions);
+      it('keeps visible navigation accessible during focus-related scroll corrections, including after a small downward scroll', () => {
+        const { container } = render(articleNavigation, stickyOptions);
+        const stickyNav = container.querySelector('[data-e2e="sticky-nav"]');
+        scrollTo(500);
+        scrollTo(450);
+        scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX - 1);
+        screen.getByRole('button', { name: 'menu' }).focus();
+
+        scrollTo(500);
+        scrollTo(498);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+
+        act(() => {
+          jest.advanceTimersByTime(3000);
+        });
+        scrollTo(700);
+
+        expect(stickyNav).toHaveAttribute('data-sticky-visible', 'true');
+        expect(stickyNav).not.toHaveAttribute('inert');
+        expect(stickyNav).not.toHaveAttribute('aria-hidden');
+      });
+
+      it.each(['wheel', 'touchmove', 'pointerdown'])(
+        'allows deliberate %s scrolling to reveal navigation after navigating by focus',
+        eventType => {
+          const { container } = render(
+            <>
+              {articleNavigation}
+              <a href="/article-link">Article link</a>
+            </>,
+            stickyOptions,
+          );
           scrollTo(500);
-          fireEvent.keyDown(window, { key });
+          screen.getByRole('link', { name: 'Article link' }).focus();
+          scrollTo(498);
+
+          act(() => {
+            jest.advanceTimersByTime(3000);
+          });
+          if (eventType === 'wheel') fireEvent.wheel(window, { deltaY: -80 });
+          else if (eventType === 'touchmove') {
+            fireEvent.touchStart(window, {
+              touches: [{ clientX: 0, clientY: 0 }],
+            });
+            fireEvent.touchMove(window, {
+              touches: [{ clientX: 0, clientY: 80 }],
+            });
+          } else fireEvent.pointerDown(window);
           scrollTo(450);
 
           expect(
@@ -1068,7 +1646,106 @@ describe('Navigation - Canonical', () => {
         },
       );
 
-      it('still shows the sticky navigation bar on a genuine scroll-up, once enough time has passed since the last Tab press', () => {
+      it.each(['wheel', 'touchmove', 'pointerdown'])(
+        'still hides navigation on deliberate %s scrolling immediately after focusing its menu button',
+        eventType => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          screen.getByRole('button', { name: 'menu' }).focus();
+
+          if (eventType === 'wheel') fireEvent.wheel(window, { deltaY: 80 });
+          else if (eventType === 'touchmove') {
+            fireEvent.touchStart(window, {
+              touches: [{ clientX: 0, clientY: 100 }],
+            });
+            fireEvent.touchMove(window, {
+              touches: [{ clientX: 0, clientY: 20 }],
+            });
+          } else fireEvent.pointerDown(window);
+          scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
+
+          expect(
+            container.querySelector('[data-e2e="sticky-nav"]'),
+          ).toHaveAttribute('data-sticky-visible', 'false');
+        },
+      );
+
+      it('still shows the sticky navigation bar on scroll-up after pressing Shift+Tab to move backward', () => {
+        const { container } = render(
+          <>
+            {articleNavigation}
+            <a href="/article-link">Article link</a>
+          </>,
+          stickyOptions,
+        );
+        scrollTo(500);
+        fireEvent.keyDown(window, { key: 'Tab', shiftKey: true });
+        screen.getByRole('link', { name: 'Article link' }).focus();
+        scrollTo(450);
+
+        expect(
+          container.querySelector('[data-e2e="sticky-nav"]'),
+        ).toHaveAttribute('data-sticky-visible', 'true');
+      });
+
+      it.each([
+        { label: 'ArrowUp', key: 'ArrowUp' },
+        { label: 'PageUp', key: 'PageUp' },
+        { label: 'Home', key: 'Home' },
+        { label: 'Command+ArrowUp', key: 'ArrowUp', metaKey: true },
+        { label: 'Control+Home', key: 'Home', ctrlKey: true },
+      ])(
+        'shows the sticky navigation bar on scroll-up after pressing $label following focus navigation',
+        event => {
+          const { container } = render(
+            <>
+              {articleNavigation}
+              <a href="/article-link">Article link</a>
+            </>,
+            stickyOptions,
+          );
+          scrollTo(500);
+          screen.getByRole('link', { name: 'Article link' }).focus();
+          act(() => {
+            jest.advanceTimersByTime(3000);
+          });
+          fireEvent.keyDown(window, event);
+          scrollTo(450);
+
+          expect(
+            container.querySelector('[data-e2e="sticky-nav"]'),
+          ).toHaveAttribute('data-sticky-visible', 'true');
+        },
+      );
+
+      it.each([
+        { label: 'ArrowDown', key: 'ArrowDown' },
+        { label: 'PageDown', key: 'PageDown' },
+        { label: 'End', key: 'End' },
+        { label: 'Command+ArrowDown', key: 'ArrowDown', metaKey: true },
+        { label: 'Control+End', key: 'End', ctrlKey: true },
+      ])(
+        'hides visible navigation when $label deliberately scrolls down after focus navigation',
+        event => {
+          const { container } = render(articleNavigation, stickyOptions);
+          scrollTo(500);
+          scrollTo(450);
+          screen.getByRole('button', { name: 'menu' }).focus();
+          act(() => {
+            jest.advanceTimersByTime(3000);
+          });
+
+          fireEvent.keyDown(window, event);
+          scrollTo(450 + STICKY_NAV_HIDE_SCROLL_DISTANCE_PX);
+
+          expect(
+            container.querySelector('[data-e2e="sticky-nav"]'),
+          ).toHaveAttribute('data-sticky-visible', 'false');
+        },
+      );
+
+      it('still shows the sticky navigation bar when the reader scrolls up with the mouse wheel after pressing Tab', () => {
         const { container } = render(articleNavigation, stickyOptions);
         scrollTo(500);
         fireEvent.keyDown(window, { key: 'Tab' });
@@ -1081,6 +1758,7 @@ describe('Navigation - Canonical', () => {
         act(() => {
           jest.advanceTimersByTime(500);
         });
+        fireEvent.wheel(window, { deltaY: -100 });
         scrollTo(400);
 
         expect(
@@ -1117,6 +1795,41 @@ describe('Navigation - Canonical', () => {
         // checks.
         const getDropdownLinks = (container: HTMLElement) =>
           container.querySelectorAll(`[data-testid="${dropdownTestId}"] a`);
+
+        it.each(['closed', 'open'])(
+          'lets the Tab key reach visible navigation links and the menu button while the dropdown is %s',
+          dropdownState => {
+            render(
+              <>
+                <CanonicalNavigation
+                  {...navigationProps}
+                  stickyTopScrollableListItems={
+                    <a href="/primary">Primary navigation link</a>
+                  }
+                  stickyBottomScrollableListItems={
+                    <a href="/secondary">Secondary navigation link</a>
+                  }
+                />
+                <main>
+                  <p data-sticky-nav-anchor>Article body</p>
+                </main>
+              </>,
+              stickyOptions,
+            );
+            scrollTo(500);
+            scrollTo(450);
+            const menuButton = screen.getByRole('button', { name: 'menu' });
+            if (dropdownState === 'open') fireEvent.click(menuButton);
+
+            expect(menuButton).toHaveAttribute('tabindex', '0');
+            expect(
+              screen.getByRole('link', { name: 'Primary navigation link' }),
+            ).toHaveAttribute('tabindex', '0');
+            expect(
+              screen.getByRole('link', { name: 'Secondary navigation link' }),
+            ).toHaveAttribute('tabindex', '0');
+          },
+        );
 
         it('cannot reach the dropdown menu links with the Tab key before the menu is opened', () => {
           const { container } = render(articleNavigation, stickyOptions);
@@ -1188,7 +1901,7 @@ describe('Navigation - Canonical', () => {
           expect(document.activeElement).toBe(menuButton);
         });
 
-        it('makes the dropdown menu links the only part of the bar reachable with the Tab key once the menu is opened', () => {
+        it('keeps the navigation controls and dropdown links reachable with the Tab key once the menu is opened', () => {
           render(articleNavigation, stickyOptions);
           scrollTo(500);
           scrollTo(450);
@@ -1207,7 +1920,7 @@ describe('Navigation - Canonical', () => {
           );
           expect(screen.getByRole('button', { name: 'menu' })).toHaveAttribute(
             'tabindex',
-            '-1',
+            '0',
           );
         });
 
