@@ -94,6 +94,29 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      endOfArticleTreatment: {
+        endLabel: 'Has llegado al final del artículo',
+        heading: 'Ahora, explora más',
+        introduction: 'Elige qué quieres leer, ver o descubrir a continuación.',
+        previous: 'Contenido anterior',
+        next: 'Contenido siguiente',
+        position: '{current} de {total}',
+        chooseContent: 'Elige otro contenido',
+        readArticle: 'Leer artículo',
+        exploreTopic: 'Explorar tema',
+        openContent: 'Ir a la página',
+        loadingMedia: 'Cargando el reproductor…',
+        unavailableMedia:
+          'No se ha podido cargar el reproductor. Puedes abrir el contenido en su página.',
+        formats: {
+          article: 'Artículo',
+          video: 'Video',
+          portrait: 'Video vertical',
+          audio: 'Audio',
+          live: 'En vivo',
+          topic: 'Tema',
+        },
+      },
       and: 'y',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',

@@ -4,6 +4,7 @@ import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { ArticleEndItem } from '#app/components/EndOfArticleTreatment/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation, Summary } from './curationData';
@@ -171,6 +172,7 @@ export type CountryCuration = {
 };
 
 export type Article = {
+  articleEndItems?: ArticleEndItem[];
   content: ArticleContent;
   metadata: ArticleMetadata;
   mostRead: MostReadData;

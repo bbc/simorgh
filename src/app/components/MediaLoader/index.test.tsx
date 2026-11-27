@@ -19,7 +19,8 @@ import {
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
 } from './fixture';
-import { MediaBlock } from './types';
+import { MediaBlock, PlayerConfig } from './types';
+import { portraitVideoFixture } from '../PortraitVideoCarousel/fixture';
 import { fakeFullscreenStyles } from './index.styles';
 import * as buildConfig from './utils/buildSettings';
 
@@ -137,7 +138,10 @@ describe('MediaLoader', () => {
         bind: jest.fn(),
       };
       const mockBump = {
-        player: jest.fn(() => mockPlayer),
+        player: jest.fn<
+          typeof mockPlayer,
+          [HTMLDivElement | null, PlayerConfig]
+        >(() => mockPlayer),
       };
 
       window.requirejs = mockRequire;
@@ -211,6 +215,152 @@ describe('MediaLoader', () => {
       callbackFn(mockBump);
 
       expect(window.mediaPlayers.testId).not.toBeNull();
+    });
+
+    it('pauses only its own player and removes its registry entry on unmount', async () => {
+      const player = { load: jest.fn(), bind: jest.fn(), pause: jest.fn() };
+      const otherPlayer = { pause: jest.fn() };
+      const mockRequire = jest.fn();
+      window.requirejs = mockRequire;
+      window.mediaPlayers = {
+        other: otherPlayer,
+      } as unknown as typeof window.mediaPlayers;
+
+      const { unmount } = render(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          uniqueId="article-end"
+          loadPlayerOnInitialRender
+        />,
+      );
+      await act(async () =>
+        mockRequire.mock.calls[0][1]({ player: () => player }),
+      );
+
+      unmount();
+
+      expect(player.pause).toHaveBeenCalledTimes(1);
+      expect(otherPlayer.pause).not.toHaveBeenCalled();
+      expect(window.mediaPlayers['article-end']).toBeUndefined();
+    });
+
+    it('ignores RequireJS setup that completes after unmount', async () => {
+      const mockRequire = jest.fn();
+      const createPlayer = jest.fn();
+      window.requirejs = mockRequire;
+
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+      );
+      unmount();
+      await act(async () =>
+        mockRequire.mock.calls[0][1]({ player: createPlayer }),
+      );
+
+      expect(createPlayer).not.toHaveBeenCalled();
+    });
+
+    it('can unmount an identified player before the first registry is created', () => {
+      window.requirejs = jest.fn();
+      delete (window as Partial<Window>).mediaPlayers;
+
+      const { unmount } = render(
+        <MediaPlayer
+          blocks={aresMediaBlocks as MediaBlock[]}
+          uniqueId="article-end-first-player"
+        />,
+      );
+
+      expect(unmount).not.toThrow();
+    });
+
+    it('does not load a player when its advert request resolves after unmount', async () => {
+      let resolveAdTag: (tag: string) => void = jest.fn();
+      const adTag = new Promise<string>(resolve => {
+        resolveAdTag = resolve;
+      });
+      const player = {
+        load: jest.fn(),
+        loadPlugin: jest.fn(),
+        bind: jest.fn(),
+        pause: jest.fn(),
+      };
+      const mockRequire = jest.fn();
+      window.requirejs = mockRequire;
+      window.dotcom = {
+        cmd: [],
+        ads: { getAdTag: () => adTag },
+      } as unknown as typeof window.dotcom;
+
+      const { unmount } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+        {
+          showAdsBasedOnLocation: true,
+          toggles: { preroll: { enabled: true } },
+        },
+      );
+      await act(async () => {
+        mockRequire.mock.calls[0][1]({ player: () => player });
+      });
+      unmount();
+      await act(async () => resolveAdTag('advert-tag'));
+
+      expect(player.pause).toHaveBeenCalledTimes(1);
+      expect(player.loadPlugin).not.toHaveBeenCalled();
+      expect(player.load).not.toHaveBeenCalled();
+    });
+
+    it('only creates a player for the current effect after configuration changes', async () => {
+      const mockRequire = jest.fn();
+      const player = { load: jest.fn(), bind: jest.fn(), pause: jest.fn() };
+      const createPlayer = jest.fn(() => player);
+      window.requirejs = mockRequire;
+
+      const { rerender } = render(
+        <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
+      );
+      rerender(<MediaPlayer blocks={[...aresMediaBlocks] as MediaBlock[]} />);
+      await act(async () => {
+        mockRequire.mock.calls.forEach(([, callback]) =>
+          callback({ player: createPlayer }),
+        );
+      });
+
+      expect(createPlayer).toHaveBeenCalledTimes(1);
+      expect(player.load).toHaveBeenCalledTimes(1);
+    });
+
+    it('uses a single inline portrait player without carousel navigation or autoplay', async () => {
+      const mockRequire = jest.fn();
+      const player = { load: jest.fn(), bind: jest.fn(), pause: jest.fn() };
+      const createPlayer = jest.fn(() => player);
+      window.requirejs = mockRequire;
+
+      render(
+        <MediaPlayer
+          blocks={[portraitVideoFixture.blocks[0]]}
+          singleItemPlayback
+          loadPlayerOnInitialRender
+        />,
+      );
+      await act(async () =>
+        mockRequire.mock.calls[0][1]({ player: createPlayer }),
+      );
+
+      expect(createPlayer).toHaveBeenCalledWith(
+        expect.any(HTMLElement),
+        expect.objectContaining({
+          autoplay: false,
+          plugins: { toLoad: [] },
+          ui: expect.objectContaining({
+            swipable: { enabled: false, direction: 'Y' },
+            controls: expect.objectContaining({
+              includePreviousButton: false,
+              includeNextButton: false,
+            }),
+          }),
+        }),
+      );
     });
 
     it('adds and removes fullscreen classes on fake fullscreen enter/exit events', async () => {

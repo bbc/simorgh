@@ -27,6 +27,17 @@ module.exports = {
           },
         ],
       },
+      // Temporary WS-3523 demo workaround: CSS-mask icons on localhost.bbc.com
+      // load from localhost and fail CORS, also reproduced on latest.
+      // Keep development-only; remove once local asset origins are aligned.
+      ...(process.env.NODE_ENV === 'development'
+        ? [
+            {
+              source: '/images/icons/:path*',
+              headers: [{ key: 'Access-Control-Allow-Origin', value: '*' }],
+            },
+          ]
+        : []),
       // Service worker headers to allow scope to be set correctly */
       {
         source: '/:service/sw.js',
