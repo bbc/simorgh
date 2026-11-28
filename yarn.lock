@@ -239,6 +239,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-string-parser@npm:^7.29.15":
+  version: 7.29.15
+  resolution: "@babel/helper-string-parser@npm:7.29.15"
+  checksum: 10/f47627415e209bbfd83f9a4b2273eec30e9a30e087f65421055c6d5bf74ae30be5283d7ab340202a86022f266a5e48535748614491f6444e3248255829050052
+  languageName: node
+  linkType: hard
+
 "@babel/helper-string-parser@npm:^7.29.7":
   version: 7.29.7
   resolution: "@babel/helper-string-parser@npm:7.29.7"
@@ -614,6 +621,16 @@ __metadata:
     "@babel/helper-string-parser": "npm:^7.27.1"
     "@babel/helper-validator-identifier": "npm:^7.27.1"
   checksum: 10/2f28b84efb5005d1e85fc3944219c284400c42aeefc1f6e10500a74fed43b3dfb4f9e349a5d6e0e3fc24f5d241c513b30ef00ede2885535ce7a0a4e111c2098e
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.26.0":
+  version: 7.29.15
+  resolution: "@babel/types@npm:7.29.15"
+  dependencies:
+    "@babel/helper-string-parser": "npm:^7.29.15"
+    "@babel/helper-validator-identifier": "npm:^7.29.7"
+  checksum: 10/8500f1961da3139738b1d2dc41e1da0ac38be815f819be456b3fac2424c62c385b966751359d5971f9dfcccf9dc08166cfa0668c0d97f027d4b895b3dc7f3799
   languageName: node
   linkType: hard
 
@@ -5605,6 +5622,15 @@ __metadata:
     cosmiconfig: "npm:^7.0.0"
     resolve: "npm:^1.19.0"
   checksum: 10/30be6ca45e9a124c58ca00af9a0753e5410ec0b79a737714fc4722bbbeb693e55d9258f05c437145ef4a867c2d1603e06a1c292d66c243ce1227458c8ea2ca8c
+  languageName: node
+  linkType: hard
+
+"babel-plugin-react-compiler@npm:1.0.0":
+  version: 1.0.0
+  resolution: "babel-plugin-react-compiler@npm:1.0.0"
+  dependencies:
+    "@babel/types": "npm:^7.26.0"
+  checksum: 10/51358f4da7dd338afd93ca647af3b5b95fdedd2ffde78719fbba5c542e3d66d338f020bc61234caf4ddf25cddbf517ae101ff76e362e3244d1047c1e64d90a60
   languageName: node
   linkType: hard
 
@@ -14577,6 +14603,7 @@ __metadata:
     "@testing-library/react": "npm:16.3.1"
     autoprefixer: "npm:10.6.2"
     axe-core: "npm:4.14.0"
+    babel-plugin-react-compiler: "npm:1.0.0"
     cypress: "npm:15.21.2"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"

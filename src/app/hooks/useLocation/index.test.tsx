@@ -1,18 +1,24 @@
-import { renderHook } from '#app/components/react-testing-library-with-providers';
-import { fireEvent } from '@testing-library/react';
-import { useState } from 'react';
-import useLocation, * as useLocationObj from '.';
-
-jest.mock('react', () => ({
-  ...jest.requireActual('react'),
-  useState: jest.fn(),
-}));
+import {
+  renderHook,
+  fireEvent,
+} from '#app/components/react-testing-library-with-providers';
+import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+import useLocation from '.';
 
 describe('useLocation', () => {
   beforeEach(() => {
-    (useState as jest.Mock).mockImplementation(
-      jest.requireActual('react').useState,
-    );
+    window.history.replaceState({}, '', '/');
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('preserves the empty search snapshot during server rendering', () => {
+    window.history.replaceState({}, '', '/?client-only=true');
+    const { result } = renderSSRHook(() => useLocation());
+
+    expect(result.current.search).toBe('');
   });
   it('should set location to the current window location', () => {
     const { result } = renderHook(() => useLocation());
@@ -34,25 +40,50 @@ describe('useLocation', () => {
   });
 
   it('should remove the event listeners when the component unmounts', () => {
+    const addEventListenerSpy = jest.spyOn(window, 'addEventListener');
     const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener');
-    const { unmount } = renderHook(() => useLocation());
+    const { rerender, unmount } = renderHook(() => useLocation());
+    const popstateListener = addEventListenerSpy.mock.calls.find(
+      ([name]) => name === 'popstate',
+    )?.[1];
+
+    rerender();
 
     unmount();
 
-    expect(removeEventListenerSpy).toHaveBeenCalled();
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'popstate',
+      popstateListener,
+    );
+    expect(removeEventListenerSpy).toHaveBeenCalledWith(
+      'hashchange',
+      popstateListener,
+    );
+    expect(
+      addEventListenerSpy.mock.calls.filter(([name]) => name === 'popstate'),
+    ).toHaveLength(1);
   });
 
-  it('should update itself on user popstate interaction', () => {
-    const spy = jest.fn();
+  it('updates consumers on popstate even though window.location is mutable', () => {
+    const { result } = renderHook(() => useLocation().search);
 
-    (useState as jest.Mock).mockImplementation(() => ['location', spy]);
-
-    renderHook(() => useLocationObj.default());
-
-    fireEvent(window, new window.PopStateEvent('popstate'));
-    fireEvent(window, new window.PopStateEvent('popstate'));
+    window.history.pushState({}, '', '/?page=2');
     fireEvent(window, new window.PopStateEvent('popstate'));
 
-    expect(spy).toHaveBeenCalledTimes(4);
+    expect(result.current).toBe('?page=2');
+
+    window.history.replaceState({}, '', '/?page=3');
+    fireEvent(window, new window.PopStateEvent('popstate'));
+
+    expect(result.current).toBe('?page=3');
+  });
+
+  it('updates consumers on hash changes', () => {
+    const { result } = renderHook(() => useLocation().hash);
+
+    window.history.replaceState({}, '', '/#content');
+    fireEvent(window, new window.HashChangeEvent('hashchange'));
+
+    expect(result.current).toBe('#content');
   });
 });

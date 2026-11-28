@@ -1,4 +1,4 @@
-import { Fragment, PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 import styles from './index.module.scss';
 import { LeftChevron, RightChevron } from '../../icons';
 
@@ -17,25 +17,24 @@ const Subhead = ({
   ...curationSubheadingClickTracker
 }: PropsWithChildren<Props>) => {
   const { dir } = use(ServiceContext);
-  const Wrapper = link
-    ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
+  return (
+    <h2 className={styles.h2} id={id}>
+      {link ? (
         <a
           href={link}
           className="focusIndicatorDisplayBlock"
           {...curationSubheadingClickTracker}
         >
-          <span>{innerChildren}</span>
+          <span>{children}</span>
           {dir === 'ltr' ? (
             <RightChevron className={styles.chevron} />
           ) : (
             <LeftChevron className={styles.chevron} />
           )}
         </a>
-      )
-    : Fragment;
-  return (
-    <h2 className={styles.h2} id={id}>
-      <Wrapper>{children}</Wrapper>
+      ) : (
+        children
+      )}
     </h2>
   );
 };

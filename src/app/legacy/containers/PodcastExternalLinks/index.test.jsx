@@ -107,6 +107,46 @@ describe('PodcastExternalLinks', () => {
     const linkText = getByText('Spotify');
     expect(linkText.getAttribute('lang')).toEqual('en-GB');
   });
+
+  it('should translate frozen download links without changing their input', () => {
+    const downloadLink = Object.freeze({
+      linkUrl: 'https://bbc.com/download',
+      linkText: 'Original download label',
+      linkType: 'download',
+    });
+    const immutableLinks = Object.freeze([links[0], downloadLink]);
+    const { getByText, rerender } = render(
+      <Component links={immutableLinks} service="afrique" />,
+    );
+
+    expect(getByText('Download')).toBeInTheDocument();
+    expect(downloadLink.linkText).toBe('Original download label');
+
+    rerender(<Component links={immutableLinks} service="arabic" />);
+
+    expect(getByText('تحميل الحلقة')).toHaveAttribute('lang', 'ar');
+    expect(downloadLink.linkText).toBe('Original download label');
+  });
+
+  it('should translate a single download link and its accessible name', () => {
+    const immutableLinks = Object.freeze([
+      Object.freeze({
+        linkUrl: 'https://bbc.com/download',
+        linkText: 'Original download label',
+        linkType: 'download',
+      }),
+    ]);
+    const { getByRole, getByText, queryByRole } = render(
+      <Component links={immutableLinks} service="arabic" />,
+    );
+
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(getByText('تحميل الحلقة')).toHaveAttribute('lang', 'ar');
+    expect(getByRole('link')).toHaveAccessibleName(
+      expect.stringContaining('تحميل الحلقة'),
+    );
+    expect(immutableLinks[0].linkText).toBe('Original download label');
+  });
 });
 
 describe('Event Tracking', () => {

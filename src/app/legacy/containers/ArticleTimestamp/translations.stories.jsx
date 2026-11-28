@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
@@ -403,7 +403,14 @@ const issueHref = localeName =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
 const Component = ({ service, variant, dir, locale, altCalendar }) => {
-  moment.now = originalNow;
+  // Some rows fix `moment.now` to the story date, so restore it when the story
+  // unmounts to avoid leaking the fixed time into other stories.
+  useEffect(
+    () => () => {
+      moment.now = originalNow;
+    },
+    [],
+  );
 
   return (
     <>

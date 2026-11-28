@@ -23,24 +23,34 @@ const usePolling = <TResponse, TData>({
   const [data, setData] = useState<TData>(initialData);
 
   const paramsRef = useRef(params);
-  paramsRef.current = params;
   const returnedDataRef = useRef(returnedData);
-  returnedDataRef.current = returnedData;
+
+  useEffect(() => {
+    paramsRef.current = params;
+    returnedDataRef.current = returnedData;
+  }, [params, returnedData]);
 
   useEffect(() => {
     if (enabled === false) return undefined;
+
+    let cancelled = false;
 
     const timerId = setInterval(async () => {
       const response = await fetchPolledData<TResponse>(endpoint, {
         params: paramsRef.current,
       });
 
+      if (cancelled) return;
+
       const nextData = response?.data && returnedDataRef.current(response.data);
 
       if (nextData != null) setData(nextData);
     }, interval);
 
-    return () => clearInterval(timerId);
+    return () => {
+      cancelled = true;
+      clearInterval(timerId);
+    };
   }, [enabled, endpoint, interval]);
 
   return data;

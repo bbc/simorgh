@@ -1,15 +1,9 @@
-import { useState, useEffect } from 'react';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 
 const useOperaMiniDetection = () => {
-  const [isOperaMini, setIsOperaMini] = useState(false);
+  const isHydrated = useHydrationDetection();
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.operamini) {
-      setIsOperaMini(true);
-    }
-  }, []);
-
-  return isOperaMini;
+  return isHydrated && Boolean(window.operamini);
 };
 
 export default useOperaMiniDetection;

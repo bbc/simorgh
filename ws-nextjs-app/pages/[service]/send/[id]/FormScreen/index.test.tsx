@@ -58,6 +58,7 @@ const sections: Section[] = [
 
 describe('Form', () => {
   beforeEach(() => {
+    jest.restoreAllMocks();
     mockMatchMedia();
   });
 
@@ -115,36 +116,20 @@ describe('Form', () => {
     expect(handleSubmit).toHaveBeenCalled();
   });
   it('should render an error summary box on an invalid form', async () => {
-    jest
-      .spyOn(FormContextModule, 'useFormContext')
-      .mockImplementationOnce(() => ({
-        ...mockContextValue,
-        validationErrors: [
-          {
-            id: 'txt49018765',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-          {
-            id: 'txt49018835',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-        ],
-        attemptedSubmitCount: 1,
-      }))
-      .mockImplementationOnce(() => ({
-        ...mockContextValue,
-        validationErrors: [
-          {
-            id: 'txt49018765',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-          {
-            id: 'txt49018835',
-            messageCode: InvalidMessageCodes.FieldRequired,
-          },
-        ],
-        attemptedSubmitCount: 1,
-      }));
+    jest.spyOn(FormContextModule, 'useFormContext').mockImplementation(() => ({
+      ...mockContextValue,
+      validationErrors: [
+        {
+          id: 'txt49018765',
+          messageCode: InvalidMessageCodes.FieldRequired,
+        },
+        {
+          id: 'txt49018835',
+          messageCode: InvalidMessageCodes.FieldRequired,
+        },
+      ],
+      attemptedSubmitCount: 1,
+    }));
     const { container } = await act(() => {
       return render(
         <Form
@@ -159,16 +144,10 @@ describe('Form', () => {
     expect(errorSummary).toBeInTheDocument();
   });
   it('should render no error summary box on a valid form', async () => {
-    jest
-      .spyOn(FormContextModule, 'useFormContext')
-      .mockImplementationOnce(() => ({
-        ...mockContextValue,
-        attemptedSubmitCount: 1,
-      }))
-      .mockImplementationOnce(() => ({
-        ...mockContextValue,
-        attemptedSubmitCount: 1,
-      }));
+    jest.spyOn(FormContextModule, 'useFormContext').mockImplementation(() => ({
+      ...mockContextValue,
+      attemptedSubmitCount: 1,
+    }));
     const { container } = await act(() => {
       return render(
         <Form

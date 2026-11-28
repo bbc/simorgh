@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import { getLocalisedTime } from '../helpers/localise-datetime';
@@ -14,13 +14,10 @@ interface TimeProps {
 }
 
 const Time = ({ date, time }: TimeProps) => {
-  const [localisedTime, setLocalisedTime] = useState(time.displayTimeUK);
-
-  useEffect(() => {
-    const clientTime = getLocalisedTime(date, time.displayTimeUK);
-    setLocalisedTime(clientTime);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const isHydrated = useHydrationDetection();
+  const localisedTime = isHydrated
+    ? getLocalisedTime(date, time.displayTimeUK)
+    : time.displayTimeUK;
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { useEffect, useState, use } from 'react';
+import { useEffect, useRef, useState, use } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const getScrollDepth = () =>
@@ -12,10 +12,7 @@ const getScrollDepth = () =>
 const useOptimizelyScrollDepth = () => {
   const { optimizely } = use(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
-  const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
-  const [scrollFifty, setScrollFifty] = useState(false);
-  const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
-  const [scrollHundred, setScrollHundred] = useState(false);
+  const trackedThresholds = useRef(new Set<number>());
 
   useEffect(() => {
     const handleScroll = () => setScrollDepth(getScrollDepth);
@@ -26,33 +23,18 @@ const useOptimizelyScrollDepth = () => {
   }, []);
 
   useEffect(() => {
-    if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely?.track('scroll25');
-      setScrollTwentyFive(true);
-    }
+    if (!optimizely) return;
 
-    if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely?.track('scroll50');
-      setScrollFifty(true);
-    }
-
-    if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely?.track('scroll75');
-      setScrollSeventyFive(true);
-    }
-
-    if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely?.track('scroll100');
-      setScrollHundred(true);
-    }
-  }, [
-    optimizely,
-    scrollDepth,
-    scrollFifty,
-    scrollHundred,
-    scrollSeventyFive,
-    scrollTwentyFive,
-  ]);
+    [25, 50, 75, 100].forEach(threshold => {
+      if (
+        scrollDepth >= threshold &&
+        !trackedThresholds.current.has(threshold)
+      ) {
+        optimizely.track(`scroll${threshold}`);
+        trackedThresholds.current.add(threshold);
+      }
+    });
+  }, [optimizely, scrollDepth]);
 
   return {
     setScrollDepth,

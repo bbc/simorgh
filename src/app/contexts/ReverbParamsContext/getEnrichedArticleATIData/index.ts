@@ -1,12 +1,12 @@
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import { ATIData } from '#app/components/ATIAnalytics/types';
 import {
   CORRESPONDENT_STORY_PAGE,
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+
+export const ARTICLE_PAGE_VIEWS_EXPERIMENT_NAME = 'test_page_views_aa_3';
 
 const getActiveExperimentProps = (
   experimentName: string,
@@ -20,7 +20,15 @@ const getActiveExperimentProps = (
       }
     : null;
 
-export default ({ pageMetadata, serviceContext }) => {
+export default ({
+  pageMetadata,
+  serviceContext,
+  experimentVariant = null,
+}: {
+  pageMetadata?: { atiAnalytics?: ATIData; type?: string };
+  serviceContext: { brandName: string };
+  experimentVariant?: string | null;
+}) => {
   const { brandName } = serviceContext;
 
   const { atiAnalytics: atiData = {} } = pageMetadata ?? {};
@@ -30,19 +38,12 @@ export default ({ pageMetadata, serviceContext }) => {
   const isCSP = pageMetadata?.type === CORRESPONDENT_STORY_PAGE;
   const isCPS = isPGL || isSTY || isCSP;
 
-  // EXPERIMENT: Topic Discovery
-  const testPageViewsExperimentName = 'test_page_views_aa_3';
-  const testPageViewsVariant = useOptimizelyVariation({
-    experimentName: testPageViewsExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
   const isTestPageViewsVariant =
-    testPageViewsVariant && testPageViewsVariant !== 'off';
+    experimentVariant && experimentVariant !== 'off';
 
   const testPageViewsExperimentProps = getActiveExperimentProps(
-    testPageViewsExperimentName,
-    testPageViewsVariant,
+    ARTICLE_PAGE_VIEWS_EXPERIMENT_NAME,
+    experimentVariant,
   );
 
   const enrichedData = {

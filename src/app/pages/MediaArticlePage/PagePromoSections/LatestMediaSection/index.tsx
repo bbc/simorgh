@@ -28,7 +28,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
 
-  let ariaLabelledBy = generatePromoId({
+  const singleItemAriaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
     canonicalUrl: singleItem.link,
@@ -60,7 +60,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         <div css={styles.latestMediaPromoBorderAndWidth}>
           <LatestMediaItem
             item={singleItem}
-            ariaLabelledBy={ariaLabelledBy}
+            ariaLabelledBy={singleItemAriaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
             isPortraitImage={singleItem.isPortraitImage}
@@ -69,7 +69,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
           {content.map((item, index) => {
-            ariaLabelledBy = generatePromoId({
+            const ariaLabelledBy = generatePromoId({
               sectionType: 'latest-media',
               assetUri: null,
               canonicalUrl: item.link,

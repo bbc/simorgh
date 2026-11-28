@@ -1,14 +1,9 @@
-import { useEffect, useState } from 'react';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 
 const useAndroidDetection = () => {
-  const [isAndroid, setIsAndroid] = useState(false);
+  const isHydrated = useHydrationDetection();
 
-  useEffect(() => {
-    const testUserDevice = /(android)/i.test(navigator.userAgent);
-    setIsAndroid(testUserDevice);
-  }, []);
-
-  return isAndroid;
+  return isHydrated && /(android)/i.test(navigator.userAgent);
 };
 
 export default useAndroidDetection;

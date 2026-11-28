@@ -121,6 +121,7 @@ module.exports = {
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
   poweredByHeader: false,
+  reactCompiler: true,
   reactStrictMode: true,
   transpilePackages: ['simorgh'],
   webpack: (config, { webpack, isServer, dev }) => {

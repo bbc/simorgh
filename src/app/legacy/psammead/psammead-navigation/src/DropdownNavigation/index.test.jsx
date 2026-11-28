@@ -140,6 +140,58 @@ describe('Canonical', () => {
 });
 
 describe('Dropdown navigation', () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('measures the dropdown content after mounting an open menu', () => {
+    jest
+      .spyOn(HTMLElement.prototype, 'scrollHeight', 'get')
+      .mockReturnValue(160);
+    const { container } = render(
+      <CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>,
+    );
+
+    expect(container.firstChild).toHaveStyle({
+      height: '160px',
+      visibility: 'visible',
+    });
+  });
+
+  it('remeasures when opening or changing content and still collapses on close', () => {
+    const scrollHeight = jest
+      .spyOn(HTMLElement.prototype, 'scrollHeight', 'get')
+      .mockReturnValue(160);
+    const { container, rerender } = render(
+      <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
+    );
+    expect(container.firstChild).toHaveStyle({
+      height: '0px',
+      visibility: 'hidden',
+    });
+
+    scrollHeight.mockReturnValue(240);
+    rerender(<CanonicalDropdown isOpen>{dropdownList}</CanonicalDropdown>);
+    expect(container.firstChild).toHaveStyle({ height: '240px' });
+
+    scrollHeight.mockReturnValue(320);
+    rerender(
+      <CanonicalDropdown isOpen>
+        {dropdownList}
+        <span>Additional navigation item</span>
+      </CanonicalDropdown>,
+    );
+    expect(container.firstChild).toHaveStyle({ height: '320px' });
+
+    rerender(
+      <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,
+    );
+    expect(container.firstChild).toHaveStyle({
+      height: '0px',
+      visibility: 'hidden',
+    });
+  });
+
   it('should render correctly when closer', () => {
     render(
       <CanonicalDropdown isOpen={false}>{dropdownList}</CanonicalDropdown>,

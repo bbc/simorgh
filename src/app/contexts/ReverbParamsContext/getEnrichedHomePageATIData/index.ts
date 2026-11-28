@@ -1,7 +1,8 @@
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import { ATIData } from '#app/components/ATIAnalytics/types';
+
+// EXPERIMENT: replace with the name of an active client side home page experiment
+export const HOME_PAGE_EXPERIMENT_NAME = 'test_homepage_client_side_aa';
 
 const getActiveExperimentProps = (
   experimentName: string,
@@ -15,20 +16,19 @@ const getActiveExperimentProps = (
       }
     : null;
 
-export default ({ pageMetadata }) => {
+export default ({
+  pageMetadata,
+  experimentVariant = null,
+}: {
+  pageMetadata?: { atiAnalytics?: ATIData };
+  experimentVariant?: string | null;
+}) => {
   const { atiAnalytics: atiData = {} } = pageMetadata ?? {};
-
-  // EXPERIMENT: replace with the name of an active client side home page experiment
-  const experimentName = 'test_homepage_client_side_aa';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
 
   const isActiveVariant = experimentVariant && experimentVariant !== 'off';
 
   const experimentProps = getActiveExperimentProps(
-    experimentName,
+    HOME_PAGE_EXPERIMENT_NAME,
     experimentVariant,
   );
 

@@ -1,11 +1,4 @@
-import {
-  createContext,
-  PropsWithChildren,
-  use,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import { createContext, PropsWithChildren, use, useMemo } from 'react';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -39,8 +32,8 @@ export const AccountProvider = ({
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
-  const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
   const isHydrated = useHydrationDetection();
+  const pageToReturnTo = onClient() && isHydrated ? window.location.href : null;
   const { service } = use(ServiceContext);
   const { enabled: isPersonalizationToggleEnabled, value: accountService } =
     useToggle('uasPersonalization');
@@ -48,10 +41,6 @@ export const AccountProvider = ({
     enabled: topicUasPersonalizationEnabled,
     value: topicAccountService,
   } = useToggle('topicUasPersonalization');
-
-  useEffect(() => {
-    setPageToReturnTo(window.location.href);
-  }, []);
 
   const getClientCookie = (cookieName: string) =>
     onClient() && isHydrated ? Cookie.get(cookieName) : undefined;

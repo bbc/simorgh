@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getActionTooltipStatus, {
@@ -18,11 +18,12 @@ const useActionTooltip = <TActionResult extends ActionResult>({
   trackingNamePrefix,
   resourceId,
 }: UseActionTooltipProps<TActionResult>) => {
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-
-  useEffect(() => {
-    if (actionResult) setIsTooltipVisible(true);
-  }, [actionResult]);
+  // Track the dismissed result rather than syncing visibility in an effect, so a
+  // new action result shows the tooltip again without a cascading render.
+  const [dismissedActionResult, setDismissedActionResult] =
+    useState<TActionResult | null>(null);
+  const isTooltipVisible =
+    Boolean(actionResult) && actionResult !== dismissedActionResult;
 
   const tooltipViewTracker = useViewTracker({
     componentName: `${trackingNamePrefix}-tooltip-view-${
@@ -45,7 +46,7 @@ const useActionTooltip = <TActionResult extends ActionResult>({
   const handleTooltipClose = (
     event?: React.MouseEvent | MouseEvent | KeyboardEvent,
   ) => {
-    setIsTooltipVisible(false);
+    setDismissedActionResult(actionResult);
     resetActionResult();
     onTooltipCloseClickTrack?.(event);
   };
