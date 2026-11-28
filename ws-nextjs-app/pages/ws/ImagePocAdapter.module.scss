@@ -1,0 +1,45 @@
+@use '@scss/themeTokens' as theme;
+
+// Reserve crop space even when no image exists; the adapter supplies the ratio.
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--image-aspect-ratio);
+}
+
+.clip {
+  overflow: hidden;
+}
+
+.wrapper:not(.clip) {
+  overflow: visible;
+}
+
+// Reuse BBC artwork and responsive sizing without importing legacy render logic.
+.placeholder {
+  background-color: theme.$palette-lunar;
+  background-image: var(--image-placeholder);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60px 17px;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    background-size: 77px 22px;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    background-size: 93px 27px;
+  }
+}
+
+.placeholder.darkPlaceholder {
+  background-color: theme.$palette-shadow;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--image-aspect-ratio);
+  object-fit: cover;
+}
