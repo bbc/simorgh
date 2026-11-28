@@ -106,15 +106,22 @@ export default ({ service, pageType }: ServiceParametersType) => {
               this.skip();
             }
             cy.location('pathname').then(previousUrl => {
-              cy.wrap($items).eq(1).find('a').click();
-              cy.location('pathname').should('not.eq', previousUrl);
               cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
-                $links => {
-                  const newTexts = $links
+                $currentLinks => {
+                  const textsBeforeClick = $currentLinks
                     .toArray()
                     .map(link => link.textContent || '');
-                  expect(newTexts).to.not.deep.equal(
-                    initialSecondaryNavItemLinkTexts,
+
+                  cy.wrap($items).eq(1).find('a').click();
+                  cy.location('pathname').should('not.eq', previousUrl);
+
+                  cy.get('[data-e2e="scrollable-nav-secondary"] li a').should(
+                    $links => {
+                      const newTexts = $links
+                        .toArray()
+                        .map(link => link.textContent || '');
+                      expect(newTexts).to.not.deep.equal(textsBeforeClick);
+                    },
                   );
                 },
               );

@@ -1,0 +1,8 @@
+@use '@scss/themeTokens' as theme;
+
+time.timestamp,
+:global([data-is-dark-ui='true']) time.timestamp {
+  @include theme.typography-from-scale-and-variant(bodyCopy, 'sans-bold');
+  display: inline-block;
+  color: theme.$palette-black;
+}

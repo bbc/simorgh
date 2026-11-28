@@ -8,7 +8,6 @@ import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
 import fetchToggles from '#app/lib/utilities/fetchToggles';
-import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
 
@@ -26,7 +25,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,
@@ -38,7 +36,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv,
+    rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: TV_PAGE,
   });
@@ -62,7 +60,6 @@ export default async (context: GetServerSidePropsContext) => {
       props: {
         service,
         status,
-        timeOnServer: Date.now(),
         variant: variant || null,
         pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,

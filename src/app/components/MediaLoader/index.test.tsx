@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   act,
   render,
+  screen,
 } from '#app/components/react-testing-library-with-providers';
 import { Helmet } from 'react-helmet';
 import useLocation from '#app/hooks/useLocation';
@@ -425,21 +426,13 @@ describe('MediaLoader', () => {
       );
     });
     it('Displays a caption when provided ', async () => {
-      let container;
-
       await act(async () => {
-        ({ container } = render(
-          <MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />,
-          {
-            id: 'testId',
-          },
-        ));
+        render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
+          id: 'testId',
+        });
       });
 
-      const caption = (container as unknown as HTMLElement).querySelectorAll(
-        'span',
-      );
-      expect(caption[3]?.textContent).toBe('This is a caption!');
+      expect(screen.getByText('This is a caption!')).toBeVisible();
     });
   });
 

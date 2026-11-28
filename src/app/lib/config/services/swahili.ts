@@ -1,6 +1,6 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import '#psammead/moment-timezone-include/tz/Africa/Nairobi';
-import '#psammead/psammead-locales/moment/sw';
+import '#lib/locales/moment/sw';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -99,6 +99,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      showMore: 'Onyesha zaidi',
       moreOnThis: '',
       navMenuText: 'Yaliyomo',
       liteSite: {

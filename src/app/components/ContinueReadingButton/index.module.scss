@@ -1,0 +1,51 @@
+@use '@scss/themeTokens' as theme;
+
+.continueReadingButton {
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  width: calc(100% - #{theme.$spacings-quadruple});
+  padding: theme.$spacings-double 0;
+  margin: 0 theme.$spacings-double theme.pixelsToRem-px-to-rem(12)
+    theme.$spacings-double;
+  background-color: theme.$palette-grey-2;
+  color: theme.$palette-grey-10;
+  text-align: start;
+  border: none;
+  border-bottom: theme.pixelsToRem-px-to-rem(1) solid theme.$palette-grey-4;
+  padding-bottom: calc(#{theme.$spacings-double} + #{theme.$spacings-full});
+
+  :global(.external-svg) {
+    width: theme.$spacings-double;
+    height: theme.$spacings-double;
+    margin-inline-start: theme.pixelsToRem-px-to-rem(10);
+    vertical-align: middle;
+  }
+
+  // Keep the button outline visible in high-contrast modes
+  @media (forced-colors: active) {
+    background-color: Canvas;
+    color: CanvasText;
+    border: theme.pixelsToRem-px-to-rem(1) solid CanvasText;
+  }
+
+  @media #{theme.$mediaQueries-group-1-max-width} {
+    margin: 0 theme.$spacings-full theme.pixelsToRem-px-to-rem(12)
+      theme.$spacings-full;
+    width: calc(100% - #{theme.$spacings-double});
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  :global(.no-js) &,
+  :global(.is-opera-mini) & {
+    display: none;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    display: none;
+  }
+}

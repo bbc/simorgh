@@ -4,7 +4,7 @@
 
 The `#legacy/psammead-paragraph/src` package exports a single Paragraph component. It uses a `p` HTML element.
 
-It uses `#legacy/psammead-styles/src` for colours and font family and `#legacy/gel-foundations/src` for spacing and for GEL Typography implemented in Styled Components.
+It uses `#legacy/gel-foundations/src` for spacing and for GEL Typography implemented in Styled Components.
 
 ## Installation
 

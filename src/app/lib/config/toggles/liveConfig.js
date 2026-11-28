@@ -76,6 +76,9 @@ export default {
     enabled: true,
     value: 4,
   },
+  relaxedCsp: {
+    enabled: false,
+  },
   scriptLink: {
     enabled: true,
   },
@@ -83,9 +86,6 @@ export default {
     enabled: false,
   },
   showSportDataHeader: {
-    enabled: false,
-  },
-  stickyNavigation: {
     enabled: false,
   },
   topBarOJs: {

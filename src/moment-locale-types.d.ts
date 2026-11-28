@@ -3,4 +3,4 @@
 // (registering locale/timezone data) and have no exports.
 declare module 'moment/locale/*';
 declare module '#psammead/moment-timezone-include/tz/*';
-declare module '#psammead/psammead-locales/moment/*';
+declare module '#lib/locales/moment/*';

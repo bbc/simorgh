@@ -199,6 +199,26 @@ describe('RecentAudioEpisodes', () => {
     expect(visuallyHiddenDate[0]).toBeInTheDocument();
   });
 
+  it('should separate the visible title, duration and date with spaces in the accessible name', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+      { service: 'indonesia' },
+    );
+
+    const label = container.querySelector('#episodeLinkIndex-0');
+    const title = label.querySelector('.episode-list__title--hover');
+    const duration = label.querySelector('[aria-hidden="true"]').parentElement;
+
+    expect(title.nextSibling.nextSibling.nodeValue).toEqual(' ');
+    expect(duration.textContent).toMatch(/ $/);
+    expect(duration.nextSibling).toContainElement(label.querySelector('time'));
+  });
+
   it('should render the correct list item links for podcasts', async () => {
     const { getAllByText } = render(
       <RecentAudioEpisodesWithContext
@@ -307,7 +327,7 @@ describe('RecentAudioEpisodes', () => {
     expect(wrappingDiv.style.borderBottom).toBe('');
   });
 
-  it('should render a border between two DateTimeDuration elements when there is an episode title', () => {
+  it('preserves the semantic date when rendered through DateTimeDuration', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_indonesian_radio"
@@ -317,10 +337,9 @@ describe('RecentAudioEpisodes', () => {
       />,
       { service: 'indonesia' },
     );
-    const spanEl = getByText('17 November 2020');
-    const style = window.getComputedStyle(spanEl);
-
-    expect(style.borderLeft).toBe('0.0625rem solid rgb(174, 174, 181)');
+    const time = getByText('17 November 2020');
+    expect(time.tagName).toBe('TIME');
+    expect(time).toHaveAttribute('datetime', '2020-11-17');
   });
 
   it('should aria-hide the duration', () => {

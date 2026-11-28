@@ -1,6 +1,6 @@
 import latinWithDiacritics from '../../../components/ThemeProvider/fontScripts/latinWithDiacritics';
 import '#psammead/moment-timezone-include/tz/Europe/Warsaw';
-import '#psammead/psammead-locales/moment/pl-pl';
+import '#lib/locales/moment/pl-pl';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -85,6 +85,7 @@ export const service: DefaultServiceConfig = {
       },
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      showMore: 'Pokaż więcej',
       moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {

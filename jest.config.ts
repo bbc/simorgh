@@ -34,7 +34,7 @@ type ResolvedRootJestConfig = Omit<
   transformIgnorePatterns: string[];
 };
 
-type IntegrationPlatform = 'canonical' | 'amp' | 'lite';
+type IntegrationPlatform = 'canonical' | 'amp' | 'lite' | 'app';
 
 type IntegrationTestDescriptor = {
   displayName: string;
@@ -49,8 +49,6 @@ const nextBuildPath = path.resolve(nextRoot, 'build');
 const sharedSetupPath = path.resolve(repoRoot, 'src/testHelpers/setupTests.js');
 
 const nextTransformerPattern = '^.+\\.(js|jsx|ts|tsx|mjs)$';
-const puppeteerNodeModulesPattern =
-  'node_modules/(?!(puppeteer(?:-core)?|@puppeteer/browsers)/)';
 
 const rootProjectPaths = {
   rootDir: repoRoot,
@@ -90,7 +88,6 @@ const unitTests = {
     '**/?(*.)+(test).{js,jsx,ts,tsx}',
     '!**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
-    '!**/puppeteer/**/*',
   ],
 } satisfies JestProjectConfig;
 
@@ -101,16 +98,7 @@ const clientUnitTests = {
   testMatch: [
     '**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/**/*',
-    '!**/puppeteer/**/*',
   ],
-} satisfies JestProjectConfig;
-
-const puppeteerTests = {
-  ...rootProjectPaths,
-  setupFiles: [path.resolve(repoRoot, 'puppeteer/jest-setup.js')],
-  moduleNameMapper: jestDirAlias,
-  displayName: 'Puppeteer Tests',
-  testMatch: ['**/puppeteer/**/*.test.js'],
 } satisfies JestProjectConfig;
 
 const rootCreateJestConfig = nextJest({});
@@ -161,17 +149,6 @@ const buildRootProject = async (
   })()) as ResolvedRootJestConfig;
 
   return withRootEmotion(resolvedConfig);
-};
-
-const buildPuppeteerProject = async (): Promise<ResolvedRootJestConfig> => {
-  const resolvedConfig = await buildRootProject(puppeteerTests);
-
-  return {
-    ...resolvedConfig,
-    transformIgnorePatterns: resolvedConfig.transformIgnorePatterns
-      .filter(pattern => !pattern.includes('node_modules'))
-      .concat(puppeteerNodeModulesPattern),
-  };
 };
 
 const configFile = ts.readConfigFile(nextTsConfigPath, ts.sys.readFile);
@@ -251,17 +228,38 @@ const nextIntegrationTestDescriptors = [
   {
     displayName: 'Integration Tests - Canonical',
     platform: 'canonical',
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   },
   {
     displayName: 'Integration Tests - AMP',
     platform: 'amp',
-    testPathIgnorePatterns: ['.*lite\\.test\\.ts$', '.*canonical\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*lite\\.test\\.ts$',
+      '.*canonical\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
   },
   {
     displayName: 'Integration Tests - Lite',
     platform: 'lite',
-    testPathIgnorePatterns: ['.*canonical\\.test\\.ts$', '.*amp\\.test\\.ts$'],
+    testPathIgnorePatterns: [
+      '.*canonical\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*app\\.test\\.ts$',
+    ],
+  },
+  {
+    displayName: 'Integration Tests - App',
+    platform: 'app',
+    testPathIgnorePatterns: [
+      '.*canonical\\.test\\.ts$',
+      '.*amp\\.test\\.ts$',
+      '.*lite\\.test\\.ts$',
+    ],
   },
 ] satisfies IntegrationTestDescriptor[];
 
@@ -285,7 +283,6 @@ export default async function createJestConfig(): Promise<JestConfig> {
     projects: [
       await buildRootProject(unitTests),
       await buildRootProject(clientUnitTests),
-      await buildPuppeteerProject(),
       await buildNextProject(nextUnitTests),
       ...(await Promise.all(nextIntegrationTests.map(buildNextProject))),
     ],

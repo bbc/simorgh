@@ -119,7 +119,7 @@ describe('useUASFetchSaveStatus', () => {
     expect(mockUasApiRequest).not.toHaveBeenCalled();
   });
 
-  test('returns savedMetadata when article is saved', async () => {
+  test('returns metadata when article is saved', async () => {
     const mockMetadata = {
       title: 'Test Article',
       promoImage: 'https://ichef.bbc.co.uk/image.jpg',
@@ -138,10 +138,10 @@ describe('useUASFetchSaveStatus', () => {
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.isSaved).toBe(true);
-    expect(result.current.savedMetadata).toEqual(mockMetadata);
+    expect(result.current.metadata).toEqual(mockMetadata);
   });
 
-  test('returns undefined savedMetadata when article is not saved', async () => {
+  test('returns undefined metadata when article is not saved', async () => {
     mockBuildGlobalId.mockReturnValue('global-123');
     mockUseQueryReturn.data = { isSaved: false };
 
@@ -152,6 +152,6 @@ describe('useUASFetchSaveStatus', () => {
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.isSaved).toBe(false);
-    expect(result.current.savedMetadata).toBeUndefined();
+    expect(result.current.metadata).toBeUndefined();
   });
 });

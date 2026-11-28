@@ -46,8 +46,6 @@ const {
 } = russianServiceConfig.default.podcastPromo;
 
 describe('Inline', () => {
-  const electionsIconPathSnippet = 'M18.1,7.2v2.6h8.7';
-
   it('should omit the canonical sizes hint for AMP images', () => {
     const { container: canonicalContainer } = render(<PromoWithContext />, {
       service: 'russian',
@@ -132,7 +130,7 @@ describe('Inline', () => {
           ...russianServiceConfig.default.podcastPromo,
           linkLabel: {
             ...russianServiceConfig.default.podcastPromo.linkLabel,
-            href: 'https://www.bbc.com/portuguese/articles/cm1dlv13yql9o',
+            href: 'https://www.bbc.com/portuguese/articles/c61m430mdek2o',
           },
         },
       },
@@ -145,7 +143,10 @@ describe('Inline', () => {
       },
     );
 
-    expect(container.innerHTML).toContain(electionsIconPathSnippet);
+    expect(container.querySelector('.podcastIconWrapper img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('/images/icons/media-elections.svg'),
+    );
   });
 
   it('should show when all props are available', () => {
@@ -243,18 +244,17 @@ describe('Inline', () => {
     expect(getByText('Загрузить расширение').closest('p')).toBeInTheDocument();
   });
 
-  it('SVGs should use focusable=false and aria-hidden=true to ensure the icon is not focusable in the tabbing order (IE 11)', () => {
+  it('keeps external promo artwork decorative and out of the tab order', () => {
     const { container } = render(<PromoWithContext inline />, {
       service: 'russian',
     });
-    const svgEls = Array.from(container.querySelectorAll('svg'));
-    const focusableAttrs = svgEls.map(svgEl => svgEl.getAttribute('focusable'));
-    const ariaHiddenAttrs = svgEls.map(svgEl =>
-      svgEl.getAttribute('aria-hidden'),
-    );
+    const icon = container.querySelector('.external-svg');
+    const image = icon.querySelector('img');
 
-    expect(focusableAttrs.every(attr => attr === 'false')).toBe(true);
-    expect(ariaHiddenAttrs.every(attr => attr === 'true')).toBe(true);
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+    expect(image).toHaveAttribute('alt', '');
+    expect(image.tabIndex).toBe(-1);
+    expect(container.querySelector('svg')).not.toBeInTheDocument();
   });
 });
 

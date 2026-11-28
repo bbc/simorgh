@@ -5,8 +5,6 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import RadioScheduleContainer from '..';
 
-const timeOnServer = Date.parse('2024-11-20T16:29:30Z');
-
 const RadioSchedulesWithContext = ({
   service,
   radioScheduleToggle = false,
@@ -31,7 +29,6 @@ const RadioSchedulesWithContext = ({
         pageType={HOME_PAGE}
         service={service}
         pathname={`/${service}`}
-        timeOnServer={timeOnServer}
       >
         <ServiceContextProvider service={service}>
           <RadioScheduleContainer

@@ -6,7 +6,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#app/lib/utilities/timestamp';
 import VisuallyHiddenText from '../../../components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 

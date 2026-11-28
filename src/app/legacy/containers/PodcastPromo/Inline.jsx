@@ -20,7 +20,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 import Image from '#app/components/Image';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
+import { mediaIcons } from '#app/components/icons/shared';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { FORCED_COLOURS } from '#app/components/ThemeProvider/mediaQueries';
@@ -171,7 +171,7 @@ const icons = {
 };
 
 const iconOverridesByUrl = {
-  '/portuguese/articles/cm1dlv13yql9o': mediaIcons.elections,
+  '/portuguese/articles/c61m430mdek2o': mediaIcons.elections,
 };
 
 const getIconFromUrl = url => {

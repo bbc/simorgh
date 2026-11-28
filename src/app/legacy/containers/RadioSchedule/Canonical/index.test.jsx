@@ -17,7 +17,6 @@ const RadioScheduleWithContext = ({ radioSchedule, lang }) => (
     pageType={HOME_PAGE}
     service="arabic"
     pathname="/arabic"
-    timeOnServer={timeOnServer}
   >
     <ServiceContextProvider service="arabic">
       <RadioSchedule radioSchedule={radioSchedule} lang={lang} />

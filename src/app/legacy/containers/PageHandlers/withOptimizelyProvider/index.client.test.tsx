@@ -67,6 +67,10 @@ jest.mock('#app/contexts/UserContext', () => ({
 describe('withOptimizelyProvider HOC', () => {
   const originalMatchMedia = window.matchMedia;
 
+  beforeEach(() => {
+    window.history.replaceState(null, '', '/');
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
     Cookie.remove('ckns_mvt');
@@ -160,13 +164,8 @@ describe('withOptimizelyProvider HOC', () => {
 
   describe('referrer attribute', () => {
     beforeEach(() => {
-      // Reset document.referrer and window.location.search before each test
       Object.defineProperty(document, 'referrer', {
         value: '',
-        writable: true,
-      });
-      Object.defineProperty(window, 'location', {
-        value: { search: '' },
         writable: true,
       });
     });
@@ -225,10 +224,7 @@ describe('withOptimizelyProvider HOC', () => {
     it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
       'should set referrer to "social" when the at_campaign URL parameter is %s',
       atParamValue => {
-        Object.defineProperty(window, 'location', {
-          value: { search: `?at_campaign=${atParamValue}` },
-          writable: true,
-        });
+        window.history.replaceState(null, '', `?at_campaign=${atParamValue}`);
 
         render(<TestComponent />);
 
@@ -242,10 +238,7 @@ describe('withOptimizelyProvider HOC', () => {
     it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
       'should set referrer to "social" when the at_medium URL parameter is %s',
       atParamValue => {
-        Object.defineProperty(window, 'location', {
-          value: { search: `?at_medium=${atParamValue}` },
-          writable: true,
-        });
+        window.history.replaceState(null, '', `?at_medium=${atParamValue}`);
 
         render(<TestComponent />);
 
@@ -348,10 +341,7 @@ describe('withOptimizelyProvider HOC', () => {
       capturedDecisionListener = undefined;
       mockTrack.mockReset();
       localStorage.clear();
-      Object.defineProperty(window, 'location', {
-        value: { pathname: '/pathname', search: '' },
-        writable: true,
-      });
+      window.history.replaceState(null, '', '/pathname');
 
       // The notification listener is registered at module initialisation time (top-level code
       // in index.tsx), so the standard top-level import would have already run before any mocks
@@ -536,10 +526,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      Object.defineProperty(window, 'location', {
-        value: { pathname: '/new-page', search: '' },
-        writable: true,
-      });
+      window.history.replaceState(null, '', '/new-page');
 
       capturedDecisionListener?.({
         decisionInfo: {
@@ -565,10 +552,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      Object.defineProperty(window, 'location', {
-        value: { pathname: '/new-page', search: '' },
-        writable: true,
-      });
+      window.history.replaceState(null, '', '/new-page');
 
       capturedDecisionListener?.({
         decisionInfo: {
@@ -578,10 +562,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      Object.defineProperty(window, 'location', {
-        value: { pathname: '/pathname', search: '' },
-        writable: true,
-      });
+      window.history.replaceState(null, '', '/pathname');
 
       capturedDecisionListener?.({
         decisionInfo: {
@@ -608,10 +589,7 @@ describe('withOptimizelyProvider HOC', () => {
         },
       });
 
-      Object.defineProperty(window, 'location', {
-        value: { pathname: '/pathname', search: '?page=2' },
-        writable: true,
-      });
+      window.history.replaceState(null, '', '/pathname?page=2');
 
       capturedDecisionListener?.({
         decisionInfo: {

@@ -5,6 +5,7 @@ import Promo from '#components/OptimoPromos';
 import isEmpty from 'ramda/src/isEmpty';
 import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
+import timestampStyles from './index.module.scss';
 import { EventTrackingBlock } from '../../../models/types/eventTracking';
 
 type RelatedContentItemProps = {
@@ -152,6 +153,7 @@ const RelatedContentItem = ({
 
   return (
     <div
+      className={timestampStyles.wrapper}
       css={[styles.wrapper, headlineFirst && styles.promoFullWidth]}
       {...viewTracker}
     >
@@ -179,7 +181,7 @@ const RelatedContentItem = ({
               <Promo.Content headline={headline} />
             </Promo.Link>
           </Promo.Title>
-          <Promo.Timestamp css={styles.promoTimestamp}>
+          <Promo.Timestamp className={timestampStyles.promoTimestamp}>
             {timestamp}
           </Promo.Timestamp>
         </Promo.ContentWrapper>

@@ -1,0 +1,22 @@
+@use '@scss/themeTokens' as theme;
+
+.link {
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  display: block;
+  color: theme.$palette-white;
+  padding: theme.pixelsToRem-px-to-rem(12) 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}

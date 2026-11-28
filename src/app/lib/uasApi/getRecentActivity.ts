@@ -113,9 +113,11 @@ const getRecentActivity = async ({
       startIndex: data.pagination.startIndex,
     };
   } catch (error) {
-    logger.error(UAS_API_ERROR, {
-      error: error instanceof Error ? error.message : 'Unknown error',
-    });
+    if (!signal?.aborted) {
+      logger.error(UAS_API_ERROR, {
+        error: error instanceof Error ? error.message : 'Unknown error',
+      });
+    }
 
     throw error;
   }

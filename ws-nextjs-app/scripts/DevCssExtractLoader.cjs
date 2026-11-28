@@ -21,6 +21,8 @@ const cssMap = new Map();
 // stores it in the in-memory map, writes the concatenated output to disk, then passes
 // the JS through unchanged for the remaining loaders.
 module.exports = function devCssExtractLoader(jsSource) {
+  // Cached loader output cannot replay the CSS file write needed by AMP/Lite.
+  this.cacheable(false);
   const match = jsSource.match(CSS_CONTENT_REGEX);
   if (match) {
     const css = JSON.parse(`"${match[1]}"`);

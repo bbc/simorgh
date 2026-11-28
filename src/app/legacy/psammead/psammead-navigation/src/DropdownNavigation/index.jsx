@@ -1,6 +1,6 @@
 import { cloneElement, useLayoutEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
-import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
+import { navigationIcons } from '#app/components/icons/shared';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -208,6 +208,7 @@ export const CanonicalMenuButton = ({
   onClick,
   dir = 'ltr',
   className = '',
+  ...props
 }) => (
   <MenuButton
     onClick={onClick}
@@ -215,6 +216,7 @@ export const CanonicalMenuButton = ({
     aria-label={announcedText}
     dir={dir}
     className={`${className} focusIndicatorRemove`}
+    {...props}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>

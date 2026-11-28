@@ -1,6 +1,6 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
+import { formatUnixTimestamp } from '#app/lib/utilities/timestamp';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';

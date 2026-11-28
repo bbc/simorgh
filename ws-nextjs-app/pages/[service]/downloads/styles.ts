@@ -33,12 +33,6 @@ export default {
         gridTemplateColumns: 'repeat(auto-fill, minmax(50%, 1fr))',
       },
     }),
-  cta: () =>
-    css({
-      div: {
-        display: 'block',
-      },
-    }),
   listItem: ({ fontSizes, palette }: Theme) =>
     css({
       borderBottom: '1px solid #000',
@@ -49,9 +43,6 @@ export default {
       time: {
         ...fontSizes.greatPrimer,
         marginBottom: '8px',
-      },
-      svg: {
-        marginRight: '8px',
       },
       a: {
         color: palette.RHINO,

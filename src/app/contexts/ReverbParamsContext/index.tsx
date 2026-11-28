@@ -36,7 +36,7 @@ import getEnrichedArticleATIData, {
 import getEnrichedMostReadATIData from './getEnrichedMostReadATIData';
 import getEnrichedMediaArticleATIData from './getEnrichedMediaArticleATIData';
 import getEnrichedHomePageATIData, {
-  HOME_PAGE_VIEWS_EXPERIMENT_NAME,
+  HOME_PAGE_EXPERIMENT_NAME,
 } from './getEnrichedHomePageATIData';
 
 type ReverbParamsContextProps = {
@@ -171,7 +171,7 @@ const getPageViewsExperimentName = (pageType: PageTypes) => {
     case STORY_PAGE:
       return ARTICLE_PAGE_VIEWS_EXPERIMENT_NAME;
     case HOME_PAGE:
-      return HOME_PAGE_VIEWS_EXPERIMENT_NAME;
+      return HOME_PAGE_EXPERIMENT_NAME;
     default:
       return null;
   }

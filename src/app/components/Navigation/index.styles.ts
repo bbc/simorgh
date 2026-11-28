@@ -1,6 +1,10 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
+import {
+  STICKY_MIN_VIEWPORT_HEIGHT,
+  STICKY_TRANSITION_DURATION_MS,
+} from './config';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
@@ -17,9 +21,29 @@ export default {
       backgroundColor: palette.WHITE,
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
       transform: 'translateY(-100%)',
-      transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-      '@media (prefers-reduced-motion: reduce)': {
-        transition: 'none',
+      transition: `transform ${STICKY_TRANSITION_DURATION_MS}ms cubic-bezier(0.4, 0, 0.2, 1)`,
+      // Only applied while the bar is pinned, so the browser keeps it on its
+      // own compositor layer for the slide and drops the layer afterwards.
+      willChange: 'transform',
+
+      // When a user zooms in a lot (roughly 200% or more), the browser
+      // reports a much shorter viewport. We don't want the bar fixed to the
+      // top of the screen in that case, because it would cover too much of
+      // the visible page.
+      //
+      // Below this height, we switch `position` from `fixed` to `static`.
+      // That means the bar is no longer pinned to the top of the screen, and
+      // instead scrolls away normally with the rest of the content, like it
+      // does before the user has scrolled down at all.
+      //
+      // We also check the screen height in JavaScript (search the codebase
+      // for STICKY_MIN_VIEWPORT_HEIGHT) and avoid pinning the bar there too.
+      // This CSS rule exists as a backup, in case there is ever a brief
+      // moment where the JavaScript state has not updated yet.
+      [`@media (max-height: ${STICKY_MIN_VIEWPORT_HEIGHT - 1}px)`]: {
+        position: 'static',
+        transform: 'none',
+        boxShadow: 'none',
       },
     }),
   stickyVisible: css({
@@ -54,6 +78,10 @@ export default {
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
+    width: '100%',
+  }),
+  navRowWrapper: css({
+    position: 'relative',
     width: '100%',
   }),
   ampScrollableNav: ({ mq }: Theme) =>

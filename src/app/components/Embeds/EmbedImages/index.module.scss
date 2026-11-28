@@ -1,0 +1,20 @@
+@use '@scss/themeTokens' as theme;
+
+// Physical left/right rather than the logical shorthand
+// (e.g. `padding-inline: theme.$spacings-full`): the values are symmetric,
+// so RTL is unaffected, and Opera Mini doesn't support the shorthand.
+.embedDiv {
+  padding-left: theme.$spacings-full;
+  padding-right: theme.$spacings-full;
+  margin-bottom: theme.$spacings-triple;
+
+  @media #{theme.$mediaQueries-group-2-min-width} {
+    padding-left: theme.$spacings-double;
+    padding-right: theme.$spacings-double;
+  }
+
+  @media #{theme.$mediaQueries-group-4-min-width} {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -7,11 +7,12 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getTopicPageUrl from '#app/lib/utilities/getTopicPageUrl';
-import styles from './index.styles';
+import styles from './index.module.scss';
 
 interface TopicTagsProps {
   tags: Pick<TopicTag, 'topicName' | 'topicId'>[];
   experimentProps?: ComponentExperimentProps;
+  trackingSource?: string;
 }
 
 type TopicTagLinkProps = {
@@ -44,15 +45,19 @@ const TopicTagLink = ({
   );
 };
 
-export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
-  const componentName = 'topics';
+export const TopicTags = ({
+  tags,
+  experimentProps,
+  trackingSource,
+}: TopicTagsProps) => {
+  const componentName = trackingSource ? `${trackingSource}-topics` : 'topics';
   const { service, translations } = use(ServiceContext);
   const { variant } = use(RequestContext);
   const heading = translations?.relatedTopics ?? 'Related Topics';
   const eventTrackingData = {
     componentName,
     groupTracker: {
-      name: heading,
+      name: trackingSource || heading,
       type: componentName,
       itemCount: tags.length,
     },
@@ -77,12 +82,12 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
   return hasMultiple ? (
     <ul
       role="list"
-      css={styles.topicsList}
+      className={styles.topicsContainer}
       data-testid="topic-tags-multiple"
       {...viewTracker}
     >
       {tags.map((tag, index) => (
-        <li key={tag.topicId} css={styles.topicTagItem}>
+        <li key={tag.topicId} className={styles.topicTagItem}>
           <TopicTagLink
             tag={tag}
             href={buildTopicPageUrl(tag.topicId)}
@@ -94,11 +99,11 @@ export const TopicTags = ({ tags, experimentProps }: TopicTagsProps) => {
     </ul>
   ) : (
     <div
-      css={styles.singleContainer}
+      className={styles.topicsContainer}
       data-testid="topic-tags-single"
       {...viewTracker}
     >
-      <div css={styles.topicTagItem}>
+      <div className={styles.topicTagItem}>
         <TopicTagLink
           tag={tags[0]}
           href={buildTopicPageUrl(tags[0].topicId)}

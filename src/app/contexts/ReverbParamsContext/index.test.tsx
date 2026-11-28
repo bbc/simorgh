@@ -350,7 +350,7 @@ describe('ReverbParamsContext', () => {
       [STORY_PAGE, 'test_page_views_aa_3'],
       [CORRESPONDENT_STORY_PAGE, 'test_page_views_aa_3'],
       [PHOTO_GALLERY_PAGE, 'test_page_views_aa_3'],
-      [HOME_PAGE, 'test_page_views_aa_4'],
+      [HOME_PAGE, 'test_homepage_client_side_aa'],
       [MEDIA_ARTICLE_PAGE, null],
       [MEDIA_ASSET_PAGE, null],
       [MOST_READ_PAGE, null],
@@ -402,7 +402,7 @@ describe('ReverbParamsContext', () => {
       setDecision('home-variant');
       rerender();
       expect(result.current.experimentProps).toEqual({
-        experimentName: 'test_page_views_aa_4',
+        experimentName: 'test_homepage_client_side_aa',
         experimentVariant: 'home-variant',
         sendOptimizelyEvents: true,
       });
@@ -458,8 +458,8 @@ describe('ReverbParamsContext', () => {
     it.each([
       [ARTICLE_PAGE, 'test_page_views_aa_3', null],
       [ARTICLE_PAGE, 'test_page_views_aa_3', 'off'],
-      [HOME_PAGE, 'test_page_views_aa_4', null],
-      [HOME_PAGE, 'test_page_views_aa_4', 'off'],
+      [HOME_PAGE, 'test_homepage_client_side_aa', null],
+      [HOME_PAGE, 'test_homepage_client_side_aa', 'off'],
     ])(
       'updates real hook state on %s for %s and removes experiment data when the variant becomes %s',
       (pageType, experimentName, inactiveVariant) => {

@@ -1,8 +1,7 @@
 import { use } from 'react';
 import Heading from '#app/components/Heading';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import Spinner from '#app/components/Spinner';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import MyNewsSpinner from '#app/components/MyNewsSpinner';
 import styles from './styles';
 
 const MyNewsPageLoading = () => {
@@ -11,15 +10,10 @@ const MyNewsPageLoading = () => {
 
   return (
     <>
-      <Heading level={1} css={styles.heading}>
+      <Heading id="content" tabIndex={-1} level={1} css={styles.heading}>
         {translations?.myNews?.title}
       </Heading>
-      <div css={styles.spinnerWrapper} data-testid="my-news-page-spinner">
-        <VisuallyHiddenText aria-live="polite">
-          {loadingText}
-        </VisuallyHiddenText>
-        <Spinner css={styles.spinner} />
-      </div>
+      <MyNewsSpinner label={loadingText} testId="my-news-page-spinner" />
     </>
   );
 };

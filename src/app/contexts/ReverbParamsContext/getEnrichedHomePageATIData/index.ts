@@ -1,7 +1,8 @@
 import { ComponentExperimentProps } from '#app/models/types/global';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 
-export const HOME_PAGE_VIEWS_EXPERIMENT_NAME = 'test_page_views_aa_4';
+// EXPERIMENT: replace with the name of an active client side home page experiment
+export const HOME_PAGE_EXPERIMENT_NAME = 'test_homepage_client_side_aa';
 
 const getActiveExperimentProps = (
   experimentName: string,
@@ -24,21 +25,20 @@ export default ({
 }) => {
   const { atiAnalytics: atiData = {} } = pageMetadata ?? {};
 
-  const isTestPageViewsVariant =
-    experimentVariant && experimentVariant !== 'off';
+  const isActiveVariant = experimentVariant && experimentVariant !== 'off';
 
-  const testPageViewsExperimentProps = getActiveExperimentProps(
-    HOME_PAGE_VIEWS_EXPERIMENT_NAME,
+  const experimentProps = getActiveExperimentProps(
+    HOME_PAGE_EXPERIMENT_NAME,
     experimentVariant,
   );
 
   const enrichedData = {
     ...atiData,
-    ...(isTestPageViewsVariant &&
-      testPageViewsExperimentProps && {
-        experimentName: testPageViewsExperimentProps.experimentName,
-        experimentVariant: testPageViewsExperimentProps.experimentVariant,
-        experimentProps: testPageViewsExperimentProps,
+    ...(isActiveVariant &&
+      experimentProps && {
+        experimentName: experimentProps.experimentName,
+        experimentVariant: experimentProps.experimentVariant,
+        experimentProps,
       }),
   };
 

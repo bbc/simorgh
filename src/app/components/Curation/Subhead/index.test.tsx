@@ -22,11 +22,11 @@ describe('Curation Subhead Component', () => {
   });
 
   it.each([
-    ['mundo', 'M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z'],
-    ['arabic', 'M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z'],
+    ['mundo', 'chevron-forward.svg'],
+    ['arabic', 'chevron-backward.svg'],
   ] as [Services, string][])(
     'should render a link with the correct chevron for %s',
-    (service, chevronPath) => {
+    (service, asset) => {
       render(<Subhead link="https://bbc.com">My Text</Subhead>, { service });
 
       const headingElement = screen.getByRole('heading', {
@@ -38,18 +38,10 @@ describe('Curation Subhead Component', () => {
       expect(anchorElement).toHaveAttribute('href', 'https://bbc.com');
       expect(anchorElement).toHaveClass('focusIndicatorDisplayBlock');
       expect(anchorElement.querySelector('span')).toHaveTextContent('My Text');
-      expect(anchorElement.querySelector('svg')).toHaveAttribute(
-        'aria-hidden',
-        'true',
-      );
-      expect(anchorElement.querySelector('svg')).toHaveAttribute(
-        'focusable',
-        'false',
-      );
-      expect(anchorElement.querySelector('path')).toHaveAttribute(
-        'd',
-        chevronPath,
-      );
+
+      const chevron = anchorElement.querySelector<HTMLElement>('.external-svg');
+      expect(chevron).toHaveClass('chevron');
+      expect(chevron?.style.getPropertyValue('--icon-source')).toContain(asset);
     },
   );
 

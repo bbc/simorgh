@@ -17,6 +17,7 @@ const trackedEnvVars = [
   'SIMORGH_APP_ENV',
   'TOGGLES_SERVICE_ENV',
   'WEB_CDN_URL',
+  'SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS',
 ] as const;
 
 type EnvSnapshot = Record<(typeof trackedEnvVars)[number], string | undefined>;
@@ -45,10 +46,12 @@ describe('fetchToggles', () => {
     process.env.TOGGLES_BFF_PATH = 'https://mock-toggles-endpoint';
     jest
       .spyOn(global, 'fetch')
+      .mockReset()
       .mockResolvedValue(mockSuccessfulFetchResponse as unknown as Response);
   });
 
   afterEach(() => {
+    jest.useRealTimers();
     jest.resetModules();
     jest.restoreAllMocks();
     restoreEnv(envSnapshot);
@@ -176,6 +179,172 @@ describe('fetchToggles', () => {
       await fetchToggles({ service: 'mundo' });
 
       expect(global.fetch).toHaveBeenCalledTimes(2);
+    });
+
+    it('should not deduplicate concurrent requests when running locally', async () => {
+      const { default: fetchToggles } = await import('./index');
+
+      await expect(
+        Promise.all([
+          fetchToggles({ service: 'mundo' }),
+          fetchToggles({ service: 'mundo' }),
+        ]),
+      ).resolves.toEqual([
+        { ...mockDefaultToggleDefinitions, ...remoteToggles },
+        { ...mockDefaultToggleDefinitions, ...remoteToggles },
+      ]);
+      expect(global.fetch).toHaveBeenCalledTimes(2);
+    });
+
+    describe('concurrent cache misses outside local development', () => {
+      beforeEach(() => {
+        process.env.SIMORGH_APP_ENV = 'live';
+        process.env.WEB_CDN_URL = 'https://mock-cdn';
+        jest.mock('#lib/config/toggles', () => ({
+          ...mockDefaultToggles,
+          live: mockDefaultToggles.local,
+          test: mockDefaultToggles.local,
+        }));
+      });
+
+      it('should share concurrent misses until the response body is parsed', async () => {
+        const { promise, resolve } = Promise.withResolvers<{
+          data: { toggles: typeof remoteToggles };
+        }>();
+        const { promise: bodyStarted, resolve: startBody } =
+          Promise.withResolvers<void>();
+        const json = jest.fn(() => {
+          startBody();
+          return promise;
+        });
+        (global.fetch as jest.Mock).mockResolvedValue({ ok: true, json });
+        const { default: fetchToggles } = await import('./index');
+
+        const firstRequest = fetchToggles({ service: 'mundo' });
+        await bodyStarted;
+        const secondRequest = fetchToggles({ service: 'mundo' });
+
+        resolve({ data: { toggles: remoteToggles } });
+
+        const expectedToggles = {
+          ...mockDefaultToggleDefinitions,
+          ...remoteToggles,
+        };
+        await expect(
+          Promise.all([firstRequest, secondRequest]),
+        ).resolves.toEqual([expectedToggles, expectedToggles]);
+        expect(global.fetch).toHaveBeenCalledTimes(1);
+        expect(json).toHaveBeenCalledTimes(1);
+
+        await expect(fetchToggles({ service: 'mundo' })).resolves.toEqual(
+          expectedToggles,
+        );
+        expect(global.fetch).toHaveBeenCalledTimes(1);
+      });
+
+      it('should deduplicate a new fetch after the cached toggles expire', async () => {
+        jest.useFakeTimers();
+        jest.advanceTimersByTime(1);
+        process.env.SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS = '1';
+        const { default: fetchToggles } = await import('./index');
+        await fetchToggles({ service: 'mundo' });
+
+        jest.advanceTimersByTime(1001);
+
+        await expect(
+          Promise.all([
+            fetchToggles({ service: 'mundo' }),
+            fetchToggles({ service: 'mundo' }),
+          ]),
+        ).resolves.toEqual([
+          { ...mockDefaultToggleDefinitions, ...remoteToggles },
+          { ...mockDefaultToggleDefinitions, ...remoteToggles },
+        ]);
+        expect(global.fetch).toHaveBeenCalledTimes(2);
+      });
+
+      it.each([
+        ['service', { service: 'arabic' }],
+        ['platform', { service: 'mundo', isAmp: true }],
+      ] as const)(
+        'should not share concurrent requests for a different %s',
+        async (_name, params) => {
+          const { default: fetchToggles } = await import('./index');
+
+          await Promise.all([
+            fetchToggles({ service: 'mundo' }),
+            fetchToggles(params),
+          ]);
+
+          expect(global.fetch).toHaveBeenCalledTimes(2);
+        },
+      );
+
+      it('should keep environments separate for pending and cached requests', async () => {
+        const { default: fetchToggles } = await import('./index');
+        const liveRequest = fetchToggles({ service: 'mundo' });
+        process.env.SIMORGH_APP_ENV = 'test';
+        const testRequest = fetchToggles({ service: 'mundo' });
+
+        await Promise.all([liveRequest, testRequest]);
+        await fetchToggles({ service: 'mundo' });
+        process.env.SIMORGH_APP_ENV = 'live';
+        await fetchToggles({ service: 'mundo' });
+
+        expect(global.fetch).toHaveBeenCalledTimes(2);
+        expect(global.fetch).toHaveBeenCalledWith(
+          expect.any(String),
+          expect.objectContaining({
+            headers: { 'ctx-service-env': 'test' },
+          }),
+        );
+        expect(global.fetch).toHaveBeenCalledWith(
+          expect.any(String),
+          expect.objectContaining({
+            headers: { 'ctx-service-env': 'live' },
+          }),
+        );
+      });
+
+      it.each([
+        ['network error', () => Promise.reject(new Error('Network error'))],
+        ['HTTP error', async () => ({ ok: false, status: 500 })],
+        [
+          'JSON error',
+          async () => ({
+            ok: true,
+            json: async () => {
+              throw new Error('Invalid JSON');
+            },
+          }),
+        ],
+        ['missing toggles', async () => ({ ok: true, json: async () => ({}) })],
+      ])(
+        'should share a %s fallback and allow a later retry',
+        async (_name, failure) => {
+          (global.fetch as jest.Mock)
+            .mockImplementationOnce(failure)
+            .mockResolvedValueOnce(mockSuccessfulFetchResponse);
+          const { default: fetchToggles } = await import('./index');
+
+          await expect(
+            Promise.all([
+              fetchToggles({ service: 'mundo' }),
+              fetchToggles({ service: 'mundo' }),
+            ]),
+          ).resolves.toEqual([
+            mockDefaultToggleDefinitions,
+            mockDefaultToggleDefinitions,
+          ]);
+          expect(global.fetch).toHaveBeenCalledTimes(1);
+
+          await expect(fetchToggles({ service: 'mundo' })).resolves.toEqual({
+            ...mockDefaultToggleDefinitions,
+            ...remoteToggles,
+          });
+          expect(global.fetch).toHaveBeenCalledTimes(2);
+        },
+      );
     });
 
     it('should send the ctx-service-env header from TOGGLES_SERVICE_ENV when running locally', async () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Navigation - Canonical snapshots should correctly render Canonical navigation 1`] = `
+exports[`Navigation - Canonical snapshots renders the navigation bar correctly 1`] = `
 .emotion-0 {
   position: relative;
   background-color: #FFFFFF;
@@ -17,7 +17,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 }
 
-.emotion-0 .e1s8yomp3::after {
+.emotion-0 .ejhjkr43::after {
   left: 0;
 }
 
@@ -277,17 +277,6 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 .emotion-11 {
-  color: #000000;
-  fill: currentColor;
-}
-
-@media screen and (forced-colors:active) {
-  .emotion-11 {
-    fill: linkText;
-  }
-}
-
-.emotion-13 {
   background-color: #FFFFFF;
   clear: both;
   overflow: hidden;
@@ -305,45 +294,45 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 @media (min-width:37.5rem) {
-  .emotion-13 {
+  .emotion-11 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .emotion-13 {
+  .emotion-11 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-13 ul {
+.emotion-11 ul {
   padding: 0;
   border: none;
 }
 
-.emotion-13 ul li {
+.emotion-11 ul li {
   padding: 0;
 }
 
-.emotion-13 ul li:last-child {
+.emotion-11 ul li:last-child {
   padding-bottom: 0;
 }
 
-.emotion-13 a {
+.emotion-11 a {
   display: block;
   position: relative;
   padding-inline: 0.5rem;
 }
 
-.emotion-13 a:hover {
+.emotion-11 a:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-13 a:before {
+.emotion-11 a:before {
   content: "";
   position: absolute;
   top: 0;
@@ -355,22 +344,22 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   opacity: 0;
 }
 
-.emotion-13 a:hover::before {
+.emotion-11 a:hover::before {
   opacity: 1;
 }
 
-.emotion-13 a:focus-visible {
+.emotion-11 a:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width:37.4375rem) {
-  .emotion-16 {
+  .emotion-14 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -381,20 +370,20 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 
   @media (min-width:25rem) {
-    .emotion-16 {
+    .emotion-14 {
       scroll-padding-inline-end: 6rem;
     }
   }
 
-  .emotion-16::-webkit-scrollbar {
+  .emotion-14::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-16:focus-visible {
+  .emotion-14:focus-visible {
     outline: none;
   }
 
-  .emotion-16:focus-visible::after {
+  .emotion-14:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -402,7 +391,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     height: 100%;
   }
 
-  .emotion-16:after {
+  .emotion-14:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -418,18 +407,18 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 
   @media (min-width:25rem) {
-    .emotion-16:after {
+    .emotion-14:after {
       width: 6rem;
     }
   }
 }
 
-.emotion-16 li {
+.emotion-14 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-16 li a {
+.emotion-14 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -445,7 +434,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   justify-content: center;
 }
 
-.emotion-16 li:before {
+.emotion-14 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -461,23 +450,23 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   opacity: 1;
 }
 
-.emotion-16 li:last-child:before {
+.emotion-14 li:last-child:before {
   display: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   position: absolute;
   width: 100%;
   inset-inline-start: 0;
 }
 
 @media (min-width: 1041px) {
-  .emotion-18 {
+  .emotion-16 {
     width: 100%;
   }
 }
 
-.emotion-18::after {
+.emotion-16::after {
   content: '';
   position: absolute;
   inset-block-end: 0;
@@ -525,7 +514,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
             >
               <svg
                 aria-hidden="true"
-                class="emotion-11 emotion-12"
+                class="navigation"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -546,7 +535,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
             role="presentation"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="emotion-11 emotion-12"
               data-e2e="dropdown-nav"
               height="0"
             >
@@ -572,10 +561,10 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
           </div>
         </div>
         <div
-          class="emotion-15"
+          class="emotion-13"
         >
           <div
-            class="emotion-16 emotion-8"
+            class="emotion-14 emotion-8"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
           >
@@ -590,7 +579,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
         </div>
       </div>
       <div
-        class="emotion-18"
+        class="emotion-16"
       />
     </div>
   </nav>

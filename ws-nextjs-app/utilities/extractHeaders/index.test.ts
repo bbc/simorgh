@@ -7,6 +7,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: null,
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
@@ -19,6 +20,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: 'gb',
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
@@ -32,6 +34,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: 'za',
       isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
@@ -45,6 +48,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: 'za',
       isUK: true,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
@@ -57,6 +61,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: 'za',
       isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
@@ -69,6 +74,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
+      country: null,
       isUK: false,
       showAdsBasedOnLocation: true,
       showCookieBannerBasedOnCountry: true,
@@ -81,9 +87,26 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: 'https://www.bbc.co.uk/news',
+      country: null,
       isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
     });
+  });
+
+  it(`lowercases country and falls back to 'x-bbc-edge-country'`, () => {
+    expect(extractHeaders({ 'x-country': ' FR ' }).country).toBe('fr');
+    expect(extractHeaders({ 'x-bbc-edge-country': 'NG' }).country).toBe('ng');
+  });
+
+  it('uses the first value when a header arrives as an array', () => {
+    expect(extractHeaders({ 'x-country': ['GB', 'FR'] }).country).toBe('gb');
+    expect(extractHeaders({ 'x-bbc-edge-country': ['NG', 'KE'] }).country).toBe(
+      'ng',
+    );
+  });
+
+  it(`sets isUK to true when 'x-country' is set to 'GB' (uppercase)`, () => {
+    expect(extractHeaders({ 'x-country': 'GB' }).isUK).toBe(true);
   });
 });

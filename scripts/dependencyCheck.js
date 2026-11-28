@@ -6,7 +6,6 @@ const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
   ignoreDirs: ['build', '.storybook', '.yarn', 'cypress'],
   ignoreMatches: [
-    'puppeteer',
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
