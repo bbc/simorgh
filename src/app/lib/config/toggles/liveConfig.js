@@ -49,6 +49,9 @@ export default {
   mostRead: {
     enabled: false,
   },
+  nextJsImageAdapter: {
+    enabled: false,
+  },
   nielsenAnalytics: {
     enabled: true,
   },

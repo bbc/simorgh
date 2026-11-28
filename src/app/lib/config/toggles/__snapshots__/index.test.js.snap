@@ -52,6 +52,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "mostRead": {
     "enabled": false,
   },
+  "nextJsImageAdapter": {
+    "enabled": false,
+  },
   "nielsenAnalytics": {
     "enabled": true,
   },
@@ -172,6 +175,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "mostRead": {
     "enabled": true,
   },
+  "nextJsImageAdapter": {
+    "enabled": false,
+  },
   "nielsenAnalytics": {
     "enabled": true,
   },
@@ -286,6 +292,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "mostRead": {
     "enabled": true,
+  },
+  "nextJsImageAdapter": {
+    "enabled": false,
   },
   "nielsenAnalytics": {
     "enabled": true,

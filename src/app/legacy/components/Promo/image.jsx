@@ -1,3 +1,4 @@
+import { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import {
@@ -6,10 +7,18 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import IMAGE from '#app/components/Image';
 import BlurredBackground from '#app/components/Image/BlurredBackground';
+import ImageAdapter from '#app/components/ImageAdapter';
+import { isImageAdapterSource } from '#app/components/ImageAdapter/ichefLoader';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useToggle from '#app/hooks/useToggle';
 import { createResponsiveSrcSet } from '#app/utilities/imageSrcSets';
 
 const IMAGE_RESOLUTIONS = [85, 120, 170, 232, 325, 450, 660, 800];
 const PROGRAMME_IMAGE_RESOLUTIONS = [96, 128, 176, 240, 352, 464, 672, 800];
+
+// 16:9 at the largest promo resolution; the adapter derives the aspect ratio from these.
+const ADAPTER_WIDTH = 800;
+const ADAPTER_HEIGHT = 450;
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
@@ -78,6 +87,8 @@ const Image = props => {
     mobileSize,
     ...rest
   } = props;
+  const { isAmp: isAmpRequest, isLite: isLiteRequest } = use(RequestContext);
+  const { enabled: imageAdapterEnabled } = useToggle('nextJsImageAdapter');
   const isProgrammeImage = src?.startsWith(
     'https://ichef.bbci.co.uk/images/ic/',
   );
@@ -104,23 +115,44 @@ const Image = props => {
     sizesBuilder: () => sizes,
   })?.srcSet;
   const srcWith240Width = src?.replace('{width}', 240);
+  // Trial: canonical iChef promos only. AMP, Lite, portrait and programme images keep the existing renderer.
+  const shouldUseImageAdapter =
+    Boolean(imageAdapterEnabled) &&
+    !isAmpRequest &&
+    !isLiteRequest &&
+    !isPortraitImage &&
+    isImageAdapterSource(src);
+  const adapterLoading =
+    (rest.fetchPriority === 'high' && 'priority') ||
+    (rest.lazyLoad ? 'lazy' : 'eager');
 
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
       {isPortraitImage && srcWith240Width && (
         <BlurredBackground src={srcWith240Width} />
       )}
-      <IMAGE
-        {...rest}
-        src={srcWith240Width}
-        srcSet={primarySrcSet}
-        mediaType="image/webp"
-        fallbackSrcSet={fallbackSrcSet}
-        fallbackMediaType="image/jpeg"
-        sizes={sizes}
-        aspectRatio={[16, 9]}
-        {...(isPortraitImage && { placeholder: false })}
-      />
+      {shouldUseImageAdapter ? (
+        <ImageAdapter
+          src={src}
+          alt={rest.alt}
+          width={ADAPTER_WIDTH}
+          height={ADAPTER_HEIGHT}
+          sizes={sizes}
+          loading={adapterLoading}
+        />
+      ) : (
+        <IMAGE
+          {...rest}
+          src={srcWith240Width}
+          srcSet={primarySrcSet}
+          mediaType="image/webp"
+          fallbackSrcSet={fallbackSrcSet}
+          fallbackMediaType="image/jpeg"
+          sizes={sizes}
+          aspectRatio={[16, 9]}
+          {...(isPortraitImage && { placeholder: false })}
+        />
+      )}
       {children && (
         <ChildWrapper className={className}>{children}</ChildWrapper>
       )}

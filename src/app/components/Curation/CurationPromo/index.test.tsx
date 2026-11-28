@@ -84,6 +84,68 @@ describe('Curation Promo', () => {
     expect(getByText('17 abril 2023')).toBeInTheDocument();
   });
 
+  describe('Next.js Image adapter trial', () => {
+    // Production BFF shape: content summaries return WebP iChef templates.
+    const TEMPLATE =
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/17CDB/production/_123699479_indigena.jpg.webp';
+    const toggleOn = { nextJsImageAdapter: { enabled: true } };
+
+    const getImage = () => screen.getByAltText('Campesino indígena peruano.');
+
+    it('should keep the existing renderer when the toggle is off', () => {
+      render(<Fixture imageUrl={TEMPLATE} lazy />, {
+        toggles: { nextJsImageAdapter: { enabled: false } },
+      });
+
+      expect(getImage()).toHaveAttribute(
+        'src',
+        TEMPLATE.replace('{width}', '240'),
+      );
+      expect(getImage()).not.toHaveAttribute('decoding');
+    });
+
+    it('should render through the adapter when the toggle is on', () => {
+      const { container } = render(<Fixture imageUrl={TEMPLATE} lazy />, {
+        toggles: toggleOn,
+      });
+
+      expect(getImage()).toHaveAttribute('decoding', 'async');
+      expect(getImage()).toHaveAttribute('loading', 'lazy');
+      expect(getImage().closest('picture')).not.toBeNull();
+      expect(
+        container.querySelector('source[type="image/webp"]'),
+      ).toHaveAttribute('sizes', getImage().getAttribute('sizes'));
+    });
+
+    it('should map lazy={false} to eager loading', () => {
+      render(<Fixture imageUrl={TEMPLATE} lazy={false} />, {
+        toggles: toggleOn,
+      });
+
+      expect(getImage()).toHaveAttribute('loading', 'eager');
+    });
+
+    it.each([
+      ['AMP', { isAmp: true }],
+      ['Lite', { isLite: true }],
+    ])('should keep the existing renderer on %s', (_, options) => {
+      const { container } = render(<Fixture imageUrl={TEMPLATE} />, {
+        toggles: toggleOn,
+        ...options,
+      });
+
+      expect(container.querySelector('picture img[decoding]')).toBeNull();
+    });
+
+    it('should keep the existing renderer for unsupported sources', () => {
+      const programmeImage =
+        'https://ichef.bbci.co.uk/images/ic/{width}xn/p01k6mtv.jpg';
+      render(<Fixture imageUrl={programmeImage} />, { toggles: toggleOn });
+
+      expect(getImage()).not.toHaveAttribute('decoding');
+    });
+  });
+
   describe('Lazy loading', () => {
     it('should not lazy load when lazy is falsey', () => {
       render(<Fixture lazy={false} />);
