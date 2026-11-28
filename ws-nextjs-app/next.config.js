@@ -93,6 +93,12 @@ module.exports = {
     NEXTJS: 'true',
   },
   generateEtags: false,
+  // Used only by the toggled ImageAdapter trial. Matches the promo image iChef widths
+  // (src/app/legacy/components/Promo/image.jsx) so candidate URLs and cache entries are unchanged.
+  images: {
+    deviceSizes: [85, 120, 170, 232, 325, 450, 660, 800],
+    imageSizes: [],
+  },
   output: 'standalone',
   /*
     Build-time tooling (webpack, its optional minifiers and sass) gets traced into

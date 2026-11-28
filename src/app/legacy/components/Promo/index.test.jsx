@@ -311,3 +311,85 @@ describe('Promo component - Timestamp', () => {
     });
   });
 });
+
+describe('Promo component - Next.js Image adapter trial', () => {
+  // Production BFF shape: content summaries return WebP iChef templates.
+  const TEMPLATE =
+    'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/17CDB/production/_123699479_indigena.jpg.webp';
+  const toggles = { nextJsImageAdapter: { enabled: true } };
+
+  const AdapterFixture = props => (
+    <Promo>
+      <Promo.Image src={TEMPLATE} alt="Adapter alt text" {...props} />
+      <Promo.Heading>test heading</Promo.Heading>
+    </Promo>
+  );
+
+  const getImage = () => screen.getByAltText('Adapter alt text');
+
+  it.each([
+    ['lazy', { lazyLoad: true }],
+    ['eager', { lazyLoad: false }],
+    ['high priority', { lazyLoad: false, fetchPriority: 'high' }],
+    ['large images', { lazyLoad: true, useLargeImages: true }],
+  ])(
+    'renders the same image attributes as the existing renderer (%s)',
+    (_, props) => {
+      const attributes = ['alt', 'src', 'sizes', 'loading', 'fetchpriority'];
+      const getRendered = enabled => {
+        const { container, unmount } = render(<AdapterFixture {...props} />, {
+          toggles: { nextJsImageAdapter: { enabled } },
+        });
+        const img = getImage();
+        const wrapper = img.closest('div');
+        const result = {
+          ...Object.fromEntries(
+            attributes.map(name => [name, img.getAttribute(name)]),
+          ),
+          webpSizes: container
+            .querySelector('source[type="image/webp"]')
+            ?.getAttribute('sizes'),
+          paddingBottom: wrapper.style.paddingBottom,
+        };
+        unmount();
+        return result;
+      };
+
+      const existing = getRendered(false);
+      const adapter = getRendered(true);
+
+      expect(adapter).toEqual({
+        ...existing,
+        // The existing renderer only adds a <picture> on Home pages.
+        webpSizes: existing.webpSizes ?? existing.sizes,
+      });
+    },
+  );
+
+  it('maps fetchPriority="high" to eager, high-priority loading', () => {
+    render(<AdapterFixture lazyLoad={false} fetchPriority="high" />, {
+      toggles,
+    });
+
+    expect(getImage()).toHaveAttribute('decoding', 'async');
+    expect(getImage()).toHaveAttribute('loading', 'eager');
+    expect(getImage()).toHaveAttribute('fetchpriority', 'high');
+  });
+
+  it('uses the same iChef widths and sizes as the existing renderer', () => {
+    render(<AdapterFixture lazyLoad />, { toggles });
+
+    const source = getImage().closest('picture').querySelector('source');
+    expect(source).toHaveAttribute(
+      'sizes',
+      '(min-width: 63rem) 232px, (min-width: 37.5rem) 50vw, 33vw',
+    );
+    expect(getImage()).toHaveAttribute('loading', 'lazy');
+  });
+
+  it('keeps the existing renderer for portrait images', () => {
+    render(<AdapterFixture isPortraitImage />, { toggles });
+
+    expect(getImage()).not.toHaveAttribute('decoding');
+  });
+});
